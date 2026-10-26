@@ -1,0 +1,29 @@
+$ deepseek_facts.py Quito
+  tokens in 3908 out 672
+Quito: 0 problems
+
+$ deepseek_city.py Quito --stage places
+Quito: places
+  tokens in 1195 out 3307
+
+$ deepseek_city.py Quito --stage frame
+Quito: frame
+  tokens in 2498 out 1870
+
+$ deepseek_city.py Quito --stage plans
+Quito: plans
+  plans for day
+  tokens in 2261 out 896
+  plans for 1n
+  tokens in 2262 out 878
+  plans for 2n
+  tokens in 2267 out 1285
+  plans for 3n
+  tokens in 2262 out 1751
+  plans for 4n
+  tokens in 2262 out 1898
+
+$ merge_city.py Quito
+Quito: 20 places, 16 plans, 0 errors, 0 warnings
+wrote itineraries/quito.json and planner/quito.json
+

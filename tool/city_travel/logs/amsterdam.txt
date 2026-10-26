@@ -1,0 +1,34 @@
+$ deepseek_prep.py Amsterdam
+  tokens in 944 out 448
+Amsterdam: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Amsterdam
+  tokens in 4214 out 952
+Amsterdam: 0 problems
+
+$ deepseek_city.py Amsterdam --stage places
+Amsterdam: places
+  tokens in 1245 out 4719
+
+$ deepseek_city.py Amsterdam --stage frame
+Amsterdam: frame
+  tokens in 2425 out 1903
+  repaired JSON
+
+$ deepseek_city.py Amsterdam --stage plans
+Amsterdam: plans
+  plans for day
+  tokens in 2693 out 1090
+  plans for 1n
+  tokens in 2694 out 1165
+  plans for 2n
+  tokens in 2699 out 1362
+  plans for 3n
+  tokens in 2694 out 1655
+  plans for 4n
+  tokens in 2694 out 2227
+
+$ merge_city.py Amsterdam
+Amsterdam: 28 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/amsterdam.json and planner/amsterdam.json
+

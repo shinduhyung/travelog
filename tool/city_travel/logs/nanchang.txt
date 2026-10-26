@@ -1,0 +1,29 @@
+$ deepseek_facts.py Nanchang
+  tokens in 1753 out 594
+Nanchang: 1 problems
+  - KHN taxi ¥80-120 vs tariff estimate 174
+
+$ deepseek_city.py Nanchang --stage places
+Nanchang: places
+  tokens in 1123 out 2944
+
+$ deepseek_city.py Nanchang --stage frame
+Nanchang: frame
+  tokens in 2445 out 1897
+  repaired JSON
+
+$ deepseek_city.py Nanchang --stage plans
+Nanchang: plans
+  plans for day
+  tokens in 2085 out 1081
+  plans for 1n
+  tokens in 2091 out 904
+  plans for 2n
+  tokens in 2086 out 1554
+  plans for 3n
+  tokens in 2086 out 1850
+
+$ merge_city.py Nanchang
+Nanchang: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/nanchang.json and planner/nanchang.json
+

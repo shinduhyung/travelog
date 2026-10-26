@@ -1,0 +1,563 @@
+{
+  "city": "Nanjing",
+  "checked": "October 2026",
+  "intro_line": "Ancient capital on the Yangtze, layered with dynasties and modern buzz.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Xinjiekou",
+        "Fuzimiao",
+        "Xuanwu Lake",
+        "Nanjing South Station"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Xinjiekou",
+        "Fuzimiao",
+        "Xuanwu Lake",
+        "Nanjing South Station"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Xinjiekou",
+        "Fuzimiao",
+        "Xuanwu Lake",
+        "Nanjing South Station"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Xinjiekou",
+        "Fuzimiao",
+        "Xuanwu Lake",
+        "Nanjing South Station"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Xinjiekou",
+        "Fuzimiao",
+        "Xuanwu Lake",
+        "Nanjing South Station"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 9,
+        "note": "Coldest month: highs near 8°C, lows near 0°C. Pack a warm coat."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 8,
+        "note": "Still cold, highs around 11°C. Fewer rain days, good for museums."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 9,
+        "note": "Milder spring: highs near 16°C, lows around 7°C. Layer up."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 9,
+        "note": "Pleasant spring, highs near 21°C. Good walking weather."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Warm and green, highs near 26°C. Light rain gear helps."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 12,
+        "note": "Hot start to summer, highs near 29°C. Expect about 12 rain days."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 17,
+        "note": "Hottest and wettest: highs near 31°C, lows near 25°C, 17 rain days."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 13,
+        "note": "Still hot and humid, highs near 32°C. Plan indoor breaks."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 10,
+        "note": "Cooling down, highs near 28°C. Pleasant evenings return."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 8,
+        "note": "Best month: highs near 22°C, lows near 14°C, fewer rain days."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 8,
+        "note": "Crisp autumn, highs near 17°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 6,
+        "note": "Cold again, highs near 10°C, lows near 1°C. Fewest rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.85,
+      0.65
+    ],
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.85,
+      0.65
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "nature": [
+      0.4,
+      0.5,
+      0.75,
+      0.95,
+      0.9,
+      0.7,
+      0.45,
+      0.45,
+      0.8,
+      0.95,
+      0.7,
+      0.4
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.85,
+      0.7
+    ]
+  },
+  "places": {
+    "sun_yat_sen": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning, spring or autumn",
+      "area": "Xuanwu Lake",
+      "popularity": 5
+    },
+    "confucius_temple": {
+      "types": [
+        "history",
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening, any season",
+      "area": "Fuzimiao",
+      "popularity": 5
+    },
+    "massacre_memorial": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Xinjiekou",
+      "popularity": 5
+    },
+    "ming_xiaoling": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, autumn for the trees",
+      "area": "Xuanwu Lake",
+      "popularity": 4
+    },
+    "happy_valley": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday, spring or autumn",
+      "area": "Xuanwu Lake",
+      "popularity": 3
+    },
+    "nanjing_university": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Xinjiekou",
+      "popularity": 3
+    },
+    "qinhuai_boat": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Fuzimiao",
+      "popularity": 4
+    },
+    "laomendong": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Fuzimiao",
+      "popularity": 4
+    },
+    "xuanwu_lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunset or early morning",
+      "area": "Xuanwu Lake",
+      "popularity": 4
+    },
+    "city_wall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Fuzimiao",
+      "popularity": 3
+    },
+    "presidential_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Xinjiekou",
+      "popularity": 4
+    },
+    "xinjiekou_walk": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Xinjiekou",
+      "popularity": 3
+    },
+    "purple_mountain": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, autumn",
+      "area": "Xuanwu Lake",
+      "popularity": 3
+    },
+    "nanjing_museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Xuanwu Lake",
+      "popularity": 4
+    },
+    "south_station_food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Before departure",
+      "area": "Nanjing South Station",
+      "popularity": 2
+    },
+    "fuzimiao_night_walk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Fuzimiao",
+      "popularity": 4
+    },
+    "jiqingsi": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Xuanwu Lake",
+      "popularity": 3
+    },
+    "tangshan_hotspring": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Afternoon into evening, cooler months",
+      "area": "Xuanwu Lake",
+      "popularity": 3
+    },
+    "nanjing_duck": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or early dinner",
+      "area": "Xinjiekou",
+      "popularity": 3
+    },
+    "zhonghua_gate_walk": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Fuzimiao",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Ming tombs, city wall and Fuzimiao food lanes without rushing; add a night for a day trip."
+  },
+  "airports": [
+    {
+      "code": "NKG",
+      "name": "Nanjing Lukou International Airport",
+      "primary": true,
+      "note": "Main gateway, about 36 km south of the centre.",
+      "options": [
+        {
+          "mode": "Metro S1",
+          "to": "Nanjing South Station",
+          "price": "¥6",
+          "time": "30 min",
+          "note": "Long walk between Line 1 and S1 at South Station."
+        },
+        {
+          "mode": "Airport express bus",
+          "to": "North or South Railway Station",
+          "price": "¥20",
+          "time": "60+ min",
+          "note": "Runs about every 30 min; buy at arrivals kiosk."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "¥90-110",
+          "time": "30-50 min",
+          "note": "Similar time to metro but far pricier."
+        },
+        {
+          "mode": "Didi",
+          "to": "Downtown",
+          "price": "¥80-110",
+          "time": "30-50 min",
+          "note": "Use app pickup point at arrivals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Nanjing",
+      "https://en.wikivoyage.org/wiki/Nanjing"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most trips; Didi or taxi for late nights and door-to-door rides.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Clean, cheap and fast. Single tokens cost ¥2–9 and run roughly 05:00–23:00. Line S1 links Nanjing South Station to the airport in about 30 min for ¥6."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cost a flat ¥2 (some ¥1). An IC card gives about 20% off."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥9 plus a ¥2 service fee; most trips cost under ¥25. Didi works well, but drivers rarely speak English, so show Chinese addresses."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the city; metro, buses and taxis cover the sights. Skip it unless you plan trips outside Nanjing."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in spring and autumn for Fuzimiao lanes, the city wall and lake paths. Hot and humid in summer, so walk early or late."
+      },
+      {
+        "mode": "Shared bikes",
+        "has": true,
+        "text": "Hello and Meituan bikes are everywhere. Handy for short hops between metro stops and sights."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams serve the southwest and Qilin Town. Useful only if your plans go that way."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, fairly dry winters and hot, humid, rainy summers. Spring and autumn are the best times to walk.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April, May and October",
+        "text": "Highs around 21–26°C and comfortable lows. Ideal for the city wall, Purple Mountain and lake walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs near 29–32°C with muggy nights around 21–25°C. Do outdoor sights early morning."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in July",
+        "text": "About 17 rain days in July and 12–13 in June and August. Carry a light rain jacket or umbrella."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters (December to February)",
+        "text": "Highs around 8–11°C and lows near 0–1°C. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🍂",
+        "title": "Dry, clear autumn",
+        "text": "October and November have fewer rain days and mild highs. Great for photos and long walks."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, breathable clothes and rain gear for summer. Comfortable shoes for cobbled lanes."
+      }
+    ]
+  }
+}

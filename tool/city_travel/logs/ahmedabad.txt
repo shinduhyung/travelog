@@ -1,0 +1,31 @@
+$ deepseek_prep.py Ahmedabad
+  tokens in 643 out 325
+Ahmedabad: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Ahmedabad
+  tokens in 4267 out 674
+Ahmedabad: 0 problems
+
+$ deepseek_city.py Ahmedabad --stage places
+Ahmedabad: places
+  tokens in 1138 out 3122
+
+$ deepseek_city.py Ahmedabad --stage frame
+Ahmedabad: frame
+  tokens in 2462 out 1863
+
+$ deepseek_city.py Ahmedabad --stage plans
+Ahmedabad: plans
+  plans for day
+  tokens in 2209 out 959
+  plans for 1n
+  tokens in 2210 out 895
+  plans for 2n
+  tokens in 2215 out 1452
+  plans for 3n
+  tokens in 2210 out 2206
+
+$ merge_city.py Ahmedabad
+Ahmedabad: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/ahmedabad.json and planner/ahmedabad.json
+

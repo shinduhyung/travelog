@@ -1,0 +1,1897 @@
+{
+  "city": "Xi'an",
+  "checked": "October 2026",
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro": "Xi'an rewards visitors with a walled old town, world-class archaeology and a buzzing food scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 34.1981,
+      "west": 108.9302,
+      "north": 34.3975,
+      "east": 108.9725,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 9,
+      "flag_airport": 9,
+      "per_km": 2,
+      "min_fare": 9
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "Metro: 12+ lines, single ride about ¥5; buy a Changantong card or scan WeChat/Alipay.",
+      "Buses: ¥1-2 flat fare; line 610 (tourist 8) links station, Bell Tower and pagodas.",
+      "Taxis: cheap but hard to hail at rush hour and shift change; watch the meter.",
+      "Ride apps: DiDi works widely; also WeChat and Alipay ride-hailing.",
+      "Driving: not advised for visitors; traffic and parking are tough.",
+      "Walking and shared bikes are best inside the city walls."
+    ],
+    "sources": []
+  },
+  "places": {
+    "terracotta": {
+      "name": "Terracotta Army",
+      "landmark": "Terracotta Army",
+      "kind": "sight",
+      "lat": 34.3841,
+      "lon": 109.2785,
+      "price": 120,
+      "price_text": "≈ CNY 120 (check on the day)",
+      "hours": "Roughly 08:30–17:00, longer in summer; check on the day",
+      "tip": "Go early and see Pit 1 last so the scale hits hardest. Hire a guide or audio guide for context.",
+      "source": ""
+    },
+    "citywall": {
+      "name": "Xi'an City Wall",
+      "landmark": "Xi'an City Wall",
+      "kind": "sight",
+      "lat": 34.2594,
+      "lon": 108.947,
+      "price": 54,
+      "price_text": "≈ CNY 54 entry; bike rental extra (check on the day)",
+      "hours": "Roughly 08:00–22:00; check on the day",
+      "tip": "Rent a bike and ride the full loop — about 14 km, allow 1.5–2 hours. Late afternoon is cooler.",
+      "source": ""
+    },
+    "biggoose": {
+      "name": "Big Wild Goose Pagoda",
+      "landmark": "Big Wild Goose Pagoda",
+      "kind": "sight",
+      "lat": 34.2198,
+      "lon": 108.9592,
+      "price": 50,
+      "price_text": "≈ CNY 50 temple entry; extra to climb the pagoda (check on the day)",
+      "hours": "Roughly 08:00–18:00; check on the day",
+      "tip": "Come back after dark for the fountain show on the north square — free and lively.",
+      "source": ""
+    },
+    "shaanxi": {
+      "name": "Shaanxi History Museum",
+      "landmark": "Shaanxi History Museum",
+      "kind": "museum",
+      "lat": 34.2235,
+      "lon": 108.95,
+      "price": 0,
+      "price_text": "Free with advance booking; some special exhibitions charge",
+      "hours": "Closed Monday; roughly 09:00–17:30; check on the day",
+      "tip": "Free tickets are limited and booked online in advance with your passport — reserve days ahead.",
+      "source": ""
+    },
+    "muslimquarter": {
+      "name": "Muslim Quarter",
+      "landmark": "Muslim Quarter",
+      "kind": "food",
+      "lat": 34.2638,
+      "lon": 108.9431,
+      "price": 0,
+      "price_text": "Free to walk; food paid per stall",
+      "hours": "Busiest from late afternoon into the evening",
+      "tip": "Eat where locals queue. Try roujiamo, yangrou paomo and cold noodles; carry small cash or use a phone wallet.",
+      "source": ""
+    },
+    "belltower": {
+      "name": "Bell Tower of Xi'an",
+      "landmark": "Bell Tower of Xi'an",
+      "kind": "sight",
+      "lat": 34.2597,
+      "lon": 108.947,
+      "price": 35,
+      "price_text": "≈ CNY 35; combined ticket with Drum Tower may be cheaper (check on the day)",
+      "hours": "Roughly 08:30–21:00; check on the day",
+      "tip": "Best seen lit up at night from the street or a nearby rooftop. Climb for the view over the old grid.",
+      "source": ""
+    },
+    "greatmosque": {
+      "name": "Great Mosque of Xi'an",
+      "landmark": "Great Mosque of Xi'an",
+      "kind": "sight",
+      "lat": 34.2631,
+      "lon": 108.9379,
+      "price": 25,
+      "price_text": "≈ CNY 25 (check on the day)",
+      "hours": "Roughly 08:00–19:00; closed to tourists at prayer times",
+      "tip": "A quiet, walled garden complex in Chinese architecture. Dress modestly and keep voices low.",
+      "source": ""
+    },
+    "shuyuanmen": {
+      "name": "Shuyuanmen Culture Street",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.2575,
+      "lon": 108.9455,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops roughly 09:00–20:00",
+      "tip": "A calm stone-paved lane of calligraphy and brush shops just inside the South Gate — good for gifts.",
+      "source": ""
+    },
+    "southgate": {
+      "name": "South Gate (Yongningmen) and moat park",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 34.2539,
+      "lon": 108.9436,
+      "price": 0,
+      "price_text": "Free to view; wall entry charged separately",
+      "hours": "Gate area open daily; lit at night",
+      "tip": "The grandest gate of the wall. Walk the moat park at dusk, then watch the gate light up.",
+      "source": ""
+    },
+    "drumtower": {
+      "name": "Drum Tower of Xi'an",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 34.2628,
+      "lon": 108.9419,
+      "price": 35,
+      "price_text": "≈ CNY 35; combined ticket with Bell Tower may be cheaper (check on the day)",
+      "hours": "Roughly 08:30–21:00; check on the day",
+      "tip": "Short drum performances are held a few times a day — ask at the ticket desk for times.",
+      "source": ""
+    },
+    "dacieng": {
+      "name": "Da Ci'en Temple grounds",
+      "landmark": null,
+      "kind": "park",
+      "lat": 34.2189,
+      "lon": 108.9631,
+      "price": 0,
+      "price_text": "Free to walk the surrounding squares",
+      "hours": "Open daily",
+      "tip": "The north and south squares around the pagoda are free and great for an evening stroll.",
+      "source": ""
+    },
+    "fountain": {
+      "name": "North Square fountain show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 34.2213,
+      "lon": 108.9648,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Evening shows; times change by season — check on the day",
+      "tip": "Arrive 20 minutes early for a front spot. The music-and-water show is a local favourite.",
+      "source": ""
+    },
+    "tangshow": {
+      "name": "Tang-dynasty dinner show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 34.2205,
+      "lon": 108.9622,
+      "price": 280,
+      "price_text": "≈ CNY 200–400 depending on seats (check on the day)",
+      "hours": "Evening performances, usually one sitting",
+      "tip": "A song-and-dance show with dinner near the pagoda. Book ahead and confirm what the ticket includes.",
+      "source": ""
+    },
+    "bike": {
+      "name": "City Wall bike ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.2617,
+      "lon": 108.9422,
+      "price": 45,
+      "price_text": "≈ CNY 45 per bike for a set time; deposit may apply (check on the day)",
+      "hours": "Rental during wall opening hours",
+      "tip": "Ride the full loop for the best views of old and new Xi'an. Bring water; shade is limited.",
+      "source": ""
+    },
+    "huimin": {
+      "name": "Huimin Street food walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": 34.2675,
+      "lon": 108.9392,
+      "price": 0,
+      "price_text": "Free to walk; pay per stall",
+      "hours": "Busiest from late afternoon",
+      "tip": "Skip the main drag and eat on the side lanes. Try grilled skewers, persimmon cakes and paomo.",
+      "source": ""
+    },
+    "defu": {
+      "name": "Defu Lane coffee and bar street",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.2547,
+      "lon": 108.9503,
+      "price": 0,
+      "price_text": "Free to walk; drinks paid separately",
+      "hours": "Cafes and bars from afternoon into late night",
+      "tip": "A relaxed lane of small cafes and bars inside the wall — good for a slow afternoon away from crowds.",
+      "source": ""
+    },
+    "beilin": {
+      "name": "Beilin Museum (Forest of Stone Steles)",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 34.2549,
+      "lon": 108.9469,
+      "price": 65,
+      "price_text": "≈ CNY 65 (check on the day)",
+      "hours": "Roughly 08:00–18:00; check on the day",
+      "tip": "Carved stone tablets with centuries of calligraphy. Quiet and close to the South Gate.",
+      "source": ""
+    },
+    "damingpalace": {
+      "name": "Daming Palace National Heritage Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 34.2936,
+      "lon": 108.9597,
+      "price": 60,
+      "price_text": "≈ CNY 60 for the core site; park areas may be free (check on the day)",
+      "hours": "Roughly 08:30–18:00; check on the day",
+      "tip": "Vast ruins of a Tang palace. Bring sun protection — there is little shade.",
+      "source": ""
+    },
+    "huangcheng": {
+      "name": "Huangcheng Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 34.2565,
+      "lon": 108.9487,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, roughly dawn to dusk",
+      "tip": "A local park on the old wall line — good for people-watching, tai chi and a rest between sights.",
+      "source": ""
+    },
+    "northstation": {
+      "name": "Xi'an North Station area",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.3767,
+      "lon": 108.9398,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Station open long hours; check trains on the day",
+      "tip": "High-speed trains to the Terracotta Army region and other cities leave from here. Allow extra time for security.",
+      "source": ""
+    },
+    "xianfood": {
+      "name": "Xi'an dumpling and noodle dinner",
+      "landmark": null,
+      "kind": "food",
+      "lat": 34.2605,
+      "lon": 108.9435,
+      "price": 80,
+      "price_text": "≈ CNY 60–120 per person (check on the day)",
+      "hours": "Restaurants roughly 11:00–22:00",
+      "tip": "Try a dumpling banquet or a bowl of biangbiang noodles near the Bell Tower. Book popular places at weekends.",
+      "source": ""
+    },
+    "calligraphy": {
+      "name": "Calligraphy class or brush workshop",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.2578,
+      "lon": 108.9452,
+      "price": 150,
+      "price_text": "≈ CNY 100–250 depending on the class (check on the day)",
+      "hours": "Classes by booking",
+      "tip": "A hands-on hour with brush and ink near Shuyuanmen. Book a day ahead and confirm the language of instruction.",
+      "source": ""
+    },
+    "nightwalk": {
+      "name": "Bell Tower night lights walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.2622,
+      "lon": 108.9445,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Best after dark, roughly 19:00–22:00",
+      "tip": "Walk from the Bell Tower to the South Gate along the lit-up streets for the classic Xi'an night view.",
+      "source": ""
+    },
+    "huashan": {
+      "name": "Terracotta Army day tour with guide",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 34.3841,
+      "lon": 109.2785,
+      "price": 350,
+      "price_text": "≈ CNY 250–450 including transport and entry (check on the day)",
+      "hours": "Half-day tours usually leave in the morning",
+      "tip": "A guided half-day trip saves the hassle of finding the site. Confirm entry tickets and pickup are included.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day: the Terracotta Army first, then the city wall and old-town relics.",
+      "days": [
+        {
+          "title": "Terracotta Army, then the wall and Bell Tower",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early. It is outside the city near Xi'an North Station; allow travel time. Check hours on the day."
+            },
+            {
+              "place": "citywall",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Enter at South Gate. Walk or rent a bike on top."
+            },
+            {
+              "place": "southgate",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Short walk from the wall entrance. Moat park is free."
+            },
+            {
+              "place": "belltower",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "About 15 minutes on foot. Stay for the lights after dark."
+            },
+            {
+              "place": "xianfood",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dumplings or noodles nearby in the Bell Tower area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around eating: the Muslim Quarter, a food walk and a dumpling dinner.",
+      "days": [
+        {
+          "title": "Old town snacks and evening food streets",
+          "stops": [
+            {
+              "place": "greatmosque",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Quiet in the morning. Closed to tourists at prayer times."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Start snacking before the crowds build."
+            },
+            {
+              "place": "belltower",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Short walk. Good landmark to get your bearings."
+            },
+            {
+              "place": "defu",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee break. About 15 minutes by taxi to South Gate area."
+            },
+            {
+              "place": "huimin",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening food walk when stalls are busiest."
+            },
+            {
+              "place": "xianfood",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Sit-down dinner to finish. Restaurants roughly 11:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and temples by day, a Tang-dynasty dinner show after dark.",
+      "days": [
+        {
+          "title": "History museum, pagoda and evening show",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book ahead. Closed Monday."
+            },
+            {
+              "place": "biggoose",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Short walk. Lunch nearby first."
+            },
+            {
+              "place": "dacieng",
+              "at": "14:15",
+              "minutes": 40,
+              "note": "Temple grounds next to the pagoda."
+            },
+            {
+              "place": "fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "North Square show after dark. Times change by season — check on the day."
+            },
+            {
+              "place": "tangshow",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Dinner show nearby. Book ahead; usually one sitting."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Big Wild Goose Pagoda"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "First-timers who want the Terracotta Army and the old city walls in one tight day.",
+      "days": [
+        {
+          "title": "Terracotta Army, then the city wall at sunset",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go at opening to beat the tour buses. Bring your passport for tickets."
+            },
+            {
+              "place": "xianfood",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Back in the city centre for dumplings and noodles."
+            },
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Enter at the South Gate. Late afternoon light is best."
+            },
+            {
+              "place": "bike",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Rent a bike on the wall for a loop. Check rental hours on the day."
+            },
+            {
+              "place": "southgate",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Moat park at dusk, then walk to dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then travel",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book ahead online. Closed Monday."
+            },
+            {
+              "place": "biggoose",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Short walk from the museum. Late morning is quieter."
+            },
+            {
+              "place": "northstation",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Allow 45 minutes before your train. Check trains on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want the Muslim Quarter, dumplings and noodles without rushing.",
+      "days": [
+        {
+          "title": "Old city walls, then the Muslim Quarter",
+          "stops": [
+            {
+              "place": "southgate",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Start at the South Gate and the moat park."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Brush and paper shops. Good small gifts."
+            },
+            {
+              "place": "xianfood",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch: hand-pulled noodles or dumplings."
+            },
+            {
+              "place": "greatmosque",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Closed to tourists at prayer times."
+            },
+            {
+              "place": "huimin",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Stalls get busy from late afternoon. Bring small cash."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Bell Tower lights after dark."
+            }
+          ]
+        },
+        {
+          "title": "Coffee street, then travel",
+          "stops": [
+            {
+              "place": "defu",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Cafes open from afternoon, so go late morning or swap for a walk."
+            },
+            {
+              "place": "beilin",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Stone steles museum. Morning is quiet."
+            },
+            {
+              "place": "northstation",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Allow 45 minutes before your train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: pagoda and museum by day, Tang show at night.",
+      "days": [
+        {
+          "title": "Pagoda, museum and an evening show",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book ahead. Closed Monday."
+            },
+            {
+              "place": "biggoose",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Short walk. Late afternoon is best, but fit it in now."
+            },
+            {
+              "place": "dacieng",
+              "at": "14:00",
+              "minutes": 40,
+              "note": "Temple grounds next to the pagoda."
+            },
+            {
+              "place": "tangshow",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner show. Book ahead; usually one sitting."
+            },
+            {
+              "place": "fountain",
+              "at": "20:45",
+              "minutes": 30,
+              "note": "North Square show. Times change by season — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Calligraphy street, then travel",
+          "stops": [
+            {
+              "place": "calligraphy",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Book a brush workshop in advance."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Culture street next to the class."
+            },
+            {
+              "place": "northstation",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Allow 45 minutes before your train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Big Wild Goose Pagoda"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the Terracotta Army, the city wall and the old capital's relics at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, city wall and old streets",
+          "stops": [
+            {
+              "place": "southgate",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start at the South Gate. The moat park is free and calm."
+            },
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Walk or ride the wall. Late afternoon light is best."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Brush and paper shops just inside the South Gate."
+            },
+            {
+              "place": "xianfood",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dumplings or hand-pulled noodles nearby."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army, then the north side",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early. It is busy by mid-morning. Bring your passport."
+            },
+            {
+              "place": "damingpalace",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Large park on the way back. Check opening hours on the day."
+            },
+            {
+              "place": "northstation",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Good spot for a coffee or to sort onward trains."
+            },
+            {
+              "place": "belltower",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Lit after dark. Check last entry on the day."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Short loop around the Bell Tower lights."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the pagoda, then leave",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book ahead online. Closed Monday."
+            },
+            {
+              "place": "biggoose",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot from the museum."
+            },
+            {
+              "place": "dacieng",
+              "at": "13:45",
+              "minutes": 40,
+              "note": "Temple grounds around the pagoda."
+            },
+            {
+              "place": "beilin",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Stone steles near the South Gate. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Gate / Shuyuanmen"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around snacks, dumplings and noodle shops, with the big sights in between.",
+      "days": [
+        {
+          "title": "Arrive, wall and the Muslim Quarter",
+          "stops": [
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Walk off the journey. Enter at the South Gate."
+            },
+            {
+              "place": "greatmosque",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Quiet lanes before the crowds. Closed to tourists at prayer times."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "18:15",
+              "minutes": 90,
+              "note": "Stalls busiest from late afternoon. Bring small cash."
+            },
+            {
+              "place": "huimin",
+              "at": "19:45",
+              "minutes": 90,
+              "note": "Keep eating along Huimin Street. Try roujiamo and cold noodles."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army and a dumpling dinner",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Early start beats the tour buses. Bring your passport."
+            },
+            {
+              "place": "northstation",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch stop on the way back into town."
+            },
+            {
+              "place": "belltower",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Climb for the view. Check last entry on the day."
+            },
+            {
+              "place": "xianfood",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dumpling banquet or a noodle shop. Book dinner spots ahead."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Walk off dinner under the tower lights."
+            }
+          ]
+        },
+        {
+          "title": "Coffee street and a last meal",
+          "stops": [
+            {
+              "place": "defu",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Slow coffee start. Cafes open from late morning."
+            },
+            {
+              "place": "beilin",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Optional culture break. Check hours on the day."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Snack stalls and tea along the old street."
+            },
+            {
+              "place": "huangcheng",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Easy park walk before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most visitors: pagodas, temples, calligraphy and a Tang-era show, with the wall at sunset.",
+      "days": [
+        {
+          "title": "Arrive, wall and the Bell Tower at night",
+          "stops": [
+            {
+              "place": "southgate",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start at the South Gate and the moat park."
+            },
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Late afternoon to sunset is the best light."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Calligraphy shops just inside the gate."
+            },
+            {
+              "place": "belltower",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Lit after dark. Check last entry on the day."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Loop the tower lights, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army and a Tang show",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early. Bring your passport for tickets."
+            },
+            {
+              "place": "shaanxi",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Book ahead online. Closed Monday."
+            },
+            {
+              "place": "biggoose",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon, then stay for the evening."
+            },
+            {
+              "place": "tangshow",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner show. Book ahead; usually one sitting."
+            }
+          ]
+        },
+        {
+          "title": "Temple grounds, fountain and leave",
+          "stops": [
+            {
+              "place": "dacieng",
+              "at": "10:00",
+              "minutes": 40,
+              "note": "Quiet temple grounds in the morning."
+            },
+            {
+              "place": "calligraphy",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Brush workshop by booking. Ask your hotel to arrange."
+            },
+            {
+              "place": "beilin",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Forest of Stone Steles. Check hours on the day."
+            },
+            {
+              "place": "fountain",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Show times change by season — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Big Wild Goose Pagoda"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the big relics at a calm pace, with evenings free.",
+      "days": [
+        {
+          "title": "Arrive, city wall at sunset",
+          "stops": [
+            {
+              "place": "southgate",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Start at the South Gate. The moat park is free to walk."
+            },
+            {
+              "place": "citywall",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Walk or rent a bike on top. Late afternoon is cooler and the light is good."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Brush, paper and souvenir shops just inside the gate. Many close around 20:00."
+            },
+            {
+              "place": "xianfood",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "Dumplings or noodles near the Bell Tower."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army, then the north side",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early. It is busy from mid-morning. Bring your passport for tickets."
+            },
+            {
+              "place": "damingpalace",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Large open park on the way back. Check hours on the day."
+            },
+            {
+              "place": "northstation",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Only if you need trains or metro links. Otherwise head back to the center."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening snack walk. Cash and small notes help at stalls."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the pagoda",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book a free timed slot ahead. Bring your passport."
+            },
+            {
+              "place": "biggoose",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Pagoda and temple grounds. Check hours on the day."
+            },
+            {
+              "place": "dacieng",
+              "at": "15:15",
+              "minutes": 40,
+              "note": "Temple grounds next to the pagoda."
+            },
+            {
+              "place": "fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "North Square show. Times change by season — check on the day."
+            },
+            {
+              "place": "tangshow",
+              "at": "19:45",
+              "minutes": 120,
+              "note": "Optional dinner show. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Old city morning, then leave",
+          "stops": [
+            {
+              "place": "beilin",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Stone steles and calligraphy. Quiet in the morning."
+            },
+            {
+              "place": "greatmosque",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Closed to tourists at prayer times. Dress modestly."
+            },
+            {
+              "place": "belltower",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Quick look before lunch. Check hours on the day."
+            },
+            {
+              "place": "xianfood",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch, then allow 45 minutes to Xi'an North Station for trains."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, noodles and dumplings, with the main sights slotted in between meals.",
+      "days": [
+        {
+          "title": "Arrive, wall and the Muslim Quarter",
+          "stops": [
+            {
+              "place": "citywall",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Walk off the flight on top of the wall. Late afternoon is best."
+            },
+            {
+              "place": "huimin",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Food walk. Busiest from late afternoon. Try roujiamo and yangrou paomo."
+            },
+            {
+              "place": "nightwalk",
+              "at": "20:15",
+              "minutes": 60,
+              "note": "Bell Tower lights after dark, roughly 19:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army and a dumpling dinner",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Early start beats the crowds. Eat a big breakfast first."
+            },
+            {
+              "place": "northstation",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Metro or taxi back toward the center."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Second pass for stalls you missed. Go before the peak."
+            },
+            {
+              "place": "xianfood",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dumpling banquet dinner. Book ahead for weekend evenings."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, pagoda evening",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book ahead. The food gallery is worth the time."
+            },
+            {
+              "place": "biggoose",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Pagoda and grounds. Check hours on the day."
+            },
+            {
+              "place": "defu",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Coffee and a rest on Defu Lane."
+            },
+            {
+              "place": "fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "North Square show. Times change by season — check on the day."
+            },
+            {
+              "place": "tangshow",
+              "at": "19:45",
+              "minutes": 120,
+              "note": "Dinner show, or eat at the square instead."
+            }
+          ]
+        },
+        {
+          "title": "Old streets and last bites",
+          "stops": [
+            {
+              "place": "greatmosque",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Morning is calm. Closed to tourists at prayer times."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Snack stalls and shops. Many open around 09:00."
+            },
+            {
+              "place": "beilin",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Optional. Skip if you would rather eat longer."
+            },
+            {
+              "place": "xianfood",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Last bowl of biangbiang noodles before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Travellers who want temples, calligraphy and Tang-era evenings more than rushing between sights.",
+      "days": [
+        {
+          "title": "Arrive, wall and old streets",
+          "stops": [
+            {
+              "place": "southgate",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "South Gate and moat park. Lit at night."
+            },
+            {
+              "place": "citywall",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Walk the top at sunset. Check hours on the day."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Calligraphy street. Shops roughly 09:00–20:00."
+            },
+            {
+              "place": "xianfood",
+              "at": "19:45",
+              "minutes": 90,
+              "note": "Dinner near the Bell Tower."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army and the pagoda",
+          "stops": [
+            {
+              "place": "terracotta",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early. A guide helps with the pits. Bring your passport."
+            },
+            {
+              "place": "biggoose",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Pagoda and temple. Check hours on the day."
+            },
+            {
+              "place": "dacieng",
+              "at": "15:45",
+              "minutes": 40,
+              "note": "Temple grounds, quiet in late afternoon."
+            },
+            {
+              "place": "fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "North Square show. Check times on the day."
+            },
+            {
+              "place": "tangshow",
+              "at": "19:45",
+              "minutes": 120,
+              "note": "Tang-dynasty dinner show. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museum, mosque and a workshop",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed slot ahead."
+            },
+            {
+              "place": "greatmosque",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Closed to tourists at prayer times. Dress modestly."
+            },
+            {
+              "place": "calligraphy",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Brush workshop by booking. Ask your hotel to arrange it."
+            },
+            {
+              "place": "belltower",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Bell Tower lights after dark."
+            }
+          ]
+        },
+        {
+          "title": "Steles and a slow morning",
+          "stops": [
+            {
+              "place": "beilin",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Forest of Stone Steles. Quiet in the morning."
+            },
+            {
+              "place": "huangcheng",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Park walk. Open roughly dawn to dusk."
+            },
+            {
+              "place": "defu",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch and coffee before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Gate / Shuyuanmen"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-timers who want the big relics: Terracotta Army, city walls, museums and old temples at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the old city core",
+          "stops": [
+            {
+              "place": "belltower",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. Buy the combined Bell and Drum Tower ticket if offered."
+            },
+            {
+              "place": "drumtower",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "A short walk from the Bell Tower."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "The towers and walls light up after dark."
+            },
+            {
+              "place": "xianfood",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "Dumplings and noodles nearby."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army day",
+          "stops": [
+            {
+              "place": "huashan",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Guided half-day tour. Book ahead and leave early to beat crowds."
+            },
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Rest, then walk the wall in the cooler late afternoon."
+            },
+            {
+              "place": "southgate",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Dusk is the best light. The moat park is free to wander."
+            }
+          ]
+        },
+        {
+          "title": "Museums and steles",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book ahead online; morning is quieter."
+            },
+            {
+              "place": "biggoose",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Same area. Late afternoon light is good."
+            },
+            {
+              "place": "dacieng",
+              "at": "15:15",
+              "minutes": 40,
+              "note": "Temple grounds next to the pagoda."
+            },
+            {
+              "place": "fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Evening show times change by season — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Walls, bikes and the Muslim Quarter",
+          "stops": [
+            {
+              "place": "beilin",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Forest of Stone Steles. Morning is calm."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Brush and paper shops on the walk to the South Gate."
+            },
+            {
+              "place": "bike",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Rent a bike on the wall. Late afternoon is cooler."
+            },
+            {
+              "place": "greatmosque",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Closed to tourists at prayer times."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Eat your way through the stalls as they get busy."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "huangcheng",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early-morning park walk with locals."
+            },
+            {
+              "place": "northstation",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Allow 45 minutes before your train. Check trains on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want the Muslim Quarter, dumplings and noodles, with the main sights slotted in between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat in the Muslim Quarter",
+          "stops": [
+            {
+              "place": "belltower",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Quick orientation stop."
+            },
+            {
+              "place": "greatmosque",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Go before the quarter gets busy. Closed at prayer times."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Graze the stalls: roujiamo, persimmon cakes, lamb skewers."
+            },
+            {
+              "place": "huimin",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Deeper food walk down the side lanes."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army, then dumplings",
+          "stops": [
+            {
+              "place": "huashan",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Morning guided tour. Eat a big breakfast first."
+            },
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Walk off lunch on the wall."
+            },
+            {
+              "place": "xianfood",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dumpling banquet dinner. Book a table at peak times."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, noodle evening",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book ahead."
+            },
+            {
+              "place": "biggoose",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Same area, easy walk."
+            },
+            {
+              "place": "defu",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Coffee and snacks on the bar street."
+            },
+            {
+              "place": "muslimquarter",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Second pass at the stalls for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Old streets and a Tang show",
+          "stops": [
+            {
+              "place": "shuyuanmen",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Snack stalls and tea along the culture street."
+            },
+            {
+              "place": "beilin",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Steles museum, then lunch nearby."
+            },
+            {
+              "place": "dacieng",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "Temple grounds before the show."
+            },
+            {
+              "place": "tangshow",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner show with Tang-era music and dance. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Last bites, then go",
+          "stops": [
+            {
+              "place": "huangcheng",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning walk, then a last bowl of noodles nearby."
+            },
+            {
+              "place": "northstation",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Allow 45 minutes before your train. Check trains on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bell Tower / City Walls"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Travellers who want pagodas, temples, calligraphy and a Tang show, with the Terracotta Army on one full day.",
+      "days": [
+        {
+          "title": "Arrive, towers and lights",
+          "stops": [
+            {
+              "place": "belltower",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Central start point."
+            },
+            {
+              "place": "drumtower",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "Short walk away."
+            },
+            {
+              "place": "nightwalk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Towers lit up after dark."
+            },
+            {
+              "place": "xianfood",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Terracotta Army and the wall",
+          "stops": [
+            {
+              "place": "huashan",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Guided half-day tour. Book ahead."
+            },
+            {
+              "place": "citywall",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Late afternoon on the wall."
+            },
+            {
+              "place": "southgate",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Dusk at the gate and moat park."
+            }
+          ]
+        },
+        {
+          "title": "Pagoda, museum and fountain",
+          "stops": [
+            {
+              "place": "shaanxi",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book ahead."
+            },
+            {
+              "place": "biggoose",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Same area."
+            },
+            {
+              "place": "dacieng",
+              "at": "15:15",
+              "minutes": 40,
+              "note": "Temple grounds."
+            },
+            {
+              "place": "fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Evening show; times change by season — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Calligraphy and a Tang show",
+          "stops": [
+            {
+              "place": "beilin",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Steles museum in the morning."
+            },
+            {
+              "place": "calligraphy",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Brush workshop by booking. Afternoon slot works too."
+            },
+            {
+              "place": "shuyuanmen",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Browse the shops."
+            },
+            {
+              "place": "tangshow",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner show. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "huangcheng",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning park walk."
+            },
+            {
+              "place": "northstation",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Allow 45 minutes before your train. Check trains on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Big Wild Goose Pagoda"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Terracotta Army, city walls and the old capital's relics."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Muslim Quarter snacks, dumplings and hand-pulled noodles."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Pagodas, temples, calligraphy streets and Tang-era shows."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Bell Tower / City Walls",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Central and walkable. Close to the Bell and Drum Towers, the Muslim Quarter and metro lines.",
+      "center": [
+        34.261,
+        108.945
+      ]
+    },
+    {
+      "area": "South Gate / Shuyuanmen",
+      "range": [
+        300,
+        850
+      ],
+      "why": "Quieter old-town lanes near the wall and the calligraphy street. Good for evening walks.",
+      "center": [
+        34.252,
+        108.947
+      ]
+    },
+    {
+      "area": "Big Wild Goose Pagoda",
+      "range": [
+        280,
+        800
+      ],
+      "why": "Near the pagoda, museums and the fountain square. Lively at night, a bit south of the walls.",
+      "center": [
+        34.219,
+        108.964
+      ]
+    },
+    {
+      "area": "Xi'an North Station",
+      "range": [
+        200,
+        550
+      ],
+      "why": "Best for early high-speed trains. Few sights nearby; use the metro to reach the center.",
+      "center": [
+        34.376,
+        108.94
+      ]
+    }
+  ],
+  "food": [
+    "Eat in the Muslim Quarter: roujiamo (meat sandwich), yangrou paomo (lamb soup with bread) and grilled skewers. Prices are low; check the bill.",
+    "Try biangbiang noodles and hand-pulled noodles at small local shops. A bowl is often ¥15–35.",
+    "Dumpling banquets are a Xi'an classic. Book ahead for dinner shows; expect ¥80–200 per person.",
+    "Breakfast like a local: jinggao, hulatang (pepper soup) and sesame flatbreads from street stalls.",
+    "Tap water is not for drinking. Drink bottled or boiled water, and be careful with very spicy or cold street food if your stomach is sensitive."
+  ],
+  "more_time": [
+    "Add a half day at the Shaanxi History Museum (book free tickets online in advance) and the Big Wild Goose Pagoda area.",
+    "Take a day trip to Mount Huashan by high-speed train for cable-car views; check weather and train times on the day.",
+    "Spend an evening at the Tang Paradise or a Tang-dynasty dinner show, or cycle the full city wall loop (rental about ¥45)."
+  ]
+}

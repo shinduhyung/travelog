@@ -1,0 +1,28 @@
+$ deepseek_facts.py Qingdao
+  tokens in 2158 out 577
+Qingdao: 0 problems
+
+$ deepseek_city.py Qingdao --stage places
+Qingdao: places
+  tokens in 1156 out 3017
+
+$ deepseek_city.py Qingdao --stage frame
+Qingdao: frame
+  tokens in 2430 out 1737
+  repaired JSON
+
+$ deepseek_city.py Qingdao --stage plans
+Qingdao: plans
+  plans for day
+  tokens in 2067 out 951
+  plans for 1n
+  tokens in 2068 out 1196
+  plans for 2n
+  tokens in 2073 out 1426
+  plans for 3n
+  tokens in 2068 out 2138
+
+$ merge_city.py Qingdao
+Qingdao: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/qingdao.json and planner/qingdao.json
+

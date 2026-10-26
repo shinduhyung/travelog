@@ -1,0 +1,31 @@
+$ deepseek_prep.py Dallas
+  tokens in 740 out 371
+Dallas: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Dallas
+  tokens in 3981 out 800
+Dallas: 0 problems
+
+$ deepseek_city.py Dallas --stage places
+Dallas: places
+  tokens in 1194 out 3162
+
+$ deepseek_city.py Dallas --stage frame
+Dallas: frame
+  tokens in 2426 out 1731
+
+$ deepseek_city.py Dallas --stage plans
+Dallas: plans
+  plans for day
+  tokens in 2061 out 825
+  plans for 1n
+  tokens in 2062 out 1254
+  plans for 2n
+  tokens in 2067 out 1564
+  plans for 3n
+  tokens in 2062 out 1559
+
+$ merge_city.py Dallas
+Dallas: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/dallas.json and planner/dallas.json
+

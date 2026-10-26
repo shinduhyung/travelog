@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Puppet-state palace, film museum and wartime sites."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Park lakes, forests and winter ice on the rivers."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Northeast barbecue, dumplings and street snacks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "People's Square",
+      "range": [
+        200,
+        550
+      ],
+      "why": "Central and walkable; metro lines 1 and 2 meet here, so most sights are a short ride away.",
+      "center": [
+        43.883,
+        125.323
+      ]
+    },
+    {
+      "area": "Chongqing Road",
+      "range": [
+        180,
+        500
+      ],
+      "why": "Shopping and food street; busy at night, easy taxis, good budget-to-mid choice.",
+      "center": [
+        43.879,
+        125.33
+      ]
+    },
+    {
+      "area": "Guilin Road",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Student and Korean-food district; cheapest eats and a lively evening scene.",
+      "center": [
+        43.86,
+        125.29
+      ]
+    },
+    {
+      "area": "Hongqi Street",
+      "range": [
+        220,
+        600
+      ],
+      "why": "Quieter, greener area near the car industry district; handy if you have business there.",
+      "center": [
+        43.85,
+        125.22
+      ]
+    }
+  ],
+  "food": [
+    "Try Northeast barbecue (chuan'r) and guo bao rou, sweet-and-sour pork slices. Portions are big; share.",
+    "Dumplings and cold noodles are cheap and filling; a meal often costs ¥20–40.",
+    "Guilin Road has Korean and student food: stews, fried chicken, late-night snacks.",
+    "Winter markets sell frozen pears and tanghulu; eat them outside, they are meant to be cold.",
+    "Look for hot pot and iron-pot stews in winter. Book ahead on weekend evenings."
+  ],
+  "more_time": [
+    "Add a half-day at Jingyuetan park: lake walks, forest trails and winter skiing; check opening hours on the day.",
+    "History fans can swap a shopping afternoon for the Film Museum and the old puppet-state buildings; check tickets on the day.",
+    "In winter, swap a park visit for an indoor museum or the hot springs outside town; check transport on the day."
+  ],
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.8,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.5,
+      0.4
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ]
+  },
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights cover the wartime history, the film museum and a food evening; add a night for Jingyuetan or a winter day trip."
+  },
+  "month_notes": [
+    "January: very cold, highs near -8°C. Dress in layers and plan indoor sights.",
+    "February: still freezing, around -3°C by day. Short days; check opening hours.",
+    "March: warming to 7°C but windy and dusty. A coat still needed.",
+    "April: mild at 15°C, good for walking. A few rain days.",
+    "May: pleasant at 22°C, the best month to be outside.",
+    "June: warm at 26°C with frequent rain. Carry an umbrella.",
+    "July: hottest and wettest, highs near 28°C. Go out early.",
+    "August: hot and rainy, similar to July. Indoor sights are a good bet.",
+    "September: cooler at 22°C and drier. A great month to visit.",
+    "October: crisp at 13°C, good light. Bring a jacket.",
+    "November: cold at 2°C, short days. Fewer crowds.",
+    "December: freezing at -7°C. Pack boots and a warm hat."
+  ],
+  "climate_guide": {
+    "summary": "Cold continental climate: long freezing winters, short warm summers, and most rain from June to August.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Winter is long and harsh",
+        "text": "December to February highs sit near -8 to -3°C, lows to -18°C. Pack boots, a hat and layers."
+      },
+      {
+        "icon": "🌸",
+        "title": "Best time: May and September",
+        "text": "Around 22°C by day, mild evenings and fewer rain days. Ideal for parks and walking."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain peaks in summer",
+        "text": "June to August bring 14–15 rain days a month. Carry an umbrella and plan indoor backups."
+      },
+      {
+        "icon": "🥵",
+        "title": "Short, warm summer",
+        "text": "July highs near 28°C with humid nights around 20°C. Go out early or after sunset."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and autumn are short",
+        "text": "April and October are mild but changeable; March and November can still feel like winter."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Warm layers and boots for November to March; light clothes and rain gear for June to August."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for most trips; taxis are cheap for short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "6 lines (1, 2, 3, 4, 6, 8) cover many central areas. A T-Union card works."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams 54 and 55 run in the west; fare ¥2. Route 55 ends at West station."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Extensive and about ¥2. Chinese reading helps a lot."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Cheap and easy: flag fall ¥5 plus ¥1 fuel surcharge. Didi works; local apps may need Chinese registration."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for a city visit; traffic and parking are a hassle."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine May to mid-November. Cycling is risky in traffic."
+      }
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "currency": "GTQ",
+  "usd_rate": 7.6454,
+  "intro_line": "Guatemala City: where ancient roots meet modern bustle.",
+  "intro": "Guatemala City rewards visitors with its vibrant markets, rich history, and lively food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Zona 10",
+    "Zona 9",
+    "Zona 1",
+    "Zona 4"
+  ],
+  "taxi": {
+    "flag_day": 25,
+    "flag_airport": 100,
+    "per_km": 10,
+    "min_fare": 25
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Transmetro BRT: 7 lines, use Citizen's Card (Q20 with 5 trips) or contactless card; cash not accepted.",
+    "Transurbano buses: prepaid card needed; slower but more routes.",
+    "Red city buses are unsafe; avoid.",
+    "Taxis: yellow metered (call 1766) or white negotiate price; Uber works.",
+    "Driving: chaotic traffic; rental cars available but not recommended for city driving.",
+    "Walking: use caution; accompanied walking advised."
+  ],
+  "airports": [
+    {
+      "code": "GUA",
+      "name": "La Aurora International Airport",
+      "primary": true,
+      "note": "Main international gateway, 6 km south of centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Zona 10 (La Reforma & 12 Calle)",
+          "price": "Q1-5",
+          "time": "30-45 min",
+          "note": "Cheap but crowded; watch belongings."
+        },
+        {
+          "mode": "Taxi (fixed price)",
+          "to": "Zona 10",
+          "price": "Q90-100",
+          "time": "20-30 min",
+          "note": "Official taxis at airport; pricey but safe."
+        },
+        {
+          "mode": "Uber",
+          "to": "Zona 10",
+          "price": "Q50-70",
+          "time": "20-30 min",
+          "note": "Often cheaper; meet at designated area."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "Antigua",
+          "price": "Q60-90",
+          "time": "1-1.5 hr",
+          "note": "Runs 06:00-20:00; book ahead."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "National Palace of Culture, Guatemala City",
+    "Metropolitan Cathedral of Guatemala City",
+    "Kaminaljuyu",
+    "Museo Nacional de Arqueología y Etnología",
+    "Popol Vuh Museum",
+    "Antigua Guatemala",
+    "Hill of the Cross (Cerro de la Cruz)",
+    "Ixchel Museum of Indigenous Textiles",
+    "La Merced Church (Antigua)",
+    "Mundo Petapa Theme Park",
+    "Palacio de los Capitanes Generales",
+    "Pepián",
+    "San Francisco Church (Antigua)",
+    "Santa Catalina Arch"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Guatemala City",
+      "https://en.wikivoyage.org/wiki/Guatemala%20City"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    14.6349,
+    -90.5069
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 13,
+      "rain_days": 4
+    },
+    {
+      "high": 27,
+      "low": 14,
+      "rain_days": 5
+    },
+    {
+      "high": 28,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 19
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 23
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 18
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 21
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 24
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 21
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "GUA taxi Q90-100 vs tariff estimate 184"
+  ]
+}

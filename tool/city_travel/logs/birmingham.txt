@@ -1,0 +1,37 @@
+$ deepseek_prep.py Birmingham
+  tokens in 666 out 385
+Birmingham: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Birmingham
+  tokens in 3862 out 578
+Birmingham: 0 problems
+
+$ deepseek_city.py Birmingham --stage places
+Birmingham: places
+  tokens in 1143 out 3355
+
+$ deepseek_city.py Birmingham --stage frame
+Birmingham: frame
+  tokens in 2439 out 1740
+
+$ deepseek_city.py Birmingham --stage plans
+Birmingham: plans
+  plans for day
+  tokens in 2207 out 819
+  plans for 1n
+  tokens in 2208 out 914
+  plans for 2n
+  tokens in 2213 out 1687
+  plans for 3n
+  tokens in 2208 out 2263
+
+$ merge_city.py Birmingham
+Traceback (most recent call last):
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\merge_city.py", line 158, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\merge_city.py", line 78, in main
+    if d > facts.get("max_km", 60):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'float' and 'NoneType'
+

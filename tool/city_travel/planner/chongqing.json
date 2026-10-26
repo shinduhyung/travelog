@@ -1,0 +1,515 @@
+{
+  "city": "Chongqing",
+  "checked": "October 2026",
+  "intro_line": "A mountain city of rivers, hotpot and neon stairways.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Jiefangbei",
+        "Jiangbei",
+        "Nanping",
+        "Shapingba"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Jiefangbei",
+        "Jiangbei",
+        "Nanping",
+        "Shapingba"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Jiefangbei",
+        "Jiangbei",
+        "Nanping",
+        "Shapingba"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Jiefangbei",
+        "Jiangbei",
+        "Nanping",
+        "Shapingba"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Jiefangbei",
+        "Jiangbei",
+        "Nanping",
+        "Shapingba"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 6,
+        "rain_days": 9,
+        "note": "January: cold and damp, highs near 11°C. Pack warm layers; hotpot weather."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 8,
+        "note": "February: still cool, highs around 14°C. Fewer rain days than spring."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 14,
+        "note": "March: warming to 19°C but rain picks up (about 14 wet days). Bring an umbrella."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 17,
+        "note": "April: mild at 23°C, but one of the wettest months. Plan indoor backups."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 17,
+        "note": "May: warm and humid, highs 26°C, frequent rain. Light rain jacket helps."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 16,
+        "note": "June: hot and sticky, highs 29°C, many rainy days. Go out early and late."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 15,
+        "note": "July: hot, highs 32°C, humid. Carry water and take midday breaks."
+      },
+      {
+        "high": 34,
+        "low": 26,
+        "rain_days": 12,
+        "note": "August: the hottest month, highs 34°C. Limit midday walking; evenings are busy."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 15,
+        "note": "September: still warm at 28°C with plenty of rain. Watch for slippery stairs."
+      },
+      {
+        "high": 22,
+        "low": 16,
+        "rain_days": 16,
+        "note": "October: comfortable at 22°C, though rain is common. Good month for walking."
+      },
+      {
+        "high": 17,
+        "low": 12,
+        "rain_days": 12,
+        "note": "November: cooler at 17°C with fewer dry spells than autumn; layers advised."
+      },
+      {
+        "high": 12,
+        "low": 7,
+        "rain_days": 7,
+        "note": "December: cool and fairly dry, highs 12°C. Quiet season for sightseeing."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.75,
+      0.7,
+      0.6,
+      0.5,
+      0.45,
+      0.65,
+      0.8,
+      0.75,
+      0.65
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8,
+      0.85,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.7,
+      0.75,
+      0.7,
+      0.6,
+      0.5,
+      0.45,
+      0.65,
+      0.75,
+      0.65,
+      0.5
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.8,
+      0.7,
+      0.6
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.75,
+      0.7,
+      0.6,
+      0.5,
+      0.45,
+      0.65,
+      0.8,
+      0.75,
+      0.65
+    ]
+  },
+  "places": {
+    "hongyacave": {
+      "types": [
+        "culture",
+        "nightlife",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "After sunset, any season",
+      "area": "Jiefangbei",
+      "popularity": 5
+    },
+    "ciqikou": {
+      "types": [
+        "culture",
+        "food",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning on a weekday",
+      "area": "Shapingba",
+      "popularity": 4
+    },
+    "dazu": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning start; avoid rainy days",
+      "area": "Shapingba",
+      "popularity": 3
+    },
+    "liziba": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime; quick stop",
+      "area": "Jiefangbei",
+      "popularity": 4
+    },
+    "landsea": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset into evening",
+      "area": "Jiefangbei",
+      "popularity": 4
+    },
+    "fantawild": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday, dry weather",
+      "area": "Jiangbei",
+      "popularity": 3
+    },
+    "jialing": {
+      "types": [
+        "nature",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Dusk and evening",
+      "area": "Jiangbei",
+      "popularity": 3
+    },
+    "cablecar": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late afternoon or after dark",
+      "area": "Nanping",
+      "popularity": 4
+    },
+    "cikoumarket": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner, any season",
+      "area": "Jiefangbei",
+      "popularity": 5
+    },
+    "nanshan": {
+      "types": [
+        "nature",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Nanping",
+      "popularity": 4
+    },
+    "cikouwalk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Jiefangbei",
+      "popularity": 3
+    },
+    "cruise": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Jiefangbei",
+      "popularity": 4
+    },
+    "market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunch or late evening",
+      "area": "Jiefangbei",
+      "popularity": 4
+    },
+    "museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Jiangbei",
+      "popularity": 3
+    },
+    "peoplepark": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Jiefangbei",
+      "popularity": 3
+    },
+    "escalator": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Jiefangbei",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old town, river views and a hotpot dinner; add a night for a Yangtze side trip."
+  },
+  "airports": [
+    {
+      "code": "CKG",
+      "name": "Chongqing Jiangbei International Airport",
+      "primary": true,
+      "note": "Main hub, about 19 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 3",
+          "to": "City centre",
+          "price": "¥5-10",
+          "time": "40-60 min",
+          "note": "Cheapest option; accessible from both terminals."
+        },
+        {
+          "mode": "Metro Line 10",
+          "to": "City centre",
+          "price": "¥5-10",
+          "time": "35-50 min",
+          "note": "Runs from the T3 transport hub."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Shangqisi Lu, central Chongqing",
+          "price": "¥15-20",
+          "time": "45-70 min",
+          "note": "Departs from ground level of Terminal 2."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "¥40-80",
+          "time": "30-50 min",
+          "note": "Show your hotel name in Chinese."
+        },
+        {
+          "mode": "Ride app (DiDi)",
+          "to": "Downtown",
+          "price": "¥40-80",
+          "time": "30-50 min",
+          "note": "Set pickup point by terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Chongqing",
+      "https://en.wikivoyage.org/wiki/Chongqing"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "nightlife",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for most trips; ride apps for hills, stairs and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast, cheap and air-conditioned, with announcements in Mandarin and English. Lines 3 and 10 link the airport to the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent and cheap, but signs are mostly in Chinese. Useful for short local hops."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are yellow and metered; few drivers speak English, so show your destination in Chinese. DiDi works well; set up the app before you arrive."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not advised for visitors: steep, confusing roads and hard parking. Use metro and apps instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Expect stairs and hills everywhere. Biking is not advised in the centre. Wear good shoes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A short Liangjiang ferry crosses the river for about ¥10. A cheap way to see the skyline from the water."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical climate: mild winters, hot sticky summers, and rain in most months. Expect hills, stairs and haze.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best months: October to December",
+        "text": "Highs of 12–22°C and fewer rainy days. Comfortable for walking the hills and riverfront."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs of 29–34°C with high humidity. Move slowly, carry water and rest at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in most months",
+        "text": "Spring and autumn are wettest, with 14–17 rain days. Pack a compact umbrella and grippy shoes."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cool, damp winter",
+        "text": "January highs near 11°C and lows around 6°C. Buildings can feel cold; bring warm layers."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Haze and mist",
+        "text": "River mist and haze can hide the skyline. Views are clearest after rain or on cooler days."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes for stairs and hills, a rain jacket, and light breathable clothes for summer."
+      }
+    ]
+  }
+}

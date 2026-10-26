@@ -1,0 +1,163 @@
+{
+  "currency": "CRC",
+  "usd_rate": 456.1408,
+  "intro_line": "A bustling highland capital ringed by green mountains and coffee farms.",
+  "intro": "San José rewards visitors with lively markets, museums and easy escapes to volcanoes and cloud forests. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Downtown (Avenida Central)",
+    "Barrio Amón",
+    "Barrio Escalante",
+    "San Pedro"
+  ],
+  "taxi": {
+    "flag_day": 500,
+    "flag_airport": 2000,
+    "per_km": 700,
+    "min_fare": 1000
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "No metro or tram; buses cover the city and country from several downtown terminals.",
+    "City buses are cheap, about ₡500 per ride, with no transfers or day passes.",
+    "Use the Moovit app for bus routes and schedules.",
+    "Taxis should use a meter but often don't; agree the price first.",
+    "Uber and DiDi work well in the city, though Uber is technically illegal.",
+    "Driving is slow and confusing; walking is fine downtown but bike lanes are limited."
+  ],
+  "airports": [
+    {
+      "code": "SJO",
+      "name": "Juan Santamaría International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 15 km northwest near Alajuela.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown San José (Braulio Carrillo Colina Park)",
+          "price": "₡650",
+          "time": "30-45 min",
+          "note": "Stop is a short walk past the car park; bring small change."
+        },
+        {
+          "mode": "Taxi Aeropuerto",
+          "to": "City centre",
+          "price": "₡10000-15000 or US$25",
+          "time": "25-40 min",
+          "note": "Use licensed reddish-orange taxis only."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "₡5000-10000",
+          "time": "25-40 min",
+          "note": "Pickup at the airport can be slow and unreliable."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Basilica of Our Lady of the Angels",
+    "Costa Rican Gallo Pinto",
+    "Parque de Diversiones Dr. Roberto Ortiz Brenes"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: San José",
+      "https://en.wikivoyage.org/wiki/San%20Jos%C3%A9"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    9.9281,
+    -84.0907
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 6
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 17
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 27
+    },
+    {
+      "high": 24,
+      "low": 17,
+      "rain_days": 28
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 24
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 27
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 29
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 29
+    },
+    {
+      "high": 24,
+      "low": 17,
+      "rain_days": 25
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 13
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

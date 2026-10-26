@@ -1,0 +1,573 @@
+{
+  "city": "Porto",
+  "checked": "October 2026",
+  "intro_line": "Porto charms with river views, tiled churches and port wine.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Ribeira",
+        "Baixa",
+        "Cedofeita",
+        "Boavista"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Ribeira",
+        "Baixa",
+        "Cedofeita",
+        "Boavista"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Ribeira",
+        "Baixa",
+        "Cedofeita",
+        "Boavista"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Ribeira",
+        "Baixa",
+        "Cedofeita",
+        "Boavista"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Ribeira",
+        "Baixa",
+        "Cedofeita",
+        "Boavista"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 13,
+        "low": 7,
+        "rain_days": 12,
+        "note": "January: cool and wet. Pack a rain jacket and plan indoor sights."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 10,
+        "note": "February: still cool with about 10 rain days. Bring layers."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 13,
+        "note": "March: mild but one of the wettest months. Keep plans flexible."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 12,
+        "note": "April: warmer and drier. Good for walking the old town."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 9,
+        "note": "May: pleasant days around 20°C. A strong month to visit."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 8,
+        "note": "June: warm and fairly dry. Long evenings by the river."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 3,
+        "note": "July: warmest and driest. Book hotels and cellar tours early."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 3,
+        "note": "August: hot and dry, and busy with visitors. Go early or late in the day."
+      },
+      {
+        "high": 23,
+        "low": 16,
+        "rain_days": 6,
+        "note": "September: still warm and drier than autumn. Good value."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 13,
+        "note": "October: rain returns, about 13 rain days. Carry an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 14,
+        "note": "November: wet and cooler. Fewer crowds, lower prices."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 14,
+        "note": "December: cool and wet with festive lights in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.65,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nightlife": [
+      0.5,
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.55
+    ]
+  },
+  "places": {
+    "ribeira": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Ribeira",
+      "popularity": 5
+    },
+    "domluis": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon for light",
+      "area": "Ribeira",
+      "popularity": 5
+    },
+    "lello": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "First thing in the morning",
+      "area": "Baixa",
+      "popularity": 5
+    },
+    "clerigos": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "bolsa": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday or rainy day",
+      "area": "Ribeira",
+      "popularity": 4
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Ribeira",
+      "popularity": 4
+    },
+    "sixbridges": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Ribeira",
+      "popularity": 4
+    },
+    "casamusica": {
+      "types": [
+        "culture",
+        "art",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening for a concert",
+      "area": "Boavista",
+      "popularity": 3
+    },
+    "douro": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Ribeira",
+      "popularity": 5
+    },
+    "dragao": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Boavista",
+      "popularity": 3
+    },
+    "sealife": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or midday",
+      "area": "Boavista",
+      "popularity": 3
+    },
+    "saofrancisco": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Ribeira",
+      "popularity": 4
+    },
+    "university": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Baixa",
+      "popularity": 2
+    },
+    "bolhao": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, Mon–Sat",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "virtudes": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Cedofeita",
+      "popularity": 3
+    },
+    "portowalk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Ribeira",
+      "popularity": 5
+    },
+    "cedofeita": {
+      "types": [
+        "culture",
+        "art",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Cedofeita",
+      "popularity": 3
+    },
+    "foz": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Boavista",
+      "popularity": 4
+    },
+    "tram1": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Ribeira",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover Ribeira, the bridges, Port cellars and Serralves; add a night for a Douro or coastal day trip."
+  },
+  "airports": [
+    {
+      "code": "OPO",
+      "name": "Francisco de Sá Carneiro Airport",
+      "primary": true,
+      "note": "Main international hub, about 12 km north of the centre.",
+      "options": [
+        {
+          "mode": "Metro line E",
+          "to": "City centre (Trindade, Bolhão)",
+          "price": "€2.15 plus €0.60 card",
+          "time": "25-35 min",
+          "note": "Cheapest option; runs about 06:00-01:00."
+        },
+        {
+          "mode": "STCP bus 601/602/604",
+          "to": "City centre",
+          "price": "€2-3",
+          "time": "30-45 min",
+          "note": "Runs about 05:30-00:30 every 25 min."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€10-25",
+          "time": "20-30 min",
+          "note": "Easy with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "20-30 min",
+          "note": "Metered; confirm the fare first."
+        }
+      ]
+    },
+    {
+      "code": "LIS",
+      "name": "Lisbon Portela Airport",
+      "primary": false,
+      "note": "Alternative gateway, about 300 km south; connect by train.",
+      "options": [
+        {
+          "mode": "Metro then train",
+          "to": "Porto Campanhã",
+          "price": "€30-50",
+          "time": "3-3.5 hr",
+          "note": "Metro to Oriente, then Alfa Pendular or Intercidades."
+        },
+        {
+          "mode": "Long-distance bus",
+          "to": "Porto Campanhã",
+          "price": "€15-30",
+          "time": "3.5-4 hr",
+          "note": "Rede Expressos and Flixbus run often."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Porto",
+          "price": "check locally",
+          "time": "3-3.5 hr",
+          "note": "Expensive; train is better."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Porto",
+      "https://en.wikivoyage.org/wiki/Porto"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk in the centre and use the metro for longer hops; use Uber or Bolt for the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Line E links the airport to the centre. Validate your Andante card before boarding."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "STCP buses cover the city. Night bus 3M runs to the airport hourly."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Bolt work well. Airport rides cost about €10–25."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic: narrow hilly streets and hard parking. Best avoided."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The best way around the centre, though it is hilly."
+      },
+      {
+        "mode": "Boat",
+        "has": true,
+        "text": "Douro river boats and the Leixões harbour serve cruise and tour trips."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Atlantic climate: wet from October to March, warm and dry in July and August.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 20–25°C and few rain days, especially July and August."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest months: October to March",
+        "text": "Around 12–14 rain days a month. Bring a rain jacket and waterproof shoes."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild winters",
+        "text": "January highs near 13°C and lows near 7°C. Rarely freezing, but damp and chilly."
+      },
+      {
+        "icon": "🥵",
+        "title": "Warm summers, not extreme",
+        "text": "July and August peak around 24–25°C. Comfortable for walking, but the hills are steep."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain can come any month",
+        "text": "Even summer has a few wet days. A small umbrella is worth packing."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and comfortable shoes for cobbled hills. Add sunglasses and a hat for summer."
+      }
+    ]
+  }
+}

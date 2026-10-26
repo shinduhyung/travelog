@@ -1,0 +1,916 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A full culture day in the centre: museums, the Spodek and Nikiszowiec's brick lanes.",
+      "days": [
+        {
+          "title": "Museums and the Spodek",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Usually closed Monday. Go early on a weekday for quiet galleries."
+            },
+            {
+              "place": "viewpoint",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Mine tower lift inside the museum grounds. Clear afternoons are best."
+            },
+            {
+              "place": "pierogi",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the centre. Check opening hours on the day."
+            },
+            {
+              "place": "spodek",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Exterior always visible. Interior only during events."
+            },
+            {
+              "place": "nikiszowiec",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Short tram or bus ride from the centre. Walk the red-brick lanes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Mining heritage and WWII memory in one long day. Start early and book ahead.",
+      "days": [
+        {
+          "title": "Auschwitz, then the old industrial heart",
+          "stops": [
+            {
+              "place": "auschwitz",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Book ahead. Hours vary by season, so check on the day. Allow travel time from Katowice."
+            },
+            {
+              "place": "pierogi",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch back in the centre."
+            },
+            {
+              "place": "silesian-museum",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Usually closed Monday. Mining and regional history."
+            },
+            {
+              "place": "nikiszowiec",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Workers' estate with a mining past. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście"
+    },
+    {
+      "id": "day-budget",
+      "length": "day",
+      "style": "budget",
+      "nights": 0,
+      "for": "Cheap and compact: walk the centre, ride a tram, eat well for little.",
+      "days": [
+        {
+          "title": "Centre on foot and by tram",
+          "stops": [
+            {
+              "place": "walking-tour",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually daily. Book ahead and check on the day."
+            },
+            {
+              "place": "food-market",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Mornings, mostly weekdays. Check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Cheap, filling lunch."
+            },
+            {
+              "place": "tram-ride",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Buy a short ticket and ride across the city."
+            },
+            {
+              "place": "rynek",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Always open. Good for a coffee and a wander."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museums and brick lanes: a compact culture day in the centre, then Nikiszowiec.",
+      "days": [
+        {
+          "title": "Arrive, museum quarter and Rynek",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Usually closed Monday. Check hours on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Mine tower view over the city. Clear afternoons are best."
+            },
+            {
+              "place": "spodek",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Short tram ride from the centre. The outside is always visible."
+            },
+            {
+              "place": "rynek",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening stroll on the square."
+            },
+            {
+              "place": "pierogi",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the centre. Check opening times."
+            }
+          ]
+        },
+        {
+          "title": "Nikiszowiec, then go",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Red-brick miners' estate. Take a tram or bus from the centre."
+            },
+            {
+              "place": "food-market",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Mornings are best, mostly weekdays. Check on the day."
+            },
+            {
+              "place": "walking-tour",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Central walk to tie the sights together. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near the Rynek"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Mining heritage and WWII memory: museum and Nikiszowiec on day one, Auschwitz on day two.",
+      "days": [
+        {
+          "title": "Arrive, museum and Nikiszowiec",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Former mine site. Usually closed Monday."
+            },
+            {
+              "place": "koszutka-walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Modernist district, easy to walk on your own."
+            },
+            {
+              "place": "nikiszowiec",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Old workers' estate. Daytime light is best, so go earlier if you can."
+            },
+            {
+              "place": "pierogi",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner back in the centre."
+            }
+          ]
+        },
+        {
+          "title": "Auschwitz, then go",
+          "stops": [
+            {
+              "place": "auschwitz",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Book ahead. Open daily, hours vary by season. Allow travel time from Katowice."
+            },
+            {
+              "place": "rynek",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Slow walk on the square before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near the Rynek"
+    },
+    {
+      "id": "1n-budget",
+      "length": "1n",
+      "style": "budget",
+      "nights": 1,
+      "for": "Cheap and walkable: market food, free streets and a tram ride across town.",
+      "days": [
+        {
+          "title": "Arrive, centre on foot",
+          "stops": [
+            {
+              "place": "food-market",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Cheap lunch. Mornings and weekdays are best."
+            },
+            {
+              "place": "walking-tour",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Tip-based walks are common. Book ahead."
+            },
+            {
+              "place": "tram-ride",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Buy a short ticket and ride across the centre."
+            },
+            {
+              "place": "rynek",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Free to wander. Busiest in the evening."
+            },
+            {
+              "place": "mariacka",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Cheap bars. Busiest at night."
+            }
+          ]
+        },
+        {
+          "title": "Parks and lanes, then go",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Free to walk. Take a tram or bus."
+            },
+            {
+              "place": "park-slaski",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Free park. Weekend daytime is liveliest."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Filling late lunch before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near the Rynek"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums, the Spodek and Nikiszowiec's brick lanes at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Rynek and Mariacka",
+          "stops": [
+            {
+              "place": "rynek",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. Always open."
+            },
+            {
+              "place": "mariacka",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk from the Rynek. Bars get busy later."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Lunch or early dinner in the centre. Check on the day."
+            },
+            {
+              "place": "spodek",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Exterior always visible. Interior only during events."
+            }
+          ]
+        },
+        {
+          "title": "Silesian Museum and the tower view",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Usually Tue–Sun, closed Monday. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Mine tower viewpoint. Museum hours apply."
+            },
+            {
+              "place": "food-market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Mornings, mostly weekdays. Check on the day."
+            },
+            {
+              "place": "koszutka-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Modernist district, always open. Daytime is best."
+            }
+          ]
+        },
+        {
+          "title": "Nikiszowiec, then out",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Brick workers' estate. Always open, best in daytime."
+            },
+            {
+              "place": "walking-tour",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Central tour, usually daily. Book ahead and check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Last meal before you go. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near the Rynek"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors focused on mining heritage and WWII history, with an early start for Auschwitz-Birkenau.",
+      "days": [
+        {
+          "title": "Arrive and central history",
+          "stops": [
+            {
+              "place": "walking-tour",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually daily. Book ahead and check on the day."
+            },
+            {
+              "place": "rynek",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Always open. Good for an evening stroll."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the centre. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Auschwitz-Birkenau, full day",
+          "stops": [
+            {
+              "place": "auschwitz",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Open daily, hours vary by season. Book ahead and check on the day. Allow extra time for travel."
+            },
+            {
+              "place": "nightlife",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Quiet evening bars near the Rynek. Busiest Thu–Sat."
+            }
+          ]
+        },
+        {
+          "title": "Museum and Nikiszowiec",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Usually Tue–Sun, closed Monday. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Mine tower viewpoint. Museum hours apply."
+            },
+            {
+              "place": "nikiszowiec",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Always open, best in daytime. Mining-era housing."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near the Rynek"
+    },
+    {
+      "id": "2n-budget",
+      "length": "2n",
+      "style": "budget",
+      "nights": 2,
+      "for": "Travellers keeping costs low: cheap food, free streets and parks, and a tram to see the city.",
+      "days": [
+        {
+          "title": "Arrive, Rynek and cheap eats",
+          "stops": [
+            {
+              "place": "rynek",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Always open and free to wander."
+            },
+            {
+              "place": "mariacka",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk away. Bars are cheaper early."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Filling and cheap. Check on the day."
+            },
+            {
+              "place": "tram-ride",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Day and night service. Buy a single ticket."
+            }
+          ]
+        },
+        {
+          "title": "Free sights and the park",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Always open and free to walk."
+            },
+            {
+              "place": "park-slaski",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Always open. Weekend daytime is best."
+            },
+            {
+              "place": "legendia",
+              "at": "15:00",
+              "minutes": 240,
+              "note": "Seasonal, mostly spring–autumn. Check on the day and prices."
+            }
+          ]
+        },
+        {
+          "title": "Market and museum tower",
+          "stops": [
+            {
+              "place": "food-market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Mornings, mostly weekdays. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Museum hours apply. Check on the day."
+            },
+            {
+              "place": "koszutka-walk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Always open and free."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Last cheap meal before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near the Rynek"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, the Spodek and Nikiszowiec's brick lanes at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Rynek and Mariacka",
+          "stops": [
+            {
+              "place": "rynek",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start at the central square to get your bearings."
+            },
+            {
+              "place": "mariacka",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk from the Rynek. Bars get busy at night."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Lunch or early dinner in the centre. Check on the day."
+            },
+            {
+              "place": "spodek",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Exterior always visible. Interior only during events."
+            }
+          ]
+        },
+        {
+          "title": "Silesian Museum and the tower",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Usually Tue–Sun, closed Monday. Check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Mine tower viewpoint, same site. Best on a clear afternoon."
+            },
+            {
+              "place": "food-market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Mornings mostly weekdays. Check on the day."
+            },
+            {
+              "place": "walking-tour",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually daily, book ahead. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Nikiszowiec and Koszutka",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Brick workers' district. Go in daytime."
+            },
+            {
+              "place": "koszutka-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Modernist district, always open."
+            },
+            {
+              "place": "tram-ride",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Cheap way to see the city. Day and night service."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars around the Rynek, busiest Thu–Sat."
+            }
+          ]
+        },
+        {
+          "title": "Auschwitz day trip, then fly",
+          "stops": [
+            {
+              "place": "auschwitz",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Book ahead. Open daily, hours vary by season. Check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late lunch back in the centre. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near the Rynek"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors focused on mining heritage, WWII sites and the old industrial heart.",
+      "days": [
+        {
+          "title": "Arrive and central history",
+          "stops": [
+            {
+              "place": "walking-tour",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually daily, book ahead. Check on the day."
+            },
+            {
+              "place": "rynek",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Always open. Good for an evening stroll."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the centre. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum and tower",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Mining and regional history. Closed Monday, check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Mine tower viewpoint. Check on the day."
+            },
+            {
+              "place": "food-market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Mornings mostly weekdays. Check on the day."
+            },
+            {
+              "place": "spodek",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Exterior always visible. Interior only during events."
+            }
+          ]
+        },
+        {
+          "title": "Nikiszowiec and Koszutka",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Old workers' district, daytime visit."
+            },
+            {
+              "place": "koszutka-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Modernist housing and planning history."
+            },
+            {
+              "place": "tram-ride",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Cheap ride across the city."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening bars near the Rynek."
+            }
+          ]
+        },
+        {
+          "title": "Auschwitz day trip, then fly",
+          "stops": [
+            {
+              "place": "auschwitz",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Book ahead. Hours vary by season. Check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late lunch before departure. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near the Rynek"
+    },
+    {
+      "id": "3n-budget",
+      "length": "3n",
+      "style": "budget",
+      "nights": 3,
+      "for": "Travellers who want cheap tickets, cheap food and a compact, walkable centre.",
+      "days": [
+        {
+          "title": "Arrive, Rynek and Mariacka",
+          "stops": [
+            {
+              "place": "rynek",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Free and always open."
+            },
+            {
+              "place": "mariacka",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk. Bars busiest at night."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Cheap, filling lunch or dinner. Check on the day."
+            },
+            {
+              "place": "spodek",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Exterior always visible, free to see."
+            }
+          ]
+        },
+        {
+          "title": "Museum, tower and market",
+          "stops": [
+            {
+              "place": "silesian-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Check ticket prices on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Mine tower viewpoint. Check on the day."
+            },
+            {
+              "place": "food-market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Cheap eats, mornings mostly weekdays. Check on the day."
+            },
+            {
+              "place": "tram-ride",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Cheap way to cross the city."
+            }
+          ]
+        },
+        {
+          "title": "Nikiszowiec and Koszutka",
+          "stops": [
+            {
+              "place": "nikiszowiec",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Free to wander, daytime."
+            },
+            {
+              "place": "koszutka-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Free self-guided walk."
+            },
+            {
+              "place": "park-slaski",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Free park, best on a weekend daytime."
+            },
+            {
+              "place": "nightlife",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Budget bars near the Rynek."
+            }
+          ]
+        },
+        {
+          "title": "Auschwitz day trip, then fly",
+          "stops": [
+            {
+              "place": "auschwitz",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Book ahead, entry is free but reserve. Check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Cheap late lunch. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near the Rynek"
+    }
+  ]
+}

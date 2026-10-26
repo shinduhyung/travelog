@@ -1,0 +1,590 @@
+{
+  "city": "George Town",
+  "checked": "October 2026",
+  "intro_line": "Penang's heritage port where cultures, food and street art collide.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "UNESCO Heritage Site",
+        "Gurney Drive",
+        "Tanjung Tokong",
+        "Batu Ferringhi"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "UNESCO Heritage Site",
+        "Gurney Drive",
+        "Tanjung Tokong",
+        "Batu Ferringhi"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "UNESCO Heritage Site",
+        "Gurney Drive",
+        "Tanjung Tokong",
+        "Batu Ferringhi"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "UNESCO Heritage Site",
+        "Gurney Drive",
+        "Tanjung Tokong",
+        "Batu Ferringhi"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "UNESCO Heritage Site",
+        "Gurney Drive",
+        "Tanjung Tokong",
+        "Batu Ferringhi"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 19,
+        "note": "January: warm and fairly dry (19 rain days). Good for walking the heritage core."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 15,
+        "note": "February: the driest month (15 rain days). One of the best times to visit."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 23,
+        "note": "March: rain picks up (23 days). Plan indoor food stops for afternoon showers."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 28,
+        "note": "April: wet (28 rain days). Carry a light rain jacket and keep plans flexible."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 28,
+        "note": "May: wet (28 days) and warm nights. Short heavy showers are likely."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 23,
+        "note": "June: still wet (23 days) but a little drier than May. Mornings are best."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 22,
+        "note": "July: moderate rain (22 days). Good window for outdoor sights early in the day."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 26,
+        "note": "August: wetter again (26 days). Expect afternoon downpours."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 27,
+        "note": "September: wet (27 days). Indoor markets and cafés are good backups."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 28,
+        "note": "October: very wet (28 days). Check forecasts before hill or beach trips."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 30,
+        "note": "November: the wettest month (30 rain days). Pack rain gear and plan short walks."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 23,
+        "note": "December: still wet (23 days) but easing. Warm days around 29°C."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.65,
+      0.55,
+      0.55,
+      0.65,
+      0.7,
+      0.65,
+      0.6,
+      0.55,
+      0.5,
+      0.65
+    ]
+  },
+  "places": {
+    "unesco_zone": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon to avoid heat",
+      "area": "UNESCO Heritage Site",
+      "popularity": 5
+    },
+    "fort_cornwallis": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning before the heat peaks",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "khoo_kongsi": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "peranakan_mansion": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday when it is hot outside",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "clan_jetties": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "kek_lok_si": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; busy around Chinese New Year",
+      "area": "Tanjung Tokong",
+      "popularity": 5
+    },
+    "batu_ferringhi": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Batu Ferringhi",
+      "popularity": 4
+    },
+    "penang_hill": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Early morning or after sunset for city lights",
+      "area": "Tanjung Tokong",
+      "popularity": 5
+    },
+    "chowrasta_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "hawker_food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "street_art_walk": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "gurney_drive": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Gurney Drive",
+      "popularity": 4
+    },
+    "chew_jetty": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "tropical_spice_garden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Batu Ferringhi",
+      "popularity": 3
+    },
+    "trishaw_ride": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "armenia_street": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "UNESCO Heritage Site",
+      "popularity": 4
+    },
+    "penang_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "batu_night_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Batu Ferringhi",
+      "popularity": 3
+    },
+    "esplanade_viewpoint": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "ferry_ride": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "little_india": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late morning or evening",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "botanic_gardens": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Tanjung Tokong",
+      "popularity": 3
+    },
+    "cooking_class": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning or afternoon session",
+      "area": "UNESCO Heritage Site",
+      "popularity": 3
+    },
+    "sunset_cruise": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "UNESCO Heritage Site",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the heritage core, the food and the murals at an easy pace; add a night for Penang Hill and the beaches."
+  },
+  "airports": [
+    {
+      "code": "PEN",
+      "name": "Penang International Airport",
+      "primary": true,
+      "note": "Main gateway, about 14-16 km south of the centre.",
+      "options": [
+        {
+          "mode": "Rapid Penang bus 102/401/401E",
+          "to": "KOMTAR",
+          "price": "RM2.70",
+          "time": "45-60 min",
+          "note": "Exact fare only; drivers give no change."
+        },
+        {
+          "mode": "Taxi coupon",
+          "to": "George Town centre",
+          "price": "RM44.70",
+          "time": "25-40 min",
+          "note": "Buy coupon at arrivals counter; RM67 midnight-6AM."
+        },
+        {
+          "mode": "Grab",
+          "to": "George Town centre",
+          "price": "RM35-50",
+          "time": "25-40 min",
+          "note": "Pickup point may be outside the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: George Town",
+      "https://en.wikivoyage.org/wiki/George%20Town"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk the heritage core and use Grab or Rapid Penang buses for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram on Penang Island. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Rapid Penang buses fan out from Weld Quay via KOMTAR; fares RM1.40–4. Free CAT buses loop the heritage core and modern centre."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Grab is the main ride app. Taxis use a coupon system or meter; agree the price first."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible but traffic and parking in the heritage core are hard. Most visitors skip it."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The heritage core is compact and walkable. Link Bike day pass is RM6."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Rapid Ferry links Butterworth rail station to Weld Quay, RM1.20."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, around 29–31°C by day and 25–26°C at night. Rain is common in every month, heaviest from September to November.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Hot all year",
+        "text": "Highs stay near 29–31°C and lows near 25–26°C. No cool season; pack light clothes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect 15–30 rain days a month. Showers are often short and heavy, not all-day."
+      },
+      {
+        "icon": "☂️",
+        "title": "Driest window: January to February",
+        "text": "15–19 rain days. The best odds for dry sightseeing and outdoor walks."
+      },
+      {
+        "icon": "🌊",
+        "title": "Wettest: September to November",
+        "text": "27–30 rain days. Keep indoor backups and check forecasts before hill or beach trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Humidity and heat",
+        "text": "Muggy most days. Walk early morning or evening and rest in air-conditioned cafés at midday."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a compact umbrella or rain jacket, sandals, and sunscreen."
+      }
+    ]
+  }
+}

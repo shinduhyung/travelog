@@ -1,0 +1,30 @@
+$ deepseek_facts.py St. Petersburg
+  tokens in 4469 out 552
+St. Petersburg: 0 problems
+
+$ deepseek_city.py St. Petersburg --stage places
+St. Petersburg: places
+  tokens in 1257 out 4206
+
+$ deepseek_city.py St. Petersburg --stage frame
+St. Petersburg: frame
+  tokens in 2475 out 1870
+  repaired JSON
+
+$ deepseek_city.py St. Petersburg --stage plans
+St. Petersburg: plans
+  plans for day
+  tokens in 2588 out 821
+  plans for 1n
+  tokens in 2589 out 945
+  plans for 2n
+  tokens in 2589 out 1667
+  plans for 3n
+  tokens in 2594 out 1900
+  plans for 4n
+  tokens in 2589 out 2099
+
+$ merge_city.py St. Petersburg
+St. Petersburg: 28 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/st-petersburg.json and planner/st-petersburg.json
+

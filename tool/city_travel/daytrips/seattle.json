@@ -1,0 +1,108 @@
+{
+ "city": "Seattle",
+ "trips": [
+  {
+   "place": "Bainbridge Island",
+   "label": "",
+   "position": {
+    "id": 462698,
+    "name": "Bainbridge Island, WA",
+    "city": "Bainbridge Island",
+    "lat": 47.62621,
+    "lng": -122.52124
+   },
+   "town": {
+    "name": "Bainbridge Island",
+    "lat": 47.62621,
+    "lng": -122.52124
+   },
+   "road": {
+    "km": 147,
+    "min": 126,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 370.0,
+    "currency": "USD"
+   },
+   "modes": {},
+   "route_note": "Washington State Ferries sail directly from downtown Seattle's Colman Dock to Winslow in about 35 minutes; the town center is a short walk from the ferry terminal.",
+   "see": [
+    "Winslow downtown stroll",
+    "Bainbridge Island Museum of Art",
+    "Bloedel Reserve",
+    "Waterfront park and cafes"
+   ],
+   "visit": "Half day",
+   "tour_query": "Bainbridge Island ferry day trip from Seattle",
+   "quests": [],
+   "recommended": "tour",
+   "why": "The ferry crossing is only about 35 minutes, but the island's sights are spread out beyond the walkable Winslow town center, so a tour handles the last-mile problem.",
+   "stars": 4,
+   "know": [
+    "Ferries run frequently from Colman Dock and the town center is a short walk from the terminal",
+    "Go on a clear day for the best views of the Seattle skyline and Mount Rainier"
+   ]
+  },
+  {
+   "place": "Tacoma",
+   "label": "",
+   "position": {
+    "id": 316580,
+    "name": "Seattle-Tacoma International Airport, WA",
+    "city": "SeaTac",
+    "lat": 47.44443,
+    "lng": -122.3005
+   },
+   "town": {
+    "name": "Tacoma",
+    "lat": 47.25288,
+    "lng": -122.44429
+   },
+   "road": {
+    "km": 54,
+    "min": 45,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 140.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$21-$35",
+     "time": "55m",
+     "via": "King Street Station to Tacoma Dome Station",
+     "source": "https://www.rome2rio.com/s/Seattle/Tacoma"
+    },
+    "bus": {
+     "from": "$3",
+     "time": "53m",
+     "via": "2nd Ave & Marion St to Pacific Ave & S 14th St",
+     "source": "https://www.rome2rio.com/s/Seattle/Tacoma"
+    }
+   },
+   "route_note": "Sound Transit Sounder commuter rail runs directly from King Street Station to Tacoma in about an hour, or take the faster Amtrak Cascades; local buses connect the station to the museums and waterfront.",
+   "see": [
+    "Museum of Glass",
+    "Point Defiance Park",
+    "Tacoma Art Museum",
+    "Ruston Way waterfront"
+   ],
+   "visit": "Full day",
+   "tour_query": "Tacoma day trip from Seattle",
+   "quests": [],
+   "recommended": "train",
+   "why": "The Sounder commuter rail runs directly from King Street Station to Tacoma in about an hour and local buses connect the station to the museums and waterfront.",
+   "stars": 3,
+   "know": [
+    "Museums like the Museum of Glass often close on Mondays",
+    "Check the Sounder schedule since commuter service is limited on weekends"
+   ]
+  }
+ ],
+ "problems": [
+  "Snoqualmie: not a town in cities15000.json (US), dropped",
+  "Leavenworth: not a town in cities15000.json (US), dropped"
+ ]
+}

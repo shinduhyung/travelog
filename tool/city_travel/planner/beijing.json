@@ -1,0 +1,667 @@
+{
+  "city": "Beijing",
+  "checked": "October 2026",
+  "intro_line": "Ancient emperors' capital, now a vast modern metropolis.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Dongcheng (Forbidden City)",
+        "Chaoyang (Sanlitun)",
+        "Xicheng (Houhai)",
+        "Wangfujing"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Dongcheng (Forbidden City)",
+        "Chaoyang (Sanlitun)",
+        "Xicheng (Houhai)",
+        "Wangfujing"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Dongcheng (Forbidden City)",
+        "Chaoyang (Sanlitun)",
+        "Xicheng (Houhai)",
+        "Wangfujing"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Dongcheng (Forbidden City)",
+        "Chaoyang (Sanlitun)",
+        "Xicheng (Houhai)",
+        "Wangfujing"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Dongcheng (Forbidden City)",
+        "Chaoyang (Sanlitun)",
+        "Xicheng (Houhai)",
+        "Wangfujing"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 3,
+        "low": -7,
+        "rain_days": 0,
+        "note": "Coldest month: highs near 3°C, lows around -7°C. Pack a heavy coat, hat and gloves."
+      },
+      {
+        "high": 6,
+        "low": -5,
+        "rain_days": 2,
+        "note": "Still cold, highs near 6°C and lows around -5°C. Few rainy days; layer up."
+      },
+      {
+        "high": 15,
+        "low": 1,
+        "rain_days": 3,
+        "note": "Warming up: highs near 15°C, lows around 1°C. Good for walking the Wall."
+      },
+      {
+        "high": 22,
+        "low": 8,
+        "rain_days": 3,
+        "note": "Pleasant spring: highs near 22°C, lows around 8°C. Light jacket for evenings."
+      },
+      {
+        "high": 28,
+        "low": 14,
+        "rain_days": 5,
+        "note": "Warm and dry: highs near 28°C, lows around 14°C. Great sightseeing weather."
+      },
+      {
+        "high": 33,
+        "low": 20,
+        "rain_days": 6,
+        "note": "Hot: highs near 33°C, lows around 20°C. Start early and rest at midday."
+      },
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 14,
+        "note": "Hottest and wettest: highs near 32°C, about 14 rain days. Carry an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 12,
+        "note": "Hot and humid: highs near 30°C, about 12 rain days. Stay hydrated."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 6,
+        "note": "Cooling down: highs near 27°C, lows around 16°C. One of the best months."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 4,
+        "note": "Mild and clear: highs near 19°C, lows around 8°C. Ideal for the Great Wall."
+      },
+      {
+        "high": 10,
+        "low": 0,
+        "rain_days": 3,
+        "note": "Cool: highs near 10°C, lows around 0°C. Warm layers needed."
+      },
+      {
+        "high": 3,
+        "low": -6,
+        "rain_days": 1,
+        "note": "Cold again: highs near 3°C, lows around -6°C. Few rainy days; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.6,
+      0.9,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "culture": [
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.6,
+      0.9,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.75,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "shopping": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.75,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "family": [
+      0.5,
+      0.6,
+      0.8,
+      0.95,
+      0.9,
+      0.7,
+      0.5,
+      0.55,
+      0.9,
+      0.95,
+      0.75,
+      0.5
+    ]
+  },
+  "places": {
+    "forbidden_city": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning at opening; avoid weekends and holidays",
+      "area": "Dongcheng (Forbidden City)",
+      "popularity": 5
+    },
+    "great_wall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn for clear, cool weather",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 5
+    },
+    "summer_palace": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning; autumn colours are best",
+      "area": "Xicheng (Houhai)",
+      "popularity": 5
+    },
+    "temple_of_heaven": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Dongcheng (Forbidden City)",
+      "popularity": 5
+    },
+    "tiananmen": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Dongcheng (Forbidden City)",
+      "popularity": 5
+    },
+    "birds_nest": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening for the lights",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 4
+    },
+    "ming_tombs": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning; combine with the Great Wall",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "beihai": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon; lovely in autumn",
+      "area": "Xicheng (Houhai)",
+      "popularity": 4
+    },
+    "blue_zoo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; good rainy-day option",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "shijingshan": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday; summer and holidays are busy",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 2
+    },
+    "beijing_zoo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Xicheng (Houhai)",
+      "popularity": 4
+    },
+    "cctv": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Dusk for the skyline",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "champion_pizza": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 2
+    },
+    "china_zun": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "cotti_coffee": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Morning coffee",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 2
+    },
+    "drum_bell": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon, then wander the hutongs",
+      "area": "Xicheng (Houhai)",
+      "popularity": 4
+    },
+    "happy_valley": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday; summer season",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "jingshan": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Dongcheng (Forbidden City)",
+      "popularity": 4
+    },
+    "lama_temple": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Dongcheng (Forbidden City)",
+      "popularity": 4
+    },
+    "mi_bibimbap": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 2
+    },
+    "mutianyu_cable": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning; clear autumn days",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 4
+    },
+    "ghost_market": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "hutong_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Xicheng (Houhai)",
+      "popularity": 4
+    },
+    "peking_duck": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner; book ahead",
+      "area": "Dongcheng (Forbidden City)",
+      "popularity": 4
+    },
+    "wangfujing": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Wangfujing",
+      "popularity": 4
+    },
+    "olympic_park": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 3
+    },
+    "p798": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Chaoyang (Sanlitun)",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Forbidden City, a Great Wall day and a hutong evening without rushing."
+  },
+  "airports": [
+    {
+      "code": "PEK",
+      "name": "Beijing Capital International Airport",
+      "primary": true,
+      "note": "Main older hub, 25 km northeast of centre.",
+      "options": [
+        {
+          "mode": "Capital Airport Express",
+          "to": "Dongzhimen / Sanyuanqiao",
+          "price": "¥25",
+          "time": "25 min",
+          "note": "Trains every 10-15 min, 06:30-23:00; buy a separate subway ticket after."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city points",
+          "price": "¥25-40",
+          "time": "60-90 min",
+          "note": "Slower but useful with heavy bags."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥100-150",
+          "time": "40-60 min",
+          "note": "Use the official taxi rank; expect queues."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥100-150",
+          "time": "40-60 min",
+          "note": "Needs Alipay or WeChat Pay set up."
+        }
+      ]
+    },
+    {
+      "code": "PKX",
+      "name": "Beijing Daxing International Airport",
+      "primary": false,
+      "note": "Newer southern hub, 44 km from centre.",
+      "options": [
+        {
+          "mode": "Daxing Airport Express",
+          "to": "Caoqiao (Line 10)",
+          "price": "¥35",
+          "time": "22 min",
+          "note": "Runs every ~10 min; ticket machines may reject foreign passports, so use a cashier."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city points",
+          "price": "¥25-40",
+          "time": "~90 min",
+          "note": "Good if your hotel is off the express line."
+        },
+        {
+          "mode": "Beijing-Xiong'an high-speed rail",
+          "to": "Beijing West Railway Station",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Connects to the national high-speed network."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "~¥200 incl. toll",
+          "time": "60-90 min",
+          "note": "Metered; toll added."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "~¥200",
+          "time": "60-90 min",
+          "note": "Works with Alipay or WeChat Pay."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Beijing",
+      "https://en.wikivoyage.org/wiki/Beijing"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for most trips; DiDi or Alipay taxis for late nights and places off the metro.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Extensive, cheap (¥3–10) and reaches most sights. Buy a Yikatong card or use Alipay/WeChat."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent but hard to navigate without Chinese; fares around ¥2."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Metered taxis, but drivers rarely speak English; show place names in Chinese characters. DiDi works and can be paid via Alipay or WeChat; Alipay also books taxis in English."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Needs a Chinese licence and a Beijing entry permit (进京证); most visitors skip driving."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in hutongs and parks. Use Baidu or Amap maps, not Google."
+      },
+      {
+        "mode": "Shared bike",
+        "has": true,
+        "text": "Dockless shared bikes are great for last-mile trips; use Baidu or Amap maps."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, dry winters and hot, rainy summers. Spring and autumn are the best times to visit.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April, May, September, October",
+        "text": "Highs around 19–28°C with low rain. Perfect for the Great Wall and long walks."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold and dry",
+        "text": "December to February highs near 3–6°C and lows below freezing. Very little rain; pack a heavy coat."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and wet",
+        "text": "June to August highs near 30–33°C, with the most rain in July. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain peaks in July and August",
+        "text": "About 12–14 rain days a month then. Other months are mostly dry."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Spring can be windy and dusty",
+        "text": "March and April bring wind; air quality varies. Check the day's forecast before outdoor plans."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a heavy coat for winter, light breathable clothes and an umbrella for summer. Comfortable shoes for long walks."
+      }
+    ]
+  }
+}

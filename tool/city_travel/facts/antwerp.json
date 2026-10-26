@@ -1,0 +1,236 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Antwerp blends diamond trade, grand station, and medieval streets.",
+  "intro": "Antwerp rewards visitors with a stunning station, a lively old town, and a strong fashion and art scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Old Town (Centrum)",
+    "Het Zuid",
+    "Station District",
+    "Eilandje"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 8,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "De Lijn runs trams, buses, and pre-metro trams; a 10-fare card costs about €21.",
+    "Single fares last one hour; pay contactless on board, cash is not accepted.",
+    "Ride apps like Uber and Bolt work in Antwerp; taxis wait at the station and main squares.",
+    "The centre is compact and walkable; many streets are narrow and slow for cars.",
+    "Bikes are popular; cycle superhighways F1, F4, and F14 reach the city.",
+    "The city centre is a low-emission zone; register foreign cars before entering."
+  ],
+  "airports": [
+    {
+      "code": "ANR",
+      "name": "Antwerp International Airport (Deurne)",
+      "primary": true,
+      "note": "Small airport 5 km from the centre, mostly seasonal leisure flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "€3",
+          "time": "20-30 min",
+          "note": "Regular bus links the airport to the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€10-15",
+          "time": "15-20 min",
+          "note": "Quick trip; small airport means fast arrivals."
+        }
+      ]
+    },
+    {
+      "code": "BRU",
+      "name": "Brussels Airport",
+      "primary": false,
+      "note": "Main international hub, about 45 km south of Antwerp.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Antwerpen Centraal",
+          "price": "€11.30",
+          "time": "25-45 min",
+          "note": "Hourly direct trains; slower on weekends."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Franklin Rooseveltplaats / Crowne Plaza",
+          "price": "€10",
+          "time": "45-60 min",
+          "note": "Two stops in Antwerp; check the schedule."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€70-90",
+          "time": "40-50 min",
+          "note": "Fixed fares vary; agree before riding."
+        }
+      ]
+    },
+    {
+      "code": "AMS",
+      "name": "Amsterdam Airport Schiphol",
+      "primary": false,
+      "note": "Major international hub about 130 km north, with direct rail links.",
+      "options": [
+        {
+          "mode": "Train (EuroCity + IC)",
+          "to": "Antwerpen Centraal",
+          "price": "€25",
+          "time": "2 hr",
+          "note": "Cheapest route; transfer at Rotterdam Centraal."
+        },
+        {
+          "mode": "EuroCity Direct train",
+          "to": "Antwerpen Centraal",
+          "price": "€21-51",
+          "time": "1 hr 13 min",
+          "note": "Hourly direct; book early for lower fares."
+        },
+        {
+          "mode": "Eurostar",
+          "to": "Antwerpen Centraal",
+          "price": "€40-100",
+          "time": "1 hr 3 min",
+          "note": "Reservation required; book ahead."
+        },
+        {
+          "mode": "KLM shuttle bus",
+          "to": "Antwerpen Centraal",
+          "price": "check locally",
+          "time": "2.5 hr",
+          "note": "Bookable as a KLM flight segment."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-200",
+          "time": "1.5-2 hr",
+          "note": "Long drive; train is usually better."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Antwerp Central Station",
+    "Cathedral of Our Lady, Antwerp",
+    "Grote Markt",
+    "Museum aan de Stroom",
+    "Duvel Moortgat",
+    "Plopsa Station",
+    "Tomorrowland"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Antwerp",
+      "https://en.wikivoyage.org/wiki/Antwerp"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    51.22047,
+    4.40026
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 7,
+      "low": 2,
+      "rain_days": 14
+    },
+    {
+      "high": 9,
+      "low": 2,
+      "rain_days": 13
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 14
+    },
+    {
+      "high": 14,
+      "low": 5,
+      "rain_days": 11
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 13
+    },
+    {
+      "high": 10,
+      "low": 5,
+      "rain_days": 14
+    },
+    {
+      "high": 8,
+      "low": 4,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ANR taxi €10-15 vs tariff estimate 25",
+    "AMS taxi €150-200 vs tariff estimate 426",
+    "airport AMS is 124 km away"
+  ]
+}

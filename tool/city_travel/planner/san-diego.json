@@ -1,0 +1,583 @@
+{
+  "city": "San Diego",
+  "checked": "October 2026",
+  "intro_line": "Sun-soaked harbour city where beaches meet a famous zoo.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Downtown / Gaslamp Quarter",
+        "Harbor Island / Airport area",
+        "La Jolla",
+        "Mission Valley"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown / Gaslamp Quarter",
+        "Harbor Island / Airport area",
+        "La Jolla",
+        "Mission Valley"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown / Gaslamp Quarter",
+        "Harbor Island / Airport area",
+        "La Jolla",
+        "Mission Valley"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown / Gaslamp Quarter",
+        "Harbor Island / Airport area",
+        "La Jolla",
+        "Mission Valley"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown / Gaslamp Quarter",
+        "Harbor Island / Airport area",
+        "La Jolla",
+        "Mission Valley"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 6,
+        "note": "January: cool and often cloudy, highs near 18°C. Pack a jacket for evenings."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 5,
+        "note": "February: similar to January, about 5 rain days. Good for museums and the Zoo with fewer crowds."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 8,
+        "note": "March: still cool, around 8 rain days — the wettest month. Keep a rain plan."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 3,
+        "note": "April: drier and milder, highs near 20°C. Good walking weather."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 3,
+        "note": "May: pleasant, highs near 20°C and little rain. May grey mornings are common near the coast."
+      },
+      {
+        "high": 22,
+        "low": 16,
+        "rain_days": 0,
+        "note": "June: mild and dry, highs near 22°C. Coastal fog often clears by midday."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 0,
+        "note": "July: warm and dry, highs near 25°C. Busiest beach month; book hotels early."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 0,
+        "note": "August: the warmest month, highs near 26°C and warm nights. Expect crowds."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 1,
+        "note": "September: still warm, highs near 25°C. Fewer crowds than August."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 2,
+        "note": "October: warm days near 24°C and cooler nights. A strong month for outdoor plans."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 4,
+        "note": "November: cooler, highs near 21°C, a few rain days. Quieter and often cheaper."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 5,
+        "note": "December: cool, highs near 18°C, about 5 rain days. Bring layers for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.4,
+      0.45,
+      0.55,
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.8,
+      0.55,
+      0.4
+    ],
+    "family": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "zoo": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning, spring and autumn",
+      "area": "Mission Valley",
+      "popularity": 5
+    },
+    "coronado": {
+      "types": [
+        "beach",
+        "family",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon to sunset",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 5
+    },
+    "seaworld": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Mission Valley",
+      "popularity": 4
+    },
+    "harbor_cruise": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 4
+    },
+    "belmont": {
+      "types": [
+        "family",
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon to sunset",
+      "area": "Mission Valley",
+      "popularity": 3
+    },
+    "comiccon": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 480,
+      "setting": "indoor",
+      "best": "July; arrive early each day",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 4
+    },
+    "sesame": {
+      "types": [
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer morning",
+      "area": "Mission Valley",
+      "popularity": 3
+    },
+    "ucsd": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "La Jolla",
+      "popularity": 2
+    },
+    "jackbox": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 2
+    },
+    "mundo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Mission Valley",
+      "popularity": 1
+    },
+    "qdoba": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch or quick dinner",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 1
+    },
+    "gaslamp": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 4
+    },
+    "lajolla_cove": {
+      "types": [
+        "beach",
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "La Jolla",
+      "popularity": 5
+    },
+    "liberty_station": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Lunchtime",
+      "area": "Harbor Island / Airport area",
+      "popularity": 3
+    },
+    "cabrillo": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, low tide",
+      "area": "Harbor Island / Airport area",
+      "popularity": 3
+    },
+    "balboa": {
+      "types": [
+        "culture",
+        "nature",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning to afternoon",
+      "area": "Mission Valley",
+      "popularity": 5
+    },
+    "sunset_cliffs": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Harbor Island / Airport area",
+      "popularity": 4
+    },
+    "old_town": {
+      "types": [
+        "culture",
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Mission Valley",
+      "popularity": 3
+    },
+    "midway": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Downtown / Gaslamp Quarter",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Zoo or Balboa Park plus a beach day; add a night for La Jolla and Torrey Pines."
+  },
+  "airports": [
+    {
+      "code": "SAN",
+      "name": "San Diego International Airport",
+      "primary": true,
+      "note": "Main airport, about 3 km from downtown.",
+      "options": [
+        {
+          "mode": "MTS bus #992 Flyer",
+          "to": "Santa Fe Depot, downtown",
+          "price": "$2.25",
+          "time": "10-15 min",
+          "note": "Day ticket $6 allows transfers to trolley and buses."
+        },
+        {
+          "mode": "Free shuttle",
+          "to": "Old Town Transit Center",
+          "price": "$0",
+          "time": "10-15 min",
+          "note": "Connects to trolley, Greyhound and Old Town."
+        },
+        {
+          "mode": "Shared shuttle",
+          "to": "Downtown hotels",
+          "price": "$15",
+          "time": "15-25 min",
+          "note": "Per person; book ahead."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$15-20",
+          "time": "10-15 min",
+          "note": "Short ride; traffic can slow it."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$12-20",
+          "time": "10-15 min",
+          "note": "Pickup zones at both terminals."
+        }
+      ]
+    },
+    {
+      "code": "TIJ",
+      "name": "Tijuana International Airport (via CBX)",
+      "primary": false,
+      "note": "Across the Mexican border, about 25 km southeast; useful for Mexico flights.",
+      "options": [
+        {
+          "mode": "CBX pedestrian bridge",
+          "to": "Tijuana airport terminal",
+          "price": "$19.95-26.95",
+          "time": "5-10 min",
+          "note": "Each way; much faster than vehicle lanes."
+        },
+        {
+          "mode": "CBX shuttle",
+          "to": "Santa Fe Depot, downtown",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Last bus from CBX leaves around 20:30."
+        },
+        {
+          "mode": "Trolley Blue Line + walk",
+          "to": "San Ysidro border, then taxi",
+          "price": "$2.50-5 plus taxi",
+          "time": "60-90 min",
+          "note": "Cheapest but slower; cross on foot."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$45-70",
+          "time": "30-45 min",
+          "note": "Border waits can add time."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: San Diego",
+      "https://en.wikivoyage.org/wiki/San%20Diego"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "family",
+    "nature"
+  ],
+  "transit": {
+    "best": "Ride apps or a rental car for most trips; the trolley and #992 bus cover downtown and the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "MTS Trolley light rail links downtown, Old Town, Mission Valley and San Ysidro. Useful for those areas; not a full city network."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MTS buses cover the city. The #992 Flyer runs between SAN terminals and Santa Fe Depot downtown."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; Uber and Lyft operate widely and are usually cheaper."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "A car is the most efficient way to see the sprawling county. Expect rush-hour congestion."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown and the bayfront are walkable. Bikes and scooters are common near the beaches."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The Coaster commuter train and Amtrak Pacific Surfliner serve the coast north to Oceanside and Los Angeles."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Mediterranean-style coast: warm dry summers, cool winters and little rain outside winter and spring.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: July to October",
+        "text": "Warmest and driest, highs 24–26°C. Best for beaches and outdoor days."
+      },
+      {
+        "icon": "🌫️",
+        "title": "May grey and June gloom",
+        "text": "Coastal fog and cloud in late spring and early summer. It often clears by midday; inland is sunnier."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is light and winter-based",
+        "text": "Most rain falls December to March, peaking in March at about 8 rain days. Summer is almost dry."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings year-round",
+        "text": "Lows drop to 9–19°C depending on month. Bring a light layer even in summer."
+      },
+      {
+        "icon": "🌊",
+        "title": "Ocean stays cool",
+        "text": "Water is chilly much of the year. Wetsuits are common for surfing; check conditions on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a light jacket, sunscreen and comfortable shoes. Add a rain shell for winter and spring visits."
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+$ deepseek_prep.py Hanoi
+  tokens in 780 out 602
+Hanoi: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Hanoi
+  tokens in 3998 out 623
+Hanoi: 1 problems
+  - HAN taxi 300,000-400,000 VND vs tariff estimate 643200
+
+$ deepseek_city.py Hanoi --stage places
+Hanoi: places
+  tokens in 1207 out 3316
+
+$ deepseek_city.py Hanoi --stage frame
+Hanoi: frame
+  tokens in 2466 out 1804
+  repaired JSON
+
+$ deepseek_city.py Hanoi --stage plans
+Hanoi: plans
+  plans for day
+  tokens in 2178 out 1138
+  plans for 1n
+  tokens in 2179 out 1081
+  plans for 2n
+  tokens in 2184 out 1378
+  plans for 3n
+  tokens in 2179 out 2265
+  plans for 4n
+  tokens in 2179 out 1856
+
+$ merge_city.py Hanoi
+Hanoi: 21 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/hanoi.json and planner/hanoi.json
+

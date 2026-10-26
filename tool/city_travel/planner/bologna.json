@@ -1,0 +1,555 @@
+{
+  "city": "Bologna",
+  "checked": "October 2026",
+  "intro_line": "Bologna: red porticoes, bold food, and a buzzing student soul.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Historical Centre",
+        "Bologna Centrale",
+        "University Quarter",
+        "Saragozza"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Historical Centre",
+        "Bologna Centrale",
+        "University Quarter",
+        "Saragozza"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Historical Centre",
+        "Bologna Centrale",
+        "University Quarter",
+        "Saragozza"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Historical Centre",
+        "Bologna Centrale",
+        "University Quarter",
+        "Saragozza"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Historical Centre",
+        "Bologna Centrale",
+        "University Quarter",
+        "Saragozza"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 1,
+        "rain_days": 6,
+        "note": "January: cold, highs near 8°C, lows around 1°C. Pack a warm coat."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 8,
+        "note": "February: still cold, highs near 11°C, about 8 rain days."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 8,
+        "note": "March: mild at 15°C, mixed sun and showers."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 9,
+        "note": "April: pleasant at 19°C, but one of the wetter months."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 13,
+        "note": "May: warm at 22°C and the wettest month, around 13 rain days."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 8,
+        "note": "June: warm and drier, highs near 28°C."
+      },
+      {
+        "high": 32,
+        "low": 21,
+        "rain_days": 7,
+        "note": "July: hot, highs near 32°C; sightsee early and late."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 8,
+        "note": "August: hot and often quiet, highs near 31°C; some places close."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 9,
+        "note": "September: warm at 25°C, good all-round month."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 9,
+        "note": "October: mild at 20°C, about 9 rain days."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 10,
+        "note": "November: cooler at 13°C and wetter, around 10 rain days."
+      },
+      {
+        "high": 9,
+        "low": 2,
+        "rain_days": 8,
+        "note": "December: cold, highs near 9°C; festive lights in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "art": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "piazza_maggiore": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening",
+      "area": "Historical Centre",
+      "popularity": 5
+    },
+    "two_towers": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning for clearer views",
+      "area": "Historical Centre",
+      "popularity": 5
+    },
+    "archiginnasio": {
+      "types": [
+        "history",
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "university": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday afternoons",
+      "area": "University Quarter",
+      "popularity": 3
+    },
+    "quadrilatero": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning to midday",
+      "area": "Historical Centre",
+      "popularity": 5
+    },
+    "mercato_erbe": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or early evening",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "san_luca": {
+      "types": [
+        "culture",
+        "budget",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Saragozza",
+      "popularity": 5
+    },
+    "santo_stefano": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Midday",
+      "area": "Historical Centre",
+      "popularity": 3
+    },
+    "food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "portico_walk": {
+      "types": [
+        "culture",
+        "budget",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Any time of day",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "via_zamboni": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "University Quarter",
+      "popularity": 3
+    },
+    "mambo": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy days or afternoons",
+      "area": "Saragozza",
+      "popularity": 3
+    },
+    "pinacoteca": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "University Quarter",
+      "popularity": 3
+    },
+    "giardini_margherita": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoons",
+      "area": "Saragozza",
+      "popularity": 3
+    },
+    "aperitivo": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early evening",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "bologna_centrale": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "When arriving or leaving",
+      "area": "Bologna Centrale",
+      "popularity": 3
+    },
+    "san_petronio": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "tortellini_class": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Historical Centre",
+      "popularity": 4
+    },
+    "via_indipendenza": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "Historical Centre",
+      "popularity": 3
+    },
+    "piazza_santo_stefano_market": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Warm evenings",
+      "area": "Historical Centre",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the centre, the porticoes and a proper food day, with time for one day trip."
+  },
+  "airports": [
+    {
+      "code": "BLQ",
+      "name": "Bologna / Borgo Panigale Airport",
+      "primary": true,
+      "note": "Main airport, about 6 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Bus #81/#91",
+          "to": "Bologna Centrale",
+          "price": "€1.5",
+          "time": "30-40 min",
+          "note": "Board at Birra stop, a 10 min walk from the terminal."
+        },
+        {
+          "mode": "Marconi Express monorail",
+          "to": "Bologna Centrale",
+          "price": "€12.80",
+          "time": "7 min",
+          "note": "Pay contactless at the gate; queues can be long."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€15-20",
+          "time": "15-25 min",
+          "note": "Fixed-ish fare; agree before you ride."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Availability is limited in Bologna."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Bologna",
+      "https://en.wikivoyage.org/wiki/Bologna"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk the centre; use TPER buses for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro yet; a tram network is under construction."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "TPER buses cover the city. Single ticket €2.30, valid 75 min; €2.50 on board. Day pass about €9. Buy at tabacchi or newsstands."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber is limited; local apps work better."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is restricted; cars are banned in parts during the day."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is easy and pleasant. Bike hire is cheap, about €1–2 per 15 min."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, damp winters and hot, humid summers, with the best weather in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild days around 19–25°C, good for walking the porticoes."
+      },
+      {
+        "icon": "🥵",
+        "title": "July and August are hot",
+        "text": "Highs near 31–32°C with warm nights. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and damp",
+        "text": "January highs near 8°C and lows around 1°C. Bring a warm coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in spring and autumn",
+        "text": "May has the most rain days, around 13. Carry a small umbrella."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is fairly dry",
+        "text": "July and August see around 7–8 rain days, often short storms."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, and a light rain jacket in spring and autumn."
+      }
+    ]
+  }
+}

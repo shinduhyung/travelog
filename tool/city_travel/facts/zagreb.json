@@ -1,0 +1,172 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Zagreb rewards with coffee culture, trams and a walkable old town.",
+  "intro": "Zagreb is a compact, green city of trams, cafés and Habsburg squares. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Donji Grad",
+    "Gornji Grad",
+    "Lower Town centre",
+    "near Glavni Kolodvor"
+  ],
+  "taxi": {
+    "flag_day": 2,
+    "flag_airport": 3,
+    "per_km": 1,
+    "min_fare": 3
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Trams run 24 hours: 15 day lines and 4 night lines.",
+    "ZET buses cover the suburbs and use the same tickets as trams.",
+    "Buy tickets at kiosks or the MOJ ZET app; cheaper than from the driver.",
+    "A short 30-minute ticket costs about €0.53 at a kiosk.",
+    "Taxis, Bolt and Uber all work; airport rides cost about €14-20.",
+    "The centre is best walked; public bikes cost about €0.66 per 30 min."
+  ],
+  "airports": [
+    {
+      "code": "ZAG",
+      "name": "Zagreb Airport",
+      "primary": true,
+      "note": "Main airport, about 10 km straight-line south-east of the centre.",
+      "options": [
+        {
+          "mode": "ZET bus 290",
+          "to": "city centre",
+          "price": "€1-2",
+          "time": "30-40 min",
+          "note": "Cheapest option; stops on the main road outside the terminal."
+        },
+        {
+          "mode": "Airport bus (Pleso prijevoz)",
+          "to": "main bus station",
+          "price": "€8",
+          "time": "about 30 min",
+          "note": "Runs every 30 min in daytime; leaves from the northeast wing."
+        },
+        {
+          "mode": "Taxi",
+          "to": "city centre",
+          "price": "€14-20",
+          "time": "25-35 min",
+          "note": "Agree the price or use the meter."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "city centre",
+          "price": "€14-20",
+          "time": "25-35 min",
+          "note": "Often cheaper than a street taxi."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Zagreb Cathedral",
+    "St. Mark's Church",
+    "Gornji Grad",
+    "Museum of Broken Relationships",
+    "Zagorski Štrukli"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Zagreb",
+      "https://en.wikivoyage.org/wiki/Zagreb"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    45.815,
+    15.9819
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -2,
+      "rain_days": 10
+    },
+    {
+      "high": 9,
+      "low": 0,
+      "rain_days": 8
+    },
+    {
+      "high": 12,
+      "low": 2,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 15
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 9
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 9
+    },
+    {
+      "high": 6,
+      "low": 0,
+      "rain_days": 9
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

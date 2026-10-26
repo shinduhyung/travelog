@@ -1,0 +1,680 @@
+{
+  "city": "Seoul",
+  "checked": "October 2026",
+  "intro_line": "A fast, neon-lit capital where palaces sit beside skyscrapers.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Myeongdong",
+        "Jongno",
+        "Gangnam",
+        "Hongdae"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Myeongdong",
+        "Jongno",
+        "Gangnam",
+        "Hongdae"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Myeongdong",
+        "Jongno",
+        "Gangnam",
+        "Hongdae"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Myeongdong",
+        "Jongno",
+        "Gangnam",
+        "Hongdae"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Myeongdong",
+        "Jongno",
+        "Gangnam",
+        "Hongdae"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 2,
+        "low": -7,
+        "rain_days": 3,
+        "note": "Coldest month: highs near 2°C, lows around -7°C. Pack a heavy coat; few rainy days."
+      },
+      {
+        "high": 5,
+        "low": -5,
+        "rain_days": 4,
+        "note": "Still cold, highs near 5°C. Indoor sights and cafés are comfortable."
+      },
+      {
+        "high": 12,
+        "low": 0,
+        "rain_days": 6,
+        "note": "Warming up to about 12°C. Cherry blossoms usually appear late in the month; check on the day."
+      },
+      {
+        "high": 18,
+        "low": 6,
+        "rain_days": 7,
+        "note": "Pleasant spring: highs near 18°C, some rain. Great for walking the palaces."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 8,
+        "note": "One of the best months: warm, around 23°C, with a few wet days."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Warm and humid, highs near 27°C. Rain picks up late in the month."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 18,
+        "note": "Rainy season: about 18 rain days and highs near 29°C. Carry an umbrella daily."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 16,
+        "note": "Hot and wet, similar to July. Plan indoor breaks in the afternoon."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 9,
+        "note": "Cooling to about 25°C and drier. Excellent for sightseeing."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 6,
+        "note": "Best month: clear, mild, highs near 19°C. Autumn leaves peak late in the month."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 7,
+        "note": "Turning cold, highs near 11°C. Light layers plus a jacket."
+      },
+      {
+        "high": 3,
+        "low": -5,
+        "rain_days": 4,
+        "note": "Cold again: highs near 3°C, lows around -5°C. Few rain days; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      0.85,
+      0.6,
+      0.6,
+      0.95,
+      1,
+      0.8,
+      0.55
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.75,
+      0.95,
+      1,
+      0.85,
+      0.7
+    ],
+    "history": [
+      0.5,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      0.85,
+      0.6,
+      0.6,
+      0.95,
+      1,
+      0.8,
+      0.55
+    ],
+    "shopping": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.65
+    ]
+  },
+  "places": {
+    "gyeongbokgung": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Jongno",
+      "popularity": 5
+    },
+    "nseoultower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Myeongdong",
+      "popularity": 5
+    },
+    "bukchon": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning before crowds",
+      "area": "Jongno",
+      "popularity": 5
+    },
+    "changdeokgung": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Autumn for the garden colours",
+      "area": "Jongno",
+      "popularity": 5
+    },
+    "ddp": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Jongno",
+      "popularity": 4
+    },
+    "gwanghwamun": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Jongno",
+      "popularity": 4
+    },
+    "myeongdongcathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Myeongdong",
+      "popularity": 3
+    },
+    "jongmyo": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Jongno",
+      "popularity": 3
+    },
+    "hongdae": {
+      "types": [
+        "nightlife",
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Hongdae",
+      "popularity": 5
+    },
+    "insadong": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Jongno",
+      "popularity": 4
+    },
+    "lottetower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Gangnam",
+      "popularity": 4
+    },
+    "aquaplanet": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Gangnam",
+      "popularity": 2
+    },
+    "bongeunsa": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Gangnam",
+      "popularity": 3
+    },
+    "bugaksan": {
+      "types": [
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Jongno",
+      "popularity": 2
+    },
+    "coexaquarium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Gangnam",
+      "popularity": 3
+    },
+    "changgyeonggung": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Jongno",
+      "popularity": 3
+    },
+    "cheonggyecheon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Jongno",
+      "popularity": 4
+    },
+    "cheongwadae": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Jongno",
+      "popularity": 3
+    },
+    "deoksugung": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Jongno",
+      "popularity": 3
+    },
+    "ewha": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Hongdae",
+      "popularity": 3
+    },
+    "gangnamstatue": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "Gangnam",
+      "popularity": 2
+    },
+    "gwangjang": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Lunch or evening",
+      "area": "Jongno",
+      "popularity": 5
+    },
+    "namsanwalk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Myeongdong",
+      "popularity": 4
+    },
+    "hanoktour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Jongno",
+      "popularity": 4
+    },
+    "myeongdongfood": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Myeongdong",
+      "popularity": 5
+    },
+    "hongdaenight": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Friday or Saturday night",
+      "area": "Hongdae",
+      "popularity": 4
+    },
+    "gangnamwalk": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Gangnam",
+      "popularity": 3
+    },
+    "p63building": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Gangnam",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the palaces, markets and shopping without rushing; spring and autumn are the best months."
+  },
+  "airports": [
+    {
+      "code": "ICN",
+      "name": "Incheon International Airport",
+      "primary": true,
+      "note": "Main international gateway, 48 km west on Yeongjong Island.",
+      "options": [
+        {
+          "mode": "AREX all-stop train",
+          "to": "Seoul Station",
+          "price": "₩4,750-5,350",
+          "time": "59-66 min",
+          "note": "Cheapest rail option; also stops at Gimpo Airport."
+        },
+        {
+          "mode": "AREX Express train",
+          "to": "Seoul Station",
+          "price": "₩13,000",
+          "time": "43-51 min",
+          "note": "Non-stop, separate platform and tickets."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Citywide, incl. Gangnam",
+          "price": "₩15,000-18,000",
+          "time": "60-90 min",
+          "note": "Best with heavy luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Seoul",
+          "price": "₩50,000-70,000",
+          "time": "60-80 min",
+          "note": "Regular vs deluxe rates; tolls extra."
+        },
+        {
+          "mode": "Kakao T / Uber",
+          "to": "Central Seoul",
+          "price": "₩50,000-70,000",
+          "time": "60-80 min",
+          "note": "Book in the app; pickup zones are signed."
+        }
+      ]
+    },
+    {
+      "code": "GMP",
+      "name": "Gimpo International Airport",
+      "primary": false,
+      "note": "Closer city airport, 17 km west; domestic flights plus China, Japan and Taiwan routes.",
+      "options": [
+        {
+          "mode": "Subway Line 9 / Line 5",
+          "to": "Central Seoul",
+          "price": "₩1,000-2,100",
+          "time": "30-50 min",
+          "note": "Line 9 express trains are faster."
+        },
+        {
+          "mode": "AREX train",
+          "to": "Seoul Station",
+          "price": "₩1,000-2,100",
+          "time": "20-30 min",
+          "note": "Links to Incheon Airport too."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Seoul",
+          "price": "₩30,000-40,000",
+          "time": "30-50 min",
+          "note": "Cheaper than from Incheon."
+        },
+        {
+          "mode": "Kakao T / Uber",
+          "to": "Central Seoul",
+          "price": "₩30,000-40,000",
+          "time": "30-50 min",
+          "note": "Use app pickup points at the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Seoul",
+      "https://en.wikivoyage.org/wiki/Seoul"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Get a T-money card and use the metro for most trips; buses beat traffic on short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "9 numbered lines plus suburban lines. Base fare ₩1,550 with card, ₩1,650 single ticket. Stops late at night."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses have their own lanes and beat traffic. Use a T-money card for both bus and metro."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered and plentiful. Kakao T is the main ride-hailing app; Uber works too."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible but traffic jams are common and parking is costly. Not needed for most trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in Myeongdong, Jongno and Hongdae. Use metro for longer hops between districts."
+      },
+      {
+        "mode": "Climate Card",
+        "has": true,
+        "text": "Unlimited 1–7 day transit passes from ₩5,000 to ₩20,000. Good value if you ride often."
+      },
+      {
+        "mode": "Night bus",
+        "has": true,
+        "text": "Subway stops late at night; night buses run on major routes."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, dry winters and hot, rainy summers. Spring and autumn are the best times to visit.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Mild highs of 18–25°C with fewer rainy days. Ideal for palaces, walking and markets."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold and dry",
+        "text": "January highs near 2°C and lows around -7°C, with only about 3 rain days. Bring a heavy coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy season in July and August",
+        "text": "About 18 and 16 rain days, with highs near 29°C. Expect heavy downpours; carry an umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "June to August feels muggy. Plan outdoor sights for morning and rest indoors in the afternoon."
+      },
+      {
+        "icon": "🍂",
+        "title": "Crisp autumn",
+        "text": "September and October cool to 19–25°C with fewer wet days. The most comfortable months."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, and a rain jacket or umbrella for summer."
+      }
+    ]
+  }
+}

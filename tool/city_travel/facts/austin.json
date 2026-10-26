@@ -1,0 +1,173 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Austin blends live music, barbecue, and a laid-back Texas vibe.",
+  "intro": "Austin rewards visitors with music, food, and outdoorsy fun. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "South Congress",
+    "University of Texas",
+    "East Austin"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 4,
+    "per_km": 2,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "No metro or tram; a single commuter rail line (Red Line) runs north-south.",
+    "Capital Metro buses cover downtown, the Capitol, and South Congress; fares are about $1.25 one way.",
+    "Ride apps Uber and Lyft work well; taxis are available but less common.",
+    "Driving is common but traffic is heavy at rush hour; I-35 is often jammed.",
+    "Downtown and UT are walkable; summers are very hot.",
+    "Bikes are popular; bike lanes exist on most major streets."
+  ],
+  "airports": [
+    {
+      "code": "AUS",
+      "name": "Austin Bergstrom International Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km southeast of downtown.",
+      "options": [
+        {
+          "mode": "Capital Metro bus 20",
+          "to": "Downtown Austin",
+          "price": "$1.25",
+          "time": "40-60 min",
+          "note": "Cheapest option; a 24-hour local pass costs $2.50."
+        },
+        {
+          "mode": "Ride app (Uber/Lyft)",
+          "to": "Downtown",
+          "price": "$20-35",
+          "time": "20-30 min",
+          "note": "Pickup zones are signed at the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Taxis wait outside baggage claim."
+        },
+        {
+          "mode": "Shared ride shuttle",
+          "to": "Downtown hotels",
+          "price": "$15-25",
+          "time": "30-45 min",
+          "note": "Book ahead; cheaper than a private taxi."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "University of Texas at Austin",
+    "SXSW (South by Southwest)",
+    "COTALAND",
+    "Austin's Park N Pizza",
+    "Tom Foolerys Adventure Park, Texas",
+    "Self-Portrait with Thorn Necklace and Hummingbird"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Austin",
+      "https://en.wikivoyage.org/wiki/Austin"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    30.26715,
+    -97.74306
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 20,
+      "rain_days": 16
+    },
+    {
+      "high": 33,
+      "low": 23,
+      "rain_days": 11
+    },
+    {
+      "high": 35,
+      "low": 25,
+      "rain_days": 8
+    },
+    {
+      "high": 36,
+      "low": 25,
+      "rain_days": 8
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 9
+    },
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 8,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

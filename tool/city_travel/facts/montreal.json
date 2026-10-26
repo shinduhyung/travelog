@@ -1,0 +1,176 @@
+{
+  "currency": "CAD",
+  "usd_rate": 1.4014,
+  "intro_line": "Montreal: where European charm meets North American energy.",
+  "intro": "Montreal rewards visitors with its vibrant neighbourhoods, rich history, and culinary scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Old Montreal",
+    "Plateau Mont-Royal",
+    "Quartier des Spectacles"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 10,
+    "per_km": 1.7,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Metro: 4 lines, frequent and fast; fares $3.50 per ride or day pass $10.",
+    "Buses: extensive network; use same tickets as metro.",
+    "Taxis: available but pricier; Uber and Lyft operate.",
+    "Driving: traffic and parking are challenging; not recommended for short visits.",
+    "Walking/bikes: BIXI bike-share $5 for 24h access; many bike lanes.",
+    "Ferry: none for tourists, but river shuttles exist in summer."
+  ],
+  "airports": [
+    {
+      "code": "YUL",
+      "name": "Montreal / Pierre Elliott Trudeau International Airport",
+      "primary": true,
+      "note": "Main international gateway, 13 km west of centre.",
+      "options": [
+        {
+          "mode": "Bus 747",
+          "to": "Downtown (Berri-UQAM)",
+          "price": "$11",
+          "time": "45-60 min",
+          "note": "Runs 24/7; ticket valid for 24h on STM network."
+        },
+        {
+          "mode": "Landline shuttle",
+          "to": "Palais des congrès",
+          "price": "$9",
+          "time": "30-45 min",
+          "note": "For Air Canada passengers; every 15-30 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$40-50",
+          "time": "20-40 min",
+          "note": "Fixed fare to downtown; use taxi lane."
+        },
+        {
+          "mode": "Uber",
+          "to": "Downtown",
+          "price": "$35-45",
+          "time": "20-40 min",
+          "note": "Pickup at designated zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Notre-Dame Basilica of Montreal",
+    "Old Montreal",
+    "Saint Joseph's Oratory",
+    "Place Jacques-Cartier",
+    "Habitat 67",
+    "La Ronde: A Six Flags Park",
+    "McGill University",
+    "Montreal Underground City",
+    "Place des Arts"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Montreal",
+      "https://en.wikivoyage.org/wiki/Montreal"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    45.50884,
+    -73.58781
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": -6,
+      "low": -14,
+      "rain_days": 12
+    },
+    {
+      "high": -4,
+      "low": -14,
+      "rain_days": 11
+    },
+    {
+      "high": 2,
+      "low": -8,
+      "rain_days": 11
+    },
+    {
+      "high": 9,
+      "low": -1,
+      "rain_days": 12
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 14
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 12
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 13
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 13,
+      "low": 5,
+      "rain_days": 12
+    },
+    {
+      "high": 5,
+      "low": -2,
+      "rain_days": 12
+    },
+    {
+      "high": -1,
+      "low": -8,
+      "rain_days": 13
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

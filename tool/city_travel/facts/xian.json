@@ -1,0 +1,174 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Ancient capital where the Silk Road began and terracotta warriors sleep.",
+  "intro": "Xi'an rewards visitors with a walled old town, world-class archaeology and a buzzing food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Bell Tower / City Walls",
+    "South Gate / Shuyuanmen",
+    "Big Wild Goose Pagoda",
+    "Xi'an North Station"
+  ],
+  "taxi": {
+    "flag_day": 9,
+    "flag_airport": 9,
+    "per_km": 2,
+    "min_fare": 9
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: 12+ lines, single ride about ¥5; buy a Changantong card or scan WeChat/Alipay.",
+    "Buses: ¥1-2 flat fare; line 610 (tourist 8) links station, Bell Tower and pagodas.",
+    "Taxis: cheap but hard to hail at rush hour and shift change; watch the meter.",
+    "Ride apps: DiDi works widely; also WeChat and Alipay ride-hailing.",
+    "Driving: not advised for visitors; traffic and parking are tough.",
+    "Walking and shared bikes are best inside the city walls."
+  ],
+  "airports": [
+    {
+      "code": "XIY",
+      "name": "Xi'an Xianyang International Airport",
+      "primary": true,
+      "note": "Main hub, about 27 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Bell Tower / West Street",
+          "price": "¥25",
+          "time": "50-70 min",
+          "note": "Runs 08:00-01:00; leaves when full."
+        },
+        {
+          "mode": "Metro Line 14",
+          "to": "Xi'an North station",
+          "price": "¥5-10",
+          "time": "30-40 min",
+          "note": "Change to Line 2 for the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Bell Tower downtown",
+          "price": "¥120-160",
+          "time": "40-60 min",
+          "note": "Ignore touts; note the plate if overcharged."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥120-170",
+          "time": "40-60 min",
+          "note": "Meet at the designated pickup zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Terracotta Army",
+    "Xi'an City Wall",
+    "Big Wild Goose Pagoda",
+    "Shaanxi History Museum",
+    "Muslim Quarter",
+    "Bell Tower of Xi'an",
+    "Great Mosque of Xi'an"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Xi'an",
+      "https://en.wikivoyage.org/wiki/Xi%27an"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    34.25833,
+    108.92861
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": -4,
+      "rain_days": 3
+    },
+    {
+      "high": 10,
+      "low": -1,
+      "rain_days": 4
+    },
+    {
+      "high": 18,
+      "low": 5,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 28,
+      "low": 15,
+      "rain_days": 7
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 8
+    },
+    {
+      "high": 33,
+      "low": 22,
+      "rain_days": 10
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 6
+    },
+    {
+      "high": 7,
+      "low": -3,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,96 @@
+{
+ "city": "Cape Town",
+ "trips": [
+  {
+   "place": "Hermanus",
+   "label": "",
+   "position": {
+    "id": 412470,
+    "name": "Hermanus",
+    "city": "Hermanus",
+    "lat": -34.4187,
+    "lng": 19.23446
+   },
+   "town": {
+    "name": "Hermanus",
+    "lat": -34.4187,
+    "lng": 19.23446
+   },
+   "road": {
+    "km": 118,
+    "min": 95,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1450,
+    "currency": "ZAR"
+   },
+   "modes": {},
+   "route_note": "Take a long-distance coach from Cape Town to Hermanus (about 1.5 to 2 hours, with a scenic coastal drive); the town centre and harbour are a short walk or taxi ride from the bus stop.",
+   "see": [
+    "Cliff path along the coast",
+    "Old Harbour and fish market",
+    "Whale-watching viewpoints (seasonal, roughly June to November)",
+    "Stony Point penguin colony"
+   ],
+   "visit": "Full day",
+   "tour_query": "Hermanus whale watching day trip from Cape Town",
+   "quests": [],
+   "recommended": "tour",
+   "why": "A direct long-distance coach takes you along a scenic coastal drive to a stop within walking distance of the harbour.",
+   "stars": 5,
+   "know": [
+    "Whale-watching season is roughly June to November, the best time for this trip.",
+    "Check coach timetables in advance, as service frequency may be limited."
+   ]
+  },
+  {
+   "place": "Stellenbosch",
+   "label": "",
+   "position": {
+    "id": 412552,
+    "name": "Stellenbosch",
+    "city": "Stellenbosch",
+    "lat": -33.93462,
+    "lng": 18.86676
+   },
+   "town": {
+    "name": "Stellenbosch",
+    "lat": -33.93462,
+    "lng": 18.86676
+   },
+   "road": {
+    "km": 55,
+    "min": 44,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 690,
+    "currency": "ZAR"
+   },
+   "modes": {},
+   "route_note": "Take a Metrorail train or a long-distance coach from Cape Town to Stellenbosch (about 1 hour), then walk or take a short local taxi into the town centre; check current timetables, as local rail service is often disrupted.",
+   "see": [
+    "Stellenbosch Village Museum",
+    "Dorp Street historic buildings",
+    "Oak-lined town centre and university campus",
+    "Local wine estates on the Helshoogte and Simonsberg routes"
+   ],
+   "visit": "Full day",
+   "tour_query": "Stellenbosch wine tour day trip from Cape Town",
+   "quests": [],
+   "recommended": "tour",
+   "why": "The long-distance coach is more dependable than the often-disrupted local rail and drops you near the town centre.",
+   "stars": 4,
+   "know": [
+    "Local rail service is often disrupted, so check current timetables before you go.",
+    "Many wine estates are spread around the surrounding area, so a short taxi ride between them helps."
+   ]
+  }
+ ],
+ "problems": [
+  "Franschhoek: no Omio position, dropped",
+  "Stellenbosch: model picked bus without data; set to tour",
+  "Hermanus: model picked bus without data; set to tour"
+ ]
+}

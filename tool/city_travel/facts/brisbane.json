@@ -1,0 +1,170 @@
+{
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro_line": "Brisbane blends river life, sunshine and a laid-back outdoor buzz.",
+  "intro": "Brisbane rewards visitors with river ferries, leafy parks and a lively food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    }
+  ],
+  "areas": [
+    "CBD",
+    "Fortitude Valley",
+    "South Bank",
+    "West End"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 6,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Translink runs trains, buses and ferries; a 50c flat fare covers most trips with up to 3 transfers.",
+    "Brisbane Metro M1 and M2 buses run every 5-15 minutes along the busway.",
+    "CityCat ferries are a scenic and practical way to cross the river.",
+    "Uber and DiDi operate; taxis are plentiful and take cards.",
+    "Driving is easy outside peak hours; parking in the CBD is costly.",
+    "The CBD is walkable, with riverside paths good for walking and cycling."
+  ],
+  "airports": [
+    {
+      "code": "BNE",
+      "name": "Brisbane International Airport",
+      "primary": true,
+      "note": "Main gateway, about 13 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Airtrain",
+          "to": "Roma Street and Central",
+          "price": "A$22.30",
+          "time": "20-25 min",
+          "note": "Book online for a 15% discount."
+        },
+        {
+          "mode": "Bus + train",
+          "to": "CBD via Gold Coast Airport",
+          "price": "A$0.50",
+          "time": "2-3 hours",
+          "note": "Cheap but slow; 760 bus to Varsity Lakes then train."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "A$45-60",
+          "time": "20-35 min",
+          "note": "Fixed ranks outside terminals."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "CBD",
+          "price": "A$35-50",
+          "time": "20-35 min",
+          "note": "Pickup zones are signposted."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "South Bank Parklands",
+    "Brisbane River",
+    "University of Queensland"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Brisbane",
+      "https://en.wikivoyage.org/wiki/Brisbane"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -27.4698,
+    153.0251
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 16
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 16
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 10,
+      "rain_days": 6
+    },
+    {
+      "high": 23,
+      "low": 11,
+      "rain_days": 5
+    },
+    {
+      "high": 25,
+      "low": 13,
+      "rain_days": 7
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 29,
+      "low": 20,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

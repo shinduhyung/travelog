@@ -1,0 +1,511 @@
+{
+  "city": "Phnom Penh",
+  "checked": "October 2026",
+  "intro_line": "A chaotic, charming riverside capital waking to a new airport.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Riverside (Sisowath Quay)",
+        "Royal Palace area",
+        "BKK1",
+        "Tonle Bassac"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Riverside (Sisowath Quay)",
+        "Royal Palace area",
+        "BKK1",
+        "Tonle Bassac"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Riverside (Sisowath Quay)",
+        "Royal Palace area",
+        "BKK1",
+        "Tonle Bassac"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Riverside (Sisowath Quay)",
+        "Royal Palace area",
+        "BKK1",
+        "Tonle Bassac"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Riverside (Sisowath Quay)",
+        "Royal Palace area",
+        "BKK1",
+        "Tonle Bassac"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 4,
+        "note": "January: dry and mild, highs near 31°C. The best month for walking the sights."
+      },
+      {
+        "high": 33,
+        "low": 23,
+        "rain_days": 2,
+        "note": "February: the driest month, only about 2 rain days. Hot at 33°C by afternoon; start early."
+      },
+      {
+        "high": 34,
+        "low": 25,
+        "rain_days": 5,
+        "note": "March: hotter at 34°C and still mostly dry. Carry water and plan shade breaks."
+      },
+      {
+        "high": 35,
+        "low": 26,
+        "rain_days": 14,
+        "note": "April: the hottest month, 35°C highs, with rain days jumping to about 14. Do sights before 10am."
+      },
+      {
+        "high": 34,
+        "low": 26,
+        "rain_days": 25,
+        "note": "May: the wet season starts, about 25 rain days. Expect heavy afternoon downpours and high humidity."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 24,
+        "note": "June: wet and warm, around 24 rain days. Short showers, then sun; keep plans flexible."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 24,
+        "note": "July: similar to June, about 24 rain days and 32°C highs. Rivers run high."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 26,
+        "note": "August: the wettest stretch, about 26 rain days. Pack a light rain jacket."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 28,
+        "note": "September: peak rain, about 28 rain days. Flooded streets are possible; allow extra travel time."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 25,
+        "note": "October: still wet, about 25 rain days, but rain eases late in the month."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 16,
+        "note": "November: rain drops to about 16 days and highs stay near 31°C. A good shoulder month."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 7,
+        "note": "December: dry and cooler, about 7 rain days. Comfortable days and the busiest tourist season."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.45,
+      0.45,
+      0.45,
+      0.4,
+      0.6,
+      0.85,
+      1
+    ],
+    "history": [
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.45,
+      0.45,
+      0.45,
+      0.4,
+      0.6,
+      0.85,
+      1
+    ],
+    "food": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.6,
+      0.6,
+      0.55,
+      0.75,
+      0.9,
+      1
+    ],
+    "nightlife": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.6,
+      0.6,
+      0.55,
+      0.75,
+      0.9,
+      1
+    ],
+    "budget": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.65,
+      0.6,
+      0.75,
+      0.9,
+      1
+    ]
+  },
+  "places": {
+    "royal-palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Early morning, dry season Nov–Mar",
+      "area": "Royal Palace area",
+      "popularity": 5
+    },
+    "tuol-sleng": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning, before the heat peaks",
+      "area": "Royal Palace area",
+      "popularity": 5
+    },
+    "killing-field": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning; pair with Tuol Sleng on the same day",
+      "area": "Royal Palace area",
+      "popularity": 5
+    },
+    "wat-phnom": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Riverside (Sisowath Quay)",
+      "popularity": 4
+    },
+    "national-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Midday, when it is hottest outside",
+      "area": "Royal Palace area",
+      "popularity": 4
+    },
+    "mekong-river": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "Riverside (Sisowath Quay)",
+      "popularity": 4
+    },
+    "independence-monument": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Royal Palace area",
+      "popularity": 3
+    },
+    "phsar-thmei": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Royal Palace area",
+      "popularity": 3
+    },
+    "phsar-toul-tom-poung": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning to midday",
+      "area": "BKK1",
+      "popularity": 3
+    },
+    "fish-amok": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Royal Palace area",
+      "popularity": 4
+    },
+    "riverside-walk": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Riverside (Sisowath Quay)",
+      "popularity": 4
+    },
+    "sunset-cruise": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Riverside (Sisowath Quay)",
+      "popularity": 4
+    },
+    "bkk1-food": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Breakfast or dinner",
+      "area": "BKK1",
+      "popularity": 3
+    },
+    "tonle-bassac-walk": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Tonle Bassac",
+      "popularity": 2
+    },
+    "cyclo-tour": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Royal Palace area",
+      "popularity": 3
+    },
+    "night-market": {
+      "types": [
+        "food",
+        "budget",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Riverside (Sisowath Quay)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Royal Palace, the genocide memorials and a food-and-riverside evening; add a night for a slower pace in the heat."
+  },
+  "airports": [
+    {
+      "code": "PNH",
+      "name": "Techo International Airport",
+      "primary": true,
+      "note": "New main airport since 9 Sep 2025; about 20 km from the centre, so allow extra time.",
+      "options": [
+        {
+          "mode": "Airport Express Bus (AEB)",
+          "to": "Kouch Kanong Roundabout via AEON Mall 3",
+          "price": "1500 KHR",
+          "time": "about 1 hr",
+          "note": "Runs 05:30-23:30 every 10 min; pay exact, no change given."
+        },
+        {
+          "mode": "Grab / PassApp",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-60 min",
+          "note": "App price is fixed; drivers may need help with pickup points."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-60 min",
+          "note": "Agree the fare first; show clean, untorn dollar notes before paying."
+        },
+        {
+          "mode": "Tuk-tuk",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "Cheaper but slow and exposed to traffic fumes."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Phnom Penh",
+      "https://en.wikivoyage.org/wiki/Phnom%20Penh"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Ride apps (PassApp, Grab, TADA) for fixed prices; city buses if you are on a tight budget.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Do not plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "13 city bus lines run about 05:30–20:30. Fare is 1,500 riel; drivers give no change, so pay exact."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "PassApp, Grab and TADA show fixed prices, so no haggling. Tuk-tuks cost about US$2–3 in town and US$8 to the airport; agree the fare first if you hail one."
+      },
+      {
+        "mode": "Tuk-tuk",
+        "has": true,
+        "best": true,
+        "text": "The easy way around town: about US$2–3 a ride. Always agree the fare before you get in."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not recommended for visitors. Motorbikes rent for US$5–6 a day, but traffic is chaotic and theft is common; park in guarded areas."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine for short blocks near the riverside and palace, but heat and traffic make longer walks unpleasant. Bicycles and cyclos are slow but scenic; bike hire is US$1–3 a day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, with a dry season roughly November to April and a wet season May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Highs 31–33°C and few rain days. The most comfortable months for walking and temples."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hottest in March and April",
+        "text": "Highs reach 34–35°C. Sightsee before 10am and rest in air-conditioning at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season May to October",
+        "text": "Rain on 24–28 days a month, usually as heavy afternoon showers. Mornings are often clear."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid year-round",
+        "text": "Lows stay 23–26°C, so nights are warm and sticky. Light, breathable clothes help."
+      },
+      {
+        "icon": "🌊",
+        "title": "Flooding in the peak rains",
+        "text": "September and October can flood streets. Wear sandals and allow extra time for tuk-tuks."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a hat, sunscreen and insect repellent; a rain jacket or umbrella for May to October; modest dress for temples."
+      }
+    ]
+  }
+}

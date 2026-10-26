@@ -1,0 +1,575 @@
+{
+  "city": "Denver",
+  "checked": "October 2026",
+  "intro_line": "Mile-high city where the Rockies meet a lively downtown.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "LoDo",
+        "Downtown CBD",
+        "Capitol Hill",
+        "RiNo"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "LoDo",
+        "Downtown CBD",
+        "Capitol Hill",
+        "RiNo"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "LoDo",
+        "Downtown CBD",
+        "Capitol Hill",
+        "RiNo"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "LoDo",
+        "Downtown CBD",
+        "Capitol Hill",
+        "RiNo"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "LoDo",
+        "Downtown CBD",
+        "Capitol Hill",
+        "RiNo"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -10,
+        "rain_days": 5,
+        "note": "January: cold, highs near 5°C and lows around -10°C. Pack layers and watch for snow and ice."
+      },
+      {
+        "high": 6,
+        "low": -10,
+        "rain_days": 6,
+        "note": "February: still cold, similar to January. A good month for museums and indoor sights."
+      },
+      {
+        "high": 11,
+        "low": -5,
+        "rain_days": 8,
+        "note": "March: warming to highs near 11°C but lows still below freezing. Snow is possible."
+      },
+      {
+        "high": 16,
+        "low": 0,
+        "rain_days": 8,
+        "note": "April: mild days near 16°C, cold nights near 0°C. Rain and snow showers are common."
+      },
+      {
+        "high": 20,
+        "low": 5,
+        "rain_days": 13,
+        "note": "May: pleasant highs near 20°C. Wettest month by rain days, so carry a light rain jacket."
+      },
+      {
+        "high": 28,
+        "low": 12,
+        "rain_days": 7,
+        "note": "June: warm and mostly dry, highs near 28°C. Strong sun at altitude; use sunscreen."
+      },
+      {
+        "high": 31,
+        "low": 16,
+        "rain_days": 7,
+        "note": "July: hottest month, highs near 31°C. Afternoon thunderstorms are common; plan hikes for the morning."
+      },
+      {
+        "high": 30,
+        "low": 15,
+        "rain_days": 7,
+        "note": "August: hot like July, highs near 30°C. Stay hydrated and watch afternoon storms."
+      },
+      {
+        "high": 28,
+        "low": 11,
+        "rain_days": 4,
+        "note": "September: warm days near 28°C and fewer rain days. A great month for trails and patios."
+      },
+      {
+        "high": 19,
+        "low": 3,
+        "rain_days": 5,
+        "note": "October: cooler, highs near 19°C and lows near 3°C. Crisp days; pack a warm layer."
+      },
+      {
+        "high": 11,
+        "low": -3,
+        "rain_days": 5,
+        "note": "November: chilly, highs near 11°C with freezing nights. Snow becomes more likely."
+      },
+      {
+        "high": 7,
+        "low": -7,
+        "rain_days": 4,
+        "note": "December: cold, highs near 7°C and lows around -7°C. Dress warm for downtown evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.55,
+      0.4
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "adventure": [
+      0.35,
+      0.4,
+      0.55,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.5,
+      0.35
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "red_rocks": {
+      "types": [
+        "nature",
+        "culture",
+        "adventure"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning for hiking; summer evenings for concerts",
+      "area": "Downtown CBD",
+      "popularity": 5
+    },
+    "denver_art_museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Capitol Hill",
+      "popularity": 5
+    },
+    "state_capitol": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Capitol Hill",
+      "popularity": 4
+    },
+    "mines": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Downtown CBD",
+      "popularity": 2
+    },
+    "coors": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown CBD",
+      "popularity": 3
+    },
+    "elitch": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Downtown CBD",
+      "popularity": 3
+    },
+    "lakeside": {
+      "types": [
+        "adventure",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Downtown CBD",
+      "popularity": 2
+    },
+    "flea_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "RiNo",
+      "popularity": 2
+    },
+    "quiznos": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown CBD",
+      "popularity": 1
+    },
+    "union_station": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning coffee or evening",
+      "area": "LoDo",
+      "popularity": 4
+    },
+    "larimer_square": {
+      "types": [
+        "culture",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "LoDo",
+      "popularity": 4
+    },
+    "sixteenth_street": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Downtown CBD",
+      "popularity": 3
+    },
+    "denver_central_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "RiNo",
+      "popularity": 4
+    },
+    "rino_murals": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "RiNo",
+      "popularity": 4
+    },
+    "city_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Capitol Hill",
+      "popularity": 3
+    },
+    "molly_brown": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Capitol Hill",
+      "popularity": 2
+    },
+    "coors_field": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer evening game",
+      "area": "LoDo",
+      "popularity": 4
+    },
+    "denver_botanic": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Capitol Hill",
+      "popularity": 3
+    },
+    "wings_over_rockies": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "Downtown CBD",
+      "popularity": 2
+    },
+    "cherry_creek": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Capitol Hill",
+      "popularity": 3
+    },
+    "great_divide": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "RiNo",
+      "popularity": 3
+    },
+    "denver_mint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown CBD",
+      "popularity": 3
+    },
+    "confluence_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "LoDo",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers downtown, a museum and a foothills or Red Rocks outing; add a night if you want a full mountain day."
+  },
+  "airports": [
+    {
+      "code": "DEN",
+      "name": "Denver International Airport",
+      "primary": true,
+      "note": "Main hub, about 30 km east-northeast of the centre.",
+      "options": [
+        {
+          "mode": "RTD A Line train",
+          "to": "Union Station",
+          "price": "$10.50",
+          "time": "35-40 min",
+          "note": "Cheapest reliable option; buy ticket before boarding."
+        },
+        {
+          "mode": "RTD bus",
+          "to": "Downtown",
+          "price": "$10.50",
+          "time": "60-75 min",
+          "note": "Slower; check schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$55-70",
+          "time": "35-50 min",
+          "note": "Flat-ish airport rates; traffic can add time."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$45-65",
+          "time": "35-50 min",
+          "note": "Pickup at designated rideshare zones."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Denver",
+      "https://en.wikivoyage.org/wiki/Denver"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "adventure",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk downtown and use RTD light rail or buses; use ride apps for late nights and spots outside the core.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "RTD light rail and commuter rail link downtown, suburbs and the airport. Check fares and schedules on the day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "RTD buses cost $2.75 cash with a 3-hour transfer; day passes about $5.50."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber and Lyft both work well in Denver."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "A car is handy outside downtown; toll roads are cashless, so check rental billing."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Downtown is walkable; bikes and scooters are common in summer."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service; the city is landlocked."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "High-altitude, semi-arid climate: sunny much of the year, cold winters, warm summers and quick afternoon storms in summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm, mostly dry days with highs around 28–31°C. Ideal for trails and outdoor sights."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs near 5–7°C and lows around -10°C. Snow and ice are possible; bring a warm coat and boots."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Summer afternoon storms",
+        "text": "July and August often bring afternoon thunderstorms. Hike early and be off exposed ridges by midday."
+      },
+      {
+        "icon": "🌂",
+        "title": "Wettest in spring",
+        "text": "May has the most rain days (about 13). Carry a light rain jacket in spring."
+      },
+      {
+        "icon": "🏔️",
+        "title": "High altitude",
+        "text": "Denver sits about a mile high. Take it easy on day one, drink water and use sunscreen."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers year-round, a warm jacket for winter, sun protection in summer and sturdy shoes for trails."
+      }
+    ]
+  }
+}

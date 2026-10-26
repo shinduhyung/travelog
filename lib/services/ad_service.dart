@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jidoapp/services/subscription_service.dart';
@@ -48,6 +49,24 @@ class AdService {
   final FacebookAppEvents _facebookAppEvents = FacebookAppEvents();
 
   InterstitialAd? _interstitialAd;
+
+  // ─── 광고 SDK 초기화 / 동의 흐름 상태 ────────────────────────────────────
+  // MobileAds.initialize()는 UMP 동의(와 iOS ATT)가 끝난 뒤에만 호출한다.
+  // 동의 전에 초기화하면 미디에이션 SDK들이 동의 상태를 모른 채 시작된다.
+  bool _mobileAdsInitialized = false;
+  bool get adsInitialized => _mobileAdsInitialized;
+  final Completer<void> _consentFlowCompleter = Completer<void>();
+
+  /// UMP 동의 + (iOS) ATT 프롬프트 흐름이 끝나면 완료된다.
+  Future<void> get consentFlowDone => _consentFlowCompleter.future;
+
+  // ─── 로드 실패 재시도 ────────────────────────────────────────────────────
+  // 로드 실패 시 지수 백오프(15·30·60·120·120초)로 최대 5회까지 재시도한다.
+  // 5회를 넘기면 멈추고, 이후는 기존처럼 화면 전환 시점의 로드에 맡긴다.
+  bool _isLoadingInterstitial = false;
+  int _loadRetryAttempt = 0;
+  Timer? _loadRetryTimer;
+  static const int _maxLoadRetries = 5;
 
   int _touchesSinceLastAd = 0; // 직전 노출 이후 터치 수 — 터치 트리거이자 계측용 겸용
   String?
@@ -157,6 +176,7 @@ class AdService {
   void _onPremiumActivated() {
     _isPremium = true;
     _timeTriggerTimer?.cancel();
+    _loadRetryTimer?.cancel();
     _interstitialAd?.dispose();
     _interstitialAd = null;
     // pending 상태로 대기 중이던 광고가 있었더라도, 프리미엄으로 전환된
@@ -342,9 +362,7 @@ class AdService {
           final canRequestAds = await ConsentInformation.instance
               .canRequestAds();
           debugPrint('[Consent] canRequestAds=$canRequestAds');
-          if (canRequestAds) {
-            _startAdsAfterConsent();
-          }
+          await _finishConsentFlow(canRequestAds);
         });
       },
       (formError) async {
@@ -352,11 +370,50 @@ class AdService {
           '[Consent] update error: ${formError.errorCode} ${formError.message}',
         );
         final canRequestAds = await ConsentInformation.instance.canRequestAds();
-        if (canRequestAds) {
-          _startAdsAfterConsent();
-        }
+        await _finishConsentFlow(canRequestAds);
       },
     );
+  }
+
+  /// 동의(UMP) → ATT(iOS) → MobileAds 초기화 → 광고 로드 순서를 보장한다.
+  /// 이전에는 MobileAds.initialize()가 UMP보다 먼저 실행됐고, ATT 프롬프트는
+  /// UMP 폼과 동시에 떠서 서로 겹칠 수 있었다.
+  Future<void> _finishConsentFlow(bool canRequestAds) async {
+    try {
+      if (Platform.isIOS) await _requestTrackingAuthorizationIfNeeded();
+      if (canRequestAds) {
+        await _initMobileAds();
+        if (_mobileAdsInitialized) _startAdsAfterConsent();
+      }
+    } catch (e) {
+      debugPrint('[AdService] consent flow error: $e');
+    } finally {
+      if (!_consentFlowCompleter.isCompleted) _consentFlowCompleter.complete();
+    }
+  }
+
+  Future<void> _requestTrackingAuthorizationIfNeeded() async {
+    try {
+      final status = await AppTrackingTransparency.trackingAuthorizationStatus;
+      if (status != TrackingStatus.notDetermined) return;
+      // UMP 폼이 닫힌 직후에는 앱이 아직 active 상태로 돌아오기 전일 수 있어
+      // (이때 호출하면 프롬프트가 조용히 무시될 수 있음) 잠깐 기다린다.
+      await Future.delayed(const Duration(milliseconds: 500));
+      await AppTrackingTransparency.requestTrackingAuthorization();
+    } catch (e) {
+      debugPrint('[AdService] ATT request error: $e');
+    }
+  }
+
+  Future<void> _initMobileAds() async {
+    if (_mobileAdsInitialized) return;
+    try {
+      await MobileAds.instance.initialize();
+      _mobileAdsInitialized = true;
+      debugPrint('[AdService] MobileAds.initialize 완료 (동의 이후)');
+    } catch (e) {
+      debugPrint('[AdService] MobileAds.initialize 실패: $e');
+    }
   }
 
   void _startAdsAfterConsent() {
@@ -494,7 +551,11 @@ class AdService {
   void loadInterstitialAd() {
     if (_isPremium) return;
     if (_interstitialAd != null) return;
+    if (_isLoadingInterstitial) return; // 이미 요청 중이면 중복 요청하지 않음
+    if (!_mobileAdsInitialized) return; // 동의/초기화 전에는 요청하지 않음
 
+    _isLoadingInterstitial = true;
+    _loadRetryTimer?.cancel();
     _logAdRequestToFirestore(); // 실제 로드 요청 시점 기록 (fill rate 계산용)
 
     InterstitialAd.load(
@@ -502,6 +563,8 @@ class AdService {
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
+          _isLoadingInterstitial = false;
+          _loadRetryAttempt = 0;
           _interstitialAd = ad;
           final String adSourceName =
               ad.responseInfo?.mediationAdapterClassName ?? 'unknown';
@@ -575,10 +638,27 @@ class AdService {
           );
         },
         onAdFailedToLoad: (LoadAdError error) {
+          _isLoadingInterstitial = false;
           _interstitialAd = null;
           debugPrint('[AdService] interstitial failed to load: $error');
+          _scheduleLoadRetry();
         },
       ),
+    );
+  }
+
+  /// 로드 실패 후 지수 백오프(15→30→60→120→120초)로 재시도한다.
+  /// 프리미엄이면 재시도하지 않고, 최대 횟수를 넘기면 멈춘다
+  /// (이후는 화면 전환 시점의 로드 시도에 맡김).
+  void _scheduleLoadRetry() {
+    if (_isPremium) return;
+    if (_loadRetryAttempt >= _maxLoadRetries) return;
+    final int seconds = min(15 * pow(2, _loadRetryAttempt).toInt(), 120);
+    _loadRetryAttempt++;
+    _loadRetryTimer?.cancel();
+    _loadRetryTimer = Timer(Duration(seconds: seconds), loadInterstitialAd);
+    debugPrint(
+      '[AdService] retry #$_loadRetryAttempt in ${seconds}s',
     );
   }
 

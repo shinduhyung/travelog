@@ -1,0 +1,34 @@
+$ deepseek_facts.py São Paulo
+  tokens in 4226 out 1232
+São Paulo: 0 problems
+
+$ deepseek_city.py São Paulo --stage places
+São Paulo: places
+  tokens in 1242 out 3984
+
+$ deepseek_city.py São Paulo --stage frame
+São Paulo: frame
+  tokens in 2470 out 1903
+  repaired JSON
+
+$ deepseek_city.py São Paulo --stage plans
+São Paulo: plans
+  plans for day
+  tokens in 2443 out 848
+  plans for 1n
+  tokens in 2444 out 881
+  repaired JSON
+  plans for 2n
+  tokens in 2444 out 1632
+  plans for 3n
+  tokens in 2449 out 2001
+  plans for 4n
+  tokens in 2444 out 1994
+  repaired JSON
+  plans for 5n
+  tokens in 2444 out 2444
+
+$ merge_city.py São Paulo
+São Paulo: 25 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/sao-paulo.json and planner/sao-paulo.json
+

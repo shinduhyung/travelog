@@ -1,0 +1,572 @@
+{
+  "city": "Dhaka",
+  "checked": "October 2026",
+  "intro_line": "Dhaka pulses with rickshaws, rivers and relentless energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Gulshan",
+        "Banani",
+        "Motijheel",
+        "Old Dhaka"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Gulshan",
+        "Banani",
+        "Motijheel",
+        "Old Dhaka"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Gulshan",
+        "Banani",
+        "Motijheel",
+        "Old Dhaka"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Gulshan",
+        "Banani",
+        "Motijheel",
+        "Old Dhaka"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Gulshan",
+        "Banani",
+        "Motijheel",
+        "Old Dhaka"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 1,
+        "note": "January: cool and dry, highs near 24°C. The best month for walking Old Dhaka."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 2,
+        "note": "February: mild and dry, around 27°C. Great for sightseeing and outdoor food walks."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 7,
+        "note": "March: warms to 31°C with about 7 rain days. Start early; afternoons get sticky."
+      },
+      {
+        "high": 33,
+        "low": 24,
+        "rain_days": 13,
+        "note": "April: hot at 33°C and wetter, about 13 rain days. Plan indoor breaks at midday."
+      },
+      {
+        "high": 33,
+        "low": 25,
+        "rain_days": 21,
+        "note": "May: hot and humid, about 21 rain days. Carry an umbrella and expect short downpours."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 26,
+        "note": "June: monsoon begins, around 26 rain days. Sightseeing is possible between showers; streets flood."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 28,
+        "note": "July: peak monsoon, about 28 rain days. Wettest month; keep plans flexible."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 28,
+        "note": "August: still peak monsoon, about 28 rain days. Same advice: mornings out, afternoons indoors."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 25,
+        "note": "September: heavy rain continues, about 25 rain days. Slightly cooler but still wet."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 16,
+        "note": "October: rain eases to about 16 days. A good shoulder month as the heat drops."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 2,
+        "note": "November: dry and pleasant, highs near 29°C. One of the best months to visit."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 2,
+        "note": "December: cool and dry, around 25°C. Pack a light layer for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.65,
+      0.5,
+      0.45,
+      0.45,
+      0.55,
+      0.8,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "shopping": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.6,
+      0.85,
+      0.95,
+      0.95
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.9
+    ]
+  },
+  "places": {
+    "sangsad": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning, weekdays",
+      "area": "Gulshan",
+      "popularity": 4
+    },
+    "lalbagh": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning, cool months (Nov–Feb)",
+      "area": "Old Dhaka",
+      "popularity": 4
+    },
+    "ahsan": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "Old Dhaka",
+      "popularity": 4
+    },
+    "shaheed": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old Dhaka",
+      "popularity": 3
+    },
+    "dhakeshwari": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning or evening prayer time",
+      "area": "Old Dhaka",
+      "popularity": 3
+    },
+    "armenian": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Old Dhaka",
+      "popularity": 2
+    },
+    "newmarket": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Old Dhaka",
+      "popularity": 3
+    },
+    "fantasy": {
+      "types": [
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Gulshan",
+      "popularity": 2
+    },
+    "paturi": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch, June–September",
+      "area": "Old Dhaka",
+      "popularity": 3
+    },
+    "martyrs": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning, cool months",
+      "area": "Gulshan",
+      "popularity": 3
+    },
+    "panam": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, Nov–Feb",
+      "area": "Gulshan",
+      "popularity": 3
+    },
+    "shishu": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Motijheel",
+      "popularity": 2
+    },
+    "buriganga": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Old Dhaka",
+      "popularity": 4
+    },
+    "olddhakawalk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning, Nov–Feb",
+      "area": "Old Dhaka",
+      "popularity": 4
+    },
+    "kawran": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Motijheel",
+      "popularity": 3
+    },
+    "gulshanlake": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Gulshan",
+      "popularity": 3
+    },
+    "bananiwalk": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Banani",
+      "popularity": 3
+    },
+    "rickshaw": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Old Dhaka",
+      "popularity": 4
+    },
+    "bashundhara": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Motijheel",
+      "popularity": 3
+    },
+    "biriyani": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Old Dhaka",
+      "popularity": 4
+    },
+    "starmosque": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Mid-morning",
+      "area": "Old Dhaka",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Old Dhaka's sights and food plus the museums, with time for the river."
+  },
+  "airports": [
+    {
+      "code": "DAC",
+      "name": "Hazrat Shahjalal International Airport",
+      "primary": true,
+      "note": "Main gateway, about 4 km north of the centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "Tk 30-50",
+          "time": "40-60 min",
+          "note": "Cheapest but crowded; check locally for routes."
+        },
+        {
+          "mode": "CNG auto-rickshaw",
+          "to": "Gulshan or Banani",
+          "price": "Tk 200-300",
+          "time": "20-40 min",
+          "note": "Agree fare before boarding."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Tk 400-700",
+          "time": "30-60 min",
+          "note": "Traffic can double the time."
+        },
+        {
+          "mode": "Uber / Pathao",
+          "to": "City centre",
+          "price": "Tk 350-600",
+          "time": "30-60 min",
+          "note": "App fare avoids haggling."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Dhaka",
+      "https://en.wikivoyage.org/wiki/Dhaka"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "The MRT Line 6 metro for cross-city trips; ride apps or CNG auto-rickshaws for the rest.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "MRT Line 6 runs Uttara to Motijheel. Cheap and fast; a good way to skip traffic."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are crowded, noisy and signed only in Bengali. Hard for first-time visitors."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Pathao work in Dhaka. CNG auto-rickshaws are cheapest for longer rides; meters are rarely used, so agree the fare."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving yourself is not recommended; traffic is chaotic. Hire a car with a driver instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Often fastest for short hops; watch pollution and traffic."
+      },
+      {
+        "mode": "Rickshaw",
+        "has": true,
+        "text": "Cycle rickshaws are quick for short hops. Agree the fare first."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries and rocket steamers leave from Sadarghat river port."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical monsoon climate: a cool dry winter, a hot sticky spring, and a long, very wet summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Dry, mild days around 24–29°C and cooler evenings. Ideal for walking and the old city."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot season: March to May",
+        "text": "Highs reach 33°C with rising humidity. Go out early and rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon: June to September",
+        "text": "Rain on 25–28 days a month. Expect flooded streets and traffic delays; carry an umbrella."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid most of the year",
+        "text": "Lows stay near 24–26°C in the wet months. Light, breathable clothes help."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack for rain in summer",
+        "text": "A compact umbrella and quick-dry shoes are useful from May to October."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, a hat and sunscreen; a light layer for December–January evenings; modest dress for mosques."
+      }
+    ]
+  }
+}

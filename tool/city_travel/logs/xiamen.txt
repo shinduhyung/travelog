@@ -1,0 +1,27 @@
+$ deepseek_facts.py Xiamen
+  tokens in 3930 out 595
+Xiamen: 0 problems
+
+$ deepseek_city.py Xiamen --stage places
+Xiamen: places
+  tokens in 1150 out 3616
+
+$ deepseek_city.py Xiamen --stage frame
+Xiamen: frame
+  tokens in 2448 out 1768
+
+$ deepseek_city.py Xiamen --stage plans
+Xiamen: plans
+  plans for day
+  tokens in 2355 out 954
+  plans for 1n
+  tokens in 2356 out 1241
+  plans for 2n
+  tokens in 2361 out 2273
+  plans for 3n
+  tokens in 2356 out 2433
+
+$ merge_city.py Xiamen
+Xiamen: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/xiamen.json and planner/xiamen.json
+

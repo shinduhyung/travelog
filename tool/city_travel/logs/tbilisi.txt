@@ -1,0 +1,31 @@
+$ deepseek_facts.py Tbilisi
+  tokens in 5242 out 752
+Tbilisi: 1 problems
+  - airport KUT is 201 km away
+
+$ deepseek_city.py Tbilisi --stage places
+Tbilisi: places
+  tokens in 1212 out 3313
+
+$ deepseek_city.py Tbilisi --stage frame
+Tbilisi: frame
+  tokens in 2438 out 1685
+  repaired JSON
+
+$ deepseek_city.py Tbilisi --stage plans
+Tbilisi: plans
+  plans for day
+  tokens in 2297 out 925
+  plans for 1n
+  tokens in 2298 out 874
+  plans for 2n
+  tokens in 2298 out 1565
+  plans for 3n
+  tokens in 2303 out 2431
+  plans for 4n
+  tokens in 2298 out 2427
+
+$ merge_city.py Tbilisi
+Tbilisi: 20 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/tbilisi.json and planner/tbilisi.json
+

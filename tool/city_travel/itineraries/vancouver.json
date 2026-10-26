@@ -1,0 +1,1507 @@
+{
+  "city": "Vancouver",
+  "checked": "October 2026",
+  "currency": "CAD",
+  "usd_rate": 1.4014,
+  "intro": "Vancouver rewards visitors with mountains, beaches, and world-class food all within easy reach. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 49.1763,
+      "west": -123.2903,
+      "north": 49.4107,
+      "east": -122.9691,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4,
+      "flag_airport": 5,
+      "per_km": 2.5,
+      "min_fare": 15
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "SkyTrain Canada Line links YVR to downtown in about 25 minutes.",
+      "SkyTrain Expo and Millennium lines plus SeaBus ferries cover the region.",
+      "TransLink buses run frequent local routes; N10 runs overnight from the airport.",
+      "Taxis accept credit cards; Uber and Lyft operate in Vancouver.",
+      "Driving is easy outside rush hour; downtown parking is costly.",
+      "Walking and bike share (Mobi) suit the compact downtown and seawall."
+    ],
+    "sources": []
+  },
+  "places": {
+    "stanley_park": {
+      "name": "Stanley Park",
+      "landmark": "Stanley Park",
+      "kind": "park",
+      "lat": 49.3017,
+      "lon": -123.1417,
+      "price": 0,
+      "price_text": "Free to enter · parking paid",
+      "hours": "Open 24 hours · park drive one-way for cars",
+      "tip": "Rent a bike near the entrance and ride the 9 km Seawall loop; allow two hours.",
+      "source": "https://vancouver.ca/parks-recreation-culture/stanley-park.aspx"
+    },
+    "granville_island": {
+      "name": "Granville Island",
+      "landmark": "Granville Island",
+      "kind": "food",
+      "lat": 49.2712,
+      "lon": -123.134,
+      "price": 0,
+      "price_text": "Free to enter · pay per item at the market",
+      "hours": "Public Market roughly 09:00–18:00 · check on the day",
+      "tip": "Come hungry for the Public Market, then walk the waterfront for harbour views.",
+      "source": "https://granvilleisland.com/"
+    },
+    "canada_place": {
+      "name": "Canada Place",
+      "landmark": "Canada Place",
+      "kind": "sight",
+      "lat": 49.2888,
+      "lon": -123.1111,
+      "price": 0,
+      "price_text": "Free to walk the promenade · FlyOver Canada ticketed separately",
+      "hours": "Promenade open daily · check on the day",
+      "tip": "Walk the pier for views of the North Shore mountains and cruise ships.",
+      "source": "https://www.canadaplace.ca/"
+    },
+    "capilano_bridge": {
+      "name": "Capilano Suspension Bridge",
+      "landmark": "Capilano Suspension Bridge",
+      "kind": "activity",
+      "lat": 49.3429,
+      "lon": -123.1149,
+      "price": null,
+      "price_text": "Adult ticket roughly CAD 60–75 · check on the day",
+      "hours": "Daily, usually 09:00–17:00 or later in summer · check on the day",
+      "tip": "Go early to beat tour buses; the Cliffwalk and Treetops add an hour.",
+      "source": "https://www.capbridge.com/"
+    },
+    "gastown_steam_clock": {
+      "name": "Gastown Steam Clock",
+      "landmark": "Gastown Steam Clock",
+      "kind": "sight",
+      "lat": 49.2845,
+      "lon": -123.1111,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always visible · whistles on the quarter hour",
+      "tip": "Arrive a few minutes before the quarter hour to hear it whistle.",
+      "source": ""
+    },
+    "vancouver_aquarium": {
+      "name": "Vancouver Aquarium",
+      "landmark": "Vancouver Aquarium",
+      "kind": "museum",
+      "lat": 49.3008,
+      "lon": -123.1309,
+      "price": null,
+      "price_text": "Adult ticket roughly CAD 45–60 · check on the day",
+      "hours": "Daily, usually 10:00–17:00 · check on the day",
+      "tip": "Book online and go at opening; the otter and jellyfish galleries are the highlights.",
+      "source": "https://www.vanaqua.org/"
+    },
+    "moa_ubc": {
+      "name": "Museum of Anthropology at UBC",
+      "landmark": "Museum of Anthropology at UBC",
+      "kind": "museum",
+      "lat": 49.2693,
+      "lon": -123.2594,
+      "price": null,
+      "price_text": "Adult ticket roughly CAD 18–25 · check on the day",
+      "hours": "Closed Mondays in some seasons · usually 10:00–17:00 · check on the day",
+      "tip": "The Great Hall totem poles are the reason to come; allow two hours.",
+      "source": "https://moa.ubc.ca/"
+    },
+    "cypress_mountain": {
+      "name": "Cypress Mountain",
+      "landmark": "Cypress Mountain",
+      "kind": "activity",
+      "lat": 49.387,
+      "lon": -123.197,
+      "price": null,
+      "price_text": "Ski pass and rentals vary by season · check on the day",
+      "hours": "Seasonal · check on the day",
+      "tip": "In summer hike the trails for city views; in winter book ski passes ahead.",
+      "source": "https://www.cypressmountain.com/"
+    },
+    "false_creek_ferry": {
+      "name": "False Creek Ferry",
+      "landmark": "False Creek Ferry",
+      "kind": "tour",
+      "lat": 49.2694,
+      "lon": -123.1374,
+      "price": null,
+      "price_text": "Small hop fare roughly CAD 4–6 · check on the day",
+      "hours": "Daytime service · check on the day",
+      "tip": "Use the little rainbow ferries as cheap transport between Granville Island and downtown.",
+      "source": "https://www.granvilleislandferries.bc.ca/"
+    },
+    "fraser_river": {
+      "name": "Fraser River",
+      "landmark": "Fraser River",
+      "kind": "sight",
+      "lat": 49.2,
+      "lon": -123.0,
+      "price": 0,
+      "price_text": "Free · riverside paths free",
+      "hours": "Always open",
+      "tip": "Walk the riverside paths near Steveston for fishing boats and fish and chips.",
+      "source": ""
+    },
+    "papa_murphys": {
+      "name": "Papa Murphy's",
+      "landmark": "Papa Murphy's",
+      "kind": "food",
+      "lat": 45.6318,
+      "lon": -122.6716,
+      "price": null,
+      "price_text": "Take-and-bake pizza roughly CAD 12–25 · check on the day",
+      "hours": "Varies by branch · check on the day",
+      "tip": "It is take-and-bake: you cook the pizza yourself, so it suits an apartment stay.",
+      "source": "https://www.papamurphys.com/"
+    },
+    "playland": {
+      "name": "Playland, Vancouver",
+      "landmark": "Playland, Vancouver",
+      "kind": "activity",
+      "lat": 49.2781,
+      "lon": -123.076,
+      "price": null,
+      "price_text": "Ride pass roughly CAD 40–55 · check on the day",
+      "hours": "Seasonal, mainly summer · check on the day",
+      "tip": "The wooden roller coaster is the classic ride; check opening days before you go.",
+      "source": "https://www.pne.ca/playland/"
+    },
+    "science_world": {
+      "name": "Science World",
+      "landmark": "Science World",
+      "kind": "museum",
+      "lat": 49.2734,
+      "lon": -123.1038,
+      "price": null,
+      "price_text": "Adult ticket roughly CAD 25–35 · check on the day",
+      "hours": "Daily, usually 10:00–17:00 · check on the day",
+      "tip": "Good for families and rainy days; the dome is a False Creek landmark.",
+      "source": "https://www.scienceworld.ca/"
+    },
+    "ubc": {
+      "name": "University of British Columbia (UBC)",
+      "landmark": "University of British Columbia (UBC)",
+      "kind": "sight",
+      "lat": 49.2606,
+      "lon": -123.246,
+      "price": 0,
+      "price_text": "Free to walk the campus · museums ticketed",
+      "hours": "Campus open daily · buildings vary",
+      "tip": "Pair a campus walk with the Museum of Anthropology and the nearby beaches.",
+      "source": "https://www.ubc.ca/"
+    },
+    "granville_market_food": {
+      "name": "Granville Island Public Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 49.2716,
+      "lon": -123.1352,
+      "price": null,
+      "price_text": "Pay per item · snacks roughly CAD 5–15",
+      "hours": "Usually 09:00–18:00 · check on the day",
+      "tip": "Buy picnic supplies here before a Seawall walk.",
+      "source": "https://granvilleisland.com/public-market"
+    },
+    "queen_elizabeth_viewpoint": {
+      "name": "Queen Elizabeth Park viewpoint",
+      "landmark": null,
+      "kind": "park",
+      "lat": 49.2415,
+      "lon": -123.1125,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park open daily, usually dawn to dusk",
+      "tip": "Highest point in the city; come for skyline and mountain views.",
+      "source": "https://vancouver.ca/parks-recreation-culture/queen-elizabeth-park.aspx"
+    },
+    "seawall_bike_tour": {
+      "name": "Seawall bike ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.2905,
+      "lon": -123.1355,
+      "price": null,
+      "price_text": "Bike rental roughly CAD 15–30 per hour · check on the day",
+      "hours": "Rentals daytime · check on the day",
+      "tip": "Ride from English Bay to Stanley Park and back for an easy flat route.",
+      "source": ""
+    },
+    "gastown_walk": {
+      "name": "Gastown neighbourhood walk",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 49.2833,
+      "lon": -123.1065,
+      "price": 0,
+      "price_text": "Free · self-guided",
+      "hours": "Always open · shops daytime",
+      "tip": "Walk Water Street for brick buildings and the steam clock, then grab coffee.",
+      "source": ""
+    },
+    "english_bay_beach": {
+      "name": "English Bay Beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 49.2865,
+      "lon": -123.1445,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · swimming in summer",
+      "tip": "Sunset here is the classic Vancouver evening; bring a layer, it cools fast.",
+      "source": "https://vancouver.ca/parks-recreation-culture/english-bay-beach.aspx"
+    },
+    "chinatown_walk": {
+      "name": "Chinatown food walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": 49.2795,
+      "lon": -123.1005,
+      "price": null,
+      "price_text": "Pay per item · snacks roughly CAD 5–20",
+      "hours": "Daytime, most shops 10:00–18:00 · check on the day",
+      "tip": "Try dim sum and the Chinese garden; go with an appetite.",
+      "source": ""
+    },
+    "grouse_mountain": {
+      "name": "Grouse Mountain gondola",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.3803,
+      "lon": -123.0816,
+      "price": null,
+      "price_text": "Gondola ticket roughly CAD 60–80 · check on the day",
+      "hours": "Daily, hours vary by season · check on the day",
+      "tip": "Clear days give the best city views; check the webcam before going up.",
+      "source": "https://www.grousemountain.com/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "One full day outdoors: the seawall, Stanley Park and a beach sunset.",
+      "days": [
+        {
+          "title": "Seawall, Stanley Park and English Bay",
+          "stops": [
+            {
+              "place": "seawall_bike_tour",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Rent a bike near the West End. Go early before the path gets busy."
+            },
+            {
+              "place": "stanley_park",
+              "at": "11:15",
+              "minutes": 180,
+              "note": "Lock the bikes and walk the seawall and trails. Park drive is one-way for cars."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy walk from the park. Stay for sunset in summer."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Short hop across the water if the weather is clear. Check daytime service."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasty day: market grazing, Chinatown lunch and an easy dinner in.",
+      "days": [
+        {
+          "title": "Market, Chinatown and dinner",
+          "stops": [
+            {
+              "place": "granville_market_food",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go weekday morning to beat crowds. Usually 09:00–18:00; check on the day."
+            },
+            {
+              "place": "granville_island",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Wander the studios and waterfront. The False Creek Ferry is a fun way back."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunchtime food walk. Most shops 10:00–18:00; check on the day."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "14:45",
+              "minutes": 20,
+              "note": "Short walk from Chinatown. It whistles on the quarter hour."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Pick up a pizza for an easy meal in. Branches vary; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and Indigenous art, then Gastown in the evening light.",
+      "days": [
+        {
+          "title": "UBC museum, then Gastown",
+          "stops": [
+            {
+              "place": "moa_ubc",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Mondays in some seasons. Check hours before you go."
+            },
+            {
+              "place": "ubc",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk the campus and grab lunch nearby."
+            },
+            {
+              "place": "gastown_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late afternoon into evening is best. Shops are daytime only."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "On the walk. Stay for the lit streets after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gastown or Downtown"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "First-timers who want the seawall, the park and one mountain view in a single day.",
+      "days": [
+        {
+          "title": "Arrive, Stanley Park and the seawall",
+          "stops": [
+            {
+              "place": "stanley_park",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Start at the West End entrance. Park drive is one-way for cars."
+            },
+            {
+              "place": "seawall_bike_tour",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Rentals are daytime only, so start by late afternoon. Check on the day."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset spot in summer. Easy walk from the West End."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "20:00",
+              "minutes": 30,
+              "note": "Easy takeaway dinner. Branch hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Grouse Mountain, then fly",
+          "stops": [
+            {
+              "place": "grouse_mountain",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early for clear views. Hours vary by season, check on the day."
+            },
+            {
+              "place": "canada_place",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Promenade walk on the way back downtown."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Short daytime crossing. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around markets, snacks and a Chinatown lunch.",
+      "days": [
+        {
+          "title": "Arrive, Granville Island and False Creek",
+          "stops": [
+            {
+              "place": "granville_market_food",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekday mornings are quieter. Usually 09:00–18:00, check on the day."
+            },
+            {
+              "place": "granville_island",
+              "at": "13:15",
+              "minutes": 150,
+              "note": "Wander the studios and waterfront after eating."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Daytime service only, check on the day."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Easy meal in. Branch hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown lunch, Gastown, then fly",
+          "stops": [
+            {
+              "place": "chinatown_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Lunchtime is best. Most shops 10:00–18:00, check on the day."
+            },
+            {
+              "place": "gastown_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short walk from Chinatown. Shops are daytime."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Whistles on the quarter hour."
+            },
+            {
+              "place": "canada_place",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Waterfront walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yaletown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: Indigenous art at UBC, then Gastown and the waterfront.",
+      "days": [
+        {
+          "title": "Arrive, UBC and the Museum of Anthropology",
+          "stops": [
+            {
+              "place": "ubc",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Campus is open daily. Buildings vary, check on the day."
+            },
+            {
+              "place": "moa_ubc",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Closed Mondays in some seasons. Usually 10:00–17:00, check on the day."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Easy dinner back downtown. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Gastown, waterfront, then fly",
+          "stops": [
+            {
+              "place": "gastown_walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Shops are daytime. Late afternoon is livelier but you leave today."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Whistles on the quarter hour."
+            },
+            {
+              "place": "canada_place",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Promenade open daily, check on the day."
+            },
+            {
+              "place": "science_world",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Usually 10:00–17:00, check on the day. Short ride from downtown."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "First-timers who want parks, water and mountain views without rushing.",
+      "days": [
+        {
+          "title": "Arrive, Stanley Park and the seawall",
+          "stops": [
+            {
+              "place": "stanley_park",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Start at the West End entrance. The park drive is one-way for cars."
+            },
+            {
+              "place": "seawall_bike_tour",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Rent a bike near the park. Rentals are daytime only, so check closing time."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset over the water in summer. Easy walk from the West End."
+            }
+          ]
+        },
+        {
+          "title": "Granville Island, False Creek and a viewpoint",
+          "stops": [
+            {
+              "place": "granville_island",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Go on a weekday morning to beat crowds. Public Market hours vary, check on the day."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Short hop across False Creek. Daytime service only."
+            },
+            {
+              "place": "queen_elizabeth_viewpoint",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Clear late afternoon is best. About 20 minutes by taxi or bus."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Easy takeaway dinner. Branch hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "North Shore mountains, then fly",
+          "stops": [
+            {
+              "place": "capilano_bridge",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go first thing to avoid lines. Hours vary by season, check on the day."
+            },
+            {
+              "place": "grouse_mountain",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Gondola up for views. Hours vary by season, check on the day."
+            },
+            {
+              "place": "canada_place",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Promenade walk before you head to the airport. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, snacks and a good dinner.",
+      "days": [
+        {
+          "title": "Arrive, market and False Creek",
+          "stops": [
+            {
+              "place": "granville_market_food",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Weekday morning is quietest, but an early afternoon works too. Check hours on the day."
+            },
+            {
+              "place": "granville_island",
+              "at": "14:15",
+              "minutes": 150,
+              "note": "Wander the studios and food stalls."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Ride across for the water views. Daytime service only."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Easy meal in. Branch hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Gastown and Chinatown eats",
+          "stops": [
+            {
+              "place": "gastown_walk",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Shops open daytime. Streets are best late afternoon."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Whistles on the quarter hour."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunchtime food walk. Most shops 10:00–18:00, check on the day."
+            },
+            {
+              "place": "canada_place",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Walk the promenade. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Park morning, then fly",
+          "stops": [
+            {
+              "place": "stanley_park",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning is calm. Grab a snack inside the park."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Quick beach stop before you leave."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Pick up lunch for the road. Check branch hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yaletown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Visitors who want museums, Indigenous art and historic streets.",
+      "days": [
+        {
+          "title": "Arrive, Gastown and Canada Place",
+          "stops": [
+            {
+              "place": "gastown_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Shops open daytime. Streets get lively in the evening."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Whistles on the quarter hour."
+            },
+            {
+              "place": "canada_place",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Promenade and harbour views. Check hours on the day."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Easy dinner. Branch hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "UBC museums and campus",
+          "stops": [
+            {
+              "place": "moa_ubc",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Mondays in some seasons. Usually 10:00–17:00, check on the day."
+            },
+            {
+              "place": "ubc",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Campus walk and lunch. Buildings vary in hours."
+            },
+            {
+              "place": "queen_elizabeth_viewpoint",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Clear late afternoon for the skyline."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium or Science World, then fly",
+          "stops": [
+            {
+              "place": "vancouver_aquarium",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Good on a rainy day. Usually 10:00–17:00, check on the day."
+            },
+            {
+              "place": "science_world",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Indoor backup if weather turns. Check hours on the day."
+            },
+            {
+              "place": "canada_place",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Last look at the harbour before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "First-timers who want the seawall, beaches and a mountain day, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Stanley Park and the seawall",
+          "stops": [
+            {
+              "place": "stanley_park",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Start at the West End entrance. The park drive is one-way for cars."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Walk back along the water. Sunset is the best time in summer."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Easy takeaway pizza for an early night. Check your nearest branch."
+            }
+          ]
+        },
+        {
+          "title": "Bike the seawall, then False Creek",
+          "stops": [
+            {
+              "place": "seawall_bike_tour",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Rent a bike near the West End. Go early on a dry day."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Small ferries hop across False Creek. Daytime service only."
+            },
+            {
+              "place": "granville_market_food",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Usually 09:00–18:00, check on the day."
+            },
+            {
+              "place": "science_world",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Good backup if it rains. Usually 10:00–17:00."
+            }
+          ]
+        },
+        {
+          "title": "North Shore mountains, then fly",
+          "stops": [
+            {
+              "place": "capilano_bridge",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go first thing to beat the crowds. Check hours on the day."
+            },
+            {
+              "place": "grouse_mountain",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Gondola up for views. Hours vary by season, check on the day."
+            },
+            {
+              "place": "canada_place",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Promenade walk before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, snacks and a good dinner.",
+      "days": [
+        {
+          "title": "Arrive, Granville Island",
+          "stops": [
+            {
+              "place": "granville_island",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Market, shops and food stalls. Weekday afternoons are calmer."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Ride across False Creek for the view."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Easy meal in. Check branch hours."
+            }
+          ]
+        },
+        {
+          "title": "Gastown and Chinatown eats",
+          "stops": [
+            {
+              "place": "gastown_steam_clock",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "It whistles on the quarter hour."
+            },
+            {
+              "place": "gastown_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shops are daytime; streets get lively later."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Lunchtime food walk. Most shops 10:00–18:00."
+            },
+            {
+              "place": "canada_place",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Walk down to the waterfront to finish."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then fly",
+          "stops": [
+            {
+              "place": "granville_market_food",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Breakfast from the stalls. Go early on a weekday."
+            },
+            {
+              "place": "queen_elizabeth_viewpoint",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "City and mountain views on a clear day."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yaletown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, Indigenous art and old neighbourhoods.",
+      "days": [
+        {
+          "title": "Arrive, Gastown and the waterfront",
+          "stops": [
+            {
+              "place": "canada_place",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Promenade and harbour views. Check hours on the day."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "14:45",
+              "minutes": 20,
+              "note": "Short walk from the waterfront."
+            },
+            {
+              "place": "gastown_walk",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Late afternoon into evening is best."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Easy dinner in. Check branch hours."
+            }
+          ]
+        },
+        {
+          "title": "Museum of Anthropology and UBC",
+          "stops": [
+            {
+              "place": "ubc",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Campus walk. Weekday mornings are quiet."
+            },
+            {
+              "place": "moa_ubc",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Indigenous art and totem poles. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "queen_elizabeth_viewpoint",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Stop on the way back downtown."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium or Science World, then fly",
+          "stops": [
+            {
+              "place": "vancouver_aquarium",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "In Stanley Park. Usually 10:00–17:00, check on the day."
+            },
+            {
+              "place": "stanley_park",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Short loop before you leave."
+            },
+            {
+              "place": "canada_place",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Last look at the harbour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "First-timers who want parks, water and mountains without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease into the West End",
+          "stops": [
+            {
+              "place": "english_bay_beach",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Flat walk from most downtown hotels. Sunset is the best time in summer."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Easy takeaway pizza for a quiet first night. Branches vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Stanley Park and the seawall",
+          "stops": [
+            {
+              "place": "seawall_bike_tour",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Rent a bike near the park entrance. Go early on a dry day."
+            },
+            {
+              "place": "stanley_park",
+              "at": "11:30",
+              "minutes": 180,
+              "note": "Park drive is one-way for cars. Bring water and snacks."
+            },
+            {
+              "place": "vancouver_aquarium",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Inside Stanley Park, so no extra travel. Usually closes around 17:00, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "North Shore mountains",
+          "stops": [
+            {
+              "place": "capilano_bridge",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go first thing to beat the crowds. Free shuttle from downtown in season, check on the day."
+            },
+            {
+              "place": "grouse_mountain",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Short drive or taxi from Capilano. Hours vary by season, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "UBC, museum and a last look",
+          "stops": [
+            {
+              "place": "ubc",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "About 30 minutes by bus from downtown. Campus is open daily."
+            },
+            {
+              "place": "moa_ubc",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "On campus. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "queen_elizabeth_viewpoint",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Stop on the way back downtown. Clear late afternoon is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want markets, Chinatown and an easy base near the water.",
+      "days": [
+        {
+          "title": "Arrive and Granville Island",
+          "stops": [
+            {
+              "place": "false_creek_ferry",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Small ferries hop across False Creek. Daytime service, check on the day."
+            },
+            {
+              "place": "granville_market_food",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Grab lunch from the stalls. Usually 09:00–18:00, so check on the day."
+            },
+            {
+              "place": "granville_island",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "Walk the studios and shops after eating. Weekday mornings are quieter."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown and Gastown",
+          "stops": [
+            {
+              "place": "chinatown_walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunchtime food walk. Most shops 10:00–18:00, so check on the day."
+            },
+            {
+              "place": "gastown_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk from Chinatown. Late afternoon into evening is best."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "15:15",
+              "minutes": 20,
+              "note": "The clock whistles on the quarter hour."
+            }
+          ]
+        },
+        {
+          "title": "Stanley Park and the seawall",
+          "stops": [
+            {
+              "place": "seawall_bike_tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Work up an appetite. Rentals are daytime only, check on the day."
+            },
+            {
+              "place": "stanley_park",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Picnic lunch in the park. Park drive is one-way for cars."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk back along the water. Sunset in summer."
+            }
+          ]
+        },
+        {
+          "title": "Market again and a last meal",
+          "stops": [
+            {
+              "place": "canada_place",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Promenade walk with harbour views. Check hours on the day."
+            },
+            {
+              "place": "papa_murphys",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Easy final-night meal in. Branches vary, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yaletown"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museum lovers and walkers who want history, art and neighbourhood streets.",
+      "days": [
+        {
+          "title": "Arrive, downtown icons",
+          "stops": [
+            {
+              "place": "canada_place",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Promenade open daily, check on the day. Clear morning or sunset is best."
+            },
+            {
+              "place": "gastown_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk or taxi from Canada Place. Shops are daytime."
+            },
+            {
+              "place": "gastown_steam_clock",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Whistles on the quarter hour. Streets look good lit up."
+            }
+          ]
+        },
+        {
+          "title": "Museum day at UBC",
+          "stops": [
+            {
+              "place": "ubc",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "About 30 minutes by bus. Campus open daily, buildings vary."
+            },
+            {
+              "place": "moa_ubc",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Indigenous art and totem poles. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "queen_elizabeth_viewpoint",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Stop on the way back. Park usually dawn to dusk."
+            }
+          ]
+        },
+        {
+          "title": "Science and the water",
+          "stops": [
+            {
+              "place": "science_world",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Good rainy-day option. Usually 10:00–17:00, so check on the day."
+            },
+            {
+              "place": "false_creek_ferry",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Ride across False Creek. Daytime service, check on the day."
+            },
+            {
+              "place": "granville_island",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Studios and craft shops. Weekday afternoons are quieter."
+            }
+          ]
+        },
+        {
+          "title": "Park and a last walk",
+          "stops": [
+            {
+              "place": "stanley_park",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Totem poles near Brockton Point. Park drive is one-way for cars."
+            },
+            {
+              "place": "english_bay_beach",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk back along the seawall. Swimming in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Stanley Park, the seawall and the North Shore mountains."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Granville Island, Asian eats and seafood."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, Gastown and Indigenous art."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        200,
+        450
+      ],
+      "why": "Central for SkyTrain, shops and the seawall; walk to most sights.",
+      "center": [
+        49.2827,
+        -123.1207
+      ]
+    },
+    {
+      "area": "West End",
+      "range": [
+        160,
+        350
+      ],
+      "why": "Quiet streets next to Stanley Park and English Bay beaches.",
+      "center": [
+        49.286,
+        -123.135
+      ]
+    },
+    {
+      "area": "Yaletown",
+      "range": [
+        220,
+        480
+      ],
+      "why": "Lively restaurants and bars by the water; easy Canada Line access.",
+      "center": [
+        49.2755,
+        -123.1215
+      ]
+    },
+    {
+      "area": "Gastown",
+      "range": [
+        180,
+        400
+      ],
+      "why": "Historic brick streets, cafés and nightlife; close to Waterfront station.",
+      "center": [
+        49.2835,
+        -123.108
+      ]
+    }
+  ],
+  "food": [
+    "Try Pacific salmon and spot prawns in season; ask what is local that day.",
+    "Granville Island Public Market: graze cheese, bread and fruit, then sit by the water.",
+    "Richmond has excellent Chinese food; the Canada Line gets you there in about 25 minutes.",
+    "Cheap eats: sushi, ramen and food trucks downtown, roughly CAD 10–20 a meal.",
+    "Book popular dinner spots ahead; weekend brunch queues are long."
+  ],
+  "more_time": [
+    "Swap a city day for Capilano Suspension Bridge or Grouse Mountain; check prices and shuttle options on the day.",
+    "Take the SeaBus to North Vancouver for the Lonsdale Quay market and skyline views.",
+    "Rent a bike (Mobi) and ride more of the seawall toward Kitsilano and the beaches."
+  ]
+}

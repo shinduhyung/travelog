@@ -1,0 +1,63 @@
+{
+ "city": "Vancouver",
+ "trips": [
+  {
+   "place": "Squamish",
+   "label": "",
+   "position": {
+    "id": 16869791,
+    "name": "Squamish, BC",
+    "city": "Squamish",
+    "lat": 49.70163,
+    "lng": -123.15581
+   },
+   "town": {
+    "name": "Squamish",
+    "lat": 49.69925,
+    "lng": -123.15631
+   },
+   "road": {
+    "km": 65,
+    "min": 68,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 170.0,
+    "currency": "CAD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$22-$55",
+     "time": "1h",
+     "via": "Burrard Skytrain Station to Squamish Adventure Center",
+     "source": "https://www.rome2rio.com/s/Vancouver/Squamish"
+    }
+   },
+   "route_note": "Take the BC Ferries connector or a direct coach from downtown Vancouver; the Sea to Sky Highway route runs straight to Squamish with no changes needed.",
+   "see": [
+    "Sea to Sky Gondola",
+    "Shannon Falls",
+    "Squamish Estuary trails",
+    "Downtown Squamish"
+   ],
+   "visit": "Full day",
+   "tour_query": "Squamish day trip from Vancouver",
+   "quests": [
+    "Shannon Falls"
+   ],
+   "recommended": "bus",
+   "why": "A direct coach from downtown reaches Squamish in about an hour with no changes, dropping you near the sights.",
+   "stars": 3,
+   "know": [
+    "Book the coach ahead in summer, when seats fill up",
+    "The Sea to Sky Highway views are best on clear days",
+    "Bring layers; weather changes quickly in the mountains"
+   ]
+  }
+ ],
+ "problems": [
+  "Whistler: not a town in cities15000.json (CA), dropped",
+  "Victoria: 248 min by road, dropped (too far for a day trip)",
+  "Nanaimo: 216 min by road, dropped (too far for a day trip)"
+ ]
+}

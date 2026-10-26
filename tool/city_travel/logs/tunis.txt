@@ -1,0 +1,30 @@
+$ deepseek_facts.py Tunis
+  tokens in 3911 out 607
+Tunis: 1 problems
+  - TUN taxi 5-10 DT day, up to 15 DT night vs tariff estimate 13
+
+$ deepseek_city.py Tunis --stage places
+Tunis: places
+  tokens in 1168 out 2794
+
+$ deepseek_city.py Tunis --stage frame
+Tunis: frame
+  tokens in 2501 out 1933
+
+$ deepseek_city.py Tunis --stage plans
+Tunis: plans
+  plans for day
+  tokens in 1963 out 967
+  plans for 1n
+  tokens in 1964 out 1353
+  plans for 2n
+  tokens in 1969 out 1462
+  plans for 3n
+  tokens in 1964 out 2160
+  plans for 4n
+  tokens in 1964 out 2559
+
+$ merge_city.py Tunis
+Tunis: 17 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/tunis.json and planner/tunis.json
+

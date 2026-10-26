@@ -1,0 +1,32 @@
+$ deepseek_facts.py Rio de Janeiro
+  tokens in 4092 out 844
+Rio de Janeiro: 0 problems
+
+$ deepseek_city.py Rio de Janeiro --stage places
+Rio de Janeiro: places
+  tokens in 1260 out 4164
+
+$ deepseek_city.py Rio de Janeiro --stage frame
+Rio de Janeiro: frame
+  tokens in 2428 out 1912
+  repaired JSON
+
+$ deepseek_city.py Rio de Janeiro --stage plans
+Rio de Janeiro: plans
+  plans for day
+  tokens in 2560 out 859
+  plans for 1n
+  tokens in 2561 out 859
+  plans for 2n
+  tokens in 2561 out 1521
+  plans for 3n
+  tokens in 2566 out 2090
+  plans for 4n
+  tokens in 2561 out 2106
+  plans for 5n
+  tokens in 2561 out 2164
+
+$ merge_city.py Rio de Janeiro
+Rio de Janeiro: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/rio-de-janeiro.json and planner/rio-de-janeiro.json
+

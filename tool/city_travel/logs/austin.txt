@@ -1,0 +1,33 @@
+$ deepseek_prep.py Austin
+  tokens in 694 out 455
+Austin: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Austin
+  tokens in 2856 out 563
+Austin: 0 problems
+
+$ deepseek_city.py Austin --stage places
+Austin: places
+  tokens in 1166 out 3406
+
+$ deepseek_city.py Austin --stage frame
+Austin: frame
+  tokens in 2429 out 1716
+
+$ deepseek_city.py Austin --stage plans
+Austin: plans
+  plans for day
+  tokens in 2188 out 824
+  plans for 1n
+  tokens in 2189 out 855
+  plans for 2n
+  tokens in 2194 out 1247
+  plans for 3n
+  tokens in 2189 out 1908
+  plans for 4n
+  tokens in 2189 out 2064
+
+$ merge_city.py Austin
+Austin: 21 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/austin.json and planner/austin.json
+

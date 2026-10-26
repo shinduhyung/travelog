@@ -1,0 +1,31 @@
+$ deepseek_prep.py Geneva
+  tokens in 700 out 538
+Geneva: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Geneva
+  tokens in 4017 out 637
+Geneva: 0 problems
+
+$ deepseek_city.py Geneva --stage places
+Geneva: places
+  tokens in 1157 out 2918
+
+$ deepseek_city.py Geneva --stage frame
+Geneva: frame
+  tokens in 2439 out 1768
+
+$ deepseek_city.py Geneva --stage plans
+Geneva: plans
+  plans for day
+  tokens in 2067 out 764
+  plans for 1n
+  tokens in 2068 out 1086
+  plans for 2n
+  tokens in 2073 out 1529
+  plans for 3n
+  tokens in 2068 out 1451
+
+$ merge_city.py Geneva
+Geneva: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/geneva.json and planner/geneva.json
+

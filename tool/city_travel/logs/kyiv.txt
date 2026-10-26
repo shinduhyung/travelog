@@ -1,0 +1,28 @@
+$ deepseek_facts.py Kyiv
+  tokens in 4850 out 839
+Kyiv: 0 problems
+
+$ deepseek_city.py Kyiv --stage places
+Kyiv: places
+  tokens in 1241 out 3492
+
+$ deepseek_city.py Kyiv --stage frame
+Kyiv: frame
+  tokens in 2435 out 1735
+  repaired JSON
+
+$ deepseek_city.py Kyiv --stage plans
+Kyiv: plans
+  plans for day
+  tokens in 2277 out 897
+  plans for 1n
+  tokens in 2278 out 1314
+  plans for 2n
+  tokens in 2283 out 1942
+  plans for 3n
+  tokens in 2278 out 2039
+
+$ merge_city.py Kyiv
+Kyiv: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/kyiv.json and planner/kyiv.json
+

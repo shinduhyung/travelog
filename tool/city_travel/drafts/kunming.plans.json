@@ -1,0 +1,880 @@
+{
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "One full day outdoors: the Stone Forest early, then Dianchi Lake at sunset.",
+      "days": [
+        {
+          "title": "Stone Forest, then the lake",
+          "stops": [
+            {
+              "place": "shilin",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Leave the city early; the drive takes about 1.5 hours. Bring sun protection and water."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Rice noodle lunch back in the city centre."
+            },
+            {
+              "place": "dianchi",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk the Haigeng Dam promenade. Stay for sunset."
+            },
+            {
+              "place": "bird_lake",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Seagulls only from November to March. Skip outside winter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market morning, a noodle lunch and an evening of street snacks.",
+      "days": [
+        {
+          "title": "Markets, noodles and old streets",
+          "stops": [
+            {
+              "place": "zhuanxin",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early; it is busiest in the morning. Try fresh fruit and local snacks."
+            },
+            {
+              "place": "greenlake",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Short walk from the market. Watch locals dance and sing."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Classic crossing-the-bridge rice noodles for lunch."
+            },
+            {
+              "place": "chagee",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Milk tea break. Check the branch hours."
+            },
+            {
+              "place": "nanping",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening snack street. Shops roughly 10:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Temples, a museum and the old town in one relaxed day.",
+      "days": [
+        {
+          "title": "Temples and old-town Kunming",
+          "stops": [
+            {
+              "place": "yuantong",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Quiet in the morning. Modest dress is respectful."
+            },
+            {
+              "place": "greenlake",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "About 15 minutes on foot from the temple."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch near Green Lake."
+            },
+            {
+              "place": "yunnan_museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Closed Monday. Good rainy-afternoon backup."
+            },
+            {
+              "place": "guandu",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Old streets and temples. Temples close around 17:00, so go there first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Lakeside views and the Stone Forest in one short stay.",
+      "days": [
+        {
+          "title": "Arrive, Dianchi Lake and seagulls",
+          "stops": [
+            {
+              "place": "dianchi",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the Haigeng Dam promenade. About 30–40 minutes by taxi from the centre; check on the day."
+            },
+            {
+              "place": "bird_lake",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Seagulls at Haigeng Park, November to March only. In summer, skip and stay on the promenade."
+            },
+            {
+              "place": "flower_market",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Dounan Flower Market. Wholesale trade is very early; afternoon is calmer."
+            },
+            {
+              "place": "nanping",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner and a stroll in the pedestrian area."
+            }
+          ]
+        },
+        {
+          "title": "Stone Forest, then leave",
+          "stops": [
+            {
+              "place": "shilin",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Go early to beat crowds. About 1.5 hours by bus or car each way; check on the day. Bring water and sun protection."
+            },
+            {
+              "place": "railway_station_food",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick noodle lunch near the station before departure."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets, rice noodles and street snacks in the old town.",
+      "days": [
+        {
+          "title": "Arrive, market and old streets",
+          "stops": [
+            {
+              "place": "zhuanxin",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Busiest in the morning, but afternoon still has stalls. Try fresh fruit and snacks."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Late guoqiao mixian lunch; many shops serve all day."
+            },
+            {
+              "place": "greenlake",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Walk off lunch by the lake."
+            },
+            {
+              "place": "cuihu_cafe",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Coffee break near the park."
+            },
+            {
+              "place": "nanping",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening street food and shops."
+            }
+          ]
+        },
+        {
+          "title": "Guandu food and temples, then leave",
+          "stops": [
+            {
+              "place": "guandu",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Old town streets and temples; snack as you go. Temples roughly 08:00–17:00."
+            },
+            {
+              "place": "chagee",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Milk tea stop; check the branch."
+            },
+            {
+              "place": "railway_station_food",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Noodles before your train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Temples, old streets and a museum in the city centre.",
+      "days": [
+        {
+          "title": "Arrive, temple and old-town walk",
+          "stops": [
+            {
+              "place": "yuantong",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Calm temple in the centre. Roughly 08:00–17:00; check on the day."
+            },
+            {
+              "place": "greenlake",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Short walk from the temple. Good late afternoon."
+            },
+            {
+              "place": "yuantong_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Wenlin Street and old-town lanes; shops roughly 10:00–22:00."
+            },
+            {
+              "place": "nanping",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and evening stroll."
+            }
+          ]
+        },
+        {
+          "title": "Museum or Guandu, then leave",
+          "stops": [
+            {
+              "place": "yunnan_museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Roughly 09:00–17:00."
+            },
+            {
+              "place": "guandu",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Old town temples and lunch. Temples roughly 08:00–17:00."
+            },
+            {
+              "place": "railway_station_food",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Quick bite before departure."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "First-timers who want the big landscapes: Stone Forest, the lake and the western hills.",
+      "days": [
+        {
+          "title": "Arrive, lake promenade and gulls",
+          "stops": [
+            {
+              "place": "dianchi",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the Haigeng Dam. Taxi from the centre takes about 30 minutes."
+            },
+            {
+              "place": "bird_lake",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Seagulls only November to March. Otherwise skip and stay on the promenade."
+            },
+            {
+              "place": "nanping",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and an evening stroll in the city centre."
+            }
+          ]
+        },
+        {
+          "title": "Stone Forest day trip",
+          "stops": [
+            {
+              "place": "stone_forest_tour",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full day out. Bring water, sun hat and cash. Dry season is best."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Crossing-the-bridge rice noodles for dinner back in town."
+            }
+          ]
+        },
+        {
+          "title": "Western Hills, then out",
+          "stops": [
+            {
+              "place": "xishan",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go on a clear morning for the lake view. Cable car or bus up; check on the day."
+            },
+            {
+              "place": "flower_market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Dounan is on the way back to town. Wholesale trade is very early; afternoons are calmer."
+            },
+            {
+              "place": "south_station",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Allow buffer time for a high-speed train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters: market breakfasts, rice noodles and a slow café afternoon by the lake.",
+      "days": [
+        {
+          "title": "Market morning and old town",
+          "stops": [
+            {
+              "place": "zhuanxin",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Busiest and best in the morning. Snack as you go."
+            },
+            {
+              "place": "yuantong",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Quiet temple a short walk away."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Guoqiao mixian lunch, the classic Kunming bowl."
+            },
+            {
+              "place": "greenlake",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Walk it off around the lake."
+            },
+            {
+              "place": "cuihu_cafe",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Afternoon coffee stop."
+            }
+          ]
+        },
+        {
+          "title": "Lake food and flowers",
+          "stops": [
+            {
+              "place": "dianchi",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Promenade walk before it gets busy."
+            },
+            {
+              "place": "ethnic_village",
+              "at": "11:30",
+              "minutes": 180,
+              "note": "Snack stalls inside; check opening on the day."
+            },
+            {
+              "place": "flower_market",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Flowers, tea and cheap eats. Early morning is the wholesale rush."
+            },
+            {
+              "place": "nanping",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening street food and shops."
+            }
+          ]
+        },
+        {
+          "title": "Noodles before the train",
+          "stops": [
+            {
+              "place": "railway_station_food",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Quick bowl near the station before departure."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Temples, old streets and museums, with the Stone Forest as the big day out.",
+      "days": [
+        {
+          "title": "Temple, lake and old streets",
+          "stops": [
+            {
+              "place": "yuantong",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is calmest."
+            },
+            {
+              "place": "greenlake",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk from the temple."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "yunnan_museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Closed Monday. Good rainy-afternoon backup."
+            },
+            {
+              "place": "yuantong_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Wenlin Street and old-town lanes in late afternoon light."
+            }
+          ]
+        },
+        {
+          "title": "Stone Forest, then out",
+          "stops": [
+            {
+              "place": "stone_forest_tour",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full day. Check the return time before booking onward travel."
+            },
+            {
+              "place": "south_station",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Buffer for a high-speed train."
+            }
+          ]
+        },
+        {
+          "title": "Guandu morning",
+          "stops": [
+            {
+              "place": "guandu",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Temples roughly 08:00–17:00. Street food is good here."
+            },
+            {
+              "place": "jindian",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Golden Temple Park; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Lakes, hills and the Stone Forest, with easy mornings and sunset by the water.",
+      "days": [
+        {
+          "title": "Arrive and ease in by the lake",
+          "stops": [
+            {
+              "place": "dianchi",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the promenade and Haigeng Dam. Always open; sunset is the best light."
+            },
+            {
+              "place": "nanping",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and a wander. Shops roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Western Hills and the lake shore",
+          "stops": [
+            {
+              "place": "xishan",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go on a clear morning for the lake views. Roughly 08:00–17:30; check on the day."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Crossing-the-bridge rice noodles for lunch."
+            },
+            {
+              "place": "bird_lake",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Seagulls at Haigeng Park, November to March only. Daylight hours."
+            },
+            {
+              "place": "flower_market",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dounan Flower Market. Roughly 08:00–22:00; wholesale trade is very early."
+            }
+          ]
+        },
+        {
+          "title": "Stone Forest day trip",
+          "stops": [
+            {
+              "place": "stone_forest_tour",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full-day trip from Kunming, back in the evening. Book ahead and start early."
+            },
+            {
+              "place": "railway_station_food",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Quick noodles near the station if you arrive there. Roughly 06:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Green hills, then go",
+          "stops": [
+            {
+              "place": "greenlake",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early morning is calm and local. Open dawn to dusk."
+            },
+            {
+              "place": "jindian",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Golden Temple Park. Roughly 08:00–18:00; go in the morning."
+            },
+            {
+              "place": "cuihu_cafe",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch stop before you head off. Roughly 09:00–22:00."
+            },
+            {
+              "place": "south_station",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Allow extra time for security before a high-speed train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Markets, noodles and snacks, with a lake walk between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat downtown",
+          "stops": [
+            {
+              "place": "zhuanxin",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Wet market snacks. Roughly 06:00–19:00; busiest in the morning."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Rice noodle dinner. Roughly 10:00–21:00."
+            },
+            {
+              "place": "nanping",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening street food and shops. Roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and old town tastes",
+          "stops": [
+            {
+              "place": "zhuanxin",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early for the full market. Roughly 06:00–19:00."
+            },
+            {
+              "place": "guandu",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Old town snacks and temples. Streets always open; temples roughly 08:00–17:00."
+            },
+            {
+              "place": "chagee",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Tea break. Roughly 10:00–22:00; check the branch."
+            },
+            {
+              "place": "yuantong_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Old-town walk with snack stops. Shops roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Lake day with a flower market finish",
+          "stops": [
+            {
+              "place": "dianchi",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Promenade walk. Always open."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Roughly 10:00–21:00."
+            },
+            {
+              "place": "flower_market",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Dounan Flower Market. Roughly 08:00–22:00."
+            },
+            {
+              "place": "nanping",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Last dinner downtown. Roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Quick bite before you go",
+          "stops": [
+            {
+              "place": "greenlake",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning stroll. Open dawn to dusk."
+            },
+            {
+              "place": "cuihu_cafe",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Coffee and a snack. Roughly 09:00–22:00."
+            },
+            {
+              "place": "railway_station_food",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Noodles before departure. Roughly 06:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Temples, old streets and museums, with the Stone Forest as a day out.",
+      "days": [
+        {
+          "title": "Arrive, temple and old town",
+          "stops": [
+            {
+              "place": "yuantong",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Temple in the city centre. Roughly 08:00–17:00; check on the day."
+            },
+            {
+              "place": "greenlake",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Park next door. Open dawn to dusk."
+            },
+            {
+              "place": "yuantong_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Wenlin Street and old-town walk. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "nanping",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Shops roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Museum and Guandu Old Town",
+          "stops": [
+            {
+              "place": "yunnan_museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday; roughly 09:00–17:00."
+            },
+            {
+              "place": "cuihu_food",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Roughly 10:00–21:00."
+            },
+            {
+              "place": "guandu",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Old town temples and streets. Temples roughly 08:00–17:00."
+            },
+            {
+              "place": "chagee",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Tea break. Check the branch."
+            }
+          ]
+        },
+        {
+          "title": "Stone Forest day trip",
+          "stops": [
+            {
+              "place": "stone_forest_tour",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full-day trip, back in the evening. Book ahead."
+            },
+            {
+              "place": "railway_station_food",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Quick noodles if you arrive near the station. Roughly 06:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Golden Temple, then go",
+          "stops": [
+            {
+              "place": "jindian",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Golden Temple Park. Roughly 08:00–18:00; morning is best."
+            },
+            {
+              "place": "cuihu_cafe",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch before departure. Roughly 09:00–22:00."
+            },
+            {
+              "place": "south_station",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Allow extra time for security before a high-speed train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City centre (Tangzixiang)"
+    }
+  ]
+}

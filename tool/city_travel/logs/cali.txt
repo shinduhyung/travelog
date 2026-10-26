@@ -1,0 +1,33 @@
+$ deepseek_prep.py Cali
+  tokens in 627 out 230
+Cali: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Cali
+  tokens in 1897 out 591
+Cali: 0 problems
+
+$ deepseek_city.py Cali --stage places
+Cali: places
+  tokens in 1128 out 2080
+
+$ deepseek_city.py Cali --stage frame
+Cali: frame
+  tokens in 2441 out 1862
+
+$ deepseek_city.py Cali --stage plans
+Cali: plans
+  plans for day
+  tokens in 1665 out 871
+  plans for 1n
+  tokens in 1666 out 879
+  plans for 2n
+  tokens in 1666 out 1156
+  plans for 3n
+  tokens in 1671 out 2002
+  plans for 4n
+  tokens in 1666 out 1942
+
+$ merge_city.py Cali
+Cali: 15 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/cali.json and planner/cali.json
+

@@ -1,0 +1,33 @@
+$ deepseek_facts.py Santo Domingo
+  tokens in 6076 out 784
+Santo Domingo: 3 problems
+  - SDQ taxi US$25-40 vs tariff estimate 2120
+  - SDQ Bus RD$40 costs more than taxi US$25-40
+  - JBQ taxi RD$500-800 vs tariff estimate 1015
+
+$ deepseek_city.py Santo Domingo --stage places
+Santo Domingo: places
+  tokens in 1171 out 2319
+
+$ deepseek_city.py Santo Domingo --stage frame
+Santo Domingo: frame
+  tokens in 2439 out 1824
+  repaired JSON
+
+$ deepseek_city.py Santo Domingo --stage plans
+Santo Domingo: plans
+  plans for day
+  tokens in 1758 out 960
+  plans for 1n
+  tokens in 1759 out 1158
+  plans for 2n
+  tokens in 1764 out 1657
+  plans for 3n
+  tokens in 1759 out 1967
+  plans for 4n
+  tokens in 1759 out 2306
+
+$ merge_city.py Santo Domingo
+Santo Domingo: 15 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/santo-domingo.json and planner/santo-domingo.json
+

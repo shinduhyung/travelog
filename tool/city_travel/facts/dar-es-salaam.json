@@ -1,0 +1,170 @@
+{
+  "currency": "TZS",
+  "usd_rate": 2644.9172,
+  "intro_line": "Tanzania's steamy coastal hub of trade, spice and Swahili rhythm.",
+  "intro": "Dar es Salaam rewards visitors with a lively waterfront, markets and easy island escapes. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "City Centre (Posta)",
+    "Kivukoni",
+    "Msasani Peninsula",
+    "Oyster Bay"
+  ],
+  "taxi": {
+    "flag_day": 5000,
+    "flag_airport": 30000,
+    "per_km": 1500,
+    "min_fare": 5000
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "DART bus rapid transit runs on dedicated lanes; Phase 1 links Kimara to Kivukoni Ferry via Posta.",
+    "Daladala minibuses are cheap (under TSh 1,000) but slow and crowded; look for POSTA signs.",
+    "Taxis are everywhere; agree the fare first, as meters are rare.",
+    "Ride apps like Bolt and Uber work in Dar and often beat street-taxi prices.",
+    "Driving is on the left; traffic is heavy, especially at evening rush hour.",
+    "Walking suits the compact centre; cycling is possible but risky on busy roads.",
+    "Ferries from Kivukoni cross to Kigamboni in the south."
+  ],
+  "airports": [
+    {
+      "code": "DAR",
+      "name": "Julius Nyerere International Airport",
+      "primary": true,
+      "note": "Tanzania's main gateway, about 10 km from the centre.",
+      "options": [
+        {
+          "mode": "Daladala",
+          "to": "Posta, city centre",
+          "price": "under TSh 1,000",
+          "time": "45-75 min",
+          "note": "Walk out to the main road for the stop; expect detours."
+        },
+        {
+          "mode": "Bajaji",
+          "to": "City centre",
+          "price": "TSh 15,000-20,000",
+          "time": "30-60 min",
+          "note": "About half a taxi fare; fine for light luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "TSh 30,000-50,000",
+          "time": "25-50 min",
+          "note": "Higher at night; allow extra time in rush hour."
+        },
+        {
+          "mode": "Ride app (Bolt/Uber)",
+          "to": "City centre",
+          "price": "TSh 20,000-35,000",
+          "time": "25-50 min",
+          "note": "Meet the driver at the marked pickup point."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "National Museum of Tanzania",
+    "Askari Monument"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Dar es Salaam",
+      "https://en.wikivoyage.org/wiki/Dar%20es%20Salaam"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -6.82349,
+    39.26951
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 15
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 12
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 26
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 16
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 8
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 6
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 9
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 11
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 20
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 21
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

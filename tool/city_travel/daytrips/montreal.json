@@ -1,0 +1,77 @@
+{
+ "city": "Montreal",
+ "trips": [
+  {
+   "place": "Ottawa",
+   "label": "",
+   "position": {
+    "id": 16896703,
+    "name": "Ottawa, ON",
+    "city": "Ottawa",
+    "lat": 45.41643,
+    "lng": -75.65169
+   },
+   "town": {
+    "name": "Ottawa",
+    "lat": 45.41117,
+    "lng": -75.69812
+   },
+   "road": {
+    "km": 197,
+    "min": 153,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 340.0,
+    "currency": "CAD"
+   },
+   "modes": {
+    "train": {
+     "from": "$30-$180",
+     "time": "2h 1m",
+     "via": "Montréal to Ottawa",
+     "source": "https://www.rome2rio.com/s/Montreal/Ottawa"
+    },
+    "bus": {
+     "from": "$30-$45",
+     "time": "3h 25m",
+     "via": "Montreal to Ottawa",
+     "source": "https://www.rome2rio.com/s/Montreal/Ottawa"
+    }
+   },
+   "route_note": "Direct VIA Rail trains and Orléans Express buses connect Montreal to Ottawa in roughly 2 hours with no changes.",
+   "see": [
+    "Parliament Hill",
+    "Rideau Canal",
+    "ByWard Market",
+    "National Gallery of Canada",
+    "Canadian Museum of History"
+   ],
+   "visit": "Full day",
+   "tour_query": "Ottawa day trip from Montreal",
+   "quests": [
+    "Parliament Hill",
+    "Notre-Dame Cathedral Basilica",
+    "Canadian Museum of History",
+    "National Gallery of Canada",
+    "Rideau Hall",
+    "ByWard Market",
+    "Library of Parliament",
+    "Rideau Canal Cruise"
+   ],
+   "recommended": "train",
+   "why": "Direct trains take about 2 hours with no changes and drop you right in central Ottawa.",
+   "stars": 4,
+   "know": [
+    "Book ahead for the cheapest fares",
+    "Parliament tours require advance booking",
+    "Best in spring for the tulips or early fall"
+   ]
+  }
+ ],
+ "problems": [
+  "Quebec City: not a town in cities15000.json (CA), dropped",
+  "Mont-Tremblant: not a town in cities15000.json (CA), dropped",
+  "Saint-Sauveur: not a town in cities15000.json (CA), dropped"
+ ]
+}

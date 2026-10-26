@@ -1,0 +1,235 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Luxembourg blends medieval charm with modern finance in a green valley.",
+  "intro": "Luxembourg rewards visitors with free public transport, a walkable old town, and easy access to nature. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Ville Haute",
+    "Gare",
+    "Kirchberg",
+    "Grund"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4.5,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Tram T1 connects the airport to the city centre and Gare, every 8 minutes, free.",
+    "Buses 1-31 serve the city; most stop at Hamilius and Gare, free.",
+    "Taxis are available but limited; ride apps like Uber and Bolt operate.",
+    "Driving is easy but parking in the centre is paid and scarce on weekends.",
+    "Walking and cycling are great; the city is compact and bike-friendly.",
+    "No ferries; the country is landlocked."
+  ],
+  "airports": [
+    {
+      "code": "LUX",
+      "name": "Luxembourg-Findel International Airport",
+      "primary": true,
+      "note": "Main gateway, 6 km from centre.",
+      "options": [
+        {
+          "mode": "Tram T1",
+          "to": "City centre (Hamilius)",
+          "price": "€0",
+          "time": "20-25 min",
+          "note": "Free and frequent, every 8 min."
+        },
+        {
+          "mode": "Bus 16",
+          "to": "Kirchberg, City Centre, Gare",
+          "price": "€0",
+          "time": "25-30 min",
+          "note": "Free, stops at Hamilius and Gare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "15-20 min",
+          "note": "Fixed fare zone, check locally."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€25-35",
+          "time": "15-20 min",
+          "note": "App-based, may surge."
+        }
+      ]
+    },
+    {
+      "code": "HHN",
+      "name": "Frankfurt-Hahn Airport",
+      "primary": false,
+      "note": "Secondary low-cost airport, ~80 km from centre.",
+      "options": [
+        {
+          "mode": "Bus (Flibco)",
+          "to": "Luxembourg Gare",
+          "price": "€15-20",
+          "time": "1h30-2h",
+          "note": "Direct bus, check schedule."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-180",
+          "time": "1h-1h15",
+          "note": "Expensive, pre-book."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€120-150",
+          "time": "1h-1h15",
+          "note": "May not be available, check app."
+        }
+      ]
+    },
+    {
+      "code": "CRL",
+      "name": "Brussels South Charleroi Airport",
+      "primary": false,
+      "note": "Low-cost airport, ~150 km from centre.",
+      "options": [
+        {
+          "mode": "Bus (Flibco)",
+          "to": "Luxembourg Gare",
+          "price": "€20-25",
+          "time": "3h",
+          "note": "Direct bus, book online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€250-300",
+          "time": "2h-2h30",
+          "note": "Very expensive, not recommended."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€200-250",
+          "time": "2h-2h30",
+          "note": "Check availability."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Grand Ducal Palace",
+    "Bock Casemates",
+    "Le Chemin de la Corniche",
+    "Notre-Dame Cathedral, Luxembourg",
+    "Adolphe Bridge",
+    "Judd mat Gaardebounen",
+    "Mudam Luxembourg",
+    "Parc Merveilleux"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Luxembourg",
+      "https://en.wikivoyage.org/wiki/Luxembourg"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    49.6116,
+    6.1319
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": 0,
+      "rain_days": 14
+    },
+    {
+      "high": 7,
+      "low": 0,
+      "rain_days": 12
+    },
+    {
+      "high": 10,
+      "low": 2,
+      "rain_days": 13
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 10
+    },
+    {
+      "high": 15,
+      "low": 8,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 14
+    },
+    {
+      "high": 6,
+      "low": 1,
+      "rain_days": 15
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport CRL is 152 km away"
+  ]
+}

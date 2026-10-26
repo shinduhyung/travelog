@@ -1,0 +1,553 @@
+{
+  "city": "Perth",
+  "checked": "October 2026",
+  "intro_line": "Sun-soaked, isolated, and ringed by river and sea.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "CBD",
+        "Northbridge",
+        "Fremantle",
+        "Scarborough"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "CBD",
+        "Northbridge",
+        "Fremantle",
+        "Scarborough"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "CBD",
+        "Northbridge",
+        "Fremantle",
+        "Scarborough"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "CBD",
+        "Northbridge",
+        "Fremantle",
+        "Scarborough"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "CBD",
+        "Northbridge",
+        "Fremantle",
+        "Scarborough"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 2,
+        "note": "January: hot and dry, highs near 30°C. Best for beaches; start outdoor plans early."
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 2,
+        "note": "February: similar to January — hot, dry and busy with summer crowds."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 5,
+        "note": "March: still warm at about 28°C, with a few more rain days. Good beach weather."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 6,
+        "note": "April: mild and pleasant, highs near 25°C. A comfortable month for walking and day trips."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 8,
+        "note": "May: cooler at about 21°C with more rain. Pack a light jacket."
+      },
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 12,
+        "note": "June: cool and wet — highs near 18°C and about 12 rain days. Plan indoor backups."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 15,
+        "note": "July: the wettest and coolest month, around 17°C. Bring a rain jacket."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 13,
+        "note": "August: still cool and showery, about 18°C. Watch the forecast for beach days."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 7,
+        "note": "September: warming to about 19°C with fewer rain days. Wildflowers start inland."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 6,
+        "note": "October: mild at about 22°C and drying out. A good shoulder month."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 4,
+        "note": "November: warm and mostly dry at about 25°C. Great for beaches and Rottnest."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 2,
+        "note": "December: hot and dry near 28°C. Book accommodation early for the holidays."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.95,
+      0.95,
+      0.9,
+      0.7,
+      0.5,
+      0.35,
+      0.3,
+      0.35,
+      0.45,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "culture": [
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "family": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95
+    ]
+  },
+  "places": {
+    "fremantle-prison": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; book ahead in summer",
+      "area": "Fremantle",
+      "popularity": 5
+    },
+    "elizabeth-quay": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "cottesloe-beach": {
+      "types": [
+        "beach",
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon swim, sunset views",
+      "area": "Fremantle",
+      "popularity": 5
+    },
+    "aqwa": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning on a hot or rainy day",
+      "area": "Northbridge",
+      "popularity": 4
+    },
+    "adventure-world": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday in summer, arrive at opening",
+      "area": "Fremantle",
+      "popularity": 4
+    },
+    "fishing-boat-harbour": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunch or early dinner",
+      "area": "Fremantle",
+      "popularity": 4
+    },
+    "kalamunda-water-park": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Hot summer day, morning",
+      "area": "CBD",
+      "popularity": 2
+    },
+    "royal-showgrounds": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late September, weekday to avoid crowds",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "swan-river": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset or early morning",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "great-escape": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend, morning",
+      "area": "Northbridge",
+      "popularity": 2
+    },
+    "uwa": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Fremantle",
+      "popularity": 2
+    },
+    "kings-park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon; spring for wildflowers",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "fremantle-markets": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Friday to Sunday, morning",
+      "area": "Fremantle",
+      "popularity": 4
+    },
+    "scarborough-beach": {
+      "types": [
+        "beach",
+        "family",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon to sunset",
+      "area": "Scarborough",
+      "popularity": 4
+    },
+    "rottnest-day-trip": {
+      "types": [
+        "nature",
+        "family",
+        "beach"
+      ],
+      "minutes": 420,
+      "setting": "outdoor",
+      "best": "Full day; calm weather",
+      "area": "Fremantle",
+      "popularity": 5
+    },
+    "swan-valley-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday, daytime",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "northbridge-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening, Thursday to Saturday",
+      "area": "Northbridge",
+      "popularity": 3
+    },
+    "perth-mint": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning or rainy day",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "south-perth-foreshore": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "cbd-art-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "CBD",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the beaches, Kings Park and a full Rottnest day without rushing."
+  },
+  "airports": [
+    {
+      "code": "PER",
+      "name": "Perth Airport",
+      "primary": true,
+      "note": "Main gateway, 10 km east of the centre; T1/T2 and T3/T4 are separate precincts.",
+      "options": [
+        {
+          "mode": "Airport Line train",
+          "to": "Perth city centre",
+          "price": "$5",
+          "time": "20-30 min",
+          "note": "Flat fare; serves T1/T2 only."
+        },
+        {
+          "mode": "Bus 292 + train",
+          "to": "Redcliffe Station, then city",
+          "price": "$3.50-5",
+          "time": "35-45 min",
+          "note": "For T3/T4; bus stop is 20 m outside T4."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$35-50",
+          "time": "20-35 min",
+          "note": "Plentiful outside peak; book for airport runs."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "$30-45",
+          "time": "20-35 min",
+          "note": "Pickup zones are signposted at each precinct."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Perth",
+      "https://en.wikivoyage.org/wiki/Perth"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "nature",
+    "family"
+  ],
+  "transit": {
+    "best": "Trains and the free CAT buses for the CBD; a car or tour for beaches and day trips.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Transperth runs eight lines every 5–10 min at peak and about 15 min off-peak. Handy for Fremantle and the CBD."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses cover the CBD and suburbs. The CAT buses are free on five colour-coded routes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A ferry links Elizabeth Quay to South Perth."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and DiDi operate; taxis are Swan Taxis and Black and White."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Useful for beaches and day trips outside the train lines. Check parking in the CBD."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Easy in the CBD and Fremantle. The city is spread out, so use transport for longer hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, wet winters. Rain falls mostly from May to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Warm, dry days around 25–30°C. Ideal for beaches and Rottnest Island."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest: June to August",
+        "text": "About 12–15 rain days a month and highs near 17–18°C. Bring a rain jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild shoulder months",
+        "text": "April, May, September and October sit around 19–25°C — good for walking and day trips."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Sea breezes",
+        "text": "The afternoon sea breeze is strong in summer. Mornings are calmer for the beach."
+      },
+      {
+        "icon": "🧴",
+        "title": "Strong sun",
+        "text": "UV is high even on cooler days. Wear sunscreen and a hat."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and swimwear for summer; a warm layer and rain jacket for winter."
+      }
+    ]
+  }
+}

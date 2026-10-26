@@ -1,0 +1,207 @@
+{
+  "currency": "PLN",
+  "usd_rate": 3.8993,
+  "intro_line": "Silesia's industrial heart, reborn as a green, gritty cultural capital.",
+  "intro": "Katowice rewards visitors with striking post-industrial architecture, top museums and a lively music scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Rynek",
+    "Śródmieście",
+    "Koszutka",
+    "Ligota"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 15,
+    "per_km": 3,
+    "min_fare": 12
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Trams and buses run by ZTM Metropolia cover the whole metro area with one ticket system.",
+    "A 20-min ticket is 4.60 zł, 90-min or full-route 6.60 zł, and a day pass 12 zł.",
+    "Validate your ticket on boarding; inspectors fine unvalidated tickets.",
+    "Buy tickets at kiosks, machines or POP points; drivers sell only the 90-min ticket, cash only.",
+    "Uber and Bolt work well; agree taxi prices beforehand or use an app.",
+    "The centre is walkable; Metrorower yellow bikes rent via app across the region."
+  ],
+  "airports": [
+    {
+      "code": "KTW",
+      "name": "Katowice International Airport",
+      "primary": true,
+      "note": "Main airport, 24 km north at Pyrzowice.",
+      "options": [
+        {
+          "mode": "AP airport bus",
+          "to": "Main railway and bus stations",
+          "price": "6.60 zł",
+          "time": "50-55 min",
+          "note": "Every 30 min daytime, hourly at night; avoid slower M11."
+        },
+        {
+          "mode": "Matuszek bus",
+          "to": "Kraków",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Direct service if heading to Kraków."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "90-130 zł",
+          "time": "30-40 min",
+          "note": "Agree the fare first or book via app."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "70-110 zł",
+          "time": "30-40 min",
+          "note": "Fixed app price, often cheaper than rank taxis."
+        }
+      ]
+    },
+    {
+      "code": "KRK",
+      "name": "Kraków John Paul II Airport",
+      "primary": false,
+      "note": "Major airport with wide European connections, about 70 km east.",
+      "options": [
+        {
+          "mode": "Train + bus",
+          "to": "Kraków centre, then Katowice",
+          "price": "check locally",
+          "time": "2-2.5 hr",
+          "note": "Frequent trains and buses link Kraków to Katowice."
+        },
+        {
+          "mode": "Flixbus",
+          "to": "Katowice bus station",
+          "price": "check locally",
+          "time": "1.5-2 hr",
+          "note": "Some services call at the airport; check timetables."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "250-350 zł",
+          "time": "1-1.5 hr",
+          "note": "Long ride; train is usually better value."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "220-320 zł",
+          "time": "1-1.5 hr",
+          "note": "App price agreed upfront."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Spodek",
+    "Silesian Museum",
+    "Auschwitz-Birkenau Memorial and Museum",
+    "Legendia (Silesian Amusement Park)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Katowice",
+      "https://en.wikivoyage.org/wiki/Katowice"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    50.25841,
+    19.02754
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 2,
+      "low": -3,
+      "rain_days": 13
+    },
+    {
+      "high": 5,
+      "low": -2,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 0,
+      "rain_days": 11
+    },
+    {
+      "high": 14,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 14
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 4,
+      "low": -1,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

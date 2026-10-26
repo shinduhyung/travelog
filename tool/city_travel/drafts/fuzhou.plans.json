@@ -1,0 +1,961 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "for": "One full day of old lanes, museums and jasmine tea, all on foot in the old city.",
+      "nights": 0,
+      "days": [
+        {
+          "title": "Old lanes in the morning, museums and tea in the afternoon",
+          "stops": [
+            {
+              "place": "sanfang_qixiang",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Go early before tour groups. Lanes are free to walk."
+            },
+            {
+              "place": "linzexu",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Small hall in the lanes. Closed Monday, so check the day."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch nearby. Fish balls are the local classic."
+            },
+            {
+              "place": "fuzhou_museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Indoor and cool at midday. Closed Monday. Short taxi or bus ride."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Back in the lanes for jasmine tea tasting. Tea houses stay open late."
+            },
+            {
+              "place": "nanhou_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening snacks on Nanhou Street. Busiest after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "for": "A eat-your-way-through day: breakfast stall, fish balls, tea and evening snacks.",
+      "nights": 0,
+      "days": [
+        {
+          "title": "Breakfast to night market, all in the old city",
+          "stops": [
+            {
+              "place": "breakfast_stall",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Go early, many stalls close by 10:00."
+            },
+            {
+              "place": "gulou_walk",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Walk off breakfast in the old Gulou streets."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Early lunch before the queues. Roughly 08:00–21:00."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Jasmine tea tasting. A calm break between meals."
+            },
+            {
+              "place": "lacquer_workshop",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Optional craft stop in the lanes. Roughly 10:00–18:00."
+            },
+            {
+              "place": "night_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening snack street near Dongjiekou. Roughly 17:00–23:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "for": "Green hills in the morning, riverside at sunset. Good for warm, clear days.",
+      "nights": 0,
+      "days": [
+        {
+          "title": "Hill, river and park",
+          "stops": [
+            {
+              "place": "yushan",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Climb early before the heat. Roughly 06:00–18:00."
+            },
+            {
+              "place": "temple",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Quiet temple stop in Taijiang. Dress modestly."
+            },
+            {
+              "place": "wallace",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Fast lunch nearby. Check hours on the day."
+            },
+            {
+              "place": "west_lake",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Shady paths around the lake. Open all day."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Riverside walk at sunset. Open all day."
+            },
+            {
+              "place": "park_evening",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening stroll, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taijiang"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the old lanes, a temple and jasmine tea in one relaxed day.",
+      "days": [
+        {
+          "title": "Old lanes and tea",
+          "stops": [
+            {
+              "place": "sanfang_qixiang",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start early before the crowds. Small museums open around 08:30."
+            },
+            {
+              "place": "linzexu",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "A few minutes on foot. Closed Monday."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch: Fuzhou fish balls are the local classic."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Jasmine tea tasting. Fuzhou is famous for it."
+            },
+            {
+              "place": "bookshop",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Browse, then rest with a drink."
+            }
+          ]
+        },
+        {
+          "title": "Temple morning, then riverside",
+          "stops": [
+            {
+              "place": "temple",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Quiet early. Dress modestly."
+            },
+            {
+              "place": "gulou_walk",
+              "at": "09:15",
+              "minutes": 60,
+              "note": "Short taxi or bus from Taijiang. Old neighbourhood streets."
+            },
+            {
+              "place": "breakfast_stall",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Late breakfast or snack. Stalls wind down around 10:00, so check on the day."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset by the river before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around snacks, markets and tea.",
+      "days": [
+        {
+          "title": "Lanes, snacks and tea",
+          "stops": [
+            {
+              "place": "breakfast_stall",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Go early; stalls close around 10:00."
+            },
+            {
+              "place": "sanfang_qixiang",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk the lanes between snacks."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Early lunch to beat the queue."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Jasmine tea break in the afternoon."
+            },
+            {
+              "place": "nanhou_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Street food. Busiest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Shopping street and night snacks",
+          "stops": [
+            {
+              "place": "wallace",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick cheap lunch in Dongjiekou."
+            },
+            {
+              "place": "dongjiekou_walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Shops open around 10:00."
+            },
+            {
+              "place": "night_market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening snack street. Bring small cash."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "A short trip built around hills, parks and the river at sunset.",
+      "days": [
+        {
+          "title": "Hill morning, lake afternoon",
+          "stops": [
+            {
+              "place": "yushan",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early for cooler air and views. Roughly 06:00–18:00."
+            },
+            {
+              "place": "tastien",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Quick lunch nearby. Check hours on the day."
+            },
+            {
+              "place": "west_lake",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon to sunset is best."
+            }
+          ]
+        },
+        {
+          "title": "Riverside and park",
+          "stops": [
+            {
+              "place": "minjiang_walk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is quieter than sunset."
+            },
+            {
+              "place": "park_evening",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Easy evening stroll before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taijiang"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old lanes, a temple and jasmine tea at an easy pace.",
+      "days": [
+        {
+          "title": "Old lanes and jasmine tea",
+          "stops": [
+            {
+              "place": "sanfang_qixiang",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start early before tour groups. Small museums open around 08:30."
+            },
+            {
+              "place": "linzexu",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Monday. Check the day before."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch nearby in the lanes."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Jasmine tea is Fuzhou's specialty. Ask for a tasting set."
+            },
+            {
+              "place": "bookshop",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Rest your feet in the old street bookshop and teahouse."
+            }
+          ]
+        },
+        {
+          "title": "Museum, temple and riverside",
+          "stops": [
+            {
+              "place": "fuzhou_museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Good for hot or rainy hours."
+            },
+            {
+              "place": "temple",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Quiet midday visit. Dress modestly."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset over the river. Bring water."
+            },
+            {
+              "place": "night_market",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening snacks in Dongjiekou."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want fish balls, street snacks and a proper tea stop between meals.",
+      "days": [
+        {
+          "title": "Lanes, snacks and tea",
+          "stops": [
+            {
+              "place": "breakfast_stall",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Go early, stalls wind down by 10:00."
+            },
+            {
+              "place": "sanfang_qixiang",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk off breakfast in the lanes."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Fuzhou fish balls are the classic lunch."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Afternoon jasmine tea tasting."
+            },
+            {
+              "place": "nanhou_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Busiest in the evening. Bring small cash."
+            }
+          ]
+        },
+        {
+          "title": "Market streets and evening snacks",
+          "stops": [
+            {
+              "place": "gulou_walk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning neighbourhood walk, good for photos."
+            },
+            {
+              "place": "tastien",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick cheap lunch. Hours vary, check on the day."
+            },
+            {
+              "place": "dongjiekou_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops open around 10:00. Good for a wander."
+            },
+            {
+              "place": "wallace",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Fast dinner before the stalls get busy."
+            },
+            {
+              "place": "night_market",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Roughly 17:00–23:00. Cash is handy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Dongjiekou"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Walkers who want green hills, river sunsets and parks instead of museums.",
+      "days": [
+        {
+          "title": "Hill views and river sunset",
+          "stops": [
+            {
+              "place": "yushan",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early for cooler air. Roughly 06:00–18:00."
+            },
+            {
+              "place": "temple",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short stop on the way down."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "west_lake",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon to sunset is best. Open all day."
+            },
+            {
+              "place": "park_evening",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Easy evening stroll by the river."
+            }
+          ]
+        },
+        {
+          "title": "Riverside and old lanes",
+          "stops": [
+            {
+              "place": "minjiang_walk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is quieter than sunset."
+            },
+            {
+              "place": "sanfang_qixiang",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Lanes open all day. Shade is limited at midday."
+            },
+            {
+              "place": "tastien",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick lunch. Check hours on the day."
+            },
+            {
+              "place": "gulou_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shaded old streets in Gulou."
+            },
+            {
+              "place": "night_market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening snacks to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taijiang"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want old lanes, temples and tea at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into the old lanes",
+          "stops": [
+            {
+              "place": "sanfang_qixiang",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Start at Nanhou Street and wander the lanes. Small museums close around 17:00."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Jasmine tea is Fuzhou's signature. Tea houses stay open late."
+            },
+            {
+              "place": "nanhou_market",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Evening snack stalls. Busiest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the old neighbourhood",
+          "stops": [
+            {
+              "place": "breakfast_stall",
+              "at": "08:00",
+              "minutes": 30,
+              "note": "Go early; many stalls wind down by 10:00."
+            },
+            {
+              "place": "linzexu",
+              "at": "09:15",
+              "minutes": 60,
+              "note": "Closed Monday. Check the day before."
+            },
+            {
+              "place": "lacquer_workshop",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Fuzhou lacquerware is a local craft. Book ahead if possible."
+            },
+            {
+              "place": "tastien",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick, cheap lunch nearby."
+            },
+            {
+              "place": "gulou_walk",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Quiet streets and old buildings. Shade is limited at midday."
+            }
+          ]
+        },
+        {
+          "title": "Temple morning, riverside evening",
+          "stops": [
+            {
+              "place": "temple",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Dress modestly. Mornings are calmest."
+            },
+            {
+              "place": "yushan",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Short climb for a city view. Bring water."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Fuzhou fish balls are a must-try."
+            },
+            {
+              "place": "fuzhou_museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Good for hot or rainy hours."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset over the river."
+            }
+          ]
+        },
+        {
+          "title": "Last lanes and departure",
+          "stops": [
+            {
+              "place": "bookshop",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Old-street bookshop with a teahouse. Opens around 10:00."
+            },
+            {
+              "place": "sanfang_qixiang",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Final loop for photos and gifts."
+            },
+            {
+              "place": "wallace",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Fast lunch before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around breakfast stalls and night markets.",
+      "days": [
+        {
+          "title": "Arrive and eat through the lanes",
+          "stops": [
+            {
+              "place": "sanfang_qixiang",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk off the journey between snacks."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Early bite. Most shops close around 21:00."
+            },
+            {
+              "place": "nanhou_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Grazing dinner. Busiest in the evening."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Finish with jasmine tea."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast crawl and night market",
+          "stops": [
+            {
+              "place": "breakfast_stall",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Go early; stalls close by about 10:00."
+            },
+            {
+              "place": "gulou_walk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Walk between snacks in the old neighbourhood."
+            },
+            {
+              "place": "tastien",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Cheap, reliable lunch."
+            },
+            {
+              "place": "west_lake",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Stroll before dinner. Best near sunset."
+            },
+            {
+              "place": "night_market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Snack street, roughly 17:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, river evening",
+          "stops": [
+            {
+              "place": "nanhou_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quieter than evenings; good for photos."
+            },
+            {
+              "place": "lacquer_workshop",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Non-food break. Opens around 10:00."
+            },
+            {
+              "place": "wallace",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch."
+            },
+            {
+              "place": "dongjiekou_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Shops and snack stalls. Shops open until about 22:00."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset walk to build an appetite."
+            }
+          ]
+        },
+        {
+          "title": "Tea, snacks and departure",
+          "stops": [
+            {
+              "place": "breakfast_stall",
+              "at": "08:00",
+              "minutes": 30,
+              "note": "One last local breakfast."
+            },
+            {
+              "place": "bookshop",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Teahouse stop. Opens around 10:00."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Early lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sanfang Qixiang"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Walkers who want hills, river sunsets and green space between sights.",
+      "days": [
+        {
+          "title": "Arrive, lake and sunset",
+          "stops": [
+            {
+              "place": "west_lake",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Easy loop. Best light late afternoon."
+            },
+            {
+              "place": "tastien",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Quick dinner near the lake area."
+            },
+            {
+              "place": "park_evening",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening stroll by the water."
+            }
+          ]
+        },
+        {
+          "title": "Hill morning, river evening",
+          "stops": [
+            {
+              "place": "yushan",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early for cooler air. Roughly 06:00–18:00."
+            },
+            {
+              "place": "fishball_shop",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Early lunch after the climb."
+            },
+            {
+              "place": "temple",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Quiet courtyard break."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset over the river."
+            }
+          ]
+        },
+        {
+          "title": "Lanes, tea and green space",
+          "stops": [
+            {
+              "place": "sanfang_qixiang",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning is calmest in the lanes."
+            },
+            {
+              "place": "fuzhou_tea",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Jasmine tea break."
+            },
+            {
+              "place": "wallace",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Fast lunch."
+            },
+            {
+              "place": "west_lake",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Second visit for a slower loop."
+            },
+            {
+              "place": "park_evening",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Riverside evening air."
+            }
+          ]
+        },
+        {
+          "title": "Morning walk and departure",
+          "stops": [
+            {
+              "place": "gulou_walk",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Quiet streets before the heat."
+            },
+            {
+              "place": "breakfast_stall",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Stalls may close by 10:00, so go promptly."
+            },
+            {
+              "place": "minjiang_walk",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short river loop before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulou"
+    }
+  ]
+}

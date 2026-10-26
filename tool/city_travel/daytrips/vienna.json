@@ -1,0 +1,118 @@
+{
+ "city": "Vienna",
+ "trips": [
+  {
+   "place": "Baden",
+   "label": "",
+   "position": {
+    "id": 368389,
+    "name": "Baden bei Wien",
+    "city": "Baden bei Wien",
+    "lat": 48.00543,
+    "lng": 16.23264
+   },
+   "town": {
+    "name": "Baden",
+    "lat": 48.00543,
+    "lng": 16.23264
+   },
+   "road": {
+    "km": 33,
+    "min": 34,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 60.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$10",
+     "time": "21m",
+     "via": "Wien Hbf to Baden B.Wien",
+     "source": "https://www.rome2rio.com/s/Vienna/Baden%20bei%20Wien"
+    },
+    "bus": {
+     "from": "$8-$12",
+     "time": "59m",
+     "via": "Wien Oper/Karlsplatz to Baden Josefsplatz",
+     "source": "https://www.rome2rio.com/s/Vienna/Baden%20bei%20Wien"
+    }
+   },
+   "route_note": "Frequent direct suburban trains (S-Bahn) run from Vienna to Baden bei Wien in well under an hour.",
+   "see": [
+    "Baden spa and casino",
+    "Kaiserhaus and pedestrian center",
+    "Rosarium and Kurpark",
+    "Nearby vineyards and Helenental"
+   ],
+   "visit": "Half day",
+   "tour_query": "Baden bei Wien day trip from Vienna",
+   "quests": [],
+   "recommended": "train",
+   "why": "Frequent direct S-Bahn trains reach Baden in 21 minutes, far faster than the 59-minute bus.",
+   "stars": 3,
+   "know": [
+    "Baden is a spa town with thermal baths and a pedestrian old town",
+    "Best visited in spring through early autumn for the gardens and outdoor spa"
+   ]
+  },
+  {
+   "place": "Wiener Neustadt",
+   "label": "",
+   "position": {
+    "id": 337833,
+    "name": "Wiener Neustadt Civitas Nova",
+    "city": "Wiener Neustadt",
+    "lat": 47.83357,
+    "lng": 16.25536
+   },
+   "town": {
+    "name": "Wiener Neustadt",
+    "lat": 47.80485,
+    "lng": 16.23196
+   },
+   "road": {
+    "km": 58,
+    "min": 48,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 100.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€21",
+     "from_usd": 25.0,
+     "avg": "€33",
+     "time": "30m",
+     "per_day": 5,
+     "source": "https://www.omio.com/trains/vienna/wiener-neustadt"
+    }
+   },
+   "route_note": "Frequent direct regional trains run from Vienna's main station to Wiener Neustadt in about 45 minutes.",
+   "see": [
+    "Main square and town hall",
+    "Dom of Wiener Neustadt",
+    "Theresian Military Academy",
+    "Nearby Schneeberg foothills"
+   ],
+   "visit": "Half day",
+   "tour_query": "Wiener Neustadt day trip from Vienna",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct regional trains take just 30 minutes, much better than the 48-minute drive.",
+   "stars": 2,
+   "know": [
+    "The old town and main square are a short walk from the station",
+    "The Theresian Military Academy and cathedral are the main sights"
+   ]
+  }
+ ],
+ "problems": [
+  "Bratislava: not a town in cities15000.json (AT), dropped",
+  "Melk: not a town in cities15000.json (AT), dropped",
+  "Krems an der Donau: not a town in cities15000.json (AT), dropped"
+ ]
+}

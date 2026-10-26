@@ -1,0 +1,182 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "A mountain city of rivers, hotpot and neon stairways.",
+  "intro": "Chongqing rewards visitors with dramatic hills, river views and fiery food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Jiefangbei",
+    "Jiangbei",
+    "Nanping",
+    "Shapingba"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 8,
+    "per_km": 1.8,
+    "min_fare": 8
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro is fast, cheap and air-conditioned; announcements in Mandarin and English.",
+    "Metro Line 3 and Line 10 link the airport to the city.",
+    "Buses are frequent and cheap but signs are mostly Chinese.",
+    "Taxis are yellow and metered; few drivers speak English, so show your destination in Chinese.",
+    "Ride apps like DiDi work well; have the app set up before you arrive.",
+    "Walking means stairs and hills; biking is not advised in the centre.",
+    "A short Liangjiang ferry crosses the river for about ¥10."
+  ],
+  "airports": [
+    {
+      "code": "CKG",
+      "name": "Chongqing Jiangbei International Airport",
+      "primary": true,
+      "note": "Main hub, about 19 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 3",
+          "to": "City centre",
+          "price": "¥5-10",
+          "time": "40-60 min",
+          "note": "Cheapest option; accessible from both terminals."
+        },
+        {
+          "mode": "Metro Line 10",
+          "to": "City centre",
+          "price": "¥5-10",
+          "time": "35-50 min",
+          "note": "Runs from the T3 transport hub."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Shangqisi Lu, central Chongqing",
+          "price": "¥15-20",
+          "time": "45-70 min",
+          "note": "Departs from ground level of Terminal 2."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "¥40-80",
+          "time": "30-50 min",
+          "note": "Show your hotel name in Chinese."
+        },
+        {
+          "mode": "Ride app (DiDi)",
+          "to": "Downtown",
+          "price": "¥40-80",
+          "time": "30-50 min",
+          "note": "Set pickup point by terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Hongya Cave",
+    "Ciqikou Ancient Town",
+    "Dazu Rock Carvings",
+    "Liziba Station",
+    "Chongqing International Land-Sea Center",
+    "Fantawild Adventure (Chongqing)",
+    "Jialing River"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Chongqing",
+      "https://en.wikivoyage.org/wiki/Chongqing"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    29.563,
+    106.5516
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 8
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 17
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 17
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 16
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 15
+    },
+    {
+      "high": 34,
+      "low": 26,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 16,
+      "rain_days": 16
+    },
+    {
+      "high": 17,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 12,
+      "low": 7,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

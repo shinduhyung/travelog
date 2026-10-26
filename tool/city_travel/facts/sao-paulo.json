@@ -1,0 +1,272 @@
+{
+  "currency": "BRL",
+  "usd_rate": 5.0428,
+  "intro_line": "São Paulo: endless energy, art, and food in Brazil's giant.",
+  "intro": "São Paulo rewards visitors with world-class museums, buzzing neighbourhoods and a food scene that never stops. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Jardins",
+    "Paulista",
+    "Vila Madalena",
+    "Centro"
+  ],
+  "taxi": {
+    "flag_day": 6,
+    "flag_airport": 8,
+    "per_km": 3,
+    "min_fare": 10
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metrô and CPTM trains are modern, safe and the fastest way around; Lines 1-5 and 9 suit tourists.",
+    "Buses cover the whole city; fares are R$5.30 and Bilhete Único gives free transfers within 3 hours.",
+    "Taxis are metered; Guarucoop has a monopoly at GRU and fares are posted on a tabela.",
+    "Uber and 99 operate widely and are usually cheaper than taxis.",
+    "Driving is stressful; traffic peaks 06:00-09:00 and 16:00-19:00, so avoid renting a car.",
+    "Bikes are popular with many cycleways; walking is fine in central and Jardins areas."
+  ],
+  "airports": [
+    {
+      "code": "GRU",
+      "name": "Guarulhos International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 21 km from the centre.",
+      "options": [
+        {
+          "mode": "Urban bus 257",
+          "to": "Tatuapé Metro station",
+          "price": "R$6.15",
+          "time": "35-50 min",
+          "note": "Cheapest; board at Terminal 2 at peak times."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Praça da República, Paulista, Tietê and Barra Funda",
+          "price": "R$42",
+          "time": "45-90 min",
+          "note": "Connects to the Metrô except the Congonhas line."
+        },
+        {
+          "mode": "Airport Express train",
+          "to": "Luz station",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Free shuttle bus links terminals to the station."
+        },
+        {
+          "mode": "Taxi (Guarucoop)",
+          "to": "City centre",
+          "price": "R$120-180",
+          "time": "45-120 min",
+          "note": "Pay in advance at the booth if using a card."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "City centre",
+          "price": "R$80-140",
+          "time": "45-120 min",
+          "note": "Pick-up points are outside the terminals."
+        }
+      ]
+    },
+    {
+      "code": "CGH",
+      "name": "Congonhas Airport",
+      "primary": false,
+      "note": "Main domestic airport, about 9 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 609J/10 from São Judas Metro",
+          "to": "Airport",
+          "price": "R$5.40",
+          "time": "10-20 min",
+          "note": "Metrô to São Judas, then the bus."
+        },
+        {
+          "mode": "Aeroporto bus along Avenida Paulista",
+          "to": "Airport",
+          "price": "R$5.40",
+          "time": "40-60 min",
+          "note": "Bilhete Único accepted."
+        },
+        {
+          "mode": "Metrô Line 17 (Gold)",
+          "to": "Airport",
+          "price": "R$5.40",
+          "time": "check locally",
+          "note": "Needs at least two connections to the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R$50-80",
+          "time": "20-50 min",
+          "note": "Check traffic before leaving."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "City centre",
+          "price": "R$35-60",
+          "time": "20-50 min",
+          "note": "Usually cheaper than taxis."
+        }
+      ]
+    },
+    {
+      "code": "VCP",
+      "name": "Viracopos International Airport",
+      "primary": false,
+      "note": "Azul hub in Campinas, about 79 km from the centre.",
+      "options": [
+        {
+          "mode": "Azul free shuttle bus",
+          "to": "São Paulo",
+          "price": "free for Azul passengers",
+          "time": "1.5-2.5 h",
+          "note": "Show your boarding pass."
+        },
+        {
+          "mode": "Intercity bus",
+          "to": "Tietê bus terminal",
+          "price": "R$40-60",
+          "time": "1.5-2.5 h",
+          "note": "Book ahead at peak times."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R$250-350",
+          "time": "1.5-2.5 h",
+          "note": "Long ride; agree on the fare first."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "City centre",
+          "price": "R$180-280",
+          "time": "1.5-2.5 h",
+          "note": "Check availability at the airport."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ibirapuera Park",
+    "São Paulo Museum of Art",
+    "Paulista Avenue",
+    "Mercado Municipal de Sao Paulo",
+    "Sao Paulo Cathedral",
+    "Theatro Municipal",
+    "Liberdade",
+    "Batman Alley",
+    "Allianz Parque",
+    "Altino Arantes Building",
+    "Cidade da Criança",
+    "Copan Building",
+    "Estadio do Morumbi",
+    "Monument to the Bandeiras",
+    "Octavio Frias de Oliveira Bridge",
+    "Parque Marisa",
+    "Pinacoteca do Estado",
+    "Playcenter Family",
+    "São Paulo Zoo"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: São Paulo",
+      "https://en.wikivoyage.org/wiki/S%C3%A3o%20Paulo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -23.5505,
+    -46.6333
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 24
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 19
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 19
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 8
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 6
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 3
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 8
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 15
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 17
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 21
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

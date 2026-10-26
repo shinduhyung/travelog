@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class FlightMapSettingsProvider with ChangeNotifier {
   // --- Firebase Instances ---
@@ -53,7 +54,7 @@ class FlightMapSettingsProvider with ChangeNotifier {
     // 2. Check server data if logged in (overwrite with server data if available)
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists) {
           final data = doc.data();
           if (data != null) {
@@ -183,7 +184,7 @@ class FlightMapSettingsProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data() != null) {
           final data = doc.data()!;
           if (data.containsKey('route_thickness_by_freq')) {

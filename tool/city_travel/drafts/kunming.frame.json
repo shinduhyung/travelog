@@ -1,0 +1,271 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Stone Forest, Dianchi Lake and green hills."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Rice noodles, wild mushrooms and market snacks."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Temples, ethnic villages and old streets."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "City centre (Tangzixiang)",
+      "range": [
+        200,
+        550
+      ],
+      "why": "Walk to Green Lake Park, the old streets and markets. Metro nearby for trips out of town.",
+      "center": [
+        25.04,
+        102.71
+      ]
+    },
+    {
+      "area": "Kunming Railway Station area",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Handy for early trains and buses onward. Busy, plain streets; good budget rooms.",
+      "center": [
+        25.015,
+        102.73
+      ]
+    },
+    {
+      "area": "Dianchi lakeside",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Lake views, quieter evenings and easy access to the western hills. Far from the centre.",
+      "center": [
+        24.96,
+        102.66
+      ]
+    },
+    {
+      "area": "Kunming South Station area",
+      "range": [
+        180,
+        450
+      ],
+      "why": "Best for high-speed trains to other provinces. Little to see nearby; a sleep-and-go base.",
+      "center": [
+        24.87,
+        102.86
+      ]
+    }
+  ],
+  "food": [
+    "Try Crossing-the-Bridge rice noodles (过桥米线), the city's signature bowl. Expect roughly ¥20–40.",
+    "Wild mushrooms are a summer treat. Eat them only at busy, reputable restaurants and always cooked through.",
+    "Snack streets near the old town and university area sell grilled skewers, fried potatoes and flower cakes.",
+    "Flower cakes (鲜花饼) and Pu'er tea make easy, light gifts. Buy from shops, not only tourist stalls.",
+    "Street food is cheap, often ¥5–15 a snack. Carry small cash and use WeChat or Alipay where accepted."
+  ],
+  "more_time": [
+    "Add a day for the Stone Forest (Shilin): buses and trains run from the city; check times on the day.",
+    "Swap a city afternoon for a lake walk and the Western Hills near Dianchi.",
+    "Take a side trip to a nearby old town or ethnic village; ask your hostel about day tours."
+  ],
+  "type_month_fit": {
+    "nature": [
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.85,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "budget": [
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.7,
+      0.85,
+      0.85,
+      0.75
+    ]
+  },
+  "best_for": [
+    "nature",
+    "food",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers the city sights and a Stone Forest day; add a night for lake and hill time."
+  },
+  "month_notes": [
+    "January: cold nights near 4°C and mild days. Pack a warm layer.",
+    "February: still cool, few rainy days. Good for walking the old streets.",
+    "March: warming up, around 22°C days. Comfortable for parks and day trips.",
+    "April: warm and mostly dry, but rain days rise. Carry a light rain jacket.",
+    "May: warm with more showers. Plan indoor sights for wet afternoons.",
+    "June: rainy season starts, about 24 rain days. Bring a raincoat and waterproof shoes.",
+    "July: wettest month, around 26 rain days. Expect afternoon downpours.",
+    "August: still very wet. Keep plans flexible and check the day's forecast.",
+    "September: rain eases a little but stays high. Mushroom season is at its peak.",
+    "October: cooler and drier. A good month for the lake and hills.",
+    "November: mild days, cool nights, few rain days. Great for sightseeing.",
+    "December: cool and dry with cold nights. Layer up for evenings."
+  ],
+  "climate_guide": {
+    "summary": "Mild highland climate: cool, dry winters and a long, wet summer. Rarely hot, rarely freezing.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to April",
+        "text": "Mild days around 15–24°C and fewer rainy days. Ideal for parks, temples and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet summer (June to September)",
+        "text": "Rain on most days, up to 26 rain days in July and August. Showers often pass; carry rain gear."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool nights all year",
+        "text": "Lows drop to 4–8°C in winter. Even summer evenings are mild, so bring a light jacket."
+      },
+      {
+        "icon": "☀️",
+        "title": "Strong highland sun",
+        "text": "Days are bright even in the wet season. Use sunscreen and a hat at altitude."
+      },
+      {
+        "icon": "🍄",
+        "title": "Mushroom season",
+        "text": "Wild mushrooms peak in the wet months. Eat them only at busy restaurants, always cooked."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and waterproof shoes for summer; a warm coat for winter nights."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for most trips; Didi or taxi for late nights and the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Five lines run about 07:00–22:00, fares ¥2–10. Ticket machines take paper cash only, so keep small notes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cost ¥2 and run roughly 06:00–22:00. A bus card cuts fares to about ¥0.90."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥8 plus a ¥3 fuel surcharge; insist on the meter. Didi works, and WeChat or Alipay are widely used to pay."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for city sights. Use trains and buses for day trips instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the centre and parks. Distances grow outside downtown, so mix walking with the metro."
+      },
+      {
+        "mode": "Bikes / e-bikes",
+        "has": true,
+        "text": "Hostels rent bikes for about ¥20 a day. Shared e-bikes cost about ¥2.5 for the first 20 minutes."
+      },
+      {
+        "mode": "Airport link",
+        "has": true,
+        "text": "Line 6 links Changshui Airport to East Bus Station, then Line 3 into downtown."
+      }
+    ]
+  }
+}

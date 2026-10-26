@@ -1,0 +1,15 @@
+$ deepseek_city.py Düsseldorf --stage plans
+Düsseldorf: plans
+  plans for day
+  tokens in 2050 out 806
+  plans for 1n
+  tokens in 2051 out 1090
+  plans for 2n
+  tokens in 2056 out 1368
+  plans for 3n
+  tokens in 2051 out 2155
+
+$ merge_city.py Düsseldorf
+ERROR plan day-art: unknown place 'kunstpalast'
+Düsseldorf: 19 places, 12 plans, 1 errors, 0 warnings
+

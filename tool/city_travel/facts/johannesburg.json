@@ -1,0 +1,213 @@
+{
+  "currency": "ZAR",
+  "usd_rate": 16.4953,
+  "intro_line": "A sprawling gold-rush metropolis of energy, culture and green escapes.",
+  "intro": "Johannesburg rewards visitors with world-class museums, lively food scenes and easy day trips. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Sandton",
+    "Rosebank",
+    "Maboneng",
+    "Melville"
+  ],
+  "taxi": {
+    "flag_day": 30,
+    "flag_airport": 50,
+    "per_km": 12,
+    "min_fare": 40
+  },
+  "road_factor": 1.4,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Gautrain is the fast, safe rail link between OR Tambo, Sandton, Rosebank and Pretoria.",
+    "Metrorail commuter trains are cheap but not advised for tourists.",
+    "City and Putco buses are limited; minibus taxis are cheap but risky for visitors.",
+    "Uber and Bolt work well; use comfort or black options where possible.",
+    "Renting a car gives the most flexibility; traffic peaks 06:30-09:00 and 15:30-18:30.",
+    "Walking is fine in malls and some suburbs; avoid walking between distant areas."
+  ],
+  "airports": [
+    {
+      "code": "JNB",
+      "name": "O. R. Tambo International Airport",
+      "primary": true,
+      "note": "Africa's busiest hub, about 22 km east of the centre.",
+      "options": [
+        {
+          "mode": "Gautrain",
+          "to": "Sandton",
+          "price": "R200-250",
+          "time": "15-20 min",
+          "note": "Adds an airport surcharge of R155-185; card costs R21 extra."
+        },
+        {
+          "mode": "Airport shuttle",
+          "to": "Hotels in Sandton and Rosebank",
+          "price": "R150-300",
+          "time": "30-45 min",
+          "note": "Book through your hotel where possible."
+        },
+        {
+          "mode": "Uber or Bolt",
+          "to": "Sandton",
+          "price": "R250-400",
+          "time": "25-40 min",
+          "note": "Often cheaper than Gautrain for groups."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R300-500",
+          "time": "30-45 min",
+          "note": "Use licensed metered taxis outside arrivals; ignore touts inside."
+        }
+      ]
+    },
+    {
+      "code": "HLA",
+      "name": "Lanseria Airport",
+      "primary": false,
+      "note": "Smaller private airport northwest of the city, about 32 km away.",
+      "options": [
+        {
+          "mode": "Uber or Bolt",
+          "to": "Sandton",
+          "price": "R350-500",
+          "time": "40-60 min",
+          "note": "Check availability before landing."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R400-600",
+          "time": "45-70 min",
+          "note": "Traffic can be heavy; allow extra time."
+        },
+        {
+          "mode": "Airport shuttle",
+          "to": "Sandton and Pretoria hotels",
+          "price": "check locally",
+          "time": "45-70 min",
+          "note": "Pre-book with your hotel or airline."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Apartheid Museum",
+    "Constitution Hill",
+    "Mandela House",
+    "Hector Pieterson Memorial",
+    "Gold Reef City",
+    "Ponte City",
+    "SAB World of Beer",
+    "FNB Stadium",
+    "Carnival City",
+    "Castle Brewery",
+    "Emperors Palace",
+    "Monte Casino Entertainment Complex",
+    "Nando's",
+    "Orlando Towers",
+    "Satyagraha House",
+    "Steers",
+    "Wimpy"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Johannesburg",
+      "https://en.wikivoyage.org/wiki/Johannesburg"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -26.2041,
+    28.0473
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 26,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 25,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 24,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 20,
+      "low": 7,
+      "rain_days": 2
+    },
+    {
+      "high": 17,
+      "low": 4,
+      "rain_days": 1
+    },
+    {
+      "high": 17,
+      "low": 4,
+      "rain_days": 0
+    },
+    {
+      "high": 21,
+      "low": 6,
+      "rain_days": 1
+    },
+    {
+      "high": 25,
+      "low": 10,
+      "rain_days": 3
+    },
+    {
+      "high": 26,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 26,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 16
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

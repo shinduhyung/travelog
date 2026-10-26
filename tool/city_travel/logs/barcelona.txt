@@ -1,0 +1,35 @@
+$ deepseek_prep.py Barcelona
+  tokens in 922 out 656
+Barcelona: 9 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Barcelona
+  tokens in 4136 out 1055
+Barcelona: 0 problems
+
+$ deepseek_city.py Barcelona --stage places
+Barcelona: places
+  tokens in 1268 out 4418
+
+$ deepseek_city.py Barcelona --stage frame
+Barcelona: frame
+  tokens in 2449 out 1817
+
+$ deepseek_city.py Barcelona --stage plans
+Barcelona: plans
+  plans for day
+  tokens in 2599 out 745
+  plans for 1n
+  tokens in 2600 out 862
+  plans for 2n
+  tokens in 2600 out 1275
+  plans for 3n
+  tokens in 2605 out 1902
+  plans for 4n
+  tokens in 2600 out 1693
+  plans for 5n
+  tokens in 2600 out 2213
+
+$ merge_city.py Barcelona
+Barcelona: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/barcelona.json and planner/barcelona.json
+

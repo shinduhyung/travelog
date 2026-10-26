@@ -1,0 +1,618 @@
+{
+  "city": "Dublin",
+  "checked": "October 2026",
+  "intro_line": "A warm, literary city of pubs, parks and Georgian streets.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Temple Bar",
+        "Georgian Quarter",
+        "Docklands",
+        "Rathmines"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Temple Bar",
+        "Georgian Quarter",
+        "Docklands",
+        "Rathmines"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Temple Bar",
+        "Georgian Quarter",
+        "Docklands",
+        "Rathmines"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Temple Bar",
+        "Georgian Quarter",
+        "Docklands",
+        "Rathmines"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Temple Bar",
+        "Georgian Quarter",
+        "Docklands",
+        "Rathmines"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 4,
+        "rain_days": 12,
+        "note": "Cold and damp: highs near 8°C, rain on about 12 days. Pack a warm waterproof coat."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 13,
+        "note": "Similar to January: 9°C highs, 13 rain days. Indoor sights are the plan."
+      },
+      {
+        "high": 10,
+        "low": 4,
+        "rain_days": 14,
+        "note": "Still cool at 10°C with 14 rain days; expect showers most weeks."
+      },
+      {
+        "high": 12,
+        "low": 6,
+        "rain_days": 12,
+        "note": "Milder at 12°C, 12 rain days. Good for walking the centre."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Warmer: 15°C highs, 9°C nights, 12 rain days. Parks and day trips open up."
+      },
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 13,
+        "note": "Long bright evenings, 18°C highs, 13 rain days. Bring a light rain layer anyway."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 15,
+        "note": "Warmest month: 19°C highs, 15 rain days. Busy tourist season; book ahead."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 14,
+        "note": "Warm at 19°C with 14 rain days. Showers pass quickly; keep plans flexible."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 13,
+        "note": "Cooling to 17°C, 13 rain days. Pleasant for walking and outdoor sights."
+      },
+      {
+        "high": 14,
+        "low": 9,
+        "rain_days": 14,
+        "note": "Autumn: 14°C highs, 14 rain days. Layers and an umbrella."
+      },
+      {
+        "high": 11,
+        "low": 6,
+        "rain_days": 13,
+        "note": "Cooler at 11°C, 13 rain days. Fewer crowds, shorter days."
+      },
+      {
+        "high": 9,
+        "low": 5,
+        "rain_days": 15,
+        "note": "Cold and wet: 9°C highs, 15 rain days. Dark by late afternoon; plan indoor evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.4
+    ]
+  },
+  "places": {
+    "guinness": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning or late afternoon; rainy days",
+      "area": "Georgian Quarter",
+      "popularity": 5
+    },
+    "trinity-library": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "First slot of the day",
+      "area": "Temple Bar",
+      "popularity": 5
+    },
+    "temple-bar": {
+      "types": [
+        "nightlife",
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening for live music; daytime for photos",
+      "area": "Temple Bar",
+      "popularity": 5
+    },
+    "dublin-castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "st-patricks": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Georgian Quarter",
+      "popularity": 4
+    },
+    "kilmainham": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Book the first tour of the day",
+      "area": "Georgian Quarter",
+      "popularity": 5
+    },
+    "christ-church": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "dublin-zoo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Dry weekday morning",
+      "area": "Georgian Quarter",
+      "popularity": 4
+    },
+    "emerald-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Georgian Quarter",
+      "popularity": 3
+    },
+    "fort-lucan": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer, dry day",
+      "area": "Georgian Quarter",
+      "popularity": 2
+    },
+    "funderland": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Check season; usually winter and summer runs",
+      "area": "Docklands",
+      "popularity": 2
+    },
+    "gpo": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Docklands",
+      "popularity": 3
+    },
+    "grafton": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "irish-stew": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch on a cold day",
+      "area": "Temple Bar",
+      "popularity": 3
+    },
+    "liffey-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Dry afternoon",
+      "area": "Docklands",
+      "popularity": 3
+    },
+    "molly-malone": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Temple Bar",
+      "popularity": 3
+    },
+    "national-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy afternoon; closed Monday",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "oconnell": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Docklands",
+      "popularity": 3
+    },
+    "patrick-festival": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "17 March, morning",
+      "area": "Docklands",
+      "popularity": 5
+    },
+    "trinity-college": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "vikings": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Dry daytime",
+      "area": "Temple Bar",
+      "popularity": 3
+    },
+    "george-st-arcade": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Temple Bar",
+      "popularity": 3
+    },
+    "stephens-green": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "phoenix-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunny morning",
+      "area": "Georgian Quarter",
+      "popularity": 4
+    },
+    "howth-cliff": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear day, morning start",
+      "area": "Docklands",
+      "popularity": 4
+    },
+    "literary-pub-tour": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weeknight evening",
+      "area": "Temple Bar",
+      "popularity": 4
+    },
+    "coffee-neighbourhood": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Georgian Quarter",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Trinity, the Castle, a cathedral and a museum, with one evening of pubs and live music."
+  },
+  "airports": [
+    {
+      "code": "DUB",
+      "name": "Dublin Airport",
+      "primary": true,
+      "note": "Main gateway, 8 km north of the centre; no rail link.",
+      "options": [
+        {
+          "mode": "Local bus 16 or 41",
+          "to": "O'Connell Street",
+          "price": "€2.60 or €2 with Leap",
+          "time": "45-60 min",
+          "note": "Cheapest; exact coins only, limited luggage space."
+        },
+        {
+          "mode": "Dublin Express bus",
+          "to": "City centre and Heuston Station",
+          "price": "€8 single, €10 return online",
+          "time": "25-40 min",
+          "note": "Runs every 10 min or so; last bus 11PM."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€34-40",
+          "time": "20-35 min",
+          "note": "Good value for groups of three or more."
+        },
+        {
+          "mode": "Uber / Free Now",
+          "to": "City centre",
+          "price": "€30-45",
+          "time": "20-35 min",
+          "note": "App pickup at designated zones."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Dublin",
+      "https://en.wikivoyage.org/wiki/Dublin"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Walk the compact centre; use the Luas tram or buses for longer hops.",
+    "modes": [
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Luas has two lines, Red and Green, across the centre. Flat €2 adult fare with a Leap Card."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Dublin Bus and Go-Ahead cover most of the city. Pay exact coins or use a Leap Card (€2 flat fare, daily caps apply)."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis; Free Now and Uber work in Dublin. Handy for late nights and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Heavy traffic and limited parking. Use Park & Ride at Luas or DART stops instead of driving in."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and best on foot. Dublinbikes stations are widely spread for longer rides."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild, changeable and often wet: rain on roughly 12–15 days every month, and rarely very hot or very cold.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain any month",
+        "text": "Expect rain on about 12–15 days each month. Showers are often short; carry a compact waterproof."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack layers",
+        "text": "Highs run from about 8°C in winter to 19°C in summer. A warm mid-layer and a rain jacket cover most trips."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best months: May to September",
+        "text": "Warmest and brightest, with highs of 15–19°C. Still bring rain gear — wet days happen."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cool, not freezing",
+        "text": "January and February sit around 8–9°C by day and 4°C at night. Wind off the river feels colder."
+      },
+      {
+        "icon": "🕶️",
+        "title": "Long summer evenings",
+        "text": "June and July give the longest daylight, good for late walks and outdoor pints."
+      },
+      {
+        "icon": "👟",
+        "title": "Wear comfortable shoes",
+        "text": "You will walk a lot on cobbles and wet pavements. Waterproof shoes beat an umbrella in wind."
+      }
+    ]
+  }
+}

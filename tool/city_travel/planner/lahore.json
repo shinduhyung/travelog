@@ -1,0 +1,510 @@
+{
+  "city": "Lahore",
+  "checked": "October 2026",
+  "intro_line": "Lahore: Mughal grandeur, chaotic streets, and endless flavour.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Gulberg",
+        "Old City (Walled City)",
+        "Liberty Market",
+        "Mall Road"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Gulberg",
+        "Old City (Walled City)",
+        "Liberty Market",
+        "Mall Road"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Gulberg",
+        "Old City (Walled City)",
+        "Liberty Market",
+        "Mall Road"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Gulberg",
+        "Old City (Walled City)",
+        "Liberty Market",
+        "Mall Road"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Gulberg",
+        "Old City (Walled City)",
+        "Liberty Market",
+        "Mall Road"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 6,
+        "note": "January: cool and dry, highs near 17°C. Pack a jacket for evenings."
+      },
+      {
+        "high": 22,
+        "low": 9,
+        "rain_days": 5,
+        "note": "February: mild and pleasant, around 22°C by day. Good for walking the Old City."
+      },
+      {
+        "high": 27,
+        "low": 14,
+        "rain_days": 6,
+        "note": "March: warming to 27°C; comfortable sightseeing weather."
+      },
+      {
+        "high": 34,
+        "low": 19,
+        "rain_days": 5,
+        "note": "April: hot at 34°C. Do outdoor sights early morning."
+      },
+      {
+        "high": 38,
+        "low": 24,
+        "rain_days": 4,
+        "note": "May: very hot, highs near 38°C. Plan indoor afternoons."
+      },
+      {
+        "high": 39,
+        "low": 27,
+        "rain_days": 6,
+        "note": "June: hottest month, around 39°C. Drink water and avoid midday sun."
+      },
+      {
+        "high": 35,
+        "low": 27,
+        "rain_days": 17,
+        "note": "July: monsoon starts; about 17 rain days and humid nights."
+      },
+      {
+        "high": 34,
+        "low": 26,
+        "rain_days": 16,
+        "note": "August: still rainy and muggy, highs near 34°C. Carry an umbrella."
+      },
+      {
+        "high": 34,
+        "low": 25,
+        "rain_days": 7,
+        "note": "September: rain eases; hot and humid but improving."
+      },
+      {
+        "high": 32,
+        "low": 19,
+        "rain_days": 2,
+        "note": "October: drier and cooler at 32°C; a good shoulder month."
+      },
+      {
+        "high": 26,
+        "low": 13,
+        "rain_days": 2,
+        "note": "November: mild and dry, around 26°C. Excellent for sightseeing."
+      },
+      {
+        "high": 20,
+        "low": 8,
+        "rain_days": 2,
+        "note": "December: cool and dry, highs near 20°C. Bring a warm layer."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.8,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.55,
+      0.85,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.85,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.65,
+      0.9,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.8,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.55,
+      0.85,
+      1,
+      1
+    ],
+    "shopping": [
+      0.9,
+      0.95,
+      1,
+      0.85,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.65,
+      0.9,
+      1,
+      0.95
+    ],
+    "budget": [
+      0.9,
+      0.95,
+      1,
+      0.85,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.65,
+      0.9,
+      1,
+      0.95
+    ]
+  },
+  "places": {
+    "badshahi": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "Old City (Walled City)",
+      "popularity": 5
+    },
+    "fort": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning before the heat",
+      "area": "Old City (Walled City)",
+      "popularity": 5
+    },
+    "minar": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Old City (Walled City)",
+      "popularity": 4
+    },
+    "shalimar": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Old City (Walled City)",
+      "popularity": 4
+    },
+    "anarkali": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to evening",
+      "area": "Old City (Walled City)",
+      "popularity": 4
+    },
+    "joyland": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Mall Road",
+      "popularity": 3
+    },
+    "wazirkhan": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old City (Walled City)",
+      "popularity": 4
+    },
+    "foodstreet": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Old City (Walled City)",
+      "popularity": 4
+    },
+    "fortroad": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset to evening",
+      "area": "Old City (Walled City)",
+      "popularity": 4
+    },
+    "liberty": {
+      "types": [
+        "shopping",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Liberty Market",
+      "popularity": 4
+    },
+    "gulberg": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Gulberg",
+      "popularity": 3
+    },
+    "museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Midday",
+      "area": "Mall Road",
+      "popularity": 3
+    },
+    "bagh": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Mall Road",
+      "popularity": 3
+    },
+    "tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Old City (Walled City)",
+      "popularity": 3
+    },
+    "delhi": {
+      "types": [
+        "culture",
+        "shopping",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old City (Walled City)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Old City, the food streets and a museum or garden; add a night for Wagah and Shalimar."
+  },
+  "airports": [
+    {
+      "code": "LHE",
+      "name": "Allama Iqbal International Airport",
+      "primary": true,
+      "note": "Main gateway, about 6 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Metro Bus + Orange Line",
+          "to": "City centre",
+          "price": "Rs 20-60",
+          "time": "45-70 min",
+          "note": "Cheapest; needs a change and some walking."
+        },
+        {
+          "mode": "Bus",
+          "to": "Main railway station",
+          "price": "Rs 20-50",
+          "time": "40-60 min",
+          "note": "Slow in traffic; check the route locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Gulberg",
+          "price": "Rs 600-900",
+          "time": "20-30 min",
+          "note": "Agree the price before you sit; includes car park fee."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Old City",
+          "price": "Rs 800-1,200",
+          "time": "30-40 min",
+          "note": "Pay in advance; ignore touts inside the terminal."
+        },
+        {
+          "mode": "Careem / Uber / InDrive",
+          "to": "City centre",
+          "price": "Rs 500-900",
+          "time": "20-35 min",
+          "note": "App price is fixed; meet at the marked pickup point."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Lahore",
+      "https://en.wikivoyage.org/wiki/Lahore"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Ride apps or auto-rickshaws for most trips; the metro and Metro Bus for cheap cross-city runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Orange Line runs 26 stations; cheap and air-conditioned."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Metro Bus (BRT) has 27 stations from Gajjumata to Shahdara; fare about Rs 20."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Careem, InDrive and Uber work in Lahore. Street taxis are rare, so book by app or phone."
+      },
+      {
+        "mode": "Auto-rickshaw",
+        "has": true,
+        "text": "Auto-rickshaws and qingqis are the cheapest option; agree the fare first."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not a practical option for most visitors; use apps and the metro instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking suits the Old City; distances elsewhere are long and hot."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot semi-arid climate with a short cool winter and a hot, humid monsoon summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Mild days around 17–27°C and cool nights. Ideal for the Old City and food streets."
+      },
+      {
+        "icon": "🥵",
+        "title": "Very hot April to June",
+        "text": "Highs of 34–39°C. Sightsee at sunrise and rest indoors in the afternoon."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon in July and August",
+        "text": "About 16–17 rain days each month and muggy nights. Expect short heavy showers."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid summer nights",
+        "text": "Lows stay near 26–27°C in July and August, so evenings stay warm."
+      },
+      {
+        "icon": "🌂",
+        "title": "Little rain in winter",
+        "text": "Only a few rain days from October to December; an umbrella is rarely needed."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, a hat and sunscreen; a light jacket for winter nights; modest dress for mosques."
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "currency": "EGP",
+  "usd_rate": 55.2156,
+  "intro_line": "Cairo: where ancient wonders meet chaotic, vibrant streets.",
+  "intro": "Cairo rewards visitors with pyramids, mosques, markets and Nile views. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Zamalek",
+    "Giza",
+    "Heliopolis"
+  ],
+  "taxi": {
+    "flag_day": 30,
+    "flag_airport": 50,
+    "per_km": 10,
+    "min_fare": 30
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metro: three lines, clean and cheap; tickets EGP8-20 by distance.",
+    "Buses: red-white-blue city buses EGP4-6; air-conditioned EGP7-12; minibuses EGP5-15.",
+    "Taxis: white cabs; meters often unused, agree or pay the fair sum on exit.",
+    "Ride apps: Uber and Careem work well in Cairo; often easier than street taxis.",
+    "Driving: not advised for visitors; traffic is heavy and rules are loose.",
+    "Walking: fine in some districts but crossings and pavements are poor; little cycling."
+  ],
+  "airports": [
+    {
+      "code": "CAI",
+      "name": "Cairo International Airport",
+      "primary": true,
+      "note": "Main hub, about 18 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Public bus",
+          "to": "Downtown / Midan Tahrir",
+          "price": "EGP10-20",
+          "time": "60-90 min",
+          "note": "Cheapest but slow and crowded; check the route with the driver."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Various hotels and squares",
+          "price": "EGP50-100",
+          "time": "45-75 min",
+          "note": "Runs to main areas; confirm the stop before boarding."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "EGP200-350",
+          "time": "30-60 min",
+          "note": "Agree the price first or insist on the meter."
+        },
+        {
+          "mode": "Uber / Careem",
+          "to": "City centre",
+          "price": "EGP150-250",
+          "time": "30-60 min",
+          "note": "Pick-up point is signed in the arrivals area."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Pyramids of Giza",
+    "Great Sphinx of Giza",
+    "Egyptian Museum",
+    "Cairo Citadel",
+    "Mosque of Muhammad Ali",
+    "Khan el-Khalili",
+    "Abdeen Palace",
+    "Al-Azhar Mosque",
+    "Al-Rifa'i Mosque",
+    "Bab Zuweila",
+    "Babylon Fortress",
+    "Baron Empain Palace",
+    "Bent Pyramid",
+    "Cairo International Stadium",
+    "Cairo Land",
+    "Cairo Opera House",
+    "Cairo Tower",
+    "Cave Church",
+    "Church of St. Sergius and Bacchus",
+    "City of the Dead",
+    "Coptic Museum",
+    "Dream Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Cairo",
+      "https://en.wikivoyage.org/wiki/Cairo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    30.0444,
+    31.2357
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 1
+    },
+    {
+      "high": 21,
+      "low": 9,
+      "rain_days": 2
+    },
+    {
+      "high": 25,
+      "low": 12,
+      "rain_days": 1
+    },
+    {
+      "high": 30,
+      "low": 15,
+      "rain_days": 1
+    },
+    {
+      "high": 34,
+      "low": 19,
+      "rain_days": 0
+    },
+    {
+      "high": 37,
+      "low": 22,
+      "rain_days": 0
+    },
+    {
+      "high": 38,
+      "low": 23,
+      "rain_days": 0
+    },
+    {
+      "high": 38,
+      "low": 24,
+      "rain_days": 0
+    },
+    {
+      "high": 36,
+      "low": 22,
+      "rain_days": 0
+    },
+    {
+      "high": 32,
+      "low": 19,
+      "rain_days": 0
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 1
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

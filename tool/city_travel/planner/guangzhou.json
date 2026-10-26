@@ -1,0 +1,512 @@
+{
+  "city": "Guangzhou",
+  "checked": "October 2026",
+  "intro_line": "A booming southern megacity where dim sum meets 2,000 years of trade.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Zhujiang New Town",
+        "Tianhe",
+        "Yuexiu",
+        "Shamian Island"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Zhujiang New Town",
+        "Tianhe",
+        "Yuexiu",
+        "Shamian Island"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Zhujiang New Town",
+        "Tianhe",
+        "Yuexiu",
+        "Shamian Island"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Zhujiang New Town",
+        "Tianhe",
+        "Yuexiu",
+        "Shamian Island"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Zhujiang New Town",
+        "Tianhe",
+        "Yuexiu",
+        "Shamian Island"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 7,
+        "note": "Coolest month: highs near 19°C, lows near 11°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 9,
+        "note": "Mild and dry-ish: highs around 21°C, about 9 rain days. Good walking weather."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 15,
+        "note": "Warms up to 24°C with more rain (about 15 days). Carry an umbrella."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 17,
+        "note": "Warm and wet: highs near 27°C, around 17 rain days. Expect humid afternoons."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 22,
+        "note": "Hot and rainy: highs near 30°C, about 22 rain days. Plan indoor breaks."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 26,
+        "note": "Peak rain: highs near 31°C, around 26 rain days. Thunderstorms are common."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 22,
+        "note": "Hot and humid: highs near 32°C, still about 22 rain days. Go out early or late."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 25,
+        "note": "Similar to July: highs near 32°C, around 25 rain days. Stay hydrated."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 20,
+        "note": "Still hot at 31°C but rain eases to about 20 days. Typhoon season; check forecasts."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 8,
+        "note": "Comfort returns: highs near 28°C, only about 8 rain days. Great month to visit."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 6,
+        "note": "Pleasant and dry: highs near 25°C, around 6 rain days. Ideal for sightseeing."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 5,
+        "note": "Cool and dry: highs near 20°C, about 5 rain days. Pack a light coat."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.65,
+      0.55,
+      0.55,
+      0.55,
+      0.65,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.65,
+      0.55,
+      0.55,
+      0.55,
+      0.65,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "shopping": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.75,
+      0.65,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.8,
+      0.75,
+      0.6,
+      0.45,
+      0.45,
+      0.45,
+      0.55,
+      0.8,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "canton_tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon into evening",
+      "area": "Zhujiang New Town",
+      "popularity": 5
+    },
+    "chen_clan": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Yuexiu",
+      "popularity": 4
+    },
+    "pearl_river": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Zhujiang New Town",
+      "popularity": 4
+    },
+    "sun_yat_sen_hall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Yuexiu",
+      "popularity": 4
+    },
+    "opera_house": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Zhujiang New Town",
+      "popularity": 4
+    },
+    "ctf_finance": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear afternoon or evening",
+      "area": "Zhujiang New Town",
+      "popularity": 4
+    },
+    "chimelong": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday, full day",
+      "area": "Tianhe",
+      "popularity": 4
+    },
+    "kungfu": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or a quick dinner",
+      "area": "Tianhe",
+      "popularity": 3
+    },
+    "sysu": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Yuexiu",
+      "popularity": 3
+    },
+    "tianhe_stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Tianhe",
+      "popularity": 3
+    },
+    "qingping_market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Yuexiu",
+      "popularity": 3
+    },
+    "shamian_walk": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Shamian Island",
+      "popularity": 3
+    },
+    "dim_sum": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Yuexiu",
+      "popularity": 4
+    },
+    "baiyun": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Yuexiu",
+      "popularity": 4
+    },
+    "beijing_road": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Yuexiu",
+      "popularity": 4
+    },
+    "huacheng_square": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Zhujiang New Town",
+      "popularity": 4
+    },
+    "food_street": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Yuexiu",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old city, Shamian and a proper dim sum morning; add a night for day trips or shopping."
+  },
+  "airports": [
+    {
+      "code": "CAN",
+      "name": "Guangzhou Baiyun International Airport",
+      "primary": true,
+      "note": "Main hub, about 29 km north of the centre.",
+      "options": [
+        {
+          "mode": "Metro line 3",
+          "to": "City centre (Gongyuanqian)",
+          "price": "¥7-10",
+          "time": "45-60 min",
+          "note": "Cheapest option; change at Jiahewanggang if needed."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Major hotels and stations",
+          "price": "¥20-30",
+          "time": "60-90 min",
+          "note": "Several routes; check your hotel stop."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥100-150",
+          "time": "40-60 min",
+          "note": "Use the official taxi queue; avoid touts."
+        },
+        {
+          "mode": "DiDi ride app",
+          "to": "City centre",
+          "price": "¥90-140",
+          "time": "40-60 min",
+          "note": "Pick a marked pickup point in the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Guangzhou",
+      "https://en.wikivoyage.org/wiki/Guangzhou"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro for almost everything: cheap, fast and signed in English.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "15+ lines, fares ¥2–21, English signs. Tap a foreign contactless card or buy a token. A Yang Cheng Tong card costs ¥50 (¥18 deposit) and gives 5–40% discounts."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap and wide-reaching but slower and harder to read for visitors."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis. DiDi and Amap work; Uber does not operate in China."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not advised for visitors: heavy traffic and different rules."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Good in the centre; shared bikes are common for short hops."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries run to Hong Kong and Macau from Nansha and Lianhuashan ports."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and humid: hot, wet summers and mild, drier winters.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to December",
+        "text": "Highs of 20–28°C with few rain days. Comfortable for walking and outdoor sights."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to September)",
+        "text": "Highs around 31–32°C and lows near 25–26°C. Muggy days; take indoor breaks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest months: May to August",
+        "text": "Around 22–26 rain days a month. Short heavy showers; carry an umbrella."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Typhoon season",
+        "text": "Late summer and autumn can bring storms. Check forecasts before day trips."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool, dry winters",
+        "text": "January and February drop to 11–12°C at night. A jacket helps in the evening."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes and rain gear in summer; a light layer for winter nights; comfortable shoes for walking."
+      }
+    ]
+  }
+}

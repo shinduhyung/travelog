@@ -1,0 +1,185 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Riga blends medieval charm with Baltic energy and Art Nouveau flair.",
+  "intro": "Riga rewards visitors with a walkable old town, vibrant markets, and green parks along the Daugava. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Vecrīga (Old Town)",
+    "Centrs",
+    "Āgenskalns",
+    "Maskačka"
+  ],
+  "taxi": {
+    "flag_day": 2,
+    "flag_airport": 3,
+    "per_km": 1,
+    "min_fare": 3
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Trams, buses, and trolleybuses run by Rigas Satiksme; single fare €1.50 valid 90 minutes with transfers.",
+    "Buy tickets via Mobilly app, Narvesen shops, or ticket machines; activate by scanning the vehicle QR code.",
+    "24-hour pass costs €5, 3-day €8, 5-day €10; public transport is free on some holidays.",
+    "Ride apps Bolt, Panda Taxi, and Red Cab work well; avoid hailing random street taxis.",
+    "Driving is not advised due to traffic and parking fees up to €8/hour in the old town.",
+    "Old Town is best on foot; cobblestones are rough. Bikes and e-scooters are common April to September.",
+    "Seasonal boat to Jūrmala runs May to September, €15-20, about 2.5 hours."
+  ],
+  "airports": [
+    {
+      "code": "RIX",
+      "name": "Riga International Airport",
+      "primary": true,
+      "note": "Main hub, about 9 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Bus 22",
+          "to": "Old Town and central station",
+          "price": "€1.50",
+          "time": "30-40 min",
+          "note": "Runs all day; night bus N22 after midnight. Buy ticket before boarding."
+        },
+        {
+          "mode": "Taxi (Baltic Taxi)",
+          "to": "City centre",
+          "price": "€15",
+          "time": "15 min",
+          "note": "Fixed price if booked online."
+        },
+        {
+          "mode": "Taxi (Red Cab)",
+          "to": "City centre",
+          "price": "€12-15",
+          "time": "15 min",
+          "note": "Metered; use the app for clear rates."
+        },
+        {
+          "mode": "Ride app (Bolt)",
+          "to": "City centre",
+          "price": "€10-20",
+          "time": "15 min",
+          "note": "See the fare upfront and pay by card."
+        },
+        {
+          "mode": "Carshare (Bolt, Citybee)",
+          "to": "City centre",
+          "price": "€8-15",
+          "time": "15-20 min",
+          "note": "Register and upload your licence before arrival."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Riga Old Town",
+    "House of the Blackheads",
+    "Freedom Monument",
+    "Art Nouveau District",
+    "Riga Central Market",
+    "St. Peter's Church",
+    "Daugava River",
+    "Grey Peas with Bacon",
+    "Jūrmala Resort",
+    "Riga Motormuseum"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Riga",
+      "https://en.wikivoyage.org/wiki/Riga"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    56.9496,
+    24.1052
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 0,
+      "low": -4,
+      "rain_days": 14
+    },
+    {
+      "high": 2,
+      "low": -3,
+      "rain_days": 11
+    },
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 18,
+      "low": 11,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 14
+    },
+    {
+      "high": 5,
+      "low": 2,
+      "rain_days": 13
+    },
+    {
+      "high": 2,
+      "low": -2,
+      "rain_days": 15
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

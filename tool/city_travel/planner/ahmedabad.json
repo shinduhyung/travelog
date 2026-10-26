@@ -1,0 +1,569 @@
+{
+  "city": "Ahmedabad",
+  "checked": "October 2026",
+  "intro_line": "Ahmedabad: a walled city of gates, mosques and textile grit.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old City (Kalupur)",
+        "Ellisbridge",
+        "Navrangpura",
+        "Satellite"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old City (Kalupur)",
+        "Ellisbridge",
+        "Navrangpura",
+        "Satellite"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old City (Kalupur)",
+        "Ellisbridge",
+        "Navrangpura",
+        "Satellite"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Old City (Kalupur)",
+        "Ellisbridge",
+        "Navrangpura",
+        "Satellite"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Old City (Kalupur)",
+        "Ellisbridge",
+        "Navrangpura",
+        "Satellite"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 27,
+        "low": 14,
+        "rain_days": 0,
+        "note": "January: cool and dry, highs near 27°C. The best month for walking the Old City."
+      },
+      {
+        "high": 31,
+        "low": 16,
+        "rain_days": 0,
+        "note": "February: mild and dry, highs around 31°C. Great for sightseeing and day trips."
+      },
+      {
+        "high": 35,
+        "low": 21,
+        "rain_days": 1,
+        "note": "March: warming fast, highs near 35°C. Sightsee early morning and evening."
+      },
+      {
+        "high": 39,
+        "low": 25,
+        "rain_days": 0,
+        "note": "April: hot, highs around 39°C. Keep afternoons indoors and carry water."
+      },
+      {
+        "high": 41,
+        "low": 28,
+        "rain_days": 1,
+        "note": "May: the hottest month, highs near 41°C. Avoid midday sun; plan air-conditioned stops."
+      },
+      {
+        "high": 38,
+        "low": 28,
+        "rain_days": 8,
+        "note": "June: still hot at 38°C, with the first monsoon showers (about 8 rain days)."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 23,
+        "note": "July: monsoon peak, about 23 rain days and highs near 32°C. Carry an umbrella."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 19,
+        "note": "August: wet and humid, about 19 rain days. Streets can flood briefly; plan flexible days."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 14,
+        "note": "September: rain easing, about 14 rain days, highs near 32°C. Still humid."
+      },
+      {
+        "high": 34,
+        "low": 23,
+        "rain_days": 3,
+        "note": "October: drying out, highs near 34°C. Comfortable evenings return."
+      },
+      {
+        "high": 32,
+        "low": 19,
+        "rain_days": 0,
+        "note": "November: dry and pleasant, highs around 32°C. A strong month to visit."
+      },
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 1,
+        "note": "December: cool and dry, highs near 28°C. Good for sightseeing; bring a light layer for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.35,
+      0.35,
+      0.45,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.5,
+      0.45,
+      0.45,
+      0.55,
+      0.85,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.35,
+      0.35,
+      0.45,
+      0.8,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.5,
+      0.45,
+      0.45,
+      0.55,
+      0.85,
+      1,
+      1
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      0.9
+    ]
+  },
+  "places": {
+    "sarkhej_roza": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Early morning or late afternoon",
+      "area": "Old City (Kalupur)",
+      "popularity": 4
+    },
+    "vishwas_swaroopam": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning before the heat",
+      "area": "Satellite",
+      "popularity": 4
+    },
+    "manek_chowk_walk": {
+      "types": [
+        "food",
+        "shopping",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late evening",
+      "area": "Old City (Kalupur)",
+      "popularity": 5
+    },
+    "old_city_heritage_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Old City (Kalupur)",
+      "popularity": 4
+    },
+    "sabarmati_riverfront": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Ellisbridge",
+      "popularity": 4
+    },
+    "law_garden": {
+      "types": [
+        "food",
+        "shopping",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Navrangpura",
+      "popularity": 4
+    },
+    "kankaria_lake": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old City (Kalupur)",
+      "popularity": 4
+    },
+    "adalaj_stepwell": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Satellite",
+      "popularity": 4
+    },
+    "gandhi_ashram": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Ellisbridge",
+      "popularity": 5
+    },
+    "auto_rickshaw_tour": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Navrangpura",
+      "popularity": 3
+    },
+    "textile_shopping": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Navrangpura",
+      "popularity": 3
+    },
+    "gujarati_thali": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Navrangpura",
+      "popularity": 4
+    },
+    "evening_food_street": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old City (Kalupur)",
+      "popularity": 4
+    },
+    "riverfront_viewpoint": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Ellisbridge",
+      "popularity": 3
+    },
+    "heritage_house_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning or afternoon",
+      "area": "Old City (Kalupur)",
+      "popularity": 3
+    },
+    "morning_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Old City (Kalupur)",
+      "popularity": 3
+    },
+    "city_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday heat",
+      "area": "Ellisbridge",
+      "popularity": 3
+    },
+    "lake_walk": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old City (Kalupur)",
+      "popularity": 3
+    },
+    "craft_bazaar": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Navrangpura",
+      "popularity": 3
+    },
+    "sunset_rooftop": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Old City (Kalupur)",
+      "popularity": 3
+    },
+    "half_day_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Navrangpura",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Old City, the stepwells and a proper thali, with time for the ashram and markets."
+  },
+  "airports": [
+    {
+      "code": "AMD",
+      "name": "Sardar Vallabhbhai Patel International Airport",
+      "primary": true,
+      "note": "Main gateway, about 7 km straight-line NE of the centre (Wikivoyage says 15 km by road).",
+      "options": [
+        {
+          "mode": "BRTS bus 1000",
+          "to": "Karnavati Club via 29 stops",
+          "price": "₹50",
+          "time": "45-60 min",
+          "note": "Air-conditioned, every 30 minutes."
+        },
+        {
+          "mode": "AMTS bus",
+          "to": "Various city stops",
+          "price": "₹10-25",
+          "time": "40-60 min",
+          "note": "Cheapest; routes are in Gujarati."
+        },
+        {
+          "mode": "Auto rickshaw",
+          "to": "City centre",
+          "price": "₹200-300",
+          "time": "25-40 min",
+          "note": "Use the prepaid booth to avoid haggling."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹300-500",
+          "time": "25-40 min",
+          "note": "Hotel pickup is the smoothest option."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹250-400",
+          "time": "25-40 min",
+          "note": "Check app pickup point at the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Ahmedabad",
+      "https://en.wikivoyage.org/wiki/Ahmedabad"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Auto rickshaw or Ola/Uber for most trips; walk the Old City on foot.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro yet. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "AMTS city buses and BRTS (Janmarg) buses run roughly 6AM–11PM. AMTS fares about ₹3–25; a ₹45 day pass exists but is rarely worth it. BRTS bus 1000 links the airport and Karnavati Club, max fare ₹50, every 30 min."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Ola and Uber work, plus local taxi apps. Auto rickshaws are cheap; agree the fare first or use the prepaid booth at the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but driving is hectic. Most visitors do better with autos and app cabs."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best way to explore the Old City lanes. Use cycle rickshaws for short hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot and mostly dry, with a short, heavy monsoon from June to September. November to February is the comfortable window.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Highs of 27–32°C and cool nights. Ideal for walking the Old City and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Very hot April to June",
+        "text": "Highs of 38–41°C. Do outdoor sights at sunrise or after dark and rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon July to September",
+        "text": "Up to 23 rain days in July. Short heavy downpours; keep plans flexible and carry an umbrella."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid in the rains",
+        "text": "Sticky from June to September. Light, quick-dry clothes help."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big day-to-night swing in winter",
+        "text": "January lows near 14°C. A light jacket is useful in the evening."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, a hat and sunscreen; an umbrella for monsoon months; a light layer for winter nights."
+      }
+    ]
+  }
+}

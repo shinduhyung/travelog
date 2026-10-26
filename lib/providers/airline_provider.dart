@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class FlightScatterPlotPoint {
   final FlightLog flight;
@@ -267,7 +268,7 @@ class AirlineProvider with ChangeNotifier {
 
       if (user != null) {
         try {
-          final doc = await _firestore.collection('users').doc(user.uid).get();
+          final doc = await UserDocLoader.instance.load(user.uid);
           if (doc.exists) {
             final data = doc.data();
             if (data != null) {
@@ -1324,7 +1325,7 @@ class AirlineProvider with ChangeNotifier {
     final user = _auth.currentUser;
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data() != null) {
           final data = doc.data()!;
 

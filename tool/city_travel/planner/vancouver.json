@@ -1,0 +1,613 @@
+{
+  "city": "Vancouver",
+  "checked": "October 2026",
+  "intro_line": "Where mountains meet the sea and every neighbourhood has its own flavour.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "West End",
+        "Yaletown",
+        "Gastown"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "West End",
+        "Yaletown",
+        "Gastown"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "West End",
+        "Yaletown",
+        "Gastown"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Downtown",
+        "West End",
+        "Yaletown",
+        "Gastown"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "Downtown",
+        "West End",
+        "Yaletown",
+        "Gastown"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": 2,
+        "rain_days": 18,
+        "note": "Cold and wet: highs near 6°C, about 18 rain days. Pack a waterproof jacket."
+      },
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 16,
+        "note": "Coldest month, lows near 1°C, 16 rain days. Snow is rare downtown but possible on the hills."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 16,
+        "note": "Still cool and showery, highs near 9°C. Cherry blossoms start late in the month."
+      },
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 15,
+        "note": "Milder, highs near 12°C, 15 rain days. Good for walking with a rain layer."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 9,
+        "note": "Warmer and drier: highs near 16°C, 9 rain days. Great for the seawall."
+      },
+      {
+        "high": 19,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Mild and pleasant, highs near 19°C, about 10 rain days. Long daylight hours."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 5,
+        "note": "Warmest and driest: highs near 22°C, only 5 rain days. Book hotels early."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 6,
+        "note": "Hot and dry, highs near 23°C. Best beach month; pack sunscreen."
+      },
+      {
+        "high": 18,
+        "low": 12,
+        "rain_days": 12,
+        "note": "Still warm at 18°C but rain returns (12 days). Carry a light rain jacket."
+      },
+      {
+        "high": 13,
+        "low": 8,
+        "rain_days": 15,
+        "note": "Cooler and wetter: highs near 13°C, 15 rain days. Good museum weather."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 19,
+        "note": "Cool and rainy, highs near 9°C, 19 rain days. Bring waterproof shoes."
+      },
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 20,
+        "note": "Wettest month: highs near 6°C, about 20 rain days. Expect grey, damp days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.5
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.85
+    ],
+    "beach": [
+      0.2,
+      0.2,
+      0.3,
+      0.45,
+      0.65,
+      0.8,
+      0.95,
+      0.95,
+      0.7,
+      0.45,
+      0.25,
+      0.2
+    ],
+    "adventure": [
+      0.45,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.45
+    ]
+  },
+  "places": {
+    "stanley_park": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon; summer",
+      "area": "West End",
+      "popularity": 5
+    },
+    "granville_island": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Weekday morning to avoid crowds",
+      "area": "Yaletown",
+      "popularity": 5
+    },
+    "canada_place": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Clear morning or sunset",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "capilano_bridge": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "First thing in the morning",
+      "area": "West End",
+      "popularity": 5
+    },
+    "gastown_steam_clock": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time; evening for the lit streets",
+      "area": "Gastown",
+      "popularity": 4
+    },
+    "vancouver_aquarium": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning on a rainy day",
+      "area": "West End",
+      "popularity": 4
+    },
+    "moa_ubc": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "West End",
+      "popularity": 3
+    },
+    "cypress_mountain": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Winter for skiing; summer for hikes",
+      "area": "West End",
+      "popularity": 3
+    },
+    "false_creek_ferry": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime, clear weather",
+      "area": "Yaletown",
+      "popularity": 4
+    },
+    "fraser_river": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "papa_murphys": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Evening, for an easy meal in",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "playland": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "science_world": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Rainy day or school holidays",
+      "area": "Yaletown",
+      "popularity": 3
+    },
+    "ubc": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "West End",
+      "popularity": 3
+    },
+    "granville_market_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Yaletown",
+      "popularity": 5
+    },
+    "queen_elizabeth_viewpoint": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Clear late afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "seawall_bike_tour": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning on a dry day",
+      "area": "West End",
+      "popularity": 4
+    },
+    "gastown_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Gastown",
+      "popularity": 4
+    },
+    "english_bay_beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "West End",
+      "popularity": 4
+    },
+    "chinatown_walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Lunchtime",
+      "area": "Gastown",
+      "popularity": 3
+    },
+    "grouse_mountain": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "West End",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Stanley Park, Granville Island and Gastown; add a night for the North Shore mountains."
+  },
+  "airports": [
+    {
+      "code": "YVR",
+      "name": "Vancouver International Airport",
+      "primary": true,
+      "note": "Main hub, 11 km south of centre on Sea Island.",
+      "options": [
+        {
+          "mode": "SkyTrain Canada Line",
+          "to": "Downtown (Waterfront)",
+          "price": "CAD 9-10",
+          "time": "25 min",
+          "note": "Includes YVR AddFare on airport departures only."
+        },
+        {
+          "mode": "Bus N10",
+          "to": "Downtown",
+          "price": "CAD 3-4",
+          "time": "40-50 min",
+          "note": "Overnight service when SkyTrain is closed."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "CAD 40-45",
+          "time": "20-30 min",
+          "note": "Fixed zone fare from airport; cards accepted."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "CAD 35-50",
+          "time": "20-30 min",
+          "note": "Pickup at designated rideshare zone."
+        }
+      ]
+    },
+    {
+      "code": "YXX",
+      "name": "Abbotsford International Airport",
+      "primary": false,
+      "note": "Alternate low-cost airport about 60 km east.",
+      "options": [
+        {
+          "mode": "Intercity bus",
+          "to": "Pacific Central Station",
+          "price": "CAD 20-35",
+          "time": "60-90 min",
+          "note": "No local transit link; book ahead."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "CAD 100-140",
+          "time": "60-90 min",
+          "note": "Drive via Highway 1; traffic varies."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Availability varies; check the app."
+        }
+      ]
+    },
+    {
+      "code": "BLI",
+      "name": "Bellingham International Airport",
+      "primary": false,
+      "note": "US budget airport about 85 km south, plus border time.",
+      "options": [
+        {
+          "mode": "Shuttle bus",
+          "to": "Downtown",
+          "price": "CAD 50-60",
+          "time": "2-3 h",
+          "note": "Runs to Vancouver; allow for border waits."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "1.5-2.5 h",
+          "note": "Cross-border trip; confirm fare first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "1.5-2.5 h",
+          "note": "Cross-border rides are limited; check the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Vancouver",
+      "https://en.wikivoyage.org/wiki/Vancouver"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "food",
+    "adventure"
+  ],
+  "transit": {
+    "best": "SkyTrain for the airport and downtown; walk or bike the seawall.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "SkyTrain Canada Line links YVR to downtown in about 25 minutes. Expo and Millennium lines plus SeaBus ferries cover the region."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "TransLink buses run frequent local routes; N10 runs overnight from the airport."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis accept credit cards; Uber and Lyft operate in Vancouver."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside rush hour; downtown parking is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking and bike share (Mobi) suit the compact downtown and seawall."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "SeaBus ferries are part of TransLink and cross to North Vancouver."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild coastal climate: wet, cool winters and warm, dry summers. Rain is common from October to March.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm highs of 19–23°C and the fewest rain days. Ideal for parks, beaches and the seawall."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winters",
+        "text": "November to January brings 19–20 rain days a month. Pack a waterproof jacket and shoes."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild, not freezing",
+        "text": "Winter highs stay near 6°C and lows near 1–2°C. Snow is uncommon downtown."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Short beach season",
+        "text": "July and August are the only reliably warm beach months, around 22–23°C."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Spring is showery",
+        "text": "March to May warms from 9°C to 16°C but rain days stay at 9–16. Bring layers."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and comfortable walking shoes year-round; sunscreen and a hat for summer."
+      }
+    ]
+  }
+}

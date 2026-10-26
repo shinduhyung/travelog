@@ -1,0 +1,862 @@
+{
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One tasty day: teahouse, snacks, a market walk and hotpot for dinner.",
+      "days": [
+        {
+          "title": "Teahouse, snacks and hotpot",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Sit in the teahouse, order jasmine tea and watch locals play cards."
+            },
+            {
+              "place": "wenshu-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi or metro ride. Go before 11:00 for the busiest stalls."
+            },
+            {
+              "place": "wenshu",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Temple next to the market. Simple vegetarian lunch nearby."
+            },
+            {
+              "place": "kuanzhai",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Old lanes with snack stalls. Try rabbit head or sweet rice cakes if you are brave."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Book ahead or expect a queue. Ask for mild (wei la) broth if you are new to it."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chunxi Road"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Old lanes, a temple and a face-changing show in one day.",
+      "days": [
+        {
+          "title": "Temples, lanes and opera",
+          "stops": [
+            {
+              "place": "wenshu",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Quiet in the morning. Walk slowly and look at the halls."
+            },
+            {
+              "place": "kuanzhai",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Lunch at a snack stall here."
+            },
+            {
+              "place": "peoples-park",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Teahouse break. Short metro ride from Kuanzhai."
+            },
+            {
+              "place": "tianfu-square",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk through the square and see the Mao statue."
+            },
+            {
+              "place": "sichuan-opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Back at Kuanzhai Alley. Book tickets earlier in the day. Shows usually start around 19:30."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kuanzhai Alley"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Pandas at dawn, then a slow green afternoon.",
+      "days": [
+        {
+          "title": "Pandas early, river at sunset",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Arrive at opening. Pandas are most active before 10:00. Bring water."
+            },
+            {
+              "place": "jinli-market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch on Sichuan snacks near the panda base area."
+            },
+            {
+              "place": "dufu",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Garden and old cottage. Shaded paths, good for a hot afternoon."
+            },
+            {
+              "place": "jinjiang-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset stroll along the river. Dinner nearby afterwards."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chunxi Road"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of eating: snacks, hotpot and a teahouse, all close to the metro.",
+      "days": [
+        {
+          "title": "Arrive, old lanes and hotpot",
+          "stops": [
+            {
+              "place": "kuanzhai",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start with the lanes. Graze on snacks as you walk."
+            },
+            {
+              "place": "wenshu-market",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short taxi. Best in the morning, but late afternoon still has stalls open."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Book ahead on weekends. Ask for mild if you are new to Sichuan heat."
+            },
+            {
+              "place": "jinjiang-walk",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Easy stroll to walk off dinner."
+            }
+          ]
+        },
+        {
+          "title": "Teahouse morning, then fly",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Tea, snacks and people-watching. Order at the counter."
+            },
+            {
+              "place": "chunxi-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short metro ride. Shops open around 10:00."
+            },
+            {
+              "place": "dicos",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Quick lunch before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chunxi Road"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most first-timers: old streets, a teahouse and a face-changing show.",
+      "days": [
+        {
+          "title": "Arrive, lanes and opera",
+          "stops": [
+            {
+              "place": "kuanzhai",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Old lanes, teahouses and snack stalls."
+            },
+            {
+              "place": "wenshu",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Short taxi. Temple closes around 17:00, so go straight there."
+            },
+            {
+              "place": "sichuan-opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book tickets earlier in the day. Shows usually start around 19:30."
+            }
+          ]
+        },
+        {
+          "title": "Teahouse and shrine, then fly",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning tea is the classic Chengdu ritual."
+            },
+            {
+              "place": "wuhou",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Metro to Wuhou Temple. Go before the midday crowds."
+            },
+            {
+              "place": "jinli",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Next door. Grab lunch from the snack stalls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chunxi Road"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Pandas first thing, then green space and a river walk before you fly.",
+      "days": [
+        {
+          "title": "Arrive, river and park",
+          "stops": [
+            {
+              "place": "jinjiang-walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Flat riverside path. Good at sunset."
+            },
+            {
+              "place": "peoples-park",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Short walk. Teahouse is daytime only, so come for the park itself."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner nearby in the Chunxi Road area."
+            }
+          ]
+        },
+        {
+          "title": "Pandas early, then fly",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Go at opening. Pandas are most active early and it gets hot by midday."
+            },
+            {
+              "place": "jinli-market",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short taxi. Lunch from the snack street."
+            },
+            {
+              "place": "wuhou",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Optional if time allows before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuhou Temple"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "First-timers who want hotpot, snacks and teahouse life with pandas on the side.",
+      "days": [
+        {
+          "title": "Arrive, old lanes and hotpot",
+          "stops": [
+            {
+              "place": "kuanzhai",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Open all day. Walk the three lanes and snack as you go."
+            },
+            {
+              "place": "wenshu-market",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Busiest in the morning, but stalls stay open into the evening. Check on the day."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Book ahead on weekends. Ask for mild (weiwēi) if you are new to chilli."
+            }
+          ]
+        },
+        {
+          "title": "Pandas early, snacks and tea",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Go at opening. Pandas are most active early and it is cooler."
+            },
+            {
+              "place": "jinli-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch of small Sichuan snacks. About 30 minutes by taxi from the base."
+            },
+            {
+              "place": "peoples-park",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Teahouse in the park. Order jasmine tea and sit outside."
+            },
+            {
+              "place": "chunxi-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–22:00. Good for a stroll before dinner."
+            },
+            {
+              "place": "kwafood",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner. Check the branch hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Opera, then fly",
+          "stops": [
+            {
+              "place": "wenshu",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is calmest. Vegetarian lunch nearby is good value."
+            },
+            {
+              "place": "jinli",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Street open all day. Shops roughly 09:00–22:00."
+            },
+            {
+              "place": "sichuan-opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening shows usually around 19:30–21:00. Book tickets a day ahead. Skip if your flight is early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chunxi Road"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Visitors who want temples, old streets and a face-changing show, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Kuanzhai and opera",
+          "stops": [
+            {
+              "place": "kuanzhai",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Liveliest from late afternoon. Good for photos and snacks."
+            },
+            {
+              "place": "sichuan-opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Face-changing show, usually 19:30–21:00. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Shrines, old street and tea",
+          "stops": [
+            {
+              "place": "wuhou",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning before 10:00 is quietest. Hours roughly 08:00–18:00; check on the day."
+            },
+            {
+              "place": "jinli",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Next door. Shops roughly 09:00–22:00."
+            },
+            {
+              "place": "jinli-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch of Sichuan snacks on the same street."
+            },
+            {
+              "place": "peoples-park",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Teahouse. Morning to early afternoon is best, but afternoons work too."
+            },
+            {
+              "place": "tianfu-square",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Evening when lit up. Metro runs until late."
+            }
+          ]
+        },
+        {
+          "title": "Monastery, then fly",
+          "stops": [
+            {
+              "place": "wenshu",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is best. Hours roughly 08:00–17:00; check on the day."
+            },
+            {
+              "place": "dufu",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi. Morning or late afternoon is nicest."
+            },
+            {
+              "place": "chunxi-walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Last shopping and a quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kuanzhai Alley"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Families and panda fans who want green space and an easy day trip.",
+      "days": [
+        {
+          "title": "Arrive, park tea and river walk",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Teahouse in the park. Shaded and relaxed."
+            },
+            {
+              "place": "jinjiang-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Best at sunset. Always open."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner near Chunxi Road."
+            }
+          ]
+        },
+        {
+          "title": "Pandas early, museum afternoon",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Arrive at opening. Pandas are most active early; avoid midday heat."
+            },
+            {
+              "place": "jinli-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby. About 30 minutes by taxi."
+            },
+            {
+              "place": "jinsha",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor, good for a hot afternoon. Closed some Mondays; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Mountain day trip or easy morning",
+          "stops": [
+            {
+              "place": "qingcheng",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full day. Dry season is best; start early. Check hours on the day. Only if you have a late flight."
+            },
+            {
+              "place": "dufu",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Alternative if you skip the mountain: gardens and bamboo, late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuhou Temple"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through Chengdu: hotpot, snacks, teahouses and a wet market, with pandas on the last morning.",
+      "days": [
+        {
+          "title": "Arrive, old lanes and hotpot",
+          "stops": [
+            {
+              "place": "kuanzhai",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start with a stroll and a snack. Liveliest late afternoon."
+            },
+            {
+              "place": "wenshu-market",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Quick look at a local market; busiest in the morning, so expect a quieter scene."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Book ahead at popular spots. Ask for mild (wei la) if you are new to it."
+            }
+          ]
+        },
+        {
+          "title": "Teahouse, snacks and opera",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Sit with a covered-bowl tea. Order snacks from the stalls."
+            },
+            {
+              "place": "jinli",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Snack street inside the old lane. Weekday afternoons are quieter."
+            },
+            {
+              "place": "jinli-market",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Try a few small plates rather than one big meal."
+            },
+            {
+              "place": "sichuan-opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Face-changing show, usually around 19:30. Book tickets earlier in the day."
+            }
+          ]
+        },
+        {
+          "title": "Chunxi eats and river evening",
+          "stops": [
+            {
+              "place": "chunxi-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shops open around 10:00. Good for browsing and snacking."
+            },
+            {
+              "place": "dicos",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Quick, cheap lunch. Check the branch."
+            },
+            {
+              "place": "chapanda",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Milk tea break. Pick your sugar level."
+            },
+            {
+              "place": "jinjiang-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Riverside stroll at sunset."
+            },
+            {
+              "place": "jiuyanqiao",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner and a drink on the bar street. Bars open around 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Pandas early, then fly",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Go at opening; pandas are most active early. Bring water and wear comfy shoes."
+            },
+            {
+              "place": "kwafood",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch near Chunxi Road. Check the branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chunxi Road"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Temples, teahouses, old lanes and a face-changing show, with a panda morning to finish.",
+      "days": [
+        {
+          "title": "Arrive, Kuanzhai and opera",
+          "stops": [
+            {
+              "place": "kuanzhai",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Old lanes, teahouses and snack stalls. Liveliest late afternoon."
+            },
+            {
+              "place": "sichuan-opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Face-changing show, usually around 19:30. Book earlier in the day."
+            }
+          ]
+        },
+        {
+          "title": "Shrines and old streets",
+          "stops": [
+            {
+              "place": "wuhou",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go before 10:00 for calm. Check hours on the day."
+            },
+            {
+              "place": "jinli",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Next door. Weekday mornings are quieter; lanterns come on in the evening."
+            },
+            {
+              "place": "jinli-market",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch from the snack street."
+            },
+            {
+              "place": "tianfu-square",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Central square, lit up in the evening. Metro nearby."
+            }
+          ]
+        },
+        {
+          "title": "Teahouse, monastery and river",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Covered-bowl tea and people-watching. Daytime is best."
+            },
+            {
+              "place": "wenshu",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Monastery and vegetarian food nearby. Check hours on the day."
+            },
+            {
+              "place": "jinjiang-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Riverside walk at sunset."
+            },
+            {
+              "place": "chunxi-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening shopping walk, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Pandas early, then fly",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Arrive at opening; pandas are most active early. About 30-40 minutes by taxi from the centre."
+            },
+            {
+              "place": "dufu",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Poet's cottage and gardens. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kuanzhai Alley"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Pandas first thing, green hills on a day trip, and easy riverside and park time in between.",
+      "days": [
+        {
+          "title": "Arrive, park and river",
+          "stops": [
+            {
+              "place": "peoples-park",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Green space and a teahouse. Park open roughly 06:00-22:00."
+            },
+            {
+              "place": "jinjiang-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Riverside walk at sunset."
+            },
+            {
+              "place": "hotpot-dinner",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner near Chunxi Road. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Pandas early, then old lanes",
+          "stops": [
+            {
+              "place": "panda-base",
+              "at": "07:30",
+              "minutes": 180,
+              "note": "Go at opening; pandas are most active early and avoid midday heat."
+            },
+            {
+              "place": "jinli",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch from the snack street, then a wander."
+            },
+            {
+              "place": "kuanzhai",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon into evening is liveliest."
+            }
+          ]
+        },
+        {
+          "title": "Qingcheng Mountain day trip",
+          "stops": [
+            {
+              "place": "qingcheng",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full day out. Start early, wear grippy shoes, check weather and hours on the day."
+            },
+            {
+              "place": "kwafood",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Easy dinner back in the city. Check the branch."
+            }
+          ]
+        },
+        {
+          "title": "Garden morning, then fly",
+          "stops": [
+            {
+              "place": "dufu",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Poet's cottage and gardens. Morning is calm. Check hours on the day."
+            },
+            {
+              "place": "tianfu-square",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick look, then metro to the airport line."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tianfu Square"
+    }
+  ]
+}

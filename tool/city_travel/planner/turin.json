@@ -1,0 +1,547 @@
+{
+  "city": "Turin",
+  "checked": "October 2026",
+  "intro_line": "Turin: elegant arcades, royal palaces, and the Alps on the horizon.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro",
+        "Porta Nuova",
+        "Porta Susa",
+        "Lingotto"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro",
+        "Porta Nuova",
+        "Porta Susa",
+        "Lingotto"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro",
+        "Porta Nuova",
+        "Porta Susa",
+        "Lingotto"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Centro",
+        "Porta Nuova",
+        "Porta Susa",
+        "Lingotto"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Centro",
+        "Porta Nuova",
+        "Porta Susa",
+        "Lingotto"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": -2,
+        "rain_days": 5,
+        "note": "January: cold, highs near 8°C and lows below freezing. Pack a warm coat."
+      },
+      {
+        "high": 10,
+        "low": 0,
+        "rain_days": 7,
+        "note": "February: still cold, highs around 10°C. Fewer crowds at museums."
+      },
+      {
+        "high": 14,
+        "low": 3,
+        "rain_days": 8,
+        "note": "March: milder at 14°C, some rain. Good for walking the centre."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 10,
+        "note": "April: pleasant at 18°C but rainier, with about 10 wet days."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 16,
+        "note": "May: warm at 21°C and the wettest month, around 16 rain days. Carry an umbrella."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 12,
+        "note": "June: warm and sunny, highs near 27°C. Good outdoor evenings."
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 11,
+        "note": "July: hot, highs around 30°C. Sightsee early and rest at midday."
+      },
+      {
+        "high": 29,
+        "low": 18,
+        "rain_days": 9,
+        "note": "August: hot like July, around 29°C. Many locals are away; some shops close."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 9,
+        "note": "September: warm at 24°C and comfortable. A strong month to visit."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 10,
+        "note": "October: mild at 18°C with some rain. Good for food and wine trips."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 9,
+        "note": "November: cooler at 12°C with around 9 rain days. Bring layers."
+      },
+      {
+        "high": 8,
+        "low": -1,
+        "rain_days": 5,
+        "note": "December: cold again, highs near 8°C. Christmas lights and markets in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "art": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.85,
+      0.8,
+      0.65,
+      0.65,
+      0.8,
+      0.75,
+      0.5,
+      0.4
+    ]
+  },
+  "places": {
+    "mole": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon or sunset; clear days",
+      "area": "Centro",
+      "popularity": 5
+    },
+    "cinema-museum": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "egyptian-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "First slot in the morning",
+      "area": "Centro",
+      "popularity": 5
+    },
+    "royal-palace": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning; closed Monday",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "venaria": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning; spring and autumn",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "superga": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Clear morning or late afternoon",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "sacra-san-michele": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning; clear days",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "allianz-stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match day or a booked tour",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "teatro-regio": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "porta-palazzo-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday morning; Saturday is busiest",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "monte-dei-cappuccini": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "po-river-walk": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon; spring and autumn",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "quadrilatero": {
+      "types": [
+        "food",
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Aperitivo time, early evening",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "gianduiotto-tasting": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "porta-nuova-area": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Porta Nuova",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Egyptian Museum, the royal palaces and a proper aperitivo; add a night for a palace or wine-country day trip."
+  },
+  "airports": [
+    {
+      "code": "TRN",
+      "name": "Torino / Caselle International Airport",
+      "primary": true,
+      "note": "Main airport, 15 km north of the city centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Torino Porta Susa",
+          "price": "€4",
+          "time": "19 min",
+          "note": "Runs every 30 min; buy ticket at machines or app."
+        },
+        {
+          "mode": "Bus (Arriva 268)",
+          "to": "Porta Susa / Porta Nuova",
+          "price": "€8 single, €11 return",
+          "time": "40-55 min",
+          "note": "Buy ticket in arrivals; cash on board costs €1 extra."
+        },
+        {
+          "mode": "Bus (Flibco)",
+          "to": "Porta Susa (Corso Vittorio Emanuele II)",
+          "price": "€7.5 single, €11 return",
+          "time": "25 min",
+          "note": "Runs every 30 min; buy online or from driver."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€36-40",
+          "time": "30-40 min",
+          "note": "Fixed fare; confirm with driver."
+        }
+      ]
+    },
+    {
+      "code": "MXP",
+      "name": "Milan Malpensa Airport",
+      "primary": false,
+      "note": "Alternative airport with more flights, 120 km northeast.",
+      "options": [
+        {
+          "mode": "Bus (SADEM)",
+          "to": "Torino Porta Susa",
+          "price": "€22",
+          "time": "2 hr",
+          "note": "Hourly 08:00-22:00 and midnight; buy in arrival hall."
+        },
+        {
+          "mode": "Train + Metro",
+          "to": "Torino Porta Nuova",
+          "price": "€20-30",
+          "time": "2-2.5 hr",
+          "note": "Malpensa Express to Milan, then train to Turin."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-200",
+          "time": "1.5-2 hr",
+          "note": "Private transfer; book ahead."
+        }
+      ]
+    },
+    {
+      "code": "LIN",
+      "name": "Milan Linate Airport",
+      "primary": false,
+      "note": "Closer to Milan, 140 km east; fewer international flights.",
+      "options": [
+        {
+          "mode": "Bus + Train",
+          "to": "Torino Porta Nuova",
+          "price": "€15-25",
+          "time": "2-2.5 hr",
+          "note": "Bus to Milan Centrale, then train to Turin."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-200",
+          "time": "1.5-2 hr",
+          "note": "Private transfer; book ahead."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Turin",
+      "https://en.wikivoyage.org/wiki/Turin"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk in the centre; use Metro Linea 1 and trams for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Linea 1 runs driverless trains from Bengasi to Fermi, linking Porta Nuova and Porta Susa."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and trams run 06:00–00:30. Buy tickets before boarding from tobacconists or machines. A standard 'City + Suburban 100' ticket costs €2 and is valid for 100 minutes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are available but ride apps like Uber are limited. Use FreeNow or local apps."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is not recommended due to restricted streets and trams."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is ideal in the centre. Bike sharing is available via Lime and RideMovi."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold winters and warm summers. Rain is spread across the year, heaviest in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild days around 18–24°C. Good for walking and day trips."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is hot but not extreme",
+        "text": "July and August reach about 30°C. Go to museums at midday and walk in the evening."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold",
+        "text": "December to February see highs near 8–10°C and lows at or below freezing. Bring a warm coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "May is wettest with about 16 rain days. Keep a small umbrella handy in spring and autumn."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Po valley haze",
+        "text": "Winter days can be grey and foggy. Plan indoor sights as backup."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobblestones. Add a hat and sunscreen for summer."
+      }
+    ]
+  }
+}

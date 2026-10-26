@@ -1,0 +1,573 @@
+{
+  "city": "Dallas",
+  "checked": "October 2026",
+  "intro_line": "Big Texas sprawl, big steaks, big ideas.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Deep Ellum",
+        "Oak Lawn"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Deep Ellum",
+        "Oak Lawn"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Deep Ellum",
+        "Oak Lawn"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Deep Ellum",
+        "Oak Lawn"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Deep Ellum",
+        "Oak Lawn"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 7,
+        "note": "Jan: cold, highs near 13°C and lows near 3°C. Pack a warm layer."
+      },
+      {
+        "high": 16,
+        "low": 5,
+        "rain_days": 9,
+        "note": "Feb: still cool, highs around 16°C. Rain on about 9 days."
+      },
+      {
+        "high": 21,
+        "low": 10,
+        "rain_days": 11,
+        "note": "Mar: mild and pleasant, highs near 21°C. Good walking weather."
+      },
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 12,
+        "note": "Apr: warm, highs around 24°C. One of the best months to visit."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 14,
+        "note": "May: warm to hot, highs near 28°C. Wettest month, with rain on about 14 days."
+      },
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 10,
+        "note": "Jun: hot, highs around 32°C. Plan indoor sights at midday."
+      },
+      {
+        "high": 35,
+        "low": 25,
+        "rain_days": 9,
+        "note": "Jul: very hot, highs near 35°C. Stay hydrated and use shade."
+      },
+      {
+        "high": 35,
+        "low": 25,
+        "rain_days": 9,
+        "note": "Aug: as hot as July, highs near 35°C. Mornings and evenings are best outdoors."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 8,
+        "note": "Sep: still hot, highs around 32°C. Slightly fewer rain days."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 8,
+        "note": "Oct: warm and comfortable, highs near 26°C. Great for outdoor plans."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 8,
+        "note": "Nov: mild, highs around 19°C. Light jacket for evenings."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 8,
+        "note": "Dec: cool, highs near 16°C and lows near 6°C. Rain on about 8 days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.5,
+      0.7,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.75,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "art": [
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.75,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.75,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "shopping": [
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.75,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "dealey-plaza": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "sixth-floor-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning; book ahead",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "reunion-tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "dallas-zoo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Oak Lawn",
+      "popularity": 4
+    },
+    "six-flags": {
+      "types": [
+        "history"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday morning, summer",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "traders-village": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "smu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Uptown",
+      "popularity": 2
+    },
+    "chuck-e-cheese": {
+      "types": [
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Uptown",
+      "popularity": 2
+    },
+    "pizza-hut": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or late evening",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "prairie-playland": {
+      "types": [
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "smoothie-king": {
+      "types": [
+        "food"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "wingstreet": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "itz": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekend lunch",
+      "area": "Uptown",
+      "popularity": 2
+    },
+    "klyde-warren": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunchtime or sunset",
+      "area": "Uptown",
+      "popularity": 4
+    },
+    "dallas-arts-district": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Daytime, avoid Monday closures",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "dallas-museum-art": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "deep-ellum": {
+      "types": [
+        "art",
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, Thursday to Saturday",
+      "area": "Deep Ellum",
+      "popularity": 4
+    },
+    "bishop-arts": {
+      "types": [
+        "shopping",
+        "food",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Oak Lawn",
+      "popularity": 4
+    },
+    "katy-trail": {
+      "types": [
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or evening",
+      "area": "Uptown",
+      "popularity": 3
+    },
+    "peggy-suelen": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Uptown",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Sixth Floor Museum, the Arts District and a proper BBQ and Tex-Mex run without rushing."
+  },
+  "airports": [
+    {
+      "code": "DFW",
+      "name": "Dallas Fort Worth International Airport",
+      "primary": true,
+      "note": "American Airlines' largest hub, 26 km from the centre.",
+      "options": [
+        {
+          "mode": "DART Orange Line",
+          "to": "Downtown Dallas",
+          "price": "$3-6",
+          "time": "50-60 min",
+          "note": "Station outside Terminal A; take SkyLink tram to get there."
+        },
+        {
+          "mode": "Shared-ride shuttle",
+          "to": "Downtown and hotels",
+          "price": "$30",
+          "time": "30-45 min",
+          "note": "Door-to-door pickup; book ahead."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Dallas",
+          "price": "$45-60",
+          "time": "25-40 min",
+          "note": "Follow signs to the taxi stand outside any terminal."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Dallas",
+          "price": "$35-55",
+          "time": "25-40 min",
+          "note": "Pickup zones are signposted; prices surge at peak times."
+        }
+      ]
+    },
+    {
+      "code": "DAL",
+      "name": "Dallas Love Field",
+      "primary": false,
+      "note": "Southwest Airlines' home base, 9 km northwest of downtown.",
+      "options": [
+        {
+          "mode": "DART route 524 (Love Link)",
+          "to": "Inwood/Love Field Station",
+          "price": "$3-6",
+          "time": "15-20 min",
+          "note": "Then Green or Orange Line to downtown."
+        },
+        {
+          "mode": "Shared-ride shuttle",
+          "to": "Downtown and hotels",
+          "price": "$30",
+          "time": "20-30 min",
+          "note": "Door-to-door; book ahead."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Dallas",
+          "price": "$20-30",
+          "time": "15-25 min",
+          "note": "Short ride; no rail link exists."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Dallas",
+          "price": "$15-25",
+          "time": "15-25 min",
+          "note": "Usually the quickest option here."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Dallas",
+      "https://en.wikivoyage.org/wiki/Dallas"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "A rental car or ride apps for most trips; DART rail for downtown and suburbs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "DART light rail covers downtown and many suburbs; best for commuters. Tap a contactless card or phone on DART readers; you pay the cheapest valid fare."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "DART buses reach most places but are slow and infrequent off-peak."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis hail at stands and hotels; Uber and Lyft both work widely."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "A car is the simplest way around; rush hour on I-35 and US-75 is brutal."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable; bikes and scooters suit short hops, not sprawl."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: long hot summers, mild winters, and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: March to May and October to November",
+        "text": "Highs of 19–28°C make walking and outdoor sights comfortable."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is very hot (June to September)",
+        "text": "Highs of 32–35°C with warm nights near 22–25°C. Do outdoor plans early or after dark."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–14 rain days a month. May is wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is mild but chilly at night",
+        "text": "January highs near 13°C and lows near 3°C. Bring a warm jacket."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Spring storms",
+        "text": "Spring can bring thunderstorms. Check the forecast on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a hat and sunscreen for summer; a warm layer for winter nights; comfortable shoes for the sprawl."
+      }
+    ]
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Table Mountain, Cape Point and the penguins."
+    },
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Camps Bay sunsets and Atlantic swims."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Winelands, braais and the V&A food halls."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "City Bowl",
+      "range": [
+        900,
+        2500
+      ],
+      "why": "Central base under Table Mountain. Walk to restaurants and museums; short rides to most sights.",
+      "center": [
+        -33.928,
+        18.417
+      ]
+    },
+    {
+      "area": "V&A Waterfront",
+      "range": [
+        1800,
+        5000
+      ],
+      "why": "Safe, walkable and full of shops and food. Easy start for Robben Island ferries.",
+      "center": [
+        -33.903,
+        18.42
+      ]
+    },
+    {
+      "area": "Sea Point",
+      "range": [
+        1000,
+        2800
+      ],
+      "why": "Promenade walks and ocean views. Good value and quick rides to the centre and beaches.",
+      "center": [
+        -33.917,
+        18.385
+      ]
+    },
+    {
+      "area": "Camps Bay",
+      "range": [
+        1500,
+        4500
+      ],
+      "why": "Beach on your doorstep and famous sunsets. Quieter at night; you'll need rides to town.",
+      "center": [
+        -33.95,
+        18.377
+      ]
+    }
+  ],
+  "food": [
+    "Try a braai (South African barbecue) and a Cape Malay curry in the Bo-Kaap.",
+    "Seafood at the V&A Waterfront or Kalk Bay harbour; ask the price before you order.",
+    "Book a Winelands lunch in Stellenbosch or Franschhoek; many estates need a booking.",
+    "Cheap eats: biltong, koeksisters and food-market stalls around the City Bowl.",
+    "Tipping is normal, around 10–15% in restaurants. Check if a service charge is already added."
+  ],
+  "more_time": [
+    "Swap a city day for the Cape Winelands: a full day of tastings in Stellenbosch or Franschhoek.",
+    "Take the ferry to Robben Island for the history tour; book ahead and check weather.",
+    "Drive the Cape Peninsula loop to Cape Point and Boulders Beach penguins in one long day."
+  ],
+  "type_month_fit": {
+    "nature": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "beach": [
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.45,
+      0.3,
+      0.25,
+      0.3,
+      0.45,
+      0.65,
+      0.8,
+      0.9
+    ],
+    "food": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "culture": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "history": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95
+    ]
+  },
+  "best_for": [
+    "nature",
+    "food",
+    "beach"
+  ],
+  "recommend": {
+    "why": "Three nights covers Table Mountain, the beaches and a Winelands day without rushing."
+  },
+  "month_notes": [
+    "Jan: hot and dry, highs near 26°C. Best beach month; book ahead.",
+    "Feb: warm and dry, similar to Jan. Great for the coast and mountains.",
+    "Mar: still warm at 24°C, a few more rain days. Good all-round month.",
+    "Apr: cooler at 22°C and more showers. Pack a light jacket.",
+    "May: mild at 20°C with about 7 rain days. Fewer crowds.",
+    "Jun: cool and wet, highs near 17°C with 11 rain days. Plan indoor days.",
+    "Jul: coldest month, highs around 16°C. Wet and windy; bring warm layers.",
+    "Aug: still cool at 17°C with 10 rain days. Watch the weather for mountain days.",
+    "Sep: warming to 18°C, rain easing. A quiet, good-value month.",
+    "Oct: pleasant at 21°C with 6 rain days. Good for hiking and wine farms.",
+    "Nov: warm at 22°C and drier. A strong shoulder month.",
+    "Dec: hot at 24°C and busy. Book hotels and restaurants early."
+  ],
+  "climate_guide": {
+    "summary": "Mediterranean climate: warm, dry summers and cool, wet winters. Wind and cloud can change mountain plans fast.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Warm, mostly dry days around 22–26°C. Ideal for beaches, Table Mountain and the Winelands."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest: June to August",
+        "text": "Around 10–11 rain days a month and highs near 16–17°C. Keep indoor plans ready."
+      },
+      {
+        "icon": "💨",
+        "title": "Windy days",
+        "text": "The Cape is windy, especially in summer. Check the cableway status before heading up Table Mountain."
+      },
+      {
+        "icon": "🌊",
+        "title": "Cold Atlantic water",
+        "text": "The sea stays cold even in summer. Bring a wetsuit or swim briefly at Camps Bay."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings",
+        "text": "Nights drop to 10–18°C. A light jacket helps year-round."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, sunscreen, a hat, a rain jacket for winter, and sturdy shoes for hiking."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Uber or Bolt for most trips; drive yourself for the peninsula and Winelands.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "MetroRail links the centre to the Southern Suburbs and Simon's Town, but there is no Sunday service. Safe by day; avoid night travel."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover main routes and show on Google Maps. Useful but slower than ride apps."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Bolt are the easiest way around; airport to centre costs about R150. Ignore unofficial 'airport taxi' touts."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "Easy driving on good roads. Keep doors locked and avoid unknown areas after dark."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the City Bowl, Waterfront and Sea Point by day. Use rides at night or for longer trips."
+      }
+    ]
+  }
+}

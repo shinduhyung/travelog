@@ -1,0 +1,1287 @@
+{
+  "city": "Stockholm",
+  "checked": "October 2026",
+  "currency": "SEK",
+  "usd_rate": 9.9102,
+  "intro": "Stockholm rewards visitors with walkable islands, world-class museums, and a calm, watery beauty. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 59.3027,
+      "west": 17.8597,
+      "north": 59.3836,
+      "east": 18.125,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 50,
+      "flag_airport": 100,
+      "per_km": 15,
+      "min_fare": 100
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Metro (Tunnelbana) is fast and covers the city; buy an SL card or use the app.",
+      "Trams and buses fill the gaps; SL travel card is best value.",
+      "Taxis are pricey; use Uber or Bolt for app-based rides.",
+      "Driving is not recommended in the centre due to congestion and tolls.",
+      "Walking and cycling are great in warm months; many bike lanes.",
+      "Ferries connect the islands and are part of the transit network."
+    ],
+    "sources": []
+  },
+  "places": {
+    "vasa": {
+      "name": "Vasa Museum",
+      "landmark": "Vasa Museum",
+      "kind": "museum",
+      "lat": 59.328,
+      "lon": 18.0914,
+      "price": 190,
+      "price_text": "≈ SEK 190 adult · under 18 free · check current price",
+      "hours": "Daily, roughly 10:00–17:00 · longer in summer · check on the day",
+      "tip": "Go right at opening or after 15:00 to avoid the biggest crowds. The guided tour in English is worth it.",
+      "source": "https://www.vasamuseet.se/en"
+    },
+    "gamla-stan": {
+      "name": "Gamla Stan",
+      "landmark": "Gamla Stan",
+      "kind": "sight",
+      "lat": 59.3276,
+      "lon": 18.0691,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Leave the main street Västerlånggatan and wander the quiet side lanes early in the morning.",
+      "source": ""
+    },
+    "stockholm-palace": {
+      "name": "Stockholm Palace",
+      "landmark": "Stockholm Palace",
+      "kind": "sight",
+      "lat": 59.3268,
+      "lon": 18.0717,
+      "price": 180,
+      "price_text": "≈ SEK 180 adult · check current price and combined tickets",
+      "hours": "Roughly daily 10:00–17:00 in summer · shorter off-season · check on the day",
+      "tip": "Time your visit for the changing of the guard in the outer courtyard, usually around midday.",
+      "source": "https://www.kungligaslotten.se/english"
+    },
+    "city-hall": {
+      "name": "Stockholm City Hall",
+      "landmark": "Stockholm City Hall",
+      "kind": "sight",
+      "lat": 59.3278,
+      "lon": 18.0544,
+      "price": 150,
+      "price_text": "≈ SEK 150 guided tour only · check current price",
+      "hours": "Guided tours only, roughly daily · check on the day",
+      "tip": "You can only see the Golden Hall and Blue Hall on a guided tour, so book a slot ahead.",
+      "source": "https://stadshuset.stockholm/en/"
+    },
+    "skansen": {
+      "name": "Skansen",
+      "landmark": "Skansen",
+      "kind": "park",
+      "lat": 59.3263,
+      "lon": 18.097,
+      "price": 240,
+      "price_text": "≈ SEK 240 adult in summer · lower off-season · check current price",
+      "hours": "Daily, roughly 10:00–17:00 · longer in summer · check on the day",
+      "tip": "It is big. Pick two or three areas, see the Nordic animals and old houses, and allow half a day.",
+      "source": "https://www.skansen.se/en/"
+    },
+    "abba": {
+      "name": "ABBA The Museum",
+      "landmark": "ABBA The Museum",
+      "kind": "museum",
+      "lat": 59.3247,
+      "lon": 18.0942,
+      "price": 250,
+      "price_text": "≈ SEK 250 adult · check current price, book online",
+      "hours": "Daily, roughly 10:00–18:00 · check on the day",
+      "tip": "Book a timed ticket online. It is on Djurgården, so pair it with the Vasa Museum nearby.",
+      "source": "https://abbathemuseum.com/en/"
+    },
+    "metro-art": {
+      "name": "Stockholm Metro Art",
+      "landmark": "Stockholm Metro Art",
+      "kind": "sight",
+      "lat": 59.3308,
+      "lon": 18.0592,
+      "price": 43,
+      "price_text": "≈ SEK 43 single ticket · 75 minutes of travel · check current price",
+      "hours": "Runs with metro hours, roughly 05:00–01:00",
+      "tip": "The Blue Line stations T-Centralen, Kungsträdgården and Solna Centrum are the highlights. One ticket covers the ride.",
+      "source": "https://visitstockholm.com/see-do/attractions/art-in-the-subway/"
+    },
+    "birka": {
+      "name": "Birka and Hovgården",
+      "landmark": "Birka and Hovgården",
+      "kind": "tour",
+      "lat": 59.3283,
+      "lon": 17.5458,
+      "price": 400,
+      "price_text": "≈ SEK 350–450 including boat from central Stockholm · check current price",
+      "hours": "Seasonal, roughly May–September · boat times vary · check on the day",
+      "tip": "It is a full-day trip by boat. Book ahead in summer and bring a windproof layer for the crossing.",
+      "source": "https://www.birkavikingastaden.se/en/"
+    },
+    "drottningholm": {
+      "name": "Drottningholm Palace",
+      "landmark": "Drottningholm Palace",
+      "kind": "sight",
+      "lat": 59.3229,
+      "lon": 17.886,
+      "price": 160,
+      "price_text": "≈ SEK 160 palace · gardens free · check current price",
+      "hours": "Roughly daily in summer · shorter off-season · check on the day",
+      "tip": "Take the boat from City Hall instead of the metro. The gardens are free and worth the trip alone.",
+      "source": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/drottningholm-palace.html"
+    },
+    "friends-arena": {
+      "name": "Friends Arena",
+      "landmark": "Friends Arena",
+      "kind": "show",
+      "lat": 59.3727,
+      "lon": 18.0003,
+      "price": null,
+      "price_text": "Ticket price depends on the event",
+      "hours": "Only on event days · check the programme",
+      "tip": "It is outside the city centre in Solna. Take the commuter train and arrive early on match or concert nights.",
+      "source": "https://www.friendsarena.se/"
+    },
+    "grona-lund": {
+      "name": "Gröna Lund",
+      "landmark": "Gröna Lund",
+      "kind": "park",
+      "lat": 59.3242,
+      "lon": 18.0987,
+      "price": 0,
+      "price_text": "Entry often free · ride wristband ≈ SEK 400 · check current price",
+      "hours": "Seasonal, roughly April–September · check on the day",
+      "tip": "Buy the ride wristband online and go on a weekday evening for shorter queues.",
+      "source": "https://www.gronalund.com/en/"
+    },
+    "junibacken": {
+      "name": "Junibacken",
+      "landmark": "Junibacken",
+      "kind": "museum",
+      "lat": 59.3289,
+      "lon": 18.0934,
+      "price": 200,
+      "price_text": "≈ SEK 200 adult · children cheaper · check current price",
+      "hours": "Daily, roughly 10:00–17:00 · check on the day",
+      "tip": "Best for families with young children. The Story Train ride is the highlight.",
+      "source": "https://www.junibacken.se/en/"
+    },
+    "kth": {
+      "name": "KTH Royal Institute of Technology",
+      "landmark": "KTH Royal Institute of Technology",
+      "kind": "sight",
+      "lat": 59.3498,
+      "lon": 18.0707,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily · buildings vary",
+      "tip": "Only worth a detour if you like architecture. The main building and courtyard are the photo spot.",
+      "source": "https://www.kth.se/en"
+    },
+    "kottbullar": {
+      "name": "Köttbullar (Swedish meatballs)",
+      "landmark": "Köttbullar",
+      "kind": "food",
+      "lat": 59.3293,
+      "lon": 18.0686,
+      "price": 200,
+      "price_text": "≈ SEK 150–250 a plate in a mid-range restaurant",
+      "hours": "Lunch and dinner, restaurant dependent",
+      "tip": "Order them with lingonberry, cream sauce and boiled potatoes. Lunch menus are much cheaper than dinner.",
+      "source": ""
+    },
+    "national-library": {
+      "name": "National Library of Sweden",
+      "landmark": "National Library of Sweden",
+      "kind": "sight",
+      "lat": 59.3381,
+      "lon": 18.072,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Roughly Mon–Fri daytime · check on the day",
+      "tip": "A quiet stop for book lovers. The reading room is the reason to come.",
+      "source": "https://www.kb.se/in-english.html"
+    },
+    "riddarholmen": {
+      "name": "Riddarholmen Church",
+      "landmark": "Riddarholmen Church",
+      "kind": "sight",
+      "lat": 59.3262,
+      "lon": 18.0644,
+      "price": 60,
+      "price_text": "≈ SEK 60 · check current price",
+      "hours": "Summer only, roughly daily · check on the day",
+      "tip": "Small but atmospheric. Combine it with a walk along the Riddarholmen waterfront at sunset.",
+      "source": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/riddarholmen-church.html"
+    },
+    "sergels-torg": {
+      "name": "Sergels Torg",
+      "landmark": "Sergels Torg",
+      "kind": "sight",
+      "lat": 59.3308,
+      "lon": 18.0645,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The glass triangle and fountain are the classic meeting point. Cross to Drottninggatan for the shopping street.",
+      "source": ""
+    },
+    "public-library": {
+      "name": "Stockholm Public Library",
+      "landmark": "Stockholm Public Library",
+      "kind": "sight",
+      "lat": 59.3433,
+      "lon": 18.0548,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Roughly daily · check on the day",
+      "tip": "Walk up to the round rotunda reading room. It is a short detour from Odenplan.",
+      "source": "https://biblioteket.stockholm.se/"
+    },
+    "stortorget": {
+      "name": "Stortorget, Stockholm",
+      "landmark": "Stortorget, Stockholm",
+      "kind": "sight",
+      "lat": 59.3275,
+      "lon": 18.07,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The colourful old houses are the classic photo. Come before 09:00 to have the square almost to yourself.",
+      "source": ""
+    },
+    "under-bridges": {
+      "name": "Under the Bridges of Stockholm",
+      "landmark": "Under the Bridges of Stockholm",
+      "kind": "tour",
+      "lat": 59.3297,
+      "lon": 18.0729,
+      "price": 300,
+      "price_text": "≈ SEK 250–350 boat tour · check current price",
+      "hours": "Seasonal, roughly April–October · several departures daily",
+      "tip": "Sit on the open deck for photos. The tour passes under low bridges, so it is a good way to see the city from the water.",
+      "source": "https://www.stromma.com/en-se/stockholm/sightseeing/"
+    },
+    "ostermalms-saluhall": {
+      "name": "Östermalms Saluhall",
+      "landmark": null,
+      "kind": "food",
+      "lat": 59.3352,
+      "lon": 18.0783,
+      "price": 150,
+      "price_text": "≈ SEK 100–200 for lunch at a counter",
+      "hours": "Roughly Mon–Sat daytime · check on the day",
+      "tip": "A classic food hall for a sit-down lunch. Try a shrimp sandwich or a pastry from the counters.",
+      "source": "https://ostermalmshallen.se/"
+    },
+    "monteliusvagen": {
+      "name": "Monteliusvägen viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 59.3203,
+      "lon": 18.0611,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A short cliff walk on Södermalm with the best free view of Gamla Stan and the water. Go at sunset.",
+      "source": ""
+    },
+    "sofo-walk": {
+      "name": "SoFo neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.3136,
+      "lon": 18.0742,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops roughly daytime",
+      "tip": "Wander the streets south of Folkungagatan for small shops, cafés and street art. Good for a slow afternoon.",
+      "source": ""
+    },
+    "fika": {
+      "name": "Fika at a classic café",
+      "landmark": null,
+      "kind": "food",
+      "lat": 59.326,
+      "lon": 18.069,
+      "price": 80,
+      "price_text": "≈ SEK 60–100 for coffee and a cinnamon bun",
+      "hours": "Café dependent, usually daytime",
+      "tip": "Fika is the Swedish coffee break. Order a kanelbulle with your coffee and sit down, do not rush.",
+      "source": ""
+    },
+    "archipelago-tour": {
+      "name": "Stockholm archipelago boat trip",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 59.3225,
+      "lon": 18.096,
+      "price": 350,
+      "price_text": "≈ SEK 250–450 depending on route · check current price",
+      "hours": "Seasonal, roughly May–September · check on the day",
+      "tip": "Even a short hop to an island like Fjäderholmarna gives you the archipelago feel without a full day.",
+      "source": "https://www.stromma.com/en-se/stockholm/"
+    },
+    "sodermalm-view": {
+      "name": "Södermalm waterfront and Fotografiska area",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.3179,
+      "lon": 18.0855,
+      "price": 0,
+      "price_text": "Free to walk · museum ticket separate",
+      "hours": "Waterfront always open",
+      "tip": "Walk the quays east of Slussen for water views and cafés. A good evening stroll after dinner.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: the Vasa ship, old-town lanes and metro art, all close together.",
+      "days": [
+        {
+          "title": "Vasa, Gamla Stan and metro art",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go at opening to beat the crowds. Check hours on the day."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Walk the lanes and stop for lunch. Ten minutes by tram or bus from the museum."
+            },
+            {
+              "place": "stortorget",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "The main square in the old town. Easy to find on foot."
+            },
+            {
+              "place": "fika",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Coffee and a pastry in a classic café nearby."
+            },
+            {
+              "place": "metro-art",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Ride the blue line for the painted stations. A ticket covers the metro."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gamla Stan or Norrmalm"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Royal and medieval Stockholm on foot, with a boat out to the archipelago's Viking past.",
+      "days": [
+        {
+          "title": "Palace, old town and Birka",
+          "stops": [
+            {
+              "place": "stockholm-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is calmer. Check hours on the day."
+            },
+            {
+              "place": "riddarholmen",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "A short walk across the bridge. Summer only."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch and lanes in the old town."
+            },
+            {
+              "place": "birka",
+              "at": "14:30",
+              "minutes": 360,
+              "note": "Summer only. Book a boat in advance and check times on the day. This fills the rest of the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gamla Stan"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Water, islands and green views, with a boat trip and a sunset walk.",
+      "days": [
+        {
+          "title": "Archipelago boat and Södermalm views",
+          "stops": [
+            {
+              "place": "archipelago-tour",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Summer only. Book ahead and check departure times on the day."
+            },
+            {
+              "place": "ostermalms-saluhall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch at the food hall. Check hours on the day."
+            },
+            {
+              "place": "sofo-walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Cross to Södermalm and wander the side streets."
+            },
+            {
+              "place": "monteliusvagen",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Best at sunset. A short walk uphill."
+            },
+            {
+              "place": "sodermalm-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Waterfront walk and dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Södermalm or Norrmalm"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: the Vasa Museum and old-town lanes on day one, modern art and a viewpoint before you leave.",
+      "days": [
+        {
+          "title": "Arrive, Vasa and Gamla Stan",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Djurgården. Go straight in; it is busiest midday in summer."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Walk the lanes slowly. Cobblestones, so wear flat shoes."
+            },
+            {
+              "place": "stortorget",
+              "at": "17:20",
+              "minutes": 20,
+              "note": "The main square. Good photo stop."
+            },
+            {
+              "place": "fika",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Coffee and a cinnamon bun before dinner."
+            },
+            {
+              "place": "kottbullar",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Metro art, then out",
+          "stops": [
+            {
+              "place": "metro-art",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Use a single ticket. The Blue Line stations are the highlight."
+            },
+            {
+              "place": "sergels-torg",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Central square, a few minutes on foot."
+            },
+            {
+              "place": "ostermalms-saluhall",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the food hall. Closed Sunday."
+            },
+            {
+              "place": "national-library",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Weekdays only. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Norrmalm, near the central station"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Royal and old-town history in one tight loop, with the archipelago story if you have a full summer day.",
+      "days": [
+        {
+          "title": "Palace, old town and the water",
+          "stops": [
+            {
+              "place": "stockholm-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Go early for the guard ceremony in summer. Check times on the day."
+            },
+            {
+              "place": "riddarholmen",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short walk across the bridge. Summer only."
+            },
+            {
+              "place": "stortorget",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Then lunch nearby in Gamla Stan."
+            },
+            {
+              "place": "city-hall",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Guided tours only. Book a slot."
+            },
+            {
+              "place": "under-bridges",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Seasonal, roughly April–October. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Vasa and a last walk",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "First entry is calmest."
+            },
+            {
+              "place": "fika",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Café on Djurgården."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Final wander before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gamla Stan"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Water, ferries and green islands. Best in summer when boats run.",
+      "days": [
+        {
+          "title": "Archipelago and viewpoints",
+          "stops": [
+            {
+              "place": "archipelago-tour",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Seasonal, roughly May–September. Book a morning boat."
+            },
+            {
+              "place": "ostermalms-saluhall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch. Closed Sunday."
+            },
+            {
+              "place": "monteliusvagen",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk the cliff path. Best light near sunset."
+            },
+            {
+              "place": "sofo-walk",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Shops close early; cafés stay open."
+            },
+            {
+              "place": "sodermalm-view",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Skansen morning, then out",
+          "stops": [
+            {
+              "place": "skansen",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Open-air museum. Dress for weather; it is a big site."
+            },
+            {
+              "place": "fika",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Café inside or nearby on Djurgården."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Östermalm, near Djurgården"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights plus old-town lanes and a fika break.",
+      "days": [
+        {
+          "title": "Arrive, Vasa and Östermalm",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Go early in your trip; it gets busy. Check hours on the day."
+            },
+            {
+              "place": "abba",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "A short walk away. Book a slot online."
+            },
+            {
+              "place": "ostermalms-saluhall",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Food hall; mostly daytime and early evening, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Gamla Stan and the water",
+          "stops": [
+            {
+              "place": "stockholm-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning; check hours on the day."
+            },
+            {
+              "place": "stortorget",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "The main square, right next door."
+            },
+            {
+              "place": "fika",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Coffee and a bun in the old town."
+            },
+            {
+              "place": "riddarholmen",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Summer only; check on the day."
+            },
+            {
+              "place": "metro-art",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Ride the blue line for the painted stations. Good in rain."
+            }
+          ]
+        },
+        {
+          "title": "Södermalm views, then leave",
+          "stops": [
+            {
+              "place": "sofo-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops open later; mornings are quiet."
+            },
+            {
+              "place": "monteliusvagen",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Short walk up for the classic view."
+            },
+            {
+              "place": "sodermalm-view",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Waterfront stroll before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Norrmalm or Gamla Stan"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want kings, old lanes and the archipelago's story in two days.",
+      "days": [
+        {
+          "title": "Old town and palace",
+          "stops": [
+            {
+              "place": "stockholm-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Check the guard ceremony times on the day."
+            },
+            {
+              "place": "stortorget",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Right by the palace."
+            },
+            {
+              "place": "fika",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch or coffee in Gamla Stan."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "13:15",
+              "minutes": 120,
+              "note": "Wander the lanes at your own pace."
+            },
+            {
+              "place": "riddarholmen",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Summer only; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Vasa and city hall",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "A must for history. Check hours on the day."
+            },
+            {
+              "place": "city-hall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Guided tours only; check times on the day."
+            },
+            {
+              "place": "sergels-torg",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Central square, easy to pass through."
+            },
+            {
+              "place": "kottbullar",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Meatballs for dinner; book or go early."
+            }
+          ]
+        },
+        {
+          "title": "Birka or Drottningholm, then leave",
+          "stops": [
+            {
+              "place": "birka",
+              "at": "09:00",
+              "minutes": 360,
+              "note": "Summer only; book a morning boat. Swap for Drottningholm off-season."
+            },
+            {
+              "place": "drottningholm",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Alternative if Birka is closed; boat out in the morning."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gamla Stan or Norrmalm"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want water, ferries and green islands at an easy pace.",
+      "days": [
+        {
+          "title": "Waterfront and Skansen",
+          "stops": [
+            {
+              "place": "skansen",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Open-air museum and animals. Dress for weather."
+            },
+            {
+              "place": "sodermalm-view",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Waterfront walk; good light in the evening."
+            },
+            {
+              "place": "kottbullar",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the city centre."
+            }
+          ]
+        },
+        {
+          "title": "Archipelago and old town",
+          "stops": [
+            {
+              "place": "archipelago-tour",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Summer only; check departures on the day."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Easy stroll after the boat."
+            },
+            {
+              "place": "fika",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Coffee break in the old town."
+            }
+          ]
+        },
+        {
+          "title": "Under the bridges, then leave",
+          "stops": [
+            {
+              "place": "under-bridges",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Seasonal, roughly April–October; check on the day."
+            },
+            {
+              "place": "monteliusvagen",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Viewpoint before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Östermalm or Norrmalm"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights plus old-town lanes and a little modern art.",
+      "days": [
+        {
+          "title": "Arrive, Vasa and Östermalm",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Book a slot online. The ship is the star; allow extra time for the films."
+            },
+            {
+              "place": "abba",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "A short walk away on Djurgården. Book a time slot."
+            },
+            {
+              "place": "ostermalms-saluhall",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Food hall for an early dinner. Mostly closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Gamla Stan on foot",
+          "stops": [
+            {
+              "place": "stockholm-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Check the guard ceremony time on the day."
+            },
+            {
+              "place": "stortorget",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "The main square; good photo stop."
+            },
+            {
+              "place": "fika",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Coffee and a cinnamon bun in the old town."
+            },
+            {
+              "place": "riddarholmen",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Summer only; check on the day."
+            },
+            {
+              "place": "city-hall",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Guided tours only. Walk over from the old town."
+            }
+          ]
+        },
+        {
+          "title": "Södermalm and metro art",
+          "stops": [
+            {
+              "place": "metro-art",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Start at T-Centralen and ride a few blue-line stations."
+            },
+            {
+              "place": "sofo-walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Shops and lunch in the neighbourhood."
+            },
+            {
+              "place": "monteliusvagen",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Cliff walk with a city view. Best near sunset."
+            },
+            {
+              "place": "sodermalm-view",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Waterfront stroll; dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Norrmalm or Gamla Stan"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want royals, old streets and the archipelago's Viking story.",
+      "days": [
+        {
+          "title": "Old town and the palace",
+          "stops": [
+            {
+              "place": "stockholm-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Check the guard ceremony time on the day."
+            },
+            {
+              "place": "stortorget",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "The old town's heart."
+            },
+            {
+              "place": "fika",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch or coffee in Gamla Stan."
+            },
+            {
+              "place": "riddarholmen",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Summer only; check on the day."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Wander the lanes at your own pace."
+            }
+          ]
+        },
+        {
+          "title": "Vasa and Djurgården",
+          "stops": [
+            {
+              "place": "vasa",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book online; go early to beat the crowds."
+            },
+            {
+              "place": "skansen",
+              "at": "12:30",
+              "minutes": 240,
+              "note": "Open-air museum with historic buildings. Lunch inside. Dress for weather."
+            }
+          ]
+        },
+        {
+          "title": "Birka day trip",
+          "stops": [
+            {
+              "place": "birka",
+              "at": "09:00",
+              "minutes": 360,
+              "note": "Summer only. Book a morning boat; the trip includes the crossing."
+            },
+            {
+              "place": "sergels-torg",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Back in the centre; a quick look at the square."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gamla Stan or Norrmalm"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want water, ferries and green islands more than museums.",
+      "days": [
+        {
+          "title": "Djurgården outdoors",
+          "stops": [
+            {
+              "place": "skansen",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Open-air museum and park. Lunch inside. Dress for weather."
+            },
+            {
+              "place": "archipelago-tour",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Seasonal, roughly May–September. Check departure times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Boat, bridges and views",
+          "stops": [
+            {
+              "place": "under-bridges",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Seasonal, roughly April–October. Several departures daily."
+            },
+            {
+              "place": "city-hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Guided tours only. Waterfront outside is lovely."
+            },
+            {
+              "place": "monteliusvagen",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Cliff walk with a wide view. Best near sunset."
+            },
+            {
+              "place": "sodermalm-view",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Waterfront stroll; dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Drottningholm by boat",
+          "stops": [
+            {
+              "place": "drottningholm",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Summer best. Boat out in the morning; check times on the day."
+            },
+            {
+              "place": "gamla-stan",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Evening walk in the old town on the way back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Östermalm or Norrmalm"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Vasa Museum, Gamla Stan lanes and modern art in one loop."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Royal Palace, old town and the archipelago's story."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Ferries, green islands and water everywhere."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Norrmalm",
+      "range": [
+        1100,
+        2200
+      ],
+      "why": "Central and practical. Walk to Gamla Stan and the station; most metro lines meet here.",
+      "center": [
+        59.333,
+        18.06
+      ]
+    },
+    {
+      "area": "Gamla Stan",
+      "range": [
+        1300,
+        2600
+      ],
+      "why": "Sleep in the old town. Pretty lanes, but noisy in summer and few lifts in old buildings.",
+      "center": [
+        59.325,
+        18.071
+      ]
+    },
+    {
+      "area": "Södermalm",
+      "range": [
+        1000,
+        2100
+      ],
+      "why": "Cafés, bars and viewpoints. A short metro or walk south of the centre; good value.",
+      "center": [
+        59.314,
+        18.072
+      ]
+    },
+    {
+      "area": "Östermalm",
+      "range": [
+        1500,
+        3200
+      ],
+      "why": "Quiet, upmarket and close to Djurgården's museums and parkland.",
+      "center": [
+        59.338,
+        18.088
+      ]
+    }
+  ],
+  "food": [
+    "Try Swedish classics: meatballs with lingonberry, pickled herring, and cinnamon buns (kanelbullar).",
+    "Lunch is the value meal. Many restaurants serve a weekday 'dagens lunch' for around SEK 120–160.",
+    "Fika is a coffee-and-pastry break. Sit down mid-afternoon like the locals do.",
+    "Södermalm and Vasastan have the best casual food streets; book dinner spots ahead on weekends.",
+    "Alcohol is expensive and sold in state shops (Systembolaget). Check opening hours before you shop."
+  ],
+  "more_time": [
+    "Take a ferry to Djurgården for the Vasa Museum and Skansen if you have a spare half-day.",
+    "Swap a city afternoon for a short archipelago boat trip; check timetables and weather on the day.",
+    "Rainy day? The metro art walk and the City Hall tour fill a few hours cheaply."
+  ]
+}

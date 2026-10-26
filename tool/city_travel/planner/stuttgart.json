@@ -1,0 +1,666 @@
+{
+  "city": "Stuttgart",
+  "checked": "October 2026",
+  "intro_line": "Stuttgart: vineyards, engines and baroque squares in a green valley.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Stuttgart-Mitte",
+        "Stuttgart-West",
+        "Bad Cannstatt",
+        "Degerloch"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -1,
+        "rain_days": 14,
+        "note": "January: cold, highs near 5°C, and rain on many days. Pack a warm coat and plan indoor sights."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 11,
+        "note": "February: still cold, highs around 8°C. A good quiet month for museums."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 12,
+        "note": "March: cool and changeable, highs near 11°C. Bring layers and an umbrella."
+      },
+      {
+        "high": 15,
+        "low": 4,
+        "rain_days": 11,
+        "note": "April: milder at around 15°C, but showers are common. Good for walking between sights."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 14,
+        "note": "May: pleasant at around 18°C, though rain days peak. Keep a rain jacket handy."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 13,
+        "note": "June: warm at around 23°C with frequent showers. Long evenings are good for beer gardens."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 11,
+        "note": "July: the warmest month, highs near 25°C. Book hotels early and expect some rain."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 12,
+        "note": "August: warm like July, around 25°C. Popular holiday month, so book ahead."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 10,
+        "note": "September: mild and drier, around 21°C. One of the best months to visit."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 12,
+        "note": "October: cooler at around 16°C with more rain. Good for museums and the wine season."
+      },
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 12,
+        "note": "November: chilly at around 10°C and often grey. Christmas markets usually start late in the month; check dates."
+      },
+      {
+        "high": 7,
+        "low": 1,
+        "rain_days": 14,
+        "note": "December: cold, highs near 7°C, with rain on many days. Dress warm for the Christmas markets."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "shopping": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.85,
+      0.75,
+      0.6,
+      0.5
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "art": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "mercedes": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning to avoid crowds",
+      "area": "Bad Cannstatt",
+      "popularity": 5
+    },
+    "porsche": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Bad Cannstatt",
+      "popularity": 5
+    },
+    "library": {
+      "types": [
+        "culture",
+        "art",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Late afternoon for soft light",
+      "area": "Stuttgart-Mitte",
+      "popularity": 4
+    },
+    "schlossplatz": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon or evening",
+      "area": "Stuttgart-Mitte",
+      "popularity": 5
+    },
+    "marktplatz": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Stuttgart-Mitte",
+      "popularity": 4
+    },
+    "killesberg": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring and summer afternoons",
+      "area": "Stuttgart-West",
+      "popularity": 4
+    },
+    "weinberge": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late summer and autumn",
+      "area": "Stuttgart-West",
+      "popularity": 3
+    },
+    "fernsehturm": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Degerloch",
+      "popularity": 4
+    },
+    "wilhelma": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Bad Cannstatt",
+      "popularity": 5
+    },
+    "schloss-solitude": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekend morning",
+      "area": "Stuttgart-West",
+      "popularity": 3
+    },
+    "stadtmuseum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Stuttgart-Mitte",
+      "popularity": 3
+    },
+    "kunstmuseum": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Stuttgart-Mitte",
+      "popularity": 3
+    },
+    "cannstatter-wasen": {
+      "types": [
+        "food",
+        "family",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Festival season evenings",
+      "area": "Bad Cannstatt",
+      "popularity": 4
+    },
+    "bad-cannstatt": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Bad Cannstatt",
+      "popularity": 3
+    },
+    "mineralbad": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Bad Cannstatt",
+      "popularity": 3
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Stuttgart-Mitte",
+      "popularity": 3
+    },
+    "eugensplatz": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Stuttgart-West",
+      "popularity": 3
+    },
+    "weissenhof": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Stuttgart-West",
+      "popularity": 3
+    },
+    "pragsattel": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Stuttgart-West",
+      "popularity": 2
+    },
+    "bohnenviertel": {
+      "types": [
+        "food",
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Stuttgart-Mitte",
+      "popularity": 3
+    },
+    "mercedes-arena": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Bad Cannstatt",
+      "popularity": 2
+    },
+    "degerloch": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Degerloch",
+      "popularity": 2
+    },
+    "cannstatter-volksfest-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Stuttgart-Mitte",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the car museums, the art museums and a vineyard walk without rushing."
+  },
+  "airports": [
+    {
+      "code": "STR",
+      "name": "Stuttgart Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km south of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S2/S3",
+          "to": "Hauptbahnhof",
+          "price": "€3.70",
+          "time": "25-30 min",
+          "note": "Validate your ticket before boarding."
+        },
+        {
+          "mode": "Stadtbahn U6",
+          "to": "Hauptbahnhof",
+          "price": "€3.70",
+          "time": "30-35 min",
+          "note": "Climbs steep hills; stop is by the Mövenpick hotel."
+        },
+        {
+          "mode": "Bus",
+          "to": "Tübingen and Reutlingen",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Stops at the bus terminal outside the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€30-35",
+          "time": "20-30 min",
+          "note": "Taxis wait outside arrivals."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€25-35",
+          "time": "20-30 min",
+          "note": "Availability can vary; check the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Stuttgart",
+      "https://en.wikivoyage.org/wiki/Stuttgart"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "art",
+    "nature"
+  ],
+  "transit": {
+    "best": "Stadtbahn and S-Bahn for most trips; the centre is compact and walkable.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Stadtbahn lines U1–U16 run underground in the centre and are fast and frequent. The S-Bahn (S1–S6) links the centre with suburbs and the airport."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill gaps in the network. Night buses run from Schlossplatz on weekends."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis wait at Hauptbahnhof and the airport. Uber and Bolt work but are limited."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow at rush hour. The centre is a low-emission zone, so a green sticker is needed."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and walkable. Bikes and e-scooters are common."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate continental climate: cold winters, warm summers, and rain in every month. No month is reliably dry.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best months: May to September",
+        "text": "Highs of 18–25°C make walking and vineyard trips comfortable. July and August are warmest."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs of 5–8°C and lows near or below freezing. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 10–14 rain days every month. January and December are wettest; September is driest."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack layers",
+        "text": "Days can warm up and cool down fast, especially in spring and autumn. A light waterproof layer helps."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild shoulder seasons",
+        "text": "April, May and September are pleasant but changeable. Check the forecast each morning."
+      },
+      {
+        "icon": "☀️",
+        "title": "Long summer evenings",
+        "text": "June to August stay light late, good for beer gardens and outdoor walks after dinner."
+      }
+    ]
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "city": "Minneapolis",
+  "checked": "October 2026",
+  "intro_line": "Minneapolis: lakes, arts, and a lively riverfront.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Northeast",
+        "University"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Northeast",
+        "University"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Northeast",
+        "University"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Northeast",
+        "University"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Uptown",
+        "Northeast",
+        "University"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -4,
+        "low": -13,
+        "rain_days": 5,
+        "note": "Coldest month: highs near -4°C, lows near -13°C. Bundle up and plan indoor sights."
+      },
+      {
+        "high": -2,
+        "low": -14,
+        "rain_days": 6,
+        "note": "Still deep winter: highs near -2°C, lows near -14°C. Watch for icy sidewalks."
+      },
+      {
+        "high": 6,
+        "low": -5,
+        "rain_days": 8,
+        "note": "Warming slowly: highs near 6°C, lows near -5°C. Expect some rain or snow days."
+      },
+      {
+        "high": 12,
+        "low": 1,
+        "rain_days": 11,
+        "note": "Spring arrives: highs near 12°C, lows near 1°C. Rain picks up; pack a layer."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Pleasant: highs near 20°C, lows near 9°C. Good for parks and walking."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 11,
+        "note": "Warm and green: highs near 27°C, lows near 16°C. Frequent rain showers."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 10,
+        "note": "Hottest month: highs near 28°C, lows near 18°C. Stay hydrated; some rain days."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 11,
+        "note": "Warm and humid: highs near 27°C, lows near 17°C. Good lake weather."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Comfortable: highs near 24°C, lows near 14°C. Great for outdoor plans."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 10,
+        "note": "Cooling down: highs near 14°C, lows near 6°C. Bring a jacket."
+      },
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 8,
+        "note": "Chilly: highs near 6°C, lows near -2°C. Rain or snow possible."
+      },
+      {
+        "high": -1,
+        "low": -9,
+        "rain_days": 8,
+        "note": "Winter returns: highs near -1°C, lows near -9°C. Pack warm layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.45,
+      0.65,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.75,
+      0.45,
+      0.3
+    ],
+    "shopping": [
+      0.6,
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "family": [
+      0.5,
+      0.5,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ]
+  },
+  "places": {
+    "sculpture_garden": {
+      "types": [
+        "culture",
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or golden hour; summer and fall",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "stone_arch": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset; spring to fall",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "nickelodeon_universe": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday mornings; any season",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "valleyfair": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer weekdays",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "university_minnesota": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday daytime; spring and fall",
+      "area": "University",
+      "popularity": 3
+    },
+    "como_town": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Summer mornings",
+      "area": "University",
+      "popularity": 3
+    },
+    "dairy_queen": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon snack",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "dogs_playing_poker": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Check locally",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "haagen_dazs": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "minnesota_river": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daylight; summer and fall",
+      "area": "University",
+      "popularity": 2
+    },
+    "orange_julius": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "mill_city_market": {
+      "types": [
+        "culture",
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Saturday morning in season",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "guthrie_viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "minnehaha_park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning; spring to fall",
+      "area": "University",
+      "popularity": 4
+    },
+    "north_loop_walk": {
+      "types": [
+        "shopping",
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "chain_of_lakes": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunset; summer",
+      "area": "Uptown",
+      "popularity": 5
+    },
+    "mall_of_america": {
+      "types": [
+        "shopping",
+        "family",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday; any weather",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "walker_art": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the riverfront, a museum and the lakes; add a night for St. Paul or Mall of America."
+  },
+  "airports": [
+    {
+      "code": "MSP",
+      "name": "Minneapolis-St Paul International Airport",
+      "primary": true,
+      "note": "Main airport, 11 km southeast of downtown.",
+      "options": [
+        {
+          "mode": "METRO Blue Line",
+          "to": "Downtown Minneapolis",
+          "price": "$2",
+          "time": "25-30 min",
+          "note": "Trains run frequently; fare includes 2.5-hour transfer."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Minneapolis",
+          "price": "$20-30",
+          "time": "15-25 min",
+          "note": "Taxis available at both terminals."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Minneapolis",
+          "price": "$15-25",
+          "time": "15-25 min",
+          "note": "Ride apps pick up at designated zones."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Minneapolis",
+      "https://en.wikivoyage.org/wiki/Minneapolis"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Light rail and buses for most trips; ride apps or a car for scattered sights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "METRO Blue Line links the airport, downtown and Mall of America; fare $2 includes a 2.5-hour transfer. The Green Line connects downtown Minneapolis to St. Paul via the University."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover the city. Use the Metro Transit app or website for routes and schedules. Day passes cost $6; 7-day passes $24 (Go-To card required)."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis can be hailed or found at ranks. Uber and Lyft operate."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common. Rush hours (7-9 AM, 3-7 PM) are congested."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking and biking are pleasant in many areas."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold, snowy winters and warm, humid summers. Rain is spread through the year.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Winters are very cold",
+        "text": "December to February highs sit near -4 to -1°C with lows near -9 to -14°C. Dress in layers and plan indoor stops."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs around 20–28°C. Ideal for the lakes, river paths and outdoor dining."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Rain days range from about 5 to 12 a month, peaking in spring and summer. Carry a light rain jacket."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer can be humid",
+        "text": "July and August highs near 27–28°C with warm nights. Go out early or late on hot days."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and fall are mild",
+        "text": "April and October highs near 12–14°C. Pleasant for walking but changeable; pack a layer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Warm coat, hat and gloves in winter; light clothes and rain gear in summer; a jacket for spring and fall."
+      }
+    ]
+  }
+}

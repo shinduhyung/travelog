@@ -1,0 +1,537 @@
+{
+  "city": "Katowice",
+  "checked": "October 2026",
+  "intro_line": "Silesia's industrial heart, reborn as a green, gritty cultural capital.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Rynek",
+        "Śródmieście",
+        "Koszutka",
+        "Ligota"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Rynek",
+        "Śródmieście",
+        "Koszutka",
+        "Ligota"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Rynek",
+        "Śródmieście",
+        "Koszutka",
+        "Ligota"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Rynek",
+        "Śródmieście",
+        "Koszutka",
+        "Ligota"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Rynek",
+        "Śródmieście",
+        "Koszutka",
+        "Ligota"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 2,
+        "low": -3,
+        "rain_days": 13,
+        "note": "January: cold, highs near 2°C and lows around -3°C. Pack a warm coat; about 13 rain days."
+      },
+      {
+        "high": 5,
+        "low": -2,
+        "rain_days": 12,
+        "note": "February: still cold, highs near 5°C. Short days; plan indoor museums."
+      },
+      {
+        "high": 9,
+        "low": 0,
+        "rain_days": 11,
+        "note": "March: warming to about 9°C, nights near 0°C. Mixed weather, around 11 rain days."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 11,
+        "note": "April: mild at about 14°C. Good for walking the centre; keep a light rain jacket."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 12,
+        "note": "May: pleasant, highs near 18°C and lows around 9°C. A good month for parks and outdoor sights."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 12,
+        "note": "June: warm at about 23°C. Long evenings suit the café and bar scene."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 14,
+        "note": "July: the warmest month, highs near 25°C and lows around 15°C. Around 14 rain days, so carry an umbrella."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 11,
+        "note": "August: warm, highs near 25°C. Busy holiday month; book hotels ahead."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 12,
+        "note": "September: mild at about 20°C. Comfortable for sightseeing with fewer crowds."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 11,
+        "note": "October: cooler at about 14°C, nights near 7°C. Around 11 rain days."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 10,
+        "note": "November: chilly at about 8°C. Short days; a good time for museums and food."
+      },
+      {
+        "high": 4,
+        "low": -1,
+        "rain_days": 12,
+        "note": "December: cold, highs near 4°C. Christmas markets on the Rynek; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "spodek": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Late afternoon or evening",
+      "area": "Śródmieście",
+      "popularity": 4
+    },
+    "silesian-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Śródmieście",
+      "popularity": 5
+    },
+    "auschwitz": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning start; book ahead",
+      "area": "Śródmieście",
+      "popularity": 5
+    },
+    "legendia": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday in summer",
+      "area": "Ligota",
+      "popularity": 4
+    },
+    "rynek": {
+      "types": [
+        "culture",
+        "food",
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Rynek",
+      "popularity": 4
+    },
+    "mariacka": {
+      "types": [
+        "nightlife",
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "nikiszowiec": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Śródmieście",
+      "popularity": 4
+    },
+    "food-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "viewpoint": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Clear afternoon",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "walking-tour": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or early afternoon",
+      "area": "Rynek",
+      "popularity": 3
+    },
+    "koszutka-walk": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Koszutka",
+      "popularity": 2
+    },
+    "park-slaski": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Ligota",
+      "popularity": 3
+    },
+    "pierogi": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "nightlife": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late evening",
+      "area": "Rynek",
+      "popularity": 3
+    },
+    "tram-ride": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Śródmieście",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Rynek, the museums and Nikiszowiec at an easy pace, with time for a day trip."
+  },
+  "airports": [
+    {
+      "code": "KTW",
+      "name": "Katowice International Airport",
+      "primary": true,
+      "note": "Main airport, 24 km north at Pyrzowice.",
+      "options": [
+        {
+          "mode": "AP airport bus",
+          "to": "Main railway and bus stations",
+          "price": "6.60 zł",
+          "time": "50-55 min",
+          "note": "Every 30 min daytime, hourly at night; avoid slower M11."
+        },
+        {
+          "mode": "Matuszek bus",
+          "to": "Kraków",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Direct service if heading to Kraków."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "90-130 zł",
+          "time": "30-40 min",
+          "note": "Agree the fare first or book via app."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "70-110 zł",
+          "time": "30-40 min",
+          "note": "Fixed app price, often cheaper than rank taxis."
+        }
+      ]
+    },
+    {
+      "code": "KRK",
+      "name": "Kraków John Paul II Airport",
+      "primary": false,
+      "note": "Major airport with wide European connections, about 70 km east.",
+      "options": [
+        {
+          "mode": "Train + bus",
+          "to": "Kraków centre, then Katowice",
+          "price": "check locally",
+          "time": "2-2.5 hr",
+          "note": "Frequent trains and buses link Kraków to Katowice."
+        },
+        {
+          "mode": "Flixbus",
+          "to": "Katowice bus station",
+          "price": "check locally",
+          "time": "1.5-2 hr",
+          "note": "Some services call at the airport; check timetables."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "250-350 zł",
+          "time": "1-1.5 hr",
+          "note": "Long ride; train is usually better value."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "220-320 zł",
+          "time": "1-1.5 hr",
+          "note": "App price agreed upfront."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Katowice",
+      "https://en.wikivoyage.org/wiki/Katowice"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "budget"
+  ],
+  "transit": {
+    "best": "Trams for most trips; the centre is walkable and tickets are cheap.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro in Katowice. Use trams and buses instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "ZTM Metropolia buses cover the whole metro area. Same tickets as trams: 20-min 4.60 zł, 90-min or full-route 6.60 zł, day pass 12 zł. Validate on boarding."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams and buses share one ZTM ticket system across the metro area. Buy at kiosks, machines or POP points; drivers sell only the 90-min ticket, cash only. Inspectors fine unvalidated tickets."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt work well. Agree taxi prices beforehand or use an app."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Useful for day trips outside the metro area. In the centre, trams and walking are easier."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The centre is walkable. Metrorower yellow bikes rent via app across the region for longer hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate climate with cold winters and mild, wet summers. Rain falls year-round, so pack layers and an umbrella.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 18–25°C make walking and outdoor sights comfortable. July and August are warmest."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs of 2–5°C and lows down to -3°C. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 10–14 rain days every month. July is the wettest at about 14 days."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack an umbrella",
+        "text": "Showers are common in every season. A light waterproof layer helps in spring and autumn."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings in spring and autumn",
+        "text": "April and October can be mild by day and cool at night. Dress in layers."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a rain jacket and warm layers for winter. Summer needs only light clothes plus something for cool evenings."
+      }
+    ]
+  }
+}

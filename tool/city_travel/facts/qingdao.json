@@ -1,0 +1,172 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Where red roofs meet the Yellow Sea and Tsingtao flows.",
+  "intro": "Qingdao rewards visitors with beaches, Bavarian old-town charm, and fresh seafood. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Old Town (Shinan)",
+    "May Fourth Square",
+    "Badaguan",
+    "Laoshan"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 12,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro fares ¥2-8; trains run about 06:00-22:30.",
+    "Metro Line 8 links the airport to Qingdao North Railway Station.",
+    "Buses cost ¥1, or ¥2 with air conditioning; up to ¥6 for far suburbs.",
+    "Didi and other ride-hailing apps work well; pickup at the Ground Transportation Center.",
+    "Taxis are plentiful but hard to flag in peak summer; use an app.",
+    "Cycling is hilly and risky; shared bikes are scarce."
+  ],
+  "airports": [
+    {
+      "code": "TAO",
+      "name": "Qingdao Jiaodong International Airport",
+      "primary": true,
+      "note": "Main hub, about 42 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 8",
+          "to": "Qingdao North Railway Station (transfer to Line 1/3)",
+          "price": "¥2-8",
+          "time": "40-60 min",
+          "note": "Cheapest option; transfer for downtown."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Major hotels and districts",
+          "price": "¥25-30",
+          "time": "60-90 min",
+          "note": "Check route for your hotel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "May Fourth Square",
+          "price": "¥120-250",
+          "time": "50-90 min",
+          "note": "Price varies; add ¥10 on the Qingyin expressway."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥120-200",
+          "time": "50-90 min",
+          "note": "Pickup at the Ground Transportation Center."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Tsingtao Brewery Museum",
+    "Zhanqiao Pier",
+    "St. Michael's Cathedral",
+    "May Fourth Square",
+    "No. 1 Bathing Beach"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Qingdao",
+      "https://en.wikivoyage.org/wiki/Qingdao"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    36.06488,
+    120.38042
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": -2,
+      "rain_days": 2
+    },
+    {
+      "high": 6,
+      "low": -1,
+      "rain_days": 3
+    },
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 3
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 5
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 6
+    },
+    {
+      "high": 24,
+      "low": 19,
+      "rain_days": 7
+    },
+    {
+      "high": 27,
+      "low": 23,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 13,
+      "rain_days": 4
+    },
+    {
+      "high": 13,
+      "low": 7,
+      "rain_days": 5
+    },
+    {
+      "high": 6,
+      "low": 0,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

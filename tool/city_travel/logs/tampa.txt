@@ -1,0 +1,29 @@
+$ deepseek_facts.py Tampa
+  tokens in 3297 out 1039
+Tampa: 0 problems
+
+$ deepseek_city.py Tampa --stage places
+Tampa: places
+  tokens in 1149 out 3940
+
+$ deepseek_city.py Tampa --stage frame
+Tampa: frame
+  tokens in 2466 out 1833
+
+$ deepseek_city.py Tampa --stage plans
+Tampa: plans
+  plans for day
+  tokens in 2419 out 981
+  plans for 1n
+  tokens in 2420 out 1240
+  plans for 2n
+  tokens in 2425 out 1624
+  plans for 3n
+  tokens in 2420 out 1958
+  plans for 4n
+  tokens in 2420 out 2137
+
+$ merge_city.py Tampa
+Tampa: 24 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/tampa.json and planner/tampa.json
+

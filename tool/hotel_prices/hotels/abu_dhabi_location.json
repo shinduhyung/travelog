@@ -1,0 +1,839 @@
+{
+  "city": "Abu Dhabi",
+  "weights": {
+    "sights": 0.6,
+    "center": 0.2,
+    "airport": 0.2
+  },
+  "spots": [
+    "Sheikh Zayed Grand Mosque",
+    "Louvre Abu Dhabi",
+    "Etihad Towers",
+    "Emirates Palace",
+    "Qasr Al Hosn",
+    "Heritage Village",
+    "teamLab Phenomena Abu Dhabi",
+    "Abrahamic Family House",
+    "Saadiyat Beach",
+    "Mangrove National Park",
+    "Wahat Al Karama",
+    "Al Khatim Desert",
+    "Qasr Al Watan",
+    "Abu Dhabi Corniche",
+    "The National Aquarium Abu Dhabi",
+    "Ferrari World Abu Dhabi +3"
+  ],
+  "airport": "AUH",
+  "hotels": [
+    {
+      "hotel_identifier": "ChgIsI-x07GCwtaVARoLL20vMDEyOTducjgQAQ",
+      "title": "Fairmont Bab Al Bahr, Abu Dhabi",
+      "score": 8.3,
+      "parts": {
+        "sights": 9.6,
+        "center": 4.3,
+        "airport": 8.2
+      },
+      "area": "Grand Mosque & Al Maqta",
+      "center_km": 12.2,
+      "airport_km": 16.4,
+      "nearest_sights": [
+        {
+          "name": "Wahat Al Karama",
+          "km": 0.8
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 1.4
+        },
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 1.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIvNvDlICg3sFfGgwvZy8xcHR5cnY5ZGcQAQ",
+      "title": "Conrad Abu Dhabi Etihad Towers",
+      "score": 8.3,
+      "parts": {
+        "sights": 10.0,
+        "center": 8.0,
+        "airport": 3.3
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 5.6,
+      "airport_km": 33.4,
+      "nearest_sights": [
+        {
+          "name": "Etihad Towers",
+          "km": 0.1
+        },
+        {
+          "name": "Emirates Palace",
+          "km": 0.6
+        },
+        {
+          "name": "Qasr Al Watan",
+          "km": 1.0
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcIx-CLgMq_26Q-GgsvZy8xdGZ6a3RuMRAB",
+      "title": "Radisson Blu Hotel & Resort, Abu Dhabi Corniche",
+      "score": 8.3,
+      "parts": {
+        "sights": 9.9,
+        "center": 8.2,
+        "airport": 3.4
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 5.3,
+      "airport_km": 33.1,
+      "nearest_sights": [
+        {
+          "name": "Etihad Towers",
+          "km": 0.7
+        },
+        {
+          "name": "Emirates Palace",
+          "km": 0.9
+        },
+        {
+          "name": "Qasr Al Watan",
+          "km": 1.3
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIv7qa3oTAr4MHGgwvZy8xMTl0eHJ2Z3IQAQ",
+      "title": "The Ritz-Carlton Abu Dhabi, Grand Canal",
+      "score": 8.3,
+      "parts": {
+        "sights": 9.7,
+        "center": 4.5,
+        "airport": 8.0
+      },
+      "area": "Grand Mosque & Al Maqta",
+      "center_km": 11.9,
+      "airport_km": 17.0,
+      "nearest_sights": [
+        {
+          "name": "Wahat Al Karama",
+          "km": 0.5
+        },
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 1.0
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 2.1
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChUIyIP1vb3LvadjGgkvbS8wOTIwcjcQAQ",
+      "title": "Emirates Palace Mandarin Oriental",
+      "score": 8.2,
+      "parts": {
+        "sights": 10.0,
+        "center": 7.7,
+        "airport": 3.2
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 6.1,
+      "airport_km": 33.9,
+      "nearest_sights": [
+        {
+          "name": "Emirates Palace",
+          "km": 0.1
+        },
+        {
+          "name": "Etihad Towers",
+          "km": 0.4
+        },
+        {
+          "name": "Qasr Al Watan",
+          "km": 0.5
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIkt_I0JXLlcncARoLL2cvMXRmdnJmZGYQAQ",
+      "title": "InterContinental Abu Dhabi by IHG",
+      "score": 8.2,
+      "parts": {
+        "sights": 9.7,
+        "center": 8.4,
+        "airport": 3.5
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 4.9,
+      "airport_km": 32.7,
+      "nearest_sights": [
+        {
+          "name": "Etihad Towers",
+          "km": 0.8
+        },
+        {
+          "name": "Emirates Palace",
+          "km": 1.3
+        },
+        {
+          "name": "Qasr Al Watan",
+          "km": 1.7
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcIsf3lm8_nl48CGgsvZy8xdm4xNl9wZhAB",
+      "title": "Khalidiya Palace Rayhaan by Rotana",
+      "score": 8.2,
+      "parts": {
+        "sights": 10.0,
+        "center": 7.8,
+        "airport": 3.2
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 5.9,
+      "airport_km": 33.7,
+      "nearest_sights": [
+        {
+          "name": "Etihad Towers",
+          "km": 0.3
+        },
+        {
+          "name": "Emirates Palace",
+          "km": 0.6
+        },
+        {
+          "name": "Qasr Al Watan",
+          "km": 0.9
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIrLC2vI3V6uDBARoLL2cvMTIxczN3Y24QAQ",
+      "title": "Bab Al Qasr Hotel & Residences",
+      "score": 8.2,
+      "parts": {
+        "sights": 10.0,
+        "center": 7.9,
+        "airport": 3.3
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 5.8,
+      "airport_km": 33.6,
+      "nearest_sights": [
+        {
+          "name": "Etihad Towers",
+          "km": 0.1
+        },
+        {
+          "name": "Emirates Palace",
+          "km": 0.5
+        },
+        {
+          "name": "Qasr Al Watan",
+          "km": 0.9
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIvqiN7oTVq7TDARoLL2cvMXRyN2d2X2MQAQ",
+      "title": "Park Rotana Abu Dhabi",
+      "score": 8.2,
+      "parts": {
+        "sights": 9.2,
+        "center": 5.4,
+        "airport": 7.7
+      },
+      "area": "Grand Mosque & Al Maqta",
+      "center_km": 10.2,
+      "airport_km": 18.0,
+      "nearest_sights": [
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 1.3
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 1.3
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 2.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcI8brmo-vUrYE6GgsvZy8xdG5qaDExZhAB",
+      "title": "Shangri-La Qaryat Al Beri, Abu Dhabi",
+      "score": 7.9,
+      "parts": {
+        "sights": 9.1,
+        "center": 4.1,
+        "airport": 8.1
+      },
+      "area": "Grand Mosque & Al Maqta",
+      "center_km": 12.6,
+      "airport_km": 16.5,
+      "nearest_sights": [
+        {
+          "name": "Wahat Al Karama",
+          "km": 1.3
+        },
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 1.7
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 2.3
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChoIvKi-penoruCMARoNL2cvMTFnZzljel80eRAB",
+      "title": "Rixos Marina Abu Dhabi",
+      "score": 7.7,
+      "parts": {
+        "sights": 9.3,
+        "center": 7.6,
+        "airport": 3.2
+      },
+      "area": "Breakwater & Marina",
+      "center_km": 6.3,
+      "airport_km": 33.7,
+      "nearest_sights": [
+        {
+          "name": "Heritage Village",
+          "km": 0.4
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 1.9
+        },
+        {
+          "name": "Emirates Palace",
+          "km": 2.2
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgI5t6j99ugkrG-ARoLL2cvMXRoeDcyM3MQAQ",
+      "title": "Grand Millennium Al Wahda",
+      "score": 7.4,
+      "parts": {
+        "sights": 7.3,
+        "center": 10.0,
+        "airport": 4.7
+      },
+      "area": "Corniche & Downtown",
+      "center_km": 2.0,
+      "airport_km": 28.4,
+      "nearest_sights": [
+        {
+          "name": "Qasr Al Hosn",
+          "km": 2.3
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 3.4
+        },
+        {
+          "name": "Mangrove National Park",
+          "km": 3.5
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIqaWbpvyZovleGgwvZy8xMmxwcHZxaGIQAQ",
+      "title": "Millennium Downtown Abu Dhabi",
+      "score": 7.4,
+      "parts": {
+        "sights": 7.9,
+        "center": 8.7,
+        "airport": 4.4
+      },
+      "area": "Corniche & Downtown",
+      "center_km": 4.3,
+      "airport_km": 29.6,
+      "nearest_sights": [
+        {
+          "name": "Qasr Al Hosn",
+          "km": 1.5
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 2.8
+        },
+        {
+          "name": "Heritage Village",
+          "km": 4.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChYIvvGluIC_-8AVGgovbS8wd2Zqd21nEAE",
+      "title": "Dusit Thani Abu Dhabi",
+      "score": 7.2,
+      "parts": {
+        "sights": 6.8,
+        "center": 10.0,
+        "airport": 5.4
+      },
+      "area": null,
+      "center_km": 1.8,
+      "airport_km": 26.1,
+      "nearest_sights": [
+        {
+          "name": "Mangrove National Park",
+          "km": 0.8
+        },
+        {
+          "name": "Qasr Al Hosn",
+          "km": 5.0
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 6.1
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChoI2drq4Pjt3fD0ARoNL2cvMTFmeXhkaGh5ORAB",
+      "title": "Saadiyat Rotana Resort & Villas",
+      "score": 7.2,
+      "parts": {
+        "sights": 8.5,
+        "center": 4.9,
+        "airport": 5.6
+      },
+      "area": "Saadiyat Island",
+      "center_km": 11.2,
+      "airport_km": 25.4,
+      "nearest_sights": [
+        {
+          "name": "Saadiyat Beach",
+          "km": 0.7
+        },
+        {
+          "name": "teamLab Phenomena Abu Dhabi",
+          "km": 3.0
+        },
+        {
+          "name": "Louvre Abu Dhabi",
+          "km": 3.4
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChkI9JOWtu3x2J4yGg0vZy8xMWNrcW44X3NmEAE",
+      "title": "City Seasons Al Hamra Hotel",
+      "score": 7.0,
+      "parts": {
+        "sights": 7.3,
+        "center": 8.8,
+        "airport": 4.5
+      },
+      "area": "Corniche & Downtown",
+      "center_km": 4.2,
+      "airport_km": 29.1,
+      "nearest_sights": [
+        {
+          "name": "Qasr Al Hosn",
+          "km": 1.8
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 3.2
+        },
+        {
+          "name": "Heritage Village",
+          "km": 5.1
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcIhve1767oltQfGgsvZy8xdm1fd2M3dxAB",
+      "title": "Sofitel Abu Dhabi Corniche",
+      "score": 6.7,
+      "parts": {
+        "sights": 6.9,
+        "center": 8.3,
+        "airport": 4.4
+      },
+      "area": "Corniche & Downtown",
+      "center_km": 5.1,
+      "airport_km": 29.6,
+      "nearest_sights": [
+        {
+          "name": "Qasr Al Hosn",
+          "km": 2.3
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 3.5
+        },
+        {
+          "name": "Louvre Abu Dhabi",
+          "km": 4.9
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChYIjpfPruGCqMkhGgovbS8wZ2c0anFiEAE",
+      "title": "Beach Rotana",
+      "score": 6.2,
+      "parts": {
+        "sights": 5.8,
+        "center": 8.6,
+        "airport": 4.9
+      },
+      "area": "Al Reem & Al Maryah Island",
+      "center_km": 4.6,
+      "airport_km": 27.9,
+      "nearest_sights": [
+        {
+          "name": "Qasr Al Hosn",
+          "km": 3.2
+        },
+        {
+          "name": "Louvre Abu Dhabi",
+          "km": 4.6
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 4.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIw5bB6LXxh5MnGgwvZy8xcTJ2d3NoNHcQAQ",
+      "title": "Ramada by Wyndham Abu Dhabi Corniche",
+      "score": 6.2,
+      "parts": {
+        "sights": 6.2,
+        "center": 8.0,
+        "airport": 4.6
+      },
+      "area": "Al Reem & Al Maryah Island",
+      "center_km": 5.6,
+      "airport_km": 29.1,
+      "nearest_sights": [
+        {
+          "name": "Qasr Al Hosn",
+          "km": 3.2
+        },
+        {
+          "name": "Louvre Abu Dhabi",
+          "km": 4.1
+        },
+        {
+          "name": "Abu Dhabi Corniche",
+          "km": 4.4
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgI_9bbjPXd9YUdGgwvZy8xMXhmMGMxZDIQAQ",
+      "title": "Centro Capital Centre",
+      "score": 6.0,
+      "parts": {
+        "sights": 5.5,
+        "center": 6.9,
+        "airport": 6.8
+      },
+      "area": null,
+      "center_km": 7.6,
+      "airport_km": 21.4,
+      "nearest_sights": [
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 3.5
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 4.2
+        },
+        {
+          "name": "Mangrove National Park",
+          "km": 5.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChkI-dX0yYWpopmHARoML2cvMXB2NjByNTNrEAE",
+      "title": "Novotel Abu Dhabi Al Bustan",
+      "score": 5.8,
+      "parts": {
+        "sights": 5.0,
+        "center": 7.9,
+        "airport": 6.4
+      },
+      "area": null,
+      "center_km": 5.9,
+      "airport_km": 22.5,
+      "nearest_sights": [
+        {
+          "name": "Mangrove National Park",
+          "km": 3.8
+        },
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 5.1
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 5.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChoI6vz4w76WqenGARoNL2cvMTFidjFiYmowMRAB",
+      "title": "Novotel Abu Dhabi Gate",
+      "score": 5.6,
+      "parts": {
+        "sights": 5.5,
+        "center": 2.4,
+        "airport": 8.8
+      },
+      "area": null,
+      "center_km": 15.6,
+      "airport_km": 14.1,
+      "nearest_sights": [
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 3.9
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 4.2
+        },
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 4.7
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChgIkcnRidKKgfRzGgwvZy8xcHAydmY2OGgQAQ",
+      "title": "ibis Abu Dhabi Gate",
+      "score": 5.6,
+      "parts": {
+        "sights": 5.5,
+        "center": 2.4,
+        "airport": 8.8
+      },
+      "area": null,
+      "center_km": 15.6,
+      "airport_km": 14.1,
+      "nearest_sights": [
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 3.9
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 4.2
+        },
+        {
+          "name": "Sheikh Zayed Grand Mosque",
+          "km": 4.7
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChYIgMus2u-Wis0vGgovbS8wOXZ3Z3ZtEAE",
+      "title": "Yas Plaza Marina",
+      "score": 5.0,
+      "parts": {
+        "sights": 5.0,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": "Yas Island",
+      "center_km": 22.5,
+      "airport_km": 6.4,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 0.6
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 11.1
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 13.1
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChYI8ouEiarQp48wGgovbS8wOXZ3Z3Z2EAE",
+      "title": "Yas Plaza Circuit",
+      "score": 5.0,
+      "parts": {
+        "sights": 5.0,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": "Yas Island",
+      "center_km": 22.5,
+      "airport_km": 6.4,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 0.7
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 11.1
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 13.0
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcI--3iitvzoY6gARoKL20vMDl2d2d2ZhAB",
+      "title": "Crowne Plaza Abu Dhabi - Yas Island by IHG",
+      "score": 5.0,
+      "parts": {
+        "sights": 5.0,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": "Yas Island",
+      "center_km": 22.3,
+      "airport_km": 6.5,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 0.8
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 11.0
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 12.9
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcItaWG5de2oZf8ARoKL20vMDlnYzNreRAB",
+      "title": "W Abu Dhabi - Yas Island",
+      "score": 5.0,
+      "parts": {
+        "sights": 5.0,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": "Yas Island",
+      "center_km": 23.1,
+      "airport_km": 6.0,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 0.3
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 11.7
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 13.7
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChkI1oOEkcTJyooFGg0vZy8xMWo5aHNqa19iEAE",
+      "title": "Hilton Abu Dhabi Yas Island",
+      "score": 4.9,
+      "parts": {
+        "sights": 4.9,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": null,
+      "center_km": 22.7,
+      "airport_km": 5.8,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 1.2
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 11.1
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 13.0
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcI24Hhu5z3rvRnGgsvZy8xd2MyX3FxNBAB",
+      "title": "Al Raha Beach Resort & Spa",
+      "score": 3.5,
+      "parts": {
+        "sights": 2.5,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": "Al Raha & Khalifa City",
+      "center_km": 20.0,
+      "airport_km": 7.9,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 4.6
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 7.7
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 9.6
+        }
+      ]
+    },
+    {
+      "hotel_identifier": "ChcIgqn3k9ultOkOGgsvZy8xdGo3emZzNhAB",
+      "title": "Premier Inn Abu Dhabi Airport (Business Park) Hotel",
+      "score": 2.9,
+      "parts": {
+        "sights": 1.4,
+        "center": 0.0,
+        "airport": 10.0
+      },
+      "area": null,
+      "center_km": 26.9,
+      "airport_km": 1.1,
+      "nearest_sights": [
+        {
+          "name": "Ferrari World Abu Dhabi +3",
+          "km": 6.0
+        },
+        {
+          "name": "The National Aquarium Abu Dhabi",
+          "km": 14.5
+        },
+        {
+          "name": "Wahat Al Karama",
+          "km": 16.2
+        }
+      ]
+    }
+  ]
+}

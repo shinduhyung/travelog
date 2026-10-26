@@ -1,0 +1,222 @@
+{
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro_line": "Laneways, trams and coffee: Melbourne rewards the curious.",
+  "intro": "Melbourne rewards visitors who wander its laneways, markets and waterfront. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "CBD",
+    "Southbank",
+    "St Kilda",
+    "Fitzroy"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 6,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Trains, trams and buses run on myki; a 2-hour fare is about $5.70 and a weekday daily cap about $11.40.",
+    "Trams are free inside the CBD Free Tram Zone; touch on only if you travel beyond it.",
+    "Buses fill the gaps; trains run every 10-20 min and a Night Network runs after midnight on Fri-Sat.",
+    "Taxis and Uber, DiDi and Ola all operate; taxis are metered and apps often cost less.",
+    "Driving is easy on freeways but parking in the CBD is costly; skip the car in town.",
+    "The CBD grid is walkable; shared bikes and scooters cover short hops."
+  ],
+  "airports": [
+    {
+      "code": "MEL",
+      "name": "Melbourne International Airport",
+      "primary": true,
+      "note": "Main gateway, about 19-22 km north-west of the CBD.",
+      "options": [
+        {
+          "mode": "Public bus 901 + train",
+          "to": "Broadmeadows station, then CBD",
+          "price": "A$5.70-11.40",
+          "time": "50-70 min",
+          "note": "Cheapest; needs a myki card."
+        },
+        {
+          "mode": "SkyBus",
+          "to": "Southern Cross Station, CBD",
+          "price": "A$24 one way, A$40 return",
+          "time": "25-35 min",
+          "note": "Book online for the lower fare."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "CBD",
+          "price": "A$50-70",
+          "time": "25-40 min",
+          "note": "Pickup ranks outside Terminals 2 and 4."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "A$75-100",
+          "time": "25-40 min",
+          "note": "Metered; expect surcharges at night."
+        }
+      ]
+    },
+    {
+      "code": "AVV",
+      "name": "Avalon Airport",
+      "primary": false,
+      "note": "Domestic Jetstar base about 50-55 km south-west, near Geelong.",
+      "options": [
+        {
+          "mode": "Bus 18 + train",
+          "to": "Lara station, then Southern Cross",
+          "price": "A$5.70-11.40",
+          "time": "60-90 min",
+          "note": "Cheapest; bus runs to Lara, 8 km away."
+        },
+        {
+          "mode": "SkyBus Avalon City Express",
+          "to": "Southern Cross Station, CBD",
+          "price": "A$22 adult, A$10 child",
+          "time": "45-60 min",
+          "note": "Meets every flight via Werribee."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "CBD",
+          "price": "A$80-110",
+          "time": "45-60 min",
+          "note": "Check app pickup point at the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "A$100+",
+          "time": "45-60 min",
+          "note": "Long trip; fares climb in traffic."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Royal Exhibition Building",
+    "Flinders Street Station",
+    "Shrine of Remembrance",
+    "Federation Square",
+    "National Gallery of Victoria",
+    "Melbourne Cricket Ground",
+    "Eureka Tower",
+    "St Kilda Beach",
+    "State Library Victoria",
+    "SEA LIFE Melbourne Aquarium",
+    "Arts Centre Melbourne",
+    "Boost Juice",
+    "Carlton & United Breweries",
+    "Luna Park (Melbourne)",
+    "Melbourne Showgrounds",
+    "Monash University",
+    "University of Melbourne",
+    "Wonderland Junior",
+    "Yarra River Cruise"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Melbourne",
+      "https://en.wikivoyage.org/wiki/Melbourne"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -37.8136,
+    144.9631
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 8
+    },
+    {
+      "high": 26,
+      "low": 14,
+      "rain_days": 6
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 11
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 6,
+      "rain_days": 13
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 13,
+      "rain_days": 9
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

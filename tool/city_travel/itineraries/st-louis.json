@@ -1,0 +1,1251 @@
+{
+  "city": "St. Louis",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "St. Louis rewards visitors with grand parks, free museums and a lively food and music scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 38.5468,
+      "west": -90.4718,
+      "north": 38.8391,
+      "east": -90.02,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 4,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "MetroLink light rail links the airport, Forest Park, downtown and Illinois.",
+      "A 2-hour MetroLink pass costs $3, or $4 at the airport station.",
+      "A day pass for trains and buses costs $5.",
+      "Metro buses cover the region but run infrequently; single fare $2.",
+      "Uber and Lyft are popular; taxis must be ordered by phone or app.",
+      "Driving is the most common way around; downtown is walkable."
+    ],
+    "sources": []
+  },
+  "places": {
+    "gateway-arch": {
+      "name": "Gateway Arch",
+      "landmark": "Gateway Arch",
+      "kind": "sight",
+      "lat": 38.6246,
+      "lon": -90.1847,
+      "price": 19,
+      "price_text": "Tram to the top ≈ $19 adult; grounds and museum free",
+      "hours": "Daily, roughly 09:00–18:00; longer in summer — check on the day",
+      "tip": "Book the tram ride online ahead of time and arrive 30 minutes early for security.",
+      "source": "https://www.gatewayarch.com"
+    },
+    "st-louis-zoo": {
+      "name": "St. Louis Zoo",
+      "landmark": "St. Louis Zoo",
+      "kind": "park",
+      "lat": 38.6365,
+      "lon": -90.2913,
+      "price": 0,
+      "price_text": "Free admission; some attractions cost extra",
+      "hours": "Daily, roughly 09:00–17:00 — check on the day",
+      "tip": "Go early in the morning when animals are active and crowds are light.",
+      "source": "https://www.stlzoo.org"
+    },
+    "cahokia-mounds": {
+      "name": "Cahokia Mounds",
+      "landmark": "Cahokia Mounds",
+      "kind": "sight",
+      "lat": 38.6551,
+      "lon": -90.0618,
+      "price": 0,
+      "price_text": "Free; small suggested donation for the museum",
+      "hours": "Grounds daily dawn–dusk; museum hours vary — check on the day",
+      "tip": "Climb Monks Mound for the view and start at the museum to understand the site.",
+      "source": "https://cahokiamounds.org"
+    },
+    "anheuser-busch-brewery": {
+      "name": "Anheuser-Busch Brewery",
+      "landmark": "Anheuser-Busch Brewery",
+      "kind": "tour",
+      "lat": 38.5985,
+      "lon": -90.214,
+      "price": 15,
+      "price_text": "≈ $10–20 depending on tour; free tour options exist",
+      "hours": "Daily tours, roughly 10:00–17:00 — check on the day",
+      "tip": "Book the tour online and bring ID; the free tour is short but the paid one includes tastings.",
+      "source": "https://www.budweisertours.com"
+    },
+    "missouri-river": {
+      "name": "Missouri River",
+      "landmark": "Missouri River",
+      "kind": "sight",
+      "lat": 38.8106,
+      "lon": -90.1102,
+      "price": null,
+      "price_text": "Free to view; riverboat cruises cost extra",
+      "hours": "Always open",
+      "tip": "Walk the riverfront near the Arch or take a riverboat cruise for the best views.",
+      "source": ""
+    },
+    "st-louis-union-station": {
+      "name": "St. Louis Union Station",
+      "landmark": "St. Louis Union Station",
+      "kind": "sight",
+      "lat": 38.627,
+      "lon": -90.1994,
+      "price": 0,
+      "price_text": "Free to enter; attractions inside cost extra",
+      "hours": "Daily, roughly 10:00–18:00 — check on the day",
+      "tip": "See the Grand Hall for free, then decide on the aquarium or Ferris wheel.",
+      "source": "https://www.stlouisunionstation.com"
+    },
+    "washu": {
+      "name": "Washington University in St. Louis",
+      "landmark": "Washington University in St. Louis",
+      "kind": "sight",
+      "lat": 38.6488,
+      "lon": -90.3108,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily; buildings vary",
+      "tip": "Stroll the Danforth campus and the nearby Loop for coffee and shops.",
+      "source": "https://wustl.edu"
+    },
+    "panera-bread": {
+      "name": "Panera Bread",
+      "landmark": "Panera Bread",
+      "kind": "food",
+      "lat": 38.5816,
+      "lon": -90.43,
+      "price": 12,
+      "price_text": "≈ $8–15 per person",
+      "hours": "Daily, roughly 06:00–21:00 — check on the day",
+      "tip": "A reliable quick lunch stop; the chain started in St. Louis.",
+      "source": "https://www.panerabread.com"
+    },
+    "incredible-pizza": {
+      "name": "St. Louis's Incredible Pizza Company",
+      "landmark": "St. Louis's Incredible Pizza Company",
+      "kind": "food",
+      "lat": 38.627,
+      "lon": -90.1994,
+      "price": 15,
+      "price_text": "≈ $12–20 buffet; games extra",
+      "hours": "Daily, roughly 11:00–21:00 — check on the day",
+      "tip": "Good for families with kids; the buffet plus arcade fills a rainy afternoon.",
+      "source": ""
+    },
+    "city-museum": {
+      "name": "City Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 38.6335,
+      "lon": -90.2018,
+      "price": 20,
+      "price_text": "≈ $15–25 depending on day; rooftop extra",
+      "hours": "Varies by day, often Wed–Sun — check on the day",
+      "tip": "Wear closed shoes and be ready to climb; it is part playground, part art.",
+      "source": "https://www.citymuseum.org"
+    },
+    "soulard-market": {
+      "name": "Soulard Farmers Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 38.5753,
+      "lon": -90.2183,
+      "price": 0,
+      "price_text": "Free to enter; pay per vendor",
+      "hours": "Wed–Sat mornings, roughly 07:00–15:30 — check on the day",
+      "tip": "Come Saturday morning for the fullest stalls and nearby bars.",
+      "source": "https://soulardmarket.com"
+    },
+    "citygarden": {
+      "name": "Citygarden",
+      "landmark": null,
+      "kind": "park",
+      "lat": 38.6266,
+      "lon": -90.1993,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 06:00–22:00",
+      "tip": "A free sculpture park with a splash fountain; good picnic stop near the Arch.",
+      "source": "https://www.citygardenstl.org"
+    },
+    "forest-park": {
+      "name": "Forest Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 38.6389,
+      "lon": -90.2847,
+      "price": 0,
+      "price_text": "Free; some museums charge admission",
+      "hours": "Daily, dawn–dusk",
+      "tip": "Bigger than Central Park; rent a bike or walk to the museums inside it.",
+      "source": "https://www.forestparkforever.org"
+    },
+    "art-museum": {
+      "name": "Saint Louis Art Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 38.6395,
+      "lon": -90.2944,
+      "price": 0,
+      "price_text": "Free general admission; special exhibits cost extra",
+      "hours": "Closed Monday; Tue–Sun roughly 10:00–17:00",
+      "tip": "Free entry and a good rainy-day option inside Forest Park.",
+      "source": "https://www.slam.org"
+    },
+    "delmar-loop": {
+      "name": "Delmar Loop walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.6555,
+      "lon": -90.3033,
+      "price": 0,
+      "price_text": "Free to walk; pay per shop or venue",
+      "hours": "Shops vary; liveliest in the evening",
+      "tip": "Walk the Loop for record shops, murals and the Walk of Fame stars.",
+      "source": "https://www.visittheloop.com"
+    },
+    "riverboat-cruise": {
+      "name": "Gateway Arch riverboat cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 38.6239,
+      "lon": -90.1839,
+      "price": 20,
+      "price_text": "≈ $15–25 per person",
+      "hours": "Seasonal, roughly spring–fall — check on the day",
+      "tip": "A short river cruise gives the classic skyline view of the Arch.",
+      "source": "https://www.gatewayarch.com"
+    },
+    "bbq-stop": {
+      "name": "St. Louis-style BBQ lunch",
+      "landmark": null,
+      "kind": "food",
+      "lat": 38.6103,
+      "lon": -90.2047,
+      "price": 18,
+      "price_text": "≈ $12–25 per person",
+      "hours": "Lunch and dinner; hours vary by spot",
+      "tip": "Try pork with the local sweet sauce; go early to beat the lunch line.",
+      "source": ""
+    },
+    "botanical-garden": {
+      "name": "Missouri Botanical Garden",
+      "landmark": null,
+      "kind": "park",
+      "lat": 38.6126,
+      "lon": -90.2594,
+      "price": 14,
+      "price_text": "≈ $12–16 adult; discounts for kids and seniors",
+      "hours": "Daily, roughly 09:00–17:00",
+      "tip": "The Climatron dome is good in any weather; spring is best for the gardens.",
+      "source": "https://www.missouribotanicalgarden.org"
+    },
+    "science-center": {
+      "name": "Saint Louis Science Center",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 38.6297,
+      "lon": -90.2707,
+      "price": 0,
+      "price_text": "Free general admission; planetarium and OMNIMAX cost extra",
+      "hours": "Closed some weekdays — check on the day",
+      "tip": "Free and very kid-friendly; the bridge over the highway is fun for kids.",
+      "source": "https://www.slsc.org"
+    },
+    "ted-drews": {
+      "name": "Ted Drewes Frozen Custard",
+      "landmark": null,
+      "kind": "food",
+      "lat": 38.5936,
+      "lon": -90.2969,
+      "price": 6,
+      "price_text": "≈ $4–8 per person",
+      "hours": "Seasonal; open late in summer — check on the day",
+      "tip": "Order a concrete; it is thick enough to hold upside down.",
+      "source": "https://teddrewes.com"
+    },
+    "old-courthouse": {
+      "name": "Old Courthouse",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 38.6256,
+      "lon": -90.1899,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 08:00–17:00 — check on the day",
+      "tip": "See the Dred Scott case exhibits and the dome view before the Arch.",
+      "source": "https://www.nps.gov/jeff"
+    },
+    "lafayette-square": {
+      "name": "Lafayette Square walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.6147,
+      "lon": -90.2153,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; cafes have their own hours",
+      "tip": "Victorian houses around a pretty park; pair it with a Soulard food stop.",
+      "source": ""
+    },
+    "brewery-tour-alt": {
+      "name": "Craft brewery tasting",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 38.6069,
+      "lon": -90.2097,
+      "price": 25,
+      "price_text": "≈ $15–30 per person",
+      "hours": "Afternoons and evenings — check on the day",
+      "tip": "Small local breweries offer tastings; confirm hours before you go.",
+      "source": ""
+    },
+    "arch-grounds": {
+      "name": "Gateway Arch National Park grounds",
+      "landmark": null,
+      "kind": "park",
+      "lat": 38.6247,
+      "lon": -90.1855,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, dawn–dusk",
+      "tip": "Walk the paths to the river for the best free view of the Arch.",
+      "source": "https://www.nps.gov/jeff"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of museums, the Arch and a lively evening street, mostly on foot or short rides.",
+      "days": [
+        {
+          "title": "Arch, downtown art and the Loop",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early for shorter lines. Book the tram ahead if you can."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "A short walk from the Arch grounds."
+            },
+            {
+              "place": "citygarden",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Free sculpture garden. Good spot for a quick lunch nearby."
+            },
+            {
+              "place": "art-museum",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. Free entry. About 15 minutes by car from downtown."
+            },
+            {
+              "place": "delmar-loop",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Shops and food. Liveliest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A history-first day: the Arch, the Old Courthouse, the river and an old brewery.",
+      "days": [
+        {
+          "title": "Gateway history and Soulard",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Start with the museum and tram ride. Check hours on the day."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk over from the Arch. Check hours on the day."
+            },
+            {
+              "place": "missouri-river",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk the riverfront. Grab lunch nearby."
+            },
+            {
+              "place": "anheuser-busch-brewery",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "About 10 minutes by car. Tours run daily; check times on the day."
+            },
+            {
+              "place": "soulard-market",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Wed–Sat mornings mainly; check on the day. Otherwise walk Lafayette Square."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "A kid-friendly day with animals, hands-on fun and a sweet finish.",
+      "days": [
+        {
+          "title": "Zoo, park and custard",
+          "stops": [
+            {
+              "place": "st-louis-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Free entry. Weekday morning is calmest. Check hours on the day."
+            },
+            {
+              "place": "forest-park",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Picnic or a short walk. The zoo sits inside the park."
+            },
+            {
+              "place": "science-center",
+              "at": "13:45",
+              "minutes": 120,
+              "note": "Closed some weekdays; check on the day."
+            },
+            {
+              "place": "ted-drews",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Seasonal; open late in summer. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central West End"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the Arch, a museum and a lively evening street in one overnight.",
+      "days": [
+        {
+          "title": "Arrive, Arch and downtown culture",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Book tram tickets ahead. Morning is quieter, but afternoon works if you arrive early."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Short walk from the Arch grounds. Check hours on the day."
+            },
+            {
+              "place": "citygarden",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Free sculpture garden. Good light late afternoon."
+            },
+            {
+              "place": "delmar-loop",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "About 15 minutes by car. Dinner and a walk; liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Forest Park museums, then fly",
+          "stops": [
+            {
+              "place": "art-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free entry; check on the day."
+            },
+            {
+              "place": "forest-park",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk or short drive within the park. Grab lunch nearby."
+            },
+            {
+              "place": "panera-bread",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Quick lunch in The Loop before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Visitors who want the river, the Arch story and old St. Louis in a single overnight.",
+      "days": [
+        {
+          "title": "Arch, courthouse and the river",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early for shorter lines. Tram and museum inside."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk over from the Arch. Check hours on the day."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "St. Louis-style ribs for lunch. Hours vary by spot."
+            },
+            {
+              "place": "arch-grounds",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Walk the riverfront paths. Return at sunset if you have time."
+            },
+            {
+              "place": "missouri-river",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "River views near the Arch. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Soulard history and beer",
+          "stops": [
+            {
+              "place": "soulard-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Wed–Sat mornings only. Check on the day."
+            },
+            {
+              "place": "lafayette-square",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk or drive. Old brick streets and cafes."
+            },
+            {
+              "place": "anheuser-busch-brewery",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Book a tour slot. Roughly 10:00–17:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Soulard"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Families with kids who want animals, hands-on fun and an easy evening treat.",
+      "days": [
+        {
+          "title": "Zoo and Forest Park",
+          "stops": [
+            {
+              "place": "st-louis-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Free entry. Weekday morning is calmest. Check hours on the day."
+            },
+            {
+              "place": "forest-park",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Picnic or playground time. Grab lunch nearby."
+            },
+            {
+              "place": "science-center",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Closed some weekdays — check on the day."
+            },
+            {
+              "place": "ted-drews",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Frozen custard. Seasonal; open late in summer."
+            }
+          ]
+        },
+        {
+          "title": "Arch and City Museum",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book the tram ahead. Kids love the ride up."
+            },
+            {
+              "place": "city-museum",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Often Wed–Sun — check on the day. Wear grippy shoes."
+            },
+            {
+              "place": "incredible-pizza",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Pizza and games in The Loop. Weekend afternoons are busiest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Arch, top museums and a lively evening street, grouped by area.",
+      "days": [
+        {
+          "title": "Downtown icons and the river",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early for shorter lines. Buy tram tickets ahead if you can."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "A short walk from the Arch grounds. Check hours on the day."
+            },
+            {
+              "place": "citygarden",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby, then a stroll among the sculptures."
+            },
+            {
+              "place": "arch-grounds",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Come back for sunset over the river."
+            }
+          ]
+        },
+        {
+          "title": "Forest Park museums",
+          "stops": [
+            {
+              "place": "art-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general admission."
+            },
+            {
+              "place": "forest-park",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch and a walk. The park is huge, so pick one corner."
+            },
+            {
+              "place": "science-center",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed some weekdays — check on the day."
+            },
+            {
+              "place": "delmar-loop",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and shops. Liveliest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the Arch story, the Old Courthouse and the region's deep past.",
+      "days": [
+        {
+          "title": "Arch and courthouse",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Museum and tram. Morning means shorter lines."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "The Dred Scott case is told here. Check hours on the day."
+            },
+            {
+              "place": "missouri-river",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch, then walk the riverfront."
+            },
+            {
+              "place": "st-louis-union-station",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Grand old rail hall. Good for a rainy hour."
+            }
+          ]
+        },
+        {
+          "title": "Cahokia and Soulard",
+          "stops": [
+            {
+              "place": "cahokia-mounds",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Across the river in Illinois. Morning in spring or fall is best."
+            },
+            {
+              "place": "soulard-market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Wed–Sat mornings only — check on the day. Lunch here."
+            },
+            {
+              "place": "anheuser-busch-brewery",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Book a tour slot ahead. Afternoon is quieter."
+            },
+            {
+              "place": "lafayette-square",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Victorian streets and cafes for an early dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids: animals, hands-on museums and room to run.",
+      "days": [
+        {
+          "title": "Zoo and park",
+          "stops": [
+            {
+              "place": "st-louis-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Free entry. Weekday morning is calmest."
+            },
+            {
+              "place": "forest-park",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Picnic lunch and playground time."
+            },
+            {
+              "place": "science-center",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed some weekdays — check on the day."
+            },
+            {
+              "place": "ted-drews",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Custard for dinner dessert. Seasonal hours."
+            }
+          ]
+        },
+        {
+          "title": "City Museum and the Arch",
+          "stops": [
+            {
+              "place": "city-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Often Wed–Sun — check on the day. Wear closed shoes."
+            },
+            {
+              "place": "incredible-pizza",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch and games for the kids."
+            },
+            {
+              "place": "gateway-arch",
+              "at": "15:30",
+              "minutes": 150,
+              "note": "Tram to the top. Book a time slot ahead."
+            },
+            {
+              "place": "arch-grounds",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Run around before dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-time visitors who want the Arch, the big museums and a lively evening street, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive downtown: Arch grounds and Citygarden",
+          "stops": [
+            {
+              "place": "arch-grounds",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk the park paths under the Arch. Free and open until dusk."
+            },
+            {
+              "place": "citygarden",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Sculpture garden a short walk inland. Good light late in the day."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "St. Louis-style BBQ for dinner. Hours vary by spot."
+            }
+          ]
+        },
+        {
+          "title": "Arch and Old Courthouse, then Soulard",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book the tram ride ahead. Morning means shorter lines."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Next to the Arch. Check on the day for hours."
+            },
+            {
+              "place": "soulard-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Best Wed–Sat mornings; check on the day."
+            },
+            {
+              "place": "lafayette-square",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Victorian streets and a small park. Cafes have their own hours."
+            }
+          ]
+        },
+        {
+          "title": "Forest Park museums",
+          "stops": [
+            {
+              "place": "art-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general admission."
+            },
+            {
+              "place": "forest-park",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Walk or rent a bike between the museums."
+            },
+            {
+              "place": "science-center",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed some weekdays — check on the day."
+            },
+            {
+              "place": "delmar-loop",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and a walk. Liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Loop morning, then fly",
+          "stops": [
+            {
+              "place": "washu",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Campus walk. Buildings vary; grounds are open."
+            },
+            {
+              "place": "panera-bread",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Lunch before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the Arch, the river and the region's deep past, with time for Cahokia.",
+      "days": [
+        {
+          "title": "Arrive: Arch grounds at sunset",
+          "stops": [
+            {
+              "place": "arch-grounds",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Free park paths. Sunset is the best light."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner nearby. Hours vary by spot."
+            }
+          ]
+        },
+        {
+          "title": "Arch, Old Courthouse and the river",
+          "stops": [
+            {
+              "place": "gateway-arch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book the tram ahead. Morning for shorter lines."
+            },
+            {
+              "place": "old-courthouse",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Dred Scott history. Check on the day for hours."
+            },
+            {
+              "place": "riverboat-cruise",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Seasonal, spring–fall — check on the day."
+            },
+            {
+              "place": "missouri-river",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk the levee. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Cahokia Mounds and Union Station",
+          "stops": [
+            {
+              "place": "cahokia-mounds",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Across the river in Illinois; allow travel time. Museum hours vary — check on the day."
+            },
+            {
+              "place": "st-louis-union-station",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Historic rail hall. Good rainy-day backup."
+            },
+            {
+              "place": "soulard-market",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Wed–Sat afternoons only — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Brewery history, then fly",
+          "stops": [
+            {
+              "place": "anheuser-busch-brewery",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Tour times vary — check on the day."
+            },
+            {
+              "place": "lafayette-square",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Short walk and lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids: the Zoo, City Museum and Science Center, with short days and meal stops.",
+      "days": [
+        {
+          "title": "Arrive: Citygarden and the river",
+          "stops": [
+            {
+              "place": "citygarden",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sculptures kids can walk among. Open until about 22:00."
+            },
+            {
+              "place": "arch-grounds",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Room to run under the Arch."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early dinner. Hours vary by spot."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and Forest Park",
+          "stops": [
+            {
+              "place": "st-louis-zoo",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Weekday morning is calmest. Check on the day for hours."
+            },
+            {
+              "place": "forest-park",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Picnic and playground time."
+            },
+            {
+              "place": "ted-drews",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Frozen custard. Seasonal; open late in summer."
+            }
+          ]
+        },
+        {
+          "title": "City Museum and Arch",
+          "stops": [
+            {
+              "place": "city-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Often Wed–Sun — check on the day. Wear closed shoes."
+            },
+            {
+              "place": "gateway-arch",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Book the tram ahead for a set time."
+            },
+            {
+              "place": "panera-bread",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Easy dinner in the Loop."
+            }
+          ]
+        },
+        {
+          "title": "Science Center, then fly",
+          "stops": [
+            {
+              "place": "science-center",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed some weekdays — check on the day."
+            },
+            {
+              "place": "incredible-pizza",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch and games before departure."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Arch and Forest Park institutions."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Gateway Arch, old courthouse and river history."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Zoo, Science Center and City Museum for kids."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        120,
+        260
+      ],
+      "why": "Walk to the Gateway Arch, the Old Courthouse and the riverfront. Good MetroLink access.",
+      "center": [
+        38.627,
+        -90.199
+      ]
+    },
+    {
+      "area": "Central West End",
+      "range": [
+        140,
+        300
+      ],
+      "why": "Leafy streets, restaurants and cafés next to Forest Park and its museums.",
+      "center": [
+        38.641,
+        -90.261
+      ]
+    },
+    {
+      "area": "Soulard",
+      "range": [
+        110,
+        230
+      ],
+      "why": "Historic brick streets, old bars and a lively weekend scene. Short ride to downtown.",
+      "center": [
+        38.595,
+        -90.21
+      ]
+    },
+    {
+      "area": "The Loop",
+      "range": [
+        100,
+        210
+      ],
+      "why": "Walkable strip of shops, music venues and cheap eats; good for families and students.",
+      "center": [
+        38.656,
+        -90.305
+      ]
+    }
+  ],
+  "food": [
+    "Try St. Louis-style pizza: thin cracker crust with Provel cheese. It divides opinion, so give it a go.",
+    "Toast Ravioli is a local appetizer, usually served with a side of marinara for dipping.",
+    "Go for barbecue: ribs and pulled pork are common; ask locally for the current favorite spots.",
+    "Soulard and The Hill are good areas to wander for bars, cafés and Italian or pub food.",
+    "Budget tip: lunch specials and food trucks keep meals cheaper than dinner. Check hours on the day."
+  ],
+  "more_time": [
+    "Add a Forest Park half-day: the free zoo, art museum and science center are close together.",
+    "Cross the river or drive out for a day of wineries and small-town stops; check opening days first.",
+    "Catch a Cardinals baseball game at Busch Stadium if the season fits your dates."
+  ]
+}

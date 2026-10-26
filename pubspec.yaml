@@ -130,6 +130,8 @@ flutter:
     - assets/l10n/
     - .env
     - assets/custom.geo.json
+    # TODO(old-map): 고지도 모드를 되살릴 때 주석 해제
+    # - assets/old_maps/
     - assets/admin1_regions.geojson
     - assets/admin1_coverage.json
     - assets/admin1_sources.txt
@@ -169,14 +171,14 @@ flutter:
     - assets/height.json
     - assets/novel.json
     - assets/olympics.json
-    - assets/gov.json
-    - assets/sports.json
     - assets/sports_fifa_ranking.json
     - assets/sports_ucl_titles.json
     - assets/sports_world_cup_results.json
     - assets/sports_tennis_slam_men.json
     - assets/sports_fide_grandmasters.json
     - assets/sports_mlb_international_players.json
+    - assets/gov.json
+    - assets/sports.json
     - assets/alpha.json
     - assets/cold_war.json
     - assets/transportation.json
@@ -255,6 +257,8 @@ flutter:
     - assets/city_rank.json
     - assets/top_city_hub_airport.json
     - assets/city_tour_links.json
+    - assets/bounce_city_pages.json
+    - assets/city_trip_pages.json
     - assets/data/
     - assets/images/flags/
     - assets/images/flags_insane/

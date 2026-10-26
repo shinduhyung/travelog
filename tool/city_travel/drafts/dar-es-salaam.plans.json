@@ -1,0 +1,808 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of museums, markets and old-city streets, all close together.",
+      "days": [
+        {
+          "title": "Museums and the old city centre",
+          "stops": [
+            {
+              "place": "national_museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start when it opens. Weekday mornings are calmest."
+            },
+            {
+              "place": "botanical_garden",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short walk nearby. A green breather in the middle of town."
+            },
+            {
+              "place": "st_joseph",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Check service times before you go in. Dress modestly."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Ask your driver for a busy local spot."
+            },
+            {
+              "place": "askari_monument",
+              "at": "14:30",
+              "minutes": 15,
+              "note": "Quick photo stop at the roundabout."
+            },
+            {
+              "place": "city_walk",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Walk the old streets on foot. Carry water and stay in daylight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Posta)"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Ocean air, a ferry ride and sunset on the peninsula.",
+      "days": [
+        {
+          "title": "Ferry, beach and sunset",
+          "stops": [
+            {
+              "place": "kivukoni_fish_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early while the boats are landing. Watch your footing."
+            },
+            {
+              "place": "kigamboni_ferry",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Walk on as a foot passenger. Cross and come back."
+            },
+            {
+              "place": "mikadi_beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Taxi to the peninsula. Bring cash for snacks and shade."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book a table by the water. Check the day's catch and prices first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets, grills and coastal cooking from morning to night.",
+      "days": [
+        {
+          "title": "Markets and local eating",
+          "stops": [
+            {
+              "place": "kariakoo_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Arrive early. Keep valuables close and haggle politely."
+            },
+            {
+              "place": "mikocheni_market",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Taxi across town. Good for fruit and snacks."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch of grilled meat with rice or ugali. Ask for prices first."
+            },
+            {
+              "place": "slipway",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Coffee and a wander by the water. Shops may close early."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Finish with fish by the ocean. Check on the day for opening times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "A compact city-centre day for first-time visitors who want history and Swahili street life.",
+      "days": [
+        {
+          "title": "City centre heritage and markets",
+          "stops": [
+            {
+              "place": "national_museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start early to beat the heat. Check opening hours on the day."
+            },
+            {
+              "place": "city_walk",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Walk past the Askari Monument and old buildings. Carry water."
+            },
+            {
+              "place": "askari_monument",
+              "at": "13:15",
+              "minutes": 15,
+              "note": "Quick photo stop on the walk."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch of grilled meat and local sides."
+            },
+            {
+              "place": "kariakoo_market",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Busy and lively. Watch your belongings."
+            },
+            {
+              "place": "village_museum",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Outdoor huts and crafts. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Posta)"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Ocean air, a ferry ride and a sunset on the peninsula.",
+      "days": [
+        {
+          "title": "Ferry, beach and sunset",
+          "stops": [
+            {
+              "place": "kivukoni_fish_market",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Most active early morning. Go before the heat."
+            },
+            {
+              "place": "kigamboni_ferry",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Short crossing. Check times on the day."
+            },
+            {
+              "place": "coco_beach",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Swim and snacks. Liveliest late afternoon."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner by the water on the peninsula."
+            },
+            {
+              "place": "mbezi_sunset",
+              "at": "20:15",
+              "minutes": 30,
+              "note": "Evening stroll. Sunset is earlier, so come for the sea air."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets, grills and coastal seafood in one easy day.",
+      "days": [
+        {
+          "title": "Markets to seafood",
+          "stops": [
+            {
+              "place": "kariakoo_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for produce and spice stalls."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch of grilled meat. Ask what is fresh."
+            },
+            {
+              "place": "mikocheni_market",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Local market on the peninsula. Morning to early evening."
+            },
+            {
+              "place": "slipway",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Waterfront shops and cafes. Check hours on the day."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Fresh fish by the water. Book ahead if you can."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want museums, markets and the old city on foot, with sunsets on the peninsula.",
+      "days": [
+        {
+          "title": "City centre heritage and markets",
+          "stops": [
+            {
+              "place": "national_museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start when it opens. Weekday mornings are calmest."
+            },
+            {
+              "place": "city_walk",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Walk the old centre at your own pace. Carry water and a hat."
+            },
+            {
+              "place": "askari_monument",
+              "at": "13:15",
+              "minutes": 15,
+              "note": "A short stop on the walk. Good meeting point."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch of grilled meat and sides. Ask for the day's price."
+            },
+            {
+              "place": "st_joseph",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Open around services. Dress modestly and keep quiet."
+            },
+            {
+              "place": "botanical_garden",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Shady break before the evening."
+            }
+          ]
+        },
+        {
+          "title": "Kariakoo, Village Museum and sunset",
+          "stops": [
+            {
+              "place": "kariakoo_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for the full buzz. Watch your bag and agree prices first."
+            },
+            {
+              "place": "village_museum",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Outdoor huts and craft displays. Take a taxi between the two."
+            },
+            {
+              "place": "mikocheni_market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Local market stop on the way to the peninsula. Lunch nearby."
+            },
+            {
+              "place": "oyster_bay_walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Shoreline walk in daylight, then stay for sunset."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Posta)"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sun, sea and sunsets: peninsula beaches, a ferry crossing and a boat trip.",
+      "days": [
+        {
+          "title": "Ferry, fish market and Coco Beach",
+          "stops": [
+            {
+              "place": "kivukoni_fish_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Most active early. Go with a guide if you want to chat to traders."
+            },
+            {
+              "place": "kigamboni_ferry",
+              "at": "09:15",
+              "minutes": 45,
+              "note": "Walk on, cross and come back. Cheap and quick."
+            },
+            {
+              "place": "coco_beach",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Arrive late afternoon. Swim only where locals swim and watch your things."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner by the water nearby."
+            }
+          ]
+        },
+        {
+          "title": "Boat trip and peninsula beach day",
+          "stops": [
+            {
+              "place": "boat_trip",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning departures. Confirm the time and price the day before."
+            },
+            {
+              "place": "beach_resort_day",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Day pass or lunch at a beach spot. Weekdays are quieter."
+            },
+            {
+              "place": "mbezi_sunset",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Sunset viewpoint. Bring insect repellent."
+            },
+            {
+              "place": "slipway",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Shops and restaurants. Check closing times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through markets, street grills and waterfront seafood.",
+      "days": [
+        {
+          "title": "Markets and street food",
+          "stops": [
+            {
+              "place": "kariakoo_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Produce, spices and snacks. Eat where it looks busy and freshly cooked."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch grill. Point at what you want and confirm the price."
+            },
+            {
+              "place": "national_museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Air-conditioned break from the heat."
+            },
+            {
+              "place": "kivukoni_fish_market",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Quieter than morning but still lively. Ask before taking photos."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead. Ask what is fresh that day."
+            }
+          ]
+        },
+        {
+          "title": "Peninsula markets and beach eating",
+          "stops": [
+            {
+              "place": "mikocheni_market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning market. Good for fruit and local snacks."
+            },
+            {
+              "place": "art_gallery",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Craft and art shops. Check opening hours on the day."
+            },
+            {
+              "place": "coco_beach",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Beach food stalls and drinks. Busiest in the evening."
+            },
+            {
+              "place": "slipway",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Waterfront dinner. Check restaurant times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, markets and Swahili city life at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into the city centre",
+          "stops": [
+            {
+              "place": "national_museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start indoors to escape the heat. Check opening hours on the day."
+            },
+            {
+              "place": "askari_monument",
+              "at": "15:45",
+              "minutes": 15,
+              "note": "Short walk from the museum area."
+            },
+            {
+              "place": "st_joseph",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Open around services; check on the day."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening grill dinner. Ask your hotel for a trusted spot."
+            }
+          ]
+        },
+        {
+          "title": "Markets and the waterfront",
+          "stops": [
+            {
+              "place": "kariakoo_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for the buzz. Watch your belongings."
+            },
+            {
+              "place": "city_walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Heritage walk through the old centre in daylight."
+            },
+            {
+              "place": "kivukoni_fish_market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Most active early morning; still lively around midday. Check on the day."
+            },
+            {
+              "place": "kigamboni_ferry",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Cross for the sunset and come back. Check crossing times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Village Museum and peninsula evening",
+          "stops": [
+            {
+              "place": "village_museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Outdoor, so bring water and a hat. Check hours on the day."
+            },
+            {
+              "place": "botanical_garden",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Short shaded wander nearby."
+            },
+            {
+              "place": "slipway",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Shops and restaurants by the water. Check hours on the day."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Book ahead in high season."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "art_gallery",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Browse local art and crafts. Check hours on the day."
+            },
+            {
+              "place": "oyster_bay_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shoreline walk in daylight before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Posta) or Msasani Peninsula"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sun, sand and sunsets: a slow peninsula base with one city and one ferry outing.",
+      "days": [
+        {
+          "title": "Arrive and catch the sunset",
+          "stops": [
+            {
+              "place": "coco_beach",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Liveliest late afternoon. Stay for sunset."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner by the water. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Beach day on the peninsula",
+          "stops": [
+            {
+              "place": "beach_resort_day",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Weekday is quieter. Confirm day-pass details with the resort."
+            },
+            {
+              "place": "mbezi_sunset",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Short sunset stop on the way back."
+            }
+          ]
+        },
+        {
+          "title": "Ferry, harbour and fish market",
+          "stops": [
+            {
+              "place": "kivukoni_fish_market",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Most active early morning. Check on the day."
+            },
+            {
+              "place": "boat_trip",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Harbour and islands. Check departures on the day."
+            },
+            {
+              "place": "kigamboni_ferry",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Cross at sunset and return. Check times on the day."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Local grill dinner."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "oyster_bay_walk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Shoreline walk in daylight."
+            },
+            {
+              "place": "slipway",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Coffee and last shopping. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Msasani Peninsula"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through markets, grills and seafood, with beach time in between.",
+      "days": [
+        {
+          "title": "Arrive and eat local",
+          "stops": [
+            {
+              "place": "kariakoo_market",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Afternoon is busy but calmer than early morning. Quieter on Sunday."
+            },
+            {
+              "place": "nyama_choma",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening grill. Ask for the day's fresh options."
+            }
+          ]
+        },
+        {
+          "title": "Fish market and peninsula food",
+          "stops": [
+            {
+              "place": "kivukoni_fish_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early for the catch. Check on the day."
+            },
+            {
+              "place": "mikocheni_market",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Local market, morning to early evening."
+            },
+            {
+              "place": "coco_beach",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Snacks and drinks as the sun drops."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Book ahead in high season."
+            }
+          ]
+        },
+        {
+          "title": "Culture, then a long lunch",
+          "stops": [
+            {
+              "place": "village_museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Outdoor; bring water. Check hours on the day."
+            },
+            {
+              "place": "slipway",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch by the water. Check hours on the day."
+            },
+            {
+              "place": "oyster_bay_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk off lunch at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Last taste, then fly",
+          "stops": [
+            {
+              "place": "national_museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Quick indoor visit. Check hours on the day."
+            },
+            {
+              "place": "mikadi_beach",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Weekday afternoon is quieter. Eat before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Posta) or Msasani Peninsula"
+    }
+  ]
+}

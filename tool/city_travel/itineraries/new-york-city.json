@@ -1,0 +1,1796 @@
+{
+  "city": "New York City",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "New York is big but its sights cluster in Manhattan. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 40.6746,
+      "west": -74.0581,
+      "north": 40.7996,
+      "east": -73.9453,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 7,
+      "flag_airport": 7,
+      "per_km": 2.2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 14,
+    "notes": [
+      "The subway runs 24 hours; tap OMNY (contactless) for $3.00 a ride, with a weekly fare cap.",
+      "Buses use the same fare; the M-routes cover Manhattan avenues.",
+      "Yellow cabs are metered (plus congestion surcharges); Uber and Lyft work everywhere.",
+      "Driving and parking in Manhattan are slow and expensive; skip the car.",
+      "Manhattan's grid is easy to walk; 20 blocks north-south is about a mile.",
+      "The free Staten Island Ferry passes the Statue of Liberty."
+    ],
+    "sources": []
+  },
+  "places": {
+    "statue-liberty": {
+      "name": "Statue of Liberty",
+      "landmark": "Statue of Liberty",
+      "kind": "sight",
+      "lat": 40.6892,
+      "lon": -74.0445,
+      "price": 25,
+      "price_text": "≈ USD 25–30 ferry and grounds ticket; crown and pedestal cost extra",
+      "hours": "Ferries usually run morning to late afternoon; check the day's schedule",
+      "tip": "Book ferry tickets online weeks ahead. Arrive for the first boat to beat the crowds.",
+      "source": "https://www.nps.gov/stli/index.htm"
+    },
+    "ellis-island": {
+      "name": "Ellis Island",
+      "landmark": "Ellis Island",
+      "kind": "museum",
+      "lat": 40.6995,
+      "lon": -74.0396,
+      "price": 0,
+      "price_text": "Included in the Statue of Liberty ferry ticket",
+      "hours": "Same hours as the ferry service; check on the day",
+      "tip": "The immigration museum is included with the ferry. Allow an extra hour to look up family records.",
+      "source": "https://www.nps.gov/elis/index.htm"
+    },
+    "empire-state": {
+      "name": "Empire State Building",
+      "landmark": "Empire State Building",
+      "kind": "sight",
+      "lat": 40.7484,
+      "lon": -73.9857,
+      "price": 44,
+      "price_text": "≈ USD 44–80 depending on deck and time; check online",
+      "hours": "Open daily, roughly 09:00–midnight",
+      "tip": "Go up at sunset for day and night views. Buy a timed ticket online to skip the queue.",
+      "source": "https://www.esbnyc.com/"
+    },
+    "times-square": {
+      "name": "Times Square",
+      "landmark": "Times Square",
+      "kind": "sight",
+      "lat": 40.7588,
+      "lon": -73.9851,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Come after dark for the neon. Keep moving and watch your bag in the crowds.",
+      "source": "https://www.timessquarenyc.org/"
+    },
+    "central-park": {
+      "name": "Central Park",
+      "landmark": "Central Park",
+      "kind": "park",
+      "lat": 40.785,
+      "lon": -73.9682,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily 06:00–01:00",
+      "tip": "Rent a bike or walk the Mall and Bethesda Terrace. The park is huge, so pick one area.",
+      "source": "https://www.centralparknyc.org/"
+    },
+    "met-museum": {
+      "name": "Metropolitan Museum of Art",
+      "landmark": "Metropolitan Museum of Art",
+      "kind": "museum",
+      "lat": 40.7794,
+      "lon": -73.9632,
+      "price": 30,
+      "price_text": "≈ USD 30 adults; pay-what-you-wish for NY State residents",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "Pick two or three galleries, not the whole museum. The rooftop garden is worth a look in season.",
+      "source": "https://www.metmuseum.org/"
+    },
+    "moma": {
+      "name": "The Museum of Modern Art",
+      "landmark": "The Museum of Modern Art",
+      "kind": "museum",
+      "lat": 40.7614,
+      "lon": -73.9776,
+      "price": 30,
+      "price_text": "≈ USD 30 adults; free for under 16",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "Start on the top floor and work down. Van Gogh's Starry Night is a must-see.",
+      "source": "https://www.moma.org/"
+    },
+    "amnh": {
+      "name": "American Museum of Natural History",
+      "landmark": "American Museum of Natural History",
+      "kind": "museum",
+      "lat": 40.7813,
+      "lon": -73.974,
+      "price": 28,
+      "price_text": "≈ USD 28 adults; pay-what-you-wish for NY State residents",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "The dinosaur halls and blue whale are the highlights. Book timed entry online.",
+      "source": "https://www.amnh.org/"
+    },
+    "guggenheim": {
+      "name": "Solomon R. Guggenheim Museum",
+      "landmark": "Solomon R. Guggenheim Museum",
+      "kind": "museum",
+      "lat": 40.7829,
+      "lon": -73.9589,
+      "price": 25,
+      "price_text": "≈ USD 25 adults; check online",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "Take the lift to the top and spiral down. The building itself is the star.",
+      "source": "https://www.guggenheim.org/"
+    },
+    "brooklyn-bridge": {
+      "name": "Brooklyn Bridge",
+      "landmark": "Brooklyn Bridge",
+      "kind": "sight",
+      "lat": 40.706,
+      "lon": -73.9968,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk from Brooklyn to Manhattan in the morning for the skyline view. Stay in the marked lane.",
+      "source": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml"
+    },
+    "memorial-911": {
+      "name": "9/11 Memorial",
+      "landmark": "9/11 Memorial",
+      "kind": "sight",
+      "lat": 40.7114,
+      "lon": -74.0132,
+      "price": 0,
+      "price_text": "Memorial free; museum ≈ USD 33",
+      "hours": "Memorial open daily; museum hours vary, check on the day",
+      "tip": "The memorial pools are free and moving. The museum is separate and needs a ticket.",
+      "source": "https://www.911memorial.org/"
+    },
+    "one-wtc": {
+      "name": "One World Trade Center",
+      "landmark": "One World Trade Center",
+      "kind": "sight",
+      "lat": 40.7127,
+      "lon": -74.0134,
+      "price": 44,
+      "price_text": "≈ USD 44–50 for the observatory; check online",
+      "hours": "Observatory usually open daily; check the day's hours",
+      "tip": "Go on a clear day. Sunset slots sell out, so book ahead.",
+      "source": "https://www.oneworldobservatory.com/"
+    },
+    "high-line": {
+      "name": "The High Line",
+      "landmark": "The High Line",
+      "kind": "park",
+      "lat": 40.7479,
+      "lon": -74.0048,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily; hours vary by season, check on the day",
+      "tip": "Walk south from 34th Street to Chelsea Market. Go early to avoid the crowds.",
+      "source": "https://www.thehighline.org/"
+    },
+    "rockefeller": {
+      "name": "Rockefeller Center",
+      "landmark": "Rockefeller Center",
+      "kind": "sight",
+      "lat": 40.7587,
+      "lon": -73.9786,
+      "price": 0,
+      "price_text": "Free to walk; Top of the Rock ≈ USD 40+",
+      "hours": "Plaza always open; the ice rink runs in winter",
+      "tip": "See the plaza and the Christmas tree in winter. Top of the Rock gives the classic Empire State view.",
+      "source": "https://www.rockefellercenter.com/"
+    },
+    "grand-central": {
+      "name": "Grand Central Terminal",
+      "landmark": "Grand Central Terminal",
+      "kind": "sight",
+      "lat": 40.7527,
+      "lon": -73.9772,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Open daily, roughly 05:15–02:00",
+      "tip": "Look up at the ceiling in the main concourse. The whispering gallery is by the Oyster Bar.",
+      "source": "https://www.grandcentralterminal.com/"
+    },
+    "summit-vanderbilt": {
+      "name": "SUMMIT One Vanderbilt",
+      "landmark": "SUMMIT One Vanderbilt",
+      "kind": "sight",
+      "lat": 40.7531,
+      "lon": -73.9787,
+      "price": 45,
+      "price_text": "≈ USD 45–60 depending on time; check online",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "The mirrored rooms are the draw. Book a sunset slot and wear something you can see your feet in.",
+      "source": "https://summitov.com/"
+    },
+    "chrysler": {
+      "name": "Chrysler Building",
+      "landmark": "Chrysler Building",
+      "kind": "sight",
+      "lat": 40.7516,
+      "lon": -73.9755,
+      "price": 0,
+      "price_text": "Free to see from the street; the lobby is not open to tourists",
+      "hours": "View from outside any time",
+      "tip": "Best seen from a distance, for example from Tudor City or the street to the east.",
+      "source": ""
+    },
+    "wall-street": {
+      "name": "Wall Street",
+      "landmark": "Wall Street",
+      "kind": "sight",
+      "lat": 40.7068,
+      "lon": -74.0113,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk from the Charging Bull to Federal Hall and the Stock Exchange. Weekdays are livelier.",
+      "source": ""
+    },
+    "chelsea-market": {
+      "name": "Chelsea Market",
+      "landmark": "Chelsea Market",
+      "kind": "food",
+      "lat": 40.7423,
+      "lon": -74.0061,
+      "price": 0,
+      "price_text": "Free to enter; food paid per stall",
+      "hours": "Usually open daily, roughly 07:00–21:00; check on the day",
+      "tip": "Come hungry and try a few stalls. It is a good stop at the end of the High Line.",
+      "source": "https://www.chelseamarket.com/"
+    },
+    "broadway": {
+      "name": "Broadway Theater District",
+      "landmark": "Broadway Theater District",
+      "kind": "show",
+      "lat": 40.759,
+      "lon": -73.9851,
+      "price": 100,
+      "price_text": "≈ USD 80–200 per ticket; discounts at the TKTS booth",
+      "hours": "Shows usually evening, with some matinees",
+      "tip": "Buy same-day discount tickets at the TKTS booth in Times Square. Book popular shows weeks ahead.",
+      "source": "https://www.tdf.org/"
+    },
+    "st-patricks": {
+      "name": "St. Patrick's Cathedral",
+      "landmark": "St. Patrick's Cathedral",
+      "kind": "sight",
+      "lat": 40.7584,
+      "lon": -73.9759,
+      "price": 0,
+      "price_text": "Free; donations welcome",
+      "hours": "Open daily; check on the day for mass times",
+      "tip": "Step inside for the stained glass. Dress respectfully and keep quiet during services.",
+      "source": "https://www.saintpatrickscathedral.org/"
+    },
+    "staten-island-ferry": {
+      "name": "Staten Island Ferry",
+      "landmark": "Staten Island Ferry",
+      "kind": "activity",
+      "lat": 40.7018,
+      "lon": -74.0135,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Runs 24 hours, roughly every 30 minutes",
+      "tip": "A free ride past the Statue of Liberty. Stand on the right side going out for the best view.",
+      "source": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml"
+    },
+    "nypl": {
+      "name": "New York Public Library (Main Branch)",
+      "landmark": "New York Public Library (Main Branch)",
+      "kind": "sight",
+      "lat": 40.7532,
+      "lon": -73.9822,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "See the Rose Main Reading Room and the stone lions outside. Free tours run on some days.",
+      "source": "https://www.nypl.org/"
+    },
+    "flatiron": {
+      "name": "Flatiron Building",
+      "landmark": "Flatiron Building",
+      "kind": "sight",
+      "lat": 40.741,
+      "lon": -73.9896,
+      "price": 0,
+      "price_text": "Free to see from outside",
+      "hours": "View from outside any time",
+      "tip": "Best photo spot is from Madison Square Park to the north. The building is not open inside.",
+      "source": ""
+    },
+    "smorgasburg": {
+      "name": "Smorgasburg food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.7215,
+      "lon": -73.9625,
+      "price": 0,
+      "price_text": "Free to enter; food paid per stall, roughly USD 10–20 a dish",
+      "hours": "Weekends in season; check dates and locations on the day",
+      "tip": "A big open-air food market with many stalls. Go early for shorter lines.",
+      "source": "https://www.smorgasburg.com/"
+    },
+    "brooklyn-heights": {
+      "name": "Brooklyn Heights Promenade walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.6965,
+      "lon": -73.9965,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A quiet walk with skyline views. Combine it with the Brooklyn Bridge walk.",
+      "source": ""
+    },
+    "top-of-the-rock": {
+      "name": "Top of the Rock viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.7593,
+      "lon": -73.9794,
+      "price": 40,
+      "price_text": "≈ USD 40–50; check online",
+      "hours": "Usually open daily; check the day's hours",
+      "tip": "The best view of the Empire State Building. Go at dusk for both day and night.",
+      "source": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/"
+    },
+    "greenwich-village": {
+      "name": "Greenwich Village walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.7336,
+      "lon": -74.0027,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Wander the side streets around Washington Square Park. Good for coffee and people-watching.",
+      "source": ""
+    },
+    "circle-line": {
+      "name": "Circle Line harbour cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 40.7614,
+      "lon": -74.0021,
+      "price": 40,
+      "price_text": "≈ USD 35–45; check online",
+      "hours": "Several departures daily; check on the day",
+      "tip": "A boat tour that circles Manhattan and passes the Statue of Liberty. Sit on the open deck.",
+      "source": "https://www.circleline.com/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of art and old streets, kept to one or two areas so you walk less and see more.",
+      "days": [
+        {
+          "title": "Museum morning, Midtown afternoon",
+          "stops": [
+            {
+              "place": "met-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Start at opening. Check the day's hours first. Allow 3 hours and pick two wings."
+            },
+            {
+              "place": "central-park",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Walk south through the park. Grab a snack cart lunch on the way."
+            },
+            {
+              "place": "nypl",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "The main branch reading room is free. Check the day's hours."
+            },
+            {
+              "place": "grand-central",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Look up at the ceiling in the main hall."
+            },
+            {
+              "place": "st-patricks",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Five minutes on foot. Check mass times on the day."
+            },
+            {
+              "place": "broadway",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Book ahead. Evening shows usually start around 19:00–20:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A walking day of markets, village streets and a proper dinner, with snacks in between.",
+      "days": [
+        {
+          "title": "Market, village and a big dinner",
+          "stops": [
+            {
+              "place": "chelsea-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Come hungry. Usually open daily, roughly 07:00–21:00; check on the day."
+            },
+            {
+              "place": "high-line",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Stairs up from near the market. Hours vary by season."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Walk south. Pizza slices and coffee shops are everywhere. Prices vary."
+            },
+            {
+              "place": "flatiron",
+              "at": "14:30",
+              "minutes": 15,
+              "note": "A quick photo from outside. Free."
+            },
+            {
+              "place": "times-square",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Pass through on the way to dinner. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Manhattan"
+    },
+    {
+      "id": "day-views",
+      "length": "day",
+      "style": "views",
+      "nights": 0,
+      "for": "Skyline from the water, a bridge walk and one tall deck at sunset.",
+      "days": [
+        {
+          "title": "Harbour, bridge and a rooftop",
+          "stops": [
+            {
+              "place": "staten-island-ferry",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Free. Runs 24 hours, roughly every 30 minutes. Stay on for the return trip."
+            },
+            {
+              "place": "wall-street",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Walk the old streets. Free."
+            },
+            {
+              "place": "memorial-911",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Memorial is open daily. Museum hours vary; check on the day."
+            },
+            {
+              "place": "brooklyn-bridge",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Walk from the Manhattan side. Lunch near the Brooklyn end."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk from the bridge. Best at sunset."
+            },
+            {
+              "place": "empire-state",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Book a sunset slot ahead. Open daily, roughly 09:00–midnight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Manhattan"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the big museums and old downtown in one tight day and a half.",
+      "days": [
+        {
+          "title": "Arrive, Midtown icons and a show",
+          "stops": [
+            {
+              "place": "grand-central",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Start under the painted ceiling. Easy from most Midtown hotels."
+            },
+            {
+              "place": "nypl",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Five minutes on foot along 42nd Street."
+            },
+            {
+              "place": "st-patricks",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Across the street. Quiet inside, so keep voices low."
+            },
+            {
+              "place": "moma",
+              "at": "15:30",
+              "minutes": 150,
+              "note": "A short walk south. Check the day's hours before you go."
+            },
+            {
+              "place": "broadway",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Book tickets ahead. Eat before the show, around 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Upper West Side museums, then fly",
+          "stops": [
+            {
+              "place": "met-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go early on a weekday. Pick two or three galleries, not all of it."
+            },
+            {
+              "place": "central-park",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk out the back of the Met into the park. Grab lunch nearby."
+            },
+            {
+              "place": "amnh",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "A short walk or a quick bus ride. Check the day's hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around markets, slices and a proper dinner.",
+      "days": [
+        {
+          "title": "Arrive, downtown markets and the village",
+          "stops": [
+            {
+              "place": "chelsea-market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Busy at peak times."
+            },
+            {
+              "place": "high-line",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Entrance is steps from the market. Check seasonal hours."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Wander the side streets. Coffee and a pastry stop."
+            },
+            {
+              "place": "times-square",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Quick look at the lights on the way to dinner."
+            }
+          ]
+        },
+        {
+          "title": "Brooklyn food and views, then fly",
+          "stops": [
+            {
+              "place": "smorgasburg",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Weekends in season only. Check dates and location on the day."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short ride away. Great skyline view across the water."
+            },
+            {
+              "place": "brooklyn-bridge",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Walk back toward Manhattan. Wear comfortable shoes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Manhattan"
+    },
+    {
+      "id": "1n-views",
+      "length": "1n",
+      "style": "views",
+      "nights": 1,
+      "for": "Travellers who want skyline decks, bridges and the free ferry ride.",
+      "days": [
+        {
+          "title": "Arrive, harbour and downtown",
+          "stops": [
+            {
+              "place": "staten-island-ferry",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Free ride past the Statue of Liberty. Stay on for the return."
+            },
+            {
+              "place": "wall-street",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "A short walk from the ferry terminal."
+            },
+            {
+              "place": "memorial-911",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Nearby. Museum hours vary, so check on the day."
+            },
+            {
+              "place": "one-wtc",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon on a clear day gives the best light."
+            }
+          ]
+        },
+        {
+          "title": "Midtown decks, then fly",
+          "stops": [
+            {
+              "place": "top-of-the-rock",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning is quieter. Check the day's hours."
+            },
+            {
+              "place": "central-park",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk south through the park. Lunch nearby."
+            },
+            {
+              "place": "summit-vanderbilt",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Book a slot ahead. Glass floors and mirrors."
+            },
+            {
+              "place": "chrysler",
+              "at": "15:15",
+              "minutes": 15,
+              "note": "View the spire from the street. No entry inside."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums and old downtown, with one Broadway night.",
+      "days": [
+        {
+          "title": "Arrive, Midtown icons",
+          "stops": [
+            {
+              "place": "grand-central",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Start under the painted ceiling. Easy from most Midtown hotels."
+            },
+            {
+              "place": "chrysler",
+              "at": "13:45",
+              "minutes": 15,
+              "note": "Look up from the street corner. No entry inside."
+            },
+            {
+              "place": "st-patricks",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Quiet in the afternoon. Check mass times on the day."
+            },
+            {
+              "place": "moma",
+              "at": "15:15",
+              "minutes": 150,
+              "note": "Usually open daily; check the day's hours. Closed some days, so confirm first."
+            },
+            {
+              "place": "times-square",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Walk through after dinner. Busy but quick."
+            }
+          ]
+        },
+        {
+          "title": "Downtown history and a show",
+          "stops": [
+            {
+              "place": "memorial-911",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is calmer. Museum hours vary, check on the day."
+            },
+            {
+              "place": "wall-street",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Short walk past the Stock Exchange and the Charging Bull."
+            },
+            {
+              "place": "staten-island-ferry",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Free ride past the Statue of Liberty. Stay on for the return trip."
+            },
+            {
+              "place": "chelsea-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop. Roughly 07:00–21:00, check on the day."
+            },
+            {
+              "place": "broadway",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book tickets ahead. Most shows start around 19:00–20:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, neighbourhood walks and one big steakhouse or show night.",
+      "days": [
+        {
+          "title": "Village and Chelsea tastes",
+          "stops": [
+            {
+              "place": "greenwich-village",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Wander the side streets. Grab a slice or a bagel as you go."
+            },
+            {
+              "place": "flatiron",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Photo from the street. No entry inside."
+            },
+            {
+              "place": "chelsea-market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch from the food stalls. Check hours on the day."
+            },
+            {
+              "place": "high-line",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the old rail line above the streets. Hours vary by season."
+            },
+            {
+              "place": "times-square",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Evening lights, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Brooklyn markets and a show",
+          "stops": [
+            {
+              "place": "brooklyn-bridge",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Walk to Brooklyn early to beat the crowds."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Promenade walk with skyline views."
+            },
+            {
+              "place": "smorgasburg",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Weekend lunch. Check dates and locations on the day."
+            },
+            {
+              "place": "broadway",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening show. Book ahead and eat before or after."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Manhattan"
+    },
+    {
+      "id": "2n-views",
+      "length": "2n",
+      "style": "views",
+      "nights": 2,
+      "for": "Skyline chasers: decks, bridges and the free ferry, timed for sunset.",
+      "days": [
+        {
+          "title": "Harbour and downtown views",
+          "stops": [
+            {
+              "place": "statue-liberty",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Book the first ferry. Ferries run morning to late afternoon; check the day's schedule."
+            },
+            {
+              "place": "ellis-island",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Same ferry trip. Usually included in the ticket."
+            },
+            {
+              "place": "one-wtc",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Clear-day views. Observatory hours vary, check on the day."
+            },
+            {
+              "place": "brooklyn-bridge",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset walk toward Brooklyn."
+            }
+          ]
+        },
+        {
+          "title": "Midtown decks and Central Park",
+          "stops": [
+            {
+              "place": "central-park",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning walk. Open 06:00–01:00."
+            },
+            {
+              "place": "top-of-the-rock",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Good daytime view of the Empire State Building. Check hours on the day."
+            },
+            {
+              "place": "rockefeller",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Plaza walk. Ice rink only in winter."
+            },
+            {
+              "place": "summit-vanderbilt",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Book sunset slot ahead. Hours vary, check on the day."
+            },
+            {
+              "place": "empire-state",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "After-dark lights. Open roughly 09:00–midnight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big museums, downtown history and one Broadway night.",
+      "days": [
+        {
+          "title": "Arrive and downtown history",
+          "stops": [
+            {
+              "place": "memorial-911",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start here after checking in. The memorial is free and open daily."
+            },
+            {
+              "place": "wall-street",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short walk south. See the Stock Exchange and the Charging Bull."
+            },
+            {
+              "place": "staten-island-ferry",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Free ride past the Statue of Liberty. Stay on at Staten Island and come back."
+            },
+            {
+              "place": "chelsea-market",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Early dinner under the old factory roof. About 20 minutes by subway."
+            }
+          ]
+        },
+        {
+          "title": "Statue of Liberty and Ellis Island",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "statue-liberty",
+                "ellis-island"
+              ],
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Book ahead. Security lines are long, so arrive early."
+            },
+            {
+              "place": "one-wtc",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Observatory on a clear day. Check the day's hours."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner. Try a pizza slice and a coffee."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Broadway",
+          "stops": [
+            {
+              "place": "met-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go at opening on a weekday. Pick two or three galleries, not all of them."
+            },
+            {
+              "place": "central-park",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Walk south through the park after lunch. The Met is on its edge."
+            },
+            {
+              "place": "times-square",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Quick look, then dinner nearby before the show."
+            },
+            {
+              "place": "broadway",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book tickets weeks ahead. Some shows have cheaper same-day seats."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, neighbourhoods and a good dinner.",
+      "days": [
+        {
+          "title": "Downtown markets and the High Line",
+          "stops": [
+            {
+              "place": "chelsea-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch stop. Many small stalls, so share a few things."
+            },
+            {
+              "place": "high-line",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Walk north from the market. Hours vary by season, check on the day."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Coffee, bakeries and quiet side streets."
+            },
+            {
+              "place": "memorial-911",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short subway ride south. Free to walk around."
+            },
+            {
+              "place": "staten-island-ferry",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Free sunset ride on the water before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Brooklyn food day",
+          "stops": [
+            {
+              "place": "brooklyn-bridge",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Walk from Manhattan to Brooklyn early, before the crowds."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Promenade walk with skyline views. Then find brunch nearby."
+            },
+            {
+              "place": "smorgasburg",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Weekend lunch. Check dates and locations on the day."
+            },
+            {
+              "place": "times-square",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Back in Midtown for the evening lights."
+            },
+            {
+              "place": "broadway",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Optional show. Book ahead or try same-day seats."
+            }
+          ]
+        },
+        {
+          "title": "Midtown classics and a steakhouse night",
+          "stops": [
+            {
+              "place": "grand-central",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "See the main hall and the ceiling. Weekday mornings are busiest."
+            },
+            {
+              "place": "nypl",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Five minutes on foot. The main reading room is worth a look."
+            },
+            {
+              "place": "st-patricks",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Across the street. Free entry, quiet inside."
+            },
+            {
+              "place": "rockefeller",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then walk the plaza."
+            },
+            {
+              "place": "empire-state",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Go up near sunset. Book ahead to skip the ticket line."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "3n-views",
+      "length": "3n",
+      "style": "views",
+      "nights": 3,
+      "for": "Visitors who want skyline decks, bridges and water trips, timed for sunset.",
+      "days": [
+        {
+          "title": "Harbour and downtown towers",
+          "stops": [
+            {
+              "place": "staten-island-ferry",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Free ride past the Statue of Liberty. Go on a clear day."
+            },
+            {
+              "place": "wall-street",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Short walk from the ferry terminal."
+            },
+            {
+              "place": "memorial-911",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Free memorial. Lunch nearby after."
+            },
+            {
+              "place": "one-wtc",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Highest deck downtown. Late afternoon on a clear day is best."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset over the skyline from the promenade. About 20 minutes by subway."
+            }
+          ]
+        },
+        {
+          "title": "Midtown decks",
+          "stops": [
+            {
+              "place": "central-park",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning walk. Belvedere Castle has a free view over the park."
+            },
+            {
+              "place": "chrysler",
+              "at": "12:00",
+              "minutes": 15,
+              "note": "View from the street only. Look up from Lexington Avenue."
+            },
+            {
+              "place": "grand-central",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Two blocks away. Lunch in the food hall."
+            },
+            {
+              "place": "top-of-the-rock",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dusk is best. You look straight at the Empire State Building."
+            },
+            {
+              "place": "times-square",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Walk south after dark for the lights."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, cruise and a last view",
+          "stops": [
+            {
+              "place": "brooklyn-bridge",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Walk it early, before the crowds and the heat."
+            },
+            {
+              "place": "circle-line",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Harbour cruise from Midtown. Check departure times on the day."
+            },
+            {
+              "place": "high-line",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk south to Chelsea Market for a snack."
+            },
+            {
+              "place": "empire-state",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Last skyline stop. Book ahead for the sunset slot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the big museums, downtown history and one Broadway night.",
+      "days": [
+        {
+          "title": "Arrive and downtown history",
+          "stops": [
+            {
+              "place": "memorial-911",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Outdoor memorial is free. Museum hours vary, check on the day."
+            },
+            {
+              "place": "wall-street",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short walk from the memorial. See the Stock Exchange from outside."
+            },
+            {
+              "place": "staten-island-ferry",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Free ride with harbour views. Stay on for the return trip."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner. Take the subway uptown after."
+            }
+          ]
+        },
+        {
+          "title": "Midtown icons",
+          "stops": [
+            {
+              "place": "grand-central",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Quiet on weekday mornings. Look up in the main hall."
+            },
+            {
+              "place": "nypl",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Five minutes on foot. Check the day's hours."
+            },
+            {
+              "place": "st-patricks",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Across the street from Rockefeller Center. Check mass times."
+            },
+            {
+              "place": "moma",
+              "at": "11:45",
+              "minutes": 150,
+              "note": "Book ahead. A cafe inside works for lunch."
+            },
+            {
+              "place": "times-square",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Walk through on the way to the theater."
+            },
+            {
+              "place": "broadway",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book tickets well ahead. Some shows have matinees."
+            }
+          ]
+        },
+        {
+          "title": "Upper West Side museums",
+          "stops": [
+            {
+              "place": "central-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Enter from the west side and walk toward the museums."
+            },
+            {
+              "place": "met-museum",
+              "at": "11:15",
+              "minutes": 180,
+              "note": "Check the day's hours. Closed on some weekdays, so confirm."
+            },
+            {
+              "place": "guggenheim",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Short walk south on Fifth Avenue. Check the day's hours."
+            }
+          ]
+        },
+        {
+          "title": "Statue, Ellis and Brooklyn",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "statue-liberty",
+                "ellis-island"
+              ],
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Book the first ferry. Security lines are long later."
+            },
+            {
+              "place": "chelsea-market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Roughly 20 minutes by subway."
+            },
+            {
+              "place": "high-line",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Entrance near Chelsea Market. Hours vary by season."
+            },
+            {
+              "place": "brooklyn-bridge",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Walk part of the bridge for sunset views."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want markets, neighbourhood walks and a proper steakhouse night.",
+      "days": [
+        {
+          "title": "Downtown markets and streets",
+          "stops": [
+            {
+              "place": "chelsea-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Busy at weekends."
+            },
+            {
+              "place": "high-line",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk off lunch. Hours vary by season."
+            },
+            {
+              "place": "flatiron",
+              "at": "13:30",
+              "minutes": 15,
+              "note": "Photo stop from outside."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Afternoon walk. Try a pizza slice or a bakery."
+            },
+            {
+              "place": "memorial-911",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Short subway ride south. Free outdoor memorial."
+            }
+          ]
+        },
+        {
+          "title": "Brooklyn food day",
+          "stops": [
+            {
+              "place": "brooklyn-bridge",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Walk across from Manhattan in the morning."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Promenade walk with skyline views."
+            },
+            {
+              "place": "smorgasburg",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Weekend lunch. Check dates and locations on the day."
+            },
+            {
+              "place": "times-square",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Evening lights before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Midtown and a show",
+          "stops": [
+            {
+              "place": "grand-central",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "See the hall, then grab coffee nearby."
+            },
+            {
+              "place": "st-patricks",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Check mass times on the day."
+            },
+            {
+              "place": "moma",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Cafe lunch inside. Book ahead."
+            },
+            {
+              "place": "rockefeller",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Plaza walk. Ice rink only in winter."
+            },
+            {
+              "place": "broadway",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Eat before the show."
+            }
+          ]
+        },
+        {
+          "title": "Statue trip and farewell dinner",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "statue-liberty",
+                "ellis-island"
+              ],
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Take the early ferry. Bring snacks."
+            },
+            {
+              "place": "wall-street",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short walk from the ferry terminal."
+            },
+            {
+              "place": "staten-island-ferry",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Free harbour ride. Good views on a clear day."
+            },
+            {
+              "place": "greenwich-village",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Farewell dinner in the neighbourhood."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Manhattan"
+    },
+    {
+      "id": "4n-views",
+      "length": "4n",
+      "style": "views",
+      "nights": 4,
+      "for": "Skyline chasers: decks, bridges, ferries and sunset spots.",
+      "days": [
+        {
+          "title": "Downtown and the harbour",
+          "stops": [
+            {
+              "place": "staten-island-ferry",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Free ride past the Statue. Go on a clear day."
+            },
+            {
+              "place": "wall-street",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short walk from the terminal."
+            },
+            {
+              "place": "memorial-911",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Free outdoor memorial. Lunch nearby."
+            },
+            {
+              "place": "one-wtc",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Observatory. Go on a clear afternoon. Check the day's hours."
+            },
+            {
+              "place": "brooklyn-bridge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset walk. Subway to the Brooklyn side if you prefer."
+            }
+          ]
+        },
+        {
+          "title": "Midtown decks",
+          "stops": [
+            {
+              "place": "chrysler",
+              "at": "10:00",
+              "minutes": 15,
+              "note": "View from outside. Best in daylight."
+            },
+            {
+              "place": "grand-central",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "rockefeller",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Plaza walk. Lunch nearby."
+            },
+            {
+              "place": "top-of-the-rock",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dusk is best. Book a time slot ahead."
+            },
+            {
+              "place": "times-square",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Evening lights on the walk back."
+            }
+          ]
+        },
+        {
+          "title": "Park, museum and Empire State",
+          "stops": [
+            {
+              "place": "central-park",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning walk. Open from 06:00."
+            },
+            {
+              "place": "met-museum",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Check the day's hours. Lunch in the cafe."
+            },
+            {
+              "place": "empire-state",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset or after dark. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Statue and Brooklyn views",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "statue-liberty",
+                "ellis-island"
+              ],
+              "at": "08:30",
+              "minutes": 240,
+              "note": "First ferry is best. Check the day's schedule."
+            },
+            {
+              "place": "high-line",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch near Chelsea, then walk the park."
+            },
+            {
+              "place": "brooklyn-heights",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Promenade at sunset. Subway to Brooklyn."
+            },
+            {
+              "place": "circle-line",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Optional swap on a clear day. Check departure times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Met, MoMA, Broadway and the old downtown streets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Bagels, pizza slices, Chinatown and a steakhouse night."
+    },
+    {
+      "id": "views",
+      "label": "Views",
+      "blurb": "Skyline decks, bridges and the Staten Island Ferry."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Midtown",
+      "range": [
+        180,
+        550
+      ],
+      "why": "Walk to Times Square, Central Park and Grand Central. Best for first-timers and short trips. Noisy and busy.",
+      "center": [
+        40.7549,
+        -73.984
+      ]
+    },
+    {
+      "area": "Lower Manhattan",
+      "range": [
+        170,
+        500
+      ],
+      "why": "Near the Statue of Liberty ferry, Wall Street and the Brooklyn Bridge. Quiet at night on weekends.",
+      "center": [
+        40.7075,
+        -74.0105
+      ]
+    },
+    {
+      "area": "Upper West Side",
+      "range": [
+        160,
+        450
+      ],
+      "why": "Next to Central Park and the Natural History Museum. Calmer, family-friendly, good subway links.",
+      "center": [
+        40.787,
+        -73.9754
+      ]
+    },
+    {
+      "area": "Brooklyn",
+      "range": [
+        140,
+        420
+      ],
+      "why": "Brooklyn Bridge Park, DUMBO and cheaper rooms. 20–30 minutes to Midtown by subway.",
+      "center": [
+        40.7033,
+        -73.9881
+      ]
+    }
+  ],
+  "food": [
+    "Start with a New York breakfast: a bagel with cream cheese and lox, or a bodega egg sandwich, about $8–15.",
+    "Grab a pizza slice for $4–6. Sit-down dinners run $30–60 a person before drinks.",
+    "Chinatown and Flushing have the best cheap eats: dumplings, noodles and roast meats for $10–20.",
+    "Food halls and markets (Chelsea Market, Essex Market) let a group split up and eat cheaply.",
+    "Book popular dinner spots a few days ahead. Many places add tax and tip on top of menu prices."
+  ],
+  "more_time": [
+    "Swap a Midtown day for Brooklyn: walk the Brooklyn Bridge, then DUMBO and Brooklyn Bridge Park.",
+    "Add a half-day at the American Museum of Natural History or the Met. Both need 3–4 hours.",
+    "Take the free Staten Island Ferry for skyline and Statue of Liberty views, then ride back."
+  ]
+}

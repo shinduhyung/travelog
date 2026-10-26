@@ -1,0 +1,582 @@
+{
+  "city": "San Francisco",
+  "checked": "October 2026",
+  "intro_line": "Fog, hills, and a bay that never stops moving.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Union Square",
+        "Fisherman's Wharf",
+        "SoMa",
+        "Mission District"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Union Square",
+        "Fisherman's Wharf",
+        "SoMa",
+        "Mission District"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Union Square",
+        "Fisherman's Wharf",
+        "SoMa",
+        "Mission District"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Union Square",
+        "Fisherman's Wharf",
+        "SoMa",
+        "Mission District"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Union Square",
+        "Fisherman's Wharf",
+        "SoMa",
+        "Mission District"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 14,
+        "low": 8,
+        "rain_days": 10,
+        "note": "Jan: cool and wet, highs near 14°C. Pack a rain jacket and layers."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 8,
+        "note": "Feb: still wet, highs around 15°C. Indoor sights are a good bet."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 10,
+        "note": "Mar: rain lingers, highs near 15°C. Bring an umbrella."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 5,
+        "note": "Apr: drier and milder, highs around 16°C. Good walking weather."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 2,
+        "note": "May: mostly dry, highs near 17°C. Fog can roll in by evening."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 0,
+        "note": "Jun: dry but cool, highs around 19°C. Mornings are often foggy."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 0,
+        "note": "Jul: dry and mild, highs near 19°C. Fog is common near the coast."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 0,
+        "note": "Aug: similar to July, highs around 20°C. Warmest evenings inland."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 1,
+        "note": "Sep: often the sunniest month, highs near 21°C. Great for outdoor plans."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 3,
+        "note": "Oct: warm and mostly dry, highs around 21°C. A few showers late in the month."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 7,
+        "note": "Nov: cooler and wetter, highs near 16°C. Carry a rain layer."
+      },
+      {
+        "high": 13,
+        "low": 8,
+        "rain_days": 10,
+        "note": "Dec: cool and rainy, highs around 13°C. Pack warm layers and an umbrella."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.85
+    ],
+    "nature": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      0.85,
+      0.85,
+      0.85,
+      1,
+      0.95,
+      0.7,
+      0.6
+    ],
+    "nightlife": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.6
+    ]
+  },
+  "places": {
+    "golden-gate-bridge": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning or sunset; clearest in autumn",
+      "area": "Fisherman's Wharf",
+      "popularity": 5
+    },
+    "alcatraz": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning departure; bring layers",
+      "area": "Fisherman's Wharf",
+      "popularity": 5
+    },
+    "fishermans-wharf": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning before crowds, or early evening",
+      "area": "Fisherman's Wharf",
+      "popularity": 5
+    },
+    "painted-ladies": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning light or golden hour",
+      "area": "SoMa",
+      "popularity": 4
+    },
+    "palace-fine-arts": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Fisherman's Wharf",
+      "popularity": 4
+    },
+    "alcatraz-ferry": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning sailings are calmest",
+      "area": "Fisherman's Wharf",
+      "popularity": 5
+    },
+    "childrens-fairyland": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday mornings",
+      "area": "Fisherman's Wharf",
+      "popularity": 3
+    },
+    "city-lights": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon or evening",
+      "area": "Fisherman's Wharf",
+      "popularity": 3
+    },
+    "bay-cruise": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Midday for clearer views; bring a jacket",
+      "area": "Fisherman's Wharf",
+      "popularity": 4
+    },
+    "sf-bay": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Fisherman's Wharf",
+      "popularity": 4
+    },
+    "flower-carrier": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "SoMa",
+      "popularity": 3
+    },
+    "uc-berkeley": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Fisherman's Wharf",
+      "popularity": 3
+    },
+    "ferry-building": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Saturday morning",
+      "area": "SoMa",
+      "popularity": 4
+    },
+    "twin-peaks": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset on a clear day",
+      "area": "SoMa",
+      "popularity": 4
+    },
+    "cable-car": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning to avoid queues",
+      "area": "Union Square",
+      "popularity": 5
+    },
+    "chinatown-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Union Square",
+      "popularity": 4
+    },
+    "mission-murals": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Mission District",
+      "popularity": 4
+    },
+    "dolores-park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Mission District",
+      "popularity": 4
+    },
+    "union-square": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Union Square",
+      "popularity": 4
+    },
+    "lands-end": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Fisherman's Wharf",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers Alcatraz, the Golden Gate and a food neighbourhood without rushing; add a day for redwoods or the coast."
+  },
+  "airports": [
+    {
+      "code": "SFO",
+      "name": "San Francisco International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 18 km south of the centre.",
+      "options": [
+        {
+          "mode": "BART",
+          "to": "Downtown SF stations",
+          "price": "$8.95",
+          "time": "30-40 min",
+          "note": "Trains every 15-20 min; AirTrain links terminals."
+        },
+        {
+          "mode": "SamTrans bus 292",
+          "to": "Downtown SF",
+          "price": "$2",
+          "time": "45-60 min",
+          "note": "Cheapest option; slower with stops."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown SF",
+          "price": "$35-60",
+          "time": "25-40 min",
+          "note": "Pickup at departures level, not arrivals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown SF",
+          "price": "$40-60",
+          "time": "25-40 min",
+          "note": "Metered; can exceed $60 in traffic."
+        }
+      ]
+    },
+    {
+      "code": "OAK",
+      "name": "Metropolitan Oakland International Airport",
+      "primary": false,
+      "note": "East Bay airport, about 18 km from the centre; often fog-free.",
+      "options": [
+        {
+          "mode": "BART plus people mover",
+          "to": "Downtown SF",
+          "price": "$10.20",
+          "time": "35-50 min",
+          "note": "Connector costs $6; total deducted from Clipper."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown SF",
+          "price": "$40-70",
+          "time": "25-45 min",
+          "note": "Pickup at signposted app rides area."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown SF",
+          "price": "$60-80",
+          "time": "25-45 min",
+          "note": "More expensive than SFO taxis."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: San Francisco",
+      "https://en.wikivoyage.org/wiki/San%20Francisco"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Walk neighbourhoods and use Muni or BART for longer hops; skip a rental car in town.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "BART is the fast regional metro; Muni Metro covers the city. Buy a Clipper card to ride both."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Muni buses fill the gaps; use the same Clipper card. Slow at peak times."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber and Lyft are widely used and handy for late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is costly; skip a rental car in town."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The best way to see neighbourhoods, but hills are steep. Wear good shoes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries from the Ferry Building reach Sausalito, Tiburon and Alcatraz. Pay with Clipper."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Caltrain runs regional services; use the Clipper card."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild and Mediterranean-style: cool, wet winters and dry, foggy summers. Rarely hot or freezing.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: September to October",
+        "text": "Warmest and driest months, highs near 21°C. Ideal for walking and the coast."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winters (Dec–Mar)",
+        "text": "Around 8–10 rain days a month and highs of 13–15°C. Bring a waterproof jacket."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Summer fog",
+        "text": "June to August is dry but cool and foggy, highs 19–20°C. The coast is chillier than inland."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layer up",
+        "text": "Mornings and evenings are cool year-round. A light jacket helps every month."
+      },
+      {
+        "icon": "💨",
+        "title": "Wind on the bridge and coast",
+        "text": "The Golden Gate and beaches are windy and colder than downtown. Wear a windproof layer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes for hills, layers, a rain jacket in winter, and sunglasses for fog-free afternoons."
+      }
+    ]
+  }
+}

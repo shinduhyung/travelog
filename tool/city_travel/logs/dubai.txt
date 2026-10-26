@@ -1,0 +1,22 @@
+$ deepseek_city.py Dubai --stage frame
+Dubai: frame
+  tokens in 2450 out 1727
+  repaired JSON
+
+$ deepseek_city.py Dubai --stage plans
+Dubai: plans
+  plans for day
+  tokens in 2742 out 914
+  plans for 1n
+  tokens in 2743 out 1322
+  plans for 2n
+  tokens in 2743 out 1624
+  plans for 3n
+  tokens in 2748 out 1440
+  plans for 4n
+  tokens in 2743 out 1911
+
+$ merge_city.py Dubai
+Dubai: 27 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/dubai.json and planner/dubai.json
+

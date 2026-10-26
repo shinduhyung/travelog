@@ -1,0 +1,1735 @@
+{
+  "city": "Tampa",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Tampa rewards visitors with waterfront parks, historic streetcars, and easy access to Gulf beaches. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 27.896,
+      "west": -82.4985,
+      "north": 28.0921,
+      "east": -82.3591,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 2.5,
+      "flag_airport": 3.5,
+      "per_km": 2.0,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "TECO Line Streetcar is fare-free and links downtown to Ybor City, roughly every 20 min.",
+      "HART buses cover Hillsborough County; local fare about $1.75, commuter express about $2.75.",
+      "PSTA buses serve Pinellas County and connect the airport to downtown Tampa.",
+      "Ride apps like Uber and Lyft operate; taxis are metered and best booked by app or phone.",
+      "Driving is convenient but rush hours (7:30-9:30AM, 3:30-7:30PM) are slow, especially on I-275.",
+      "Downtown is walkable; bikes and scooters work for short trips, but summer heat is strong."
+    ],
+    "sources": []
+  },
+  "places": {
+    "busch_gardens": {
+      "name": "Busch Gardens Tampa Bay",
+      "landmark": "Busch Gardens Tampa Bay",
+      "kind": "park",
+      "lat": 28.0372,
+      "lon": -82.4194,
+      "price": 110,
+      "price_text": "≈ $90–140 one-day ticket; check online for date pricing and deals",
+      "hours": "Usually 10:00–18:00, later in summer; check the day's calendar",
+      "tip": "Buy tickets online in advance and arrive at opening to ride the big coasters before lines build.",
+      "source": "https://buschgardens.com/tampa/"
+    },
+    "florida_aquarium": {
+      "name": "The Florida Aquarium",
+      "landmark": "The Florida Aquarium",
+      "kind": "museum",
+      "lat": 27.9442,
+      "lon": -82.4449,
+      "price": 40,
+      "price_text": "≈ $35–45 adult; cheaper online, children less",
+      "hours": "Daily roughly 09:30–17:00; check on the day",
+      "tip": "Book a timed ticket online and go early; the touch tanks and wetlands gallery are the highlights.",
+      "source": "https://www.flaquarium.org/"
+    },
+    "checkers": {
+      "name": "Checkers / Rally's",
+      "landmark": "Checkers / Rally's",
+      "kind": "food",
+      "lat": 27.9506,
+      "lon": -82.4572,
+      "price": 10,
+      "price_text": "≈ $6–12 per person for burgers and fries",
+      "hours": "Varies by branch; most drive-thrus open late",
+      "tip": "A cheap, fast drive-thru burger stop; there are several branches around Tampa, so pick the one nearest you.",
+      "source": "https://www.checkers.com/"
+    },
+    "geopoliticus": {
+      "name": "Geopoliticus Child Watching the Birth of the New Man",
+      "landmark": "Geopoliticus Child Watching the Birth of the New Man",
+      "kind": "sight",
+      "lat": 27.7659,
+      "lon": -82.6315,
+      "price": 25,
+      "price_text": "≈ $20–30 museum admission; check current price",
+      "hours": "Usually Tue–Sun daytime; check on the day",
+      "tip": "This Dalí painting hangs in The Dalí Museum in St. Petersburg; allow extra time for the rest of the collection.",
+      "source": "https://thedali.org/"
+    },
+    "riverwalk": {
+      "name": "Tampa Riverwalk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 27.9445,
+      "lon": -82.4595,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Open 24 hours; best in daylight and early evening",
+      "tip": "Walk the 2.6-mile path between Channelside and downtown; it links the aquarium, museums and parks.",
+      "source": "https://www.tampariverwalk.com/"
+    },
+    "ybor_walk": {
+      "name": "Ybor City historic district walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 27.9608,
+      "lon": -82.4376,
+      "price": 0,
+      "price_text": "Free to wander; food and drinks extra",
+      "hours": "Streets always open; shops and bars vary",
+      "tip": "Go by day for the cigar shops and brick streets, and stay into the evening for bars and live music.",
+      "source": "https://www.yborcityonline.com/"
+    },
+    "tampa_theatre": {
+      "name": "Tampa Theatre",
+      "landmark": null,
+      "kind": "show",
+      "lat": 27.9506,
+      "lon": -82.4586,
+      "price": 15,
+      "price_text": "≈ $10–20 depending on the film or event",
+      "hours": "Showtimes vary; box office daytime",
+      "tip": "Catch a classic film in this 1926 movie palace; the interior alone is worth the ticket.",
+      "source": "https://www.tampatheatre.org/"
+    },
+    "armature_works": {
+      "name": "Armature Works food hall",
+      "landmark": null,
+      "kind": "food",
+      "lat": 27.9606,
+      "lon": -82.4646,
+      "price": 15,
+      "price_text": "≈ $10–20 per dish",
+      "hours": "Roughly 07:00–22:00; check on the day",
+      "tip": "Many stalls under one roof plus a riverfront lawn; good for groups with different tastes.",
+      "source": "https://www.armatureworks.com/"
+    },
+    "tampa_museum": {
+      "name": "Tampa Museum of Art",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 27.9487,
+      "lon": -82.4618,
+      "price": 15,
+      "price_text": "≈ $10–20 adult; check current price and free days",
+      "hours": "Usually Tue–Sun; closed Monday",
+      "tip": "Small, calm collection on the river; pair it with a Riverwalk stroll.",
+      "source": "https://www.tampamuseum.org/"
+    },
+    "sparkman_wharf": {
+      "name": "Sparkman Wharf",
+      "landmark": null,
+      "kind": "food",
+      "lat": 27.9429,
+      "lon": -82.4459,
+      "price": 15,
+      "price_text": "≈ $10–20 per dish",
+      "hours": "Varies by vendor; busiest evenings and weekends",
+      "tip": "Outdoor container food stalls and a lawn next to the aquarium; go for sunset and live music.",
+      "source": "https://www.sparkmanwharf.com/"
+    },
+    "bayshore": {
+      "name": "Bayshore Boulevard walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 27.9165,
+      "lon": -82.4824,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Long waterfront sidewalk with skyline views; go early morning to beat the heat and the joggers.",
+      "source": ""
+    },
+    "hyde_park": {
+      "name": "Hyde Park Village",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 27.9362,
+      "lon": -82.4827,
+      "price": 0,
+      "price_text": "Free to browse; food and drink extra",
+      "hours": "Shops roughly 10:00–19:00; restaurants later",
+      "tip": "Leafy shopping streets and cafés; a relaxed break between downtown sights.",
+      "source": "https://www.hydeparkvillage.com/"
+    },
+    "zoo_tampa": {
+      "name": "ZooTampa at Lowry Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 27.9872,
+      "lon": -82.4702,
+      "price": 35,
+      "price_text": "≈ $30–40 adult; cheaper online",
+      "hours": "Daily roughly 09:30–17:00; check on the day",
+      "tip": "Good family half-day with manatees and Florida wildlife; bring sun protection.",
+      "source": "https://zootampa.org/"
+    },
+    "clearwater_beach": {
+      "name": "Clearwater Beach day trip",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 27.9772,
+      "lon": -82.8275,
+      "price": 0,
+      "price_text": "Free beach; parking and food extra",
+      "hours": "Beach open 24 hours; lifeguards daytime",
+      "tip": "About 45 minutes west of Tampa; arrive early for parking and stay for the sunset at Pier 60.",
+      "source": "https://www.myclearwater.com/"
+    },
+    "cuban_sandwich": {
+      "name": "Cuban sandwich lunch in Ybor City",
+      "landmark": null,
+      "kind": "food",
+      "lat": 27.9615,
+      "lon": -82.4389,
+      "price": 12,
+      "price_text": "≈ $8–15 per sandwich",
+      "hours": "Most delis and cafés open lunchtime; check on the day",
+      "tip": "Order a pressed Cuban and a café con leche; the historic cigar-district spots are the classic choice.",
+      "source": ""
+    },
+    "pirate_water": {
+      "name": "Pirate Water Taxi",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 27.9425,
+      "lon": -82.4545,
+      "price": 30,
+      "price_text": "≈ $25–35 day pass; check current fare",
+      "hours": "Roughly late morning to evening; seasonal",
+      "tip": "Hop-on hop-off boat linking downtown, Channelside and Ybor; a cheap way to see the skyline from the water.",
+      "source": "https://www.piratewatertaxi.com/"
+    },
+    "curtis_hixon": {
+      "name": "Curtis Hixon Waterfront Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 27.9487,
+      "lon": -82.4624,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily; fountains and events vary",
+      "tip": "Green lawn on the Riverwalk with a playground and fountains; good rest stop with kids.",
+      "source": "https://www.tampagov.net/"
+    },
+    "glazer_childrens": {
+      "name": "Glazer Children's Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 27.9495,
+      "lon": -82.4616,
+      "price": 18,
+      "price_text": "≈ $15–20 per person; check current price",
+      "hours": "Usually Tue–Sun; check on the day",
+      "tip": "Hands-on indoor option for younger kids, especially on rainy or very hot days.",
+      "source": "https://glazermuseum.org/"
+    },
+    "st_pete_dali": {
+      "name": "The Dalí Museum (St. Petersburg)",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 27.7659,
+      "lon": -82.6318,
+      "price": 30,
+      "price_text": "≈ $25–35 adult; check current price",
+      "hours": "Usually daily; check on the day",
+      "tip": "Across the bay in St. Petersburg; allow half a day with the drive and the waterfront gardens.",
+      "source": "https://thedali.org/"
+    },
+    "cigar_factory": {
+      "name": "Cigar shop and rolling demo in Ybor City",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 27.9601,
+      "lon": -82.4371,
+      "price": 0,
+      "price_text": "Free to look; cigars cost extra",
+      "hours": "Shop hours vary; check on the day",
+      "tip": "Watch a roller at work and buy a souvenir; ask before taking photos.",
+      "source": ""
+    },
+    "sunday_market": {
+      "name": "Tampa Downtown Market (weekend)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 27.9501,
+      "lon": -82.4591,
+      "price": 0,
+      "price_text": "Free entry; food and goods extra",
+      "hours": "Weekend mornings; confirm dates on the day",
+      "tip": "Local produce, food stalls and crafts; check that it is running before you go.",
+      "source": ""
+    },
+    "amalie_arena": {
+      "name": "Amalie Arena event",
+      "landmark": null,
+      "kind": "show",
+      "lat": 27.9427,
+      "lon": -82.4519,
+      "price": 50,
+      "price_text": "≈ $30–150 depending on event and seat",
+      "hours": "Event times vary",
+      "tip": "Check the schedule for Lightning hockey or a concert; book ahead for weekend games.",
+      "source": "https://www.amaliearena.com/"
+    },
+    "lettuce_lake": {
+      "name": "Lettuce Lake Park boardwalk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 28.0716,
+      "lon": -82.3749,
+      "price": 2,
+      "price_text": "Small per-vehicle entry fee; check on the day",
+      "hours": "Daily daytime hours; check on the day",
+      "tip": "Flat boardwalk through cypress swamp; bring bug spray and go early for wildlife.",
+      "source": "https://www.hillsboroughcounty.org/"
+    },
+    "gasp_parilla": {
+      "name": "Columbia Restaurant, Ybor City",
+      "landmark": null,
+      "kind": "food",
+      "lat": 27.9603,
+      "lon": -82.4365,
+      "price": 30,
+      "price_text": "≈ $20–40 per person",
+      "hours": "Lunch and dinner daily; check on the day",
+      "tip": "Florida's oldest restaurant; try the Cuban sandwich or the 1905 salad, and book for dinner.",
+      "source": "https://www.columbiarestaurant.com/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: Ybor City in the morning, downtown museums and the Riverwalk in the afternoon.",
+      "days": [
+        {
+          "title": "Ybor City morning, downtown afternoon",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start early before the heat. Streets are always open; shops vary."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Watch a rolling demo. Shop hours vary, so check on the day."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch in Ybor. Most delis serve at lunchtime."
+            },
+            {
+              "place": "tampa_museum",
+              "at": "14:15",
+              "minutes": 75,
+              "note": "Short drive or rideshare downtown. Usually closed Monday."
+            },
+            {
+              "place": "riverwalk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk from the museum along the water toward Curtis Hixon."
+            },
+            {
+              "place": "curtis_hixon",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Finish at the waterfront park as the light softens."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Channelside"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A eating-first day: Cuban classics in Ybor, then food halls and waterfront snacks.",
+      "days": [
+        {
+          "title": "Ybor lunch, Channelside and downtown food",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Work up an appetite. Streets open; bars and shops vary."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "The classic Tampa Cuban. Most cafés serve at lunchtime."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Optional second stop: the historic Columbia for a sit-down meal. Check hours on the day."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Rideshare to Channelside. Vendors vary; busiest in the evening."
+            },
+            {
+              "place": "armature_works",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Early dinner at the food hall. Roughly 07:00–22:00; check on the day."
+            },
+            {
+              "place": "riverwalk",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Walk off dinner along the water at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Channelside"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A full beach day west to Clearwater, with an easy evening back downtown.",
+      "days": [
+        {
+          "title": "Clearwater Beach, evening downtown",
+          "stops": [
+            {
+              "place": "clearwater_beach",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Leave early to beat traffic and grab parking. Lifeguards are daytime only."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Drive back to Channelside for a late lunch or snack. Vendors vary."
+            },
+            {
+              "place": "florida_aquarium",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Optional if you still have energy. Usually closes around 17:00, so check on the day."
+            },
+            {
+              "place": "riverwalk",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Sunset walk along the water."
+            },
+            {
+              "place": "armature_works",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Dinner at the food hall. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Channelside"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for first-timers: Ybor City's history, the Riverwalk and a museum, all close together.",
+      "days": [
+        {
+          "title": "Ybor City in the afternoon, Riverwalk at sunset",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Start at the visitor center area. Streets are always open; shops vary."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Short walk from 7th Avenue. Check shop hours on the day."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Early dinner. Book ahead on weekends."
+            },
+            {
+              "place": "riverwalk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "About 15 minutes by car or rideshare. Walk north toward Curtis Hixon for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then the aquarium or a show",
+          "stops": [
+            {
+              "place": "tampa_museum",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday. Usually Tue–Sun."
+            },
+            {
+              "place": "curtis_hixon",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Next door. Fountains and events vary."
+            },
+            {
+              "place": "armature_works",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch. Roughly 10 minutes along the Riverwalk."
+            },
+            {
+              "place": "florida_aquarium",
+              "at": "14:15",
+              "minutes": 150,
+              "note": "About 10 minutes by car. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A quick eating tour: Cuban sandwiches in Ybor, a food hall and a waterfront evening.",
+      "days": [
+        {
+          "title": "Ybor lunch and a food-hall evening",
+          "stops": [
+            {
+              "place": "cuban_sandwich",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in Ybor City. Most delis open at lunchtime; check on the day."
+            },
+            {
+              "place": "ybor_walk",
+              "at": "13:45",
+              "minutes": 120,
+              "note": "Walk off lunch along 7th Avenue."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "About 15 minutes by car. Busiest at sunset and weekends."
+            },
+            {
+              "place": "riverwalk",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Short walk. Best in early evening light."
+            }
+          ]
+        },
+        {
+          "title": "Brunch, market and a late snack",
+          "stops": [
+            {
+              "place": "armature_works",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Brunch. Roughly 07:00–22:00; check on the day."
+            },
+            {
+              "place": "sunday_market",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Weekend mornings only. Confirm dates on the day."
+            },
+            {
+              "place": "hyde_park",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "About 15 minutes by car. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "checkers",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Late lunch or snack. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One full beach day west of town, with a relaxed evening by the water.",
+      "days": [
+        {
+          "title": "Clearwater Beach day",
+          "stops": [
+            {
+              "place": "bayshore",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early walk before the drive. Open 24 hours."
+            },
+            {
+              "place": "clearwater_beach",
+              "at": "10:00",
+              "minutes": 300,
+              "note": "About 45–60 minutes by car. Lifeguards daytime. Bring sun cover and water."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Drive back and eat by the water. Vendors vary; busiest at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Riverwalk and a museum before you go",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is cooler. Open 24 hours."
+            },
+            {
+              "place": "florida_aquarium",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Indoor and good if it rains. Check hours on the day."
+            },
+            {
+              "place": "armature_works",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late lunch. Roughly 10 minutes along the Riverwalk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want Ybor City, the museums and the Riverwalk at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Riverwalk and downtown museums",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start at Curtis Hixon and walk south. Best light late afternoon."
+            },
+            {
+              "place": "curtis_hixon",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Fountains and skyline views. Events vary."
+            },
+            {
+              "place": "tampa_museum",
+              "at": "17:45",
+              "minutes": 75,
+              "note": "Usually closed Monday. Check hours on the day."
+            },
+            {
+              "place": "armature_works",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Dinner at the food hall. About 10 minutes by rideshare."
+            }
+          ]
+        },
+        {
+          "title": "Ybor City morning, then art or a show",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Quiet streets in the morning. Shops open later."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Shop hours vary; check on the day."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch in Ybor. Most cafés serve at midday."
+            },
+            {
+              "place": "geopoliticus",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Tue–Sun daytime. About 20 minutes by car."
+            },
+            {
+              "place": "tampa_theatre",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening show. Book ahead; showtimes vary."
+            }
+          ]
+        },
+        {
+          "title": "St. Pete art, then fly",
+          "stops": [
+            {
+              "place": "st_pete_dali",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Start early; the drive is about 40 minutes. Check hours on the day."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch by the water on the way back."
+            },
+            {
+              "place": "florida_aquarium",
+              "at": "15:15",
+              "minutes": 150,
+              "note": "Indoor and next door. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around Cuban sandwiches, food halls and waterfront dinners.",
+      "days": [
+        {
+          "title": "Arrive, food hall and waterfront",
+          "stops": [
+            {
+              "place": "armature_works",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Late lunch. Roughly 07:00–22:00; check on the day."
+            },
+            {
+              "place": "riverwalk",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Walk off lunch along the water."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Sunset dinner. Busiest at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Ybor City food day",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning stroll before the crowds."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Short rolling demo. Check shop hours on the day."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Long lunch at the Columbia. Book ahead."
+            },
+            {
+              "place": "checkers",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Optional late-afternoon snack; branches vary."
+            },
+            {
+              "place": "tampa_theatre",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening show, or a bar in Ybor instead."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then fly",
+          "stops": [
+            {
+              "place": "sunday_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekend mornings only; confirm dates on the day."
+            },
+            {
+              "place": "hyde_park",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Brunch and shops. About 15 minutes by car."
+            },
+            {
+              "place": "bayshore",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short walk on the waterfront before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sun-seekers who want one full beach day plus the city's waterfront in between.",
+      "days": [
+        {
+          "title": "Arrive, Channelside and sunset",
+          "stops": [
+            {
+              "place": "florida_aquarium",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Indoor, good if it is hot or raining. Check hours on the day."
+            },
+            {
+              "place": "pirate_water",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Water taxi around the bay. Seasonal; check times."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and sunset by the water."
+            }
+          ]
+        },
+        {
+          "title": "Clearwater Beach day",
+          "stops": [
+            {
+              "place": "clearwater_beach",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Drive about 45 minutes. Lifeguards daytime; go early for parking."
+            },
+            {
+              "place": "bayshore",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Sunset walk on the way back."
+            },
+            {
+              "place": "hyde_park",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Restaurants stay open later than shops."
+            }
+          ]
+        },
+        {
+          "title": "Morning outdoors, then fly",
+          "stops": [
+            {
+              "place": "lettuce_lake",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Boardwalk in the cool morning. Check daytime hours."
+            },
+            {
+              "place": "ybor_walk",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Quick look at the historic district."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside or Westshore"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want Ybor City, the museums and the Riverwalk without rushing.",
+      "days": [
+        {
+          "title": "Arrive and the Riverwalk",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Start at Curtis Hixon and walk south. Best light late afternoon."
+            },
+            {
+              "place": "curtis_hixon",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Fountains and skyline views. Events vary; check on the day."
+            },
+            {
+              "place": "armature_works",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Dinner at the food hall. Roughly 07:00–22:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Downtown museums",
+          "stops": [
+            {
+              "place": "tampa_museum",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Usually Tue–Sun, closed Monday. Check on the day."
+            },
+            {
+              "place": "glazer_childrens",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Next door. Good for a hot or rainy midday. Usually Tue–Sun."
+            },
+            {
+              "place": "checkers",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Quick lunch. Branch hours vary."
+            },
+            {
+              "place": "tampa_theatre",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening show if one is on. Box office daytime; check showtimes."
+            }
+          ]
+        },
+        {
+          "title": "Ybor City",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Streets always open. Shops and bars vary."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Rolling demo if scheduled. Check on the day."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch. Most delis open lunchtime; check on the day."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Early dinner. Lunch and dinner daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Westshore art, then fly",
+          "stops": [
+            {
+              "place": "geopoliticus",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually Tue–Sun daytime. Check on the day."
+            },
+            {
+              "place": "bayshore",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short waterfront walk. Open 24 hours."
+            },
+            {
+              "place": "hyde_park",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Lunch and shops. Shops roughly 10:00–19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around Cuban sandwiches, food halls and Gulf seafood.",
+      "days": [
+        {
+          "title": "Channelside and sunset",
+          "stops": [
+            {
+              "place": "florida_aquarium",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Daily roughly 09:30–17:00; check on the day."
+            },
+            {
+              "place": "pirate_water",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Afternoon ride. Roughly late morning to evening; seasonal."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset dinner. Vendors vary; busiest evenings and weekends."
+            }
+          ]
+        },
+        {
+          "title": "Ybor eating day",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Walk the historic streets first."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "The classic lunch. Check on the day."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Daytime demo if on. Shop hours vary."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Early dinner. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Downtown food and market",
+          "stops": [
+            {
+              "place": "sunday_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekend mornings only; confirm dates on the day."
+            },
+            {
+              "place": "riverwalk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Walk off breakfast. Best in daylight."
+            },
+            {
+              "place": "tampa_museum",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Usually Tue–Sun, closed Monday."
+            },
+            {
+              "place": "armature_works",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Early dinner. Roughly 07:00–22:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Westshore brunch, then fly",
+          "stops": [
+            {
+              "place": "bayshore",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Early walk. Open 24 hours."
+            },
+            {
+              "place": "hyde_park",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Late brunch. Restaurants run later than shops."
+            },
+            {
+              "place": "checkers",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Optional snack before the airport. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Visitors who want sand and water first, with a little city time in between.",
+      "days": [
+        {
+          "title": "Clearwater Beach day",
+          "stops": [
+            {
+              "place": "clearwater_beach",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Drive west early. Lifeguards daytime; beach open 24 hours."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner back in Channelside. Vendors vary."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium and Riverwalk",
+          "stops": [
+            {
+              "place": "florida_aquarium",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Daily roughly 09:30–17:00; check on the day."
+            },
+            {
+              "place": "riverwalk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk north along the water."
+            },
+            {
+              "place": "curtis_hixon",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Rest by the fountains."
+            },
+            {
+              "place": "armature_works",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Early dinner. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Bayshore and Hyde Park",
+          "stops": [
+            {
+              "place": "bayshore",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early morning is coolest. Open 24 hours."
+            },
+            {
+              "place": "hyde_park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Brunch and shops. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "lettuce_lake",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Boardwalk in the shade. Daily daytime hours; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ybor morning, then fly",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Quiet streets early. Shops and bars vary."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Lunch before the airport. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Channelside / Westshore"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want Ybor City, the museums and the Riverwalk at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the Riverwalk",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Start at Curtis Hixon and walk south. Best light late in the day."
+            },
+            {
+              "place": "curtis_hixon",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Fountains and lawns. Events vary; check on the day."
+            },
+            {
+              "place": "armature_works",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Food hall for an early dinner. Roughly 07:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Downtown museums",
+          "stops": [
+            {
+              "place": "tampa_museum",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday. Usually Tue–Sun."
+            },
+            {
+              "place": "glazer_childrens",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Next door. Good if you travel with kids."
+            },
+            {
+              "place": "checkers",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Quick lunch. Branch hours vary."
+            },
+            {
+              "place": "tampa_theatre",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening show. Check showtimes and book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Ybor City day",
+          "stops": [
+            {
+              "place": "ybor_walk",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Streets always open. Shops and bars vary."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Rolling demo. Shop hours vary; check on the day."
+            },
+            {
+              "place": "cuban_sandwich",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch at a local deli."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Early dinner. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Westshore art and a St. Pete trip",
+          "stops": [
+            {
+              "place": "geopoliticus",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually Tue–Sun daytime; check on the day."
+            },
+            {
+              "place": "bayshore",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Waterfront walk. Early morning or sunset is best."
+            },
+            {
+              "place": "st_pete_dali",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "About 40 minutes by car. Usually daily; check on the day."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner by the water on the way back."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "hyde_park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops roughly 10:00–19:00. Coffee and a browse before you fly."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Visitors who plan the day around Cuban sandwiches, food halls and Gulf seafood.",
+      "days": [
+        {
+          "title": "Arrive and eat on the water",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk to build an appetite."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Vendors vary. Busiest at weekends."
+            },
+            {
+              "place": "pirate_water",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Water taxi ride. Seasonal; check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ybor City food day",
+          "stops": [
+            {
+              "place": "cuban_sandwich",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Classic lunch. Most delis open lunchtime."
+            },
+            {
+              "place": "cigar_factory",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Rolling demo after lunch."
+            },
+            {
+              "place": "ybor_walk",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Late afternoon into evening is best."
+            },
+            {
+              "place": "gasp_parilla",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Early dinner. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Market and food hall",
+          "stops": [
+            {
+              "place": "sunday_market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Weekend mornings only; confirm dates on the day."
+            },
+            {
+              "place": "armature_works",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Brunch. Roughly 07:00–22:00."
+            },
+            {
+              "place": "tampa_museum",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Walk off lunch. Closed Monday."
+            },
+            {
+              "place": "checkers",
+              "at": "21:00",
+              "minutes": 30,
+              "note": "Late snack. Drive-thrus open late."
+            }
+          ]
+        },
+        {
+          "title": "Beach and seafood",
+          "stops": [
+            {
+              "place": "clearwater_beach",
+              "at": "09:30",
+              "minutes": 300,
+              "note": "About 45 minutes by car. Lifeguards daytime."
+            },
+            {
+              "place": "hyde_park",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the village on the way back. Restaurants run later than shops."
+            }
+          ]
+        },
+        {
+          "title": "Last bite",
+          "stops": [
+            {
+              "place": "bayshore",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Early walk before you fly."
+            },
+            {
+              "place": "armature_works",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Coffee and a snack."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Channelside"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Sun-seekers who want Clearwater and the Gulf, with a little city time.",
+      "days": [
+        {
+          "title": "Arrive and the waterfront",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Sunset walk. Open 24 hours."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Clearwater Beach",
+          "stops": [
+            {
+              "place": "clearwater_beach",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "About 45 minutes by car. Go early for parking."
+            },
+            {
+              "place": "hyde_park",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner on the way back."
+            }
+          ]
+        },
+        {
+          "title": "City and aquarium",
+          "stops": [
+            {
+              "place": "florida_aquarium",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Indoor and cool. Daily roughly 09:30–17:00."
+            },
+            {
+              "place": "checkers",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch."
+            },
+            {
+              "place": "pirate_water",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Afternoon ride. Seasonal; check on the day."
+            },
+            {
+              "place": "armature_works",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Nature morning, beach town evening",
+          "stops": [
+            {
+              "place": "lettuce_lake",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Boardwalk. Early morning is best for wildlife."
+            },
+            {
+              "place": "bayshore",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Waterfront walk."
+            },
+            {
+              "place": "st_pete_dali",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "About 40 minutes by car. Check hours on the day."
+            },
+            {
+              "place": "sparkman_wharf",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Sunset dinner."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "bayshore",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Early walk before you fly."
+            },
+            {
+              "place": "armature_works",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Brunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Channelside / Westshore"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Ybor City, the Tampa Museum of Art and the Riverwalk."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Cuban sandwiches, deviled crab and Gulf seafood."
+    },
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Clearwater and St. Pete beaches, an easy drive west."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Walk to the Riverwalk, museums and arenas. Streetcar to Ybor is free.",
+      "center": [
+        27.948,
+        -82.461
+      ]
+    },
+    {
+      "area": "Ybor City",
+      "range": [
+        120,
+        280
+      ],
+      "why": "Historic cigar district with bars and Cuban food. Livelier at night, quieter by day.",
+      "center": [
+        27.961,
+        -82.437
+      ]
+    },
+    {
+      "area": "Channelside",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Waterfront near the Florida Aquarium and cruise terminal. Short walk to downtown.",
+      "center": [
+        27.942,
+        -82.445
+      ]
+    },
+    {
+      "area": "Westshore",
+      "range": [
+        130,
+        300
+      ],
+      "why": "Closest to the airport and the big mall. Good for early flights and rental cars.",
+      "center": [
+        27.947,
+        -82.533
+      ]
+    }
+  ],
+  "food": [
+    "Get a Cuban sandwich at a Ybor City lunch counter. Expect pressed pork, ham and pickles for roughly $10–15.",
+    "Try deviled crab and Spanish bean soup at old Ybor cafeterias. Budget about $10–20 a plate.",
+    "Gulf seafood is the local pick: grouper, stone crab in season and shrimp. Prices vary; check the day's catch.",
+    "Food halls and Riverwalk cafés are easy for mixed groups. Expect $15–25 a main.",
+    "Summer heat is strong. Drink water often and plan a long indoor lunch during afternoon storms."
+  ],
+  "more_time": [
+    "Add a beach day: drive west to Clearwater or St. Pete Beach, roughly 40–60 minutes. Check traffic on the bridges.",
+    "Busch Gardens Tampa Bay fills a full day for thrill rides and animals. Check ticket prices and opening hours on the day.",
+    "Swap a city afternoon for the Florida Aquarium or a Tampa Bay history museum if it rains."
+  ]
+}

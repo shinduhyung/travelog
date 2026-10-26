@@ -1,0 +1,582 @@
+{
+  "city": "Atlanta",
+  "checked": "October 2026",
+  "intro_line": "Atlanta rises from the pines, busy and green.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Buckhead",
+        "Virginia-Highland"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Buckhead",
+        "Virginia-Highland"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Buckhead",
+        "Virginia-Highland"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Buckhead",
+        "Virginia-Highland"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Buckhead",
+        "Virginia-Highland"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 10,
+        "note": "January: cold, highs near 11°C and lows near 2°C. Pack a warm layer."
+      },
+      {
+        "high": 15,
+        "low": 4,
+        "rain_days": 12,
+        "note": "February: still cool, highs around 15°C. Rain on about 12 days."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 12,
+        "note": "March: mild and warming, highs near 18°C. Good for walking."
+      },
+      {
+        "high": 22,
+        "low": 10,
+        "rain_days": 10,
+        "note": "April: pleasant, highs around 22°C. One of the best months to visit."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 12,
+        "note": "May: warm, highs near 26°C. Expect some rain days."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 14,
+        "note": "June: hot, highs around 30°C. Plan indoor breaks midday."
+      },
+      {
+        "high": 31,
+        "low": 22,
+        "rain_days": 17,
+        "note": "July: hottest and wettest, highs near 31°C and about 17 rain days."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 17,
+        "note": "August: hot and humid, highs near 30°C. Storms are common."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 10,
+        "note": "September: still warm, highs near 28°C, with fewer rain days."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 8,
+        "note": "October: comfortable, highs around 23°C. Great for parks and the BeltLine."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 8,
+        "note": "November: cooler, highs near 17°C. Light rain on about 8 days."
+      },
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 11,
+        "note": "December: chilly, highs around 13°C and lows near 5°C. Bring a coat."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "culture": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "nature": [
+      0.4,
+      0.5,
+      0.75,
+      0.9,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.75,
+      0.9,
+      0.7,
+      0.45
+    ],
+    "nightlife": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "georgia-aquarium": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "fox-theatre": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon tour; evening for shows",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "mercedes-benz-stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Non-event weekday",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "six-flags": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Summer weekday morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "fun-spot": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "arbys": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "buffalo-wild-wings": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Midtown",
+      "popularity": 2
+    },
+    "chick-fil-a": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Breakfast or lunch",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "churchs-texas-chicken": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "cinnabon": {
+      "types": [
+        "food"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "emory": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Virginia-Highland",
+      "popularity": 2
+    },
+    "georgia-tech": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Midtown",
+      "popularity": 2
+    },
+    "moes": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Midtown",
+      "popularity": 1
+    },
+    "round-table-pizza": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Midtown",
+      "popularity": 1
+    },
+    "stranger-things": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "waffle-house": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late night or breakfast",
+      "area": "Midtown",
+      "popularity": 3
+    },
+    "ponce-city-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Lunch or sunset",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "beltline": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Virginia-Highland",
+      "popularity": 4
+    },
+    "piedmont-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "mlk-park": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "westside-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Buckhead",
+      "popularity": 3
+    },
+    "sweet-auburn": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "krog-street": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Virginia-Highland",
+      "popularity": 3
+    },
+    "jackson-street-bridge": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the civil rights sights, the aquarium and a good food day; add a night for nature and neighborhoods."
+  },
+  "airports": [
+    {
+      "code": "ATL",
+      "name": "Hartsfield-Jackson Atlanta International Airport",
+      "primary": true,
+      "note": "World's busiest airport; about 13 km south of downtown.",
+      "options": [
+        {
+          "mode": "MARTA Red/Gold line",
+          "to": "Downtown and Midtown",
+          "price": "$2.50",
+          "time": "20-30 min",
+          "note": "Cheapest option; fare includes transfers."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city stops",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Slower than rail."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$30-40",
+          "time": "20-35 min",
+          "note": "Metered; traffic can add time."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$25-40",
+          "time": "20-35 min",
+          "note": "Pickup zones are signed in the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Atlanta",
+      "https://en.wikivoyage.org/wiki/Atlanta"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "MARTA rail and ride apps for most trips; walk downtown and Midtown.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "MARTA rail has four lines (Red, Gold, Blue, Green). $2.50 per ride, $9 for a 1-day pass. Breeze Card costs $2 and is reloadable; tap on entry and exit."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover 100+ routes, but weekend waits can reach an hour."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft work widely. Taxis are available but less common."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is fastest off-peak. Rush hour is long and parking downtown is scarce."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable and the Atlanta Streetcar links key sights. Bikes are an option."
+      },
+      {
+        "mode": "Streetcar",
+        "has": true,
+        "text": "The Atlanta Streetcar links key downtown sights."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: mild springs and falls, hot humid summers with storms, and short cool winters.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Mild highs around 22–28°C and fewer rain days. Ideal for walking and parks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (June to August)",
+        "text": "Highs near 30–31°C with about 14–17 rain days a month. Do outdoor sights in the morning."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Afternoon storms",
+        "text": "July and August bring the most rain days. Keep a plan B indoors."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cool, not freezing",
+        "text": "January highs near 11°C and lows near 2°C. A warm jacket is enough."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain spread through the year",
+        "text": "Most months see 8–17 rain days. A small umbrella helps any trip."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers in spring and fall, breathable clothes and sunscreen for summer, a warm coat for winter."
+      }
+    ]
+  }
+}

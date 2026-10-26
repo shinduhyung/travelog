@@ -1,0 +1,1639 @@
+{
+  "city": "Taipei",
+  "checked": "October 2026",
+  "currency": "TWD",
+  "usd_rate": 32.5918,
+  "intro": "Taipei rewards visitors with cheap, clean transit, superb food and green hills on its doorstep. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 24.9392,
+      "west": 121.3971,
+      "north": 25.2352,
+      "east": 121.7754,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 85,
+      "flag_airport": 85,
+      "per_km": 25,
+      "min_fare": 85
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "MRT is clean, safe and cheap: NT$20-65 per ride, trains about 06:00-00:00.",
+      "EasyCard gives 20% off MRT rides and NT$7 bus transfers within an hour.",
+      "City buses are frequent; pay with EasyCard on boarding.",
+      "Taxis are metered and plentiful; Uber operates in Taipei.",
+      "Driving is not advised for visitors; parking is hard and scooters dominate.",
+      "YouBike share bikes are widely available; sidewalks are good for walking."
+    ],
+    "sources": []
+  },
+  "places": {
+    "taipei101": {
+      "name": "Taipei 101",
+      "landmark": "Taipei 101",
+      "kind": "sight",
+      "lat": 25.0339,
+      "lon": 121.5644,
+      "price": 600,
+      "price_text": "≈ TWD 600 observatory ticket · check on the day",
+      "hours": "Observatory daily, roughly 11:00–21:00 · check on the day",
+      "tip": "Go up late afternoon to catch daylight and sunset in one visit.",
+      "source": "https://www.taipei-101.com.tw/en/observatory"
+    },
+    "npm": {
+      "name": "National Palace Museum",
+      "landmark": "National Palace Museum",
+      "kind": "museum",
+      "lat": 25.1023,
+      "lon": 121.5485,
+      "price": 350,
+      "price_text": "≈ TWD 350 adult · check on the day",
+      "hours": "Daily roughly 09:00–17:00 · closed some Mondays, check on the day",
+      "tip": "Pick three or four galleries only; the collection is huge and tiring.",
+      "source": "https://www.npm.gov.tw/?l=2"
+    },
+    "cks": {
+      "name": "Chiang Kai-shek Memorial Hall",
+      "landmark": "Chiang Kai-shek Memorial Hall",
+      "kind": "sight",
+      "lat": 25.0346,
+      "lon": 121.5216,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park daily 05:00–24:00 · hall roughly 09:00–18:00",
+      "tip": "Come early morning to watch locals practise tai chi on the square.",
+      "source": "https://www.cksmh.gov.tw/en/"
+    },
+    "shilin": {
+      "name": "Shilin Night Market",
+      "landmark": "Shilin Night Market",
+      "kind": "food",
+      "lat": 25.0877,
+      "lon": 121.5244,
+      "price": null,
+      "price_text": "Pay per stall · most snacks TWD 50–150",
+      "hours": "Evening into late night, roughly 17:00–24:00",
+      "tip": "Bring small cash and share dishes so you can try more stalls.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1001"
+    },
+    "longshan": {
+      "name": "Longshan Temple",
+      "landmark": "Longshan Temple",
+      "kind": "sight",
+      "lat": 25.0371,
+      "lon": 121.4999,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily roughly 06:00–22:00",
+      "tip": "Visit at dusk when lanterns come on and worshippers chant.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1005"
+    },
+    "ximending": {
+      "name": "Ximending",
+      "landmark": "Ximending",
+      "kind": "sight",
+      "lat": 25.0423,
+      "lon": 121.508,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops from about 11:00 to 22:00",
+      "tip": "Wander the small side lanes off the main pedestrian street for street food.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1010"
+    },
+    "dihua": {
+      "name": "Dihua Street",
+      "landmark": "Dihua Street",
+      "kind": "sight",
+      "lat": 25.0566,
+      "lon": 121.5106,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops roughly 09:00–19:00 · quieter on Sundays",
+      "tip": "Buy dried fruit and tea here; the old shophouse architecture is the draw.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1015"
+    },
+    "yehliu": {
+      "name": "Yehliu Geopark",
+      "landmark": "Yehliu Geopark",
+      "kind": "sight",
+      "lat": 25.2064,
+      "lon": 121.6905,
+      "price": 120,
+      "price_text": "≈ TWD 120 entry · check on the day",
+      "hours": "Daily roughly 08:00–17:00",
+      "tip": "Half-day trip from Taipei; bring a hat as there is little shade.",
+      "source": "https://www.northguan-nsa.gov.tw/"
+    },
+    "jiufen": {
+      "name": "Jiufen Old Street",
+      "landmark": "Jiufen Old Street",
+      "kind": "sight",
+      "lat": 25.1099,
+      "lon": 121.8452,
+      "price": 0,
+      "price_text": "Free to walk · tea houses charge per pot",
+      "hours": "Shops roughly 09:00–19:00 · busiest at weekends",
+      "tip": "Stay for dusk when the lanterns light up the hillside lanes.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1020"
+    },
+    "beefnoodle": {
+      "name": "Beef noodle soup",
+      "landmark": "Beef Noodle Soup",
+      "kind": "food",
+      "lat": 25.033,
+      "lon": 121.5654,
+      "price": 200,
+      "price_text": "≈ TWD 150–250 a bowl",
+      "hours": "Most shops lunch and dinner · check on the day",
+      "tip": "Order both braised and clear broth versions to compare.",
+      "source": ""
+    },
+    "elephant": {
+      "name": "Elephant Mountain trail",
+      "landmark": "Elephant Mountain",
+      "kind": "activity",
+      "lat": 25.0274,
+      "lon": 121.575,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · bring a torch for the descent",
+      "tip": "Start about an hour before sunset and bring water; steps are steep.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1030"
+    },
+    "songyan": {
+      "name": "Eslite Spectrum Songyan",
+      "landmark": "Eslite Spectrum Songyan",
+      "kind": "sight",
+      "lat": 25.0441,
+      "lon": 121.5607,
+      "price": 0,
+      "price_text": "Free to enter · shops and cafes extra",
+      "hours": "Daily roughly 11:00–22:00",
+      "tip": "Good rainy-day stop; combine with the nearby Songshan cultural park.",
+      "source": "https://www.eslite.com/"
+    },
+    "fortsan": {
+      "name": "Fort San Domingo",
+      "landmark": "Fort San Domingo",
+      "kind": "sight",
+      "lat": 25.1754,
+      "lon": 121.4328,
+      "price": 80,
+      "price_text": "≈ TWD 80 entry · check on the day",
+      "hours": "Daily roughly 09:30–17:00 · closed some Mondays",
+      "tip": "Pair with the Tamsui waterfront and a ferry ride across the river.",
+      "source": "https://www.tshs.ntpc.gov.tw/"
+    },
+    "libertyarch": {
+      "name": "Liberty Square Arch",
+      "landmark": "Liberty Square Arch",
+      "kind": "sight",
+      "lat": 25.0356,
+      "lon": 121.5195,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The arch frames the memorial hall; best photo from the middle of the square.",
+      "source": "https://www.cksmh.gov.tw/en/"
+    },
+    "linfamily": {
+      "name": "Lin Family Mansion and Garden",
+      "landmark": "Lin Family Mansion and Garden",
+      "kind": "sight",
+      "lat": 25.0116,
+      "lon": 121.4595,
+      "price": 80,
+      "price_text": "≈ TWD 80 entry · check on the day",
+      "hours": "Daily roughly 09:00–17:00 · closed some Mondays",
+      "tip": "A quiet classical garden; allow time to sit by the pond.",
+      "source": "https://www.linfamily.ntpc.gov.tw/"
+    },
+    "maokong": {
+      "name": "Maokong Gondola",
+      "landmark": "Maokong Gondola",
+      "kind": "activity",
+      "lat": 24.968,
+      "lon": 121.5883,
+      "price": 120,
+      "price_text": "≈ TWD 120 one way · glass cabin costs more",
+      "hours": "Roughly 09:00–21:00 · closed some Mondays, check on the day",
+      "tip": "Ride up in the afternoon and have tea at a hillside tea house before returning.",
+      "source": "https://www.gondola.taipei/"
+    },
+    "nccu": {
+      "name": "National Chengchi University",
+      "landmark": "National Chengchi University",
+      "kind": "sight",
+      "lat": 24.9875,
+      "lon": 121.576,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily · buildings vary",
+      "tip": "Only worth it if you have a reason to visit; it is a long ride from the centre.",
+      "source": "https://www.nccu.edu.tw/"
+    },
+    "ntu": {
+      "name": "National Taiwan University",
+      "landmark": "National Taiwan University",
+      "kind": "sight",
+      "lat": 25.0174,
+      "lon": 121.5397,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily",
+      "tip": "Combine with the nearby Gongguan food lanes for cheap student eats.",
+      "source": "https://www.ntu.edu.tw/english/"
+    },
+    "nationaltheater": {
+      "name": "National Theater",
+      "landmark": "National Theater",
+      "kind": "show",
+      "lat": 25.0363,
+      "lon": 121.5186,
+      "price": null,
+      "price_text": "Ticket prices vary by show · check the programme",
+      "hours": "Box office and shows in the evening · check on the day",
+      "tip": "Book a performance in advance; the building itself is worth a look by day.",
+      "source": "https://www.npac-ntch.org/"
+    },
+    "ningxia": {
+      "name": "Ningxia Night Market",
+      "landmark": "Ningxia Night Market",
+      "kind": "food",
+      "lat": 25.0556,
+      "lon": 121.5152,
+      "price": null,
+      "price_text": "Pay per stall · most snacks TWD 50–150",
+      "hours": "Evening, roughly 17:00–24:00",
+      "tip": "Smaller and easier than Shilin; try the oyster omelette stalls.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1035"
+    },
+    "pingxi": {
+      "name": "Pingxi Lantern Festival",
+      "landmark": "Pingxi Lantern Festival",
+      "kind": "activity",
+      "lat": 25.0256,
+      "lon": 121.7397,
+      "price": null,
+      "price_text": "Lantern release ≈ TWD 150–250 · festival free to watch",
+      "hours": "Festival around the Lunar New Year period · check dates",
+      "tip": "Very crowded on festival night; book transport early or go on a normal day to release a lantern.",
+      "source": "https://www.travel.taipei/"
+    },
+    "huaxi": {
+      "name": "Huaxi Street Night Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 25.0369,
+      "lon": 121.499,
+      "price": null,
+      "price_text": "Pay per stall · most snacks TWD 50–150",
+      "hours": "Evening, roughly 16:00–24:00",
+      "tip": "Old-school covered market next to Longshan Temple; go for the snake alley history and snacks.",
+      "source": ""
+    },
+    "daanpark": {
+      "name": "Daan Forest Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 25.0264,
+      "lon": 121.5365,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A big green break with ponds and birds; good for a slow morning walk.",
+      "source": ""
+    },
+    "tamsui": {
+      "name": "Tamsui waterfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 25.1679,
+      "lon": 121.4455,
+      "price": 0,
+      "price_text": "Free · ferry and snacks extra",
+      "hours": "Always open · best before dusk",
+      "tip": "Walk the riverside path and take the ferry to Bali for the sunset view.",
+      "source": ""
+    },
+    "foodtour": {
+      "name": "Old-town food walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 25.0505,
+      "lon": 121.5135,
+      "price": 1500,
+      "price_text": "≈ TWD 1,200–1,800 per person · check inclusions",
+      "hours": "Tours usually late morning or evening · book ahead",
+      "tip": "A guided tasting around Dihua Street and Dadaocheng covers dishes you might miss alone.",
+      "source": ""
+    },
+    "beitou": {
+      "name": "Beitou hot spring soak",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 25.137,
+      "lon": 121.5035,
+      "price": 300,
+      "price_text": "≈ TWD 200–600 public or private bath · check on the day",
+      "hours": "Most baths roughly 09:00–22:00",
+      "tip": "Easy MRT ride north; bring your own towel to save on rental fees.",
+      "source": ""
+    },
+    "p228park": {
+      "name": "228 Peace Memorial Park",
+      "landmark": "228 Peace Memorial Park",
+      "kind": "park",
+      "lat": 25.0415,
+      "lon": 121.5152,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A calm green stop between the station and the memorial hall.",
+      "source": "https://www.travel.taipei/en/attraction/detail/1025"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One full day of Taipei eating: old streets, beef noodles and two night markets.",
+      "days": [
+        {
+          "title": "Old streets and beef noodles",
+          "stops": [
+            {
+              "place": "dihua",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Start early. Shops open around 09:00. Snack as you walk."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch near Taipei Main Station. Most shops serve at midday."
+            },
+            {
+              "place": "ximending",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Shops open from about 11:00. Good for snacks and people-watching."
+            },
+            {
+              "place": "huaxi",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Early dinner. Stalls get going from about 16:00."
+            },
+            {
+              "place": "ningxia",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Second dinner or dessert. Busiest after 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ximending or Taipei Main Station"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The city core in a day: memorials, a temple and the National Palace Museum.",
+      "days": [
+        {
+          "title": "Memorials, temple and museum",
+          "stops": [
+            {
+              "place": "libertyarch",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Start at the arch and walk into the square."
+            },
+            {
+              "place": "cks",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Hall opens around 09:00. The park is open all day."
+            },
+            {
+              "place": "longshan",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short taxi or MRT ride. Quiet before lunch."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "npm",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed some Mondays. Check on the day. Allow 20–30 minutes to get there."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taipei Main Station"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Hills, coast and a hot spring soak, all reachable by MRT and bus.",
+      "days": [
+        {
+          "title": "Elephant Mountain, then Beitou",
+          "stops": [
+            {
+              "place": "elephant",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go early to beat the heat. Steps are steep. Bring water."
+            },
+            {
+              "place": "daanpark",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Easy stroll after the climb."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch before heading north."
+            },
+            {
+              "place": "beitou",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Most baths run roughly 09:00–22:00. Bring a towel or rent one."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ximending or Da'an"
+    },
+    {
+      "id": "day-nature-coast",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "A coast-and-hills day out: Yehliu in the morning, Jiufen in the afternoon.",
+      "days": [
+        {
+          "title": "Yehliu and Jiufen",
+          "stops": [
+            {
+              "place": "yehliu",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Opens around 08:00. Skip it in rain. Bring a hat."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch on the way, or eat at Jiufen."
+            },
+            {
+              "place": "jiufen",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Shops run roughly 09:00–19:00. Weekdays are calmer. Stay for dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taipei Main Station"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of eating: old-town snacks, a beef noodle lunch and two night markets.",
+      "days": [
+        {
+          "title": "Arrive, old town tastes, night market",
+          "stops": [
+            {
+              "place": "dihua",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Start here for dried goods and snack stalls. Most shops close around 19:00."
+            },
+            {
+              "place": "ningxia",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Oyster omelette and fried chicken. Busiest after 19:00."
+            },
+            {
+              "place": "shilin",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Bigger and louder. Go easy — you have lunch tomorrow."
+            }
+          ]
+        },
+        {
+          "title": "Beef noodles, then fly",
+          "stops": [
+            {
+              "place": "beefnoodle",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch near Taipei Main Station. Check opening days on the day."
+            },
+            {
+              "place": "ximending",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk it off. Shops open from about 11:00."
+            },
+            {
+              "place": "huaxi",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Optional early snack stop before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ximending or Taipei Main Station"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "The city core on foot: memorials, a temple and the palace museum collection.",
+      "days": [
+        {
+          "title": "Arrive, memorials and old streets",
+          "stops": [
+            {
+              "place": "cks",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Hall closes around 18:00. The park stays open late."
+            },
+            {
+              "place": "libertyarch",
+              "at": "15:10",
+              "minutes": 20,
+              "note": "A short walk across Liberty Square."
+            },
+            {
+              "place": "p228park",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Ten minutes on foot towards the station."
+            },
+            {
+              "place": "longshan",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Temple is liveliest late afternoon into evening."
+            },
+            {
+              "place": "huaxi",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Dinner at the market next door."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "npm",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed some Mondays — check on the day. Go early to beat groups."
+            },
+            {
+              "place": "dihua",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "About 15 minutes by taxi. Grab lunch from the stalls."
+            },
+            {
+              "place": "taipei101",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Observatory roughly 11:00–21:00. Skip if the sky is hazy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taipei Main Station"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Hills, hot springs and a sunset view — easy trips on the metro and bus.",
+      "days": [
+        {
+          "title": "Arrive, Beitou soak",
+          "stops": [
+            {
+              "place": "beitou",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Most baths run to about 22:00. Bring a towel or rent one."
+            },
+            {
+              "place": "tamsui",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Twenty minutes on the metro. Stay for sunset, then eat by the water."
+            }
+          ]
+        },
+        {
+          "title": "Trail and gondola, then fly",
+          "stops": [
+            {
+              "place": "elephant",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go early to beat heat and crowds. Bring water and a torch if you descend late."
+            },
+            {
+              "place": "maokong",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Closed some Mondays — check on the day. Tea and a view at the top."
+            },
+            {
+              "place": "daanpark",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Optional easy stroll before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Da'an or Ximending"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Three days of night markets, old-street snacks and a beef noodle lunch, grouped by neighbourhood.",
+      "days": [
+        {
+          "title": "Arrive, old town snacks and Ximending",
+          "stops": [
+            {
+              "place": "beefnoodle",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Start with a bowl near Taipei Main Station. Most shops serve lunch and dinner; check on the day."
+            },
+            {
+              "place": "dihua",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Tea shops and dried-goods stalls. Quieter on Sundays."
+            },
+            {
+              "place": "longshan",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Temple snacks nearby; late afternoon is lively."
+            },
+            {
+              "place": "huaxi",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Night market next to the temple. Evening only, roughly 16:00–24:00."
+            },
+            {
+              "place": "ximending",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Street food and shops until about 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Museums, then Shilin",
+          "stops": [
+            {
+              "place": "npm",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Go early on a weekday. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "shilin",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Biggest night market. Best after 18:00 on a weekday."
+            }
+          ]
+        },
+        {
+          "title": "Tea hills and a last market",
+          "stops": [
+            {
+              "place": "maokong",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Gondola up, tea and snacks with a view. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "daanpark",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Easy walk before dinner."
+            },
+            {
+              "place": "ningxia",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Compact market, good for a final graze. Busy after 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ximending or Taipei Main Station"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Temples, the palace museum and old streets, with evenings free for markets.",
+      "days": [
+        {
+          "title": "Arrive, memorials and old town",
+          "stops": [
+            {
+              "place": "cks",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Park always open; hall roughly 09:00–18:00."
+            },
+            {
+              "place": "libertyarch",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Next to the memorial hall."
+            },
+            {
+              "place": "p228park",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk north; always open."
+            },
+            {
+              "place": "longshan",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon into evening is best."
+            },
+            {
+              "place": "huaxi",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner at the night market beside the temple."
+            }
+          ]
+        },
+        {
+          "title": "Palace Museum and Dihua Street",
+          "stops": [
+            {
+              "place": "npm",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Weekday morning is calmest. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "dihua",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Old shophouses and tea shops. Quieter on Sundays."
+            },
+            {
+              "place": "fortsan",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Red fort by the river. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "tamsui",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the waterfront, then seafood dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museum quarter and a show",
+          "stops": [
+            {
+              "place": "songyan",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Bookshop and design shops in an old tobacco factory."
+            },
+            {
+              "place": "linfamily",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Garden and mansion. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "nationaltheater",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening show; book ahead and check the programme on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taipei Main Station"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Hills, hot springs and coast, with easy evenings back in the city.",
+      "days": [
+        {
+          "title": "Arrive, Elephant Mountain sunset",
+          "stops": [
+            {
+              "place": "daanpark",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Gentle start; always open."
+            },
+            {
+              "place": "elephant",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Short steep climb for the skyline. Bring a torch for the descent."
+            },
+            {
+              "place": "ximending",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and shops until about 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Coast and old street",
+          "stops": [
+            {
+              "place": "yehliu",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Rock formations by the sea. Avoid rainy days; check transport on the day."
+            },
+            {
+              "place": "jiufen",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Old street food and views. Weekdays are calmer; shops close around 19:00."
+            },
+            {
+              "place": "ningxia",
+              "at": "19:30",
+              "minutes": 75,
+              "note": "Back in town for a late market dinner."
+            }
+          ]
+        },
+        {
+          "title": "Tea hills and hot spring",
+          "stops": [
+            {
+              "place": "maokong",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Gondola and tea with a view. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "beitou",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Soak before you fly. Most baths roughly 09:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Da'an or Ximending"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Night markets, beef noodles and old-street snacks, with a hilltop view to work up an appetite.",
+      "days": [
+        {
+          "title": "Arrive, old town snacks and Ximending",
+          "stops": [
+            {
+              "place": "beefnoodle",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch near Taipei Main Station. Most shops serve lunch and dinner; check on the day."
+            },
+            {
+              "place": "dihua",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Old-street shops and snack stalls. Quieter on Sundays."
+            },
+            {
+              "place": "ningxia",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Classic night market, best after 18:00. Small stalls, cash is handy."
+            },
+            {
+              "place": "ximending",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening stroll for dessert and drinks. Shops run to about 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Temples, markets and a food tour",
+          "stops": [
+            {
+              "place": "longshan",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Temple in the morning is calmer. Dress respectfully."
+            },
+            {
+              "place": "huaxi",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Next to the temple. Many stalls open later; go for an early lunch if hungry."
+            },
+            {
+              "place": "foodtour",
+              "at": "17:30",
+              "minutes": 180,
+              "note": "Old-town food walk. Book ahead; tours usually run late morning or evening."
+            },
+            {
+              "place": "shilin",
+              "at": "21:00",
+              "minutes": 90,
+              "note": "Optional late stop. Busiest after 18:00; weekdays are easier."
+            }
+          ]
+        },
+        {
+          "title": "Elephant Mountain, then Jiufen",
+          "stops": [
+            {
+              "place": "elephant",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning hike before the heat. Bring water and a torch if you stay late."
+            },
+            {
+              "place": "jiufen",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Old Street snacks and tea houses. Shops roughly 09:00–19:00; weekdays are quieter."
+            },
+            {
+              "place": "tamsui",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Waterfront sunset and seafood snacks on the way back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ximending or Taipei Main Station"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, temples and old streets in the city core, with one easy day trip.",
+      "days": [
+        {
+          "title": "Arrive, memorials and old town",
+          "stops": [
+            {
+              "place": "cks",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Park open all day; hall roughly 09:00–18:00."
+            },
+            {
+              "place": "libertyarch",
+              "at": "15:15",
+              "minutes": 20,
+              "note": "Same square, short walk."
+            },
+            {
+              "place": "p228park",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk north through the park."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner near Taipei Main Station. Check opening on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palace Museum and Dihua Street",
+          "stops": [
+            {
+              "place": "npm",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Go early on a weekday. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "dihua",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Old-street shops and snacks. Quieter on Sundays."
+            },
+            {
+              "place": "longshan",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon into evening is a good time to visit."
+            },
+            {
+              "place": "huaxi",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner at the night market next door."
+            }
+          ]
+        },
+        {
+          "title": "Jiufen day trip",
+          "stops": [
+            {
+              "place": "jiufen",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Bus or taxi out of town. Shops roughly 09:00–19:00; weekdays are quieter."
+            },
+            {
+              "place": "songyan",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Bookshop and galleries on the way back. Open to about 22:00."
+            },
+            {
+              "place": "ximending",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taipei Main Station"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Hot springs, hill trails and waterfront sunsets, with one coastal day trip.",
+      "days": [
+        {
+          "title": "Arrive, park and hot springs",
+          "stops": [
+            {
+              "place": "daanpark",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Easy loop to stretch your legs. Always open."
+            },
+            {
+              "place": "beitou",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Soak on a cool afternoon. Most baths roughly 09:00–22:00."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Dinner back in town. Check opening on the day."
+            }
+          ]
+        },
+        {
+          "title": "Elephant Mountain and Maokong",
+          "stops": [
+            {
+              "place": "elephant",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning hike before the heat. Bring water."
+            },
+            {
+              "place": "maokong",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Gondola up for tea and views. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "ximending",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and evening walk."
+            }
+          ]
+        },
+        {
+          "title": "Yehliu and Tamsui",
+          "stops": [
+            {
+              "place": "yehliu",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Coastal rocks. Go in the morning and skip rainy days."
+            },
+            {
+              "place": "fortsan",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Stop in Tamsui on the way back. Closed some Mondays."
+            },
+            {
+              "place": "tamsui",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Waterfront walk into sunset, with snacks."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Da'an or Zhongshan"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Night markets, beef noodles and dumplings, with a day trip for old-street snacks.",
+      "days": [
+        {
+          "title": "Arrive and eat in Ximending",
+          "stops": [
+            {
+              "place": "ximending",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Shops start around 11:00 and run to about 22:00. Wander the side streets."
+            },
+            {
+              "place": "huaxi",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening only, roughly 16:00–24:00. Go for the classic snacks."
+            },
+            {
+              "place": "longshan",
+              "at": "20:15",
+              "minutes": 45,
+              "note": "Open to about 22:00. A short walk from Huaxi."
+            }
+          ]
+        },
+        {
+          "title": "Old town food tour and beef noodles",
+          "stops": [
+            {
+              "place": "foodtour",
+              "at": "10:30",
+              "minutes": 180,
+              "note": "Book ahead. Late morning or evening tours are usual."
+            },
+            {
+              "place": "dihua",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Shops roughly 09:00–19:00. Quieter on Sundays."
+            },
+            {
+              "place": "ningxia",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Evening only, roughly 17:00–24:00. Best after 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Beef noodles and Shilin",
+          "stops": [
+            {
+              "place": "beefnoodle",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Most shops serve lunch and dinner; check on the day."
+            },
+            {
+              "place": "cks",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Park open 05:00–24:00; hall roughly 09:00–18:00."
+            },
+            {
+              "place": "shilin",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Evening into late night, roughly 17:00–24:00. Weekdays are calmer."
+            }
+          ]
+        },
+        {
+          "title": "Jiufen snacks, then Maokong",
+          "stops": [
+            {
+              "place": "jiufen",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Shops roughly 09:00–19:00. Busiest at weekends, so go early."
+            },
+            {
+              "place": "maokong",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Gondola roughly 09:00–21:00. Closed some Mondays; check on the day. Tea and snacks up top."
+            }
+          ]
+        },
+        {
+          "title": "Tamsui and fly",
+          "stops": [
+            {
+              "place": "tamsui",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Always open. Snack along the waterfront before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ximending"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museums, temples and old streets, paced so you never rush a closed door.",
+      "days": [
+        {
+          "title": "Arrive and the city core",
+          "stops": [
+            {
+              "place": "cks",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Park open 05:00–24:00; hall roughly 09:00–18:00."
+            },
+            {
+              "place": "libertyarch",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Always open. Good light late in the day."
+            },
+            {
+              "place": "p228park",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Always open. A short walk from the arch."
+            },
+            {
+              "place": "beefnoodle",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner nearby. Check opening on the day."
+            }
+          ]
+        },
+        {
+          "title": "National Palace Museum",
+          "stops": [
+            {
+              "place": "npm",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Daily roughly 09:00–17:00. Closed some Mondays; check on the day. Go early on a weekday."
+            },
+            {
+              "place": "shilin",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Evening into late night, roughly 17:00–24:00."
+            }
+          ]
+        },
+        {
+          "title": "Old streets and temples",
+          "stops": [
+            {
+              "place": "longshan",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Daily roughly 06:00–22:00."
+            },
+            {
+              "place": "dihua",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Shops roughly 09:00–19:00. Quieter on Sundays."
+            },
+            {
+              "place": "fortsan",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daily roughly 09:30–17:00. Closed some Mondays."
+            },
+            {
+              "place": "ximending",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Shops from about 11:00 to 22:00. Evening is liveliest."
+            }
+          ]
+        },
+        {
+          "title": "Taipei 101 and Songyan",
+          "stops": [
+            {
+              "place": "taipei101",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Observatory roughly 11:00–21:00; check on the day. Late afternoon for clear views."
+            },
+            {
+              "place": "songyan",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Daily roughly 11:00–22:00. Books, design shops and dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Lin family garden, then fly",
+          "stops": [
+            {
+              "place": "linfamily",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Daily roughly 09:00–17:00. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "ntu",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Campus open daily. Lunch in the area before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Taipei Main Station"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Hills, coast and hot springs, with sunset viewpoints and easy day trips.",
+      "days": [
+        {
+          "title": "Arrive and Elephant Mountain",
+          "stops": [
+            {
+              "place": "daanpark",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Always open. A gentle start."
+            },
+            {
+              "place": "elephant",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Always open. Go for sunset on a clear evening and bring a torch for the descent."
+            },
+            {
+              "place": "ximending",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and a wander. Shops to about 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Yehliu and Tamsui",
+          "stops": [
+            {
+              "place": "yehliu",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Daily roughly 08:00–17:00. Avoid rainy days; the rocks are exposed."
+            },
+            {
+              "place": "tamsui",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Always open. Best before dusk for the sunset walk."
+            }
+          ]
+        },
+        {
+          "title": "Maokong and Beitou",
+          "stops": [
+            {
+              "place": "maokong",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Gondola roughly 09:00–21:00. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "beitou",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Most baths roughly 09:00–22:00. Good on a cool afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Jiufen and the coast",
+          "stops": [
+            {
+              "place": "jiufen",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Shops roughly 09:00–19:00. Weekdays are quieter; go early."
+            },
+            {
+              "place": "ningxia",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Evening only, roughly 17:00–24:00. Dinner back in town."
+            }
+          ]
+        },
+        {
+          "title": "Park morning, then fly",
+          "stops": [
+            {
+              "place": "p228park",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Always open. An easy last stroll before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Da'an"
+    }
+  ],
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Night markets, beef noodles and dumplings all day."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Temples, museums and old streets in the city core."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Hot springs, hills and easy day trips out of town."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Ximending",
+      "range": [
+        1200,
+        3500
+      ],
+      "why": "Young, busy and central. Walk to the MRT, night markets and the old Wanhua temples. Good for first-timers who want nightlife.",
+      "center": [
+        25.042,
+        121.507
+      ]
+    },
+    {
+      "area": "Zhongshan",
+      "range": [
+        1800,
+        4500
+      ],
+      "why": "Quiet lanes, small shops and cafés. Two MRT lines and short rides to most sights.",
+      "center": [
+        25.052,
+        121.52
+      ]
+    },
+    {
+      "area": "Da'an",
+      "range": [
+        2000,
+        5000
+      ],
+      "why": "Leafy and calm, near the park and Yongkang Street food. A good base for couples and slower trips.",
+      "center": [
+        25.027,
+        121.543
+      ]
+    },
+    {
+      "area": "Taipei Main Station",
+      "range": [
+        1400,
+        3800
+      ],
+      "why": "Best for transport: MRT, trains and the airport line in one place. Practical for short stays and day trips.",
+      "center": [
+        25.047,
+        121.517
+      ]
+    }
+  ],
+  "food": [
+    "Eat at night markets: Shilin and Raohe are the big ones. Go hungry, share dishes, and carry small cash.",
+    "Try the classics: beef noodle soup, soup dumplings, oyster omelette, stinky tofu and shaved ice.",
+    "Yongkang Street in Da'an is good for a sit-down food walk with tea shops and dessert.",
+    "Convenience stores are cheap and open late. A quick meal or snack costs about NT$60–150.",
+    "Many small eateries are cash-first. Keep some TWD on you; card use is common but not everywhere."
+  ],
+  "more_time": [
+    "Add a day trip to Jiufen and the coast by bus or train; check times on the day.",
+    "Take a hot-spring trip to Beitou on the MRT, about 30 minutes from the center.",
+    "Swap one city day for the National Palace Museum if you like art and history; allow half a day."
+  ]
+}

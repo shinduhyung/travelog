@@ -1,0 +1,2172 @@
+{
+  "city": "Madrid",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Madrid rewards visitors with royal palaces, three great art museums and tapas bars that fill after dark. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 40.3889,
+      "west": -3.7435,
+      "north": 40.5665,
+      "east": -3.5819,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 33,
+      "per_km": 1.3,
+      "min_fare": 4
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro: 13 lines, fast and cheap; single Zone A fare €1.50-2, airport supplement €3.",
+      "Multi Card costs €2.50 and is reloadable; ten-trip Metrobús ticket about €12.20.",
+      "Tourist Travel Cards: 1 day €10, 2 days €17, 3 days €22.50, 5 days €32.50, 7 days €41.",
+      "Buses share the same tickets; night buses run when the metro closes around 01:30.",
+      "Taxis are plentiful and metered; Uber, Cabify and Bolt operate in Madrid.",
+      "Walking is best in the centre; bikes and e-scooters are widely rented."
+    ],
+    "sources": []
+  },
+  "places": {
+    "prado": {
+      "name": "Prado Museum",
+      "landmark": "Prado Museum",
+      "kind": "museum",
+      "lat": 40.414,
+      "lon": -3.6921,
+      "price": 15,
+      "price_text": "€15 general · free Mon–Sat 18:00–20:00 and Sun 17:00–19:00",
+      "hours": "Mon–Sat 10:00–20:00 · Sun and holidays 10:00–19:00 · closed 1 Jan, 1 May, 25 Dec",
+      "tip": "Go in the free evening slot but arrive early; the queue is long. The Velázquez and Goya rooms are the core.",
+      "source": "https://www.museodelprado.es/en/visit"
+    },
+    "royal-palace": {
+      "name": "Royal Palace of Madrid",
+      "landmark": "Royal Palace of Madrid",
+      "kind": "sight",
+      "lat": 40.4181,
+      "lon": -3.7143,
+      "price": 14,
+      "price_text": "€14 basic ticket · reduced rates for students and seniors · check on the day",
+      "hours": "Usually 10:00–18:00 winter, 10:00–19:00 summer · closed on some state days",
+      "tip": "Book online to skip the ticket line. Changing of the guard is on selected mornings only, so check the day before.",
+      "source": "https://www.patrimonionacional.es/en/visita/royal-palace-madrid"
+    },
+    "plaza-mayor": {
+      "name": "Plaza Mayor",
+      "landmark": "Plaza Mayor",
+      "kind": "sight",
+      "lat": 40.4154,
+      "lon": -3.7077,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Sit at a café for the view but eat elsewhere; terrace prices are high. Come early for photos without crowds.",
+      "source": "https://www.esmadrid.com/en/tourist-information/plaza-mayor"
+    },
+    "retiro": {
+      "name": "Retiro Park",
+      "landmark": "Retiro Park",
+      "kind": "park",
+      "lat": 40.414,
+      "lon": -3.6826,
+      "price": 0,
+      "price_text": "Free · rowing boats on the lake cost extra",
+      "hours": "Daily, roughly 06:00–22:00 in summer, shorter in winter",
+      "tip": "Rent a rowing boat on the lake and see the Crystal Palace. It is huge, so pick one corner and walk slowly.",
+      "source": "https://www.esmadrid.com/en/tourist-information/parque-del-retiro"
+    },
+    "reina-sofia": {
+      "name": "Reina Sofia Museum",
+      "landmark": "Reina Sofia Museum",
+      "kind": "museum",
+      "lat": 40.4079,
+      "lon": -3.693,
+      "price": 12,
+      "price_text": "€12 general · free on some weekday evenings, check on the day",
+      "hours": "Closed Tuesday · otherwise roughly 10:00–21:00, shorter on Sunday",
+      "tip": "Go straight to Guernica on floor 2, then work backwards. Free slots are crowded.",
+      "source": "https://www.museoreinasofia.es/en/visit"
+    },
+    "puerta-del-sol": {
+      "name": "Puerta del Sol",
+      "landmark": "Puerta del Sol",
+      "kind": "sight",
+      "lat": 40.4168,
+      "lon": -3.7035,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Find the Km 0 stone slab and the bear-and-strawberry-tree statue. It is a meeting point, not a long stop.",
+      "source": "https://www.esmadrid.com/en/tourist-information/puerta-del-sol"
+    },
+    "debod": {
+      "name": "Temple of Debod",
+      "landmark": "Temple of Debod",
+      "kind": "sight",
+      "lat": 40.426,
+      "lon": -3.717,
+      "price": 0,
+      "price_text": "Free · interior visits limited, check on the day",
+      "hours": "Park always open · temple interior has short opening hours",
+      "tip": "Best at sunset, when the temple is lit and the park fills up. Bring a jacket in winter.",
+      "source": "https://www.esmadrid.com/en/tourist-information/templo-de-debod"
+    },
+    "gran-via": {
+      "name": "Gran Vía",
+      "landmark": "Gran Vía",
+      "kind": "sight",
+      "lat": 40.4208,
+      "lon": -3.7042,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk it after dark for the neon signs and the theatres. Watch your bag in the crowds.",
+      "source": "https://www.esmadrid.com/en/tourist-information/gran-via"
+    },
+    "almudena": {
+      "name": "Almudena Cathedral",
+      "landmark": "Almudena Cathedral",
+      "kind": "sight",
+      "lat": 40.4178,
+      "lon": -3.7145,
+      "price": 0,
+      "price_text": "Free entry to the main nave · museum and dome may charge, check on the day",
+      "hours": "Daily, roughly 09:00–20:30, shorter on Sunday around mass",
+      "tip": "Step inside for the colourful ceiling, then cross to the palace square. Dress respectfully.",
+      "source": "https://catedraldelaalmudena.es/"
+    },
+    "uam": {
+      "name": "Autonomous University of Madrid (Cantoblanco)",
+      "landmark": "Autonomous University of Madrid",
+      "kind": "sight",
+      "lat": 40.5475,
+      "lon": -3.6918,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open on weekdays · check on the day",
+      "tip": "It is a working campus far north of the centre, not a tourist sight. Visit only if you have business there.",
+      "source": "https://www.uam.es/"
+    },
+    "metropolitano": {
+      "name": "Estadio Metropolitano",
+      "landmark": "Estadio Metropolitano",
+      "kind": "sight",
+      "lat": 40.4362,
+      "lon": -3.5995,
+      "price": null,
+      "price_text": "Tour and match prices vary · check on the day",
+      "hours": "Tours on selected days · match days vary",
+      "tip": "Book a stadium tour or a match ticket well ahead. It is far from the centre, so allow travel time.",
+      "source": "https://www.atleticodemadrid.com/"
+    },
+    "guernica": {
+      "name": "Guernica (Picasso)",
+      "landmark": "Guernica",
+      "kind": "museum",
+      "lat": 40.4079,
+      "lon": -3.6946,
+      "price": 12,
+      "price_text": "Included in the Reina Sofia ticket",
+      "hours": "Same as Reina Sofia · closed Tuesday",
+      "tip": "No photos allowed. Stand close to see the grey tones, then step back for the whole composition.",
+      "source": "https://www.museoreinasofia.es/en/collections/artwork/guernica-pablo-picasso"
+    },
+    "las-meninas": {
+      "name": "Las Meninas (Velázquez)",
+      "landmark": "Las Meninas",
+      "kind": "museum",
+      "lat": 40.4138,
+      "lon": -3.6921,
+      "price": 15,
+      "price_text": "Included in the Prado ticket",
+      "hours": "Same as the Prado",
+      "tip": "Find it in room 12. Go early, as the crowd in front of it builds fast.",
+      "source": "https://www.museodelprado.es/en/the-collection/art-work/las-meninas"
+    },
+    "warner": {
+      "name": "Parque Warner Madrid",
+      "landmark": "Parque Warner Madrid",
+      "kind": "activity",
+      "lat": 40.4167,
+      "lon": -3.7032,
+      "price": null,
+      "price_text": "Day tickets vary by date · check on the day",
+      "hours": "Seasonal · usually open daily in summer, weekends off-season",
+      "tip": "It is far outside the city; book a shuttle or check the train. Buy tickets online for lower prices.",
+      "source": "https://www.parquewarner.com/"
+    },
+    "atracciones": {
+      "name": "Parque de Atracciones de Madrid",
+      "landmark": "Parque de Atracciones de Madrid",
+      "kind": "activity",
+      "lat": 40.4167,
+      "lon": -3.7032,
+      "price": null,
+      "price_text": "Day tickets vary · check on the day",
+      "hours": "Seasonal · check the calendar",
+      "tip": "In Casa de Campo, reachable by metro. Good for families with older kids.",
+      "source": "https://www.parquedeatracciones.es/"
+    },
+    "cibeles": {
+      "name": "Plaza de Cibeles",
+      "landmark": "Plaza de Cibeles",
+      "kind": "sight",
+      "lat": 40.4194,
+      "lon": -3.6933,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "See the fountain and the Cybele Palace from the traffic island crossings. Best photographed from the Paseo del Prado side.",
+      "source": "https://www.esmadrid.com/en/tourist-information/plaza-de-cibeles"
+    },
+    "alcala": {
+      "name": "Puerta de Alcalá",
+      "landmark": "Puerta de Alcalá",
+      "kind": "sight",
+      "lat": 40.42,
+      "lon": -3.6888,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk through it into Retiro Park. Traffic is heavy, so cross at the lights.",
+      "source": "https://www.esmadrid.com/en/tourist-information/puerta-de-alcala"
+    },
+    "teatro-real": {
+      "name": "Royal Theatre (Teatro Real)",
+      "landmark": "Royal Theatre (Teatro Real)",
+      "kind": "show",
+      "lat": 40.4187,
+      "lon": -3.7088,
+      "price": null,
+      "price_text": "Guided tours and opera tickets vary · check on the day",
+      "hours": "Box office and tours on selected days",
+      "tip": "Book opera or a guided tour online. The building faces the palace across the square.",
+      "source": "https://www.teatroreal.es/en"
+    },
+    "bernabeu": {
+      "name": "Santiago Bernabéu",
+      "landmark": "Santiago Bernabeu",
+      "kind": "sight",
+      "lat": 40.453,
+      "lon": -3.6883,
+      "price": null,
+      "price_text": "Tour and match prices vary · check on the day",
+      "hours": "Tours on selected days · match days vary",
+      "tip": "Book the Bernabéu tour online. Match tickets sell out early.",
+      "source": "https://www.realmadrid.com/en"
+    },
+    "teleferico": {
+      "name": "Teleférico de Madrid",
+      "landmark": "Teleférico de Madrid",
+      "kind": "activity",
+      "lat": 40.4253,
+      "lon": -3.7259,
+      "price": null,
+      "price_text": "Return ticket roughly €6–8 · check on the day",
+      "hours": "Usually daily, roughly 11:00–20:00, weather permitting",
+      "tip": "Ride from Paseo del Pintor Rosales to Casa de Campo for city views. Check it is running before you go.",
+      "source": "https://www.teleferico.com/"
+    },
+    "telepizza": {
+      "name": "Telepizza",
+      "landmark": "Telepizza",
+      "kind": "food",
+      "lat": 40.4168,
+      "lon": -3.7038,
+      "price": null,
+      "price_text": "Pizza from roughly €10 · check on the day",
+      "hours": "Varies by branch · many open late",
+      "tip": "A Spanish pizza chain, not a sight. Fine for a quick cheap meal, but try local tapas first.",
+      "source": "https://www.telepizza.es/"
+    },
+    "garden-earthly": {
+      "name": "The Garden of Earthly Delights (Bosch)",
+      "landmark": "The Garden of Earthly Delights",
+      "kind": "museum",
+      "lat": 40.4138,
+      "lon": -3.6921,
+      "price": 15,
+      "price_text": "Included in the Prado ticket",
+      "hours": "Same as the Prado",
+      "tip": "Find it in room 56A. Give it time; the details reward a slow look.",
+      "source": "https://www.museodelprado.es/en/the-collection/art-work/the-garden-of-earthly-delights"
+    },
+    "san-miguel": {
+      "name": "Mercado de San Miguel",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.4154,
+      "lon": -3.7089,
+      "price": null,
+      "price_text": "Tapas and drinks roughly €3–8 each · check on the day",
+      "hours": "Daily, roughly 10:00–24:00",
+      "tip": "Busy and pricey but fun for a first taste of tapas. Go before 13:00 to get a spot.",
+      "source": "https://www.mercadodesanmiguel.es/"
+    },
+    "latina-walk": {
+      "name": "La Latina and Cava Baja tapas walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.4119,
+      "lon": -3.7095,
+      "price": null,
+      "price_text": "Pay per tapa and drink · roughly €20–35 per person",
+      "hours": "Best from evening · many bars closed on Monday",
+      "tip": "Bar-hop along Cava Baja and Cava Alta. Eat standing at the bar like locals.",
+      "source": "https://www.esmadrid.com/en/tourist-information/la-latina"
+    },
+    "templo-viewpoint": {
+      "name": "Príncipe Pío riverside viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.4212,
+      "lon": -3.7188,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the Madrid Río path and watch the sunset behind the palace. Bring water in summer.",
+      "source": "https://www.esmadrid.com/en/tourist-information/madrid-rio"
+    },
+    "malasana-walk": {
+      "name": "Malasaña neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.4265,
+      "lon": -3.7038,
+      "price": 0,
+      "price_text": "Free to walk · cafés and bars extra",
+      "hours": "Shops roughly 10:00–21:00 · bars late",
+      "tip": "Vintage shops by day, bars by night. Wander Plaza del Dos de Mayo.",
+      "source": "https://www.esmadrid.com/en/tourist-information/malasana"
+    },
+    "prado-tour": {
+      "name": "Prado guided tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 40.4138,
+      "lon": -3.6921,
+      "price": null,
+      "price_text": "Roughly €30–45 per person · check on the day",
+      "hours": "Tours run most mornings",
+      "tip": "A guide helps you pick the key works in a huge museum. Book online and arrive 15 minutes early.",
+      "source": "https://www.museodelprado.es/en/visit"
+    },
+    "churros": {
+      "name": "Churros con chocolate at a classic café",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.4138,
+      "lon": -3.7058,
+      "price": null,
+      "price_text": "Roughly €5–8 per person",
+      "hours": "Most open early to late",
+      "tip": "A Madrid breakfast tradition. Order churros with thick hot chocolate and dip.",
+      "source": "https://www.esmadrid.com/en/gastronomy"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "One big art day: the Prado first thing, then the Reina Sofía, with a park break between.",
+      "days": [
+        {
+          "title": "Golden triangle in a day",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Be at the door at opening. Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "las-meninas",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "Inside the Prado. Head here early before the crowds build."
+            },
+            {
+              "place": "garden-earthly",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Also in the Prado. Allow a few minutes to find the room."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot east. Grab lunch near the park."
+            },
+            {
+              "place": "reina-sofia",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Closed Tuesday. Check Sunday closing time on the day."
+            },
+            {
+              "place": "guernica",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Inside the Reina Sofía. Ask staff for the room."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Salamanca (Paseo del Prado area)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way from a churro breakfast to a Cava Baja tapas crawl.",
+      "days": [
+        {
+          "title": "Markets, old streets and tapas",
+          "stops": [
+            {
+              "place": "churros",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Start with churros con chocolate near Sol."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Five minutes on foot. Quiet in the morning."
+            },
+            {
+              "place": "san-miguel",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Ten minutes on foot. Busy by midday; go early for space."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Many bars close Monday. Thursday to Saturday is liveliest."
+            },
+            {
+              "place": "telepizza",
+              "at": "22:30",
+              "minutes": 30,
+              "note": "Backup late bite if tapas bars are full. Check branch hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Royal Madrid and Habsburg streets, from the palace to a sunset temple.",
+      "days": [
+        {
+          "title": "Palace, cathedral and old Madrid",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Be there at opening. Closed on some state days, check ahead."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Right next door. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "About ten minutes on foot. Lunch nearby."
+            },
+            {
+              "place": "puerta-del-sol",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Five minutes on foot. Busiest in the evening."
+            },
+            {
+              "place": "debod",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Taxi or metro. Park always open; temple interior has short hours. Stay for sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "La Latina"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "One night, three big museums: the Prado first thing, Reina Sofía in the afternoon, a slow morning in Retiro.",
+      "days": [
+        {
+          "title": "Prado at opening, then the golden triangle",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Go right at opening. Closed 1 Jan, 1 May, 25 Dec. Book online to skip the ticket line."
+            },
+            {
+              "place": "las-meninas",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "Inside the Prado. Head straight for it before the rooms fill up."
+            },
+            {
+              "place": "garden-earthly",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Also in the Prado. Give yourself a break in the café after."
+            },
+            {
+              "place": "churros",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby in Sol. Churros are a breakfast or late-night thing, so order a proper meal if you want one."
+            },
+            {
+              "place": "reina-sofia",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. About 15 minutes on foot from the Prado."
+            },
+            {
+              "place": "guernica",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Inside Reina Sofía. Check the room number at the desk, it moves."
+            }
+          ]
+        },
+        {
+          "title": "Retiro, then out",
+          "stops": [
+            {
+              "place": "retiro",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Enter by the Puerta de Alcalá side. Shorter hours in winter, so check on the day."
+            },
+            {
+              "place": "alcala",
+              "at": "11:45",
+              "minutes": 15,
+              "note": "Right by the park gate."
+            },
+            {
+              "place": "cibeles",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Ten minutes' walk down Calle de Alcalá."
+            },
+            {
+              "place": "san-miguel",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at the market stalls. Busy at peak lunch, cheaper to stand."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Salamanca or Sol, near the museums"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Sol and La Latina: market lunch, a Cava Baja tapas crawl, churros to finish.",
+      "days": [
+        {
+          "title": "Market lunch and the tapas crawl",
+          "stops": [
+            {
+              "place": "churros",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Breakfast. Many classic cafés open early."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Five minutes' walk. Quietest in the morning."
+            },
+            {
+              "place": "san-miguel",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Late-morning snack or early lunch. It gets packed after 13:00."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Many bars close on Monday. Thursday to Saturday is liveliest. Eat standing at the bar."
+            }
+          ]
+        },
+        {
+          "title": "Malasaña, then a late bite",
+          "stops": [
+            {
+              "place": "puerta-del-sol",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Start here, it is the centre of everything."
+            },
+            {
+              "place": "malasana-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Afternoon into evening is best. Shops roughly 10:00–21:00."
+            },
+            {
+              "place": "gran-via",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk it after lunch. Best in the evening when lit."
+            },
+            {
+              "place": "telepizza",
+              "at": "21:00",
+              "minutes": 30,
+              "note": "Backup for a late, cheap bite. Hours vary by branch, many open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina, walkable to the bars"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Royal Madrid in a day: palace and cathedral in the morning, old streets and a sunset temple after.",
+      "days": [
+        {
+          "title": "Palace, cathedral and the old town",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Be there at opening. Closed on some state days, check before you go."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Right next door. Shorter hours on Sunday around mass."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Ten minutes' walk. Then lunch in the streets around it."
+            },
+            {
+              "place": "debod",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Park always open. Temple interior has short hours. Go for sunset."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Riverside viewpoint nearby. Stay for the light, then dinner in La Latina."
+            }
+          ]
+        },
+        {
+          "title": "Sol, Cibeles and out",
+          "stops": [
+            {
+              "place": "puerta-del-sol",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Start early, it is calm before the crowds."
+            },
+            {
+              "place": "cibeles",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Fifteen minutes' walk up Calle de Alcalá."
+            },
+            {
+              "place": "alcala",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Just past Cibeles, at the Retiro gate."
+            },
+            {
+              "place": "retiro",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "A short loop before you leave. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina, near the palace"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "First-timers who want the big three museums plus the city's best outdoor art breaks.",
+      "days": [
+        {
+          "title": "Prado at opening, then Retiro",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Go right at opening. Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "las-meninas",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Inside the Prado. Head here first before crowds build."
+            },
+            {
+              "place": "garden-earthly",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Also in the Prado. Allow time to find the room."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot east. Late morning is calm."
+            },
+            {
+              "place": "churros",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "A late breakfast or early snack near Sol."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofia and Guernica",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Check the day before you go."
+            },
+            {
+              "place": "guernica",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Inside Reina Sofia. Same closed-Tuesday rule."
+            },
+            {
+              "place": "cibeles",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Short walk north. Best lit in the evening, fine by day too."
+            },
+            {
+              "place": "alcala",
+              "at": "13:30",
+              "minutes": 15,
+              "note": "Five minutes on foot up Calle de Alcalá."
+            },
+            {
+              "place": "san-miguel",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Lunch at the market. Busy at peak times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Salamanca or Sol"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, tapas bars and late dinners.",
+      "days": [
+        {
+          "title": "Market lunch and La Latina tapas",
+          "stops": [
+            {
+              "place": "plaza-mayor",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quiet before the crowds arrive."
+            },
+            {
+              "place": "san-miguel",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Late morning is calmer than lunch."
+            },
+            {
+              "place": "churros",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Classic café stop near Sol."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Many bars close Monday. Thursday to Saturday is best."
+            }
+          ]
+        },
+        {
+          "title": "Malasaña and a late dinner",
+          "stops": [
+            {
+              "place": "puerta-del-sol",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Quick look at the square and the bear statue."
+            },
+            {
+              "place": "gran-via",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk up toward Malasaña."
+            },
+            {
+              "place": "malasana-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Shops until about 21:00. Bars run late."
+            },
+            {
+              "place": "telepizza",
+              "at": "21:30",
+              "minutes": 30,
+              "note": "Easy late option. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or Gran Vía"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want palaces, old streets and the Habsburg core on foot.",
+      "days": [
+        {
+          "title": "Royal Palace and old Madrid",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Be there at opening. Closed on some state days."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Right next door. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Early or after dark is best."
+            },
+            {
+              "place": "san-miguel",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch next to Plaza Mayor."
+            },
+            {
+              "place": "debod",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset is the best time. Temple interior has short hours."
+            }
+          ]
+        },
+        {
+          "title": "Prado and the Paseo del Prado",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is quietest. Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "cibeles",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Short walk north."
+            },
+            {
+              "place": "alcala",
+              "at": "13:30",
+              "minutes": 15,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "retiro",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Lunch nearby, then a slow walk in the park."
+            }
+          ],
+          "note": "Swap in Reina Sofia if the Prado is closed."
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "First-timers who want the big three museums plus the old city on foot.",
+      "days": [
+        {
+          "title": "Arrive, Prado highlights",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed 1 Jan, 1 May, 25 Dec. Book online to skip the ticket line."
+            },
+            {
+              "place": "las-meninas",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Inside the Prado. Head straight there before the rooms fill."
+            },
+            {
+              "place": "garden-earthly",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Also in the Prado. Allow extra time for the rest of the collection."
+            },
+            {
+              "place": "churros",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Late breakfast or a snack near Sol."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk from Sol. Quietest early morning or after dark."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofía and Retiro",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Check the day before you go."
+            },
+            {
+              "place": "guernica",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Inside Reina Sofía. Expect a crowd."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot. Late afternoon is best in spring or autumn."
+            },
+            {
+              "place": "alcala",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "At the park's edge. Good photo stop."
+            },
+            {
+              "place": "cibeles",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Short walk down Calle de Alcalá."
+            }
+          ]
+        },
+        {
+          "title": "Old Madrid and Debod sunset",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go right at opening. Some state days it closes, so check ahead."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Next to the palace. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "latina-walk",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Many bars close on Monday. Thursday to Saturday is liveliest."
+            },
+            {
+              "place": "debod",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "Sunset spot. The park is always open; the temple interior has short hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or Salamanca"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, tapas streets and late nights, with one big museum.",
+      "days": [
+        {
+          "title": "Market and old squares",
+          "stops": [
+            {
+              "place": "san-miguel",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Late morning is calmer. Roughly 10:00–24:00 daily."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Two minutes on foot."
+            },
+            {
+              "place": "puerta-del-sol",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Busiest in the evening."
+            },
+            {
+              "place": "churros",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Classic café stop near Sol."
+            },
+            {
+              "place": "gran-via",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Evening stroll before dinner."
+            }
+          ]
+        },
+        {
+          "title": "La Latina tapas day",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning at opening, then walk downhill."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Beside the palace."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Cava Baja bars. Many closed Monday."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "22:30",
+              "minutes": 60,
+              "note": "Riverside view to end the night."
+            }
+          ]
+        },
+        {
+          "title": "Prado, then Malasaña",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Book ahead. Free evening slot is busy."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk it off nearby."
+            },
+            {
+              "place": "malasana-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars run late."
+            },
+            {
+              "place": "telepizza",
+              "at": "21:00",
+              "minutes": 30,
+              "note": "Easy late bite. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want palaces, Habsburg streets and the old city at an easy pace.",
+      "days": [
+        {
+          "title": "Royal Madrid",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Right at opening. Check state days."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Next door. Shorter around Sunday mass."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short walk through the old streets."
+            },
+            {
+              "place": "puerta-del-sol",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Then lunch nearby."
+            }
+          ]
+        },
+        {
+          "title": "Prado and Retiro",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "las-meninas",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Inside the Prado."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot."
+            },
+            {
+              "place": "alcala",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Park edge."
+            },
+            {
+              "place": "cibeles",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Lit up nicely in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Debod and La Latina",
+          "stops": [
+            {
+              "place": "debod",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Park always open; temple interior has short hours."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Riverside walk."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening tapas. Many bars closed Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Four nights for the Prado, Reina Sofía and the city's best art in a relaxed pace.",
+      "days": [
+        {
+          "title": "Arrive and settle in Salamanca",
+          "stops": [
+            {
+              "place": "retiro",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Easy first walk. Gates close earlier in winter, so check on the day."
+            },
+            {
+              "place": "alcala",
+              "at": "17:45",
+              "minutes": 15,
+              "note": "Short walk from the park's north side."
+            },
+            {
+              "place": "cibeles",
+              "at": "18:15",
+              "minutes": 20,
+              "note": "Best after dark when the building is lit."
+            },
+            {
+              "place": "churros",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "A café near Sol for an early snack or dinner."
+            }
+          ]
+        },
+        {
+          "title": "Prado morning",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Go right at opening. Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "las-meninas",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Inside the Prado. Head here first before crowds build."
+            },
+            {
+              "place": "garden-earthly",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Also inside the Prado."
+            },
+            {
+              "place": "san-miguel",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch at the market. About 20 minutes on foot or a short taxi."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofía and Guernica",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Check the day before."
+            },
+            {
+              "place": "guernica",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Inside Reina Sofía. Same opening hours."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Walk down through old streets. Quiet at midday."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Tapas dinner in La Latina. Many bars closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Palace and last views",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Arrive at opening. Closed on some state days, so check ahead."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Next to the palace. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "debod",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset is the best time. Temple interior has short hours."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Riverside walk and a last dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Salamanca or Sol"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Four nights of markets, tapas crawls and late dinners, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Arrive, market and old town",
+          "stops": [
+            {
+              "place": "san-miguel",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Late-morning stalls are calmer. Open roughly 10:00–24:00."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Two minutes on foot."
+            },
+            {
+              "place": "puerta-del-sol",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Short walk. Busiest in the evening."
+            },
+            {
+              "place": "churros",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Classic café stop before dinner."
+            }
+          ]
+        },
+        {
+          "title": "La Latina tapas day",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning at opening. Check for state-day closures."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Next door to the palace."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Cava Baja crawl. Many bars closed Monday, so pick Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Prado and a long lunch",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Right at opening. Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the park. Shorter hours in winter."
+            },
+            {
+              "place": "telepizza",
+              "at": "20:00",
+              "minutes": 30,
+              "note": "Easy late option. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Malasaña and farewell dinner",
+          "stops": [
+            {
+              "place": "malasana-walk",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars run late."
+            },
+            {
+              "place": "gran-via",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening stroll. Always open."
+            },
+            {
+              "place": "san-miguel",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Last dinner at the market, open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Four nights on Habsburg Madrid, the royal palace and the old streets, with art as a bonus.",
+      "days": [
+        {
+          "title": "Arrive and old Madrid",
+          "stops": [
+            {
+              "place": "puerta-del-sol",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Central start point. Always open."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Five minutes on foot. Quiet in late afternoon."
+            },
+            {
+              "place": "churros",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Café stop near Sol."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Dinner in La Latina. Many bars closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Royal day",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Right at opening. Closed on some state days, so check ahead."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Beside the palace. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "debod",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset. Temple interior has short hours."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Riverside walk and dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Prado and Retiro",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "At opening. Closed 1 Jan, 1 May, 25 Dec."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk from the museum. Shorter hours in winter."
+            },
+            {
+              "place": "cibeles",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Short walk south. Best lit in the evening."
+            },
+            {
+              "place": "san-miguel",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner at the market, open late."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofía and Gran Vía",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Check the day before."
+            },
+            {
+              "place": "guernica",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Inside Reina Sofía."
+            },
+            {
+              "place": "gran-via",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening walk. Always open."
+            },
+            {
+              "place": "malasana-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars run late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    },
+    {
+      "id": "5n-art",
+      "length": "5n",
+      "style": "art",
+      "nights": 5,
+      "for": "Slow art days in the Prado, Reina Sofía and Retiro, with room for tapas and a park sunset.",
+      "days": [
+        {
+          "title": "Arrive and ease into the Prado",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Last entry is usually an hour before closing. Weekday afternoons are calmer."
+            },
+            {
+              "place": "las-meninas",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Inside the Prado. Ask staff for the room number on the day."
+            },
+            {
+              "place": "garden-earthly",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Also inside the Prado. Give yourself time to find it."
+            },
+            {
+              "place": "churros",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "A classic café near Sol. Many open late."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofía morning, Retiro afternoon",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Go early to beat the queues."
+            },
+            {
+              "place": "guernica",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Inside Reina Sofía. No photos allowed."
+            },
+            {
+              "place": "retiro",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk from the museum. Late afternoon is best in spring or autumn."
+            },
+            {
+              "place": "alcala",
+              "at": "16:30",
+              "minutes": 15,
+              "note": "Short walk from the park's main gate."
+            },
+            {
+              "place": "cibeles",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Stay for the evening lights."
+            }
+          ]
+        },
+        {
+          "title": "Prado guided tour and old Madrid",
+          "stops": [
+            {
+              "place": "prado-tour",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Tours run most mornings. Book ahead."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short taxi or metro ride. Quiet at midday."
+            },
+            {
+              "place": "san-miguel",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Busy at peak times."
+            },
+            {
+              "place": "royal-palace",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Check state days before you go. Last entry is usually an hour before closing."
+            },
+            {
+              "place": "almudena",
+              "at": "18:15",
+              "minutes": 30,
+              "note": "Next to the palace. Shorter hours around Sunday mass."
+            }
+          ]
+        },
+        {
+          "title": "Debod, viewpoint and tapas",
+          "stops": [
+            {
+              "place": "debod",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Park is always open. Temple interior has short hours."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset view over the river and palace."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Cava Baja tapas crawl. Many bars close on Monday."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "puerta-del-sol",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Central meeting point. Always open."
+            },
+            {
+              "place": "gran-via",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk. Good for a last look at the city."
+            },
+            {
+              "place": "telepizza",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch before the airport. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Salamanca or Sol"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Market stalls, churros and long tapas evenings, with light art and park breaks in between.",
+      "days": [
+        {
+          "title": "Arrive, market and Sol",
+          "stops": [
+            {
+              "place": "san-miguel",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Open roughly 10:00–24:00."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Two minutes on foot."
+            },
+            {
+              "place": "churros",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Afternoon snack. Many cafés open early to late."
+            },
+            {
+              "place": "puerta-del-sol",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Busiest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "La Latina tapas evening",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go right at opening. Check state days."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Next door. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "debod",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset is the best time."
+            },
+            {
+              "place": "latina-walk",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Cava Baja crawl. Best Thursday to Saturday. Many bars closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Prado morning, Malasaña evening",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Right at opening is quietest."
+            },
+            {
+              "place": "retiro",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk from the museum. Good picnic spot."
+            },
+            {
+              "place": "malasana-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars stay open late."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofía and a late dinner",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Shorter hours on Sunday."
+            },
+            {
+              "place": "guernica",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Inside the museum."
+            },
+            {
+              "place": "cibeles",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Short walk. Lit up in the evening."
+            },
+            {
+              "place": "telepizza",
+              "at": "21:00",
+              "minutes": 30,
+              "note": "Late bite. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Churros and fly",
+          "stops": [
+            {
+              "place": "churros",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Breakfast before the airport."
+            },
+            {
+              "place": "gran-via",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Last stroll. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    },
+    {
+      "id": "5n-history",
+      "length": "5n",
+      "style": "history",
+      "nights": 5,
+      "for": "Palaces, old squares and Habsburg streets, with the big museums and a sunset temple.",
+      "days": [
+        {
+          "title": "Arrive and old Madrid",
+          "stops": [
+            {
+              "place": "puerta-del-sol",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Central start point. Always open."
+            },
+            {
+              "place": "plaza-mayor",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Five minutes on foot. Quiet early morning or after dark."
+            },
+            {
+              "place": "san-miguel",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Snack stop next to the square."
+            },
+            {
+              "place": "teatro-real",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Tours on selected days. Check the box office."
+            }
+          ]
+        },
+        {
+          "title": "Royal Palace and Almudena",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Right at opening. Closed on some state days."
+            },
+            {
+              "place": "almudena",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Next door. Shorter hours around Sunday mass."
+            },
+            {
+              "place": "debod",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset. Park always open."
+            },
+            {
+              "place": "templo-viewpoint",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Riverside view, short walk away."
+            }
+          ]
+        },
+        {
+          "title": "Prado and Retiro",
+          "stops": [
+            {
+              "place": "prado",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed 1 Jan, 1 May, 25 Dec. Free evening slot most days."
+            },
+            {
+              "place": "las-meninas",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Inside the Prado."
+            },
+            {
+              "place": "retiro",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk from the museum."
+            },
+            {
+              "place": "alcala",
+              "at": "15:30",
+              "minutes": 15,
+              "note": "Near the park's main gate."
+            }
+          ]
+        },
+        {
+          "title": "Reina Sofía and Cibeles",
+          "stops": [
+            {
+              "place": "reina-sofia",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday."
+            },
+            {
+              "place": "guernica",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Inside the museum."
+            },
+            {
+              "place": "cibeles",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Short walk. Best lit in the evening."
+            },
+            {
+              "place": "gran-via",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening stroll."
+            }
+          ]
+        },
+        {
+          "title": "La Latina and fly",
+          "stops": [
+            {
+              "place": "latina-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Daytime version is quieter. Many bars closed Monday."
+            },
+            {
+              "place": "churros",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Last snack before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sol or La Latina"
+    }
+  ],
+  "styles": [
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "The Prado, Reina Sofía and Thyssen in one golden triangle."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Tapas crawls, market stalls and late dinners."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Royal palace, old streets and Habsburg Madrid."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Sol",
+      "range": [
+        90,
+        200
+      ],
+      "why": "Dead centre, walk to the Prado, Plaza Mayor and Royal Palace. Metro hub under the square. Noisy at night.",
+      "center": [
+        40.4169,
+        -3.7035
+      ]
+    },
+    {
+      "area": "Gran Vía",
+      "range": [
+        100,
+        230
+      ],
+      "why": "Theatre strip with shops and big-name hotels. Walk to Sol and Chueca; lively late into the night.",
+      "center": [
+        40.4203,
+        -3.7058
+      ]
+    },
+    {
+      "area": "La Latina",
+      "range": [
+        80,
+        180
+      ],
+      "why": "Old-town lanes, Sunday El Rastro market and the best tapas bars. Quiet mornings, busy weekends.",
+      "center": [
+        40.4115,
+        -3.7095
+      ]
+    },
+    {
+      "area": "Salamanca",
+      "range": [
+        180,
+        450
+      ],
+      "why": "Elegant, calm and upscale. Good for shopping and quiet nights; a longer walk or short metro ride to the old centre.",
+      "center": [
+        40.43,
+        -3.683
+      ]
+    }
+  ],
+  "food": [
+    "Do a tapas crawl: order one small plate and a drink per bar, then move on. Dinner starts late, often after 21:00.",
+    "Try local dishes: tortilla española, jamón ibérico, patatas bravas, cocido madrileño and bocadillo de calamares near Plaza Mayor.",
+    "Markets are good value: Mercado de San Miguel for snacks, San Antón and San Fernando for cheaper local stalls.",
+    "Book popular restaurants ahead, especially on weekends. Many close one day midweek; check before you go.",
+    "Late-night eats: churros con chocolate after midnight, and bars around Sol and La Latina stay open very late."
+  ],
+  "more_time": [
+    "Day trip to Toledo: train from Atocha in about 35 minutes; a walled old city full of history.",
+    "Day trip to Segovia: high-speed train in under 30 minutes for the Roman aqueduct and the Alcázar.",
+    "Art lovers: swap a city day for the Reina Sofía's Guernica and the Thyssen collection, or add El Escorial by train."
+  ]
+}

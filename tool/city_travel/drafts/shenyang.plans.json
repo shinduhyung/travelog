@@ -1,0 +1,910 @@
+{
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed history day: the imperial palace first, then the 918 Museum and the North Tomb.",
+      "days": [
+        {
+          "title": "Imperial palace, 918 Museum, North Tomb",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Go at opening. Closed Monday, so check the day."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short loop of the backstreets around the palace."
+            },
+            {
+              "place": "wuai_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Quick lunch from the stalls. Busiest and best in the morning, but food runs through the day."
+            },
+            {
+              "place": "mukden_museum",
+              "at": "13:45",
+              "minutes": 90,
+              "note": "Short taxi or metro ride north. Closed Monday."
+            },
+            {
+              "place": "north_tomb",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Park and tomb in one. Check the day's closing time at the gate."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around eating: market breakfast, old-street snacks and a big dongbei dinner.",
+      "days": [
+        {
+          "title": "Market, old city snacks, dongbei dinner",
+          "stops": [
+            {
+              "place": "wuai_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Breakfast here. Come early for the fullest stalls."
+            },
+            {
+              "place": "imperial_palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk it off. Closed Monday."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch and snacks along the pedestrian street."
+            },
+            {
+              "place": "tea_house",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Sit down and rest your feet."
+            },
+            {
+              "place": "northeast_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Big shared plates. Book ahead on weekends."
+            },
+            {
+              "place": "night_market",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Optional extra: street stalls if you are still hungry."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and old streets: the palace, the 918 Museum and a historic road walk.",
+      "days": [
+        {
+          "title": "Palace, museum, historic street",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Start at opening. Closed Monday."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Close by in the old city. Closed Monday."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop on the pedestrian street."
+            },
+            {
+              "place": "mukden_museum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Taxi or metro north. Closed Monday."
+            },
+            {
+              "place": "middle_street",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Historic buildings along Zhongshan Road. Daylight walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day: the imperial palace and old city, then the 918 Museum before you go.",
+      "days": [
+        {
+          "title": "Imperial palace and old city",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early. Closed Monday — check on the day."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Walk the backstreets around the palace."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and a stroll on the pedestrian street."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk away. Closed Monday — verify."
+            },
+            {
+              "place": "night_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Street food dinner in the old city."
+            }
+          ]
+        },
+        {
+          "title": "918 Museum, then leave",
+          "stops": [
+            {
+              "place": "mukden_museum",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Monday. Allow time to read the exhibits."
+            },
+            {
+              "place": "north_station_square",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Next to the museum and the main rail station."
+            },
+            {
+              "place": "north_tomb",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Taxi or metro. A park and Qing tomb in one."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through the old city: markets, dumplings and street stalls.",
+      "days": [
+        {
+          "title": "Market morning and old city snacks",
+          "stops": [
+            {
+              "place": "wuai_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Go early for the freshest food and the busiest stalls."
+            },
+            {
+              "place": "imperial_palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk it off. Closed Monday — verify."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch options along the pedestrian street."
+            },
+            {
+              "place": "tea_house",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Afternoon break."
+            },
+            {
+              "place": "night_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner from the evening stalls."
+            }
+          ]
+        },
+        {
+          "title": "Dongbei dinner and shops",
+          "stops": [
+            {
+              "place": "middle_street",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Historic road walk to build an appetite."
+            },
+            {
+              "place": "taiyuan_street",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Shops and snacks."
+            },
+            {
+              "place": "northeast_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Big portions — order less than you think."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Old streets, a museum and a teahouse — a gentle first look at Shenyang.",
+      "days": [
+        {
+          "title": "Old city culture",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday — check on the day."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Nearby. Closed Monday — verify."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "tea_house",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Sit and rest."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Late afternoon light is best."
+            }
+          ]
+        },
+        {
+          "title": "Museum and orientation",
+          "stops": [
+            {
+              "place": "mukden_museum",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "metro_tour",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Ride the metro to get your bearings."
+            },
+            {
+              "place": "middle_street",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Historic architecture walk."
+            },
+            {
+              "place": "taiyuan_street",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Shops and a late lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-time visitors who want the Qing palace, both imperial tombs and the 918 Museum in two full days.",
+      "days": [
+        {
+          "title": "Old City: palace and backstreets",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early. Closed Monday — check on the day."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Wander the lanes around the palace on foot."
+            },
+            {
+              "place": "wuai_market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Busiest and best in the morning, but food runs through the day."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk from the palace area. Closed Monday — verify."
+            },
+            {
+              "place": "zhongjie",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Stroll the pedestrian street as it wakes up for the evening."
+            },
+            {
+              "place": "night_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner from the evening stalls."
+            }
+          ]
+        },
+        {
+          "title": "Tombs and the 918 Museum",
+          "stops": [
+            {
+              "place": "north_tomb",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Zhaoling park is calm and green in the morning. Spring or autumn is best."
+            },
+            {
+              "place": "mukden_museum",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Short taxi ride. Closed Monday — verify. Allow time to read the exhibits."
+            },
+            {
+              "place": "northeast_food",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Hearty dongbei lunch nearby."
+            },
+            {
+              "place": "east_tomb",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Fuling is further out — take a taxi. Check closing time on the day."
+            },
+            {
+              "place": "tea_house",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Rest your feet before dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Travellers who plan the day around markets, dumplings, barbecue and street snacks.",
+      "days": [
+        {
+          "title": "Market morning, Old City evening",
+          "stops": [
+            {
+              "place": "wuai_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early for the freshest stalls and breakfast snacks."
+            },
+            {
+              "place": "imperial_palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk off breakfast. Closed Monday — verify."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch options along the pedestrian street."
+            },
+            {
+              "place": "tea_house",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon break."
+            },
+            {
+              "place": "night_market",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Graze the evening stalls — this is the main event."
+            }
+          ]
+        },
+        {
+          "title": "Dongbei dinner day",
+          "stops": [
+            {
+              "place": "old_city_walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning walk to build an appetite."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Closed Monday — verify."
+            },
+            {
+              "place": "taiyuan_street",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Shopping area with plenty of snack stops. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "northeast_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Big shared plates — order fewer dishes than you think."
+            },
+            {
+              "place": "zhongjie",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Evening stroll to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museum lovers and walkers who want old streets, history and a slower pace.",
+      "days": [
+        {
+          "title": "Old City culture on foot",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday — verify."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Backstreets and old shopfronts."
+            },
+            {
+              "place": "wuai_market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the stalls."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Closed Monday — verify."
+            },
+            {
+              "place": "tea_house",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Afternoon tea break."
+            },
+            {
+              "place": "zhongjie",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening lights on the pedestrian street."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the north side",
+          "stops": [
+            {
+              "place": "mukden_museum",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Monday — verify."
+            },
+            {
+              "place": "north_station_square",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick look around the station area."
+            },
+            {
+              "place": "northeast_food",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "liaoning_museum",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Taxi or metro to Hunnan. Closed Monday — verify."
+            },
+            {
+              "place": "hunnan_park",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Easy walk to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the Qing palace, both imperial tombs and the 918 Museum without rushing.",
+      "days": [
+        {
+          "title": "Old City: palace and backstreets",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early. Closed Monday, so check the day."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Walk the lanes around the palace in daylight."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short walk from the palace. Closed Monday, verify."
+            },
+            {
+              "place": "zhongjie",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Snack street. Shops open around 10:00."
+            },
+            {
+              "place": "night_market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Stalls run roughly 17:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "North: tomb and 918 Museum",
+          "stops": [
+            {
+              "place": "north_tomb",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Park opens early. Best in spring or autumn."
+            },
+            {
+              "place": "mukden_museum",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday. Verify hours before you go."
+            },
+            {
+              "place": "north_station_square",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick look around the station area."
+            },
+            {
+              "place": "northeast_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner: dongbei dishes, big portions."
+            }
+          ]
+        },
+        {
+          "title": "East Tomb and museum",
+          "stops": [
+            {
+              "place": "east_tomb",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Outdoor site. Bring water and sun cover."
+            },
+            {
+              "place": "tea_house",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Rest and warm up before the afternoon."
+            },
+            {
+              "place": "liaoning_museum",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "In Hunnan, a taxi or metro ride away. Closed Monday, verify."
+            },
+            {
+              "place": "hunnan_park",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy walk near the museum."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Travellers who plan the day around markets, dumplings, barbecue and street snacks.",
+      "days": [
+        {
+          "title": "Old City tastes",
+          "stops": [
+            {
+              "place": "wuai_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Go early, it is busiest in the morning."
+            },
+            {
+              "place": "imperial_palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk it off. Closed Monday, verify."
+            },
+            {
+              "place": "zhongjie",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch from the street stalls and shops."
+            },
+            {
+              "place": "tea_house",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Afternoon break."
+            },
+            {
+              "place": "night_market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening snacks. Stalls roughly 17:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Taiyuan Street eating day",
+          "stops": [
+            {
+              "place": "middle_street",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Historic road walk in daylight."
+            },
+            {
+              "place": "taiyuan_street",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Shops open around 10:00. Grab lunch here."
+            },
+            {
+              "place": "northeast_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Proper dongbei dinner. Book or arrive early."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, park afternoon",
+          "stops": [
+            {
+              "place": "wuai_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Second visit for breakfast snacks."
+            },
+            {
+              "place": "north_tomb",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Park walk between meals."
+            },
+            {
+              "place": "zhongjie",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Late afternoon into evening is best."
+            },
+            {
+              "place": "night_market",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Last street-food round."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Visitors who want museums, old streets and a feel for the city's history and daily life.",
+      "days": [
+        {
+          "title": "Palace and old streets",
+          "stops": [
+            {
+              "place": "imperial_palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday, verify. Morning is quieter."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Backstreets in daylight."
+            },
+            {
+              "place": "zhang_residence",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Closed Monday, verify."
+            },
+            {
+              "place": "metro_tour",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Ride to get your bearings. Runs roughly 06:00–22:30."
+            },
+            {
+              "place": "zhongjie",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the north",
+          "stops": [
+            {
+              "place": "mukden_museum",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Monday. Verify hours."
+            },
+            {
+              "place": "north_station_square",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short orientation stop."
+            },
+            {
+              "place": "north_tomb",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Outdoor park and tomb."
+            },
+            {
+              "place": "northeast_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner near Taiyuan Street."
+            }
+          ]
+        },
+        {
+          "title": "Hunnan museum day",
+          "stops": [
+            {
+              "place": "liaoning_museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday, verify. Allow plenty of time."
+            },
+            {
+              "place": "hunnan_park",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Walk and lunch nearby."
+            },
+            {
+              "place": "botanical_garden",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Best in spring and autumn. Check seasonal hours."
+            },
+            {
+              "place": "tea_house",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Wind down before heading back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shenhe (Old City)"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+$ deepseek_facts.py Seattle
+  tokens in 4063 out 991
+Seattle: 2 problems
+  - YVR taxi $250-350 vs tariff estimate 636
+  - airport YVR is 187 km away
+
+$ deepseek_city.py Seattle --stage places
+Seattle: places
+  tokens in 1210 out 2842
+
+$ deepseek_city.py Seattle --stage frame
+Seattle: frame
+  tokens in 2423 out 1909
+  repaired JSON
+
+$ deepseek_city.py Seattle --stage plans
+Seattle: plans
+  plans for day
+  tokens in 2203 out 903
+  plans for 1n
+  tokens in 2204 out 1078
+  plans for 2n
+  tokens in 2209 out 1037
+  plans for 3n
+  tokens in 2204 out 1923
+
+$ merge_city.py Seattle
+Seattle: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/seattle.json and planner/seattle.json
+

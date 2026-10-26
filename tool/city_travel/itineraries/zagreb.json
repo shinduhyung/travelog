@@ -1,0 +1,1584 @@
+{
+  "city": "Zagreb",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Zagreb is a compact, green city of trams, cafés and Habsburg squares. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 45.7736,
+      "west": 15.9182,
+      "north": 45.8364,
+      "east": 16.0454,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 2,
+      "flag_airport": 3,
+      "per_km": 1,
+      "min_fare": 3
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "Trams run 24 hours: 15 day lines and 4 night lines.",
+      "ZET buses cover the suburbs and use the same tickets as trams.",
+      "Buy tickets at kiosks or the MOJ ZET app; cheaper than from the driver.",
+      "A short 30-minute ticket costs about €0.53 at a kiosk.",
+      "Taxis, Bolt and Uber all work; airport rides cost about €14-20.",
+      "The centre is best walked; public bikes cost about €0.66 per 30 min."
+    ],
+    "sources": []
+  },
+  "places": {
+    "zagreb-cathedral": {
+      "name": "Zagreb Cathedral",
+      "landmark": "Zagreb Cathedral",
+      "kind": "sight",
+      "lat": 45.8152,
+      "lon": 16.0306,
+      "price": 0,
+      "price_text": "Free to enter · small fee for treasury, check on the day",
+      "hours": "Generally open daily morning to early evening; check on the day",
+      "tip": "Look up at the twin spires from Ban Jelačić Square first, then walk up to the door.",
+      "source": ""
+    },
+    "st-marks": {
+      "name": "St. Mark's Church",
+      "landmark": "St. Mark's Church",
+      "kind": "sight",
+      "lat": 45.8166,
+      "lon": 15.9733,
+      "price": 0,
+      "price_text": "Free · exterior viewing",
+      "hours": "Exterior always visible; interior hours vary, check on the day",
+      "tip": "The tiled roof with its coats of arms is the photo — best from the square in front.",
+      "source": ""
+    },
+    "gornji-grad": {
+      "name": "Gornji Grad",
+      "landmark": "Gornji Grad",
+      "kind": "sight",
+      "lat": 45.8161,
+      "lon": 15.9738,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Wander the lanes between St. Mark's and the Stone Gate, then take the short funicular down.",
+      "source": ""
+    },
+    "broken-relationships": {
+      "name": "Museum of Broken Relationships",
+      "landmark": "Museum of Broken Relationships",
+      "kind": "museum",
+      "lat": 45.8157,
+      "lon": 15.9734,
+      "price": 7,
+      "price_text": "≈ EUR 7 adults · check current price on the day",
+      "hours": "Generally daily late morning to evening; check on the day",
+      "tip": "Small and quirky — allow an hour and read a few stories slowly rather than all of them.",
+      "source": "https://brokenships.com/"
+    },
+    "strukli": {
+      "name": "Zagorski Štrukli",
+      "landmark": "Zagorski Štrukli",
+      "kind": "food",
+      "lat": 45.815,
+      "lon": 15.9819,
+      "price": 12,
+      "price_text": "≈ EUR 8–15 per portion in a sit-down restaurant",
+      "hours": "Restaurant hours vary; lunch and dinner",
+      "tip": "Try it savoury with cheese first, then sweet — it is a baked pastry dish from the Zagorje region.",
+      "source": ""
+    },
+    "dolac-market": {
+      "name": "Dolac Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 45.8148,
+      "lon": 15.9786,
+      "price": 0,
+      "price_text": "Free to browse · pay per item",
+      "hours": "Mornings, roughly Monday to Saturday; quieter on Sunday",
+      "tip": "Go before noon for the freshest produce and the best people-watching under the red umbrellas.",
+      "source": ""
+    },
+    "tkalciceva": {
+      "name": "Tkalčićeva Street",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.8155,
+      "lon": 15.9775,
+      "price": 0,
+      "price_text": "Free to walk · cafés and bars extra",
+      "hours": "Always open; liveliest in the evening",
+      "tip": "This is the café-and-bar strip — grab a coffee by day, a drink on the terrace at night.",
+      "source": ""
+    },
+    "ban-jelacic": {
+      "name": "Ban Jelačić Square",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.8131,
+      "lon": 15.9776,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The main square is your compass — the cathedral, Dolac and the funicular are all a few minutes away.",
+      "source": ""
+    },
+    "funicular": {
+      "name": "Zagreb Funicular",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.8146,
+      "lon": 15.9772,
+      "price": 1,
+      "price_text": "≈ EUR 1 per ride · check on the day",
+      "hours": "Daytime into evening; check on the day",
+      "tip": "One of the shortest public funiculars in the world — ride it up and walk back down through Gornji Grad.",
+      "source": ""
+    },
+    "stone-gate": {
+      "name": "Stone Gate",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.8162,
+      "lon": 15.9748,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Pause at the shrine inside the gate — it is a quiet spot in the middle of the old town.",
+      "source": ""
+    },
+    "lotrscak": {
+      "name": "Lotrščak Tower",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.8157,
+      "lon": 15.9736,
+      "price": 3,
+      "price_text": "≈ EUR 3 to climb · check on the day",
+      "hours": "Daytime; check on the day",
+      "tip": "Climb for a rooftop view over the Lower Town — the noon cannon fires from here daily.",
+      "source": ""
+    },
+    "maksimir": {
+      "name": "Maksimir Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 45.827,
+      "lon": 16.018,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A big green escape east of the centre — good for a slow walk or a picnic away from the crowds.",
+      "source": ""
+    },
+    "jarun": {
+      "name": "Jarun Lake",
+      "landmark": null,
+      "kind": "park",
+      "lat": 45.783,
+      "lon": 15.933,
+      "price": 0,
+      "price_text": "Free · boat and bike rental extra",
+      "hours": "Always open; rentals daytime",
+      "tip": "Locals come here to run, cycle and swim — a relaxed half-day if you want a break from sightseeing.",
+      "source": ""
+    },
+    "city-walk": {
+      "name": "Free walking tour of the centre",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 45.8131,
+      "lon": 15.9776,
+      "price": 0,
+      "price_text": "Free to join · tip the guide (≈ EUR 5–15)",
+      "hours": "Usually one or two departures daily; check on the day",
+      "tip": "Tours often start at Ban Jelačić Square — tip in cash and confirm the meeting point the day before.",
+      "source": ""
+    },
+    "croatian-history-museum": {
+      "name": "Croatian History Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 45.8163,
+      "lon": 15.9741,
+      "price": 5,
+      "price_text": "≈ EUR 5 · check on the day",
+      "hours": "Weekdays and Saturday; closed Sunday; check on the day",
+      "tip": "A calm, well-labelled overview of Croatian history — good context before you explore further.",
+      "source": ""
+    },
+    "mimara": {
+      "name": "Mimara Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 45.8087,
+      "lon": 15.9686,
+      "price": 8,
+      "price_text": "≈ EUR 8 · check on the day",
+      "hours": "Closed Monday; check on the day",
+      "tip": "A wide art and artefact collection in a grand building — quiet and uncrowded.",
+      "source": ""
+    },
+    "glavni-kolodvor": {
+      "name": "Glavni Kolodvor (Main Station)",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.8049,
+      "lon": 15.9785,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Open with train services",
+      "tip": "The grand station building is a handy landmark — trams and the airport bus leave from here.",
+      "source": ""
+    },
+    "king-tomislav-park": {
+      "name": "King Tomislav Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 45.8055,
+      "lon": 15.9778,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A green strip between the station and the centre — a short rest on the walk into town.",
+      "source": ""
+    },
+    "zrinjevac": {
+      "name": "Zrinjevac Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 45.8097,
+      "lon": 15.9779,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A tree-lined promenade in the Lower Town — pleasant to walk through on the way to the main square.",
+      "source": ""
+    },
+    "art-pavilion": {
+      "name": "Art Pavilion",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 45.8069,
+      "lon": 15.9786,
+      "price": 6,
+      "price_text": "≈ EUR 6 · varies by exhibition, check on the day",
+      "hours": "Closed Monday; check on the day",
+      "tip": "Check what exhibition is on — the yellow building itself is worth a look from the park.",
+      "source": ""
+    },
+    "tkalca-night": {
+      "name": "Evening drinks on Tkalčićeva",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.8156,
+      "lon": 15.9778,
+      "price": 5,
+      "price_text": "≈ EUR 3–6 per drink",
+      "hours": "Evening into late night",
+      "tip": "Pick a terrace and settle in — this is where Zagreb socialises after dark.",
+      "source": ""
+    },
+    "trznica-dolac-food": {
+      "name": "Lunch at Dolac and nearby",
+      "landmark": null,
+      "kind": "food",
+      "lat": 45.8149,
+      "lon": 15.9788,
+      "price": 10,
+      "price_text": "≈ EUR 8–15 for a casual lunch",
+      "hours": "Lunchtime; market mornings",
+      "tip": "Buy fruit at the market, then eat a simple lunch in one of the small places around the square.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day on foot: Upper Town lanes, churches and a café terrace evening.",
+      "days": [
+        {
+          "title": "Lower Town to Upper Town, then Tkalčićeva",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start at the main square. Good meeting point and easy to find."
+            },
+            {
+              "place": "dolac-market",
+              "at": "09:35",
+              "minutes": 45,
+              "note": "Just up the steps from the square. Mornings are best, Monday to Saturday."
+            },
+            {
+              "place": "zagreb-cathedral",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short walk away. Go early before tour groups. Check opening hours on the day."
+            },
+            {
+              "place": "funicular",
+              "at": "11:30",
+              "minutes": 15,
+              "note": "Ride up to Gornji Grad. Short trip, so it is quick."
+            },
+            {
+              "place": "stone-gate",
+              "at": "11:50",
+              "minutes": 15,
+              "note": "A few steps from the funicular top. Always open."
+            },
+            {
+              "place": "st-marks",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "The tiled roof is the photo. Exterior always visible."
+            },
+            {
+              "place": "strukli",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Try Zagorski štrukli. Restaurant hours vary."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Wander the lanes and viewpoints. Late afternoon light is good."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Walk down for terrace drinks. Liveliest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market morning, a štrukli lunch and a long evening on Tkalčićeva.",
+      "days": [
+        {
+          "title": "Markets, lunch and evening drinks",
+          "stops": [
+            {
+              "place": "dolac-market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early for produce and cheese. Quieter on Sunday."
+            },
+            {
+              "place": "ban-jelacic",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Cross the square and orient yourself."
+            },
+            {
+              "place": "city-walk",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Free walking tour to learn the centre. Departures vary, check on the day."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch near the market. Market stalls wind down by afternoon."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Walk off lunch in the Upper Town lanes."
+            },
+            {
+              "place": "strukli",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner. Book ahead on weekends if you can."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening drinks on the street. Best in warm months."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Old walls, the cathedral and museums for a first-time history day.",
+      "days": [
+        {
+          "title": "Upper Town history and museums",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Meet at the square, then head uphill."
+            },
+            {
+              "place": "zagreb-cathedral",
+              "at": "09:40",
+              "minutes": 45,
+              "note": "Morning is quieter. Check hours on the day."
+            },
+            {
+              "place": "stone-gate",
+              "at": "10:40",
+              "minutes": 15,
+              "note": "Short walk up. Always open."
+            },
+            {
+              "place": "st-marks",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "See the tiled roof. Interior hours vary."
+            },
+            {
+              "place": "croatian-history-museum",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Check hours on the day."
+            },
+            {
+              "place": "strukli",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch in the centre."
+            },
+            {
+              "place": "lotrscak",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Climb for the view. The noon cannon is earlier, so come for the view."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Old walls and lanes. Late afternoon is pleasant."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One easy day: Upper Town lanes, the cathedral and a café evening on Tkalčićeva.",
+      "days": [
+        {
+          "title": "Lower Town icons and the market",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Good meeting point. Look for the statue and the clock."
+            },
+            {
+              "place": "dolac-market",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Mornings are best, Monday to Saturday. Quieter on Sunday."
+            },
+            {
+              "place": "zagreb-cathedral",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Go before tour groups. Check opening hours on the day."
+            },
+            {
+              "place": "strukli",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Try baked or boiled štrukli."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Shady park, easy stroll back toward the centre."
+            }
+          ]
+        },
+        {
+          "title": "Upper Town and evening drinks",
+          "stops": [
+            {
+              "place": "funicular",
+              "at": "16:00",
+              "minutes": 15,
+              "note": "Short ride up. Check daytime hours on the day."
+            },
+            {
+              "place": "lotrscak",
+              "at": "16:20",
+              "minutes": 30,
+              "note": "Climb for views. The noon cannon is only at midday."
+            },
+            {
+              "place": "st-marks",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "The tiled roof is the photo. Interior hours vary."
+            },
+            {
+              "place": "stone-gate",
+              "at": "17:25",
+              "minutes": 15,
+              "note": "Small shrine inside the gate, always open."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Wander the lanes as light softens."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and drinks on the terraces."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Ban Jelačić Square"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A market morning, a štrukli lunch and a long evening on Tkalčićeva.",
+      "days": [
+        {
+          "title": "Market, lunch and terraces",
+          "stops": [
+            {
+              "place": "dolac-market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Come hungry. Buy cheese, honey and produce. Mornings, Monday to Saturday."
+            },
+            {
+              "place": "ban-jelacic",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Short walk down. Good orientation point."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch near the market. Check restaurant hours on the day."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Walk it off in the park."
+            },
+            {
+              "place": "strukli",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Dinner. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Evening drinks and a nightcap",
+          "stops": [
+            {
+              "place": "tkalciceva",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Stroll the street first, then pick a terrace."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Liveliest in warm months. Bars run late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Dolac Market"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Old walls, the Stone Gate and museums for a first taste of Zagreb's story.",
+      "days": [
+        {
+          "title": "Upper Town history",
+          "stops": [
+            {
+              "place": "city-walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Free walking tour of the centre. Usually one or two departures daily; check on the day."
+            },
+            {
+              "place": "stone-gate",
+              "at": "11:45",
+              "minutes": 15,
+              "note": "Always open. Pause at the shrine."
+            },
+            {
+              "place": "st-marks",
+              "at": "12:10",
+              "minutes": 20,
+              "note": "Exterior always visible. Interior hours vary."
+            },
+            {
+              "place": "strukli",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the Lower Town."
+            },
+            {
+              "place": "croatian-history-museum",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Tower views and an evening walk",
+          "stops": [
+            {
+              "place": "lotrscak",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Daytime opening; check on the day."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Lanes and viewpoints in late light."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and a slow walk home."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Ban Jelačić Square"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Upper Town lanes, the big church and café terraces without rushing.",
+      "days": [
+        {
+          "title": "Arrive, Lower Town squares and Tkalčićeva",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Good meeting point and orientation. Always open."
+            },
+            {
+              "place": "dolac-market",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Mornings are best; by afternoon stalls are thinning. Check on the day."
+            },
+            {
+              "place": "zagreb-cathedral",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Generally open daily morning to early evening; check on the day."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Shady park walk back toward the station side."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner on the terrace. Liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Upper Town on foot",
+          "stops": [
+            {
+              "place": "funicular",
+              "at": "09:30",
+              "minutes": 15,
+              "note": "Short ride up. Daytime into evening; check on the day."
+            },
+            {
+              "place": "st-marks",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "The tiled roof is the photo. Exterior always visible."
+            },
+            {
+              "place": "stone-gate",
+              "at": "10:30",
+              "minutes": 15,
+              "note": "Always open. Small shrine inside the gate."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Wander the lanes and viewpoints. Late afternoon is also lovely."
+            },
+            {
+              "place": "lotrscak",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Time it for the noon cannon if you can. Daytime; check on the day."
+            },
+            {
+              "place": "strukli",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch. Restaurant hours vary; lunch and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a slow finish",
+          "stops": [
+            {
+              "place": "broken-relationships",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Generally daily late morning to evening; check on the day."
+            },
+            {
+              "place": "croatian-history-museum",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Closed Sunday. Check on the day."
+            },
+            {
+              "place": "mimara",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Afternoon is good."
+            },
+            {
+              "place": "glavni-kolodvor",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Handy if you leave by train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Ban Jelačić"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who plan the day around the market, štrukli and long evenings on Tkalčićeva.",
+      "days": [
+        {
+          "title": "Market morning and terrace evening",
+          "stops": [
+            {
+              "place": "dolac-market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early Monday to Saturday for the full stalls. Quieter on Sunday."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Early lunch or a snack under the market. Lunchtime; market mornings."
+            },
+            {
+              "place": "ban-jelacic",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Easy meeting point before the Upper Town."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the lanes."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening drinks and dinner. Warm months are best."
+            }
+          ]
+        },
+        {
+          "title": "Štrukli and the old centre",
+          "stops": [
+            {
+              "place": "city-walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Usually one or two departures daily; check on the day."
+            },
+            {
+              "place": "strukli",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "The classic Zagreb dish, baked or boiled."
+            },
+            {
+              "place": "zagreb-cathedral",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Generally open daily morning to early evening; check on the day."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee and people-watching."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Second evening out; try a different stretch of the street."
+            }
+          ]
+        },
+        {
+          "title": "Park air and a last lunch",
+          "stops": [
+            {
+              "place": "maksimir",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning walk. Always open; spring to autumn is best."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Final lunch near the market."
+            },
+            {
+              "place": "dolac-market",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Pick up cheese, honey or dried figs to take home."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Dolac"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the old walls, the museums and the city's war story in two days.",
+      "days": [
+        {
+          "title": "Old town walls and the Stone Gate",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start here; always open."
+            },
+            {
+              "place": "funicular",
+              "at": "09:45",
+              "minutes": 15,
+              "note": "Daytime into evening; check on the day."
+            },
+            {
+              "place": "stone-gate",
+              "at": "10:15",
+              "minutes": 15,
+              "note": "Always open. The surviving old gate."
+            },
+            {
+              "place": "st-marks",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Exterior always visible; interior hours vary, check on the day."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Lanes, walls and viewpoints."
+            },
+            {
+              "place": "lotrscak",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Daytime; check on the day. Noon cannon if timing works."
+            },
+            {
+              "place": "strukli",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late lunch. Restaurant hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Museums day",
+          "stops": [
+            {
+              "place": "croatian-history-museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekdays and Saturday; closed Sunday. Check on the day."
+            },
+            {
+              "place": "broken-relationships",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Generally daily late morning to evening; check on the day."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch near the market."
+            },
+            {
+              "place": "mimara",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and a slow evening."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral and a last walk",
+          "stops": [
+            {
+              "place": "zagreb-cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Generally open daily morning to early evening; check on the day."
+            },
+            {
+              "place": "city-walk",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Usually one or two departures daily; check on the day."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Always open. Easy finish before the station."
+            },
+            {
+              "place": "glavni-kolodvor",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Open with train services."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Ban Jelačić"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "A relaxed culture-first stay: Upper Town lanes, churches, parks and a museum or two, with time to sit in cafés.",
+      "days": [
+        {
+          "title": "Arrive, main square and Upper Town",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Good meeting point and orientation. Look for the statue in the middle."
+            },
+            {
+              "place": "dolac-market",
+              "at": "15:35",
+              "minutes": 30,
+              "note": "Stalls wind down by late afternoon. Come back in the morning for the full market."
+            },
+            {
+              "place": "funicular",
+              "at": "16:15",
+              "minutes": 15,
+              "note": "Short ride up to Gornji Grad. Check on the day for running hours."
+            },
+            {
+              "place": "st-marks",
+              "at": "16:40",
+              "minutes": 20,
+              "note": "The tiled roof is the photo. Interior hours vary, check on the day."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "17:10",
+              "minutes": 90,
+              "note": "Wander the lanes and Strossmayer promenade. Late afternoon light is best."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner on the café terraces."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, parks and art",
+          "stops": [
+            {
+              "place": "zagreb-cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early, before tour groups. Generally open daily morning to early evening; check on the day."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Shady park on the walk south. Good bench stop."
+            },
+            {
+              "place": "art-pavilion",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Closed Monday. Check current exhibition on the day."
+            },
+            {
+              "place": "mimara",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Closed Monday. A calm, uncrowded collection."
+            },
+            {
+              "place": "strukli",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Late lunch of baked štrukli nearby."
+            }
+          ]
+        },
+        {
+          "title": "History morning, park afternoon",
+          "stops": [
+            {
+              "place": "stone-gate",
+              "at": "09:30",
+              "minutes": 15,
+              "note": "Small shrine inside the gate. Always open."
+            },
+            {
+              "place": "croatian-history-museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekdays and Saturday; closed Sunday. Check on the day."
+            },
+            {
+              "place": "lotrscak",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Climb for the view. Around noon you hear the cannon. Check hours on the day."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch near the market."
+            },
+            {
+              "place": "maksimir",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Tram out, then a slow loop of the park. Best spring to autumn."
+            }
+          ]
+        },
+        {
+          "title": "Old town walk, then go",
+          "stops": [
+            {
+              "place": "city-walk",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Usually one or two departures daily; check on the day. Tip the guide."
+            },
+            {
+              "place": "broken-relationships",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Small, quirky museum. Generally daily late morning to evening; check on the day."
+            },
+            {
+              "place": "king-tomislav-park",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "On the way to the station. Good last stop."
+            },
+            {
+              "place": "glavni-kolodvor",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Main station for onward trains."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, near Ban Jelačić Square"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through Zagreb: morning markets, štrukli, café terraces and long dinners.",
+      "days": [
+        {
+          "title": "Market morning and terrace evening",
+          "stops": [
+            {
+              "place": "dolac-market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early Monday to Saturday for the full market. Sunday is quieter."
+            },
+            {
+              "place": "ban-jelacic",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Coffee on the square and a look around."
+            },
+            {
+              "place": "funicular",
+              "at": "10:45",
+              "minutes": 15,
+              "note": "Ride up to the Upper Town. Check hours on the day."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk the lanes, then down to lunch."
+            },
+            {
+              "place": "strukli",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Try baked štrukli, the local cheese pastry."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening drinks and dinner on Tkalčićeva. Liveliest in warm months."
+            }
+          ]
+        },
+        {
+          "title": "Food stalls, park and a long lunch",
+          "stops": [
+            {
+              "place": "trznica-dolac-food",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Graze the market and nearby bakeries for an early lunch."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Walk it off in the park."
+            },
+            {
+              "place": "maksimir",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Tram out. Picnic weather in spring to autumn."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Aperitif before dinner."
+            },
+            {
+              "place": "strukli",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Dinner. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Upper Town, then dinner out",
+          "stops": [
+            {
+              "place": "stone-gate",
+              "at": "10:00",
+              "minutes": 15,
+              "note": "Quick look at the shrine."
+            },
+            {
+              "place": "st-marks",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "See the tiled roof. Interior hours vary, check on the day."
+            },
+            {
+              "place": "lotrscak",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "View over the city. Around noon for the cannon."
+            },
+            {
+              "place": "dolac-market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Pick up cheese, honey and fruit for later."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Long dinner and drinks."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then go",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Last coffee on the square."
+            },
+            {
+              "place": "dolac-market",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Final market browse. Mornings Monday to Saturday."
+            },
+            {
+              "place": "glavni-kolodvor",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Main station for onward travel."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, walkable to Dolac and Tkalčićeva"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Old walls, churches and museums: the city's story from the medieval Upper Town to the twentieth century.",
+      "days": [
+        {
+          "title": "Arrive, square and Upper Town walls",
+          "stops": [
+            {
+              "place": "ban-jelacic",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start here for orientation."
+            },
+            {
+              "place": "funicular",
+              "at": "15:45",
+              "minutes": 15,
+              "note": "Short climb to Gornji Grad. Check hours on the day."
+            },
+            {
+              "place": "stone-gate",
+              "at": "16:10",
+              "minutes": 15,
+              "note": "The old city gate, with a small shrine inside."
+            },
+            {
+              "place": "st-marks",
+              "at": "16:35",
+              "minutes": 20,
+              "note": "Church with the tiled coat-of-arms roof. Interior hours vary, check on the day."
+            },
+            {
+              "place": "gornji-grad",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk the old streets and the promenade."
+            },
+            {
+              "place": "tkalciceva",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in the Lower Town."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the cannon",
+          "stops": [
+            {
+              "place": "croatian-history-museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekdays and Saturday; closed Sunday. Check on the day."
+            },
+            {
+              "place": "lotrscak",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Tower with a view. Around noon for the cannon."
+            },
+            {
+              "place": "trznica-dolac-food",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch by the market."
+            },
+            {
+              "place": "broken-relationships",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Modern, personal history. Generally daily late morning to evening; check on the day."
+            },
+            {
+              "place": "zagreb-cathedral",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Generally open daily morning to early evening; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, parks and a guided walk",
+          "stops": [
+            {
+              "place": "city-walk",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Free walking tour of the centre. Usually one or two departures daily; check on the day."
+            },
+            {
+              "place": "zrinjevac",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Park on the walk south."
+            },
+            {
+              "place": "art-pavilion",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "mimara",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "tkalca-night",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening drinks and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Last look, then go",
+          "stops": [
+            {
+              "place": "dolac-market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning market, Monday to Saturday."
+            },
+            {
+              "place": "king-tomislav-park",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Near the station."
+            },
+            {
+              "place": "glavni-kolodvor",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Main station for onward trains."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lower Town centre, close to the funicular and Dolac"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Upper Town lanes, churches and café terraces."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, štrukli and long dinners out."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Museums, old walls and the war story."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Donji Grad",
+      "range": [
+        70,
+        150
+      ],
+      "why": "Flat, central grid of parks and museums. Walk to everything; good tram links.",
+      "center": [
+        45.808,
+        15.978
+      ]
+    },
+    {
+      "area": "Gornji Grad",
+      "range": [
+        80,
+        170
+      ],
+      "why": "The old Upper Town: quiet lanes, St Mark's Church and the Stone Gate on your doorstep.",
+      "center": [
+        45.816,
+        15.974
+      ]
+    },
+    {
+      "area": "Lower Town centre",
+      "range": [
+        75,
+        160
+      ],
+      "why": "Around Ban Jelačić Square and the Dolac market. Busiest spot for food and nightlife.",
+      "center": [
+        45.813,
+        15.977
+      ]
+    },
+    {
+      "area": "near Glavni Kolodvor",
+      "range": [
+        65,
+        140
+      ],
+      "why": "By the main train and bus stations. Easy airport bus and day trips; 10–15 minutes' walk to the centre.",
+      "center": [
+        45.805,
+        15.979
+      ]
+    }
+  ],
+  "food": [
+    "Try štrukli (baked cheese pastry), sarma and punjene paprike at a konoba (tavern).",
+    "Dolac market, just above the main square: fruit, cheese and honey in the morning; go early.",
+    "Grab a cheap lunch of burek or čevapi from a bakery or grill; expect roughly €5–10.",
+    "Coffee is a ritual: sit at a terrace for a small espresso or a 'bijela kava'.",
+    "For nightlife food, look around Tkalčićeva street and the Lower Town; prices vary, check menus."
+  ],
+  "more_time": [
+    "Swap a city day for the Plitvice Lakes: long day trip, book transport and tickets ahead.",
+    "Take the short trip to Samobor for cream cakes and easy hill walks.",
+    "Ride the cable car to Sljeme on Medvednica for views and a walk, if the weather is clear."
+  ]
+}

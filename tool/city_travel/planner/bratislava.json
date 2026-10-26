@@ -1,0 +1,558 @@
+{
+  "city": "Bratislava",
+  "checked": "October 2026",
+  "intro_line": "A compact Danube capital where Habsburg streets meet riverside cool.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town (Staré Mesto)",
+        "Danube riverside",
+        "Petržalka",
+        "Nové Mesto"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town (Staré Mesto)",
+        "Danube riverside",
+        "Petržalka",
+        "Nové Mesto"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Town (Staré Mesto)",
+        "Danube riverside",
+        "Petržalka",
+        "Nové Mesto"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Old Town (Staré Mesto)",
+        "Danube riverside",
+        "Petržalka",
+        "Nové Mesto"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Old Town (Staré Mesto)",
+        "Danube riverside",
+        "Petržalka",
+        "Nové Mesto"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 10,
+        "note": "January: cold, highs near 4°C and lows around -2°C. Pack a warm coat; expect about 10 rain days."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 9,
+        "note": "February: still cold, highs near 8°C. Fewer tourists and lower prices."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 7,
+        "note": "March: milder at around 11°C, with about 7 rain days, the driest month."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 8,
+        "note": "April: spring arrives, highs near 16°C. Good for walking; keep a light rain layer."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 11,
+        "note": "May: pleasant at around 20°C but about 11 rain days. Bring an umbrella."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 11,
+        "note": "June: warm at around 26°C, with about 11 rain days. Long evenings outdoors."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 8,
+        "note": "July: the hottest month, highs near 28°C. Go sightseeing early; about 8 rain days."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 8,
+        "note": "August: hot at around 28°C and busy. Book hotels ahead."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 9,
+        "note": "September: warm at around 22°C and a good balance of sun and showers."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 9,
+        "note": "October: cooler at around 16°C; autumn colours along the river."
+      },
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 9,
+        "note": "November: chilly at around 10°C with about 9 rain days. Pack layers."
+      },
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 9,
+        "note": "December: cold at around 5°C. Christmas markets make the old town lively; bring gloves."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "bratislava-castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 5
+    },
+    "st-martins-cathedral": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning, outside service times",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 4
+    },
+    "michaels-gate": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Any time; quieter early morning",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 4
+    },
+    "devin-castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Spring to autumn, morning",
+      "area": "Nové Mesto",
+      "popularity": 4
+    },
+    "bryndzove-halusky": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 4
+    },
+    "morava-river": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Spring to autumn, daytime",
+      "area": "Nové Mesto",
+      "popularity": 3
+    },
+    "old-town-hall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 4
+    },
+    "blue-church": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 4
+    },
+    "ufo-tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Sunset and evening",
+      "area": "Danube riverside",
+      "popularity": 4
+    },
+    "old-town-walk": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 5
+    },
+    "mileticova-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Nové Mesto",
+      "popularity": 3
+    },
+    "danube-promenade": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Danube riverside",
+      "popularity": 4
+    },
+    "slavin": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 3
+    },
+    "petrzalka-walk": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Petržalka",
+      "popularity": 2
+    },
+    "danube-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring to autumn, afternoon",
+      "area": "Danube riverside",
+      "popularity": 3
+    },
+    "food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 3
+    },
+    "nightlife-old-town": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late evening, Friday and Saturday",
+      "area": "Old Town (Staré Mesto)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the castle, old town and riverside at an easy pace; add a third for a Danube or wine day."
+  },
+  "airports": [
+    {
+      "code": "BTS",
+      "name": "M. R. Stefanik Airport",
+      "primary": true,
+      "note": "Main city airport, about 8 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 61",
+          "to": "Main train station (Hlavná stanica)",
+          "price": "€1.60",
+          "time": "25-35 min",
+          "note": "Buy and validate a ticket before boarding; 60-minute ticket allows transfers."
+        },
+        {
+          "mode": "Bus 61 + tram",
+          "to": "City centre via Trnavské mýto",
+          "price": "€1.60",
+          "time": "30-40 min",
+          "note": "Change to a centre-bound tram at Trnavské mýto."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "15-25 min",
+          "note": "Airport taxis are expensive; agree the price or book ahead."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€12-20",
+          "time": "15-25 min",
+          "note": "Apps work reliably and are cheaper than airport taxis."
+        }
+      ]
+    },
+    {
+      "code": "VIE",
+      "name": "Vienna International Airport",
+      "primary": false,
+      "note": "Major hub about 45 km away in Austria; good for long-haul.",
+      "options": [
+        {
+          "mode": "Bus (Flixbus / Slovak Lines / RegioJet)",
+          "to": "Most SNP or main bus station",
+          "price": "€10-20",
+          "time": "80-100 min",
+          "note": "Hourly services; some continue to Bratislava airport."
+        },
+        {
+          "mode": "Train via Vienna",
+          "to": "Bratislava main station",
+          "price": "€15-25",
+          "time": "2-2.5 hr",
+          "note": "Take a city train to Vienna, then a regional train to Bratislava."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€70-100",
+          "time": "45-60 min",
+          "note": "Cross-border trip; agree the fare in advance."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€60-90",
+          "time": "45-60 min",
+          "note": "Check cross-border availability before booking."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Bratislava",
+      "https://en.wikivoyage.org/wiki/Bratislava"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "budget"
+  ],
+  "transit": {
+    "best": "Walk the centre; use trams for longer hops and ride apps for the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro in Bratislava. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Bus 61 links the airport to the main train station; N61 runs at night. Buy tickets from machines before boarding."
+      },
+      {
+        "mode": "Tram / Trolleybus",
+        "has": true,
+        "best": true,
+        "text": "Trams and trolleybuses cover the centre. Buy tickets from machines before boarding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber, Bolt, Hopin and Liftago work reliably. Airport taxis are pricey; use an app instead."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy, but parking in the old town is scarce and costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is very walkable. Bikes are fine along the Danube."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A ferry runs on the Danube to Devín and across to Austria in season."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm summers and rain spread through the year.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best time: May to September",
+        "text": "Highs from about 20°C to 28°C. Comfortable for walking the old town and castle."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters (December to February)",
+        "text": "Highs of 4–8°C and lows near or below freezing. Warm coat, hat and gloves needed."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–11 rain days every month. May and June are the wettest; March the driest."
+      },
+      {
+        "icon": "☀️",
+        "title": "Sunny summers",
+        "text": "July and August reach about 28°C with around 8 rain days. Long daylight hours."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild shoulder months",
+        "text": "April and October sit around 16°C, good for sightseeing with fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers and a waterproof jacket any month; a warm coat for winter; light clothes and sunscreen for summer."
+      }
+    ]
+  }
+}

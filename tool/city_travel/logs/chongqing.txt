@@ -1,0 +1,35 @@
+$ deepseek_prep.py Chongqing
+  tokens in 713 out 420
+Chongqing: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Chongqing
+  tokens in 2966 out 620
+Chongqing: 0 problems
+
+$ deepseek_city.py Chongqing --stage places
+Chongqing: places
+  tokens in 1169 out 2579
+
+$ deepseek_city.py Chongqing --stage frame
+Chongqing: frame
+  tokens in 2436 out 1887
+
+$ deepseek_city.py Chongqing --stage plans
+Chongqing: plans
+  plans for day
+  tokens in 1901 out 803
+  plans for 1n
+  tokens in 1902 out 1094
+  plans for 2n
+  tokens in 1907 out 1743
+  plans for 3n
+  tokens in 1902 out 1367
+  repaired JSON
+  plans for 4n
+  tokens in 1902 out 1478
+
+$ merge_city.py Chongqing
+WARN  dazu: 78 km from the center (day trip?)
+Chongqing: 16 places, 15 plans, 0 errors, 1 warnings
+wrote itineraries/chongqing.json and planner/chongqing.json
+

@@ -1,0 +1,805 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day for the big sights: the tower in the morning, the museum after lunch, the river at dusk.",
+      "days": [
+        {
+          "title": "Tower, museum and the riverside",
+          "stops": [
+            {
+              "place": "yellow_crane_tower",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go early to beat the crowds and the heat. Check seasonal closing time on the day."
+            },
+            {
+              "place": "hubu_alley",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk downhill. Snack stalls are busiest late morning."
+            },
+            {
+              "place": "hubei_museum",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Closed Monday. A taxi is easiest; book the free entry ahead if you can."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Rest by the water, then stay for sunset."
+            },
+            {
+              "place": "yangtze_cruise",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Cross to Hankou by taxi for an evening departure. Check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuchang (Zhongnan)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way across the three towns: noodles at dawn, snacks at noon, skewers at night.",
+      "days": [
+        {
+          "title": "Breakfast to night market",
+          "stops": [
+            {
+              "place": "hot_dry_noodles",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Sesame noodles are a Wuhan breakfast ritual. Go before 09:00."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk off breakfast along the old Bund streets."
+            },
+            {
+              "place": "guqing_street",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Coffee lane for an afternoon pause. Cafes open around 10:00."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Quiet streets and old facades; cafes stay open into the evening."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Night market gets going after 17:00. Bring cash and an appetite."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan)"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A history-minded day: old temples, the 1911 story and the bridge that joined the three towns.",
+      "days": [
+        {
+          "title": "Temple, old streets and the bridge",
+          "stops": [
+            {
+              "place": "guiyuan_temple",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Calm in the morning. Daytime hours only, roughly 08:00–17:00."
+            },
+            {
+              "place": "qingchuan_pavilion",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Short taxi ride. Riverside views over the old town."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Cross the river for lunch, then walk the historic Bund."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Former foreign concession streets; good for slow wandering."
+            },
+            {
+              "place": "yangtze_bridge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk partway out for sunset. The bridge is open all day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the tower, the museum and the river lights in one tight day.",
+      "days": [
+        {
+          "title": "Tower, museum and the river at dusk",
+          "stops": [
+            {
+              "place": "yellow_crane_tower",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early for cooler air and shorter queues. Check seasonal closing time."
+            },
+            {
+              "place": "hubu_alley",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short walk downhill. Snack lunch; stalls are busiest around midday."
+            },
+            {
+              "place": "hubei_museum",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. A short taxi ride away. Bring your passport for entry."
+            },
+            {
+              "place": "yangtze_bridge",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Walk on for sunset views over the river."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Stay on for the lit skyline. Dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuchang (Zhongnan)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way across the three towns, from dawn noodles to late-night skewers.",
+      "days": [
+        {
+          "title": "Breakfast noodles, old streets, night market",
+          "stops": [
+            {
+              "place": "hot_dry_noodles",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Eat where locals do; most shops wind down by 11:00."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Cross to Hankou. Stroll the old Bund buildings; shops open around 10:00."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch in the side streets. Cafes are daytime only."
+            },
+            {
+              "place": "guqing_street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee break on the cafe lane."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Night market dinner. Busiest from about 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan)"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Travellers who want the 1911 story and the old three towns on foot.",
+      "days": [
+        {
+          "title": "Old Hankou, the bridge and the tower",
+          "stops": [
+            {
+              "place": "hankou_old_concession",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start with the colonial-era streets and banks."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk the Bund, then lunch nearby."
+            },
+            {
+              "place": "yangtze_bridge",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Cross toward Wuchang; the bridge is a 1950s landmark. Always open."
+            },
+            {
+              "place": "yellow_crane_tower",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon light. Check closing time before you go."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner by the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights plus a river evening, grouped by area to cut crossings.",
+      "days": [
+        {
+          "title": "Wuchang icons and the river",
+          "stops": [
+            {
+              "place": "yellow_crane_tower",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early for cooler air and shorter queues. Check seasonal closing time."
+            },
+            {
+              "place": "hubu_alley",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Snack lunch. Busiest around midday, so eat before the rush."
+            },
+            {
+              "place": "hubei_museum",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Closed Monday. Bring ID; entry is usually free but may need booking."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Easy walk to the water for sunset."
+            },
+            {
+              "place": "yangtze_cruise",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Cross to Hankou for evening departures. Book ahead in peak season."
+            }
+          ]
+        },
+        {
+          "title": "Hanyang temple and Hankou streets",
+          "stops": [
+            {
+              "place": "guiyuan_temple",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quietest in the morning. Dress modestly."
+            },
+            {
+              "place": "qingchuan_pavilion",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short taxi or metro hop. Riverside views."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch then the old Bund buildings. Shops open around 10:00."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Wander the side streets on foot."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner from stalls. Cash and phone payment both common."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan) near the river"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who plan the day around breakfast, snacks and night markets.",
+      "days": [
+        {
+          "title": "Breakfast, alley snacks, river night",
+          "stops": [
+            {
+              "place": "hot_dry_noodles",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Go early; many shops wind down by late morning."
+            },
+            {
+              "place": "yellow_crane_tower",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk off breakfast. Check seasonal hours."
+            },
+            {
+              "place": "hubu_alley",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Graze the stalls before the midday crush."
+            },
+            {
+              "place": "east_lake",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Bike hire in daytime hours. Spring is best for blossoms."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening stroll before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Hankou grazing day",
+          "stops": [
+            {
+              "place": "jianghan_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Start with coffee and pastries on the old streets."
+            },
+            {
+              "place": "guqing_street",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Cafe lane for an afternoon break."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Snack stops along the way."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "The main event: night market dinner. Arrive hungry."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan) near Jiqing Street"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors tracing the 1911 Revolution and the old three towns on foot.",
+      "days": [
+        {
+          "title": "Wuchang history core",
+          "stops": [
+            {
+              "place": "yellow_crane_tower",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start here for the city overview. Check seasonal hours."
+            },
+            {
+              "place": "wuhan_university",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Campus access may need registration; bring ID."
+            },
+            {
+              "place": "hubei_museum",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book free entry ahead if you can."
+            },
+            {
+              "place": "yangtze_bridge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk partway for sunset views over the river."
+            }
+          ]
+        },
+        {
+          "title": "Hankou old town and Hanyang",
+          "stops": [
+            {
+              "place": "jianghan_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Colonial-era banks and customs buildings."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch in the side streets."
+            },
+            {
+              "place": "guiyuan_temple",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Cross to Hanyang. Daytime hours only."
+            },
+            {
+              "place": "qingchuan_pavilion",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late-afternoon river views."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner on the food street."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan) near Jianghan Road"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights: the tower, the museum and the two rivers, grouped by area.",
+      "days": [
+        {
+          "title": "Arrive, Yellow Crane Tower and the riverside",
+          "stops": [
+            {
+              "place": "yellow_crane_tower",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Go up for the river view. Closing time shifts by season, so check on the day."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Walk down toward the bridge. Free and open all day."
+            },
+            {
+              "place": "yangtze_bridge",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Walk partway onto the bridge for sunset. Stay for the lights."
+            },
+            {
+              "place": "hubu_alley",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Snack dinner. Busiest around 10:00–21:00; some stalls close earlier."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, East Lake afternoon",
+          "stops": [
+            {
+              "place": "hubei_museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go early for the bells; bring your passport for entry."
+            },
+            {
+              "place": "east_lake",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch near the lake, then rent a bike. Bike hire is daytime only."
+            },
+            {
+              "place": "wuhan_university",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Campus walk. Access may need registration, so check before you go."
+            },
+            {
+              "place": "guqing_street",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Coffee or an early dinner in the cafes."
+            }
+          ]
+        },
+        {
+          "title": "Hankou history, then the night cruise",
+          "stops": [
+            {
+              "place": "hankou_old_concession",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Old bank buildings and plane-tree streets. Free to wander."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Continue to the Bund. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Early street-food dinner before the boat."
+            },
+            {
+              "place": "yangtze_cruise",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Evening departures roughly 19:00–21:30. Book ahead and arrive early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuchang (Zhongnan), near the tower and museum"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way across the three towns, from dawn noodles to late-night skewers.",
+      "days": [
+        {
+          "title": "Arrive, Hubu Alley and the riverside",
+          "stops": [
+            {
+              "place": "hubu_alley",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Late-morning snacks. Try doupi and fried treats."
+            },
+            {
+              "place": "yellow_crane_tower",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk it off next door. Check seasonal closing on the day."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Stroll toward the bridge as the light drops."
+            },
+            {
+              "place": "jiqing_street",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Taxi across the river. Best from 17:00 onward."
+            }
+          ]
+        },
+        {
+          "title": "Noodles at dawn, coffee and the Bund",
+          "stops": [
+            {
+              "place": "hot_dry_noodles",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Breakfast, roughly 06:00–11:00. Mix the sauce well."
+            },
+            {
+              "place": "hankou_old_concession",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk it off through the old streets."
+            },
+            {
+              "place": "guqing_street",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and coffee. Cafes roughly 10:00–22:00."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Snack as you go. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "yangtze_cruise",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "See the lit banks from the water. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Guanggu and a Hanyang evening",
+          "stops": [
+            {
+              "place": "optics_valley",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and browsing. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "east_lake",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Bike the greenway to work up an appetite."
+            },
+            {
+              "place": "guiyuan_temple",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Quiet late in the day; closes around 17:00, so check."
+            },
+            {
+              "place": "han_river",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset by the water, then dinner nearby in Hanyang."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hankou (Jianghan), near Jiqing Street"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "The old three towns and the 1911 story, with riverside walks between the sights.",
+      "days": [
+        {
+          "title": "Arrive, the tower and the bridge",
+          "stops": [
+            {
+              "place": "yellow_crane_tower",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Poetry and river views. Check seasonal closing on the day."
+            },
+            {
+              "place": "wuchang_riverside",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk toward the bridge. Free, open all day."
+            },
+            {
+              "place": "yangtze_bridge",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "The first road-rail bridge over the Yangtze. Sunset is best."
+            },
+            {
+              "place": "hubu_alley",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner from the stalls. Some close earlier than 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Museum and campus",
+          "stops": [
+            {
+              "place": "hubei_museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. The tomb bells and Chu relics are the highlights."
+            },
+            {
+              "place": "wuhan_university",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch nearby, then the old campus. Access may need registration."
+            },
+            {
+              "place": "east_lake",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Walk or bike the greenway. Hire is daytime only."
+            },
+            {
+              "place": "guqing_street",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Coffee and a quiet dinner."
+            }
+          ]
+        },
+        {
+          "title": "Hankou streets and Hanyang temple",
+          "stops": [
+            {
+              "place": "hankou_old_concession",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Colonial-era banks and the old foreign quarter."
+            },
+            {
+              "place": "jianghan_walk",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Lunch on the way. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "guiyuan_temple",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Cross to Hanyang. Daytime hours, roughly 08:00–17:00."
+            },
+            {
+              "place": "qingchuan_pavilion",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Riverside pavilion. Late afternoon light is best."
+            },
+            {
+              "place": "han_river",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset walk, then dinner in Hanyang."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuchang (Zhongnan), near the tower"
+    }
+  ]
+}

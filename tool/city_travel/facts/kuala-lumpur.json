@@ -1,0 +1,218 @@
+{
+  "currency": "MYR",
+  "usd_rate": 4.083,
+  "intro_line": "Twin towers, street food, and a tangle of trains.",
+  "intro": "Kuala Lumpur rewards visitors with cheap eats, leafy parks, and a skyline that never quits. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "KLCC",
+    "Bukit Bintang",
+    "Chinatown",
+    "Brickfields"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 6,
+    "per_km": 1.5,
+    "min_fare": 5
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "RapidKL metro lines 3, 4, 5, 8, 9, 11, 12 cover most sights; trains every 2-7 min.",
+    "KTM lines 1, 2, 10 and ERL lines 6, 7 link KL Sentral to suburbs and the airport.",
+    "Touch 'n Go card costs RM10 plus top-up; contactless cards work on KTM and ERL only.",
+    "Buses are cheap but slow; use them for short hops off the rail grid.",
+    "Grab is the main ride app; taxis are metered but agree the fare first.",
+    "Driving is stressful in jams; walking is fine in the centre but pavements are patchy."
+  ],
+  "airports": [
+    {
+      "code": "KUL",
+      "name": "Kuala Lumpur International Airport",
+      "primary": true,
+      "note": "Main airport for long-haul and most international flights, about 44 km south.",
+      "options": [
+        {
+          "mode": "KLIA Ekspres train",
+          "to": "KL Sentral",
+          "price": "RM55",
+          "time": "28-35 min",
+          "note": "Fastest and most reliable; runs every 15-20 min."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "KL Sentral",
+          "price": "RM12-15",
+          "time": "60-90 min",
+          "note": "Cheapest; allow extra time in traffic."
+        },
+        {
+          "mode": "Grab",
+          "to": "City centre",
+          "price": "RM70-100",
+          "time": "50-75 min",
+          "note": "Book at the app pickup point in the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RM80-120",
+          "time": "50-75 min",
+          "note": "Buy a coupon at the counter to avoid overcharging."
+        }
+      ]
+    },
+    {
+      "code": "SZB",
+      "name": "Sultan Abdul Aziz Shah International Airport",
+      "primary": false,
+      "note": "Subang Airport handles regional turboprops and some jets, about 15 km west.",
+      "options": [
+        {
+          "mode": "Rapid KL bus 772",
+          "to": "Pasar Seni LRT",
+          "price": "RM3-4",
+          "time": "40-90 min",
+          "note": "Cheapest; slow at rush hour."
+        },
+        {
+          "mode": "Grab",
+          "to": "City centre",
+          "price": "RM25-40",
+          "time": "25-45 min",
+          "note": "Usually quick and easy."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RM30-50",
+          "time": "25-45 min",
+          "note": "Metered; confirm before you ride."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Petronas Towers",
+    "Batu Caves",
+    "Merdeka Square",
+    "KL Tower",
+    "Thean Hou Temple",
+    "Islamic Arts Museum Malaysia",
+    "Merdeka 118",
+    "National Mosque of Malaysia",
+    "Bukit Bintang",
+    "Aquaria KLCC",
+    "Berjaya Times Square Theme Park",
+    "Bukit Jalil National Stadium",
+    "Jalan Alor",
+    "Kidzania Kuala Lumpur",
+    "Lord Murugan Statue",
+    "Masjid Jamek",
+    "Nasi Lemak",
+    "Pasar Seni",
+    "Petaling Street Market",
+    "Putra Mosque",
+    "Sri Mahamariamman Temple",
+    "Sunway Lagoon"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Kuala Lumpur",
+      "https://en.wikivoyage.org/wiki/Kuala%20Lumpur"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    3.139,
+    101.6869
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 17
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 23
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 24
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 29
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 27
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,1510 @@
+{
+  "city": "Adelaide",
+  "checked": "October 2026",
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro": "Adelaide rewards visitors with compact streets, free city transport and wine country on its doorstep. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -35.0547,
+      "west": 138.4442,
+      "north": -34.8147,
+      "east": 138.847,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4,
+      "flag_airport": 2,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "Adelaide Metro runs trains, trams and buses with one tap-and-pay system.",
+      "Trams and some city buses are free within the city centre.",
+      "Taxis use the meter; airport pickups add a small surcharge.",
+      "Uber and other ride apps operate across the city.",
+      "Driving is easy but parking in the CBD costs money.",
+      "The city is flat and good for walking and cycling."
+    ],
+    "sources": []
+  },
+  "places": {
+    "hahndorf": {
+      "name": "Hahndorf",
+      "landmark": "Hahndorf",
+      "kind": "sight",
+      "lat": -35.0305,
+      "lon": 138.8093,
+      "price": 0,
+      "price_text": "Free to walk · food and drink extra",
+      "hours": "Village streets always open · shops usually 10:00–17:00, some closed Mon",
+      "tip": "This is Australia's oldest surviving German settlement. Walk the main street for bakeries, pubs and craft shops.",
+      "source": ""
+    },
+    "showgrounds": {
+      "name": "Adelaide Showgrounds",
+      "landmark": "Adelaide Showgrounds",
+      "kind": "show",
+      "lat": -34.945,
+      "lon": 138.5833,
+      "price": null,
+      "price_text": "Varies by event · many free entry",
+      "hours": "Event-dependent · check the day's program",
+      "tip": "Check the events calendar before you go. The Royal Adelaide Show runs for about a week in early September.",
+      "source": "https://www.adelaideshowground.com.au/"
+    },
+    "coopers": {
+      "name": "Coopers Brewery",
+      "landmark": "Coopers Brewery",
+      "kind": "tour",
+      "lat": -34.8727,
+      "lon": 138.5714,
+      "price": null,
+      "price_text": "Tour price varies · book ahead",
+      "hours": "Tours on set days only · check on the day",
+      "tip": "Australia's largest independent brewery. Book a tour in advance and arrange your own transport.",
+      "source": "https://coopers.com.au/"
+    },
+    "university": {
+      "name": "University of Adelaide",
+      "landmark": "University of Adelaide",
+      "kind": "sight",
+      "lat": -34.9205,
+      "lon": 138.6061,
+      "price": 0,
+      "price_text": "Free to walk the public grounds",
+      "hours": "Campus generally open daytime on weekdays",
+      "tip": "The historic Mitchell Building and Bonython Hall sit right on North Terrace. Walk past them on your way to the museum strip.",
+      "source": "https://www.adelaide.edu.au/"
+    },
+    "beachouse": {
+      "name": "The Beachouse",
+      "landmark": "Magic Mountain (replaced by The Beachouse)",
+      "kind": "activity",
+      "lat": -34.9751,
+      "lon": 138.5085,
+      "price": null,
+      "price_text": "Pay per ride or buy a pass · check current prices",
+      "hours": "Usually open daily in school holidays · check on the day",
+      "tip": "This is the old Magic Mountain site, now a family fun centre with waterslides and rides. Good for kids on a hot day.",
+      "source": "https://www.thebeachouse.com.au/"
+    },
+    "central-market": {
+      "name": "Adelaide Central Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": -34.9295,
+      "lon": 138.5977,
+      "price": 0,
+      "price_text": "Free entry · food to buy",
+      "hours": "Tue–Sat roughly 07:00–17:30 · closed Sun–Mon, check on the day",
+      "tip": "Go hungry and graze: cheese, coffee, pastries and produce stalls. Saturday morning is busiest.",
+      "source": "https://www.adelaidecentralmarket.com.au/"
+    },
+    "rundle-mall": {
+      "name": "Rundle Mall",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -34.9225,
+      "lon": 138.6005,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops usually 09:00–17:30 · late Thu · check on the day",
+      "tip": "The main shopping street. Look for the bronze pigs and the old arcades off the mall.",
+      "source": ""
+    },
+    "north-terrace": {
+      "name": "North Terrace museum strip",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -34.9207,
+      "lon": 138.5999,
+      "price": 0,
+      "price_text": "Free entry to the South Australian Museum and Art Gallery",
+      "hours": "Usually 10:00–17:00 daily · check on the day",
+      "tip": "The South Australian Museum, Art Gallery and State Library sit side by side. A good rainy-day plan.",
+      "source": "https://www.samuseum.sa.gov.au/"
+    },
+    "botanic-garden": {
+      "name": "Adelaide Botanic Garden",
+      "landmark": null,
+      "kind": "park",
+      "lat": -34.9187,
+      "lon": 138.6083,
+      "price": 0,
+      "price_text": "Free entry · some glasshouse areas may charge",
+      "hours": "Usually open daily from early morning to sunset · check on the day",
+      "tip": "Walk to the Bicentennial Conservatory and the rose garden. Bring water in summer.",
+      "source": "https://www.botanicgardens.sa.gov.au/"
+    },
+    "glenelg-beach": {
+      "name": "Glenelg Beach and jetty",
+      "landmark": null,
+      "kind": "beach",
+      "lat": -34.9803,
+      "lon": 138.5111,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · swim between the flags in patrolled hours",
+      "tip": "Take the tram from the city straight to the beach. Walk the jetty at sunset.",
+      "source": ""
+    },
+    "port-adelaide": {
+      "name": "Port Adelaide waterfront walk",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -34.8478,
+      "lon": 138.5033,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · museums have their own hours",
+      "tip": "Old wharves, heritage buildings and the South Australian Maritime Museum. Quiet on weekdays.",
+      "source": ""
+    },
+    "maritime-museum": {
+      "name": "South Australian Maritime Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -34.8467,
+      "lon": 138.5039,
+      "price": null,
+      "price_text": "Entry fee · check current prices",
+      "hours": "Usually daily 10:00–17:00 · check on the day",
+      "tip": "Good for port history and lighthouse exhibits. Combine it with the waterfront walk.",
+      "source": "https://maritime.history.sa.gov.au/"
+    },
+    "adelaide-oval": {
+      "name": "Adelaide Oval tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -34.9156,
+      "lon": 138.5961,
+      "price": null,
+      "price_text": "Tour fee · check current prices and times",
+      "hours": "Tours on set times · check on the day",
+      "tip": "One of the world's prettiest cricket grounds. Book a behind-the-scenes tour, or just walk the free riverbank outside.",
+      "source": "https://www.adelaideoval.com.au/"
+    },
+    "torrens-walk": {
+      "name": "River Torrens Linear Park walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -34.9177,
+      "lon": 138.5999,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Follow the river from the city to the zoo and beyond. Flat, easy and good at sunset.",
+      "source": ""
+    },
+    "adelaide-zoo": {
+      "name": "Adelaide Zoo",
+      "landmark": null,
+      "kind": "park",
+      "lat": -34.9139,
+      "lon": 138.6067,
+      "price": null,
+      "price_text": "Entry fee · check current prices",
+      "hours": "Usually daily 09:30–17:00 · check on the day",
+      "tip": "Home to giant pandas and a big open-range area. Buy tickets online to skip the queue.",
+      "source": "https://www.adelaidezoo.com.au/"
+    },
+    "east-end": {
+      "name": "East End and Ebenezer Place walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": -34.9219,
+      "lon": 138.6067,
+      "price": 0,
+      "price_text": "Free to walk · food and drink extra",
+      "hours": "Cafes and bars open through the day into evening",
+      "tip": "Small laneways full of cafes and bars. Good for a coffee stop or an evening meal.",
+      "source": ""
+    },
+    "barossa": {
+      "name": "Barossa Valley wine tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -34.5333,
+      "lon": 138.95,
+      "price": null,
+      "price_text": "Day tours vary widely · check what tastings and lunch are included",
+      "hours": "Full-day tours usually leave in the morning",
+      "tip": "Book a guided tour so you don't have to drive. Confirm pickup and tasting fees are in the price.",
+      "source": ""
+    },
+    "mount-lofty": {
+      "name": "Mount Lofty Summit lookout",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -34.9733,
+      "lon": 138.7083,
+      "price": 0,
+      "price_text": "Free lookout · parking may charge",
+      "hours": "Lookout open daily · visitor centre hours vary",
+      "tip": "Best clear-day view over Adelaide and the coast. Bring a jacket; it is cooler up here.",
+      "source": ""
+    },
+    "semaphore": {
+      "name": "Semaphore Beach and esplanade",
+      "landmark": null,
+      "kind": "beach",
+      "lat": -34.8389,
+      "lon": 138.4819,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · swim in patrolled hours",
+      "tip": "Quieter than Glenelg, with a long esplanade and an old-fashioned foreshore. Take the train from the city.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One tasty day: market lunch, laneway bars, and a Hills village stop.",
+      "days": [
+        {
+          "title": "Market, mall and East End",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Sun and Mon. Go early for the buzz and a coffee."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Five minutes on foot. Shops open around 09:00."
+            },
+            {
+              "place": "east-end",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Lunch in a laneway cafe. Ten minutes on foot."
+            },
+            {
+              "place": "north-terrace",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk off lunch along the museum strip. Most venues free."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Easy riverside stroll to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Sand and sunsets: tram to Glenelg, then the quiet Semaphore esplanade.",
+      "days": [
+        {
+          "title": "Glenelg to Semaphore",
+          "stops": [
+            {
+              "place": "glenelg-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Tram from the CBD takes about 30 minutes. Swim between the flags."
+            },
+            {
+              "place": "beachouse",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Right by the beach. Check opening hours first, especially off school holidays."
+            },
+            {
+              "place": "east-end",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Back in town for a late lunch or ice cream."
+            },
+            {
+              "place": "semaphore",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "About 30 minutes by train or car. Good for a sunset walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD or Glenelg"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums, a stadium tour and the old port, all in one day.",
+      "days": [
+        {
+          "title": "North Terrace to Port Adelaide",
+          "stops": [
+            {
+              "place": "north-terrace",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Start at the museums. Most open around 10:00 and are free."
+            },
+            {
+              "place": "adelaide-oval",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Short walk across the river. Book a tour time ahead."
+            },
+            {
+              "place": "central-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch stop. Closed Sun and Mon."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "About 25 minutes by train or car. Waterfront walk."
+            },
+            {
+              "place": "maritime-museum",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Check closing time on the day; usually 17:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market grazing, an East End evening and a Hills food village the next morning.",
+      "days": [
+        {
+          "title": "Arrive, market and East End",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Sun–Mon. Weekday lunch is the best time. Grab lunch from the stalls."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Five minutes on foot. Shops close around 17:30, later on Thursday."
+            },
+            {
+              "place": "east-end",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Short walk east. Cafes and bars run into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Hahndorf morning, then fly",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "About 30–40 minutes by car or bus. Shops open around 10:00 and some close Monday. Go early on a weekday."
+            },
+            {
+              "place": "central-market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Back in the city. Quick coffee and supplies before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD, near Central Market"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Glenelg sand and sunset on day one, then the Port beaches the next morning.",
+      "days": [
+        {
+          "title": "Arrive and head to Glenelg",
+          "stops": [
+            {
+              "place": "glenelg-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Tram from the CBD takes about 30 minutes. Swim between the flags in patrolled hours."
+            },
+            {
+              "place": "beachouse",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Right by the beach. Usually open daily in school holidays only, so check first."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset on the jetty, then fish and chips nearby."
+            }
+          ]
+        },
+        {
+          "title": "Semaphore, then fly",
+          "stops": [
+            {
+              "place": "semaphore",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Train from the city takes about 30 minutes. Sunny mornings are quiet."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short trip south. Daytime weekday walk along the waterfront."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Glenelg, near the beach"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Free museums on arrival, then the Oval and a brewery tour the next day.",
+      "days": [
+        {
+          "title": "Arrive, North Terrace and the river",
+          "stops": [
+            {
+              "place": "north-terrace",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Most museums are free and usually open 10:00–17:00 daily. Check on the day."
+            },
+            {
+              "place": "botanic-garden",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Short walk east. Open until sunset."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Late afternoon along the river, then dinner in the city."
+            }
+          ]
+        },
+        {
+          "title": "Oval and brewery, then fly",
+          "stops": [
+            {
+              "place": "adelaide-oval",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Tours run at set times only, so book ahead and check on the day."
+            },
+            {
+              "place": "coopers",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Short taxi north. Tours on set days only, so book a weekday slot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD, near North Terrace"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market grazing, laneway bars and a full day in the Barossa.",
+      "days": [
+        {
+          "title": "Arrive, market and East End",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed Sun–Mon. Go hungry and graze the stalls."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Five minutes on foot from the market."
+            },
+            {
+              "place": "east-end",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Laneway bars and dinner. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Barossa Valley day trip",
+          "stops": [
+            {
+              "place": "barossa",
+              "at": "08:30",
+              "minutes": 480,
+              "note": "Full-day tour, usually with pickup. Book ahead and eat a proper breakfast."
+            },
+            {
+              "place": "east-end",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Easy dinner near the hotel after a long day."
+            }
+          ]
+        },
+        {
+          "title": "Hahndorf and the Hills",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "About 30–40 minutes by car. Weekday morning is quietest; some shops close Mon."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short drive from Hahndorf. Clear days give the best view."
+            },
+            {
+              "place": "central-market",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Last chance for supplies before the 17:30 close. Skip if it's Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD, near Central Market"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Tram to Glenelg, sunset sand and a lazy Semaphore afternoon.",
+      "days": [
+        {
+          "title": "Arrive and Glenelg",
+          "stops": [
+            {
+              "place": "rundle-mall",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Grab lunch, then take the tram from Victoria Square."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Tram takes roughly 30–35 minutes. Swim between the flags."
+            },
+            {
+              "place": "beachouse",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Right by the beach. Check opening hours first, especially outside school holidays."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset on the jetty, then fish and chips nearby."
+            }
+          ]
+        },
+        {
+          "title": "Semaphore and Port Adelaide",
+          "stops": [
+            {
+              "place": "semaphore",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Train from the city, about 30 minutes. Patrolled swimming hours only."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short trip from Semaphore. Weekday daytime is liveliest."
+            },
+            {
+              "place": "maritime-museum",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Good backup if the weather turns. Usually 10:00–17:00, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "City morning, then fly",
+          "stops": [
+            {
+              "place": "botanic-garden",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Early is cooler. Free entry."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Follows the river from the Botanic Garden."
+            },
+            {
+              "place": "central-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch before the airport. Closed Sun–Mon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Glenelg or CBD near the tram"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for first-timers: free museums, an Oval tour and a Hills village.",
+      "days": [
+        {
+          "title": "Arrive and North Terrace",
+          "stops": [
+            {
+              "place": "north-terrace",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Free museums, mostly 10:00–17:00. Pick two rather than rushing all."
+            },
+            {
+              "place": "university",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Next door. Campus is open on weekday daytime."
+            },
+            {
+              "place": "east-end",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dinner in the laneways."
+            }
+          ]
+        },
+        {
+          "title": "Oval, river and market",
+          "stops": [
+            {
+              "place": "adelaide-oval",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Tours run at set times. Book ahead and avoid match days."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Starts near the Oval. Flat and easy."
+            },
+            {
+              "place": "central-market",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch among the stalls. Closed Sun–Mon."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Short walk from the market. Late-night shopping on Thursday."
+            }
+          ]
+        },
+        {
+          "title": "Hahndorf, then fly",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "About 30–40 minutes by car. Weekday morning is quietest; some shops close Mon."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "On the way back to the city. Visitor centre hours vary."
+            },
+            {
+              "place": "coopers",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Tours on set days only, so check and book before you rely on it."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD, walking distance to North Terrace"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Market grazing, laneway eating and a full Barossa day for first-time food lovers.",
+      "days": [
+        {
+          "title": "Arrive and eat your way through the CBD",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed Sun–Mon. Go hungry and graze the stalls."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Five minutes on foot from the market."
+            },
+            {
+              "place": "east-end",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Laneway bars and dinner. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Barossa Valley day trip",
+          "stops": [
+            {
+              "place": "barossa",
+              "at": "08:30",
+              "minutes": 480,
+              "note": "Full-day tour, usually with lunch. Book ahead and check pickup time."
+            },
+            {
+              "place": "east-end",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Easy dinner back in the city."
+            }
+          ]
+        },
+        {
+          "title": "Hills village and a brewery finish",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Weekday morning is quieter. Some shops close Mon."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short drive from Hahndorf. Clear-day views."
+            },
+            {
+              "place": "coopers",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Tours run on set days only — check and book ahead."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Late-night shopping Thu. Dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD (near Central Market)"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Tram-to-sand days at Glenelg and Semaphore, with a Hills break in between.",
+      "days": [
+        {
+          "title": "Arrive, city green and river sunset",
+          "stops": [
+            {
+              "place": "botanic-garden",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Open daily to sunset. Free entry."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Late afternoon is best. Flat and easy."
+            },
+            {
+              "place": "east-end",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the laneways."
+            }
+          ]
+        },
+        {
+          "title": "Glenelg beach day",
+          "stops": [
+            {
+              "place": "glenelg-beach",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Tram from the city. Swim between the flags."
+            },
+            {
+              "place": "beachouse",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Check opening first — mainly school holidays."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset on the jetty, then fish and chips."
+            }
+          ]
+        },
+        {
+          "title": "Semaphore, then Hills lookout",
+          "stops": [
+            {
+              "place": "semaphore",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Train from the city. Patrolled hours only for swimming."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Short trip south. Lunch by the water."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Drive up for late-afternoon views. Check visitor centre hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Glenelg or CBD near the tram"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Free museum strip, an Oval tour and a Hills village for first-time visitors.",
+      "days": [
+        {
+          "title": "Arrive and walk North Terrace",
+          "stops": [
+            {
+              "place": "north-terrace",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Mostly free and indoor. Usually 10:00–17:00 — check on the day."
+            },
+            {
+              "place": "university",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Next door. Campus open weekday daytime."
+            },
+            {
+              "place": "east-end",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner in the East End."
+            }
+          ]
+        },
+        {
+          "title": "Oval, zoo and brewery",
+          "stops": [
+            {
+              "place": "adelaide-oval",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Tours at set times — check and book. Match days are busy."
+            },
+            {
+              "place": "adelaide-zoo",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Usually 09:30–17:00. Morning is best for active animals."
+            },
+            {
+              "place": "coopers",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Set tour days only — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Hahndorf and Port Adelaide",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Weekday morning. Some shops closed Mon."
+            },
+            {
+              "place": "maritime-museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Usually daily 10:00–17:00 — check on the day."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Waterfront walk to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD (North Terrace end)"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Market halls, laneway bars and a full winery day, with easy tram and beach breaks between meals.",
+      "days": [
+        {
+          "title": "Arrive and graze the CBD",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Sun–Mon. Weekday lunch is the best time to eat your way around."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Five minutes on foot. Shops usually 09:00–17:30."
+            },
+            {
+              "place": "east-end",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner and a drink in the laneways. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "North side tastes",
+          "stops": [
+            {
+              "place": "coopers",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Tours run on set days only. Book a weekday slot and check on the day."
+            },
+            {
+              "place": "adelaide-oval",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Tours at set times. Match days are busy, so check first."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Flat riverside path to walk off lunch."
+            },
+            {
+              "place": "east-end",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Second dinner stop in the East End."
+            }
+          ]
+        },
+        {
+          "title": "Barossa day trip",
+          "stops": [
+            {
+              "place": "barossa",
+              "at": "08:30",
+              "minutes": 480,
+              "note": "Full-day tour, usually leaving in the morning. Book ahead and eat a light breakfast."
+            },
+            {
+              "place": "east-end",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Something simple after a big day of wine."
+            }
+          ]
+        },
+        {
+          "title": "Hills village and lookout",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go on a weekday morning to beat crowds. Some shops close Monday."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short drive on. Clear mornings or sunset give the best views."
+            },
+            {
+              "place": "central-market",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Last-minute food shopping if it is a weekday. Closed Sun–Mon."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning, then fly",
+          "stops": [
+            {
+              "place": "glenelg-beach",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Tram from the CBD. Swim between the flags in patrolled hours."
+            },
+            {
+              "place": "beachouse",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Only if you have kids along. Check opening on the day."
+            },
+            {
+              "place": "central-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Final lunch stop before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD (near Central Market)"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Glenelg as your base, with easy tram hops into the city and a couple of coastal afternoons.",
+      "days": [
+        {
+          "title": "Arrive and settle at Glenelg",
+          "stops": [
+            {
+              "place": "glenelg-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Tram from the CBD drops you near the jetty. Swim between the flags."
+            },
+            {
+              "place": "beachouse",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Good for kids. Usually open daily in school holidays, so check first."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Fish and chips on the esplanade at sunset."
+            }
+          ]
+        },
+        {
+          "title": "City and river",
+          "stops": [
+            {
+              "place": "botanic-garden",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Open from early morning to sunset. Go early to avoid heat."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Riverside path links to the city."
+            },
+            {
+              "place": "central-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Weekday lunch. Closed Sun–Mon."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk. Late-night shopping on Thursday."
+            }
+          ]
+        },
+        {
+          "title": "Second beach day",
+          "stops": [
+            {
+              "place": "semaphore",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Quieter than Glenelg. Swim in patrolled hours."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short hop south. Daytime weekday is best."
+            },
+            {
+              "place": "maritime-museum",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Good backup if it turns hot or wet. Usually 10:00–17:00, check on the day."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Back for sunset and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Hills day trip",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Weekday morning is quietest. Some shops close Monday."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short drive on. Clear day for the view."
+            },
+            {
+              "place": "glenelg-beach",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening walk on the jetty."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then fly",
+          "stops": [
+            {
+              "place": "glenelg-beach",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Early swim before checkout. Patrolled hours only."
+            },
+            {
+              "place": "rundle-mall",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Tram in for lunch and last shopping. Check shop hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Glenelg"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museums, the Oval and a brewery, with a Hills village and a winery day to round it out.",
+      "days": [
+        {
+          "title": "Arrive and North Terrace",
+          "stops": [
+            {
+              "place": "north-terrace",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Free and indoor. Usually 10:00–17:00, check on the day."
+            },
+            {
+              "place": "university",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Next door. Campus open daytime on weekdays."
+            },
+            {
+              "place": "east-end",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the laneways."
+            }
+          ]
+        },
+        {
+          "title": "Oval and brewery",
+          "stops": [
+            {
+              "place": "adelaide-oval",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Tours at set times. Check on the day and avoid match days."
+            },
+            {
+              "place": "coopers",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Tours on set days only. Book a weekday slot."
+            },
+            {
+              "place": "torrens-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy riverside stroll back to the city."
+            }
+          ]
+        },
+        {
+          "title": "Port Adelaide heritage",
+          "stops": [
+            {
+              "place": "maritime-museum",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Usually daily 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "port-adelaide",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Waterfront walk. Daytime weekday is best."
+            },
+            {
+              "place": "semaphore",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short hop for a beach break."
+            },
+            {
+              "place": "central-market",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Weekday only. Closed Sun–Mon."
+            }
+          ]
+        },
+        {
+          "title": "Hahndorf and the Hills",
+          "stops": [
+            {
+              "place": "hahndorf",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Weekday morning to avoid crowds. Some shops close Monday."
+            },
+            {
+              "place": "mount-lofty",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short drive on. Visitor centre hours vary."
+            },
+            {
+              "place": "east-end",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner back in the city."
+            }
+          ]
+        },
+        {
+          "title": "Barossa day trip, then fly",
+          "stops": [
+            {
+              "place": "barossa",
+              "at": "08:30",
+              "minutes": 480,
+              "note": "Full-day tour. Book ahead and check out first if you fly late."
+            },
+            {
+              "place": "central-market",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Quick snack if it is a weekday. Closed Sun–Mon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD (North Terrace)"
+    }
+  ],
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Central Market, laneway bars and winery day trips."
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "Tram to Glenelg for sand, sunsets and fish and chips."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums on North Terrace and the Adelaide Oval."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "CBD",
+      "range": [
+        150,
+        380
+      ],
+      "why": "Walk to the Central Market, North Terrace museums and the free tram zone. Best base without a car.",
+      "center": [
+        -34.9285,
+        138.6007
+      ]
+    },
+    {
+      "area": "North Adelaide",
+      "range": [
+        160,
+        400
+      ],
+      "why": "Quiet streets, pubs and cafés, a short walk or bus to the city and the Oval.",
+      "center": [
+        -34.9065,
+        138.5935
+      ]
+    },
+    {
+      "area": "Glenelg",
+      "range": [
+        170,
+        450
+      ],
+      "why": "Beachfront stays with the tram running straight into the city.",
+      "center": [
+        -34.9803,
+        138.5147
+      ]
+    },
+    {
+      "area": "Port Adelaide",
+      "range": [
+        120,
+        300
+      ],
+      "why": "Cheaper rooms near the docks, dolphin cruises and the railway museum; a train ride to the CBD.",
+      "center": [
+        -34.8477,
+        138.5033
+      ]
+    }
+  ],
+  "food": [
+    "Start at Adelaide Central Market: graze on cheese, smallgoods, pastries and coffee. Many stalls close early afternoon, so go in the morning.",
+    "Try a pie floater or a bakery pie, and a Farmers Union iced coffee, a local habit.",
+    "The Barossa and McLaren Vale wine regions are day trips from the city. Book a tour or a driver if you plan to taste.",
+    "Laneways off Hindley Street and Peel Street have small bars and cheap eats. Book popular places ahead on weekends.",
+    "Seafood is best near the coast at Glenelg or Port Adelaide. Check the day's catch and prices on the board."
+  ],
+  "more_time": [
+    "Add a day in the Barossa Valley: cellar doors, big red wines and long lunches, about an hour's drive each way.",
+    "Take the ferry to Kangaroo Island for wildlife and coast, but it needs at least one overnight, not a day trip.",
+    "Swap a city afternoon for the Adelaide Hills: Hahndorf's German-style main street and lookout stops, about 30–40 minutes by car."
+  ]
+}

@@ -1,0 +1,32 @@
+$ deepseek_prep.py Chicago
+  tokens in 943 out 582
+Chicago: 8 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Chicago
+  tokens in 4310 out 714
+Chicago: 1 problems
+  - ORD taxi $40-55 vs tariff estimate 85
+
+$ deepseek_city.py Chicago --stage places
+Chicago: places
+  tokens in 1242 out 4570
+
+$ deepseek_city.py Chicago --stage frame
+Chicago: frame
+  tokens in 2425 out 1656
+
+$ deepseek_city.py Chicago --stage plans
+Chicago: plans
+  plans for day
+  tokens in 2648 out 1027
+  plans for 1n
+  tokens in 2649 out 1206
+  plans for 2n
+  tokens in 2654 out 1308
+  plans for 3n
+  tokens in 2649 out 2226
+
+$ merge_city.py Chicago
+Chicago: 28 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/chicago.json and planner/chicago.json
+

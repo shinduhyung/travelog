@@ -1,0 +1,189 @@
+{
+  "currency": "AZN",
+  "usd_rate": 1.7005,
+  "intro_line": "Baku blends ancient walls with futuristic towers on the Caspian Sea.",
+  "intro": "Baku rewards visitors with a mix of history, culture, and modern flair. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Old City",
+    "Fountain Square",
+    "Seafront Boulevard",
+    "Nizami Street"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 15,
+    "per_km": 0.7,
+    "min_fare": 4
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Metro runs 06:00–24:00; fare 0.60 AZN with a Bakı Metropoliten Kart (3 AZN refundable deposit).",
+    "Buses cost 0.60 AZN; newer red buses require a metro card for payment.",
+    "Taxis: agree on fare beforehand; typical city trip 4–10 AZN. Ride apps like Bolt work.",
+    "Driving: speed cameras are common; fines sent by SMS.",
+    "Walking: pedestrian zones around Fountain Square and the old town; crossings can be risky at night.",
+    "Bikes: city is fairly flat and bike-friendly, but no dedicated lanes."
+  ],
+  "airports": [
+    {
+      "code": "GYD",
+      "name": "Heydar Aliyev International Airport",
+      "primary": true,
+      "note": "Main international gateway, 17 km northeast of centre.",
+      "options": [
+        {
+          "mode": "Bus T1 Airport Express",
+          "to": "Railway station (via Koroglu metro)",
+          "price": "1.30 AZN with BakiKart",
+          "time": "30–40 min",
+          "note": "Runs every 30 min; contactless cards accepted."
+        },
+        {
+          "mode": "Bus N16",
+          "to": "Samed Vurgun Park (city centre)",
+          "price": "1 AZN",
+          "time": "40–60 min",
+          "note": "Every 30 min, early morning to late night."
+        },
+        {
+          "mode": "Minibus 135",
+          "to": "28 May Metro Station",
+          "price": "0.40 AZN",
+          "time": "60 min",
+          "note": "Stops at airport traffic circle, 15-min walk from terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "15–50 AZN",
+          "time": "20–30 min",
+          "note": "Negotiate before; airport monopoly can be pricey."
+        },
+        {
+          "mode": "Ride app (Bolt)",
+          "to": "City centre",
+          "price": "10–20 AZN",
+          "time": "20–30 min",
+          "note": "Often cheaper than airport taxis; use app to avoid haggling."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Icherisheher",
+    "Maiden Tower of Baku",
+    "Palace of the Shirvanshahs",
+    "Flame Towers",
+    "Heydar Aliyev Center",
+    "Baku Boulevard",
+    "Azerbaijan Carpet Museum",
+    "Ateshgah of Baku",
+    "Yanar Dag",
+    "Bibi-Heybat Mosque",
+    "Dolma",
+    "Nizami Street",
+    "Yasil Bazar"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Baku",
+      "https://en.wikivoyage.org/wiki/Baku"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    40.4093,
+    49.8671
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": 3,
+      "rain_days": 7
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 5
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 7
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 4
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 6
+    },
+    {
+      "high": 29,
+      "low": 20,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 4
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 8
+    },
+    {
+      "high": 14,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 10,
+      "low": 5,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "GYD taxi 15–50 AZN vs tariff estimate 30"
+  ]
+}

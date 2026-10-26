@@ -124,6 +124,7 @@ class BadgeProvider with ChangeNotifier {
   List<Achievement> get newlyPendingPremiumClaim => _newlyPendingPremiumClaim;
 
   // 랭크 시스템 관련 변수
+  bool _silentBaseline = false;
   String? _newRankUnlocked;
   String? get newRankUnlocked => _newRankUnlocked;
   String _currentRank = 'Rookie';
@@ -131,6 +132,17 @@ class BadgeProvider with ChangeNotifier {
 
   // [추가] 초기화 상태 확인용
   bool _isInitialized = false;
+
+  // [HOTFIX] "NEW BADGE" 팝업 폭주 방지용.
+  // - _knownUnlockedIds: 서버에 이미 한 번이라도 기록된(또는 이번 세션에서 이미
+  //   딴) 뱃지 id. 여기 있는 뱃지는 다시 unlock되어도 팝업을 띄우지 않는다.
+  //   서버 문서의 badgeIds(현재 해제 목록)뿐 아니라, 줄어들지 않는
+  //   everUnlockedIds까지 합쳐서 읽는다. (프리미엄 재잠금 등으로 badgeIds가
+  //   일시적으로 줄어 저장돼도 다음 로그인에서 팝업이 쏟아지지 않게)
+  // - _loadFailed: 서버 문서 조회가 실패한 경우. 이때는 "이미 딴 뱃지"를
+  //   알 수 없으므로 팝업·랭크업 알림·저장(서버 덮어쓰기)을 전부 건너뛴다.
+  final Set<String> _knownUnlockedIds = {};
+  bool _loadFailed = false;
 
   // [HOTFIX] updateBadges()가 아직 _isInitialized==false일 때 호출되면
   // (아래 updateBadges 참고) 여기 저장해뒀다가, _loadUnlockedBadges()가
@@ -7127,6 +7139,11 @@ class BadgeProvider with ChangeNotifier {
       // 뱃지 계산 자체가 멈추는(항상 0/0으로 보이는) 새 버그가 생긴다.
       // 불러올 서버 데이터가 애초에 없는 상황이니 "초기화 완료"로
       // 즉시 표시한다.
+      //
+      // 로그아웃 직후엔 폰에 이전 계정의 방문 기록이 남아 있는데 "이미 딴
+      // 뱃지" 목록은 비어 있어서, 첫 계산에서 수백 개가 새로 딴 것처럼
+      // 팝업으로 쏟아졌다. 첫 계산이 끝날 때까진 조용히 반영만 한다.
+      _silentBaseline = true;
       _isInitialized = true;
       _safeNotify();
       _replayPendingBadgeUpdateIfAny();
@@ -7134,6 +7151,7 @@ class BadgeProvider with ChangeNotifier {
     }
 
     try {
+      _loadFailed = false;
       final docSnapshot = await _firestore
           .collection('users')
           .doc(user.uid)
@@ -7150,6 +7168,10 @@ class BadgeProvider with ChangeNotifier {
             for (var achievement in _achievements) {
               achievement.isUnlocked = unlockedIds.contains(achievement.id);
             }
+            _knownUnlockedIds.addAll(unlockedIds);
+          }
+          if (data['everUnlockedIds'] is List) {
+            _knownUnlockedIds.addAll(List<String>.from(data['everUnlockedIds']));
           }
           // [추가] 저장된 랭크 데이터 로드
           if (data['currentRank'] != null) {
@@ -7163,6 +7185,7 @@ class BadgeProvider with ChangeNotifier {
       _safeNotify();
     } catch (e) {
       print('[BadgeProvider] Error loading badges: $e');
+      _loadFailed = true; // 서버의 "이미 딴 뱃지"를 모름 -> 팝업/저장 금지
       _isInitialized = true; // 에러가 나도 초기화 시도는 끝난 것으로 간주
     }
 
@@ -7195,12 +7218,17 @@ class BadgeProvider with ChangeNotifier {
       print('[BadgeProvider] No user, cannot save badges');
       return;
     }
+    if (_loadFailed) {
+      print('[BadgeProvider] Initial load failed, skip save to avoid overwriting server badges');
+      return;
+    }
 
     try {
       final unlockedIds = _achievements
           .where((a) => a.isUnlocked)
           .map((a) => a.id)
           .toList();
+      _knownUnlockedIds.addAll(unlockedIds);
 
       await _firestore
           .collection('users')
@@ -7209,6 +7237,7 @@ class BadgeProvider with ChangeNotifier {
           .doc('unlocked')
           .set({
         'badgeIds': unlockedIds,
+        'everUnlockedIds': _knownUnlockedIds.toList(), // 줄어들지 않는 누적 목록
         'currentRank': _currentRank, // [추가] 현재 랭크도 저장
         'updatedAt': FieldValue.serverTimestamp(),
       });
@@ -7553,6 +7582,14 @@ class BadgeProvider with ChangeNotifier {
     if (countryProvider.isLoading) return;
     if (allEconomyData.isEmpty) return;
 
+    // 로그아웃 상태 첫 계산(_silentBaseline)이나 서버 조회 실패(_loadFailed) 때는
+    // "이미 딴 뱃지"를 모르므로 팝업 없이 조용히 반영만 한다.
+    final bool quiet = _loadFailed || _silentBaseline;
+    final bool sourcesLoading = (cityProvider?.isLoading ?? false) ||
+        (landmarksProvider?.isLoading ?? false) ||
+        (airlineProvider?.isLoading ?? false) ||
+        (airportProvider?.isLoading ?? false);
+
     bool didChange = false;
     bool shouldSave = false;
 
@@ -7742,22 +7779,36 @@ class BadgeProvider with ChangeNotifier {
 
       // [추가] 방금 막 조건을 다 채웠는데(직전엔 안 채워진 상태) 구독이 없어서 실제
       // unlock으로는 못 이어지는 경우 -> "완료했지만 구독 필요" 팝업용 큐에 적재.
+      // [HOTFIX] 이미 딴(서버에 기록된) 뱃지거나 서버 조회가 실패한 상태면 안 띄운다.
       if (!wasConditionsMet && requirementsMet &&
-          achievement.requiresSubscription && !effectiveUnlock) {
+          achievement.requiresSubscription && !effectiveUnlock &&
+          !achievement.isUnlocked && !quiet &&
+          !_knownUnlockedIds.contains(achievement.id)) {
         _newlyPendingPremiumClaim.add(achievement);
       }
 
       bool previouslyUnlocked = achievement.isUnlocked;
       if (!previouslyUnlocked && effectiveUnlock) {
         achievement.isUnlocked = true;
-        _newlyUnlocked.add(achievement);
+        // [HOTFIX] 서버에 이미 있던 뱃지(재잠금 후 재해제 포함)는 조용히 복구.
+        if (!quiet && !_knownUnlockedIds.contains(achievement.id)) {
+          _newlyUnlocked.add(achievement);
+        }
+        _knownUnlockedIds.add(achievement.id);
         didChange = true;
         shouldSave = true;
       } else if (previouslyUnlocked && !effectiveUnlock) {
-        achievement.isUnlocked = false;
-        _newlyUnlocked.remove(achievement);
-        didChange = true;
-        shouldSave = true;
+        // [HOTFIX] 조건은 충족했는데 이 기기에서 구독만 확인 안 된 경우엔 다시
+        // 잠그지 않는다. (다른 OS/기기에서 구독했거나 결제 복원 전이면
+        // isPremium이 false라 잠금->서버 저장->재해제 폭주가 났다.)
+        final bool onlyMissingSubscription =
+            requirementsMet && achievement.requiresSubscription;
+        if (!onlyMissingSubscription) {
+          achievement.isUnlocked = false;
+          _newlyUnlocked.remove(achievement);
+          didChange = true;
+          shouldSave = true;
+        }
       }
     }
 
@@ -7767,13 +7818,17 @@ class BadgeProvider with ChangeNotifier {
 
     // [수정] 랭크가 오를 때 처리 (초기화 완료 후 진짜 상승시에만 팝업 허용)
     if (_getRankValue(calculatedRank) > _getRankValue(_currentRank)) {
-      if (_isInitialized) {
+      if (_isInitialized && !quiet) {
         _newRankUnlocked = calculatedRank; // 이 값이 null이 아닐 때만 main.dart에서 팝업을 띄움
       }
       _currentRank = calculatedRank;
       didChange = true;
       shouldSave = true; // 랭크가 바뀌었으니 저장
     }
+
+    // 모든 데이터 로딩이 끝난 뒤의 계산까지 조용히 반영했으면, 그 다음부터
+    // (비로그인 사용자가 실제로 새로 딴 뱃지는) 정상적으로 팝업을 띄운다.
+    if (_silentBaseline && !sourcesLoading) _silentBaseline = false;
 
     if (shouldSave) _saveUnlockedBadges();
     if (didChange) _safeNotify();

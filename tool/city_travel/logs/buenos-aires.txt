@@ -1,0 +1,45 @@
+$ deepseek_prep.py Buenos Aires
+  tokens in 967 out 706
+Buenos Aires: 10 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Buenos Aires
+  tokens in 3969 out 1016
+Buenos Aires: 1 problems
+  - EPA taxi ARS 15000-25000 vs tariff estimate 36520
+
+$ deepseek_city.py Buenos Aires --stage places
+Buenos Aires: places
+  tokens in 1259 out 4383
+
+$ deepseek_city.py Buenos Aires --stage frame
+Buenos Aires: frame
+  tokens in 2456 out 1875
+  repaired JSON
+
+$ deepseek_city.py Buenos Aires --stage plans
+Buenos Aires: plans
+  plans for day
+  tokens in 2690 out 901
+  plans for 1n
+  tokens in 2691 out 1234
+  plans for 2n
+  tokens in 2691 out 1422
+  plans for 3n
+  tokens in 2696 out 1797
+  plans for 4n
+  tokens in 2691 out 2668
+  plans for 5n
+  tokens in 2691 out 2402
+
+$ merge_city.py Buenos Aires
+WARN  caminito: area 'La Boca' not one of the hotel areas
+WARN  bombonera: area 'La Boca' not one of the hotel areas
+WARN  libertadores: area 'La Boca' not one of the hotel areas
+WARN  presidente_peron: area 'La Boca' not one of the hotel areas
+WARN  la_boca: area 'La Boca' not one of the hotel areas
+ERROR teatro_colon: landmark 'Teatro Colón' not in all_landmarks.json
+ERROR libertadores: landmark 'Estadio Libertadores de América' not in all_landmarks.json
+ERROR presidente_peron: landmark 'Estadio Presidente Perón' not in all_landmarks.json
+ERROR floralis: landmark 'Floralis Genérica' not in all_landmarks.json
+Buenos Aires: 28 places, 18 plans, 4 errors, 5 warnings
+

@@ -1,0 +1,547 @@
+{
+  "city": "Managua",
+  "checked": "October 2026",
+  "intro_line": "Managua: gritty capital where volcanoes and lake breezes meet.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro Histórico",
+        "Monseñor Lezcano",
+        "Bolonia",
+        "Carretera a Masaya"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro Histórico",
+        "Monseñor Lezcano",
+        "Bolonia",
+        "Carretera a Masaya"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Centro Histórico",
+        "Monseñor Lezcano",
+        "Bolonia",
+        "Carretera a Masaya"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro Histórico",
+        "Monseñor Lezcano",
+        "Bolonia",
+        "Carretera a Masaya"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Centro Histórico",
+        "Monseñor Lezcano",
+        "Bolonia",
+        "Carretera a Masaya"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 3,
+        "note": "Dry and hot: highs near 32°C, few rainy days. Good for walking the center."
+      },
+      {
+        "high": 33,
+        "low": 23,
+        "rain_days": 3,
+        "note": "Dry and hot, highs near 33°C. Carry water and plan shade breaks."
+      },
+      {
+        "high": 34,
+        "low": 23,
+        "rain_days": 3,
+        "note": "Hottest dry month, highs near 34°C. Start sightseeing early."
+      },
+      {
+        "high": 35,
+        "low": 24,
+        "rain_days": 6,
+        "note": "Very hot, highs near 35°C, with a few more rainy days. Pace yourself."
+      },
+      {
+        "high": 33,
+        "low": 25,
+        "rain_days": 20,
+        "note": "Rains arrive: about 20 rainy days and highs near 33°C. Pack a rain jacket."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 25,
+        "note": "Wet season: about 25 rainy days, highs near 30°C. Expect afternoon downpours."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 21,
+        "note": "Wet and warm, highs near 31°C, about 21 rainy days. Keep plans flexible."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 24,
+        "note": "Wet month, about 24 rainy days. Short showers are common."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 27,
+        "note": "Wettest month, about 27 rainy days. Carry an umbrella and waterproof bag."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 27,
+        "note": "Still very wet, about 27 rainy days, highs near 30°C."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 18,
+        "note": "Rains ease: about 18 rainy days, highs near 30°C."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 8,
+        "note": "Drier and slightly cooler, highs near 31°C, about 8 rainy days. A good month to visit."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.6,
+      0.8,
+      0.9
+    ],
+    "food": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.5,
+      0.4,
+      0.45,
+      0.45,
+      0.4,
+      0.45,
+      0.7,
+      0.85
+    ],
+    "history": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.6,
+      0.8,
+      0.9
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9
+    ]
+  },
+  "places": {
+    "puerto-salvador-allende": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "national-palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "masaya-artisan-market": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Carretera a Masaya",
+      "popularity": 4
+    },
+    "gallo-pinto": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "mercado-roberto-huembes": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Carretera a Masaya",
+      "popularity": 3
+    },
+    "mercado-oriental": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "old-cathedral": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "loma-de-tiscapa": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "malecon": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "laguna-de-apoyo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning to afternoon",
+      "area": "Carretera a Masaya",
+      "popularity": 4
+    },
+    "volcan-masaya": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Carretera a Masaya",
+      "popularity": 4
+    },
+    "granada-day-trip": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Early start",
+      "area": "Carretera a Masaya",
+      "popularity": 4
+    },
+    "bolonia-walk": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Bolonia",
+      "popularity": 2
+    },
+    "ruben-dario-theatre": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "huellas-de-acahualinca": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "paseo-xolotlan": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "mercado-huembes-crafts": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Carretera a Masaya",
+      "popularity": 2
+    },
+    "cafe-breakfast": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "monseor-lezcano-walk": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Monseñor Lezcano",
+      "popularity": 1
+    }
+  },
+  "recommend": {
+    "why": "One night covers the old center, a market meal and the lakefront; add a night for a volcano or Granada day trip."
+  },
+  "airports": [
+    {
+      "code": "MGA",
+      "name": "Augusto C. Sandino International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 8 km east of the centre.",
+      "options": [
+        {
+          "mode": "City bus 266",
+          "to": "Mercado Oriental / eastern city",
+          "price": "C$2.50",
+          "time": "40-60 min",
+          "note": "Walk out to Carretera Norte to catch it; watch for the terminal on your right."
+        },
+        {
+          "mode": "Commuter bus to Tipitapa",
+          "to": "Carretera Norte stops",
+          "price": "C$10-20",
+          "time": "30-50 min",
+          "note": "Ask the driver to stop at the airport."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "C$250-400",
+          "time": "20-35 min",
+          "note": "Agree the fare before you get in."
+        },
+        {
+          "mode": "Private transfer",
+          "to": "Any hotel",
+          "price": "C$400-700",
+          "time": "20-40 min",
+          "note": "Book ahead through your hotel for safety."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Managua",
+      "https://en.wikivoyage.org/wiki/Managua"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "budget"
+  ],
+  "transit": {
+    "best": "Taxis for most trips; cheap numbered buses if you know the route and travel by day.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Numbered city buses are cheap (about C$2.50) but stop early; no night service. Bus 266 runs from Mercado Oriental to the airport along Carretera Norte."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are collective or private; agree the fare first. No Uber, and ride apps are limited, so book by phone or through your hotel."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is congested and addresses use landmarks, not street numbers. Useful for day trips; check insurance and parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine downtown and at Puerto Salvador Allende by day. Cycling is for the bold."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, with a sharp dry season from December to April and a long wet season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Highs around 31–33°C with only a few rainy days. Best for walking and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hottest: March and April",
+        "text": "Highs near 34–35°C. Sightsee early morning and rest in the shade at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "Rain on 20–27 days a month. Showers are often heavy but short; plan indoor stops."
+      },
+      {
+        "icon": "☔",
+        "title": "Wettest: September and October",
+        "text": "About 27 rainy days each. Carry an umbrella and a waterproof bag for phones."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Warm nights",
+        "text": "Lows stay around 23–25°C all year. Air-conditioning or a fan helps at night."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a hat and sunscreen; a rain jacket in the wet months; modest clothes for churches."
+      }
+    ]
+  }
+}

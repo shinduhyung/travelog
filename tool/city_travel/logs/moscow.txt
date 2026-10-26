@@ -1,0 +1,33 @@
+$ deepseek_facts.py Moscow
+  tokens in 4424 out 1085
+Moscow: 2 problems
+  - DME taxi ₽1,000-1,500 vs tariff estimate 2822
+  - VKO taxi ₽1,000-1,500 vs tariff estimate 2066
+
+$ deepseek_city.py Moscow --stage places
+Moscow: places
+  tokens in 1249 out 4319
+
+$ deepseek_city.py Moscow --stage frame
+Moscow: frame
+  tokens in 2434 out 1731
+
+$ deepseek_city.py Moscow --stage plans
+Moscow: plans
+  plans for day
+  tokens in 2606 out 982
+  plans for 1n
+  tokens in 2607 out 1251
+  plans for 2n
+  tokens in 2607 out 1416
+  plans for 3n
+  tokens in 2612 out 2056
+  plans for 4n
+  tokens in 2607 out 2272
+  plans for 5n
+  tokens in 2607 out 2923
+
+$ merge_city.py Moscow
+Moscow: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/moscow.json and planner/moscow.json
+

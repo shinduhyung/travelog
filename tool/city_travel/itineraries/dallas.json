@@ -1,0 +1,1314 @@
+{
+  "city": "Dallas",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Dallas rewards visitors with world-class museums, serious barbecue and a lively downtown core. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 32.7161,
+      "west": -97.0863,
+      "north": 32.9592,
+      "east": -96.7518,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 4,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "DART light rail covers downtown and many suburbs; best for commuters.",
+      "DART buses reach most places but are slow and infrequent off-peak.",
+      "Tap a contactless card or phone on DART readers; you pay the cheapest valid fare.",
+      "Taxis hail at stands and hotels; Uber and Lyft both work widely.",
+      "A car is the simplest way around; rush hour on I-35 and US-75 is brutal.",
+      "Downtown is walkable; bikes and scooters suit short hops, not sprawl."
+    ],
+    "sources": []
+  },
+  "places": {
+    "dealey-plaza": {
+      "name": "Dealey Plaza",
+      "landmark": "Dealey Plaza",
+      "kind": "sight",
+      "lat": 32.7787,
+      "lon": -96.8082,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Come early morning to see the grassy knoll and the X marks on Elm Street without crowds.",
+      "source": ""
+    },
+    "sixth-floor-museum": {
+      "name": "The Sixth Floor Museum at Dealey Plaza",
+      "landmark": "Sixth Floor Museum",
+      "kind": "museum",
+      "lat": 32.7797,
+      "lon": -96.8085,
+      "price": 27,
+      "price_text": "≈ USD 25–30 adult · check on the day",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "Book a timed ticket online; the audio guide is worth the extra time.",
+      "source": "https://www.jfk.org/"
+    },
+    "reunion-tower": {
+      "name": "Reunion Tower GeO-Deck",
+      "landmark": "Reunion Tower",
+      "kind": "sight",
+      "lat": 32.7753,
+      "lon": -96.809,
+      "price": 26,
+      "price_text": "≈ USD 20–30 adult · check on the day",
+      "hours": "Daily, usually late morning to evening · check on the day",
+      "tip": "Go up just before sunset for daylight and city lights in one visit.",
+      "source": "https://reuniontower.com/"
+    },
+    "dallas-zoo": {
+      "name": "Dallas Zoo",
+      "landmark": "Dallas Zoo",
+      "kind": "park",
+      "lat": 32.7441,
+      "lon": -96.8152,
+      "price": 24,
+      "price_text": "≈ USD 18–28 adult · check on the day",
+      "hours": "Daily roughly 09:00–17:00 · check on the day",
+      "tip": "Start at the Giants of the Savanna early; animals are most active before the heat.",
+      "source": "https://www.dallaszoo.com/"
+    },
+    "six-flags": {
+      "name": "Six Flags Over Texas",
+      "landmark": "Six Flags Over Texas",
+      "kind": "activity",
+      "lat": 32.7547,
+      "lon": -97.07,
+      "price": 75,
+      "price_text": "≈ USD 50–100 one-day ticket · check on the day",
+      "hours": "Seasonal; usually daily in summer · check on the day",
+      "tip": "It is in Arlington, about 30 minutes by car from Downtown; buy tickets online and arrive at opening.",
+      "source": "https://www.sixflags.com/overtexas"
+    },
+    "traders-village": {
+      "name": "Traders Village",
+      "landmark": "Traders Village",
+      "kind": "food",
+      "lat": 32.7547,
+      "lon": -97.07,
+      "price": 5,
+      "price_text": "≈ USD 5 parking · entry usually free · check on the day",
+      "hours": "Weekends mainly, morning to late afternoon · check on the day",
+      "tip": "A huge weekend flea market in Grand Prairie; bring cash and go early for parking.",
+      "source": "https://www.tradersvillage.com/"
+    },
+    "smu": {
+      "name": "Southern Methodist University (SMU)",
+      "landmark": "Southern Methodist University (SMU)",
+      "kind": "sight",
+      "lat": 32.8412,
+      "lon": -96.7845,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily",
+      "tip": "Walk the tree-lined boulevard and see the George W. Bush Presidential Center next door.",
+      "source": "https://www.smu.edu/"
+    },
+    "chuck-e-cheese": {
+      "name": "Chuck E. Cheese",
+      "landmark": "Chuck E. Cheese",
+      "kind": "activity",
+      "lat": 32.814,
+      "lon": -96.9489,
+      "price": null,
+      "price_text": "Pay per game and food · check on the day",
+      "hours": "Daily, usually late morning to evening · check on the day",
+      "tip": "Good rainy-day stop for young kids; check the nearest branch before you go.",
+      "source": "https://www.chuckecheese.com/"
+    },
+    "pizza-hut": {
+      "name": "Pizza Hut",
+      "landmark": "Pizza Hut",
+      "kind": "food",
+      "lat": 33.0198,
+      "lon": -96.6989,
+      "price": null,
+      "price_text": "Budget pizza · check on the day",
+      "hours": "Varies by branch · check on the day",
+      "tip": "Chain pizza; use it as a quick, cheap meal near Downtown rather than a destination.",
+      "source": "https://www.pizzahut.com/"
+    },
+    "prairie-playland": {
+      "name": "Prairie Playland",
+      "landmark": "Prairie Playland",
+      "kind": "activity",
+      "lat": 32.7405,
+      "lon": -97.0163,
+      "price": null,
+      "price_text": "Check on the day",
+      "hours": "Check on the day",
+      "tip": "Small family play spot; confirm location and hours before making the trip.",
+      "source": ""
+    },
+    "smoothie-king": {
+      "name": "Smoothie King",
+      "landmark": "Smoothie King",
+      "kind": "food",
+      "lat": 32.9348,
+      "lon": -96.9639,
+      "price": null,
+      "price_text": "Budget smoothies · check on the day",
+      "hours": "Varies by branch · check on the day",
+      "tip": "Handy cool drink stop on a hot Dallas afternoon.",
+      "source": "https://www.smoothieking.com/"
+    },
+    "wingstreet": {
+      "name": "WingStreet",
+      "landmark": "WingStreet",
+      "kind": "food",
+      "lat": 33.0198,
+      "lon": -96.6989,
+      "price": null,
+      "price_text": "Budget wings · check on the day",
+      "hours": "Varies by branch · check on the day",
+      "tip": "Wings sold through Pizza Hut branches; fine for a quick bite, not a food destination.",
+      "source": "https://www.pizzahut.com/"
+    },
+    "itz": {
+      "name": "iT'Z Family Food & Fun",
+      "landmark": "iT'Z Family Food & Fun",
+      "kind": "activity",
+      "lat": 32.8251,
+      "lon": -97.0543,
+      "price": null,
+      "price_text": "Buffet plus game credits · check on the day",
+      "hours": "Daily, usually late morning to evening · check on the day",
+      "tip": "Buffet and arcade under one roof; good for families with kids on a hot or rainy day.",
+      "source": "https://www.itzusa.com/"
+    },
+    "klyde-warren": {
+      "name": "Klyde Warren Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 32.7893,
+      "lon": -96.8017,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, early to late",
+      "tip": "A park built over the freeway between Downtown and Uptown; food trucks often park here at lunch.",
+      "source": "https://klydewarrenpark.org/"
+    },
+    "dallas-arts-district": {
+      "name": "Dallas Arts District walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 32.7874,
+      "lon": -96.7966,
+      "price": 0,
+      "price_text": "Free to walk · museums charge entry",
+      "hours": "Streets always open · museums daytime",
+      "tip": "Walk between the Dallas Museum of Art, the Nasher and the Crow Museum in one loop.",
+      "source": "https://www.dallasartsdistrict.org/"
+    },
+    "dallas-museum-art": {
+      "name": "Dallas Museum of Art",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 32.7876,
+      "lon": -96.8011,
+      "price": 0,
+      "price_text": "Free general admission · special shows ticketed",
+      "hours": "Closed Monday · Tue–Sun daytime · check on the day",
+      "tip": "General entry is free; go for the free collection and check what special exhibition is on.",
+      "source": "https://dma.org/"
+    },
+    "deep-ellum": {
+      "name": "Deep Ellum street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 32.7846,
+      "lon": -96.7845,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Best in the evening; bars open late",
+      "tip": "Murals, live music and barbecue; walk Main Street and look up at the wall art.",
+      "source": ""
+    },
+    "bishop-arts": {
+      "name": "Bishop Arts District",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 32.7479,
+      "lon": -96.8283,
+      "price": 0,
+      "price_text": "Free to walk · pay per shop and cafe",
+      "hours": "Shops daytime; restaurants into the evening",
+      "tip": "Independent shops and cafes a short drive from Downtown; good for a relaxed half-day.",
+      "source": "https://bishopartsdistrict.com/"
+    },
+    "katy-trail": {
+      "name": "Katy Trail",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 32.8035,
+      "lon": -96.8003,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "A shaded walking and cycling path through Uptown; rent a bike or just stroll a section.",
+      "source": ""
+    },
+    "peggy-suelen": {
+      "name": "Peggy Sue BBQ",
+      "landmark": null,
+      "kind": "food",
+      "lat": 32.8556,
+      "lon": -96.7838,
+      "price": null,
+      "price_text": "≈ USD 15–25 per person · check on the day",
+      "hours": "Usually lunch and dinner daily · check on the day",
+      "tip": "Classic Dallas barbecue near SMU; try the brisket plate.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Dallas history and skyline, all in and around Downtown.",
+      "days": [
+        {
+          "title": "Dealay Plaza, the Sixth Floor and the GeO-Deck",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early before the heat and crowds. The plaza is open all day."
+            },
+            {
+              "place": "sixth-floor-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book ahead. Closed some holidays, so check on the day."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Quick lunch nearby. Hours vary by branch."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "13:15",
+              "minutes": 120,
+              "note": "Walk the streets and sculpture. Many museums close Monday."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Time it for sunset. Usually open late morning to evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day from BBQ lunch to market snacks and an evening in Deep Ellum.",
+      "days": [
+        {
+          "title": "BBQ, markets and Deep Ellum",
+          "stops": [
+            {
+              "place": "peggy-suelen",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Classic BBQ lunch. Usually open lunch and dinner, check on the day."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk off lunch. Food trucks often park here at lunchtime."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "14:15",
+              "minutes": 15,
+              "note": "Cool down. Hours vary by branch."
+            },
+            {
+              "place": "traders-village",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Weekends mainly. Snack stalls and people-watching."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and live music. Best Thursday to Saturday evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Museums and murals: the Arts District by day, Deep Ellum after dark.",
+      "days": [
+        {
+          "title": "Arts District to Deep Ellum murals",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general entry, check on the day."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Walk the district and grab lunch nearby. Many museums close Monday."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Short walk over the deck park. Open early to late."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "See the murals in daylight, then stay for dinner. Best Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for first-timers: the JFK story downtown, then the Arts District and a skyline sunset.",
+      "days": [
+        {
+          "title": "Arrive, Dealey Plaza and the Sixth Floor",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Start outside for the lay of the land."
+            },
+            {
+              "place": "sixth-floor-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Book ahead. Roughly 10:00–17:00, check on the day."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Short walk or rideshare. Streets always open."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Go up for sunset. Usually open late morning to evening, check on the day."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Easy dinner near the hotel. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general entry is typical, check on the day."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk over for lunch from the food trucks."
+            },
+            {
+              "place": "smu",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short rideshare north. Campus grounds open daily."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A quick taste of Dallas: BBQ lunch, market snacks and an evening in Deep Ellum.",
+      "days": [
+        {
+          "title": "Arrive, BBQ and Deep Ellum",
+          "stops": [
+            {
+              "place": "peggy-suelen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Classic BBQ lunch. Usually lunch and dinner daily, check on the day."
+            },
+            {
+              "place": "katy-trail",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk off lunch. Open 24 hours."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Snack stop; food trucks vary by day."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Best in the evening. Bars and kitchens open late."
+            },
+            {
+              "place": "wingstreet",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "Late wings if you are still hungry. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then fly",
+          "stops": [
+            {
+              "place": "traders-village",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Weekends mainly, morning to late afternoon. Check on the day."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "Quick drink before the airport. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Museums and murals: the Arts District on arrival, Deep Ellum and Bishop Arts the next day.",
+      "days": [
+        {
+          "title": "Arrive, Arts District and sunset",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Tue–Sun daytime, check on the day."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Walk the district; many museums close Mondays."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Lunchtime or sunset is best. Grab a snack."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset view over the skyline. Check hours on the day."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Simple dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Murals and Bishop Arts, then fly",
+          "stops": [
+            {
+              "place": "deep-ellum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Quieter by day, so the murals are easy to see."
+            },
+            {
+              "place": "bishop-arts",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Shops daytime, restaurants into the evening. Weekend afternoon is liveliest."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Quick stop before the airport. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the history core plus a neighborhood or two, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Downtown history",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Open air and free. Start here for context before the museum."
+            },
+            {
+              "place": "sixth-floor-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Book ahead online. Closed rarely, but check hours on the day."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Quick early dinner nearby. Branch hours vary."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Go up for sunset over the skyline."
+            }
+          ]
+        },
+        {
+          "title": "Arts District and Uptown",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general admission."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Walk the district. Many museums close Mondays."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Food trucks at lunchtime. A short walk or ride from the Arts District."
+            },
+            {
+              "place": "smu",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Campus stroll. About 15 minutes by car."
+            }
+          ]
+        },
+        {
+          "title": "Deep Ellum, then fly",
+          "stops": [
+            {
+              "place": "bishop-arts",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Shops and coffee. Best on a weekend afternoon."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Murals by day, bars later. Lunch on the street."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Quick stop before the airport. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Dealey Plaza"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around BBQ, tacos and market grazing.",
+      "days": [
+        {
+          "title": "Arrive, Downtown and BBQ",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Easy first stop, open 24 hours."
+            },
+            {
+              "place": "peggy-suelen",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Classic BBQ lunch. Check hours on the day."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view before dinner."
+            },
+            {
+              "place": "wingstreet",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Casual wings. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Market day and Uptown",
+          "stops": [
+            {
+              "place": "traders-village",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Weekends mainly. Go early for parking and food stalls."
+            },
+            {
+              "place": "itz",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Family lunch and games. Usually open late morning to evening."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk it off. Food trucks here too."
+            },
+            {
+              "place": "katy-trail",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Evening walk along the trail."
+            }
+          ]
+        },
+        {
+          "title": "Neighborhoods, then fly",
+          "stops": [
+            {
+              "place": "bishop-arts",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Coffee and pastries, then browse."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Tacos and murals. Lunch on the street."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "14:30",
+              "minutes": 15,
+              "note": "Quick stop before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown near Klyde Warren Park"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Museum-goers and mural hunters who want art first and history second.",
+      "days": [
+        {
+          "title": "Arrive, Arts District",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general admission."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Sculpture and architecture walk. Check Monday closures."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Sunset on the lawn, dinner from food trucks."
+            }
+          ]
+        },
+        {
+          "title": "History and murals",
+          "stops": [
+            {
+              "place": "sixth-floor-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book ahead. Morning is quieter."
+            },
+            {
+              "place": "dealey-plaza",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Step outside for the plaza itself."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Murals by day. Bars get busy at night."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Quick bite. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Bishop Arts, then fly",
+          "stops": [
+            {
+              "place": "bishop-arts",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Galleries and shops. Best on a weekend afternoon."
+            },
+            {
+              "place": "smu",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Campus and the Meadows area. Weekday daytime is best."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Quick stop before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near the Arts District"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-time visitors who want the history, the skyline and the museums without rushing.",
+      "days": [
+        {
+          "title": "Arrive and downtown history",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Open all day. Walk the plaza and the grassy knoll first."
+            },
+            {
+              "place": "sixth-floor-museum",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Last entry is usually mid-afternoon, so go here first if you arrive late. Book ahead."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Go up for sunset. Check the day's hours."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Easy dinner near the hotel. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Arts District and Uptown",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general entry."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Walk the streets and sculpture. Many museums close Monday."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Lunch from the food trucks and a rest on the lawn."
+            },
+            {
+              "place": "smu",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short drive north. Campus grounds open daily."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, Deep Ellum evening",
+          "stops": [
+            {
+              "place": "dallas-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Go early before the heat. Check hours on the day."
+            },
+            {
+              "place": "peggy-suelen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "BBQ lunch. Usually open lunch and dinner."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Murals by day, bars and music later. Best Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "katy-trail",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Flat walk or run. Open 24 hours."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "10:00",
+              "minutes": 15,
+              "note": "Quick breakfast stop. Branch hours vary."
+            },
+            {
+              "place": "bishop-arts",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Shops and galleries. Weekend afternoons are busiest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around BBQ, tacos and market food.",
+      "days": [
+        {
+          "title": "Arrive, plaza and BBQ",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Quick look at the history before eating."
+            },
+            {
+              "place": "peggy-suelen",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "BBQ plate. Check the day's hours."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view over the city."
+            },
+            {
+              "place": "wingstreet",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Wings for dinner. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, Deep Ellum night",
+          "stops": [
+            {
+              "place": "traders-village",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Weekends mainly. Go Saturday morning for the food stalls."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "12:00",
+              "minutes": 15,
+              "note": "Cool down after the market."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk off lunch. Museums close Monday."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and music. Best Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Uptown eating day",
+          "stops": [
+            {
+              "place": "katy-trail",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Walk before eating. Open 24 hours."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Food trucks at lunchtime."
+            },
+            {
+              "place": "smu",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Campus stroll nearby."
+            },
+            {
+              "place": "itz",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Family lunch or early dinner and games. Check hours."
+            },
+            {
+              "place": "bishop-arts",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Restaurants run into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Last bite, then fly",
+          "stops": [
+            {
+              "place": "sixth-floor-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book ahead. Closed rarely, but check the day."
+            },
+            {
+              "place": "pizza-hut",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Visitors who want museums, murals and galleries at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the Arts District",
+          "stops": [
+            {
+              "place": "dallas-museum-art",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general entry."
+            },
+            {
+              "place": "dallas-arts-district",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Sculpture and architecture walk. Avoid Monday closures."
+            },
+            {
+              "place": "klyde-warren",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Sunset on the lawn and a food truck dinner."
+            }
+          ]
+        },
+        {
+          "title": "History and skyline",
+          "stops": [
+            {
+              "place": "dealey-plaza",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Early is quieter."
+            },
+            {
+              "place": "sixth-floor-museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Book ahead. Check hours on the day."
+            },
+            {
+              "place": "reunion-tower",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daytime view of the whole city."
+            },
+            {
+              "place": "deep-ellum",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Murals and galleries, then dinner. Best Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Bishop Arts and Uptown",
+          "stops": [
+            {
+              "place": "bishop-arts",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Galleries and shops. Weekend afternoon is best."
+            },
+            {
+              "place": "peggy-suelen",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "BBQ lunch nearby."
+            },
+            {
+              "place": "smu",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Campus grounds open daily."
+            },
+            {
+              "place": "katy-trail",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Evening walk. Open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "dallas-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning is cooler. Check hours on the day."
+            },
+            {
+              "place": "smoothie-king",
+              "at": "12:30",
+              "minutes": 15,
+              "note": "Quick stop before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Sixth Floor Museum, Fair Park and the State Fair."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "BBQ, Tex-Mex and tacos across the neighborhoods."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "The Arts District museums and Deep Ellum murals."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to the Sixth Floor Museum, the Arts District and the convention center. DART rail lines meet here.",
+      "center": [
+        32.7767,
+        -96.797
+      ]
+    },
+    {
+      "area": "Uptown",
+      "range": [
+        150,
+        380
+      ],
+      "why": "Restaurants and bars along McKinney Avenue, a short walk or trolley ride from downtown.",
+      "center": [
+        32.795,
+        -96.802
+      ]
+    },
+    {
+      "area": "Deep Ellum",
+      "range": [
+        120,
+        300
+      ],
+      "why": "Live music, murals and late-night food. Lively at night, quieter by day.",
+      "center": [
+        32.784,
+        -96.783
+      ]
+    },
+    {
+      "area": "Oak Lawn",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Good-value hotels and a short drive to Uptown and downtown. Cedar Springs nightlife nearby.",
+      "center": [
+        32.81,
+        -96.81
+      ]
+    }
+  ],
+  "food": [
+    "Try Texas BBQ brisket and ribs; popular spots sell out by late afternoon, so go early or check on the day.",
+    "Tex-Mex is the local staple: fajitas, enchiladas and queso. Expect USD 12–25 a plate.",
+    "Breakfast tacos are a cheap Dallas ritual, often USD 3–5 each. Grab them from a taqueria or food truck.",
+    "Deep Ellum and Uptown have the densest restaurant rows. Book ahead for weekend dinner.",
+    "Tipping is expected: about 20% at sit-down restaurants and bars."
+  ],
+  "more_time": [
+    "Add a half-day at the Dallas Arboretum and Botanical Garden, or the Perot Museum of Nature and Science for families.",
+    "Sports fans can swap a museum for a Cowboys or Mavericks game; check the schedule and ticket prices on the day.",
+    "Drive 30–40 minutes to Fort Worth for the Stockyards and its twice-daily cattle drive."
+  ]
+}

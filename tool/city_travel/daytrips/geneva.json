@@ -1,0 +1,129 @@
+{
+ "city": "Geneva",
+ "trips": [
+  {
+   "place": "Montreux",
+   "label": "",
+   "position": {
+    "id": 341895,
+    "name": "Montreux (lac)",
+    "city": "Montreux",
+    "lat": 46.43453,
+    "lng": 6.90952
+   },
+   "town": {
+    "name": "Montreux",
+    "lat": 46.43301,
+    "lng": 6.91143
+   },
+   "road": {
+    "km": 94,
+    "min": 72,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 380,
+    "currency": "CHF"
+   },
+   "modes": {
+    "train": {
+     "from": "€11",
+     "from_usd": 14.0,
+     "avg": "€28",
+     "time": "1h 0m",
+     "per_day": 9,
+     "source": "https://www.omio.com/trains/geneva/montreux"
+    }
+   },
+   "route_note": "Direct IC trains run from Geneva to Montreux in about an hour along Lake Geneva.",
+   "see": [
+    "Chillon Castle",
+    "Montreux lakeside promenade",
+    "Freddie Mercury statue",
+    "Rochers-de-Naye cog railway"
+   ],
+   "visit": "Full day",
+   "tour_query": "Montreux and Chillon day trip from Geneva",
+   "quests": [
+    "Chillon Castle",
+    "Montreux Jazz Festival"
+   ],
+   "recommended": "train",
+   "why": "Direct IC trains reach Montreux in about an hour with frequent daily departures.",
+   "stars": 5,
+   "know": [
+    "Chillon Castle is a short bus or train ride from Montreux station",
+    "Best visited in summer for lakeside promenades and the castle"
+   ]
+  },
+  {
+   "place": "Lausanne",
+   "label": "",
+   "position": {
+    "id": 341894,
+    "name": "Lausanne-Ouchy",
+    "city": "Lausanne",
+    "lat": 46.50523,
+    "lng": 6.62712
+   },
+   "town": {
+    "name": "Lausanne",
+    "lat": 46.516,
+    "lng": 6.63282
+   },
+   "road": {
+    "km": 65,
+    "min": 53,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 270,
+    "currency": "CHF"
+   },
+   "modes": {
+    "train": {
+     "from": "€8",
+     "from_usd": 10.0,
+     "avg": "€23",
+     "time": "35m",
+     "per_day": 11,
+     "source": "https://www.omio.com/trains/geneva/lausanne"
+    },
+    "bus": {
+     "from": "$4-$10",
+     "time": "50m",
+     "via": "Geneva to Lausanne",
+     "source": "https://www.rome2rio.com/s/Geneva/Lausanne"
+    }
+   },
+   "route_note": "Frequent direct Swiss IC trains run from Geneva to Lausanne in under an hour along the lake.",
+   "see": [
+    "Lausanne Cathedral",
+    "Olympic Museum",
+    "Ouchy lakeside",
+    "Old town and Place de la Palud"
+   ],
+   "visit": "Half day",
+   "tour_query": "Lausanne day trip from Geneva",
+   "quests": [
+    "The Olympic Museum",
+    "Restaurant de l'Hôtel de Ville",
+    "La Table du Lausanne Palace",
+    "Pic Beau-Rivage Palace",
+    "EPFL (École Polytechnique Fédérale de Lausanne)"
+   ],
+   "recommended": "train",
+   "why": "Frequent direct IC trains take about 35 minutes and drop you right in the city center.",
+   "stars": 4,
+   "know": [
+    "Book ahead for the best fares on Swiss IC trains",
+    "Old town and cathedral are a short walk or metro ride from the station"
+   ]
+  }
+ ],
+ "problems": [
+  "Chamonix-Mont-Blanc: not a town in cities15000.json (CH), dropped",
+  "Annecy: not a town in cities15000.json (CH), dropped",
+  "Yvoire: not a town in cities15000.json (CH), dropped"
+ ]
+}

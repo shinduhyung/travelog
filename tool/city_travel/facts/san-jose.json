@@ -1,0 +1,175 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Silicon Valley's sunny heart, where orchards became innovation.",
+  "intro": "San Jose rewards visitors with a walkable downtown, world-class tech museums, and easy access to hills and coast. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "SoFA District",
+    "Santana Row",
+    "Japantown"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "VTA light rail links downtown, the airport area, and suburbs.",
+    "VTA buses cover the city; Clipper card or contactless pay works.",
+    "Taxis are metered; Uber and Lyft operate widely.",
+    "Driving is easy but parking downtown costs money; rush hour is slow.",
+    "Downtown is walkable; bikes and scooters are common.",
+    "No ferry service in San Jose."
+  ],
+  "airports": [
+    {
+      "code": "SJC",
+      "name": "Norman Y. Mineta San Jose International Airport",
+      "primary": true,
+      "note": "Main hub, about 4 km from downtown.",
+      "options": [
+        {
+          "mode": "VTA bus 60",
+          "to": "Downtown transit center",
+          "price": "$2-3",
+          "time": "20-30 min",
+          "note": "Cheapest option; runs frequently."
+        },
+        {
+          "mode": "VTA light rail",
+          "to": "Downtown San Jose",
+          "price": "$2-3",
+          "time": "15-25 min",
+          "note": "Short shuttle or walk to the station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$15-25",
+          "time": "10-15 min",
+          "note": "Metered; short ride."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$12-22",
+          "time": "10-15 min",
+          "note": "Pickup at designated rideshare zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Winchester Mystery House",
+    "Rosicrucian Egyptian Museum",
+    "San Jose Museum of Art",
+    "Happy Hollow Park and Zoo",
+    "San Jose Municipal Rose Garden",
+    "California's Great America",
+    "Santa Clara University",
+    "Stanford University",
+    "Golfland (Milpitas)",
+    "Golfland (San Jose)",
+    "Golfland (Sunnyvale)"
+  ],
+  "airports_sources": [],
+  "checked": "October 2026",
+  "center": [
+    37.33939,
+    -121.89496
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 8
+    },
+    {
+      "high": 18,
+      "low": 8,
+      "rain_days": 10
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 11,
+      "rain_days": 3
+    },
+    {
+      "high": 28,
+      "low": 14,
+      "rain_days": 0
+    },
+    {
+      "high": 29,
+      "low": 15,
+      "rain_days": 0
+    },
+    {
+      "high": 29,
+      "low": 15,
+      "rain_days": 0
+    },
+    {
+      "high": 28,
+      "low": 15,
+      "rain_days": 1
+    },
+    {
+      "high": 25,
+      "low": 13,
+      "rain_days": 3
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 9
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "no Wikivoyage text: airport facts are from the model alone"
+  ]
+}

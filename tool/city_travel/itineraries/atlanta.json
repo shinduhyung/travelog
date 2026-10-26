@@ -1,0 +1,1347 @@
+{
+  "city": "Atlanta",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Atlanta rewards visitors with walkable neighbourhoods, world-class attractions and a deep civil rights history. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 33.5034,
+      "west": -84.5899,
+      "north": 33.9638,
+      "east": -84.1805,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 3,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "MARTA rail: four lines (Red, Gold, Blue, Green); $2.50 per ride, $9 for a 1-day pass.",
+      "Breeze Card costs $2 and is reloadable; tap on entry and exit.",
+      "Buses cover 100+ routes; weekend waits can reach an hour.",
+      "Ride apps Uber and Lyft work widely; taxis are available but less common.",
+      "Driving is fastest off-peak; rush hour is long and parking downtown is scarce.",
+      "Downtown is walkable and the Atlanta Streetcar links key sights; bikes are an option."
+    ],
+    "sources": []
+  },
+  "places": {
+    "georgia-aquarium": {
+      "name": "Georgia Aquarium",
+      "landmark": "Georgia Aquarium",
+      "kind": "museum",
+      "lat": 33.7622,
+      "lon": -84.3941,
+      "price": 45,
+      "price_text": "≈ $40–55 adult; cheaper online, timed entry",
+      "hours": "Usually 09:00–21:00; check on the day",
+      "tip": "Book a timed ticket online and go at opening to see the whale sharks before the crowds.",
+      "source": "https://www.georgiaaquarium.org"
+    },
+    "fox-theatre": {
+      "name": "Fox Theatre",
+      "landmark": "Fox Theatre",
+      "kind": "show",
+      "lat": 33.7726,
+      "lon": -84.3857,
+      "price": 25,
+      "price_text": "Tours ≈ $20–30; show tickets vary widely",
+      "hours": "Tour times vary; box office daytime",
+      "tip": "Take the guided tour to see the Moorish interior even if you skip a show.",
+      "source": "https://www.foxtheatre.org"
+    },
+    "mercedes-benz-stadium": {
+      "name": "Mercedes-Benz Stadium",
+      "landmark": "Mercedes-Benz Stadium",
+      "kind": "sight",
+      "lat": 33.7554,
+      "lon": -84.4008,
+      "price": 20,
+      "price_text": "Stadium tours ≈ $15–30; event tickets vary",
+      "hours": "Tours on select days; check on the day",
+      "tip": "Check the events calendar first; match days make the area busy and tours may stop.",
+      "source": "https://mercedesbenzstadium.com"
+    },
+    "six-flags": {
+      "name": "Six Flags Over Georgia",
+      "landmark": "Six Flags Over Georgia",
+      "kind": "activity",
+      "lat": 33.7749,
+      "lon": -84.5516,
+      "price": 55,
+      "price_text": "≈ $45–80 depending on date; buy online",
+      "hours": "Seasonal; often 10:30–18:00–20:00",
+      "tip": "It is outside the city centre; allow a full day and check the seasonal calendar.",
+      "source": "https://www.sixflags.com/overgeorgia"
+    },
+    "fun-spot": {
+      "name": "Fun Spot Atlanta",
+      "landmark": "Fun Spot Atlanta",
+      "kind": "activity",
+      "lat": 33.5459,
+      "lon": -84.4497,
+      "price": 40,
+      "price_text": "≈ $30–50 wristband; check on the day",
+      "hours": "Seasonal; afternoons into evening",
+      "tip": "Smaller and cheaper than Six Flags; good for families with younger kids.",
+      "source": "https://funspotamerica.com"
+    },
+    "arbys": {
+      "name": "Arby's",
+      "landmark": "Arby's",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 12,
+      "price_text": "≈ $8–15 per person",
+      "hours": "Varies by branch; often 10:00–22:00",
+      "tip": "Fast-food chain; use it as a quick lunch stop, not a destination.",
+      "source": "https://www.arbys.com"
+    },
+    "buffalo-wild-wings": {
+      "name": "Buffalo Wild Wings",
+      "landmark": "Buffalo Wild Wings",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 20,
+      "price_text": "≈ $15–25 per person",
+      "hours": "Often 11:00–24:00; check on the day",
+      "tip": "Good for watching a game; expect a wait on event nights.",
+      "source": "https://www.buffalowildwings.com"
+    },
+    "chick-fil-a": {
+      "name": "Chick-fil-A",
+      "landmark": "Chick-fil-A",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 10,
+      "price_text": "≈ $7–12 per person",
+      "hours": "Often Mon–Sat 06:30–22:00; closed Sunday",
+      "tip": "Atlanta-born chain; closed on Sundays, so plan around it.",
+      "source": "https://www.chick-fil-a.com"
+    },
+    "churchs-texas-chicken": {
+      "name": "Church's Texas Chicken",
+      "landmark": "Church's Texas Chicken",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 10,
+      "price_text": "≈ $6–12 per person",
+      "hours": "Varies by branch",
+      "tip": "Fried-chicken chain; quick and cheap, quality varies by branch.",
+      "source": "https://www.churchs.com"
+    },
+    "cinnabon": {
+      "name": "Cinnabon",
+      "landmark": "Cinnabon",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 6,
+      "price_text": "≈ $4–8 per item",
+      "hours": "Airport and mall branches; long hours",
+      "tip": "Mostly found in malls and the airport; a snack stop, not a meal.",
+      "source": "https://www.cinnabon.com"
+    },
+    "emory": {
+      "name": "Emory University",
+      "landmark": "Emory University",
+      "kind": "sight",
+      "lat": 33.7925,
+      "lon": -84.324,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily; buildings vary",
+      "tip": "Quiet, leafy campus with the Michael C. Carlos Museum nearby.",
+      "source": "https://www.emory.edu"
+    },
+    "georgia-tech": {
+      "name": "Georgia Institute of Technology (Georgia Tech)",
+      "landmark": "Georgia Institute of Technology (Georgia Tech)",
+      "kind": "sight",
+      "lat": 33.7756,
+      "lon": -84.3963,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily",
+      "tip": "Walk the central campus and Tech Tower; the area has good casual food nearby.",
+      "source": "https://www.gatech.edu"
+    },
+    "moes": {
+      "name": "Moe's Southwest Grill",
+      "landmark": "Moe's Southwest Grill",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 12,
+      "price_text": "≈ $8–14 per person",
+      "hours": "Often 11:00–21:00",
+      "tip": "Fast-casual burritos; quick lunch option near Midtown.",
+      "source": "https://www.moes.com"
+    },
+    "round-table-pizza": {
+      "name": "Round Table Pizza",
+      "landmark": "Round Table Pizza",
+      "kind": "food",
+      "lat": 33.749,
+      "lon": -84.388,
+      "price": 18,
+      "price_text": "≈ $12–20 per person",
+      "hours": "Varies by branch",
+      "tip": "Pizza chain with limited Atlanta presence; check the nearest branch first.",
+      "source": "https://www.roundtablepizza.com"
+    },
+    "stranger-things": {
+      "name": "Stranger Things (filming locations)",
+      "landmark": "Stranger Things",
+      "kind": "tour",
+      "lat": 33.7765,
+      "lon": -84.293,
+      "price": null,
+      "price_text": "Self-guided free; guided tours vary",
+      "hours": "Outdoor sites always accessible",
+      "tip": "The show was filmed around metro Atlanta; many sites are private or far out, so check locations before you go.",
+      "source": ""
+    },
+    "waffle-house": {
+      "name": "Waffle House",
+      "landmark": "Waffle House",
+      "kind": "food",
+      "lat": 33.9213,
+      "lon": -84.2188,
+      "price": 12,
+      "price_text": "≈ $8–15 per person",
+      "hours": "Many branches open 24 hours",
+      "tip": "A Georgia institution; go late at night for the full experience.",
+      "source": "https://www.wafflehouse.com"
+    },
+    "ponce-city-market": {
+      "name": "Ponce City Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 33.7725,
+      "lon": -84.3655,
+      "price": 15,
+      "price_text": "Free to enter; food ≈ $10–20",
+      "hours": "Often 10:00–21:00; check on the day",
+      "tip": "Food hall in an old Sears building; go up to The Roof for skyline views.",
+      "source": "https://poncecitymarket.com"
+    },
+    "beltline": {
+      "name": "Atlanta BeltLine Eastside Trail",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.7701,
+      "lon": -84.3616,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk or rent a bike between Piedmont Park and Ponce City Market.",
+      "source": "https://beltline.org"
+    },
+    "piedmont-park": {
+      "name": "Piedmont Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 33.7852,
+      "lon": -84.3735,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Often 06:00–23:00",
+      "tip": "Best skyline view is from the park's north side near the lake.",
+      "source": "https://www.piedmontpark.org"
+    },
+    "mlk-park": {
+      "name": "Martin Luther King Jr. National Historical Park",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 33.7553,
+      "lon": -84.3722,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Visitor centre often 09:00–17:00; check on the day",
+      "tip": "See the birth home area and Ebenezer Baptist Church; book tours ahead if offered.",
+      "source": "https://www.nps.gov/malu"
+    },
+    "westside-park": {
+      "name": "Westside Reservoir Park (Bellwood Quarry)",
+      "landmark": null,
+      "kind": "park",
+      "lat": 33.7866,
+      "lon": -84.4308,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Often 06:00–23:00",
+      "tip": "Big new park with a quarry overlook; bring water, shade is limited.",
+      "source": "https://beltline.org/parks/westside-park"
+    },
+    "sweet-auburn": {
+      "name": "Sweet Auburn Avenue walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.756,
+      "lon": -84.378,
+      "price": 0,
+      "price_text": "Free to walk; museum tickets vary",
+      "hours": "Streets always open",
+      "tip": "Historic Black business district; combine with the MLK site and the APEX Museum.",
+      "source": ""
+    },
+    "krog-street": {
+      "name": "Krog Street Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 33.7531,
+      "lon": -84.3639,
+      "price": 15,
+      "price_text": "Free to enter; food ≈ $10–20",
+      "hours": "Often 11:00–21:00; check on the day",
+      "tip": "Food hall near the BeltLine; good lunch stop before walking the trail.",
+      "source": "https://krogstreetmarket.com"
+    },
+    "jackson-street-bridge": {
+      "name": "Jackson Street Bridge viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 33.7597,
+      "lon": -84.3736,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Classic skyline photo spot; go at sunset or blue hour.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A focused civil rights day downtown, best started early on a weekday.",
+      "days": [
+        {
+          "title": "Civil rights morning, old Atlanta afternoon",
+          "stops": [
+            {
+              "place": "mlk-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start at the visitor centre when it opens. Check tour times on the day."
+            },
+            {
+              "place": "sweet-auburn",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk the avenue past historic churches and homes. Wear comfortable shoes."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch. Closed Sunday."
+            },
+            {
+              "place": "fox-theatre",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Take an afternoon tour if one is running; check times on the day."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Classic skyline photo. Best light near sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Graze your way from a market hall to a late-night diner.",
+      "days": [
+        {
+          "title": "Markets, BeltLine and a late diner",
+          "stops": [
+            {
+              "place": "ponce-city-market",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Many food stalls. Hours vary; check on the day."
+            },
+            {
+              "place": "beltline",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk off lunch on the Eastside Trail. Always open."
+            },
+            {
+              "place": "krog-street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Second market stop for a snack or coffee."
+            },
+            {
+              "place": "piedmont-park",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Rest on the grass before dinner."
+            },
+            {
+              "place": "waffle-house",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Southern diner classic. Many branches open 24 hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green space and the BeltLine, all outdoors and easy to combine.",
+      "days": [
+        {
+          "title": "Parks and the BeltLine",
+          "stops": [
+            {
+              "place": "piedmont-park",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quiet in the morning. Often open 06:00–23:00."
+            },
+            {
+              "place": "beltline",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk or rent a bike. Always open."
+            },
+            {
+              "place": "krog-street",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop on the trail. Check hours on the day."
+            },
+            {
+              "place": "westside-park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short taxi or rideshare. Big views over the old quarry."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "End with the skyline at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "First-timers who want the civil rights story and old Atlanta in one tight day and a half.",
+      "days": [
+        {
+          "title": "Arrive, Sweet Auburn and MLK",
+          "stops": [
+            {
+              "place": "mlk-park",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Start at the visitor centre for maps. Check hours on the day."
+            },
+            {
+              "place": "sweet-auburn",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Walk the avenue past historic churches and storefronts. Daytime only."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Classic skyline photo. Best near sunset."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Quick dinner. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Midtown culture, then fly",
+          "stops": [
+            {
+              "place": "fox-theatre",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Take a tour if one is running; check times on the day."
+            },
+            {
+              "place": "georgia-tech",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short campus walk. Buildings vary."
+            },
+            {
+              "place": "ponce-city-market",
+              "at": "12:45",
+              "minutes": 120,
+              "note": "Lunch and a look around. Often 10:00–21:00."
+            },
+            {
+              "place": "beltline",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk a stretch of the Eastside Trail. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Sweet Auburn"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around meals, from market halls to late-night diners.",
+      "days": [
+        {
+          "title": "Arrive, markets and Midtown",
+          "stops": [
+            {
+              "place": "ponce-city-market",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Graze the food hall. Often 10:00–21:00."
+            },
+            {
+              "place": "beltline",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Walk off lunch toward Krog Street."
+            },
+            {
+              "place": "krog-street",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Snack stop. Often 11:00–21:00."
+            },
+            {
+              "place": "buffalo-wild-wings",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening wings and a drink. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast, then downtown",
+          "stops": [
+            {
+              "place": "waffle-house",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Classic Southern breakfast. Many branches open 24 hours."
+            },
+            {
+              "place": "georgia-aquarium",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Weekday morning is calmest. Check hours on the day."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Lunch. Closed Sunday."
+            },
+            {
+              "place": "cinnabon",
+              "at": "14:15",
+              "minutes": 15,
+              "note": "Sweet finish at a mall or airport branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown near Ponce"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Travellers who want parks, the BeltLine and green space without leaving the city.",
+      "days": [
+        {
+          "title": "Arrive, parks and the BeltLine",
+          "stops": [
+            {
+              "place": "piedmont-park",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Easy loop walk. Often 06:00–23:00."
+            },
+            {
+              "place": "beltline",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Walk the Eastside Trail. Always open."
+            },
+            {
+              "place": "krog-street",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Lunch or early dinner stop. Check hours on the day."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "18:00",
+              "minutes": 20,
+              "note": "Sunset skyline view."
+            }
+          ]
+        },
+        {
+          "title": "Westside morning, then fly",
+          "stops": [
+            {
+              "place": "westside-park",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Quarry views. Often 06:00–23:00."
+            },
+            {
+              "place": "georgia-aquarium",
+              "at": "10:30",
+              "minutes": 180,
+              "note": "Indoor backup if it rains. Check hours on the day."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Quick lunch. Closed Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown near Piedmont Park"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Civil rights history and old Atlanta, paced for first-time visitors.",
+      "days": [
+        {
+          "title": "Sweet Auburn and MLK",
+          "stops": [
+            {
+              "place": "mlk-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start at the visitor centre. Check hours on the day."
+            },
+            {
+              "place": "sweet-auburn",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk the avenue past the historic churches and shops."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch. Closed Sunday."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Classic skyline photo. Best near sunset."
+            }
+          ]
+        },
+        {
+          "title": "Midtown culture and downtown icons",
+          "stops": [
+            {
+              "place": "fox-theatre",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Join a tour if one runs; check times on the day."
+            },
+            {
+              "place": "georgia-tech",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short walk around campus. Weekday daytime is best."
+            },
+            {
+              "place": "moes",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Casual lunch in Midtown."
+            },
+            {
+              "place": "mercedes-benz-stadium",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Tours run on select days only; check on the day."
+            },
+            {
+              "place": "stranger-things",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Outdoor filming spots; plan your own route and check locations first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Markets, Southern chains and a BeltLine food crawl.",
+      "days": [
+        {
+          "title": "Ponce City Market and the BeltLine",
+          "stops": [
+            {
+              "place": "ponce-city-market",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Graze the food hall. Often 10:00–21:00; check on the day."
+            },
+            {
+              "place": "beltline",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk the Eastside Trail south from the market."
+            },
+            {
+              "place": "krog-street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Lunch stop two. Often 11:00–21:00; check on the day."
+            },
+            {
+              "place": "piedmont-park",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Wind down in the park at sunset."
+            },
+            {
+              "place": "waffle-house",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Late-night classic. Many branches open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Downtown eats and aquarium",
+          "stops": [
+            {
+              "place": "chick-fil-a",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Breakfast. Closed Sunday."
+            },
+            {
+              "place": "georgia-aquarium",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Book ahead. Usually 09:00–21:00; check on the day."
+            },
+            {
+              "place": "arbys",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick lunch near the aquarium."
+            },
+            {
+              "place": "cinnabon",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Sweet snack at a mall or airport branch."
+            },
+            {
+              "place": "buffalo-wild-wings",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening wings and screens in Midtown."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Midtown"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Parks, the BeltLine and an outdoor day, with easy food stops.",
+      "days": [
+        {
+          "title": "Parks and the Eastside Trail",
+          "stops": [
+            {
+              "place": "piedmont-park",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning loop. Often 06:00–23:00."
+            },
+            {
+              "place": "beltline",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk or rent a bike. Always open."
+            },
+            {
+              "place": "krog-street",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch in the market. Check hours on the day."
+            },
+            {
+              "place": "ponce-city-market",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Shops and rooftop views. Check hours on the day."
+            },
+            {
+              "place": "westside-park",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Quarry views at sunset. Often 06:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium and outdoor fun",
+          "stops": [
+            {
+              "place": "georgia-aquarium",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go early on a weekday. Book ahead."
+            },
+            {
+              "place": "arbys",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch downtown."
+            },
+            {
+              "place": "six-flags",
+              "at": "14:30",
+              "minutes": 180,
+              "note": "Seasonal; often 10:30–18:00–20:00. Check on the day."
+            },
+            {
+              "place": "waffle-house",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Dinner on the way back. Many branches open 24 hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Civil rights landmarks, old Atlanta streets and a show in a 1920s movie palace.",
+      "days": [
+        {
+          "title": "Arrive and walk Sweet Auburn",
+          "stops": [
+            {
+              "place": "jackson-street-bridge",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Classic skyline photo. Free and always open."
+            },
+            {
+              "place": "sweet-auburn",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Self-guided walk past historic churches and storefronts. Streets always open."
+            },
+            {
+              "place": "mlk-park",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Visitor centre often closes at 17:00, so check on the day. The outdoor grounds stay open later."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Quick dinner. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Downtown history and stadium",
+          "stops": [
+            {
+              "place": "mercedes-benz-stadium",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Tours run on select days only; check on the day and book ahead."
+            },
+            {
+              "place": "georgia-aquarium",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Usually 09:00–21:00; check on the day. Buy timed tickets online."
+            },
+            {
+              "place": "arbys",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Fast lunch or snack near the hotels."
+            },
+            {
+              "place": "fox-theatre",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Afternoon tours vary; an evening show is the better bet. Book tickets early."
+            }
+          ]
+        },
+        {
+          "title": "Midtown campuses and BeltLine",
+          "stops": [
+            {
+              "place": "georgia-tech",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Walk the central campus. Weekday daytime is liveliest."
+            },
+            {
+              "place": "ponce-city-market",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Lunch in the food hall, then look at the old Sears building. Often 10:00–21:00."
+            },
+            {
+              "place": "beltline",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk or rent a bike south toward Krog Street. Always open."
+            },
+            {
+              "place": "krog-street",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Covered market for coffee and a rest. Often 11:00–21:00."
+            },
+            {
+              "place": "piedmont-park",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset over the lake. Often open until 23:00."
+            }
+          ]
+        },
+        {
+          "title": "Emory, then fly",
+          "stops": [
+            {
+              "place": "emory",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet leafy campus in Virginia-Highland. Buildings vary; grounds open daily."
+            },
+            {
+              "place": "waffle-house",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Late breakfast. Many branches open 24 hours."
+            },
+            {
+              "place": "stranger-things",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Filming spots are outdoor and always accessible. Check current locations before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Peachtree Center"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Food halls, Southern chains and late-night waffles, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Arrive, food hall and skyline",
+          "stops": [
+            {
+              "place": "ponce-city-market",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch in the food hall. Often 10:00–21:00; check on the day."
+            },
+            {
+              "place": "beltline",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Walk off lunch on the Eastside Trail. Always open."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "18:30",
+              "minutes": 20,
+              "note": "Sunset skyline shot. Free."
+            },
+            {
+              "place": "buffalo-wild-wings",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Wings and a beer. Often open until midnight."
+            }
+          ]
+        },
+        {
+          "title": "Downtown tastes",
+          "stops": [
+            {
+              "place": "chick-fil-a",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Breakfast. Closed Sunday."
+            },
+            {
+              "place": "georgia-aquarium",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Usually 09:00–21:00; check on the day."
+            },
+            {
+              "place": "churchs-texas-chicken",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Fried chicken lunch. Hours vary by branch."
+            },
+            {
+              "place": "sweet-auburn",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk between snacks. Streets always open."
+            },
+            {
+              "place": "cinnabon",
+              "at": "17:00",
+              "minutes": 15,
+              "note": "Mall or airport branches; long hours."
+            }
+          ]
+        },
+        {
+          "title": "Midtown eating day",
+          "stops": [
+            {
+              "place": "moes",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Burritos for lunch. Often 11:00–21:00."
+            },
+            {
+              "place": "georgia-tech",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short campus walk. Grounds open daily."
+            },
+            {
+              "place": "piedmont-park",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Stroll before dinner. Often open until 23:00."
+            },
+            {
+              "place": "round-table-pizza",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Pizza dinner. Hours vary by branch."
+            },
+            {
+              "place": "waffle-house",
+              "at": "22:00",
+              "minutes": 45,
+              "note": "Late-night pecan waffles. Many branches open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Krog Street, then fly",
+          "stops": [
+            {
+              "place": "krog-street",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Brunch in the market. Often 11:00–21:00, so check on the day."
+            },
+            {
+              "place": "arbys",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Quick bite if you are short on time."
+            },
+            {
+              "place": "fox-theatre",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Afternoon tour times vary; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown near the BeltLine"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Parks, the BeltLine and a full theme-park day, with easy evenings.",
+      "days": [
+        {
+          "title": "Arrive and Piedmont Park",
+          "stops": [
+            {
+              "place": "piedmont-park",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Flat loop paths and a lake. Often 06:00–23:00."
+            },
+            {
+              "place": "beltline",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Walk north into the park or south to Krog Street. Always open."
+            },
+            {
+              "place": "krog-street",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the market. Often 11:00–21:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium and downtown",
+          "stops": [
+            {
+              "place": "georgia-aquarium",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Indoor option if it rains. Usually 09:00–21:00; check on the day."
+            },
+            {
+              "place": "chick-fil-a",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Lunch. Closed Sunday."
+            },
+            {
+              "place": "jackson-street-bridge",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Short walk for the skyline view."
+            },
+            {
+              "place": "westside-park",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Quarry lake and trails. Often 06:00–23:00. About 20 minutes by car."
+            }
+          ]
+        },
+        {
+          "title": "Six Flags day",
+          "stops": [
+            {
+              "place": "six-flags",
+              "at": "10:30",
+              "minutes": 360,
+              "note": "Seasonal; often 10:30–18:00–20:00. Check the calendar and go on a weekday in summer."
+            },
+            {
+              "place": "waffle-house",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner on the way back. Many branches open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Emory and fly",
+          "stops": [
+            {
+              "place": "emory",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Green campus walk. Grounds open daily."
+            },
+            {
+              "place": "fun-spot",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Seasonal; afternoons into evening. Check hours on the day."
+            },
+            {
+              "place": "arbys",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Midtown near Piedmont Park"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Civil rights sites, MLK park and old Atlanta."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Southern classics, BBQ and a strong global food scene."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Piedmont Park, the BeltLine and the Botanical Garden."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        120,
+        300
+      ],
+      "why": "Walk to the Georgia Aquarium, World of Coca-Cola and the National Center for Civil and Human Rights. Streetcar and MARTA nearby.",
+      "center": [
+        33.755,
+        -84.39
+      ]
+    },
+    {
+      "area": "Midtown",
+      "range": [
+        140,
+        350
+      ],
+      "why": "Central and lively: Piedmont Park, the High Museum and many restaurants. Good MARTA rail access.",
+      "center": [
+        33.783,
+        -84.383
+      ]
+    },
+    {
+      "area": "Buckhead",
+      "range": [
+        160,
+        450
+      ],
+      "why": "Quieter, upscale shopping and dining. Further from downtown sights but easy by car or ride app.",
+      "center": [
+        33.839,
+        -84.379
+      ]
+    },
+    {
+      "area": "Virginia-Highland",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Leafy neighborhood feel with local bars and cafés. Close to the BeltLine and Piedmont Park.",
+      "center": [
+        33.777,
+        -84.353
+      ]
+    }
+  ],
+  "food": [
+    "Try Southern staples: fried chicken, shrimp and grits, collard greens and peach desserts.",
+    "Look for BBQ spots for pulled pork, ribs and brisket; portions are big and prices vary.",
+    "The BeltLine and Ponce City Market area has many casual and sit-down options in one place.",
+    "Cheap eats: diners, taquerias and food halls around Midtown and Downtown, often $10–20 a meal.",
+    "Book ahead for popular weekend brunch; lines get long. Check hours on the day for smaller spots."
+  ],
+  "more_time": [
+    "Swap a city afternoon for the Atlanta Botanical Garden or a walk on the BeltLine if the weather is good.",
+    "History fans can add a half-day at the Martin Luther King Jr. National Historical Park.",
+    "With kids, the Georgia Aquarium can easily fill a morning; book timed tickets ahead."
+  ]
+}

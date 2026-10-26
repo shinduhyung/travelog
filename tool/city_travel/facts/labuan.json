@@ -1,0 +1,159 @@
+{
+  "currency": "MYR",
+  "usd_rate": 4.083,
+  "intro_line": "Duty-free island of beaches, ferries and slow, friendly streets.",
+  "intro": "Labuan rewards visitors with quiet beaches, war history and cheap seafood, all easy to reach by ferry or plane. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Labuan Town",
+    "Financial Park",
+    "Ferry Terminal area",
+    "Batu Manikar"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 5,
+    "per_km": 2,
+    "min_fare": 5
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "No metro or tram; the town centre is small and walkable.",
+    "Local buses (vans) run fixed routes, cost RM1-3, and stop by 7PM.",
+    "Taxis have no meters, so agree the fare before boarding.",
+    "Ride apps like Grab may work but coverage is patchy; check locally.",
+    "Scooters rent from about RM38 per 24 hours near the ferry terminal.",
+    "Ferries link the island to Brunei, Menumbok, Sipitang, Lawas and Limbang."
+  ],
+  "airports": [
+    {
+      "code": "LBU",
+      "name": "Labuan Airport",
+      "primary": true,
+      "note": "Main gateway, about 2 km from the centre.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Labuan Town",
+          "price": "RM10-15",
+          "time": "5-10 min",
+          "note": "Agree the fare first; no meters."
+        },
+        {
+          "mode": "Ride app",
+          "to": "Labuan Town",
+          "price": "check locally",
+          "time": "5-10 min",
+          "note": "Availability is limited."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Labuan Town",
+          "price": "check locally",
+          "time": "5-10 min",
+          "note": "Ask your hotel in advance."
+        }
+      ]
+    }
+  ],
+  "max_km": 40,
+  "place_landmarks": [],
+  "airports_sources": [
+    [
+      "Wikivoyage: Labuan",
+      "https://en.wikivoyage.org/wiki/Labuan"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    5.28028,
+    115.2475
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 24
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 18
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 26
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 23
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 21
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 21
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 23
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 27
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 27
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 27
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

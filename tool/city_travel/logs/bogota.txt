@@ -1,0 +1,34 @@
+$ deepseek_prep.py Bogotá
+  tokens in 755 out 490
+Bogotá: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bogotá
+  tokens in 4090 out 604
+Bogotá: 1 problems
+  - BOG taxi COP$40,000-70,000 vs tariff estimate 41
+
+$ deepseek_city.py Bogotá --stage places
+Bogotá: places
+  tokens in 1214 out 3167
+
+$ deepseek_city.py Bogotá --stage frame
+Bogotá: frame
+  tokens in 2481 out 1991
+
+$ deepseek_city.py Bogotá --stage plans
+Bogotá: plans
+  plans for day
+  tokens in 2171 out 790
+  plans for 1n
+  tokens in 2172 out 724
+  plans for 2n
+  tokens in 2172 out 1316
+  plans for 3n
+  tokens in 2177 out 1924
+  plans for 4n
+  tokens in 2172 out 1862
+
+$ merge_city.py Bogotá
+Bogotá: 21 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/bogota.json and planner/bogota.json
+

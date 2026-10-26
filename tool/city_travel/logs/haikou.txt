@@ -1,0 +1,31 @@
+$ deepseek_prep.py Haikou
+  tokens in 651 out 332
+Haikou: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Haikou
+  tokens in 2547 out 528
+Haikou: 0 problems
+
+$ deepseek_city.py Haikou --stage places
+Haikou: places
+  tokens in 1139 out 2795
+
+$ deepseek_city.py Haikou --stage frame
+Haikou: frame
+  tokens in 2434 out 1812
+
+$ deepseek_city.py Haikou --stage plans
+Haikou: plans
+  plans for day
+  tokens in 2010 out 854
+  plans for 1n
+  tokens in 2011 out 1219
+  plans for 2n
+  tokens in 2016 out 1399
+  plans for 3n
+  tokens in 2011 out 1834
+
+$ merge_city.py Haikou
+Haikou: 19 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/haikou.json and planner/haikou.json
+

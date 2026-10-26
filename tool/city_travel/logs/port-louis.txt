@@ -1,0 +1,28 @@
+$ deepseek_facts.py Port Louis
+  tokens in 1533 out 572
+Port Louis: 0 problems
+
+$ deepseek_city.py Port Louis --stage places
+Port Louis: places
+  tokens in 1173 out 3323
+
+$ deepseek_city.py Port Louis --stage frame
+Port Louis: frame
+  tokens in 2473 out 1760
+  repaired JSON
+
+$ deepseek_city.py Port Louis --stage plans
+Port Louis: plans
+  plans for day
+  tokens in 2221 out 900
+  plans for 1n
+  tokens in 2227 out 1370
+  plans for 2n
+  tokens in 2222 out 1364
+  plans for 3n
+  tokens in 2222 out 1686
+
+$ merge_city.py Port Louis
+Port Louis: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/port-louis.json and planner/port-louis.json
+

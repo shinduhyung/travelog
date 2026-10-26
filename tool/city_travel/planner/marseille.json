@@ -1,0 +1,560 @@
+{
+  "city": "Marseille",
+  "checked": "October 2026",
+  "intro_line": "Marseille: sun, sea, and a thousand years of stories.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Vieux-Port",
+        "Le Panier",
+        "La Canebière",
+        "Prado"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Vieux-Port",
+        "Le Panier",
+        "La Canebière",
+        "Prado"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Vieux-Port",
+        "Le Panier",
+        "La Canebière",
+        "Prado"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Vieux-Port",
+        "Le Panier",
+        "La Canebière",
+        "Prado"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Vieux-Port",
+        "Le Panier",
+        "La Canebière",
+        "Prado"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 6,
+        "note": "January: cold and windy, highs near 11°C. Pack a warm layer and expect a few wet days."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 7,
+        "note": "February: still cool at 13°C highs; quiet streets and short queues at museums."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 6,
+        "note": "March: mild at 15°C, good for walking; rain on about six days."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 7,
+        "note": "April: warming to 17°C; pleasant for the old town, sea still cool for swimming."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 7,
+        "note": "May: 21°C and mostly dry; a great month for the calanques and long walks."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 5,
+        "note": "June: 25°C and only about five rain days; beach season starts properly."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 1,
+        "note": "July: hot and very dry at 28°C; go sightseeing early and expect crowds."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 2,
+        "note": "August: as hot as July and busy with holidaymakers; book restaurants ahead."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 5,
+        "note": "September: 24°C and warm sea; one of the best months for beach plus city."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 8,
+        "note": "October: 20°C with more rain (about eight days); carry a light rain jacket."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 9,
+        "note": "November: cooler at 16°C and the wettest month, around nine rain days."
+      },
+      {
+        "high": 13,
+        "low": 7,
+        "rain_days": 7,
+        "note": "December: 13°C highs and chilly evenings; festive port atmosphere, pack layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "beach": [
+      0.2,
+      0.25,
+      0.35,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.3,
+      0.2
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "notre-dame": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Vieux-Port",
+      "popularity": 5
+    },
+    "mucen": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning; closed Tuesday",
+      "area": "Le Panier",
+      "popularity": 5
+    },
+    "velodrome": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match day or a weekday tour",
+      "area": "Prado",
+      "popularity": 4
+    },
+    "magic-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer, on a dry day",
+      "area": "Prado",
+      "popularity": 2
+    },
+    "ok-corral": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer, on a dry day",
+      "area": "Prado",
+      "popularity": 2
+    },
+    "vieux-port": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Vieux-Port",
+      "popularity": 5
+    },
+    "le-panier": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Le Panier",
+      "popularity": 4
+    },
+    "calanques-boat": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning or midday in summer",
+      "area": "Vieux-Port",
+      "popularity": 4
+    },
+    "la-canebiere": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "La Canebière",
+      "popularity": 3
+    },
+    "prado-beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer morning or late afternoon",
+      "area": "Prado",
+      "popularity": 4
+    },
+    "borley": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Vieux-Port",
+      "popularity": 3
+    },
+    "fort-saint-jean": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Le Panier",
+      "popularity": 4
+    },
+    "palais-longchamp": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "La Canebière",
+      "popularity": 3
+    },
+    "cours-julien": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "La Canebière",
+      "popularity": 3
+    },
+    "navette-maritime": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime in summer",
+      "area": "Vieux-Port",
+      "popularity": 3
+    },
+    "abbaye-saint-victor": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Vieux-Port",
+      "popularity": 3
+    },
+    "la-major": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning or afternoon",
+      "area": "Le Panier",
+      "popularity": 3
+    },
+    "noailles-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "La Canebière",
+      "popularity": 3
+    },
+    "chateau-if": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning in good weather",
+      "area": "Vieux-Port",
+      "popularity": 3
+    },
+    "corniche": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Prado",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old port, Le Panier and MuCEM, with time for a beach or calanques afternoon; add a night for a Cassis or Frioul day."
+  },
+  "airports": [
+    {
+      "code": "MRS",
+      "name": "Marseille Provence Airport",
+      "primary": true,
+      "note": "Main international airport, 20 km northwest of centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Gare St Charles",
+          "price": "€5.70",
+          "time": "20-25 min",
+          "note": "Cheapest; free shuttle to Vitrolles train station."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Gare St Charles",
+          "price": "€8.30-10",
+          "time": "25-30 min",
+          "note": "Runs every 15-20 min; buy ticket at kiosk."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€50-60",
+          "time": "25-35 min",
+          "note": "Day rate ~€50, night ~€60."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€40-50",
+          "time": "25-35 min",
+          "note": "Often cheaper than taxi; meet at designated area."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Marseille",
+      "https://en.wikivoyage.org/wiki/Marseille"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "beach"
+  ],
+  "transit": {
+    "best": "Metro and tram for the centre; walk Le Panier and the port.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Two lines, running 05:00–00:30. Single ticket €1.70, or €15 for ten."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Three lines until 00:30, same tickets as the metro. Handy along the main boulevards."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Good coverage, but most routes stop after 21:00. Night buses are limited, so plan evening trips around that."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis exist but watch for rogue drivers. Uber and similar apps work and are often easier."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not recommended in the centre: narrow streets and parking problems. Useful only for day trips out of town."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best way to see the Vieux-Port and Le Panier, though the old town is steep in places."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Le vélo scheme costs €1 a week with the first 30 minutes free. Few cycle paths, so ride carefully."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Boat across the Vieux-Port and to Frioul island, about €10 return. Check sailings on the day if windy."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: mild winters, hot dry summers and a windy, sometimes wet spring and autumn.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 21–28°C and little rain. Ideal for the port, beaches and calanques."
+      },
+      {
+        "icon": "🥵",
+        "title": "July and August are hot",
+        "text": "Around 28°C by day and 20–21°C at night. Sightsee in the morning; rest in the afternoon."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in autumn",
+        "text": "October and November bring the most rain days (about eight to nine). Showers can be heavy but short."
+      },
+      {
+        "icon": "💨",
+        "title": "The mistral wind",
+        "text": "A strong, cold north wind can blow any season. It clears the sky but makes the sea rough and boat trips uncertain."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea swimming",
+        "text": "Comfortable roughly June to September. Outside that, beaches are for walking, not swimming."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer, a windproof layer and rain jacket for spring and autumn, warm layers for winter."
+      }
+    ]
+  }
+}

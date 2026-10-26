@@ -1,0 +1,913 @@
+{
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "One sunny day: old pier at sunrise, a swim at No. 1 Bathing Beach, sunset at Taiping Cape.",
+      "days": [
+        {
+          "title": "Pier, beach and cape",
+          "stops": [
+            {
+              "place": "zhanqiao",
+              "at": "07:00",
+              "minutes": 30,
+              "note": "Quiet and cool. Walk to the end of the pier for the view back to town."
+            },
+            {
+              "place": "bathing1",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Swimming is roughly summer only; check on the day."
+            },
+            {
+              "place": "badaguan",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Shady lanes right behind the beach. Villas open daytime only."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch back in the Old Town. Try dumplings and cold beer."
+            },
+            {
+              "place": "taipingcape",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Come early for a spot at sunset. Bring a light jacket."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The classic Qingdao day: brewery, old lanes, cathedral and a hilltop view.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "brewery",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early on a weekday. Sample beer at the end of the tour."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Wander the Dabaodao lanes. Many old buildings are still lived in."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch. Busy from late morning."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Daytime hours only; check on the day. Morning light is best for photos."
+            },
+            {
+              "place": "signalhill",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short climb for red roofs and sea views. Late afternoon is best."
+            },
+            {
+              "place": "beerstreet",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and beer. Busiest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way through the Old Town, then finish with seafood by the bay.",
+      "days": [
+        {
+          "title": "Market, lanes and seafood",
+          "stops": [
+            {
+              "place": "seafoodmarket",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Come early for the freshest catch. Pick seafood and ask a nearby kitchen to cook it."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk off breakfast through the old lanes."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop. Snack-sized portions let you try several stalls."
+            },
+            {
+              "place": "zhongshanroad",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Shops and snack stalls. Good for gifts."
+            },
+            {
+              "place": "beerstreet",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Early beer and grilled seafood before the crowds."
+            },
+            {
+              "place": "mayfourth",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "About 20 minutes by taxi. Walk the square after dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One night, two beaches: the old pier at sunrise and a swim at No. 1 Bathing Beach.",
+      "days": [
+        {
+          "title": "Old pier, then sand and sea",
+          "stops": [
+            {
+              "place": "zhanqiao",
+              "at": "08:00",
+              "minutes": 30,
+              "note": "Early light, few people. Open 24 hours."
+            },
+            {
+              "place": "cathedral",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Short walk uphill. Daytime hours only; check on the day."
+            },
+            {
+              "place": "bathing1",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Swimming season is roughly summer only."
+            },
+            {
+              "place": "badaguan",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Walk the quiet lanes next to the beach. Villas open daytime only."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Seafood dinner near May Fourth Square, about 20 minutes by taxi."
+            }
+          ]
+        },
+        {
+          "title": "Sunset cape, then fly",
+          "stops": [
+            {
+              "place": "taipingcape",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Best at sunset. Open 24 hours."
+            },
+            {
+              "place": "mayfourth",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening lights by the water, about 20 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Badaguan or Old Town (Shinan)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: brewery history and old streets on day one, hills and sea views before you fly.",
+      "days": [
+        {
+          "title": "Brewery, old lanes and the pier",
+          "stops": [
+            {
+              "place": "brewery",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning on a weekday is calmest. Roughly 08:30–17:30; check on the day."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk the Dabaodao lanes. Always open."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch at the food street. Busy from late morning to evening."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Morning light is best on the facade, but afternoons are quieter. Daytime hours only."
+            },
+            {
+              "place": "zhanqiao",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Walk out to the pier. Open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Hill views, then fly",
+          "stops": [
+            {
+              "place": "xiaoyushan",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Clear morning gives the best view over the old town roofs. Daytime; check on the day."
+            },
+            {
+              "place": "signalhill",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Another short climb nearby. Daytime."
+            },
+            {
+              "place": "zhongshanroad",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Shops and a snack before you head out. Shops daytime to evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of eating: market seafood, street snacks and cold Tsingtao beer.",
+      "days": [
+        {
+          "title": "Market, snacks and beer street",
+          "stops": [
+            {
+              "place": "seafoodmarket",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early, the market is busiest from early morning to midday."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch on the food street. Busy from late morning to evening."
+            },
+            {
+              "place": "brewery",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "History and a tasting. Roughly 08:30–17:30; check on the day."
+            },
+            {
+              "place": "beerstreet",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening is busiest. Go hungry."
+            }
+          ]
+        },
+        {
+          "title": "Old street snack, then fly",
+          "stops": [
+            {
+              "place": "zhongshanroad",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Snack stalls and shops. Shops daytime to evening."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch near May Fourth Square before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Two easy seaside days: old pier at sunrise, a long beach afternoon, and sunset from the cape.",
+      "days": [
+        {
+          "title": "Old pier and the bathing beach",
+          "stops": [
+            {
+              "place": "zhanqiao",
+              "at": "08:00",
+              "minutes": 30,
+              "note": "Quietest at sunrise. The pier walk is short and flat."
+            },
+            {
+              "place": "cathedral",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "About 15 minutes on foot from the pier. Daytime hours only; check on the day."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch: dumplings and grilled seafood. Busy from late morning."
+            },
+            {
+              "place": "bathing1",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Swimming season is roughly summer only. Check flags and water quality on the day."
+            },
+            {
+              "place": "badaguan",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Shady lanes behind the beach. Villas are daytime only."
+            }
+          ]
+        },
+        {
+          "title": "Cape sunset and a slow morning",
+          "stops": [
+            {
+              "place": "xiaoyushan",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Short climb for a red-roof view over the bay. Best on a clear morning."
+            },
+            {
+              "place": "seafoodmarket",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Pick seafood early; it is quietest before midday."
+            },
+            {
+              "place": "mayfourth",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Seafront promenade. Good for a stroll before dinner."
+            },
+            {
+              "place": "taipingcape",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset viewpoint. Bring a layer; it is breezy. Check sunset time on the day."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "19:45",
+              "minutes": 90,
+              "note": "Dinner near May Fourth Square."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most visitors: brewery history, old lanes and the best sea views, all in two relaxed days.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "zhanqiao",
+              "at": "08:00",
+              "minutes": 30,
+              "note": "Start early before tour groups arrive."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Lanes around Dabaodao. Wear comfortable shoes."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch stop. Try the local dumplings."
+            },
+            {
+              "place": "cathedral",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Daytime hours only; check on the day."
+            },
+            {
+              "place": "signalhill",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late-afternoon view over the rooftops."
+            }
+          ]
+        },
+        {
+          "title": "Brewery, pier and beer street",
+          "stops": [
+            {
+              "place": "brewery",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Roughly 08:30–17:30; check on the day."
+            },
+            {
+              "place": "naval",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Closed some weekdays; check on the day before you go."
+            },
+            {
+              "place": "zhongshanroad",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops run from daytime into evening."
+            },
+            {
+              "place": "beerstreet",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Busiest in the evening. Fresh beer and snacks."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through Qingdao: market seafood, street snacks, brewery beer and a proper seafood dinner.",
+      "days": [
+        {
+          "title": "Market morning and street food",
+          "stops": [
+            {
+              "place": "seafoodmarket",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for the best pick. Many stalls cook what you buy."
+            },
+            {
+              "place": "zhanqiao",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Short walk to work up an appetite."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch: snacks and grilled skewers."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the old lanes."
+            },
+            {
+              "place": "beerstreet",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening beer and seafood. Busiest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and a seafood dinner",
+          "stops": [
+            {
+              "place": "brewery",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Tasting at the end. Weekday mornings are quieter."
+            },
+            {
+              "place": "zhongshanroad",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then browse the shops."
+            },
+            {
+              "place": "mayfourth",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Seafront walk before dinner."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Book ahead at weekends. Prices vary by season; ask first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "First-time beach lovers: swim at No. 1 Bathing Beach, walk the old pier and catch sunsets over the water.",
+      "days": [
+        {
+          "title": "Arrive, old pier and first swim",
+          "stops": [
+            {
+              "place": "zhanqiao",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Walk out to the pavilion. Best light is early, but it is calm in the afternoon."
+            },
+            {
+              "place": "bathing1",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Swimming season is roughly summer only; check on the day."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Seafood dinner near May Fourth Square. Taxi from the beach."
+            }
+          ]
+        },
+        {
+          "title": "Badaguan coast and sunset",
+          "stops": [
+            {
+              "place": "badaguan",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Shaded lanes between old villas. Villas open daytime only."
+            },
+            {
+              "place": "bathing1",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Second swim or a beach walk. Lunch from nearby stalls."
+            },
+            {
+              "place": "taipingcape",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset viewpoint. Bring a light layer; it gets breezy."
+            }
+          ]
+        },
+        {
+          "title": "Sailing and waterfront evening",
+          "stops": [
+            {
+              "place": "sailing",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Daytime departures, weather permitting. Book ahead in summer."
+            },
+            {
+              "place": "mayfourth",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk from the marina."
+            },
+            {
+              "place": "olympic",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Waterfront stroll as lights come on."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Old Town morning, then fly",
+          "stops": [
+            {
+              "place": "xiaoyushan",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Clear morning gives the best sea views. Daytime only; check on the day."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Early lunch of snacks and dumplings."
+            },
+            {
+              "place": "zhanqiao",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Last look at the pier before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan) or near May Fourth Square"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for most first-timers: brewery history, German-era streets and seaside viewpoints in a compact Old Town loop.",
+      "days": [
+        {
+          "title": "Arrive and Old Town lanes",
+          "stops": [
+            {
+              "place": "zhanqiao",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start at the pier, the symbol of the old city."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Dabaodao lanes. Always open; go slow and look up at the facades."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner from food stalls. Busy from late morning to evening."
+            }
+          ]
+        },
+        {
+          "title": "Brewery, cathedral and hill views",
+          "stops": [
+            {
+              "place": "brewery",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Weekday morning is calmer. Roughly 08:30–17:30; check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Morning light on the facade. Daytime hours only; check on the day."
+            },
+            {
+              "place": "signalhill",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Late afternoon is best, but any clear slot works for rooftops."
+            },
+            {
+              "place": "zhongshanroad",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Shops daytime to evening. Walk down toward the pier."
+            },
+            {
+              "place": "beerstreet",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening is busiest. Cold beer and grilled seafood."
+            }
+          ]
+        },
+        {
+          "title": "Badaguan and May Fourth Square",
+          "stops": [
+            {
+              "place": "badaguan",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Villa streets. Villas open daytime only."
+            },
+            {
+              "place": "bathing1",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Beach walk, not a swim unless it is summer."
+            },
+            {
+              "place": "mayfourth",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Evening is best here. Taxi from Badaguan."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner near the square."
+            }
+          ]
+        },
+        {
+          "title": "Museum or hill, then fly",
+          "stops": [
+            {
+              "place": "naval",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed some weekdays; check on the day before you go."
+            },
+            {
+              "place": "xiaoyushan",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short climb for a last sea view. Daytime only."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through Qingdao: seafood markets, dumpling streets and cold Tsingtao beer, with easy walks between meals.",
+      "days": [
+        {
+          "title": "Arrive, market and beer street",
+          "stops": [
+            {
+              "place": "seafoodmarket",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Early morning to midday is best; go early if you can. Pick seafood and ask a nearby kitchen to cook it."
+            },
+            {
+              "place": "zhanqiao",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short walk to the pier to digest."
+            },
+            {
+              "place": "beerstreet",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening is busiest. Try the fresh draft beer."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and Old Town snacks",
+          "stops": [
+            {
+              "place": "brewery",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday morning is calmer. Tasting room at the end. Check hours on the day."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch of snacks and dumplings."
+            },
+            {
+              "place": "oldtownwalk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the Dabaodao lanes."
+            },
+            {
+              "place": "zhongshanroad",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Snack stops along the shopping street."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Taxi to May Fourth Square for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Badaguan walk and waterfront dinner",
+          "stops": [
+            {
+              "place": "badaguan",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning walk between villas. Villas open daytime only."
+            },
+            {
+              "place": "bathing1",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Beach walk and a light lunch nearby."
+            },
+            {
+              "place": "mayfourth",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Evening is best."
+            },
+            {
+              "place": "seafooddinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast, then fly",
+          "stops": [
+            {
+              "place": "seafoodmarket",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early; it winds down by midday."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick look at the facade. Daytime hours only; check on the day."
+            },
+            {
+              "place": "pichaiyuan",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Last lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Shinan)"
+    }
+  ]
+}

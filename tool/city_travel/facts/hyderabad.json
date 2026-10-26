@@ -1,0 +1,177 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "Pearls, biryani and old-world charm in a booming tech city.",
+  "intro": "Hyderabad blends Nizami heritage with a fast-growing tech scene, and rewards visitors with forts, bazaars and great food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Banjara Hills",
+    "Jubilee Hills",
+    "HITEC City",
+    "Secunderabad"
+  ],
+  "taxi": {
+    "flag_day": 50,
+    "flag_airport": 100,
+    "per_km": 20,
+    "min_fare": 20
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro is fast and clean: Red, Blue and Green lines, 57 stations, trains every ~4 min.",
+    "Metro fares run from ₹10 to about ₹60 end to end.",
+    "TSRTC buses are cheap but crowded; routes are shown in English too.",
+    "Ola and Uber work well; cabs cannot be hailed on the street.",
+    "Auto-rickshaws need a fare agreed first; minimum ₹20 for 1.6 km, then about ₹11/km.",
+    "Driving is for the brave; traffic jams are common at rush hour."
+  ],
+  "airports": [
+    {
+      "code": "HYD",
+      "name": "Rajiv Gandhi International Airport Shamshabad",
+      "primary": true,
+      "note": "Main airport, about 18-22 km south of the centre.",
+      "options": [
+        {
+          "mode": "Pushpak Airport Liner bus",
+          "to": "Secunderabad, Miyapur, BHEL, MGBS",
+          "price": "₹106-265",
+          "time": "45-75 min",
+          "note": "Cheapest public option; buses every 10-40 min."
+        },
+        {
+          "mode": "MMTS train",
+          "to": "Secunderabad and city stations",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Check schedules; limited service."
+        },
+        {
+          "mode": "Metered taxi (Meru, Sky Cabs)",
+          "to": "Anywhere in the city",
+          "price": "about ₹20/km",
+          "time": "40-70 min",
+          "note": "Book at airport counters; avoid touts."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "Anywhere in the city",
+          "price": "check locally",
+          "time": "40-70 min",
+          "note": "Book in the app at the baggage carousel."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Charminar",
+    "Golconda Fort",
+    "Mecca Masjid",
+    "Jalavihar",
+    "Ramoji Film City",
+    "Snow World",
+    "Wonderla (Hyderabad)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Hyderabad",
+      "https://en.wikivoyage.org/wiki/Hyderabad"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    17.385,
+    78.4867
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 28,
+      "low": 16,
+      "rain_days": 1
+    },
+    {
+      "high": 31,
+      "low": 18,
+      "rain_days": 0
+    },
+    {
+      "high": 34,
+      "low": 21,
+      "rain_days": 1
+    },
+    {
+      "high": 37,
+      "low": 24,
+      "rain_days": 4
+    },
+    {
+      "high": 37,
+      "low": 26,
+      "rain_days": 6
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 18
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 21
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 18
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 20
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 13
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 4
+    },
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "HYD taxi about ₹20/km vs tariff estimate 586",
+    "HYD Pushpak Airport Liner bus ₹106-265 costs more than taxi about ₹20/km"
+  ]
+}

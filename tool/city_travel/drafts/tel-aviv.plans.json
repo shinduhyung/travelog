@@ -1,0 +1,1363 @@
+{
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A full beach day: morning swim, seafront bike ride, sunset at Jaffa Port.",
+      "days": [
+        {
+          "title": "Swim, ride and sunset by the sea",
+          "stops": [
+            {
+              "place": "tel-aviv-beach",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Lifeguards usually from 07:00. Bring water and shade."
+            },
+            {
+              "place": "bike-rental",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Rent near the promenade and ride south. Shops are daytime only, check on the day."
+            },
+            {
+              "place": "falafel",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch near the beach. Some stands close early Friday."
+            },
+            {
+              "place": "gordon-beach",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Afternoon swim. Lifeguards daytime only."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Walk south along the water for sunset. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near the beach"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way from Carmel Market to Jaffa in one day.",
+      "days": [
+        {
+          "title": "Market morning, Jaffa afternoon",
+          "stops": [
+            {
+              "place": "carmel-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early. Closed Saturday, Friday closes about 14:00."
+            },
+            {
+              "place": "carmel-food-tour",
+              "at": "10:45",
+              "minutes": 180,
+              "note": "Book ahead. Tours usually run in the morning."
+            },
+            {
+              "place": "sarona-market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Indoor, good for a hot afternoon. Saturday hours are limited."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Snacks and people-watching. Saturday limited."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset by the water, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Carmel Market"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Bauhaus streets, a museum and Old Jaffa in one packed day.",
+      "days": [
+        {
+          "title": "White City to Old Jaffa",
+          "stops": [
+            {
+              "place": "rothschild-blvd",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning walk past Bauhaus buildings. Always open."
+            },
+            {
+              "place": "independence-hall",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Weekday tours by booking only, check on the day."
+            },
+            {
+              "place": "tel-aviv-museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Good for the hot midday. Check opening days on the day."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon is best. Shops and cafes daytime."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Streets always open. End at the port for sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Rothschild"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One easy beach day: swim in the morning, walk the promenade, catch sunset over Jaffa.",
+      "days": [
+        {
+          "title": "Beach morning and Jaffa sunset",
+          "stops": [
+            {
+              "place": "tel-aviv-beach",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Swim early before the heat. Lifeguards usually from 07:00."
+            },
+            {
+              "place": "bike-rental",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Ride the seafront south toward Jaffa. Bring water and a hat."
+            },
+            {
+              "place": "falafel",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch near the beach. Most stands are daytime only."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Best light at sunset. Check sunset time on the day."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Evening bars and food around the market lanes."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then go",
+          "stops": [
+            {
+              "place": "gordon-beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Last swim. Showers and cafes nearby."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Short promenade walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near the beach"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Carmel Market and Sarona, with a Jaffa food stop on day two.",
+      "days": [
+        {
+          "title": "Market day",
+          "stops": [
+            {
+              "place": "carmel-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early. Closed Saturday, and Friday closes around 14:00."
+            },
+            {
+              "place": "carmel-food-tour",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Book ahead. Tours usually run in the morning."
+            },
+            {
+              "place": "rothschild-blvd",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk off lunch under the trees."
+            },
+            {
+              "place": "sarona-market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Indoor food hall, good for dinner. Saturday hours are limited."
+            }
+          ]
+        },
+        {
+          "title": "Jaffa flavours, then fly",
+          "stops": [
+            {
+              "place": "jaffa-flea-market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Friday morning is busiest and best."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Wander the lanes and the port. Galleries open later in the day."
+            },
+            {
+              "place": "falafel",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Last bite before the airport. Check stand hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Carmel Market"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Old Jaffa and Neve Tzedek on foot, plus a museum for the hot afternoon.",
+      "days": [
+        {
+          "title": "Old Jaffa and the old station",
+          "stops": [
+            {
+              "place": "jaffa-old-port-tour",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning tours are common. Book ahead."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Sea views from the old port."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch first, then the lanes. Shops are daytime only."
+            },
+            {
+              "place": "hatachana",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Old railway station, cafes and small shops."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Walk back along the promenade for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Bauhaus morning, then go",
+          "stops": [
+            {
+              "place": "independence-hall",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday tours by booking. Check on the day."
+            },
+            {
+              "place": "rothschild-blvd",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Bauhaus buildings along the boulevard."
+            },
+            {
+              "place": "habima-square",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Quick look at the square and theatre."
+            },
+            {
+              "place": "tel-aviv-museum",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Check opening days and hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Rothschild"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "First-timers who want sand, sea and sunsets, with a little Jaffa history in between.",
+      "days": [
+        {
+          "title": "Arrive, settle in, first swim",
+          "stops": [
+            {
+              "place": "tel-aviv-beach",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Drop bags first. Lifeguards usually finish around 17:00, longer in summer."
+            },
+            {
+              "place": "gordon-beach",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Easy walk up the promenade. Good for a late dip."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Stay on the promenade for sunset. Check the exact sunset time on the day."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner at the port. Boardwalk stays busy into the night."
+            }
+          ]
+        },
+        {
+          "title": "Bike the seafront, then Jaffa",
+          "stops": [
+            {
+              "place": "bike-rental",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Rent near the beach. Ride south toward Jaffa. Shops open daytime, check on the day."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Park the bikes and walk the port. Always open."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Wander the lanes and St Peter's Church. Streets always open, galleries daytime."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch and browsing. Friday is busiest, Saturday limited."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Back on the Tel Aviv promenade for the sunset."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then go",
+          "stops": [
+            {
+              "place": "tel-aviv-beach",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Last swim before checkout. Lifeguards from about 07:00."
+            },
+            {
+              "place": "carmel-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Grab snacks for the trip. Closed Saturday, Friday until about 14:00."
+            },
+            {
+              "place": "falafel",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Quick lunch. Most stands are daytime only, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, a few streets back from the beach"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want the market, the hummus and the late-night port, with beach breaks.",
+      "days": [
+        {
+          "title": "Arrive, Sarona and the port",
+          "stops": [
+            {
+              "place": "sarona-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Indoor food hall, good for lunch and a hot afternoon. Saturday hours are limited."
+            },
+            {
+              "place": "rothschild-blvd",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk off lunch under the trees. Always open."
+            },
+            {
+              "place": "habima-square",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Short stop, good for a coffee nearby."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner by the water. Restaurants run into the night."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, Jaffa afternoon",
+          "stops": [
+            {
+              "place": "carmel-food-tour",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead. Tours usually run in the morning. Not on Saturday."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Cafes and small streets. Shops are daytime only."
+            },
+            {
+              "place": "hatachana",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Old railway station, shops and cafes. Check hours on the day."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Snack and browse. Friday busy, Saturday limited."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset over the water, then dinner in Jaffa."
+            }
+          ]
+        },
+        {
+          "title": "Falafel and farewell",
+          "stops": [
+            {
+              "place": "falafel",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Late breakfast. Check opening on the day."
+            },
+            {
+              "place": "carmel-market",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Last shopping for spices and snacks. Closed Saturday."
+            },
+            {
+              "place": "tel-aviv-beach",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Quick sit by the sea before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Carmel Market"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want Bauhaus streets, museums and the old port, paced for hot days.",
+      "days": [
+        {
+          "title": "Arrive, Bauhaus and the museum",
+          "stops": [
+            {
+              "place": "rothschild-blvd",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start with the White City streets. Always open."
+            },
+            {
+              "place": "independence-hall",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Weekday tours by booking only. Check on the day."
+            },
+            {
+              "place": "tel-aviv-museum",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Good for a hot afternoon. Hours vary, check on the day."
+            },
+            {
+              "place": "dizengoff-square",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Evening stroll, cafes around the square."
+            }
+          ]
+        },
+        {
+          "title": "Old Jaffa and Neve Tzedek",
+          "stops": [
+            {
+              "place": "jaffa-old-port-tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Book ahead. Tours usually morning or late afternoon."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Stay on for the lanes and St Peter's Church. Galleries daytime only."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch and browsing. Saturday limited."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Late afternoon is best here. Shops and cafes daytime."
+            },
+            {
+              "place": "hatachana",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Old railway station. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Port morning, then go",
+          "stops": [
+            {
+              "place": "tel-aviv-port",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Boardwalk is always open. Shops and cafes daytime."
+            },
+            {
+              "place": "habima-square",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short stop before you head off."
+            },
+            {
+              "place": "falafel",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch. Check opening on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Rothschild Boulevard"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Swim, walk the promenade and catch a Mediterranean sunset every day.",
+      "days": [
+        {
+          "title": "Arrive and settle by the sea",
+          "stops": [
+            {
+              "place": "tel-aviv-beach",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Easy first swim. Lifeguards usually until 17:00, later in summer."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Walk the promenade as the sun goes down."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Dinner on the boardwalk. Shops and restaurants run into the night."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning, Jaffa afternoon",
+          "stops": [
+            {
+              "place": "gordon-beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning swim. Lifeguards daytime."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Short taxi or bus south. Always open."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Wander the lanes. St Peter's Church and galleries have daytime hours."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Sun–Thu daytime. Saturday limited."
+            }
+          ]
+        },
+        {
+          "title": "Bike ride and port evening",
+          "stops": [
+            {
+              "place": "bike-rental",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Ride the seafront path. Rental shops daytime."
+            },
+            {
+              "place": "tel-aviv-beach",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Cool off after the ride."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening stroll and dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then go",
+          "stops": [
+            {
+              "place": "gordon-beach",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "One last swim. Check out first if needed."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick walk along the promenade before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near the beach"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Market mornings, falafel lunches and long dinners in the old port.",
+      "days": [
+        {
+          "title": "Arrive, market and port dinner",
+          "stops": [
+            {
+              "place": "carmel-market",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Sun–Thu roughly 08:00–17:00. Closed Saturday."
+            },
+            {
+              "place": "falafel",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Grab a late lunch nearby. Check on the day."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner on the boardwalk. Restaurants run into the night."
+            }
+          ]
+        },
+        {
+          "title": "Food tour and old Jaffa",
+          "stops": [
+            {
+              "place": "carmel-food-tour",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead. Tours usually morning."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk off lunch in the lanes."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Friday busy. Saturday limited."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset view. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Sarona and the boulevard",
+          "stops": [
+            {
+              "place": "sarona-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch indoors. Sun–Thu roughly 09:00–21:00, Saturday limited."
+            },
+            {
+              "place": "rothschild-blvd",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the boulevard. Always open."
+            },
+            {
+              "place": "habima-square",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Coffee stop. Always open."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Late afternoon stroll, then dinner in the neighbourhood."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast and go",
+          "stops": [
+            {
+              "place": "falafel",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick bite before you leave. Check on the day."
+            },
+            {
+              "place": "carmel-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Last snacks for the trip. Closed Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Carmel Market"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Old Jaffa, Bauhaus streets and museums, with beach breaks in between.",
+      "days": [
+        {
+          "title": "Arrive, boulevard and old station",
+          "stops": [
+            {
+              "place": "rothschild-blvd",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Bauhaus walk. Always open."
+            },
+            {
+              "place": "habima-square",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Short stop. Always open."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon is best."
+            },
+            {
+              "place": "hatachana",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Shops and cafes into evening. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Old Jaffa day",
+          "stops": [
+            {
+              "place": "jaffa-old-port-tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Book ahead. Tours usually morning."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Lanes, St Peter's Church and galleries in daytime hours."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Sun–Thu daytime. Saturday limited."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset viewpoint. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Museum and beach",
+          "stops": [
+            {
+              "place": "independence-hall",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Weekday tours by booking. Check on the day."
+            },
+            {
+              "place": "tel-aviv-museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Hot afternoon indoors. Check opening days on the day."
+            },
+            {
+              "place": "tel-aviv-beach",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late swim. Lifeguards usually until 17:00, later in summer."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Promenade sunset."
+            }
+          ]
+        },
+        {
+          "title": "Last walk, then go",
+          "stops": [
+            {
+              "place": "dizengoff-square",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick look. Always open."
+            },
+            {
+              "place": "carmel-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Souvenirs and snacks. Closed Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center, near Rothschild Boulevard"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "First-timers who want sand, sea and sunsets, with a little Jaffa and market food in between.",
+      "days": [
+        {
+          "title": "Arrive and ease into the sea",
+          "stops": [
+            {
+              "place": "tel-aviv-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Drop bags first. Lifeguards usually until 17:00, longer in summer."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Walk the promenade north as the sun goes down."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner on the boardwalk. Shops and restaurants run into the night."
+            }
+          ]
+        },
+        {
+          "title": "Jaffa side of the coast",
+          "stops": [
+            {
+              "place": "jaffa-port",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quiet in the morning. Good photos of the skyline."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Wander lanes and St Peter's Church. Galleries open daytime."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Grab lunch at a stall. Friday is busiest, Saturday limited."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Back along the promenade for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Bike the seafront, swim at Gordon",
+          "stops": [
+            {
+              "place": "bike-rental",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Ride the promenade. Rental shops open daytime, check on the day."
+            },
+            {
+              "place": "gordon-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Swim and lunch nearby. Lifeguards daytime."
+            },
+            {
+              "place": "dizengoff-square",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk inland for coffee."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening by the water."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, beach afternoon",
+          "stops": [
+            {
+              "place": "carmel-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early. Closed Saturday, Friday until about 14:00."
+            },
+            {
+              "place": "falafel",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Lunch at a stand. Some close early Friday, check on the day."
+            },
+            {
+              "place": "tel-aviv-beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Afternoon swim and rest."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Last sunset on the promenade."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then go",
+          "stops": [
+            {
+              "place": "gordon-beach",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning swim before checkout. Lifeguards daytime."
+            },
+            {
+              "place": "habima-square",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short stroll if time allows before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center near the beach"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who plan the day around markets, falafel and long dinners.",
+      "days": [
+        {
+          "title": "Arrive and eat at the port",
+          "stops": [
+            {
+              "place": "tel-aviv-port",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Boardwalk open always. Restaurants daytime into night."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Walk off dinner along the promenade."
+            }
+          ]
+        },
+        {
+          "title": "Carmel Market deep dive",
+          "stops": [
+            {
+              "place": "carmel-food-tour",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Tours usually morning, book ahead."
+            },
+            {
+              "place": "carmel-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Browse stalls after the tour. Closed Saturday, Friday until about 14:00."
+            },
+            {
+              "place": "rothschild-blvd",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk it off. Always open."
+            },
+            {
+              "place": "habima-square",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Evening stroll before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Jaffa flavours",
+          "stops": [
+            {
+              "place": "jaffa-flea-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Snack stalls and coffee. Friday busy, Saturday limited."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Lanes and galleries, daytime hours."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch by the water."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Cafes and boutiques, late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Sarona and the centre",
+          "stops": [
+            {
+              "place": "sarona-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch spot. Sun–Thu roughly 09:00–21:00, Saturday limited."
+            },
+            {
+              "place": "tel-aviv-museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Hot afternoon indoors. Check opening days on the day."
+            },
+            {
+              "place": "falafel",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Classic snack. Check on the day."
+            },
+            {
+              "place": "tel-aviv-port",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner on the boardwalk."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast and go",
+          "stops": [
+            {
+              "place": "carmel-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Last market breakfast. Closed Saturday."
+            },
+            {
+              "place": "dizengoff-square",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Coffee before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center near Carmel Market"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want Bauhaus streets, museums and the old port, with beach breaks.",
+      "days": [
+        {
+          "title": "Arrive, Bauhaus and the White City",
+          "stops": [
+            {
+              "place": "rothschild-blvd",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Always open. Good intro to the Bauhaus streets."
+            },
+            {
+              "place": "habima-square",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Short walk from Rothschild."
+            },
+            {
+              "place": "dizengoff-square",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Afternoon coffee stop."
+            },
+            {
+              "place": "beach-sunset",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset on the promenade."
+            }
+          ]
+        },
+        {
+          "title": "Old Jaffa and the flea market",
+          "stops": [
+            {
+              "place": "jaffa-old-port-tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Tours usually morning or late afternoon. Book ahead."
+            },
+            {
+              "place": "old-jaffa",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "St Peter's Church and galleries, daytime hours."
+            },
+            {
+              "place": "jaffa-flea-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch and browsing. Saturday limited."
+            },
+            {
+              "place": "jaffa-port",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset over the water."
+            }
+          ]
+        },
+        {
+          "title": "Museum and Neve Tzedek",
+          "stops": [
+            {
+              "place": "independence-hall",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekday tours by booking. Check on the day."
+            },
+            {
+              "place": "tel-aviv-museum",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Check opening days on the day."
+            },
+            {
+              "place": "neve-tzedek-walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon light is best."
+            },
+            {
+              "place": "hatachana",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Old railway station shops and cafes."
+            }
+          ]
+        },
+        {
+          "title": "Port, beach and market",
+          "stops": [
+            {
+              "place": "tel-aviv-port",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Boardwalk always open."
+            },
+            {
+              "place": "tel-aviv-beach",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Swim and lunch. Lifeguards daytime."
+            },
+            {
+              "place": "carmel-market",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Saturday, Friday until about 14:00."
+            },
+            {
+              "place": "falafel",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Quick dinner. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last look, then go",
+          "stops": [
+            {
+              "place": "rothschild-blvd",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning walk before checkout."
+            },
+            {
+              "place": "habima-square",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Short stop before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tel Aviv Center near Rothschild"
+    }
+  ]
+}

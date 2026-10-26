@@ -1,0 +1,853 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A compact culture day: old port, Le Panier and MuCEM, all walkable.",
+      "days": [
+        {
+          "title": "Old port, Le Panier and MuCEM",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start at the fish market on the quay. Mornings only, roughly 08:00–13:00."
+            },
+            {
+              "place": "le-panier",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk uphill through the lanes. Wear comfy shoes."
+            },
+            {
+              "place": "la-major",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Big striped cathedral near the water. Check hours on the day."
+            },
+            {
+              "place": "borley",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch near the port. Book ahead in summer."
+            },
+            {
+              "place": "mucen",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Closed Tuesday. Fort Saint-Jean is next door and included."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets, snacks and a proper bouillabaisse to finish.",
+      "days": [
+        {
+          "title": "Markets and the old port",
+          "stops": [
+            {
+              "place": "noailles-market",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Go early. Closed some days, so check first."
+            },
+            {
+              "place": "la-canebiere",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Walk down to the port and graze as you go."
+            },
+            {
+              "place": "vieux-port",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Fish market and a coffee on the quay."
+            },
+            {
+              "place": "le-panier",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch stop in the old quarter. Many small spots close mid-afternoon."
+            },
+            {
+              "place": "borley",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Bouillabaisse dinner. Reserve a day ahead; it is often cooked for two."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "City sand and a boat to the calanques, all from the Vieux-Port.",
+      "days": [
+        {
+          "title": "Calanques by boat, then Prado sand",
+          "stops": [
+            {
+              "place": "calanques-boat",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead in summer. Bring water and sun cream."
+            },
+            {
+              "place": "vieux-port",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Quick lunch by the water."
+            },
+            {
+              "place": "navette-maritime",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Ferry to Pointe Rouge. Seasonal; check times."
+            },
+            {
+              "place": "prado-beach",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Swim and relax. Lifeguards in season."
+            },
+            {
+              "place": "corniche",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Walk back along the coast at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the old port, Le Panier and the best view in town in one day.",
+      "days": [
+        {
+          "title": "Arrive, old port and Le Panier",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start at the harbour. The fish market is morning only, so come back tomorrow if you want it."
+            },
+            {
+              "place": "le-panier",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Wander the lanes uphill. Wear good shoes."
+            },
+            {
+              "place": "la-major",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Big striped cathedral near the water. Check hours on the day."
+            },
+            {
+              "place": "fort-saint-jean",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Free viewpoint over the port. Good light late afternoon."
+            },
+            {
+              "place": "borley",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book a bouillabaisse dinner near the Vieux-Port. Many kitchens want it ordered ahead."
+            }
+          ]
+        },
+        {
+          "title": "Hilltop basilica, then go",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Quick look at the morning fish market before it packs up."
+            },
+            {
+              "place": "notre-dame",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Bus or taxi up the hill. Best city view. Check basilica hours on the day."
+            },
+            {
+              "place": "mucen",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Closed Tuesday. Walk down through Le Panier to reach it."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port or Le Panier"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want markets, street snacks and a proper bouillabaisse.",
+      "days": [
+        {
+          "title": "Markets and the old port",
+          "stops": [
+            {
+              "place": "noailles-market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early. Closed some days, so check before you go."
+            },
+            {
+              "place": "la-canebiere",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk down the main street to Noailles for spices and snacks."
+            },
+            {
+              "place": "vieux-port",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Fish market is roughly 08:00–13:00. Grab a pastis at a quay cafe."
+            },
+            {
+              "place": "le-panier",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch in the lanes. Small places fill up, so arrive early or late."
+            },
+            {
+              "place": "borley",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Bouillabaisse dinner. Reserve ahead and expect a set price per person."
+            }
+          ]
+        },
+        {
+          "title": "Harbour morning, then go",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Last look at the fish stalls and a coffee on the quay."
+            },
+            {
+              "place": "abbaye-saint-victor",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quiet old abbey near the port. Check hours on the day."
+            },
+            {
+              "place": "corniche",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Seafront walk with a snack stop. Easy taxi back to the station or airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port or La Canebière"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Sun-seekers with one day: city sand, a boat to the calanques and a sunset walk.",
+      "days": [
+        {
+          "title": "Calanques by boat, Prado sand",
+          "stops": [
+            {
+              "place": "calanques-boat",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead in summer. Morning sea is usually calmer. Seasonal departures."
+            },
+            {
+              "place": "vieux-port",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch by the harbour after the boat."
+            },
+            {
+              "place": "prado-beach",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "City beach with lifeguards in season. Bus or taxi from the port."
+            },
+            {
+              "place": "corniche",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk the seafront to sunset. Bring water."
+            }
+          ]
+        },
+        {
+          "title": "Ferry and a last swim",
+          "stops": [
+            {
+              "place": "navette-maritime",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Short ferry to Pointe Rouge. Seasonal daytime crossings; check times."
+            },
+            {
+              "place": "prado-beach",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Swim and dry off before you travel."
+            },
+            {
+              "place": "vieux-port",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Ferry or bus back, then a quick lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port or Prado"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old port, Le Panier and MuCEM without rushing.",
+      "days": [
+        {
+          "title": "Old port, Le Panier and the basilica",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start at the fish market on the quay. Mornings only, roughly 08:00–13:00."
+            },
+            {
+              "place": "le-panier",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Wander the lanes uphill. Wear good shoes, the streets are steep."
+            },
+            {
+              "place": "la-major",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Big striped cathedral near the water. Check opening hours on the day."
+            },
+            {
+              "place": "borley",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch near the port. Book ahead in summer."
+            },
+            {
+              "place": "notre-dame",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Bus 60 or a steep walk up. Best city views. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "MuCEM, fort and street art",
+          "stops": [
+            {
+              "place": "mucen",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Tuesday. Go early to beat the crowds."
+            },
+            {
+              "place": "fort-saint-jean",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Linked to MuCEM by a footbridge. Great harbour views."
+            },
+            {
+              "place": "abbaye-saint-victor",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Short walk along the port. Check hours on the day."
+            },
+            {
+              "place": "cours-julien",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Street art and cafes. Livelier late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who plan the day around markets, pastis and a real bouillabaisse.",
+      "days": [
+        {
+          "title": "Markets and the old port",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Fish market first thing, when it is busiest and best."
+            },
+            {
+              "place": "noailles-market",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Spices, produce and cheap eats. Mornings; closed some days, check."
+            },
+            {
+              "place": "la-canebiere",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk the main street down to the port. Stop for a snack."
+            },
+            {
+              "place": "le-panier",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Work off lunch in the old lanes."
+            },
+            {
+              "place": "borley",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book bouillabaisse a day ahead. It is often made to order."
+            }
+          ]
+        },
+        {
+          "title": "MuCEM and a last long lunch",
+          "stops": [
+            {
+              "place": "mucen",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Tuesday. Cafe on site for a coffee break."
+            },
+            {
+              "place": "fort-saint-jean",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk over the footbridge for the view."
+            },
+            {
+              "place": "vieux-port",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late lunch on the quay. Watch the prices on the terrace menus."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sun-seekers who want calanques coves plus easy city sand.",
+      "days": [
+        {
+          "title": "Calanques by boat, then city beach",
+          "stops": [
+            {
+              "place": "calanques-boat",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead in summer. Bring water and sun cream; shade is limited."
+            },
+            {
+              "place": "vieux-port",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Quick lunch by the water before the beach."
+            },
+            {
+              "place": "prado-beach",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "City sand, lifeguards in season. Bus from the port."
+            },
+            {
+              "place": "corniche",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Walk the coast road at sunset. Flat and easy."
+            }
+          ]
+        },
+        {
+          "title": "Ferry, fort and the basilica",
+          "stops": [
+            {
+              "place": "navette-maritime",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Short ferry to Pointe Rouge. Seasonal, check times."
+            },
+            {
+              "place": "prado-beach",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Swim near Pointe Rouge before heading back."
+            },
+            {
+              "place": "fort-saint-jean",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Harbour views. Roughly 10:00–18:00, check on the day."
+            },
+            {
+              "place": "notre-dame",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late-afternoon light over the sea. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Prado"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the old port, the museums and the hilltop basilica without rushing.",
+      "days": [
+        {
+          "title": "Old port and Le Panier",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start at the fish market on the quay. Mornings only, roughly 08:00–13:00."
+            },
+            {
+              "place": "le-panier",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Wander the narrow lanes uphill. Wear comfy shoes."
+            },
+            {
+              "place": "la-major",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Big striped cathedral near the water. Check hours on the day."
+            },
+            {
+              "place": "noailles-market",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Grab lunch from the stalls. Mornings to early afternoon; closed some days."
+            }
+          ]
+        },
+        {
+          "title": "MuCEM and Fort Saint-Jean",
+          "stops": [
+            {
+              "place": "mucen",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Tuesday. Book ahead in summer."
+            },
+            {
+              "place": "fort-saint-jean",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Free viewpoint next door. Late morning is quieter."
+            },
+            {
+              "place": "borley",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Book a bouillabaisse dinner near the Vieux-Port. Reserve a table."
+            }
+          ]
+        },
+        {
+          "title": "Basilica, abbey and street art",
+          "stops": [
+            {
+              "place": "notre-dame",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early for the view and fewer crowds. Basilica roughly 07:00–18:00."
+            },
+            {
+              "place": "abbaye-saint-victor",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short walk downhill. Check opening hours on the day."
+            },
+            {
+              "place": "la-canebiere",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Main street and Noailles backstreets."
+            },
+            {
+              "place": "cours-julien",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Street art and cafés. Good in late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Palais Longchamp, then go",
+          "stops": [
+            {
+              "place": "palais-longchamp",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Water tower and park. Park roughly 07:00–20:00."
+            },
+            {
+              "place": "vieux-port",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Last coffee by the boats before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port or Le Panier"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around markets, pastis and one big bouillabaisse.",
+      "days": [
+        {
+          "title": "Markets and the old port",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Fish market first thing. Roughly 08:00–13:00."
+            },
+            {
+              "place": "noailles-market",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Spices, fruit and snacks. Closed some days; check on the day."
+            },
+            {
+              "place": "la-canebiere",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk down to Noailles for lunch spots."
+            },
+            {
+              "place": "le-panier",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Small bakeries and cafés in the lanes."
+            }
+          ]
+        },
+        {
+          "title": "MuCEM and a big dinner",
+          "stops": [
+            {
+              "place": "mucen",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Tuesday. Café on site for a light lunch."
+            },
+            {
+              "place": "fort-saint-jean",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk off lunch with the view."
+            },
+            {
+              "place": "borley",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "The bouillabaisse night. Book ahead; many places need a day's notice."
+            }
+          ]
+        },
+        {
+          "title": "Hilltop view and Corniche",
+          "stops": [
+            {
+              "place": "notre-dame",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning visit, then coffee nearby."
+            },
+            {
+              "place": "abbaye-saint-victor",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Quick look inside. Check hours on the day."
+            },
+            {
+              "place": "corniche",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset walk; stop for a drink by the water."
+            }
+          ]
+        },
+        {
+          "title": "Longchamp and last bites",
+          "stops": [
+            {
+              "place": "palais-longchamp",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning park stroll."
+            },
+            {
+              "place": "cours-julien",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch and street art before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sun-seekers who want calanques coves, city sand and a boat on the water.",
+      "days": [
+        {
+          "title": "Calanques by boat",
+          "stops": [
+            {
+              "place": "vieux-port",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Get tickets at the quay early. Departures through the day; seasonal."
+            },
+            {
+              "place": "calanques-boat",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Half-day trip to the coves. Bring water and sun cream."
+            },
+            {
+              "place": "borley",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner back at the port."
+            }
+          ]
+        },
+        {
+          "title": "Prado beaches",
+          "stops": [
+            {
+              "place": "navette-maritime",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Ferry to Pointe Rouge. Daytime crossings; seasonal."
+            },
+            {
+              "place": "prado-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Swim and lunch. Lifeguards in season."
+            },
+            {
+              "place": "corniche",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset walk back along the coast."
+            }
+          ]
+        },
+        {
+          "title": "Culture break and views",
+          "stops": [
+            {
+              "place": "notre-dame",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning visit before the heat."
+            },
+            {
+              "place": "le-panier",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Shady lanes and lunch."
+            },
+            {
+              "place": "mucen",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Closed Tuesday. Cool inside on hot days."
+            }
+          ]
+        },
+        {
+          "title": "Château d'If, then go",
+          "stops": [
+            {
+              "place": "chateau-if",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Boat and island visit. Seasonal; check the timetable."
+            },
+            {
+              "place": "vieux-port",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Last lunch by the harbour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux-Port or Prado"
+    }
+  ]
+}

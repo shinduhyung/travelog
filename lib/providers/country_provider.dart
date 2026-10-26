@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 Color _parseThemeColor(String? hexColor, String? colorName) {
   if (hexColor != null && hexColor.startsWith('#')) {
@@ -1119,7 +1120,7 @@ class CountryProvider with ChangeNotifier {
 
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists) {
           final data = doc.data();
           if (data != null) {
@@ -1202,7 +1203,7 @@ class CountryProvider with ChangeNotifier {
 
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('country_visits_v2')) {
           final String serverJson = doc.data()!['country_visits_v2'] as String;
           final Map<String, dynamic> decoded = json.decode(serverJson);
@@ -1251,7 +1252,7 @@ class CountryProvider with ChangeNotifier {
 
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('homeCountryIsoA3')) {
           _homeCountryIsoA3 = doc.data()!['homeCountryIsoA3'] as String?;
           if (_homeCountryIsoA3 != null) {

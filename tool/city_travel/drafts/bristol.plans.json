@@ -1,0 +1,841 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of museums and harbour life, mostly on foot.",
+      "days": [
+        {
+          "title": "Harbourside museums and the old city",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Start early on a weekday. Book online to skip queues."
+            },
+            {
+              "place": "m-shed",
+              "at": "12:15",
+              "minutes": 75,
+              "note": "Short walk along the harbour. Closed Monday."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch at Wapping Wharf food spots, then walk the harbour."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Ten minutes on foot to the Old City. Stalls wind down late afternoon."
+            },
+            {
+              "place": "bristol-museum-art-gallery",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Bus or 20-minute walk uphill to Clifton. Closed Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market stalls, harbour food and a relaxed walk between bites.",
+      "days": [
+        {
+          "title": "Markets, harbour food and Clifton",
+          "stops": [
+            {
+              "place": "st-nicholas-market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Weekday morning is calm. Check individual stall days."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Walk to Wapping Wharf for lunch. Many places are small, so book ahead."
+            },
+            {
+              "place": "ss-great-britain",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Optional culture break. Closed some weekdays in winter, check on the day."
+            },
+            {
+              "place": "clifton-village",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Bus or 25-minute walk uphill. Cafés and delis for an early dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Brunel, the harbour and the Old City in one day.",
+      "days": [
+        {
+          "title": "Brunel and the harbour",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go early on a weekday. Allow two hours."
+            },
+            {
+              "place": "m-shed",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Harbour-side walk between the two. Closed Monday."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Short hop across the harbour. Seasonal, check on the day."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Lunch and a wander in the Old City."
+            },
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Bus or taxi uphill. Best light late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Harbourside museums and Clifton views in one easy day and a half.",
+      "days": [
+        {
+          "title": "Arrive, Harbourside museums",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Start here on a weekday afternoon. Allow two hours on the ship and in the dry dock."
+            },
+            {
+              "place": "m-shed",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Ten minutes along the water. Closed Monday."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk to Wapping Wharf for food stalls and dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Clifton and the bridge",
+          "stops": [
+            {
+              "place": "clifton-village",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet on a weekday morning. Cafés open around 09:00."
+            },
+            {
+              "place": "bristol-museum-art-gallery",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short walk uphill. Closed Monday."
+            },
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Walk down to the bridge. Visitor centre hours vary, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market lunch, harbour food stalls and an evening wander.",
+      "days": [
+        {
+          "title": "Old City to the harbour",
+          "stops": [
+            {
+              "place": "st-nicholas-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekday lunch is busiest and best. Check individual stall hours."
+            },
+            {
+              "place": "bristol-cathedral",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Five minutes on foot. Check on the day for services."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk down to the water. Wapping Wharf has food stalls and small restaurants."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Short hop on the water if boats are running. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Clifton cafés and a view",
+          "stops": [
+            {
+              "place": "clifton-village",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekend morning for cafés and independent shops."
+            },
+            {
+              "place": "brandon-hill",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Climb Cabot Tower for a city view. Tower hours vary, check on the day."
+            },
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Finish with the bridge and a pub lunch nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Brunel's ship, the Old City and the bridge in a short trip.",
+      "days": [
+        {
+          "title": "Harbour history",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go early on a weekday. Book ahead if you can."
+            },
+            {
+              "place": "m-shed",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Ten minutes along the water. Closed Monday."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch in the Old City. Check individual stall hours."
+            },
+            {
+              "place": "bristol-cathedral",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Short walk. Check on the day for services."
+            }
+          ]
+        },
+        {
+          "title": "Clifton and the bridge",
+          "stops": [
+            {
+              "place": "clifton-village",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Historic streets and Georgian terraces."
+            },
+            {
+              "place": "clifton-observatory",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Giant's Cave and the view. Weather dependent, check on the day."
+            },
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk across for the classic view back to the gorge."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums and harbour life at an easy pace, with Clifton's views on the side.",
+      "days": [
+        {
+          "title": "Harbourside museums and the water",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Start early on a weekday. Allow two hours on the ship and in the dockyard."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Walk to Wapping Wharf for lunch at the food venues. Many are small, so expect a queue at peak times."
+            },
+            {
+              "place": "m-shed",
+              "at": "14:15",
+              "minutes": 75,
+              "note": "Free local history museum. Closed Monday."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short hop on the water. Runs roughly spring to autumn, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Clifton: bridge, village and gallery",
+          "stops": [
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Walk across for free. Visitor centre hours vary."
+            },
+            {
+              "place": "clifton-observatory",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Next to the bridge. Weather dependent, check on the day."
+            },
+            {
+              "place": "clifton-village",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch and a wander. Shops are mostly daytime only."
+            },
+            {
+              "place": "bristol-museum-art-gallery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Free entry."
+            },
+            {
+              "place": "brandon-hill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Climb Cabot Tower for city views if it is open. Tower hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside or Clifton"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Markets, harbour food halls and a slow Clifton morning between meals.",
+      "days": [
+        {
+          "title": "Old City market and the harbour",
+          "stops": [
+            {
+              "place": "st-nicholas-market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Come at weekday lunchtime for the street food stalls. Check individual stall days."
+            },
+            {
+              "place": "bristol-cathedral",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short look inside. Check on the day for services."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the harbour and Wapping Wharf. Good for an afternoon snack or early dinner."
+            },
+            {
+              "place": "m-shed",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Free, and a good rain plan. Closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Clifton morning, then the ship",
+          "stops": [
+            {
+              "place": "clifton-village",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekend morning is best for cafés and the market feel."
+            },
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Short walk from the village."
+            },
+            {
+              "place": "ss-great-britain",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Book ahead in busy periods. Roughly 10:00–17:00, check on the day."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Ride the water if the season allows. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside, near Wapping Wharf"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Brunel's bridge and ship, the Old City and the harbour's past in two days.",
+      "days": [
+        {
+          "title": "Brunel and the bridge",
+          "stops": [
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Start here before the crowds. Walk across for free."
+            },
+            {
+              "place": "clifton-observatory",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Giant's Cave and the camera obscura. Weather dependent."
+            },
+            {
+              "place": "clifton-village",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop. Georgian streets and small shops."
+            },
+            {
+              "place": "university-of-bristol",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Walk past the Wills Memorial Building. Public areas daytime only."
+            },
+            {
+              "place": "bristol-museum-art-gallery",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Closed Monday. Good for local and natural history."
+            }
+          ]
+        },
+        {
+          "title": "Old City and the harbour",
+          "stops": [
+            {
+              "place": "bristol-cathedral",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Morning is quiet. Check service times."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Historic covered market. Weekday lunchtime is liveliest."
+            },
+            {
+              "place": "ss-great-britain",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "The dockyard and ship. Allow two hours."
+            },
+            {
+              "place": "m-shed",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Bristol's port history. Closed Monday."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Finish along the water into Wapping Wharf for dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Harbourside"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, harbour life and Clifton at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and Harbourside",
+          "stops": [
+            {
+              "place": "harbourside-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Easy flat walk past Wapping Wharf food stalls. Grab a late lunch here."
+            },
+            {
+              "place": "m-shed",
+              "at": "15:45",
+              "minutes": 75,
+              "note": "Free city history museum. Closed Monday."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Short hop on the water. Runs roughly spring to autumn, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "SS Great Britain and Old City",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book ahead. Allow extra time for the dry dock."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Weekday lunchtime is busiest but best."
+            },
+            {
+              "place": "bristol-cathedral",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Quiet stop nearby. Check service times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Clifton day",
+          "stops": [
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Walk across for free. Visitor centre hours vary."
+            },
+            {
+              "place": "clifton-observatory",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk along the gorge. Weather dependent."
+            },
+            {
+              "place": "clifton-village",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch and a wander. Weekend mornings are calmest."
+            },
+            {
+              "place": "bristol-museum-art-gallery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Free entry. Closed Monday."
+            },
+            {
+              "place": "brandon-hill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Climb Cabot Tower for views if it is open."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "university-of-bristol",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Walk the public areas and the Wills Memorial Building area."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Final coffee by the water before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, harbour food halls and easy walks between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat on the harbour",
+          "stops": [
+            {
+              "place": "harbourside-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Wapping Wharf has small independent kitchens and bars. Expect queues at peak times."
+            },
+            {
+              "place": "m-shed",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Free, and a good rainy-hour backup. Closed Monday."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Ride between harbour stops. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market lunch and the ship",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning is quieter. Book ahead."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "12:45",
+              "minutes": 75,
+              "note": "Street food lunch. Many stalls close by late afternoon."
+            },
+            {
+              "place": "bristol-cathedral",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Short walk to walk off lunch."
+            }
+          ]
+        },
+        {
+          "title": "Clifton and the gorge",
+          "stops": [
+            {
+              "place": "clifton-village",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekend morning for cafés and delis."
+            },
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Free to walk across."
+            },
+            {
+              "place": "clifton-observatory",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Check it is open; weather dependent."
+            },
+            {
+              "place": "brandon-hill",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Walk down into the centre afterwards."
+            }
+          ]
+        },
+        {
+          "title": "Slow last morning",
+          "stops": [
+            {
+              "place": "harbourside-walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Brunch by the water before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want Brunel, the Old City and the harbour's story in three days.",
+      "days": [
+        {
+          "title": "Arrive and the harbour story",
+          "stops": [
+            {
+              "place": "m-shed",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Start with the city's history. Closed Monday."
+            },
+            {
+              "place": "harbourside-walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Follow the docks past Wapping Wharf."
+            },
+            {
+              "place": "harbour-ferry",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "See the harbour from the water. Seasonal, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Brunel and the Old City",
+          "stops": [
+            {
+              "place": "ss-great-britain",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "The dry dock and ship are the highlight. Book ahead."
+            },
+            {
+              "place": "st-nicholas-market",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch, then wander the Old City lanes."
+            },
+            {
+              "place": "bristol-cathedral",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Check service times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Clifton and the bridge",
+          "stops": [
+            {
+              "place": "clifton-suspension-bridge",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Brunel's bridge. Visitor centre hours vary."
+            },
+            {
+              "place": "clifton-observatory",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Giant's Cave and the gorge view. Weather dependent."
+            },
+            {
+              "place": "clifton-village",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch and Georgian streets."
+            },
+            {
+              "place": "bristol-museum-art-gallery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Free. Closed Monday."
+            },
+            {
+              "place": "brandon-hill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Cabot Tower if open."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "university-of-bristol",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Wills Memorial Building area, then head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbourside"
+    }
+  ]
+}

@@ -1,0 +1,883 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of history and art in Bellas Artes, with a relaxed evening in Las Mercedes.",
+      "days": [
+        {
+          "title": "Historic centre and museums",
+          "stops": [
+            {
+              "place": "plaza_bolivar",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early while it is quiet. Daytime only."
+            },
+            {
+              "place": "pantheon",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk from the plaza. Closed Monday."
+            },
+            {
+              "place": "bolivar_birthplace",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Nearby. Closed Monday, check on the day."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Ask your driver for a trusted criollo spot."
+            },
+            {
+              "place": "museo_bellas_artes",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "university_city",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Campus grounds open weekday daytime. Walk the main lawns."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellas Artes or Altamira"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasty day: market breakfast, arepas, a long criollo lunch and an evening food strip.",
+      "days": [
+        {
+          "title": "Markets, arepas and Las Mercedes",
+          "stops": [
+            {
+              "place": "mercado_municipal",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for fresh juice and breakfast stalls. Roughly 06:00–17:00."
+            },
+            {
+              "place": "arepa_breakfast",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Second breakfast if you are still hungry. Morning through midday."
+            },
+            {
+              "place": "altamira_square",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk Plaza Francia and the surrounding streets."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Long lunch. Most criollo places serve lunch and dinner."
+            },
+            {
+              "place": "heladeria",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Afternoon ice cream stop."
+            },
+            {
+              "place": "las_mercedes_dining",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner on the restaurant strip. Busier and later on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altamira or Las Mercedes"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green Caracas: the El Ávila cable car if it runs, plus parks and a garden memorial.",
+      "days": [
+        {
+          "title": "Mountain and parks",
+          "stops": [
+            {
+              "place": "cable_car_base",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Check operating days before you go. Go early for clear skies."
+            },
+            {
+              "place": "avila_viewpoint",
+              "at": "09:45",
+              "minutes": 180,
+              "note": "Ride up if running, otherwise skip. Often closed some weekdays."
+            },
+            {
+              "place": "parque_del_este",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch nearby first, then walk the park. Closed some Mondays."
+            },
+            {
+              "place": "parque_naciones_unidas",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy afternoon stroll. Daytime only."
+            },
+            {
+              "place": "los_proceres",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Late afternoon light. Open daily, daylight hours best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altamira or La Castellana"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the historic centre and the Bolívar story in one tight day.",
+      "days": [
+        {
+          "title": "Historic centre and Bellas Artes",
+          "stops": [
+            {
+              "place": "plaza_bolivar",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early in the historic centre. Daytime only, so keep it in the morning."
+            },
+            {
+              "place": "pantheon",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk from the plaza. Closed Monday. Check on the day."
+            },
+            {
+              "place": "bolivar_birthplace",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Pabellón criollo is the classic plate to try."
+            },
+            {
+              "place": "museo_bellas_artes",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Altamira and a café finish",
+          "stops": [
+            {
+              "place": "arepa_breakfast",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Arepa breakfast before heading out."
+            },
+            {
+              "place": "altamira_square",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Easy walk around Plaza Francia. Best in late afternoon but fine in the morning."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Coffee stop before you leave the area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altamira or Bellas Artes"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around arepas, market stalls and a long Las Mercedes dinner.",
+      "days": [
+        {
+          "title": "Market morning and Las Mercedes evening",
+          "stops": [
+            {
+              "place": "arepa_breakfast",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Start with an arepa. Morning through midday."
+            },
+            {
+              "place": "mercado_municipal",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early. Roughly 06:00–17:00, check on the day."
+            },
+            {
+              "place": "parque_del_este",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk off breakfast in the park. Closed some Mondays."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Most criollo places serve lunch and dinner."
+            },
+            {
+              "place": "las_mercedes_dining",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner on the restaurant strip. Later on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Altamira and ice cream",
+          "stops": [
+            {
+              "place": "altamira_square",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning walk around Plaza Francia."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Coffee before moving on."
+            },
+            {
+              "place": "heladeria",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Afternoon ice cream stop in Las Mercedes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Las Mercedes or Altamira"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "A quick green escape: El Ávila views and the city's parks, with time for a good lunch.",
+      "days": [
+        {
+          "title": "El Ávila and the parks",
+          "stops": [
+            {
+              "place": "cable_car_base",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Check operating days before you go. Go early for clear skies."
+            },
+            {
+              "place": "avila_viewpoint",
+              "at": "09:45",
+              "minutes": 180,
+              "note": "Often closed some weekdays. Check on the day."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch after coming down."
+            },
+            {
+              "place": "parque_naciones_unidas",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy afternoon walk. Daytime only."
+            }
+          ]
+        },
+        {
+          "title": "Los Próceres and the park",
+          "stops": [
+            {
+              "place": "arepa_breakfast",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Breakfast before heading out."
+            },
+            {
+              "place": "los_proceres",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Open daily. Daylight hours are best."
+            },
+            {
+              "place": "parque_del_este",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed some Mondays."
+            },
+            {
+              "place": "heladeria",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Afternoon ice cream in Las Mercedes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altamira or La Castellana"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the historic centre, Bolívar's story and the city's museums, all in easy daytime blocks.",
+      "days": [
+        {
+          "title": "Arrive and settle in Bellas Artes",
+          "stops": [
+            {
+              "place": "pantheon",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Closed Monday. Go early afternoon while it is still open."
+            },
+            {
+              "place": "bolivar_birthplace",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "A short walk away. Closed Monday, check on the day."
+            },
+            {
+              "place": "plaza_bolivar",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Daytime only. Walk the historic centre with a local guide if you can."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Short taxi to Altamira for a coffee and an early evening."
+            }
+          ]
+        },
+        {
+          "title": "Museums and campus",
+          "stops": [
+            {
+              "place": "museo_bellas_artes",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Weekday afternoon is quieter, but mornings work too."
+            },
+            {
+              "place": "university_city",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekday daytime only. Walk the grounds, don't enter buildings uninvited."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Ask your hotel for a nearby criollo spot."
+            },
+            {
+              "place": "sabana_grande_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Daytime only. Busy boulevard, keep valuables out of sight."
+            },
+            {
+              "place": "city_tour",
+              "at": "16:30",
+              "minutes": 240,
+              "note": "Book ahead. If only morning departures run, swap this to tomorrow morning."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellas Artes or Altamira"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want arepas at breakfast, a market in the morning and long Las Mercedes dinners.",
+      "days": [
+        {
+          "title": "Arepas, market and Las Mercedes",
+          "stops": [
+            {
+              "place": "arepa_breakfast",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start with a hot arepa and coffee."
+            },
+            {
+              "place": "mercado_municipal",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning is best. Roughly 06:00–17:00, check on the day."
+            },
+            {
+              "place": "parque_del_este",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Green break nearby. Closed some Mondays."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch. Pabellón criollo is the national plate to try."
+            },
+            {
+              "place": "las_mercedes_dining",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner on the strip. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Altamira walk and ice cream",
+          "stops": [
+            {
+              "place": "altamira_square",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Plaza Francia and the surrounding streets. Late afternoon is liveliest."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Coffee stop before lunch."
+            },
+            {
+              "place": "heladeria",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Afternoon ice cream in Las Mercedes."
+            },
+            {
+              "place": "diverxity",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Check on the day. Weekend daytime is the usual slot."
+            },
+            {
+              "place": "las_mercedes_dining",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Second dinner on the strip, or try a different area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Las Mercedes or Altamira"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Visitors who want El Ávila views and green escapes, with culture and food in between.",
+      "days": [
+        {
+          "title": "Parks and the mountain base",
+          "stops": [
+            {
+              "place": "parque_naciones_unidas",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning is coolest. Daytime only."
+            },
+            {
+              "place": "parque_del_este",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed some Mondays. Big park, easy walking."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "cable_car_base",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Check operating days before you go. The cable car often closes some weekdays."
+            }
+          ]
+        },
+        {
+          "title": "El Ávila viewpoint and Los Próceres",
+          "stops": [
+            {
+              "place": "avila_viewpoint",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Clear morning is best. Check on the day, it is often closed some weekdays."
+            },
+            {
+              "place": "los_proceres",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Open daily. Daylight hours best, late afternoon is pleasant."
+            },
+            {
+              "place": "heladeria",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Cool down after the mountain."
+            },
+            {
+              "place": "altamira_square",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Late afternoon walk and a snack."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altamira"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the historic centre, the Bolívar story and a museum afternoon, kept to safe daytime hours.",
+      "days": [
+        {
+          "title": "Arrive and settle in Bellas Artes",
+          "stops": [
+            {
+              "place": "plaza_bolivar",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Start in the historic centre. Daytime only. Keep valuables out of sight."
+            },
+            {
+              "place": "pantheon",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Short walk from the plaza. Closed Monday. Check on the day."
+            },
+            {
+              "place": "sabana_grande_walk",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Boulevard stroll. Daytime only, so finish before dark."
+            }
+          ]
+        },
+        {
+          "title": "Bolívar morning and museums",
+          "stops": [
+            {
+              "place": "bolivar_birthplace",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "university_city",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Campus grounds open weekday daytime. Walk the main lawns."
+            },
+            {
+              "place": "museo_bellas_artes",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Weekday afternoon is calm."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short taxi to Altamira for coffee."
+            }
+          ]
+        },
+        {
+          "title": "City tour or Las Mercedes culture",
+          "stops": [
+            {
+              "place": "city_tour",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Book ahead. Morning departures are common. Bring ID."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch on the national dish in Las Mercedes."
+            },
+            {
+              "place": "diverxity",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Check opening on the day."
+            },
+            {
+              "place": "los_proceres",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Late afternoon light. Daylight hours best."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "arepa_breakfast",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Quick arepa before checkout."
+            },
+            {
+              "place": "altamira_square",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Easy walk near hotels. Keep it short if your flight is early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellas Artes or Altamira"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want arepas, market stalls and long Las Mercedes dinners, with a little history in between.",
+      "days": [
+        {
+          "title": "Arrive, market and Altamira",
+          "stops": [
+            {
+              "place": "mercado_municipal",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early, roughly 06:00–17:00. Check on the day. Cash helps."
+            },
+            {
+              "place": "arepa_breakfast",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Second breakfast is normal here."
+            },
+            {
+              "place": "altamira_square",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk Plaza Francia. Late afternoon is busier."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Coffee stop before the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Centre, then Las Mercedes dinner",
+          "stops": [
+            {
+              "place": "plaza_bolivar",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Daytime only. Weekday morning is quietest."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch is the main meal. Try pabellón criollo."
+            },
+            {
+              "place": "heladeria",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Afternoon ice cream in Las Mercedes."
+            },
+            {
+              "place": "las_mercedes_dining",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead on weekends. Later hours Fri–Sat."
+            }
+          ]
+        },
+        {
+          "title": "Sabana Grande and a long lunch",
+          "stops": [
+            {
+              "place": "sabana_grande_walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Daytime only. Weekday is calmer."
+            },
+            {
+              "place": "mercado_municipal",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Second market visit for snacks and fruit."
+            },
+            {
+              "place": "pabellon_criollo",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop near Las Mercedes."
+            },
+            {
+              "place": "los_proceres",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Walk it off. Daylight hours best."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast and fly",
+          "stops": [
+            {
+              "place": "arepa_breakfast",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Last arepa. Allow extra time for airport traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Las Mercedes or Altamira"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want El Ávila views and green city parks, with cable car days checked in advance.",
+      "days": [
+        {
+          "title": "Arrive and Altamira parks",
+          "stops": [
+            {
+              "place": "altamira_square",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy start near hotels. Daytime and early evening."
+            },
+            {
+              "place": "cable_car_base",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Scout the base station and check operating days for tomorrow."
+            }
+          ]
+        },
+        {
+          "title": "El Ávila cable car day",
+          "stops": [
+            {
+              "place": "avila_viewpoint",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Clear morning is best. Often closed some weekdays, so check on the day."
+            },
+            {
+              "place": "cafe_altamira",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Coffee after coming down."
+            },
+            {
+              "place": "arepa_breakfast",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Late lunch stop nearby."
+            }
+          ]
+        },
+        {
+          "title": "Parks and gardens",
+          "stops": [
+            {
+              "place": "parque_del_este",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Weekend morning is best. Closed some Mondays."
+            },
+            {
+              "place": "parque_naciones_unidas",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Short hop in La Castellana. Daytime."
+            },
+            {
+              "place": "mercado_municipal",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch from market stalls. Check on the day."
+            },
+            {
+              "place": "los_proceres",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon is the best light."
+            }
+          ]
+        },
+        {
+          "title": "Morning air, then fly",
+          "stops": [
+            {
+              "place": "altamira_square",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Final walk before checkout. Keep it short if your flight is early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altamira or La Castellana"
+    }
+  ]
+}

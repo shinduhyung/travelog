@@ -1,0 +1,557 @@
+{
+  "city": "Austin",
+  "checked": "October 2026",
+  "intro_line": "Austin blends live music, barbecue, and a laid-back Texas vibe.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "South Congress",
+        "University of Texas",
+        "East Austin"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "South Congress",
+        "University of Texas",
+        "East Austin"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "South Congress",
+        "University of Texas",
+        "East Austin"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown",
+        "South Congress",
+        "University of Texas",
+        "East Austin"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Downtown",
+        "South Congress",
+        "University of Texas",
+        "East Austin"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 9,
+        "note": "Cool and quiet: highs near 16°C, lows near 6°C. Pack a warm layer."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 9,
+        "note": "Still cool, highs near 18°C. Good for walking; a few rainy days."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Mild and pleasant, highs near 23°C. Busy spring break weeks."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 12,
+        "note": "Warm, highs near 26°C. Great outdoor weather; more rain days."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 16,
+        "note": "Warm and wetter, highs near 29°C. Carry a rain jacket."
+      },
+      {
+        "high": 33,
+        "low": 23,
+        "rain_days": 11,
+        "note": "Hot, highs near 33°C. Plan outdoor time for morning."
+      },
+      {
+        "high": 35,
+        "low": 25,
+        "rain_days": 8,
+        "note": "Very hot, highs near 35°C. Stay hydrated and seek shade."
+      },
+      {
+        "high": 36,
+        "low": 25,
+        "rain_days": 8,
+        "note": "Hottest month, highs near 36°C. Do outdoor sights early."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 9,
+        "note": "Still hot, highs near 32°C. Pools and shade help."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 9,
+        "note": "Cooling down, highs near 28°C. Good festival season."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 9,
+        "note": "Mild, highs near 21°C. Comfortable for walking all day."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 8,
+        "note": "Cool, highs near 18°C. Light jacket for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "nature": [
+      0.6,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.6,
+      0.4,
+      0.4,
+      0.6,
+      0.9,
+      0.85,
+      0.6
+    ],
+    "nightlife": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "budget": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "ut_austin": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday mornings; cooler in spring and fall",
+      "area": "University of Texas",
+      "popularity": 4
+    },
+    "sxsw": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "March; plan around the music week",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "cotaland": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Spring and fall; avoid the hottest afternoons",
+      "area": "East Austin",
+      "popularity": 3
+    },
+    "parks_n_pizza": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday mornings",
+      "area": "East Austin",
+      "popularity": 2
+    },
+    "tom_foolerys": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy days or midsummer afternoons",
+      "area": "East Austin",
+      "popularity": 2
+    },
+    "frida_portrait": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoons",
+      "area": "University of Texas",
+      "popularity": 3
+    },
+    "franklin_bbq": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late morning, Tue–Fri",
+      "area": "East Austin",
+      "popularity": 5
+    },
+    "south_congress": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "South Congress",
+      "popularity": 4
+    },
+    "congress_bridge": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset, spring to fall",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "state_capitol": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "zilker_park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in summer; sunny winter days",
+      "area": "South Congress",
+      "popularity": 4
+    },
+    "rainey_street": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening, Thu–Sat",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "sixth_street": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Night, weekends",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "east_austin_food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekend brunch",
+      "area": "East Austin",
+      "popularity": 3
+    },
+    "lady_bird_lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "blanton": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoons",
+      "area": "University of Texas",
+      "popularity": 3
+    },
+    "torchys": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or late night",
+      "area": "South Congress",
+      "popularity": 3
+    },
+    "mount_bonnell": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "bat_cruise": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "bullock_museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Hot afternoons",
+      "area": "University of Texas",
+      "popularity": 3
+    },
+    "rainbow_cattle": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "South Congress",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers BBQ, the Capitol and a Barton Springs swim. Add a night for live music and East Austin."
+  },
+  "airports": [
+    {
+      "code": "AUS",
+      "name": "Austin Bergstrom International Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km southeast of downtown.",
+      "options": [
+        {
+          "mode": "Capital Metro bus 20",
+          "to": "Downtown Austin",
+          "price": "$1.25",
+          "time": "40-60 min",
+          "note": "Cheapest option; a 24-hour local pass costs $2.50."
+        },
+        {
+          "mode": "Ride app (Uber/Lyft)",
+          "to": "Downtown",
+          "price": "$20-35",
+          "time": "20-30 min",
+          "note": "Pickup zones are signed at the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Taxis wait outside baggage claim."
+        },
+        {
+          "mode": "Shared ride shuttle",
+          "to": "Downtown hotels",
+          "price": "$15-25",
+          "time": "30-45 min",
+          "note": "Book ahead; cheaper than a private taxi."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Austin",
+      "https://en.wikivoyage.org/wiki/Austin"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Ride apps or the bus for most trips; walk downtown and around UT.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. A single commuter rail line (Red Line) runs north-south."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Capital Metro buses cover downtown, the Capitol and South Congress. Fares about $1.25 one way."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft work well. Taxis exist but are less common."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common but traffic is heavy at rush hour; I-35 is often jammed."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown and UT are walkable. Summers are very hot, so plan shade and water."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Bikes are popular and bike lanes exist on most major streets."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical: long hot summers, mild winters, and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: March to May and October to November",
+        "text": "Mild to warm days around 21–29°C. Ideal for walking, parks and patios."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is very hot (June to September)",
+        "text": "Highs of 32–36°C. Go outside early or after sunset and carry water."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain any month",
+        "text": "About 8–16 rain days a month, most in May. Showers are often short."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Warm nights in summer",
+        "text": "Lows stay near 22–25°C from June to September, so evenings stay hot."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter nights",
+        "text": "December to February lows near 6–8°C. Bring a jacket for evenings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer; a light rain layer; a warm layer for winter nights."
+      }
+    ]
+  }
+}

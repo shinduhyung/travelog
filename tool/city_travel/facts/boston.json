@@ -1,0 +1,188 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Boston packs history, harbour views and student energy into a walkable core.",
+  "intro": "Boston rewards visitors with colonial streets, world-class museums and a lively waterfront. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Downtown and Waterfront",
+    "Back Bay",
+    "Beacon Hill",
+    "Seaport"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 4,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "The T subway has four colour-coded lines; the Blue Line links the airport area to downtown.",
+    "The Silver Line bus runs free from Logan to South Station and connects to the Red Line.",
+    "Buses and the subway use a CharlieCard; tap or buy at stations.",
+    "Taxis are mostly white and cost $25-50 from Logan to downtown.",
+    "Uber and Lyft pick up and drop off at Logan; check the current pickup zone.",
+    "Central Boston is compact and walkable; bikes and ferries serve the harbour."
+  ],
+  "airports": [
+    {
+      "code": "BOS",
+      "name": "General Edward Lawrence Logan International Airport",
+      "primary": true,
+      "note": "Main gateway, about 5 km from the centre.",
+      "options": [
+        {
+          "mode": "Silver Line bus",
+          "to": "South Station downtown",
+          "price": "Free",
+          "time": "20-30 min",
+          "note": "Free from Logan; transfer free to the Red Line."
+        },
+        {
+          "mode": "MassPort shuttle + Blue Line",
+          "to": "Downtown Boston",
+          "price": "$2-3",
+          "time": "30-40 min",
+          "note": "Shuttle to Airport Station, then the T."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown hotels",
+          "price": "$25-50",
+          "time": "15-30 min",
+          "note": "Price depends on destination and traffic."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$25-45",
+          "time": "15-30 min",
+          "note": "Pickup zone may be in the Central Garage; check on arrival."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Faneuil Hall Marketplace",
+    "USS Constitution",
+    "Baskin-Robbins",
+    "Boston College",
+    "Boston Duck Tours",
+    "Boston Public Library",
+    "Boston University",
+    "Brandeis University",
+    "Charles River",
+    "Dunkin'",
+    "Harvard University",
+    "Massachusetts Institute of Technology (MIT)",
+    "New England Aquarium",
+    "Northeastern University",
+    "Old North Church",
+    "Samuel Adams Brewery",
+    "Symphony Hall",
+    "Trinity Church",
+    "Tufts University",
+    "USS Constitution Harbor Cruise",
+    "Watson and the Shark"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Boston",
+      "https://en.wikivoyage.org/wiki/Boston"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    42.35843,
+    -71.05977
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 3,
+      "low": -5,
+      "rain_days": 10
+    },
+    {
+      "high": 4,
+      "low": -6,
+      "rain_days": 10
+    },
+    {
+      "high": 8,
+      "low": -2,
+      "rain_days": 12
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 10,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 10
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 8
+    },
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

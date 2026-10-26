@@ -1,0 +1,180 @@
+{
+ "city": "Copenhagen",
+ "trips": [
+  {
+   "place": "Roskilde",
+   "label": "",
+   "position": {
+    "id": 361684,
+    "name": "Roskilde station",
+    "city": "Roskilde",
+    "lat": 55.63901,
+    "lng": 12.08886
+   },
+   "town": {
+    "name": "Roskilde",
+    "lat": 55.64152,
+    "lng": 12.08035
+   },
+   "road": {
+    "km": 35,
+    "min": 37,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 560,
+    "currency": "DKK"
+   },
+   "modes": {
+    "train": {
+     "from": "$3",
+     "time": "28m",
+     "via": "København H to Roskilde St.",
+     "source": "https://www.rome2rio.com/s/Copenhagen/Roskilde"
+    },
+    "bus": {
+     "from": "$5-$8",
+     "time": "1h 17m",
+     "via": "Hovedbanegården, Frihedsstøtten to Kong Valdemars Vej",
+     "source": "https://www.rome2rio.com/s/Copenhagen/Roskilde"
+    }
+   },
+   "route_note": "Regional trains run frequently from Copenhagen Central to Roskilde in about 25 minutes, with the cathedral and Viking Ship Museum a short walk from the station.",
+   "see": [
+    "Roskilde Cathedral",
+    "Viking Ship Museum",
+    "Roskilde Museum",
+    "Harbour and fjord walk"
+   ],
+   "visit": "Full day",
+   "tour_query": "Roskilde day trip from Copenhagen",
+   "quests": [
+    "Roskilde Cathedral",
+    "Viking Ship Museum, Roskilde"
+   ],
+   "recommended": "train",
+   "why": "Frequent regional trains take just 28 minutes from Copenhagen Central, and both the cathedral and Viking Ship Museum are a short walk from the station.",
+   "stars": 5,
+   "know": [
+    "The Viking Ship Museum is open year-round but boat-sailing season is summer only",
+    "Roskilde Cathedral can close for services—check times"
+   ]
+  },
+  {
+   "place": "Hillerød",
+   "label": "",
+   "position": {
+    "id": 377601,
+    "name": "Hillerød",
+    "city": "Hillerød",
+    "lat": 55.92667,
+    "lng": 12.31091
+   },
+   "town": {
+    "name": "Hillerød",
+    "lat": 55.92791,
+    "lng": 12.30081
+   },
+   "road": {
+    "km": 38,
+    "min": 37,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 610,
+    "currency": "DKK"
+   },
+   "modes": {
+    "train": {
+     "from": "$4",
+     "time": "41m",
+     "via": "Vesterport St. to Hillerød St.",
+     "source": "https://www.rome2rio.com/s/Copenhagen/Hillerod"
+    }
+   },
+   "route_note": "Take the S-train line A or E north from Copenhagen Central to Hillerød, then walk or catch a local bus to Frederiksborg Castle.",
+   "see": [
+    "Frederiksborg Castle",
+    "Castle Lake and Baroque Garden",
+    "Museum of National History",
+    "Hillerød old town streets"
+   ],
+   "visit": "Full day",
+   "tour_query": "Frederiksborg Castle day trip from Copenhagen",
+   "quests": [
+    "Frederiksborg Castle"
+   ],
+   "recommended": "train",
+   "why": "S-train line A/E runs straight from the city center to Hillerød in about 41 minutes, with Frederiksborg Castle a short walk or local bus away.",
+   "stars": 4,
+   "know": [
+    "Frederiksborg Castle is closed on some Mondays—check opening days before going",
+    "Allow at least half a day to see the castle and gardens properly"
+   ]
+  },
+  {
+   "place": "Helsingør",
+   "label": "",
+   "position": {
+    "id": 361523,
+    "name": "Helsingør Station",
+    "city": "Helsingør",
+    "lat": 56.03314,
+    "lng": 12.61378
+   },
+   "town": {
+    "name": "Helsingør",
+    "lat": 56.03606,
+    "lng": 12.6136
+   },
+   "road": {
+    "km": 46,
+    "min": 43,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 730,
+    "currency": "DKK"
+   },
+   "modes": {
+    "train": {
+     "from": "€19",
+     "from_usd": 22.0,
+     "avg": "€19",
+     "time": "47m",
+     "per_day": 18,
+     "source": "https://www.omio.com/trains/copenhagen/helsingor"
+    },
+    "bus": {
+     "from": null,
+     "time": "1h 5m",
+     "via": "Köpenhamn Dybbölsbro busterm to Helsingør",
+     "source": "https://www.rome2rio.com/s/Copenhagen/Helsingor"
+    }
+   },
+   "route_note": "Take the coastal regional train north from Copenhagen Central or Østerport directly to Helsingør, then walk about 15 minutes to Kronborg Castle.",
+   "see": [
+    "Kronborg Castle",
+    "Maritime Museum of Denmark",
+    "Helsingør old town",
+    "Ferry harbour views to Sweden"
+   ],
+   "visit": "Full day",
+   "tour_query": "Kronborg Castle day trip from Copenhagen",
+   "quests": [
+    "Kronborg"
+   ],
+   "recommended": "train",
+   "why": "The coastal regional train runs directly from Copenhagen Central or Østerport in 47 minutes with 18 departures a day, then a 15-minute walk to Kronborg.",
+   "stars": 4,
+   "know": [
+    "Kronborg Castle is open year-round but hours vary by season",
+    "Combine with a stroll around the harbor and old town"
+   ]
+  }
+ ],
+ "problems": [
+  "Malmö: not a town in cities15000.json (DK), dropped",
+  "Dragør: not a town in cities15000.json (DK), dropped"
+ ]
+}

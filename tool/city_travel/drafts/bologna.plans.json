@@ -1,0 +1,874 @@
+{
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One tasty day: market grazing, a pasta class and an evening aperitivo.",
+      "days": [
+        {
+          "title": "Markets, pasta and aperitivo",
+          "stops": [
+            {
+              "place": "quadrilatero",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early for market stalls. Graze as you walk."
+            },
+            {
+              "place": "mercato_erbe",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "About 10 minutes on foot. Good for a light lunch."
+            },
+            {
+              "place": "tortellini_class",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Book ahead. Classes usually run morning or afternoon."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early evening in the centre. Prices vary; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The classic Bologna day: main square, towers, porticoes and a church complex.",
+      "days": [
+        {
+          "title": "Piazza, towers and porticoes",
+          "stops": [
+            {
+              "place": "piazza_maggiore",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings."
+            },
+            {
+              "place": "san_petronio",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "On the square. Daytime opening; check on the day."
+            },
+            {
+              "place": "archiginnasio",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short walk. Closed some days; check on the day."
+            },
+            {
+              "place": "two_towers",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Climb in the morning for clearer views. Check hours on the day."
+            },
+            {
+              "place": "santo_stefano",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch nearby, then visit the complex."
+            },
+            {
+              "place": "portico_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Always open. Easy walking."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "day-budget",
+      "length": "day",
+      "style": "budget",
+      "nights": 0,
+      "for": "Free sights and cheap eats, all on foot in the centre.",
+      "days": [
+        {
+          "title": "Free sights and cheap bites",
+          "stops": [
+            {
+              "place": "piazza_maggiore",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Free to wander. Always open."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Cheap snacks from market stalls in the morning."
+            },
+            {
+              "place": "university",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Outdoor areas always open. Free to walk."
+            },
+            {
+              "place": "via_zamboni",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Student quarter. Cheap lunch spots."
+            },
+            {
+              "place": "portico_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Always open and free."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Budget-friendly early evening. Prices vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One tasty day: market grazing, pasta class and an evening food scene.",
+      "days": [
+        {
+          "title": "Markets, pasta and aperitivo",
+          "stops": [
+            {
+              "place": "quadrilatero",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early for the stalls. Graze as you walk."
+            },
+            {
+              "place": "mercato_erbe",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk west. Good for a quick bite."
+            },
+            {
+              "place": "tortellini_class",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Book ahead. Classes usually run morning or afternoon."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early evening in the centre. Prices vary, check the board."
+            },
+            {
+              "place": "piazza_santo_stefano_market",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Warm evenings only. Casual dinner outdoors."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for first-timers: the main square, the towers and the porticoes in one day.",
+      "days": [
+        {
+          "title": "Piazza, towers and porticoes",
+          "stops": [
+            {
+              "place": "piazza_maggiore",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings."
+            },
+            {
+              "place": "san_petronio",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "On the square. Daytime only, check on the day."
+            },
+            {
+              "place": "archiginnasio",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Closed some days, check on the day."
+            },
+            {
+              "place": "two_towers",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Climb in the morning for clearer views. Check opening on the day."
+            },
+            {
+              "place": "portico_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Always open. Easy walking after lunch."
+            },
+            {
+              "place": "santo_stefano",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Daytime, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "1n-budget",
+      "length": "1n",
+      "style": "budget",
+      "nights": 1,
+      "for": "Cheap and walkable: free squares, porticoes and market food.",
+      "days": [
+        {
+          "title": "Free sights and cheap eats",
+          "stops": [
+            {
+              "place": "via_indipendenza",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Walk from the station end into the centre."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Free to wander. Sit on the steps."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Cheap bites from the stalls, mostly morning to early afternoon."
+            },
+            {
+              "place": "university",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Outdoor areas always open and free."
+            },
+            {
+              "place": "via_zamboni",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Student quarter, cheap cafes."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early evening. Compare prices before you sit."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market grazing, ragù and tortellini, with a pasta class and an evening food scene.",
+      "days": [
+        {
+          "title": "Arrive, Quadrilatero and aperitivo",
+          "stops": [
+            {
+              "place": "bologna_centrale",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Walk or take the shuttle bus to the centre, about 20 minutes."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Market stalls are best morning to early afternoon. Graze as you go."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Sit on the steps and watch the square."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early evening. A drink usually comes with snacks; prices vary."
+            }
+          ]
+        },
+        {
+          "title": "Food tour and market lunch",
+          "stops": [
+            {
+              "place": "food_tour",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning departure. Book ahead; confirm the meeting point."
+            },
+            {
+              "place": "mercato_erbe",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Food counters run into the evening. Check on the day."
+            },
+            {
+              "place": "portico_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk off lunch under the arcades."
+            },
+            {
+              "place": "piazza_santo_stefano_market",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Warm evenings only. Casual food and drink."
+            }
+          ]
+        },
+        {
+          "title": "Pasta class and last bites",
+          "stops": [
+            {
+              "place": "tortellini_class",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Afternoon classes also run. Book ahead."
+            },
+            {
+              "place": "san_petronio",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Daytime; check on the day."
+            },
+            {
+              "place": "via_indipendenza",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Easy walk back toward the station."
+            },
+            {
+              "place": "bologna_centrale",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Allow extra time for trains."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre, near Piazza Maggiore"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Piazzas, porticoes, the oldest university and the San Luca walk.",
+      "days": [
+        {
+          "title": "Centre icons on foot",
+          "stops": [
+            {
+              "place": "bologna_centrale",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "About 20 minutes on foot to the centre."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings."
+            },
+            {
+              "place": "san_petronio",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Daytime; check on the day."
+            },
+            {
+              "place": "archiginnasio",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Closed some days. Check on the day."
+            },
+            {
+              "place": "santo_stefano",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Daytime; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Towers, university and San Luca",
+          "stops": [
+            {
+              "place": "two_towers",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning for clearer views. Climb usually daytime; check on the day."
+            },
+            {
+              "place": "university",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Outdoor areas always open."
+            },
+            {
+              "place": "via_zamboni",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Student quarter walk."
+            },
+            {
+              "place": "san_luca",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Portico always open; church daytime. The climb is long; take your time."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early evening back in the centre."
+            }
+          ]
+        },
+        {
+          "title": "Porticoes and departure",
+          "stops": [
+            {
+              "place": "portico_walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Any time of day."
+            },
+            {
+              "place": "pinacoteca",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "bologna_centrale",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "About 20 minutes on foot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre, near Piazza Maggiore"
+    },
+    {
+      "id": "2n-budget",
+      "length": "2n",
+      "style": "budget",
+      "nights": 2,
+      "for": "Free sights, cheap eats and walkable streets. Most of this plan costs little.",
+      "days": [
+        {
+          "title": "Free centre walk and market lunch",
+          "stops": [
+            {
+              "place": "bologna_centrale",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Walk to the centre; it is about 20 minutes."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Free to wander."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Cheap bites from market stalls, mostly morning to early afternoon."
+            },
+            {
+              "place": "portico_walk",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Always open and free."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "One drink with snacks is a cheap dinner. Prices vary."
+            }
+          ]
+        },
+        {
+          "title": "Towers, students and the park",
+          "stops": [
+            {
+              "place": "two_towers",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Climb usually daytime; check on the day. Small ticket."
+            },
+            {
+              "place": "via_zamboni",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Free walk."
+            },
+            {
+              "place": "giardini_margherita",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Sunny afternoons are best; bring a picnic."
+            },
+            {
+              "place": "mercato_erbe",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Budget lunch. Check hours on the day."
+            },
+            {
+              "place": "santo_stefano",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Daytime; check on the day. Entry is usually free."
+            }
+          ]
+        },
+        {
+          "title": "San Luca walk and departure",
+          "stops": [
+            {
+              "place": "san_luca",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Portico always open; church daytime. Free walk, long climb."
+            },
+            {
+              "place": "via_indipendenza",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Easy walk back toward the station."
+            },
+            {
+              "place": "bologna_centrale",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Allow extra time for trains."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre or near Bologna Centrale"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Three days of market grazing, pasta classes and aperitivo in the centre.",
+      "days": [
+        {
+          "title": "Arrive and graze the Quadrilatero",
+          "stops": [
+            {
+              "place": "bologna_centrale",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Drop bags at your hotel near the centre."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Market stalls are best in the morning, but shops and delis stay open into the afternoon."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sit on the steps and watch the square."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early evening drinks with snacks."
+            }
+          ]
+        },
+        {
+          "title": "Markets, pasta class and evening scene",
+          "stops": [
+            {
+              "place": "mercato_erbe",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Lunch counters and produce. Check opening on the day."
+            },
+            {
+              "place": "tortellini_class",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Book ahead. Classes usually run morning or afternoon."
+            },
+            {
+              "place": "piazza_santo_stefano_market",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Warm evenings only. Food and drink in the square."
+            }
+          ]
+        },
+        {
+          "title": "Food tour and San Luca",
+          "stops": [
+            {
+              "place": "food_tour",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning departure. Check meeting point when you book."
+            },
+            {
+              "place": "san_luca",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Portico walk up to the church. Church is daytime only."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Back in the centre for a last drink."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Porticoes, piazzas and the oldest university at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the main square",
+          "stops": [
+            {
+              "place": "bologna_centrale",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Walk or take a short bus ride to the centre."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Start here to get your bearings."
+            },
+            {
+              "place": "san_petronio",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Daytime only. Check on the day."
+            },
+            {
+              "place": "portico_walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Any time of day. Follow the covered walkways."
+            }
+          ]
+        },
+        {
+          "title": "Towers, library and food streets",
+          "stops": [
+            {
+              "place": "two_towers",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Morning for clearer views. Climb hours vary, check on the day."
+            },
+            {
+              "place": "archiginnasio",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Usually morning to afternoon. Closed some days, check on the day."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop among the food streets."
+            },
+            {
+              "place": "santo_stefano",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Daytime. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "University quarter and San Luca",
+          "stops": [
+            {
+              "place": "university",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Outdoor areas always open. Weekday afternoons are liveliest."
+            },
+            {
+              "place": "via_zamboni",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Student quarter walk."
+            },
+            {
+              "place": "pinacoteca",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "san_luca",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Portico always open. Church daytime only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    },
+    {
+      "id": "3n-budget",
+      "length": "3n",
+      "style": "budget",
+      "nights": 3,
+      "for": "Free sights, cheap eats and walkable streets for first-timers.",
+      "days": [
+        {
+          "title": "Arrive and walk the centre",
+          "stops": [
+            {
+              "place": "bologna_centrale",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Station area. Walk to the centre in about 20 minutes."
+            },
+            {
+              "place": "via_indipendenza",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Main street into the centre."
+            },
+            {
+              "place": "piazza_maggiore",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Free to wander."
+            },
+            {
+              "place": "aperitivo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Cheap early evening drinks with snacks."
+            }
+          ]
+        },
+        {
+          "title": "Markets and porticoes",
+          "stops": [
+            {
+              "place": "quadrilatero",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning is best for market stalls. Graze cheaply."
+            },
+            {
+              "place": "portico_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Always open and free."
+            },
+            {
+              "place": "santo_stefano",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Daytime. Check on the day."
+            },
+            {
+              "place": "mercato_erbe",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Food counters into the evening. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Student quarter and San Luca",
+          "stops": [
+            {
+              "place": "university",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Outdoor areas always open."
+            },
+            {
+              "place": "via_zamboni",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Free walk through the student quarter."
+            },
+            {
+              "place": "giardini_margherita",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Sunny afternoons. Free park."
+            },
+            {
+              "place": "san_luca",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Portico always open. Church daytime only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Historical Centre"
+    }
+  ]
+}

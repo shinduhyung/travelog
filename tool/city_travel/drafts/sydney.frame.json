@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Bondi, Coogee and a ferry to Manly."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Rocks, the Opera House and the harbour museums."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Coastal walks, harbour ferries and the Blue Mountains."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "The Rocks",
+      "range": [
+        180,
+        450
+      ],
+      "why": "Old sandstone lanes, weekend markets and a short walk to the Opera House and Circular Quay ferries.",
+      "center": [
+        -33.859,
+        151.208
+      ]
+    },
+    {
+      "area": "Circular Quay",
+      "range": [
+        250,
+        650
+      ],
+      "why": "Best base for first-timers: ferries, trains and the harbour icons on your doorstep.",
+      "center": [
+        -33.861,
+        151.211
+      ]
+    },
+    {
+      "area": "Darling Harbour",
+      "range": [
+        200,
+        500
+      ],
+      "why": "Family-friendly: aquarium, maritime museum and flat walks; light rail and buses nearby.",
+      "center": [
+        -33.874,
+        151.201
+      ]
+    },
+    {
+      "area": "Bondi",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Beach mornings and the coastal walk; 20–30 minutes by train and bus to the centre.",
+      "center": [
+        -33.891,
+        151.277
+      ]
+    }
+  ],
+  "food": [
+    "Try a flat white and a meat pie or a lamington for a cheap daytime bite.",
+    "Seafood by the water: fish and chips at Watsons Bay or Manly, or the Sydney Fish Market.",
+    "Asian food is excellent and good value: Chinatown, Haymarket and the Spice Alley laneway.",
+    "Book ahead for dinner in Surry Hills and Newtown; walk-ins are easier at lunch.",
+    "Alcohol is sold in bottle shops and licensed venues; many cafés stop serving coffee early afternoon."
+  ],
+  "more_time": [
+    "Swap a beach day for the Blue Mountains: train from Central (about 2 hours each way) to Katoomba for the Three Sisters and bush walks.",
+    "Take the ferry to Taronga Zoo for harbour views and a half-day with animals.",
+    "Walk the Bondi to Coogee coastal path (about 6 km, 2 hours) and swim at the beaches along the way."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.95,
+      0.95,
+      0.85,
+      0.6,
+      0.4,
+      0.3,
+      0.3,
+      0.35,
+      0.5,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "family": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ]
+  },
+  "best_for": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Three nights covers the harbour icons, a beach day and a coastal walk without rushing; add a night for the Blue Mountains."
+  },
+  "month_notes": [
+    "January: hottest month, highs near 27°C and 13 rain days. Book beaches early and carry water.",
+    "February: warm and similar to January, around 26°C with 13 rain days.",
+    "March: still warm at 25°C but rainier, about 15 rain days. Keep a light rain jacket.",
+    "April: mild and drier, highs near 22°C with 10 rain days. Good for walking and coastal paths.",
+    "May: cooler at 19°C and only 8 rain days. Bring a layer for evenings.",
+    "June: winter starts, highs near 17°C and 10 rain days. Pack a warm jacket.",
+    "July: coldest month, highs near 17°C and lows around 8°C. Driest stretch with 7 rain days.",
+    "August: similar to July, 18°C highs and only 6 rain days. Crisp, clear days for walks.",
+    "September: warming to 21°C with 8 rain days. A pleasant shoulder month.",
+    "October: mild at 22°C but rain picks up to 11 days. Carry an umbrella.",
+    "November: warm at 24°C with 11 rain days. Good for beaches and ferries.",
+    "December: warm and busy, 26°C highs and 10 rain days. Book accommodation well ahead."
+  ],
+  "climate_guide": {
+    "summary": "Warm temperate climate: mild winters, warm summers and rain spread through the year. Rarely very cold or very hot.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warmest months, highs 25–27°C. Best for beaches and harbour days, but also the busiest and priciest."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Rain days run from 6 to 15 a month. March is wettest; August is driest. Showers often pass quickly."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild winters (June to August)",
+        "text": "Highs around 17–18°C and lows near 8–9°C. Bring a warm layer; beach swims are for the brave."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea and sun",
+        "text": "Summer sun is strong; use sunscreen and shade. Check flags and surf conditions at patrolled beaches."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack for changeable days",
+        "text": "A light rain jacket and layers work in every month. Evenings cool down near the water."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "T-shirts and shorts for summer, a jumper and jacket for winter, comfortable walking shoes and a hat."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Opal card or contactless tap for trains, ferries and buses; ferries are the scenic way to cross the harbour.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Trains, metro and light rail run on one Opal card or contactless tap. Fast way in and out of the CBD."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": true,
+        "text": "Ferries from Circular Quay are the scenic way to reach Manly, Taronga Zoo and Watsons Bay."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps in the inner suburbs. Google Maps and TripView show live times."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis and Uber, DiDi and Ola all operate. Taxis are easiest at ranks and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy and tolled on most motorways. Parking in the centre is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The CBD is walkable. Bikes and e-scooters suit the harbour foreshore paths."
+      }
+    ]
+  }
+}

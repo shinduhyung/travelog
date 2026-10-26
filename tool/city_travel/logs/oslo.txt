@@ -1,0 +1,28 @@
+$ deepseek_facts.py Oslo
+  tokens in 4230 out 869
+Oslo: 0 problems
+
+$ deepseek_city.py Oslo --stage places
+Oslo: places
+  tokens in 1207 out 3364
+
+$ deepseek_city.py Oslo --stage frame
+Oslo: frame
+  tokens in 2429 out 1762
+  repaired JSON
+
+$ deepseek_city.py Oslo --stage plans
+Oslo: plans
+  plans for day
+  tokens in 2147 out 863
+  plans for 1n
+  tokens in 2148 out 1204
+  plans for 2n
+  tokens in 2153 out 1469
+  plans for 3n
+  tokens in 2148 out 1940
+
+$ merge_city.py Oslo
+Oslo: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/oslo.json and planner/oslo.json
+

@@ -1,0 +1,5395 @@
+[
+ {
+  "key": "theatres",
+  "label": "극장 수",
+  "dataset": "urb_ctour",
+  "indicators": [
+   "CR1008V"
+  ],
+  "period": "2025",
+  "unit": "개",
+  "eurostat_city_count": 79,
+  "top": [
+   {
+    "rank": 1,
+    "code": "FR001C",
+    "eurostat_name": "Paris (greater city)",
+    "value": 353.0,
+    "gisco_name": "Paris",
+    "country": "FR",
+    "eurostat_population": 10159710,
+    "eurostat_population_year": "2023",
+    "status": "exact+pop_check",
+    "match": {
+     "name": "Paris",
+     "km": 3.3,
+     "population": 2050000,
+     "name_equal": true,
+     "pop_ratio": 4.96
+    },
+    "candidates": [
+     {
+      "name": "Paris",
+      "km": 3.3,
+      "population": 2050000,
+      "name_equal": true,
+      "pop_ratio": 4.96
+     },
+     {
+      "name": "Marne La Vallée",
+      "km": 24.0,
+      "population": 318325,
+      "name_equal": false,
+      "pop_ratio": 31.92
+     },
+     {
+      "name": "Cergy-Pontoise",
+      "km": 28.0,
+      "population": 183430,
+      "name_equal": false,
+      "pop_ratio": 55.39
+     },
+     {
+      "name": "Saint-Quentin-en-Yvelines",
+      "km": 23.0,
+      "population": 146598,
+      "name_equal": false,
+      "pop_ratio": 69.3
+     },
+     {
+      "name": "Montreuil",
+      "km": 9.7,
+      "population": 111240,
+      "name_equal": false,
+      "pop_ratio": 91.33
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "FR002C",
+    "eurostat_name": "Lyon (greater city)",
+    "value": 38.0,
+    "gisco_name": "Lyon",
+    "country": "FR",
+    "eurostat_population": 1229077,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Lyon",
+     "km": 2.3,
+     "population": 522969,
+     "name_equal": true,
+     "pop_ratio": 2.35
+    },
+    "candidates": [
+     {
+      "name": "Lyon",
+      "km": 2.3,
+      "population": 522969,
+      "name_equal": true,
+      "pop_ratio": 2.35
+     },
+     {
+      "name": "Villeurbanne",
+      "km": 2.8,
+      "population": 131445,
+      "name_equal": false,
+      "pop_ratio": 9.35
+     },
+     {
+      "name": "Lyon 03",
+      "km": 2.9,
+      "population": 102725,
+      "name_equal": false,
+      "pop_ratio": 11.96
+     },
+     {
+      "name": "Lyon 08",
+      "km": 0.7,
+      "population": 86154,
+      "name_equal": false,
+      "pop_ratio": 14.27
+     },
+     {
+      "name": "Lyon 07",
+      "km": 2.5,
+      "population": 82573,
+      "name_equal": false,
+      "pop_ratio": 14.88
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "FR006C",
+    "eurostat_name": "Toulouse (greater city)",
+    "value": 29.0,
+    "gisco_name": "Toulouse",
+    "country": "FR",
+    "eurostat_population": 716000,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Toulouse",
+     "km": 3.3,
+     "population": 493465,
+     "name_equal": true,
+     "pop_ratio": 1.45
+    },
+    "candidates": [
+     {
+      "name": "Toulouse",
+      "km": 3.3,
+      "population": 493465,
+      "name_equal": true,
+      "pop_ratio": 1.45
+     },
+     {
+      "name": "Colomiers",
+      "km": 5.5,
+      "population": 31363,
+      "name_equal": false,
+      "pop_ratio": 22.83
+     },
+     {
+      "name": "Tournefeuille",
+      "km": 6.9,
+      "population": 29124,
+      "name_equal": false,
+      "pop_ratio": 24.58
+     },
+     {
+      "name": "Muret",
+      "km": 17.2,
+      "population": 24313,
+      "name_equal": false,
+      "pop_ratio": 29.45
+     },
+     {
+      "name": "Blagnac",
+      "km": 3.7,
+      "population": 24263,
+      "name_equal": false,
+      "pop_ratio": 29.51
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "FR003C",
+    "eurostat_name": "Lille (greater city)",
+    "value": 28.0,
+    "gisco_name": "Lille",
+    "country": "FR",
+    "eurostat_population": 937308,
+    "eurostat_population_year": "2023",
+    "status": "exact+pop_check",
+    "match": {
+     "name": "Lille",
+     "km": 3.0,
+     "population": 234475,
+     "name_equal": true,
+     "pop_ratio": 4.0
+    },
+    "candidates": [
+     {
+      "name": "Lille",
+      "km": 3.0,
+      "population": 234475,
+      "name_equal": true,
+      "pop_ratio": 4.0
+     },
+     {
+      "name": "Roubaix",
+      "km": 8.7,
+      "population": 98828,
+      "name_equal": false,
+      "pop_ratio": 9.48
+     },
+     {
+      "name": "Tourcoing",
+      "km": 11.1,
+      "population": 98656,
+      "name_equal": false,
+      "pop_ratio": 9.5
+     },
+     {
+      "name": "Villeneuve-d'Ascq",
+      "km": 4.9,
+      "population": 62400,
+      "name_equal": false,
+      "pop_ratio": 15.02
+     },
+     {
+      "name": "Douai",
+      "km": 29.1,
+      "population": 46531,
+      "name_equal": false,
+      "pop_ratio": 20.14
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "FR005C",
+    "eurostat_name": "Bordeaux (greater city)",
+    "value": 28.0,
+    "gisco_name": "Bordeaux",
+    "country": "FR",
+    "eurostat_population": 746217,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Bordeaux",
+     "km": 6.1,
+     "population": 260958,
+     "name_equal": true,
+     "pop_ratio": 2.86
+    },
+    "candidates": [
+     {
+      "name": "Bordeaux",
+      "km": 6.1,
+      "population": 260958,
+      "name_equal": true,
+      "pop_ratio": 2.86
+     },
+     {
+      "name": "Mérignac",
+      "km": 1.0,
+      "population": 69791,
+      "name_equal": false,
+      "pop_ratio": 10.69
+     },
+     {
+      "name": "Pessac",
+      "km": 4.6,
+      "population": 57944,
+      "name_equal": false,
+      "pop_ratio": 12.88
+     },
+     {
+      "name": "Talence",
+      "km": 6.6,
+      "population": 42579,
+      "name_equal": false,
+      "pop_ratio": 17.53
+     },
+     {
+      "name": "Villenave-d'Ornon",
+      "km": 10.1,
+      "population": 30347,
+      "name_equal": false,
+      "pop_ratio": 24.59
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "FR004C",
+    "eurostat_name": "Marseille (greater city)",
+    "value": 23.0,
+    "gisco_name": "Marseille",
+    "country": "FR",
+    "eurostat_population": 973249,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Marseille",
+     "km": 6.3,
+     "population": 870731,
+     "name_equal": true,
+     "pop_ratio": 1.12
+    },
+    "candidates": [
+     {
+      "name": "Marseille",
+      "km": 6.3,
+      "population": 870731,
+      "name_equal": true,
+      "pop_ratio": 1.12
+     },
+     {
+      "name": "Aix-en-Provence",
+      "km": 25.1,
+      "population": 146821,
+      "name_equal": false,
+      "pop_ratio": 6.63
+     },
+     {
+      "name": "Marseille 13",
+      "km": 4.4,
+      "population": 89316,
+      "name_equal": false,
+      "pop_ratio": 10.9
+     },
+     {
+      "name": "Marseille 08",
+      "km": 7.2,
+      "population": 78837,
+      "name_equal": false,
+      "pop_ratio": 12.35
+     },
+     {
+      "name": "Marseille 15",
+      "km": 11.5,
+      "population": 77770,
+      "name_equal": false,
+      "pop_ratio": 12.51
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "FR009C",
+    "eurostat_name": "Strasbourg (greater city)",
+    "value": 18.0,
+    "gisco_name": "Strasbourg",
+    "country": "FR",
+    "eurostat_population": 432797,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Strasbourg",
+     "km": 1.8,
+     "population": 274845,
+     "name_equal": true,
+     "pop_ratio": 1.57
+    },
+    "candidates": [
+     {
+      "name": "Strasbourg",
+      "km": 1.8,
+      "population": 274845,
+      "name_equal": true,
+      "pop_ratio": 1.57
+     },
+     {
+      "name": "Haguenau",
+      "km": 27.8,
+      "population": 38721,
+      "name_equal": false,
+      "pop_ratio": 11.18
+     },
+     {
+      "name": "Schiltigheim",
+      "km": 4.5,
+      "population": 32289,
+      "name_equal": false,
+      "pop_ratio": 13.4
+     },
+     {
+      "name": "Illkirch-Graffenstaden",
+      "km": 4.8,
+      "population": 27261,
+      "name_equal": false,
+      "pop_ratio": 15.88
+     },
+     {
+      "name": "Bischheim",
+      "km": 5.4,
+      "population": 17434,
+      "name_equal": false,
+      "pop_ratio": 24.82
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "FR012C",
+    "eurostat_name": "Grenoble (greater city)",
+    "value": 15.0,
+    "gisco_name": "Grenoble",
+    "country": "FR",
+    "eurostat_population": 329369,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Grenoble",
+     "km": 1.1,
+     "population": 158552,
+     "name_equal": true,
+     "pop_ratio": 2.08
+    },
+    "candidates": [
+     {
+      "name": "Grenoble",
+      "km": 1.1,
+      "population": 158552,
+      "name_equal": true,
+      "pop_ratio": 2.08
+     },
+     {
+      "name": "Saint-Martin-d'Hères",
+      "km": 2.7,
+      "population": 35528,
+      "name_equal": false,
+      "pop_ratio": 9.27
+     },
+     {
+      "name": "Échirolles",
+      "km": 3.6,
+      "population": 33088,
+      "name_equal": false,
+      "pop_ratio": 9.95
+     },
+     {
+      "name": "Fontaine",
+      "km": 3.6,
+      "population": 24588,
+      "name_equal": false,
+      "pop_ratio": 13.4
+     },
+     {
+      "name": "Voiron",
+      "km": 23.7,
+      "population": 22114,
+      "name_equal": false,
+      "pop_ratio": 14.89
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "FR011C",
+    "eurostat_name": "Montpellier (greater city)",
+    "value": 14.0,
+    "gisco_name": "Montpellier",
+    "country": "FR",
+    "eurostat_population": 374347,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Montpellier",
+     "km": 2.6,
+     "population": 248252,
+     "name_equal": true,
+     "pop_ratio": 1.51
+    },
+    "candidates": [
+     {
+      "name": "Montpellier",
+      "km": 2.6,
+      "population": 248252,
+      "name_equal": true,
+      "pop_ratio": 1.51
+     },
+     {
+      "name": "Sète",
+      "km": 27.8,
+      "population": 40736,
+      "name_equal": false,
+      "pop_ratio": 9.19
+     },
+     {
+      "name": "Lunel",
+      "km": 23.7,
+      "population": 26588,
+      "name_equal": false,
+      "pop_ratio": 14.08
+     },
+     {
+      "name": "Frontignan",
+      "km": 21.1,
+      "population": 22251,
+      "name_equal": false,
+      "pop_ratio": 16.82
+     },
+     {
+      "name": "Mauguio",
+      "km": 12.7,
+      "population": 18320,
+      "name_equal": false,
+      "pop_ratio": 20.43
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "FR043C",
+    "eurostat_name": "Avignon (greater city)",
+    "value": 13.0,
+    "gisco_name": "Avignon",
+    "country": "FR",
+    "eurostat_population": 110574,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Avignon",
+     "km": 3.0,
+     "population": 89769,
+     "name_equal": true,
+     "pop_ratio": 1.23
+    },
+    "candidates": [
+     {
+      "name": "Avignon",
+      "km": 3.0,
+      "population": 89769,
+      "name_equal": true,
+      "pop_ratio": 1.23
+     },
+     {
+      "name": "Arles",
+      "km": 33.9,
+      "population": 53431,
+      "name_equal": false,
+      "pop_ratio": 2.07
+     },
+     {
+      "name": "Salon-de-Provence",
+      "km": 38.7,
+      "population": 41397,
+      "name_equal": false,
+      "pop_ratio": 2.67
+     },
+     {
+      "name": "Orange",
+      "km": 22.2,
+      "population": 30530,
+      "name_equal": false,
+      "pop_ratio": 3.62
+     },
+     {
+      "name": "Carpentras",
+      "km": 20.7,
+      "population": 29709,
+      "name_equal": false,
+      "pop_ratio": 3.72
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "libraries",
+  "label": "공공도서관 수",
+  "dataset": "urb_ctour",
+  "indicators": [
+   "CR1010V"
+  ],
+  "period": "2024",
+  "unit": "개",
+  "eurostat_city_count": 375,
+  "top": [
+   {
+    "rank": 1,
+    "code": "FR001C",
+    "eurostat_name": "Paris (greater city)",
+    "value": 516.0,
+    "gisco_name": "Paris",
+    "country": "FR",
+    "eurostat_population": 10159710,
+    "eurostat_population_year": "2023",
+    "status": "exact+pop_check",
+    "match": {
+     "name": "Paris",
+     "km": 3.3,
+     "population": 2050000,
+     "name_equal": true,
+     "pop_ratio": 4.96
+    },
+    "candidates": [
+     {
+      "name": "Paris",
+      "km": 3.3,
+      "population": 2050000,
+      "name_equal": true,
+      "pop_ratio": 4.96
+     },
+     {
+      "name": "Marne La Vallée",
+      "km": 24.0,
+      "population": 318325,
+      "name_equal": false,
+      "pop_ratio": 31.92
+     },
+     {
+      "name": "Cergy-Pontoise",
+      "km": 28.0,
+      "population": 183430,
+      "name_equal": false,
+      "pop_ratio": 55.39
+     },
+     {
+      "name": "Saint-Quentin-en-Yvelines",
+      "km": 23.0,
+      "population": 146598,
+      "name_equal": false,
+      "pop_ratio": 69.3
+     },
+     {
+      "name": "Montreuil",
+      "km": 9.7,
+      "population": 111240,
+      "name_equal": false,
+      "pop_ratio": 91.33
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "HR001C",
+    "eurostat_name": "Zagreb",
+    "value": 340.0,
+    "gisco_name": "Zagreb",
+    "country": "HR",
+    "eurostat_population": 760020,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Zagreb",
+     "km": 1.8,
+     "population": 663592,
+     "name_equal": true,
+     "pop_ratio": 1.15
+    },
+    "candidates": [
+     {
+      "name": "Zagreb",
+      "km": 1.8,
+      "population": 663592,
+      "name_equal": true,
+      "pop_ratio": 1.15
+     },
+     {
+      "name": "Sesvete",
+      "km": 9.3,
+      "population": 55313,
+      "name_equal": false,
+      "pop_ratio": 13.74
+     },
+     {
+      "name": "Centar",
+      "km": 1.8,
+      "population": 37000,
+      "name_equal": false,
+      "pop_ratio": 20.54
+     },
+     {
+      "name": "Velika Gorica",
+      "km": 12.3,
+      "population": 30036,
+      "name_equal": false,
+      "pop_ratio": 25.3
+     },
+     {
+      "name": "Zaprešić",
+      "km": 15.8,
+      "population": 18768,
+      "name_equal": false,
+      "pop_ratio": 40.5
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "PL001C",
+    "eurostat_name": "Warszawa",
+    "value": 249.0,
+    "gisco_name": "Warszawa",
+    "country": "PL",
+    "eurostat_population": 1863845,
+    "eurostat_population_year": "2024",
+    "status": "name_similar",
+    "match": {
+     "name": "Warsaw",
+     "km": 2.4,
+     "population": 1702139,
+     "name_equal": false,
+     "pop_ratio": 1.1
+    },
+    "candidates": [
+     {
+      "name": "Warsaw",
+      "km": 2.4,
+      "population": 1702139,
+      "name_equal": false,
+      "pop_ratio": 1.1
+     },
+     {
+      "name": "Mokotów",
+      "km": 4.1,
+      "population": 217683,
+      "name_equal": false,
+      "pop_ratio": 8.56
+     },
+     {
+      "name": "Praga Południe",
+      "km": 3.1,
+      "population": 179836,
+      "name_equal": false,
+      "pop_ratio": 10.36
+     },
+     {
+      "name": "Ursynów",
+      "km": 8.8,
+      "population": 149775,
+      "name_equal": false,
+      "pop_ratio": 12.44
+     },
+     {
+      "name": "Wola",
+      "km": 6.0,
+      "population": 140958,
+      "name_equal": false,
+      "pop_ratio": 13.22
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "HU001C",
+    "eurostat_name": "Budapest (greater city)",
+    "value": 240.0,
+    "gisco_name": "Budapest (greater city)",
+    "country": "HU",
+    "eurostat_population": 1686222,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Budapest",
+     "km": 4.7,
+     "population": 1741041,
+     "name_equal": true,
+     "pop_ratio": 1.03
+    },
+    "candidates": [
+     {
+      "name": "Budapest",
+      "km": 4.7,
+      "population": 1741041,
+      "name_equal": true,
+      "pop_ratio": 1.03
+     },
+     {
+      "name": "Budapest XI. kerület",
+      "km": 4.3,
+      "population": 139049,
+      "name_equal": false,
+      "pop_ratio": 12.13
+     },
+     {
+      "name": "Zugló",
+      "km": 4.8,
+      "population": 130000,
+      "name_equal": false,
+      "pop_ratio": 12.97
+     },
+     {
+      "name": "Budapest III. kerület",
+      "km": 8.2,
+      "population": 123723,
+      "name_equal": false,
+      "pop_ratio": 13.63
+     },
+     {
+      "name": "Budapest XIII. kerület",
+      "km": 6.2,
+      "population": 113531,
+      "name_equal": false,
+      "pop_ratio": 14.85
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "ES001C",
+    "eurostat_name": "Madrid (greater city)",
+    "value": 107.0,
+    "gisco_name": "Madrid",
+    "country": "ES",
+    "eurostat_population": 4501429,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Madrid",
+     "km": 3.0,
+     "population": 3255944,
+     "name_equal": true,
+     "pop_ratio": 1.38
+    },
+    "candidates": [
+     {
+      "name": "Madrid",
+      "km": 3.0,
+      "population": 3255944,
+      "name_equal": true,
+      "pop_ratio": 1.38
+     },
+     {
+      "name": "Latina",
+      "km": 6.9,
+      "population": 256644,
+      "name_equal": false,
+      "pop_ratio": 17.54
+     },
+     {
+      "name": "Carabanchel",
+      "km": 6.0,
+      "population": 253678,
+      "name_equal": false,
+      "pop_ratio": 17.74
+     },
+     {
+      "name": "Puente de Vallecas",
+      "km": 6.8,
+      "population": 244151,
+      "name_equal": false,
+      "pop_ratio": 18.44
+     },
+     {
+      "name": "Fuencarral",
+      "km": 6.6,
+      "population": 238765,
+      "name_equal": false,
+      "pop_ratio": 18.85
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "ES002C",
+    "eurostat_name": "Barcelona (greater city)",
+    "value": 74.0,
+    "gisco_name": "Barcelona",
+    "country": "ES",
+    "eurostat_population": 2658830,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Barcelona",
+     "km": 3.1,
+     "population": 1620343,
+     "name_equal": true,
+     "pop_ratio": 1.64
+    },
+    "candidates": [
+     {
+      "name": "Barcelona",
+      "km": 3.1,
+      "population": 1620343,
+      "name_equal": true,
+      "pop_ratio": 1.64
+     },
+     {
+      "name": "Eixample",
+      "km": 3.0,
+      "population": 266477,
+      "name_equal": false,
+      "pop_ratio": 9.98
+     },
+     {
+      "name": "L'Hospitalet de Llobregat",
+      "km": 8.3,
+      "population": 257038,
+      "name_equal": false,
+      "pop_ratio": 10.34
+     },
+     {
+      "name": "Sant Martí",
+      "km": 2.8,
+      "population": 235719,
+      "name_equal": false,
+      "pop_ratio": 11.28
+     },
+     {
+      "name": "Badalona",
+      "km": 7.8,
+      "population": 219547,
+      "name_equal": false,
+      "pop_ratio": 12.11
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "BE001C",
+    "eurostat_name": "Bruxelles/Brussel (greater city)",
+    "value": 67.0,
+    "gisco_name": "Bruxelles/Brussel (greater city)",
+    "country": "BE",
+    "eurostat_population": 1271709,
+    "eurostat_population_year": "2025",
+    "status": "name_similar",
+    "match": {
+     "name": "Brussels",
+     "km": 0.8,
+     "population": 1019022,
+     "name_equal": false,
+     "pop_ratio": 1.25
+    },
+    "candidates": [
+     {
+      "name": "Brussels",
+      "km": 0.8,
+      "population": 1019022,
+      "name_equal": false,
+      "pop_ratio": 1.25
+     },
+     {
+      "name": "Anderlecht",
+      "km": 2.3,
+      "population": 160553,
+      "name_equal": false,
+      "pop_ratio": 7.92
+     },
+     {
+      "name": "Schaerbeek",
+      "km": 3.7,
+      "population": 132761,
+      "name_equal": false,
+      "pop_ratio": 9.58
+     },
+     {
+      "name": "Leuven",
+      "km": 25.3,
+      "population": 101032,
+      "name_equal": false,
+      "pop_ratio": 12.59
+     },
+     {
+      "name": "Molenbeek-Saint-Jean",
+      "km": 2.4,
+      "population": 97037,
+      "name_equal": false,
+      "pop_ratio": 13.11
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "PL002C",
+    "eurostat_name": "Łódź",
+    "value": 67.0,
+    "gisco_name": "Łódź",
+    "country": "PL",
+    "eurostat_population": 645693,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Łódź",
+     "km": 0.6,
+     "population": 768755,
+     "name_equal": true,
+     "pop_ratio": 1.19
+    },
+    "candidates": [
+     {
+      "name": "Łódź",
+      "km": 0.6,
+      "population": 768755,
+      "name_equal": true,
+      "pop_ratio": 1.19
+     },
+     {
+      "name": "Pabianice",
+      "km": 14.3,
+      "population": 70542,
+      "name_equal": false,
+      "pop_ratio": 9.15
+     },
+     {
+      "name": "Zgierz",
+      "km": 11.1,
+      "population": 58036,
+      "name_equal": false,
+      "pop_ratio": 11.13
+     },
+     {
+      "name": "Ozorków",
+      "km": 25.4,
+      "population": 20608,
+      "name_equal": false,
+      "pop_ratio": 31.33
+     },
+     {
+      "name": "Aleksandrów Łódzki",
+      "km": 13.5,
+      "population": 20292,
+      "name_equal": false,
+      "pop_ratio": 31.82
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "ES003C",
+    "eurostat_name": "Valencia (greater city)",
+    "value": 66.0,
+    "gisco_name": "Valencia",
+    "country": "ES",
+    "eurostat_population": 1474632,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Valencia",
+     "km": 5.6,
+     "population": 825948,
+     "name_equal": true,
+     "pop_ratio": 1.79
+    },
+    "candidates": [
+     {
+      "name": "Valencia",
+      "km": 5.6,
+      "population": 825948,
+      "name_equal": true,
+      "pop_ratio": 1.79
+     },
+     {
+      "name": "Torrent",
+      "km": 4.2,
+      "population": 78543,
+      "name_equal": false,
+      "pop_ratio": 18.77
+     },
+     {
+      "name": "Sagunto",
+      "km": 28.1,
+      "population": 66070,
+      "name_equal": false,
+      "pop_ratio": 22.32
+     },
+     {
+      "name": "Paterna",
+      "km": 3.5,
+      "population": 64023,
+      "name_equal": false,
+      "pop_ratio": 23.03
+     },
+     {
+      "name": "Grao de Murviedro",
+      "km": 25.9,
+      "population": 62368,
+      "name_equal": false,
+      "pop_ratio": 23.64
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "PL003C",
+    "eurostat_name": "Kraków",
+    "value": 65.0,
+    "gisco_name": "Kraków",
+    "country": "PL",
+    "eurostat_population": 809168,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Kraków",
+     "km": 3.6,
+     "population": 755050,
+     "name_equal": true,
+     "pop_ratio": 1.07
+    },
+    "candidates": [
+     {
+      "name": "Kraków",
+      "km": 3.6,
+      "population": 755050,
+      "name_equal": true,
+      "pop_ratio": 1.07
+     },
+     {
+      "name": "Bieńczyce",
+      "km": 4.9,
+      "population": 42633,
+      "name_equal": false,
+      "pop_ratio": 18.98
+     },
+     {
+      "name": "Olkusz",
+      "km": 39.2,
+      "population": 37744,
+      "name_equal": false,
+      "pop_ratio": 21.44
+     },
+     {
+      "name": "Bochnia",
+      "km": 33.2,
+      "population": 29184,
+      "name_equal": false,
+      "pop_ratio": 27.73
+     },
+     {
+      "name": "Grzegórzki",
+      "km": 1.8,
+      "population": 28960,
+      "name_equal": false,
+      "pop_ratio": 27.94
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "nights_per_resident",
+  "label": "주민 1명당 관광숙박일수",
+  "dataset": "urb_ctour",
+  "indicators": [
+   "CR2011I"
+  ],
+  "period": "2025",
+  "unit": "일",
+  "eurostat_city_count": 89,
+  "top": [
+   {
+    "rank": 1,
+    "code": "IT011C",
+    "eurostat_name": "Venezia",
+    "value": 51.81,
+    "gisco_name": "Venezia",
+    "country": "IT",
+    "eurostat_population": 249490,
+    "eurostat_population_year": "2025",
+    "status": "manual_override",
+    "match": {
+     "name": "Mestre",
+     "km": 1.8,
+     "population": 147662,
+     "name_equal": false,
+     "pop_ratio": 1.69
+    },
+    "candidates": [
+     {
+      "name": "Padova",
+      "km": 27.8,
+      "population": 203725,
+      "name_equal": false,
+      "pop_ratio": 1.22
+     },
+     {
+      "name": "Mestre",
+      "km": 1.8,
+      "population": 147662,
+      "name_equal": false,
+      "pop_ratio": 1.69
+     },
+     {
+      "name": "Treviso",
+      "km": 20.4,
+      "population": 85760,
+      "name_equal": false,
+      "pop_ratio": 2.91
+     },
+     {
+      "name": "Venice",
+      "km": 9.8,
+      "population": 51298,
+      "name_equal": false,
+      "pop_ratio": 4.86
+     },
+     {
+      "name": "Arcella",
+      "km": 27.3,
+      "population": 44000,
+      "name_equal": false,
+      "pop_ratio": 5.67
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "IT071C",
+    "eurostat_name": "Rimini",
+    "value": 47.68,
+    "gisco_name": "Rimini",
+    "country": "IT",
+    "eurostat_population": 150333,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Rimini",
+     "km": 3.5,
+     "population": 148688,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Rimini",
+      "km": 3.5,
+      "population": 148688,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Cesena",
+      "km": 25.5,
+      "population": 97137,
+      "name_equal": false,
+      "pop_ratio": 1.55
+     },
+     {
+      "name": "Pesaro",
+      "km": 34.1,
+      "population": 77241,
+      "name_equal": false,
+      "pop_ratio": 1.95
+     },
+     {
+      "name": "Riccione",
+      "km": 11.0,
+      "population": 32744,
+      "name_equal": false,
+      "pop_ratio": 4.59
+     },
+     {
+      "name": "Cervia",
+      "km": 28.8,
+      "population": 28700,
+      "name_equal": false,
+      "pop_ratio": 5.24
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "IT007C",
+    "eurostat_name": "Firenze",
+    "value": 31.84,
+    "gisco_name": "Firenze",
+    "country": "IT",
+    "eurostat_population": 361705,
+    "eurostat_population_year": "2025",
+    "status": "coords_only",
+    "match": {
+     "name": "Florence",
+     "km": 0.1,
+     "population": 367150,
+     "name_equal": false,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Florence",
+      "km": 0.1,
+      "population": 367150,
+      "name_equal": false,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Prato",
+      "km": 16.3,
+      "population": 195089,
+      "name_equal": false,
+      "pop_ratio": 1.85
+     },
+     {
+      "name": "Pistoia",
+      "km": 30.7,
+      "population": 73832,
+      "name_equal": false,
+      "pop_ratio": 4.9
+     },
+     {
+      "name": "Sesto Fiorentino",
+      "km": 6.8,
+      "population": 45656,
+      "name_equal": false,
+      "pop_ratio": 7.92
+     },
+     {
+      "name": "Scandicci",
+      "km": 5.4,
+      "population": 44951,
+      "name_equal": false,
+      "pop_ratio": 8.05
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "IT040C",
+    "eurostat_name": "Pisa",
+    "value": 25.14,
+    "gisco_name": "Pisa",
+    "country": "IT",
+    "eurostat_population": 89422,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Pisa",
+     "km": 5.7,
+     "population": 109960,
+     "name_equal": true,
+     "pop_ratio": 1.23
+    },
+    "candidates": [
+     {
+      "name": "Livorno",
+      "km": 14.4,
+      "population": 157017,
+      "name_equal": false,
+      "pop_ratio": 1.76
+     },
+     {
+      "name": "Pisa",
+      "km": 5.7,
+      "population": 109960,
+      "name_equal": true,
+      "pop_ratio": 1.23
+     },
+     {
+      "name": "Lucca",
+      "km": 22.6,
+      "population": 81748,
+      "name_equal": false,
+      "pop_ratio": 1.09
+     },
+     {
+      "name": "Viareggio",
+      "km": 23.2,
+      "population": 62169,
+      "name_equal": false,
+      "pop_ratio": 1.44
+     },
+     {
+      "name": "Capannori",
+      "km": 25.7,
+      "population": 41116,
+      "name_equal": false,
+      "pop_ratio": 2.17
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "IT069C",
+    "eurostat_name": "Ravenna",
+    "value": 20.0,
+    "gisco_name": "Ravenna",
+    "country": "IT",
+    "eurostat_population": 156340,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Ravenna",
+     "km": 0.6,
+     "population": 80868,
+     "name_equal": true,
+     "pop_ratio": 1.93
+    },
+    "candidates": [
+     {
+      "name": "Forlì",
+      "km": 24.4,
+      "population": 116696,
+      "name_equal": false,
+      "pop_ratio": 1.34
+     },
+     {
+      "name": "Cesena",
+      "km": 30.7,
+      "population": 97137,
+      "name_equal": false,
+      "pop_ratio": 1.61
+     },
+     {
+      "name": "Ravenna",
+      "km": 0.6,
+      "population": 80868,
+      "name_equal": true,
+      "pop_ratio": 1.93
+     },
+     {
+      "name": "Imola",
+      "km": 38.6,
+      "population": 69953,
+      "name_equal": false,
+      "pop_ratio": 2.23
+     },
+     {
+      "name": "Faenza",
+      "km": 28.4,
+      "population": 41714,
+      "name_equal": false,
+      "pop_ratio": 3.75
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "IT001C",
+    "eurostat_name": "Roma",
+    "value": 18.34,
+    "gisco_name": "Roma",
+    "country": "IT",
+    "eurostat_population": 2747290,
+    "eurostat_population_year": "2025",
+    "status": "coords_name_diff",
+    "match": {
+     "name": "Rome",
+     "km": 10.8,
+     "population": 2318895,
+     "name_equal": false,
+     "pop_ratio": 1.18
+    },
+    "candidates": [
+     {
+      "name": "Rome",
+      "km": 10.8,
+      "population": 2318895,
+      "name_equal": false,
+      "pop_ratio": 1.18
+     },
+     {
+      "name": "Acilia-Castel Fusano-Ostia Antica",
+      "km": 12.0,
+      "population": 129362,
+      "name_equal": false,
+      "pop_ratio": 21.24
+     },
+     {
+      "name": "Lido di Ostia",
+      "km": 17.2,
+      "population": 85301,
+      "name_equal": false,
+      "pop_ratio": 32.21
+     },
+     {
+      "name": "Aprilia",
+      "km": 37.2,
+      "population": 74977,
+      "name_equal": false,
+      "pop_ratio": 36.64
+     },
+     {
+      "name": "Guidonia Montecelio",
+      "km": 31.3,
+      "population": 67516,
+      "name_equal": false,
+      "pop_ratio": 40.69
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "IT039C",
+    "eurostat_name": "Como",
+    "value": 17.13,
+    "gisco_name": "Como",
+    "country": "IT",
+    "eurostat_population": 83135,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Como",
+     "km": 1.5,
+     "population": 84808,
+     "name_equal": true,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Milan",
+      "km": 37.7,
+      "population": 1371498,
+      "name_equal": false,
+      "pop_ratio": 16.5
+     },
+     {
+      "name": "Quarto Oggiaro",
+      "km": 31.7,
+      "population": 182118,
+      "name_equal": false,
+      "pop_ratio": 2.19
+     },
+     {
+      "name": "Monza",
+      "km": 28.0,
+      "population": 124398,
+      "name_equal": false,
+      "pop_ratio": 1.5
+     },
+     {
+      "name": "Como",
+      "km": 1.5,
+      "population": 84808,
+      "name_equal": true,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Busto Arsizio",
+      "km": 27.4,
+      "population": 83405,
+      "name_equal": false,
+      "pop_ratio": 1.0
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "IT081C",
+    "eurostat_name": "Grosseto",
+    "value": 14.66,
+    "gisco_name": "Grosseto",
+    "country": "IT",
+    "eurostat_population": 81264,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Grosseto",
+     "km": 1.6,
+     "population": 60922,
+     "name_equal": true,
+     "pop_ratio": 1.33
+    },
+    "candidates": [
+     {
+      "name": "Grosseto",
+      "km": 1.6,
+      "population": 60922,
+      "name_equal": true,
+      "pop_ratio": 1.33
+     },
+     {
+      "name": "Follonica",
+      "km": 32.0,
+      "population": 21163,
+      "name_equal": false,
+      "pop_ratio": 3.84
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "IT009C",
+    "eurostat_name": "Bologna",
+    "value": 13.43,
+    "gisco_name": "Bologna",
+    "country": "IT",
+    "eurostat_population": 390151,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Bologna",
+     "km": 0.6,
+     "population": 394843,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Bologna",
+      "km": 0.6,
+      "population": 394843,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Modena",
+      "km": 36.4,
+      "population": 184732,
+      "name_equal": false,
+      "pop_ratio": 2.11
+     },
+     {
+      "name": "Imola",
+      "km": 33.9,
+      "population": 69953,
+      "name_equal": false,
+      "pop_ratio": 5.58
+     },
+     {
+      "name": "Formigine",
+      "km": 39.4,
+      "population": 34328,
+      "name_equal": false,
+      "pop_ratio": 11.37
+     },
+     {
+      "name": "Casalecchio di Reno",
+      "km": 5.3,
+      "population": 33789,
+      "name_equal": false,
+      "pop_ratio": 11.55
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "IT012C",
+    "eurostat_name": "Verona",
+    "value": 12.94,
+    "gisco_name": "Verona",
+    "country": "IT",
+    "eurostat_population": 255039,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Verona",
+     "km": 1.3,
+     "population": 258031,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Verona",
+      "km": 1.3,
+      "population": 258031,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Mantova",
+      "km": 35.8,
+      "population": 39260,
+      "name_equal": false,
+      "pop_ratio": 6.5
+     },
+     {
+      "name": "Desenzano del Garda",
+      "km": 36.5,
+      "population": 22665,
+      "name_equal": false,
+      "pop_ratio": 11.25
+     },
+     {
+      "name": "Valdagno",
+      "km": 31.8,
+      "population": 22555,
+      "name_equal": false,
+      "pop_ratio": 11.31
+     },
+     {
+      "name": "Legnago",
+      "km": 36.8,
+      "population": 21646,
+      "name_equal": false,
+      "pop_ratio": 11.78
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "taxi_5km",
+  "label": "도심행 주간 택시 5km 요금",
+  "dataset": "urb_ctran",
+  "indicators": [
+   "TT1081V"
+  ],
+  "period": "2025",
+  "unit": "EUR",
+  "eurostat_city_count": 94,
+  "top": [
+   {
+    "rank": 1,
+    "code": "BE015C",
+    "eurostat_name": "Verviers (greater city)",
+    "value": 19.38,
+    "gisco_name": "Verviers (greater city)",
+    "country": "BE",
+    "eurostat_population": 71935,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Verviers",
+     "km": 0.7,
+     "population": 52824,
+     "name_equal": true,
+     "pop_ratio": 1.36
+    },
+    "candidates": [
+     {
+      "name": "Liège",
+      "km": 21.7,
+      "population": 195278,
+      "name_equal": false,
+      "pop_ratio": 2.71
+     },
+     {
+      "name": "Seraing",
+      "km": 26.0,
+      "population": 60737,
+      "name_equal": false,
+      "pop_ratio": 1.18
+     },
+     {
+      "name": "Verviers",
+      "km": 0.7,
+      "population": 52824,
+      "name_equal": true,
+      "pop_ratio": 1.36
+     },
+     {
+      "name": "Herstal",
+      "km": 19.0,
+      "population": 36503,
+      "name_equal": false,
+      "pop_ratio": 1.97
+     },
+     {
+      "name": "Tongeren",
+      "km": 35.3,
+      "population": 29816,
+      "name_equal": false,
+      "pop_ratio": 2.41
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "BE001C",
+    "eurostat_name": "Bruxelles/Brussel (greater city)",
+    "value": 19.1,
+    "gisco_name": "Bruxelles/Brussel (greater city)",
+    "country": "BE",
+    "eurostat_population": 1271709,
+    "eurostat_population_year": "2025",
+    "status": "name_similar",
+    "match": {
+     "name": "Brussels",
+     "km": 0.8,
+     "population": 1019022,
+     "name_equal": false,
+     "pop_ratio": 1.25
+    },
+    "candidates": [
+     {
+      "name": "Brussels",
+      "km": 0.8,
+      "population": 1019022,
+      "name_equal": false,
+      "pop_ratio": 1.25
+     },
+     {
+      "name": "Anderlecht",
+      "km": 2.3,
+      "population": 160553,
+      "name_equal": false,
+      "pop_ratio": 7.92
+     },
+     {
+      "name": "Schaerbeek",
+      "km": 3.7,
+      "population": 132761,
+      "name_equal": false,
+      "pop_ratio": 9.58
+     },
+     {
+      "name": "Leuven",
+      "km": 25.3,
+      "population": 101032,
+      "name_equal": false,
+      "pop_ratio": 12.59
+     },
+     {
+      "name": "Molenbeek-Saint-Jean",
+      "km": 2.4,
+      "population": 97037,
+      "name_equal": false,
+      "pop_ratio": 13.11
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "BE005C",
+    "eurostat_name": "Liège (greater city)",
+    "value": 18.88,
+    "gisco_name": "Liège (greater city)",
+    "country": "BE",
+    "eurostat_population": 412835,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Liège",
+     "km": 1.1,
+     "population": 195278,
+     "name_equal": true,
+     "pop_ratio": 2.11
+    },
+    "candidates": [
+     {
+      "name": "Liège",
+      "km": 1.1,
+      "population": 195278,
+      "name_equal": true,
+      "pop_ratio": 2.11
+     },
+     {
+      "name": "Hasselt",
+      "km": 36.2,
+      "population": 77651,
+      "name_equal": false,
+      "pop_ratio": 5.32
+     },
+     {
+      "name": "Genk",
+      "km": 36.8,
+      "population": 63666,
+      "name_equal": false,
+      "pop_ratio": 6.48
+     },
+     {
+      "name": "Seraing",
+      "km": 6.8,
+      "population": 60737,
+      "name_equal": false,
+      "pop_ratio": 6.8
+     },
+     {
+      "name": "Verviers",
+      "km": 22.5,
+      "population": 52824,
+      "name_equal": false,
+      "pop_ratio": 7.82
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "BE007C",
+    "eurostat_name": "Namur",
+    "value": 18.75,
+    "gisco_name": "Namur",
+    "country": "BE",
+    "eurostat_population": 116605,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Namur",
+     "km": 0.8,
+     "population": 110939,
+     "name_equal": true,
+     "pop_ratio": 1.05
+    },
+    "candidates": [
+     {
+      "name": "Charleroi",
+      "km": 30.8,
+      "population": 200132,
+      "name_equal": false,
+      "pop_ratio": 1.72
+     },
+     {
+      "name": "Namur",
+      "km": 0.8,
+      "population": 110939,
+      "name_equal": true,
+      "pop_ratio": 1.05
+     },
+     {
+      "name": "Châtelet",
+      "km": 25.2,
+      "population": 35238,
+      "name_equal": false,
+      "pop_ratio": 3.31
+     },
+     {
+      "name": "Wavre",
+      "km": 34.4,
+      "population": 34305,
+      "name_equal": false,
+      "pop_ratio": 3.4
+     },
+     {
+      "name": "Tienen",
+      "km": 38.9,
+      "population": 31743,
+      "name_equal": false,
+      "pop_ratio": 3.67
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "BE009C",
+    "eurostat_name": "Mons (greater city)",
+    "value": 18.75,
+    "gisco_name": "Mons (greater city)",
+    "country": "BE",
+    "eurostat_population": 158867,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Mons",
+     "km": 1.6,
+     "population": 95299,
+     "name_equal": true,
+     "pop_ratio": 1.67
+    },
+    "candidates": [
+     {
+      "name": "Charleroi",
+      "km": 35.5,
+      "population": 200132,
+      "name_equal": false,
+      "pop_ratio": 1.26
+     },
+     {
+      "name": "Mons",
+      "km": 1.6,
+      "population": 95299,
+      "name_equal": true,
+      "pop_ratio": 1.67
+     },
+     {
+      "name": "La Louvière",
+      "km": 17.9,
+      "population": 76668,
+      "name_equal": false,
+      "pop_ratio": 2.07
+     },
+     {
+      "name": "Halle",
+      "km": 38.5,
+      "population": 34479,
+      "name_equal": false,
+      "pop_ratio": 4.61
+     },
+     {
+      "name": "Binche",
+      "km": 15.8,
+      "population": 32030,
+      "name_equal": false,
+      "pop_ratio": 4.96
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "BE013C",
+    "eurostat_name": "Mouscron",
+    "value": 18.75,
+    "gisco_name": "Mouscron",
+    "country": "BE",
+    "eurostat_population": 61242,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Mouscron",
+     "km": 3.3,
+     "population": 52069,
+     "name_equal": true,
+     "pop_ratio": 1.18
+    },
+    "candidates": [
+     {
+      "name": "Kortrijk",
+      "km": 10.2,
+      "population": 73879,
+      "name_equal": false,
+      "pop_ratio": 1.21
+     },
+     {
+      "name": "Tournai",
+      "km": 17.4,
+      "population": 69554,
+      "name_equal": false,
+      "pop_ratio": 1.14
+     },
+     {
+      "name": "Roeselare",
+      "km": 25.0,
+      "population": 56016,
+      "name_equal": false,
+      "pop_ratio": 1.09
+     },
+     {
+      "name": "Mouscron",
+      "km": 3.3,
+      "population": 52069,
+      "name_equal": true,
+      "pop_ratio": 1.18
+     },
+     {
+      "name": "Waregem",
+      "km": 21.0,
+      "population": 35896,
+      "name_equal": false,
+      "pop_ratio": 1.71
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "BE004C",
+    "eurostat_name": "Charleroi (greater city)",
+    "value": 17.88,
+    "gisco_name": "Charleroi (greater city)",
+    "country": "BE",
+    "eurostat_population": 242973,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Charleroi",
+     "km": 1.3,
+     "population": 200132,
+     "name_equal": true,
+     "pop_ratio": 1.21
+    },
+    "candidates": [
+     {
+      "name": "Charleroi",
+      "km": 1.3,
+      "population": 200132,
+      "name_equal": true,
+      "pop_ratio": 1.21
+     },
+     {
+      "name": "Namur",
+      "km": 29.4,
+      "population": 110939,
+      "name_equal": false,
+      "pop_ratio": 2.19
+     },
+     {
+      "name": "Mons",
+      "km": 36.2,
+      "population": 95299,
+      "name_equal": false,
+      "pop_ratio": 2.55
+     },
+     {
+      "name": "La Louvière",
+      "km": 20.7,
+      "population": 76668,
+      "name_equal": false,
+      "pop_ratio": 3.17
+     },
+     {
+      "name": "Braine-l'Alleud",
+      "km": 30.3,
+      "population": 37512,
+      "name_equal": false,
+      "pop_ratio": 6.48
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "BE014C",
+    "eurostat_name": "La Louvière (greater city)",
+    "value": 17.58,
+    "gisco_name": "La Louvière (greater city)",
+    "country": "BE",
+    "eurostat_population": 106050,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "La Louvière",
+     "km": 1.3,
+     "population": 76668,
+     "name_equal": true,
+     "pop_ratio": 1.38
+    },
+    "candidates": [
+     {
+      "name": "Charleroi",
+      "km": 20.4,
+      "population": 200132,
+      "name_equal": false,
+      "pop_ratio": 1.89
+     },
+     {
+      "name": "Mons",
+      "km": 16.0,
+      "population": 95299,
+      "name_equal": false,
+      "pop_ratio": 1.11
+     },
+     {
+      "name": "Uccle",
+      "km": 37.8,
+      "population": 82929,
+      "name_equal": false,
+      "pop_ratio": 1.28
+     },
+     {
+      "name": "La Louvière",
+      "km": 1.3,
+      "population": 76668,
+      "name_equal": true,
+      "pop_ratio": 1.38
+     },
+     {
+      "name": "Forest",
+      "km": 39.2,
+      "population": 56254,
+      "name_equal": false,
+      "pop_ratio": 1.89
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "BE006C",
+    "eurostat_name": "Brugge",
+    "value": 17.33,
+    "gisco_name": "Brugge",
+    "country": "BE",
+    "eurostat_population": 120693,
+    "eurostat_population_year": "2025",
+    "status": "name_similar",
+    "match": {
+     "name": "Bruges",
+     "km": 6.3,
+     "population": 118509,
+     "name_equal": false,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Bruges",
+      "km": 6.3,
+      "population": 118509,
+      "name_equal": false,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Ostend",
+      "km": 21.3,
+      "population": 69011,
+      "name_equal": false,
+      "pop_ratio": 1.75
+     },
+     {
+      "name": "Roeselare",
+      "km": 36.2,
+      "population": 56016,
+      "name_equal": false,
+      "pop_ratio": 2.15
+     },
+     {
+      "name": "Knokke-Heist",
+      "km": 9.8,
+      "population": 33781,
+      "name_equal": false,
+      "pop_ratio": 3.57
+     },
+     {
+      "name": "Evergem",
+      "km": 38.0,
+      "population": 31615,
+      "name_equal": false,
+      "pop_ratio": 3.82
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "BE010C",
+    "eurostat_name": "Kortrijk (greater city)",
+    "value": 17.33,
+    "gisco_name": "Kortrijk (greater city)",
+    "country": "BE",
+    "eurostat_population": 80961,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Kortrijk",
+     "km": 1.1,
+     "population": 73879,
+     "name_equal": true,
+     "pop_ratio": 1.1
+    },
+    "candidates": [
+     {
+      "name": "Kortrijk",
+      "km": 1.1,
+      "population": 73879,
+      "name_equal": true,
+      "pop_ratio": 1.1
+     },
+     {
+      "name": "Tournai",
+      "km": 25.1,
+      "population": 69554,
+      "name_equal": false,
+      "pop_ratio": 1.16
+     },
+     {
+      "name": "Roeselare",
+      "km": 17.6,
+      "population": 56016,
+      "name_equal": false,
+      "pop_ratio": 1.45
+     },
+     {
+      "name": "Mouscron",
+      "km": 9.7,
+      "population": 52069,
+      "name_equal": false,
+      "pop_ratio": 1.55
+     },
+     {
+      "name": "Waregem",
+      "km": 13.1,
+      "population": 35896,
+      "name_equal": false,
+      "pop_ratio": 2.26
+     }
+    ]
+   },
+   {
+    "rank": 11,
+    "code": "BE011C",
+    "eurostat_name": "Oostende (greater city)",
+    "value": 17.33,
+    "gisco_name": "Oostende (greater city)",
+    "country": "BE",
+    "eurostat_population": 73187,
+    "eurostat_population_year": "2025",
+    "status": "name_similar",
+    "match": {
+     "name": "Ostend",
+     "km": 0.9,
+     "population": 69011,
+     "name_equal": false,
+     "pop_ratio": 1.06
+    },
+    "candidates": [
+     {
+      "name": "Bruges",
+      "km": 19.9,
+      "population": 118509,
+      "name_equal": false,
+      "pop_ratio": 1.62
+     },
+     {
+      "name": "Ostend",
+      "km": 0.9,
+      "population": 69011,
+      "name_equal": false,
+      "pop_ratio": 1.06
+     },
+     {
+      "name": "Roeselare",
+      "km": 32.6,
+      "population": 56016,
+      "name_equal": false,
+      "pop_ratio": 1.31
+     },
+     {
+      "name": "Knokke-Heist",
+      "km": 27.2,
+      "population": 33781,
+      "name_equal": false,
+      "pop_ratio": 2.17
+     },
+     {
+      "name": "Izegem",
+      "km": 38.7,
+      "population": 26382,
+      "name_equal": false,
+      "pop_ratio": 2.77
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "apartment_price",
+  "label": "아파트 평균 매매가격",
+  "dataset": "urb_clivcon",
+  "indicators": [
+   "SA1051V"
+  ],
+  "period": "2024",
+  "unit": "EUR",
+  "eurostat_city_count": 252,
+  "top": [
+   {
+    "rank": 1,
+    "code": "ES089C",
+    "eurostat_name": "Eivissa",
+    "value": 543700.0,
+    "gisco_name": "Eivissa",
+    "country": "ES",
+    "eurostat_population": 53228,
+    "eurostat_population_year": "2024",
+    "status": "coords_only",
+    "match": {
+     "name": "Ibiza",
+     "km": 1.3,
+     "population": 48684,
+     "name_equal": false,
+     "pop_ratio": 1.09
+    },
+    "candidates": [
+     {
+      "name": "Ibiza",
+      "km": 1.3,
+      "population": 48684,
+      "name_equal": false,
+      "pop_ratio": 1.09
+     },
+     {
+      "name": "Santa Eulària des Riu",
+      "km": 12.7,
+      "population": 31314,
+      "name_equal": false,
+      "pop_ratio": 1.7
+     },
+     {
+      "name": "Sant Antoni de Portmany",
+      "km": 12.4,
+      "population": 21852,
+      "name_equal": false,
+      "pop_ratio": 2.44
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "ES109C",
+    "eurostat_name": "Las Rozas de Madrid (greater city)",
+    "value": 442553.0,
+    "gisco_name": "Las Rozas de Madrid",
+    "country": "ES",
+    "eurostat_population": 172740,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Las Rozas de Madrid",
+     "km": 1.9,
+     "population": 95550,
+     "name_equal": true,
+     "pop_ratio": 1.81
+    },
+    "candidates": [
+     {
+      "name": "Madrid",
+      "km": 18.6,
+      "population": 3255944,
+      "name_equal": false,
+      "pop_ratio": 18.85
+     },
+     {
+      "name": "Latina",
+      "km": 17.6,
+      "population": 256644,
+      "name_equal": false,
+      "pop_ratio": 1.49
+     },
+     {
+      "name": "Carabanchel",
+      "km": 18.8,
+      "population": 253678,
+      "name_equal": false,
+      "pop_ratio": 1.47
+     },
+     {
+      "name": "Puente de Vallecas",
+      "km": 22.9,
+      "population": 244151,
+      "name_equal": false,
+      "pop_ratio": 1.41
+     },
+     {
+      "name": "Fuencarral",
+      "km": 17.7,
+      "population": 238765,
+      "name_equal": false,
+      "pop_ratio": 1.38
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "ES063C",
+    "eurostat_name": "San Sebastián/Donostia (greater city)",
+    "value": 409451.0,
+    "gisco_name": "San Sebastián/Donostia",
+    "country": "ES",
+    "eurostat_population": 250056,
+    "eurostat_population_year": "2024",
+    "status": "coords_name_diff",
+    "match": {
+     "name": "Donostia / San Sebastián",
+     "km": 1.0,
+     "population": 185357,
+     "name_equal": false,
+     "pop_ratio": 1.35
+    },
+    "candidates": [
+     {
+      "name": "Donostia / San Sebastián",
+      "km": 1.0,
+      "population": 185357,
+      "name_equal": false,
+      "pop_ratio": 1.35
+     },
+     {
+      "name": "Irun",
+      "km": 14.9,
+      "population": 60951,
+      "name_equal": false,
+      "pop_ratio": 4.1
+     },
+     {
+      "name": "Errenteria",
+      "km": 5.4,
+      "population": 38767,
+      "name_equal": false,
+      "pop_ratio": 6.45
+     },
+     {
+      "name": "Zarautz",
+      "km": 16.5,
+      "population": 22627,
+      "name_equal": false,
+      "pop_ratio": 11.05
+     },
+     {
+      "name": "Hernani",
+      "km": 4.5,
+      "population": 20222,
+      "name_equal": false,
+      "pop_ratio": 12.37
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "PT004C",
+    "eurostat_name": "Funchal (greater city)",
+    "value": 394589.44,
+    "gisco_name": "Funchal",
+    "country": "PT",
+    "eurostat_population": 108129,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Funchal",
+     "km": 1.6,
+     "population": 100847,
+     "name_equal": true,
+     "pop_ratio": 1.07
+    },
+    "candidates": [
+     {
+      "name": "Funchal",
+      "km": 1.6,
+      "population": 100847,
+      "name_equal": true,
+      "pop_ratio": 1.07
+     },
+     {
+      "name": "Câmara de Lobos",
+      "km": 6.2,
+      "population": 32209,
+      "name_equal": false,
+      "pop_ratio": 3.36
+     },
+     {
+      "name": "São Martinho",
+      "km": 4.2,
+      "population": 26482,
+      "name_equal": false,
+      "pop_ratio": 4.08
+     },
+     {
+      "name": "Santo António",
+      "km": 2.4,
+      "population": 25940,
+      "name_equal": false,
+      "pop_ratio": 4.17
+     },
+     {
+      "name": "Caniço",
+      "km": 8.3,
+      "population": 23368,
+      "name_equal": false,
+      "pop_ratio": 4.63
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "FR001C",
+    "eurostat_name": "Paris (greater city)",
+    "value": 355475.0,
+    "gisco_name": "Paris",
+    "country": "FR",
+    "eurostat_population": 10159710,
+    "eurostat_population_year": "2023",
+    "status": "exact+pop_check",
+    "match": {
+     "name": "Paris",
+     "km": 3.3,
+     "population": 2050000,
+     "name_equal": true,
+     "pop_ratio": 4.96
+    },
+    "candidates": [
+     {
+      "name": "Paris",
+      "km": 3.3,
+      "population": 2050000,
+      "name_equal": true,
+      "pop_ratio": 4.96
+     },
+     {
+      "name": "Marne La Vallée",
+      "km": 24.0,
+      "population": 318325,
+      "name_equal": false,
+      "pop_ratio": 31.92
+     },
+     {
+      "name": "Cergy-Pontoise",
+      "km": 28.0,
+      "population": 183430,
+      "name_equal": false,
+      "pop_ratio": 55.39
+     },
+     {
+      "name": "Saint-Quentin-en-Yvelines",
+      "km": 23.0,
+      "population": 146598,
+      "name_equal": false,
+      "pop_ratio": 69.3
+     },
+     {
+      "name": "Montreuil",
+      "km": 9.7,
+      "population": 111240,
+      "name_equal": false,
+      "pop_ratio": 91.33
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "ES001C",
+    "eurostat_name": "Madrid (greater city)",
+    "value": 354705.0,
+    "gisco_name": "Madrid",
+    "country": "ES",
+    "eurostat_population": 4501429,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Madrid",
+     "km": 3.0,
+     "population": 3255944,
+     "name_equal": true,
+     "pop_ratio": 1.38
+    },
+    "candidates": [
+     {
+      "name": "Madrid",
+      "km": 3.0,
+      "population": 3255944,
+      "name_equal": true,
+      "pop_ratio": 1.38
+     },
+     {
+      "name": "Latina",
+      "km": 6.9,
+      "population": 256644,
+      "name_equal": false,
+      "pop_ratio": 17.54
+     },
+     {
+      "name": "Carabanchel",
+      "km": 6.0,
+      "population": 253678,
+      "name_equal": false,
+      "pop_ratio": 17.74
+     },
+     {
+      "name": "Puente de Vallecas",
+      "km": 6.8,
+      "population": 244151,
+      "name_equal": false,
+      "pop_ratio": 18.44
+     },
+     {
+      "name": "Fuencarral",
+      "km": 6.6,
+      "population": 238765,
+      "name_equal": false,
+      "pop_ratio": 18.85
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "ES010C",
+    "eurostat_name": "Palma de Mallorca",
+    "value": 324028.0,
+    "gisco_name": "Palma de Mallorca",
+    "country": "ES",
+    "eurostat_population": 438234,
+    "eurostat_population_year": "2024",
+    "status": "coords_name_diff",
+    "match": {
+     "name": "Palma",
+     "km": 10.9,
+     "population": 409661,
+     "name_equal": false,
+     "pop_ratio": 1.07
+    },
+    "candidates": [
+     {
+      "name": "Palma",
+      "km": 10.9,
+      "population": 409661,
+      "name_equal": false,
+      "pop_ratio": 1.07
+     },
+     {
+      "name": "Calvià",
+      "km": 23.2,
+      "population": 51774,
+      "name_equal": false,
+      "pop_ratio": 8.46
+     },
+     {
+      "name": "Manacor",
+      "km": 37.2,
+      "population": 40548,
+      "name_equal": false,
+      "pop_ratio": 10.81
+     },
+     {
+      "name": "Llucmajor",
+      "km": 12.4,
+      "population": 36078,
+      "name_equal": false,
+      "pop_ratio": 12.15
+     },
+     {
+      "name": "Marratxí",
+      "km": 8.3,
+      "population": 33348,
+      "name_equal": false,
+      "pop_ratio": 13.14
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "PT001C",
+    "eurostat_name": "Lisboa (greater city)",
+    "value": 323965.26,
+    "gisco_name": "Lisboa",
+    "country": "PT",
+    "eurostat_population": 1965363,
+    "eurostat_population_year": "2025",
+    "status": "name_similar+pop_check",
+    "match": {
+     "name": "Lisbon",
+     "km": 9.4,
+     "population": 517802,
+     "name_equal": false,
+     "pop_ratio": 3.8
+    },
+    "candidates": [
+     {
+      "name": "Lisbon",
+      "km": 9.4,
+      "population": 517802,
+      "name_equal": false,
+      "pop_ratio": 3.8
+     },
+     {
+      "name": "Amadora",
+      "km": 7.7,
+      "population": 178858,
+      "name_equal": false,
+      "pop_ratio": 10.99
+     },
+     {
+      "name": "Queluz",
+      "km": 9.0,
+      "population": 103399,
+      "name_equal": false,
+      "pop_ratio": 19.01
+     },
+     {
+      "name": "Cacém",
+      "km": 11.6,
+      "population": 93982,
+      "name_equal": false,
+      "pop_ratio": 20.91
+     },
+     {
+      "name": "Algueirão",
+      "km": 14.7,
+      "population": 66250,
+      "name_equal": false,
+      "pop_ratio": 29.67
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "BE003C",
+    "eurostat_name": "Gent",
+    "value": 323371.0,
+    "gisco_name": "Gent",
+    "country": "BE",
+    "eurostat_population": 273394,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Gent",
+     "km": 2.8,
+     "population": 265086,
+     "name_equal": true,
+     "pop_ratio": 1.03
+    },
+    "candidates": [
+     {
+      "name": "Gent",
+      "km": 2.8,
+      "population": 265086,
+      "name_equal": true,
+      "pop_ratio": 1.03
+     },
+     {
+      "name": "Bruges",
+      "km": 38.0,
+      "population": 118509,
+      "name_equal": false,
+      "pop_ratio": 2.31
+     },
+     {
+      "name": "Aalst",
+      "km": 26.6,
+      "population": 77534,
+      "name_equal": false,
+      "pop_ratio": 3.53
+     },
+     {
+      "name": "Sint-Niklaas",
+      "km": 30.9,
+      "population": 69010,
+      "name_equal": false,
+      "pop_ratio": 3.96
+     },
+     {
+      "name": "Dendermonde",
+      "km": 26.8,
+      "population": 45673,
+      "name_equal": false,
+      "pop_ratio": 5.99
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "FR038C",
+    "eurostat_name": "Annecy (greater city)",
+    "value": 323208.0,
+    "gisco_name": "Annecy",
+    "country": "FR",
+    "eurostat_population": 141408,
+    "eurostat_population_year": "2023",
+    "status": "exact",
+    "match": {
+     "name": "Annecy",
+     "km": 1.3,
+     "population": 49232,
+     "name_equal": true,
+     "pop_ratio": 2.87
+    },
+    "candidates": [
+     {
+      "name": "Annecy",
+      "km": 1.3,
+      "population": 49232,
+      "name_equal": true,
+      "pop_ratio": 2.87
+     },
+     {
+      "name": "Annemasse",
+      "km": 33.7,
+      "population": 28275,
+      "name_equal": false,
+      "pop_ratio": 5.0
+     },
+     {
+      "name": "Aix-les-Bains",
+      "km": 28.3,
+      "population": 27651,
+      "name_equal": false,
+      "pop_ratio": 5.11
+     },
+     {
+      "name": "Annecy-le-Vieux",
+      "km": 3.1,
+      "population": 21521,
+      "name_equal": false,
+      "pop_ratio": 6.57
+     },
+     {
+      "name": "Cluses",
+      "km": 40.0,
+      "population": 19789,
+      "name_equal": false,
+      "pop_ratio": 7.15
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "women_per_100_men",
+  "label": "남성 100명당 여성 수",
+  "dataset": "urb_cpopstr",
+  "indicators": [
+   "DE1003I"
+  ],
+  "period": "2025",
+  "unit": "명",
+  "eurostat_city_count": 303,
+  "top": [
+   {
+    "rank": 1,
+    "code": "EE003C",
+    "eurostat_name": "Narva",
+    "value": 121.5,
+    "gisco_name": "Narva",
+    "country": "EE",
+    "eurostat_population": 52495,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Narva",
+     "km": 5.4,
+     "population": 54409,
+     "name_equal": true,
+     "pop_ratio": 1.04
+    },
+    "candidates": [
+     {
+      "name": "Narva",
+      "km": 5.4,
+      "population": 54409,
+      "name_equal": true,
+      "pop_ratio": 1.04
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "EE002C",
+    "eurostat_name": "Tartu",
+    "value": 114.5,
+    "gisco_name": "Tartu",
+    "country": "EE",
+    "eurostat_population": 100685,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Tartu",
+     "km": 6.1,
+     "population": 91407,
+     "name_equal": true,
+     "pop_ratio": 1.1
+    },
+    "candidates": [
+     {
+      "name": "Tartu",
+      "km": 6.1,
+      "population": 91407,
+      "name_equal": true,
+      "pop_ratio": 1.1
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "BG010C",
+    "eurostat_name": "Dobrich",
+    "value": 114.2,
+    "gisco_name": "Dobrich",
+    "country": "BG",
+    "eurostat_population": 69434,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Dobrich",
+     "km": 2.7,
+     "population": 79269,
+     "name_equal": true,
+     "pop_ratio": 1.14
+    },
+    "candidates": [
+     {
+      "name": "Dobrich",
+      "km": 2.7,
+      "population": 79269,
+      "name_equal": true,
+      "pop_ratio": 1.14
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "EE001C",
+    "eurostat_name": "Tallinn",
+    "value": 114.1,
+    "gisco_name": "Tallinn",
+    "country": "EE",
+    "eurostat_population": 456518,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Tallinn",
+     "km": 3.6,
+     "population": 394024,
+     "name_equal": true,
+     "pop_ratio": 1.16
+    },
+    "candidates": [
+     {
+      "name": "Tallinn",
+      "km": 3.6,
+      "population": 394024,
+      "name_equal": true,
+      "pop_ratio": 1.16
+     },
+     {
+      "name": "Nõmme",
+      "km": 4.3,
+      "population": 39422,
+      "name_equal": false,
+      "pop_ratio": 11.58
+     },
+     {
+      "name": "Maardu",
+      "km": 15.3,
+      "population": 16630,
+      "name_equal": false,
+      "pop_ratio": 27.45
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "PT005C",
+    "eurostat_name": "Coimbra (greater city)",
+    "value": 113.5,
+    "gisco_name": "Coimbra",
+    "country": "PT",
+    "eurostat_population": 146899,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Coimbra",
+     "km": 2.5,
+     "population": 106582,
+     "name_equal": true,
+     "pop_ratio": 1.38
+    },
+    "candidates": [
+     {
+      "name": "Coimbra",
+      "km": 2.5,
+      "population": 106582,
+      "name_equal": true,
+      "pop_ratio": 1.38
+     },
+     {
+      "name": "Figueira da Foz",
+      "km": 36.0,
+      "population": 46600,
+      "name_equal": false,
+      "pop_ratio": 3.15
+     },
+     {
+      "name": "Santo António dos Olivais",
+      "km": 3.5,
+      "population": 41150,
+      "name_equal": false,
+      "pop_ratio": 3.57
+     },
+     {
+      "name": "Pombal",
+      "km": 36.7,
+      "population": 17355,
+      "name_equal": false,
+      "pop_ratio": 8.46
+     },
+     {
+      "name": "São Paulo de Frades",
+      "km": 5.6,
+      "population": 17154,
+      "name_equal": false,
+      "pop_ratio": 8.56
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "PT004C",
+    "eurostat_name": "Funchal (greater city)",
+    "value": 113.3,
+    "gisco_name": "Funchal",
+    "country": "PT",
+    "eurostat_population": 108129,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Funchal",
+     "km": 1.6,
+     "population": 100847,
+     "name_equal": true,
+     "pop_ratio": 1.07
+    },
+    "candidates": [
+     {
+      "name": "Funchal",
+      "km": 1.6,
+      "population": 100847,
+      "name_equal": true,
+      "pop_ratio": 1.07
+     },
+     {
+      "name": "Câmara de Lobos",
+      "km": 6.2,
+      "population": 32209,
+      "name_equal": false,
+      "pop_ratio": 3.36
+     },
+     {
+      "name": "São Martinho",
+      "km": 4.2,
+      "population": 26482,
+      "name_equal": false,
+      "pop_ratio": 4.08
+     },
+     {
+      "name": "Santo António",
+      "km": 2.4,
+      "population": 25940,
+      "name_equal": false,
+      "pop_ratio": 4.17
+     },
+     {
+      "name": "Caniço",
+      "km": 8.3,
+      "population": 23368,
+      "name_equal": false,
+      "pop_ratio": 4.63
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "PT001C",
+    "eurostat_name": "Lisboa (greater city)",
+    "value": 113.0,
+    "gisco_name": "Lisboa",
+    "country": "PT",
+    "eurostat_population": 1965363,
+    "eurostat_population_year": "2025",
+    "status": "name_similar+pop_check",
+    "match": {
+     "name": "Lisbon",
+     "km": 9.4,
+     "population": 517802,
+     "name_equal": false,
+     "pop_ratio": 3.8
+    },
+    "candidates": [
+     {
+      "name": "Lisbon",
+      "km": 9.4,
+      "population": 517802,
+      "name_equal": false,
+      "pop_ratio": 3.8
+     },
+     {
+      "name": "Amadora",
+      "km": 7.7,
+      "population": 178858,
+      "name_equal": false,
+      "pop_ratio": 10.99
+     },
+     {
+      "name": "Queluz",
+      "km": 9.0,
+      "population": 103399,
+      "name_equal": false,
+      "pop_ratio": 19.01
+     },
+     {
+      "name": "Cacém",
+      "km": 11.6,
+      "population": 93982,
+      "name_equal": false,
+      "pop_ratio": 20.91
+     },
+     {
+      "name": "Algueirão",
+      "km": 14.7,
+      "population": 66250,
+      "name_equal": false,
+      "pop_ratio": 29.67
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "BG017C",
+    "eurostat_name": "Veliko Tarnovo",
+    "value": 112.8,
+    "gisco_name": "Veliko Tarnovo",
+    "country": "BG",
+    "eurostat_population": 77049,
+    "eurostat_population_year": "2025",
+    "status": "name_similar",
+    "match": {
+     "name": "Veliko Tŭrnovo",
+     "km": 15.2,
+     "population": 66217,
+     "name_equal": false,
+     "pop_ratio": 1.16
+    },
+    "candidates": [
+     {
+      "name": "Veliko Tŭrnovo",
+      "km": 15.2,
+      "population": 66217,
+      "name_equal": false,
+      "pop_ratio": 1.16
+     },
+     {
+      "name": "Gabrovo",
+      "km": 25.8,
+      "population": 66175,
+      "name_equal": false,
+      "pop_ratio": 1.16
+     },
+     {
+      "name": "Gorna Oryahovitsa",
+      "km": 21.4,
+      "population": 32792,
+      "name_equal": false,
+      "pop_ratio": 2.35
+     },
+     {
+      "name": "Sevlievo",
+      "km": 28.6,
+      "population": 24582,
+      "name_equal": false,
+      "pop_ratio": 3.13
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "BG002C",
+    "eurostat_name": "Plovdiv",
+    "value": 112.6,
+    "gisco_name": "Plovdiv",
+    "country": "BG",
+    "eurostat_population": 329489,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Plovdiv",
+     "km": 1.2,
+     "population": 346893,
+     "name_equal": true,
+     "pop_ratio": 1.05
+    },
+    "candidates": [
+     {
+      "name": "Plovdiv",
+      "km": 1.2,
+      "population": 346893,
+      "name_equal": true,
+      "pop_ratio": 1.05
+     },
+     {
+      "name": "Pazardzhik",
+      "km": 34.0,
+      "population": 65671,
+      "name_equal": false,
+      "pop_ratio": 5.02
+     },
+     {
+      "name": "Asenovgrad",
+      "km": 17.6,
+      "population": 54778,
+      "name_equal": false,
+      "pop_ratio": 6.01
+     },
+     {
+      "name": "Peshtera",
+      "km": 38.2,
+      "population": 18676,
+      "name_equal": false,
+      "pop_ratio": 17.64
+     },
+     {
+      "name": "Parvomay",
+      "km": 39.8,
+      "population": 17000,
+      "name_equal": false,
+      "pop_ratio": 19.38
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "BG005C",
+    "eurostat_name": "Pleven",
+    "value": 112.3,
+    "gisco_name": "Pleven",
+    "country": "BG",
+    "eurostat_population": 109080,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Pleven",
+     "km": 5.3,
+     "population": 100952,
+     "name_equal": true,
+     "pop_ratio": 1.08
+    },
+    "candidates": [
+     {
+      "name": "Pleven",
+      "km": 5.3,
+      "population": 100952,
+      "name_equal": true,
+      "pop_ratio": 1.08
+     },
+     {
+      "name": "Lovech",
+      "km": 28.6,
+      "population": 29659,
+      "name_equal": false,
+      "pop_ratio": 3.68
+     }
+    ]
+   },
+   {
+    "rank": 11,
+    "code": "IT031C",
+    "eurostat_name": "Salerno",
+    "value": 112.3,
+    "gisco_name": "Salerno",
+    "country": "IT",
+    "eurostat_population": 126000,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Salerno",
+     "km": 1.8,
+     "population": 125797,
+     "name_equal": true,
+     "pop_ratio": 1.0
+    },
+    "candidates": [
+     {
+      "name": "Salerno",
+      "km": 1.8,
+      "population": 125797,
+      "name_equal": true,
+      "pop_ratio": 1.0
+     },
+     {
+      "name": "Torre del Greco",
+      "km": 38.4,
+      "population": 85332,
+      "name_equal": false,
+      "pop_ratio": 1.48
+     },
+     {
+      "name": "Castellammare di Stabia",
+      "km": 26.8,
+      "population": 66164,
+      "name_equal": false,
+      "pop_ratio": 1.9
+     },
+     {
+      "name": "Cava Dè Tirreni",
+      "km": 8.2,
+      "population": 53130,
+      "name_equal": false,
+      "pop_ratio": 2.37
+     },
+     {
+      "name": "Scafati",
+      "km": 23.8,
+      "population": 48702,
+      "name_equal": false,
+      "pop_ratio": 2.59
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "unemployment",
+  "label": "실업률",
+  "dataset": "urb_clma",
+  "indicators": [
+   "EC1020I"
+  ],
+  "period": "2024",
+  "unit": "%",
+  "eurostat_city_count": 230,
+  "top": [
+   {
+    "rank": 1,
+    "code": "ES051C",
+    "eurostat_name": "Línea de la Concepción, La",
+    "value": 28.6,
+    "gisco_name": "Línea de la Concepción, La",
+    "country": "ES",
+    "eurostat_population": 64987,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "La Línea de la Concepción",
+     "km": 3.8,
+     "population": 64595,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Algeciras",
+      "km": 12.4,
+      "population": 116209,
+      "name_equal": false,
+      "pop_ratio": 1.79
+     },
+     {
+      "name": "Ceuta",
+      "km": 34.8,
+      "population": 83179,
+      "name_equal": false,
+      "pop_ratio": 1.28
+     },
+     {
+      "name": "Estepona",
+      "km": 30.6,
+      "population": 65592,
+      "name_equal": false,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "La Línea de la Concepción",
+      "km": 3.8,
+      "population": 64595,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "San Roque",
+      "km": 4.0,
+      "population": 29249,
+      "name_equal": false,
+      "pop_ratio": 2.22
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "ES090C",
+    "eurostat_name": "Linares",
+    "value": 27.59,
+    "gisco_name": "Linares",
+    "country": "ES",
+    "eurostat_population": 55303,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Linares",
+     "km": 0.1,
+     "population": 61338,
+     "name_equal": true,
+     "pop_ratio": 1.11
+    },
+    "candidates": [
+     {
+      "name": "Jaén",
+      "km": 38.8,
+      "population": 113457,
+      "name_equal": false,
+      "pop_ratio": 2.05
+     },
+     {
+      "name": "Linares",
+      "km": 0.1,
+      "population": 61338,
+      "name_equal": true,
+      "pop_ratio": 1.11
+     },
+     {
+      "name": "Andújar",
+      "km": 36.8,
+      "population": 39111,
+      "name_equal": false,
+      "pop_ratio": 1.41
+     },
+     {
+      "name": "Úbeda",
+      "km": 25.1,
+      "population": 35649,
+      "name_equal": false,
+      "pop_ratio": 1.55
+     },
+     {
+      "name": "Bailén",
+      "km": 12.3,
+      "population": 18785,
+      "name_equal": false,
+      "pop_ratio": 2.94
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "ES045C",
+    "eurostat_name": "Melilla",
+    "value": 26.51,
+    "gisco_name": "Melilla",
+    "country": "ES",
+    "eurostat_population": 85985,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Melilla",
+     "km": 1.2,
+     "population": 85985,
+     "name_equal": true,
+     "pop_ratio": 1.0
+    },
+    "candidates": [
+     {
+      "name": "Melilla",
+      "km": 1.2,
+      "population": 85985,
+      "name_equal": true,
+      "pop_ratio": 1.0
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "ES039C",
+    "eurostat_name": "Ceuta",
+    "value": 26.27,
+    "gisco_name": "Ceuta",
+    "country": "ES",
+    "eurostat_population": 83179,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Ceuta",
+     "km": 3.2,
+     "population": 83179,
+     "name_equal": true,
+     "pop_ratio": 1.0
+    },
+    "candidates": [
+     {
+      "name": "Algeciras",
+      "km": 28.1,
+      "population": 116209,
+      "name_equal": false,
+      "pop_ratio": 1.4
+     },
+     {
+      "name": "Ceuta",
+      "km": 3.2,
+      "population": 83179,
+      "name_equal": true,
+      "pop_ratio": 1.0
+     },
+     {
+      "name": "La Línea de la Concepción",
+      "km": 30.7,
+      "population": 64595,
+      "name_equal": false,
+      "pop_ratio": 1.29
+     },
+     {
+      "name": "San Roque",
+      "km": 35.4,
+      "population": 29249,
+      "name_equal": false,
+      "pop_ratio": 2.84
+     },
+     {
+      "name": "Los Barrios",
+      "km": 34.7,
+      "population": 23513,
+      "name_equal": false,
+      "pop_ratio": 3.54
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "ES059C",
+    "eurostat_name": "Granada (greater city)",
+    "value": 23.13,
+    "gisco_name": "Granada",
+    "country": "ES",
+    "eurostat_population": 333545,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Granada",
+     "km": 10.7,
+     "population": 234325,
+     "name_equal": true,
+     "pop_ratio": 1.42
+    },
+    "candidates": [
+     {
+      "name": "Granada",
+      "km": 10.7,
+      "population": 234325,
+      "name_equal": true,
+      "pop_ratio": 1.42
+     },
+     {
+      "name": "Armilla",
+      "km": 8.9,
+      "population": 21380,
+      "name_equal": false,
+      "pop_ratio": 15.6
+     },
+     {
+      "name": "Maracena",
+      "km": 14.0,
+      "population": 20815,
+      "name_equal": false,
+      "pop_ratio": 16.02
+     },
+     {
+      "name": "Zubia",
+      "km": 4.6,
+      "population": 18995,
+      "name_equal": false,
+      "pop_ratio": 17.56
+     },
+     {
+      "name": "Albolote",
+      "km": 17.1,
+      "population": 17089,
+      "name_equal": false,
+      "pop_ratio": 19.52
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "ES079C",
+    "eurostat_name": "Algeciras",
+    "value": 22.6,
+    "gisco_name": "Algeciras",
+    "country": "ES",
+    "eurostat_population": 125047,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Algeciras",
+     "km": 3.9,
+     "population": 116209,
+     "name_equal": true,
+     "pop_ratio": 1.08
+    },
+    "candidates": [
+     {
+      "name": "Algeciras",
+      "km": 3.9,
+      "population": 116209,
+      "name_equal": true,
+      "pop_ratio": 1.08
+     },
+     {
+      "name": "Ceuta",
+      "km": 28.1,
+      "population": 83179,
+      "name_equal": false,
+      "pop_ratio": 1.5
+     },
+     {
+      "name": "La Línea de la Concepción",
+      "km": 13.7,
+      "population": 64595,
+      "name_equal": false,
+      "pop_ratio": 1.94
+     },
+     {
+      "name": "San Roque",
+      "km": 14.3,
+      "population": 29249,
+      "name_equal": false,
+      "pop_ratio": 4.28
+     },
+     {
+      "name": "Los Barrios",
+      "km": 8.8,
+      "population": 23513,
+      "name_equal": false,
+      "pop_ratio": 5.32
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "ES062C",
+    "eurostat_name": "Jerez de la Frontera",
+    "value": 21.8,
+    "gisco_name": "Jerez de la Frontera",
+    "country": "ES",
+    "eurostat_population": 214844,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Jerez de la Frontera",
+     "km": 4.6,
+     "population": 207532,
+     "name_equal": true,
+     "pop_ratio": 1.04
+    },
+    "candidates": [
+     {
+      "name": "Jerez de la Frontera",
+      "km": 4.6,
+      "population": 207532,
+      "name_equal": true,
+      "pop_ratio": 1.04
+     },
+     {
+      "name": "Cadiz",
+      "km": 26.9,
+      "population": 126766,
+      "name_equal": false,
+      "pop_ratio": 1.69
+     },
+     {
+      "name": "San Fernando",
+      "km": 27.7,
+      "population": 96366,
+      "name_equal": false,
+      "pop_ratio": 2.23
+     },
+     {
+      "name": "El Puerto de Santa María",
+      "km": 18.0,
+      "population": 88364,
+      "name_equal": false,
+      "pop_ratio": 2.43
+     },
+     {
+      "name": "Chiclana de la Frontera",
+      "km": 32.7,
+      "population": 77293,
+      "name_equal": false,
+      "pop_ratio": 2.78
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "ES100C",
+    "eurostat_name": "Armilla (greater city)",
+    "value": 21.74,
+    "gisco_name": "Armilla",
+    "country": "ES",
+    "eurostat_population": 65548,
+    "eurostat_population_year": "2024",
+    "status": "exact+pop_check",
+    "match": {
+     "name": "Armilla",
+     "km": 5.2,
+     "population": 21380,
+     "name_equal": true,
+     "pop_ratio": 3.07
+    },
+    "candidates": [
+     {
+      "name": "Granada",
+      "km": 8.9,
+      "population": 234325,
+      "name_equal": false,
+      "pop_ratio": 3.57
+     },
+     {
+      "name": "Armilla",
+      "km": 5.2,
+      "population": 21380,
+      "name_equal": true,
+      "pop_ratio": 3.07
+     },
+     {
+      "name": "Maracena",
+      "km": 9.0,
+      "population": 20815,
+      "name_equal": false,
+      "pop_ratio": 3.15
+     },
+     {
+      "name": "Zubia",
+      "km": 9.0,
+      "population": 18995,
+      "name_equal": false,
+      "pop_ratio": 3.45
+     },
+     {
+      "name": "Albolote",
+      "km": 10.8,
+      "population": 17089,
+      "name_equal": false,
+      "pop_ratio": 3.84
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "ES074C",
+    "eurostat_name": "Jaén",
+    "value": 21.71,
+    "gisco_name": "Jaén",
+    "country": "ES",
+    "eurostat_population": 111945,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Jaén",
+     "km": 5.4,
+     "population": 113457,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Jaén",
+      "km": 5.4,
+      "population": 113457,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Linares",
+      "km": 33.6,
+      "population": 61338,
+      "name_equal": false,
+      "pop_ratio": 1.83
+     },
+     {
+      "name": "Andújar",
+      "km": 36.7,
+      "population": 39111,
+      "name_equal": false,
+      "pop_ratio": 2.86
+     },
+     {
+      "name": "Martos",
+      "km": 21.6,
+      "population": 24655,
+      "name_equal": false,
+      "pop_ratio": 4.54
+     },
+     {
+      "name": "Bailén",
+      "km": 32.2,
+      "population": 18785,
+      "name_equal": false,
+      "pop_ratio": 5.96
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "ES035C",
+    "eurostat_name": "Talavera de la Reina",
+    "value": 20.82,
+    "gisco_name": "Talavera de la Reina",
+    "country": "ES",
+    "eurostat_population": 85138,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Talavera de la Reina",
+     "km": 1.9,
+     "population": 88856,
+     "name_equal": true,
+     "pop_ratio": 1.04
+    },
+    "candidates": [
+     {
+      "name": "Talavera de la Reina",
+      "km": 1.9,
+      "population": 88856,
+      "name_equal": true,
+      "pop_ratio": 1.04
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "safe_at_night",
+  "label": "밤에 혼자 걸어도 안전하다는 응답률",
+  "dataset": "urb_percep",
+  "indicators": [
+   "PS3514V",
+   "PS3515V"
+  ],
+  "period": "2023",
+  "unit": "%",
+  "eurostat_city_count": 80,
+  "top": [
+   {
+    "rank": 1,
+    "code": "DK001C",
+    "eurostat_name": "København (greater city)",
+    "value": 86.5,
+    "gisco_name": "København",
+    "country": "DK",
+    "eurostat_population": 559440,
+    "eurostat_population_year": "2013",
+    "status": "coords_name_diff",
+    "match": {
+     "name": "Copenhagen",
+     "km": 5.8,
+     "population": 1153615,
+     "name_equal": false,
+     "pop_ratio": 2.06
+    },
+    "candidates": [
+     {
+      "name": "Copenhagen",
+      "km": 5.8,
+      "population": 1153615,
+      "name_equal": false,
+      "pop_ratio": 2.06
+     },
+     {
+      "name": "Frederiksberg",
+      "km": 4.6,
+      "population": 95029,
+      "name_equal": false,
+      "pop_ratio": 5.89
+     },
+     {
+      "name": "Hvidovre",
+      "km": 8.8,
+      "population": 53527,
+      "name_equal": false,
+      "pop_ratio": 10.45
+     },
+     {
+      "name": "Avedøre",
+      "km": 10.8,
+      "population": 53443,
+      "name_equal": false,
+      "pop_ratio": 10.47
+     },
+     {
+      "name": "Roskilde",
+      "km": 28.5,
+      "population": 51916,
+      "name_equal": false,
+      "pop_ratio": 10.78
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "ES013C",
+    "eurostat_name": "Oviedo",
+    "value": 85.3,
+    "gisco_name": "Oviedo",
+    "country": "ES",
+    "eurostat_population": 220027,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Oviedo",
+     "km": 3.1,
+     "population": 220020,
+     "name_equal": true,
+     "pop_ratio": 1.0
+    },
+    "candidates": [
+     {
+      "name": "Gijón",
+      "km": 25.4,
+      "population": 277554,
+      "name_equal": false,
+      "pop_ratio": 1.26
+     },
+     {
+      "name": "Oviedo",
+      "km": 3.1,
+      "population": 220020,
+      "name_equal": true,
+      "pop_ratio": 1.0
+     },
+     {
+      "name": "Avilés",
+      "km": 20.7,
+      "population": 78715,
+      "name_equal": false,
+      "pop_ratio": 2.8
+     },
+     {
+      "name": "Mieres",
+      "km": 16.3,
+      "population": 44070,
+      "name_equal": false,
+      "pop_ratio": 4.99
+     },
+     {
+      "name": "Sama",
+      "km": 17.9,
+      "population": 39984,
+      "name_equal": false,
+      "pop_ratio": 5.5
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "SI001C",
+    "eurostat_name": "Ljubljana",
+    "value": 85.2,
+    "gisco_name": "Ljubljana ",
+    "country": "SI",
+    "eurostat_population": 297575,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Ljubljana",
+     "km": 2.3,
+     "population": 272220,
+     "name_equal": true,
+     "pop_ratio": 1.09
+    },
+    "candidates": [
+     {
+      "name": "Ljubljana",
+      "km": 2.3,
+      "population": 272220,
+      "name_equal": true,
+      "pop_ratio": 1.09
+     },
+     {
+      "name": "Kranj",
+      "km": 21.5,
+      "population": 37941,
+      "name_equal": false,
+      "pop_ratio": 7.84
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "CH002C",
+    "eurostat_name": "Zurich (greater city)",
+    "value": 84.2,
+    "gisco_name": "Zurich (greater city)",
+    "country": "CH",
+    "eurostat_population": 725893,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Zurich",
+     "km": 3.1,
+     "population": 415367,
+     "name_equal": true,
+     "pop_ratio": 1.75
+    },
+    "candidates": [
+     {
+      "name": "Zurich",
+      "km": 3.1,
+      "population": 415367,
+      "name_equal": true,
+      "pop_ratio": 1.75
+     },
+     {
+      "name": "Winterthur",
+      "km": 23.2,
+      "population": 111840,
+      "name_equal": false,
+      "pop_ratio": 6.49
+     },
+     {
+      "name": "Luzern",
+      "km": 37.0,
+      "population": 81691,
+      "name_equal": false,
+      "pop_ratio": 8.89
+     },
+     {
+      "name": "Schaffhausen",
+      "km": 39.5,
+      "population": 36587,
+      "name_equal": false,
+      "pop_ratio": 19.84
+     },
+     {
+      "name": "Rapperswil",
+      "km": 26.9,
+      "population": 34776,
+      "name_equal": false,
+      "pop_ratio": 20.87
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "NL018C",
+    "eurostat_name": "Groningen",
+    "value": 83.9,
+    "gisco_name": "Groningen",
+    "country": "NL",
+    "eurostat_population": 243768,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Groningen",
+     "km": 3.6,
+     "population": 238147,
+     "name_equal": true,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Groningen",
+      "km": 3.6,
+      "population": 238147,
+      "name_equal": true,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Assen",
+      "km": 25.0,
+      "population": 62237,
+      "name_equal": false,
+      "pop_ratio": 3.92
+     },
+     {
+      "name": "Drachten",
+      "km": 36.7,
+      "population": 44537,
+      "name_equal": false,
+      "pop_ratio": 5.47
+     },
+     {
+      "name": "Delfzijl",
+      "km": 23.3,
+      "population": 28649,
+      "name_equal": false,
+      "pop_ratio": 8.51
+     },
+     {
+      "name": "Veendam",
+      "km": 21.3,
+      "population": 28155,
+      "name_equal": false,
+      "pop_ratio": 8.66
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "PL011C",
+    "eurostat_name": "Białystok",
+    "value": 83.5,
+    "gisco_name": "Białystok",
+    "country": "PL",
+    "eurostat_population": 290386,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Białystok",
+     "km": 0.4,
+     "population": 291855,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Białystok",
+      "km": 0.4,
+      "population": 291855,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Sokółka",
+      "km": 38.2,
+      "population": 19079,
+      "name_equal": false,
+      "pop_ratio": 15.22
+     },
+     {
+      "name": "Łapy",
+      "km": 24.1,
+      "population": 16434,
+      "name_equal": false,
+      "pop_ratio": 17.67
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "DK004C",
+    "eurostat_name": "Aalborg",
+    "value": 83.3,
+    "gisco_name": "Aalborg",
+    "country": "DK",
+    "eurostat_population": 203448,
+    "eurostat_population_year": "2013",
+    "status": "exact",
+    "match": {
+     "name": "Aalborg",
+     "km": 9.6,
+     "population": 142937,
+     "name_equal": true,
+     "pop_ratio": 1.42
+    },
+    "candidates": [
+     {
+      "name": "Aalborg",
+      "km": 9.6,
+      "population": 142937,
+      "name_equal": true,
+      "pop_ratio": 1.42
+     },
+     {
+      "name": "Nørresundby",
+      "km": 10.8,
+      "population": 23718,
+      "name_equal": false,
+      "pop_ratio": 8.58
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "PT003C",
+    "eurostat_name": "Braga (greater city)",
+    "value": 83.1,
+    "gisco_name": "Braga",
+    "country": "PT",
+    "eurostat_population": 203519,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Braga",
+     "km": 0.7,
+     "population": 121394,
+     "name_equal": true,
+     "pop_ratio": 1.68
+    },
+    "candidates": [
+     {
+      "name": "Braga",
+      "km": 0.7,
+      "population": 121394,
+      "name_equal": true,
+      "pop_ratio": 1.68
+     },
+     {
+      "name": "Felgueiras",
+      "km": 27.3,
+      "population": 58065,
+      "name_equal": false,
+      "pop_ratio": 3.51
+     },
+     {
+      "name": "Ponte de Lima",
+      "km": 28.2,
+      "population": 44667,
+      "name_equal": false,
+      "pop_ratio": 4.56
+     },
+     {
+      "name": "Guimarães",
+      "km": 15.2,
+      "population": 40604,
+      "name_equal": false,
+      "pop_ratio": 5.01
+     },
+     {
+      "name": "Ermesinde",
+      "km": 38.1,
+      "population": 39420,
+      "name_equal": false,
+      "pop_ratio": 5.16
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "LU001C",
+    "eurostat_name": "Luxembourg (greater city)",
+    "value": 81.9,
+    "gisco_name": "Luxembourg (greater city)",
+    "country": "LU",
+    "eurostat_population": 115227,
+    "eurostat_population_year": "2016",
+    "status": "exact",
+    "match": {
+     "name": "Luxembourg",
+     "km": 1.1,
+     "population": 76684,
+     "name_equal": true,
+     "pop_ratio": 1.5
+    },
+    "candidates": [
+     {
+      "name": "Luxembourg",
+      "km": 1.1,
+      "population": 76684,
+      "name_equal": true,
+      "pop_ratio": 1.5
+     },
+     {
+      "name": "Esch-sur-Alzette",
+      "km": 15.9,
+      "population": 36625,
+      "name_equal": false,
+      "pop_ratio": 3.15
+     },
+     {
+      "name": "Differdange",
+      "km": 18.8,
+      "population": 27103,
+      "name_equal": false,
+      "pop_ratio": 4.25
+     },
+     {
+      "name": "Dudelange",
+      "km": 14.3,
+      "population": 18013,
+      "name_equal": false,
+      "pop_ratio": 6.4
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "FI004C",
+    "eurostat_name": "Oulu/Uleåborg",
+    "value": 81.5,
+    "gisco_name": "Oulu/Uleåborg",
+    "country": "FI",
+    "eurostat_population": 216152,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Oulu",
+     "km": 28.2,
+     "population": 209648,
+     "name_equal": true,
+     "pop_ratio": 1.03
+    },
+    "candidates": [
+     {
+      "name": "Oulu",
+      "km": 28.2,
+      "population": 209648,
+      "name_equal": true,
+      "pop_ratio": 1.03
+     },
+     {
+      "name": "Haukipudas",
+      "km": 30.6,
+      "population": 17298,
+      "name_equal": false,
+      "pop_ratio": 12.5
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "lgbt_good_place",
+  "label": "성소수자가 살기 좋다는 응답률",
+  "dataset": "urb_percep",
+  "indicators": [
+   "PS3535V"
+  ],
+  "period": "2023",
+  "unit": "%",
+  "eurostat_city_count": 80,
+  "top": [
+   {
+    "rank": 1,
+    "code": "IS001C",
+    "eurostat_name": "Reykjavík",
+    "value": 89.4,
+    "country": "IS",
+    "eurostat_population": null,
+    "status": "name_only",
+    "match": {
+     "name": "Reykjavík",
+     "km": null,
+     "population": 118918,
+     "name_equal": true,
+     "pop_ratio": null
+    },
+    "candidates": [
+     {
+      "name": "Reykjavík",
+      "km": null,
+      "population": 118918,
+      "name_equal": true,
+      "pop_ratio": null
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "MT001C",
+    "eurostat_name": "Greater Valletta",
+    "value": 87.9,
+    "gisco_name": "Greater Valletta",
+    "country": "MT",
+    "eurostat_population": 466066,
+    "eurostat_population_year": "2024",
+    "status": "exact+pop_check",
+    "match": {
+     "name": "Valletta",
+     "km": 3.5,
+     "population": 6794,
+     "name_equal": true,
+     "pop_ratio": 68.6
+    },
+    "candidates": [
+     {
+      "name": "St. Paul's Bay",
+      "km": 9.3,
+      "population": 32042,
+      "name_equal": false,
+      "pop_ratio": 14.55
+     },
+     {
+      "name": "Birkirkara",
+      "km": 2.2,
+      "population": 24356,
+      "name_equal": false,
+      "pop_ratio": 19.14
+     },
+     {
+      "name": "Mosta",
+      "km": 5.6,
+      "population": 23482,
+      "name_equal": false,
+      "pop_ratio": 19.85
+     },
+     {
+      "name": "Sliema",
+      "km": 3.6,
+      "population": 22591,
+      "name_equal": false,
+      "pop_ratio": 20.63
+     },
+     {
+      "name": "Qormi",
+      "km": 1.2,
+      "population": 16801,
+      "name_equal": false,
+      "pop_ratio": 27.74
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "NL018C",
+    "eurostat_name": "Groningen",
+    "value": 86.9,
+    "gisco_name": "Groningen",
+    "country": "NL",
+    "eurostat_population": 243768,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Groningen",
+     "km": 3.6,
+     "population": 238147,
+     "name_equal": true,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Groningen",
+      "km": 3.6,
+      "population": 238147,
+      "name_equal": true,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Assen",
+      "km": 25.0,
+      "population": 62237,
+      "name_equal": false,
+      "pop_ratio": 3.92
+     },
+     {
+      "name": "Drachten",
+      "km": 36.7,
+      "population": 44537,
+      "name_equal": false,
+      "pop_ratio": 5.47
+     },
+     {
+      "name": "Delfzijl",
+      "km": 23.3,
+      "population": 28649,
+      "name_equal": false,
+      "pop_ratio": 8.51
+     },
+     {
+      "name": "Veendam",
+      "km": 21.3,
+      "population": 28155,
+      "name_equal": false,
+      "pop_ratio": 8.66
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "CH002C",
+    "eurostat_name": "Zurich (greater city)",
+    "value": 86.9,
+    "gisco_name": "Zurich (greater city)",
+    "country": "CH",
+    "eurostat_population": 725893,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Zurich",
+     "km": 3.1,
+     "population": 415367,
+     "name_equal": true,
+     "pop_ratio": 1.75
+    },
+    "candidates": [
+     {
+      "name": "Zurich",
+      "km": 3.1,
+      "population": 415367,
+      "name_equal": true,
+      "pop_ratio": 1.75
+     },
+     {
+      "name": "Winterthur",
+      "km": 23.2,
+      "population": 111840,
+      "name_equal": false,
+      "pop_ratio": 6.49
+     },
+     {
+      "name": "Luzern",
+      "km": 37.0,
+      "population": 81691,
+      "name_equal": false,
+      "pop_ratio": 8.89
+     },
+     {
+      "name": "Schaffhausen",
+      "km": 39.5,
+      "population": 36587,
+      "name_equal": false,
+      "pop_ratio": 19.84
+     },
+     {
+      "name": "Rapperswil",
+      "km": 26.9,
+      "population": 34776,
+      "name_equal": false,
+      "pop_ratio": 20.87
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "DK001C",
+    "eurostat_name": "København (greater city)",
+    "value": 86.4,
+    "gisco_name": "København",
+    "country": "DK",
+    "eurostat_population": 559440,
+    "eurostat_population_year": "2013",
+    "status": "coords_name_diff",
+    "match": {
+     "name": "Copenhagen",
+     "km": 5.8,
+     "population": 1153615,
+     "name_equal": false,
+     "pop_ratio": 2.06
+    },
+    "candidates": [
+     {
+      "name": "Copenhagen",
+      "km": 5.8,
+      "population": 1153615,
+      "name_equal": false,
+      "pop_ratio": 2.06
+     },
+     {
+      "name": "Frederiksberg",
+      "km": 4.6,
+      "population": 95029,
+      "name_equal": false,
+      "pop_ratio": 5.89
+     },
+     {
+      "name": "Hvidovre",
+      "km": 8.8,
+      "population": 53527,
+      "name_equal": false,
+      "pop_ratio": 10.45
+     },
+     {
+      "name": "Avedøre",
+      "km": 10.8,
+      "population": 53443,
+      "name_equal": false,
+      "pop_ratio": 10.47
+     },
+     {
+      "name": "Roskilde",
+      "km": 28.5,
+      "population": 51916,
+      "name_equal": false,
+      "pop_ratio": 10.78
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "ES006C",
+    "eurostat_name": "Málaga",
+    "value": 85.9,
+    "gisco_name": "Málaga",
+    "country": "ES",
+    "eurostat_population": 592346,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Málaga",
+     "km": 5.3,
+     "population": 578460,
+     "name_equal": true,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Málaga",
+      "km": 5.3,
+      "population": 578460,
+      "name_equal": true,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Vélez-Málaga",
+      "km": 28.7,
+      "population": 74190,
+      "name_equal": false,
+      "pop_ratio": 7.98
+     },
+     {
+      "name": "Mijas",
+      "km": 26.9,
+      "population": 73787,
+      "name_equal": false,
+      "pop_ratio": 8.03
+     },
+     {
+      "name": "Fuengirola",
+      "km": 31.0,
+      "population": 71482,
+      "name_equal": false,
+      "pop_ratio": 8.29
+     },
+     {
+      "name": "Torremolinos",
+      "km": 17.7,
+      "population": 65448,
+      "name_equal": false,
+      "pop_ratio": 9.05
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "LU001C",
+    "eurostat_name": "Luxembourg (greater city)",
+    "value": 85.5,
+    "gisco_name": "Luxembourg (greater city)",
+    "country": "LU",
+    "eurostat_population": 115227,
+    "eurostat_population_year": "2016",
+    "status": "exact",
+    "match": {
+     "name": "Luxembourg",
+     "km": 1.1,
+     "population": 76684,
+     "name_equal": true,
+     "pop_ratio": 1.5
+    },
+    "candidates": [
+     {
+      "name": "Luxembourg",
+      "km": 1.1,
+      "population": 76684,
+      "name_equal": true,
+      "pop_ratio": 1.5
+     },
+     {
+      "name": "Esch-sur-Alzette",
+      "km": 15.9,
+      "population": 36625,
+      "name_equal": false,
+      "pop_ratio": 3.15
+     },
+     {
+      "name": "Differdange",
+      "km": 18.8,
+      "population": 27103,
+      "name_equal": false,
+      "pop_ratio": 4.25
+     },
+     {
+      "name": "Dudelange",
+      "km": 14.3,
+      "population": 18013,
+      "name_equal": false,
+      "pop_ratio": 6.4
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "IT009C",
+    "eurostat_name": "Bologna",
+    "value": 85.3,
+    "gisco_name": "Bologna",
+    "country": "IT",
+    "eurostat_population": 390151,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Bologna",
+     "km": 0.6,
+     "population": 394843,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Bologna",
+      "km": 0.6,
+      "population": 394843,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Modena",
+      "km": 36.4,
+      "population": 184732,
+      "name_equal": false,
+      "pop_ratio": 2.11
+     },
+     {
+      "name": "Imola",
+      "km": 33.9,
+      "population": 69953,
+      "name_equal": false,
+      "pop_ratio": 5.58
+     },
+     {
+      "name": "Formigine",
+      "km": 39.4,
+      "population": 34328,
+      "name_equal": false,
+      "pop_ratio": 11.37
+     },
+     {
+      "name": "Casalecchio di Reno",
+      "km": 5.3,
+      "population": 33789,
+      "name_equal": false,
+      "pop_ratio": 11.55
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "NO001C",
+    "eurostat_name": "Oslo (greater city)",
+    "value": 85.1,
+    "gisco_name": "Oslo",
+    "country": "NO",
+    "eurostat_population": 699827,
+    "eurostat_population_year": "2023",
+    "status": "name_only_far_label",
+    "match": {
+     "name": "Oslo",
+     "km": 123.1,
+     "population": 1082575,
+     "name_equal": true,
+     "pop_ratio": 1.55
+    },
+    "candidates": [
+     {
+      "name": "Oslo",
+      "km": 123.1,
+      "population": 1082575,
+      "name_equal": true,
+      "pop_ratio": 1.55
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "DE002C",
+    "eurostat_name": "Hamburg",
+    "value": 84.8,
+    "gisco_name": "Hamburg",
+    "country": "DE",
+    "eurostat_population": 1862565,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Hamburg",
+     "km": 2.3,
+     "population": 1845229,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Hamburg",
+      "km": 2.3,
+      "population": 1845229,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Wandsbek",
+      "km": 5.7,
+      "population": 411422,
+      "name_equal": false,
+      "pop_ratio": 4.53
+     },
+     {
+      "name": "Hamburg-Nord",
+      "km": 5.7,
+      "population": 315514,
+      "name_equal": false,
+      "pop_ratio": 5.9
+     },
+     {
+      "name": "Hamburg-Mitte",
+      "km": 0.9,
+      "population": 301231,
+      "name_equal": false,
+      "pop_ratio": 6.18
+     },
+     {
+      "name": "Marienthal",
+      "km": 4.5,
+      "population": 287101,
+      "name_equal": false,
+      "pop_ratio": 6.49
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "immigrants_good_place",
+  "label": "이민자가 살기 좋다는 응답률",
+  "dataset": "urb_percep",
+  "indicators": [
+   "PS3538V"
+  ],
+  "period": "2023",
+  "unit": "%",
+  "eurostat_city_count": 80,
+  "top": [
+   {
+    "rank": 1,
+    "code": "PT003C",
+    "eurostat_name": "Braga (greater city)",
+    "value": 86.4,
+    "gisco_name": "Braga",
+    "country": "PT",
+    "eurostat_population": 203519,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Braga",
+     "km": 0.7,
+     "population": 121394,
+     "name_equal": true,
+     "pop_ratio": 1.68
+    },
+    "candidates": [
+     {
+      "name": "Braga",
+      "km": 0.7,
+      "population": 121394,
+      "name_equal": true,
+      "pop_ratio": 1.68
+     },
+     {
+      "name": "Felgueiras",
+      "km": 27.3,
+      "population": 58065,
+      "name_equal": false,
+      "pop_ratio": 3.51
+     },
+     {
+      "name": "Ponte de Lima",
+      "km": 28.2,
+      "population": 44667,
+      "name_equal": false,
+      "pop_ratio": 4.56
+     },
+     {
+      "name": "Guimarães",
+      "km": 15.2,
+      "population": 40604,
+      "name_equal": false,
+      "pop_ratio": 5.01
+     },
+     {
+      "name": "Ermesinde",
+      "km": 38.1,
+      "population": 39420,
+      "name_equal": false,
+      "pop_ratio": 5.16
+     }
+    ]
+   },
+   {
+    "rank": 2,
+    "code": "UK009C",
+    "eurostat_name": "Cardiff",
+    "value": 85.5,
+    "country": "GB",
+    "eurostat_population": 363502,
+    "status": "name_only",
+    "match": {
+     "name": "Cardiff",
+     "km": null,
+     "population": 372089,
+     "name_equal": true,
+     "pop_ratio": null
+    },
+    "candidates": [
+     {
+      "name": "Cardiff",
+      "km": null,
+      "population": 372089,
+      "name_equal": true,
+      "pop_ratio": null
+     }
+    ]
+   },
+   {
+    "rank": 3,
+    "code": "PT001C",
+    "eurostat_name": "Lisboa (greater city)",
+    "value": 84.3,
+    "gisco_name": "Lisboa",
+    "country": "PT",
+    "eurostat_population": 1965363,
+    "eurostat_population_year": "2025",
+    "status": "name_similar+pop_check",
+    "match": {
+     "name": "Lisbon",
+     "km": 9.4,
+     "population": 517802,
+     "name_equal": false,
+     "pop_ratio": 3.8
+    },
+    "candidates": [
+     {
+      "name": "Lisbon",
+      "km": 9.4,
+      "population": 517802,
+      "name_equal": false,
+      "pop_ratio": 3.8
+     },
+     {
+      "name": "Amadora",
+      "km": 7.7,
+      "population": 178858,
+      "name_equal": false,
+      "pop_ratio": 10.99
+     },
+     {
+      "name": "Queluz",
+      "km": 9.0,
+      "population": 103399,
+      "name_equal": false,
+      "pop_ratio": 19.01
+     },
+     {
+      "name": "Cacém",
+      "km": 11.6,
+      "population": 93982,
+      "name_equal": false,
+      "pop_ratio": 20.91
+     },
+     {
+      "name": "Algueirão",
+      "km": 14.7,
+      "population": 66250,
+      "name_equal": false,
+      "pop_ratio": 29.67
+     }
+    ]
+   },
+   {
+    "rank": 4,
+    "code": "PL006C",
+    "eurostat_name": "Gdańsk",
+    "value": 83.3,
+    "gisco_name": "Gdańsk",
+    "country": "PL",
+    "eurostat_population": 488651,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Gdańsk",
+     "km": 1.2,
+     "population": 461865,
+     "name_equal": true,
+     "pop_ratio": 1.06
+    },
+    "candidates": [
+     {
+      "name": "Gdańsk",
+      "km": 1.2,
+      "population": 461865,
+      "name_equal": true,
+      "pop_ratio": 1.06
+     },
+     {
+      "name": "Gdynia",
+      "km": 19.0,
+      "population": 257000,
+      "name_equal": false,
+      "pop_ratio": 1.9
+     },
+     {
+      "name": "Wrzeszcz",
+      "km": 2.6,
+      "population": 65000,
+      "name_equal": false,
+      "pop_ratio": 7.52
+     },
+     {
+      "name": "Tczew",
+      "km": 31.1,
+      "population": 60133,
+      "name_equal": false,
+      "pop_ratio": 8.13
+     },
+     {
+      "name": "Wejherowo",
+      "km": 37.6,
+      "population": 46820,
+      "name_equal": false,
+      "pop_ratio": 10.44
+     }
+    ]
+   },
+   {
+    "rank": 5,
+    "code": "ES013C",
+    "eurostat_name": "Oviedo",
+    "value": 82.9,
+    "gisco_name": "Oviedo",
+    "country": "ES",
+    "eurostat_population": 220027,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Oviedo",
+     "km": 3.1,
+     "population": 220020,
+     "name_equal": true,
+     "pop_ratio": 1.0
+    },
+    "candidates": [
+     {
+      "name": "Gijón",
+      "km": 25.4,
+      "population": 277554,
+      "name_equal": false,
+      "pop_ratio": 1.26
+     },
+     {
+      "name": "Oviedo",
+      "km": 3.1,
+      "population": 220020,
+      "name_equal": true,
+      "pop_ratio": 1.0
+     },
+     {
+      "name": "Avilés",
+      "km": 20.7,
+      "population": 78715,
+      "name_equal": false,
+      "pop_ratio": 2.8
+     },
+     {
+      "name": "Mieres",
+      "km": 16.3,
+      "population": 44070,
+      "name_equal": false,
+      "pop_ratio": 4.99
+     },
+     {
+      "name": "Sama",
+      "km": 17.9,
+      "population": 39984,
+      "name_equal": false,
+      "pop_ratio": 5.5
+     }
+    ]
+   },
+   {
+    "rank": 6,
+    "code": "ES002C",
+    "eurostat_name": "Barcelona (greater city)",
+    "value": 80.8,
+    "gisco_name": "Barcelona",
+    "country": "ES",
+    "eurostat_population": 2658830,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Barcelona",
+     "km": 3.1,
+     "population": 1620343,
+     "name_equal": true,
+     "pop_ratio": 1.64
+    },
+    "candidates": [
+     {
+      "name": "Barcelona",
+      "km": 3.1,
+      "population": 1620343,
+      "name_equal": true,
+      "pop_ratio": 1.64
+     },
+     {
+      "name": "Eixample",
+      "km": 3.0,
+      "population": 266477,
+      "name_equal": false,
+      "pop_ratio": 9.98
+     },
+     {
+      "name": "L'Hospitalet de Llobregat",
+      "km": 8.3,
+      "population": 257038,
+      "name_equal": false,
+      "pop_ratio": 10.34
+     },
+     {
+      "name": "Sant Martí",
+      "km": 2.8,
+      "population": 235719,
+      "name_equal": false,
+      "pop_ratio": 11.28
+     },
+     {
+      "name": "Badalona",
+      "km": 7.8,
+      "population": 219547,
+      "name_equal": false,
+      "pop_ratio": 12.11
+     }
+    ]
+   },
+   {
+    "rank": 7,
+    "code": "ES006C",
+    "eurostat_name": "Málaga",
+    "value": 80.2,
+    "gisco_name": "Málaga",
+    "country": "ES",
+    "eurostat_population": 592346,
+    "eurostat_population_year": "2024",
+    "status": "exact",
+    "match": {
+     "name": "Málaga",
+     "km": 5.3,
+     "population": 578460,
+     "name_equal": true,
+     "pop_ratio": 1.02
+    },
+    "candidates": [
+     {
+      "name": "Málaga",
+      "km": 5.3,
+      "population": 578460,
+      "name_equal": true,
+      "pop_ratio": 1.02
+     },
+     {
+      "name": "Vélez-Málaga",
+      "km": 28.7,
+      "population": 74190,
+      "name_equal": false,
+      "pop_ratio": 7.98
+     },
+     {
+      "name": "Mijas",
+      "km": 26.9,
+      "population": 73787,
+      "name_equal": false,
+      "pop_ratio": 8.03
+     },
+     {
+      "name": "Fuengirola",
+      "km": 31.0,
+      "population": 71482,
+      "name_equal": false,
+      "pop_ratio": 8.29
+     },
+     {
+      "name": "Torremolinos",
+      "km": 17.7,
+      "population": 65448,
+      "name_equal": false,
+      "pop_ratio": 9.05
+     }
+    ]
+   },
+   {
+    "rank": 8,
+    "code": "DE002C",
+    "eurostat_name": "Hamburg",
+    "value": 80.1,
+    "gisco_name": "Hamburg",
+    "country": "DE",
+    "eurostat_population": 1862565,
+    "eurostat_population_year": "2025",
+    "status": "exact",
+    "match": {
+     "name": "Hamburg",
+     "km": 2.3,
+     "population": 1845229,
+     "name_equal": true,
+     "pop_ratio": 1.01
+    },
+    "candidates": [
+     {
+      "name": "Hamburg",
+      "km": 2.3,
+      "population": 1845229,
+      "name_equal": true,
+      "pop_ratio": 1.01
+     },
+     {
+      "name": "Wandsbek",
+      "km": 5.7,
+      "population": 411422,
+      "name_equal": false,
+      "pop_ratio": 4.53
+     },
+     {
+      "name": "Hamburg-Nord",
+      "km": 5.7,
+      "population": 315514,
+      "name_equal": false,
+      "pop_ratio": 5.9
+     },
+     {
+      "name": "Hamburg-Mitte",
+      "km": 0.9,
+      "population": 301231,
+      "name_equal": false,
+      "pop_ratio": 6.18
+     },
+     {
+      "name": "Marienthal",
+      "km": 4.5,
+      "population": 287101,
+      "name_equal": false,
+      "pop_ratio": 6.49
+     }
+    ]
+   },
+   {
+    "rank": 9,
+    "code": "IE001C",
+    "eurostat_name": "Dublin (greater city)",
+    "value": 79.7,
+    "gisco_name": "Dublin (greater city)",
+    "country": "IE",
+    "eurostat_population": 1325700,
+    "eurostat_population_year": "2016",
+    "status": "exact",
+    "match": {
+     "name": "Dublin",
+     "km": 3.6,
+     "population": 1024027,
+     "name_equal": true,
+     "pop_ratio": 1.29
+    },
+    "candidates": [
+     {
+      "name": "Dublin",
+      "km": 3.6,
+      "population": 1024027,
+      "name_equal": true,
+      "pop_ratio": 1.29
+     },
+     {
+      "name": "South Dublin",
+      "km": 5.6,
+      "population": 278749,
+      "name_equal": false,
+      "pop_ratio": 4.76
+     },
+     {
+      "name": "Tallaght",
+      "km": 7.2,
+      "population": 80339,
+      "name_equal": false,
+      "pop_ratio": 16.5
+     },
+     {
+      "name": "Swords",
+      "km": 14.9,
+      "population": 42738,
+      "name_equal": false,
+      "pop_ratio": 31.02
+     },
+     {
+      "name": "Bray",
+      "km": 20.0,
+      "population": 32600,
+      "name_equal": false,
+      "pop_ratio": 40.67
+     }
+    ]
+   },
+   {
+    "rank": 10,
+    "code": "LU001C",
+    "eurostat_name": "Luxembourg (greater city)",
+    "value": 78.8,
+    "gisco_name": "Luxembourg (greater city)",
+    "country": "LU",
+    "eurostat_population": 115227,
+    "eurostat_population_year": "2016",
+    "status": "exact",
+    "match": {
+     "name": "Luxembourg",
+     "km": 1.1,
+     "population": 76684,
+     "name_equal": true,
+     "pop_ratio": 1.5
+    },
+    "candidates": [
+     {
+      "name": "Luxembourg",
+      "km": 1.1,
+      "population": 76684,
+      "name_equal": true,
+      "pop_ratio": 1.5
+     },
+     {
+      "name": "Esch-sur-Alzette",
+      "km": 15.9,
+      "population": 36625,
+      "name_equal": false,
+      "pop_ratio": 3.15
+     },
+     {
+      "name": "Differdange",
+      "km": 18.8,
+      "population": 27103,
+      "name_equal": false,
+      "pop_ratio": 4.25
+     },
+     {
+      "name": "Dudelange",
+      "km": 14.3,
+      "population": 18013,
+      "name_equal": false,
+      "pop_ratio": 6.4
+     }
+    ]
+   },
+   {
+    "rank": 11,
+    "code": "AT002C",
+    "eurostat_name": "Graz",
+    "value": 78.8,
+    "gisco_name": "Graz",
+    "country": "AT",
+    "eurostat_population": 269997,
+    "eurostat_population_year": "2014",
+    "status": "exact",
+    "match": {
+     "name": "Graz",
+     "km": 1.3,
+     "population": 303270,
+     "name_equal": true,
+     "pop_ratio": 1.12
+    },
+    "candidates": [
+     {
+      "name": "Graz",
+      "km": 1.3,
+      "population": 303270,
+      "name_equal": true,
+      "pop_ratio": 1.12
+     },
+     {
+      "name": "Jakomini",
+      "km": 2.5,
+      "population": 32912,
+      "name_equal": false,
+      "pop_ratio": 8.2
+     },
+     {
+      "name": "Lend",
+      "km": 1.9,
+      "population": 31147,
+      "name_equal": false,
+      "pop_ratio": 8.67
+     },
+     {
+      "name": "Gries",
+      "km": 1.8,
+      "population": 29363,
+      "name_equal": false,
+      "pop_ratio": 9.2
+     },
+     {
+      "name": "Geidorf",
+      "km": 1.0,
+      "population": 24767,
+      "name_equal": false,
+      "pop_ratio": 10.9
+     }
+    ]
+   }
+  ]
+ }
+]

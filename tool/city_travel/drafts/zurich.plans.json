@@ -1,0 +1,799 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Old Town churches, art and history, all on foot.",
+      "days": [
+        {
+          "title": "Old Town churches and art",
+          "stops": [
+            {
+              "place": "grossmunster",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early before tour groups. Tower climb is extra and weather-dependent."
+            },
+            {
+              "place": "fraumunster",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Five minutes across the river. See the Chagall windows."
+            },
+            {
+              "place": "lindenhof",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short uphill walk for the river view."
+            },
+            {
+              "place": "markthalle",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the market hall. Closed Sunday."
+            },
+            {
+              "place": "kunsthaus",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Tram or a 15-minute walk."
+            },
+            {
+              "place": "landesmuseum",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Closed Monday. Near the main station for the trip home."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Lake views, a boat ride and a hilltop sunset in one day.",
+      "days": [
+        {
+          "title": "Lakefront and viewpoints",
+          "stops": [
+            {
+              "place": "lake_promenade",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Flat walk along the water. Bring a layer, it can be breezy."
+            },
+            {
+              "place": "limmat_cruise",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Check the timetable on the day. More departures in summer."
+            },
+            {
+              "place": "markthalle",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Closed Sunday."
+            },
+            {
+              "place": "zoo",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Tram from Enge. Last entry is earlier than closing, check on the day."
+            },
+            {
+              "place": "polyterrasse",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset view over the Old Town. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Enge"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Chocolate, market stalls and fondue, with a walk between each.",
+      "days": [
+        {
+          "title": "Taste the city",
+          "stops": [
+            {
+              "place": "chocolatier",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Weekday morning is calmest. Shops closed Sunday."
+            },
+            {
+              "place": "bahnhofstrasse",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Stroll toward the Old Town."
+            },
+            {
+              "place": "old_town_food_tour",
+              "at": "11:45",
+              "minutes": 180,
+              "note": "Book ahead. Usually one or two departures a day."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Wander the lanes and pick a cafe."
+            },
+            {
+              "place": "fondue",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book a table in the evening. Best in cooler months."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Niederdorf"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day of Old Town churches, art and river views, all on foot.",
+      "days": [
+        {
+          "title": "Old Town icons and art",
+          "stops": [
+            {
+              "place": "grossmunster",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early before tour groups. Tower hours vary, check on the day."
+            },
+            {
+              "place": "fraumunster",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Short walk across the river. Shorter hours on Sundays."
+            },
+            {
+              "place": "lindenhof",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Hilltop square with river views. Always open."
+            },
+            {
+              "place": "markthalle",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the market hall. Closed Sunday."
+            },
+            {
+              "place": "kunsthaus",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Thu open late."
+            },
+            {
+              "place": "polyterrasse",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Sunset viewpoint above the city. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Lake air, a boat ride and the best free viewpoints in one day.",
+      "days": [
+        {
+          "title": "Lake and viewpoints",
+          "stops": [
+            {
+              "place": "lake_promenade",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Flat walk along the water. Always open."
+            },
+            {
+              "place": "limmat_cruise",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Daytime departures, more in summer. Check the timetable."
+            },
+            {
+              "place": "markthalle",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "polyterrasse",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "City and lake views. Always open."
+            },
+            {
+              "place": "lindenhof",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Second viewpoint over the river. Always open."
+            },
+            {
+              "place": "fondue",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening fondue in the old town. Best October to March."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Enge"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Chocolate, market food and fondue, with a little Old Town walking between.",
+      "days": [
+        {
+          "title": "Taste the city",
+          "stops": [
+            {
+              "place": "chocolatier",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Morning tasting. Closed Sunday."
+            },
+            {
+              "place": "bahnhofstrasse",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Stroll the shopping street. Shops closed Sunday."
+            },
+            {
+              "place": "markthalle",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch among the stalls. Closed Sunday."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Old-town lanes, liveliest in the evening."
+            },
+            {
+              "place": "fondue",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead in winter. Mostly evening service."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Niederdorf"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Old Town churches, big museums and a lake view in two easy days.",
+      "days": [
+        {
+          "title": "Old Town churches and river",
+          "stops": [
+            {
+              "place": "grossmunster",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early before tour groups. Tower climb is optional; check tower hours on the day."
+            },
+            {
+              "place": "fraumunster",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Short walk across the river. Chagall windows are the highlight. Shorter hours on Sundays."
+            },
+            {
+              "place": "lindenhof",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Hilltop square with river views. Good spot for a picnic lunch."
+            },
+            {
+              "place": "landesmuseum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Swiss history near the main station. Closed Monday."
+            },
+            {
+              "place": "limmat_cruise",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Relax on the water. More departures in summer; check the timetable."
+            }
+          ]
+        },
+        {
+          "title": "Art, campus and views",
+          "stops": [
+            {
+              "place": "kunsthaus",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Thursday open late."
+            },
+            {
+              "place": "eth",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Walk up or take the Polybahn. Some buildings closed at weekends."
+            },
+            {
+              "place": "polyterrasse",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Viewpoint over the city. Grab lunch nearby."
+            },
+            {
+              "place": "uzh",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Public areas open on weekdays only."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening stroll through the old lanes. Dinner options everywhere."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want lake air, hilltop views and a swim in season.",
+      "days": [
+        {
+          "title": "Lakefront and views",
+          "stops": [
+            {
+              "place": "lake_promenade",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Flat walk along the water. Bring a jacket; it can be breezy."
+            },
+            {
+              "place": "swimming",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Public baths are summer only, roughly 09:00–20:00. Check the season."
+            },
+            {
+              "place": "polyterrasse",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Sunset view over the Old Town. Take the Polybahn up."
+            },
+            {
+              "place": "lindenhof",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Short walk down. Another good river view."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and river",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Go early when animals are active. Longer hours in summer."
+            },
+            {
+              "place": "markthalle",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch under the arches. Closed Sunday."
+            },
+            {
+              "place": "limmat_cruise",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Afternoon on the river. Check departure times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Enge"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, chocolate and a fondue dinner.",
+      "days": [
+        {
+          "title": "Old Town tastes",
+          "stops": [
+            {
+              "place": "chocolatier",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Morning tasting. Shops closed Sunday."
+            },
+            {
+              "place": "old_town_food_tour",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Late-morning walking tour with tastings. Book ahead."
+            },
+            {
+              "place": "lindenhof",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Walk off lunch with a view."
+            },
+            {
+              "place": "fondue",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Classic cheese fondue. Best in cooler months; book a table."
+            }
+          ]
+        },
+        {
+          "title": "Market hall and lake",
+          "stops": [
+            {
+              "place": "markthalle",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Weekday lunch spot under the arches. Closed Sunday."
+            },
+            {
+              "place": "lake_promenade",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Easy walk by the water."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening lanes with bars and casual food."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Niederdorf"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the Old Town churches, the big museums and a river view, at an easy pace.",
+      "days": [
+        {
+          "title": "Old Town churches and the river",
+          "stops": [
+            {
+              "place": "grossmunster",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early before tour groups. Tower hours vary, so check on the day."
+            },
+            {
+              "place": "fraumunster",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Short walk across the river. Chagall windows are the highlight."
+            },
+            {
+              "place": "lindenhof",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Hilltop square with river views. Good spot for a picnic lunch."
+            },
+            {
+              "place": "landesmuseum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Swiss history near the main station. Closed Monday."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Old-town lanes, liveliest in the evening. Dinner on the way."
+            }
+          ]
+        },
+        {
+          "title": "Art and the university hill",
+          "stops": [
+            {
+              "place": "kunsthaus",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Weekday mornings are quiet."
+            },
+            {
+              "place": "chagall_museum",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Same building area, so plan lunch nearby first if you like."
+            },
+            {
+              "place": "eth",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Campus open on weekdays. Some buildings close at weekends."
+            },
+            {
+              "place": "polyterrasse",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Viewpoint right by ETH. Best at sunset."
+            },
+            {
+              "place": "fondue",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead in winter. Mostly evening service."
+            }
+          ]
+        },
+        {
+          "title": "Museums, market and a tram ride",
+          "stops": [
+            {
+              "place": "tram_tour",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Line 4 or 11 for a cheap city loop. Runs all day."
+            },
+            {
+              "place": "markthalle",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Good for a weekday lunch."
+            },
+            {
+              "place": "fifa",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. In Enge, a short tram ride away."
+            },
+            {
+              "place": "lake_promenade",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk the waterfront back toward the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt or near the main station"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Visitors who want the lake, hilltop views and time outdoors, with a museum for rainy hours.",
+      "days": [
+        {
+          "title": "Lakefront and a boat ride",
+          "stops": [
+            {
+              "place": "lake_promenade",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Flat walk along the water. Always open."
+            },
+            {
+              "place": "limmat_cruise",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Daytime departures, more in summer. Check the timetable."
+            },
+            {
+              "place": "markthalle",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "lindenhof",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Sunset view over the river."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and the lake baths",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning is best. Open daily, longer hours in summer."
+            },
+            {
+              "place": "swimming",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Summer season only. Bring a towel."
+            },
+            {
+              "place": "lake_promenade",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Evening stroll back toward the centre."
+            }
+          ]
+        },
+        {
+          "title": "Hilltop views and a rainy-day backup",
+          "stops": [
+            {
+              "place": "polyterrasse",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "City and lake views. Always open."
+            },
+            {
+              "place": "eth",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Campus open on weekdays."
+            },
+            {
+              "place": "landesmuseum",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Indoor backup if it rains. Closed Monday."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Enge, close to the lake"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Travellers who plan the day around lunch, chocolate and a fondue dinner.",
+      "days": [
+        {
+          "title": "Market hall and chocolate",
+          "stops": [
+            {
+              "place": "chocolatier",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Closed Sunday. Weekday mornings are calm."
+            },
+            {
+              "place": "bahnhofstrasse",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Shops roughly 09:00–20:00, closed Sunday."
+            },
+            {
+              "place": "markthalle",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch among the stalls. Closed Sunday."
+            },
+            {
+              "place": "niederdorf_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Evening lanes, then dinner."
+            },
+            {
+              "place": "fondue",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead. Best October to March."
+            }
+          ]
+        },
+        {
+          "title": "Old-town food tour",
+          "stops": [
+            {
+              "place": "old_town_food_tour",
+              "at": "10:30",
+              "minutes": 180,
+              "note": "Late-morning departure. Book ahead."
+            },
+            {
+              "place": "grossmunster",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk off lunch. Check tower hours on the day."
+            },
+            {
+              "place": "lindenhof",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Rest with a view."
+            },
+            {
+              "place": "lake_promenade",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset walk before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Tram, market and a last tasting",
+          "stops": [
+            {
+              "place": "tram_tour",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Line 4 or 11. Runs all day."
+            },
+            {
+              "place": "chocolatier",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Second tasting if you like. Closed Sunday."
+            },
+            {
+              "place": "markthalle",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Final lunch. Closed Sunday."
+            },
+            {
+              "place": "fraumunster",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Short visit. Shorter hours on Sundays."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Niederdorf, near the restaurants"
+    }
+  ]
+}

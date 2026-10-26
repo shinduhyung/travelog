@@ -1,0 +1,2138 @@
+{
+  "city": "São Paulo",
+  "checked": "October 2026",
+  "currency": "BRL",
+  "usd_rate": 5.0428,
+  "intro": "São Paulo rewards visitors with world-class museums, buzzing neighbourhoods and a food scene that never stops. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -23.7314,
+      "west": -46.7428,
+      "north": -23.5044,
+      "east": -46.5221,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 6,
+      "flag_airport": 8,
+      "per_km": 3,
+      "min_fare": 10
+    },
+    "road_factor": 1.4,
+    "city_kmh": 18,
+    "notes": [
+      "Metrô and CPTM trains are modern, safe and the fastest way around; Lines 1-5 and 9 suit tourists.",
+      "Buses cover the whole city; fares are R$5.30 and Bilhete Único gives free transfers within 3 hours.",
+      "Taxis are metered; Guarucoop has a monopoly at GRU and fares are posted on a tabela.",
+      "Uber and 99 operate widely and are usually cheaper than taxis.",
+      "Driving is stressful; traffic peaks 06:00-09:00 and 16:00-19:00, so avoid renting a car.",
+      "Bikes are popular with many cycleways; walking is fine in central and Jardins areas."
+    ],
+    "sources": []
+  },
+  "places": {
+    "ibirapuera": {
+      "name": "Ibirapuera Park",
+      "landmark": "Ibirapuera Park",
+      "kind": "park",
+      "lat": -23.5874,
+      "lon": -46.6576,
+      "price": 0,
+      "price_text": "Free entry · some museums inside charge separately",
+      "hours": "Park roughly 05:00–24:00 daily; museums have shorter hours — check on the day",
+      "tip": "Rent a bike or walk the lake loop early on Sunday, when avenues close to cars and the park fills with locals.",
+      "source": "https://www.parqueibirapuera.org/"
+    },
+    "masp": {
+      "name": "São Paulo Museum of Art (MASP)",
+      "landmark": "São Paulo Museum of Art",
+      "kind": "museum",
+      "lat": -23.5614,
+      "lon": -46.6558,
+      "price": 75,
+      "price_text": "Around BRL 75 · free on Tuesdays — confirm current price",
+      "hours": "Tue–Sun roughly 10:00–18:00, Thu until 20:00 · closed Monday",
+      "tip": "The famous red staircase and the free-standing paintings on glass easels are the highlight; go Tuesday for free entry.",
+      "source": "https://masp.org.br/"
+    },
+    "paulista": {
+      "name": "Paulista Avenue",
+      "landmark": "Paulista Avenue",
+      "kind": "sight",
+      "lat": -23.5632,
+      "lon": -46.6544,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · closed to cars on Sundays",
+      "tip": "Walk it on a Sunday when the avenue becomes a pedestrian street, and duck into the free cultural centres along the way.",
+      "source": ""
+    },
+    "mercado": {
+      "name": "Mercado Municipal de São Paulo",
+      "landmark": "Mercado Municipal de Sao Paulo",
+      "kind": "food",
+      "lat": -23.5419,
+      "lon": -46.6293,
+      "price": 0,
+      "price_text": "Free entry · food paid separately",
+      "hours": "Mon–Sat roughly 06:00–18:00, Sun until about 16:00 — check on the day",
+      "tip": "Try a mortadella sandwich and pastel de bacalhau, but arrive before 11:00 to beat the crowds.",
+      "source": ""
+    },
+    "cathedral": {
+      "name": "São Paulo Cathedral (Catedral da Sé)",
+      "landmark": "Sao Paulo Cathedral",
+      "kind": "sight",
+      "lat": -23.5512,
+      "lon": -46.6342,
+      "price": 0,
+      "price_text": "Free entry · small donation welcome",
+      "hours": "Roughly Mon–Fri 08:00–17:00, weekends shorter — check on the day",
+      "tip": "Visit in daylight and keep valuables out of sight in the surrounding square.",
+      "source": ""
+    },
+    "theatro": {
+      "name": "Theatro Municipal",
+      "landmark": "Theatro Municipal",
+      "kind": "sight",
+      "lat": -23.5453,
+      "lon": -46.6385,
+      "price": 20,
+      "price_text": "Guided tour around BRL 20 · performances priced separately",
+      "hours": "Guided tours on set days — check the schedule on the day",
+      "tip": "Book a guided tour to see the ornate interior; evening concerts are a cheap way to experience it.",
+      "source": "https://theatromunicipal.org.br/"
+    },
+    "liberdade": {
+      "name": "Liberdade",
+      "landmark": "Liberdade",
+      "kind": "sight",
+      "lat": -23.5559,
+      "lon": -46.6343,
+      "price": 0,
+      "price_text": "Free to walk · food paid separately",
+      "hours": "Streets always open · shops roughly 10:00–19:00",
+      "tip": "Come on a weekend for the street food stalls and Japanese-Brazilian snacks; the lantern-lit streets are best after dark.",
+      "source": ""
+    },
+    "batman": {
+      "name": "Batman Alley (Beco do Batman)",
+      "landmark": "Batman Alley",
+      "kind": "sight",
+      "lat": -23.5566,
+      "lon": -46.6865,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · best in daylight",
+      "tip": "The murals change often, so wander the side streets too, then grab a coffee in Vila Madalena.",
+      "source": ""
+    },
+    "allianz": {
+      "name": "Allianz Parque",
+      "landmark": "Allianz Parque",
+      "kind": "show",
+      "lat": -23.5275,
+      "lon": -46.6784,
+      "price": null,
+      "price_text": "Match and concert tickets vary — check on the day",
+      "hours": "Only open for events",
+      "tip": "Check the fixture list before you go; match nights are loud and fun but taxis are scarce afterwards.",
+      "source": "https://www.allianzparque.com.br/"
+    },
+    "altino": {
+      "name": "Altino Arantes Building (Farol Santander)",
+      "landmark": "Altino Arantes Building",
+      "kind": "sight",
+      "lat": -23.5453,
+      "lon": -46.6346,
+      "price": 40,
+      "price_text": "Observation deck around BRL 40 — confirm on the day",
+      "hours": "Roughly Tue–Sun 09:00–20:00 · closed Monday",
+      "tip": "The top-floor lookout gives one of the best free-ish views over Centro; go late afternoon for sunset light.",
+      "source": ""
+    },
+    "crianca": {
+      "name": "Cidade da Criança",
+      "landmark": "Cidade da Criança",
+      "kind": "park",
+      "lat": -23.7083,
+      "lon": -46.5447,
+      "price": 0,
+      "price_text": "Free entry — check on the day",
+      "hours": "Daytime hours only — check on the day",
+      "tip": "A small family-friendly park inside Ibirapuera; good for a break with kids mid-walk.",
+      "source": ""
+    },
+    "copan": {
+      "name": "Copan Building",
+      "landmark": "Copan Building",
+      "kind": "sight",
+      "lat": -23.5471,
+      "lon": -46.6444,
+      "price": 0,
+      "price_text": "Free to view from outside",
+      "hours": "Exterior always visible",
+      "tip": "Admire the Oscar Niemeyer curve from the street; the interior is residential, so don't wander in.",
+      "source": ""
+    },
+    "morumbi": {
+      "name": "Estádio do Morumbi",
+      "landmark": "Estadio do Morumbi",
+      "kind": "show",
+      "lat": -23.6001,
+      "lon": -46.7202,
+      "price": null,
+      "price_text": "Match tickets vary — check on the day",
+      "hours": "Only open for events and tours",
+      "tip": "It's far from the centre; go only if you have a match ticket and plan transport back in advance.",
+      "source": ""
+    },
+    "bandeiras": {
+      "name": "Monument to the Bandeiras",
+      "landmark": "Monument to the Bandeiras",
+      "kind": "sight",
+      "lat": -23.5804,
+      "lon": -46.6605,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always visible",
+      "tip": "It sits at the Ibirapuera entrance, so see it on the way into the park.",
+      "source": ""
+    },
+    "octavio": {
+      "name": "Octavio Frias de Oliveira Bridge",
+      "landmark": "Octavio Frias de Oliveira Bridge",
+      "kind": "sight",
+      "lat": -23.6139,
+      "lon": -46.6997,
+      "price": 0,
+      "price_text": "Free to view",
+      "hours": "Always visible · lit at night",
+      "tip": "See it lit up after dark from a nearby riverside spot; it's a quick photo stop, not a long visit.",
+      "source": ""
+    },
+    "marisa": {
+      "name": "Parque Marisa",
+      "landmark": "Parque Marisa",
+      "kind": "park",
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daytime hours — check on the day",
+      "tip": "A small local park; pair it with a walk in nearby Vila Madalena rather than a special trip.",
+      "source": ""
+    },
+    "pinacoteca": {
+      "name": "Pinacoteca do Estado",
+      "landmark": "Pinacoteca do Estado",
+      "kind": "museum",
+      "lat": -23.5348,
+      "lon": -46.634,
+      "price": 30,
+      "price_text": "Around BRL 30 · free on Saturdays — confirm on the day",
+      "hours": "Tue–Sun roughly 10:00–18:00 · closed Monday",
+      "tip": "Brazilian art in a beautiful old building; Saturdays are free and busy, so go early.",
+      "source": "https://pinacoteca.org.br/"
+    },
+    "playcenter": {
+      "name": "Playcenter Family",
+      "landmark": "Playcenter Family",
+      "kind": "activity",
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "price": null,
+      "price_text": "Ticket prices vary — check on the day",
+      "hours": "Check opening days on the day",
+      "tip": "An indoor family amusement option; confirm hours and prices online before travelling.",
+      "source": ""
+    },
+    "zoo": {
+      "name": "São Paulo Zoo",
+      "landmark": "São Paulo Zoo",
+      "kind": "park",
+      "lat": -23.6508,
+      "lon": -46.62,
+      "price": 65,
+      "price_text": "Around BRL 65 — confirm on the day",
+      "hours": "Roughly Tue–Sun 09:00–17:00 · closed Monday",
+      "tip": "It's large and far south; go early, wear comfortable shoes and bring water.",
+      "source": "https://www.zoologico.com.br/"
+    },
+    "farol": {
+      "name": "Farol Santander viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -23.5456,
+      "lon": -46.6344,
+      "price": 40,
+      "price_text": "Around BRL 40 — confirm on the day",
+      "hours": "Roughly Tue–Sun daytime · closed Monday",
+      "tip": "A rooftop lookout over Centro; check visibility on the day before buying a ticket.",
+      "source": ""
+    },
+    "vila-madalena-walk": {
+      "name": "Vila Madalena neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -23.5567,
+      "lon": -46.6905,
+      "price": 0,
+      "price_text": "Free to walk · food and drink paid separately",
+      "hours": "Best daytime into evening",
+      "tip": "Wander the streets between Batman Alley and the bars; evenings are lively but keep to busy streets.",
+      "source": ""
+    },
+    "liberdade-food-tour": {
+      "name": "Liberdade street food walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": -23.5583,
+      "lon": -46.635,
+      "price": null,
+      "price_text": "Pay per stall — budget around BRL 50–100",
+      "hours": "Weekends have the most stalls",
+      "tip": "Bring cash for small stalls and try a few snacks rather than one big meal.",
+      "source": ""
+    },
+    "centro-walk": {
+      "name": "Centro histórico walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -23.5504,
+      "lon": -46.6339,
+      "price": null,
+      "price_text": "Free walking tours tip-based — check on the day",
+      "hours": "Tours usually run mornings and afternoons",
+      "tip": "Join a guided group rather than exploring alone; it's the easiest way to see the old centre safely.",
+      "source": ""
+    },
+    "jardins-food": {
+      "name": "Jardins restaurant and café stroll",
+      "landmark": null,
+      "kind": "food",
+      "lat": -23.568,
+      "lon": -46.665,
+      "price": null,
+      "price_text": "Meals vary — budget BRL 60–150",
+      "hours": "Cafés daytime · restaurants into the evening",
+      "tip": "Walk the tree-lined streets around Oscar Freire for cafés and shops; book dinner on weekends.",
+      "source": ""
+    },
+    "sunday-avenue": {
+      "name": "Sunday car-free Paulista bike ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -23.5614,
+      "lon": -46.6559,
+      "price": 0,
+      "price_text": "Free · bike rental paid separately",
+      "hours": "Sunday daytime",
+      "tip": "Rent a bike on Sunday when the avenue closes to cars, and ride the car-free stretch at an easy pace.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of art and history: MASP in the morning, the historic Centro in the afternoon.",
+      "days": [
+        {
+          "title": "MASP, Paulista and the old Centro",
+          "stops": [
+            {
+              "place": "masp",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Tuesday is free. Go early to beat the crowds."
+            },
+            {
+              "place": "paulista",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Walk the avenue outside the museum. Cafés nearby for a quick lunch."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "About 15 minutes by metro to Sé. Keep bags close in the square."
+            },
+            {
+              "place": "centro-walk",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Walking tour of the historic streets. Book ahead or join a group."
+            },
+            {
+              "place": "altino",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Rooftop view at sunset. Closed Monday. Check last entry on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Paulista"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day of markets and street food: the big municipal market, then Liberdade's Asian food street.",
+      "days": [
+        {
+          "title": "Market morning, Liberdade afternoon",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Go before the lunch rush. Try a pastel and a fruit juice. Closed early Sunday."
+            },
+            {
+              "place": "centro-walk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Short walk through the old streets to work up an appetite."
+            },
+            {
+              "place": "liberdade",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "About 10 minutes by metro. Weekend afternoons have the most stalls."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Street food walk: dumplings, noodles and sweets. Cash is handy."
+            },
+            {
+              "place": "jardins-food",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Taxi back for a relaxed dinner in the Jardins."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins"
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "Art in the afternoon, then bars and live music in Vila Madalena into the night.",
+      "days": [
+        {
+          "title": "Street art, then Vila Madalena bars",
+          "stops": [
+            {
+              "place": "batman",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Best in daylight. Weekdays are quieter."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Wander the streets, galleries and small shops. Stop for a coffee."
+            },
+            {
+              "place": "marisa",
+              "at": "18:15",
+              "minutes": 30,
+              "note": "Small park to rest before the evening. Check hours on the day."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Dinner, then bars and live samba. Things get busy after 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vila Madalena"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for first-timers: MASP and Paulista on arrival, then Ibirapuera and the historic Centro the next day.",
+      "days": [
+        {
+          "title": "Arrive, Paulista and MASP",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start at the top of the avenue and walk down. Sunday it is closed to cars."
+            },
+            {
+              "place": "masp",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Closed Monday. Tuesday is free entry."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:15",
+              "minutes": 120,
+              "note": "Dinner in the side streets off the avenue."
+            }
+          ]
+        },
+        {
+          "title": "Ibirapuera, then Centro",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Go early. Museums inside have shorter hours — check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "About 20 minutes by taxi or metro to Sé. Weekday daytime is calmest."
+            },
+            {
+              "place": "centro-walk",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Walking tour of the old centre. Keep valuables out of sight."
+            },
+            {
+              "place": "altino",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Closed Monday. Late afternoon light is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Paulista"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way from the Mercado to Liberdade, with a long Jardins lunch in between.",
+      "days": [
+        {
+          "title": "Mercado and Centro snacks",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Go before the lunch rush. Try a pastel and a fruit stall."
+            },
+            {
+              "place": "centro-walk",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Walk it off through the old centre. Weekday mornings are quieter."
+            },
+            {
+              "place": "liberdade",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Shops roughly 10:00–19:00. Weekends have the most street stalls."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Street food walk. Bring cash for small stalls."
+            }
+          ]
+        },
+        {
+          "title": "Jardins cafés and Paulista",
+          "stops": [
+            {
+              "place": "jardins-food",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Slow café stop, then browse the side streets."
+            },
+            {
+              "place": "masp",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. The café inside is a good break."
+            },
+            {
+              "place": "paulista",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk the avenue. Sunday it is car-free."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "Street art and bars in Vila Madalena, then a slow morning in the parks.",
+      "days": [
+        {
+          "title": "Vila Madalena afternoon into night",
+          "stops": [
+            {
+              "place": "batman",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Always open, but best in daylight for photos."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Wander the side streets. Bars pick up after dark."
+            },
+            {
+              "place": "allianz",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Only open for events — check the fixture list on the day."
+            }
+          ]
+        },
+        {
+          "title": "Parks and a late lunch",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "A slow start after a late night. Sunday is busiest."
+            },
+            {
+              "place": "jardins-food",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Long lunch, then a nap before your flight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vila Madalena or Jardins"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums, the historic centre and a Vila Madalena evening.",
+      "days": [
+        {
+          "title": "Arrive, Paulista and MASP",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start with a walk down the avenue. It is closed to cars on Sundays."
+            },
+            {
+              "place": "masp",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Monday. Tuesday is free entry. The art hangs on glass easels."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner in the Jardins. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Centro histórico on foot",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Go early and keep valuables out of sight in the square."
+            },
+            {
+              "place": "centro-walk",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Walking tour of the old centre. Book ahead and confirm the start point."
+            },
+            {
+              "place": "mercado",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch stop. Try a pastel and a fruit juice. Busy at midday."
+            },
+            {
+              "place": "farol",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Rooftop viewpoint. Closed Monday. Late afternoon light is best."
+            },
+            {
+              "place": "theatro",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Tours run on set days only — check the schedule on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ibirapuera, then fly",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Big park with museums inside. Check museum hours on the day."
+            },
+            {
+              "place": "bandeiras",
+              "at": "11:45",
+              "minutes": 15,
+              "note": "Short walk to the monument at the park edge."
+            },
+            {
+              "place": "octavio",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "See the bridge from a nearby viewpoint. Best after dark, but fine by day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Paulista"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want the market, street food and long café lunches.",
+      "days": [
+        {
+          "title": "Market morning and Centro tastes",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go before the lunch rush. Try the mortadella sandwich and fresh fruit."
+            },
+            {
+              "place": "centro-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk off breakfast through the old centre. Confirm tour times."
+            },
+            {
+              "place": "cathedral",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Weekday daytime is calmest."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Street food walk. Weekends have the most stalls."
+            }
+          ]
+        },
+        {
+          "title": "Liberdade and Vila Madalena",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Weekend afternoons are liveliest. Shops open around 10:00."
+            },
+            {
+              "place": "jardins-food",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch and café crawl in the Jardins."
+            },
+            {
+              "place": "batman",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Street art in daylight. Free and always open."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Bars and botecos. Dinner here and stay into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Park and a last lunch",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk the park. Food kiosks inside are simple but fine."
+            },
+            {
+              "place": "paulista",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Last stroll. Closed to cars on Sundays."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Centro"
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "Evening-first visitors: bars in Vila Madalena, live music and late Centro nights.",
+      "days": [
+        {
+          "title": "Paulista by day, Vila Madalena by night",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the avenue. Sunday is car-free."
+            },
+            {
+              "place": "masp",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Closed Monday. Thursday is open late until 20:00."
+            },
+            {
+              "place": "batman",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "See the street art before dark."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Dinner, then bars. Things get busy after 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Centro sights, then live music",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Morning snack before the crowds."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekday daytime. Keep your phone out of sight."
+            },
+            {
+              "place": "farol",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Rooftop view. Closed Monday."
+            },
+            {
+              "place": "liberdade",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Weekend afternoons into evening are best."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Eat your way down the street, then find a bar nearby."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Fresh air before the airport. Early morning is quietest."
+            },
+            {
+              "place": "octavio",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Bridge view on the way out. Lit at night."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vila Madalena or Paulista"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big museums, the historic centre and a colourful afternoon in Vila Madalena.",
+      "days": [
+        {
+          "title": "Arrive, Paulista and MASP",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start with a walk down the avenue. It is closed to cars on Sundays."
+            },
+            {
+              "place": "masp",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Monday. Tuesday is free entry. The red staircase is the photo."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner and a café stroll in the leafy streets nearby."
+            }
+          ]
+        },
+        {
+          "title": "Ibirapuera morning, Centro afternoon",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Go early for cooler air. Museum hours inside the park are shorter — check on the day."
+            },
+            {
+              "place": "bandeiras",
+              "at": "11:30",
+              "minutes": 15,
+              "note": "Quick stop at the monument on the way out."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Weekday daytime is best. Keep valuables close in the square."
+            },
+            {
+              "place": "centro-walk",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Walking tour of the old centre. Tours usually run mornings and afternoons."
+            },
+            {
+              "place": "altino",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Rooftop view late afternoon. Closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Markets, art and Vila Madalena",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Morning is calmer. Try a pastel and a fruit juice."
+            },
+            {
+              "place": "pinacoteca",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Monday. Saturday is free entry."
+            },
+            {
+              "place": "batman",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Street art in daylight. About 20–30 minutes by taxi or metro plus a walk."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Wander the streets, then stay for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops open around 10:00. Weekends are liveliest."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Street food lunch. Most stalls on weekends."
+            },
+            {
+              "place": "octavio",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Photo stop under the bridge. Best after dark, but fine by day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Paulista"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around the market, long lunches and street food.",
+      "days": [
+        {
+          "title": "Arrive and eat on Paulista",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Easy first walk. Closed to cars on Sundays."
+            },
+            {
+              "place": "jardins-food",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Cafés by day, restaurants into the evening. Good first dinner."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and Centro",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go before the lunch rush. Come hungry."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short visit. Weekday daytime is best."
+            },
+            {
+              "place": "centro-walk",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Walk off breakfast, then find lunch in the centre."
+            },
+            {
+              "place": "altino",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Rooftop coffee with a view. Closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Liberdade food day",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Shops open around 10:00. Weekends have the most stalls."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Grazing lunch through the streets."
+            },
+            {
+              "place": "ibirapuera",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Walk it off in the park. Check museum hours on the day."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner back in Jardins."
+            }
+          ]
+        },
+        {
+          "title": "Vila Madalena, then fly",
+          "stops": [
+            {
+              "place": "batman",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Daylight is best for the murals."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "End with a long lunch in the neighbourhood."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Vila Madalena"
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Visitors who want days light and evenings long, with bars in Vila Madalena and live music.",
+      "days": [
+        {
+          "title": "Arrive, Paulista and an easy night",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Closed to cars on Sundays."
+            },
+            {
+              "place": "masp",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Closed Monday. Thursday open until 20:00."
+            },
+            {
+              "place": "jardins-food",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner, then keep it early tonight."
+            }
+          ]
+        },
+        {
+          "title": "Centro by day, Vila Madalena by night",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Morning is calmer."
+            },
+            {
+              "place": "pinacoteca",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Monday. Saturday is free entry."
+            },
+            {
+              "place": "batman",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Daylight for the street art."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars fill up late."
+            }
+          ]
+        },
+        {
+          "title": "Park morning, music night",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Early is cooler. Check museum hours on the day."
+            },
+            {
+              "place": "liberdade",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Weekend afternoons are liveliest."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Street food before the evening."
+            },
+            {
+              "place": "allianz",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Only open for events — check the schedule on the day."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Weekday daytime is best."
+            },
+            {
+              "place": "altino",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Rooftop view. Closed Monday."
+            },
+            {
+              "place": "octavio",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Photo stop. Lit at night, but fine by day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vila Madalena or Jardins"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want museums, the historic centre and a big park without rushing.",
+      "days": [
+        {
+          "title": "Arrive and Paulista",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Flat, easy walk to get your bearings. Closed to cars on Sundays."
+            },
+            {
+              "place": "masp",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Tue–Sun roughly 10:00–18:00, Thu until 20:00. Closed Monday. Tuesday is free entry."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Dinner near your hotel. Cafés are daytime, restaurants run into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Ibirapuera and Jardins",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Park roughly 05:00–24:00; museums inside have shorter hours — check on the day."
+            },
+            {
+              "place": "bandeiras",
+              "at": "12:00",
+              "minutes": 15,
+              "note": "Always visible, a short walk from the park."
+            },
+            {
+              "place": "crianca",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Daytime hours only — check on the day."
+            },
+            {
+              "place": "jardins-food",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late lunch in the Jardins."
+            }
+          ]
+        },
+        {
+          "title": "Historic Centro",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Roughly Mon–Fri 08:00–17:00, weekends shorter — check on the day. Go weekday daytime."
+            },
+            {
+              "place": "centro-walk",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Tours usually run mornings and afternoons. Keep valuables close."
+            },
+            {
+              "place": "mercado",
+              "at": "13:15",
+              "minutes": 75,
+              "note": "Mon–Sat roughly 06:00–18:00, Sun until about 16:00. Morning is calmer than lunch."
+            },
+            {
+              "place": "altino",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Roughly Tue–Sun 09:00–20:00, closed Monday. Late afternoon light is best."
+            },
+            {
+              "place": "copan",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Exterior always visible, a short walk away."
+            }
+          ]
+        },
+        {
+          "title": "Art and the centre east",
+          "stops": [
+            {
+              "place": "pinacoteca",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Tue–Sun roughly 10:00–18:00, closed Monday. Saturday is free entry."
+            },
+            {
+              "place": "theatro",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Guided tours on set days — check the schedule on the day."
+            },
+            {
+              "place": "farol",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Roughly Tue–Sun daytime, closed Monday. Late afternoon for the view."
+            },
+            {
+              "place": "liberdade",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Streets always open, shops roughly 10:00–19:00. Weekend afternoons are liveliest."
+            }
+          ]
+        },
+        {
+          "title": "Vila Madalena, then fly",
+          "stops": [
+            {
+              "place": "batman",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Always open, best in daylight. Go early before the crowds."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Best daytime into evening. Stop for lunch on the way."
+            },
+            {
+              "place": "marisa",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Daytime hours — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Paulista"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who plan the day around markets, padarias and long lunches.",
+      "days": [
+        {
+          "title": "Arrive and Jardins",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Easy first walk. Closed to cars on Sundays."
+            },
+            {
+              "place": "jardins-food",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Cafés daytime, restaurants into the evening. Book ahead for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Market morning",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Mon–Sat roughly 06:00–18:00, Sun until about 16:00. Go early, before the lunch rush."
+            },
+            {
+              "place": "centro-walk",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Tours usually run mornings and afternoons. Works up an appetite."
+            },
+            {
+              "place": "cathedral",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Roughly Mon–Fri 08:00–17:00, weekends shorter — check on the day."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Weekends have the most stalls. Weekday afternoons are quieter."
+            }
+          ]
+        },
+        {
+          "title": "Ibirapuera and a long lunch",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Park roughly 05:00–24:00. Bring water and sunscreen."
+            },
+            {
+              "place": "jardins-food",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Late lunch, then a slow afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Vila Madalena",
+          "stops": [
+            {
+              "place": "batman",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Always open, best in daylight."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Best afternoon into evening. Bars pick up after dark."
+            },
+            {
+              "place": "playcenter",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Check opening days on the day. Good for a rainy afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Liberdade, then fly",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Streets always open, shops roughly 10:00–19:00. Weekend afternoons have the most stalls."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Weekends have the most stalls. Eat before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Paulista"
+    },
+    {
+      "id": "4n-nightlife",
+      "length": "4n",
+      "style": "nightlife",
+      "nights": 4,
+      "for": "Late starters who want bars, live music and easy daytime sightseeing.",
+      "days": [
+        {
+          "title": "Arrive and Paulista",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Closed to cars on Sundays. Busy and safe in the evening."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner, then see where the night goes."
+            }
+          ]
+        },
+        {
+          "title": "Centro by day, Vila Madalena by night",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Weekday daytime is best. Roughly Mon–Fri 08:00–17:00."
+            },
+            {
+              "place": "mercado",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Mon–Sat roughly 06:00–18:00. Morning is calmer."
+            },
+            {
+              "place": "altino",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Roughly Tue–Sun 09:00–20:00, closed Monday."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Best afternoon into evening. Bars fill up late."
+            }
+          ]
+        },
+        {
+          "title": "Art, then a show",
+          "stops": [
+            {
+              "place": "masp",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Tue–Sun roughly 10:00–18:00, Thu until 20:00. Closed Monday."
+            },
+            {
+              "place": "ibirapuera",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Park roughly 05:00–24:00. A calm afternoon before a late night."
+            },
+            {
+              "place": "theatro",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Guided tours on set days; evening shows need booking — check the schedule on the day."
+            }
+          ]
+        },
+        {
+          "title": "Vila Madalena",
+          "stops": [
+            {
+              "place": "batman",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Always open, best in daylight."
+            },
+            {
+              "place": "marisa",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Daytime hours — check on the day."
+            },
+            {
+              "place": "allianz",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Only open for events. Check the fixture list before you go."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Streets always open, shops roughly 10:00–19:00. Weekend afternoons are liveliest."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Weekends have the most stalls. A last meal before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vila Madalena or Jardins"
+    },
+    {
+      "id": "5n-culture",
+      "length": "5n",
+      "style": "culture",
+      "nights": 5,
+      "for": "A calm first-timer's run through São Paulo's art, parks and historic centre, grouped by area so you spend less time in traffic.",
+      "days": [
+        {
+          "title": "Arrive and settle on Paulista",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start with a gentle walk down the avenue. On Sundays it is closed to cars."
+            },
+            {
+              "place": "masp",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Closed Monday. Thursday stays open until 20:00. Tuesday is free entry."
+            },
+            {
+              "place": "jardins-food",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner in the Jardins, a short taxi or metro ride away."
+            }
+          ]
+        },
+        {
+          "title": "Ibirapuera Park and the south side",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early. Museums inside have shorter hours — check on the day."
+            },
+            {
+              "place": "bandeiras",
+              "at": "11:45",
+              "minutes": 15,
+              "note": "A quick photo stop near the park."
+            },
+            {
+              "place": "crianca",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Daytime only — check on the day."
+            },
+            {
+              "place": "jardins-food",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch, then a slow café stroll."
+            }
+          ]
+        },
+        {
+          "title": "Historic Centro on foot",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday daytime is best. Weekend hours are shorter."
+            },
+            {
+              "place": "centro-walk",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Tours usually run mornings and afternoons. Book ahead."
+            },
+            {
+              "place": "mercado",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Go before the lunch rush. Try a pastel and a fruit juice."
+            },
+            {
+              "place": "altino",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Closed Monday. Late afternoon light is best."
+            },
+            {
+              "place": "copan",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Exterior only. A short walk from the tower."
+            }
+          ]
+        },
+        {
+          "title": "Art in the centre, then Vila Madalena",
+          "stops": [
+            {
+              "place": "pinacoteca",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Saturday is free entry."
+            },
+            {
+              "place": "theatro",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Guided tours run on set days — check the schedule on the day."
+            },
+            {
+              "place": "batman",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Best in daylight. About 20–30 minutes by taxi or metro."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars pick up after dark."
+            }
+          ]
+        },
+        {
+          "title": "Liberdade and a last view",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekend afternoons have the most street stalls."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Eat your way down the street. Cash helps at small stalls."
+            },
+            {
+              "place": "farol",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Closed Monday. Late afternoon for the view."
+            },
+            {
+              "place": "octavio",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Lit at night. Best seen after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Paulista or Jardins"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Markets, bakeries and long lunches, with enough culture in between to walk off the pastels.",
+      "days": [
+        {
+          "title": "Arrive and eat on Paulista",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Easy first walk. Closed to cars on Sundays."
+            },
+            {
+              "place": "jardins-food",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Cafés by day, restaurants into the evening. Book dinner ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and Centro tastes",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Go early, before the lunch rush. Mon–Sat from about 06:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "A short walk away. Weekday daytime is best."
+            },
+            {
+              "place": "centro-walk",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Tours usually run mornings and afternoons."
+            },
+            {
+              "place": "altino",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Closed Monday. Coffee with a view."
+            }
+          ]
+        },
+        {
+          "title": "Liberdade street food day",
+          "stops": [
+            {
+              "place": "liberdade",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Shops roughly 10:00–19:00. Weekends are busiest and best."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Weekend afternoons have the most stalls. Bring small notes."
+            },
+            {
+              "place": "pinacoteca",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed Monday. A calm break after eating."
+            }
+          ]
+        },
+        {
+          "title": "Park morning, Vila Madalena evening",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Early is cooler and quieter. Food kiosks inside — check on the day."
+            },
+            {
+              "place": "batman",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Best in daylight. Cafés nearby for lunch."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Bars and botecos fill up late."
+            }
+          ]
+        },
+        {
+          "title": "MASP and a last long lunch",
+          "stops": [
+            {
+              "place": "masp",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Tuesday is free entry."
+            },
+            {
+              "place": "jardins-food",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "A slow final lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jardins or Paulista"
+    },
+    {
+      "id": "5n-nightlife",
+      "length": "5n",
+      "style": "nightlife",
+      "nights": 5,
+      "for": "Days for parks and art, nights for Vila Madalena bars and live music, with easy mornings.",
+      "days": [
+        {
+          "title": "Arrive and ease into Paulista",
+          "stops": [
+            {
+              "place": "paulista",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk the avenue. Closed to cars on Sundays."
+            },
+            {
+              "place": "jardins-food",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner first, then see where the night goes."
+            }
+          ]
+        },
+        {
+          "title": "Centro by day, bars by night",
+          "stops": [
+            {
+              "place": "mercado",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Morning is calmer. Mon–Sat from about 06:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekday daytime is best."
+            },
+            {
+              "place": "altino",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Monday. Late afternoon light is best."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Bars pick up after dark. Taxi or metro from Centro."
+            }
+          ]
+        },
+        {
+          "title": "Park, then Vila Madalena",
+          "stops": [
+            {
+              "place": "ibirapuera",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Go early. Museums inside have shorter hours — check on the day."
+            },
+            {
+              "place": "batman",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Best in daylight. Good cafés nearby."
+            },
+            {
+              "place": "allianz",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Only open for events. Check the fixture list on the day."
+            }
+          ]
+        },
+        {
+          "title": "Art day, Liberdade evening",
+          "stops": [
+            {
+              "place": "masp",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Thursday until 20:00."
+            },
+            {
+              "place": "pinacoteca",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Saturday is free entry."
+            },
+            {
+              "place": "liberdade",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Weekend afternoons into evening are liveliest."
+            },
+            {
+              "place": "liberdade-food-tour",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Weekends have the most stalls. Eat before the bars."
+            }
+          ]
+        },
+        {
+          "title": "Slow Sunday and a last night out",
+          "stops": [
+            {
+              "place": "sunday-avenue",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Sunday only. The avenue is car-free."
+            },
+            {
+              "place": "jardins-food",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Long lunch, then rest before the evening."
+            },
+            {
+              "place": "vila-madalena-walk",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Last night. Live samba spots fill up — arrive early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vila Madalena or Paulista"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "MASP, Ibirapuera and the historic Centro."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, padarias and long lunches."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Bars in Vila Madalena and live samba."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Jardins",
+      "range": [
+        450,
+        1100
+      ],
+      "why": "Leafy, safe and central. Walk to Avenida Paulista and the MASP; good restaurants nearby.",
+      "center": [
+        -23.567,
+        -46.658
+      ]
+    },
+    {
+      "area": "Paulista",
+      "range": [
+        300,
+        750
+      ],
+      "why": "Right on the main avenue and metro line. Best base for first-time sightseeing.",
+      "center": [
+        -23.561,
+        -46.656
+      ]
+    },
+    {
+      "area": "Vila Madalena",
+      "range": [
+        280,
+        700
+      ],
+      "why": "Street art, bars and nightlife. Livelier and a bit rougher; use ride apps at night.",
+      "center": [
+        -23.555,
+        -46.69
+      ]
+    },
+    {
+      "area": "Centro",
+      "range": [
+        180,
+        500
+      ],
+      "why": "Cheapest and closest to historic sights and markets. Busy by day, quiet after dark; check the block.",
+      "center": [
+        -23.548,
+        -46.633
+      ]
+    }
+  ],
+  "food": [
+    "Try a Brazilian lunch: feijoada (bean and pork stew) or a prato feito (rice, beans, meat and salad), often R$30–60.",
+    "Mercado Municipal downtown: pastel de bacalhau and huge mortadella sandwiches. Go before noon to beat the crowds.",
+    "Padarias (bakeries) serve cheap breakfasts and coffee all day; a pão na chapa and coffee is about R$10–15.",
+    "São Paulo has strong Japanese, Italian and Arab food. Look for restaurants in Liberdade and Bixiga.",
+    "Churrascarias and kilo buffets (comida por kilo) are good value; pay by weight, usually R$60–100 per kilo."
+  ],
+  "more_time": [
+    "Add a day for Ibirapuera Park and the museums around it; it is a big park and easy to spend half a day.",
+    "Swap one city day for a trip to the coast or the hills; check bus times and prices on the day.",
+    "Art lovers can swap a shopping afternoon for the Pinacoteca and the Luz area near the Centro."
+  ]
+}

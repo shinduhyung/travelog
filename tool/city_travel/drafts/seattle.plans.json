@@ -1,0 +1,859 @@
+{
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "One outdoor day: a ferry, a beach park and a sunset viewpoint, all easy without a car.",
+      "days": [
+        {
+          "title": "Water, woods and a sunset",
+          "stops": [
+            {
+              "place": "ferry-bainbridge",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Walk on at the Downtown terminal. Sailings are roughly hourly; check the day's schedule. Bring a layer, it is windy on deck."
+            },
+            {
+              "place": "waterfront-park",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Back on the Downtown waterfront. Grab lunch nearby first."
+            },
+            {
+              "place": "discovery-park",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "About 25 minutes by rideshare. Trails to the lighthouse; wear shoes you don't mind getting muddy."
+            },
+            {
+              "place": "kerry-park",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Small viewpoint with the classic skyline and Mount Rainier view. Best at sunset; check the day's sunset time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of eating and coffee, mostly on foot around Pike Place and Capitol Hill.",
+      "days": [
+        {
+          "title": "Market morning, coffee afternoon",
+          "stops": [
+            {
+              "place": "starbucks",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "The original store gets busy fast. Go early if you want a photo without the crowd."
+            },
+            {
+              "place": "pike-place",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday mornings are calmest. Snack as you go: chowder, pastries, fruit. Bring cash for small stalls."
+            },
+            {
+              "place": "gum-wall",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "A short walk below the market. Quick stop, then keep moving."
+            },
+            {
+              "place": "underground-tour",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Book ahead in summer. Good rainy-day backup too."
+            },
+            {
+              "place": "reserve-roastery",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "About 15 minutes by rideshare to Capitol Hill. Big coffee bar and food; a good sit-down break."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and icons in one day, grouped around Seattle Center and Downtown.",
+      "days": [
+        {
+          "title": "Seattle Center, then Downtown",
+          "stops": [
+            {
+              "place": "chihuly",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Start here before the Space Needle crowds build. Combo tickets with the Needle are usually cheaper."
+            },
+            {
+              "place": "space-needle",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Right next door. Go up on a clear day; check visibility before you buy."
+            },
+            {
+              "place": "mopop",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "A few minutes on foot. Lunch at the Seattle Center food options first."
+            },
+            {
+              "place": "central-library",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "About 15 minutes by rideshare or the monorail plus a walk. The top-floor reading room is the highlight."
+            },
+            {
+              "place": "underground-tour",
+              "at": "17:15",
+              "minutes": 75,
+              "note": "Nearby in Pioneer Square. Check the last tour time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Water, views and a ferry ride in one relaxed day and a half.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and the ferry",
+          "stops": [
+            {
+              "place": "waterfront-park",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Easy walk along the water to stretch your legs."
+            },
+            {
+              "place": "ferry-bainbridge",
+              "at": "14:15",
+              "minutes": 180,
+              "note": "Walk on as a foot passenger. Sailings are roughly hourly; check the day's timetable."
+            },
+            {
+              "place": "pike-place",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Most stalls close around 18:00, but restaurants stay open later for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Views, park and out",
+          "stops": [
+            {
+              "place": "kerry-park",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Best skyline view in the city. Go early for fewer people."
+            },
+            {
+              "place": "discovery-park",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Loop trails and a lighthouse. Bring a rain layer."
+            },
+            {
+              "place": "woodland-zoo",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Animals are most active in the morning, but early afternoon works too."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market bites, coffee and seafood, with a little walking in between.",
+      "days": [
+        {
+          "title": "Arrive, market and waterfront",
+          "stops": [
+            {
+              "place": "starbucks",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "The original store. Expect a line; it moves fast."
+            },
+            {
+              "place": "pike-place",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Graze as you go. Weekday afternoons are calmer than weekends."
+            },
+            {
+              "place": "gum-wall",
+              "at": "15:45",
+              "minutes": 15,
+              "note": "Just below the market. Quick photo stop."
+            },
+            {
+              "place": "waterfront-park",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Walk off lunch, then pick a seafood spot for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Coffee and out",
+          "stops": [
+            {
+              "place": "reserve-roastery",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Big roastery in Capitol Hill. Good breakfast stop."
+            },
+            {
+              "place": "central-library",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Free to enter. Check holiday closures."
+            },
+            {
+              "place": "underground-tour",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Tours run through the day; book ahead in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "The big sights: Space Needle, glass art and pop culture, plus market history.",
+      "days": [
+        {
+          "title": "Arrive, Seattle Center",
+          "stops": [
+            {
+              "place": "space-needle",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Clear afternoons give the best views. Book a time slot online."
+            },
+            {
+              "place": "chihuly",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Right next to the Needle. Last entry is usually late afternoon."
+            },
+            {
+              "place": "mopop",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Check closing time; it is often 17:00, so go earlier if needed."
+            }
+          ]
+        },
+        {
+          "title": "Market and downtown history",
+          "stops": [
+            {
+              "place": "pike-place",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning is quietest."
+            },
+            {
+              "place": "gum-wall",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Short stop below the market."
+            },
+            {
+              "place": "underground-tour",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Book ahead. Good rainy-day backup."
+            },
+            {
+              "place": "central-library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Free. Architecture is the draw."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Water, ferries and green space, with a rainy-day backup indoors.",
+      "days": [
+        {
+          "title": "Waterfront and the ferry",
+          "stops": [
+            {
+              "place": "waterfront-park",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Flat walk along the water. Bring a light rain jacket any season."
+            },
+            {
+              "place": "aquarium",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Right on the waterfront. Weekday mornings are calmer."
+            },
+            {
+              "place": "pike-place",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch from the stalls. Most close around 18:00."
+            },
+            {
+              "place": "ferry-bainbridge",
+              "at": "15:30",
+              "minutes": 180,
+              "note": "Walk on, ride across, stroll the town, ride back. Check the day's sailing times."
+            }
+          ]
+        },
+        {
+          "title": "Parks and viewpoints",
+          "stops": [
+            {
+              "place": "discovery-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Trails to the lighthouse and bluffs. Go early for clear views."
+            },
+            {
+              "place": "kerry-park",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Classic skyline view. Best on a clear day."
+            },
+            {
+              "place": "woodland-zoo",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Outdoor-heavy, so save it for a dry afternoon. Check hours on the day."
+            },
+            {
+              "place": "reserve-roastery",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Warm up with coffee in Capitol Hill."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market grazing, coffee culture and seafood, with short walks between bites.",
+      "days": [
+        {
+          "title": "Market morning and waterfront",
+          "stops": [
+            {
+              "place": "starbucks",
+              "at": "08:00",
+              "minutes": 20,
+              "note": "Original store; go early to beat the line."
+            },
+            {
+              "place": "pike-place",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning is best. Snack as you go and watch the fish throw."
+            },
+            {
+              "place": "gum-wall",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Quick stop on the way down to the water."
+            },
+            {
+              "place": "waterfront-park",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk off lunch along the piers."
+            },
+            {
+              "place": "argosy-cruise",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Harbor cruise; seasonal departures, check times."
+            }
+          ]
+        },
+        {
+          "title": "Coffee and Capitol Hill",
+          "stops": [
+            {
+              "place": "underground-tour",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Good rainy-day plan. Book ahead in summer."
+            },
+            {
+              "place": "central-library",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Free to enter; the top floors have good views."
+            },
+            {
+              "place": "reserve-roastery",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Big coffee experience in Capitol Hill; lunch nearby."
+            },
+            {
+              "place": "kerry-park",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Sunset view if the sky is clear."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums, music history and the Space Needle, grouped around Seattle Center.",
+      "days": [
+        {
+          "title": "Seattle Center day",
+          "stops": [
+            {
+              "place": "space-needle",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Clear mornings give the best views. Hours vary by season."
+            },
+            {
+              "place": "chihuly",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Next to the Needle. Late morning is quieter."
+            },
+            {
+              "place": "mopop",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch at the Center first. Great for rainy afternoons."
+            },
+            {
+              "place": "kerry-park",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Short ride away for the skyline view."
+            }
+          ]
+        },
+        {
+          "title": "Downtown history and market",
+          "stops": [
+            {
+              "place": "pike-place",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning. Grab breakfast here."
+            },
+            {
+              "place": "gum-wall",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Just below the market."
+            },
+            {
+              "place": "underground-tour",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Pioneer Square history; check the day's tour times."
+            },
+            {
+              "place": "central-library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Free architecture stop."
+            },
+            {
+              "place": "suzzallo",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Reading room is worth the trip; weekday hours are longer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Water, ferries and green space, with one easy day trip. Best in dry weather.",
+      "days": [
+        {
+          "title": "Arrive and walk the waterfront",
+          "stops": [
+            {
+              "place": "waterfront-park",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Easy stroll near the downtown hotels. Always open."
+            },
+            {
+              "place": "pike-place",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Most stalls close around 18:00. Go for a snack and a look."
+            },
+            {
+              "place": "gum-wall",
+              "at": "17:15",
+              "minutes": 15,
+              "note": "Short stop below the market on the way to dinner."
+            }
+          ]
+        },
+        {
+          "title": "Ferry and Discovery Park",
+          "stops": [
+            {
+              "place": "ferry-bainbridge",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Walk on, ride across, and come back. Sailings are roughly hourly; check the day's timetable."
+            },
+            {
+              "place": "discovery-park",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "About 20 minutes by car from the ferry terminal. Trails and bluff views."
+            },
+            {
+              "place": "kerry-park",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Sunset skyline view. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and campus",
+          "stops": [
+            {
+              "place": "woodland-zoo",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Arrive at opening; animals are most active in the morning."
+            },
+            {
+              "place": "uw",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Short drive north. Walk the quad and the waterfront."
+            },
+            {
+              "place": "suzzallo",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Weekday daytime only; check weekend hours."
+            },
+            {
+              "place": "reserve-roastery",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Coffee stop on the way back to Downtown."
+            }
+          ]
+        },
+        {
+          "title": "Space Needle and fly out",
+          "stops": [
+            {
+              "place": "space-needle",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early for the clearest views. Hours vary by season."
+            },
+            {
+              "place": "chihuly",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Next to the Needle. Roughly 10:00–18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Market grazing, coffee and seafood, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Market morning and waterfront",
+          "stops": [
+            {
+              "place": "starbucks",
+              "at": "08:00",
+              "minutes": 20,
+              "note": "Original store; go early to beat the line."
+            },
+            {
+              "place": "pike-place",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning is calmest. Snack as you go."
+            },
+            {
+              "place": "gum-wall",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Just below the market."
+            },
+            {
+              "place": "waterfront-park",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk off lunch by the water."
+            },
+            {
+              "place": "aquarium",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Indoor backup if it rains. Roughly 09:30–17:00."
+            }
+          ]
+        },
+        {
+          "title": "Coffee and Capitol Hill",
+          "stops": [
+            {
+              "place": "reserve-roastery",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Big coffee stop; morning is quieter."
+            },
+            {
+              "place": "central-library",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short ride back toward Downtown. Free."
+            },
+            {
+              "place": "underground-tour",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Good rainy-day plan. Tours run roughly 10:00–17:00."
+            },
+            {
+              "place": "argosy-cruise",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Harbor views; seasonal departures, check times."
+            }
+          ]
+        },
+        {
+          "title": "Needle, glass and a slow dinner",
+          "stops": [
+            {
+              "place": "space-needle",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Clear mornings are best. Hours vary by season."
+            },
+            {
+              "place": "chihuly",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Next door to the Needle."
+            },
+            {
+              "place": "mopop",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Short walk; indoor and good in rain."
+            },
+            {
+              "place": "kerry-park",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset view before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and fly out",
+          "stops": [
+            {
+              "place": "pike-place",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Last market breakfast and shopping. Stalls close around 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, music history and the Space Needle, with indoor plans for rain.",
+      "days": [
+        {
+          "title": "Downtown history and market",
+          "stops": [
+            {
+              "place": "pike-place",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning is calmest."
+            },
+            {
+              "place": "gum-wall",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Below the market."
+            },
+            {
+              "place": "underground-tour",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Book ahead; tours run roughly 10:00–17:00."
+            },
+            {
+              "place": "central-library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Free; striking building. Closed some holidays."
+            }
+          ]
+        },
+        {
+          "title": "Seattle Center day",
+          "stops": [
+            {
+              "place": "space-needle",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early for clear views. Hours vary by season."
+            },
+            {
+              "place": "chihuly",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Next to the Needle. Later in summer."
+            },
+            {
+              "place": "mopop",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Music and pop culture; indoor."
+            },
+            {
+              "place": "kerry-park",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset skyline view. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Campus and Capitol Hill",
+          "stops": [
+            {
+              "place": "suzzallo",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Weekday daytime; shorter weekend hours."
+            },
+            {
+              "place": "uw",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Walk the campus; spring is best for blossoms."
+            },
+            {
+              "place": "reserve-roastery",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Coffee stop on the way back."
+            },
+            {
+              "place": "lumen-field",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Event days only; tours on select days. Check the schedule."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium and fly out",
+          "stops": [
+            {
+              "place": "aquarium",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Weekday morning is quieter. Roughly 09:30–17:00."
+            },
+            {
+              "place": "waterfront-park",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Short walk by the water before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ]
+}

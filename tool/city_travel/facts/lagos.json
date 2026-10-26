@@ -1,0 +1,177 @@
+{
+  "currency": "NGN",
+  "usd_rate": 1324.6032,
+  "intro_line": "Lagos: chaotic, coastal, and endlessly alive.",
+  "intro": "Lagos rewards visitors who embrace its energy, from beaches and music to markets and food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Victoria Island",
+    "Ikoyi",
+    "Lekki",
+    "Ikeja GRA"
+  ],
+  "taxi": {
+    "flag_day": 500,
+    "flag_airport": 2000,
+    "per_km": 300,
+    "min_fare": 500
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Blue Line rail runs Marina to Mile 2; fare about ₦375, Cowry Card only.",
+    "BRT buses use dedicated lanes; cash not accepted, buy a Cowry Card (₦500-1,000).",
+    "Yellow danfo minibuses cover most routes; fares start around ₦50 and rise with distance.",
+    "Ride apps like Uber and Bolt work widely; taxis are metered or negotiated.",
+    "Okadas (motorbike taxis) are quick but risky and banned in many districts and after dark.",
+    "Ferries link Lagos Island, Banana Island, Mile 2 and the mainland; walking is best in a few central areas only."
+  ],
+  "airports": [
+    {
+      "code": "LOS",
+      "name": "Murtala Muhammed International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 9 km north of the centre.",
+      "options": [
+        {
+          "mode": "BRT bus + danfo",
+          "to": "Oshodi / Ikeja",
+          "price": "₦300-700",
+          "time": "45-90 min",
+          "note": "Cheapest but slow with luggage; Cowry Card needed for BRT."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt)",
+          "to": "Victoria Island / Ikoyi",
+          "price": "₦4,000-9,000",
+          "time": "30-60 min",
+          "note": "Meet your driver outside the terminal; traffic is heavy in the evening."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre hotels",
+          "price": "₦5,000-12,000",
+          "time": "30-60 min",
+          "note": "Agree the fare before you enter."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Major hotels",
+          "price": "check locally",
+          "time": "30-60 min",
+          "note": "Book ahead; many hotels offer pick-up."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "National Theatre of Nigeria",
+    "Nigerian National Museum",
+    "Tafawa Balewa Square",
+    "Nike Art Gallery",
+    "Cathedral Church of Christ",
+    "Apapa Amusement Park",
+    "Dreamworld Africana",
+    "Fun Factory",
+    "Hi-Impact Planet",
+    "Praia de Dona Ana"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Lagos",
+      "https://en.wikivoyage.org/wiki/Lagos"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    6.5244,
+    3.3792
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 5
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 8
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 16
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 16
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 22
+    },
+    {
+      "high": 28,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 27,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 27,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 28,
+      "low": 24,
+      "rain_days": 27
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 27
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 18
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

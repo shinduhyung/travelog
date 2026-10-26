@@ -1,0 +1,174 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Charlotte blends Southern charm with a modern, banking-driven skyline.",
+  "intro": "Charlotte rewards visitors with a compact Uptown, leafy historic districts and a lively food and craft-beer scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Uptown",
+    "South End",
+    "Dilworth",
+    "NoDa"
+  ],
+  "taxi": {
+    "flag_day": 2.5,
+    "flag_airport": 25,
+    "per_km": 2.5,
+    "min_fare": 2.5
+  },
+  "road_factor": 1.4,
+  "city_kmh": 22,
+  "transit_facts": [
+    "LYNX Blue Line light rail runs north-south, $2.20 one-way, $6.60 day pass.",
+    "CATS buses fan out from Uptown Transportation Center, $2.20 one-way.",
+    "CityLYNX Gold Line streetcar is free and links Uptown with Elizabeth.",
+    "Taxis are metered; Uber and Lyft operate widely.",
+    "Uptown is walkable, but outer districts are car-oriented; use a GPS.",
+    "Bikes and e-scooters (Bird, Lime) work best in Dilworth and Myers Park."
+  ],
+  "airports": [
+    {
+      "code": "CLT",
+      "name": "Charlotte Douglas International Airport",
+      "primary": true,
+      "note": "Main hub, about 9 km west of Uptown.",
+      "options": [
+        {
+          "mode": "CATS Sprinter bus (Route 5)",
+          "to": "Uptown",
+          "price": "$2.20",
+          "time": "25-35 min",
+          "note": "Cheapest option; runs regularly."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Uptown",
+          "price": "$25 flat",
+          "time": "15-25 min",
+          "note": "Flat rate for one or two passengers."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Uptown",
+          "price": "$20-30",
+          "time": "15-25 min",
+          "note": "Pickup at designated rideshare zone."
+        },
+        {
+          "mode": "Bus Route 591",
+          "to": "LYNX Archdale Station",
+          "price": "$2.20",
+          "time": "20-30 min",
+          "note": "Connect to light rail for South End."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "NASCAR Hall of Fame",
+    "Carowinds",
+    "Bojangles'",
+    "Frankie's (Charlotte)",
+    "Krispy Kreme"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Charlotte",
+      "https://en.wikivoyage.org/wiki/Charlotte"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    35.22709,
+    -80.84313
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 14,
+      "low": 3,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 12
+    },
+    {
+      "high": 33,
+      "low": 22,
+      "rain_days": 13
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 15
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 8
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 9
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "CLT taxi $25 flat vs tariff estimate 56"
+  ]
+}

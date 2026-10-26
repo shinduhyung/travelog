@@ -1,0 +1,1904 @@
+{
+  "city": "Barcelona",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Barcelona rewards visitors who wander beyond the Ramblas into its neighbourhoods, markets and hills. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 41.3549,
+      "west": 2.1108,
+      "north": 41.4298,
+      "east": 2.2045,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 2.5,
+      "flag_airport": 4.5,
+      "per_km": 1.3,
+      "min_fare": 7
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro and FGC trains cover the city; zone 1 tickets are cheap and contactless via T-mobilitat.",
+      "City and intercity buses fill the gaps; night buses run when the metro closes.",
+      "Taxis are metered; ride apps like Uber, Bolt and Cabify operate in Barcelona.",
+      "Driving is slow and parking is costly; leave the car outside the centre.",
+      "Walking is best in the old town; bike lanes and Bicing-style bike hire are common.",
+      "Ferries and cruise shuttles link the port to La Rambla and the Balearics."
+    ],
+    "sources": []
+  },
+  "places": {
+    "sagrada": {
+      "name": "Sagrada Familia",
+      "landmark": "Sagrada Familia",
+      "kind": "sight",
+      "lat": 41.4036,
+      "lon": 2.1743,
+      "price": 26,
+      "price_text": "≈ €26–36 depending on tower access · book online",
+      "hours": "Roughly 09:00–18:00 in winter, later in summer · check on the day",
+      "tip": "Book a timed ticket weeks ahead. Go early morning for softer light through the stained glass.",
+      "source": "https://sagradafamilia.org/en/"
+    },
+    "guell": {
+      "name": "Park Güell",
+      "landmark": "Park Güell",
+      "kind": "park",
+      "lat": 41.4137,
+      "lon": 2.1525,
+      "price": 18,
+      "price_text": "≈ €18 for the monumental zone · park outside is free",
+      "hours": "Daily, roughly 09:30–19:30 · check on the day",
+      "tip": "The ticketed zone is small; buy a slot and walk up from Lesseps metro to save the bus queue.",
+      "source": "https://parkguell.barcelona/en"
+    },
+    "rambla": {
+      "name": "La Rambla",
+      "landmark": "La Rambla",
+      "kind": "sight",
+      "lat": 41.3817,
+      "lon": 2.1749,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk it once for the buzz, then use the parallel streets for food and shopping. Watch your bag.",
+      "source": ""
+    },
+    "batllo": {
+      "name": "Casa Batlló",
+      "landmark": "Casa Batlló",
+      "kind": "museum",
+      "lat": 41.3915,
+      "lon": 2.1649,
+      "price": 35,
+      "price_text": "≈ €35 standard · pricier immersive options",
+      "hours": "Daily, roughly 09:00–20:00 · check on the day",
+      "tip": "The rooftop and attic are the highlights. Book online to skip the street queue.",
+      "source": "https://www.casabatllo.es/en/"
+    },
+    "gotic": {
+      "name": "Gothic Quarter",
+      "landmark": "Gothic Quarter",
+      "kind": "sight",
+      "lat": 41.3831,
+      "lon": 2.1764,
+      "price": 0,
+      "price_text": "Free to wander",
+      "hours": "Always open",
+      "tip": "Get lost in the lanes north of the cathedral. Plaça Reial and the Roman walls are easy wins.",
+      "source": ""
+    },
+    "mila": {
+      "name": "Casa Milà (La Pedrera)",
+      "landmark": "Casa Milà",
+      "kind": "museum",
+      "lat": 41.3954,
+      "lon": 2.161,
+      "price": 28,
+      "price_text": "≈ €28 day visit · night rooftop tours cost more",
+      "hours": "Daily, roughly 09:00–20:00 · check on the day",
+      "tip": "The rooftop chimneys are the star. Evening tours include the attic and a light show.",
+      "source": "https://www.lapedrera.com/en"
+    },
+    "boqueria": {
+      "name": "Mercado de La Boqueria",
+      "landmark": "Mercado de La Boqueria",
+      "kind": "food",
+      "lat": 41.382,
+      "lon": 2.1738,
+      "price": 0,
+      "price_text": "Free to enter · food priced per item",
+      "hours": "Mon–Sat roughly 08:00–20:30 · closed Sunday",
+      "tip": "Eat at the back counters where locals go; the front stalls are for photos.",
+      "source": "https://www.boqueria.barcelona/"
+    },
+    "catedral": {
+      "name": "Barcelona Cathedral",
+      "landmark": "Barcelona Cathedral",
+      "kind": "sight",
+      "lat": 41.3831,
+      "lon": 2.1764,
+      "price": 11,
+      "price_text": "≈ €11 entry · rooftop lift extra",
+      "hours": "Daily, roughly 08:30–19:30 · check on the day",
+      "tip": "The cloister geese and the rooftop walk are worth the small extra. Dress modestly.",
+      "source": "https://catedralbcn.org/"
+    },
+    "campnou": {
+      "name": "Camp Nou",
+      "landmark": "Camp Nou",
+      "kind": "sight",
+      "lat": 41.3809,
+      "lon": 2.1228,
+      "price": 28,
+      "price_text": "≈ €28 museum and stadium tour · check current access",
+      "hours": "Daily, hours vary with works · check on the day",
+      "tip": "The stadium has been under renovation; confirm the tour route and match dates before you go.",
+      "source": "https://www.fcbarcelona.com/en/tickets/camp-nou-experience"
+    },
+    "arc": {
+      "name": "Arc de Triomf",
+      "landmark": "Arc de Triomf",
+      "kind": "sight",
+      "lat": 41.3912,
+      "lon": 2.1806,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk through to the Parc de la Ciutadella for a free, shady break.",
+      "source": ""
+    },
+    "aquarium": {
+      "name": "Barcelona Aquarium",
+      "landmark": "Barcelona Aquarium",
+      "kind": "museum",
+      "lat": 41.3767,
+      "lon": 2.1843,
+      "price": 25,
+      "price_text": "≈ €25 adult · cheaper online and for children",
+      "hours": "Daily, roughly 10:00–20:00 · check on the day",
+      "tip": "Good rainy-day option with kids. The glass tunnel is the highlight.",
+      "source": "https://www.aquariumbcn.com/en/"
+    },
+    "barceloneta": {
+      "name": "Barceloneta Beach",
+      "landmark": "Barceloneta Beach",
+      "kind": "beach",
+      "lat": 41.3784,
+      "lon": 2.1925,
+      "price": 0,
+      "price_text": "Free · sunbeds and umbrellas cost extra",
+      "hours": "Always open · lifeguards in season",
+      "tip": "Go early to claim space. Keep valuables with you and use the showers before leaving.",
+      "source": ""
+    },
+    "liceu": {
+      "name": "Gran Teatre del Liceu",
+      "landmark": "Gran Teatre del Liceu",
+      "kind": "show",
+      "lat": 41.3803,
+      "lon": 2.1736,
+      "price": 15,
+      "price_text": "≈ €15 guided tour · opera tickets from roughly €20",
+      "hours": "Tours daily, times vary with rehearsals · check on the day",
+      "tip": "Book a tour slot online; the horseshoe auditorium is the reason to go.",
+      "source": "https://www.liceubarcelona.cat/en"
+    },
+    "santpau": {
+      "name": "Hospital de Sant Pau",
+      "landmark": "Hospital de Sant Pau",
+      "kind": "sight",
+      "lat": 41.4116,
+      "lon": 2.1764,
+      "price": 17,
+      "price_text": "≈ €17 adult · cheaper online",
+      "hours": "Daily, roughly 09:30–18:30 · check on the day",
+      "tip": "Quieter than the big Gaudí sites and just as beautiful. Pair it with Sagrada Familia on foot.",
+      "source": "https://www.santpaubarcelona.org/en"
+    },
+    "fountain": {
+      "name": "Magic Fountain of Montjuïc",
+      "landmark": "Magic Fountain of Montjuïc",
+      "kind": "show",
+      "lat": 41.3711,
+      "lon": 2.1517,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Evening shows on selected nights · check schedule on the day",
+      "tip": "Shows have been limited in recent years; confirm before you plan an evening around it.",
+      "source": ""
+    },
+    "castell": {
+      "name": "Montjuïc Castle",
+      "landmark": "Montjuïc Castle",
+      "kind": "sight",
+      "lat": 41.3653,
+      "lon": 2.1652,
+      "price": 5,
+      "price_text": "≈ €5 entry · free on some Sunday afternoons",
+      "hours": "Daily, roughly 10:00–20:00 in summer · check on the day",
+      "tip": "The harbour views from the moat are free. Take the cable car or bus up, walk down.",
+      "source": "https://www.barcelona.cat/castelldemontjuic/en"
+    },
+    "palau": {
+      "name": "Palau de la Música Catalana",
+      "landmark": "Palau de la Música Catalana",
+      "kind": "show",
+      "lat": 41.3876,
+      "lon": 2.1753,
+      "price": 20,
+      "price_text": "≈ €20 guided tour · concert tickets vary",
+      "hours": "Tours daily, times vary · check on the day",
+      "tip": "A concert here beats the tour if your dates fit. The stained-glass skylight is stunning.",
+      "source": "https://www.palaumusica.cat/en"
+    },
+    "upf": {
+      "name": "Pompeu Fabra University (Ciutadella campus)",
+      "landmark": "Pompeu Fabra University",
+      "kind": "sight",
+      "lat": 41.3828,
+      "lon": 2.1856,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Weekdays during term time",
+      "tip": "Skip unless you have a reason to visit; the nearby Ciutadella park is the real draw.",
+      "source": "https://www.upf.edu/en/"
+    },
+    "teleferico": {
+      "name": "Teleférico del Puerto",
+      "landmark": "Teleférico del Puerto",
+      "kind": "activity",
+      "lat": 41.3713,
+      "lon": 2.1724,
+      "price": 12,
+      "price_text": "≈ €12 one way · return costs more",
+      "hours": "Daily, roughly 11:00–19:00 · check on the day",
+      "tip": "Ride from the port to Montjuïc for the view, then walk down through the gardens.",
+      "source": "https://www.telefericodepuerto.cat/"
+    },
+    "tibidabo": {
+      "name": "Tibidabo Amusement Park",
+      "landmark": "Tibidabo Amusement Park",
+      "kind": "activity",
+      "lat": 41.4111,
+      "lon": 2.1501,
+      "price": 35,
+      "price_text": "≈ €35 day pass · cheaper for small children",
+      "hours": "Seasonal, mostly weekends and summer · check on the day",
+      "tip": "The old rides and the view over the city are the point. Bring a jacket, it is high and breezy.",
+      "source": "https://www.tibidabo.cat/en"
+    },
+    "ub": {
+      "name": "University of Barcelona (Historic Building)",
+      "landmark": "University of Barcelona",
+      "kind": "sight",
+      "lat": 41.3876,
+      "lon": 2.1643,
+      "price": 0,
+      "price_text": "Free to see the facade and courtyard",
+      "hours": "Weekdays during term time",
+      "tip": "Peek into the courtyard off Plaça Universitat; it is a calm five-minute stop.",
+      "source": "https://www.ub.edu/"
+    },
+    "bunkers": {
+      "name": "Bunkers del Carmel viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.4194,
+      "lon": 2.1618,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Best 360° view in the city. Bring water and go for sunset, but arrange your ride back.",
+      "source": ""
+    },
+    "gracia_walk": {
+      "name": "Gràcia neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.4025,
+      "lon": 2.1565,
+      "price": 0,
+      "price_text": "Free · cafés and shops extra",
+      "hours": "Daytime and evening",
+      "tip": "Small squares, local bars and few tourists. Wander Plaça del Sol and Plaça de la Virreina.",
+      "source": ""
+    },
+    "tapas_tour": {
+      "name": "Evening tapas and wine tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 41.3851,
+      "lon": 2.1734,
+      "price": 75,
+      "price_text": "≈ €60–90 per person · food and drinks included",
+      "hours": "Evening departures, roughly 18:00–21:00",
+      "tip": "Book a small-group tour to learn what to order. Confirm drinks are included in the price.",
+      "source": ""
+    },
+    "barceloneta_walk": {
+      "name": "Barceloneta and Port Vell waterfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.378,
+      "lon": 2.188,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk from the Columbus statue along the marina to the beach. Good at sunset.",
+      "source": ""
+    },
+    "montjuic_walk": {
+      "name": "Montjuïc gardens and Olympic hill walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.366,
+      "lon": 2.158,
+      "price": 0,
+      "price_text": "Free · cable car and castle extra",
+      "hours": "Daylight hours",
+      "tip": "Take the bus up and walk down through the gardens to the Magic Fountain area.",
+      "source": ""
+    },
+    "santacaterina": {
+      "name": "Mercat de Santa Caterina",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.3867,
+      "lon": 2.1783,
+      "price": 0,
+      "price_text": "Free to enter · food priced per item",
+      "hours": "Mon–Sat mornings to afternoon · closed Sunday",
+      "tip": "Calmer than La Boqueria with the same fresh produce. Good for a cheap lunch counter.",
+      "source": "https://mercatsantacaterina.com/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: Gaudí in the morning, the old city on foot after lunch.",
+      "days": [
+        {
+          "title": "Gaudí morning, Gothic afternoon",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book the first slot online. Security queues build fast."
+            },
+            {
+              "place": "batllo",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "Short taxi or metro ride down Passeig de Gràcia."
+            },
+            {
+              "place": "boqueria",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Grab a stool at a market bar for lunch. Closed Sunday."
+            },
+            {
+              "place": "gotic",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Wander the lanes. Keep bags close in crowds."
+            },
+            {
+              "place": "catedral",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Check the day's opening times at the door."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eixample"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market-and-tapas day with a long lunch and an evening food tour.",
+      "days": [
+        {
+          "title": "Markets by day, tapas by night",
+          "stops": [
+            {
+              "place": "boqueria",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Come early, before the tour groups. Closed Sunday."
+            },
+            {
+              "place": "gotic",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Walk off breakfast through the old lanes."
+            },
+            {
+              "place": "santacaterina",
+              "at": "12:30",
+              "minutes": 40,
+              "note": "Lunch at a market counter. Closed Sunday."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Book ahead. Bring an appetite; portions are generous."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Born"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A swim, a waterfront stroll and seafood, with one Gaudí stop if you have energy.",
+      "days": [
+        {
+          "title": "Beach and port",
+          "stops": [
+            {
+              "place": "barceloneta",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Arrive early for space. Lifeguards in season."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Stroll to Port Vell. Seafood lunch on the way."
+            },
+            {
+              "place": "teleferico",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Harbour views. Check times on the day."
+            },
+            {
+              "place": "gotic",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Cool down in the shaded lanes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barri Gòtic"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Gaudí and the old city in one tight day: book Sagrada Familia first, then walk the Gothic lanes.",
+      "days": [
+        {
+          "title": "Gaudí morning, Gothic afternoon",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book the first slot online. Metro Sagrada Família. Allow 15 minutes to get there."
+            },
+            {
+              "place": "batllo",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "Metro or a 20-minute walk down Passeig de Gràcia. Buy a timed ticket."
+            },
+            {
+              "place": "boqueria",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch from the stalls. Closed Sunday. Watch your bag in the crowds."
+            },
+            {
+              "place": "gotic",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Wander the lanes from La Rambla to the cathedral. Flat shoes help on the cobbles."
+            },
+            {
+              "place": "catedral",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Check the day's opening times at the door. Shoulders covered."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eixample, near Passeig de Gràcia"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets and tapas: eat your way from La Boqueria to an evening tapas tour in El Born.",
+      "days": [
+        {
+          "title": "Markets, old city and tapas",
+          "stops": [
+            {
+              "place": "boqueria",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Go early on a weekday. Closed Sunday. Small plates at the back stalls."
+            },
+            {
+              "place": "gotic",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Walk off breakfast through the lanes toward Santa Maria del Mar."
+            },
+            {
+              "place": "santacaterina",
+              "at": "12:45",
+              "minutes": 40,
+              "note": "Quieter than La Boqueria. Closed Sunday. Good spot for a light lunch."
+            },
+            {
+              "place": "palau",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Afternoon tour. Times vary, so book ahead."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening departure from El Born. Eat light at lunch. Tell them about allergies."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Born, walkable to bars and markets"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "A swim and seafood: waterfront walk, beach time and a sunset viewpoint.",
+      "days": [
+        {
+          "title": "Port, beach and sunset",
+          "stops": [
+            {
+              "place": "barceloneta_walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Start at Port Vell and follow the water to the beach. Bring water and sun cream."
+            },
+            {
+              "place": "barceloneta",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Swim in season; lifeguards on duty then. Keep valuables with you, not on the sand."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Seafood and wine in El Born. Book ahead in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barceloneta or El Born, near the water"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Gaudí's big three plus the old city on foot, paced for a first visit.",
+      "days": [
+        {
+          "title": "Arrive, Eixample Gaudí",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book a timed ticket online ahead. Security line can be long."
+            },
+            {
+              "place": "santpau",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "About 15 minutes on foot up Avinguda de Gaudí."
+            },
+            {
+              "place": "mila",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Rooftop light is best late afternoon. Check last entry on the day."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Evening tapas and wine in El Born; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Old city and Park Güell",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early for cooler air and fewer people. Monument zone needs a ticket."
+            },
+            {
+              "place": "gotic",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Wander the lanes; about 25 minutes by metro from Gràcia."
+            },
+            {
+              "place": "catedral",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Dress modestly. Check visiting hours on the day."
+            },
+            {
+              "place": "boqueria",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Closed Sunday. Grab a light lunch at a counter."
+            },
+            {
+              "place": "rambla",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Walk down toward the port. Watch your bag in crowds."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eixample"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Markets, tapas and long meals, with a little Gaudí between courses.",
+      "days": [
+        {
+          "title": "Arrive, markets and El Born",
+          "stops": [
+            {
+              "place": "boqueria",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Closed Sunday. Weekday mornings are calmer."
+            },
+            {
+              "place": "gotic",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk off lunch through the lanes."
+            },
+            {
+              "place": "santacaterina",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "Closed Sunday. Good for a coffee and a snack."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead; evening departures roughly 18:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Gràcia and Gaudí",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Early slot beats the heat and crowds."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Small squares and local bakeries. Lunch here."
+            },
+            {
+              "place": "sagrada",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Book a timed ticket online. About 20 minutes by metro."
+            },
+            {
+              "place": "bunkers",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset views over the city. Bring water and a layer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Born"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Waterfront time with a swim, a sunset walk and one Gaudí highlight.",
+      "days": [
+        {
+          "title": "Arrive, port and beach",
+          "stops": [
+            {
+              "place": "barceloneta_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy flat walk from Port Vell to the sand."
+            },
+            {
+              "place": "barceloneta",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Lifeguards in season. Keep valuables close."
+            },
+            {
+              "place": "teleferico",
+              "at": "18:45",
+              "minutes": 30,
+              "note": "Late afternoon light. Check times on the day."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Seafood and wine in El Born; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Old city and Gaudí",
+          "stops": [
+            {
+              "place": "gotic",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Quiet lanes before the crowds."
+            },
+            {
+              "place": "catedral",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Dress modestly. Check hours on the day."
+            },
+            {
+              "place": "sagrada",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Book a timed ticket online in advance."
+            },
+            {
+              "place": "barceloneta",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Last swim before you go. Showers on the beach."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barri Gòtic"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want Gaudí, the Gothic lanes and a sunset viewpoint, with time to slow down.",
+      "days": [
+        {
+          "title": "Arrive, Gothic lanes and the cathedral",
+          "stops": [
+            {
+              "place": "rambla",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start at the top near Plaça de Catalunya and walk down. Watch your bag in crowds."
+            },
+            {
+              "place": "boqueria",
+              "at": "15:50",
+              "minutes": 45,
+              "note": "Just off La Rambla. Closed Sunday, so check the day."
+            },
+            {
+              "place": "catedral",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "A few minutes on foot through the old lanes. Dress modestly."
+            },
+            {
+              "place": "gotic",
+              "at": "17:40",
+              "minutes": 120,
+              "note": "Wander without a map. Plaça Reial and the lanes near the cathedral are the highlights."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Evening food and wine in El Born. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí morning, Eixample afternoon",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book the first slot online. Morning light through the east windows is the best."
+            },
+            {
+              "place": "santpau",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "About 15 minutes on foot up Avinguda de Gaudí."
+            },
+            {
+              "place": "mila",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Lunch nearby first. Late afternoon gives the best rooftop light."
+            },
+            {
+              "place": "batllo",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "A short walk down Passeig de Gràcia. Book a timed ticket."
+            }
+          ]
+        },
+        {
+          "title": "Park Güell, Gràcia and sunset",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early for cooler air and fewer people. The monumental zone needs a timed ticket."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Walk downhill into Gràcia. Stop for lunch in one of the small squares."
+            },
+            {
+              "place": "bunkers",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Go up about an hour before sunset. Bring water; there are few facilities."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eixample, near Passeig de Gràcia"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, long lunches and tapas, with a little culture in between.",
+      "days": [
+        {
+          "title": "Markets and the old city",
+          "stops": [
+            {
+              "place": "boqueria",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Weekday morning is calmest. Closed Sunday."
+            },
+            {
+              "place": "gotic",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk off breakfast through the lanes. Stop for a coffee in a square."
+            },
+            {
+              "place": "santacaterina",
+              "at": "13:30",
+              "minutes": 40,
+              "note": "Lunch at the market stalls. Closed Sunday and quiet in the afternoon."
+            },
+            {
+              "place": "palau",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Afternoon tour. Times vary, so book ahead."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening tour through El Born bars. Come hungry."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí and a long Eixample lunch",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "First slot online. Then walk up Avinguda de Gaudí."
+            },
+            {
+              "place": "santpau",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "About 15 minutes on foot."
+            },
+            {
+              "place": "mila",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Lunch first nearby, then the rooftop. Book a timed ticket."
+            },
+            {
+              "place": "batllo",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Short walk down Passeig de Gràcia."
+            }
+          ]
+        },
+        {
+          "title": "Gràcia, beach and seafood",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Early entry beats the heat and the queues."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch in a Gràcia square. Many kitchens close around 16:00."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Waterfront stroll from Port Vell. Good at sunset."
+            },
+            {
+              "place": "barceloneta",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Seafood dinner near the sand. Book in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Born, near Santa Caterina"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "A relaxed mix of city beach time, a swim and easy sightseeing between meals.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and beach",
+          "stops": [
+            {
+              "place": "rambla",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk down toward the port. Keep an eye on your bag."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Follow the waterfront from Port Vell to the beach."
+            },
+            {
+              "place": "barceloneta",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Swim and relax. Lifeguards are on duty in season."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Evening food and wine in El Born. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Gothic morning, Gaudí afternoon",
+          "stops": [
+            {
+              "place": "catedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Morning is quietest. Dress modestly."
+            },
+            {
+              "place": "gotic",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Short wander through the lanes before it gets hot."
+            },
+            {
+              "place": "batllo",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Lunch first, then a timed ticket. Indoor and cool."
+            },
+            {
+              "place": "mila",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "A short walk up Passeig de Gràcia. Rooftop light is best late."
+            }
+          ]
+        },
+        {
+          "title": "Park Güell, then the beach again",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early for cooler air. Timed ticket for the monumental zone."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch in Gràcia on the way down."
+            },
+            {
+              "place": "barceloneta",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Afternoon swim. Avoid peak August afternoons; the sand gets packed."
+            },
+            {
+              "place": "liceu",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Optional evening tour if times allow. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barri Gòtic, near the port"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want Gaudí, the Gothic lanes and a sunset viewpoint, paced so you are not rushing.",
+      "days": [
+        {
+          "title": "Arrive, Gothic lanes and the cathedral",
+          "stops": [
+            {
+              "place": "rambla",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. Watch your bag in crowds."
+            },
+            {
+              "place": "boqueria",
+              "at": "15:50",
+              "minutes": 45,
+              "note": "Just off La Rambla. Closed Sunday."
+            },
+            {
+              "place": "catedral",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Dress modestly. Check on the day for tourist entry times."
+            },
+            {
+              "place": "gotic",
+              "at": "17:35",
+              "minutes": 90,
+              "note": "Wander the lanes at your own pace. Dinner in the old city."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí morning, Eixample afternoon",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book the first slot online. Check on the day for opening hours."
+            },
+            {
+              "place": "santpau",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "About 15 minutes on foot from Sagrada Familia."
+            },
+            {
+              "place": "mila",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Late afternoon gives the best rooftop light."
+            },
+            {
+              "place": "batllo",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "A short walk down Passeig de Gràcia. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Park Güell, Gràcia and sunset",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early for cooler air and fewer people. Book ahead."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and small squares. Late afternoon into evening is liveliest."
+            },
+            {
+              "place": "bunkers",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint. Bring water and a light layer."
+            }
+          ]
+        },
+        {
+          "title": "El Born, music and the waterfront",
+          "stops": [
+            {
+              "place": "palau",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Tour times vary. Book ahead and check on the day."
+            },
+            {
+              "place": "arc",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Short walk from El Born."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Waterfront stroll at sunset. Easy last evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eixample or El Born"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Visitors who plan the day around markets, long lunches and tapas, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Arrive, market and old city",
+          "stops": [
+            {
+              "place": "boqueria",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Closed Sunday. Grab a snack at a counter."
+            },
+            {
+              "place": "rambla",
+              "at": "15:50",
+              "minutes": 45,
+              "note": "Stroll and people-watch."
+            },
+            {
+              "place": "gotic",
+              "at": "16:40",
+              "minutes": 90,
+              "note": "Lanes and small bars. Dinner in the old city."
+            }
+          ]
+        },
+        {
+          "title": "El Born food day",
+          "stops": [
+            {
+              "place": "santacaterina",
+              "at": "10:30",
+              "minutes": 40,
+              "note": "Weekday lunch spot. Closed Sunday."
+            },
+            {
+              "place": "palau",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short tour before lunch. Check times on the day."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening departure. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí and Gràcia",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "First slot, booked online."
+            },
+            {
+              "place": "guell",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Book ahead. Morning is cooler."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late lunch and small squares."
+            }
+          ]
+        },
+        {
+          "title": "Beach and seafood",
+          "stops": [
+            {
+              "place": "barceloneta_walk",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Morning walk along the port."
+            },
+            {
+              "place": "barceloneta",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Swim and seafood lunch nearby. Lifeguards in season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Born or Barri Gòtic"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "A relaxed trip mixing city beaches and waterfront walks with a little culture and good food.",
+      "days": [
+        {
+          "title": "Arrive and waterfront",
+          "stops": [
+            {
+              "place": "barceloneta_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy first stroll at sunset."
+            },
+            {
+              "place": "barceloneta",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Swim or sit on the sand. Lifeguards in season."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning, old city evening",
+          "stops": [
+            {
+              "place": "barceloneta",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning is cooler and quieter."
+            },
+            {
+              "place": "gotic",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Lanes after the heat. Dinner in the old city."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí and Park Güell",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book the first slot online."
+            },
+            {
+              "place": "guell",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Book ahead. Bring water."
+            },
+            {
+              "place": "bunkers",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint to end the day."
+            }
+          ]
+        },
+        {
+          "title": "Port and a last swim",
+          "stops": [
+            {
+              "place": "teleferico",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Harbour views. Check on the day."
+            },
+            {
+              "place": "barceloneta",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Last swim and lunch by the sea."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barri Gòtic or Barceloneta"
+    },
+    {
+      "id": "5n-culture",
+      "length": "5n",
+      "style": "culture",
+      "nights": 5,
+      "for": "First-timers who want Gaudí, the Gothic lanes and the old city at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into the Gothic Quarter",
+          "stops": [
+            {
+              "place": "rambla",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Start at the top near Plaça de Catalunya and walk down."
+            },
+            {
+              "place": "boqueria",
+              "at": "16:50",
+              "minutes": 45,
+              "note": "Just off La Rambla. Closed Sunday."
+            },
+            {
+              "place": "catedral",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Check the day's hours; dress modestly."
+            },
+            {
+              "place": "gotic",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Wander the lanes after dark, then eat nearby."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí morning, Eixample afternoon",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book the first slot online. Check hours on the day."
+            },
+            {
+              "place": "santpau",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "About 15 minutes on foot up Avinguda de Gaudí."
+            },
+            {
+              "place": "mila",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Lunch first, then the rooftop in late light."
+            },
+            {
+              "place": "batllo",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "A short walk down Passeig de Gràcia."
+            }
+          ]
+        },
+        {
+          "title": "Park Güell and Gràcia",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Timed entry. Go early for cooler air and fewer people."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Walk down into Gràcia; stop for lunch in a small square."
+            },
+            {
+              "place": "bunkers",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset views over the city. Bring water."
+            }
+          ]
+        },
+        {
+          "title": "El Born, music and the waterfront",
+          "stops": [
+            {
+              "place": "palau",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Tour times vary; book ahead."
+            },
+            {
+              "place": "santacaterina",
+              "at": "12:00",
+              "minutes": 40,
+              "note": "Weekday lunch stop. Closed Sunday."
+            },
+            {
+              "place": "arc",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Short walk up Passeig de Lluís Companys."
+            },
+            {
+              "place": "liceu",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Afternoon tour; times depend on rehearsals."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Port Vell to the beach at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Montjuïc hill, then fly",
+          "stops": [
+            {
+              "place": "montjuic_walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Gardens and Olympic hill in the morning."
+            },
+            {
+              "place": "castell",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Check summer hours on the day."
+            },
+            {
+              "place": "teleferico",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Harbour cable car back down. Check hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eixample or Barri Gòtic"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Visitors who plan the day around markets, tapas and long lunches.",
+      "days": [
+        {
+          "title": "Arrive, market and old-town lanes",
+          "stops": [
+            {
+              "place": "boqueria",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Weekday afternoon is calmer. Closed Sunday."
+            },
+            {
+              "place": "rambla",
+              "at": "16:50",
+              "minutes": 45,
+              "note": "Stroll down and pick a bar off the main strip."
+            },
+            {
+              "place": "gotic",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Evening walk; eat in a small square."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí morning, Eixample lunch",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "First slot online. Check hours on the day."
+            },
+            {
+              "place": "mila",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Rooftop views before lunch."
+            },
+            {
+              "place": "batllo",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Lunch on Passeig de Gràcia first, then visit."
+            }
+          ]
+        },
+        {
+          "title": "Park Güell and Gràcia eating",
+          "stops": [
+            {
+              "place": "guell",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Timed entry; go early."
+            },
+            {
+              "place": "gracia_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and small shops in Gràcia."
+            },
+            {
+              "place": "bunkers",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset, then dinner back in Gràcia."
+            }
+          ]
+        },
+        {
+          "title": "El Born markets and tapas tour",
+          "stops": [
+            {
+              "place": "santacaterina",
+              "at": "11:00",
+              "minutes": 40,
+              "note": "Weekday lunch. Closed Sunday."
+            },
+            {
+              "place": "palau",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Tour times vary; book ahead."
+            },
+            {
+              "place": "tapas_tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening departure; eat light at lunch."
+            }
+          ]
+        },
+        {
+          "title": "Beach lunch, then fly",
+          "stops": [
+            {
+              "place": "barceloneta",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning swim and a seafood lunch nearby."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Port Vell walk before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Born or Barri Gòtic"
+    },
+    {
+      "id": "5n-beach",
+      "length": "5n",
+      "style": "beach",
+      "nights": 5,
+      "for": "A relaxed mix of city beach time, a swim and easy sightseeing.",
+      "days": [
+        {
+          "title": "Arrive and waterfront sunset",
+          "stops": [
+            {
+              "place": "barceloneta_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Port Vell to the beach at sunset."
+            },
+            {
+              "place": "barceloneta",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Evening stroll on the sand; dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning, Gothic afternoon",
+          "stops": [
+            {
+              "place": "barceloneta",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning swim before the heat. Lifeguards in season."
+            },
+            {
+              "place": "boqueria",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "gotic",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Shaded lanes in the afternoon."
+            },
+            {
+              "place": "catedral",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Gaudí morning, beach evening",
+          "stops": [
+            {
+              "place": "sagrada",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "First slot online."
+            },
+            {
+              "place": "guell",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Timed entry; taxi between the two."
+            },
+            {
+              "place": "barceloneta",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late swim and dinner on the sand."
+            }
+          ]
+        },
+        {
+          "title": "Harbour, aquarium and cable car",
+          "stops": [
+            {
+              "place": "aquarium",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning is quieter."
+            },
+            {
+              "place": "teleferico",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Harbour cable car. Check hours."
+            },
+            {
+              "place": "barceloneta",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Afternoon on the beach."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then fly",
+          "stops": [
+            {
+              "place": "barceloneta",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning swim; check out first."
+            },
+            {
+              "place": "barceloneta_walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Walk to Port Vell, then to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barceloneta or El Born"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Gothic lanes, Gaudí landmarks and the old city on foot."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, tapas bars and long lunches by the sea."
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "City beaches, a swim and seafood on the sand."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Barri Gòtic",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Sleep in the medieval centre. Walk to the cathedral, La Rambla and the port. Can be noisy at night.",
+      "center": [
+        41.383,
+        2.176
+      ]
+    },
+    {
+      "area": "Eixample",
+      "range": [
+        120,
+        300
+      ],
+      "why": "Grid streets with Modernista buildings. Good metro links and calmer nights than the old town.",
+      "center": [
+        41.392,
+        2.165
+      ]
+    },
+    {
+      "area": "El Born",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Bars, boutiques and the Picasso Museum near the park. Lively but central and walkable.",
+      "center": [
+        41.385,
+        2.183
+      ]
+    },
+    {
+      "area": "Gràcia",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Village feel with small squares and local restaurants. Quieter, a short metro ride from the sights.",
+      "center": [
+        41.403,
+        2.156
+      ]
+    }
+  ],
+  "food": [
+    "Try Catalan dishes: pa amb tomàquet (bread with tomato), escalivada and crema catalana.",
+    "La Boqueria market off La Rambla is busy and pricey; locals often shop at Santa Caterina or El Ninot instead.",
+    "Lunch is the big meal, often a fixed menú del dia around €12–20. Dinner starts late, often after 21:00.",
+    "Tapas bars in El Born and Gràcia are cheaper and calmer than the Rambla strip. Stand at the bar to pay less.",
+    "Book popular restaurants ahead. Many close one day a week and some shut in August; check on the day."
+  ],
+  "more_time": [
+    "Swap a beach afternoon for Montjuïc: cable car, gardens and city views, then the Miró foundation.",
+    "Take a half-day train to Montserrat for the mountain monastery; check times and ticket options on the day.",
+    "Add a day trip to Girona or Sitges by train if you want a change from the city."
+  ]
+}

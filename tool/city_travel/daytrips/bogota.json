@@ -1,0 +1,61 @@
+{
+ "city": "Bogotá",
+ "trips": [
+  {
+   "place": "Zipaquirá",
+   "label": "",
+   "position": {
+    "id": 375216,
+    "name": "Zipaquirá",
+    "city": "Zipaquirá",
+    "lat": 5.02208,
+    "lng": -74.00481
+   },
+   "town": {
+    "name": "Zipaquirá",
+    "lat": 5.02208,
+    "lng": -74.00481
+   },
+   "road": {
+    "km": 41,
+    "min": 44,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 70,
+    "currency": "COP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$3-$5",
+     "time": "1h 17m",
+     "via": "Chía to Terminal de Transporte Zipaquirá",
+     "source": "https://www.rome2rio.com/s/Bogot%C3%A1/Zipaquir%C3%A1"
+    }
+   },
+   "route_note": "Take a direct bus from Bogotá's Portal del Norte terminal to Zipaquirá (about 1 hour), then a short taxi or local bus to the Salt Cathedral.",
+   "see": [
+    "Salt Cathedral (Catedral de Sal)",
+    "Salt mine tunnels and the Way of the Cross",
+    "Zipaquirá historic centre and Plaza de Bolívar",
+    "Local salt museum exhibits"
+   ],
+   "visit": "Half day",
+   "tour_query": "Zipaquirá Salt Cathedral day trip from Bogotá",
+   "quests": [
+    "Salt Cathedral of Zipaquira"
+   ],
+   "recommended": "bus",
+   "why": "The direct bus takes about 1h 17m from Portal del Norte, faster and cheaper than a car or taxi for this distance, with a short taxi or local bus for the last stretch to the Salt Cathedral.",
+   "stars": 5,
+   "know": [
+    "The Salt Cathedral is underground inside a salt mine, so bring a warm layer.",
+    "Allow time for the short last-mile trip from the bus terminal to the cathedral.",
+    "Weekends are busier, so go early in the day."
+   ]
+  }
+ ],
+ "problems": [
+  "Guatavita: not a town in cities15000.json (CO), dropped"
+ ]
+}

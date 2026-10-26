@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Laneways, markets and the old city grid."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Coffee, laneway bars and market grazing."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Beaches, gardens and the bay foreshore."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "CBD",
+      "range": [
+        140,
+        380
+      ],
+      "why": "Walk to the laneways, Queen Victoria Market and the free tram zone. Best base for a first visit.",
+      "center": [
+        -37.8136,
+        144.9631
+      ]
+    },
+    {
+      "area": "Southbank",
+      "range": [
+        160,
+        420
+      ],
+      "why": "River views and a short walk over the bridge to the CBD. Good for evenings out.",
+      "center": [
+        -37.8226,
+        144.9648
+      ]
+    },
+    {
+      "area": "St Kilda",
+      "range": [
+        120,
+        320
+      ],
+      "why": "Beach, pier and cake shops. A tram ride from the centre; quieter at night.",
+      "center": [
+        -37.8679,
+        144.9811
+      ]
+    },
+    {
+      "area": "Fitzroy",
+      "range": [
+        130,
+        350
+      ],
+      "why": "Bars, galleries and cafés on Brunswick Street. Walkable and lively.",
+      "center": [
+        -37.7983,
+        144.9784
+      ]
+    }
+  ],
+  "food": [
+    "Start with coffee: Melbourne cafés take it seriously. A flat white is the local order, about $4–6.",
+    "Queen Victoria Market: graze the deli hall and hot-doughnut stall. Cheapest on a weekday morning.",
+    "Laneway bars and small restaurants fill the CBD blocks off Flinders Lane. Book dinner on weekends.",
+    "Try a pub counter meal (parma or pie) for a filling lunch, roughly $20–30.",
+    "Asian food is strong and cheap: dumplings and noodles in Chinatown and Richmond, about $12–20 a plate."
+  ],
+  "more_time": [
+    "Swap a city day for the Great Ocean Road: a long day tour, or drive yourself and stay a night in Apollo Bay.",
+    "Take a train to the Yarra Valley or Mornington Peninsula for wineries; check timetables and book tastings.",
+    "Phillip Island for penguins at dusk: tours run from the city, or drive about 2 hours. Book ahead."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "shopping": [
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85
+    ],
+    "nature": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.5,
+      0.45,
+      0.5,
+      0.6,
+      0.8,
+      0.95,
+      1
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "art"
+  ],
+  "recommend": {
+    "why": "Three nights covers the laneways, markets and galleries, with a day left for the beach or a wine trip."
+  },
+  "month_notes": [
+    "January: warm and mostly dry, highs near 26°C. Book accommodation early; it's peak holiday season.",
+    "February: similar to January, highs near 26°C, few rain days. Good for the beach and outdoor dining.",
+    "March: still warm at 24°C, a little more rain. Comfortable for walking the city.",
+    "April: cooler at 20°C with about 9 rain days. Pack a light jacket.",
+    "May: cool and wetter, highs near 16°C and 11 rain days. Plan indoor sights and cafés.",
+    "June: cold, highs near 14°C, about 10 rain days. Bring warm layers.",
+    "July: the coldest month, highs near 13°C and the most rain (13 days). Expect grey, damp days.",
+    "August: cold like July, highs near 14°C, 12 rain days. Rug up for the beach and gardens.",
+    "September: warming to 17°C but still wet, 12 rain days. Carry an umbrella.",
+    "October: mild at 20°C, 12 rain days. Good for markets and day trips between showers.",
+    "November: pleasant at 22°C, 11 rain days. A strong month for the city and coast.",
+    "December: warm at 25°C, 9 rain days. Festive and busy; book ahead."
+  ],
+  "climate_guide": {
+    "summary": "Temperate and changeable: warm dry summers, cool wet winters, and rain possible in any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warm days around 24–26°C and fewer rain days. Ideal for the beach, gardens and outdoor dining."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cool and damp (June to August)",
+        "text": "Highs only 13–14°C with 10–13 rain days a month. Bring a warm coat and plan indoor sights."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Rain in every month",
+        "text": "Expect 6–13 rain days whatever the season. Carry a small umbrella and a light layer."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Weather changes fast",
+        "text": "A warm morning can turn cool and showery by afternoon. Dress in layers you can add or shed."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach days are summer-only",
+        "text": "St Kilda and the bay are best December to March. Water stays cool even then."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for walking. Add a hat and sunscreen for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Trams in the CBD and trains for longer hops; walk the grid for short trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Trains run every 10–20 minutes and reach the suburbs. A Night Network runs after midnight on Fri–Sat."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams are free inside the CBD Free Tram Zone. Touch on with myki only if you travel beyond it."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps where trains and trams don't go. Pay with myki."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber, DiDi and Ola operate and often cost less. Handy for late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy on freeways but CBD parking is costly. Skip the car in town; rent only for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The CBD grid is walkable. Shared bikes and scooters cover short hops."
+      }
+    ]
+  }
+}

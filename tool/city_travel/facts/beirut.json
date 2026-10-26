@@ -1,0 +1,176 @@
+{
+  "currency": "LBP",
+  "usd_rate": 89500,
+  "intro_line": "Beirut: a resilient Mediterranean capital of sea, spice and nightlife.",
+  "intro": "Beirut rewards visitors with a compact, walkable centre, a buzzing food scene and a dramatic corniche. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Hamra",
+    "Gemmayzeh",
+    "Achrafieh"
+  ],
+  "taxi": {
+    "flag_day": 10000,
+    "flag_airport": 25000,
+    "per_km": 0,
+    "min_fare": 10000
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "No metro or tram; travel is by bus, minibus, service taxi and taxi.",
+    "OCFTC blue-and-white buses and LCC red minibuses cost LBP500-1,000; flag them at the roadside.",
+    "Shared 'service' taxis charge a fixed LBP2,000 per person; agree the price first.",
+    "Hail-taxis charge per destination, not distance; a cross-town ride is around LBP10,000.",
+    "Uber and Bolt work in Beirut; airport rides are often a fixed fare.",
+    "Driving is heavy and aggressive; walking is best in the compact centre and on the Corniche."
+  ],
+  "airports": [
+    {
+      "code": "BEY",
+      "name": "Beirut Rafic Hariri International Airport",
+      "primary": true,
+      "note": "Lebanon's only international airport, about 8 km south of the centre.",
+      "options": [
+        {
+          "mode": "Public minivan",
+          "to": "Downtown / Charles Helou Station",
+          "price": "LBP1,500 or US$1",
+          "time": "20-40 min",
+          "note": "Flag it outside the upstairs departures; pay on exit."
+        },
+        {
+          "mode": "Service taxi",
+          "to": "Hamra or Downtown",
+          "price": "LBP25,000-40,000",
+          "time": "15-30 min",
+          "note": "Agree the fare before leaving."
+        },
+        {
+          "mode": "Airport taxi",
+          "to": "City centre",
+          "price": "US$15-30",
+          "time": "10-20 min",
+          "note": "Bargain hard; start low."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "US$10-20",
+          "time": "10-20 min",
+          "note": "Fixed app fare; avoids haggling."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Mohammad Al-Amin Mosque",
+    "National Museum of Beirut",
+    "Beit Beirut",
+    "Jeita Grotto",
+    "Our Lady of Lebanon",
+    "Byblos Citadel",
+    "Beiteddine Palace",
+    "Nijmeh Square ",
+    "Tabbouleh"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Beirut",
+      "https://en.wikivoyage.org/wiki/Beirut"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    33.8938,
+    35.5018
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 14
+    },
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 12,
+      "rain_days": 13
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 5
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 0
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 0
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 16,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 12,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

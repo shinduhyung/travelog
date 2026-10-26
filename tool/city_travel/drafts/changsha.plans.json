@@ -1,0 +1,895 @@
+{
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One hungry day: old-lane snacks, a big Hunan lunch and a late-night food street.",
+      "days": [
+        {
+          "title": "Old lane breakfast, academy lunch, night market",
+          "stops": [
+            {
+              "place": "taiping-street",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start with coffee and small snacks in the old lane. Shops open around 10:00."
+            },
+            {
+              "place": "yuelu-academy",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Take a taxi across the river. Go early in the day; hours are shorter in winter."
+            },
+            {
+              "place": "yuelu-gate-food",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Lunch at the snack stalls by the gate. Busiest around midday."
+            },
+            {
+              "place": "pozi-street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Stinky tofu and spicy plates. Busiest from late afternoon."
+            },
+            {
+              "place": "huangxing-road",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Walk off dinner here. Shops close around 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A compact history day: the academy and mountain in the morning, old streets and the river after dark.",
+      "days": [
+        {
+          "title": "Academy, mountain, old lane, river",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Arrive near opening. Weekdays are quieter."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Short walk up the hill from the academy."
+            },
+            {
+              "place": "yuelu-mountain",
+              "at": "10:50",
+              "minutes": 150,
+              "note": "Walk the trails. The cable car runs in daytime only. Skip the mountain if it is very hot."
+            },
+            {
+              "place": "taiping-street",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Old lane with cafes and small shops. Good for a late lunch."
+            },
+            {
+              "place": "juzizhou-bridge",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset walk on the bridge. Lit at night."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museum in the morning, river and island in the afternoon, tower and streets at night.",
+      "days": [
+        {
+          "title": "Museum, island, tower, streets",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go on a weekday morning if you can."
+            },
+            {
+              "place": "juzizhou-ferry",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Cross to Orange Isle. Daytime crossings only; check the last one on the day."
+            },
+            {
+              "place": "juzizhou-head",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Viewpoint at the island head. Grab lunch from island stalls."
+            },
+            {
+              "place": "orange-isle",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Walk the island. Check last metro or ferry time before you go far."
+            },
+            {
+              "place": "ifs-tower",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset and evening views. Mall roughly 10:00–22:00."
+            },
+            {
+              "place": "wuyi-square",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Dinner and a wander nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of Hunan spice: snack streets in the evening, then a slow food morning near the academy.",
+      "days": [
+        {
+          "title": "Arrive, old lane and snack streets",
+          "stops": [
+            {
+              "place": "wuyi-square",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Shops stay open late."
+            },
+            {
+              "place": "taiping-street",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Old lane with cafes and small snack shops. Good for a first bite."
+            },
+            {
+              "place": "pozi-street",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Busiest from late afternoon. Try stinky tofu and spicy skewers. Cash and phone payment both work."
+            },
+            {
+              "place": "huangxing-road",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Pedestrian street, mostly 10:00–22:00. Easy walk from Pozi Street."
+            }
+          ]
+        },
+        {
+          "title": "Yuelu morning, then south night market",
+          "stops": [
+            {
+              "place": "yuelu-gate-food",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Snack stalls near the academy gate, busiest around lunch. Arrive before noon."
+            },
+            {
+              "place": "yuelu-academy",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Roughly 08:00–18:00, shorter in winter. Check on the day."
+            },
+            {
+              "place": "helong-sports",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening into late night. About 30 minutes by metro from the centre. Check the last train time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "The classic Changsha history loop: academy and mountain one day, museum and old streets the next.",
+      "days": [
+        {
+          "title": "Academy, mountain and old lane",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early on a weekday if you can. Roughly 08:00–18:00, shorter in winter."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short walk uphill from the academy. Daylight hours only."
+            },
+            {
+              "place": "yuelu-mountain",
+              "at": "11:45",
+              "minutes": 150,
+              "note": "Trails open daily. Cable car runs daytime only. Wear shoes with grip."
+            },
+            {
+              "place": "taiping-street",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Old lane, shops roughly 10:00–22:00. Dinner here or nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, river evening",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Roughly 09:00–17:00. Book ahead if you can; check on the day."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Daylight hours. Quiet at midday. Lunch nearby."
+            },
+            {
+              "place": "juzizhou-bridge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Always open, lit at night. Good sunset spot over the Xiang River."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most first-timers: museum and river views, then the academy and evening streets.",
+      "days": [
+        {
+          "title": "Museum, temple and river sunset",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Roughly 09:00–17:00. Allow time for the Mawangdui galleries."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Daylight hours. A calm break after the museum crowds."
+            },
+            {
+              "place": "juzizhou-head",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light. Reach the island by metro or ferry; check the last crossing time."
+            },
+            {
+              "place": "xiang-river-cruise",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening departures. Book on the day and confirm the time."
+            }
+          ]
+        },
+        {
+          "title": "Academy, tower and night streets",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is best, weekdays quieter. Roughly 08:00–18:00, shorter in winter."
+            },
+            {
+              "place": "ifs-tower",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Mall roughly 10:00–22:00. Go up for sunset and evening views."
+            },
+            {
+              "place": "pozi-street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Busiest late afternoon to late night. Dinner stop."
+            },
+            {
+              "place": "huangxing-road",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–22:00. Short walk from Pozi Street."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Snack streets and spicy Hunan plates, with a museum break and river views in between.",
+      "days": [
+        {
+          "title": "Arrive, old lane and Wuyi Square snacks",
+          "stops": [
+            {
+              "place": "taiping-street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy start: cafes and small snack shops in an old lane."
+            },
+            {
+              "place": "pozi-street",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Stinky tofu and skewers. Busiest from late afternoon."
+            },
+            {
+              "place": "huangxing-road",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Pedestrian street for more snacks and people-watching."
+            },
+            {
+              "place": "wuyi-square",
+              "at": "20:15",
+              "minutes": 60,
+              "note": "Finish with a late dessert or drink nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, south night market",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go early; queues build later."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quiet temple stop, then lunch nearby."
+            },
+            {
+              "place": "changsha-south",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Metro south; short walk around the station area."
+            },
+            {
+              "place": "helong-sports",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Night market food stalls, best late evening."
+            }
+          ]
+        },
+        {
+          "title": "Yuelu snacks, then fly",
+          "stops": [
+            {
+              "place": "yuelu-gate-food",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Snack stalls near the academy gate, busiest at lunch."
+            },
+            {
+              "place": "yuelu-academy",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Shorter hours in winter; check on the day."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Short walk uphill; daylight hours only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Academy, museum and old streets, grouped by area so you walk less.",
+      "days": [
+        {
+          "title": "Yuelu history and river sunset",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is calmer. Shorter hours in winter."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Uphill walk from the academy area."
+            },
+            {
+              "place": "yuelu-gate-food",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Lunch at the stalls by the gate."
+            },
+            {
+              "place": "juzizhou-head",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light; check metro or ferry times back."
+            }
+          ]
+        },
+        {
+          "title": "Museum and old lane",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is best."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Daylight hours; lunch nearby after."
+            },
+            {
+              "place": "taiping-street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Old lane with small shops and cafes."
+            },
+            {
+              "place": "pozi-street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner from street stalls."
+            }
+          ]
+        },
+        {
+          "title": "Tomb site, then fly",
+          "stops": [
+            {
+              "place": "mawangdui-site",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Check on the day; the site area is simple."
+            },
+            {
+              "place": "changsha-south",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Lunch near the station before departure."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums, river views and lively evening streets, with one mountain morning.",
+      "days": [
+        {
+          "title": "Museum, temple, evening streets",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go at opening."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Daylight hours; lunch nearby."
+            },
+            {
+              "place": "taiping-street",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Old lane, good for a coffee break."
+            },
+            {
+              "place": "ifs-tower",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset and evening views; mall roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Yuelu morning, river night",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning, weekdays. Shorter hours in winter."
+            },
+            {
+              "place": "yuelu-mountain",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Trails open daily; cable car daytime only."
+            },
+            {
+              "place": "xiang-river-cruise",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening departures; book ahead or check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Island walk, then fly",
+          "stops": [
+            {
+              "place": "juzizhou-ferry",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Daytime crossings; check last times."
+            },
+            {
+              "place": "orange-isle",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Island open daily; check metro or ferry times back."
+            },
+            {
+              "place": "juzizhou-bridge",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Bridge walk; lit at night but fine by day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Three nights of Hunan spice: snack streets, old lanes and late-night markets, with a river break in between.",
+      "days": [
+        {
+          "title": "Arrive, old lane and snack street",
+          "stops": [
+            {
+              "place": "wuyi-square",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Shops run into the evening."
+            },
+            {
+              "place": "taiping-street",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Old lane with cafes and small snack shops. Easy first taste of Changsha."
+            },
+            {
+              "place": "pozi-street",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Busiest from late afternoon. Try stinky tofu and spicy skewers. Cash and phone pay both work."
+            },
+            {
+              "place": "huangxing-road",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Short walk away. Good for dessert and people-watching."
+            }
+          ]
+        },
+        {
+          "title": "Yuelu side and river sunset",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early on a weekday. Hours are shorter in winter, so check on the day."
+            },
+            {
+              "place": "yuelu-gate-food",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Snack stalls by the gate. Busiest around lunch, so this is a calm window."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Short walk uphill. Daylight hours only."
+            },
+            {
+              "place": "juzizhou-bridge",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Cross to the island for sunset. The bridge is lit at night."
+            },
+            {
+              "place": "pozi-street",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Back in Wuyi Square for a late dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, market night",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book ahead if you can. Weekday mornings are calmer."
+            },
+            {
+              "place": "wuyi-square",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch near the square."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Quiet temple stop. Daylight hours."
+            },
+            {
+              "place": "helong-sports",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Night market area near Changsha South Station. Best late evening. Take the metro."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Academy, tombs and old streets: a steady history route with evenings left free for food streets.",
+      "days": [
+        {
+          "title": "Arrive and old Changsha lanes",
+          "stops": [
+            {
+              "place": "taiping-street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Historic lane, good first walk. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Daylight hours only, so go before dusk."
+            },
+            {
+              "place": "wuyi-square",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner nearby. Shops stay open late."
+            }
+          ]
+        },
+        {
+          "title": "Yuelu history day",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Weekday morning is best. Check winter hours on the day."
+            },
+            {
+              "place": "yuelu-gate-food",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Quick snack before the climb."
+            },
+            {
+              "place": "yuelu-mountain",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Trails open daily. Cable car runs daytime only. Wear good shoes."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "On the way down. Daylight hours."
+            },
+            {
+              "place": "pozi-street",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening food street to close the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum and tomb site",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. The Mawangdui finds are the highlight."
+            },
+            {
+              "place": "mawangdui-site",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "The original tomb site area. Hours vary, so check on the day."
+            },
+            {
+              "place": "changsha-south",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk and a meal near the station."
+            },
+            {
+              "place": "helong-sports",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Late snack market. Metro back to the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for most visitors: museum, academy and river views by day, lively streets after dark.",
+      "days": [
+        {
+          "title": "Arrive, old lane and river evening",
+          "stops": [
+            {
+              "place": "taiping-street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Old lane with cafes and small shops."
+            },
+            {
+              "place": "wuyi-square",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Central square, easy to reach on foot."
+            },
+            {
+              "place": "pozi-street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner on the food street. Busiest late afternoon onward."
+            },
+            {
+              "place": "ifs-tower",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Sunset and evening views. Mall roughly 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Academy, mountain and river",
+          "stops": [
+            {
+              "place": "yuelu-academy",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Weekday morning is best. Check winter hours on the day."
+            },
+            {
+              "place": "aiwan-pavilion",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Short walk uphill. Daylight hours."
+            },
+            {
+              "place": "yuelu-mountain",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Trails open daily. Cable car daytime only."
+            },
+            {
+              "place": "juzizhou-head",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Island head viewpoint, best late afternoon."
+            },
+            {
+              "place": "xiang-river-cruise",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening departure. Check times and book on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "hunan-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday mornings are calmer."
+            },
+            {
+              "place": "kaifu-temple",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Daylight hours. Short taxi or metro ride."
+            },
+            {
+              "place": "huangxing-road",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch and last shopping. Shops roughly 10:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Wuyi Square"
+    }
+  ]
+}

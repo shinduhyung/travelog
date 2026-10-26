@@ -1,0 +1,895 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of gardens and canal lanes, all in the old town.",
+      "days": [
+        {
+          "title": "Gardens in the morning, canals at night",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Go at opening. It gets busy by mid-morning."
+            },
+            {
+              "place": "suzhou_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Free entry, but book ahead. Closed Monday."
+            },
+            {
+              "place": "suzhou_noodles",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch. Many shops close around 14:00."
+            },
+            {
+              "place": "master_of_nets",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Small and calm. About 15 minutes on foot from Pingjiang Road."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Canal lanes, snacks and shops. Liveliest late afternoon."
+            },
+            {
+              "place": "suzhou_opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book a Kunqu or pingtan show in advance. Check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street / Pingjiang Road"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Pagodas, a hilltop legend and the city's best museum, all near the station.",
+      "days": [
+        {
+          "title": "North side history, then the old town",
+          "stops": [
+            {
+              "place": "huqiu_market",
+              "at": "07:00",
+              "minutes": 45,
+              "note": "Early local market. Go before 09:00 for the full scene."
+            },
+            {
+              "place": "tiger_hill",
+              "at": "08:15",
+              "minutes": 120,
+              "note": "Short taxi from the market. Leaning pagoda and gardens."
+            },
+            {
+              "place": "suzhou_station_area",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk to North Temple Pagoda. Check opening before you go."
+            },
+            {
+              "place": "shantang_street",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and canal-side stroll. Shops open around 09:00."
+            },
+            {
+              "place": "suzhou_museum",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. Book free tickets ahead."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner and shopping. Shops run to about 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Near Suzhou Station"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Gardens, a canal boat and a lakeside sunset, mostly outdoors.",
+      "days": [
+        {
+          "title": "Old town green, then the lake",
+          "stops": [
+            {
+              "place": "lion_grove",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early is best. Rockeries get crowded later."
+            },
+            {
+              "place": "bike_city",
+              "at": "09:15",
+              "minutes": 120,
+              "note": "Rent a bike and loop the old town walls and canals."
+            },
+            {
+              "place": "tea_house",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Canal-side rest and a light lunch."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Daytime departures from near Pingjiang Road. Check times on the day."
+            },
+            {
+              "place": "jinji_lake",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Metro to Suzhou Industrial Park. Stay for sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pingjiang Road"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Gardens and canal lanes in the old town, with one evening show.",
+      "days": [
+        {
+          "title": "Gardens and the canal quarter",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Go at opening. Buy tickets online if you can."
+            },
+            {
+              "place": "suzhou_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Free entry, but book ahead in busy seasons."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and a wander. Shops open around 10:00."
+            },
+            {
+              "place": "master_of_nets",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Small and calm. Some evening shows; check on the day."
+            },
+            {
+              "place": "suzhou_opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Kunqu or pingtan. Book seats earlier in the day."
+            }
+          ]
+        },
+        {
+          "title": "Canal walk, then out",
+          "stops": [
+            {
+              "place": "pingjiang_walk",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Quiet early. Best photos before the crowds."
+            },
+            {
+              "place": "tea_house",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Canal-side rest. Most open around 10:00."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Daytime departures. Check times at the dock."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pingjiang Road"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Museums, a hilltop pagoda and old streets near the station.",
+      "days": [
+        {
+          "title": "Museum and old streets",
+          "stops": [
+            {
+              "place": "suzhou_museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Book ahead in peak season."
+            },
+            {
+              "place": "silk_museum",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Monday. Small and quick to see."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Lunch, then shopping on the pedestrian street."
+            },
+            {
+              "place": "panmen_gate",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Gate and pagoda. Last entry mid-afternoon; check on the day."
+            },
+            {
+              "place": "shantang_street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and evening stroll. Shops close around 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Tiger Hill, then out",
+          "stops": [
+            {
+              "place": "huqiu_market",
+              "at": "07:00",
+              "minutes": 45,
+              "note": "Local wet market. Busiest early; go before 09:00."
+            },
+            {
+              "place": "tiger_hill",
+              "at": "08:15",
+              "minutes": 120,
+              "note": "Near Suzhou Station. Leaning pagoda and gardens."
+            },
+            {
+              "place": "suzhou_station_area",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "North Temple Pagoda area walk. Daylight hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Near Suzhou Station"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Classical gardens, a canal ride and a lakeside sunset.",
+      "days": [
+        {
+          "title": "Gardens and canals",
+          "stops": [
+            {
+              "place": "lion_grove",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early morning is calmest. Rockeries get busy later."
+            },
+            {
+              "place": "humble_administrator",
+              "at": "09:15",
+              "minutes": 120,
+              "note": "The big one. Book ahead in spring and autumn."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Lunch on the way. Shops and food all along the canal."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daytime departures; some evening trips. Check at the dock."
+            },
+            {
+              "place": "jinji_lake",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Sunset by the water. About 30 minutes by metro or taxi."
+            }
+          ]
+        },
+        {
+          "title": "Bike loop, then out",
+          "stops": [
+            {
+              "place": "bike_city",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Old town loop in daylight. Rent a bike near Guanqian Street."
+            },
+            {
+              "place": "suzhou_noodles",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Early lunch. Most noodle shops close around 14:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the classic gardens, canal lanes and a water town in three easy days.",
+      "days": [
+        {
+          "title": "Arrive, gardens and the old lanes",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Go early afternoon to beat the worst crowds. Last entry is mid-afternoon, so don't be late."
+            },
+            {
+              "place": "lion_grove",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "A short walk away. Famous rockery maze; keep it brief if you are tired."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Canal lanes near the gardens. Wander, then pick a spot for dinner."
+            },
+            {
+              "place": "suzhou_noodles",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Many noodle shops close early; for dinner choose a canal-side restaurant instead and save noodles for breakfast."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, water town afternoon",
+          "stops": [
+            {
+              "place": "suzhou_museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Arrive at opening; free entry usually needs advance booking, so check on the day."
+            },
+            {
+              "place": "silk_museum",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Nearby and small. Also closed Monday."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch and a look at the pedestrian street."
+            },
+            {
+              "place": "master_of_nets",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Small, lovely garden near Pingjiang Road. Some evenings have short shows; check on the day."
+            },
+            {
+              "place": "suzhou_opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Kunqu or pingtan show. Book ahead; times vary."
+            }
+          ]
+        },
+        {
+          "title": "Water town, then leave",
+          "stops": [
+            {
+              "place": "tongli",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Go early on a weekday if you can. About an hour by taxi or metro plus bus; check routes on the day."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Back in town, a short canal cruise. Daytime departures; confirm the last boat."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street / Pingjiang Road"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want temples, pagodas and museums more than gardens.",
+      "days": [
+        {
+          "title": "Arrive, pagoda and old streets",
+          "stops": [
+            {
+              "place": "suzhou_station_area",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Easy first walk near the station area. Daylight hours only."
+            },
+            {
+              "place": "tiger_hill",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Pagoda and legends. Last entry late afternoon; check on the day."
+            },
+            {
+              "place": "shantang_street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Canal street near the station. Stay for dinner; shops wind down around 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the city wall",
+          "stops": [
+            {
+              "place": "suzhou_museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Book ahead if you can."
+            },
+            {
+              "place": "silk_museum",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Monday. Good for the city's silk trade story."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "panmen_gate",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Gate and pagoda by the water. Closes around 17:00."
+            },
+            {
+              "place": "tea_house",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Rest your feet canal-side before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Water town, then leave",
+          "stops": [
+            {
+              "place": "tongli",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Old houses and canals. Weekday mornings are calmest. Check transport on the day."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Short cruise to finish. Confirm departure times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street / Pingjiang Road"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who prefer gardens, canals and lakeside sunsets over museums.",
+      "days": [
+        {
+          "title": "Arrive, garden and canal evening",
+          "stops": [
+            {
+              "place": "master_of_nets",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Compact garden, easy first stop. Closes around 17:00."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Canal-side stroll as the light softens."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening trips run some days; check on the day."
+            },
+            {
+              "place": "tea_house",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Light dinner or tea by the water."
+            }
+          ]
+        },
+        {
+          "title": "Big garden, then the lake",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Early morning is quietest. Last entry mid-afternoon."
+            },
+            {
+              "place": "lion_grove",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short walk away."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch before heading east."
+            },
+            {
+              "place": "jinji_lake",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "About 30 minutes by metro. Stay for sunset, then eat nearby."
+            }
+          ]
+        },
+        {
+          "title": "Bike loop, then leave",
+          "stops": [
+            {
+              "place": "bike_city",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Rent a bike and loop the old town in daylight. Watch traffic."
+            },
+            {
+              "place": "suzhou_noodles",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Classic noodle breakfast or early lunch; many shops close by 14:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pingjiang Road / Guanqian Street"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Classical gardens, canal lanes and a water town, paced gently for first-timers.",
+      "days": [
+        {
+          "title": "Gardens and the old canal lanes",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Go at opening to beat the crowds. Last entry is mid-afternoon."
+            },
+            {
+              "place": "suzhou_noodles",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "A short walk for a local noodle breakfast; most shops close early afternoon."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Stroll the canal lanes before the midday rush."
+            },
+            {
+              "place": "tea_house",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Sit by the water and rest your feet."
+            },
+            {
+              "place": "master_of_nets",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Small and lovely late in the day. Some evening shows; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning and evening opera",
+          "stops": [
+            {
+              "place": "suzhou_museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Arrive at opening; free entry, but book ahead if you can."
+            },
+            {
+              "place": "lion_grove",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Rockery maze next door. Early is best but late morning is fine."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and browsing on the pedestrian street."
+            },
+            {
+              "place": "silk_museum",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Closed Monday. Small and quick."
+            },
+            {
+              "place": "suzhou_opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Kunqu or pingtan show. Book seats earlier in the day."
+            }
+          ]
+        },
+        {
+          "title": "Water town day trip",
+          "stops": [
+            {
+              "place": "huqiu_market",
+              "at": "07:00",
+              "minutes": 45,
+              "note": "Early local market; most stalls wind down by 11:00."
+            },
+            {
+              "place": "tongli",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Allow time to travel out; go on a weekday if you can. Check return transport on the day."
+            },
+            {
+              "place": "jinji_lake",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset by the lake on the way back into town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street / Pingjiang Road"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Temples, museums and 2,500 years of city life at an easy pace.",
+      "days": [
+        {
+          "title": "Tiger Hill and the north old town",
+          "stops": [
+            {
+              "place": "tiger_hill",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Leaning pagoda and gardens. Morning is cooler and quieter."
+            },
+            {
+              "place": "suzhou_station_area",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk the North Temple Pagoda area; daylight hours only."
+            },
+            {
+              "place": "shantang_street",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch and canal-side wandering; shops open around 09:00."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the city gate",
+          "stops": [
+            {
+              "place": "suzhou_museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Book ahead if you can."
+            },
+            {
+              "place": "silk_museum",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Closed Monday. Learn how Suzhou silk was made."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and shopping."
+            },
+            {
+              "place": "panmen_gate",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Gate, pagoda and a stretch of old wall. Closes around 17:00."
+            }
+          ]
+        },
+        {
+          "title": "Gardens, boat and evening show",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "The city's most famous garden; arrive at opening."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Canal lanes and snacks."
+            },
+            {
+              "place": "grand_canal_boat",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Late-afternoon departure; some evening trips too. Check times on the day."
+            },
+            {
+              "place": "suzhou_opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening Kunqu or pingtan show; book earlier in the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street / Pingjiang Road"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Gardens, canals and lakeside walks, with time outdoors each day.",
+      "days": [
+        {
+          "title": "Gardens and a canal walk",
+          "stops": [
+            {
+              "place": "humble_administrator",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Quietest at opening. Spring and autumn are best."
+            },
+            {
+              "place": "lion_grove",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Rock gardens next door."
+            },
+            {
+              "place": "suzhou_noodles",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quick local lunch; many shops close by early afternoon."
+            },
+            {
+              "place": "pingjiang_walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Easy canal-side stroll."
+            },
+            {
+              "place": "master_of_nets",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Garden with a pond and pavilions; lovely in late light."
+            }
+          ]
+        },
+        {
+          "title": "Bike loop and lake sunset",
+          "stops": [
+            {
+              "place": "bike_city",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Rent a bike and loop the old town in daylight. Watch traffic."
+            },
+            {
+              "place": "guanqian_food",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and a break."
+            },
+            {
+              "place": "jinji_lake",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Waterfront walk; stay for sunset. Allow travel time from the old town."
+            }
+          ]
+        },
+        {
+          "title": "Water town and hill",
+          "stops": [
+            {
+              "place": "tiger_hill",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Gardens and views; go early."
+            },
+            {
+              "place": "tongli",
+              "at": "11:00",
+              "minutes": 240,
+              "note": "Canals and gardens in a water town. Weekday is calmer; check transport on the day."
+            },
+            {
+              "place": "shantang_street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Evening canal walk and dinner near the station area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Guanqian Street / Pingjiang Road"
+    }
+  ]
+}

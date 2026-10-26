@@ -1,0 +1,182 @@
+{
+  "currency": "RSD",
+  "usd_rate": 104.765,
+  "intro_line": "Belgrade: gritty, warm, and always awake at the confluence of two rivers.",
+  "intro": "Belgrade rewards visitors with fortress views, river nightlife, and a café culture that runs late. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Stari Grad",
+    "Vračar",
+    "Novi Beograd",
+    "Zemun"
+  ],
+  "taxi": {
+    "flag_day": 270,
+    "flag_airport": 270,
+    "per_km": 110,
+    "min_fare": 270
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "City buses, trams and trolleybuses are free; express E-lines and trains are not.",
+    "Trams run 11 routes and converge around Slavija and Vukov Spomenik.",
+    "BG:Voz suburban trains link the main stations; the metro is not open yet.",
+    "Ride apps: Car:Go, Pink Taxi and Yandex Go; all need SMS verification.",
+    "Only use taxis with a roof sign and plates ending in TX; insist on the meter.",
+    "Driving is stressful at rush hour; keep low beams on and watch for police speed traps."
+  ],
+  "airports": [
+    {
+      "code": "BEG",
+      "name": "Belgrade Nikola Tesla Airport",
+      "primary": true,
+      "note": "Main gateway, about 12-18 km west of the centre.",
+      "options": [
+        {
+          "mode": "Bus 72",
+          "to": "Zeleni Venac via Novi Beograd",
+          "price": "free",
+          "time": "50 min",
+          "note": "Runs every 30 min, daily 05:00-23:30."
+        },
+        {
+          "mode": "Bus 600",
+          "to": "Beograd Centar (Prokop) via Novi Beograd",
+          "price": "free",
+          "time": "40-60 min",
+          "note": "Every 30-40 min; good for trains."
+        },
+        {
+          "mode": "Minibus A1",
+          "to": "Slavija Square via Fontana and bus station",
+          "price": "RSD400",
+          "time": "30 min",
+          "note": "Pay the driver in dinars or euros; runs at night with a 02:00-04:00 break."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RSD2000-3000",
+          "time": "25-35 min",
+          "note": "Book by app or phone, or buy a fixed-price voucher at baggage claim."
+        },
+        {
+          "mode": "Ride app (Car:Go, Yandex Go, Pink Taxi)",
+          "to": "City centre",
+          "price": "RSD1800-2800",
+          "time": "25-35 min",
+          "note": "App records route and price; meet driver upstairs at Departures."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Belgrade Fortress",
+    "Knez Mihailova Street",
+    "St. Sava Temple",
+    "Skadarlija",
+    "Nikola Tesla Museum",
+    "Sava River",
+    "Stadion Rajko Mitic",
+    "Ćevapčići"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Belgrade",
+      "https://en.wikivoyage.org/wiki/Belgrade"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    44.7866,
+    20.4489
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -2,
+      "rain_days": 12
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 10
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 13
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 9
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 7
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 8
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 7
+    },
+    {
+      "high": 12,
+      "low": 5,
+      "rain_days": 10
+    },
+    {
+      "high": 7,
+      "low": 1,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,540 @@
+{
+  "city": "Adelaide",
+  "checked": "October 2026",
+  "intro_line": "Adelaide blends vineyards, beaches and easy city living.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "CBD",
+        "North Adelaide",
+        "Glenelg",
+        "Port Adelaide"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "CBD",
+        "North Adelaide",
+        "Glenelg",
+        "Port Adelaide"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "CBD",
+        "North Adelaide",
+        "Glenelg",
+        "Port Adelaide"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "CBD",
+        "North Adelaide",
+        "Glenelg",
+        "Port Adelaide"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "CBD",
+        "North Adelaide",
+        "Glenelg",
+        "Port Adelaide"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 4,
+        "note": "January: hot and dry, highs near 28°C. Beach days are great; start walks early."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 2,
+        "note": "February: the driest month, only about 2 rain days. Warm evenings suit outdoor dining."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 4,
+        "note": "March: still warm at 25°C, with a few more rain days. Good all-round month."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 7,
+        "note": "April: mild at 21°C with about 7 rain days. Bring a light jacket for evenings."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 11,
+        "note": "May: cooler at 17°C and wetter, around 11 rain days. Plan indoor sights and cafés."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 12,
+        "note": "June: cool and wet, highs near 15°C with about 12 rain days. Pack a rain jacket."
+      },
+      {
+        "high": 14,
+        "low": 8,
+        "rain_days": 13,
+        "note": "July: the coldest month, highs near 14°C and lows around 8°C. Wettest stretch, about 13 rain days."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 13,
+        "note": "August: similar to July, cold and showery. Museums and markets are good choices."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 11,
+        "note": "September: warming to 17°C but still about 11 rain days. Carry a compact umbrella."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 8,
+        "note": "October: mild at 21°C with about 8 rain days. Good for walking and the hills."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 7,
+        "note": "November: warm at 23°C and drier, about 7 rain days. A strong month for the beach."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 4,
+        "note": "December: hot and dry, highs near 26°C. Book restaurants and beach spots ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "nature": [
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.65,
+      0.55,
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.85,
+      0.85
+    ],
+    "beach": [
+      0.95,
+      0.95,
+      0.85,
+      0.65,
+      0.4,
+      0.25,
+      0.2,
+      0.25,
+      0.4,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "budget": [
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85
+    ]
+  },
+  "places": {
+    "hahndorf": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday morning to avoid crowds",
+      "area": "Adelaide Hills (day trip)",
+      "popularity": 5
+    },
+    "showgrounds": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Only worth a visit if an event is on",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "coopers": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Book a weekday tour",
+      "area": "North Adelaide",
+      "popularity": 3
+    },
+    "university": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "CBD",
+      "popularity": 2
+    },
+    "beachouse": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Hot afternoon; check opening first",
+      "area": "Glenelg",
+      "popularity": 3
+    },
+    "central-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday lunchtime",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "rundle-mall": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday shopping hours",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "north-terrace": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Any time; free and indoor",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "botanic-garden": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "glenelg-beach": {
+      "types": [
+        "beach",
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunset; summer for swimming",
+      "area": "Glenelg",
+      "popularity": 5
+    },
+    "port-adelaide": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime, weekday",
+      "area": "Port Adelaide",
+      "popularity": 3
+    },
+    "maritime-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy or hot day",
+      "area": "Port Adelaide",
+      "popularity": 3
+    },
+    "adelaide-oval": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday tour; match days are busy",
+      "area": "North Adelaide",
+      "popularity": 4
+    },
+    "torrens-walk": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "adelaide-zoo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning when animals are active",
+      "area": "North Adelaide",
+      "popularity": 4
+    },
+    "east-end": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunch or evening",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "barossa": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Weekday; book ahead",
+      "area": "Barossa (day trip)",
+      "popularity": 4
+    },
+    "mount-lofty": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Clear morning or sunset",
+      "area": "Adelaide Hills (day trip)",
+      "popularity": 3
+    },
+    "semaphore": {
+      "types": [
+        "beach",
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Port Adelaide",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Central Market, North Terrace museums and a Glenelg beach afternoon; add a night for a wine-region day trip."
+  },
+  "airports": [
+    {
+      "code": "ADL",
+      "name": "Adelaide International Airport",
+      "primary": true,
+      "note": "Main gateway, about 6-7 km west of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus J1/J2",
+          "to": "City centre",
+          "price": "A$2.60-4.55",
+          "time": "25-35 min",
+          "note": "Runs often; tap and pay on board."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "A$20-30",
+          "time": "15-25 min",
+          "note": "Metered plus airport surcharge."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "A$18-28",
+          "time": "15-25 min",
+          "note": "Pickup zone outside terminal."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City and beyond",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Kiosks near baggage claim."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Adelaide",
+      "https://en.wikivoyage.org/wiki/Adelaide"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "beach",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk or take the free city tram in the centre; use the tram to Glenelg and trains for Port Adelaide.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Adelaide Metro runs trains, trams and buses with one tap-and-pay system. Trams and some city buses are free within the city centre. The tram runs to Glenelg."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Part of the same Adelaide Metro tap-and-pay system. Some city buses are free in the centre."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis use the meter; airport pickups add a small surcharge. Uber and other ride apps operate across the city."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy but parking in the CBD costs money. Useful for the Barossa, McLaren Vale and the hills."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The city is flat and good for walking and cycling."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Adelaide Metro trains are part of the same tap-and-pay system. Useful for Port Adelaide and outer suburbs."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean-style climate: hot, dry summers and cool, wetter winters. Rain is spread over the cooler months.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Warm to hot days around 23–28°C and low rain. Ideal for beaches, the hills and outdoor dining."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest: June to August",
+        "text": "About 12–13 rain days a month and highs near 14–15°C. Pack a rain jacket and plan indoor stops."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Cool winters",
+        "text": "July lows drop to about 8°C. Mornings and evenings feel cold; bring layers."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach weather",
+        "text": "Best from December to March. By June to August the sea and air are cold for swimming."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild shoulder months",
+        "text": "April, October and November are comfortable at about 21–23°C with moderate rain. Good for walking and wine regions."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Summer: light clothes, hat and sunscreen. Winter: warm layers, a waterproof jacket and an umbrella."
+      }
+    ]
+  }
+}

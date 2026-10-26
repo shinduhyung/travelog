@@ -1,0 +1,32 @@
+$ deepseek_prep.py Chennai
+  tokens in 699 out 240
+Chennai: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Chennai
+  tokens in 4014 out 616
+Chennai: 0 problems
+
+$ deepseek_city.py Chennai --stage places
+Chennai: places
+  tokens in 1165 out 2528
+
+$ deepseek_city.py Chennai --stage frame
+Chennai: frame
+  tokens in 2453 out 1888
+  repaired JSON
+
+$ deepseek_city.py Chennai --stage plans
+Chennai: plans
+  plans for day
+  tokens in 1892 out 910
+  plans for 1n
+  tokens in 1893 out 1203
+  plans for 2n
+  tokens in 1898 out 1481
+  plans for 3n
+  tokens in 1893 out 1729
+
+$ merge_city.py Chennai
+Chennai: 17 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/chennai.json and planner/chennai.json
+

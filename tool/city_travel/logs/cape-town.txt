@@ -1,0 +1,19 @@
+$ deepseek_city.py Cape Town --stage plans
+Cape Town: plans
+  plans for day
+  tokens in 2598 out 735
+  plans for 1n
+  tokens in 2599 out 710
+  plans for 2n
+  tokens in 2599 out 1471
+  plans for 3n
+  tokens in 2604 out 1884
+  plans for 4n
+  tokens in 2599 out 2157
+  plans for 5n
+  tokens in 2599 out 2213
+
+$ merge_city.py Cape Town
+Cape Town: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/cape-town.json and planner/cape-town.json
+

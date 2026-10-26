@@ -1,0 +1,229 @@
+{
+  "currency": "JPY",
+  "usd_rate": 156.9206,
+  "intro_line": "Osaka: Japan's kitchen of neon and castles.",
+  "intro": "Osaka rewards visitors with its legendary street food, lively nightlife, and rich history. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Namba",
+    "Umeda",
+    "Shinsaibashi",
+    "Tennoji"
+  ],
+  "taxi": {
+    "flag_day": 500,
+    "flag_airport": 700,
+    "per_km": 300,
+    "min_fare": 500
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Osaka Metro and JR trains cover the city; use an IC card like ICOCA.",
+    "Buses are useful but less frequent; taxis are easy to hail.",
+    "Ride apps: Uber and GO work in Osaka.",
+    "Driving is not recommended for visitors; parking is expensive.",
+    "Walking and cycling are great in central areas; rent bikes from stations.",
+    "Ferries connect to Kansai Airport and nearby islands."
+  ],
+  "airports": [
+    {
+      "code": "KIX",
+      "name": "Kansai International Airport",
+      "primary": true,
+      "note": "Main international gateway, 38 km from centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Osaka Station",
+          "price": "¥1,500-2,000",
+          "time": "50-60 min",
+          "note": "Cheapest direct option; runs frequently."
+        },
+        {
+          "mode": "Train (Nankai Rapi:t)",
+          "to": "Namba",
+          "price": "¥1,500",
+          "time": "35-40 min",
+          "note": "Limited express; comfortable and fast."
+        },
+        {
+          "mode": "Train (JR Haruka)",
+          "to": "Shin-Osaka",
+          "price": "¥3,000",
+          "time": "50 min",
+          "note": "Good for Shinkansen connections."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥15,000-20,000",
+          "time": "50-60 min",
+          "note": "Fixed fares available; check before boarding."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "¥15,000-20,000",
+          "time": "50-60 min",
+          "note": "App-based; similar to taxi."
+        }
+      ]
+    },
+    {
+      "code": "ITM",
+      "name": "Osaka International Airport (Itami)",
+      "primary": false,
+      "note": "Domestic airport, 12 km from centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Osaka Station",
+          "price": "¥500-600",
+          "time": "30-40 min",
+          "note": "Frequent limousine buses."
+        },
+        {
+          "mode": "Monorail + train",
+          "to": "Umeda",
+          "price": "¥420",
+          "time": "30-40 min",
+          "note": "Cheapest; transfer at Hotarugaike."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Osaka Castle area",
+          "price": "¥4,000-5,000",
+          "time": "20-30 min",
+          "note": "Plus tolls; faster than bus."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "¥4,000-5,000",
+          "time": "20-30 min",
+          "note": "App-based; similar to taxi."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "Osaka Castle",
+    "Dotonbori",
+    "Umeda Sky Building",
+    "Tsutenkaku",
+    "Shitenno-ji",
+    "Sumiyoshi Taisha",
+    "Universal Studios Japan",
+    "Asahi Breweries Suita",
+    "Bunraku Theatre",
+    "Dotonbori River Cruise",
+    "Horyu-ji",
+    "Kobe Harborland",
+    "Kuromon Ichiba Market",
+    "Osaka Aquarium Kaiyukan",
+    "Osaka University",
+    "Rokko-Arima Ropeway",
+    "Toshodai-ji",
+    "Yakushi-ji",
+    "Yodo River"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Osaka",
+      "https://en.wikivoyage.org/wiki/Osaka"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    34.6937,
+    135.5023
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 9,
+      "low": 1,
+      "rain_days": 7
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 7
+    },
+    {
+      "high": 14,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 10
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 16
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 8
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

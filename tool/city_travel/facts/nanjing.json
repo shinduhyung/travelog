@@ -1,0 +1,173 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Ancient capital on the Yangtze, layered with dynasties and modern buzz.",
+  "intro": "Nanjing rewards visitors with imperial tombs, lakeside walls and a lively food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Xinjiekou",
+    "Fuzimiao",
+    "Xuanwu Lake",
+    "Nanjing South Station"
+  ],
+  "taxi": {
+    "flag_day": 11,
+    "flag_airport": 11,
+    "per_km": 2.5,
+    "min_fare": 11
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro is clean, cheap and fast; single tokens cost ¥2-9 and run roughly 05:00-23:00.",
+    "Line S1 links Nanjing South Station to the airport in about 30 min for ¥6.",
+    "City buses cost a flat ¥2 (some ¥1); IC card gives about 20% off.",
+    "Taxis start at ¥9 plus ¥2 service fee; most trips cost under ¥25.",
+    "Ride apps like Didi work well; drivers rarely speak English, so show Chinese addresses.",
+    "Shared bikes (Hello, Meituan) are everywhere; trams serve the southwest and Qilin Town."
+  ],
+  "airports": [
+    {
+      "code": "NKG",
+      "name": "Nanjing Lukou International Airport",
+      "primary": true,
+      "note": "Main gateway, about 36 km south of the centre.",
+      "options": [
+        {
+          "mode": "Metro S1",
+          "to": "Nanjing South Station",
+          "price": "¥6",
+          "time": "30 min",
+          "note": "Long walk between Line 1 and S1 at South Station."
+        },
+        {
+          "mode": "Airport express bus",
+          "to": "North or South Railway Station",
+          "price": "¥20",
+          "time": "60+ min",
+          "note": "Runs about every 30 min; buy at arrivals kiosk."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "¥90-110",
+          "time": "30-50 min",
+          "note": "Similar time to metro but far pricier."
+        },
+        {
+          "mode": "Didi",
+          "to": "Downtown",
+          "price": "¥80-110",
+          "time": "30-50 min",
+          "note": "Use app pickup point at arrivals."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Dr. Sun Yat-sen Mausoleum",
+    "Confucius Temple, Nanjing",
+    "Nanjing Massacre Memorial Hall",
+    "Ming Xiaoling Mausoleum",
+    "Happy Valley Nanjing",
+    "Nanjing University"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Nanjing",
+      "https://en.wikivoyage.org/wiki/Nanjing"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    32.06167,
+    118.77778
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 1,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 12
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 17
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 8
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

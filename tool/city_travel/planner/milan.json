@@ -1,0 +1,631 @@
+{
+  "city": "Milan",
+  "checked": "October 2026",
+  "intro_line": "Milan rewards style, art and appetite in equal measure.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Duomo",
+        "Brera",
+        "Navigli",
+        "Porta Nuova"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Duomo",
+        "Brera",
+        "Navigli",
+        "Porta Nuova"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Duomo",
+        "Brera",
+        "Navigli",
+        "Porta Nuova"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Duomo",
+        "Brera",
+        "Navigli",
+        "Porta Nuova"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Duomo",
+        "Brera",
+        "Navigli",
+        "Porta Nuova"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": -1,
+        "rain_days": 6,
+        "note": "January: cold, highs near 8°C. Pack a warm coat; museums are quiet."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 8,
+        "note": "February: still cold, lows near 2°C. Rain on about 8 days; carry an umbrella."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 9,
+        "note": "March: milder, highs around 14°C. Good for walking; expect some rain."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 9,
+        "note": "April: pleasant at 18°C. Showers on about 9 days; layers help."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 16,
+        "note": "May: warm at 22°C but the wettest month, rain on about 16 days."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 11,
+        "note": "June: warm and sunny, highs near 27°C. Long evenings; book sights ahead."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 12,
+        "note": "July: hot at 30°C. Sightsee early and late; expect some thunderstorms."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 10,
+        "note": "August: hot and often quiet as locals leave. Some restaurants close; check before you go."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 10,
+        "note": "September: warm at 24°C and comfortable. A strong month to visit."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 11,
+        "note": "October: cooler at 19°C with rain on about 11 days. Bring a jacket."
+      },
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 11,
+        "note": "November: cool and damp, highs near 12°C, rain on about 11 days."
+      },
+      {
+        "high": 8,
+        "low": 1,
+        "rain_days": 7,
+        "note": "December: cold at 8°C with festive lights and markets. Pack warm layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "art": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "shopping": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "duomo": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Early morning for fewer crowds; clear day for the terraces",
+      "area": "Duomo",
+      "popularity": 5
+    },
+    "lastsupper": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any slot; book far in advance",
+      "area": "Duomo",
+      "popularity": 5
+    },
+    "galleria": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning or evening for fewer crowds",
+      "area": "Duomo",
+      "popularity": 5
+    },
+    "sforza": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning; pair with Parco Sempione",
+      "area": "Brera",
+      "popularity": 4
+    },
+    "piazzaduomo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning or after dark when the cathedral is lit",
+      "area": "Duomo",
+      "popularity": 5
+    },
+    "bocconi": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Navigli",
+      "popularity": 2
+    },
+    "certosa": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; a half-day trip",
+      "area": "Porta Nuova",
+      "popularity": 2
+    },
+    "idroscalo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Warm spring and summer days",
+      "area": "Porta Nuova",
+      "popularity": 2
+    },
+    "greenland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend daytime in good weather",
+      "area": "Porta Nuova",
+      "popularity": 1
+    },
+    "minigolf": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon in good weather",
+      "area": "Porta Nuova",
+      "popularity": 1
+    },
+    "politecnico": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Porta Nuova",
+      "popularity": 2
+    },
+    "prehistoric": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend daytime in good weather",
+      "area": "Porta Nuova",
+      "popularity": 1
+    },
+    "sansiro": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning; avoid match days",
+      "area": "Porta Nuova",
+      "popularity": 3
+    },
+    "santamaria": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning, before or after the Last Supper",
+      "area": "Duomo",
+      "popularity": 4
+    },
+    "starbucks": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Mid-morning or late evening",
+      "area": "Duomo",
+      "popularity": 3
+    },
+    "scala": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening for a performance; daytime for the museum",
+      "area": "Duomo",
+      "popularity": 4
+    },
+    "navigli": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunset into evening; spring and summer",
+      "area": "Navigli",
+      "popularity": 5
+    },
+    "brera": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Brera",
+      "popularity": 4
+    },
+    "portanuova": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Porta Nuova",
+      "popularity": 4
+    },
+    "market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Navigli",
+      "popularity": 3
+    },
+    "tram": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Duomo",
+      "popularity": 3
+    },
+    "walkingtour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Duomo",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Duomo, the Last Supper and an aperitivo in Navigli; add a night for a Lake Como day trip."
+  },
+  "airports": [
+    {
+      "code": "MXP",
+      "name": "Malpensa International Airport",
+      "primary": true,
+      "note": "Main international gateway, 40 km northwest.",
+      "options": [
+        {
+          "mode": "Malpensa Express train",
+          "to": "Cadorna or Centrale",
+          "price": "€13-15",
+          "time": "30-50 min",
+          "note": "Fastest reliable option; trains run often."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Milano Centrale",
+          "price": "€8-12",
+          "time": "50-60 min",
+          "note": "Cheap but traffic can slow it."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€90-110",
+          "time": "45-60 min",
+          "note": "Fixed fare applies to the centre."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€90-120",
+          "time": "45-60 min",
+          "note": "Check the app for pickup point."
+        }
+      ]
+    },
+    {
+      "code": "LIN",
+      "name": "Linate Airport",
+      "primary": false,
+      "note": "Small city airport, 7 km east.",
+      "options": [
+        {
+          "mode": "Metro M4",
+          "to": "City centre (San Babila)",
+          "price": "€2.20",
+          "time": "15-20 min",
+          "note": "Runs every 7 minutes; buy ticket inside terminal."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Milano Centrale",
+          "price": "€5",
+          "time": "25-30 min",
+          "note": "Every 30 minutes; stops at Lambrate too."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€12-20",
+          "time": "15-25 min",
+          "note": "Minimum charge €12; ignore unofficial touts."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€15-25",
+          "time": "15-25 min",
+          "note": "Short ride; traffic can add time."
+        }
+      ]
+    },
+    {
+      "code": "BGY",
+      "name": "Bergamo / Orio Al Serio Airport",
+      "primary": false,
+      "note": "Budget airport, 46 km northeast.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Milano Centrale",
+          "price": "€10-12",
+          "time": "60-75 min",
+          "note": "Book online for less; be at the stop early."
+        },
+        {
+          "mode": "Bus + train via Bergamo",
+          "to": "Milano Centrale",
+          "price": "€7-9",
+          "time": "90-120 min",
+          "note": "Cheapest route; bus to Bergamo station then train."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€100+",
+          "time": "50-70 min",
+          "note": "Expensive; buses are usually better."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€100-130",
+          "time": "50-70 min",
+          "note": "Availability can be limited."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Milan",
+      "https://en.wikivoyage.org/wiki/Milan"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "art",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Metro and trams for the centre; walk between the Duomo, Brera and Navigli.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines M1–M5 cover the centre. Tickets cost €2.20 for 90 minutes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Trams and buses run frequently. Buy tickets at newsagents or by app."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; queues are long at peak hours and during Fashion Week. Uber works in Milan and ride apps are common for airport runs."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is restricted (Area C). Use park-and-ride at metro termini."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is flat and walkable. Bike sharing is easy to find."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Northern Italian climate: cold, damp winters and warm to hot summers, with rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June, September to October",
+        "text": "Mild days around 18–27°C. Comfortable for walking and sightseeing."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot (July–August)",
+        "text": "Highs near 30°C and humid. Plan indoor sights at midday and go out in the evening."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "May is wettest, with rain on about 16 days. Carry a small umbrella year-round."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters (December–February)",
+        "text": "Highs around 8°C and lows near 0°C. A warm coat and layers are essential."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Summer thunderstorms",
+        "text": "Short, heavy storms are common in July and August. They pass quickly."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobbles; a hat and sunscreen for summer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Chengdu: pandas, peppercorns and teahouse calm.",
+  "intro": "Chengdu rewards slow days with spicy food, old lanes and easy trips to mountains and pandas. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Tianfu Square",
+    "Chunxi Road",
+    "Kuanzhai Alley",
+    "Wuhou Temple"
+  ],
+  "taxi": {
+    "flag_day": 9,
+    "flag_airport": 10,
+    "per_km": 2,
+    "min_fare": 9
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: many lines, English ticket machines, WeChat/Alipay and most international cards accepted.",
+    "Metro line 10 links Shuangliu Airport to the centre in about 30-40 min.",
+    "Metro line 18 links Tianfu Airport to South Railway Station in about 50 min; ticket to Tianfu Square around ¥11.",
+    "Buses cost ¥2 air-conditioned, ¥1 older; exact change or transit card; signs in Chinese only.",
+    "Taxis are metered and cheap; add about ¥10 for the airport expressway toll when leaving town.",
+    "Ride apps: DiDi works well; walking and shared bikes are good in the flat centre."
+  ],
+  "airports": [
+    {
+      "code": "CTU",
+      "name": "Chengdu Shuangliu International Airport",
+      "primary": true,
+      "note": "Main domestic airport, 11 km southwest of centre.",
+      "options": [
+        {
+          "mode": "Metro line 10",
+          "to": "Taipingyuan, then lines 3 and 7",
+          "price": "¥2-6",
+          "time": "30-40 min",
+          "note": "Cheapest and reliable; buy at machines."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre, Renmin Nanlu area",
+          "price": "¥10-15",
+          "time": "40-60 min",
+          "note": "Runs all day, less frequent at night."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥45-60",
+          "time": "25-40 min",
+          "note": "Metered; have your address in Chinese."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥40-60",
+          "time": "25-40 min",
+          "note": "Works with foreign cards in app."
+        }
+      ]
+    },
+    {
+      "code": "TFU",
+      "name": "Chengdu Tianfu International Airport",
+      "primary": false,
+      "note": "Newer airport for many international flights, 46 km southeast.",
+      "options": [
+        {
+          "mode": "Metro line 18",
+          "to": "South Railway Station, then line 1",
+          "price": "¥11 to Tianfu Square",
+          "time": "50-60 min",
+          "note": "Trains roughly 06:00-23:00."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Chengdu IFS near Chunxilu",
+          "price": "¥40",
+          "time": "60-90 min",
+          "note": "Check desk outside arrivals for times."
+        },
+        {
+          "mode": "Metro line 19",
+          "to": "Shuangliu Airport",
+          "price": "check locally",
+          "time": "about 30 min express",
+          "note": "Useful for airport-to-airport transfers."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥120-180",
+          "time": "50-80 min",
+          "note": "Long ride; tolls may apply."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥110-170",
+          "time": "50-80 min",
+          "note": "Book after landing; pickup zones signed."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Jinli Ancient Street",
+    "Wuhou Shrine",
+    "Chengdu Research Base of Giant Panda Breeding",
+    "ChaPanda",
+    "Cube Oceanarium",
+    "Dicos",
+    "Du Fu Thatched Cottage",
+    "Happy Valley Chengdu",
+    "Kwafood"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Chengdu",
+      "https://en.wikivoyage.org/wiki/Chengdu"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    30.5728,
+    104.0668
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 5
+    },
+    {
+      "high": 13,
+      "low": 5,
+      "rain_days": 6
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 11
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 14
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 20
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 19
+    },
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 16
+    },
+    {
+      "high": 21,
+      "low": 15,
+      "rain_days": 13
+    },
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 5
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

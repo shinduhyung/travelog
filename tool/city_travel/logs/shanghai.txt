@@ -1,0 +1,30 @@
+$ deepseek_facts.py Shanghai
+  tokens in 4132 out 888
+Shanghai: 0 problems
+
+$ deepseek_city.py Shanghai --stage places
+Shanghai: places
+  tokens in 1252 out 4370
+
+$ deepseek_city.py Shanghai --stage frame
+Shanghai: frame
+  tokens in 2444 out 1762
+  repaired JSON
+
+$ deepseek_city.py Shanghai --stage plans
+Shanghai: plans
+  plans for day
+  tokens in 2687 out 926
+  plans for 1n
+  tokens in 2688 out 1213
+  plans for 2n
+  tokens in 2688 out 1311
+  plans for 3n
+  tokens in 2693 out 2101
+  plans for 4n
+  tokens in 2688 out 2040
+
+$ merge_city.py Shanghai
+Shanghai: 28 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/shanghai.json and planner/shanghai.json
+

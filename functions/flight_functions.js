@@ -1,6 +1,8 @@
 // functions/flight_functions.js
 //
 // Flight price proxy backed by Air Scrapper (formerly Sky-scrapper) on RapidAPI.
+// Uses searchFlights v2 (v1 is marked "Deprecated - DON'T USE" on RapidAPI) and
+// getPriceCalendar for the "how cheap is this date" insight (getFlightInsight).
 // Wire it into functions/index.js like this:
 //
 //   const flightFunctions = require('./flight_functions');
@@ -41,6 +43,7 @@ const RAPIDAPI_KEY = defineSecret('RAPIDAPI_KEY');
 const RAPIDAPI_HOST = 'sky-scrapper.p.rapidapi.com'; // confirmed
 
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+const EMPTY_CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes for "no flights found"
 
 function rapidHeaders() {
   const key = RAPIDAPI_KEY.value();
@@ -186,105 +189,59 @@ function findTripComOption(itineraries, agentsLookup) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────
-// Sky-scrapper (and most Skyscanner-data-mirror APIs on RapidAPI) run the
-// search asynchronously: the first searchFlights response can come back with
-// data.context.status = "incomplete" and only a partial set of itineraries
-// (whichever airlines/agents had responded by the time the request timed
-// out). The full, accurate result set (including the actual cheapest/direct
-// options) only shows up after polling a follow-up endpoint until
-// data.context.status = "complete".
-//
-// The exact polling endpoint/params are NOT confirmed for this specific
-// mirror — this assumes the commonly-documented shape
-// (GET .../searchIncomplete?sessionId=...). Heavy logging below will show
-// immediately if that assumption is wrong (404, different param name, etc).
+// searchFlights (v2) runs the search asynchronously: the first response can
+// come back with data.context.status = "incomplete" and only part of the
+// itineraries. Per the API docs, poll GET /api/v2/flights/searchIncomplete
+// with data.context.sessionId until status = "complete". Each poll returns
+// the cumulative list, not a delta.
+// Observed 2026-10-20: searchIncomplete v2 answers {status:false, "Something went
+// wrong"} every time, while searchFlights v2 already returns most itineraries
+// (8 of 10 for ICN->AUH). So a failed poll keeps what we have instead of
+// counting as "complete", and an empty first search is retried.
 // ─────────────────────────────────────────────────────────────────────────
-async function pollUntilComplete(initialResp, headers, originalUrl, originalParams, maxAttempts = 6, delayMs = 1200) {
-  let status = initialResp.data?.data?.context?.status ?? initialResp.data?.context?.status ?? null;
+const SEARCH_URL = `https://${RAPIDAPI_HOST}/api/v2/flights/searchFlights`;
+const INCOMPLETE_URL = `https://${RAPIDAPI_HOST}/api/v2/flights/searchIncomplete`;
+const CALENDAR_URL = `https://${RAPIDAPI_HOST}/api/v1/flights/getPriceCalendar`;
+
+async function pollUntilComplete(initialResp, headers, originalParams, maxAttempts = 6, delayMs = 1200) {
+  let status = initialResp.data?.data?.context?.status ?? null;
   let itineraries = initialResp.data?.data?.itineraries ?? [];
-  let sessionId =
-    initialResp.data?.data?.context?.sessionId ??
-    initialResp.data?.data?.sessionId ??
-    initialResp.data?.sessionId ??
-    null;
+  const sessionId = initialResp.data?.data?.context?.sessionId ?? null;
+  console.log(`[flight] pollUntilComplete — initial status="${status}", itineraries=${itineraries.length}`);
 
-  console.log(`[flight] pollUntilComplete — initial status="${status}", sessionId=${sessionId}, ` +
-    `itineraries so far=${itineraries.length}`);
-
-  if (status !== 'incomplete') {
-    console.log('[flight] pollUntilComplete — status is not "incomplete" (or no status field found at all), skipping polling.');
-    return itineraries;
-  }
+  if (status !== 'incomplete') return itineraries;
   if (!sessionId) {
-    console.warn('[flight] pollUntilComplete — status is "incomplete" but no sessionId found anywhere ' +
-      '(checked data.context.sessionId, data.sessionId, top-level sessionId) — cannot poll, using partial result set.');
+    console.warn('[flight] pollUntilComplete — "incomplete" but no data.context.sessionId; using the partial result set.');
     return itineraries;
   }
 
-  // Probe every plausible dedicated poll-endpoint name ONCE, back-to-back, no
-  // delay — cheap to try a few candidates up front instead of guessing one
-  // at a time across separate deploys. Different Skyscanner-mirror APIs on
-  // RapidAPI have been seen using both camelCase and hyphenated names.
-  const candidateEndpoints = [
-    `https://${RAPIDAPI_HOST}/api/v1/flights/searchIncomplete`,
-    `https://${RAPIDAPI_HOST}/api/v1/flights/search-incomplete`,
-    `https://${RAPIDAPI_HOST}/api/v2/flights/searchIncomplete`,
-  ];
-  let pollUrl = null;
-  for (const candidate of candidateEndpoints) {
-    console.log(`[flight] pollUntilComplete — probing candidate endpoint: GET ${candidate}`);
-    try {
-      const probeResp = await axios.get(candidate, {params: {sessionId}, headers});
-      // It responded without throwing -> this is a real endpoint. Use its result directly.
-      pollUrl = candidate;
-      status = probeResp.data?.data?.context?.status ?? probeResp.data?.context?.status ?? 'complete';
-      const polled = probeResp.data?.data?.itineraries ?? [];
-      if (polled.length > 0) itineraries = polled;
-      console.log(`[flight] pollUntilComplete — candidate WORKED: ${candidate} (status="${status}", itineraries=${itineraries.length}). Using this endpoint for remaining polls.`);
-      break;
-    } catch (err) {
-      const httpStatus = err.response?.status;
-      console.log(`[flight] pollUntilComplete — candidate FAILED (HTTP ${httpStatus ?? 'no response'}): ${candidate}` +
-        (err.response?.data ? ` — ${JSON.stringify(err.response.data)?.slice(0, 200)}` : ''));
-    }
-  }
-
-  const useStrategyB = pollUrl === null; // none of the dedicated endpoints exist on this mirror
-  if (useStrategyB) {
-    console.warn('[flight] pollUntilComplete — none of the dedicated poll endpoints exist on this mirror. ' +
-      'Falling back to strategy B: re-calling searchFlights itself with the same params + sessionId.');
-  }
-
-  let attempt = 0;
-  while (status === 'incomplete' && attempt < maxAttempts) {
-    attempt += 1;
+  // keep currency/market/country identical to the original search
+  const pollParams = {
+    sessionId,
+    currency: originalParams.currency,
+    market: originalParams.market,
+    countryCode: originalParams.countryCode,
+  };
+  for (let attempt = 1; status === 'incomplete' && attempt <= maxAttempts; attempt++) {
     await new Promise((resolve) => setTimeout(resolve, delayMs));
-
-    const url = useStrategyB ? originalUrl : pollUrl;
-    const params = useStrategyB ? {...originalParams, sessionId} : {sessionId};
-    const label = useStrategyB ? 'searchFlights-retry' : pollUrl;
-    console.log(`[flight] pollUntilComplete — attempt ${attempt}/${maxAttempts} (${label}): GET ${url}`, JSON.stringify(params));
-
     let resp;
     try {
-      resp = await axios.get(url, {params, headers});
+      resp = await axios.get(INCOMPLETE_URL, {params: pollParams, headers});
     } catch (err) {
-      logAxiosError(`poll attempt ${attempt} (${label})`, err);
-      console.warn('[flight] pollUntilComplete — polling request failed, giving up and using whatever itineraries we have so far.');
+      logAxiosError(`searchIncomplete attempt ${attempt}`, err);
       break;
     }
-
-    status = resp.data?.data?.context?.status ?? resp.data?.context?.status ?? 'complete';
-    const polled = resp.data?.data?.itineraries ?? [];
-    if (polled.length > 0) itineraries = polled; // each poll returns the cumulative full list, not a delta
-    console.log(`[flight] pollUntilComplete — attempt ${attempt} result: status="${status}", itineraries=${itineraries.length}`);
+    if (resp.data?.status === false || !resp.data?.data?.context) {
+      console.warn(`[flight] pollUntilComplete — attempt ${attempt}: API error "${resp.data?.message ?? 'no data'}"; keeping ${itineraries.length} itineraries.`);
+      break;
+    }
+    status = resp.data.data.context.status ?? 'complete';
+    const polled = resp.data.data.itineraries ?? [];
+    if (polled.length > 0) itineraries = polled;
+    console.log(`[flight] pollUntilComplete — attempt ${attempt}: status="${status}", itineraries=${itineraries.length}`);
   }
-
   if (status === 'incomplete') {
-    console.warn(`[flight] pollUntilComplete — still "incomplete" after polling, ` +
-      `giving up and using the ${itineraries.length} itineraries collected so far.`);
-  } else {
-    console.log(`[flight] pollUntilComplete — DONE, status="${status}", final itineraries=${itineraries.length}`);
+    console.warn(`[flight] pollUntilComplete — still incomplete; using the ${itineraries.length} itineraries collected so far.`);
   }
   return itineraries;
 }
@@ -352,6 +309,11 @@ async function getAirportSkyId(iata) {
 // ─────────────────────────────────────────────────────────────────────────
 exports.getFlightPrice = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 120}, async (request) => {
   const {originIata, destinationIata, date, stops} = request.data || {};
+  // Optional (newer clients): round trip, cabin and party size. Older app builds omit them.
+  const returnDate = request.data?.returnDate || null;
+  const cabinClass = ['economy', 'premium_economy', 'business', 'first'].includes(request.data?.cabinClass)
+    ? request.data.cabinClass : 'economy';
+  const adults = Math.min(9, Math.max(1, parseInt(request.data?.adults, 10) || 1));
   console.log(`[flight] getFlightPrice called with originIata=${originIata}, ` +
     `destinationIata=${destinationIata}, date=${date}, stops=${stops}`);
 
@@ -360,7 +322,8 @@ exports.getFlightPrice = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 120}, 
     throw new HttpsError('invalid-argument', 'originIata, destinationIata, and date are required.');
   }
 
-  const cacheKey = `${originIata}_${destinationIata}_${date}_${stops ?? 'any'}`;
+  const cacheKey = `${originIata}_${destinationIata}_${date}_${stops ?? 'any'}` +
+    (returnDate || cabinClass !== 'economy' || adults !== 1 ? `_${returnDate ?? 'ow'}_${cabinClass}_${adults}` : '');
   const cacheRef = db.collection('flight_price_cache').doc(cacheKey);
 
   const cachedSnap = await cacheRef.get();
@@ -368,7 +331,8 @@ exports.getFlightPrice = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 120}, 
     const cached = cachedSnap.data();
     const ageMs = Date.now() - cached.updatedAt;
     console.log(`[flight] getFlightPrice — cache entry found for "${cacheKey}", age=${Math.round(ageMs / 1000)}s`);
-    if (ageMs < CACHE_TTL_MS) {
+    // "nothing found" is often a transient API miss, so it only sticks for 15 minutes
+    if (ageMs < (cached.found === false ? EMPTY_CACHE_TTL_MS : CACHE_TTL_MS)) {
       console.log(`[flight] getFlightPrice — returning CACHED result:`, JSON.stringify(cached));
       return cached;
     }
@@ -388,14 +352,16 @@ exports.getFlightPrice = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 120}, 
     throw err; // already an HttpsError from getAirportSkyId, re-throw as-is
   }
 
-  const url = `https://${RAPIDAPI_HOST}/api/v1/flights/searchFlights`;
+  const url = SEARCH_URL;
   const params = {
     originSkyId: origin.skyId,
     destinationSkyId: destination.skyId,
     originEntityId: origin.entityId,
     destinationEntityId: destination.entityId,
     date,
-    adults: 1,
+    ...(returnDate ? {returnDate} : {}),
+    cabinClass,
+    adults,
     currency: 'KRW', // TODO: make this dynamic (request param) if needed
     market: 'en-US',
     countryCode: 'KR',
@@ -424,7 +390,19 @@ exports.getFlightPrice = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 120}, 
 
   // Poll for the complete result set if the initial response is "incomplete"
   // (see pollUntilComplete's comment above for why this matters).
-  let itineraries = await pollUntilComplete(resp, rapidHeaders(), url, params);
+  let itineraries = await pollUntilComplete(resp, rapidHeaders(), params);
+  // The first call sometimes comes back empty while the search warms up; ask again.
+  for (let retry = 1; itineraries.length === 0 && retry <= 2; retry++) {
+    await new Promise((r) => setTimeout(r, 2000));
+    try {
+      resp = await fetchWithRetry(url, params, rapidHeaders(), `searchFlights retry ${retry}`);
+      itineraries = resp.data?.data?.itineraries ?? [];
+      console.log(`[flight] getFlightPrice — searchFlights retry ${retry}: ${itineraries.length} itineraries`);
+    } catch (err) {
+      logAxiosError(`searchFlights retry ${retry}`, err);
+      break;
+    }
+  }
   console.log(`[flight] getFlightPrice — ${itineraries.length} itineraries returned before stop filtering. ` +
     (itineraries.length === 0
       ? `Full response (truncated): ${JSON.stringify(resp.data)?.slice(0, 1500)}`
@@ -523,6 +501,82 @@ exports.getFlightPrice = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 120}, 
 
   await cacheRef.set(result);
   return result;
+});
+
+// ─────────────────────────────────────────────────────────────────────────
+// Fare insight from getPriceCalendar: the approximate one-way fare for a date
+// and how cheap it is. The calendar lists the cheapest fare per day for months
+// ahead, each tagged by Skyscanner as "low" / "medium" / "high" for that route,
+// so one call per route per day (cached) serves every date a user picks.
+// Exact prices still come from the booking site.
+// ─────────────────────────────────────────────────────────────────────────
+const IATA_RE = /^[A-Z]{3}$/;
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+async function getRouteCalendar(originIata, destinationIata) {
+  const today = new Date().toISOString().slice(0, 10);
+  const cacheRef = db.collection('flight_calendar_cache').doc(`${originIata}_${destinationIata}`);
+  const snap = await cacheRef.get();
+  if (snap.exists && snap.data().fetchedOn === today && Date.now() - snap.data().updatedAt < CACHE_TTL_MS) {
+    return snap.data();
+  }
+  const [origin, destination] = await Promise.all([getAirportSkyId(originIata), getAirportSkyId(destinationIata)]);
+  const params = {originSkyId: origin.skyId, destinationSkyId: destination.skyId, fromDate: today, currency: 'USD'};
+  let resp;
+  try {
+    resp = await fetchWithRetry(CALENDAR_URL, params, rapidHeaders(), 'getPriceCalendar');
+  } catch (err) {
+    logAxiosError('getPriceCalendar', err);
+    throw new HttpsError('internal', 'getPriceCalendar request failed: ' +
+      (err.response ? `RapidAPI returned HTTP ${err.response.status}` : err.message));
+  }
+  // documented shape: data.flights.days[] = {day: 'YYYY-MM-DD', group: 'low'|'medium'|'high', price}
+  const days = (resp.data?.data?.flights?.days ?? [])
+    .filter((d) => d?.day && Number(d.price) > 0)
+    .map((d) => ({d: d.day, p: Math.round(Number(d.price) * 100) / 100, g: d.group ?? null}));
+  console.log(`[flight] getRouteCalendar ${originIata}->${destinationIata}: ${days.length} priced days`);
+  const doc = {days, currency: 'USD', fetchedOn: today, updatedAt: Date.now()};
+  await cacheRef.set(doc);
+  return doc;
+}
+
+exports.getFlightInsight = onCall({secrets: [RAPIDAPI_KEY], timeoutSeconds: 60}, async (request) => {
+  const originIata = String(request.data?.originIata || '').toUpperCase();
+  const destinationIata = String(request.data?.destinationIata || '').toUpperCase();
+  const date = String(request.data?.date || '');
+  if (!IATA_RE.test(originIata) || !IATA_RE.test(destinationIata) || !DATE_RE.test(date) || originIata === destinationIata) {
+    throw new HttpsError('invalid-argument', 'originIata, destinationIata (3-letter codes) and date (YYYY-MM-DD) are required.');
+  }
+
+  const cal = await getRouteCalendar(originIata, destinationIata);
+  const days = cal.days;
+  const chosen = days.find((d) => d.d === date);
+  const base = {originIata, destinationIata, date, currency: cal.currency, source: 'skyscanner-calendar', updatedAt: cal.updatedAt};
+  if (!chosen) return {...base, found: false};
+
+  const t = Date.parse(date);
+  const within = (n) => days.filter((d) => Math.abs(Date.parse(d.d) - t) <= n * 864e5);
+  const month = within(30);                      // the month around the date
+  const near = within(3);                        // ±3 days
+  const cheapest = (list) => list.reduce((a, b) => (b.p < a.p ? b : a));
+  const monthMin = cheapest(month);
+  const nearMin = cheapest(near);
+  // share of the surrounding days that cost more than (or the same as) this date
+  const cheaperThanPct = Math.round(100 * month.filter((d) => d.p >= chosen.p).length / month.length);
+  const level = ['low', 'medium', 'high'].includes(chosen.g)
+    ? chosen.g
+    : (cheaperThanPct >= 67 ? 'low' : cheaperThanPct >= 33 ? 'medium' : 'high');
+
+  return {
+    ...base,
+    found: true,
+    price: chosen.p,
+    level,                                       // 'low' | 'medium' | 'high'
+    cheaperThanPct,                              // vs. days within ±30 days
+    vsMonthLowPct: Math.round(100 * (chosen.p - monthMin.p) / monthMin.p),
+    monthLow: {date: monthMin.d, price: monthMin.p},
+    betterNearby: nearMin.p < chosen.p ? {date: nearMin.d, price: nearMin.p} : null,
+  };
 });
 
 // ─────────────────────────────────────────────────────────────────────────

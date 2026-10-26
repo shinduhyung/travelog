@@ -1,0 +1,627 @@
+{
+  "city": "Chengdu",
+  "checked": "October 2026",
+  "intro_line": "Chengdu: pandas, peppercorns and teahouse calm.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Tianfu Square",
+        "Chunxi Road",
+        "Kuanzhai Alley",
+        "Wuhou Temple"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Tianfu Square",
+        "Chunxi Road",
+        "Kuanzhai Alley",
+        "Wuhou Temple"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Tianfu Square",
+        "Chunxi Road",
+        "Kuanzhai Alley",
+        "Wuhou Temple"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Tianfu Square",
+        "Chunxi Road",
+        "Kuanzhai Alley",
+        "Wuhou Temple"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Tianfu Square",
+        "Chunxi Road",
+        "Kuanzhai Alley",
+        "Wuhou Temple"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 5,
+        "note": "Coldest month: highs near 11°C, lows near 4°C. Pack a warm coat; few rainy days."
+      },
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 6,
+        "note": "Still chilly, highs around 13°C. Good for indoor sights and hotpot."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 11,
+        "note": "Warming up to 19°C; rain days rise to about 11. Bring a light rain jacket."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 13,
+        "note": "Pleasant at 24°C highs; about 13 rain days, so keep an umbrella handy."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 14,
+        "note": "Warm and green, highs near 27°C; frequent showers."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 14,
+        "note": "Warm start to summer, highs around 30°C; humid with about 14 rain days."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 20,
+        "note": "Hottest and wettest: highs near 31°C and about 20 rain days. Plan indoor afternoons."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 19,
+        "note": "Similar to July: hot, humid and rainy. Go out early."
+      },
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 16,
+        "note": "Cooling to 26°C highs; still about 16 rain days."
+      },
+      {
+        "high": 21,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Comfortable at 21°C highs; good month for walking and day trips."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 5,
+        "note": "Mild at 17°C highs with only about 5 rain days; a strong month to visit."
+      },
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 5,
+        "note": "Cool again: highs near 11°C, lows near 5°C. Few rainy days; pack layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.55,
+      0.6,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      0.9,
+      0.75,
+      0.55
+    ],
+    "history": [
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "family": [
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      0.9,
+      0.75,
+      0.6
+    ]
+  },
+  "places": {
+    "jinli": {
+      "types": [
+        "culture",
+        "history",
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening for lanterns; weekday mornings are quieter",
+      "area": "Wuhou Temple",
+      "popularity": 5
+    },
+    "wuhou": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, before 10:00",
+      "area": "Wuhou Temple",
+      "popularity": 4
+    },
+    "panda-base": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning, year-round; avoid midday heat",
+      "area": "Wuhou Temple",
+      "popularity": 5
+    },
+    "chapanda": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "Chunxi Road",
+      "popularity": 3
+    },
+    "oceanarium": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Tianfu Square",
+      "popularity": 3
+    },
+    "dicos": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Quick lunch",
+      "area": "Chunxi Road",
+      "popularity": 2
+    },
+    "dufu": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Tianfu Square",
+      "popularity": 4
+    },
+    "happy-valley": {
+      "types": [
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday, dry season",
+      "area": "Tianfu Square",
+      "popularity": 3
+    },
+    "kwafood": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Chunxi Road",
+      "popularity": 3
+    },
+    "hotpot-dinner": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Dinner, any season",
+      "area": "Chunxi Road",
+      "popularity": 5
+    },
+    "kuanzhai": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Kuanzhai Alley",
+      "popularity": 4
+    },
+    "peoples-park": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning to early afternoon",
+      "area": "Tianfu Square",
+      "popularity": 4
+    },
+    "jinli-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunch or evening",
+      "area": "Wuhou Temple",
+      "popularity": 4
+    },
+    "sichuan-opera": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Kuanzhai Alley",
+      "popularity": 4
+    },
+    "tianfu-square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening when lit up",
+      "area": "Tianfu Square",
+      "popularity": 3
+    },
+    "chunxi-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chunxi Road",
+      "popularity": 4
+    },
+    "wenshu": {
+      "types": [
+        "history",
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Kuanzhai Alley",
+      "popularity": 4
+    },
+    "panda-tour": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Wuhou Temple",
+      "popularity": 4
+    },
+    "qingcheng": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Dry season, early start",
+      "area": "Wuhou Temple",
+      "popularity": 3
+    },
+    "jinsha": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Tianfu Square",
+      "popularity": 3
+    },
+    "jiuyanqiao": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chunxi Road",
+      "popularity": 3
+    },
+    "jinjiang-walk": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Chunxi Road",
+      "popularity": 3
+    },
+    "wenshu-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Kuanzhai Alley",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers pandas, hotpot and the old lanes at an easy pace; add a night for a day trip to Leshan or the mountains."
+  },
+  "airports": [
+    {
+      "code": "CTU",
+      "name": "Chengdu Shuangliu International Airport",
+      "primary": true,
+      "note": "Main domestic airport, 11 km southwest of centre.",
+      "options": [
+        {
+          "mode": "Metro line 10",
+          "to": "Taipingyuan, then lines 3 and 7",
+          "price": "¥2-6",
+          "time": "30-40 min",
+          "note": "Cheapest and reliable; buy at machines."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre, Renmin Nanlu area",
+          "price": "¥10-15",
+          "time": "40-60 min",
+          "note": "Runs all day, less frequent at night."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥45-60",
+          "time": "25-40 min",
+          "note": "Metered; have your address in Chinese."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥40-60",
+          "time": "25-40 min",
+          "note": "Works with foreign cards in app."
+        }
+      ]
+    },
+    {
+      "code": "TFU",
+      "name": "Chengdu Tianfu International Airport",
+      "primary": false,
+      "note": "Newer airport for many international flights, 46 km southeast.",
+      "options": [
+        {
+          "mode": "Metro line 18",
+          "to": "South Railway Station, then line 1",
+          "price": "¥11 to Tianfu Square",
+          "time": "50-60 min",
+          "note": "Trains roughly 06:00-23:00."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Chengdu IFS near Chunxilu",
+          "price": "¥40",
+          "time": "60-90 min",
+          "note": "Check desk outside arrivals for times."
+        },
+        {
+          "mode": "Metro line 19",
+          "to": "Shuangliu Airport",
+          "price": "check locally",
+          "time": "about 30 min express",
+          "note": "Useful for airport-to-airport transfers."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥120-180",
+          "time": "50-80 min",
+          "note": "Long ride; tolls may apply."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥110-170",
+          "time": "50-80 min",
+          "note": "Book after landing; pickup zones signed."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Chengdu",
+      "https://en.wikivoyage.org/wiki/Chengdu"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Metro for most trips; DiDi or taxis for evenings and airport runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Many lines with English ticket machines. WeChat/Alipay and most international cards accepted. Line 10 links Shuangliu Airport to the centre in about 30–40 min. Line 18 links Tianfu Airport to South Railway Station in about 50 min; ticket to Tianfu Square around ¥11."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "¥2 air-conditioned, ¥1 older buses. Exact change or a transit card. Signs in Chinese only, so use a map app."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Metered taxis are cheap; add about ¥10 for the airport expressway toll when leaving town. DiDi works well."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the city; traffic and parking are a hassle. Use trains for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The flat centre is good on foot, and shared bikes are handy for short hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: mild winters, warm summers and rain in every month, heaviest in July and August.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: March to May and October to November",
+        "text": "Highs of 19–27°C and manageable rain. Ideal for walking, pandas and day trips."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain all year",
+        "text": "Even the driest months see about 5 rain days. July and August are wettest with about 20. Always carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs near 30–31°C with muggy air. Do outdoor sights early morning; rest indoors in the afternoon."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool, damp winter (December to February)",
+        "text": "Highs of 11–13°C and lows of 4–5°C. Homes and some rooms are lightly heated, so bring warm layers."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Cloudy skies are common",
+        "text": "Chengdu is often overcast and hazy. Don't count on blue skies for photos."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket or umbrella, comfortable walking shoes, and mosquito repellent for summer evenings."
+      }
+    ]
+  }
+}

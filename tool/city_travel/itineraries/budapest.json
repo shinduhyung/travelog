@@ -1,0 +1,1945 @@
+{
+  "city": "Budapest",
+  "checked": "October 2026",
+  "currency": "HUF",
+  "usd_rate": 326.1922,
+  "intro": "Budapest rewards visitors with thermal baths, ruin bars and castle views over the Danube. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 47.4591,
+      "west": 19.0235,
+      "north": 47.5286,
+      "east": 19.108,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 1300,
+      "flag_airport": 2100,
+      "per_km": 521,
+      "min_fare": 1300
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Metro lines 1-4 plus trams and trolleybuses cover the centre; buy tickets or passes at machines.",
+      "Bus 100E runs 24 hours between Deák Ferenc tér and the airport.",
+      "Buses and trams are frequent; validate every ticket or risk a fine.",
+      "Taxis have fixed citywide rates; Főtaxi is the licensed airport operator, and Bolt works well.",
+      "Driving is slow and parking is hard; walking and cycling suit the flat Pest side.",
+      "A river ferry and hop-on boats link stops along the Danube."
+    ],
+    "sources": []
+  },
+  "places": {
+    "parliament": {
+      "name": "Hungarian Parliament Building",
+      "landmark": "Hungarian Parliament Building",
+      "kind": "sight",
+      "lat": 47.5065,
+      "lon": 19.0505,
+      "price": null,
+      "price_text": "Guided tours for non-EU visitors roughly HUF 5,000–10,000; check on the day",
+      "hours": "Visitor centre usually 08:00–18:00 in season; book ahead",
+      "tip": "Book a guided tour online days ahead and bring your passport for security.",
+      "source": "https://www.parlament.hu/web/visitors"
+    },
+    "buda-castle": {
+      "name": "Buda Castle",
+      "landmark": "Buda Castle",
+      "kind": "sight",
+      "lat": 47.495,
+      "lon": 19.0408,
+      "price": 0,
+      "price_text": "Castle grounds free; museums charge separately",
+      "hours": "Grounds always open; museum hours vary",
+      "tip": "Walk the grounds at sunset for the best view across to Pest.",
+      "source": "https://www.budacastle.hu/"
+    },
+    "fishermans-bastion": {
+      "name": "Fisherman's Bastion",
+      "landmark": "Fisherman's Bastion",
+      "kind": "sight",
+      "lat": 47.5015,
+      "lon": 19.0353,
+      "price": 0,
+      "price_text": "Terrace free; upper turrets may have a small fee, check on the day",
+      "hours": "Open 24 hours",
+      "tip": "Come before 09:00 to beat the crowds on the terraces.",
+      "source": "https://fishermansbastion.com/"
+    },
+    "chain-bridge": {
+      "name": "Széchenyi Chain Bridge",
+      "landmark": "Széchenyi Chain Bridge",
+      "kind": "sight",
+      "lat": 47.4988,
+      "lon": 19.0439,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Open 24 hours",
+      "tip": "Walk it at night when the bridge and castle are lit up.",
+      "source": ""
+    },
+    "st-stephens": {
+      "name": "St. Stephen's Basilica",
+      "landmark": "St. Stephen's Basilica",
+      "kind": "sight",
+      "lat": 47.4996,
+      "lon": 19.0548,
+      "price": null,
+      "price_text": "Small entry donation; dome lift extra, check on the day",
+      "hours": "Roughly 09:00–17:00 Mon–Sat, Sunday afternoons; check on the day",
+      "tip": "Climb the dome for a 360° view over Pest.",
+      "source": "https://bazilika.biz/"
+    },
+    "heroes-square": {
+      "name": "Heroes' Square",
+      "landmark": "Heroes' Square",
+      "kind": "sight",
+      "lat": 47.514,
+      "lon": 19.0776,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Pair it with a walk down Andrássy Avenue or into City Park.",
+      "source": ""
+    },
+    "szechenyi-baths": {
+      "name": "Széchenyi Thermal Baths",
+      "landmark": "Széchenyi Thermal Baths",
+      "kind": "activity",
+      "lat": 47.5186,
+      "lon": 19.0768,
+      "price": null,
+      "price_text": "Day ticket roughly HUF 8,000–12,000 depending on day; check on the day",
+      "hours": "Usually 07:00–19:00 or 20:00; check on the day",
+      "tip": "Bring flip-flops and a towel, or rent them there; weekdays are quieter.",
+      "source": "https://www.szechenyibath.hu/"
+    },
+    "zoo": {
+      "name": "Budapest Zoo & Botanical Garden",
+      "landmark": "Budapest Zoo & Botanical Garden",
+      "kind": "park",
+      "lat": 47.5186,
+      "lon": 19.0776,
+      "price": null,
+      "price_text": "Adult ticket roughly HUF 4,000–5,000; check on the day",
+      "hours": "Usually 09:00–17:00 or later in summer; check on the day",
+      "tip": "Good for families; combine with Heroes' Square next door.",
+      "source": "https://zoobudapest.com/"
+    },
+    "danube-river": {
+      "name": "Danube River",
+      "landmark": "Danube River",
+      "kind": "sight",
+      "lat": 47.4979,
+      "lon": 19.0402,
+      "price": 0,
+      "price_text": "Free to walk the banks",
+      "hours": "Open 24 hours",
+      "tip": "The Pest embankment is best at sunset and after dark.",
+      "source": ""
+    },
+    "danube-sightseeing": {
+      "name": "Danube River Sightseeing",
+      "landmark": "Danube River Sightseeing",
+      "kind": "tour",
+      "lat": 47.5058,
+      "lon": 19.0483,
+      "price": null,
+      "price_text": "Cruises roughly HUF 5,000–15,000 depending on length and drinks; check on the day",
+      "hours": "Departures through the day and evening",
+      "tip": "Take an evening cruise to see the lit-up Parliament from the water.",
+      "source": ""
+    },
+    "dohany-synagogue": {
+      "name": "Dohány Street Synagogue",
+      "landmark": "Dohány Street Synagogue",
+      "kind": "sight",
+      "lat": 47.4967,
+      "lon": 19.0567,
+      "price": null,
+      "price_text": "Entry roughly HUF 5,000–7,000; check on the day",
+      "hours": "Closed Saturday; weekday hours vary, check on the day",
+      "tip": "Men need a head covering; a simple kippah is provided at the door.",
+      "source": "https://www.dohanyzsinagoga.com/"
+    },
+    "gellert-hill": {
+      "name": "Gellért Hill",
+      "landmark": "Gellért Hill",
+      "kind": "park",
+      "lat": 47.487,
+      "lon": 19.0494,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Climb to the Citadel for the best panorama of the city.",
+      "source": ""
+    },
+    "goulash": {
+      "name": "Goulash",
+      "landmark": "Goulash",
+      "kind": "food",
+      "lat": 47.4979,
+      "lon": 19.0402,
+      "price": null,
+      "price_text": "A bowl in a mid-range restaurant roughly HUF 2,500–4,500",
+      "hours": "Restaurant hours vary",
+      "tip": "Try it as a soup in a traditional restaurant, not just as a stew.",
+      "source": ""
+    },
+    "great-market-hall": {
+      "name": "Great Market Hall",
+      "landmark": "Great Market Hall",
+      "kind": "food",
+      "lat": 47.4851,
+      "lon": 19.0601,
+      "price": 0,
+      "price_text": "Free to enter; food priced per stall",
+      "hours": "Closed Sunday; roughly 06:00–18:00 Mon–Fri, shorter Saturday; check on the day",
+      "tip": "Go upstairs for cheap street food and paprika to take home.",
+      "source": ""
+    },
+    "godollo-palace": {
+      "name": "Gödöllő Palace",
+      "landmark": "Gödöllő Palace",
+      "kind": "sight",
+      "lat": 47.5878,
+      "lon": 19.3567,
+      "price": null,
+      "price_text": "Entry roughly HUF 3,000–5,000; check on the day",
+      "hours": "Usually 10:00–17:00 or 18:00; closed Mondays, check on the day",
+      "tip": "It is a day trip outside the city; allow half a day with the train.",
+      "source": "https://kiralyikastely.hu/"
+    },
+    "house-of-terror": {
+      "name": "House of Terror",
+      "landmark": "House of Terror",
+      "kind": "museum",
+      "lat": 47.5056,
+      "lon": 19.0583,
+      "price": null,
+      "price_text": "Entry roughly HUF 3,000–4,000; check on the day",
+      "hours": "Closed Mondays; usually 10:00–18:00; check on the day",
+      "tip": "Heavy subject matter; allow two hours and go early.",
+      "source": "https://www.terrorhaza.hu/"
+    },
+    "opera-house": {
+      "name": "Hungarian State Opera House",
+      "landmark": "Hungarian State Opera House",
+      "kind": "show",
+      "lat": 47.501,
+      "lon": 19.0583,
+      "price": null,
+      "price_text": "Tickets vary widely; guided tours roughly HUF 3,000–5,000",
+      "hours": "Box office daytime; performances in the evening",
+      "tip": "Book a performance or a daytime tour to see the ornate hall.",
+      "source": "https://www.opera.hu/"
+    },
+    "matthias-church": {
+      "name": "Matthias Church",
+      "landmark": "Matthias Church",
+      "kind": "sight",
+      "lat": 47.5016,
+      "lon": 19.0347,
+      "price": null,
+      "price_text": "Entry roughly HUF 2,000–3,000; check on the day",
+      "hours": "Usually 09:00–17:00; closed to tourists during mass",
+      "tip": "Visit early and combine with Fisherman's Bastion next door.",
+      "source": "https://www.matyas-templom.hu/"
+    },
+    "mupa": {
+      "name": "Müpa Budapest",
+      "landmark": "Müpa Budapest",
+      "kind": "show",
+      "lat": 47.4691,
+      "lon": 19.0706,
+      "price": null,
+      "price_text": "Tickets vary by event; check the programme",
+      "hours": "Box office daytime; events in the evening",
+      "tip": "Check the programme for concerts; it is a short tram ride south of the centre.",
+      "source": "https://www.mupa.hu/"
+    },
+    "puskas-arena": {
+      "name": "Puskás Arena",
+      "landmark": "Puskas Arena",
+      "kind": "sight",
+      "lat": 47.5031,
+      "lon": 19.0968,
+      "price": null,
+      "price_text": "Tours and match tickets vary; check on the day",
+      "hours": "Match days and tours only",
+      "tip": "Only worth it for a match or a stadium tour; book ahead.",
+      "source": "https://www.puskasarena.hu/"
+    },
+    "shoes-danube": {
+      "name": "Shoes on the Danube Bank",
+      "landmark": "Shoes on the Danube Bank",
+      "kind": "sight",
+      "lat": 47.5019,
+      "lon": 19.043,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "A short, moving stop on the Pest embankment; visit at dusk.",
+      "source": ""
+    },
+    "ruin-bar-tour": {
+      "name": "Ruin bar evening in the Jewish Quarter",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 47.4972,
+      "lon": 19.0622,
+      "price": null,
+      "price_text": "Drinks roughly HUF 1,000–2,500 each",
+      "hours": "Bars usually open from evening until late",
+      "tip": "Start early on a weekday; the famous spots get packed on weekends.",
+      "source": ""
+    },
+    "central-market-food": {
+      "name": "Central Market Hall food stalls",
+      "landmark": null,
+      "kind": "food",
+      "lat": 47.4869,
+      "lon": 19.0589,
+      "price": null,
+      "price_text": "Street food roughly HUF 1,500–3,000",
+      "hours": "Closed Sunday; daytime only",
+      "tip": "Cheap lángos and sausages upstairs; go before noon.",
+      "source": ""
+    },
+    "citadel-viewpoint": {
+      "name": "Citadel viewpoint on Gellért Hill",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 47.4869,
+      "lon": 19.0464,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Bring water; the climb takes about 20 minutes from the river.",
+      "source": ""
+    },
+    "castle-walk": {
+      "name": "Castle District walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 47.4989,
+      "lon": 19.0396,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Wander the quiet side streets behind Matthias Church away from the crowds.",
+      "source": ""
+    },
+    "thermal-bath-activity": {
+      "name": "Thermal bath soak (Rudas or Gellért)",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 47.4892,
+      "lon": 19.0478,
+      "price": null,
+      "price_text": "Tickets roughly HUF 6,000–12,000; check on the day",
+      "hours": "Usually daytime into evening; check on the day",
+      "tip": "Rudas has a rooftop pool with a river view; bring a swim cap if required.",
+      "source": ""
+    },
+    "jewish-quarter-walk": {
+      "name": "Jewish Quarter street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 47.4965,
+      "lon": 19.0615,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "See the synagogue, murals and ruin bars on foot in an hour or two.",
+      "source": ""
+    },
+    "andrssy": {
+      "name": "Andrássy Avenue",
+      "landmark": "Andrássy Avenue",
+      "kind": "sight",
+      "lat": 47.5042,
+      "lon": 19.0558,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Open 24 hours",
+      "tip": "Walk from the Opera House up to Heroes' Square for the full stretch.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: Parliament, the Danube bank and Castle Hill, ending with a bath or an evening view.",
+      "days": [
+        {
+          "title": "Pest side in the morning, Castle Hill after lunch",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Book the tour ahead. Bring ID. The visitor centre usually opens at 08:00 in season."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "10:15",
+              "minutes": 15,
+              "note": "A short walk south along the river bank."
+            },
+            {
+              "place": "st-stephens",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "About 10 minutes on foot inland. Roughly 09:00–17:00 Mon–Sat; check on the day."
+            },
+            {
+              "place": "goulash",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch in Belváros. Restaurant hours vary, so pick a busy place."
+            },
+            {
+              "place": "chain-bridge",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Cross on foot to the Buda side."
+            },
+            {
+              "place": "castle-walk",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Wander the Castle District lanes and terraces."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Open 24 hours. The terraces get busy at sunset, so arrive early."
+            },
+            {
+              "place": "danube-sightseeing",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening boat from the Pest bank. Departures run through the day and evening; book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A history-first day: Parliament, the synagogue, then Castle Hill and the Soviet-era museum.",
+      "days": [
+        {
+          "title": "Pest history, then Castle Hill",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Book ahead. The tour covers the crown and the building's history."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "10:15",
+              "minutes": 15,
+              "note": "Memorial on the river bank, a short walk south."
+            },
+            {
+              "place": "dohany-synagogue",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary, so check on the day."
+            },
+            {
+              "place": "great-market-hall",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the food stalls upstairs. Closed Sunday; daytime only."
+            },
+            {
+              "place": "chain-bridge",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Cross to Buda on foot."
+            },
+            {
+              "place": "buda-castle",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Grounds always open; museum hours vary. Check on the day."
+            },
+            {
+              "place": "matthias-church",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00 and closed to tourists during mass, so this is a tight fit. Swap with the castle if needed."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets, goulash and a ruin-bar evening, with light sightseeing in between.",
+      "days": [
+        {
+          "title": "Market morning, ruin-bar night",
+          "stops": [
+            {
+              "place": "great-market-hall",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Roughly 06:00–18:00 Mon–Fri, shorter Saturday."
+            },
+            {
+              "place": "central-market-food",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Second breakfast: lángos and sausage. Daytime only."
+            },
+            {
+              "place": "goulash",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Sit-down lunch in Belváros. Restaurant hours vary."
+            },
+            {
+              "place": "st-stephens",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk it off. Roughly 09:00–17:00 Mon–Sat; check on the day."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late-afternoon streets and courtyards before the bars open."
+            },
+            {
+              "place": "ruin-bar-tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Bars open from evening until late. Weekdays are calmer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jewish Quarter"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "A quick culture hit: Parliament and the Danube on day one, Castle Hill views before you leave.",
+      "days": [
+        {
+          "title": "Arrive, Parliament and the Danube",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Book the tour ahead. Bring ID. Visitor centre usually open 08:00–18:00 in season."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "14:15",
+              "minutes": 15,
+              "note": "A short walk south along the river bank."
+            },
+            {
+              "place": "st-stephens",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Roughly 09:00–17:00 Mon–Sat; check on the day."
+            },
+            {
+              "place": "goulash",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Early dinner in Belváros. Restaurant hours vary."
+            },
+            {
+              "place": "danube-river",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Sunset walk on the Pest embankment."
+            }
+          ]
+        },
+        {
+          "title": "Castle District, then fly",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Take the bus or funicular up. Grounds always open."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Open 24 hours. Free to walk; terraces may charge."
+            },
+            {
+              "place": "matthias-church",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00; closed to tourists during mass."
+            },
+            {
+              "place": "great-market-hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Roughly 06:00–18:00 Mon–Fri; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "The big history stops: Parliament, the Soviet past and Castle Hill in one night.",
+      "days": [
+        {
+          "title": "Arrive, Parliament and the terror museum",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Book ahead. Visitor centre usually 08:00–18:00 in season."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "14:15",
+              "minutes": 15,
+              "note": "Memorial on the Pest river bank."
+            },
+            {
+              "place": "house-of-terror",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed Mondays. Usually 10:00–18:00; check on the day."
+            },
+            {
+              "place": "andrssy",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Walk back toward the centre along the avenue."
+            },
+            {
+              "place": "goulash",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Dinner in Belváros."
+            }
+          ]
+        },
+        {
+          "title": "Castle Hill, then fly",
+          "stops": [
+            {
+              "place": "buda-castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Grounds always open; museum hours vary."
+            },
+            {
+              "place": "matthias-church",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00; closed to tourists during mass."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Open 24 hours. Great views over the river."
+            },
+            {
+              "place": "central-market-food",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Closed Sunday; daytime only. Lunch at the stalls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets, goulash and a ruin bar night in the Jewish Quarter.",
+      "days": [
+        {
+          "title": "Arrive, market and ruin bars",
+          "stops": [
+            {
+              "place": "great-market-hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Roughly 06:00–18:00 Mon–Fri; check on the day."
+            },
+            {
+              "place": "central-market-food",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Closed Sunday; daytime only. Try the food stalls upstairs."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Open 24 hours. Walk the streets before dark."
+            },
+            {
+              "place": "goulash",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in Belváros. Restaurant hours vary."
+            },
+            {
+              "place": "ruin-bar-tour",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Bars usually open from evening until late. Weekdays are calmer."
+            }
+          ]
+        },
+        {
+          "title": "Baths and a last lunch, then fly",
+          "stops": [
+            {
+              "place": "szechenyi-baths",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Usually 07:00–19:00 or 20:00; check on the day. Bring a towel."
+            },
+            {
+              "place": "heroes-square",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Open 24 hours. Right by the baths."
+            },
+            {
+              "place": "goulash",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights, a thermal soak and Danube views at sunset.",
+      "days": [
+        {
+          "title": "Arrive, Parliament and the Danube bank",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Book the tour ahead. Bring photo ID."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "A short walk south along the river."
+            },
+            {
+              "place": "st-stephens",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Check hours on the day; Sunday afternoons only."
+            },
+            {
+              "place": "goulash",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Belváros."
+            },
+            {
+              "place": "danube-river",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Sunset walk on the Pest embankment."
+            }
+          ]
+        },
+        {
+          "title": "Castle District and a thermal soak",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start early before the crowds."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Free to walk; the upper terraces may charge."
+            },
+            {
+              "place": "matthias-church",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Closed to tourists during mass."
+            },
+            {
+              "place": "thermal-bath-activity",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Rudas or Gellért. Bring a towel and flip-flops."
+            },
+            {
+              "place": "citadel-viewpoint",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset over both banks. Wear good shoes."
+            }
+          ]
+        },
+        {
+          "title": "Andrássy Avenue, then depart",
+          "stops": [
+            {
+              "place": "opera-house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Daytime tour or box office visit. Evening shows need booking."
+            },
+            {
+              "place": "house-of-terror",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Closed Mondays. Expect heavy content."
+            },
+            {
+              "place": "heroes-square",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "At the end of Andrássy Avenue."
+            },
+            {
+              "place": "andrssy",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Walk back toward the centre. Metro line 1 runs underneath."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros (Pest side, near the river)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Travellers who want the Soviet past, the Castle and the Jewish Quarter story.",
+      "days": [
+        {
+          "title": "Parliament, memorials and the Jewish Quarter",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Book ahead. Photo ID needed."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "10:45",
+              "minutes": 15,
+              "note": "Holocaust memorial on the river bank."
+            },
+            {
+              "place": "st-stephens",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "dohany-synagogue",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon is calm before the bars open."
+            }
+          ]
+        },
+        {
+          "title": "Castle Hill and the Soviet past",
+          "stops": [
+            {
+              "place": "buda-castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Grounds always open; museum hours vary."
+            },
+            {
+              "place": "matthias-church",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Closed to tourists during mass."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Open 24 hours."
+            },
+            {
+              "place": "goulash",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch in the Castle District."
+            },
+            {
+              "place": "house-of-terror",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Closed Mondays. Last entry is earlier than closing."
+            }
+          ]
+        },
+        {
+          "title": "Heroes' Square, then depart",
+          "stops": [
+            {
+              "place": "heroes-square",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Daytime is best for photos."
+            },
+            {
+              "place": "andrssy",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Walk or take metro line 1."
+            },
+            {
+              "place": "opera-house",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Daytime visit; check tour times."
+            },
+            {
+              "place": "great-market-hall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Shorter hours on Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros or Jewish Quarter (Pest side)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want market halls, goulash and a ruin bar night.",
+      "days": [
+        {
+          "title": "Market hall, goulash and a ruin bar night",
+          "stops": [
+            {
+              "place": "great-market-hall",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Go early for the food stalls."
+            },
+            {
+              "place": "central-market-food",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Late morning is best; stalls close early afternoon."
+            },
+            {
+              "place": "goulash",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Sit-down lunch in Belváros."
+            },
+            {
+              "place": "danube-river",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Walk off lunch along the river."
+            },
+            {
+              "place": "ruin-bar-tour",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Weekdays are calmer. Bars run until late."
+            }
+          ]
+        },
+        {
+          "title": "Castle views and a thermal soak",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is quiet."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Open 24 hours."
+            },
+            {
+              "place": "goulash",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch on the Buda side."
+            },
+            {
+              "place": "szechenyi-baths",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Weekday afternoon is quieter. Bring a towel."
+            },
+            {
+              "place": "heroes-square",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "A short walk from the baths."
+            }
+          ]
+        },
+        {
+          "title": "Jewish Quarter food, then depart",
+          "stops": [
+            {
+              "place": "jewish-quarter-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is calm."
+            },
+            {
+              "place": "dohany-synagogue",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Closed Saturday. Check hours on the day."
+            },
+            {
+              "place": "goulash",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Final lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jewish Quarter (Pest side)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights, a bath soak and an evening on the Danube.",
+      "days": [
+        {
+          "title": "Arrive, Basilica and the Danube bank",
+          "stops": [
+            {
+              "place": "st-stephens",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Central and easy from most hotels. Check hours on the day."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "15:30",
+              "minutes": 15,
+              "note": "Short walk toward the river. Quiet and moving at dusk."
+            },
+            {
+              "place": "parliament",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Book a tour slot ahead; visitor centre usually closes around 18:00 in season."
+            },
+            {
+              "place": "danube-river",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Stroll the Pest embankment as lights come on."
+            },
+            {
+              "place": "goulash",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in Belváros. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Castle District on foot",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start early before tour groups. Wear good shoes for cobbles."
+            },
+            {
+              "place": "matthias-church",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Closed to tourists during mass; check on the day."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Free to walk; upper terraces may charge. Great views."
+            },
+            {
+              "place": "buda-castle",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch first, then grounds and a museum if time allows."
+            },
+            {
+              "place": "chain-bridge",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Walk back across to Pest in the evening light."
+            }
+          ]
+        },
+        {
+          "title": "Baths, Heroes' Square and an evening cruise",
+          "stops": [
+            {
+              "place": "szechenyi-baths",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Weekday morning is calmest. Bring flip-flops and a towel."
+            },
+            {
+              "place": "heroes-square",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short walk or one metro stop from the baths."
+            },
+            {
+              "place": "andrssy",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Walk back down the avenue toward the centre."
+            },
+            {
+              "place": "opera-house",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Daytime tour or book an evening performance."
+            },
+            {
+              "place": "danube-sightseeing",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening cruise for the lit-up bridges. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros (District V) near the Danube"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the full story: castle, parliament, occupation and the Jewish Quarter.",
+      "days": [
+        {
+          "title": "Parliament and the memorials",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Book the guided tour ahead; bring ID."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "A few minutes' walk along the river."
+            },
+            {
+              "place": "st-stephens",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Check hours on the day; Sunday afternoons only."
+            },
+            {
+              "place": "goulash",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Belváros."
+            },
+            {
+              "place": "dohany-synagogue",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Castle Hill and Gellért Hill",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is cooler and quieter."
+            },
+            {
+              "place": "buda-castle",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Grounds always open; museum hours vary."
+            },
+            {
+              "place": "matthias-church",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch nearby first. Closed during mass."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Open 24 hours; free to walk."
+            },
+            {
+              "place": "citadel-viewpoint",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Walk up for sunset. Bring water."
+            }
+          ]
+        },
+        {
+          "title": "Soviet past and Heroes' Square",
+          "stops": [
+            {
+              "place": "house-of-terror",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Mondays. Usually 10:00–18:00; check on the day."
+            },
+            {
+              "place": "heroes-square",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Short walk up Andrássy."
+            },
+            {
+              "place": "andrssy",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Walk down toward the opera."
+            },
+            {
+              "place": "opera-house",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Daytime tour or an evening performance."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late-afternoon wander; end at a ruin bar."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros or the Jewish Quarter (District VII)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, goulash and ruin bars, with the main sights in between.",
+      "days": [
+        {
+          "title": "Market hall and the Danube",
+          "stops": [
+            {
+              "place": "great-market-hall",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Go early for the food stalls."
+            },
+            {
+              "place": "central-market-food",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Grab a late-morning snack upstairs."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "12:00",
+              "minutes": 15,
+              "note": "Short walk along the river."
+            },
+            {
+              "place": "parliament",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Book ahead; visitor centre usually closes around 18:00 in season."
+            },
+            {
+              "place": "goulash",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sit-down goulash dinner in Belváros."
+            }
+          ]
+        },
+        {
+          "title": "Castle District and a bath soak",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning walk before the crowds."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Free to walk; great views over Pest."
+            },
+            {
+              "place": "thermal-bath-activity",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Rudas or Gellért. Check hours on the day."
+            },
+            {
+              "place": "gellert-hill",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walk up for sunset."
+            },
+            {
+              "place": "danube-river",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening stroll back along the water."
+            }
+          ]
+        },
+        {
+          "title": "Jewish Quarter and ruin bars",
+          "stops": [
+            {
+              "place": "dohany-synagogue",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary, check on the day."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Late-morning wander past street food spots."
+            },
+            {
+              "place": "st-stephens",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch nearby, then the basilica."
+            },
+            {
+              "place": "ruin-bar-tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Weekday evening is calmer. Bars open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jewish Quarter (District VII) near the ruin bars"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "A calm first visit: the big sights, two soaks and an evening on the Danube.",
+      "days": [
+        {
+          "title": "Arrive, Danube bank and Parliament",
+          "stops": [
+            {
+              "place": "shoes-danube",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Free memorial on the Pest embankment. Easy walk from most central hotels."
+            },
+            {
+              "place": "parliament",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Book a tour online ahead. Visitor centre usually 08:00–18:00 in season; check on the day."
+            },
+            {
+              "place": "danube-river",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Walk north along the river as the lights come on."
+            },
+            {
+              "place": "goulash",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Belváros. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Castle District on foot",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start early before tour groups. Wear good shoes, the streets are cobbled."
+            },
+            {
+              "place": "buda-castle",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Grounds always open; museum hours vary, check on the day."
+            },
+            {
+              "place": "matthias-church",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00; closed to tourists during mass."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Open 24 hours. The upper terraces may charge a small fee; check on the day."
+            },
+            {
+              "place": "chain-bridge",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk back across to Pest. Best in evening light."
+            }
+          ]
+        },
+        {
+          "title": "Baths and the Palace District",
+          "stops": [
+            {
+              "place": "szechenyi-baths",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Weekday morning is quietest. Bring flip-flops and a towel, or rent there. Usually 07:00–19:00 or 20:00; check on the day."
+            },
+            {
+              "place": "heroes-square",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Right outside the baths."
+            },
+            {
+              "place": "zoo",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually 09:00–17:00 or later in summer; check on the day. Lunch at the zoo café or nearby."
+            },
+            {
+              "place": "andrssy",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Walk or take metro line 1 back toward the centre."
+            },
+            {
+              "place": "opera-house",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Book an evening performance or a daytime tour. Box office open in the day."
+            }
+          ]
+        },
+        {
+          "title": "Synagogue, market and a river cruise",
+          "stops": [
+            {
+              "place": "dohany-synagogue",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary, check on the day."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Quiet streets by day, very different at night."
+            },
+            {
+              "place": "great-market-hall",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Roughly 06:00–18:00 Mon–Fri, shorter Saturday. Lunch upstairs at the food stalls."
+            },
+            {
+              "place": "st-stephens",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Roughly 09:00–17:00 Mon–Sat, Sunday afternoons; check on the day. Climb the dome if clear."
+            },
+            {
+              "place": "danube-sightseeing",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening departures show the lit-up bridges. Book ahead in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros (Pest centre), near the Danube"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "The city's layers: Castle Hill, the Parliament and the 20th-century past.",
+      "days": [
+        {
+          "title": "Arrive, Parliament and the memorial",
+          "stops": [
+            {
+              "place": "parliament",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Book the tour online ahead. Visitor centre usually 08:00–18:00 in season; check on the day."
+            },
+            {
+              "place": "shoes-danube",
+              "at": "15:15",
+              "minutes": 15,
+              "note": "A short walk south along the embankment."
+            },
+            {
+              "place": "st-stephens",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Roughly 09:00–17:00 Mon–Sat, Sunday afternoons; check on the day."
+            },
+            {
+              "place": "goulash",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner in Belváros."
+            }
+          ]
+        },
+        {
+          "title": "Castle Hill history",
+          "stops": [
+            {
+              "place": "buda-castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Grounds always open; museum hours vary, check on the day."
+            },
+            {
+              "place": "matthias-church",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00; closed to tourists during mass."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Open 24 hours. Lunch nearby in the Castle District."
+            },
+            {
+              "place": "castle-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Wander the side streets and old walls."
+            },
+            {
+              "place": "chain-bridge",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Cross back to Pest on foot."
+            }
+          ]
+        },
+        {
+          "title": "Soviet and Cold War past",
+          "stops": [
+            {
+              "place": "house-of-terror",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Mondays. Usually 10:00–18:00; check on the day. Allow time, it is heavy."
+            },
+            {
+              "place": "andrssy",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Walk south down the avenue. Lunch on a side street."
+            },
+            {
+              "place": "heroes-square",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Open 24 hours. Statues of the Magyar chiefs and kings."
+            },
+            {
+              "place": "szechenyi-baths",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "A soak to reset after the museum. Usually 07:00–19:00 or 20:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Gellért Hill and the Jewish Quarter",
+          "stops": [
+            {
+              "place": "citadel-viewpoint",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Climb early before the heat. Open 24 hours."
+            },
+            {
+              "place": "gellert-hill",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Walk down through the paths toward the river."
+            },
+            {
+              "place": "great-market-hall",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Lunch at the food stalls upstairs."
+            },
+            {
+              "place": "dohany-synagogue",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary, check on the day."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Look for the memorial plaques and old courtyards."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Belváros (Pest centre), near the Danube"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Markets, hearty plates and long evenings in the ruin bars.",
+      "days": [
+        {
+          "title": "Arrive, market hall and first goulash",
+          "stops": [
+            {
+              "place": "great-market-hall",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Roughly 06:00–18:00 Mon–Fri, shorter Saturday. Go hungry."
+            },
+            {
+              "place": "central-market-food",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Closed Sunday, daytime only. Try lángos and paprika to take home."
+            },
+            {
+              "place": "danube-river",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk off lunch along the Pest bank."
+            },
+            {
+              "place": "goulash",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "A proper sit-down goulash dinner. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Castle District and a soak",
+          "stops": [
+            {
+              "place": "castle-walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is quiet. Stop for coffee and a pastry."
+            },
+            {
+              "place": "fishermans-bastion",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Open 24 hours. Great views over Pest."
+            },
+            {
+              "place": "matthias-church",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00; closed to tourists during mass."
+            },
+            {
+              "place": "thermal-bath-activity",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Rudas or Gellért. Usually daytime into evening; check on the day."
+            },
+            {
+              "place": "chain-bridge",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Walk back to Pest for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Palace District and ruin bars",
+          "stops": [
+            {
+              "place": "szechenyi-baths",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Weekday morning is quietest. Usually 07:00–19:00 or 20:00; check on the day."
+            },
+            {
+              "place": "heroes-square",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Right outside the baths. Lunch nearby."
+            },
+            {
+              "place": "andrssy",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Stroll toward the centre."
+            },
+            {
+              "place": "ruin-bar-tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Start in the Jewish Quarter. Weekdays are calmer. Bars open until late."
+            }
+          ]
+        },
+        {
+          "title": "Synagogue, streets and a last dinner",
+          "stops": [
+            {
+              "place": "dohany-synagogue",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Saturday. Weekday hours vary, check on the day."
+            },
+            {
+              "place": "jewish-quarter-walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Look for the small bakeries and delis."
+            },
+            {
+              "place": "st-stephens",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Roughly 09:00–17:00 Mon–Sat, Sunday afternoons; check on the day."
+            },
+            {
+              "place": "danube-sightseeing",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening cruise with a drink. Book ahead in summer."
+            },
+            {
+              "place": "goulash",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Last dinner in Belváros."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jewish Quarter or Belváros, walkable to bars and markets"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Baths, Parliament, opera and Danube views."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Castle Hill, the Parliament and the Soviet past."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Ruin bars, market halls and hearty Hungarian plates."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Belváros",
+      "range": [
+        22000,
+        55000
+      ],
+      "why": "The flat inner city: walk to the Danube, Váci utca and the Parliament. Best for first-timers.",
+      "center": [
+        47.497,
+        19.052
+      ]
+    },
+    {
+      "area": "Castle District",
+      "range": [
+        28000,
+        70000
+      ],
+      "why": "Quiet cobbled streets on the Buda side, with the palace and Fisherman's Bastion on your doorstep.",
+      "center": [
+        47.497,
+        19.039
+      ]
+    },
+    {
+      "area": "Jewish Quarter",
+      "range": [
+        18000,
+        45000
+      ],
+      "why": "Ruin bars, cheap eats and the Great Synagogue; lively and central on the Pest side.",
+      "center": [
+        47.497,
+        19.063
+      ]
+    },
+    {
+      "area": "Palace District",
+      "range": [
+        20000,
+        50000
+      ],
+      "why": "Grand 19th-century streets near the Parliament and Nyugati station; good value and calm at night.",
+      "center": [
+        47.507,
+        19.055
+      ]
+    }
+  ],
+  "food": [
+    "Try gulyás (goulash soup), pörkölt stew and lángos flatbread; a filling lunch is often 2500–4500 HUF.",
+    "The Great Market Hall (Nagy Vásárcsarnok) is good for paprika, sausages and cheap upstairs eats.",
+    "Ruin bars in the Jewish Quarter: Szimpla Kert is the famous one; expect busy crowds after dark.",
+    "Book a table for dinner on Friday and Saturday; popular places fill up. A mid-range dinner is about 6000–12000 HUF per person.",
+    "Budapest is famous for cakes: try a slice of dobos torta or somlói galuska in a traditional café."
+  ],
+  "more_time": [
+    "Swap a city afternoon for Szentendre: a short suburban train ride up the Danube to a pretty art town.",
+    "Bath lovers can add a second thermal bath; the Széchenyi and Gellért baths are the classic picks.",
+    "History fans can take a half-day trip to the Memento Park for Soviet statues, or to Esztergom for the basilica."
+  ]
+}

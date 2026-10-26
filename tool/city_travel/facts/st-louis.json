@@ -1,0 +1,176 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "A river city of arches, brick neighborhoods and blues.",
+  "intro": "St. Louis rewards visitors with grand parks, free museums and a lively food and music scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Central West End",
+    "Soulard",
+    "The Loop"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 4,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "MetroLink light rail links the airport, Forest Park, downtown and Illinois.",
+    "A 2-hour MetroLink pass costs $3, or $4 at the airport station.",
+    "A day pass for trains and buses costs $5.",
+    "Metro buses cover the region but run infrequently; single fare $2.",
+    "Uber and Lyft are popular; taxis must be ordered by phone or app.",
+    "Driving is the most common way around; downtown is walkable."
+  ],
+  "airports": [
+    {
+      "code": "STL",
+      "name": "Lambert St Louis International Airport",
+      "primary": true,
+      "note": "Main airport, 20 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "MetroLink Red Line",
+          "to": "Downtown",
+          "price": "$4",
+          "time": "30-40 min",
+          "note": "Airport station ticket includes a 2-hour transfer."
+        },
+        {
+          "mode": "Uber",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Pickup allowed at the terminal."
+        },
+        {
+          "mode": "Lyft",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Compare fares with Uber."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$35-50",
+          "time": "20-30 min",
+          "note": "Use a reputable company."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Gateway Arch",
+    "St. Louis Zoo",
+    "Cahokia Mounds",
+    "Anheuser-Busch Brewery",
+    "Missouri River",
+    "St. Louis Union Station",
+    "Washington University in St. Louis",
+    "Panera Bread",
+    "St. Louis's Incredible Pizza Company"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: St. Louis",
+      "https://en.wikivoyage.org/wiki/St.%20Louis"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    38.62727,
+    -90.19789
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -4,
+      "rain_days": 9
+    },
+    {
+      "high": 8,
+      "low": -3,
+      "rain_days": 8
+    },
+    {
+      "high": 14,
+      "low": 3,
+      "rain_days": 13
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 11
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 13
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 8
+    },
+    {
+      "high": 21,
+      "low": 10,
+      "rain_days": 9
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 9
+    },
+    {
+      "high": 8,
+      "low": -1,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

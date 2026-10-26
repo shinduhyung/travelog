@@ -1,0 +1,1783 @@
+{
+  "city": "Lisbon",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Lisbon rewards visitors with tiled alleys, river views and custard tarts at every turn. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 38.6765,
+      "west": -9.4593,
+      "north": 38.8076,
+      "east": -9.0559,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4.5,
+      "per_km": 0.6,
+      "min_fare": 3.5
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro is fast and cheap; red line links the airport to the centre with one change.",
+      "Carris buses and trams cover the city; buy a rechargeable Navegante card for about €0.50.",
+      "Trams 15 and 28 are scenic but crowded; watch for pickpockets.",
+      "Taxis use meters; insist on the meter and keep a receipt.",
+      "Uber, Bolt and FreeNow work in Lisbon; look for the TVDE sign on the car.",
+      "Driving in the centre is slow and parking is hard; walking and bikes work well on flat Baixa."
+    ],
+    "sources": []
+  },
+  "places": {
+    "belem_tower": {
+      "name": "Belém Tower",
+      "landmark": "Belém Tower",
+      "kind": "sight",
+      "lat": 38.6916,
+      "lon": -9.2158,
+      "price": 8,
+      "price_text": "≈ €8 adult · check current ticket price",
+      "hours": "Tue–Sun roughly 10:00–17:30 · closed Mondays · check on the day",
+      "tip": "Go right at opening or late afternoon; the spiral stairs are narrow and queues grow fast.",
+      "source": ""
+    },
+    "jeronimos": {
+      "name": "Jerónimos Monastery",
+      "landmark": "Jerónimos Monastery",
+      "kind": "sight",
+      "lat": 38.6979,
+      "lon": -9.2065,
+      "price": 12,
+      "price_text": "≈ €12 adult · cloister included · check on the day",
+      "hours": "Tue–Sun roughly 09:30–17:30 · closed Mondays",
+      "tip": "Buy a timed ticket online the day before; the cloister is the highlight, not the church.",
+      "source": ""
+    },
+    "sao_jorge": {
+      "name": "São Jorge Castle",
+      "landmark": "São Jorge Castle",
+      "kind": "sight",
+      "lat": 38.7138,
+      "lon": -9.1344,
+      "price": 15,
+      "price_text": "≈ €15 adult · check on the day",
+      "hours": "Daily roughly 09:00–21:00 in summer · shorter in winter",
+      "tip": "Come for the terrace views over Alfama and the river, not the small museum.",
+      "source": ""
+    },
+    "praca_comercio": {
+      "name": "Praça do Comércio",
+      "landmark": "Praça do Comércio",
+      "kind": "sight",
+      "lat": 38.7077,
+      "lon": -9.1367,
+      "price": 0,
+      "price_text": "Free to walk · arch viewpoint charged separately",
+      "hours": "Square always open",
+      "tip": "Sit by the river steps at sunset; the square is the natural start of a Baixa walk.",
+      "source": ""
+    },
+    "padrao": {
+      "name": "Padrão dos Descobrimentos",
+      "landmark": "Padrão dos Descobrimentos",
+      "kind": "sight",
+      "lat": 38.6936,
+      "lon": -9.2057,
+      "price": 6,
+      "price_text": "≈ €6 adult · rooftop included · check on the day",
+      "hours": "Daily roughly 10:00–19:00 in summer",
+      "tip": "The rooftop gives the best view back to Belém Tower and the river.",
+      "source": ""
+    },
+    "santa_justa": {
+      "name": "Santa Justa Lift",
+      "landmark": "Santa Justa Lift",
+      "kind": "sight",
+      "lat": 38.7126,
+      "lon": -9.1396,
+      "price": 6,
+      "price_text": "≈ €6 return · check on the day",
+      "hours": "Daily roughly 07:00–22:00",
+      "tip": "Skip the lift queue and walk up through Chiado to the top terrace instead.",
+      "source": ""
+    },
+    "alfama": {
+      "name": "Alfama District",
+      "landmark": "Alfama District",
+      "kind": "sight",
+      "lat": 38.7115,
+      "lon": -9.1305,
+      "price": 0,
+      "price_text": "Free to wander",
+      "hours": "Always open",
+      "tip": "Get lost on purpose; the steep lanes and tiled walls are the point. Wear grippy shoes.",
+      "source": ""
+    },
+    "bacalhau": {
+      "name": "Bacalhau à Brás",
+      "landmark": "Bacalhau à Brás",
+      "kind": "food",
+      "lat": 38.7223,
+      "lon": -9.1393,
+      "price": 15,
+      "price_text": "≈ €12–20 per plate in a tasca",
+      "hours": "Lunch and dinner · varies by restaurant",
+      "tip": "Order it in a simple neighbourhood tasca, not a tourist-menu place on the main square.",
+      "source": ""
+    },
+    "bairro_alto": {
+      "name": "Bairro Alto",
+      "landmark": "Bairro Alto",
+      "kind": "activity",
+      "lat": 38.7118,
+      "lon": -9.1448,
+      "price": 0,
+      "price_text": "Free to walk · drinks extra",
+      "hours": "Quiet by day · bars busiest roughly 22:00–02:00",
+      "tip": "Come after 22:00 for street bars; keep noise down, locals live here.",
+      "source": ""
+    },
+    "pasteis_belem": {
+      "name": "Pastéis de Belém",
+      "landmark": "Bairro de Belém (Pastéis de Belém)",
+      "kind": "food",
+      "lat": 38.6976,
+      "lon": -9.2045,
+      "price": 2,
+      "price_text": "≈ €1.50–2 per pastry · cash and card",
+      "hours": "Daily roughly 08:00–23:00",
+      "tip": "Take the takeaway counter at the side; the sit-down queue is much slower.",
+      "source": ""
+    },
+    "cascais": {
+      "name": "Cascais Beach",
+      "landmark": "Cascais Beach",
+      "kind": "beach",
+      "lat": 38.6979,
+      "lon": -9.4215,
+      "price": 0,
+      "price_text": "Free · train fare extra",
+      "hours": "Beach always open · lifeguards in summer",
+      "tip": "Take the train from Cais do Sodré; the coast here is calmer than Atlantic beaches further west.",
+      "source": ""
+    },
+    "moors_castle": {
+      "name": "Castle of the Moors",
+      "landmark": "Castle of the Moors",
+      "kind": "sight",
+      "lat": 38.7925,
+      "lon": -9.3871,
+      "price": 8,
+      "price_text": "≈ €8 adult · check on the day",
+      "hours": "Daily roughly 09:00–18:00",
+      "tip": "A Sintra day trip: walk the forest path up from the old town, it is steep but shady.",
+      "source": ""
+    },
+    "chiado": {
+      "name": "Chiado District",
+      "landmark": "Chiado District",
+      "kind": "sight",
+      "lat": 38.7107,
+      "lon": -9.1418,
+      "price": 0,
+      "price_text": "Free to wander",
+      "hours": "Always open · shops roughly 10:00–19:00",
+      "tip": "Coffee at a historic café, then browse the bookshops and side streets.",
+      "source": ""
+    },
+    "alvalade": {
+      "name": "Estádio José Alvalade",
+      "landmark": "Estadio Jose Alvalade",
+      "kind": "activity",
+      "lat": 38.7612,
+      "lon": -9.1607,
+      "price": null,
+      "price_text": "Stadium tour price varies · check on the day",
+      "hours": "Tour times vary on match weeks",
+      "tip": "Book a stadium tour online; match tickets sell out and prices change.",
+      "source": ""
+    },
+    "luz": {
+      "name": "Estádio da Luz",
+      "landmark": "Estadio da Luz",
+      "kind": "activity",
+      "lat": 38.7528,
+      "lon": -9.1847,
+      "price": null,
+      "price_text": "Tour price varies · check on the day",
+      "hours": "Tour times vary on match weeks",
+      "tip": "Check the fixture list first; tours pause around home games.",
+      "source": ""
+    },
+    "ler_devagar": {
+      "name": "Ler Devagar",
+      "landmark": "Ler Devagar",
+      "kind": "sight",
+      "lat": 38.7032,
+      "lon": -9.1788,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Roughly Tue–Sun 10:00–20:00 · check on the day",
+      "tip": "A bookshop inside an old factory in LX Factory; go for the space and the café.",
+      "source": ""
+    },
+    "zoo": {
+      "name": "Lisbon Zoo",
+      "landmark": "Lisbon Zoo",
+      "kind": "park",
+      "lat": 38.7423,
+      "lon": -9.1718,
+      "price": 26,
+      "price_text": "≈ €26 adult · child rates lower · check on the day",
+      "hours": "Daily roughly 10:00–18:00 · longer in summer",
+      "tip": "Good for families; allow half a day and bring water in summer.",
+      "source": ""
+    },
+    "mafra": {
+      "name": "Mafra Palace Library",
+      "landmark": "Mafra Palace Library",
+      "kind": "sight",
+      "lat": 38.9369,
+      "lon": -9.3263,
+      "price": 6,
+      "price_text": "≈ €6 palace ticket · check on the day",
+      "hours": "Tue–Sun roughly 09:30–17:30 · closed Mondays",
+      "tip": "A half-day trip outside Lisbon; the long rococo library is the reason to come.",
+      "source": ""
+    },
+    "azulejo": {
+      "name": "National Azulejo Museum",
+      "landmark": "National Azulejo Museum",
+      "kind": "museum",
+      "lat": 38.7247,
+      "lon": -9.1121,
+      "price": 8,
+      "price_text": "≈ €8 adult · check on the day",
+      "hours": "Tue–Sun roughly 10:00–18:00 · closed Mondays",
+      "tip": "The huge tile panel of old Lisbon is the highlight; quiet and uncrowded.",
+      "source": ""
+    },
+    "coach_museum": {
+      "name": "National Coach Museum",
+      "landmark": "National Coach Museum",
+      "kind": "museum",
+      "lat": 38.6967,
+      "lon": -9.2078,
+      "price": 8,
+      "price_text": "≈ €8 adult · check on the day",
+      "hours": "Tue–Sun roughly 10:00–18:00 · closed Mondays",
+      "tip": "Pair with Belém sights; the gilded royal coaches surprise most visitors.",
+      "source": ""
+    },
+    "oceanario": {
+      "name": "Oceanário de Lisboa",
+      "landmark": "Oceanario de Lisboa",
+      "kind": "museum",
+      "lat": 38.7636,
+      "lon": -9.0937,
+      "price": 25,
+      "price_text": "≈ €25 adult · child rates lower · check on the day",
+      "hours": "Daily roughly 10:00–20:00",
+      "tip": "Buy a timed ticket online; the big central tank is worth a slow sit-down.",
+      "source": ""
+    },
+    "pena": {
+      "name": "Pena Palace",
+      "landmark": "Pena Palace",
+      "kind": "sight",
+      "lat": 38.7877,
+      "lon": -9.3905,
+      "price": 20,
+      "price_text": "≈ €20 palace and park · check on the day",
+      "hours": "Daily roughly 09:30–18:30 · last entry earlier",
+      "tip": "Book a timed ticket; mornings are clearer and less crowded than midday.",
+      "source": ""
+    },
+    "time_out_market": {
+      "name": "Time Out Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 38.7071,
+      "lon": -9.1459,
+      "price": 15,
+      "price_text": "≈ €10–20 per dish",
+      "hours": "Daily roughly 10:00–24:00",
+      "tip": "One roof, many top chefs; go off-peak to find seats.",
+      "source": ""
+    },
+    "senhora_monte": {
+      "name": "Senhora do Monte viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 38.7192,
+      "lon": -9.1325,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The highest miradouro in the city; come at sunset with a drink from a nearby kiosk.",
+      "source": ""
+    },
+    "tram28": {
+      "name": "Tram 28 ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.7109,
+      "lon": -9.1364,
+      "price": 3,
+      "price_text": "≈ €3 single on board · day pass cheaper",
+      "hours": "Roughly 06:00–23:00",
+      "tip": "Board at the Martim Moniz end early to get a seat; watch for pickpockets.",
+      "source": ""
+    },
+    "fado_show": {
+      "name": "Fado show in Alfama",
+      "landmark": null,
+      "kind": "show",
+      "lat": 38.7112,
+      "lon": -9.1305,
+      "price": 25,
+      "price_text": "≈ €20–40 with a drink · dinner packages cost more",
+      "hours": "Shows usually from roughly 20:00",
+      "tip": "Small rooms sound better than big venues; book ahead in summer.",
+      "source": ""
+    },
+    "lx_factory": {
+      "name": "LX Factory walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.7033,
+      "lon": -9.1786,
+      "price": 0,
+      "price_text": "Free to walk · food and shops extra",
+      "hours": "Shops roughly 10:00–20:00 · busiest weekends",
+      "tip": "Old industrial yard with shops and food; combine with a riverside walk.",
+      "source": ""
+    },
+    "miradouro_santa_luzia": {
+      "name": "Miradouro de Santa Luzia",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 38.7118,
+      "lon": -9.1301,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Tiled terrace with river views; a calm stop while walking Alfama.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of tiles, views and fado in the old city, mostly on foot.",
+      "days": [
+        {
+          "title": "Alfama hill, viewpoints and fado",
+          "stops": [
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start early for soft light and few people. Free."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Short uphill walk from the viewpoint. Check opening hours on the day."
+            },
+            {
+              "place": "alfama",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Wander the lanes and stop for lunch in a small tasca."
+            },
+            {
+              "place": "azulejo",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Mondays. A good indoor break if it is hot."
+            },
+            {
+              "place": "senhora_monte",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Best at sunset. Take tram 28 or a short taxi up."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:30",
+              "minutes": 90,
+              "note": "Book ahead. Shows usually start around 20:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Alfama or Baixa"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: custard tarts in Belém, market lunch, then grilled fish and bars.",
+      "days": [
+        {
+          "title": "Belém pastries, market lunch, Bairro Alto bars",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go early for warm tarts. Expect a queue later."
+            },
+            {
+              "place": "jeronimos",
+              "at": "09:45",
+              "minutes": 90,
+              "note": "Closed Mondays. Short walk from the bakery."
+            },
+            {
+              "place": "time_out_market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Late lunch. Many stalls, easy for first-timers."
+            },
+            {
+              "place": "chiado",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk it off. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "bacalhau",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Try bacalhau à Brás for dinner. Book or go early."
+            },
+            {
+              "place": "bairro_alto",
+              "at": "21:30",
+              "minutes": 120,
+              "note": "Bars busiest roughly 22:00–02:00, Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chiado or Bairro Alto"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Age of Discovery monuments in Belém, then the Moorish hill and castle.",
+      "days": [
+        {
+          "title": "Belém monuments, then the castle hill",
+          "stops": [
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot in the morning. Closed Mondays."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short walk along the river. Closed Mondays."
+            },
+            {
+              "place": "padrao",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Riverside monument. Lunch nearby in Belém."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Taxi or tram back east. Late afternoon light is best."
+            },
+            {
+              "place": "alfama",
+              "at": "17:15",
+              "minutes": 120,
+              "note": "Old Moorish quarter below the castle. Dinner in the lanes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Alfama"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One full day of tiles, viewpoints and fado in the old hill districts.",
+      "days": [
+        {
+          "title": "Alfama hill, views and fado",
+          "stops": [
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start early for soft light and few people."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Short walk uphill. Check closing time in winter."
+            },
+            {
+              "place": "alfama",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Wander the lanes. Stop for lunch in a small tasca."
+            },
+            {
+              "place": "azulejo",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Mondays. Good escape from the heat."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Book ahead. Shows usually start around 20:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Alfama or Baixa"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A tasting day: custard tarts, market stalls and a long lunch.",
+      "days": [
+        {
+          "title": "Belém sweets then market and tascas",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go early, warm from the oven. Expect a queue later."
+            },
+            {
+              "place": "jeronimos",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Mondays. First slot is calmest."
+            },
+            {
+              "place": "bacalhau",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Classic lunch dish. Prices vary by restaurant."
+            },
+            {
+              "place": "time_out_market",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Late lunch or early dinner. Many stalls, shared tables."
+            },
+            {
+              "place": "bairro_alto",
+              "at": "21:30",
+              "minutes": 120,
+              "note": "Bars busiest roughly 22:00–02:00. Stay aware of your surroundings."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Chiado"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Age of Discovery monuments in Belém plus the old Moorish hill.",
+      "days": [
+        {
+          "title": "Belém monuments, then the castle hill",
+          "stops": [
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays. Go first to beat the crowds."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Short walk along the river."
+            },
+            {
+              "place": "padrao",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Riverside monument. Check summer hours on the day."
+            },
+            {
+              "place": "bacalhau",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch nearby before heading back to the centre."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon for soft light over the city."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want tiles, viewpoints and fado in three easy days.",
+      "days": [
+        {
+          "title": "Arrive, Chiado and the riverfront",
+          "stops": [
+            {
+              "place": "chiado",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Shops close around 19:00. Good for a first wander."
+            },
+            {
+              "place": "santa_justa",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Queues build fast. The upper walkway is free if you skip the lift."
+            },
+            {
+              "place": "praca_comercio",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Open square by the river. Walk down through the arch."
+            },
+            {
+              "place": "time_out_market",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Early dinner. Busy but easy for a first night."
+            }
+          ]
+        },
+        {
+          "title": "Alfama hill and fado",
+          "stops": [
+            {
+              "place": "tram28",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Board early at the start of the line to get a seat."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Short walk uphill from the tram stop."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Castle grounds and views. Bring water."
+            },
+            {
+              "place": "alfama",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch in a tasca, then wander the lanes."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Book ahead. Small rooms fill up."
+            }
+          ]
+        },
+        {
+          "title": "Belém monuments, then fly",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Go early, warm from the oven."
+            },
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays. First slot is calmest."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Short walk along the river."
+            },
+            {
+              "place": "padrao",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Monument to the Discoveries. Lift to the top."
+            },
+            {
+              "place": "coach_museum",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Closed Mondays. Cool and indoor if it is hot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Chiado"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who plan the day around tarts, tascas and the market.",
+      "days": [
+        {
+          "title": "Arrive, market and Baixa",
+          "stops": [
+            {
+              "place": "time_out_market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Late lunch. Many stalls, shared tables."
+            },
+            {
+              "place": "chiado",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk it off. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "praca_comercio",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Riverfront stroll."
+            },
+            {
+              "place": "bacalhau",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Order bacalhau à Brás at a simple tasca. Prices vary."
+            }
+          ]
+        },
+        {
+          "title": "Belém tarts and Alfama dinner",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Morning is quietest. Cash helps."
+            },
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Check on the day."
+            },
+            {
+              "place": "alfama",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Wander, then pick a small restaurant for grilled fish."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:30",
+              "minutes": 90,
+              "note": "Dinner and fado often combined. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "LX Factory, then fly",
+          "stops": [
+            {
+              "place": "lx_factory",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Brunch and coffee under the bridge. Busiest weekends."
+            },
+            {
+              "place": "ler_devagar",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Bookshop inside LX Factory. Check hours on the day."
+            },
+            {
+              "place": "bacalhau",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Last lunch in Baixa before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chiado or Baixa"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the Age of Discovery and the old Moorish hill.",
+      "days": [
+        {
+          "title": "Arrive, Baixa and the riverfront",
+          "stops": [
+            {
+              "place": "praca_comercio",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Start at the triumphal arch."
+            },
+            {
+              "place": "santa_justa",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Early afternoon is quieter than midday."
+            },
+            {
+              "place": "chiado",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Historic streets and cafés."
+            },
+            {
+              "place": "bacalhau",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Simple dinner in Baixa."
+            }
+          ]
+        },
+        {
+          "title": "Belém and the Discoveries",
+          "stops": [
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays. First slot."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Check on the day."
+            },
+            {
+              "place": "padrao",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Monument to the Discoveries."
+            },
+            {
+              "place": "coach_museum",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Closed Mondays. Indoor and cool."
+            },
+            {
+              "place": "pasteis_belem",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Tart break before heading back."
+            }
+          ]
+        },
+        {
+          "title": "Castle hill, then fly",
+          "stops": [
+            {
+              "place": "sao_jorge",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning light, fewer crowds."
+            },
+            {
+              "place": "alfama",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Old Moorish quarter lanes below the castle."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick view, then lunch nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Alfama"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want tiles, viewpoints and fado in one easy loop.",
+      "days": [
+        {
+          "title": "Arrive and ease into Chiado",
+          "stops": [
+            {
+              "place": "chiado",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Flat, walkable streets. Shops close around 19:00."
+            },
+            {
+              "place": "santa_justa",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Lift queues build fast. Walk up via the Carmo side if busy."
+            },
+            {
+              "place": "time_out_market",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Early dinner. Busy from about 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Belém monuments",
+          "stops": [
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot. Closed Mondays."
+            },
+            {
+              "place": "pasteis_belem",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Two minutes on foot. Warm from the oven."
+            },
+            {
+              "place": "padrao",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Riverside walk from the monastery."
+            },
+            {
+              "place": "belem_tower",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Mondays. Small inside, expect a short wait."
+            },
+            {
+              "place": "bacalhau",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Lunch back in Baixa. Check opening times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Alfama hill and fado",
+          "stops": [
+            {
+              "place": "tram28",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Board early to get a seat. Pickpockets work the crowds."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk up through Alfama. Peacocks and river views."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short walk downhill. Tiled benches."
+            },
+            {
+              "place": "alfama",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Wander the lanes. Lunch in a small tasca."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Book ahead. Shows usually start around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Tiles or coaches, then fly",
+          "stops": [
+            {
+              "place": "azulejo",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Mondays. Quiet on weekday mornings."
+            },
+            {
+              "place": "lx_factory",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch among the shops. Busiest at weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chiado or Baixa"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around tarts, tascas and the market.",
+      "days": [
+        {
+          "title": "Arrive, market and Baixa",
+          "stops": [
+            {
+              "place": "time_out_market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Late lunch. Many stalls, shared tables."
+            },
+            {
+              "place": "praca_comercio",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk to the river square."
+            },
+            {
+              "place": "chiado",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Coffee and a bookshop stop."
+            },
+            {
+              "place": "bacalhau",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner. Book or arrive early."
+            }
+          ]
+        },
+        {
+          "title": "Belém and the tarts",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go early, warm from the oven."
+            },
+            {
+              "place": "jeronimos",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Mondays."
+            },
+            {
+              "place": "padrao",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Riverside walk."
+            },
+            {
+              "place": "belem_tower",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Mondays. Check on the day."
+            },
+            {
+              "place": "cascais",
+              "at": "15:00",
+              "minutes": 240,
+              "note": "Train from Belém. Beach time and seafood. Water is cold."
+            }
+          ]
+        },
+        {
+          "title": "Alfama tastes and fado",
+          "stops": [
+            {
+              "place": "tram28",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Early ride to avoid crowds."
+            },
+            {
+              "place": "alfama",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Market lanes and small bars."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick view before lunch."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Dinner and fado together. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and fly",
+          "stops": [
+            {
+              "place": "lx_factory",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekend brunch spots. Busiest at weekends."
+            },
+            {
+              "place": "santa_justa",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Short ride up if queues are short."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Chiado"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors chasing the Age of Discovery and the old Moorish hill.",
+      "days": [
+        {
+          "title": "Arrive and the river square",
+          "stops": [
+            {
+              "place": "praca_comercio",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start at the arch. Square always open."
+            },
+            {
+              "place": "chiado",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk up through the shopping streets."
+            },
+            {
+              "place": "bacalhau",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in Baixa."
+            }
+          ]
+        },
+        {
+          "title": "Belém in full",
+          "stops": [
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot. Closed Mondays."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Short wait for the tower stairs."
+            },
+            {
+              "place": "padrao",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Monument to the Discoveries."
+            },
+            {
+              "place": "coach_museum",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Closed Mondays. Good in midday heat."
+            },
+            {
+              "place": "pasteis_belem",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Sweet finish before the tram back."
+            }
+          ]
+        },
+        {
+          "title": "Castle hill and fado",
+          "stops": [
+            {
+              "place": "sao_jorge",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk up through Alfama."
+            },
+            {
+              "place": "alfama",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Old lanes and lunch."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "River view over the rooftops."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Evening in a fado house. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Tiles or a day trip, then fly",
+          "stops": [
+            {
+              "place": "azulejo",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Mondays. Tells Lisbon's tile story."
+            },
+            {
+              "place": "mafra",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Bus from the city, about an hour. Closed Mondays. Check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Alfama"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Tiles, fado houses and miradouro views over the river, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Baixa and the riverfront",
+          "stops": [
+            {
+              "place": "praca_comercio",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Big open square by the water. Good first stop after check-in."
+            },
+            {
+              "place": "santa_justa",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Lift up for the view. Queues are long later; go early if you can."
+            },
+            {
+              "place": "chiado",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Cafés and old bookshops. Shops close around 19:00."
+            },
+            {
+              "place": "time_out_market",
+              "at": "19:30",
+              "minutes": 75,
+              "note": "Early dinner from many food stalls."
+            }
+          ]
+        },
+        {
+          "title": "Belém monuments",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Warm custard tarts for breakfast. Expect a line."
+            },
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays. Go first thing to beat the crowds."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Small inside, so entry is timed."
+            },
+            {
+              "place": "padrao",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Monument to the Age of Discovery. Lift to the top."
+            },
+            {
+              "place": "coach_museum",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Closed Mondays. Cool and indoor at midday."
+            }
+          ]
+        },
+        {
+          "title": "Alfama hill and fado",
+          "stops": [
+            {
+              "place": "tram28",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Ride early to get a seat. Watch for pickpockets."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Shaded viewpoint over the rooftops and river."
+            },
+            {
+              "place": "sao_jorge",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Castle walls and peacocks. Open daily."
+            },
+            {
+              "place": "alfama",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Wander the lanes, then lunch in a small tasca."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Book ahead. Shows usually start around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Tiles and a last viewpoint",
+          "stops": [
+            {
+              "place": "azulejo",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Mondays. Great rainy-day or hot-afternoon stop."
+            },
+            {
+              "place": "lx_factory",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and a walk among the old factory shops."
+            },
+            {
+              "place": "senhora_monte",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset over the whole city. Bring a layer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Chiado, near a metro stop"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Custard tarts, grilled fish and cheap tascas, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat in the market",
+          "stops": [
+            {
+              "place": "praca_comercio",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short walk by the river to work up an appetite."
+            },
+            {
+              "place": "time_out_market",
+              "at": "17:30",
+              "minutes": 75,
+              "note": "Many stalls under one roof. Go before the dinner rush."
+            },
+            {
+              "place": "chiado",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening stroll. Many places close around 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Belém and the famous tarts",
+          "stops": [
+            {
+              "place": "pasteis_belem",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "The classic stop. Eat them warm with cinnamon."
+            },
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays. Short visit, then back to food."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Timed entry inside."
+            },
+            {
+              "place": "bacalhau",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch: salt cod with potato and egg. Prices vary by restaurant."
+            }
+          ]
+        },
+        {
+          "title": "Alfama lanes and fado",
+          "stops": [
+            {
+              "place": "tram28",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Ride early for a seat."
+            },
+            {
+              "place": "alfama",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Small tascas and bakeries in the side streets."
+            },
+            {
+              "place": "miradouro_santa_luzia",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Quick view before lunch."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Dinner and fado together. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Market walk and a last meal",
+          "stops": [
+            {
+              "place": "lx_factory",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Brunch and a walk. Busiest at weekends."
+            },
+            {
+              "place": "santa_justa",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Short ride up for the view."
+            },
+            {
+              "place": "bacalhau",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Last dinner. Try grilled fish too if you like."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa, walking distance to the market and river"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Age of Discovery monuments in Belém and the old Moorish hill, with time for nearby palaces.",
+      "days": [
+        {
+          "title": "Arrive and the riverfront",
+          "stops": [
+            {
+              "place": "praca_comercio",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Where the city rebuilt after the 1755 earthquake."
+            },
+            {
+              "place": "chiado",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Old streets and cafés. Shops close around 19:00."
+            },
+            {
+              "place": "time_out_market",
+              "at": "19:30",
+              "minutes": 75,
+              "note": "Dinner under one roof."
+            }
+          ]
+        },
+        {
+          "title": "Belém: the Age of Discovery",
+          "stops": [
+            {
+              "place": "jeronimos",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Mondays. First slot is calmest."
+            },
+            {
+              "place": "belem_tower",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Closed Mondays. Timed entry, small inside."
+            },
+            {
+              "place": "padrao",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Monument to the explorers. Lift to the top."
+            },
+            {
+              "place": "pasteis_belem",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Quick sweet stop."
+            },
+            {
+              "place": "coach_museum",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Closed Mondays. Royal coaches, indoor and cool."
+            }
+          ]
+        },
+        {
+          "title": "Moorish hill and Alfama",
+          "stops": [
+            {
+              "place": "sao_jorge",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Castle on the old Moorish site. Open daily."
+            },
+            {
+              "place": "alfama",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Oldest quarter. Lunch in a tasca."
+            },
+            {
+              "place": "azulejo",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Mondays. Tiles tell the city's story."
+            },
+            {
+              "place": "fado_show",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Evening fado in Alfama. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Palaces outside the centre",
+          "stops": [
+            {
+              "place": "pena",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "In Sintra, about an hour by train. Go early; last entry is earlier than closing."
+            },
+            {
+              "place": "mafra",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Mondays. Huge palace and library. Check train times on the day."
+            },
+            {
+              "place": "senhora_monte",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset view to end the trip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Baixa or Alfama, near a metro or tram stop"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Tiles, fado houses and miradouro views over the river."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Custard tarts, grilled sardines and cheap tascas."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Age of Discovery monuments in Belém and the old Moorish hill."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Baixa",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Flat, central grid near the river, tram 15 and metro. Easiest base for first-timers and walking.",
+      "center": [
+        38.71,
+        -9.14
+      ]
+    },
+    {
+      "area": "Alfama",
+      "range": [
+        80,
+        200
+      ],
+      "why": "Oldest quarter, steep lanes and fado bars. Charming but hilly and noisy at night.",
+      "center": [
+        38.711,
+        -9.13
+      ]
+    },
+    {
+      "area": "Chiado",
+      "range": [
+        120,
+        280
+      ],
+      "why": "Upscale shopping and cafés, walkable to Baixa and Bairro Alto. Good mix of comfort and location.",
+      "center": [
+        38.711,
+        -9.142
+      ]
+    },
+    {
+      "area": "Bairro Alto",
+      "range": [
+        85,
+        200
+      ],
+      "why": "Nightlife heart; quiet by day, loud on weekend nights. Close to Chiado and Príncipe Real.",
+      "center": [
+        38.713,
+        -9.145
+      ]
+    }
+  ],
+  "food": [
+    "Try a pastel de nata warm with cinnamon; the famous Belém bakery queues are long, many cafés are just as good.",
+    "Eat grilled sardines and bacalhau (salt cod) in a simple tasca; lunch menus often cost €8–15.",
+    "Order a bifana (pork sandwich) or a prego for a cheap snack, about €3–6.",
+    "Seafood is best near the river and in Cascais; check the price per kilo before ordering.",
+    "Vegetarian and vegan options are growing in Chiado and Príncipe Real; check menus on the day."
+  ],
+  "more_time": [
+    "Swap a city day for Sintra: train from Rossio, about 40 minutes, to palaces and gardens. Go early, it gets crowded.",
+    "Take a half-day trip to Cascais or Belém by train along the river for beaches and the tower.",
+    "Spend an evening in a fado house in Alfama or Mouraria; book ahead and expect a cover charge."
+  ]
+}

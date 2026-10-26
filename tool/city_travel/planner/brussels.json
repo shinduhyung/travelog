@@ -1,0 +1,654 @@
+{
+  "city": "Brussels",
+  "checked": "October 2026",
+  "intro_line": "Brussels: grand squares, comic-strip walls and world-class chocolate.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Grand-Place",
+        "Sablon",
+        "Ixelles",
+        "European Quarter"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Grand-Place",
+        "Sablon",
+        "Ixelles",
+        "European Quarter"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Grand-Place",
+        "Sablon",
+        "Ixelles",
+        "European Quarter"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Grand-Place",
+        "Sablon",
+        "Ixelles",
+        "European Quarter"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Grand-Place",
+        "Sablon",
+        "Ixelles",
+        "European Quarter"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": 2,
+        "rain_days": 14,
+        "note": "January: cold and grey, highs near 6°C, about 14 rain days. Pack a warm coat and waterproof shoes."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 12,
+        "note": "February: still cold, highs around 8°C, slightly fewer rain days. Museums are quiet."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 14,
+        "note": "March: cool at 11°C with about 14 rain days. Bring layers and an umbrella."
+      },
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 11,
+        "note": "April: milder at 14°C, about 11 rain days. Good for walking the centre."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 12,
+        "note": "May: pleasant at 18°C, around 12 rain days. Terrace season begins."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 10,
+        "note": "June: warm at 22°C, about 10 rain days. Long evenings; book hotels early."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 11,
+        "note": "July: warmest month, highs near 23°C, about 11 rain days. Busy with tourists."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 12,
+        "note": "August: similar warmth, about 12 rain days. Many locals are away; some small shops close."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 11,
+        "note": "September: mild at 20°C, about 11 rain days. A comfortable month for sightseeing."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 13,
+        "note": "October: cooler at 16°C, about 13 rain days. Carry a rain jacket."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 14,
+        "note": "November: cold and wet, highs near 10°C, about 14 rain days. Short days; plan indoor sights."
+      },
+      {
+        "high": 8,
+        "low": 3,
+        "rain_days": 14,
+        "note": "December: cold at 8°C, about 14 rain days. Christmas markets and lights around Grand-Place."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.8,
+      0.65,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.75
+    ],
+    "art": [
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.8,
+      0.65,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "grand_place": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or after dark",
+      "area": "Grand-Place",
+      "popularity": 5
+    },
+    "atomium": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Grand-Place",
+      "popularity": 5
+    },
+    "manneken_pis": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 10,
+      "setting": "outdoor",
+      "best": "Any time; quick stop",
+      "area": "Grand-Place",
+      "popularity": 4
+    },
+    "royal_palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Summer, weekday morning",
+      "area": "Sablon",
+      "popularity": 3
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning light through the windows",
+      "area": "Sablon",
+      "popularity": 4
+    },
+    "cinquantenaire": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "European Quarter",
+      "popularity": 3
+    },
+    "cantillon": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Weekday late morning",
+      "area": "Sablon",
+      "popularity": 4
+    },
+    "cook_book": {
+      "types": [
+        "food",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "European Quarter",
+      "popularity": 3
+    },
+    "duvel": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Booked weekday tour",
+      "area": "Grand-Place",
+      "popularity": 2
+    },
+    "begijnhof": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Grand-Place",
+      "popularity": 3
+    },
+    "ku_leuven": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Day trip, weekday",
+      "area": "Grand-Place",
+      "popularity": 2
+    },
+    "la_monnaie": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Grand-Place",
+      "popularity": 3
+    },
+    "lions_mound": {
+      "types": [
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Sablon",
+      "popularity": 3
+    },
+    "magritte": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday opening time",
+      "area": "Sablon",
+      "popularity": 4
+    },
+    "moules_frites": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Lunch or dinner, cooler months",
+      "area": "Grand-Place",
+      "popularity": 4
+    },
+    "oceade": {
+      "types": [
+        "food"
+      ],
+      "minutes": 0,
+      "setting": "indoor",
+      "best": "Not applicable",
+      "area": "Grand-Place",
+      "popularity": 1
+    },
+    "stella": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Booked weekday tour",
+      "area": "Grand-Place",
+      "popularity": 3
+    },
+    "icarus": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Sablon",
+      "popularity": 3
+    },
+    "son_of_man": {
+      "types": [
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday opening time",
+      "area": "Sablon",
+      "popularity": 4
+    },
+    "tomorrowland": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Late July, full day",
+      "area": "Grand-Place",
+      "popularity": 4
+    },
+    "walibi": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday in summer",
+      "area": "Sablon",
+      "popularity": 3
+    },
+    "zoetwater": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Check on the day",
+      "area": "Grand-Place",
+      "popularity": 1
+    },
+    "sablon_market": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Sablon",
+      "popularity": 3
+    },
+    "mont_des_arts": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Sablon",
+      "popularity": 4
+    },
+    "marolles_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning to early afternoon",
+      "area": "Sablon",
+      "popularity": 3
+    },
+    "beer_tour": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Grand-Place",
+      "popularity": 4
+    },
+    "comic_walk": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Dry daytime",
+      "area": "Grand-Place",
+      "popularity": 3
+    },
+    "flagey_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Ixelles",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover Grand-Place, the museums and a relaxed food day; add a third for a day trip to Bruges or Ghent."
+  },
+  "airports": [
+    {
+      "code": "BRU",
+      "name": "Brussels Airport",
+      "primary": true,
+      "note": "Main airport in Zaventem, 11 km north-east of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Brussel-Centraal",
+          "price": "€10-12",
+          "time": "15-20 min",
+          "note": "Runs every 10-20 min from Level -1; airport supplement usually included."
+        },
+        {
+          "mode": "Bus 12",
+          "to": "European district / Trône",
+          "price": "€8-8.50",
+          "time": "30 min",
+          "note": "Go2City ticket needed from the airport; departs Level 0."
+        },
+        {
+          "mode": "De Lijn bus R26",
+          "to": "Brussel-Noord",
+          "price": "€3",
+          "time": "30-40 min",
+          "note": "Cheap but not valid on other Brussels transport."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€50-60",
+          "time": "20-30 min",
+          "note": "Confirm the fare first; some drivers overcharge."
+        }
+      ]
+    },
+    {
+      "code": "CRL",
+      "name": "Brussels South Charleroi Airport",
+      "primary": false,
+      "note": "Budget airport 44 km south; mostly Ryanair and Wizzair.",
+      "options": [
+        {
+          "mode": "TEC bus A + train",
+          "to": "Brussel-Zuid/Midi",
+          "price": "€15-16",
+          "time": "80-90 min",
+          "note": "Combined ticket from the TEC machine at the airport."
+        },
+        {
+          "mode": "Flibco shuttle bus",
+          "to": "Brussel-Zuid/Midi",
+          "price": "€10-20",
+          "time": "60-75 min",
+          "note": "Book online for a lower price; queues can be long."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€90-120",
+          "time": "50-70 min",
+          "note": "Fixed fares; Brussels taxis charge more."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Brussels",
+      "https://en.wikivoyage.org/wiki/Brussels"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "Walk the compact centre; use metro or tram for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "STIB/MIVB metro and trams reach most sights. A single ride costs about €2.10–2.60; tap a contactless bank card or buy a MOBIB card (about €6) for cheaper fares."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "STIB buses cover the city. De Lijn buses serve the airport and Flanders, but their tickets are not valid on STIB."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber, Bolt and local taxi apps work. Taxis from the airport cost around €60."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is costly. A low-emission zone covers the centre; check your car meets the rules."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and walkable. Shared bikes and scooters are common for longer trips."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and often cloudy: mild summers, cool winters and rain in every month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 18–23°C and the most daylight. Ideal for walking the centre and sitting outside."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 10–14 rain days every month. Showers are often short; carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "December to February highs of 6–8°C and lows near 2°C. A warm coat and layers are essential."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild, not hot, summers",
+        "text": "July and August peak near 23°C. Rarely very hot; evenings can still feel cool."
+      },
+      {
+        "icon": "☁️",
+        "title": "Grey skies are common",
+        "text": "Overcast days are frequent. Plan museums and cafés as backups to outdoor plans."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobblestones. Add a scarf and gloves in winter."
+      }
+    ]
+  }
+}

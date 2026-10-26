@@ -1,0 +1,31 @@
+$ deepseek_prep.py Casablanca
+  tokens in 675 out 243
+Casablanca: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Casablanca
+  tokens in 2350 out 548
+Casablanca: 0 problems
+
+$ deepseek_city.py Casablanca --stage places
+Casablanca: places
+  tokens in 1150 out 2057
+
+$ deepseek_city.py Casablanca --stage frame
+Casablanca: frame
+  tokens in 2449 out 1874
+
+$ deepseek_city.py Casablanca --stage plans
+Casablanca: plans
+  plans for day
+  tokens in 1626 out 832
+  plans for 1n
+  tokens in 1627 out 1215
+  plans for 2n
+  tokens in 1632 out 1089
+  plans for 3n
+  tokens in 1627 out 1473
+
+$ merge_city.py Casablanca
+Casablanca: 14 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/casablanca.json and planner/casablanca.json
+

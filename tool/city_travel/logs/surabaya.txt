@@ -1,0 +1,27 @@
+$ deepseek_facts.py Surabaya
+  tokens in 3551 out 665
+Surabaya: 0 problems
+
+$ deepseek_city.py Surabaya --stage places
+Surabaya: places
+  tokens in 1157 out 2370
+
+$ deepseek_city.py Surabaya --stage frame
+Surabaya: frame
+  tokens in 2486 out 1860
+
+$ deepseek_city.py Surabaya --stage plans
+Surabaya: plans
+  plans for day
+  tokens in 1751 out 811
+  plans for 1n
+  tokens in 1757 out 1198
+  plans for 2n
+  tokens in 1752 out 1383
+  plans for 3n
+  tokens in 1752 out 1678
+
+$ merge_city.py Surabaya
+Surabaya: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/surabaya.json and planner/surabaya.json
+

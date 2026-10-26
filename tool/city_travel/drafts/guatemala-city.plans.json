@@ -1,0 +1,802 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day in Zona 1: colonial churches, the National Palace and a museum, all on foot or short taxi hops.",
+      "days": [
+        {
+          "title": "Zona 1 old town on foot",
+          "stops": [
+            {
+              "place": "metropolitan-cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start at the plaza before the crowds. Check opening on the day."
+            },
+            {
+              "place": "national-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Next to the cathedral. Closed Monday; check on the day."
+            },
+            {
+              "place": "la-merced",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short walk north. Morning light is best."
+            },
+            {
+              "place": "airport-food",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Simple set lunch at a comedor near the centre."
+            },
+            {
+              "place": "arqueologia-museum",
+              "at": "13:45",
+              "minutes": 120,
+              "note": "Maya and ethnography collections. Closed Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way through markets and comedores, then finish with an evening walk in Zona 4.",
+      "days": [
+        {
+          "title": "Market lunch and Zona 4 evening",
+          "stops": [
+            {
+              "place": "mercado-central",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Wander the stalls first; go early for the best produce."
+            },
+            {
+              "place": "pepian",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Try the thick stew at a traditional lunch spot. Ask for it mild if unsure."
+            },
+            {
+              "place": "zona-4-walk",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Cafes, street food and bars. Late afternoon into evening is liveliest."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Optional taxi ride for dinner and dessert. Check the day's opening hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1 or Zona 4"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Maya archaeology in the morning, colonial power in the afternoon, and a hilltop view to close.",
+      "days": [
+        {
+          "title": "Maya past and colonial centre",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Best single stop for Maya history. Closed Monday."
+            },
+            {
+              "place": "kaminaljuyu",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Open-air Maya mounds. Bring sun protection; check it is open."
+            },
+            {
+              "place": "airport-food",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch near the centre."
+            },
+            {
+              "place": "capitanes",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Colonial government building on the plaza. Some closures; check."
+            },
+            {
+              "place": "cerro-cruz",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon for the clearest volcano views. Daylight only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day in Zona 1: the plaza, the cathedral and a museum, with a walk in Zona 4 at dusk.",
+      "days": [
+        {
+          "title": "Historic centre on foot",
+          "stops": [
+            {
+              "place": "metropolitan-cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early; the plaza is calmest now."
+            },
+            {
+              "place": "national-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Bring ID for entry checks."
+            },
+            {
+              "place": "mercado-central",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch from the food stalls. Go with what looks busy."
+            },
+            {
+              "place": "arqueologia-museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Closed Monday. A short taxi or bus ride from the centre."
+            },
+            {
+              "place": "zona-4-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Late afternoon into evening. Take a taxi back after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1, near the Plaza de la Constitución"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A market lunch, a pepián dinner and a slow evening of eating in Zona 10.",
+      "days": [
+        {
+          "title": "Markets, pepián and Zona 10",
+          "stops": [
+            {
+              "place": "mercado-central",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Come hungry. Fruit, snacks and comedores inside."
+            },
+            {
+              "place": "airport-food",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Simple set lunch. Expect low prices; pay in cash."
+            },
+            {
+              "place": "pepian",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "A sit-down pepián lunch at a traditional restaurant."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dining and shopping strip. Liveliest at night; taxi between spots."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 10, for restaurants and evening safety"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Maya collections and colonial churches in one day, with a hilltop view to finish.",
+      "days": [
+        {
+          "title": "Maya past and colonial centre",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Best Maya overview in the city."
+            },
+            {
+              "place": "kaminaljuyu",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Outdoor mounds. Closed some days — check on the day. Bring sun protection."
+            },
+            {
+              "place": "la-merced",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick look at the yellow facade, then lunch nearby."
+            },
+            {
+              "place": "capitanes",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Part of a plaza walk. Some closures — check on the day."
+            },
+            {
+              "place": "cerro-cruz",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Daylight only. Late afternoon for the clearest volcano views."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1, walking distance to the plaza"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the colonial core, the big museums and a volcano view without rushing.",
+      "days": [
+        {
+          "title": "Zona 1 old town on foot",
+          "stops": [
+            {
+              "place": "city-tour",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Morning walking tour of the historic centre. Book ahead; confirm the start point."
+            },
+            {
+              "place": "pepian",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch: try pepián, a thick spiced stew. Ask for mild if unsure."
+            },
+            {
+              "place": "metropolitan-cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "On the main plaza. Quiet inside; dress modestly."
+            },
+            {
+              "place": "national-palace",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Next to the cathedral. Closed Monday — check on the day."
+            },
+            {
+              "place": "mercado-central",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Busy covered market. Keep bags in front of you."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a viewpoint",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Maya stone carvings and ceramics."
+            },
+            {
+              "place": "kaminaljuyu",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Open-air Maya mounds nearby. Bring sun protection and water."
+            },
+            {
+              "place": "airport-food",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Simple set lunch at a comedor. Expect a low-cost plate of the day."
+            },
+            {
+              "place": "relief-map",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Big 3D map of the country. Good for planning the rest of your trip."
+            },
+            {
+              "place": "cerro-cruz",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short taxi up. Daylight only; go before dusk for volcano views."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1 or Zona 10"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, comedores and a relaxed evening food walk.",
+      "days": [
+        {
+          "title": "Market lunch and old town tastes",
+          "stops": [
+            {
+              "place": "mercado-central",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Go before the lunch rush. Try fruit, tamales and fresh tortillas."
+            },
+            {
+              "place": "pepian",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Sit-down lunch for pepián. Portions are large; share if you like."
+            },
+            {
+              "place": "la-merced",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Short look at the yellow facade. Morning is quieter, but midday works."
+            },
+            {
+              "place": "santa-catalina",
+              "at": "14:15",
+              "minutes": 15,
+              "note": "Street landmark; quick photo stop."
+            },
+            {
+              "place": "zona-4-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Cafes and bars pick up late afternoon. Taxi between spots after dark."
+            }
+          ]
+        },
+        {
+          "title": "Zona 10 dining day",
+          "stops": [
+            {
+              "place": "ixchel",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Textiles museum, weekdays mainly. Check hours on the day."
+            },
+            {
+              "place": "popol-vuh",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Maya art collection. Closed some days — confirm before going."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch then browse. Many restaurants and shops; prices mid to high."
+            },
+            {
+              "place": "mundo-petapa",
+              "at": "16:00",
+              "minutes": 240,
+              "note": "Theme park, weekends mainly. Check opening days; good with kids."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 10"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Travellers who want the Maya story first, then the colonial city and a day trip.",
+      "days": [
+        {
+          "title": "Maya collections and the plaza",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Start here for context on the whole country."
+            },
+            {
+              "place": "kaminaljuyu",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Ancient mounds in the city. Daytime only; check it is open."
+            },
+            {
+              "place": "airport-food",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Quick comedor lunch near the centre."
+            },
+            {
+              "place": "national-palace",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Grand halls and murals."
+            },
+            {
+              "place": "metropolitan-cathedral",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Across the plaza. Check opening times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Antigua day trip",
+          "stops": [
+            {
+              "place": "antigua",
+              "at": "07:00",
+              "minutes": 480,
+              "note": "Leave early to beat traffic. About an hour each way; arrange a driver or shuttle."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Back in the city for dinner in Zona 10."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1 or Zona 10"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want colonial churches, museums and the old town at an easy pace.",
+      "days": [
+        {
+          "title": "Zona 1 core: plaza, palace and cathedral",
+          "stops": [
+            {
+              "place": "metropolitan-cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early before the plaza fills up."
+            },
+            {
+              "place": "national-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Bring ID for entry checks."
+            },
+            {
+              "place": "capitanes",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Short walk across the plaza."
+            },
+            {
+              "place": "airport-food",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Simple set lunch at a comedor near the centre."
+            },
+            {
+              "place": "la-merced",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Quiet mid-afternoon visit."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the relief map",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Allow time for the Maya rooms."
+            },
+            {
+              "place": "pepian",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Traditional stew lunch; portions are large."
+            },
+            {
+              "place": "relief-map",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Outdoor viewpoint; bring water and sun protection."
+            },
+            {
+              "place": "cerro-cruz",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon for the clearest volcano views. Daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Zona 10 museums, then evening walk",
+          "stops": [
+            {
+              "place": "popol-vuh",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Check Saturday hours."
+            },
+            {
+              "place": "ixchel",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Textiles museum, usually weekdays only."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Dinner and shopping; liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Old town walk and market, then fly",
+          "stops": [
+            {
+              "place": "city-tour",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Morning departure; book ahead."
+            },
+            {
+              "place": "mercado-central",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunchtime snacks and souvenirs."
+            },
+            {
+              "place": "san-francisco",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Short visit before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1 or Zona 10"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, comedores and neighbourhood dining without rushing.",
+      "days": [
+        {
+          "title": "Market lunch and old town tastes",
+          "stops": [
+            {
+              "place": "mercado-central",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Go hungry; stalls are busiest at lunch."
+            },
+            {
+              "place": "pepian",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Try the stew at a traditional restaurant nearby."
+            },
+            {
+              "place": "metropolitan-cathedral",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Walk it off around the plaza."
+            },
+            {
+              "place": "la-merced",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short stop; check daytime hours."
+            }
+          ]
+        },
+        {
+          "title": "Zona 4 walk into the evening",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Builds an appetite."
+            },
+            {
+              "place": "airport-food",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Quick comedor lunch."
+            },
+            {
+              "place": "zona-4-walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Cafes first, then dinner and bars."
+            }
+          ]
+        },
+        {
+          "title": "Zona 10 dining day",
+          "stops": [
+            {
+              "place": "popol-vuh",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning; check Saturday hours."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Restaurants and shops; busiest at night."
+            }
+          ]
+        },
+        {
+          "title": "Antigua day trip for food and shopping",
+          "stops": [
+            {
+              "place": "antigua",
+              "at": "07:30",
+              "minutes": 480,
+              "note": "Leave early to beat traffic. Eat and shop in town."
+            },
+            {
+              "place": "mercado-central",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Back in the city; check closing time, often around 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 10 or Zona 4"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the Maya story first, then the colonial city on top of it.",
+      "days": [
+        {
+          "title": "Maya collections and the old plaza",
+          "stops": [
+            {
+              "place": "arqueologia-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. The best single stop for Maya context."
+            },
+            {
+              "place": "pepian",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch break."
+            },
+            {
+              "place": "national-palace",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "metropolitan-cathedral",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Finish on the plaza."
+            }
+          ]
+        },
+        {
+          "title": "Kaminaljuyu and the historic centre",
+          "stops": [
+            {
+              "place": "kaminaljuyu",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Outdoor ruins; closed some days, so check first. Bring sun protection."
+            },
+            {
+              "place": "city-tour",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Guided walk ties the sites together."
+            },
+            {
+              "place": "airport-food",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Late comedor lunch."
+            },
+            {
+              "place": "capitanes",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Colonial government building; some closures."
+            }
+          ]
+        },
+        {
+          "title": "Zona 10 museums",
+          "stops": [
+            {
+              "place": "popol-vuh",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning. Check Saturday hours."
+            },
+            {
+              "place": "ixchel",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekdays mainly."
+            },
+            {
+              "place": "zona-10-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Evening meal in Zona 10."
+            }
+          ]
+        },
+        {
+          "title": "Antigua day trip, then fly",
+          "stops": [
+            {
+              "place": "antigua",
+              "at": "07:30",
+              "minutes": 480,
+              "note": "Early start. Colonial capital and churches; back by late afternoon."
+            },
+            {
+              "place": "san-francisco",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Short stop if time allows before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zona 1"
+    }
+  ]
+}

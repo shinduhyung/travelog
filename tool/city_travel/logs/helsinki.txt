@@ -1,0 +1,31 @@
+$ deepseek_prep.py Helsinki
+  tokens in 754 out 383
+Helsinki: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Helsinki
+  tokens in 3930 out 577
+Helsinki: 0 problems
+
+$ deepseek_city.py Helsinki --stage places
+Helsinki: places
+  tokens in 1201 out 3644
+
+$ deepseek_city.py Helsinki --stage frame
+Helsinki: frame
+  tokens in 2432 out 1844
+
+$ deepseek_city.py Helsinki --stage plans
+Helsinki: plans
+  plans for day
+  tokens in 2345 out 881
+  plans for 1n
+  tokens in 2346 out 850
+  plans for 2n
+  tokens in 2351 out 1151
+  plans for 3n
+  tokens in 2346 out 1958
+
+$ merge_city.py Helsinki
+Helsinki: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/helsinki.json and planner/helsinki.json
+

@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old City walls, palaces and the carpet museum."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Fire temples, petroglyphs and Soviet-era layers."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Plov, kebabs, pomegranates and tea with jam."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old City",
+      "range": [
+        90,
+        320
+      ],
+      "why": "Inside the walls, walk to Maiden Tower and the Palace of the Shirvanshahs. Quiet lanes, but narrow streets and few cars.",
+      "center": [
+        40.366,
+        49.837
+      ]
+    },
+    {
+      "area": "Fountain Square",
+      "range": [
+        110,
+        380
+      ],
+      "why": "The pedestrian heart of the city: cafés, shops and easy walks to the Old City and the boulevard.",
+      "center": [
+        40.372,
+        49.837
+      ]
+    },
+    {
+      "area": "Seafront Boulevard",
+      "range": [
+        130,
+        450
+      ],
+      "why": "Water views and a long promenade; good for evening walks. A bit further from the Old City lanes.",
+      "center": [
+        40.36,
+        49.835
+      ]
+    },
+    {
+      "area": "Nizami Street",
+      "range": [
+        100,
+        350
+      ],
+      "why": "Central shopping street with many mid-range hotels and metro access nearby.",
+      "center": [
+        40.377,
+        49.845
+      ]
+    }
+  ],
+  "food": [
+    "Try plov (rice with meat or saffron), dushbara dumplings in broth, and kebab with sumac onions.",
+    "Tea is a ritual: order çay with jam, walnuts and sweets at a çay evi (tea house).",
+    "Qutab is a thin stuffed flatbread, cheap and filling; good for a quick lunch.",
+    "Look for pomegranate dishes and fresh herbs in season; the fruit is a local symbol.",
+    "Prices vary; a simple local meal is often well under 20 AZN. Check the bill and confirm prices in tourist areas."
+  ],
+  "more_time": [
+    "Add a day trip to Gobustan for the petroglyphs and mud volcanoes; check tour prices and road conditions on the day.",
+    "Swap an afternoon for the Fire Temple at Ateshgah and Yanar Dag, the burning hillside; best as a guided trip.",
+    "Spend a slow half-day at the Heydar Aliyev Center for the architecture and exhibitions."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.75,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.75,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights cover the Old City, the boulevard and a day trip; add a third for Gobustan or the fire sites."
+  },
+  "month_notes": [
+    "Cold and damp: highs near 8°C, lows near 3°C, about 7 rain days. Pack a warm coat.",
+    "Still cold, highs near 9°C, but fewer wet days (about 5).",
+    "Mild start to spring: highs near 11°C, lows near 5°C, around 7 rain days.",
+    "Pleasant: highs near 17°C, lows near 9°C, only about 4 rain days.",
+    "Warm and green: highs near 22°C, lows near 14°C, around 6 rain days.",
+    "Hot and dry: highs near 29°C, lows near 20°C, only about 2 rain days.",
+    "Peak heat: highs near 31°C, lows near 23°C, very dry. Sightsee early or late.",
+    "Hot like July: highs near 31°C, lows near 23°C, about 2 rain days.",
+    "Warm and comfortable: highs near 26°C, lows near 19°C, around 4 rain days.",
+    "Mild and pleasant: highs near 20°C, lows near 14°C, but about 8 rain days.",
+    "Cooler: highs near 14°C, lows near 9°C, the wettest month with about 9 rain days.",
+    "Cold again: highs near 10°C, lows near 5°C, around 7 rain days."
+  ],
+  "climate_guide": {
+    "summary": "Baku has cold, damp winters and hot, dry summers. Spring and autumn are the most comfortable for walking.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 17–26°C with moderate rain. Good for the Old City and the boulevard."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and dry",
+        "text": "July and August reach about 31°C with lows near 23°C. Go out early or after sunset."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and damp",
+        "text": "January and February sit near 8–9°C highs and 3°C lows, with around 5–7 rain days."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in autumn and early winter",
+        "text": "November has about 9 rain days and October about 8. Bring a light rain jacket."
+      },
+      {
+        "icon": "💨",
+        "title": "Windy city",
+        "text": "Baku is known as the City of Winds. The seafront can feel cooler and breezier than inland streets."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, and light breathable clothes plus sunscreen for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for cheap cross-city hops; taxis or ride apps for the Old City and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Runs 06:00–24:00. Fare 0.60 AZN with a Bakı Metropoliten Kart (3 AZN refundable deposit)."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost 0.60 AZN. Newer red buses need a metro card to pay."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Agree on the fare beforehand; a typical city trip is 4–10 AZN. Ride apps like Bolt work."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Speed cameras are common and fines arrive by SMS. Drive carefully."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Pedestrian zones around Fountain Square and the Old City. Crossings can be risky at night."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "The city is fairly flat and bike-friendly, but there are no dedicated lanes."
+      }
+    ]
+  }
+}

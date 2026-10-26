@@ -1,0 +1,17 @@
+$ deepseek_city.py Prague --stage plans
+Prague: plans
+  plans for day
+  tokens in 2717 out 847
+  plans for 1n
+  tokens in 2718 out 1525
+  plans for 2n
+  tokens in 2718 out 1439
+  plans for 3n
+  tokens in 2723 out 1985
+  plans for 4n
+  tokens in 2718 out 4062
+
+$ merge_city.py Prague
+Prague: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/prague.json and planner/prague.json
+

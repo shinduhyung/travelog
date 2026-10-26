@@ -1,0 +1,173 @@
+{
+  "currency": "IDR",
+  "usd_rate": 18082.4775,
+  "intro_line": "Surabaya: gritty port city with history, food and heart.",
+  "intro": "Surabaya rewards visitors with colonial relics, fierce local food and a lively waterfront. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Tunjungan",
+    "Gubeng",
+    "Genteng",
+    "Darmo"
+  ],
+  "taxi": {
+    "flag_day": 10000,
+    "flag_airport": 15000,
+    "per_km": 5000,
+    "min_fare": 15000
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram; commuter trains are very limited.",
+    "Suroboyo Bus and Trans Semanggi are air-conditioned; fare Rp 5,000, cashless only (QRIS or e-money card).",
+    "Buses are clean but waits run 15-30 min; track them on the GOBIS app.",
+    "Gojek, Grab and Maxim work well; use GoRide or GrabBike to beat traffic.",
+    "Taxis are plentiful; check the meter (argo) is on. Green SM runs an electric fleet.",
+    "Becak (cycle rickshaws) are common; agree a price first, around Rp 5,000-20,000.",
+    "Walking is patchy; sidewalks are inconsistent. Ferries leave from Tanjung Perak harbour."
+  ],
+  "airports": [
+    {
+      "code": "SUB",
+      "name": "Juanda International Airport",
+      "primary": true,
+      "note": "Main gateway, about 15 km south-east of the centre; Terminal 1 domestic, Terminal 2 international.",
+      "options": [
+        {
+          "mode": "Damri bus",
+          "to": "Purabaya (Bungurasih) bus terminal",
+          "price": "Rp 25,000",
+          "time": "20-30 min",
+          "note": "Leaves from both terminals; then connect onward by city bus or ride app."
+        },
+        {
+          "mode": "Suroboyo Bus",
+          "to": "City centre",
+          "price": "Rp 5,000",
+          "time": "45-70 min",
+          "note": "Cashless only; needs QRIS or an e-money card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rp 120,000-150,000",
+          "time": "30-50 min",
+          "note": "Includes airport surcharge and tolls; tip optional."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "Rp 90,000-140,000",
+          "time": "30-50 min",
+          "note": "Fixed upfront price; use the app pickup point."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ampel Mosque",
+    "House of Sampoerna",
+    "Cheng Hoo Mosque",
+    "Kebab Turki Baba Rafi",
+    "Kidzania Surabaya"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Surabaya",
+      "https://en.wikivoyage.org/wiki/Surabaya"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -7.24917,
+    112.75083
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 29
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 28
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 29
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 24
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 12
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 10
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 5
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 2
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 4
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 9
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 28
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

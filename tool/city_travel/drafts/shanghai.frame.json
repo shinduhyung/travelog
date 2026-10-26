@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Bund, Yu Garden and the old city lanes."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Soup dumplings, street snacks and long dinners."
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "blurb": "Nanjing Road, malls and the French Concession boutiques."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "The Bund",
+      "range": [
+        600,
+        1800
+      ],
+      "why": "Step out to the river skyline at night. Walk to Yu Garden and the old city. Metro lines nearby.",
+      "center": [
+        31.2397,
+        121.4903
+      ]
+    },
+    {
+      "area": "People's Square",
+      "range": [
+        400,
+        1100
+      ],
+      "why": "Central and well connected. Walk to Nanjing Road shopping and the Shanghai Museum.",
+      "center": [
+        31.2304,
+        121.4737
+      ]
+    },
+    {
+      "area": "French Concession",
+      "range": [
+        450,
+        1300
+      ],
+      "why": "Leafy streets, cafés and small shops. Good for slow evenings and food hunting.",
+      "center": [
+        31.2135,
+        121.4453
+      ]
+    },
+    {
+      "area": "Jing'an",
+      "range": [
+        500,
+        1400
+      ],
+      "why": "Temple, malls and metro lines in one spot. Easy rides to most sights.",
+      "center": [
+        31.2231,
+        121.4453
+      ]
+    }
+  ],
+  "food": [
+    "Try xiaolongbao (soup dumplings) and shengjianbao (pan-fried pork buns). Popular spots get busy; go early or expect a queue.",
+    "Street snacks are cheap and good: scallion pancakes, jianbing and skewers. Prices vary by stall; check on the day.",
+    "Book a table for dinner in the French Concession or Jing'an. Many small restaurants fill up on weekends.",
+    "Breakfast locally: soy milk, youtiao (fried dough sticks) and congee from neighborhood shops.",
+    "Drink bottled or boiled water. Tap water is not for drinking."
+  ],
+  "more_time": [
+    "Add a half-day in Suzhou by high-speed train for classical gardens and canals. Book tickets ahead; check times on the day.",
+    "Spend an evening on the Huangpu ferry (about ¥2) for a cheap river crossing and skyline views.",
+    "Visit Zhujiajiao water town for canals and old bridges. Go on a weekday if you can."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.65,
+      0.45,
+      0.45,
+      0.75,
+      1,
+      0.9,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.65,
+      0.45,
+      0.45,
+      0.75,
+      1,
+      0.9,
+      0.75
+    ],
+    "shopping": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      1,
+      0.9,
+      0.8
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.8,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      1,
+      0.85,
+      0.65
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "shopping"
+  ],
+  "recommend": {
+    "why": "Three nights covers the Bund, the old city, the French Concession and a good food day without rushing."
+  },
+  "month_notes": [
+    "Cold and damp: highs near 9°C, lows near 2°C. Pack a warm coat.",
+    "Still chilly, highs around 11°C. Fewer crowds at indoor sights.",
+    "Milder at 16°C highs. Good for walking; expect about 11 rain days.",
+    "Pleasant spring: highs near 20°C. One of the best months to visit.",
+    "Warm at 25°C. Rain picks up; carry an umbrella.",
+    "Hot and wet: highs 28°C, about 17 rain days. Plan indoor breaks.",
+    "Hottest month: highs 32°C, lows 25°C. Go out early or after dark.",
+    "Still hot at 32°C and humid. Stay hydrated.",
+    "Cooling to 28°C highs. Comfortable again; about 14 rain days.",
+    "Great month: highs near 23°C and only about 8 rain days.",
+    "Mild at 18°C highs. Good for sightseeing; about 10 rain days.",
+    "Cold again: highs near 11°C, lows near 3°C. Dress in layers."
+  ],
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, damp winters. Spring and autumn are the best times to walk.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April and October",
+        "text": "Highs around 20–23°C with moderate rain. Ideal for the Bund and long walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid",
+        "text": "July and August hit 32°C with lows near 25–26°C. Plan indoor sights midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June to September",
+        "text": "Up to 18 rain days a month. Carry an umbrella and keep a backup indoor plan."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and damp",
+        "text": "January highs near 9°C and lows near 2°C. A warm coat and layers help."
+      },
+      {
+        "icon": "💨",
+        "title": "Humidity year-round",
+        "text": "Summers feel sticky; winters feel raw. Breathable clothes in summer, layers in winter."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, an umbrella, and layers. Add sunscreen and a hat for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for most trips: fast, cheap and English-signed.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast, cheap and English-signed; fares run about ¥3-9. Buy a Shanghai Public Transportation Card or use the metro app for tap-and-go."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover gaps the metro misses; fares are about ¥2."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; expect ¥200-500 to Pudong Airport and about ¥60-100 to Hongqiao. DiDi works well; Uber does not operate in mainland China."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is not advised for visitors."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking and shared bikes suit short trips."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries cross the Huangpu for about ¥2."
+      }
+    ]
+  }
+}

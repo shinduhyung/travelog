@@ -1,0 +1,178 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "A booming southern megacity where dim sum meets 2,000 years of trade.",
+  "intro": "Guangzhou rewards visitors with Cantonese food, riverside towers and leafy colonial islands. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Zhujiang New Town",
+    "Tianhe",
+    "Yuexiu",
+    "Shamian Island"
+  ],
+  "taxi": {
+    "flag_day": 12,
+    "flag_airport": 15,
+    "per_km": 2.6,
+    "min_fare": 12
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: 15+ lines, fares ¥2-21, English signs; tap a foreign contactless card or buy a token.",
+    "Yang Cheng Tong stored-value card costs ¥50 (¥18 deposit) and gives 5-40% metro discounts.",
+    "Buses are cheap and wide-reaching but slower and harder to read for visitors.",
+    "Taxis are metered; ride-hailing apps DiDi and Amap work, Uber does not operate in China.",
+    "Driving yourself is not advised for visitors; traffic is heavy and rules differ.",
+    "Walking is good in the centre; shared bikes are common for short hops.",
+    "Ferries run to Hong Kong and Macau from Nansha and Lianhuashan ports."
+  ],
+  "airports": [
+    {
+      "code": "CAN",
+      "name": "Guangzhou Baiyun International Airport",
+      "primary": true,
+      "note": "Main hub, about 29 km north of the centre.",
+      "options": [
+        {
+          "mode": "Metro line 3",
+          "to": "City centre (Gongyuanqian)",
+          "price": "¥7-10",
+          "time": "45-60 min",
+          "note": "Cheapest option; change at Jiahewanggang if needed."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Major hotels and stations",
+          "price": "¥20-30",
+          "time": "60-90 min",
+          "note": "Several routes; check your hotel stop."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥100-150",
+          "time": "40-60 min",
+          "note": "Use the official taxi queue; avoid touts."
+        },
+        {
+          "mode": "DiDi ride app",
+          "to": "City centre",
+          "price": "¥90-140",
+          "time": "40-60 min",
+          "note": "Pick a marked pickup point in the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Canton Tower",
+    "Chen Clan Ancestral Hall",
+    "Pearl River",
+    "Sun Yat-sen Memorial Hall",
+    "Guangzhou Opera House",
+    "Guangzhou CTF Finance Centre",
+    "Chimelong Paradise",
+    "Kungfu (Kungfu Catering)",
+    "Sun Yat-sen University",
+    "Tianhe Stadium"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Guangzhou",
+      "https://en.wikivoyage.org/wiki/Guangzhou"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    23.1291,
+    113.2644
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 7
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 15
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 17
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 22
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 8
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,230 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "A divided capital where old walls hold both histories.",
+  "intro": "Nicosia rewards visitors who wander its walled Old City and cross the Green Line between two worlds. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Laiki Geitonia",
+    "Old City centre",
+    "Ledra Street area",
+    "North Nicosia"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 5,
+    "per_km": 1.5,
+    "min_fare": 5
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "No metro or tram; the Old City is best on foot.",
+    "Buses are cheap but timetables are unreliable and few are air conditioned.",
+    "Taxis are diesel Mercedes with 'T' plates; check the meter is on.",
+    "Ride apps like Bolt and Uber operate in the south; coverage varies.",
+    "Car hire is affordable and useful for day trips beyond the city.",
+    "Bike sharing (Bike in Action) needs a smart card; ferries leave from Limassol and Larnaca."
+  ],
+  "airports": [
+    {
+      "code": "ECN",
+      "name": "Ercan International Airport",
+      "primary": true,
+      "note": "Closest airport, 11 km north of the centre in Northern Cyprus.",
+      "options": [
+        {
+          "mode": "Shared shuttle / dolmuş",
+          "to": "North Nicosia",
+          "price": "€5-10",
+          "time": "20-30 min",
+          "note": "Cheapest option; confirm the drop-off point."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€15-25",
+          "time": "15-25 min",
+          "note": "Agree the fare before you ride."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "App coverage in the north is limited."
+        }
+      ]
+    },
+    {
+      "code": "LCA",
+      "name": "Larnaca International Airport",
+      "primary": false,
+      "note": "Main south-side gateway, about 40 km and a 30-min drive.",
+      "options": [
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Nicosia (near highway)",
+          "price": "€8-10",
+          "time": "45-60 min",
+          "note": "Does not stop near the centre; take a taxi or local bus onward."
+        },
+        {
+          "mode": "Intercity bus",
+          "to": "Central bus station, Solomos Square",
+          "price": "€4-6",
+          "time": "60-75 min",
+          "note": "Cheap and reliable; check the timetable."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€45-60",
+          "time": "30-40 min",
+          "note": "Fixed fares are common; agree first."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-40 min",
+          "note": "Bolt and Uber may serve the airport."
+        }
+      ]
+    },
+    {
+      "code": "PFO",
+      "name": "Paphos International Airport",
+      "primary": false,
+      "note": "Smaller airport, about 140 km and a 1 hr 40 min drive.",
+      "options": [
+        {
+          "mode": "Intercity bus",
+          "to": "Nicosia via Limassol",
+          "price": "€10-15",
+          "time": "2.5-3 hr",
+          "note": "Requires a change; slow but cheap."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€120-150",
+          "time": "1 hr 40 min",
+          "note": "Expensive; share if possible."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "1 hr 40 min",
+          "note": "Long-distance app rides are unreliable."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Buyuk Han",
+    "Selimiye Mosque, Nicosia",
+    "Bellapais Abbey",
+    "Kyrenia Castle",
+    "Souvla"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Nicosia",
+      "https://en.wikivoyage.org/wiki/Nicosia"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    35.1856,
+    33.3823
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 12,
+      "rain_days": 5
+    },
+    {
+      "high": 30,
+      "low": 17,
+      "rain_days": 4
+    },
+    {
+      "high": 34,
+      "low": 21,
+      "rain_days": 3
+    },
+    {
+      "high": 38,
+      "low": 24,
+      "rain_days": 1
+    },
+    {
+      "high": 37,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 34,
+      "low": 21,
+      "rain_days": 2
+    },
+    {
+      "high": 29,
+      "low": 17,
+      "rain_days": 4
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 5
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

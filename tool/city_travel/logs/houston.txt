@@ -1,0 +1,34 @@
+$ deepseek_prep.py Houston
+  tokens in 659 out 482
+Houston: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Houston
+  tokens in 4473 out 736
+Houston: 0 problems
+
+$ deepseek_city.py Houston --stage places
+Houston: places
+  tokens in 1141 out 3426
+
+$ deepseek_city.py Houston --stage frame
+Houston: frame
+  tokens in 2435 out 1852
+  repaired JSON
+
+$ deepseek_city.py Houston --stage plans
+Houston: plans
+  plans for day
+  tokens in 2241 out 826
+  plans for 1n
+  tokens in 2242 out 1014
+  plans for 2n
+  tokens in 2247 out 1440
+  plans for 3n
+  tokens in 2242 out 1871
+  plans for 4n
+  tokens in 2242 out 2097
+
+$ merge_city.py Houston
+Houston: 21 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/houston.json and planner/houston.json
+

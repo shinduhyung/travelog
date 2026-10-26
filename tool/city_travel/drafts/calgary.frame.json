@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Bow River paths, Fish Creek Park and a day in the Rockies."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Glenbow-style museums, the Stampede story and Inglewood's old streets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Steak, brunch and a growing craft-beer scene."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown Core",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to the CTrain on 7th Avenue, the Calgary Tower and the Bow River paths. Best base without a car.",
+      "center": [
+        51.046,
+        -114.07
+      ]
+    },
+    {
+      "area": "Beltline",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Just south of downtown: most restaurants and bars per block, still walkable to the core.",
+      "center": [
+        51.04,
+        -114.07
+      ]
+    },
+    {
+      "area": "Kensington",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Quiet, leafy and close to the river and Prince's Island Park; good for walks and cafés.",
+      "center": [
+        51.055,
+        -114.085
+      ]
+    },
+    {
+      "area": "Inglewood",
+      "range": [
+        130,
+        300
+      ],
+      "why": "Oldest neighbourhood: independent shops, breweries and the river; short bus ride to downtown.",
+      "center": [
+        51.04,
+        -114.04
+      ]
+    }
+  ],
+  "food": [
+    "Try Alberta beef at least once: steakhouses downtown and in the Beltline, roughly CAD 35–70 for a main.",
+    "Brunch is a local habit. Expect lineups on weekend mornings; go before 10am or book ahead.",
+    "Local craft beer is easy to find: taprooms in the Beltline and Inglewood, about CAD 8–10 a pint.",
+    "Cheap eats: Vietnamese, Korean and donair shops in the Beltline and Forest Lawn, about CAD 12–20 a meal.",
+    "The Calgary Farmers' Market is good for local produce and snacks; check opening days on the day."
+  ],
+  "more_time": [
+    "Add a day in the Rockies: Banff is about 1.5 hours west by car or bus. Check road and park pass details before you go.",
+    "Dinosaur fans can swap a city afternoon for Drumheller and the Royal Tyrrell Museum, about 1.5 hours east by car.",
+    "In July, give the Calgary Stampede a full day or evening rather than squeezing it in."
+  ],
+  "type_month_fit": {
+    "nature": [
+      0.4,
+      0.45,
+      0.55,
+      0.7,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.45,
+      0.4
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.5
+    ],
+    "adventure": [
+      0.45,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.5,
+      0.45
+    ]
+  },
+  "best_for": [
+    "nature",
+    "family",
+    "adventure"
+  ],
+  "recommend": {
+    "why": "Two nights covers downtown, the river paths and one Rockies day; add a third night for Drumheller or the Stampede."
+  },
+  "month_notes": [
+    "January: cold, highs near -2°C and lows around -12°C. Dress in layers and watch for ice.",
+    "February: still cold, about -2°C high and -13°C low, with the most snow days of winter. Warm boots help.",
+    "March: slowly warming, highs near 4°C but nights still below freezing. Expect slush.",
+    "April: highs around 10°C, lows near -2°C. Mild days mix with cold snaps; pack a warm layer.",
+    "May: pleasant at about 17°C, but the wettest-ish month with around 10 rain days. Carry a light rain jacket.",
+    "June: mild at about 21°C with around 13 rain days. Showers pass quickly; evenings are cool.",
+    "July: warmest month, highs near 24°C and lows around 11°C. Stampede time; book hotels early.",
+    "August: warm and similar to July, about 23°C high. Good for parks and day trips.",
+    "September: comfortable at about 18°C, fewer rain days. A strong month for walking and the Rockies.",
+    "October: cooling to about 11°C, nights near 0°C. First frosts possible; bring a jacket.",
+    "November: cold again, highs near 3°C and lows around -7°C. Short days; plan indoor sights.",
+    "December: cold, about -3°C high and -12°C low. Snow possible; check conditions before driving."
+  ],
+  "climate_guide": {
+    "summary": "Cold, dry winters and short, mild summers. Rain is spread through the year, heaviest in June.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs of 18–24°C and long days. Ideal for the river paths, parks and Rockies day trips."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is genuinely cold",
+        "text": "December to February highs sit near -2 to -3°C, with lows around -12°C. Pack a real coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June",
+        "text": "About 13 rain days in June, versus 4–8 in most other months. Showers are usually short."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and fall swing widely",
+        "text": "April and October can be mild one day and cold the next. Layers beat a single heavy outfit."
+      },
+      {
+        "icon": "❄️",
+        "title": "Snow is possible in winter",
+        "text": "February has the most snow days in the averages. Watch for icy sidewalks and check road conditions."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Summer: light layers and a rain jacket. Winter: insulated coat, boots, hat and gloves. Always bring a warm layer for evenings."
+      }
+    ]
+  },
+  "transit": {
+    "best": "CTrain for downtown and nearby stops; walk the compact core and use buses or ride apps for the rest.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "CTrain light rail runs two lines, Red and Blue, through downtown on 7th Avenue South, which is transit-only."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Calgary Transit buses fill the gaps. A single fare is about $4 adult, $2.65 youth, free for ages 12 and under."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber is the main ride-hailing app and the only one authorized at the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside rush hour. Downtown parking is expensive, so use park-and-ride at suburban stations."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Downtown is compact and walkable. The Bow River pathways are good for bikes and rentals."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries; the city is inland."
+      }
+    ]
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "currency": "SGD",
+  "usd_rate": 1.2773,
+  "intro_line": "A garden city of hawker feasts and glass towers.",
+  "intro": "Singapore packs cultures, food and greenery into a compact, easy-to-navigate island. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Marina Bay",
+    "Orchard Road",
+    "Chinatown",
+    "Bugis"
+  ],
+  "taxi": {
+    "flag_day": 4.6,
+    "flag_airport": 8,
+    "per_km": 1.1,
+    "min_fare": 6
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "MRT trains are fast and cheap; tap a contactless credit card or buy an EZ-link card.",
+    "Buses cover gaps the MRT misses; fares are distance-based and low.",
+    "Taxis meter fares; Grab and Gojek ride apps are widely used.",
+    "Driving is possible but costly: ERP tolls, high parking and a car-ownership tax regime.",
+    "Walking is pleasant in the core; covered walkways help in rain and heat.",
+    "Ferries run from HarbourFront and Tanah Merah to the Riau Islands and Johor."
+  ],
+  "airports": [
+    {
+      "code": "SIN",
+      "name": "Singapore Changi International Airport",
+      "primary": true,
+      "note": "Main hub, about 19 km east of the centre.",
+      "options": [
+        {
+          "mode": "MRT",
+          "to": "City Hall",
+          "price": "S$2.30",
+          "time": "45-55 min",
+          "note": "Cross-platform transfer at Tanah Merah; last city-bound trains end before midnight."
+        },
+        {
+          "mode": "Public bus",
+          "to": "City centre",
+          "price": "S$2-3",
+          "time": "60-80 min",
+          "note": "Cheapest but slow; good if you have time."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "S$20-30",
+          "time": "20-30 min",
+          "note": "Includes about S$5 airport surcharge; 50% more from 1-6AM."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "S$20-35",
+          "time": "20-35 min",
+          "note": "Pick-up points are signposted in each terminal."
+        }
+      ]
+    },
+    {
+      "code": "XSP",
+      "name": "Seletar Airport",
+      "primary": false,
+      "note": "Small airport for turboprops and general aviation, about 15 km north.",
+      "options": [
+        {
+          "mode": "Public bus 102",
+          "to": "Hougang MRT",
+          "price": "S$1-2",
+          "time": "20-30 min",
+          "note": "Connects to the North-East Line."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "S$15-25",
+          "time": "20-30 min",
+          "note": "S$3 surcharge applies for trips from the airport."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "S$15-30",
+          "time": "20-35 min",
+          "note": "Fewer cars here; allow extra wait time."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Marina Bay Sands",
+    "Gardens by the Bay",
+    "Merlion Park",
+    "Jewel Changi Airport",
+    "Chinatown Heritage District",
+    "Buddha Tooth Relic Temple",
+    "Kampong Glam & Haji Lane",
+    "Little India",
+    "Raffles Hotel",
+    "Universal Studios Singapore",
+    "Marina Bay",
+    "Bird Paradise",
+    "BreadTalk",
+    "Chilli Crab",
+    "Chinatown Street Market",
+    "Clarke Quay",
+    "Esplanade - Theatres on the Bay",
+    "Fort Siloso",
+    "Haw Par Villa",
+    "Helix Bridge",
+    "KidZania Singapore",
+    "Lau Pa Sat"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Singapore",
+      "https://en.wikivoyage.org/wiki/Singapore"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    1.3521,
+    103.8198
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 24
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 18
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 27
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 28
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 23
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 23
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 27
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 28
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,524 @@
+{
+  "city": "Auckland",
+  "checked": "October 2026",
+  "intro_line": "Auckland: harbours, volcanoes and Pacific energy in one spread-out city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "CBD / Britomart",
+        "Viaduct Harbour",
+        "Ponsonby",
+        "Parnell"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "CBD / Britomart",
+        "Viaduct Harbour",
+        "Ponsonby",
+        "Parnell"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "CBD / Britomart",
+        "Viaduct Harbour",
+        "Ponsonby",
+        "Parnell"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "CBD / Britomart",
+        "Viaduct Harbour",
+        "Ponsonby",
+        "Parnell"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "CBD / Britomart",
+        "Viaduct Harbour",
+        "Ponsonby",
+        "Parnell"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 23,
+        "low": 18,
+        "rain_days": 11,
+        "note": "January: warmest and driest feel, highs near 23°C. Book ferries and beaches early."
+      },
+      {
+        "high": 23,
+        "low": 18,
+        "rain_days": 11,
+        "note": "February: similar to January, around 23°C. Great for beaches and island trips."
+      },
+      {
+        "high": 22,
+        "low": 16,
+        "rain_days": 11,
+        "note": "March: still warm at 22°C, but rain days stay around 11. Pack a light rain jacket."
+      },
+      {
+        "high": 20,
+        "low": 15,
+        "rain_days": 11,
+        "note": "April: cooler at 20°C. Good for hiking; evenings need a layer."
+      },
+      {
+        "high": 17,
+        "low": 12,
+        "rain_days": 13,
+        "note": "May: drops to 17°C with more rain days (13). Mix indoor sights with short walks."
+      },
+      {
+        "high": 15,
+        "low": 11,
+        "rain_days": 12,
+        "note": "June: cool at 15°C and wetter. Bring a waterproof and warm layers."
+      },
+      {
+        "high": 14,
+        "low": 10,
+        "rain_days": 13,
+        "note": "July: coldest month, highs near 14°C. Indoor museums and cafés are good bets."
+      },
+      {
+        "high": 14,
+        "low": 9,
+        "rain_days": 14,
+        "note": "August: similar cold, around 14°C, with the most rain days (14). Plan flexible days."
+      },
+      {
+        "high": 15,
+        "low": 11,
+        "rain_days": 15,
+        "note": "September: still cool at 15°C and the wettest month (15 rain days). Keep an umbrella handy."
+      },
+      {
+        "high": 17,
+        "low": 12,
+        "rain_days": 13,
+        "note": "October: warms to 17°C but rain days stay high (13). Check forecasts each morning."
+      },
+      {
+        "high": 19,
+        "low": 14,
+        "rain_days": 14,
+        "note": "November: milder at 19°C. Good shoulder season for walks and ferries."
+      },
+      {
+        "high": 21,
+        "low": 16,
+        "rain_days": 13,
+        "note": "December: warm again at 21°C. Busy holiday season; book stays ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "beach": [
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.35,
+      0.3,
+      0.35,
+      0.45,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "family": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.5,
+      0.55,
+      0.6,
+      0.75,
+      0.9,
+      0.95
+    ]
+  },
+  "places": {
+    "skytower": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon to sunset",
+      "area": "CBD / Britomart",
+      "popularity": 5
+    },
+    "museum": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Morning on a rainy day",
+      "area": "Parnell",
+      "popularity": 5
+    },
+    "viaduct": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Viaduct Harbour",
+      "popularity": 4
+    },
+    "harbourbridge": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight or sunset",
+      "area": "Viaduct Harbour",
+      "popularity": 3
+    },
+    "waiheke": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 420,
+      "setting": "mixed",
+      "best": "Full day, best in summer",
+      "area": "CBD / Britomart",
+      "popularity": 5
+    },
+    "piha": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning to afternoon in summer",
+      "area": "CBD / Britomart",
+      "popularity": 4
+    },
+    "adventurepark": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Daytime, dry weather",
+      "area": "CBD / Britomart",
+      "popularity": 2
+    },
+    "crystalmountain": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "CBD / Britomart",
+      "popularity": 2
+    },
+    "lionbrewery": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "CBD / Britomart",
+      "popularity": 2
+    },
+    "rainbowsend": {
+      "types": [
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "CBD / Britomart",
+      "popularity": 3
+    },
+    "civic": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening show",
+      "area": "CBD / Britomart",
+      "popularity": 3
+    },
+    "university": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "CBD / Britomart",
+      "popularity": 2
+    },
+    "fishmarket": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunch",
+      "area": "Viaduct Harbour",
+      "popularity": 3
+    },
+    "mteden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunrise or sunset",
+      "area": "CBD / Britomart",
+      "popularity": 4
+    },
+    "ponsonby": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Ponsonby",
+      "popularity": 3
+    },
+    "ferry": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Daytime, clear weather",
+      "area": "CBD / Britomart",
+      "popularity": 4
+    },
+    "britomart": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunch or evening",
+      "area": "CBD / Britomart",
+      "popularity": 3
+    },
+    "albertpark": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "CBD / Britomart",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the harbour, a volcano walk and a ferry trip; add a night for an island or west-coast beach day."
+  },
+  "airports": [
+    {
+      "code": "AKL",
+      "name": "Auckland International Airport",
+      "primary": true,
+      "note": "Main gateway, about 18-22 km south of the centre.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Waitematā Station, CBD",
+          "price": "NZ$10 HOP card plus fare",
+          "time": "60-90 min",
+          "note": "Take the AIR bus to Puhinui, then a train; buy a HOP card at the airport."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "CBD hotels",
+          "price": "NZ$35",
+          "time": "40-60 min",
+          "note": "Shared shuttle; book ahead at busy times."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "NZ$35-90",
+          "time": "30-50 min",
+          "note": "Ask for a fixed fare; metered runs cost more."
+        },
+        {
+          "mode": "Uber",
+          "to": "CBD",
+          "price": "NZ$40-70",
+          "time": "30-50 min",
+          "note": "Pickup zone is signposted outside the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Auckland",
+      "https://en.wikivoyage.org/wiki/Auckland"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "beach"
+  ],
+  "transit": {
+    "best": "Walk the CBD and take trains, buses or ferries; use an AT HOP card or contactless card.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Four lines run from Waitematā Station, and a new underground city loop is open. Good for suburbs and the airport link via bus or rail; check routes on the day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses cover most suburbs. Cash is not accepted; use an AT HOP card or contactless card. Fares start around NZ$2.80 per zone with free transfers within 30 minutes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries leave the CBD for Hauraki Gulf islands and Devonport. A quick, scenic way to cross the harbour."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber works widely; taxis are plentiful and take cards."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy off-peak, but motorways jam at rush hour and parking is hard."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking suits the CBD and waterfront. Use transit for hills and far suburbs."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild oceanic climate: warm, drier summers and cool, wetter winters. Rain can come any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warmest months, highs around 21–23°C. Best for beaches, ferries and volcano walks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect roughly 11–15 rain days every month. Showers can be short; carry a light rain jacket."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cool winters (June to August)",
+        "text": "Highs near 14–15°C and lows around 9–11°C. Bring warm layers and a waterproof."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Sea breezes and changeable days",
+        "text": "Harbour winds can make it feel cooler. A layer you can add or remove helps."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Swim in summer",
+        "text": "Water and air are warmest December to March. Other months suit walks more than swims."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket, comfortable walking shoes and sunscreen for summer. A warm hat for winter."
+      }
+    ]
+  }
+}

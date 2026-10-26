@@ -1,0 +1,33 @@
+$ deepseek_prep.py Cairo
+  tokens in 1048 out 473
+Cairo: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Cairo
+  tokens in 4054 out 595
+Cairo: 0 problems
+
+$ deepseek_city.py Cairo --stage places
+Cairo: places
+  tokens in 1256 out 4182
+
+$ deepseek_city.py Cairo --stage frame
+Cairo: frame
+  tokens in 2449 out 1697
+
+$ deepseek_city.py Cairo --stage plans
+Cairo: plans
+  plans for day
+  tokens in 2518 out 1636
+  plans for 1n
+  tokens in 2519 out 1144
+  plans for 2n
+  tokens in 2519 out 1388
+  plans for 3n
+  tokens in 2524 out 1759
+  plans for 4n
+  tokens in 2519 out 2145
+
+$ merge_city.py Cairo
+Cairo: 26 places, 19 plans, 0 errors, 0 warnings
+wrote itineraries/cairo.json and planner/cairo.json
+

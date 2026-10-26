@@ -1,0 +1,1279 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of San Francisco icons: Alcatraz in the morning, cable cars and Chinatown after lunch.",
+      "days": [
+        {
+          "title": "Alcatraz, wharf and Chinatown",
+          "stops": [
+            {
+              "place": "alcatraz-ferry",
+              "at": "08:45",
+              "minutes": 30,
+              "note": "Book ahead. Pier 33 is the only departure point. Arrive 20–30 minutes early."
+            },
+            {
+              "place": "alcatraz",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "The audio tour is included. It is windy and cool on the island, so bring a jacket."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch stop. Seafood stalls and clam chowder. Expect crowds by midday."
+            },
+            {
+              "place": "cable-car",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Board at the wharf end of the Powell–Hyde line. Queues are shorter mid-afternoon."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Start at Dragon's Gate. Shops close around 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: Ferry Building in the morning, Mission burritos and murals in the afternoon.",
+      "days": [
+        {
+          "title": "Ferry Building, Mission food and murals",
+          "stops": [
+            {
+              "place": "ferry-building",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best on Tuesday, Thursday or Saturday mornings for the farmers market. Many stalls close by 18:00."
+            },
+            {
+              "place": "mission-murals",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi or BART. Grab a burrito on the way."
+            },
+            {
+              "place": "dolores-park",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Short walk uphill. Sunny afternoons are best; bring a layer."
+            },
+            {
+              "place": "union-square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "About 15 minutes by taxi or Muni. Shops stay open to roughly 20:00."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Five minutes on foot from Union Square. Good spot for an early dim sum dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Union Square"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Coast, bridge and bay views in one day, with a boat ride to finish.",
+      "days": [
+        {
+          "title": "Bridge, coastal trail and bay cruise",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk partway across. It is often foggy in the morning; autumn is clearest."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "About 10 minutes by taxi. Grounds are open all day."
+            },
+            {
+              "place": "lands-end",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch nearby first. The trail is unpaved in parts; wear sturdy shoes."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Back at the wharf. Book a mid-afternoon sailing and bring a jacket."
+            },
+            {
+              "place": "sf-bay",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Stay on the waterfront for sunset views if the sky is clear."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want Alcatraz, the bridge and a cable car in one tight day.",
+      "days": [
+        {
+          "title": "Arrive, waterfront icons and Alcatraz",
+          "stops": [
+            {
+              "place": "fishermans-wharf",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Start here for orientation. Piers and shops open around 10:00."
+            },
+            {
+              "place": "alcatraz-ferry",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Book ahead; morning sailings are calmest. Arrive at Pier 33 early."
+            },
+            {
+              "place": "alcatraz",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Bring layers; it is windy and cool on the island."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short taxi or bus ride. Grounds open all day."
+            },
+            {
+              "place": "cable-car",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Ride toward Union Square. Queues are shorter in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, books and Chinatown",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Late morning light is good. Fog clears later in the day, so check the view first."
+            },
+            {
+              "place": "city-lights",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Open daily around 10:00. Small shop, big history."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and a wander through Dragon's Gate. Shops open around 10:00."
+            },
+            {
+              "place": "union-square",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Plaza is always open. Good spot to end before heading out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want the Ferry Building, dim sum and Mission burritos in one day.",
+      "days": [
+        {
+          "title": "Ferry Building and the waterfront",
+          "stops": [
+            {
+              "place": "ferry-building",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Grab breakfast and coffee. Farmers market runs Tue/Thu/Sat mornings."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Seafood lunch and a walk along the piers."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Midday sailings give clearer views. Bring a jacket."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Snack your way through. Shops close around 19:00."
+            },
+            {
+              "place": "union-square",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner nearby. Shops open until about 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Mission flavours",
+          "stops": [
+            {
+              "place": "mission-murals",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning walk is quieter. Grab a burrito after."
+            },
+            {
+              "place": "dolores-park",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Picnic lunch with skyline views. Open roughly 06:00–22:00."
+            },
+            {
+              "place": "flower-carrier",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Diego Rivera mural. Museum hours vary, so check on the day."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Always open. Clear afternoons give the best view."
+            }
+          ]
+        }
+      ],
+      "stay_area": "SoMa"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Outdoorsy visitors who want the coast, the bay and big views.",
+      "days": [
+        {
+          "title": "Coast and bridge",
+          "stops": [
+            {
+              "place": "lands-end",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Trail is open in daylight hours. Wear sturdy shoes."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short ride east. Grounds open all day."
+            },
+            {
+              "place": "golden-gate-bridge",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk part of the span. Bring layers; it is windy."
+            },
+            {
+              "place": "sf-bay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Watch the water and boats. Always open."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dinner by the water. Shops close around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Bay views and hills",
+          "stops": [
+            {
+              "place": "bay-cruise",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning sailings are calmest. Dress warm."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Always open. Clear afternoons give the best view."
+            },
+            {
+              "place": "dolores-park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Sunny afternoon spot. Open roughly 06:00–22:00."
+            },
+            {
+              "place": "mission-murals",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Outdoors, always open. Good for a slow wander."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want Alcatraz, the bridge and the city's best neighborhoods without rushing.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and the bay",
+          "stops": [
+            {
+              "place": "fishermans-wharf",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Easy first stop near most hotels. Watch the sea lions at Pier 39."
+            },
+            {
+              "place": "alcatraz-ferry",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Book Alcatraz tickets well ahead; they sell out. Pier 33 is a short walk."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "About 15 minutes by taxi. Calm late-afternoon light."
+            },
+            {
+              "place": "city-lights",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Browse, then eat nearby in North Beach."
+            }
+          ]
+        },
+        {
+          "title": "Alcatraz morning, bridge and sunset",
+          "stops": [
+            {
+              "place": "alcatraz",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning boats are calmest. Bring a warm layer; it is windy on the island."
+            },
+            {
+              "place": "golden-gate-bridge",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Taxi or bus from the wharf. Walk part of the span if weather is clear."
+            },
+            {
+              "place": "lands-end",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Coastal trail near the bridge. Wear shoes with grip."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset viewpoint. Bring a jacket; it is cold and windy up there."
+            }
+          ]
+        },
+        {
+          "title": "Neighborhoods and murals",
+          "stops": [
+            {
+              "place": "cable-car",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Ride early to beat queues. Pay with a Clipper card or exact fare."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Start at Dragon's Gate. Grab dim sum for lunch."
+            },
+            {
+              "place": "ferry-building",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short taxi or walk downhill. Saturday has the farmers market."
+            },
+            {
+              "place": "mission-murals",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Take BART or a taxi. Outdoors, so go while it is light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf or Union Square"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, dim sum and Mission burritos between the big sights.",
+      "days": [
+        {
+          "title": "Arrive, wharf snacks and the bay",
+          "stops": [
+            {
+              "place": "fishermans-wharf",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Clam chowder in a sourdough bowl is the classic. Expect crowds."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Midday or afternoon sailings give clearer views. Bring a jacket."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Short walk from the wharf. Nice before dinner."
+            },
+            {
+              "place": "city-lights",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Then eat in North Beach; Italian spots fill up, so book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, Alcatraz afternoon",
+          "stops": [
+            {
+              "place": "ferry-building",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Best on Saturday for the farmers market. Coffee and pastries inside."
+            },
+            {
+              "place": "alcatraz-ferry",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Book ahead; tickets sell out. Pier 33 is a short taxi away."
+            },
+            {
+              "place": "alcatraz",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Bring layers. The audio tour is worth it."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dim sum or noodles for dinner. Shops close around 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Mission food and murals",
+          "stops": [
+            {
+              "place": "cable-car",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Ride early to avoid queues."
+            },
+            {
+              "place": "mission-murals",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Take BART to the Mission. Grab a burrito for lunch."
+            },
+            {
+              "place": "dolores-park",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Sunny afternoon spot. Sit on the slope with a snack."
+            },
+            {
+              "place": "flower-carrier",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Check museum hours on the day before going."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Union Square or Fisherman's Wharf"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Outdoorsy visitors who want coastal trails, bay views and the bridge up close.",
+      "days": [
+        {
+          "title": "Arrive, bay and waterfront",
+          "stops": [
+            {
+              "place": "fishermans-wharf",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Stretch your legs and see the sea lions."
+            },
+            {
+              "place": "sf-bay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the waterfront path. Afternoons are usually clearer."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Short taxi ride. Good late-afternoon light."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, coast and sunset",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk part of the span. It is windy; bring a layer."
+            },
+            {
+              "place": "lands-end",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Coastal trail with bridge views. Wear shoes with grip."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset viewpoint on a clear day. Cold and windy up there."
+            }
+          ]
+        },
+        {
+          "title": "Alcatraz and the bay",
+          "stops": [
+            {
+              "place": "alcatraz-ferry",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Book ahead; morning sailings are calmest."
+            },
+            {
+              "place": "alcatraz",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Bring layers. The island is exposed and breezy."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Optional extra sail if you have energy. Check departure times."
+            },
+            {
+              "place": "ferry-building",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Snack stop before you leave. Saturday has the farmers market."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want Alcatraz, the bridge and the city's best neighbourhoods at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, wharf and bay views",
+          "stops": [
+            {
+              "place": "fishermans-wharf",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Easy first wander. Shops and piers roughly 10:00–20:00."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short taxi or bus ride west. Late afternoon light is best."
+            },
+            {
+              "place": "sf-bay",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Walk the waterfront back toward the wharf."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner near the piers. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Alcatraz morning, Chinatown afternoon",
+          "stops": [
+            {
+              "place": "alcatraz-ferry",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Book tickets well ahead; morning sailings are calmest."
+            },
+            {
+              "place": "alcatraz",
+              "at": "09:45",
+              "minutes": 150,
+              "note": "Bring layers. The audio tour is included."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Enter through Dragon's Gate. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "city-lights",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short walk north. Open roughly 10:00–22:00."
+            },
+            {
+              "place": "cable-car",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Ride from near Union Square. Queues are shorter off-peak."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, murals and sunset",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk partway across. Fog often clears by late morning."
+            },
+            {
+              "place": "lands-end",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Coastal trail nearby. Daylight hours only."
+            },
+            {
+              "place": "mission-murals",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Taxi or bus south. Outdoors, always open."
+            },
+            {
+              "place": "dolores-park",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Short walk uphill. Open roughly 06:00–22:00."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset on a clear day. Bring a jacket, it is windy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf or Union Square"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, dim sum and burritos, with the icons in between.",
+      "days": [
+        {
+          "title": "Ferry Building and the waterfront",
+          "stops": [
+            {
+              "place": "ferry-building",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best on Saturday morning for the farmers market. Many stalls close by 18:00."
+            },
+            {
+              "place": "sf-bay",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk the Embarcadero after eating."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch stop. Crab and chowder are the classics."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short ride west. Grounds open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown dim sum and cable cars",
+          "stops": [
+            {
+              "place": "chinatown-walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Go early for dim sum; some spots sell out by lunch."
+            },
+            {
+              "place": "union-square",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Plaza always open. Shops roughly 10:00–20:00."
+            },
+            {
+              "place": "cable-car",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Morning is quieter, but midday works from Union Square."
+            },
+            {
+              "place": "city-lights",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Ride or walk north. Open roughly 10:00–22:00."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dinner by the water. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Mission food and murals",
+          "stops": [
+            {
+              "place": "mission-murals",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Outdoors, always open. Wear comfortable shoes."
+            },
+            {
+              "place": "dolores-park",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Grab a burrito nearby and eat in the park."
+            },
+            {
+              "place": "flower-carrier",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Museum hours vary; check on the day."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Sunset on a clear day. Bring a jacket."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Union Square or SoMa"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want coastal trails, bay views and the bridge, with city stops in between.",
+      "days": [
+        {
+          "title": "Bridge and coastal trail",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk partway across. Clearest in autumn mornings."
+            },
+            {
+              "place": "lands-end",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Coastal trail, daylight hours. Some steps and uneven ground."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Short ride east. Grounds open 24 hours."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late lunch or early dinner near the piers."
+            }
+          ]
+        },
+        {
+          "title": "Bay cruise and Alcatraz",
+          "stops": [
+            {
+              "place": "bay-cruise",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Midday for clearer views. Bring a jacket."
+            },
+            {
+              "place": "alcatraz-ferry",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Book tickets well ahead."
+            },
+            {
+              "place": "alcatraz",
+              "at": "12:15",
+              "minutes": 150,
+              "note": "Bring layers. The audio tour is included."
+            },
+            {
+              "place": "sf-bay",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Walk the waterfront after the ferry back."
+            }
+          ]
+        },
+        {
+          "title": "Twin Peaks and the Mission",
+          "stops": [
+            {
+              "place": "twin-peaks",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Clear mornings give the best views. Windy up top."
+            },
+            {
+              "place": "dolores-park",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Open roughly 06:00–22:00. Good picnic stop."
+            },
+            {
+              "place": "mission-murals",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Outdoors, always open. Lunch nearby."
+            },
+            {
+              "place": "ferry-building",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Roughly 10:00–18:00 daily. Coffee and a snack before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-time visitors who want the big sights plus neighbourhood history, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, waterfront icons",
+          "stops": [
+            {
+              "place": "palace-fine-arts",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Grounds are always open. Good first stop near the wharf."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Walk the piers. Shops close around 20:00."
+            },
+            {
+              "place": "city-lights",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Bookshop open late, roughly 10:00–22:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Alcatraz morning",
+          "stops": [
+            {
+              "place": "alcatraz-ferry",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Book ahead. Morning sailings are calmest."
+            },
+            {
+              "place": "alcatraz",
+              "at": "09:45",
+              "minutes": 180,
+              "note": "Bring layers; it is windy and cool on the island."
+            },
+            {
+              "place": "ferry-building",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Lunch and a look around the marketplace."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view if the sky is clear. Bring a jacket."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, bay and cable car",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk part of the span. Welcome center hours vary; check on the day."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Midday sailings often have clearer views."
+            },
+            {
+              "place": "cable-car",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Ride from near Union Square. Go early to avoid queues."
+            },
+            {
+              "place": "chinatown-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Dragon's Gate and side streets. Shops close around 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Murals and museums, then fly",
+          "stops": [
+            {
+              "place": "mission-murals",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Self-guided walk. Outdoors, always open."
+            },
+            {
+              "place": "flower-carrier",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Diego Rivera mural. Museum hours vary; check on the day."
+            },
+            {
+              "place": "dolores-park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Relax with a view before heading out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want markets, dim sum and burritos, with the classic sights in between.",
+      "days": [
+        {
+          "title": "Arrive, wharf and seafood",
+          "stops": [
+            {
+              "place": "fishermans-wharf",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Clam chowder and crab stands along the piers."
+            },
+            {
+              "place": "palace-fine-arts",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Short walk for photos. Grounds open 24 hours."
+            },
+            {
+              "place": "city-lights",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Browse before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Ferry Building and bridge",
+          "stops": [
+            {
+              "place": "ferry-building",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best on a Saturday for the farmers market. Tue/Thu/Sat mornings."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Sail under the bridge. Bring a jacket."
+            },
+            {
+              "place": "golden-gate-bridge",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon light is good for photos."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset stop if clear."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown and Alcatraz",
+          "stops": [
+            {
+              "place": "chinatown-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Dim sum lunch on the way. Shops open around 10:00."
+            },
+            {
+              "place": "alcatraz-ferry",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Book ahead; check the day's schedule."
+            },
+            {
+              "place": "alcatraz",
+              "at": "13:45",
+              "minutes": 180,
+              "note": "Audio tour included. Bring layers."
+            },
+            {
+              "place": "union-square",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner options nearby."
+            }
+          ]
+        },
+        {
+          "title": "Mission food and murals, then fly",
+          "stops": [
+            {
+              "place": "mission-murals",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk between murals; grab a burrito after."
+            },
+            {
+              "place": "dolores-park",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Picnic spot on a sunny day."
+            },
+            {
+              "place": "flower-carrier",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Museum hours vary; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Union Square"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Travellers who want coastal trails, bay views and the bridge, with time outdoors each day.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and bay",
+          "stops": [
+            {
+              "place": "palace-fine-arts",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Easy start near the wharf."
+            },
+            {
+              "place": "sf-bay",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Walk the waterfront and watch the boats."
+            },
+            {
+              "place": "fishermans-wharf",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Early evening is quieter than midday."
+            }
+          ]
+        },
+        {
+          "title": "Bridge and coastal trail",
+          "stops": [
+            {
+              "place": "golden-gate-bridge",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Late morning is often clearest. Walk part of the span."
+            },
+            {
+              "place": "lands-end",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Coastal trail, daylight hours. Wear good shoes."
+            },
+            {
+              "place": "bay-cruise",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Midday to afternoon sailings; bring a jacket."
+            },
+            {
+              "place": "twin-peaks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset viewpoint on a clear day."
+            }
+          ]
+        },
+        {
+          "title": "Alcatraz and gardens",
+          "stops": [
+            {
+              "place": "alcatraz-ferry",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Morning sailings are calmest. Book ahead."
+            },
+            {
+              "place": "alcatraz",
+              "at": "09:45",
+              "minutes": 180,
+              "note": "Windy and cool; bring layers."
+            },
+            {
+              "place": "childrens-fairyland",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Usually Wed–Sun, roughly 10:00–16:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Campus or murals, then fly",
+          "stops": [
+            {
+              "place": "uc-berkeley",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Campus open daily; buildings vary. Allow travel time across the bay."
+            },
+            {
+              "place": "dolores-park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Sunny afternoon stop before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fisherman's Wharf"
+    }
+  ]
+}

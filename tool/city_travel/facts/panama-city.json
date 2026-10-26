@@ -1,0 +1,243 @@
+{
+  "currency": "PAB",
+  "usd_rate": 1,
+  "intro_line": "Where the canal meets the skyline and the old town.",
+  "intro": "Panama City rewards visitors with a canal, a colonial quarter and rainforest all in one trip. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Casco Antiguo",
+    "El Cangrejo",
+    "Bella Vista",
+    "Amador Causeway"
+  ],
+  "taxi": {
+    "flag_day": 1.25,
+    "flag_airport": 30,
+    "per_km": 0.5,
+    "min_fare": 1.25
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro Line 1 runs underground from Albrook to El Ingenio; Line 2 serves the northern suburbs.",
+    "Metro fare is B/.0.35 on Line 1 and B/.0.50 on Line 2; last train about 22:00.",
+    "Metrobuses need a RapiPass card (about B/.2 plus top-up); cash is not accepted at turnstiles.",
+    "Taxis have no meter; fares are zone-based, roughly B/.1.25 in one zone up to B/.5 across town.",
+    "Uber and inDrive work in the city; agree the price before a street taxi ride.",
+    "Walking is good in Casco Antiguo and along the Causeway; the old 'diablo rojo' buses are now rare."
+  ],
+  "airports": [
+    {
+      "code": "PTY",
+      "name": "Tocumen International Airport",
+      "primary": true,
+      "note": "Main international hub, about 18 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Metro + bus",
+          "to": "Albrook terminal",
+          "price": "B/.1-2",
+          "time": "60-80 min",
+          "note": "Cheapest; metro station is near the terminal."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre",
+          "price": "B/.1-2",
+          "time": "60-90 min",
+          "note": "Check locally for current routes."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "B/.20-30",
+          "time": "30-45 min",
+          "note": "Usually cheaper than street taxis."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "B/.30",
+          "time": "30-45 min",
+          "note": "Price includes Corredor Sur tolls."
+        }
+      ]
+    },
+    {
+      "code": "PAC",
+      "name": "Marcos A. Gelabert International Airport (Albrook)",
+      "primary": false,
+      "note": "Domestic and regional airport, about 4 km from the centre.",
+      "options": [
+        {
+          "mode": "Metro",
+          "to": "City centre",
+          "price": "B/.0.35",
+          "time": "10-20 min",
+          "note": "Albrook metro station is nearby."
+        },
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "B/.0.25-0.35",
+          "time": "15-25 min",
+          "note": "Metrobus needs a RapiPass card."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "B/.5-8",
+          "time": "10-20 min",
+          "note": "Short ride; watch for airport pickup rules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "B/.5-10",
+          "time": "10-20 min",
+          "note": "Agree the zone fare first."
+        }
+      ]
+    },
+    {
+      "code": "BLB",
+      "name": "Panamá Pacífico International Airport",
+      "primary": false,
+      "note": "Small regional airport on the west bank, about 20 km southwest.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Limited service; check locally."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "B/.20-30",
+          "time": "30-45 min",
+          "note": "Best booked on arrival."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "B/.25-35",
+          "time": "30-45 min",
+          "note": "Agree the price before you ride."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Panama Canal",
+    "Casco Viejo",
+    "Panama Viejo",
+    "BioMuseo",
+    "Bridge of the Americas",
+    "F&F Tower",
+    "Metropolitan Cathedral of Panama",
+    "San Jose Church (Golden Altar)",
+    "Sancocho"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Panama City",
+      "https://en.wikivoyage.org/wiki/Panama%20City"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    8.9824,
+    -79.5199
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 8
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 5
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 9
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 19
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 29
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 29
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 29
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 30
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 30
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 29
+    },
+    {
+      "high": 28,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 19
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "PAC taxi B/.5-10 vs tariff estimate 33"
+  ]
+}

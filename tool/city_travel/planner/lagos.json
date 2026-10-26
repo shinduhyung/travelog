@@ -1,0 +1,565 @@
+{
+  "city": "Lagos",
+  "checked": "October 2026",
+  "intro_line": "Lagos: chaotic, coastal, and endlessly alive.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Victoria Island",
+        "Ikoyi",
+        "Lekki",
+        "Ikeja GRA"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Victoria Island",
+        "Ikoyi",
+        "Lekki",
+        "Ikeja GRA"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Victoria Island",
+        "Ikoyi",
+        "Lekki",
+        "Ikeja GRA"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Victoria Island",
+        "Ikoyi",
+        "Lekki",
+        "Ikeja GRA"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Victoria Island",
+        "Ikoyi",
+        "Lekki",
+        "Ikeja GRA"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 5,
+        "note": "January: dry and warm, about 32°C by day. One of the best months to visit."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 8,
+        "note": "February: warm and fairly dry, around 8 rain days. Good for sightseeing."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 16,
+        "note": "March: rain picks up to about 16 days. Carry a light rain jacket."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 16,
+        "note": "April: similar to March, warm and wet at times. Plan indoor backups."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 22,
+        "note": "May: wet season starts in earnest, about 22 rain days. Expect short heavy downpours."
+      },
+      {
+        "high": 28,
+        "low": 24,
+        "rain_days": 28,
+        "note": "June: the wettest month, around 28 rain days. Pack rain gear and keep plans flexible."
+      },
+      {
+        "high": 27,
+        "low": 24,
+        "rain_days": 25,
+        "note": "July: still very wet and cooler, highs near 27°C. Good for indoor culture and food."
+      },
+      {
+        "high": 27,
+        "low": 24,
+        "rain_days": 22,
+        "note": "August: wet, about 22 rain days. Some dry breaks; check forecasts daily."
+      },
+      {
+        "high": 28,
+        "low": 24,
+        "rain_days": 27,
+        "note": "September: very wet again, around 27 rain days. Flooding can slow traffic."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 27,
+        "note": "October: still rainy, about 27 days. Roads can flood; allow extra time."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 18,
+        "note": "November: rain eases to about 18 days. A good shoulder month."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 6,
+        "note": "December: dry and warm, around 6 rain days. A top month for beaches and nights out."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.95,
+      0.9,
+      0.75,
+      0.75,
+      0.6,
+      0.45,
+      0.5,
+      0.55,
+      0.45,
+      0.45,
+      0.75,
+      0.95
+    ],
+    "food": [
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.65,
+      0.6,
+      0.6,
+      0.8,
+      0.95
+    ],
+    "beach": [
+      0.9,
+      0.85,
+      0.7,
+      0.7,
+      0.55,
+      0.35,
+      0.4,
+      0.45,
+      0.35,
+      0.4,
+      0.7,
+      0.9
+    ],
+    "nightlife": [
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.75,
+      0.65,
+      0.65,
+      0.7,
+      0.65,
+      0.65,
+      0.8,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.6,
+      0.45,
+      0.5,
+      0.55,
+      0.45,
+      0.45,
+      0.75,
+      0.9
+    ]
+  },
+  "places": {
+    "national-theatre": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday daytime for the building; evening for a show",
+      "area": "Ikeja GRA",
+      "popularity": 4
+    },
+    "national-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Ikeja GRA",
+      "popularity": 3
+    },
+    "tafawa-balewa": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning, before the heat",
+      "area": "Victoria Island",
+      "popularity": 3
+    },
+    "nike-art": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning or early afternoon",
+      "area": "Lekki",
+      "popularity": 4
+    },
+    "cathedral-christ": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Victoria Island",
+      "popularity": 3
+    },
+    "apapa-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Victoria Island",
+      "popularity": 2
+    },
+    "dreamworld": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Lekki",
+      "popularity": 2
+    },
+    "fun-factory": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon or rainy day",
+      "area": "Lekki",
+      "popularity": 2
+    },
+    "hi-impact": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekend, start early",
+      "area": "Ikeja GRA",
+      "popularity": 2
+    },
+    "praia-dona-ana": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning; check conditions first",
+      "area": "Victoria Island",
+      "popularity": 1
+    },
+    "lekki-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, cooler and busier",
+      "area": "Lekki",
+      "popularity": 3
+    },
+    "freedom-park": {
+      "types": [
+        "culture",
+        "history",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Victoria Island",
+      "popularity": 3
+    },
+    "third-mainland-view": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Mid-morning or sunset",
+      "area": "Ikoyi",
+      "popularity": 2
+    },
+    "victoria-island-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Victoria Island",
+      "popularity": 2
+    },
+    "lagos-food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening, when street food is busiest",
+      "area": "Victoria Island",
+      "popularity": 3
+    },
+    "ikeja-city-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Ikeja GRA",
+      "popularity": 2
+    },
+    "lekki-conservation": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Lekki",
+      "popularity": 4
+    },
+    "bar-beach": {
+      "types": [
+        "beach",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon into sunset",
+      "area": "Lekki",
+      "popularity": 4
+    },
+    "freedom-music": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Friday or Saturday night",
+      "area": "Victoria Island",
+      "popularity": 3
+    },
+    "ikoyi-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Ikoyi",
+      "popularity": 2
+    },
+    "jollof-lunch": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Victoria Island",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the markets, museums and a beach day, with an evening for the music and food scene."
+  },
+  "airports": [
+    {
+      "code": "LOS",
+      "name": "Murtala Muhammed International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 9 km north of the centre.",
+      "options": [
+        {
+          "mode": "BRT bus + danfo",
+          "to": "Oshodi / Ikeja",
+          "price": "₦300-700",
+          "time": "45-90 min",
+          "note": "Cheapest but slow with luggage; Cowry Card needed for BRT."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt)",
+          "to": "Victoria Island / Ikoyi",
+          "price": "₦4,000-9,000",
+          "time": "30-60 min",
+          "note": "Meet your driver outside the terminal; traffic is heavy in the evening."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre hotels",
+          "price": "₦5,000-12,000",
+          "time": "30-60 min",
+          "note": "Agree the fare before you enter."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Major hotels",
+          "price": "check locally",
+          "time": "30-60 min",
+          "note": "Book ahead; many hotels offer pick-up."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Lagos",
+      "https://en.wikivoyage.org/wiki/Lagos"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Ride apps (Uber, Bolt) for most trips; BRT buses and the Blue Line rail if you're saving money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Blue Line rail runs Marina to Mile 2; fare about ₦375, Cowry Card only."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "BRT buses use dedicated lanes; cash not accepted, buy a Cowry Card (₦500–1,000)."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Bolt work widely; taxis are metered or negotiated. Agree the price first."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not recommended for first-time visitors; traffic is heavy and driving rules are loosely followed."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Only in a few central areas. The city is spread out and pavements are uneven."
+      },
+      {
+        "mode": "Danfo minibus",
+        "has": true,
+        "text": "Yellow minibuses cover most routes; fares start around ₦50 and rise with distance. Cash only."
+      },
+      {
+        "mode": "Okada (motorbike taxi)",
+        "has": true,
+        "text": "Quick but risky, and banned in many districts and after dark. Avoid unless you know the area."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries link Lagos Island, Banana Island, Mile 2 and the mainland. A fast way to skip traffic."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical climate: hot all year, with a long wet season from roughly April to October and a drier stretch from November to March.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to February",
+        "text": "Warm days around 32°C and the fewest rain days (5–8). Ideal for beaches, markets and walking."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: April to October",
+        "text": "Rain days climb to 22–28 a month. Downpours are often short but heavy; carry a rain jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Hot and humid all year",
+        "text": "Highs stay between 27 and 32°C, lows near 24–26°C. Humidity makes it feel hotter."
+      },
+      {
+        "icon": "🚗",
+        "title": "Flooding slows traffic",
+        "text": "In the wettest months (June, September, October) roads can flood. Allow extra time and avoid low-lying routes."
+      },
+      {
+        "icon": "🌊",
+        "title": "Beach days need timing",
+        "text": "Beaches are best in the dry months. In the wet season, go early and check the sky."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, sandals, sunscreen, a rain jacket and insect repellent. A light layer for air-conditioned rooms."
+      }
+    ]
+  }
+}

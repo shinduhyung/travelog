@@ -1,0 +1,686 @@
+{
+  "city": "Dubai",
+  "checked": "October 2026",
+  "intro_line": "Desert glamour, gold souks and record towers on the Gulf.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Dubai Marina",
+        "Deira",
+        "Jumeirah"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Dubai Marina",
+        "Deira",
+        "Jumeirah"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Downtown",
+        "Dubai Marina",
+        "Deira",
+        "Jumeirah"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Downtown",
+        "Dubai Marina",
+        "Deira",
+        "Jumeirah"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Dubai Marina",
+        "Deira",
+        "Jumeirah"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 2,
+        "note": "January: mild days around 24°C, cool nights; best month for walking the souks."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 2,
+        "note": "February: similar to January, a couple of rain days; pack a light layer."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 2,
+        "note": "March: warming to 28°C; good beach weather before the heat builds."
+      },
+      {
+        "high": 33,
+        "low": 21,
+        "rain_days": 1,
+        "note": "April: 33°C by day; do outdoor sights in the morning."
+      },
+      {
+        "high": 37,
+        "low": 25,
+        "rain_days": 0,
+        "note": "May: 37°C and dry; move to malls, museums and evening plans."
+      },
+      {
+        "high": 40,
+        "low": 28,
+        "rain_days": 0,
+        "note": "June: 40°C; stay indoors midday, hydrate constantly."
+      },
+      {
+        "high": 41,
+        "low": 31,
+        "rain_days": 0,
+        "note": "July: hottest month, 41°C highs and 31°C nights; plan around air-conditioning."
+      },
+      {
+        "high": 41,
+        "low": 30,
+        "rain_days": 0,
+        "note": "August: as hot as July; beaches only at sunrise or after sunset."
+      },
+      {
+        "high": 39,
+        "low": 28,
+        "rain_days": 0,
+        "note": "September: still 39°C; indoor sights and evening creek walks."
+      },
+      {
+        "high": 35,
+        "low": 25,
+        "rain_days": 0,
+        "note": "October: cooling to 35°C; outdoor days become pleasant again."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 1,
+        "note": "November: 31°C and dry; excellent for beach and desert trips."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 1,
+        "note": "December: mild 26°C days, cool evenings; busy holiday season, book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.8,
+      0.6,
+      0.5,
+      0.45,
+      0.45,
+      0.5,
+      0.75,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.85,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      1,
+      1
+    ],
+    "beach": [
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.7,
+      0.4,
+      0.3,
+      0.3,
+      0.4,
+      0.85,
+      1,
+      0.9
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "family": [
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.55,
+      0.5,
+      0.5,
+      0.55,
+      0.8,
+      1,
+      1
+    ]
+  },
+  "places": {
+    "burj-khalifa": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset or early morning; clear winter days",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "dubai-mall": {
+      "types": [
+        "shopping",
+        "family",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday mornings; evenings are busiest",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "palm-jumeirah": {
+      "types": [
+        "family",
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon; sunset from the viewing deck",
+      "area": "Dubai Marina",
+      "popularity": 5
+    },
+    "dubai-fountain": {
+      "types": [
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "After dark; check show times on the day",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "burj-al-arab": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset from the beach",
+      "area": "Jumeirah",
+      "popularity": 5
+    },
+    "museum-future": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "dubai-frame": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon into sunset",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "al-fahidi": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, October to April",
+      "area": "Deira",
+      "popularity": 4
+    },
+    "adventureland-sharjah": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekend afternoons; check hours first",
+      "area": "Deira",
+      "popularity": 2
+    },
+    "dubai-aquarium": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "creek-abra": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Late afternoon or early evening",
+      "area": "Deira",
+      "popularity": 4
+    },
+    "gold-souk": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon when it is cooler",
+      "area": "Deira",
+      "popularity": 4
+    },
+    "marina-dhow": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening, year-round",
+      "area": "Dubai Marina",
+      "popularity": 4
+    },
+    "dubai-opera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "dubai-parks": {
+      "types": [
+        "family"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Weekday, cooler months",
+      "area": "Dubai Marina",
+      "popularity": 3
+    },
+    "img-worlds": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "indoor",
+      "best": "Weekday; any weather",
+      "area": "Deira",
+      "popularity": 3
+    },
+    "jbr-beach": {
+      "types": [
+        "beach",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or sunset; winter",
+      "area": "Dubai Marina",
+      "popularity": 4
+    },
+    "kite-beach": {
+      "types": [
+        "beach",
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon; winter",
+      "area": "Jumeirah",
+      "popularity": 4
+    },
+    "legoland-dubai": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday morning; cooler months",
+      "area": "Dubai Marina",
+      "popularity": 3
+    },
+    "motiongate": {
+      "types": [
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "mixed",
+      "best": "Weekday; cooler months",
+      "area": "Dubai Marina",
+      "popularity": 3
+    },
+    "real-madrid-world": {
+      "types": [
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Weekday; cooler months",
+      "area": "Dubai Marina",
+      "popularity": 2
+    },
+    "sharjah-islamic-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning; check opening days",
+      "area": "Deira",
+      "popularity": 2
+    },
+    "spice-souk": {
+      "types": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Deira",
+      "popularity": 4
+    },
+    "al-seef-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening, October to April",
+      "area": "Deira",
+      "popularity": 3
+    },
+    "desert-safari": {
+      "types": [
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Afternoon into evening; cooler months",
+      "area": "Dubai Marina",
+      "popularity": 4
+    },
+    "madinat-view": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Jumeirah",
+      "popularity": 3
+    },
+    "marina-walk": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, cooler months",
+      "area": "Dubai Marina",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the souks, a beach day and the Burj Khalifa without rushing, and leaves room for a desert evening."
+  },
+  "airports": [
+    {
+      "code": "DXB",
+      "name": "Dubai International Airport",
+      "primary": true,
+      "note": "Main hub, 11 km from the centre.",
+      "options": [
+        {
+          "mode": "Metro Red Line",
+          "to": "Downtown and city centre",
+          "price": "AED 3-7.50",
+          "time": "15-20 min",
+          "note": "Needs a nol card; terminals 1 and 3 have stations."
+        },
+        {
+          "mode": "Bus",
+          "to": "Various city stops",
+          "price": "AED 3-7.50",
+          "time": "40-60 min",
+          "note": "Slower but cheap; use the same nol card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "AED 50-80",
+          "time": "15-30 min",
+          "note": "Airport flag fall is higher; queues can be long at midnight."
+        },
+        {
+          "mode": "Careem / Uber",
+          "to": "City centre",
+          "price": "AED 55-90",
+          "time": "15-30 min",
+          "note": "Pick-up points are signposted outside arrivals."
+        }
+      ]
+    },
+    {
+      "code": "DWC",
+      "name": "Al Maktoum International Airport",
+      "primary": false,
+      "note": "Low-cost hub in Jebel Ali, 36 km straight-line but about 60 km by road.",
+      "options": [
+        {
+          "mode": "Bus F55 + Metro",
+          "to": "Expo 2020 metro station, then city",
+          "price": "AED 3-7.50",
+          "time": "2 hr or more",
+          "note": "Buses run about every 30 min; allow plenty of time."
+        },
+        {
+          "mode": "Night bus N55",
+          "to": "Al Ghubaiba bus station",
+          "price": "AED 3-7.50",
+          "time": "2 hr or more",
+          "note": "Runs at night about every 30 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "AED 100-150",
+          "time": "45-70 min",
+          "note": "Taxis are available at the terminal."
+        },
+        {
+          "mode": "Careem / Uber",
+          "to": "City centre",
+          "price": "AED 110-170",
+          "time": "45-70 min",
+          "note": "Book ahead at quiet hours."
+        }
+      ]
+    },
+    {
+      "code": "SHJ",
+      "name": "Sharjah International Airport",
+      "primary": false,
+      "note": "Across the border in Sharjah, about 30 min by road from Dubai.",
+      "options": [
+        {
+          "mode": "Air Arabia bus + Metro",
+          "to": "Rashidiya metro station",
+          "price": "AED 10-25",
+          "time": "40-60 min",
+          "note": "Then take the Red Line into town."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "AED 80-120",
+          "time": "30-50 min",
+          "note": "Agree the fare or use the meter."
+        },
+        {
+          "mode": "Careem / Uber",
+          "to": "City centre",
+          "price": "AED 90-130",
+          "time": "30-50 min",
+          "note": "Cross-emirate trips may cost more."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Dubai",
+      "https://en.wikivoyage.org/wiki/Dubai"
+    ]
+  ],
+  "best_for": [
+    "shopping",
+    "beach",
+    "family"
+  ],
+  "transit": {
+    "best": "Metro for Downtown and Marina; taxis or ride apps for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Red and Green lines link the airport, Downtown and Marina; fares AED 3–7.50 with a Silver nol card."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover the rest of the city; tap out at the end of every ride."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Easy to flag; Careem and Uber both work in Dubai."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common; rent a car with an International Driving Permit."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in Marina and Deira but hard in summer heat; abras cross the creek for AED 1–2."
+      },
+      {
+        "mode": "Abra",
+        "has": true,
+        "text": "Small wooden boats cross the creek for AED 1–2; the cheapest ride in the city."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: sunny nearly every day, very little rain, and a long, humid summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Days around 24–31°C with cool evenings. Ideal for beaches, souks and the desert."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to September)",
+        "text": "Highs of 39–41°C with humid nights near 30°C. Go outside only early or after dark."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid by the coast",
+        "text": "Muggy evenings from May to October; expect fogged sunglasses leaving air-conditioning."
+      },
+      {
+        "icon": "🌂",
+        "title": "Almost no rain",
+        "text": "Only 0–2 rain days a month, mostly December to March. No umbrella needed most of the year."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Occasional dust",
+        "text": "Spring and early summer can bring hazy, dusty skies; desert trips may be cancelled."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, hat and strong sunscreen; a light layer for winter nights and cold AC; modest wear for souks and mosques."
+      }
+    ]
+  }
+}

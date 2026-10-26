@@ -1,0 +1,170 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "A historic port city where old canals meet modern skylines.",
+  "intro": "Ningbo rewards visitors with ancient libraries, temple markets, and mountain escapes beyond the downtown. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Tianyi Square",
+    "Old Bund",
+    "Yinzhou",
+    "Haishu"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 10,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro lines 1-5 cover the city; fares are low and stations are signed in English.",
+    "Buses cost ¥1, or ¥2 with air conditioning.",
+    "Taxis start at ¥10 for the first 3 km plus ¥2 fuel tax.",
+    "Ride apps Didi and Amap work well; Uber does not operate in China.",
+    "Driving is not advised for short visits; traffic is dense downtown.",
+    "Bikes can be rented outside downtown; motorbikes are banned in the centre."
+  ],
+  "airports": [
+    {
+      "code": "NGB",
+      "name": "Ningbo Lishe International Airport",
+      "primary": true,
+      "note": "Main airport, about 10 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Metro",
+          "to": "Downtown Ningbo",
+          "price": "¥2-6",
+          "time": "25-35 min",
+          "note": "Free shuttle links the terminal to the metro station every 8 min."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Ningbo Railway Station",
+          "price": "¥10",
+          "time": "30-40 min",
+          "note": "Runs hourly until 18:20."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Ningbo",
+          "price": "¥45-60",
+          "time": "20-30 min",
+          "note": "About 11 km by road."
+        },
+        {
+          "mode": "Didi",
+          "to": "Downtown Ningbo",
+          "price": "¥40-55",
+          "time": "20-30 min",
+          "note": "Use the app's designated pickup zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Tianyi Pavilion",
+    "Old Bund of Ningbo",
+    "Romon U-Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Ningbo",
+      "https://en.wikivoyage.org/wiki/Ningbo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    29.87819,
+    121.54945
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 10
+    },
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 14
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 19
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 17
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 15
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 15
+    },
+    {
+      "high": 23,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

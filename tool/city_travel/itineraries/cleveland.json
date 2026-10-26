@@ -1,0 +1,1285 @@
+{
+  "city": "Cleveland",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Cleveland rewards visitors with world-class museums, hearty food, and a walkable downtown core. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 41.427,
+      "west": -81.7604,
+      "north": 41.527,
+      "east": -81.5716,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4,
+      "per_km": 1.8,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 28,
+    "notes": [
+      "RTA Rapid rail: Red Line links the airport to downtown; Blue and Green Lines serve the east side.",
+      "Waterfront Line tram connects Tower City to the Flats, stadium, and Rock Hall.",
+      "RTA buses cover the city; the Health Line BRT runs Euclid Avenue from downtown to University Circle.",
+      "An all-day RTA pass costs about $5 and covers buses and trains.",
+      "Taxis are metered; Uber and Lyft both operate widely.",
+      "Driving is easy with grid streets and light traffic; downtown has purple district signs.",
+      "Bike trails and paths are expanding; walking works well downtown."
+    ],
+    "sources": []
+  },
+  "places": {
+    "rock_hall": {
+      "name": "Rock & Roll Hall of Fame",
+      "landmark": "Rock & Roll Hall of Fame",
+      "kind": "museum",
+      "lat": 41.5085,
+      "lon": -81.6954,
+      "price": 35,
+      "price_text": "≈ $35 adult · discounts for kids and seniors (check current rates)",
+      "hours": "Daily, roughly 10:00–17:00, later on some days · check on the day",
+      "tip": "Buy tickets online and go early; the top floors and the Hall of Fame gallery get busy by midday.",
+      "source": "https://www.rockhall.com"
+    },
+    "cleveland_museum_art": {
+      "name": "Cleveland Museum of Art",
+      "landmark": "Cleveland Museum of Art",
+      "kind": "museum",
+      "lat": 41.5089,
+      "lon": -81.6617,
+      "price": 0,
+      "price_text": "Free general admission · special exhibitions may charge",
+      "hours": "Closed Monday · Tue–Sun roughly 10:00–17:00 · check on the day",
+      "tip": "Free entry makes this the best rainy-day stop in the city; the armour court and Asian galleries are highlights.",
+      "source": "https://www.clevelandart.org"
+    },
+    "west_side_market": {
+      "name": "West Side Market",
+      "landmark": "West Side Market",
+      "kind": "food",
+      "lat": 41.4844,
+      "lon": -81.7032,
+      "price": 0,
+      "price_text": "Free to enter · pay per stall",
+      "hours": "Mon, Wed, Fri, Sat roughly 07:00–16:00 · Sun 10:00–14:00 · closed Tue and Thu · check on the day",
+      "tip": "Come hungry and bring cash for small stalls; the old market hall is worth a slow walk even if you buy nothing.",
+      "source": "https://www.westsidemarket.org"
+    },
+    "severance_hall": {
+      "name": "Severance Hall",
+      "landmark": "Severance Hall",
+      "kind": "show",
+      "lat": 41.5076,
+      "lon": -81.6115,
+      "price": null,
+      "price_text": "Concert tickets vary by program · check the orchestra's site",
+      "hours": "Show times vary · box office hours check on the day",
+      "tip": "The Cleveland Orchestra plays here; book ahead for weekend concerts and arrive early to see the art deco lobby.",
+      "source": "https://www.clevelandorchestra.com"
+    },
+    "case_western": {
+      "name": "Case Western Reserve University",
+      "landmark": "Case Western Reserve University",
+      "kind": "sight",
+      "lat": 41.5043,
+      "lon": -81.6084,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily · buildings have their own hours",
+      "tip": "Walk through the quad and past the historic buildings on your way between the museums; it is a pleasant 20-minute stroll.",
+      "source": "https://case.edu"
+    },
+    "memphis_kiddie_park": {
+      "name": "Memphis Kiddie Park",
+      "landmark": "Memphis Kiddie Park",
+      "kind": "park",
+      "lat": 41.4395,
+      "lon": -81.7226,
+      "price": null,
+      "price_text": "Rides sold per ticket or as a wristband · check current prices",
+      "hours": "Seasonal, roughly May–September · check on the day",
+      "tip": "A small vintage amusement park for young kids; check that it is open before you drive out, as hours are seasonal.",
+      "source": "https://www.memphiskiddiepark.com"
+    },
+    "edgewater_park": {
+      "name": "Edgewater Park",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 41.4895,
+      "lon": -81.7405,
+      "price": 0,
+      "price_text": "Free · parking free",
+      "hours": "Daily, roughly dawn to dusk",
+      "tip": "Best free skyline view in Cleveland: look back east over the lake at sunset.",
+      "source": "https://www.clevelandmetroparks.com"
+    },
+    "tremont_walk": {
+      "name": "Tremont neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.4844,
+      "lon": -81.6908,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops and cafes have their own hours",
+      "tip": "Wander the side streets for churches, galleries and coffee; it is hilly, so wear comfortable shoes.",
+      "source": ""
+    },
+    "flats_east_bank": {
+      "name": "Flats East Bank riverfront",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.5029,
+      "lon": -81.7042,
+      "price": 0,
+      "price_text": "Free to walk · pay for food and drinks",
+      "hours": "Boardwalk always open · bars and restaurants later",
+      "tip": "Walk the river boardwalk at dusk, then pick a patio for dinner; it is a short walk from downtown.",
+      "source": ""
+    },
+    "great_lakes_science": {
+      "name": "Great Lakes Science Center",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 41.5075,
+      "lon": -81.6967,
+      "price": null,
+      "price_text": "Admission varies · check current prices",
+      "hours": "Roughly daily 10:00–17:00 · check on the day",
+      "tip": "Good for families with kids and right next to the Rock Hall, so pair the two in one trip.",
+      "source": "https://www.greatscience.com"
+    },
+    "lola_bistro": {
+      "name": "Lola Bistro (East 4th Street)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.4995,
+      "lon": -81.6895,
+      "price": null,
+      "price_text": "Mains roughly $25–45 · check menu",
+      "hours": "Dinner daily · weekend brunch · check on the day",
+      "tip": "East 4th Street is packed with restaurants; book ahead for weekend dinner.",
+      "source": ""
+    },
+    "ohio_city_brewery": {
+      "name": "Ohio City brewery stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.4844,
+      "lon": -81.7045,
+      "price": null,
+      "price_text": "Beers roughly $7–9 · food extra",
+      "hours": "Afternoons and evenings · check each taproom",
+      "tip": "Combine with West Side Market: market in the morning, a taproom patio in the afternoon.",
+      "source": ""
+    },
+    "lake_view_cemetery": {
+      "name": "Lake View Cemetery",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.5145,
+      "lon": -81.5915,
+      "price": 0,
+      "price_text": "Free · donations welcome",
+      "hours": "Daily, roughly 07:30–17:30 · check on the day",
+      "tip": "Quiet green space with the James A. Garfield Memorial; drive or take a rideshare, it is a long walk from University Circle.",
+      "source": "https://www.lakeviewcemetery.com"
+    },
+    "little_italy": {
+      "name": "Little Italy walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.5085,
+      "lon": -81.6015,
+      "price": 0,
+      "price_text": "Free to walk · pay for food",
+      "hours": "Always open · restaurants have their own hours",
+      "tip": "Walk Mayfield Road for bakeries and old-school Italian restaurants; it is a short walk from the museums.",
+      "source": ""
+    },
+    "cleveland_metroparks_zoo": {
+      "name": "Cleveland Metroparks Zoo",
+      "landmark": null,
+      "kind": "park",
+      "lat": 41.4465,
+      "lon": -81.7105,
+      "price": null,
+      "price_text": "Admission varies by season · check current prices",
+      "hours": "Daily, roughly 10:00–17:00 · check on the day",
+      "tip": "Big enough for half a day with kids; go in the morning before it gets hot.",
+      "source": "https://www.clevelandmetroparks.com/zoo"
+    },
+    "playhouse_square": {
+      "name": "Playhouse Square",
+      "landmark": null,
+      "kind": "show",
+      "lat": 41.5008,
+      "lon": -81.6815,
+      "price": null,
+      "price_text": "Tickets vary by show · check the venue",
+      "hours": "Show times vary · box office hours check on the day",
+      "tip": "See a touring show in one of the restored theatres, and look up at the chandelier outside after dark.",
+      "source": "https://www.playhousesquare.org"
+    },
+    "soldiers_sailors": {
+      "name": "Soldiers' and Sailors' Monument",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.4995,
+      "lon": -81.6935,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 09:00–16:00 · check on the day",
+      "tip": "Quick free stop on Public Square; the outdoor observation deck gives a good look over downtown.",
+      "source": ""
+    },
+    "towpath_trail": {
+      "name": "Ohio & Erie Canal Towpath Trail",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.4785,
+      "lon": -81.7015,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Flat paved path along the old canal; rent a bike or walk a short stretch from Ohio City.",
+      "source": "https://www.clevelandmetroparks.com"
+    },
+    "market_garden": {
+      "name": "Market Garden Brewery",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.4848,
+      "lon": -81.7038,
+      "price": null,
+      "price_text": "Mains roughly $15–25 · check menu",
+      "hours": "Daily, roughly 11:00–late · check on the day",
+      "tip": "Right across from West Side Market; a big patio makes it an easy lunch stop after the market.",
+      "source": ""
+    },
+    "achristmasstoryhouse": {
+      "name": "A Christmas Story House",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.4645,
+      "lon": -81.6875,
+      "price": null,
+      "price_text": "Admission varies · check current prices",
+      "hours": "Daily, roughly 10:00–17:00 · check on the day",
+      "tip": "Fun for fans of the film; the house is in a residential street in Tremont, so combine it with a neighbourhood walk.",
+      "source": "https://www.achristmasstoryhouse.com"
+    },
+    "cleveland_museum_natural_histo": {
+      "name": "Cleveland Museum of Natural History",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 41.5115,
+      "lon": -81.6125,
+      "price": null,
+      "price_text": "Admission varies · check current prices",
+      "hours": "Daily, roughly 10:00–17:00 · check on the day",
+      "tip": "Strong for families and dinosaurs; it sits next to the art museum, so plan both in one day.",
+      "source": "https://www.cmnh.org"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Cleveland's biggest culture hits, all indoors and easy to reach.",
+      "days": [
+        {
+          "title": "Rock Hall morning, art museum afternoon",
+          "stops": [
+            {
+              "place": "rock_hall",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Start at opening. Weekday mornings are quietest. Allow extra time if a big act is being inducted."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Short walk or ride along the river. Grab lunch at one of the boardwalk spots."
+            },
+            {
+              "place": "cleveland_museum_art",
+              "at": "14:15",
+              "minutes": 150,
+              "note": "About 15 minutes by car to University Circle. Closed Monday. General admission is free; special shows cost extra."
+            },
+            {
+              "place": "little_italy",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk over for an early dinner. Restaurants have their own hours, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market halls, brewery taps and a neighbourhood food walk in one day.",
+      "days": [
+        {
+          "title": "West Side Market, Ohio City, then East 4th",
+          "stops": [
+            {
+              "place": "west_side_market",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Tuesday and Thursday. Saturday morning is busiest but the best atmosphere. Bring cash for small stalls."
+            },
+            {
+              "place": "ohio_city_brewery",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "A short walk away. Taprooms open later in the day, so check each one before you go."
+            },
+            {
+              "place": "market_garden",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch and a beer. Roughly open from 11:00 daily."
+            },
+            {
+              "place": "tremont_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Short ride south. Cafes and shops keep their own hours."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner on East 4th Street downtown. Book ahead for weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ohio City or Downtown"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "Hands-on science, animals and a lakefront sunset with kids in tow.",
+      "days": [
+        {
+          "title": "Science center, zoo, lakefront",
+          "stops": [
+            {
+              "place": "great_lakes_science",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Next to the Rock Hall. Good for a rainy or very hot day. Check hours on the day."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch by the river, a short walk away."
+            },
+            {
+              "place": "cleveland_metroparks_zoo",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "About 15 minutes by car. Go earlier in summer heat if you can. Check hours on the day."
+            },
+            {
+              "place": "edgewater_park",
+              "at": "17:30",
+              "minutes": 75,
+              "note": "Beach and skyline views. Best at sunset in summer. Bring a picnic if the kids are tired."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the Rock Hall, great art and a show, all in one night.",
+      "days": [
+        {
+          "title": "Arrive, Rock Hall and the riverfront",
+          "stops": [
+            {
+              "place": "rock_hall",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Downtown, on the lake. Book ahead in summer. Check hours on the day."
+            },
+            {
+              "place": "soldiers_sailors",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Short walk inland on Public Square. Usually closes mid-afternoon."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk down to the river. Boardwalk is always open."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner on East 4th Street. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "University Circle museums, then a concert",
+          "stops": [
+            {
+              "place": "cleveland_museum_art",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Free general admission. About 15 minutes by car from Downtown."
+            },
+            {
+              "place": "little_italy",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch and a short walk. Restaurants set their own hours."
+            },
+            {
+              "place": "cleveland_museum_natural_histo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Next door to the art museum. Check hours on the day."
+            },
+            {
+              "place": "severance_hall",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening concert. Check the programme and box office hours ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around markets, breweries and a good dinner.",
+      "days": [
+        {
+          "title": "Market morning and Ohio City",
+          "stops": [
+            {
+              "place": "west_side_market",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Closed Tue and Thu. Go early on Saturday; it gets busy. Bring cash for some stalls."
+            },
+            {
+              "place": "market_garden",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Short walk away. Good for lunch. Check hours on the day."
+            },
+            {
+              "place": "ohio_city_brewery",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Pick one or two taprooms nearby. Check each one's hours."
+            },
+            {
+              "place": "edgewater_park",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Walk off lunch by the lake. Best at sunset in summer."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner Downtown. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Tremont walk and a last bite",
+          "stops": [
+            {
+              "place": "tremont_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Cafes, shops and old churches. Shops open later at weekends."
+            },
+            {
+              "place": "west_side_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Sunday hours are short, roughly 10:00–14:00. Check on the day."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Riverfront stroll before you leave. Bars open later."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ohio City or Downtown"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Families with kids who want hands-on science, animals and the lakefront.",
+      "days": [
+        {
+          "title": "Science center and the lake",
+          "stops": [
+            {
+              "place": "great_lakes_science",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Downtown, next to the Rock Hall. Good for a rainy or hot day. Check hours on the day."
+            },
+            {
+              "place": "rock_hall",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Next door. Shorten the visit if the kids tire. Lunch at the cafe."
+            },
+            {
+              "place": "edgewater_park",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Beach and playground. About 15 minutes by car."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Early dinner Downtown. Ask about kids' options."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, then home",
+          "stops": [
+            {
+              "place": "cleveland_metroparks_zoo",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Go early while animals are active. Check hours and tickets on the day."
+            },
+            {
+              "place": "memphis_kiddie_park",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Seasonal, roughly May–September. Small rides for young kids. Check on the day."
+            },
+            {
+              "place": "west_side_market",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Snack stop if open; closed Tue and Thu."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums, a concert hall and downtown theatre in one easy loop.",
+      "days": [
+        {
+          "title": "Arrive downtown: Rock Hall and the riverfront",
+          "stops": [
+            {
+              "place": "rock_hall",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Start after lunch. Allow about 2.5 hours. Check closing time on the day."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk along the river. Boardwalk is always open."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner on East 4th Street. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "University Circle: art, campus and a concert",
+          "stops": [
+            {
+              "place": "cleveland_museum_art",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Free general admission. Check hours on the day."
+            },
+            {
+              "place": "case_western",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Walk the campus next door. Grab lunch nearby."
+            },
+            {
+              "place": "lake_view_cemetery",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Garfield Memorial. Gates close late afternoon."
+            },
+            {
+              "place": "little_italy",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Early dinner or coffee. Restaurants set their own hours."
+            },
+            {
+              "place": "severance_hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Cleveland Orchestra. Book tickets and check show times in advance."
+            }
+          ]
+        },
+        {
+          "title": "Downtown history, then depart",
+          "stops": [
+            {
+              "place": "soldiers_sailors",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick look at the monument on Public Square. Check hours on the day."
+            },
+            {
+              "place": "playhouse_square",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk the theatre district. Box office hours vary; check on the day."
+            },
+            {
+              "place": "west_side_market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Short ride over the river. Closed Tuesday and Thursday. Lunch from the stalls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want the market, brewery taprooms and neighbourhood restaurants without rushing.",
+      "days": [
+        {
+          "title": "Arrive: West Side Market and Ohio City",
+          "stops": [
+            {
+              "place": "west_side_market",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Closed Tuesday and Thursday. Go hungry; stalls sell ready-to-eat food."
+            },
+            {
+              "place": "ohio_city_brewery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Pick one or two taprooms nearby. Check each one's hours."
+            },
+            {
+              "place": "edgewater_park",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Lakefront beach and skyline view. Best at sunset in summer."
+            },
+            {
+              "place": "market_garden",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Dinner and a beer near the market. Busy at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Tremont and downtown eating",
+          "stops": [
+            {
+              "place": "tremont_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Cafes, bakeries and side streets. Shops set their own hours."
+            },
+            {
+              "place": "achristmasstoryhouse",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short ride away. Check hours on the day."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Riverfront stroll. Bars open later."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead. Weekend brunch also runs."
+            }
+          ]
+        },
+        {
+          "title": "Little Italy lunch, then depart",
+          "stops": [
+            {
+              "place": "little_italy",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch on Mayfield Road. Restaurants have their own hours."
+            },
+            {
+              "place": "cleveland_museum_art",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Monday. A short walk from Little Italy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ohio City or Downtown"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids who want hands-on science, animals and lakefront space to run.",
+      "days": [
+        {
+          "title": "Arrive: science center and the lakefront",
+          "stops": [
+            {
+              "place": "great_lakes_science",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Good rainy-day backup. Check hours on the day."
+            },
+            {
+              "place": "rock_hall",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Next door. Families can do a shorter visit; check closing time."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Casual dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "University Circle: dinosaurs and art",
+          "stops": [
+            {
+              "place": "cleveland_museum_natural_histo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Dinosaurs and hands-on galleries. Check hours on the day."
+            },
+            {
+              "place": "cleveland_museum_art",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Monday. Free. Family areas inside."
+            },
+            {
+              "place": "little_italy",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Gelato and a walk. Restaurants set their own hours."
+            },
+            {
+              "place": "memphis_kiddie_park",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Seasonal, roughly May to September. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, then depart",
+          "stops": [
+            {
+              "place": "cleveland_metroparks_zoo",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go early in summer. Check hours on the day."
+            },
+            {
+              "place": "west_side_market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Closed Tuesday and Thursday. Quick lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big museums, a concert hall and a walkable neighbourhood or two.",
+      "days": [
+        {
+          "title": "Arrive, Rock Hall and the riverfront",
+          "stops": [
+            {
+              "place": "rock_hall",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Downtown. Allow about 2.5 hours. Check the day's closing time."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk or ride along the river. Boardwalk is always open."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner on East 4th Street. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "University Circle museums",
+          "stops": [
+            {
+              "place": "cleveland_museum_art",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Free general admission. Check hours on the day."
+            },
+            {
+              "place": "little_italy",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch stop. Restaurants have their own hours."
+            },
+            {
+              "place": "cleveland_museum_natural_histo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Short walk from the art museum. Check hours on the day."
+            },
+            {
+              "place": "severance_hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert if something is on. Check the box office."
+            }
+          ]
+        },
+        {
+          "title": "Tremont and downtown theatre",
+          "stops": [
+            {
+              "place": "tremont_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Cafes, galleries and old churches. Shops keep their own hours."
+            },
+            {
+              "place": "west_side_market",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Closed Tue and Thu. Grab lunch from the stalls."
+            },
+            {
+              "place": "soldiers_sailors",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Downtown. Roughly 09:00–16:00, check on the day."
+            },
+            {
+              "place": "playhouse_square",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening show. Book ahead and check show times."
+            }
+          ]
+        },
+        {
+          "title": "Campus, cemetery and depart",
+          "stops": [
+            {
+              "place": "case_western",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Campus walk. Buildings have their own hours."
+            },
+            {
+              "place": "lake_view_cemetery",
+              "at": "10:45",
+              "minutes": 75,
+              "note": "Garfield Memorial. Roughly 07:30–17:30, check on the day."
+            },
+            {
+              "place": "cleveland_museum_art",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Optional quick return visit if time allows. Closed Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, breweries and neighbourhood eating.",
+      "days": [
+        {
+          "title": "Arrive, market and Ohio City",
+          "stops": [
+            {
+              "place": "west_side_market",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Closed Tue and Thu. Go hungry and graze the stalls."
+            },
+            {
+              "place": "ohio_city_brewery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "A few taprooms near the market. Check each one's hours."
+            },
+            {
+              "place": "market_garden",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Dinner and a beer. Roughly 11:00–late, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Downtown and East 4th",
+          "stops": [
+            {
+              "place": "rock_hall",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is quieter. Check closing time."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Riverside lunch spots. Boardwalk always open."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Tremont eating and a show",
+          "stops": [
+            {
+              "place": "tremont_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Weekend afternoon is liveliest. Cafes keep their own hours."
+            },
+            {
+              "place": "achristmasstoryhouse",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short ride away. Roughly 10:00–17:00, check on the day."
+            },
+            {
+              "place": "playhouse_square",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Show, then a late bite nearby. Check show times."
+            }
+          ]
+        },
+        {
+          "title": "Little Italy and depart",
+          "stops": [
+            {
+              "place": "little_italy",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Coffee and pastries. Restaurants have their own hours."
+            },
+            {
+              "place": "cleveland_museum_art",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Walk it off. Closed Monday."
+            },
+            {
+              "place": "edgewater_park",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Lake view before you go. Dawn to dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ohio City or Downtown"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids who want hands-on museums, animals and time by the lake.",
+      "days": [
+        {
+          "title": "Arrive, science center and riverfront",
+          "stops": [
+            {
+              "place": "great_lakes_science",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Good rainy-day pick. Roughly 10:00–17:00, check on the day."
+            },
+            {
+              "place": "flats_east_bank",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Boardwalk stroll. Always open."
+            },
+            {
+              "place": "lola_bistro",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Ask about a kids' menu."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, Tremont afternoon",
+          "stops": [
+            {
+              "place": "cleveland_metroparks_zoo",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Go early in summer. Roughly 10:00–17:00, check on the day."
+            },
+            {
+              "place": "tremont_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Snack and a wander. Shops keep their own hours."
+            },
+            {
+              "place": "achristmasstoryhouse",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Fun for film fans. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum day in University Circle",
+          "stops": [
+            {
+              "place": "cleveland_museum_natural_histo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Dinosaurs and hands-on exhibits. Check hours."
+            },
+            {
+              "place": "little_italy",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Restaurants have their own hours."
+            },
+            {
+              "place": "cleveland_museum_art",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Free general admission."
+            }
+          ]
+        },
+        {
+          "title": "Lakefront and depart",
+          "stops": [
+            {
+              "place": "edgewater_park",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Beach and playground. Dawn to dusk."
+            },
+            {
+              "place": "memphis_kiddie_park",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Seasonal, roughly May–September. Check on the day."
+            },
+            {
+              "place": "west_side_market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Grab snacks for the trip. Closed Tue and Thu."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Rock Hall, the art museum and Playhouse Square."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "West Side Market, pierogi and lake perch."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Science center, zoo and lakefront parks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to Rock Hall, the Flats and Playhouse Square. Best base without a car.",
+      "center": [
+        41.4993,
+        -81.6944
+      ]
+    },
+    {
+      "area": "Ohio City",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Next to West Side Market and the brewery strip; short Rapid or bus ride downtown.",
+      "center": [
+        41.4845,
+        -81.7055
+      ]
+    },
+    {
+      "area": "University Circle",
+      "range": [
+        120,
+        290
+      ],
+      "why": "Museums, Severance Hall and Case Western on the doorstep; Health Line to downtown.",
+      "center": [
+        41.5085,
+        -81.6085
+      ]
+    },
+    {
+      "area": "Tremont",
+      "range": [
+        110,
+        250
+      ],
+      "why": "Quiet streets, galleries and cafés; a short walk or ride over the river to downtown.",
+      "center": [
+        41.4845,
+        -81.6895
+      ]
+    }
+  ],
+  "food": [
+    "Try Cleveland classics: a Polish boy sandwich, pierogi, and lake perch or walleye.",
+    "West Side Market in Ohio City: graze the stalls for sausages, cheese and pastries. Check opening days before you go.",
+    "Little Italy on Mayfield Road near University Circle: pasta, pizza and espresso after the museums.",
+    "Cheap eats: diners and corner taverns downtown and in Tremont, roughly $10–20 a meal.",
+    "Book ahead for popular weekend brunch spots and for dinner on game nights downtown."
+  ],
+  "more_time": [
+    "Swap a downtown afternoon for the Cleveland Metroparks Zoo or the Lake Metroparks Farmpark if you have kids.",
+    "Add a half-day at the Cleveland Museum of Art and the adjoining Wade Oval museums in University Circle.",
+    "In summer, swap a city day for a Lake Erie beach or a drive along the lake to nearby towns."
+  ]
+}

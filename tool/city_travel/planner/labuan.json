@@ -1,0 +1,553 @@
+{
+  "city": "Labuan",
+  "checked": "October 2026",
+  "intro_line": "Duty-free island of beaches, ferries and slow, friendly streets.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Labuan Town",
+        "Financial Park",
+        "Ferry Terminal area",
+        "Batu Manikar"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Labuan Town",
+        "Financial Park",
+        "Ferry Terminal area",
+        "Batu Manikar"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Labuan Town",
+        "Financial Park",
+        "Ferry Terminal area",
+        "Batu Manikar"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Labuan Town",
+        "Financial Park",
+        "Ferry Terminal area",
+        "Batu Manikar"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Labuan Town",
+        "Financial Park",
+        "Ferry Terminal area",
+        "Batu Manikar"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 24,
+        "note": "Jan: warm and very wet, about 24 rain days. Pack a rain jacket."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 18,
+        "note": "Feb: the driest month, around 18 rain days. Best odds of dry beach time."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 21,
+        "note": "Mar: wet again, about 21 rain days. Plan indoor backups."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 25,
+        "note": "Apr: hot and very wet, around 25 rain days."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 26,
+        "note": "May: wettest stretch, about 26 rain days. Short heavy showers likely."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 23,
+        "note": "Jun: still wet, around 23 rain days. Mornings often better."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 21,
+        "note": "Jul: about 21 rain days. Warm days around 30°C."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 21,
+        "note": "Aug: similar to July, around 21 rain days."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 23,
+        "note": "Sep: rain picks up, about 23 rain days."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 27,
+        "note": "Oct: very wet, around 27 rain days. Expect delays on boats."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 27,
+        "note": "Nov: very wet, around 27 rain days. Keep plans flexible."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 27,
+        "note": "Dec: very wet, around 27 rain days. Book refundable stays."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.7,
+      0.8,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.55,
+      0.55,
+      0.55
+    ],
+    "history": [
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "nature": [
+      0.7,
+      0.8,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.55,
+      0.55,
+      0.55
+    ],
+    "budget": [
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75
+    ]
+  },
+  "places": {
+    "labuan-square": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Labuan Town",
+      "popularity": 3
+    },
+    "financial-park": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Financial Park",
+      "popularity": 3
+    },
+    "world-war-ii-memorial": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Labuan Town",
+      "popularity": 3
+    },
+    "chimney": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning, before it gets hot",
+      "area": "Batu Manikar",
+      "popularity": 3
+    },
+    "peace-park": {
+      "types": [
+        "history",
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Batu Manikar",
+      "popularity": 2
+    },
+    "surrender-point": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Batu Manikar",
+      "popularity": 2
+    },
+    "botanical-garden": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Labuan Town",
+      "popularity": 2
+    },
+    "bird-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Labuan Town",
+      "popularity": 2
+    },
+    "central-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Labuan Town",
+      "popularity": 3
+    },
+    "seafood-dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Labuan Town",
+      "popularity": 4
+    },
+    "duty-free-shops": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon or evening",
+      "area": "Labuan Town",
+      "popularity": 3
+    },
+    "island-hopping": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning, dry season",
+      "area": "Ferry Terminal area",
+      "popularity": 4
+    },
+    "ferry-terminal": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Ferry Terminal area",
+      "popularity": 3
+    },
+    "beach-walk": {
+      "types": [
+        "beach",
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Batu Manikar",
+      "popularity": 3
+    },
+    "sunset-viewpoint": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Financial Park",
+      "popularity": 3
+    },
+    "heritage-walk": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Labuan Town",
+      "popularity": 3
+    },
+    "local-coffee": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Labuan Town",
+      "popularity": 2
+    },
+    "sport-fishing": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Ferry Terminal area",
+      "popularity": 2
+    },
+    "night-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Labuan Town",
+      "popularity": 3
+    },
+    "war-museum": {
+      "types": [
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Midday, to escape the heat",
+      "area": "Labuan Town",
+      "popularity": 2
+    },
+    "scooter-rental": {
+      "types": [
+        "budget",
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning start",
+      "area": "Labuan Town",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "One night covers the town, markets and a beach; add a night for island trips or war history."
+  },
+  "airports": [
+    {
+      "code": "LBU",
+      "name": "Labuan Airport",
+      "primary": true,
+      "note": "Main gateway, about 2 km from the centre.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Labuan Town",
+          "price": "RM10-15",
+          "time": "5-10 min",
+          "note": "Agree the fare first; no meters."
+        },
+        {
+          "mode": "Ride app",
+          "to": "Labuan Town",
+          "price": "check locally",
+          "time": "5-10 min",
+          "note": "Availability is limited."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Labuan Town",
+          "price": "check locally",
+          "time": "5-10 min",
+          "note": "Ask your hotel in advance."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Labuan",
+      "https://en.wikivoyage.org/wiki/Labuan"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "history",
+    "budget"
+  ],
+  "transit": {
+    "best": "Walk in town; agree taxi fares first; rent a scooter for the beaches.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram on the island."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Local vans run fixed routes for RM1–3 but stop by 7PM. Not for evenings."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis have no meters, so agree the fare before boarding. Grab may work but coverage is patchy; check locally."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Scooters rent from about RM38 per 24 hours near the ferry terminal. Good for reaching beaches."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The town centre is small and walkable. Fine for markets, ferry and museums."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries link the island to Brunei, Menumbok, Sipitang, Lawas and Limbang. Check schedules on the day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, with rain in every month. February is the driest; October to December the wettest.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Warm all year",
+        "text": "Days sit around 29–30°C and nights around 25–26°C. No cool season."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain every month",
+        "text": "Expect 18–27 rain days a month. Showers are often short but heavy."
+      },
+      {
+        "icon": "☂️",
+        "title": "Best odds: February",
+        "text": "About 18 rain days, the lowest of the year. Still bring a rain jacket."
+      },
+      {
+        "icon": "🌊",
+        "title": "Wettest: October to December",
+        "text": "Around 27 rain days each month. Sea trips may be cancelled."
+      },
+      {
+        "icon": "👕",
+        "title": "What to pack",
+        "text": "Light, quick-dry clothes, sandals, a rain jacket or umbrella, and sunscreen."
+      },
+      {
+        "icon": "⛴️",
+        "title": "Ferry weather",
+        "text": "Heavy rain and rough seas can delay boats. Check schedules on the day."
+      }
+    ]
+  }
+}

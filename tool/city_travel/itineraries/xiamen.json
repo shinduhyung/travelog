@@ -1,0 +1,1542 @@
+{
+  "city": "Xiamen",
+  "checked": "October 2026",
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro": "Xiamen rewards visitors with leafy island streets, Gulangyu's car-free lanes and fresh seafood. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 24.4173,
+      "west": 118.0483,
+      "north": 24.4989,
+      "east": 118.1879,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 10,
+      "flag_airport": 30,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "Metro lines 1-3 link the airport area, Xiamen North station and downtown; signs are bilingual.",
+      "BRT runs on elevated bus-only roads; use the T4 station for the airport.",
+      "Buses are cheap and frequent but most route signs are Chinese only.",
+      "Pay with the Alipay or WeChat transit mini-app, or an eKatong card.",
+      "Taxis start at ¥10; ride-hailing apps like Didi work well.",
+      "Ferries to Gulangyu leave from Dongdu Wharf for non-residents; bikes are banned on Gulangyu."
+    ],
+    "sources": []
+  },
+  "places": {
+    "gulangyu": {
+      "name": "Gulangyu Island",
+      "landmark": "Gulangyu Island",
+      "kind": "sight",
+      "lat": 24.4474,
+      "lon": 118.0641,
+      "price": 100,
+      "price_text": "≈ CNY 35–100 ferry round trip; island entry free, some gardens and museums charge extra",
+      "hours": "Ferries roughly 07:00–18:00 from Xiamen; check last boat on the day",
+      "tip": "Book the ferry online in advance with your passport and go early; the island is car-free, so wear comfortable shoes.",
+      "source": ""
+    },
+    "nanputuo": {
+      "name": "Nanputuo Temple",
+      "landmark": "Nanputuo Temple",
+      "kind": "sight",
+      "lat": 24.4457,
+      "lon": 118.0879,
+      "price": 0,
+      "price_text": "Free entry; small fee for some halls may apply",
+      "hours": "Roughly 06:00–17:00; check on the day",
+      "tip": "Climb the steps behind the temple for a view over Xiamen University and the sea.",
+      "source": ""
+    },
+    "kinmen": {
+      "name": "Kinmen Islands (view from Xiamen)",
+      "landmark": "Kinmen",
+      "kind": "sight",
+      "lat": 24.44,
+      "lon": 118.33,
+      "price": null,
+      "price_text": "Viewing is free; crossing to Kinmen needs separate permits and is not a simple day trip",
+      "hours": "Coastal viewpoints open all day",
+      "tip": "Treat Kinmen as a distant view from the coast, not a casual excursion; check current entry rules before planning anything.",
+      "source": ""
+    },
+    "luckin": {
+      "name": "Luckin Coffee (city branches)",
+      "landmark": "Luckin Coffee",
+      "kind": "food",
+      "lat": 24.4798,
+      "lon": 118.0894,
+      "price": 20,
+      "price_text": "≈ CNY 15–30 per drink, order in the app",
+      "hours": "Most branches roughly 07:30–21:00",
+      "tip": "Order and pay in the Luckin app; many small branches have no seats, so take it away.",
+      "source": ""
+    },
+    "xiamen-island": {
+      "name": "Xiamen Island (city base)",
+      "landmark": "Xiamen Island",
+      "kind": "sight",
+      "lat": 24.4833,
+      "lon": 118.15,
+      "price": 0,
+      "price_text": "Free to explore; pay per transport and attraction",
+      "hours": "Always open",
+      "tip": "Use the bus and metro to move between the old town, the lake and the beaches; taxis are cheap but slow at rush hour.",
+      "source": ""
+    },
+    "zhongshan-road": {
+      "name": "Zhongshan Road pedestrian street",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4567,
+      "lon": 118.0822,
+      "price": 0,
+      "price_text": "Free to walk; snacks extra",
+      "hours": "Shops roughly 09:00–22:00",
+      "tip": "Come in the evening for the lights, and duck into the side lanes for cheaper local snacks.",
+      "source": ""
+    },
+    "eight-market": {
+      "name": "Eighth Market food lanes",
+      "landmark": null,
+      "kind": "food",
+      "lat": 24.4573,
+      "lon": 118.0806,
+      "price": 40,
+      "price_text": "≈ CNY 20–60 for a few snacks",
+      "hours": "Roughly 07:00–20:00; busiest at lunch",
+      "tip": "Point at what looks busy and freshly cooked; bring small cash and tissues.",
+      "source": ""
+    },
+    "yundang-lake": {
+      "name": "Yundang Lake walk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 24.4789,
+      "lon": 118.0975,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the loop at dusk when locals come out to jog and fish.",
+      "source": ""
+    },
+    "cafe-street": {
+      "name": "Xiamen coffee street (Yundang Lake area)",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4812,
+      "lon": 118.0951,
+      "price": 35,
+      "price_text": "≈ CNY 25–45 per coffee",
+      "hours": "Most cafes roughly 10:00–22:00",
+      "tip": "Xiamen has a strong cafe culture; pick a spot with outdoor seats and watch the lake.",
+      "source": ""
+    },
+    "xmu-campus": {
+      "name": "Xiamen University campus walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4386,
+      "lon": 118.0953,
+      "price": 0,
+      "price_text": "Free, but visitor entry needs advance booking and a passport",
+      "hours": "Visitor slots vary; check on the day",
+      "tip": "Book a visitor slot online before you go; entry is limited and often full at weekends.",
+      "source": ""
+    },
+    "baicheng-beach": {
+      "name": "Baicheng Beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 24.4344,
+      "lon": 118.0986,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; swim with care",
+      "tip": "Good sunset spot facing Gulangyu; the sand is coarse and currents can be strong.",
+      "source": ""
+    },
+    "huandao-road": {
+      "name": "Huandao Road coastal ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4289,
+      "lon": 118.1278,
+      "price": 30,
+      "price_text": "≈ CNY 20–60 to rent a bike for a few hours",
+      "hours": "Rentals roughly 08:00–19:00",
+      "tip": "Ride the seaside path south of the university; go early to avoid heat and crowds.",
+      "source": ""
+    },
+    "shapowei": {
+      "name": "Shapowei old harbour lanes",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4462,
+      "lon": 118.0794,
+      "price": 0,
+      "price_text": "Free to walk; food extra",
+      "hours": "Lanes open all day; cafes later",
+      "tip": "Small streets of old fishing houses turned cafes; good for photos and a slow afternoon.",
+      "source": ""
+    },
+    "seafood-dinner": {
+      "name": "Seafood dinner at a local restaurant",
+      "landmark": null,
+      "kind": "food",
+      "lat": 24.4521,
+      "lon": 118.0841,
+      "price": 120,
+      "price_text": "≈ CNY 80–200 per person",
+      "hours": "Most restaurants roughly 11:00–14:00 and 17:00–21:30",
+      "tip": "Ask the price per weight before ordering shellfish; prices change daily.",
+      "source": ""
+    },
+    "ferry-tour": {
+      "name": "Harbour evening boat ride",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 24.4519,
+      "lon": 118.0731,
+      "price": 100,
+      "price_text": "≈ CNY 80–150; check what is included",
+      "hours": "Evening departures, times vary",
+      "tip": "Confirm the route and duration at the ticket office; views of the lit-up coast are the draw.",
+      "source": ""
+    },
+    "gulangyu-villas": {
+      "name": "Gulangyu old villas and lanes",
+      "landmark": "Gulangyu Island",
+      "kind": "sight",
+      "lat": 24.4474,
+      "lon": 118.0641,
+      "price": 0,
+      "price_text": "Free to walk; some houses charge entry",
+      "hours": "Daylight hours",
+      "tip": "Skip the main shopping street and wander the quieter lanes to the west for the old colonial houses.",
+      "source": ""
+    },
+    "sunlight-rock": {
+      "name": "Sunlight Rock viewpoint",
+      "landmark": "Gulangyu Island",
+      "kind": "sight",
+      "lat": 24.4474,
+      "lon": 118.0641,
+      "price": 50,
+      "price_text": "≈ CNY 50; check current ticket price",
+      "hours": "Roughly 07:30–17:30",
+      "tip": "Climb early for the island view before tour groups arrive; the steps are steep.",
+      "source": ""
+    },
+    "nanputuo-vegetarian": {
+      "name": "Vegetarian meal near Nanputuo",
+      "landmark": "Nanputuo Temple",
+      "kind": "food",
+      "lat": 24.4457,
+      "lon": 118.0879,
+      "price": 40,
+      "price_text": "≈ CNY 30–60",
+      "hours": "Lunch and early dinner; check on the day",
+      "tip": "Simple temple-style vegetarian food; go at off-peak hours to avoid queues.",
+      "source": ""
+    },
+    "lujiang-night": {
+      "name": "Lujiang waterfront evening walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4548,
+      "lon": 118.0779,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the seafront promenade at night for the skyline and the breeze off the strait.",
+      "source": ""
+    },
+    "museum": {
+      "name": "Xiamen Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 24.4879,
+      "lon": 118.1721,
+      "price": 0,
+      "price_text": "Free with ID; check current rules",
+      "hours": "Closed Monday; roughly 09:00–17:00",
+      "tip": "Good rainy-day option covering local history; bring your passport for entry.",
+      "source": ""
+    },
+    "zengcuoan": {
+      "name": "Zengcuoan village lanes",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 24.4283,
+      "lon": 118.1156,
+      "price": 0,
+      "price_text": "Free to walk; food and drinks extra",
+      "hours": "Lanes open all day; busiest evening",
+      "tip": "A former fishing village now full of small cafes and guesthouses; combine it with the nearby beach.",
+      "source": ""
+    },
+    "gulangyu-organ": {
+      "name": "Gulangyu organ museum",
+      "landmark": "Gulangyu Island",
+      "kind": "museum",
+      "lat": 24.4474,
+      "lon": 118.0641,
+      "price": 30,
+      "price_text": "≈ CNY 20–50; check current ticket",
+      "hours": "Roughly 08:30–17:00",
+      "tip": "Small museum of pipe organs tied to the island's musical past; a short indoor break from the sun.",
+      "source": ""
+    },
+    "ferry-ticket": {
+      "name": "Gulangyu ferry booking desk",
+      "landmark": "Gulangyu Island",
+      "kind": "activity",
+      "lat": 24.4474,
+      "lon": 118.0641,
+      "price": 35,
+      "price_text": "≈ CNY 35–50 round trip depending on route",
+      "hours": "Ticket desks roughly 07:00–17:00",
+      "tip": "Book online in advance with your passport; tourist boats leave from the main passenger terminal, not the old town pier.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of temples, old lanes and Gulangyu's villas. Start early.",
+      "days": [
+        {
+          "title": "Temple, campus and old town",
+          "stops": [
+            {
+              "place": "nanputuo",
+              "at": "07:30",
+              "minutes": 90,
+              "note": "Arrive at opening for quiet courtyards. Dress modestly."
+            },
+            {
+              "place": "xmu-campus",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Next door. Visitor slots vary, so check on the day and bring ID."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Simple lunch near the temple. Check hours on the day."
+            },
+            {
+              "place": "shapowei",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Old harbour lanes and small cafes."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the pedestrian street. Shops close around 22:00."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Waterfront stroll after dinner. Open all day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around markets, snacks and a seafood dinner. Come hungry.",
+      "days": [
+        {
+          "title": "Markets, lanes and seafood",
+          "stops": [
+            {
+              "place": "luckin",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Quick coffee to start. Most branches open around 07:30."
+            },
+            {
+              "place": "eight-market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Busiest at lunch, so go late morning. Small stalls, cash helps."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Snack as you walk. Shops roughly 09:00–22:00."
+            },
+            {
+              "place": "cafe-street",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Taxi to Yundang Lake. Most cafes open around 10:00."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy loop walk. Best at sunset."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner service starts around 17:00. Ask prices before ordering."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Coastal rides, a beach afternoon and an evening on the water.",
+      "days": [
+        {
+          "title": "Causeway, beach and harbour",
+          "stops": [
+            {
+              "place": "huandao-road",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Rent a bike early. Rentals roughly 08:00–19:00."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Swim with care; there may be no lifeguards. Shade is limited."
+            },
+            {
+              "place": "zengcuoan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in the village lanes. Busiest in the evening."
+            },
+            {
+              "place": "kinmen",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Coastal viewpoint toward Kinmen. Best on a clear afternoon."
+            },
+            {
+              "place": "ferry-tour",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening departures vary, so book earlier in the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Xiamen University"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want Gulangyu's old lanes plus the temple and old town in one night.",
+      "days": [
+        {
+          "title": "Old town lanes and waterfront evening",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Book tomorrow's Gulangyu ferry now; bring your passport. Check the desk hours on the day."
+            },
+            {
+              "place": "shapowei",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Short walk south. Old harbour lanes, small cafes."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Pedestrian street; shops close around 22:00."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Pick a busy local place; ask prices before ordering."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "Easy walk along the water to end the night."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu morning, temple, fly out",
+          "stops": [
+            {
+              "place": "gulangyu",
+              "at": "08:00",
+              "minutes": 300,
+              "note": "Take an early ferry; check the last boat back on the day. Weekday is calmer."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk the quiet lanes on foot; no cars on the island."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Climb early before the heat. Roughly 07:30–17:30."
+            },
+            {
+              "place": "nanputuo",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Ferry back, then short taxi. Temple closes around 17:00; check on the day."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Late lunch near the temple; hours vary, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat-first visitors: street snacks, seafood and the coffee street in one night.",
+      "days": [
+        {
+          "title": "Old town snacks and seafood",
+          "stops": [
+            {
+              "place": "eight-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Busiest at lunch. Go hungry and try small portions."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Snack street off the main pedestrian road."
+            },
+            {
+              "place": "shapowei",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Cafes open later; good for a slow coffee."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner service starts around 17:00."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Walk off dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Coffee street and Zengcuoan",
+          "stops": [
+            {
+              "place": "luckin",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Quick morning coffee; most branches open around 07:30."
+            },
+            {
+              "place": "cafe-street",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Yundang Lake area; most cafes open around 10:00."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Loop walk around the lake before lunch."
+            },
+            {
+              "place": "zengcuoan",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Taxi to the village lanes; snack stalls all afternoon."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Short walk from Zengcuoan. Stay for sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Sea-and-sand visitors: a coastal ride, beach sunset and a harbour boat ride.",
+      "days": [
+        {
+          "title": "Coastal ride and beach sunset",
+          "stops": [
+            {
+              "place": "huandao-road",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Rent a bike early; rentals roughly 08:00–19:00."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Swim with care; no lifeguard guarantee."
+            },
+            {
+              "place": "zengcuoan",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the village lanes nearby."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Taxi across town for the sunset walk."
+            },
+            {
+              "place": "ferry-tour",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening departures vary; book earlier in the day."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu beach morning, fly out",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Book the day before if you can; bring your passport."
+            },
+            {
+              "place": "gulangyu",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Early ferry beats the crowds. Check the last boat back on the day."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Sea views over the island; climb before midday heat."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Shaded lanes and old villas on foot."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late lunch back on Xiamen Island before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old island, the temple and the university quarter at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, old town and the waterfront",
+          "stops": [
+            {
+              "place": "xiamen-island",
+              "at": "13:00",
+              "minutes": 0,
+              "note": "Settle in around Zhongshan Road; taxis and buses are easy here."
+            },
+            {
+              "place": "ferry-ticket",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Book tomorrow's Gulangyu ferry now; morning slots sell out on weekends."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Pedestrian street; shops open until about 22:00."
+            },
+            {
+              "place": "shapowei",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Old harbour lanes nearby; cafes open later."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner service starts around 17:00."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "20:15",
+              "minutes": 45,
+              "note": "Short walk along the water to finish."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu Island all morning",
+          "stops": [
+            {
+              "place": "gulangyu",
+              "at": "08:00",
+              "minutes": 300,
+              "note": "Take an early ferry; check the last boat back on the day."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "08:45",
+              "minutes": 60,
+              "note": "Climb early before the heat; roughly 07:30–17:30."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Wander the old lanes and villa fronts."
+            },
+            {
+              "place": "gulangyu-organ",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Indoor break in the midday heat."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Back on Xiamen Island; late lunch near the street."
+            }
+          ]
+        },
+        {
+          "title": "Temple, campus and the coast",
+          "stops": [
+            {
+              "place": "nanputuo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early morning is calmest; roughly 06:00–17:00."
+            },
+            {
+              "place": "xmu-campus",
+              "at": "09:45",
+              "minutes": 90,
+              "note": "Visitor slots vary; check on the day and bring ID."
+            },
+            {
+              "place": "kinmen",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Coastal viewpoint toward the islands; clearest on a bright day."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch nearby; check opening on the day."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short walk from campus; swim with care."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, seafood and the coffee scene, with culture in between.",
+      "days": [
+        {
+          "title": "Arrive, market lanes and seafood",
+          "stops": [
+            {
+              "place": "xiamen-island",
+              "at": "13:00",
+              "minutes": 0,
+              "note": "Base near Zhongshan Road for easy walking between meals."
+            },
+            {
+              "place": "luckin",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Quick coffee to start; most branches open to about 21:00."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Snack as you walk; busiest in the evening."
+            },
+            {
+              "place": "eight-market",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Food lanes; go before the dinner rush."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Pick a busy local place; dinner from about 17:00."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "20:15",
+              "minutes": 45,
+              "note": "Evening stroll by the water."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu morning, coffee street evening",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "07:30",
+              "minutes": 0,
+              "note": "Confirm your ferry time; desks open from about 07:00."
+            },
+            {
+              "place": "gulangyu",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Early boat out; check the last return on the day."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Lanes are quietest before lunch."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Back on the island for a late lunch."
+            },
+            {
+              "place": "cafe-street",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Coffee street near Yundang Lake; most cafes open to about 22:00."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset walk around the lake."
+            }
+          ]
+        },
+        {
+          "title": "Temple, village lanes and a last meal",
+          "stops": [
+            {
+              "place": "nanputuo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early; roughly 06:00–17:00."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Early lunch nearby; check hours on the day."
+            },
+            {
+              "place": "zengcuoan",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Village snack lanes; busiest in the evening, calm now."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short walk down to the sand."
+            },
+            {
+              "place": "eight-market",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Last snacks before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sun, sand and sea views, with the old town and Gulangyu in the mix.",
+      "days": [
+        {
+          "title": "Arrive, old town and the waterfront",
+          "stops": [
+            {
+              "place": "xiamen-island",
+              "at": "13:00",
+              "minutes": 0,
+              "note": "Stay near Zhongshan Road; the coast is a short ride away."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk and snack; shops open to about 22:00."
+            },
+            {
+              "place": "shapowei",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Harbour lanes; cafes open later."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner from about 17:00."
+            },
+            {
+              "place": "ferry-tour",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Evening boat ride; departure times vary, book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Coastal ride and beach afternoon",
+          "stops": [
+            {
+              "place": "huandao-road",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Rent a bike early; rentals roughly 08:00–19:00."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Swim with care; lifeguards may not be present."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch nearby; check hours on the day."
+            },
+            {
+              "place": "xmu-campus",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Visitor slots vary; check on the day."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Sunset walk to end the day."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu morning, then fly",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "07:30",
+              "minutes": 0,
+              "note": "Confirm your ferry time; desks open from about 07:00."
+            },
+            {
+              "place": "gulangyu",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Early boat; check the last return on the day."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "08:45",
+              "minutes": 60,
+              "note": "Sea views before the crowds; roughly 07:30–17:30."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shaded lanes near the water."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Late lunch, then collect bags."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the old town, the temple and a full day on Gulangyu.",
+      "days": [
+        {
+          "title": "Arrive, old town lanes",
+          "stops": [
+            {
+              "place": "xiamen-island",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Settle in around Zhongshan Road. Taxis and buses are cheap; the metro is easy to use."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Pedestrian street. Shops roughly 09:00–22:00."
+            },
+            {
+              "place": "shapowei",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Old harbour lanes a short walk away. Cafes open later."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Pick a busy local place and ask prices by weight first."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu full day",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Book the day before if you can. Bring your passport."
+            },
+            {
+              "place": "gulangyu",
+              "at": "08:15",
+              "minutes": 300,
+              "note": "Ferries roughly 07:00–18:00; check the last boat on the day. Weekday mornings are quietest."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Wander the old villa lanes on foot."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Roughly 07:30–17:30. Go early to beat the heat and queues."
+            },
+            {
+              "place": "gulangyu-organ",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Roughly 08:30–17:00. Good shelter from midday sun."
+            }
+          ]
+        },
+        {
+          "title": "Temple, campus and coast",
+          "stops": [
+            {
+              "place": "nanputuo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Roughly 06:00–17:00; check on the day. Early morning is calmest."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch nearby. Check opening on the day."
+            },
+            {
+              "place": "xmu-campus",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Visitor slots vary; check on the day and bring ID."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Short walk from campus. Stay for sunset; swim with care."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Waterfront walk back near the old town."
+            }
+          ]
+        },
+        {
+          "title": "Museum and lake, then go",
+          "stops": [
+            {
+              "place": "museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Monday; roughly 09:00–17:00."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Loop the lake on foot."
+            },
+            {
+              "place": "cafe-street",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch and coffee nearby. Most cafes roughly 10:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, seafood and the coffee scene, with Gulangyu squeezed in.",
+      "days": [
+        {
+          "title": "Arrive, markets and street food",
+          "stops": [
+            {
+              "place": "luckin",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Quick coffee to start. Most branches roughly 07:30–21:00."
+            },
+            {
+              "place": "zhongshan-road",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Snack as you walk. Shops roughly 09:00–22:00."
+            },
+            {
+              "place": "eight-market",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Roughly 07:00–20:00; busiest at lunch, calmer late afternoon."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Most restaurants roughly 11:00–14:00 and 17:00–21:30. Ask prices by weight."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu tastes",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Book the day before. Bring your passport."
+            },
+            {
+              "place": "gulangyu",
+              "at": "08:15",
+              "minutes": 300,
+              "note": "Ferries roughly 07:00–18:00; check the last boat on the day."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk the lanes and graze on snacks as you go."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Roughly 07:30–17:30. Views over the island."
+            }
+          ]
+        },
+        {
+          "title": "Temple, village lanes, coast",
+          "stops": [
+            {
+              "place": "nanputuo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Roughly 06:00–17:00; check on the day."
+            },
+            {
+              "place": "nanputuo-vegetarian",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch nearby. Check opening on the day."
+            },
+            {
+              "place": "zengcuoan",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Snack lanes; busiest in the evening."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk off lunch by the sea."
+            },
+            {
+              "place": "shapowei",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Old harbour cafes for an afternoon drink."
+            }
+          ]
+        },
+        {
+          "title": "Coffee street and lake",
+          "stops": [
+            {
+              "place": "cafe-street",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Most cafes roughly 10:00–22:00. Try a local roaster."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short loop before lunch."
+            },
+            {
+              "place": "museum",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Monday; roughly 09:00–17:00. Good rainy-day stop."
+            },
+            {
+              "place": "ferry-tour",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening departures, times vary. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sun and sea first: coastal rides, beach sunsets and a relaxed Gulangyu day.",
+      "days": [
+        {
+          "title": "Arrive, beach sunset",
+          "stops": [
+            {
+              "place": "xiamen-island",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Check in near Zhongshan Road, then head south."
+            },
+            {
+              "place": "baicheng-beach",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon to sunset. Swim with care."
+            },
+            {
+              "place": "seafood-dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Most restaurants roughly 11:00–14:00 and 17:00–21:30."
+            }
+          ]
+        },
+        {
+          "title": "Coastal ride and lake",
+          "stops": [
+            {
+              "place": "huandao-road",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Rentals roughly 08:00–19:00. Early morning is coolest and quietest."
+            },
+            {
+              "place": "zengcuoan",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Snack lanes near the coast road."
+            },
+            {
+              "place": "yundang-lake",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset and early evening walk."
+            },
+            {
+              "place": "cafe-street",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Dinner and coffee by the lake."
+            }
+          ]
+        },
+        {
+          "title": "Gulangyu day",
+          "stops": [
+            {
+              "place": "ferry-ticket",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Book the day before. Bring your passport."
+            },
+            {
+              "place": "gulangyu",
+              "at": "08:15",
+              "minutes": 300,
+              "note": "Ferries roughly 07:00–18:00; check the last boat on the day."
+            },
+            {
+              "place": "sunlight-rock",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Roughly 07:30–17:30. Sea views from the top."
+            },
+            {
+              "place": "gulangyu-villas",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Shady lanes and old villas on foot."
+            }
+          ]
+        },
+        {
+          "title": "Temple and waterfront, then go",
+          "stops": [
+            {
+              "place": "nanputuo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Roughly 06:00–17:00; check on the day."
+            },
+            {
+              "place": "kinmen",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Coastal viewpoints open all day. Clear afternoons are best."
+            },
+            {
+              "place": "lujiang-night",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short waterfront walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongshan Road"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Gulangyu lanes, temples and the old town."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Seafood, street snacks and tea houses."
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "Island swims, causeways and sea views."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Zhongshan Road",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Old-town streets, snack stalls and the ferry wharves nearby. Good base for first-timers.",
+      "center": [
+        24.456,
+        118.082
+      ]
+    },
+    {
+      "area": "Gulangyu",
+      "range": [
+        400,
+        1200
+      ],
+      "why": "Stay on the car-free island after day-trippers leave. Book ahead; luggage is carried by hand.",
+      "center": [
+        24.447,
+        118.067
+      ]
+    },
+    {
+      "area": "Yundang Lake",
+      "range": [
+        300,
+        800
+      ],
+      "why": "Quiet cafés and bars around the lake, close to the metro and downtown.",
+      "center": [
+        24.478,
+        118.093
+      ]
+    },
+    {
+      "area": "Xiamen University",
+      "range": [
+        280,
+        750
+      ],
+      "why": "Near Nanputuo temple, the beach road and student food streets.",
+      "center": [
+        24.437,
+        118.096
+      ]
+    }
+  ],
+  "food": [
+    "Try local seafood: oysters, crab and steamed fish, sold by weight at wet-market restaurants. Ask the price before ordering.",
+    "Snack streets around Zhongshan Road: peanut soup, oyster omelette and shacha noodles, mostly ¥10–30 a plate.",
+    "Gulangyu is known for fish balls and pineapple cakes; buy cakes as gifts near the ferry pier.",
+    "Fujian tea is big here. Sit in a tea house and try oolong; prices vary, so ask for the menu first.",
+    "Cheap and filling: noodle shops near Xiamen University. Expect ¥15–35 a bowl."
+  ],
+  "more_time": [
+    "Add a day on Gulangyu: go early, walk the quiet back lanes and skip the busiest shopping streets.",
+    "Swap a city afternoon for the beach road and Nanputuo temple, then eat near the university.",
+    "Take a short trip out of town for a slower day; check timetables on the day."
+  ]
+}

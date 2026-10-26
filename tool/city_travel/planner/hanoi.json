@@ -1,0 +1,564 @@
+{
+  "city": "Hanoi",
+  "checked": "October 2026",
+  "intro_line": "Hanoi blends ancient lanes, lakes and street-food chaos.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Quarter",
+        "French Quarter",
+        "Hoan Kiem",
+        "Tay Ho"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Quarter",
+        "French Quarter",
+        "Hoan Kiem",
+        "Tay Ho"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Quarter",
+        "French Quarter",
+        "Hoan Kiem",
+        "Tay Ho"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Old Quarter",
+        "French Quarter",
+        "Hoan Kiem",
+        "Tay Ho"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Old Quarter",
+        "French Quarter",
+        "Hoan Kiem",
+        "Tay Ho"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 12,
+        "note": "January: cool and dry, highs near 21°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 9,
+        "note": "February: mild and dry, around 22°C. Good walking weather."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 13,
+        "note": "March: warming to 26°C with more rain days. Pack a light rain layer."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 12,
+        "note": "April: warm at 29°C, some rain. Comfortable for sightseeing."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 18,
+        "note": "May: hot and humid at 32°C with frequent rain. Plan indoor breaks."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 18,
+        "note": "June: hot at 33°C and wet. Go out early and late."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 21,
+        "note": "July: hot and rainy, around 21 rain days. Keep plans flexible."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 24,
+        "note": "August: the wettest month, 24 rain days. Carry a raincoat."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 21,
+        "note": "September: still wet and warm at 31°C. Watch for heavy showers."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 13,
+        "note": "October: cooler at 28°C and drier. A pleasant month to visit."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 9,
+        "note": "November: mild at 26°C with fewer rain days. Great for walking."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 7,
+        "note": "December: cool and dry, highs near 21°C. Light layers needed."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.65,
+      0.6,
+      0.55,
+      0.5,
+      0.6,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.6,
+      0.55,
+      0.65,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "history": [
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.65,
+      0.6,
+      0.55,
+      0.5,
+      0.6,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "shopping": [
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.6,
+      0.55,
+      0.65,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "budget": [
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.65,
+      0.6,
+      0.7,
+      0.9,
+      0.95,
+      0.9
+    ]
+  },
+  "places": {
+    "mausoleum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning, dry season (Nov–Apr)",
+      "area": "Hoan Kiem",
+      "popularity": 5
+    },
+    "oldquarter": {
+      "types": [
+        "culture",
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Old Quarter",
+      "popularity": 5
+    },
+    "templeliterature": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Hoan Kiem",
+      "popularity": 5
+    },
+    "citadel": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Hoan Kiem",
+      "popularity": 4
+    },
+    "onepillar": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Hoan Kiem",
+      "popularity": 4
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Old Quarter",
+      "popularity": 4
+    },
+    "hoankiem": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or weekend evening",
+      "area": "Hoan Kiem",
+      "popularity": 5
+    },
+    "dongxuan": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning for the market, evening Fri–Sun for the night market",
+      "area": "Old Quarter",
+      "popularity": 4
+    },
+    "opera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "French Quarter",
+      "popularity": 3
+    },
+    "trainstreet": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Check train times locally before going",
+      "area": "Old Quarter",
+      "popularity": 4
+    },
+    "mydinh": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Event evenings",
+      "area": "Tay Ho",
+      "popularity": 2
+    },
+    "ngocson": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Hoan Kiem",
+      "popularity": 4
+    },
+    "pho": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Old Quarter",
+      "popularity": 5
+    },
+    "redriver": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunrise",
+      "area": "Old Quarter",
+      "popularity": 3
+    },
+    "longbien": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunrise or late afternoon",
+      "area": "Old Quarter",
+      "popularity": 3
+    },
+    "streetfoodtour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old Quarter",
+      "popularity": 4
+    },
+    "waterpuppet": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon or early evening",
+      "area": "Hoan Kiem",
+      "popularity": 4
+    },
+    "westlake": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Tay Ho",
+      "popularity": 3
+    },
+    "dongxuanfood": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Friday to Sunday evening",
+      "area": "Old Quarter",
+      "popularity": 3
+    },
+    "frenchquarter": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "French Quarter",
+      "popularity": 3
+    },
+    "eggcoffee": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Old Quarter",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Old Quarter, the lake and the main history sights, with time left for a street-food crawl."
+  },
+  "airports": [
+    {
+      "code": "HAN",
+      "name": "Noi Bai International Airport",
+      "primary": true,
+      "note": "Main gateway, about 22 km north of the centre.",
+      "options": [
+        {
+          "mode": "Public bus 07",
+          "to": "Daewoo Hotel area, west Hanoi",
+          "price": "8,000 VND",
+          "time": "60-90 min",
+          "note": "Cheapest; may need to walk to catch it."
+        },
+        {
+          "mode": "Express bus 86",
+          "to": "Long Bien station and Old Quarter",
+          "price": "50,000 VND",
+          "time": "45 min",
+          "note": "Runs 06:20-22:00 every 25 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Old Quarter",
+          "price": "300,000-400,000 VND",
+          "time": "30-40 min",
+          "note": "Use Mai Linh or Taxi Group; avoid touts."
+        },
+        {
+          "mode": "Grab",
+          "to": "City centre",
+          "price": "around 300,000 VND",
+          "time": "30-40 min",
+          "note": "Fixed app fare; motorbike option is cheaper."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Hanoi",
+      "https://en.wikivoyage.org/wiki/Hanoi"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "Grab for cars and motorbike taxis; walk in the Old Quarter.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Line 2A runs Cat Linh to Yen Nghia; Line 3 runs Cau Giay to Nhon. Fares are distance-based, about 8,000–15,000 VND; tap contactless cards at gates."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are cheap and air-conditioned, about 7,000–12,000 VND per ride."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Grab works well for cars and motorbike taxis; fares are fixed in the app. Metered taxis: Mai Linh and Taxi Group are reliable; flag-fall about 20,000 VND."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not practical for most visitors: chaotic traffic and hard parking. Use Grab or taxis instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Fine in the Old Quarter, but crossing takes nerve. Traffic is chaotic; take your time at crossings."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical Hanoi: mild, drier winters and hot, very wet summers. Rain peaks from July to September.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to April",
+        "text": "Milder days around 21–29°C and fewer rain days. Good for walking the Old Quarter."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (May to September)",
+        "text": "Highs of 31–33°C with many rain days. Sightsee early morning and after showers."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest months: July to September",
+        "text": "Around 21–24 rain days a month. Showers can be heavy; keep a raincoat handy."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter (December to February)",
+        "text": "Highs near 21–22°C and lows around 14–15°C. Bring a jacket for evenings."
+      },
+      {
+        "icon": "☂️",
+        "title": "Rain is often short",
+        "text": "Even in wet months, showers pass. Plan indoor stops like museums and cafés as backup."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a raincoat or umbrella, comfortable shoes for uneven streets, and a warm layer for winter."
+      }
+    ]
+  }
+}

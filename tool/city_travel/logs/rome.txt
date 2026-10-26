@@ -1,0 +1,24 @@
+$ deepseek_city.py Rome --stage frame
+Rome: frame
+  tokens in 2428 out 1856
+  repaired JSON
+
+$ deepseek_city.py Rome --stage plans
+Rome: plans
+  plans for day
+  tokens in 2834 out 723
+  plans for 1n
+  tokens in 2835 out 1085
+  plans for 2n
+  tokens in 2835 out 1500
+  plans for 3n
+  tokens in 2840 out 2071
+  plans for 4n
+  tokens in 2835 out 2145
+  plans for 5n
+  tokens in 2835 out 2729
+
+$ merge_city.py Rome
+Rome: 28 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/rome.json and planner/rome.json
+

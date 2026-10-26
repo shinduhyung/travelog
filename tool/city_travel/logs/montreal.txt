@@ -1,0 +1,29 @@
+$ deepseek_facts.py Montreal
+  tokens in 4413 out 614
+Montreal: 0 problems
+
+$ deepseek_city.py Montreal --stage places
+Montreal: places
+  tokens in 1179 out 2702
+
+$ deepseek_city.py Montreal --stage frame
+Montreal: frame
+  tokens in 2431 out 1799
+
+$ deepseek_city.py Montreal --stage plans
+Montreal: plans
+  plans for day
+  tokens in 1926 out 3280
+  plans for 1n
+  tokens in 1927 out 722
+  plans for 2n
+  tokens in 1932 out 1443
+  plans for 3n
+  tokens in 1927 out 1834
+  plans for 4n
+  tokens in 1927 out 2135
+
+$ merge_city.py Montreal
+Montreal: 16 places, 21 plans, 0 errors, 0 warnings
+wrote itineraries/montreal.json and planner/montreal.json
+

@@ -1,0 +1,654 @@
+{
+  "city": "Taipei",
+  "checked": "October 2026",
+  "intro_line": "Taipei blends night markets, mountain trails and hot springs.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Ximending",
+        "Zhongshan",
+        "Da'an",
+        "Taipei Main Station"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Ximending",
+        "Zhongshan",
+        "Da'an",
+        "Taipei Main Station"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Ximending",
+        "Zhongshan",
+        "Da'an",
+        "Taipei Main Station"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Ximending",
+        "Zhongshan",
+        "Da'an",
+        "Taipei Main Station"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Ximending",
+        "Zhongshan",
+        "Da'an",
+        "Taipei Main Station"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 14,
+        "rain_days": 12,
+        "note": "Jan: cool and damp, highs near 19°C. Pack a jacket and an umbrella."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Feb: similar to Jan, around 20°C. Rain on about 11 days."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Mar: warming to 23°C. A good shoulder month with fewer crowds."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 14,
+        "note": "Apr: mild and pleasant at 26°C, but rain days rise to 14."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 19,
+        "note": "May: warm and wet. Expect showers on about 19 days."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 21,
+        "note": "Jun: hot and rainy, highs near 31°C. Plan indoor breaks."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 18,
+        "note": "Jul: hottest month, around 33°C, with 18 rain days. Go out early and late."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 20,
+        "note": "Aug: still very hot at 32°C and wet. Carry water."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 16,
+        "note": "Sep: hot at 30°C but rain eases a little."
+      },
+      {
+        "high": 27,
+        "low": 22,
+        "rain_days": 15,
+        "note": "Oct: comfortable at 27°C. A strong month to visit."
+      },
+      {
+        "high": 25,
+        "low": 20,
+        "rain_days": 13,
+        "note": "Nov: mild at 25°C with 13 rain days. Good for walking."
+      },
+      {
+        "high": 20,
+        "low": 16,
+        "rain_days": 14,
+        "note": "Dec: cooler at 20°C and damp. Bring layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.95
+    ],
+    "nature": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.7,
+      0.5,
+      0.45,
+      0.45,
+      0.6,
+      0.85,
+      0.85,
+      0.7
+    ],
+    "nightlife": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "shopping": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      0.9
+    ]
+  },
+  "places": {
+    "taipei101": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon to evening; clear days",
+      "area": "Ximending",
+      "popularity": 5
+    },
+    "npm": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Zhongshan",
+      "popularity": 5
+    },
+    "cks": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Taipei Main Station",
+      "popularity": 5
+    },
+    "shilin": {
+      "types": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "After 18:00 on a weekday",
+      "area": "Zhongshan",
+      "popularity": 5
+    },
+    "longshan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Ximending",
+      "popularity": 5
+    },
+    "ximending": {
+      "types": [
+        "shopping",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Ximending",
+      "popularity": 4
+    },
+    "dihua": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning to early afternoon",
+      "area": "Zhongshan",
+      "popularity": 4
+    },
+    "yehliu": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning; avoid rainy days",
+      "area": "Zhongshan",
+      "popularity": 4
+    },
+    "jiufen": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening; weekdays",
+      "area": "Zhongshan",
+      "popularity": 5
+    },
+    "beefnoodle": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Taipei Main Station",
+      "popularity": 4
+    },
+    "elephant": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset; clear evenings",
+      "area": "Ximending",
+      "popularity": 5
+    },
+    "songyan": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Da'an",
+      "popularity": 3
+    },
+    "fortsan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Zhongshan",
+      "popularity": 3
+    },
+    "libertyarch": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "Taipei Main Station",
+      "popularity": 3
+    },
+    "linfamily": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Ximending",
+      "popularity": 2
+    },
+    "maokong": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Afternoon into early evening",
+      "area": "Da'an",
+      "popularity": 4
+    },
+    "nccu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Da'an",
+      "popularity": 1
+    },
+    "ntu": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Da'an",
+      "popularity": 2
+    },
+    "nationaltheater": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening show",
+      "area": "Taipei Main Station",
+      "popularity": 3
+    },
+    "ningxia": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "After 18:00",
+      "area": "Zhongshan",
+      "popularity": 4
+    },
+    "pingxi": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Festival evening; otherwise late afternoon",
+      "area": "Zhongshan",
+      "popularity": 4
+    },
+    "huaxi": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Ximending",
+      "popularity": 3
+    },
+    "daanpark": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Da'an",
+      "popularity": 3
+    },
+    "tamsui": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Zhongshan",
+      "popularity": 3
+    },
+    "foodtour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late morning or evening",
+      "area": "Zhongshan",
+      "popularity": 3
+    },
+    "beitou": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Afternoon on a cool day",
+      "area": "Zhongshan",
+      "popularity": 4
+    },
+    "p228park": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Taipei Main Station",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the night markets, temples and museums, plus one day trip to the hills or hot springs."
+  },
+  "airports": [
+    {
+      "code": "TPE",
+      "name": "Taiwan Taoyuan International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 34 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport MRT Express",
+          "to": "Taipei Main Station",
+          "price": "NT$150-160",
+          "time": "35-40 min",
+          "note": "Fastest option; EasyCard fare is cheaper."
+        },
+        {
+          "mode": "Express airport bus",
+          "to": "Taipei Main Station or East district hotels",
+          "price": "NT$120-150",
+          "time": "50-70 min",
+          "note": "Cheapest; traffic can slow it down."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "NT$900-1,200",
+          "time": "40-60 min",
+          "note": "Fixed-ish fares; use the official queue."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "NT$900-1,300",
+          "time": "40-60 min",
+          "note": "Pickup zones are signposted at both terminals."
+        }
+      ]
+    },
+    {
+      "code": "TSA",
+      "name": "Taipei Songshan Airport",
+      "primary": false,
+      "note": "Downtown airport, 4 km north of centre, for regional and domestic flights.",
+      "options": [
+        {
+          "mode": "MRT Wenhu Line",
+          "to": "Taipei Main Station area",
+          "price": "NT$20-30",
+          "time": "15-20 min",
+          "note": "Station is right at the terminal."
+        },
+        {
+          "mode": "City bus",
+          "to": "Various city districts",
+          "price": "NT$15-30",
+          "time": "20-40 min",
+          "note": "Cheap but slower with traffic."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "NT$150-250",
+          "time": "10-20 min",
+          "note": "Short and cheap ride downtown."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "NT$150-250",
+          "time": "10-20 min",
+          "note": "Handy with luggage."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Taipei",
+      "https://en.wikivoyage.org/wiki/Taipei"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "shopping"
+  ],
+  "transit": {
+    "best": "MRT for most trips; EasyCard makes it cheaper and works on buses too.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Clean, safe and cheap: NT$20–65 per ride. Trains run about 06:00–00:00. EasyCard gives 20% off."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent city buses. Pay with EasyCard on boarding; transfers within an hour cost NT$7."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are plentiful and Uber operates in Taipei. Good for late nights and luggage."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not advised for visitors. Parking is hard and scooters dominate the roads."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Sidewalks are good in central areas. YouBike share bikes are widely available for longer hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and humid. Summers are hot and wet; winters are mild but grey and damp. Rain falls in every month.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 11–21 rain days each month. June is the wettest. Always carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "July and August reach about 33°C with high humidity. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Best months: October to April",
+        "text": "Highs of 19–27°C and less intense heat. Best for walking and day trips."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild winter",
+        "text": "January and February sit around 14–20°C. A light jacket is enough; indoor spaces can feel cold."
+      },
+      {
+        "icon": "☂️",
+        "title": "Typhoon season",
+        "text": "Late summer and early autumn can bring storms. Check forecasts on the day and keep plans flexible."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket or umbrella, and comfortable shoes. Add a warm layer for winter evenings."
+      }
+    ]
+  }
+}

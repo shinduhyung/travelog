@@ -1,0 +1,30 @@
+$ deepseek_facts.py San Diego
+  tokens in 4016 out 885
+San Diego: 1 problems
+  - TIJ taxi $45-70 vs tariff estimate 95
+
+$ deepseek_city.py San Diego --stage places
+San Diego: places
+  tokens in 1196 out 3059
+
+$ deepseek_city.py San Diego --stage frame
+San Diego: frame
+  tokens in 2454 out 1861
+
+$ deepseek_city.py San Diego --stage plans
+San Diego: plans
+  plans for day
+  tokens in 2053 out 670
+  plans for 1n
+  tokens in 2054 out 652
+  plans for 2n
+  tokens in 2059 out 1468
+  plans for 3n
+  tokens in 2054 out 1598
+  plans for 4n
+  tokens in 2054 out 1669
+
+$ merge_city.py San Diego
+San Diego: 19 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/san-diego.json and planner/san-diego.json
+

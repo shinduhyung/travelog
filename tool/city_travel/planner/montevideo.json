@@ -1,0 +1,535 @@
+{
+  "city": "Montevideo",
+  "checked": "October 2026",
+  "intro_line": "Montevideo: a calm riverside capital of old cafés and long ramblas.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Ciudad Vieja",
+        "El Centro",
+        "Pocitos",
+        "Carrasco"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Ciudad Vieja",
+        "El Centro",
+        "Pocitos",
+        "Carrasco"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Ciudad Vieja",
+        "El Centro",
+        "Pocitos",
+        "Carrasco"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Ciudad Vieja",
+        "El Centro",
+        "Pocitos",
+        "Carrasco"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Ciudad Vieja",
+        "El Centro",
+        "Pocitos",
+        "Carrasco"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 9,
+        "note": "Warm and busy: highs near 26°C, lows near 20°C. Good beach weather; expect about 9 rain days."
+      },
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 8,
+        "note": "Similar to January: warm nights and about 8 rain days. Peak holiday season, book ahead."
+      },
+      {
+        "high": 24,
+        "low": 18,
+        "rain_days": 10,
+        "note": "Still warm at 24°C, but rainier with about 10 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 21,
+        "low": 16,
+        "rain_days": 9,
+        "note": "Cooler: highs near 21°C, lows near 16°C. Pleasant for walking; about 9 rain days."
+      },
+      {
+        "high": 17,
+        "low": 12,
+        "rain_days": 7,
+        "note": "Mild and drier: highs near 17°C, lows near 12°C, about 7 rain days. Bring a jacket."
+      },
+      {
+        "high": 15,
+        "low": 10,
+        "rain_days": 8,
+        "note": "Cool start to winter: highs near 15°C, lows near 10°C. About 8 rain days; layers help."
+      },
+      {
+        "high": 14,
+        "low": 9,
+        "rain_days": 9,
+        "note": "Coldest month: highs near 14°C, lows near 9°C. About 9 rain days; pack warm clothes."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 8,
+        "note": "Still cold: highs near 15°C, lows near 9°C. About 8 rain days; indoor sights are best."
+      },
+      {
+        "high": 16,
+        "low": 11,
+        "rain_days": 7,
+        "note": "Slowly warming: highs near 16°C, lows near 11°C, about 7 rain days. Good for the Rambla."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 10,
+        "note": "Warmer at 19°C, but the wettest month with about 10 rain days. Keep plans flexible."
+      },
+      {
+        "high": 22,
+        "low": 16,
+        "rain_days": 7,
+        "note": "Pleasant: highs near 22°C, lows near 16°C, about 7 rain days. Great for walking and food."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 8,
+        "note": "Warm again: highs near 25°C, lows near 18°C, about 8 rain days. Beach days return."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "beach": [
+      1,
+      1,
+      0.9,
+      0.6,
+      0.3,
+      0.15,
+      0.1,
+      0.15,
+      0.3,
+      0.6,
+      0.85,
+      0.95
+    ],
+    "budget": [
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85
+    ]
+  },
+  "places": {
+    "ciudad_vieja": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning to early evening; weekdays",
+      "area": "Ciudad Vieja",
+      "popularity": 5
+    },
+    "palacio_salvo": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "El Centro",
+      "popularity": 4
+    },
+    "plaza_independencia": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Any time; good at sunset",
+      "area": "El Centro",
+      "popularity": 5
+    },
+    "teatro_solis": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon tour or evening show",
+      "area": "Ciudad Vieja",
+      "popularity": 4
+    },
+    "castillo_pittamiglio": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Pocitos",
+      "popularity": 3
+    },
+    "chivito": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or late dinner",
+      "area": "El Centro",
+      "popularity": 4
+    },
+    "estadio_centenario": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Daytime; avoid match days unless you have tickets",
+      "area": "Pocitos",
+      "popularity": 3
+    },
+    "fortaleza_cerro": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Clear daytime",
+      "area": "Ciudad Vieja",
+      "popularity": 3
+    },
+    "legislative_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "El Centro",
+      "popularity": 3
+    },
+    "mercado_puerto": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Lunch, especially weekends",
+      "area": "Ciudad Vieja",
+      "popularity": 5
+    },
+    "catedral_metropolitana": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Ciudad Vieja",
+      "popularity": 4
+    },
+    "rambla": {
+      "types": [
+        "beach",
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Pocitos",
+      "popularity": 5
+    },
+    "mercado_agricola": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "El Centro",
+      "popularity": 3
+    },
+    "pocitos_beach": {
+      "types": [
+        "beach",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer afternoons",
+      "area": "Pocitos",
+      "popularity": 4
+    },
+    "carrasco_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or afternoon",
+      "area": "Carrasco",
+      "popularity": 2
+    },
+    "tango_show": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Ciudad Vieja",
+      "popularity": 3
+    },
+    "free_walking_tour": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Ciudad Vieja",
+      "popularity": 4
+    },
+    "puerto_viewpoint": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Ciudad Vieja",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Ciudad Vieja, the Mercado del Puerto and a Rambla walk; add a night for a beach day in summer."
+  },
+  "airports": [
+    {
+      "code": "MVD",
+      "name": "Carrasco International / General C L Berisso Airport",
+      "primary": true,
+      "note": "Main gateway, about 14 km east of the centre.",
+      "options": [
+        {
+          "mode": "Public bus",
+          "to": "Rio Branco Terminal, city centre",
+          "price": "UYU 107",
+          "time": "60-90 min",
+          "note": "Buses every 10-20 min; pay the driver, get off early for Pocitos or Cordón."
+        },
+        {
+          "mode": "Intercity coach (COT)",
+          "to": "Tres Cruces bus station",
+          "price": "UYU 134",
+          "time": "45-70 min",
+          "note": "Buy in the COT office or on board; check the bus heads west into the city."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or Pocitos",
+          "price": "US$60",
+          "time": "30-45 min",
+          "note": "Private airport taxis are pricey; agree the fare first."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Often cheaper than airport taxis; pick-up point may vary."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Montevideo",
+      "https://en.wikivoyage.org/wiki/Montevideo"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "beach"
+  ],
+  "transit": {
+    "best": "Walk in the centre and use ride apps or buses for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Buses are the only mass transit."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Get a free STM card at Abitab; cash fare is about UYU 36, card fares cheaper. STM gives 2 buses in 1 hr for about UYU 29, or unlimited buses in 2 hr for about UYU 44."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Ride apps like Uber work and are often cheaper and safer than street taxis. Taxis are metered; a 10-minute ride costs about UYU 100."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible but parking is scarce and expensive. Walking is easier in the centre."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Easy in the centre and along the Rambla. Use buses or apps for longer hops."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Buquebus ferries link Ciudad Vieja with Buenos Aires and Colonia."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild four-season climate with warm summers and cool winters. Rain falls all year, so keep plans flexible.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warm days around 24–26°C and mild nights. Best for beaches and the Rambla."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters (June to August)",
+        "text": "Highs near 14–15°C and lows near 9–10°C. Bring a warm jacket and layers."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–10 rain days every month. October is the wettest. A small umbrella helps."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Breezy coast",
+        "text": "The Rambla is windy; a light windproof layer is useful even in summer."
+      },
+      {
+        "icon": "🌡️",
+        "title": "No extreme heat",
+        "text": "Summers are warm, not scorching. Evenings stay comfortable for outdoor dinners."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Summer: light clothes, sunscreen and a hat. Winter: warm layers, a coat and closed shoes."
+      }
+    ]
+  }
+}

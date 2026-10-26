@@ -1,0 +1,1529 @@
+{
+  "city": "George Town",
+  "checked": "October 2026",
+  "currency": "MYR",
+  "usd_rate": 4.083,
+  "intro": "George Town rewards visitors with UNESCO streets, hawker feasts and island escapes. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 5.3837,
+      "west": 100.2296,
+      "north": 5.4873,
+      "east": 100.3824,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 5,
+      "flag_airport": 10,
+      "per_km": 2,
+      "min_fare": 5
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "No metro or tram on Penang Island; buses do the work.",
+      "Rapid Penang buses fan out from Weld Quay via KOMTAR; fares RM1.40-4.",
+      "Free CAT buses loop the heritage core and modern centre.",
+      "Grab is the main ride app; taxis use coupon or meter.",
+      "Rapid Ferry links Butterworth rail station to Weld Quay, RM1.20.",
+      "The heritage core is compact and walkable; Link Bike day pass RM6."
+    ],
+    "sources": []
+  },
+  "places": {
+    "unesco_zone": {
+      "name": "George Town UNESCO Zone",
+      "landmark": "George Town UNESCO Zone",
+      "kind": "sight",
+      "lat": 5.4141,
+      "lon": 100.3288,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Start at the waterfront and wander the grid of streets on foot; most heritage sights sit within 20 minutes of each other.",
+      "source": ""
+    },
+    "fort_cornwallis": {
+      "name": "Fort Cornwallis",
+      "landmark": "Fort Cornwallis",
+      "kind": "sight",
+      "lat": 5.4205,
+      "lon": 100.3444,
+      "price": null,
+      "price_text": "Small entry fee; check on the day",
+      "hours": "Daily, roughly 09:00–18:00; check on the day",
+      "tip": "Climb the ramparts for harbour views and look for the old bronze cannon.",
+      "source": ""
+    },
+    "khoo_kongsi": {
+      "name": "Khoo Kongsi",
+      "landmark": "Khoo Kongsi",
+      "kind": "sight",
+      "lat": 5.4147,
+      "lon": 100.337,
+      "price": null,
+      "price_text": "Modest entry fee; check on the day",
+      "hours": "Daily, roughly 09:00–17:00; check on the day",
+      "tip": "Look up at the carved roof and painted beams; the clan house courtyard is the highlight.",
+      "source": ""
+    },
+    "peranakan_mansion": {
+      "name": "Pinang Peranakan Mansion",
+      "landmark": "Pinang Peranakan Mansion",
+      "kind": "museum",
+      "lat": 5.4182,
+      "lon": 100.341,
+      "price": null,
+      "price_text": "Entry fee; check on the day",
+      "hours": "Daily, roughly 09:30–17:00; check on the day",
+      "tip": "Allow an hour; the furnished rooms and antiques give the best sense of Peranakan home life.",
+      "source": ""
+    },
+    "clan_jetties": {
+      "name": "Clan Jetties",
+      "landmark": "Clan Jetties",
+      "kind": "sight",
+      "lat": 5.4125,
+      "lon": 100.3396,
+      "price": 0,
+      "price_text": "Free to walk; some houses ask a small donation",
+      "hours": "Daylight hours; respect residents",
+      "tip": "These are lived-in homes, so keep quiet and ask before taking photos.",
+      "source": ""
+    },
+    "kek_lok_si": {
+      "name": "Kek Lok Si Temple",
+      "landmark": "Kek Lok Si Temple",
+      "kind": "sight",
+      "lat": 5.3995,
+      "lon": 100.2737,
+      "price": null,
+      "price_text": "Grounds free; small fees for some halls and the incline lift",
+      "hours": "Daily, roughly 08:30–17:30; check on the day",
+      "tip": "It sits on a hill outside the centre, so take a taxi or bus and allow half a day.",
+      "source": ""
+    },
+    "batu_ferringhi": {
+      "name": "Batu Ferringhi",
+      "landmark": "Batu Ferringhi",
+      "kind": "beach",
+      "lat": 5.4745,
+      "lon": 100.2505,
+      "price": 0,
+      "price_text": "Free beach access",
+      "hours": "Always open; night market in the evening",
+      "tip": "The sea is warm and the sand is busy; come for sunset and the evening night market.",
+      "source": ""
+    },
+    "penang_hill": {
+      "name": "Penang Hill",
+      "landmark": "Penang",
+      "kind": "sight",
+      "lat": 5.4164,
+      "lon": 100.3327,
+      "price": null,
+      "price_text": "Funicular ticket; check on the day",
+      "hours": "Daily, roughly 06:30–23:00; check on the day",
+      "tip": "Go early or late to skip queues; the air is cooler at the top.",
+      "source": ""
+    },
+    "chowrasta_market": {
+      "name": "Chowrasta Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.4169,
+      "lon": 100.3316,
+      "price": 0,
+      "price_text": "Free to browse; food priced per item",
+      "hours": "Morning to early afternoon; busiest early",
+      "tip": "Come before 10:00 for the freshest produce and local breakfast stalls.",
+      "source": ""
+    },
+    "hawker_food_tour": {
+      "name": "Hawker food walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 5.415,
+      "lon": 100.333,
+      "price": null,
+      "price_text": "Guided tours vary; self-guided is cheap",
+      "hours": "Evening is best for street food",
+      "tip": "Try char kway teow, laksa and cendol; pick stalls with long local queues.",
+      "source": ""
+    },
+    "street_art_walk": {
+      "name": "Street art walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.4135,
+      "lon": 100.3355,
+      "price": 0,
+      "price_text": "Free; maps sold cheaply nearby",
+      "hours": "Daylight hours",
+      "tip": "Go early to photograph the murals before crowds and heat arrive.",
+      "source": ""
+    },
+    "gurney_drive": {
+      "name": "Gurney Drive hawker centre",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.4378,
+      "lon": 100.3105,
+      "price": null,
+      "price_text": "Pay per dish; cheap eats",
+      "hours": "Evening to late night",
+      "tip": "Come hungry and share dishes; the seafront promenade is good for a stroll after.",
+      "source": ""
+    },
+    "chew_jetty": {
+      "name": "Chew Jetty",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 5.4128,
+      "lon": 100.3395,
+      "price": 0,
+      "price_text": "Free; small fees for some boardwalks",
+      "hours": "Daylight hours",
+      "tip": "The most visitor-friendly jetty; walk the boardwalk and buy a snack from a resident stall.",
+      "source": ""
+    },
+    "tropical_spice_garden": {
+      "name": "Tropical Spice Garden",
+      "landmark": null,
+      "kind": "park",
+      "lat": 5.4636,
+      "lon": 100.2469,
+      "price": null,
+      "price_text": "Entry fee; check on the day",
+      "hours": "Daily, roughly 09:00–18:00; check on the day",
+      "tip": "A shaded walk near Batu Ferringhi; good for a break from the beach.",
+      "source": ""
+    },
+    "trishaw_ride": {
+      "name": "Trishaw ride through heritage streets",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.416,
+      "lon": 100.332,
+      "price": null,
+      "price_text": "Negotiate fare before you start",
+      "hours": "Daylight and early evening",
+      "tip": "Agree the price and route first; a short loop is enough to see the main streets.",
+      "source": ""
+    },
+    "armenia_street": {
+      "name": "Armenian Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.4155,
+      "lon": 100.335,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; shops daytime",
+      "tip": "A short street packed with shophouses, murals and cafes; combine it with nearby clan houses.",
+      "source": ""
+    },
+    "penang_museum": {
+      "name": "Penang State Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 5.4197,
+      "lon": 100.3379,
+      "price": null,
+      "price_text": "Small entry fee; check on the day",
+      "hours": "Closed some days; check on the day",
+      "tip": "Good background on Penang's history before you explore the streets.",
+      "source": ""
+    },
+    "batu_night_market": {
+      "name": "Batu Ferringhi night market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.4705,
+      "lon": 100.2465,
+      "price": null,
+      "price_text": "Pay per item",
+      "hours": "Evening, roughly from dusk",
+      "tip": "Bargain politely and try local snacks; it runs along the main beach road.",
+      "source": ""
+    },
+    "esplanade_viewpoint": {
+      "name": "Esplanade seafront promenade",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 5.4225,
+      "lon": 100.3425,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A breezy waterfront walk near the fort; good for sunset views over the strait.",
+      "source": ""
+    },
+    "ferry_ride": {
+      "name": "Penang ferry crossing",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.3965,
+      "lon": 100.3655,
+      "price": null,
+      "price_text": "Low fare; check on the day",
+      "hours": "Regular daytime crossings",
+      "tip": "A cheap way to see the harbour and mainland skyline; check the current route and times.",
+      "source": ""
+    },
+    "little_india": {
+      "name": "Little India walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.4165,
+      "lon": 100.3315,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daytime; lively in the evening",
+      "tip": "Follow the smell of spices and try a banana-leaf meal or fresh sweets.",
+      "source": ""
+    },
+    "botanic_gardens": {
+      "name": "Penang Botanic Gardens",
+      "landmark": null,
+      "kind": "park",
+      "lat": 5.4367,
+      "lon": 100.2877,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, early to evening; check on the day",
+      "tip": "Quiet shaded paths and monkeys; go early for cooler air.",
+      "source": ""
+    },
+    "cooking_class": {
+      "name": "Nyonya cooking class",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 5.415,
+      "lon": 100.334,
+      "price": null,
+      "price_text": "Classes vary; book ahead",
+      "tip": "Learn a few Peranakan dishes and eat what you cook; confirm the menu and price when booking.",
+      "source": ""
+    },
+    "sunset_cruise": {
+      "name": "Sunset harbour cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 5.42,
+      "lon": 100.343,
+      "price": null,
+      "price_text": "Tours vary; check on the day",
+      "tip": "A relaxed way to see the waterfront; confirm departure point and weather policy.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One full day of eating your way through George Town, from breakfast stalls to a late hawker dinner.",
+      "days": [
+        {
+          "title": "Market breakfast, heritage lanes, hawker night",
+          "stops": [
+            {
+              "place": "chowrasta_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early for the busiest stalls. Try local breakfast and coffee."
+            },
+            {
+              "place": "little_india",
+              "at": "09:15",
+              "minutes": 45,
+              "note": "Short walk away. Snack on roti or sweets."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening is best for street food. Bring small notes."
+            },
+            {
+              "place": "gurney_drive",
+              "at": "20:45",
+              "minutes": 90,
+              "note": "Short taxi ride. Open late for a second round."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Heritage Site"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A compact history day on foot through the UNESCO zone, with a fort and clan house.",
+      "days": [
+        {
+          "title": "Colonial fort, clan house, heritage streets",
+          "stops": [
+            {
+              "place": "fort_cornwallis",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early before the heat. Check hours on the day."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Indoor and cool. Check hours on the day."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Morning is best. Check hours on the day."
+            },
+            {
+              "place": "trishaw_ride",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Late afternoon is cooler. Agree the price first."
+            },
+            {
+              "place": "clan_jetties",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light. Respect residents."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Heritage Site"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Murals, clan-house craft and a slow walk through the old lanes in one day.",
+      "days": [
+        {
+          "title": "Street art and heritage lanes",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early morning is cooler and quieter for photos."
+            },
+            {
+              "place": "armenia_street",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Shops open later in the day."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Look at the carvings and tiles. Check hours on the day."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Indoor break from the heat. Check hours on the day."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset by the water to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Heritage Site"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of eating: market breakfast, a hawker dinner and a food walk.",
+      "days": [
+        {
+          "title": "Market breakfast and heritage streets",
+          "stops": [
+            {
+              "place": "chowrasta_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early; stalls wind down by early afternoon."
+            },
+            {
+              "place": "unesco_zone",
+              "at": "09:45",
+              "minutes": 120,
+              "note": "Walk off breakfast through the shophouse lanes."
+            },
+            {
+              "place": "little_india",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Banana-leaf lunch is the easy pick here."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Indoor and cool at the hottest part of the day."
+            }
+          ]
+        },
+        {
+          "title": "Hawker evening",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Murals are best in soft late light."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Eat small portions at several stalls. Carry cash."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "The core heritage sights in one tight loop, with a seafront sunset.",
+      "days": [
+        {
+          "title": "Fort, clan house and jetties",
+          "stops": [
+            {
+              "place": "fort_cornwallis",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Open roughly 09:00–18:00; check on the day."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "A short walk inland. Morning light is best."
+            },
+            {
+              "place": "chowrasta_market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls nearby."
+            },
+            {
+              "place": "clan_jetties",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "People live here; keep quiet and ask before photos."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset over the water, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum and trishaw",
+          "stops": [
+            {
+              "place": "penang_museum",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed some days; check on the day."
+            },
+            {
+              "place": "trishaw_ride",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Agree the price before you set off."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Indoor, good at midday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Murals, temple carving and old lanes on foot.",
+      "days": [
+        {
+          "title": "Street art and clan houses",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early means fewer people in the photos."
+            },
+            {
+              "place": "armenia_street",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Shops open later; the street itself is always open."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Look up at the carved roof and painted beams."
+            },
+            {
+              "place": "chowrasta_market",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch stop."
+            }
+          ]
+        },
+        {
+          "title": "Temple and trishaw",
+          "stops": [
+            {
+              "place": "trishaw_ride",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Late afternoon light on the shophouses."
+            },
+            {
+              "place": "clan_jetties",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Wooden houses on stilts; respect residents."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening street food to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "First-timers who want the best hawker food in the heritage lanes, plus one evening by the sea.",
+      "days": [
+        {
+          "title": "Arrive, market and first hawker dinner",
+          "stops": [
+            {
+              "place": "chowrasta_market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Go early in the afternoon; the busiest stalls wind down later. Bring small notes."
+            },
+            {
+              "place": "little_india",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Short walk east. Look for banana-leaf rice and fresh roti."
+            },
+            {
+              "place": "armenia_street",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Easy stroll to work up an appetite."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Evening is best. Order one dish at a time and share. Check prices on the board."
+            }
+          ]
+        },
+        {
+          "title": "Morning market, then Gurney Drive",
+          "stops": [
+            {
+              "place": "unesco_zone",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Walk the quiet streets before the heat. Many shops open around 10:00."
+            },
+            {
+              "place": "chew_jetty",
+              "at": "11:45",
+              "minutes": 40,
+              "note": "Short walk from the zone. It is a lived-in village, so keep voices low."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Indoor and cool at the hottest part of the day. Check opening hours on the day."
+            },
+            {
+              "place": "gurney_drive",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Evening to late night is the best time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone (Chulia Street area)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Our pick for most visitors: the core heritage sights on foot, then the hill and the temple.",
+      "days": [
+        {
+          "title": "Heritage core on foot",
+          "stops": [
+            {
+              "place": "fort_cornwallis",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning before the heat peaks. Check hours on the day."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk. Morning light is best for the carvings."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Indoor and cool at midday. Check hours on the day."
+            },
+            {
+              "place": "penang_museum",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Closed some days, so check before you go."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset by the water, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Hill, temple and clan jetties",
+          "stops": [
+            {
+              "place": "penang_hill",
+              "at": "08:00",
+              "minutes": 150,
+              "note": "Go early to beat the queue for the funicular. Check hours on the day."
+            },
+            {
+              "place": "kek_lok_si",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "About 20 minutes by taxi. Busy around Chinese New Year."
+            },
+            {
+              "place": "clan_jetties",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Late afternoon is cooler. Respect the residents."
+            },
+            {
+              "place": "trishaw_ride",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Agree the price before you start."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone (Lebuh Farquhar area)"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Mural hunters and slow walkers who like old lanes, clan houses and craft shops.",
+      "days": [
+        {
+          "title": "Street art before the crowds",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early morning means fewer people in photos and cooler air."
+            },
+            {
+              "place": "armenia_street",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Shops open later; the street itself is always open."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Carved stone and woodwork. Check hours on the day."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Evening food walk through the lanes."
+            }
+          ]
+        },
+        {
+          "title": "Mansion, jetties and sunset",
+          "stops": [
+            {
+              "place": "peranakan_mansion",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Antiques and tiles. Check hours on the day."
+            },
+            {
+              "place": "unesco_zone",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Wander the side lanes; duck into galleries when it gets hot."
+            },
+            {
+              "place": "chew_jetty",
+              "at": "15:30",
+              "minutes": 40,
+              "note": "Late afternoon light. Keep to the boardwalk."
+            },
+            {
+              "place": "sunset_cruise",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead. Times vary, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone (Armenian Street area)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Hawker classics, market mornings and a Peranakan kitchen session in the heritage zone.",
+      "days": [
+        {
+          "title": "Arrive, market and first hawker dinner",
+          "stops": [
+            {
+              "place": "chowrasta_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Go early for the busiest stalls and fresh produce."
+            },
+            {
+              "place": "little_india",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Banana-leaf rice and spice shops. Lively again in the evening."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Eat your way through the lanes. Bring small notes and water."
+            }
+          ]
+        },
+        {
+          "title": "Cooking class, then Gurney Drive",
+          "stops": [
+            {
+              "place": "cooking_class",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead. Morning sessions usually include a market visit."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Indoor and cool in the afternoon heat. Check opening days."
+            },
+            {
+              "place": "gurney_drive",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Seafront hawker centre. Order char kway teow and laksa."
+            }
+          ]
+        },
+        {
+          "title": "Morning eats, then the beach strip",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Cooler and quieter before tour groups arrive."
+            },
+            {
+              "place": "tropical_spice_garden",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Short taxi ride out. Cafe lunch on site."
+            },
+            {
+              "place": "batu_night_market",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Street food and stalls from dusk. Cash is easiest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone (Chulia Street area)"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Colonial forts, clan houses and the UNESCO streets at an easy pace.",
+      "days": [
+        {
+          "title": "Heritage zone on foot",
+          "stops": [
+            {
+              "place": "fort_cornwallis",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early before the heat. Check hours on the day."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk along the seafront."
+            },
+            {
+              "place": "penang_museum",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Indoor break. Closed some days, so check first."
+            },
+            {
+              "place": "trishaw_ride",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Agree the price before you set off."
+            }
+          ]
+        },
+        {
+          "title": "Clan houses and jetties",
+          "stops": [
+            {
+              "place": "khoo_kongsi",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Ornate clan house. Morning light is best."
+            },
+            {
+              "place": "chew_jetty",
+              "at": "11:00",
+              "minutes": 40,
+              "note": "Walk quietly; people live here."
+            },
+            {
+              "place": "clan_jetties",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light. Respect residents' homes."
+            }
+          ]
+        },
+        {
+          "title": "Temples and hill views",
+          "stops": [
+            {
+              "place": "kek_lok_si",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Taxi out. Busy around Chinese New Year."
+            },
+            {
+              "place": "penang_hill",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Funicular queues can be long. Check hours on the day."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Finish the day with street food in the old town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone (Chulia Street area)"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Murals, clan-house craft and old lanes, with time for the beach and the hill.",
+      "days": [
+        {
+          "title": "Murals and Armenian Street",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early morning means fewer people in photos."
+            },
+            {
+              "place": "armenia_street",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Shops open later; the street itself is always walkable."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Carved stone and woodwork. Check hours on the day."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Antiques and tilework. Cool indoor stop."
+            }
+          ]
+        },
+        {
+          "title": "Craft, jetties and sunset",
+          "stops": [
+            {
+              "place": "clan_jetties",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon light on the water."
+            },
+            {
+              "place": "trishaw_ride",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Old streets from a trishaw. Agree the fare first."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset by the sea, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Temple art and the hill",
+          "stops": [
+            {
+              "place": "kek_lok_si",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Temple statues and gardens. Taxi out."
+            },
+            {
+              "place": "penang_hill",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Views and old bungalows. Check hours on the day."
+            },
+            {
+              "place": "little_india",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening is the liveliest time here."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone (Chulia Street area)"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Four relaxed days of hawker food, markets and a cooking class, with short walks between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat on Armenian Street",
+          "stops": [
+            {
+              "place": "little_india",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Start with a walk past the spice shops. Lively in the evening."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening is best for street food. Bring small notes and try a few stalls."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, mansion midday",
+          "stops": [
+            {
+              "place": "chowrasta_market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Busiest and best early. Go for breakfast snacks."
+            },
+            {
+              "place": "unesco_zone",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk off breakfast through the heritage lanes. Shade is limited by late morning."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Indoor and cool at midday. Check hours on the day."
+            },
+            {
+              "place": "cooking_class",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Book ahead. Morning or afternoon sessions are usual."
+            }
+          ]
+        },
+        {
+          "title": "Temples, gardens and Gurney Drive",
+          "stops": [
+            {
+              "place": "kek_lok_si",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early and take the lift up if it is running. Check on the day."
+            },
+            {
+              "place": "botanic_gardens",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "A short taxi ride away. Hot by midday, so carry water."
+            },
+            {
+              "place": "gurney_drive",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening to late night. Order at several stalls and share."
+            }
+          ]
+        },
+        {
+          "title": "Jetties, sunset and night market",
+          "stops": [
+            {
+              "place": "chew_jetty",
+              "at": "16:30",
+              "minutes": 40,
+              "note": "Respect residents. Daylight hours only."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view over the water."
+            },
+            {
+              "place": "batu_night_market",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "About 30–40 minutes by taxi. From dusk; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last breakfast and go",
+          "stops": [
+            {
+              "place": "little_india",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Final roti and coffee before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone, near Chulia Street"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "A slow look at the UNESCO zone, forts, clan houses and the hill, with time to rest in the heat.",
+      "days": [
+        {
+          "title": "Arrive and walk the heritage zone",
+          "stops": [
+            {
+              "place": "unesco_zone",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon is cooler. Start near the waterfront."
+            },
+            {
+              "place": "esplanade_viewpoint",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Sunset by the sea, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Fort, museum and clan house",
+          "stops": [
+            {
+              "place": "fort_cornwallis",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning before the heat peaks. Check hours on the day."
+            },
+            {
+              "place": "penang_museum",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Closed some days; check on the day."
+            },
+            {
+              "place": "khoo_kongsi",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Morning is best but midday works. Check on the day."
+            },
+            {
+              "place": "trishaw_ride",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Late afternoon light. Agree the price first."
+            }
+          ]
+        },
+        {
+          "title": "Hill and temple",
+          "stops": [
+            {
+              "place": "penang_hill",
+              "at": "08:00",
+              "minutes": 150,
+              "note": "Early morning for clear views. Check the funicular hours on the day."
+            },
+            {
+              "place": "kek_lok_si",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Nearby. Busy around Chinese New Year."
+            },
+            {
+              "place": "gurney_drive",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner at the hawker centre."
+            }
+          ]
+        },
+        {
+          "title": "Jetties and Peranakan life",
+          "stops": [
+            {
+              "place": "clan_jetties",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon. Respect residents."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Check closing time on the day; go earlier if it closes at 17:00."
+            },
+            {
+              "place": "little_india",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Ferry and go",
+          "stops": [
+            {
+              "place": "ferry_ride",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning crossing. Check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone, near the waterfront"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Murals, clan-house craft and old trades, walked early and slowly with afternoons free.",
+      "days": [
+        {
+          "title": "Arrive and catch the murals",
+          "stops": [
+            {
+              "place": "street_art_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon light is kinder. Bring water."
+            },
+            {
+              "place": "armenia_street",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Shops close by evening but the street stays open."
+            }
+          ]
+        },
+        {
+          "title": "Clan house and mansion",
+          "stops": [
+            {
+              "place": "khoo_kongsi",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning light on the carvings. Check on the day."
+            },
+            {
+              "place": "peranakan_mansion",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Indoor and cool. Check hours on the day."
+            },
+            {
+              "place": "unesco_zone",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Look at shophouse facades and five-foot ways. Shade is patchy."
+            }
+          ]
+        },
+        {
+          "title": "Temple art and the hill",
+          "stops": [
+            {
+              "place": "kek_lok_si",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Temple carvings and the pagoda. Check on the day."
+            },
+            {
+              "place": "penang_hill",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Afternoon or after sunset for city lights. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Jetties and street life",
+          "stops": [
+            {
+              "place": "chew_jetty",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "Late afternoon. Respect residents."
+            },
+            {
+              "place": "clan_jetties",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Daylight hours only."
+            },
+            {
+              "place": "hawker_food_tour",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Evening street food walk."
+            }
+          ]
+        },
+        {
+          "title": "Last walk and go",
+          "stops": [
+            {
+              "place": "armenia_street",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quiet morning photos before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "UNESCO Zone, near Armenian Street"
+    }
+  ],
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hawker stalls, kopitiam coffee and Peranakan classics."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "UNESCO shophouses, clan houses and colonial streets."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Street murals, galleries and old trades in the lanes."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "UNESCO Heritage Site",
+      "range": [
+        120,
+        450
+      ],
+      "why": "Walk to the murals, clan houses and hawker food. Best for first-timers without a car.",
+      "center": [
+        5.4141,
+        100.3388
+      ]
+    },
+    {
+      "area": "Gurney Drive",
+      "range": [
+        180,
+        500
+      ],
+      "why": "Seafront promenade and the famous hawker centre; short ride to the heritage core.",
+      "center": [
+        5.4374,
+        100.3122
+      ]
+    },
+    {
+      "area": "Tanjung Tokong",
+      "range": [
+        160,
+        420
+      ],
+      "why": "Quieter local area with cafés and malls; between the city and the beaches.",
+      "center": [
+        5.4586,
+        100.3056
+      ]
+    },
+    {
+      "area": "Batu Ferringhi",
+      "range": [
+        200,
+        700
+      ],
+      "why": "Beach resorts and night market; far from town, so plan on buses or Grab.",
+      "center": [
+        5.4717,
+        100.2453
+      ]
+    }
+  ],
+  "food": [
+    "Eat at hawker centres: char kway teow, laksa, and cendol. Expect roughly RM5–15 a dish; check prices on the day.",
+    "Kopitiam breakfast: kaya toast, half-boiled eggs and local coffee. Cheap and quick.",
+    "Peranakan (Nyonya) dishes are the local signature: try a set meal in a heritage shophouse.",
+    "Gurney Drive hawker centre is busy at night; go early for a seat.",
+    "Little India and Chinatown lanes are good for cheap eats. Many stalls close on one weekday; check on the day."
+  ],
+  "more_time": [
+    "Penang Hill: take the funicular for cooler air and views. Go early to beat queues.",
+    "Kek Lok Si temple in Air Itam is a half-day trip; combine with a laksa lunch nearby.",
+    "Beach time at Batu Ferringhi, or a day trip to the national park and beaches on the north coast."
+  ]
+}

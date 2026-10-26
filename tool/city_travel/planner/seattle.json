@@ -1,0 +1,625 @@
+{
+  "city": "Seattle",
+  "checked": "October 2026",
+  "intro_line": "Seattle: coffee, water views, and mountains on the horizon.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Capitol Hill",
+        "Belltown",
+        "South Lake Union"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Capitol Hill",
+        "Belltown",
+        "South Lake Union"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Capitol Hill",
+        "Belltown",
+        "South Lake Union"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Downtown",
+        "Capitol Hill",
+        "Belltown",
+        "South Lake Union"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Downtown",
+        "Capitol Hill",
+        "Belltown",
+        "South Lake Union"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 3,
+        "rain_days": 18,
+        "note": "January: cold and wet, highs near 8°C with about 18 rain days. Pack a waterproof jacket and warm layers."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 15,
+        "note": "February: still cold, highs near 8°C and lows near 2°C. About 15 rain days; plan indoor backups."
+      },
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 15,
+        "note": "March: slowly warming, highs near 11°C. Still about 15 rain days, so keep the rain gear handy."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 14,
+        "note": "April: milder, highs near 14°C with about 14 rain days. Good for walking between showers."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 10,
+        "note": "May: pleasant, highs near 18°C and fewer rainy days (about 10). A good shoulder month."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 8,
+        "note": "June: mild and drier, highs near 21°C with about 8 rain days. Long daylight hours help sightseeing."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 3,
+        "note": "July: the driest, sunniest month, highs near 25°C and only about 3 rain days. Book hotels early."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 5,
+        "note": "August: warm like July, highs near 25°C, about 5 rain days. Popular and busy; reserve ahead."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 10,
+        "note": "September: still mild, highs near 20°C with about 10 rain days. A comfortable, quieter month."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 14,
+        "note": "October: cooler, highs near 15°C and about 14 rain days. Bring layers and an umbrella."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 18,
+        "note": "November: wet and cool, highs near 10°C with about 18 rain days. Indoor sights and cafés shine."
+      },
+      {
+        "high": 7,
+        "low": 3,
+        "rain_days": 19,
+        "note": "December: the wettest month, highs near 7°C and about 19 rain days. Cold, dark and damp; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.35
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.55
+    ]
+  },
+  "places": {
+    "space-needle": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Clear mornings or sunset",
+      "area": "South Lake Union",
+      "popularity": 5
+    },
+    "pike-place": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "chihuly": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning or early afternoon",
+      "area": "South Lake Union",
+      "popularity": 5
+    },
+    "mopop": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy afternoons",
+      "area": "South Lake Union",
+      "popularity": 4
+    },
+    "aquarium": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "argosy-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Midday on a clear day",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "lumen-field": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match day or a guided tour",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "playtime-fun": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy afternoons",
+      "area": "South Lake Union",
+      "popularity": 2
+    },
+    "central-library": {
+      "types": [
+        "culture",
+        "budget",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; closed some holidays",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "starbucks": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "reserve-roastery": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning or afternoon",
+      "area": "Capitol Hill",
+      "popularity": 3
+    },
+    "suzzallo": {
+      "types": [
+        "culture",
+        "budget",
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "South Lake Union",
+      "popularity": 3
+    },
+    "uw": {
+      "types": [
+        "culture",
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring for blossoms; any dry day",
+      "area": "South Lake Union",
+      "popularity": 3
+    },
+    "wild-waves": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer weekdays",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "woodland-zoo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "South Lake Union",
+      "popularity": 3
+    },
+    "kerry-park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "South Lake Union",
+      "popularity": 4
+    },
+    "gum-wall": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "waterfront-park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "underground-tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Rainy days or afternoons",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "discovery-park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "South Lake Union",
+      "popularity": 3
+    },
+    "ferry-bainbridge": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Clear afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Pike Place, the waterfront, a museum and a ferry trip; add a night for a mountain or island day."
+  },
+  "airports": [
+    {
+      "code": "SEA",
+      "name": "Seattle-Tacoma International Airport",
+      "primary": true,
+      "note": "Main hub, about 18 km south of the centre.",
+      "options": [
+        {
+          "mode": "Link light rail 1 Line",
+          "to": "Downtown (Westlake)",
+          "price": "$3-4",
+          "time": "35-45 min",
+          "note": "Cheapest and avoids traffic; runs late."
+        },
+        {
+          "mode": "Sound Transit bus 560",
+          "to": "West Seattle",
+          "price": "$3-4",
+          "time": "40-55 min",
+          "note": "Direct service to West Seattle."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$45-60",
+          "time": "25-40 min",
+          "note": "Flat-ish rates; tip extra."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$40-60",
+          "time": "25-40 min",
+          "note": "Pickup at the app zone on the parking garage level."
+        }
+      ]
+    },
+    {
+      "code": "PAE",
+      "name": "Paine Field",
+      "primary": false,
+      "note": "Small airport about 48 km north in Everett; limited Alaska Airlines flights.",
+      "options": [
+        {
+          "mode": "Bus + Link light rail",
+          "to": "Downtown",
+          "price": "$5-8",
+          "time": "1 hr 30 min-2 hr",
+          "note": "Check locally for current connections."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$90-120",
+          "time": "40-60 min",
+          "note": "Long drive; agree on price first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$80-110",
+          "time": "40-60 min",
+          "note": "Availability can be thin at night."
+        }
+      ]
+    },
+    {
+      "code": "YVR",
+      "name": "Vancouver International Airport",
+      "primary": false,
+      "note": "Major airport about 225 km north across the Canadian border; good for Asia flights.",
+      "options": [
+        {
+          "mode": "Amtrak Cascades + SkyTrain",
+          "to": "Downtown Seattle",
+          "price": "$40-60",
+          "time": "5-6 hr",
+          "note": "Passport needed; book ahead."
+        },
+        {
+          "mode": "Quickcoach bus",
+          "to": "Downtown Seattle",
+          "price": "$40-60",
+          "time": "4-5 hr",
+          "note": "Crosses the border; allow extra time."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Seattle",
+          "price": "$250-350",
+          "time": "2 hr 30 min-3 hr",
+          "note": "Expensive; border waits vary."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Seattle",
+          "price": "check locally",
+          "time": "2 hr 30 min-3 hr",
+          "note": "Cross-border rides are limited."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Seattle",
+      "https://en.wikivoyage.org/wiki/Seattle"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Link light rail for the airport, Downtown and Capitol Hill; walk or ride apps for short hops.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Link light rail 1 Line links Sea-Tac, Downtown, Capitol Hill and the University of Washington. Easy for airport trips."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "King County Metro buses cover the city. Pay with an ORCA card or tap your phone."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Lyft both operate widely, handy for late nights and airport runs."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy to arrange, but Downtown traffic is heavy at most hours. Consider skipping it in the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Good Downtown and on the waterfront. Bikes and e-scooters are common for longer hops."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Washington State Ferries leave Downtown for Bainbridge Island and Bremerton. Check times and fares on the day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild, wet winters and dry, sunny summers. Rain is common from October to March; July and August are the driest.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: July and August",
+        "text": "Highs near 25°C and only about 3–5 rain days. The driest, sunniest stretch for outdoor plans."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: November to January",
+        "text": "About 18–19 rain days a month and highs of 7–10°C. Bring a waterproof jacket, not just an umbrella."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Spring is showery",
+        "text": "March to May warms from about 11°C to 18°C, but expect around 10–15 rain days a month."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layers beat a heavy coat",
+        "text": "Days are rarely very cold or very hot. A light waterproof shell over layers works most of the year."
+      },
+      {
+        "icon": "🌥️",
+        "title": "Grey skies are normal",
+        "text": "Cloud cover is common outside summer. Plan one indoor sight per day as a backup."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Waterproof jacket, comfortable walking shoes and layers. Add sunglasses and a hat for July and August."
+      }
+    ]
+  }
+}

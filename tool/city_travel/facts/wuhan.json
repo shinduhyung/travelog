@@ -1,0 +1,178 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Three rivers, three towns, one sprawling, noodle-loving hub.",
+  "intro": "Wuhan rewards visitors with river views, spicy hot dry noodles and a fast-growing metro. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Hankou (Jianghan)",
+    "Wuchang (Zhongnan)",
+    "Hanyang",
+    "Guanggu (Optics Valley)"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 10,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: 12 lines, 300+ stations; Line 2 links the airport and Hankou station, Line 4 links Wuhan and Wuchang stations.",
+    "Metro fares are distance-based; a Wuhan Tong card costs ¥15 and gives about 10% off rides, buses and ferries.",
+    "Buses: ¥1-2 flat fare (¥0.8-1.6 with card); Alipay and WeChat QR codes work on many routes.",
+    "Taxis are cheap and metered; ride-hailing apps like DiDi work well, Uber does not operate in China.",
+    "Two streetcar systems serve Hanyang and the Guanggu area.",
+    "Ferries cross the Yangtze between the three towns; walking and shared bikes suit short hops."
+  ],
+  "airports": [
+    {
+      "code": "WUH",
+      "name": "Wuhan Tianhe International Airport",
+      "primary": true,
+      "note": "Main hub, about 23 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 2",
+          "to": "City centre",
+          "price": "¥5-8",
+          "time": "45-60 min",
+          "note": "Cheapest and most reliable; runs roughly 06:00-22:30."
+        },
+        {
+          "mode": "Commuter rail",
+          "to": "Hankou Railway Station",
+          "price": "¥10-15",
+          "time": "20-30 min",
+          "note": "Irregular schedule, roughly every 1-1.5 hours."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Hankou, Wuchang and Fujiapo stations",
+          "price": "¥15-30",
+          "time": "60-90 min",
+          "note": "Service may be reduced since the metro opened."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Wuchang or Hankou centre",
+          "price": "¥70-80 plus ¥10 toll",
+          "time": "40-60 min",
+          "note": "Use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥70-100",
+          "time": "40-60 min",
+          "note": "Book in the app; pickup points are signposted."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Yellow Crane Tower",
+    "Hubei Provincial Museum",
+    "Han River, China",
+    "Wuhan Greenland Center"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Wuhan",
+      "https://en.wikivoyage.org/wiki/Wuhan"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    30.58333,
+    114.26667
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 9,
+      "low": 2,
+      "rain_days": 9
+    },
+    {
+      "high": 12,
+      "low": 3,
+      "rain_days": 10
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 13
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 15
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 13
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 10
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

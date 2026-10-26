@@ -1,0 +1,28 @@
+$ deepseek_facts.py Stuttgart
+  tokens in 3904 out 571
+Stuttgart: 0 problems
+
+$ deepseek_city.py Stuttgart --stage places
+Stuttgart: places
+  tokens in 1145 out 3511
+
+$ deepseek_city.py Stuttgart --stage frame
+Stuttgart: frame
+  tokens in 2482 out 1981
+  repaired JSON
+
+$ deepseek_city.py Stuttgart --stage plans
+Stuttgart: plans
+  plans for day
+  tokens in 2331 out 818
+  plans for 1n
+  tokens in 2332 out 1112
+  plans for 2n
+  tokens in 2337 out 1359
+  plans for 3n
+  tokens in 2332 out 1652
+
+$ merge_city.py Stuttgart
+Stuttgart: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/stuttgart.json and planner/stuttgart.json
+

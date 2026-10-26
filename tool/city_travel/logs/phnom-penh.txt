@@ -1,0 +1,35 @@
+$ deepseek_facts.py Phnom Penh
+  tokens in 4191 out 660
+Phnom Penh: 0 problems
+
+$ deepseek_city.py Phnom Penh --stage places
+Phnom Penh: places
+  tokens in 1195 out 2594
+
+$ deepseek_city.py Phnom Penh --stage frame
+Phnom Penh: frame
+  tokens in 2481 out 1989
+  repaired JSON
+
+$ deepseek_city.py Phnom Penh --stage plans
+Phnom Penh: plans
+  plans for day
+  tokens in 1935 out 860
+  plans for 1n
+  tokens in 1936 out 989
+  plans for 2n
+  tokens in 1941 out 1573
+  plans for 3n
+  tokens in 1936 out 1722
+  repaired JSON
+
+$ merge_city.py Phnom Penh
+Traceback (most recent call last):
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\merge_city.py", line 158, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\merge_city.py", line 106, in main
+    for st in d["stops"]:
+              ~^^^^^^^^^
+KeyError: 'stops'
+

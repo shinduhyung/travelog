@@ -1,0 +1,678 @@
+{
+  "city": "Barcelona",
+  "checked": "October 2026",
+  "intro_line": "Barcelona blends Gothic lanes, Gaudí curves and a beach into one lively city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Barri Gòtic",
+        "Eixample",
+        "El Born",
+        "Gràcia"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Barri Gòtic",
+        "Eixample",
+        "El Born",
+        "Gràcia"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Barri Gòtic",
+        "Eixample",
+        "El Born",
+        "Gràcia"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Barri Gòtic",
+        "Eixample",
+        "El Born",
+        "Gràcia"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Barri Gòtic",
+        "Eixample",
+        "El Born",
+        "Gràcia"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 4,
+        "note": "January: cold and quiet, highs near 14°C. Pack a warm layer; few crowds."
+      },
+      {
+        "high": 15,
+        "low": 6,
+        "rain_days": 6,
+        "note": "February: still cool, highs around 15°C, a few rainy days. Good for museums."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 7,
+        "note": "March: mild at 16°C with more showers. Bring a light rain jacket."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 8,
+        "note": "April: pleasant 18°C days, some rain. Great for walking the old town."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 7,
+        "note": "May: warm at 21°C and mostly dry. Beach days start to work."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 6,
+        "note": "June: hot at 26°C, warm evenings. Busy but not peak yet."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 4,
+        "note": "July: hot and dry, highs near 29°C. Book ahead and swim early or late."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 7,
+        "note": "August: hot and humid, highs near 29°C. Many locals leave; some shops close."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 12,
+        "note": "September: warm at 25°C but the wettest month, around 12 rain days. Keep plans flexible."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 10,
+        "note": "October: mild at 22°C with some rain. Comfortable for sightseeing."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 8,
+        "note": "November: cooler at 17°C, more showers. Fewer tourists."
+      },
+      {
+        "high": 15,
+        "low": 6,
+        "rain_days": 4,
+        "note": "December: cold at 15°C, few rain days. Festive lights and quiet sights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.2,
+      0.25,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.35,
+      0.25
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "sagrada": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Early morning or late afternoon",
+      "area": "Eixample",
+      "popularity": 5
+    },
+    "guell": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning before the crowds and heat",
+      "area": "Gràcia",
+      "popularity": 5
+    },
+    "rambla": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or evening; avoid midday heat",
+      "area": "Barri Gòtic",
+      "popularity": 5
+    },
+    "batllo": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "First slot of the day",
+      "area": "Eixample",
+      "popularity": 5
+    },
+    "gotic": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or after dark",
+      "area": "Barri Gòtic",
+      "popularity": 5
+    },
+    "mila": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Late afternoon for rooftop light",
+      "area": "Eixample",
+      "popularity": 4
+    },
+    "boqueria": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Barri Gòtic",
+      "popularity": 5
+    },
+    "catedral": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Barri Gòtic",
+      "popularity": 4
+    },
+    "campnou": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Eixample",
+      "popularity": 4
+    },
+    "arc": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "El Born",
+      "popularity": 3
+    },
+    "aquarium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Barri Gòtic",
+      "popularity": 3
+    },
+    "barceloneta": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in summer; avoid peak August afternoons",
+      "area": "Barri Gòtic",
+      "popularity": 4
+    },
+    "liceu": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon tour",
+      "area": "Barri Gòtic",
+      "popularity": 3
+    },
+    "santpau": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "fountain": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "castell": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "palau": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon tour or evening concert",
+      "area": "El Born",
+      "popularity": 3
+    },
+    "upf": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Weekday",
+      "area": "El Born",
+      "popularity": 1
+    },
+    "teleferico": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Barri Gòtic",
+      "popularity": 3
+    },
+    "tibidabo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend afternoon in good weather",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "ub": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Eixample",
+      "popularity": 1
+    },
+    "bunkers": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Gràcia",
+      "popularity": 4
+    },
+    "gracia_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Gràcia",
+      "popularity": 3
+    },
+    "tapas_tour": {
+      "types": [
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "El Born",
+      "popularity": 3
+    },
+    "barceloneta_walk": {
+      "types": [
+        "beach",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Barri Gòtic",
+      "popularity": 3
+    },
+    "montjuic_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "santacaterina": {
+      "types": [
+        "food"
+      ],
+      "minutes": 40,
+      "setting": "indoor",
+      "best": "Weekday lunch",
+      "area": "El Born",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Gothic quarter, Gaudí sights and a beach or Montjuïc afternoon without rushing."
+  },
+  "airports": [
+    {
+      "code": "BCN",
+      "name": "Barcelona El Prat International Airport",
+      "primary": true,
+      "note": "Main hub, about 13 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Rodalies train",
+          "to": "Barcelona Sants and Passeig de Gràcia",
+          "price": "€2-3",
+          "time": "25-35 min",
+          "note": "Leaves from Terminal 2; free shuttle from Terminal 1."
+        },
+        {
+          "mode": "Metro L9 Sud",
+          "to": "City centre connections",
+          "price": "€5.90 airport ticket",
+          "time": "30-40 min",
+          "note": "Airport ticket covers metro only."
+        },
+        {
+          "mode": "Aerobus",
+          "to": "Plaça Catalunya and Plaça d'Espanya",
+          "price": "€7.45",
+          "time": "35-45 min",
+          "note": "Frequent express bus, easy with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "25-35 min",
+          "note": "Fixed-style airport fares apply; check the meter."
+        },
+        {
+          "mode": "Uber or Bolt",
+          "to": "City centre",
+          "price": "€25-40",
+          "time": "25-35 min",
+          "note": "Pick-up points are signed at the terminals."
+        }
+      ]
+    },
+    {
+      "code": "GRO",
+      "name": "Girona-Costa Brava Airport",
+      "primary": false,
+      "note": "Low-cost airport about 100 km north; used by Ryanair and others.",
+      "options": [
+        {
+          "mode": "Sagalés bus",
+          "to": "Estació del Nord",
+          "price": "€16 one way, €25 return",
+          "time": "1 hr 10 min",
+          "note": "Timed to flights."
+        },
+        {
+          "mode": "Train plus local bus",
+          "to": "Girona station then airport",
+          "price": "€10-20",
+          "time": "1 hr 30 min-2 hr",
+          "note": "Slower but flexible."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Barcelona centre",
+          "price": "€120-160",
+          "time": "1 hr 15 min",
+          "note": "Only worth it for groups."
+        }
+      ]
+    },
+    {
+      "code": "REU",
+      "name": "Reus Airport",
+      "primary": false,
+      "note": "Low-cost airport about 100 km south; mainly Ryanair.",
+      "options": [
+        {
+          "mode": "Hispano Igualadina bus",
+          "to": "Barcelona Sants",
+          "price": "€13 one way, €24 return",
+          "time": "1 hr 30 min-1 hr 45 min",
+          "note": "Synchronised with flights."
+        },
+        {
+          "mode": "Train plus bus 50",
+          "to": "Reus then airport",
+          "price": "about €10",
+          "time": "about 2 hr 30 min",
+          "note": "Cheaper but slower."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Barcelona centre",
+          "price": "€130-170",
+          "time": "1 hr 20 min",
+          "note": "Best booked ahead."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Barcelona",
+      "https://en.wikivoyage.org/wiki/Barcelona"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "Metro for most trips; walk the old town and use taxis late at night.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metro and FGC trains cover the city. Zone 1 tickets are cheap and contactless via T-mobilitat."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City and intercity buses fill the gaps. Night buses run when the metro closes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber, Bolt and Cabify operate in Barcelona."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is costly. Leave the car outside the centre."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is best in the old town. Bike lanes and Bicing-style bike hire are common."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries and cruise shuttles link the port to La Rambla and the Balearics."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: mild winters, hot dry summers and the most rain in autumn.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to July",
+        "text": "Warm days around 21–29°C with little rain. Good for both sightseeing and the beach."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer (July and August)",
+        "text": "Highs near 29°C and lows around 21–22°C. Sightsee early morning or evening; rest at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in autumn",
+        "text": "September has about 12 rain days and October about 10. Showers can be heavy; carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild but cool winters",
+        "text": "January highs near 14°C and lows around 5°C. A warm coat is needed, especially at night."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach season",
+        "text": "Comfortable swimming is roughly June to September. May and October are for walks, not long swims."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer; a layer for cool evenings; a rain jacket for spring and autumn."
+      }
+    ]
+  }
+}

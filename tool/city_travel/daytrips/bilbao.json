@@ -1,0 +1,77 @@
+{
+ "city": "Bilbao",
+ "trips": [
+  {
+   "place": "Donostia / San Sebastián",
+   "label": "San Sebastián",
+   "position": {
+    "id": 1001227,
+    "name": "Donostia-San Sebastián",
+    "city": "Donostia-San Sebastian",
+    "lat": 43.31767,
+    "lng": -1.9767
+   },
+   "town": {
+    "name": "Donostia / San Sebastián",
+    "lat": 43.31283,
+    "lng": -1.97499
+   },
+   "road": {
+    "km": 103,
+    "min": 78,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 140.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€5",
+     "from_usd": 6.0,
+     "avg": "€10",
+     "time": "3h 23m",
+     "per_day": 8,
+     "source": "https://www.omio.com/trains/bilbao/san-sebastian"
+    },
+    "bus": {
+     "from": "$38-$59",
+     "time": "4h 52m",
+     "via": "Bilbao Intermodal to Madrid, Terminal de autobuses T4 (Aeropuerto de Madrid)",
+     "source": "https://www.rome2rio.com/s/Bilbao/San%20Sebasti%C3%A1n"
+    }
+   },
+   "route_note": "Direct buses run from Bilbao's Termibus station to San Sebastián's Donostia bus station in about 1.5 hours, and trains are possible with a change, so check which option suits your timing.",
+   "see": [
+    "La Concha beach and promenade",
+    "Parte Vieja (Old Town) pintxos bars",
+    "Monte Urgull and the Castillo de la Mota",
+    "Buen Pastor Cathedral",
+    "Miramar Palace gardens"
+   ],
+   "visit": "Full day",
+   "tour_query": "San Sebastian day trip from Bilbao",
+   "quests": [
+    "Peine del Viento",
+    "San Sebastián Old Town",
+    "La Concha Promenade",
+    "Arzak",
+    "Amelia by Paulo Airaudo",
+    "Mugaritz",
+    "Parque de Atracciones Monte Igueldo",
+    "La Concha Beach"
+   ],
+   "recommended": "car",
+   "why": "Driving takes about 78 minutes over 103 km, while the listed train takes 3h 23m and the listed bus takes 4h 52m.",
+   "stars": 5,
+   "know": [
+    "The listed bus option routes via Madrid, while the route note describes a direct bus of about 1.5 hours; confirm which service you'll take before booking.",
+    "Trains run 8 times per day from €5, but the 3h 23m journey makes them the slowest practical choice."
+   ]
+  }
+ ],
+ "problems": [
+  "Gernika: no Omio position, dropped",
+  "Vitoria-Gasteiz: not a town in cities15000.json (ES), dropped"
+ ]
+}

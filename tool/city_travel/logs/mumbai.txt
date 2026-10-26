@@ -1,0 +1,30 @@
+$ deepseek_facts.py Mumbai
+  tokens in 4105 out 718
+Mumbai: 1 problems
+  - airport NMI unknown code
+
+$ deepseek_city.py Mumbai --stage places
+Mumbai: places
+  tokens in 1189 out 2979
+
+$ deepseek_city.py Mumbai --stage frame
+Mumbai: frame
+  tokens in 2436 out 1793
+
+$ deepseek_city.py Mumbai --stage plans
+Mumbai: plans
+  plans for day
+  tokens in 2013 out 847
+  plans for 1n
+  tokens in 2014 out 801
+  plans for 2n
+  tokens in 2019 out 1552
+  plans for 3n
+  tokens in 2014 out 2097
+  plans for 4n
+  tokens in 2014 out 2208
+
+$ merge_city.py Mumbai
+Mumbai: 19 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/mumbai.json and planner/mumbai.json
+

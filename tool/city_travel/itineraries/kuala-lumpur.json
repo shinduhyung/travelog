@@ -1,0 +1,1819 @@
+{
+  "city": "Kuala Lumpur",
+  "checked": "October 2026",
+  "currency": "MYR",
+  "usd_rate": 4.083,
+  "intro": "Kuala Lumpur rewards visitors with cheap eats, leafy parks, and a skyline that never quits. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 2.901,
+      "west": 101.5858,
+      "north": 3.2731,
+      "east": 101.7306,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 6,
+      "per_km": 1.5,
+      "min_fare": 5
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "RapidKL metro lines 3, 4, 5, 8, 9, 11, 12 cover most sights; trains every 2-7 min.",
+      "KTM lines 1, 2, 10 and ERL lines 6, 7 link KL Sentral to suburbs and the airport.",
+      "Touch 'n Go card costs RM10 plus top-up; contactless cards work on KTM and ERL only.",
+      "Buses are cheap but slow; use them for short hops off the rail grid.",
+      "Grab is the main ride app; taxis are metered but agree the fare first.",
+      "Driving is stressful in jams; walking is fine in the centre but pavements are patchy."
+    ],
+    "sources": []
+  },
+  "places": {
+    "petronas": {
+      "name": "Petronas Towers",
+      "landmark": "Petronas Towers",
+      "kind": "sight",
+      "lat": 3.1579,
+      "lon": 101.7123,
+      "price": 98,
+      "price_text": "≈ MYR 80–120 for the observation deck; check on the day",
+      "hours": "Observation deck Tue–Sun roughly 09:00–21:00 · closed Monday",
+      "tip": "Book a timed slot online and go at dusk to see the city lights come on.",
+      "source": "https://www.petronastwintowers.com.my/"
+    },
+    "batu": {
+      "name": "Batu Caves",
+      "landmark": "Batu Caves",
+      "kind": "sight",
+      "lat": 3.2379,
+      "lon": 101.684,
+      "price": 0,
+      "price_text": "Free · small fee for some cave areas",
+      "hours": "Temple caves roughly 06:00–21:00 daily",
+      "tip": "Come before 09:00 to climb the 272 steps before the heat and crowds. Cover shoulders and knees.",
+      "source": "https://www.batucaves.com/"
+    },
+    "merdeka_square": {
+      "name": "Merdeka Square",
+      "landmark": "Merdeka Square",
+      "kind": "sight",
+      "lat": 3.1491,
+      "lon": 101.6933,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Walk the lawn and the colonial buildings around it in the cooler early evening.",
+      "source": ""
+    },
+    "kl_tower": {
+      "name": "KL Tower",
+      "landmark": "KL Tower",
+      "kind": "sight",
+      "lat": 3.1528,
+      "lon": 101.7037,
+      "price": 52,
+      "price_text": "≈ MYR 50–80 for the observation deck; check on the day",
+      "hours": "Roughly 09:00–22:00 daily",
+      "tip": "The outdoor skydeck gives better photos than the glass box. Go near sunset.",
+      "source": "https://www.menarakl.com.my/"
+    },
+    "thean_hou": {
+      "name": "Thean Hou Temple",
+      "landmark": "Thean Hou Temple",
+      "kind": "sight",
+      "lat": 3.1216,
+      "lon": 101.6875,
+      "price": 0,
+      "price_text": "Free · small donation welcome",
+      "hours": "Roughly 08:00–22:00 daily",
+      "tip": "Climb to the upper terrace for city views, and visit during Chinese New Year for lanterns.",
+      "source": ""
+    },
+    "islamic_arts": {
+      "name": "Islamic Arts Museum Malaysia",
+      "landmark": "Islamic Arts Museum Malaysia",
+      "kind": "museum",
+      "lat": 3.142,
+      "lon": 101.6896,
+      "price": 20,
+      "price_text": "≈ MYR 14–20; check on the day",
+      "hours": "Daily roughly 10:00–18:00",
+      "tip": "The model mosques and jewellery galleries are the highlights. Air-conditioned and calm.",
+      "source": "https://www.iamm.org.my/"
+    },
+    "merdeka_118": {
+      "name": "Merdeka 118",
+      "landmark": "Merdeka 118",
+      "kind": "sight",
+      "lat": 3.1409,
+      "lon": 101.6983,
+      "price": null,
+      "price_text": "Observation deck pricing varies; check on the day",
+      "hours": "Check on the day",
+      "tip": "The world's second-tallest building. View it from Merdeka Square or the KL Tower area.",
+      "source": ""
+    },
+    "national_mosque": {
+      "name": "National Mosque of Malaysia",
+      "landmark": "National Mosque of Malaysia",
+      "kind": "sight",
+      "lat": 3.1419,
+      "lon": 101.6923,
+      "price": 0,
+      "price_text": "Free · robes lent at the entrance",
+      "hours": "Open to visitors outside prayer times; check on the day",
+      "tip": "Dress modestly; robes are provided. Avoid the main prayer times.",
+      "source": ""
+    },
+    "bukit_bintang": {
+      "name": "Bukit Bintang",
+      "landmark": "Bukit Bintang",
+      "kind": "sight",
+      "lat": 3.1466,
+      "lon": 101.7115,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops roughly 10:00–22:00",
+      "tip": "The shopping and street-food heart of the city. Walk Jalan Bukit Bintang after dark.",
+      "source": ""
+    },
+    "aquaria": {
+      "name": "Aquaria KLCC",
+      "landmark": "Aquaria KLCC",
+      "kind": "sight",
+      "lat": 3.1539,
+      "lon": 101.713,
+      "price": 75,
+      "price_text": "≈ MYR 60–90; check on the day",
+      "hours": "Daily roughly 10:00–19:00",
+      "tip": "Good rainy-day option with kids. The underwater tunnel is the highlight.",
+      "source": "https://www.aquariaklcc.com/"
+    },
+    "times_square": {
+      "name": "Berjaya Times Square Theme Park",
+      "landmark": "Berjaya Times Square Theme Park",
+      "kind": "activity",
+      "lat": 3.1437,
+      "lon": 101.7144,
+      "price": 70,
+      "price_text": "≈ MYR 55–90; check on the day",
+      "hours": "Daily roughly 12:00–20:00",
+      "tip": "Indoor rides for families. Check ride closures before you buy tickets.",
+      "source": "https://www.berjayatimessquarethemepark.com/"
+    },
+    "bukit_jalil": {
+      "name": "Bukit Jalil National Stadium",
+      "landmark": "Bukit Jalil National Stadium",
+      "kind": "sight",
+      "lat": 3.055,
+      "lon": 101.6918,
+      "price": null,
+      "price_text": "Event ticket prices vary",
+      "hours": "Only on event days",
+      "tip": "Only worth the trip for a match or concert. Check the event calendar first.",
+      "source": ""
+    },
+    "jalan_alor": {
+      "name": "Jalan Alor",
+      "landmark": "Jalan Alor",
+      "kind": "food",
+      "lat": 3.1455,
+      "lon": 101.709,
+      "price": 30,
+      "price_text": "≈ MYR 15–50 per person for a meal",
+      "hours": "Stalls roughly 17:00–late daily",
+      "tip": "Come hungry after dark and try grilled seafood and satay. Bring cash.",
+      "source": ""
+    },
+    "kidzania": {
+      "name": "KidZania Kuala Lumpur",
+      "landmark": "Kidzania Kuala Lumpur",
+      "kind": "activity",
+      "lat": 3.1517,
+      "lon": 101.6247,
+      "price": 90,
+      "price_text": "≈ MYR 70–110; check on the day",
+      "hours": "Daily roughly 10:00–18:00",
+      "tip": "Best for children roughly 4–12. Book online and go early.",
+      "source": "https://www.kidzania.com.my/"
+    },
+    "murugan": {
+      "name": "Lord Murugan Statue",
+      "landmark": "Lord Murugan Statue",
+      "kind": "sight",
+      "lat": 3.2379,
+      "lon": 101.684,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "With the Batu Caves temple, roughly 06:00–21:00",
+      "tip": "The tall golden statue stands at the foot of the Batu Caves steps. Combine the two visits.",
+      "source": ""
+    },
+    "masjid_jamek": {
+      "name": "Masjid Jamek",
+      "landmark": "Masjid Jamek",
+      "kind": "sight",
+      "lat": 3.1493,
+      "lon": 101.6965,
+      "price": 0,
+      "price_text": "Free · robes lent at the entrance",
+      "hours": "Open outside prayer times; check on the day",
+      "tip": "One of the oldest mosques in the city, at the meeting of two rivers. Dress modestly.",
+      "source": ""
+    },
+    "nasi_lemak": {
+      "name": "Nasi Lemak",
+      "landmark": "Nasi Lemak",
+      "kind": "food",
+      "lat": 3.139,
+      "lon": 101.6869,
+      "price": 12,
+      "price_text": "≈ MYR 5–25 per plate",
+      "hours": "Varies by stall; many open breakfast to late",
+      "tip": "Malaysia's national dish: rice cooked in coconut milk with sambal, egg and peanuts. Try it for breakfast.",
+      "source": ""
+    },
+    "pasar_seni": {
+      "name": "Pasar Seni",
+      "landmark": "Pasar Seni",
+      "kind": "sight",
+      "lat": 3.1453,
+      "lon": 101.6953,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Daily roughly 10:00–21:00",
+      "tip": "Central Market for crafts and souvenirs. Good for gifts on a rainy afternoon.",
+      "source": ""
+    },
+    "petaling_street": {
+      "name": "Petaling Street Market",
+      "landmark": "Petaling Street Market",
+      "kind": "food",
+      "lat": 3.1445,
+      "lon": 101.698,
+      "price": 0,
+      "price_text": "Free to walk · food and goods priced per stall",
+      "hours": "Stalls roughly 10:00–late daily",
+      "tip": "Chinatown's busy market street. Haggle politely and watch your bag.",
+      "source": ""
+    },
+    "putra_mosque": {
+      "name": "Putra Mosque",
+      "landmark": "Putra Mosque",
+      "kind": "sight",
+      "lat": 2.9362,
+      "lon": 101.6897,
+      "price": 0,
+      "price_text": "Free · robes lent at the entrance",
+      "hours": "Open outside prayer times; check on the day",
+      "tip": "The pink mosque in Putrajaya, about 40 minutes from the city. Combine with a Putrajaya day trip.",
+      "source": ""
+    },
+    "sri_mahamariamman": {
+      "name": "Sri Mahamariamman Temple",
+      "landmark": "Sri Mahamariamman Temple",
+      "kind": "sight",
+      "lat": 3.1432,
+      "lon": 101.6963,
+      "price": 0,
+      "price_text": "Free · small donation welcome",
+      "hours": "Roughly 06:00–20:00 daily",
+      "tip": "The oldest Hindu temple in the city, near Chinatown. Remove shoes before entering.",
+      "source": ""
+    },
+    "sunway_lagoon": {
+      "name": "Sunway Lagoon",
+      "landmark": "Sunway Lagoon",
+      "kind": "activity",
+      "lat": 3.0718,
+      "lon": 101.602,
+      "price": 200,
+      "price_text": "≈ MYR 150–250; check on the day",
+      "hours": "Daily roughly 10:00–18:00",
+      "tip": "Water park and rides outside the city centre. Bring swimwear and a change of clothes.",
+      "source": "https://sunwaylagoon.com/"
+    },
+    "klcc_park": {
+      "name": "KLCC Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 3.1556,
+      "lon": 101.7136,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Roughly 07:00–22:00 daily",
+      "tip": "Best free view of the Petronas Towers. Come at dusk for the fountain show.",
+      "source": ""
+    },
+    "night_food_tour": {
+      "name": "Evening street-food walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 3.1452,
+      "lon": 101.7087,
+      "price": 120,
+      "price_text": "≈ MYR 80–180 per person; check on the day",
+      "hours": "Evening tours roughly 18:00–21:00",
+      "tip": "A guided walk through Jalan Alor and nearby stalls. Confirm food and drinks are included.",
+      "source": ""
+    },
+    "river_walk": {
+      "name": "Klang River walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 3.1489,
+      "lon": 101.6957,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Follow the river between Masjid Jamek and Merdeka Square for murals and old buildings.",
+      "source": ""
+    },
+    "brickfields_walk": {
+      "name": "Brickfields Little India walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 3.1294,
+      "lon": 101.6869,
+      "price": 0,
+      "price_text": "Free to walk · food priced per stall",
+      "hours": "Always open · shops roughly 09:00–21:00",
+      "tip": "Walk the streets near the KL Sentral area for Indian food, spices and banana-leaf meals.",
+      "source": ""
+    },
+    "helipad_view": {
+      "name": "Rooftop bar city view",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 3.1579,
+      "lon": 101.7116,
+      "price": 45,
+      "price_text": "≈ MYR 30–60 for a drink",
+      "hours": "Roughly 17:00–late daily",
+      "tip": "A rooftop drink gives the best skyline view for the price. Dress smart-casual.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day for first-time visitors: the cave temple at dawn, then the old city and the towers at night.",
+      "days": [
+        {
+          "title": "Batu Caves at dawn, old city, towers at dusk",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Go early: cooler and quieter. Cover knees and shoulders. About 30 minutes by train or taxi from the centre."
+            },
+            {
+              "place": "murugan",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "The tall gold statue at the foot of the steps. Same site as the caves."
+            },
+            {
+              "place": "thean_hou",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short taxi ride away. Rooftop views over the city."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch nearby first, then the colonial buildings and the flag pole."
+            },
+            {
+              "place": "masjid_jamek",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Walk along the river. Open outside prayer times; check on the day."
+            },
+            {
+              "place": "petronas",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Book the observation deck ahead. Closed Monday. Stay for the fountains in KLCC Park."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC or Chinatown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around eating: breakfast nasi lemak, Little India lunch, Chinatown snacks and Jalan Alor at night.",
+      "days": [
+        {
+          "title": "Breakfast, Little India, Chinatown, Jalan Alor",
+          "stops": [
+            {
+              "place": "nasi_lemak",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Start with a classic breakfast. Many stalls open early; check on the day."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Little India. Eat banana-leaf lunch here. Shops open roughly 09:00–21:00."
+            },
+            {
+              "place": "thean_hou",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short ride away, in the same area. Good views."
+            },
+            {
+              "place": "petaling_street",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Chinatown snacks and stalls. Busiest in the evening but fine now."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Indoor market next door. Good for a coffee and a rest."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Street-food street. Stalls roughly 17:00 to late. Bring cash."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bukit Bintang"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green space and cool air: caves and temple in the morning, park and river walk in the evening.",
+      "days": [
+        {
+          "title": "Caves, temple, park and river",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Early morning is coolest. Watch the monkeys and keep food hidden."
+            },
+            {
+              "place": "thean_hou",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Garden temple on a hill. Shaded spots to rest."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch first, then the museum during the hottest hours. Open daily roughly 10:00–18:00."
+            },
+            {
+              "place": "klcc_park",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Walk the park and the lake. Fountains in the evening."
+            },
+            {
+              "place": "river_walk",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Short ride to Chinatown. Walk the river as the lights come on."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the big sights: Batu Caves early, then colonial KL and the towers at dusk.",
+      "days": [
+        {
+          "title": "Batu Caves, old KL and the towers",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Go early: cooler and fewer crowds. Cover shoulders and knees. About 30 minutes by train from KL Sentral."
+            },
+            {
+              "place": "murugan",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "At the foot of the steps. Quick photo stop."
+            },
+            {
+              "place": "thean_hou",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Short taxi ride. City views from the terrace."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby first. Open-air colonial square; bring water."
+            },
+            {
+              "place": "masjid_jamek",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Five minutes on foot. Wait outside prayer times; robes provided."
+            },
+            {
+              "place": "petronas",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Book the observation deck ahead. Closed Monday. Stay for the fountains at KLCC Park."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC or Bukit Bintang"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat-first visitors: hawker breakfast, Chinatown snacks and a Jalan Alor dinner.",
+      "days": [
+        {
+          "title": "Chinatown to Jalan Alor",
+          "stops": [
+            {
+              "place": "nasi_lemak",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Breakfast at a local stall or kopitiam. Many open early."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Little India: banana-leaf lunch spots and sweet shops."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Indoor market, good for a hot afternoon. Near the Chinatown LRT stop."
+            },
+            {
+              "place": "petaling_street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Street stalls and snacks. Bargain politely."
+            },
+            {
+              "place": "river_walk",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Easy stroll along the Klang River before dark."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner from the stalls. Cash is handy. Busiest after 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bukit Bintang"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Green-leaning visitors: caves and temple in the morning, park and skyline at dusk.",
+      "days": [
+        {
+          "title": "Caves, temple and KLCC Park",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Early start for cooler air. Watch the monkeys; keep food hidden."
+            },
+            {
+              "place": "thean_hou",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Garden terraces and city views. Short taxi ride."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch first. Cool indoor break in the hottest hours."
+            },
+            {
+              "place": "klcc_park",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Shaded paths and a kids' pool. Fountain show after dark."
+            },
+            {
+              "place": "helipad_view",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset drink with the towers in view. Dress smart-casual."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: towers, temples and the old colonial core, grouped by area.",
+      "days": [
+        {
+          "title": "Arrive, KLCC and the towers",
+          "stops": [
+            {
+              "place": "petronas",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Observation deck closed Monday. Book a slot ahead; late afternoon light is best."
+            },
+            {
+              "place": "klcc_park",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Five minutes on foot from the towers. Good spot for the fountain show at dusk."
+            },
+            {
+              "place": "helipad_view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Rooftop drink with the towers lit up. Dress smart-casual."
+            }
+          ]
+        },
+        {
+          "title": "Batu Caves and Brickfields",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Go early: cooler and fewer crowds. About 30 minutes by train or taxi. Cover shoulders and knees."
+            },
+            {
+              "place": "murugan",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "At the foot of the stairs, on the way out."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Air-conditioned break from the heat. About 10 minutes by taxi."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch stop: banana-leaf rice and Indian sweets."
+            },
+            {
+              "place": "thean_hou",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short taxi ride. City views from the upper terrace."
+            }
+          ]
+        },
+        {
+          "title": "Old town, then fly",
+          "stops": [
+            {
+              "place": "merdeka_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Colonial buildings and the flagpole. Shade is limited; bring water."
+            },
+            {
+              "place": "masjid_jamek",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Open outside prayer times; check on the day."
+            },
+            {
+              "place": "sri_mahamariamman",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Walk along the river to Chinatown."
+            },
+            {
+              "place": "petaling_street",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Early lunch and a quick browse. Stalls busiest in the evening."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Indoor crafts market next to the LRT station. Good for gifts before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC or Bukit Bintang"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who plan the day around meals: hawker stalls, mamak suppers and Chinatown classics.",
+      "days": [
+        {
+          "title": "Arrive, Chinatown and street food",
+          "stops": [
+            {
+              "place": "pasar_seni",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start here, then walk into Chinatown."
+            },
+            {
+              "place": "petaling_street",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Snack as you go. Prices are negotiable; carry small notes."
+            },
+            {
+              "place": "river_walk",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Easy stroll along the water before dinner."
+            },
+            {
+              "place": "night_food_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening walk with tastings. Book ahead and say if you avoid pork or shellfish."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast, markets and Jalan Alor",
+          "stops": [
+            {
+              "place": "nasi_lemak",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Classic breakfast. Many stalls sell out by mid-morning."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch in Little India: banana-leaf rice, dosa, teh tarik."
+            },
+            {
+              "place": "thean_hou",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Walk it off on the temple terraces."
+            },
+            {
+              "place": "bukit_bintang",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Malls and air-conditioning until dinner."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Stalls from about 17:00. Pick a busy stall; pay as you order."
+            }
+          ]
+        },
+        {
+          "title": "KLCC, then fly",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning walk before the heat."
+            },
+            {
+              "place": "aquaria",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Indoor and cool, under the towers. Good for a rainy morning."
+            },
+            {
+              "place": "petronas",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Observation deck closed Monday. The mall below has plenty of lunch options."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bukit Bintang"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want green space and cooler air between the city sights.",
+      "days": [
+        {
+          "title": "Arrive, park and towers",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Shaded paths and a kids' pool. Dusk is the nicest time."
+            },
+            {
+              "place": "petronas",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Observation deck closed Monday. Book ahead for the last slot before sunset."
+            },
+            {
+              "place": "helipad_view",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Rooftop drink with the towers lit up."
+            }
+          ]
+        },
+        {
+          "title": "Batu Caves and the lake gardens",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Early start beats the heat and the tour buses. About 30 minutes by train."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Cool indoor break. About 10 minutes by taxi."
+            },
+            {
+              "place": "thean_hou",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch nearby first, then the temple terraces."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Taxi back into town. Open lawns and colonial facades."
+            }
+          ]
+        },
+        {
+          "title": "Sunway, then fly",
+          "stops": [
+            {
+              "place": "sunway_lagoon",
+              "at": "10:00",
+              "minutes": 300,
+              "note": "Weekday mornings are quietest. Bring swimwear and a change of clothes. About 40 minutes by taxi."
+            },
+            {
+              "place": "bukit_bintang",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Back in town for a late lunch and last shopping before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights, old KL and a taste of Little India, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, KLCC and the towers",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Start in the shade of the park. Good views up to the towers."
+            },
+            {
+              "place": "petronas",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Observation deck closed Monday. Book a slot ahead; late afternoon is best."
+            },
+            {
+              "place": "helipad_view",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Rooftop drink near KLCC. Check dress code on the day."
+            }
+          ]
+        },
+        {
+          "title": "Batu Caves and Little India",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Go early to beat heat and crowds. Wear shoes you can climb stairs in. Cover shoulders and knees."
+            },
+            {
+              "place": "murugan",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "The tall gold statue at the foot of the steps."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop: banana-leaf rice in Little India."
+            },
+            {
+              "place": "thean_hou",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Quiet in the afternoon; views over the city."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Cool and indoor for the hottest part of the day. Daily roughly 10:00–18:00."
+            }
+          ]
+        },
+        {
+          "title": "Old KL on foot",
+          "stops": [
+            {
+              "place": "masjid_jamek",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Open outside prayer times; check on the day. Modest dress."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Colonial buildings around a big open field. Hot at midday, so go now."
+            },
+            {
+              "place": "river_walk",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Follow the river between the old mosque and Chinatown."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Indoor market for crafts and a cool break. Lunch nearby."
+            },
+            {
+              "place": "petaling_street",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Busy market street. Bargain politely."
+            },
+            {
+              "place": "sri_mahamariamman",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Colourful temple at the edge of Chinatown. Roughly 06:00–20:00."
+            }
+          ]
+        },
+        {
+          "title": "Views and last bites",
+          "stops": [
+            {
+              "place": "merdeka_118",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Check opening hours and deck tickets on the day."
+            },
+            {
+              "place": "kl_tower",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Indoor deck, good in rain. Roughly 09:00–22:00."
+            },
+            {
+              "place": "nasi_lemak",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Late lunch. Many stalls serve it all day."
+            },
+            {
+              "place": "bukit_bintang",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Shops roughly 10:00–22:00. Easy walk to dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC or Bukit Bintang"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around meals, with a few sights between bites.",
+      "days": [
+        {
+          "title": "Arrive and eat in Bukit Bintang",
+          "stops": [
+            {
+              "place": "nasi_lemak",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "First plate: nasi lemak. Ask for less sambal if you are shy of heat."
+            },
+            {
+              "place": "bukit_bintang",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Wander the malls and side streets. Shops roughly 10:00–22:00."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Street-food stalls roughly 17:00–late. Bring cash and tissues."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown classics",
+          "stops": [
+            {
+              "place": "pasar_seni",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Start with coffee and a snack nearby, then browse."
+            },
+            {
+              "place": "petaling_street",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Grab lunch from the stalls. Busiest in the evening."
+            },
+            {
+              "place": "sri_mahamariamman",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick temple visit. Roughly 06:00–20:00."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Walk it off on the old field."
+            },
+            {
+              "place": "river_walk",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Easy riverside stroll back toward Chinatown."
+            }
+          ]
+        },
+        {
+          "title": "Little India and a night food walk",
+          "stops": [
+            {
+              "place": "brickfields_walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunchtime is the best time here. Try roti or banana-leaf rice."
+            },
+            {
+              "place": "thean_hou",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short ride away. A calm break from the streets."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Indoor and cool. Daily roughly 10:00–18:00."
+            },
+            {
+              "place": "night_food_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening street-food walk. Book ahead and say if you avoid pork or meat."
+            }
+          ]
+        },
+        {
+          "title": "Towers, park and a last supper",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Morning walk before the heat. Roughly 07:00–22:00."
+            },
+            {
+              "place": "aquaria",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Indoor and good in rain. Daily roughly 10:00–19:00."
+            },
+            {
+              "place": "petronas",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Deck closed Monday. Book a slot ahead."
+            },
+            {
+              "place": "helipad_view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drink with a view. Check dress code on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bukit Bintang or Chinatown"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want green space, cave steps and park time between city sights.",
+      "days": [
+        {
+          "title": "Arrive and KLCC Park",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Shaded paths and a big playground. Roughly 07:00–22:00."
+            },
+            {
+              "place": "aquaria",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Indoor and cool. Daily roughly 10:00–19:00, so go before closing."
+            },
+            {
+              "place": "petronas",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Deck closed Monday. Late evening slots are quieter."
+            }
+          ]
+        },
+        {
+          "title": "Batu Caves early",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Go at opening to beat heat and crowds. Cover shoulders and knees. Watch the monkeys."
+            },
+            {
+              "place": "murugan",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "Photo stop at the gold statue."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch in Little India."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Indoor for the hottest hours. Daily roughly 10:00–18:00."
+            },
+            {
+              "place": "thean_hou",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Garden setting with city views. Roughly 08:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Old KL and river",
+          "stops": [
+            {
+              "place": "masjid_jamek",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Open outside prayer times; check on the day."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Open 24 hours. Shady edges are best by late morning."
+            },
+            {
+              "place": "river_walk",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Flat riverside path. Early evening is cooler if you prefer."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Indoor market and lunch nearby."
+            },
+            {
+              "place": "petaling_street",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Market street. Stalls roughly 10:00–late."
+            }
+          ]
+        },
+        {
+          "title": "Views and a slow finish",
+          "stops": [
+            {
+              "place": "kl_tower",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Indoor deck. Roughly 09:00–22:00."
+            },
+            {
+              "place": "nasi_lemak",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "merdeka_118",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Check hours and tickets on the day."
+            },
+            {
+              "place": "helipad_view",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view to end the trip. Roughly 17:00–late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC or Brickfields"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-time visitors who want the big sights without rushing: towers, temples and the old colonial core.",
+      "days": [
+        {
+          "title": "Arrive, KLCC and the towers",
+          "stops": [
+            {
+              "place": "petronas",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Book the observation deck ahead. Closed Monday."
+            },
+            {
+              "place": "klcc_park",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Walk the park and watch the towers light up."
+            },
+            {
+              "place": "helipad_view",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset drinks with a skyline view. Dress smart casual."
+            }
+          ]
+        },
+        {
+          "title": "Batu Caves early, then Brickfields",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Go early to beat heat and crowds. Cover shoulders and knees."
+            },
+            {
+              "place": "murugan",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "At the foot of the stairs, on the way out."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Little India lanes; stop for a banana-leaf lunch."
+            },
+            {
+              "place": "islamic_arts",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Cool and quiet in the hottest part of the day."
+            },
+            {
+              "place": "thean_hou",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Temple on a hill; good light late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Colonial core and Chinatown",
+          "stops": [
+            {
+              "place": "masjid_jamek",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Visit outside prayer times. Modest dress."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Open-air colonial buildings; bring water and a hat."
+            },
+            {
+              "place": "river_walk",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Follow the river between the old mosque and the market."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Craft market; good for gifts and air conditioning."
+            },
+            {
+              "place": "petaling_street",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Market stalls, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Tower views and a last walk",
+          "stops": [
+            {
+              "place": "kl_tower",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Go up for the view; check the day's hours online."
+            },
+            {
+              "place": "bukit_bintang",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Malls and lunch; shops open around 10:00."
+            },
+            {
+              "place": "merdeka_118",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Check on the day whether the observation deck is open."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Street-food dinner. Stalls start around 17:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC or Bukit Bintang"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who plan the day around meals: hawker stalls, mamak suppers and Chinatown classics.",
+      "days": [
+        {
+          "title": "Arrive, KLCC and street food",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Easy walk after check-in."
+            },
+            {
+              "place": "petronas",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Deck closed Monday; book ahead."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Start with satay and grilled seafood. Cash is handy."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast, caves and Little India",
+          "stops": [
+            {
+              "place": "nasi_lemak",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Classic breakfast; many stalls open early."
+            },
+            {
+              "place": "batu",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Early is cooler and quieter. Modest dress."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunchtime in Little India; try a thali."
+            },
+            {
+              "place": "thean_hou",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short taxi ride; good views over the city."
+            },
+            {
+              "place": "night_food_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Guided evening eating walk; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown grazing day",
+          "stops": [
+            {
+              "place": "sri_mahamariamman",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Morning visit; remove shoes inside."
+            },
+            {
+              "place": "petaling_street",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Snack as you go; stalls open around 10:00."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Cool down indoors, then lunch nearby."
+            },
+            {
+              "place": "merdeka_square",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Walk off lunch on the old padang."
+            },
+            {
+              "place": "river_walk",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Early evening along the water, then dinner in Chinatown."
+            }
+          ]
+        },
+        {
+          "title": "Market lunch and a rooftop finish",
+          "stops": [
+            {
+              "place": "bukit_bintang",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Food courts and shops; lunch here."
+            },
+            {
+              "place": "kl_tower",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "helipad_view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drink; arrive early for a good table."
+            },
+            {
+              "place": "jalan_alor",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Last supper on the strip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bukit Bintang"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Travellers who want green space, cave steps and cool air between the city sights.",
+      "days": [
+        {
+          "title": "Arrive and KLCC Park",
+          "stops": [
+            {
+              "place": "klcc_park",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Shaded paths and a playground; busiest at dusk."
+            },
+            {
+              "place": "petronas",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Deck closed Monday; book ahead."
+            },
+            {
+              "place": "aquaria",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Indoor and open into the evening; check last entry."
+            }
+          ]
+        },
+        {
+          "title": "Caves and temple hill",
+          "stops": [
+            {
+              "place": "batu",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Climb early; the steps are steep and hot later."
+            },
+            {
+              "place": "murugan",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "Photo stop at the base."
+            },
+            {
+              "place": "brickfields_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch in Little India."
+            },
+            {
+              "place": "thean_hou",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Garden terraces with city views."
+            }
+          ]
+        },
+        {
+          "title": "Rainforest and old town",
+          "stops": [
+            {
+              "place": "merdeka_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early before the heat."
+            },
+            {
+              "place": "masjid_jamek",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Outside prayer times; modest dress."
+            },
+            {
+              "place": "river_walk",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Shaded in parts; carry water."
+            },
+            {
+              "place": "pasar_seni",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Indoor break and lunch nearby."
+            },
+            {
+              "place": "petaling_street",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening market and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Theme park or pool day, then views",
+          "stops": [
+            {
+              "place": "times_square",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Indoor rides; good rain plan. Check hours on the day."
+            },
+            {
+              "place": "kl_tower",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "helipad_view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset over the skyline to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "KLCC"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Batu Caves, the old mosque and colonial Merdeka Square."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hawker stalls, mamak suppers and Chinatown classics."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Forest walks, the Lake Gardens and cool hill air."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "KLCC",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Walk to the Petronas Towers and the park. Best metro links and easy airport train from KL Sentral.",
+      "center": [
+        3.158,
+        101.712
+      ]
+    },
+    {
+      "area": "Bukit Bintang",
+      "range": [
+        180,
+        550
+      ],
+      "why": "Malls, street food and nightlife on your doorstep. Central for walking to many sights.",
+      "center": [
+        3.146,
+        101.711
+      ]
+    },
+    {
+      "area": "Chinatown",
+      "range": [
+        90,
+        300
+      ],
+      "why": "Cheapest base for food and markets. Close to Merdeka Square and the old town.",
+      "center": [
+        3.143,
+        101.697
+      ]
+    },
+    {
+      "area": "Brickfields",
+      "range": [
+        120,
+        350
+      ],
+      "why": "Little India near KL Sentral, so airport trains and metro are minutes away. Good value.",
+      "center": [
+        3.129,
+        101.686
+      ]
+    }
+  ],
+  "food": [
+    "Eat at hawker centres: Jalan Alor for grilled skewers and seafood, and Lot 10 Hutong for classic stalls in air-conditioning.",
+    "Try nasi lemak, char kway teow, laksa and roti canai. A hawker meal is often around RM 8–20.",
+    "Mamak restaurants (Indian-Muslim) are open late and cheap. Good for supper after a night out.",
+    "Chinatown and Petaling Street for noodles, dumplings and fresh juice; check prices before ordering seafood.",
+    "Alcohol is pricey and limited outside bars and hotels. Many places are halal; look for the sign."
+  ],
+  "more_time": [
+    "Swap a city day for the Batu Caves in the morning, then the Forest Research Institute trails in the afternoon.",
+    "Take a day trip to Melaka or the Genting Highlands; buses and trains run from KL Sentral — check times on the day.",
+    "Add a night in the Cameron Highlands for cool air and tea plantations if you want a break from the heat."
+  ]
+}

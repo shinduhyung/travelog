@@ -1,0 +1,880 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of arcades, temples and museum history, all in Bo'ai and Haixiu.",
+      "days": [
+        {
+          "title": "Old streets in the morning, museum in the afternoon",
+          "stops": [
+            {
+              "place": "old_street_walk",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Start early before the heat and crowds. Shops open around 09:00."
+            },
+            {
+              "place": "wugongci",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Short walk within Bo'ai. Check closing time on the day."
+            },
+            {
+              "place": "coconut_drink",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Cool down with a fresh coconut."
+            },
+            {
+              "place": "hainan_museum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Short taxi to Haixiu Avenue."
+            },
+            {
+              "place": "qilou",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Back to Bo'ai for the late-afternoon light on the arcades."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of snacking, from coconut and coffee to street lanes and a seafood dinner.",
+      "days": [
+        {
+          "title": "Graze through Bo'ai, feast by the strait",
+          "stops": [
+            {
+              "place": "coconut_drink",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Hainan coffee and coconut to start."
+            },
+            {
+              "place": "temple_street",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Quiet lanes and small local eats. Daylight hours only."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch from the snack lanes. Busiest after 18:00."
+            },
+            {
+              "place": "qilou",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk off lunch under the arcades."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Taxi to the West Coast. Most places open from about 17:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "West Coast sands, a bike ride and a sunset over the strait.",
+      "days": [
+        {
+          "title": "Coast all day, sunset finish",
+          "stops": [
+            {
+              "place": "holiday_beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Swim in daylight hours. Warmest roughly Apr–Oct."
+            },
+            {
+              "place": "bihai_park",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Coastal walk nearby. Bring water and sun cover."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Late lunch by the water."
+            },
+            {
+              "place": "bike_ride",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Rent a bike for the late-afternoon light."
+            },
+            {
+              "place": "century_bridge",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Sunset view. Check the exact time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West Coast"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Arcades, temples and museum history in one easy day and a half.",
+      "days": [
+        {
+          "title": "Old streets on arrival",
+          "stops": [
+            {
+              "place": "qilou",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Start at the Bo'ai Old Street arcades. Shops open roughly 09:00–22:00."
+            },
+            {
+              "place": "old_street_walk",
+              "at": "16:10",
+              "minutes": 60,
+              "note": "Walk the arcade lanes in daylight. Go slow and look up at the facades."
+            },
+            {
+              "place": "coconut_drink",
+              "at": "17:20",
+              "minutes": 30,
+              "note": "Fresh coconut or Hainan coffee. Most stalls close around 21:00."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner from the snack lanes. Busiest after 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Temple, museum, then fly",
+          "stops": [
+            {
+              "place": "wugongci",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Open roughly 08:30–17:30. Go early for cooler air."
+            },
+            {
+              "place": "hainan_museum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Closed Monday. Check the day before you go."
+            },
+            {
+              "place": "wanlv_park",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Short garden walk nearby. Open roughly 06:00–22:00."
+            },
+            {
+              "place": "airport_garden",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Allow extra time for the trip to Meilan airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way from coconut stalls to a late seafood dinner.",
+      "days": [
+        {
+          "title": "Snack lanes and night market",
+          "stops": [
+            {
+              "place": "qilou",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the old street to build an appetite."
+            },
+            {
+              "place": "coconut_drink",
+              "at": "16:40",
+              "minutes": 30,
+              "note": "Mid-afternoon coconut stop. Most stalls close around 21:00."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Graze the snack lanes. Busiest after 18:00."
+            },
+            {
+              "place": "night_market",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Night market runs roughly 18:00 until late. Bring cash for small stalls."
+            }
+          ]
+        },
+        {
+          "title": "Lanes and seafood by the strait",
+          "stops": [
+            {
+              "place": "temple_street",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning lane walk in daylight hours. Try a local breakfast."
+            },
+            {
+              "place": "wugongci",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Open roughly 08:30–17:30."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Seafood by the strait. Most places open roughly 17:00–23:00. Check prices before ordering."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "West Coast sand, a sunset bridge and an easy bike ride.",
+      "days": [
+        {
+          "title": "West Coast sand and sunset",
+          "stops": [
+            {
+              "place": "holiday_beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Swim in daylight hours. Warmest roughly Apr–Oct."
+            },
+            {
+              "place": "bihai_park",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Coastal walk toward sunset."
+            },
+            {
+              "place": "century_bridge",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Time it for sunset. Always open."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner near the water. Most places open roughly 17:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Bike ride, then fly",
+          "stops": [
+            {
+              "place": "bike_ride",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Ride in daylight hours. Morning is cooler and quieter."
+            },
+            {
+              "place": "qiongzhou",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Strait views on a clear morning. Ferries run by timetable."
+            },
+            {
+              "place": "airport_garden",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Allow extra time for the trip to Meilan airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West Coast"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the arcaded old streets, local history and an easy coast sunset.",
+      "days": [
+        {
+          "title": "Arrive and walk the old streets",
+          "stops": [
+            {
+              "place": "qilou",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Check in near Bo'ai first. The street is always open; shops run roughly 09:00–22:00."
+            },
+            {
+              "place": "old_street_walk",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Look up at the arcades. Best in soft late light."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Busiest after 18:00. Cash and small notes help."
+            }
+          ]
+        },
+        {
+          "title": "Temple, museum and bridge sunset",
+          "stops": [
+            {
+              "place": "wugongci",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Opens roughly 08:30. Go early to beat the heat."
+            },
+            {
+              "place": "hainan_museum",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check the day before you go."
+            },
+            {
+              "place": "coconut_drink",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "A cool break after lunch."
+            },
+            {
+              "place": "century_bridge",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Time it for sunset. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Morning lanes, then fly",
+          "stops": [
+            {
+              "place": "temple_street",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Quiet lanes in daylight hours. Good for photos."
+            },
+            {
+              "place": "ferry_view",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Port runs by timetable; check on the day."
+            },
+            {
+              "place": "airport_garden",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Leave buffer for the airport transfer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want coconut, street stalls and seafood by the water.",
+      "days": [
+        {
+          "title": "Old street snacks and lanes",
+          "stops": [
+            {
+              "place": "coconut_drink",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Fresh coconut and Hainan coffee. Roughly 09:00–21:00."
+            },
+            {
+              "place": "qilou",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk off breakfast under the arcades."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Busiest after 18:00."
+            },
+            {
+              "place": "night_market",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Roughly 18:00–late. Bring small notes."
+            }
+          ]
+        },
+        {
+          "title": "Coast, seafood and sunset",
+          "stops": [
+            {
+              "place": "bihai_park",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Early morning is cooler. Always open."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Pick your fish and agree the price first."
+            },
+            {
+              "place": "century_bridge",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Short walk or taxi for sunset views."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast, then fly",
+          "stops": [
+            {
+              "place": "temple_street",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Morning food lanes in daylight hours."
+            },
+            {
+              "place": "airport_garden",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Leave buffer for the airport transfer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sun, sand and easy swims on the West Coast, with one old-street evening.",
+      "days": [
+        {
+          "title": "Arrive and West Coast sunset",
+          "stops": [
+            {
+              "place": "holiday_beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Swim in daylight hours only. Warmest Apr–Oct."
+            },
+            {
+              "place": "bike_ride",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon is best. Rent by the hour."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Roughly 17:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Coast walk, old street evening",
+          "stops": [
+            {
+              "place": "bihai_park",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early morning or sunset. Always open."
+            },
+            {
+              "place": "qilou",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Shaded arcades for the hot afternoon."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Busiest after 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Morning beach, then fly",
+          "stops": [
+            {
+              "place": "meilan_beach",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Morning is calmest. Always open."
+            },
+            {
+              "place": "airport_garden",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Close to the airport. Leave buffer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West Coast"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want old streets, temples and museum context at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into Bo'ai Old Street",
+          "stops": [
+            {
+              "place": "qilou",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Start at the arcades when the light softens. Shops are open until roughly 22:00."
+            },
+            {
+              "place": "coconut_drink",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Fresh coconut or Hainan coffee on the street."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Snack lanes get busiest after 18:00. Eat as you walk."
+            }
+          ]
+        },
+        {
+          "title": "Temple, lanes and museum",
+          "stops": [
+            {
+              "place": "old_street_walk",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Quietest light and fewest people in the arcades."
+            },
+            {
+              "place": "wugongci",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Opens roughly 08:30. Check the day's closing time on arrival."
+            },
+            {
+              "place": "temple_street",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Wander the neighbourhood lanes before lunch."
+            },
+            {
+              "place": "hainan_museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. About 20 minutes by taxi from Bo'ai."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, strait and seafood",
+          "stops": [
+            {
+              "place": "ferry_view",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Port runs by timetable, so check sailings on the day."
+            },
+            {
+              "place": "century_bridge",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Come for sunset. Always open."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Seafood places by the strait open around 17:00."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "wanlv_park",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Easy morning loop. Opens roughly 06:00."
+            },
+            {
+              "place": "airport_garden",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Allow time for the taxi to Meilan and check-in."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around snacks, seafood and late markets.",
+      "days": [
+        {
+          "title": "Arrive and eat through the old streets",
+          "stops": [
+            {
+              "place": "coconut_drink",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Settle in with a coconut before the lanes fill up."
+            },
+            {
+              "place": "qilou",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Walk the arcades between snacks."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Busiest after 18:00. Bring small cash."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and seafood night",
+          "stops": [
+            {
+              "place": "temple_street",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning lanes have the freshest breakfast stalls."
+            },
+            {
+              "place": "wugongci",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Opens roughly 08:30. A calm break between meals."
+            },
+            {
+              "place": "night_market",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Roughly 18:00 to late. Go hungry."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Optional second dinner by the strait. Check prices before ordering."
+            }
+          ]
+        },
+        {
+          "title": "West Coast flavours",
+          "stops": [
+            {
+              "place": "bihai_park",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk off breakfast along the coast."
+            },
+            {
+              "place": "holiday_beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Swim in daylight hours only."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Pick your fish, agree the price, then sit down."
+            }
+          ]
+        },
+        {
+          "title": "Coffee, then fly",
+          "stops": [
+            {
+              "place": "coconut_drink",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Last Hainan coffee before the airport."
+            },
+            {
+              "place": "airport_garden",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Allow taxi time to Meilan and check-in."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bo'ai Old Street"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Travellers who want sand and sunsets first, with a little old-town culture.",
+      "days": [
+        {
+          "title": "Arrive and catch the sunset",
+          "stops": [
+            {
+              "place": "holiday_beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Swim in daylight hours. Warmest roughly Apr–Oct."
+            },
+            {
+              "place": "century_bridge",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view over the water. Always open."
+            },
+            {
+              "place": "seafood_dinner",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Dinner near the strait."
+            }
+          ]
+        },
+        {
+          "title": "Coast path and old streets",
+          "stops": [
+            {
+              "place": "bihai_park",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early morning is cooler and quieter."
+            },
+            {
+              "place": "bike_ride",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Rent a bike along the West Coast in daylight hours."
+            },
+            {
+              "place": "qilou",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "About 30 minutes by taxi to Bo'ai."
+            },
+            {
+              "place": "qilou_snacks",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening snack lanes."
+            }
+          ]
+        },
+        {
+          "title": "Beach day and easy culture",
+          "stops": [
+            {
+              "place": "meilan_beach",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is the best window. Check conditions on the day."
+            },
+            {
+              "place": "hainan_museum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Good shade from the midday sun."
+            },
+            {
+              "place": "wanlv_park",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short garden stroll before dinner."
+            },
+            {
+              "place": "night_market",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Roughly 18:00 to late."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then fly",
+          "stops": [
+            {
+              "place": "holiday_beach",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Morning swim before checkout."
+            },
+            {
+              "place": "airport_garden",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Allow taxi time to Meilan and check-in."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West Coast"
+    }
+  ]
+}

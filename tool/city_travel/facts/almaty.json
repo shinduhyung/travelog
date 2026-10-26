@@ -1,0 +1,181 @@
+{
+  "currency": "KZT",
+  "usd_rate": 448.7707,
+  "intro_line": "Almaty: apple orchards, snow peaks, and leafy Soviet boulevards.",
+  "intro": "Almaty rewards visitors with mountain trails, café culture, and grand old squares within a short ride of each other. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Golden Quarter",
+    "Panfilov Park area",
+    "Abay Avenue",
+    "Bostandyk"
+  ],
+  "taxi": {
+    "flag_day": 500,
+    "flag_airport": 1500,
+    "per_km": 100,
+    "min_fare": 500
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: one line, open 06:00-00:00, 120 tenge per trip, contactless cards accepted at gates.",
+    "Buses: about 170 routes plus trolleybuses; cash fare 200 tenge, Onay card fare 120 tenge.",
+    "Onay card costs 800 tenge at караван newsstands; top up at Qiwi terminals, cash only.",
+    "Yandex Go is the main ride app; airport rides around 1500 tenge, but watch for fare scams.",
+    "Driving is busy and parking is hard; walking is easy in the centre, with gentle slopes toward the mountains.",
+    "Bikes and scooters are rentable by app; Yandex Go scooters run about 50 tenge per minute."
+  ],
+  "airports": [
+    {
+      "code": "ALA",
+      "name": "Almaty International Airport",
+      "primary": true,
+      "note": "Main gateway for Central Asia, 15 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Bus 92",
+          "to": "City centre via Almaty-2 station",
+          "price": "200 KZT",
+          "time": "30-50 min",
+          "note": "Stop just outside Arrivals; runs 05:30-23:00."
+        },
+        {
+          "mode": "Bus 79 or 86",
+          "to": "Downtown via Mailin Street stop",
+          "price": "200 KZT",
+          "time": "40-60 min",
+          "note": "About 400 m walk from Arrivals to the Mailin St stop."
+        },
+        {
+          "mode": "Bus 106",
+          "to": "Sayran inter-city bus station",
+          "price": "200 KZT",
+          "time": "about 50 min",
+          "note": "Skips downtown; useful for onward buses."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Anywhere in the centre",
+          "price": "1500-3000 KZT",
+          "time": "25-40 min",
+          "note": "Book at the arrivals booth or via Yandex Go; agree the total price first."
+        },
+        {
+          "mode": "Yandex Go",
+          "to": "Anywhere in the centre",
+          "price": "1500-2500 KZT",
+          "time": "25-40 min",
+          "note": "Fixed app price avoids the per-kilometre scam."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Kok Tobe Tower",
+    "Ascension Cathedral",
+    "Central State Museum of Kazakhstan",
+    "Zelionyj Bazar",
+    "Golden Warrior Monument"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Almaty",
+      "https://en.wikivoyage.org/wiki/Almaty"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    43.25,
+    76.91667
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 0,
+      "low": -9,
+      "rain_days": 6
+    },
+    {
+      "high": 3,
+      "low": -6,
+      "rain_days": 7
+    },
+    {
+      "high": 10,
+      "low": 0,
+      "rain_days": 13
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 31,
+      "low": 19,
+      "rain_days": 6
+    },
+    {
+      "high": 29,
+      "low": 17,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 15,
+      "low": 5,
+      "rain_days": 8
+    },
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 9
+    },
+    {
+      "high": 1,
+      "low": -7,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ALA taxi 1500-3000 KZT vs tariff estimate 3525"
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "city": "Kuala Lumpur",
+  "checked": "October 2026",
+  "intro_line": "Twin towers, street food, and a tangle of trains.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "KLCC",
+        "Bukit Bintang",
+        "Chinatown",
+        "Brickfields"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "KLCC",
+        "Bukit Bintang",
+        "Chinatown",
+        "Brickfields"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "KLCC",
+        "Bukit Bintang",
+        "Chinatown",
+        "Brickfields"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "KLCC",
+        "Bukit Bintang",
+        "Chinatown",
+        "Brickfields"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "KLCC",
+        "Bukit Bintang",
+        "Chinatown",
+        "Brickfields"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 22,
+        "note": "January: hot and wet, about 22 rain days. Plan indoor sights and carry a small umbrella."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 17,
+        "note": "February: the driest month, around 17 rain days. Best window for outdoor sights."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 25,
+        "note": "March: hotter and wetter again, about 25 rain days. Go out early and rest at midday."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 28,
+        "note": "April: one of the wettest months, about 28 rain days. Expect heavy afternoon storms."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 28,
+        "note": "May: still very wet, about 28 rain days. Keep plans flexible and indoor backups ready."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 23,
+        "note": "June: rain eases to about 23 days. Good for sightseeing between showers."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 22,
+        "note": "July: similar to June, about 22 rain days. Warm days around 31°C."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 25,
+        "note": "August: rain picks up, about 25 days. Short, heavy downpours are common."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 25,
+        "note": "September: about 25 rain days. Same pattern: hot, humid, stormy afternoons."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 24,
+        "note": "October: about 24 rain days. Still hot; watch the sky after lunch."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 29,
+        "note": "November: the wettest month, about 29 rain days. Pack rain gear and plan indoor days."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 27,
+        "note": "December: very wet, about 27 rain days. Expect showers most days; book flexible plans."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.75,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.65,
+      0.7
+    ],
+    "food": [
+      0.85,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.75
+    ],
+    "shopping": [
+      0.85,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.75
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.65,
+      0.55,
+      0.55,
+      0.65,
+      0.7,
+      0.65,
+      0.65,
+      0.65,
+      0.55,
+      0.6
+    ],
+    "nightlife": [
+      0.8,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.75,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.65,
+      0.7
+    ]
+  },
+  "places": {
+    "petronas": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon into evening",
+      "area": "KLCC",
+      "popularity": 5
+    },
+    "batu": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Brickfields",
+      "popularity": 5
+    },
+    "merdeka_square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "kl_tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Bukit Bintang",
+      "popularity": 4
+    },
+    "thean_hou": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning or evening",
+      "area": "Brickfields",
+      "popularity": 4
+    },
+    "islamic_arts": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Midday, when it is hottest outside",
+      "area": "Brickfields",
+      "popularity": 4
+    },
+    "merdeka_118": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Chinatown",
+      "popularity": 3
+    },
+    "national_mosque": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Brickfields",
+      "popularity": 3
+    },
+    "bukit_bintang": {
+      "types": [
+        "shopping",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Bukit Bintang",
+      "popularity": 5
+    },
+    "aquaria": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; good for rain",
+      "area": "KLCC",
+      "popularity": 4
+    },
+    "times_square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Bukit Bintang",
+      "popularity": 3
+    },
+    "bukit_jalil": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Event days",
+      "area": "Bukit Jalil",
+      "popularity": 2
+    },
+    "jalan_alor": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Bukit Bintang",
+      "popularity": 5
+    },
+    "kidzania": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "KLCC",
+      "popularity": 3
+    },
+    "murugan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Brickfields",
+      "popularity": 4
+    },
+    "masjid_jamek": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Chinatown",
+      "popularity": 3
+    },
+    "nasi_lemak": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Breakfast",
+      "area": "Bukit Bintang",
+      "popularity": 5
+    },
+    "pasar_seni": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Chinatown",
+      "popularity": 3
+    },
+    "petaling_street": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "putra_mosque": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Putrajaya",
+      "popularity": 3
+    },
+    "sri_mahamariamman": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Chinatown",
+      "popularity": 3
+    },
+    "sunway_lagoon": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning on a weekday",
+      "area": "Sunway",
+      "popularity": 3
+    },
+    "klcc_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "KLCC",
+      "popularity": 4
+    },
+    "night_food_tour": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Bukit Bintang",
+      "popularity": 3
+    },
+    "river_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early evening",
+      "area": "Chinatown",
+      "popularity": 3
+    },
+    "brickfields_walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunchtime",
+      "area": "Brickfields",
+      "popularity": 3
+    },
+    "helipad_view": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "KLCC",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the towers, the old town, Batu Caves and a hawker-food crawl, with time for rain delays."
+  },
+  "airports": [
+    {
+      "code": "KUL",
+      "name": "Kuala Lumpur International Airport",
+      "primary": true,
+      "note": "Main airport for long-haul and most international flights, about 44 km south.",
+      "options": [
+        {
+          "mode": "KLIA Ekspres train",
+          "to": "KL Sentral",
+          "price": "RM55",
+          "time": "28-35 min",
+          "note": "Fastest and most reliable; runs every 15-20 min."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "KL Sentral",
+          "price": "RM12-15",
+          "time": "60-90 min",
+          "note": "Cheapest; allow extra time in traffic."
+        },
+        {
+          "mode": "Grab",
+          "to": "City centre",
+          "price": "RM70-100",
+          "time": "50-75 min",
+          "note": "Book at the app pickup point in the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RM80-120",
+          "time": "50-75 min",
+          "note": "Buy a coupon at the counter to avoid overcharging."
+        }
+      ]
+    },
+    {
+      "code": "SZB",
+      "name": "Sultan Abdul Aziz Shah International Airport",
+      "primary": false,
+      "note": "Subang Airport handles regional turboprops and some jets, about 15 km west.",
+      "options": [
+        {
+          "mode": "Rapid KL bus 772",
+          "to": "Pasar Seni LRT",
+          "price": "RM3-4",
+          "time": "40-90 min",
+          "note": "Cheapest; slow at rush hour."
+        },
+        {
+          "mode": "Grab",
+          "to": "City centre",
+          "price": "RM25-40",
+          "time": "25-45 min",
+          "note": "Usually quick and easy."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RM30-50",
+          "time": "25-45 min",
+          "note": "Metered; confirm before you ride."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Kuala Lumpur",
+      "https://en.wikivoyage.org/wiki/Kuala%20Lumpur"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "shopping",
+    "culture"
+  ],
+  "transit": {
+    "best": "Use the RapidKL metro for most sights; Grab for late nights and places off the rail grid.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "RapidKL lines 3, 4, 5, 8, 9, 11 and 12 cover most sights. Trains every 2–7 minutes. Buy a Touch 'n Go card (RM10 plus top-up)."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "KTM lines 1, 2 and 10 and ERL lines 6 and 7 link KL Sentral to suburbs and the airport. Contactless cards work on KTM and ERL only."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap but slow. Use buses for short hops off the rail grid."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Grab is the main ride app. Metered taxis exist but agree the fare first."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful in jams. Only worth it for trips out of the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the centre, but pavements are patchy. Watch your step and cross with care."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year: highs around 30–32°C, lows around 23–24°C, and rain on most months. It is wettest from March to May and October to December.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Hot every month",
+        "text": "Highs stay around 30–32°C and lows around 23–24°C all year. There is no cool season."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is normal",
+        "text": "Expect 17–29 rain days a month. February is driest; November is wettest."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Afternoon storms",
+        "text": "Downpours are often short and heavy, usually later in the day. Plan outdoor sights for the morning."
+      },
+      {
+        "icon": "💦",
+        "title": "High humidity",
+        "text": "It feels muggy most days. Take breaks in air-conditioned malls and cafés."
+      },
+      {
+        "icon": "☂️",
+        "title": "Pack rain gear",
+        "text": "A small umbrella or light rain jacket helps. Pavements can flood briefly after storms."
+      },
+      {
+        "icon": "👕",
+        "title": "What to wear",
+        "text": "Light, breathable clothes and comfortable shoes. A light layer for strong indoor AC. Cover shoulders and knees at mosques and temples."
+      }
+    ]
+  }
+}

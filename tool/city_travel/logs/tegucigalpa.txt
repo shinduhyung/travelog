@@ -1,0 +1,29 @@
+$ deepseek_facts.py Tegucigalpa
+  tokens in 2122 out 806
+Tegucigalpa: 1 problems
+  - XPL taxi L 800-1500 vs tariff estimate 1724
+
+$ deepseek_city.py Tegucigalpa --stage places
+Tegucigalpa: places
+  tokens in 1156 out 2807
+
+$ deepseek_city.py Tegucigalpa --stage frame
+Tegucigalpa: frame
+  tokens in 2451 out 1762
+  repaired JSON
+
+$ deepseek_city.py Tegucigalpa --stage plans
+Tegucigalpa: plans
+  plans for day
+  tokens in 1980 out 847
+  plans for 1n
+  tokens in 1981 out 1131
+  plans for 2n
+  tokens in 1986 out 1286
+  plans for 3n
+  tokens in 1981 out 1558
+
+$ merge_city.py Tegucigalpa
+Tegucigalpa: 18 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/tegucigalpa.json and planner/tegucigalpa.json
+

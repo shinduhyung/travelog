@@ -1,0 +1,1525 @@
+{
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "One big nature day: Table Mountain first, then the gardens, with a penguin stop if the weather holds.",
+      "days": [
+        {
+          "title": "Mountain, gardens and penguins",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go at opening. Skip it if it is windy — the cableway closes in strong wind."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "About 15 minutes by taxi. Eat lunch at the garden cafe."
+            },
+            {
+              "place": "boulders",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "About 40 minutes by car. Penguins on the beach. Last entry is usually well before 18:00 — check on the day."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the beach, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Atlantic beaches and the peninsula drive in one long day. Start early and bring a warm layer.",
+      "days": [
+        {
+          "title": "Peninsula drive to the beaches",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full-day drive. The Atlantic water is cold — swim briefly and in daylight."
+            },
+            {
+              "place": "boulders",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Penguins and a sheltered beach. Morning is quieter, but this fits the drive."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Back in time for sunset and dinner on the strip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Camps Bay"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A food-focused day: Saturday market, Cape Malay lunch, then the Waterfront food halls.",
+      "days": [
+        {
+          "title": "Market, Bo-Kaap and the Waterfront",
+          "stops": [
+            {
+              "place": "old-biscuit-mill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Saturday only. Go early — it gets busy. Check the day on the day."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Colourful streets. Walk in daylight and ask before photographing homes."
+            },
+            {
+              "place": "bobotie",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch: Cape Malay bobotie at a local restaurant."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Food halls, shops and harbour views. Restaurants run later than the shops."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "One clear day for the mountain and the gardens, with a sunset viewpoint.",
+      "days": [
+        {
+          "title": "Mountain first, gardens after",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go early. It closes in strong wind, so check before you travel."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "About 20 minutes by taxi. Have lunch at the tea room."
+            },
+            {
+              "place": "companys-garden",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Shady walk in the city centre. Check closing time on the day."
+            },
+            {
+              "place": "signal-hill",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view over the city and sea. Go in daylight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Penguins in the morning, Atlantic sunset in the evening.",
+      "days": [
+        {
+          "title": "Penguins, promenade and sunset",
+          "stops": [
+            {
+              "place": "boulders",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Arrive early, before the tour buses. About 45 minutes by car from the city."
+            },
+            {
+              "place": "sea-point-promenade",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Lunch nearby, then walk the seafront."
+            },
+            {
+              "place": "camps-bay",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Swim in daylight. The water is cold. Stay for sunset and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Camps Bay"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Cape Malay flavours, a big market and the waterfront food halls.",
+      "days": [
+        {
+          "title": "Bo-Kaap, market and waterfront",
+          "stops": [
+            {
+              "place": "bo-kaap",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning light for photos. Ask before photographing homes."
+            },
+            {
+              "place": "bobotie",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Early lunch of Cape Malay food. Many places open at 11:00, so check on the day."
+            },
+            {
+              "place": "old-biscuit-mill",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Saturday only. Market usually 09:00–14:00. Check on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Food halls and restaurants. Stay into the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "V&A Waterfront"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "First-timers who want the mountain, the penguins and the peninsula in three days.",
+      "days": [
+        {
+          "title": "Arrive, mountain and waterfront",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Go early. It closes in strong wind, so check the weather first."
+            },
+            {
+              "place": "companys-garden",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Shady walk and a lunch stop nearby."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk from the garden. Daylight for photos."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Dinner here. Shops close around 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Peninsula day: penguins and the point",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full day by car. Start early and check the weather."
+            },
+            {
+              "place": "boulders",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Morning is best, before the tour buses."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Sunset on the beach, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Gardens and the last view",
+          "stops": [
+            {
+              "place": "kirstenbosch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Morning is cooler. About 20 minutes by taxi."
+            },
+            {
+              "place": "signal-hill",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Quick viewpoint stop. Go in daylight."
+            },
+            {
+              "place": "sea-point-promenade",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Flat walk by the sea. Busy and safer in daylight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Travellers who want Atlantic sunsets, a swim and one big mountain morning.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and sunset",
+          "stops": [
+            {
+              "place": "va-waterfront",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Lunch and a slow wander. Shops usually 09:00–21:00."
+            },
+            {
+              "place": "table-bay",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short walk for the view."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the beach. Swim in daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Mountain morning, beach afternoon",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Early is best. Closed in strong wind."
+            },
+            {
+              "place": "boulders",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Penguins. Usually 08:00–18:00, shorter in winter."
+            },
+            {
+              "place": "camps-bay",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Back to the beach for a late swim and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Promenade and fly out",
+          "stops": [
+            {
+              "place": "sea-point-promenade",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Morning walk. Flat and easy."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Colourful streets. Morning light is best."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Last lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Camps Bay"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, Cape Malay food and a long lunch.",
+      "days": [
+        {
+          "title": "Arrive, Bo-Kaap and the waterfront",
+          "stops": [
+            {
+              "place": "bo-kaap",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Morning light. Good spot for a Cape Malay lunch."
+            },
+            {
+              "place": "bobotie",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Most South African restaurants serve it."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Food halls and shops. Restaurants run later."
+            },
+            {
+              "place": "zeitz-mocaa",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Usually Thu–Sun only. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, mountain afternoon",
+          "stops": [
+            {
+              "place": "old-biscuit-mill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Saturday market, usually 09:00–14:00. Check on the day."
+            },
+            {
+              "place": "woodstock-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Street art nearby. Weekday mornings are best."
+            },
+            {
+              "place": "cableway",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Afternoon is busier. Skip it if the wind is up."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Sunset and dinner by the beach."
+            }
+          ]
+        },
+        {
+          "title": "Gardens and a last lunch",
+          "stops": [
+            {
+              "place": "kirstenbosch",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Morning walk, then tea at the garden."
+            },
+            {
+              "place": "companys-garden",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch nearby before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "First-timers who want the mountain, the coast and the penguins without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease in at Kirstenbosch",
+          "stops": [
+            {
+              "place": "kirstenbosch",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Gentle start after the airport. About 20 minutes by taxi from the City Bowl."
+            },
+            {
+              "place": "companys-garden",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Flat, shady walk. Check closing time on the day."
+            },
+            {
+              "place": "bobotie",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner in the City Bowl."
+            }
+          ]
+        },
+        {
+          "title": "Table Mountain early, then the Atlantic coast",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go first thing. It closes in strong wind, so check before you leave."
+            },
+            {
+              "place": "signal-hill",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short drive down. Bring a picnic lunch."
+            },
+            {
+              "place": "camps-bay",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Sunset on the beach. The sea is cold."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner at the waterfront."
+            }
+          ]
+        },
+        {
+          "title": "Full peninsula day",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Start early. A car or a driver makes this much easier. Check park entry times on the day."
+            },
+            {
+              "place": "boulders",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Penguins. Usually quieter in the morning, but this fits the drive."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Late dinner near your hotel."
+            }
+          ]
+        },
+        {
+          "title": "Hike or harbour, then fly",
+          "stops": [
+            {
+              "place": "lions-head",
+              "at": "07:00",
+              "minutes": 150,
+              "note": "Sunrise hike. Go with others and take water. Skip it if it is windy."
+            },
+            {
+              "place": "harbour-cruise",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Calm-day option if you would rather not hike. Weather dependent."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch, then head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl or Sea Point"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sunset chasers: Camps Bay, the promenade and the penguins, with the mountain on a clear morning.",
+      "days": [
+        {
+          "title": "Arrive, promenade and Camps Bay sunset",
+          "stops": [
+            {
+              "place": "sea-point-promenade",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Flat walk by the sea. Busy and safer in daylight."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the beach, then dinner on the strip."
+            }
+          ]
+        },
+        {
+          "title": "Mountain in the morning, beach after",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Clear mornings are best. Closed in strong wind."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Colourful streets and a Cape Malay lunch nearby."
+            },
+            {
+              "place": "camps-bay",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Afternoon swim and sunset."
+            }
+          ]
+        },
+        {
+          "title": "Penguins and the peninsula",
+          "stops": [
+            {
+              "place": "boulders",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Arrive early before the tour buses. Shorter hours in winter."
+            },
+            {
+              "place": "cape-point-drive",
+              "at": "11:00",
+              "minutes": 300,
+              "note": "Continue the coastal drive. Check park times on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner at the waterfront."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "table-bay",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Short waterfront walk with harbour views."
+            },
+            {
+              "place": "zeitz-mocaa",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Usually Thu–Sun only. Check on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch, then the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Camps Bay or Sea Point"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, Cape Malay cooking and the waterfront food halls.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and a harbour cruise",
+          "stops": [
+            {
+              "place": "harbour-cruise",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Calm-day cruise. Weather dependent."
+            },
+            {
+              "place": "zeitz-mocaa",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually Thu–Sun only. Check on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Dinner at the food halls or a seafood spot."
+            }
+          ]
+        },
+        {
+          "title": "Bo-Kaap flavours and the mountain",
+          "stops": [
+            {
+              "place": "bo-kaap",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning light for photos. Book a Cape Malay cooking class if you can."
+            },
+            {
+              "place": "bobotie",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch: try bobotie and koeksisters."
+            },
+            {
+              "place": "cableway",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Afternoon is busier. Closed in strong wind."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Sunset drinks, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "Saturday market and the peninsula",
+          "stops": [
+            {
+              "place": "old-biscuit-mill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Saturday only, usually 09:00–14:00. Go early."
+            },
+            {
+              "place": "boulders",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Penguins on the way south."
+            },
+            {
+              "place": "cape-point-drive",
+              "at": "14:30",
+              "minutes": 240,
+              "note": "Short coastal loop. Check park times on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "district-six",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Sunday. Morning is quiet."
+            },
+            {
+              "place": "companys-garden",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk and a coffee. Check hours on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Last lunch, then the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl or V&A Waterfront"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "First-timers who want the mountain, the peninsula and the penguins without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease in at the Waterfront",
+          "stops": [
+            {
+              "place": "va-waterfront",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Easy first stop. Shops usually open until 21:00."
+            },
+            {
+              "place": "table-bay",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Sunset over the bay. Bring a jacket, it gets windy."
+            },
+            {
+              "place": "bobotie",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner nearby. Ask for Cape Malay bobotie."
+            }
+          ]
+        },
+        {
+          "title": "Table Mountain early, gardens later",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go first thing. Closed in strong wind, so check before you leave."
+            },
+            {
+              "place": "companys-garden",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Shaded walk and a lunch stop nearby."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "About 15 minutes by taxi. Usually open until 19:00 in summer."
+            }
+          ]
+        },
+        {
+          "title": "Full peninsula day",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Start early. A full day with a hired car or driver."
+            },
+            {
+              "place": "boulders",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Penguins. Usually 08:00–18:00, shorter in winter."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Sunset on the beach, then dinner on the strip."
+            }
+          ]
+        },
+        {
+          "title": "Hike, then harbour",
+          "stops": [
+            {
+              "place": "lions-head",
+              "at": "07:00",
+              "minutes": 150,
+              "note": "Sunrise hike. Go with others and take water."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Colourful streets. Morning light is best for photos."
+            },
+            {
+              "place": "harbour-cruise",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Calm-day activity. Weather dependent."
+            },
+            {
+              "place": "zeitz-mocaa",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Usually Thu–Sun only. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "signal-hill",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quick viewpoint. Go in daylight."
+            },
+            {
+              "place": "sea-point-promenade",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Flat walk by the sea before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl or V&A Waterfront"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Sun-seekers who want Camps Bay sunsets, Atlantic swims and one big peninsula day.",
+      "days": [
+        {
+          "title": "Arrive and Camps Bay sunset",
+          "stops": [
+            {
+              "place": "va-waterfront",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Stretch your legs and eat."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the beach. The water is cold, swim briefly."
+            },
+            {
+              "place": "bobotie",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner on the Camps Bay strip."
+            }
+          ]
+        },
+        {
+          "title": "Penguins and the promenade",
+          "stops": [
+            {
+              "place": "boulders",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning, before tour buses. Usually 08:00–18:00."
+            },
+            {
+              "place": "sea-point-promenade",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Walk and a coffee stop. Busy and safer in daylight."
+            },
+            {
+              "place": "camps-bay",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Back for a late swim and sunset."
+            }
+          ]
+        },
+        {
+          "title": "Mountain morning, beach afternoon",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Clear, calm morning only. Closed in strong wind."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Shade and lunch. Usually open until 19:00 in summer."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset again. It is the best free show in town."
+            }
+          ]
+        },
+        {
+          "title": "Full peninsula day",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Start early. Bring swimwear and a wind layer."
+            },
+            {
+              "place": "boulders",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Second look at the penguins if you have time."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner by the beach."
+            }
+          ]
+        },
+        {
+          "title": "Slow last morning",
+          "stops": [
+            {
+              "place": "table-bay",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Harbour view before you go."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Last shopping and lunch, then the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Camps Bay or Sea Point"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want the Saturday market, Cape Malay food and a Waterfront food crawl.",
+      "days": [
+        {
+          "title": "Arrive and Waterfront food halls",
+          "stops": [
+            {
+              "place": "va-waterfront",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Grazing stop. Restaurants run later than shops."
+            },
+            {
+              "place": "harbour-cruise",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Short cruise on a calm day."
+            },
+            {
+              "place": "bobotie",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Try bobotie and a Cape Malay curry."
+            }
+          ]
+        },
+        {
+          "title": "Saturday market and street art",
+          "stops": [
+            {
+              "place": "old-biscuit-mill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Saturday only, usually 09:00–14:00. Check on the day."
+            },
+            {
+              "place": "woodstock-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Street art nearby. Weekday mornings are best, but Saturday works."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the streets and look for Cape Malay lunch spots."
+            },
+            {
+              "place": "signal-hill",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Mountain, garden, long lunch",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Early and calm. Check wind before you go."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Tea room lunch, then the gardens."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset and dinner on the strip."
+            }
+          ]
+        },
+        {
+          "title": "Peninsula day with penguins",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Start early. Pack snacks."
+            },
+            {
+              "place": "boulders",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Penguins, then a seafood stop nearby."
+            },
+            {
+              "place": "bobotie",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Easy dinner back in town."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "district-six",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Usually Mon–Sat, closed Sunday."
+            },
+            {
+              "place": "companys-garden",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short walk and a last coffee before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl or V&A Waterfront"
+    },
+    {
+      "id": "5n-nature",
+      "length": "5n",
+      "style": "nature",
+      "nights": 5,
+      "for": "First-timers who want the mountain, the peninsula and the penguins without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease into the City Bowl",
+          "stops": [
+            {
+              "place": "companys-garden",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Flat, shady walk to shake off the flight. Usually open until 19:00, check on the day."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Ten minutes uphill on foot. Colourful houses, best light earlier in the day."
+            },
+            {
+              "place": "bobotie",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the City Bowl. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Table Mountain early, gardens late",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go first thing. Closed in strong wind, so check the weather before you leave the hotel."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "About 20 minutes by taxi. Summer closing is usually 19:00."
+            },
+            {
+              "place": "signal-hill",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset viewpoint. Take a taxi up and walk down in daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Peninsula day drive",
+          "stops": [
+            {
+              "place": "cape-point-drive",
+              "at": "08:00",
+              "minutes": 480,
+              "note": "Full day. Start early, take a jacket, and check the weather. Hire a car or join a small-group tour."
+            },
+            {
+              "place": "boulders",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Penguins. Usually 08:00–18:00, shorter in winter. Go before the tour buses."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Sunset on the beach, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Waterfront and harbour",
+          "stops": [
+            {
+              "place": "robben-island-prison",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Morning ferry. Weather dependent, so book early and keep a backup day."
+            },
+            {
+              "place": "harbour-cruise",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Calm-day option. Skip if the wind is up."
+            },
+            {
+              "place": "zeitz-mocaa",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Usually Thu–Sun only. Check on the day."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Dinner at the food halls or a waterfront restaurant."
+            }
+          ]
+        },
+        {
+          "title": "Lion's Head, then fly",
+          "stops": [
+            {
+              "place": "lions-head",
+              "at": "07:00",
+              "minutes": 150,
+              "note": "Sunrise hike. Go with others, take water, and skip it in wind or heat."
+            },
+            {
+              "place": "sea-point-promenade",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Easy flat walk and a coffee before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl or V&A Waterfront"
+    },
+    {
+      "id": "5n-beach",
+      "length": "5n",
+      "style": "beach",
+      "nights": 5,
+      "for": "Sun-seekers who want Camps Bay sunsets, penguins and a slow Atlantic pace.",
+      "days": [
+        {
+          "title": "Arrive and Camps Bay sunset",
+          "stops": [
+            {
+              "place": "sea-point-promenade",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Flat walk along the sea. Busy and safer in daylight."
+            },
+            {
+              "place": "camps-bay",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the beach. The water is cold, so swim briefly."
+            },
+            {
+              "place": "bobotie",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in Camps Bay or Sea Point."
+            }
+          ]
+        },
+        {
+          "title": "Penguins and the peninsula",
+          "stops": [
+            {
+              "place": "boulders",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Morning, before the buses. Usually 08:00–18:00, shorter in winter."
+            },
+            {
+              "place": "cape-point-drive",
+              "at": "10:30",
+              "minutes": 480,
+              "note": "Continue the drive south. Start early and check the weather."
+            },
+            {
+              "place": "camps-bay",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Back for a late dinner."
+            }
+          ]
+        },
+        {
+          "title": "Mountain and gardens",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Clear, calm morning only. Closed in strong wind."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "About 20 minutes by taxi."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "17:00",
+              "minutes": 150,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Waterfront and Robben Island",
+          "stops": [
+            {
+              "place": "robben-island-prison",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Morning ferry. Weather dependent, so keep a backup day."
+            },
+            {
+              "place": "harbour-cruise",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Only on a calm day."
+            },
+            {
+              "place": "table-bay",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short waterfront walk."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Food halls for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "camps-bay",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Last swim or a beachfront breakfast. Leave time for the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Camps Bay or Sea Point"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Eaters who want markets, Cape Malay cooking and waterfront food halls.",
+      "days": [
+        {
+          "title": "Arrive, Bo-Kaap and bobotie",
+          "stops": [
+            {
+              "place": "bo-kaap",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Morning light is best for photos, but the walk is fine now."
+            },
+            {
+              "place": "bobotie",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Try Cape Malay curry or bobotie. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Saturday market and waterfront",
+          "stops": [
+            {
+              "place": "old-biscuit-mill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Saturday market, usually 09:00–14:00. Check on the day. Go early, it gets packed."
+            },
+            {
+              "place": "woodstock-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Street art nearby. Weekday mornings are best, but Saturday works."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Food halls and a slow dinner."
+            }
+          ]
+        },
+        {
+          "title": "Mountain, then gardens",
+          "stops": [
+            {
+              "place": "cableway",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Clear, calm morning only. Closed in strong wind."
+            },
+            {
+              "place": "kirstenbosch",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Tea room for a snack. Summer closing usually 19:00."
+            },
+            {
+              "place": "bobotie",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner in the City Bowl."
+            }
+          ]
+        },
+        {
+          "title": "History and harbour",
+          "stops": [
+            {
+              "place": "district-six",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Usually Mon–Sat, closed Sunday."
+            },
+            {
+              "place": "castle",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Usually 09:00–17:00. Closed some public holidays."
+            },
+            {
+              "place": "robben-island-prison",
+              "at": "14:00",
+              "minutes": 240,
+              "note": "Afternoon ferry only if it fits the schedule. Weather dependent, so check first."
+            },
+            {
+              "place": "va-waterfront",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner at the waterfront."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then fly",
+          "stops": [
+            {
+              "place": "companys-garden",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Shady walk and a coffee. Usually open until 19:00, check on the day."
+            },
+            {
+              "place": "bo-kaap",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Pick up spices or a snack before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Bowl or V&A Waterfront"
+    }
+  ]
+}

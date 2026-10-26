@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "La Jolla coves, Mission Beach and sunset surfs."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Zoo, Balboa Park museums and calm bay beaches."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Torrey Pines trails, tide pools and whale watching."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown / Gaslamp Quarter",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Walk to the bayfront, Petco Park and the Gaslamp restaurants. Trolley and #992 airport bus start here.",
+      "center": [
+        32.712,
+        -117.162
+      ]
+    },
+    {
+      "area": "Harbor Island / Airport area",
+      "range": [
+        140,
+        300
+      ],
+      "why": "Quiet bayfront hotels, minutes from SAN airport and downtown. Good for early flights and families.",
+      "center": [
+        32.727,
+        -117.205
+      ]
+    },
+    {
+      "area": "La Jolla",
+      "range": [
+        220,
+        600
+      ],
+      "why": "Walk to the cove, sea lions and snorkel spots. Upscale and calm; 20–30 minutes from downtown by car.",
+      "center": [
+        32.847,
+        -117.274
+      ]
+    },
+    {
+      "area": "Mission Valley",
+      "range": [
+        120,
+        260
+      ],
+      "why": "Cheaper chain hotels near the trolley and shopping. Central for driving to the Zoo and beaches.",
+      "center": [
+        32.768,
+        -117.15
+      ]
+    }
+  ],
+  "food": [
+    "Try a fish taco: grilled or fried fish, cabbage slaw and crema. Cheap stands and sit-down spots both do it well.",
+    "California burrito: carne asada, fries, cheese and salsa wrapped in a tortilla. A full meal for one.",
+    "Little Italy on India Street for pasta, pizza and a lively evening scene; book ahead on weekends.",
+    "Seafood by the water in Point Loma and the Embarcadero; check the day's catch and prices on the board.",
+    "Craft beer is big here. Many tasting rooms in North Park and Miramar; expect about $8–10 a pint."
+  ],
+  "more_time": [
+    "Swap a beach afternoon for a day trip north on the Coaster or Pacific Surfliner to Oceanside or Encinitas.",
+    "Add a morning at Torrey Pines State Reserve: short cliff trails and ocean views; parking fills early, check on the day.",
+    "Cross to Coronado by ferry for the beach, the Hotel del Coronado and a slow lunch."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.4,
+      0.45,
+      0.55,
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.8,
+      0.55,
+      0.4
+    ],
+    "family": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "best_for": [
+    "beach",
+    "family",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two nights covers the Zoo or Balboa Park plus a beach day; add a night for La Jolla and Torrey Pines."
+  },
+  "month_notes": [
+    "January: cool and often cloudy, highs near 18°C. Pack a jacket for evenings.",
+    "February: similar to January, about 5 rain days. Good for museums and the Zoo with fewer crowds.",
+    "March: still cool, around 8 rain days — the wettest month. Keep a rain plan.",
+    "April: drier and milder, highs near 20°C. Good walking weather.",
+    "May: pleasant, highs near 20°C and little rain. May grey mornings are common near the coast.",
+    "June: mild and dry, highs near 22°C. Coastal fog often clears by midday.",
+    "July: warm and dry, highs near 25°C. Busiest beach month; book hotels early.",
+    "August: the warmest month, highs near 26°C and warm nights. Expect crowds.",
+    "September: still warm, highs near 25°C. Fewer crowds than August.",
+    "October: warm days near 24°C and cooler nights. A strong month for outdoor plans.",
+    "November: cooler, highs near 21°C, a few rain days. Quieter and often cheaper.",
+    "December: cool, highs near 18°C, about 5 rain days. Bring layers for evenings."
+  ],
+  "climate_guide": {
+    "summary": "Mild Mediterranean-style coast: warm dry summers, cool winters and little rain outside winter and spring.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: July to October",
+        "text": "Warmest and driest, highs 24–26°C. Best for beaches and outdoor days."
+      },
+      {
+        "icon": "🌫️",
+        "title": "May grey and June gloom",
+        "text": "Coastal fog and cloud in late spring and early summer. It often clears by midday; inland is sunnier."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is light and winter-based",
+        "text": "Most rain falls December to March, peaking in March at about 8 rain days. Summer is almost dry."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings year-round",
+        "text": "Lows drop to 9–19°C depending on month. Bring a light layer even in summer."
+      },
+      {
+        "icon": "🌊",
+        "title": "Ocean stays cool",
+        "text": "Water is chilly much of the year. Wetsuits are common for surfing; check conditions on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a light jacket, sunscreen and comfortable shoes. Add a rain shell for winter and spring visits."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Ride apps or a rental car for most trips; the trolley and #992 bus cover downtown and the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "MTS Trolley light rail links downtown, Old Town, Mission Valley and San Ysidro. Useful for those areas; not a full city network."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MTS buses cover the city. The #992 Flyer runs between SAN terminals and Santa Fe Depot downtown."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; Uber and Lyft operate widely and are usually cheaper."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "A car is the most efficient way to see the sprawling county. Expect rush-hour congestion."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown and the bayfront are walkable. Bikes and scooters are common near the beaches."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The Coaster commuter train and Amtrak Pacific Surfliner serve the coast north to Oceanside and Los Angeles."
+      }
+    ]
+  }
+}

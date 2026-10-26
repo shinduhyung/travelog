@@ -1,0 +1,214 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Miami: sun, salsa, and skyline where the Americas meet.",
+  "intro": "Miami rewards visitors with beaches, Cuban food, art deco streets and lively nightlife. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    }
+  ],
+  "areas": [
+    "South Beach",
+    "Downtown/Brickell",
+    "Coconut Grove",
+    "Coral Gables"
+  ],
+  "taxi": {
+    "flag_day": 2.5,
+    "flag_airport": 2.5,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metrorail runs elevated trains to downtown, the airport and Dadeland; fare about $2.25.",
+    "Metromover is free and links downtown and Brickell.",
+    "Metrobus covers the county; route S runs downtown to Miami Beach.",
+    "Taxis are metered and pricey; Uber and Lyft work well.",
+    "Driving is common but traffic and parking are hard; walking is best in dense areas.",
+    "Tri-Rail commuter trains link Miami, Fort Lauderdale and West Palm Beach."
+  ],
+  "airports": [
+    {
+      "code": "MIA",
+      "name": "Miami International Airport",
+      "primary": true,
+      "note": "Main hub for Latin America and the Caribbean, 10 km west of centre.",
+      "options": [
+        {
+          "mode": "Metrorail",
+          "to": "Government Center downtown",
+          "price": "$2.25",
+          "time": "20-30 min",
+          "note": "Buy an EASY Card or ticket at the station; ride from the MIC via the MIA mover."
+        },
+        {
+          "mode": "Metrobus 150 express",
+          "to": "Miami Beach",
+          "price": "$2.25",
+          "time": "35-50 min",
+          "note": "Cheapest way to the beach; slower with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown or South Beach",
+          "price": "$25-45",
+          "time": "20-35 min",
+          "note": "Fixed rates to the beach areas; ask before you ride."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown or South Beach",
+          "price": "$20-40",
+          "time": "20-35 min",
+          "note": "Pick-up at the rideshare zone."
+        }
+      ]
+    },
+    {
+      "code": "FLL",
+      "name": "Fort Lauderdale Hollywood International Airport",
+      "primary": false,
+      "note": "Smaller low-cost airport 35 km north; easier security.",
+      "options": [
+        {
+          "mode": "Tri-Rail",
+          "to": "Miami Airport station (then Metrorail)",
+          "price": "$5-8",
+          "time": "45-70 min",
+          "note": "Free shuttle bus to the Tri-Rail station; not downtown."
+        },
+        {
+          "mode": "Brightline",
+          "to": "Downtown Miami",
+          "price": "$10-30",
+          "time": "40-60 min",
+          "note": "Fast and comfortable; reach the station by shuttle or taxi."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Miami",
+          "price": "$70-100",
+          "time": "35-60 min",
+          "note": "Traffic can double the time."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Miami",
+          "price": "$50-80",
+          "time": "35-60 min",
+          "note": "Often cheaper than a taxi."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "South Beach",
+    "Art Deco Historic District",
+    "Miami Beach",
+    "Wynwood Walls",
+    "Vizcaya Museum and Gardens",
+    "Millionaire's Row Cruise",
+    "American Dream Miami",
+    "Burger King",
+    "Popeyes",
+    "Santa's Enchanted Forest",
+    "Zoo Miami"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Miami",
+      "https://en.wikivoyage.org/wiki/Miami"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    25.7617,
+    -80.1918
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 24,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 10
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 16
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 24
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 19
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 13
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

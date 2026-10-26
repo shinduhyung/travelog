@@ -1,0 +1,189 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Seven hills, golden light, and the smell of grilled sardines.",
+  "intro": "Lisbon rewards visitors with tiled alleys, river views and custard tarts at every turn. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Baixa",
+    "Alfama",
+    "Chiado",
+    "Bairro Alto"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4.5,
+    "per_km": 0.6,
+    "min_fare": 3.5
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro is fast and cheap; red line links the airport to the centre with one change.",
+    "Carris buses and trams cover the city; buy a rechargeable Navegante card for about €0.50.",
+    "Trams 15 and 28 are scenic but crowded; watch for pickpockets.",
+    "Taxis use meters; insist on the meter and keep a receipt.",
+    "Uber, Bolt and FreeNow work in Lisbon; look for the TVDE sign on the car.",
+    "Driving in the centre is slow and parking is hard; walking and bikes work well on flat Baixa."
+  ],
+  "airports": [
+    {
+      "code": "LIS",
+      "name": "Lisbon Portela Airport",
+      "primary": true,
+      "note": "Main airport, about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Metro red line",
+          "to": "Saldanha / Baixa-Chiado",
+          "price": "€1.75-2",
+          "time": "16-25 min",
+          "note": "Cheapest and fastest; station sits under Terminal 1."
+        },
+        {
+          "mode": "Bus 44 / 745",
+          "to": "Oriente station and centre",
+          "price": "€2",
+          "time": "10-40 min",
+          "note": "No large luggage allowed on city buses."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€16-20",
+          "time": "15-30 min",
+          "note": "Meter plus about €1.20 per bag; check the meter first."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€13-18",
+          "time": "15-30 min",
+          "note": "Use the marked pre-reserved pickup area."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Belém Tower",
+    "Jerónimos Monastery",
+    "São Jorge Castle",
+    "Praça do Comércio",
+    "Padrão dos Descobrimentos",
+    "Santa Justa Lift",
+    "Alfama District",
+    "Bacalhau à Brás",
+    "Bairro Alto",
+    "Bairro de Belém (Pastéis de Belém)",
+    "Cascais Beach",
+    "Castle of the Moors",
+    "Chiado District",
+    "Estadio Jose Alvalade",
+    "Estadio da Luz",
+    "Ler Devagar",
+    "Lisbon Zoo",
+    "Mafra Palace Library",
+    "National Azulejo Museum",
+    "National Coach Museum",
+    "Oceanario de Lisboa",
+    "Pena Palace"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Lisbon",
+      "https://en.wikivoyage.org/wiki/Lisbon"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    38.7223,
+    -9.1393
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 7
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 7
+    },
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 4
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 4
+    },
+    {
+      "high": 23,
+      "low": 16,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

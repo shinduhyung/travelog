@@ -1,0 +1,675 @@
+{
+  "city": "Singapore",
+  "checked": "October 2026",
+  "intro_line": "A garden city of hawker feasts and glass towers.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Marina Bay",
+        "Orchard Road",
+        "Chinatown",
+        "Bugis"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Marina Bay",
+        "Orchard Road",
+        "Chinatown",
+        "Bugis"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Marina Bay",
+        "Orchard Road",
+        "Chinatown",
+        "Bugis"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Marina Bay",
+        "Orchard Road",
+        "Chinatown",
+        "Bugis"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Marina Bay",
+        "Orchard Road",
+        "Chinatown",
+        "Bugis"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 24,
+        "note": "Jan: hot and wet, about 24 rain days. Plan indoor backups."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 18,
+        "note": "Feb: the driest month, around 18 rain days. Good for outdoor days."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 25,
+        "note": "Mar: wet again, about 25 rain days. Carry an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 27,
+        "note": "Apr: very wet, about 27 rain days. Short heavy showers are common."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 28,
+        "note": "May: the wettest month, about 28 rain days. Keep plans flexible."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 26,
+        "note": "Jun: still wet, about 26 rain days. Mornings are often clearer."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 23,
+        "note": "Jul: slightly drier, about 23 rain days. Hot and humid all day."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 26,
+        "note": "Aug: wet, about 26 rain days. Watch for afternoon storms."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 23,
+        "note": "Sep: about 23 rain days. Similar to July, hot and muggy."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 27,
+        "note": "Oct: wet, about 27 rain days. Indoor sights are a safe bet."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 28,
+        "note": "Nov: very wet, about 28 rain days. Expect downpours."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 28,
+        "note": "Dec: very wet, about 28 rain days. Pack rain gear and light layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.8,
+      0.85,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "culture": [
+      0.85,
+      0.9,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.75,
+      0.8,
+      0.75,
+      0.7,
+      0.7
+    ],
+    "family": [
+      0.8,
+      0.85,
+      0.75,
+      0.7,
+      0.65,
+      0.7,
+      0.75,
+      0.7,
+      0.75,
+      0.7,
+      0.65,
+      0.65
+    ],
+    "shopping": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.8,
+      0.85,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "nature": [
+      0.75,
+      0.8,
+      0.7,
+      0.65,
+      0.6,
+      0.65,
+      0.7,
+      0.65,
+      0.7,
+      0.65,
+      0.6,
+      0.6
+    ]
+  },
+  "places": {
+    "marina-bay-sands": {
+      "types": [
+        "culture",
+        "family",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into sunset",
+      "area": "Marina Bay",
+      "popularity": 5
+    },
+    "gardens-bay": {
+      "types": [
+        "nature",
+        "family",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Late afternoon plus evening light show",
+      "area": "Marina Bay",
+      "popularity": 5
+    },
+    "merlion-park": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning or after dark",
+      "area": "Marina Bay",
+      "popularity": 5
+    },
+    "jewel-changi": {
+      "types": [
+        "family",
+        "shopping",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; good on a rainy day",
+      "area": "Marina Bay",
+      "popularity": 4
+    },
+    "chinatown-heritage": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "buddha-tooth": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "kampong-glam": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Bugis",
+      "popularity": 4
+    },
+    "little-india": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning or evening",
+      "area": "Bugis",
+      "popularity": 4
+    },
+    "raffles-hotel": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Bugis",
+      "popularity": 4
+    },
+    "universal-studios": {
+      "types": [
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Marina Bay",
+      "popularity": 5
+    },
+    "marina-bay": {
+      "types": [
+        "culture",
+        "family",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Marina Bay",
+      "popularity": 5
+    },
+    "bird-paradise": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Marina Bay",
+      "popularity": 3
+    },
+    "breadtalk": {
+      "types": [
+        "food"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Marina Bay",
+      "popularity": 2
+    },
+    "chilli-crab": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Marina Bay",
+      "popularity": 4
+    },
+    "chinatown-market": {
+      "types": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "clarke-quay": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "esplanade": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Marina Bay",
+      "popularity": 3
+    },
+    "fort-siloso": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Marina Bay",
+      "popularity": 2
+    },
+    "haw-par-villa": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Marina Bay",
+      "popularity": 2
+    },
+    "helix-bridge": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Marina Bay",
+      "popularity": 4
+    },
+    "kidzania": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Marina Bay",
+      "popularity": 2
+    },
+    "lau-pa-sat": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Marina Bay",
+      "popularity": 4
+    },
+    "hawker-dinner": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or early dinner",
+      "area": "Chinatown",
+      "popularity": 4
+    },
+    "river-cruise": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Marina Bay",
+      "popularity": 4
+    },
+    "southern-ridges": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Marina Bay",
+      "popularity": 3
+    },
+    "tiong-bahru": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Chinatown",
+      "popularity": 3
+    },
+    "supertree-show": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Marina Bay",
+      "popularity": 4
+    },
+    "orchard-road": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Orchard Road",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the bay, the old quarters and one Sentosa or nature day without rushing in the heat."
+  },
+  "airports": [
+    {
+      "code": "SIN",
+      "name": "Singapore Changi International Airport",
+      "primary": true,
+      "note": "Main hub, about 19 km east of the centre.",
+      "options": [
+        {
+          "mode": "MRT",
+          "to": "City Hall",
+          "price": "S$2.30",
+          "time": "45-55 min",
+          "note": "Cross-platform transfer at Tanah Merah; last city-bound trains end before midnight."
+        },
+        {
+          "mode": "Public bus",
+          "to": "City centre",
+          "price": "S$2-3",
+          "time": "60-80 min",
+          "note": "Cheapest but slow; good if you have time."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "S$20-30",
+          "time": "20-30 min",
+          "note": "Includes about S$5 airport surcharge; 50% more from 1-6AM."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "S$20-35",
+          "time": "20-35 min",
+          "note": "Pick-up points are signposted in each terminal."
+        }
+      ]
+    },
+    {
+      "code": "XSP",
+      "name": "Seletar Airport",
+      "primary": false,
+      "note": "Small airport for turboprops and general aviation, about 15 km north.",
+      "options": [
+        {
+          "mode": "Public bus 102",
+          "to": "Hougang MRT",
+          "price": "S$1-2",
+          "time": "20-30 min",
+          "note": "Connects to the North-East Line."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "S$15-25",
+          "time": "20-30 min",
+          "note": "S$3 surcharge applies for trips from the airport."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "S$15-30",
+          "time": "20-35 min",
+          "note": "Fewer cars here; allow extra wait time."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Singapore",
+      "https://en.wikivoyage.org/wiki/Singapore"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "shopping"
+  ],
+  "transit": {
+    "best": "MRT for most trips; ride apps or metered taxis for late nights and door-to-door.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "MRT trains are fast and cheap. Tap a contactless credit card or buy an EZ-link card."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover gaps the MRT misses. Fares are distance-based and low."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis meter fares. Grab and Gojek ride apps are widely used."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible but costly: ERP tolls, high parking and a car-ownership tax regime."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is pleasant in the core. Covered walkways help in rain and heat."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries run from HarbourFront and Tanah Merah to the Riau Islands and Johor."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year: highs near 29–30°C, lows near 24–25°C, and rain on most months.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Warm every month",
+        "text": "Highs stay around 29–30°C and lows around 24–25°C. No cool season."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is common",
+        "text": "Expect 18–28 rain days a month. February is the driest; May, November and December are the wettest."
+      },
+      {
+        "icon": "☔",
+        "title": "Short heavy showers",
+        "text": "Downpours often pass quickly. Carry a small umbrella and use covered walkways."
+      },
+      {
+        "icon": "💦",
+        "title": "High humidity",
+        "text": "It feels hotter than the numbers. Drink water and take breaks in air-conditioning."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Best outdoor months",
+        "text": "February and July–September have fewer rain days. Still plan around afternoon storms."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, sandals or quick-dry shoes, an umbrella and sunscreen. A light layer for cold indoor AC."
+      }
+    ]
+  }
+}

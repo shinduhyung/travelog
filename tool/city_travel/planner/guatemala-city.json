@@ -1,0 +1,547 @@
+{
+  "city": "Guatemala City",
+  "checked": "October 2026",
+  "intro_line": "Guatemala City: where ancient roots meet modern bustle.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Zona 10",
+        "Zona 9",
+        "Zona 1",
+        "Zona 4"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Zona 10",
+        "Zona 9",
+        "Zona 1",
+        "Zona 4"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Zona 10",
+        "Zona 9",
+        "Zona 1",
+        "Zona 4"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Zona 10",
+        "Zona 9",
+        "Zona 1",
+        "Zona 4"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Zona 10",
+        "Zona 9",
+        "Zona 1",
+        "Zona 4"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 7,
+        "note": "Jan: dry and cool. Highs near 23°C, lows near 12°C. Pack a jacket for evenings."
+      },
+      {
+        "high": 25,
+        "low": 13,
+        "rain_days": 4,
+        "note": "Feb: the driest month, about 4 rain days. Great for walking the old town."
+      },
+      {
+        "high": 27,
+        "low": 14,
+        "rain_days": 5,
+        "note": "Mar: warm and mostly dry. Highs near 27°C; sunscreen for midday."
+      },
+      {
+        "high": 28,
+        "low": 15,
+        "rain_days": 9,
+        "note": "Apr: hottest month, highs near 28°C. Rain picks up late in the month."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 19,
+        "note": "May: rainy season starts. About 19 rain days; plan indoor sights for afternoons."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 23,
+        "note": "Jun: wet, about 23 rain days. Mornings are usually the better bet."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 18,
+        "note": "Jul: still wet but a little cooler. Carry a rain jacket."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 21,
+        "note": "Aug: wet, about 21 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 24,
+        "note": "Sep: the wettest month, about 24 rain days. Keep plans flexible."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 21,
+        "note": "Oct: still rainy, about 21 rain days. Cooler evenings near 15°C."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 12,
+        "note": "Nov: rain eases to about 12 days. Pleasant highs near 22°C."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 6,
+        "note": "Dec: dry and cool again, about 6 rain days. Good for city sightseeing."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.7,
+      0.85,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.75,
+      0.85,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.7,
+      0.85,
+      0.9
+    ],
+    "nightlife": [
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.85
+    ],
+    "shopping": [
+      0.9,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.75,
+      0.85,
+      0.9
+    ]
+  },
+  "places": {
+    "national-palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Zona 1",
+      "popularity": 5
+    },
+    "metropolitan-cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, before the plaza gets busy",
+      "area": "Zona 1",
+      "popularity": 4
+    },
+    "kaminaljuyu": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning; bring sun protection",
+      "area": "Zona 1",
+      "popularity": 2
+    },
+    "arqueologia-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Zona 1",
+      "popularity": 4
+    },
+    "popol-vuh": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Zona 10",
+      "popularity": 3
+    },
+    "antigua": {
+      "types": [
+        "culture",
+        "history",
+        "shopping"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Weekday, early start",
+      "area": "Zona 1",
+      "popularity": 5
+    },
+    "cerro-cruz": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon for clear volcano views",
+      "area": "Zona 1",
+      "popularity": 4
+    },
+    "ixchel": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Zona 10",
+      "popularity": 3
+    },
+    "la-merced": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Zona 1",
+      "popularity": 4
+    },
+    "mundo-petapa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekend, arrive at opening",
+      "area": "Zona 10",
+      "popularity": 2
+    },
+    "capitanes": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Midday, as part of a plaza walk",
+      "area": "Zona 1",
+      "popularity": 3
+    },
+    "pepian": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Zona 1",
+      "popularity": 3
+    },
+    "san-francisco": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Zona 1",
+      "popularity": 3
+    },
+    "santa-catalina": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Zona 1",
+      "popularity": 5
+    },
+    "mercado-central": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Zona 1",
+      "popularity": 4
+    },
+    "zona-4-walk": {
+      "types": [
+        "culture",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into early evening",
+      "area": "Zona 4",
+      "popularity": 3
+    },
+    "zona-10-walk": {
+      "types": [
+        "food",
+        "shopping",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Zona 10",
+      "popularity": 3
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Zona 1",
+      "popularity": 3
+    },
+    "relief-map": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Zona 1",
+      "popularity": 2
+    },
+    "airport-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Zona 1",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the museums, Zona 1 old town and the food scene, with a day spare for Antigua."
+  },
+  "airports": [
+    {
+      "code": "GUA",
+      "name": "La Aurora International Airport",
+      "primary": true,
+      "note": "Main international gateway, 6 km south of centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Zona 10 (La Reforma & 12 Calle)",
+          "price": "Q1-5",
+          "time": "30-45 min",
+          "note": "Cheap but crowded; watch belongings."
+        },
+        {
+          "mode": "Taxi (fixed price)",
+          "to": "Zona 10",
+          "price": "Q90-100",
+          "time": "20-30 min",
+          "note": "Official taxis at airport; pricey but safe."
+        },
+        {
+          "mode": "Uber",
+          "to": "Zona 10",
+          "price": "Q50-70",
+          "time": "20-30 min",
+          "note": "Often cheaper; meet at designated area."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "Antigua",
+          "price": "Q60-90",
+          "time": "1-1.5 hr",
+          "note": "Runs 06:00-20:00; book ahead."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Guatemala City",
+      "https://en.wikivoyage.org/wiki/Guatemala%20City"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Uber or a yellow metered taxi for most trips; Transmetro for cheap rides on main routes.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Transmetro is a bus rapid transit system, not rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Transmetro BRT has 7 lines. Pay with the Citizen's Card (Q20 with 5 trips) or a contactless card; cash is not accepted. Transurbano buses need a prepaid card and are slower but cover more routes. Avoid red city buses."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Yellow metered taxis (call 1766) or white taxis where you negotiate the price first. Uber works and is handy for airport and late-night rides."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Traffic is chaotic. Cars are available but not recommended for city driving."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Use caution. Walk accompanied where you can, and avoid quiet streets after dark."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild year-round at about 1,500 m. Two seasons: dry and cooler from November to April, wet from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to April",
+        "text": "Highs around 22–28°C and few rain days. Ideal for walking Zona 1 and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "Rain on 18–24 days a month, usually afternoon showers. Do outdoor sights in the morning."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild, not hot",
+        "text": "Highs stay between 22 and 28°C all year. Nights are cool, around 12–16°C."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings",
+        "text": "Lows near 12–13°C in December to February. Bring a light jacket."
+      },
+      {
+        "icon": "☔",
+        "title": "Pack for rain in the wet months",
+        "text": "A compact umbrella and a dry bag for your phone help in June to September."
+      },
+      {
+        "icon": "🧴",
+        "title": "Sun at altitude",
+        "text": "The city sits high, so the sun is strong even on mild days. Use sunscreen and a hat."
+      }
+    ]
+  }
+}

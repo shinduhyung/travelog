@@ -1,0 +1,30 @@
+$ deepseek_facts.py Vienna
+  tokens in 4279 out 921
+Vienna: 0 problems
+
+$ deepseek_city.py Vienna --stage places
+Vienna: places
+  tokens in 1260 out 4789
+
+$ deepseek_city.py Vienna --stage frame
+Vienna: frame
+  tokens in 2432 out 1916
+  repaired JSON
+
+$ deepseek_city.py Vienna --stage plans
+Vienna: plans
+  plans for day
+  tokens in 2838 out 731
+  plans for 1n
+  tokens in 2839 out 1396
+  plans for 2n
+  tokens in 2839 out 1268
+  plans for 3n
+  tokens in 2844 out 1725
+  plans for 4n
+  tokens in 2839 out 2135
+
+$ merge_city.py Vienna
+Vienna: 28 places, 16 plans, 0 errors, 0 warnings
+wrote itineraries/vienna.json and planner/vienna.json
+

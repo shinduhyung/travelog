@@ -1,0 +1,243 @@
+{
+  "currency": "THB",
+  "usd_rate": 33,
+  "intro_line": "Golden temples, street food at every corner and a river that never sleeps.",
+  "intro": "Bangkok's old temples sit by the river, its malls and nightlife along the Skytrain. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "temples",
+      "label": "Temples"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Sukhumvit",
+    "Siam",
+    "Riverside",
+    "Old Town"
+  ],
+  "place_landmarks": [
+    "The Grand Palace",
+    "Wat Phra Kaew",
+    "Wat Pho",
+    "Wat Arun",
+    "Wat Traimit",
+    "Wat Saket",
+    "Bangkok Chinatown",
+    "Chatuchak Weekend Market",
+    "Jim Thompson House",
+    "Lumpini Park",
+    "ICONSIAM",
+    "Asiatique The Riverfront",
+    "Khao San Road",
+    "King Power Mahanakhon",
+    "Erawan Shrine",
+    "Bangkok National Museum",
+    "Chao Phraya Express Boat",
+    "Thonburi Klong Tour",
+    "The Giant Swing",
+    "Wat Benchamabophit",
+    "Safari World"
+  ],
+  "taxi": {
+    "flag_day": 35,
+    "flag_airport": 85,
+    "per_km": 7,
+    "min_fare": 35
+  },
+  "road_factor": 1.35,
+  "city_kmh": 15,
+  "transit_facts": [
+    "The BTS Skytrain and MRT subway cover the centre; fares about ฿16-65, contactless cards accepted on most lines.",
+    "City buses are very cheap but hard to use for visitors.",
+    "Metered taxis start at ฿35; insist on the meter. Grab and Bolt apps are often easier.",
+    "Tuk-tuks are fun for short rides; agree the price first.",
+    "Chao Phraya Express boats link the riverside temples, Chinatown and ICONSIAM.",
+    "Walking is hot and pavements are uneven; combine short walks with the Skytrain."
+  ],
+  "airports": [
+    {
+      "code": "BKK",
+      "name": "Suvarnabhumi Airport",
+      "primary": true,
+      "note": "The main international airport, 30 km east.",
+      "options": [
+        {
+          "mode": "Airport Rail Link",
+          "to": "Phaya Thai (BTS)",
+          "price": "฿45",
+          "time": "26-27 min",
+          "note": "05:30-midnight; change to BTS or MRT."
+        },
+        {
+          "mode": "Metered taxi",
+          "to": "Central Bangkok",
+          "price": "฿400-600",
+          "time": "45-75 min",
+          "note": "Includes ฿50 airport surcharge and tolls."
+        },
+        {
+          "mode": "Grab / Bolt",
+          "to": "Central Bangkok",
+          "price": "฿400-700",
+          "time": "45-75 min",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "code": "DMK",
+      "name": "Don Mueang Airport",
+      "primary": false,
+      "note": "North of the city; budget airlines.",
+      "options": [
+        {
+          "mode": "SRT Red Line",
+          "to": "Krung Thep Aphiwat (MRT)",
+          "price": "฿33",
+          "time": "about 15 min",
+          "note": ""
+        },
+        {
+          "mode": "Bus A1",
+          "to": "Mo Chit (BTS)",
+          "price": "฿30",
+          "time": "30-45 min",
+          "note": "Pay on board."
+        },
+        {
+          "mode": "Metered taxi",
+          "to": "Central Bangkok",
+          "price": "฿250-400",
+          "time": "40-70 min",
+          "note": "Plus tolls and ฿50 surcharge."
+        }
+      ]
+    }
+  ],
+  "airports_sources": [
+    [
+      "Bangkok airport to the city 2026",
+      "https://www.visitthailandtoday.com/guides/bangkok-airport-to-city"
+    ],
+    [
+      "Bangkok airport train vs taxi 2026",
+      "https://thailandawaits.com/train-from-bangkok-airport/"
+    ],
+    [
+      "Don Mueang Airport transportation",
+      "https://www.donmueangairport.com/transportation/"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    13.7563,
+    100.5018
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 31,
+      "low": 22,
+      "rain_days": 4
+    },
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 5
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 8
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 11
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 20
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 23
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 24
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 11
+    },
+    {
+      "high": 31,
+      "low": 22,
+      "rain_days": 4
+    }
+  ],
+  "tours": [
+    {
+      "title": "Bangkok: Grand Palace, Wat Pho, and Wat Arun Guided Tour",
+      "duration": "5 hrs",
+      "price": "$22",
+      "covers": [
+        "grand-palace",
+        "wat-phra-kaew",
+        "wat-pho",
+        "wat-arun"
+      ]
+    },
+    {
+      "title": "From Bangkok: Ayutthaya Temples Guided Tour with Lunch",
+      "duration": "7-7.5 hrs",
+      "price": "$33",
+      "covers": []
+    },
+    {
+      "title": "Mahanakhon SkyWalk Observation Deck Entry Ticket",
+      "duration": "1 day",
+      "price": "$41",
+      "covers": [
+        "mahanakhon"
+      ]
+    }
+  ],
+  "max_km": 45
+}

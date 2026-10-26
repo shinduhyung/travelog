@@ -1,0 +1,913 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: St Sophia, Central Street and the Ice Festival in the evening.",
+      "days": [
+        {
+          "title": "Old town morning, ice at night",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early to beat the tour groups. Hours can be shorter in winter, so check on the day."
+            },
+            {
+              "place": "sophia_square",
+              "at": "10:05",
+              "minutes": 20,
+              "note": "Step outside for the classic photo of the cathedral."
+            },
+            {
+              "place": "zhongyang",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk the pedestrian street south toward the river. Shops open around 09:00."
+            },
+            {
+              "place": "russian_food",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Lunch at a Russian-style place on or near the street."
+            },
+            {
+              "place": "stalin_park",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Riverside walk at the end of Central Street."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Cross to Songbei by taxi or metro. Winter only, roughly late Dec to late Feb. Go after dark for the lights and dress very warmly."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: morning market, street snacks and a Russian dinner.",
+      "days": [
+        {
+          "title": "Eat your way through Harbin",
+          "stops": [
+            {
+              "place": "local_market",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Daowai early-morning food street. Go before 10:00; many stalls close by then."
+            },
+            {
+              "place": "daowai_walk",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Walk off breakfast through the old neighbourhood."
+            },
+            {
+              "place": "zhongyang",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Taxi to Central Street. Look for bakeries and sausage shops."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch from the food market stalls. Roughly 10:00–21:00."
+            },
+            {
+              "place": "sophia",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Quick indoor stop to warm up. Check winter hours on the day."
+            },
+            {
+              "place": "russian_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead at weekends. Dinner, then a short stroll."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "Ice, snow and animals: a full winter day built for kids.",
+      "days": [
+        {
+          "title": "Snow sculptures, then the ice park",
+          "stops": [
+            {
+              "place": "snow_sculpture",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Sun Island Snow Sculpture Art Expo. Winter only, daytime. Wear boots and gloves."
+            },
+            {
+              "place": "sun_island",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Short walk in the park. Keep it brief if it is very cold."
+            },
+            {
+              "place": "russian_food",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Warm up over a long lunch in Songbei or back on Central Street."
+            },
+            {
+              "place": "ice_activity",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Frozen-river sledding and slides. Winter daytime only; check on the day."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Ice park opens into the evening. Book tickets ahead in peak weeks."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Songbei (Sun Island)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One night, so stay central: cathedral and Central Street on day one, the Ice Festival in the evening.",
+      "days": [
+        {
+          "title": "Arrive, cathedral and Central Street",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Check in first and leave bags at the hotel. Hours are shorter in winter, so go early afternoon."
+            },
+            {
+              "place": "sophia_square",
+              "at": "14:10",
+              "minutes": 20,
+              "note": "Step outside for the classic photo of the cathedral."
+            },
+            {
+              "place": "zhongyang",
+              "at": "14:40",
+              "minutes": 90,
+              "note": "Walk the pedestrian street south toward the river. Shops run to about 21:00."
+            },
+            {
+              "place": "russian_food",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner on or near Central Street. Book ahead in festival season."
+            },
+            {
+              "place": "icefestival",
+              "at": "19:15",
+              "minutes": 180,
+              "note": "Dec–Feb only. Taxi to Songbei. Dress in layers; it is far colder after dark."
+            }
+          ]
+        },
+        {
+          "title": "Daowai morning, then go",
+          "stops": [
+            {
+              "place": "local_market",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Early breakfast with locals. Go before 09:00 for the full stalls."
+            },
+            {
+              "place": "daowai_walk",
+              "at": "08:45",
+              "minutes": 90,
+              "note": "Old streets and small shops. Daytime is best."
+            },
+            {
+              "place": "museum",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Closed Monday. Check the day before. About 20 minutes by taxi."
+            },
+            {
+              "place": "railway_station_area",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Pick up snacks and head to your train or the airport bus."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A quick eating trip: street snacks, a Russian-style dinner and a market breakfast.",
+      "days": [
+        {
+          "title": "Central Street eating walk",
+          "stops": [
+            {
+              "place": "hongzhuan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop. Try sausage and local snacks. Roughly 10:00–21:00."
+            },
+            {
+              "place": "zhongyang",
+              "at": "13:45",
+              "minutes": 90,
+              "note": "Walk off lunch and look for bakeries and sweet shops."
+            },
+            {
+              "place": "sophia",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "A short culture break indoors. Hours are shorter in winter."
+            },
+            {
+              "place": "russian_food",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner. Book ahead in festival season."
+            },
+            {
+              "place": "sophia_night",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Evening stroll for dessert or a hot drink. Roughly 18:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast, then go",
+          "stops": [
+            {
+              "place": "local_market",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Daowai. Go early; stalls wind down around 10:00."
+            },
+            {
+              "place": "daowai_walk",
+              "at": "08:45",
+              "minutes": 90,
+              "note": "Walk between snacks in the old neighbourhood."
+            },
+            {
+              "place": "railway_station_area",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Grab food for the journey and head to your train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Ice and snow with kids: Sun Island by day, the Ice Festival lights after dark.",
+      "days": [
+        {
+          "title": "Sun Island snow and ice",
+          "stops": [
+            {
+              "place": "snow_sculpture",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Dec–Feb only, daytime. Taxi to Songbei. Bring hand warmers."
+            },
+            {
+              "place": "sun_island",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Lunch at a park cafe, then walk the sculptures. Roughly 08:00–17:00."
+            },
+            {
+              "place": "ice_activity",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Winter daytime only. Sledding and slides on the frozen river. Check prices on the day."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Stay into the evening for the lights. It gets very cold after sunset."
+            }
+          ]
+        },
+        {
+          "title": "Indoor morning, then go",
+          "stops": [
+            {
+              "place": "polarland",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Indoor and warm. Roughly 09:00–17:00. Good for a cold morning."
+            },
+            {
+              "place": "zhongyang",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk and lunch before you leave."
+            },
+            {
+              "place": "railway_station_area",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Head to your train or the airport bus."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the cathedral, Central Street and the ice festival in one easy loop.",
+      "days": [
+        {
+          "title": "Arrive, cathedral and Central Street",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start indoors if it is cold. Hours are shorter in winter, so check on the day."
+            },
+            {
+              "place": "sophia_square",
+              "at": "14:10",
+              "minutes": 20,
+              "note": "Step outside for the classic photo of the cathedral."
+            },
+            {
+              "place": "zhongyang",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the pedestrian street south to north. Shops run to about 21:00."
+            },
+            {
+              "place": "russian_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner on or near Central Street. Book ahead in winter."
+            }
+          ]
+        },
+        {
+          "title": "Ice Festival day in Songbei",
+          "stops": [
+            {
+              "place": "songhua",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Cross to Sun Island. In winter the river is frozen and walkable."
+            },
+            {
+              "place": "sun_island",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Park is open roughly 08:00–17:00. Snow sculptures are daytime only."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch back near Central Street."
+            },
+            {
+              "place": "icefestival",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Go in the evening when the ice is lit. Runs late Dec to late Feb only. Dress very warm."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, bakeries and a Russian-style dinner between the sights.",
+      "days": [
+        {
+          "title": "Markets and Central Street",
+          "stops": [
+            {
+              "place": "local_market",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early morning only, roughly 06:00–10:00. Go hungry."
+            },
+            {
+              "place": "daowai_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Old neighbourhood streets. Daytime is best."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop. Try Harbin sausage and hotpot."
+            },
+            {
+              "place": "zhongyang",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Bakeries and snack shops along the street."
+            },
+            {
+              "place": "sophia_night",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening stroll, roughly 18:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Songbei and a big dinner",
+          "stops": [
+            {
+              "place": "songhua",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Riverside walk. Sunset is best but you are here earlier."
+            },
+            {
+              "place": "stalin_park",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Riverside park back on the Central Street side."
+            },
+            {
+              "place": "russian_food",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Late lunch, or save it for dinner if you prefer."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Evening ice park, Dec–Feb only. Warm food stalls inside."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids: ice slides, snow sculptures and an indoor backup for cold days.",
+      "days": [
+        {
+          "title": "Indoor start, then the ice",
+          "stops": [
+            {
+              "place": "polarland",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Indoor and warm. Open roughly 09:00–17:00."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Pick simple dishes for kids."
+            },
+            {
+              "place": "ice_activity",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Frozen-river sledding and slides, winter daytime only."
+            },
+            {
+              "place": "icefestival",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Evening lights. Bring hand warmers and go early with kids."
+            }
+          ]
+        },
+        {
+          "title": "Snow sculptures and Central Street",
+          "stops": [
+            {
+              "place": "snow_sculpture",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Sun Island expo, daytime in winter only."
+            },
+            {
+              "place": "sun_island",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Park is open roughly 08:00–17:00. Shorten if kids get cold."
+            },
+            {
+              "place": "zhongyang",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Snacks and a warm drink on Central Street."
+            },
+            {
+              "place": "sophia",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Indoor finish. Check winter hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the cathedral, the old streets and the ice festival in one trip.",
+      "days": [
+        {
+          "title": "Arrive, Central Street and St Sophia",
+          "stops": [
+            {
+              "place": "zhongyang",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start at the north end and walk south. Shops stay open into the evening."
+            },
+            {
+              "place": "sophia_square",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Golden-hour photos of the cathedral from the square."
+            },
+            {
+              "place": "sophia",
+              "at": "17:10",
+              "minutes": 60,
+              "note": "Check closing time on the day; winter hours are shorter."
+            },
+            {
+              "place": "russian_food",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Book ahead on weekends. Borscht and bread are the safe picks."
+            }
+          ]
+        },
+        {
+          "title": "Daowai old streets, then the ice festival",
+          "stops": [
+            {
+              "place": "daowai_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Quiet lanes and old shopfronts. Wear warm boots."
+            },
+            {
+              "place": "local_market",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Early-morning stalls wind down by 10:00, so treat this as a late snack stop and check on the day."
+            },
+            {
+              "place": "museum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Good warm-up break."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Dec–Feb only. Go after dark when the lights are on. Taxi to Songbei."
+            }
+          ]
+        },
+        {
+          "title": "Sun Island and the river",
+          "stops": [
+            {
+              "place": "sun_island",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Winter: snow sculptures. Summer: gardens and shade."
+            },
+            {
+              "place": "snow_sculpture",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Winter only, daytime. Same island, short walk or shuttle."
+            },
+            {
+              "place": "songhua",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk the bank. In winter the river is frozen and busy with people."
+            },
+            {
+              "place": "stalin_park",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Sunset over the water, then walk back to Central Street for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Morning tour, then leave",
+          "stops": [
+            {
+              "place": "guided_tour",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Half-day walking tour. Confirm the meeting point the day before."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Cash and phone payment both work."
+            },
+            {
+              "place": "railway_station_area",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Allow extra time for taxis in snow."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, bakeries and a proper Russian-style dinner between sights.",
+      "days": [
+        {
+          "title": "Arrive, Central Street snacks",
+          "stops": [
+            {
+              "place": "zhongyang",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Look for sausage shops and bakeries along the street."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Early dinner from the stalls. Busiest around 18:00."
+            },
+            {
+              "place": "sophia_night",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening stroll back north past the lit-up buildings."
+            }
+          ]
+        },
+        {
+          "title": "Morning market and Daowai flavours",
+          "stops": [
+            {
+              "place": "local_market",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Go early; many stalls close by 10:00. Bring small notes."
+            },
+            {
+              "place": "daowai_walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk off breakfast through the old neighbourhood."
+            },
+            {
+              "place": "museum",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Closed Monday. Warm and free."
+            },
+            {
+              "place": "russian_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Reserve a table in peak winter."
+            }
+          ]
+        },
+        {
+          "title": "Songbei day and hotpot night",
+          "stops": [
+            {
+              "place": "polarland",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Indoor and warm. Good on a very cold morning."
+            },
+            {
+              "place": "songhua",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Riverside walk after lunch nearby."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:00",
+              "minutes": 180,
+              "note": "Dec–Feb only. Eat at the park or back on Central Street."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Late snack if the park food was thin. Check closing times."
+            }
+          ]
+        },
+        {
+          "title": "Bakery breakfast, then leave",
+          "stops": [
+            {
+              "place": "zhongyang",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Breakfast at a bakery; buy bread and sausage to take home."
+            },
+            {
+              "place": "sophia_square",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Last photos before checkout."
+            },
+            {
+              "place": "railway_station_area",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Taxis are slow in snow; leave a buffer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids: ice slides, snow sculptures and warm indoor backups.",
+      "days": [
+        {
+          "title": "Arrive, Central Street and the square",
+          "stops": [
+            {
+              "place": "zhongyang",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Easy flat walk. Kids will like the ice-cream shops even in winter."
+            },
+            {
+              "place": "sophia_square",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Open space to run around."
+            },
+            {
+              "place": "russian_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Early dinner suits small kids. Ask for a table away from the door."
+            }
+          ]
+        },
+        {
+          "title": "Sun Island snow and ice",
+          "stops": [
+            {
+              "place": "snow_sculpture",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Winter only. Dress in layers; it is colder on the island."
+            },
+            {
+              "place": "sun_island",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Walk or shuttle between the two. Bring snacks."
+            },
+            {
+              "place": "ice_activity",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Winter daytime only. Sleds and slides; check prices on the day."
+            },
+            {
+              "place": "icefestival",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Dec–Feb only. Go early evening before the kids tire."
+            }
+          ]
+        },
+        {
+          "title": "Warm indoor day",
+          "stops": [
+            {
+              "place": "polarland",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Indoor. Check show times at the gate."
+            },
+            {
+              "place": "hongzhuan",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls; pick hot dishes."
+            },
+            {
+              "place": "museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Free and warm."
+            },
+            {
+              "place": "stalin_park",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Short riverside walk at sunset if the weather allows."
+            }
+          ]
+        },
+        {
+          "title": "Morning walk, then leave",
+          "stops": [
+            {
+              "place": "daowai_walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Gentle stroll; keep it short if it is very cold."
+            },
+            {
+              "place": "local_market",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Snack stop; many stalls close by 10:00, so check on the day."
+            },
+            {
+              "place": "railway_station_area",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Allow extra time with luggage and kids."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhongyang Dajie"
+    }
+  ]
+}

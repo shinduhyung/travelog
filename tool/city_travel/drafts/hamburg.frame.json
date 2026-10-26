@@ -1,0 +1,265 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Elbphilharmonie, Speicherstadt and the big museums."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Harbour history, St. Pauli and the war years."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Fish sandwiches, Franzbrötchen and harbour-side dinners."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Altstadt",
+      "range": [
+        90,
+        200
+      ],
+      "why": "Central for the Rathaus, Kunsthalle and the lake. Walk to the main station and U/S-Bahn.",
+      "center": [
+        53.551,
+        10.0
+      ]
+    },
+    {
+      "area": "HafenCity",
+      "range": [
+        130,
+        280
+      ],
+      "why": "Next to the Elbphilharmonie and Speicherstadt. New hotels, quiet nights, short walk to the water.",
+      "center": [
+        53.542,
+        9.998
+      ]
+    },
+    {
+      "area": "St. Pauli",
+      "range": [
+        80,
+        180
+      ],
+      "why": "Nightlife, the Reeperbahn and the harbour edge. Lively and loud on weekends.",
+      "center": [
+        53.549,
+        9.968
+      ]
+    },
+    {
+      "area": "Altona",
+      "range": [
+        85,
+        190
+      ],
+      "why": "Local feel, good food, river views from the Elbe beach. Quick S-Bahn ride to the centre.",
+      "center": [
+        53.55,
+        9.935
+      ]
+    }
+  ],
+  "food": [
+    "Try a Fischbrötchen (fish sandwich) at the Landungsbrücken or the fish market; prices are roughly €4–8.",
+    "Franzbrötchen is the local cinnamon pastry. Buy one warm from a bakery for about €2–3.",
+    "Labskaus and Grünkohl are classic Hamburg dishes; look for them on traditional restaurant menus.",
+    "The Sunday fish market in Altona (early morning) is a Hamburg ritual; check opening hours on the day.",
+    "Book ahead for dinner on the Reeperbahn or in HafenCity on weekends; walk-ins get harder after 19:00."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a harbour ferry ride on the Elbe; regular ferries run and are cheap with a transit ticket.",
+    "Add a day trip to the Speicherstadt museums or the International Maritime Museum if you like ships.",
+    "Planten un Blomen park and the Wallanlagen are free and good for a slow half-day in dry weather."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "history": [
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights covers the Elbphilharmonie, Speicherstadt, the harbour and a good food evening; add a third for museums and a ferry."
+  },
+  "month_notes": [
+    "January: cold, highs near 5°C, lows around 0°C. Pack a warm coat and waterproof shoes.",
+    "February: still cold, highs near 7°C. Short days; plan indoor sights.",
+    "March: cool at 9°C highs, about 11 rain days. Layers help.",
+    "April: milder, highs near 13°C. Good for walking the harbour.",
+    "May: pleasant, highs near 18°C. Busy weekends; book hotels early.",
+    "June: warm, highs near 22°C, about 11 rain days. Long evenings.",
+    "July: warmest month, highs near 23°C, but about 14 rain days. Keep a rain jacket handy.",
+    "August: warm at 23°C highs, about 13 rain days. Peak season for the harbour.",
+    "September: still mild, highs near 20°C. Fewer rain days; a good shoulder month.",
+    "October: cooler, highs near 14°C, about 14 rain days. Bring an umbrella.",
+    "November: cold and wet, highs near 9°C. Dark early; plan indoor time.",
+    "December: cold, highs near 6°C, about 14 rain days. Christmas markets are the draw; dress warm."
+  ],
+  "climate_guide": {
+    "summary": "Cool and changeable: mild summers, cold winters, and rain in every month. Pack layers and rain gear year-round.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 10–14 rain days every month. A light waterproof jacket beats an umbrella in wind."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs around 20–23°C and long days. The busiest and most comfortable season."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold, not extreme",
+        "text": "January highs near 5°C and lows around 0°C. A warm coat, hat and gloves are enough."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Wind off the Elbe",
+        "text": "Harbour and waterfront areas feel colder and windier than the city centre. Layer up."
+      },
+      {
+        "icon": "🌂",
+        "title": "Shoulder months are mild but wet",
+        "text": "April, May, September and October are pleasant for walking, with frequent showers."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket, comfortable walking shoes and a warm hat for winter."
+      }
+    ]
+  },
+  "transit": {
+    "best": "S-Bahn and U-Bahn for most trips; walk or cycle in the flat centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "S-Bahn and U-Bahn cover the city. Buy a ticket before boarding; day tickets start around €8.20."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps. Buy your ticket before boarding; no ticket sales on board."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are plentiful. Uber and Bolt work too."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving is slow with roadworks and costly parking. Use park-and-ride if you must drive."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The city is flat and good for walking and cycling. Ferries cross the Elbe."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries cross the Elbe and are a cheap way to see the harbour."
+      }
+    ]
+  }
+}

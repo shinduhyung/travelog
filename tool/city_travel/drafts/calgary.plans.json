@@ -1,0 +1,865 @@
+{
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "One green day: river paths, a zoo morning and a sunset hill, all close to downtown.",
+      "days": [
+        {
+          "title": "Bow River morning, zoo afternoon, sunset hill",
+          "stops": [
+            {
+              "place": "bow-river-path",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start near Prince's Island and walk east. Flat and easy."
+            },
+            {
+              "place": "princes-island",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Cross the bridge for a loop around the island."
+            },
+            {
+              "place": "calgary-zoo",
+              "at": "11:45",
+              "minutes": 240,
+              "note": "About 15 minutes by taxi or a longer walk east. Check hours on the day."
+            },
+            {
+              "place": "scotsman-hill",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Short taxi ride. Best light is near sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and old streets in one day, with a walkable downtown core.",
+      "days": [
+        {
+          "title": "Museums, Stephen Avenue and Inglewood",
+          "stops": [
+            {
+              "place": "glenbow",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed some weekdays. Check before you go."
+            },
+            {
+              "place": "calgary-tower",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Views over the core."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch and a stroll on the pedestrian stretch."
+            },
+            {
+              "place": "fort-calgary",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Short taxi or CTrain east. Check hours on the day."
+            },
+            {
+              "place": "inglewood",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Walk from Fort Calgary. Shops close in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market morning, a neighbourhood lunch and an evening food walk.",
+      "days": [
+        {
+          "title": "Market, Kensington and 17th Avenue",
+          "stops": [
+            {
+              "place": "calgary-farmers-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go late morning for the best choice. Check hours on the day."
+            },
+            {
+              "place": "central-library",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short taxi north. Good coffee nearby."
+            },
+            {
+              "place": "kensington",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch and a wander. Shops are daytime only."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Walk south from Kensington."
+            },
+            {
+              "place": "beltline-food-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Book a table or just graze. Busiest at weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "A quick nature fix: river paths and parks downtown, with an easy outdoor evening.",
+      "days": [
+        {
+          "title": "Arrive, river paths and Prince's Island",
+          "stops": [
+            {
+              "place": "bow-river-path",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start near downtown and follow the water. Flat and easy walking."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "15:45",
+              "minutes": 20,
+              "note": "Short walk from the pathway. Good photo stop."
+            },
+            {
+              "place": "princes-island",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Cross the bridge into the park. Relax by the water."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner downtown. Shops close in the evening but restaurants stay open."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, then fly",
+          "stops": [
+            {
+              "place": "calgary-zoo",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Arrive at opening. Wear comfortable shoes. Check tickets online first."
+            },
+            {
+              "place": "inglewood",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Short ride from the zoo. Lunch and a wander on 9th Avenue."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most first-timers: downtown museums and old streets in one easy day.",
+      "days": [
+        {
+          "title": "Arrive, tower and Stephen Avenue",
+          "stops": [
+            {
+              "place": "calgary-tower",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Go up for the view. Late afternoon light is best."
+            },
+            {
+              "place": "glenbow",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed some weekdays, so check before you go."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Walk the pedestrian street and stop for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Inglewood history, then fly",
+          "stops": [
+            {
+              "place": "fort-calgary",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is quiet. Check opening days first."
+            },
+            {
+              "place": "inglewood",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk 9th Avenue. Old buildings, shops and lunch."
+            },
+            {
+              "place": "studio-bell",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Back downtown. Closed some days, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through downtown and the Beltline, with a market stop in the morning.",
+      "days": [
+        {
+          "title": "Arrive, market and 17th Avenue",
+          "stops": [
+            {
+              "place": "calgary-farmers-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Late morning to midday is busiest. Check hours on the day."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee and a stroll. Shops are daytime only."
+            },
+            {
+              "place": "beltline-food-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner on 17th Avenue. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Kensington brunch, then fly",
+          "stops": [
+            {
+              "place": "kensington",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekend brunch spot. Walk the side streets after eating."
+            },
+            {
+              "place": "princes-island",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short walk to the park to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Beltline"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "First-timers who want river paths, green space and an easy outdoor pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the river",
+          "stops": [
+            {
+              "place": "central-library",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "A good indoor start near the river. Check hours on the day."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Short walk from the library. Photo stop."
+            },
+            {
+              "place": "princes-island",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Cross the bridge into the park. Benches and lawns."
+            },
+            {
+              "place": "bow-river-path",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Follow the paved path east. Flat and easy."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner downtown. Shops close in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and Inglewood",
+          "stops": [
+            {
+              "place": "calgary-zoo",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Arrive at opening. Wear comfortable shoes."
+            },
+            {
+              "place": "fort-calgary",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Short walk or taxi from the zoo. Check hours on the day."
+            },
+            {
+              "place": "inglewood",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Stroll 9th Avenue. Shops are daytime only."
+            },
+            {
+              "place": "scotsman-hill",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset viewpoint over downtown. Bring a layer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most visitors: museums, old streets and the city's best views.",
+      "days": [
+        {
+          "title": "Downtown culture loop",
+          "stops": [
+            {
+              "place": "glenbow",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed some weekdays. Check before you go."
+            },
+            {
+              "place": "calgary-tower",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Five minutes on foot. Go up for the view."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch and a walk along the pedestrian street."
+            },
+            {
+              "place": "studio-bell",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed some days. Check on the day."
+            },
+            {
+              "place": "central-library",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Short walk east. Open daily, check hours."
+            }
+          ]
+        },
+        {
+          "title": "Inglewood and the Stampede grounds",
+          "stops": [
+            {
+              "place": "fort-calgary",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is quietest. Check hours on the day."
+            },
+            {
+              "place": "inglewood",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Old streets, shops and lunch."
+            },
+            {
+              "place": "stampede-park",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Hours vary by event. Check the calendar."
+            },
+            {
+              "place": "the-last-of-us",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Outdoor filming spots downtown. Daytime is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around brunch, steak and craft beer.",
+      "days": [
+        {
+          "title": "Market, downtown and 17th Avenue",
+          "stops": [
+            {
+              "place": "calgary-farmers-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Late morning is best. Check hours on the day."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch downtown. Shops are daytime only."
+            },
+            {
+              "place": "calgary-tower",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Walk off lunch with the view."
+            },
+            {
+              "place": "devonian-gardens",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Indoor garden inside the mall. Mall hours."
+            },
+            {
+              "place": "beltline-food-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner on 17th Avenue. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Kensington and the river",
+          "stops": [
+            {
+              "place": "kensington",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekend brunch and coffee. Shops are daytime only."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Short walk to the bridge."
+            },
+            {
+              "place": "princes-island",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk the park before your next stop."
+            },
+            {
+              "place": "central-library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Nearby and free. Check hours on the day."
+            },
+            {
+              "place": "inglewood",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Afternoon snack and a last stroll before you fly."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "River paths, parks and a full day out in the mountains for first-time visitors.",
+      "days": [
+        {
+          "title": "Arrive and walk the river",
+          "stops": [
+            {
+              "place": "bow-river-path",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start near the Peace Bridge and head east. Flat and easy."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Red tubular bridge. Good photos from the north bank."
+            },
+            {
+              "place": "princes-island",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Island park in the middle of the Bow. Picnic tables and benches."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner on the pedestrian mall. Many kitchens close by 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and Inglewood",
+          "stops": [
+            {
+              "place": "calgary-zoo",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Arrive at opening. Wear comfortable shoes. Check tickets online first."
+            },
+            {
+              "place": "fort-calgary",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Short walk from the zoo. Check opening days on the day."
+            },
+            {
+              "place": "inglewood",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "9th Avenue shops and coffee. Most close around 17:00–18:00."
+            }
+          ]
+        },
+        {
+          "title": "Day in the Rockies",
+          "stops": [
+            {
+              "place": "bow-river-path",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Quick morning stretch before you drive west."
+            },
+            {
+              "place": "scotsman-hill",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Sunset view over downtown. Bring a jacket, it is windy."
+            }
+          ]
+        },
+        {
+          "title": "Parks and depart",
+          "stops": [
+            {
+              "place": "devonian-gardens",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Indoor garden inside the mall. Good if it rains."
+            },
+            {
+              "place": "central-library",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Striking building, free to enter. Check hours on the day."
+            },
+            {
+              "place": "calgary-farmers-market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Busy at midday on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core or Beltline, near the river"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, old streets and the Stampede story, paced for first-timers.",
+      "days": [
+        {
+          "title": "Arrive, tower and Stephen Avenue",
+          "stops": [
+            {
+              "place": "calgary-tower",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Glass floor and city views. Late afternoon light is best."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Heritage buildings and shops. Most shops close around 18:00."
+            },
+            {
+              "place": "devonian-gardens",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Warm indoor garden, handy in winter."
+            },
+            {
+              "place": "beltline-food-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner along 17th Avenue. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Museums day",
+          "stops": [
+            {
+              "place": "glenbow",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed some weekdays. Check the day before."
+            },
+            {
+              "place": "central-library",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Free entry."
+            },
+            {
+              "place": "studio-bell",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Music museum east of downtown. Closed some days, check first."
+            },
+            {
+              "place": "olympic-plaza",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Open square. Skating rink in winter, check conditions."
+            }
+          ]
+        },
+        {
+          "title": "Inglewood and Stampede Park",
+          "stops": [
+            {
+              "place": "fort-calgary",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is quietest. Check hours on the day."
+            },
+            {
+              "place": "inglewood",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch plus old main street. Shops are daytime only."
+            },
+            {
+              "place": "stampede-park",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Varies by event. In July expect crowds and tickets."
+            },
+            {
+              "place": "scotsman-hill",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset over the skyline. Short uphill walk."
+            }
+          ]
+        },
+        {
+          "title": "Film spots and depart",
+          "stops": [
+            {
+              "place": "the-last-of-us",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Outdoor filming spots downtown. Check a fan map before you go."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Quick stop on the way to the river path."
+            },
+            {
+              "place": "princes-island",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then a short loop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown Core, walkable to most sights"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Steak, brunch and craft beer, with easy walks between neighbourhoods.",
+      "days": [
+        {
+          "title": "Arrive and eat on 17th Avenue",
+          "stops": [
+            {
+              "place": "stephen-ave",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Stroll the mall first. Shops are daytime only."
+            },
+            {
+              "place": "calgary-tower",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Views before dinner. Check hours on the day."
+            },
+            {
+              "place": "beltline-food-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Book a table. Steak and beer are the local staples."
+            }
+          ]
+        },
+        {
+          "title": "Market and Kensington",
+          "stops": [
+            {
+              "place": "calgary-farmers-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Late morning is best. Many stalls sell hot food."
+            },
+            {
+              "place": "peace-bridge",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Walk across to Kensington."
+            },
+            {
+              "place": "kensington",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and coffee. Weekend afternoons are liveliest."
+            },
+            {
+              "place": "princes-island",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk off lunch along the river."
+            },
+            {
+              "place": "devonian-gardens",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Indoor break if the weather turns."
+            }
+          ]
+        },
+        {
+          "title": "Inglewood food and beer",
+          "stops": [
+            {
+              "place": "inglewood",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Brunch spots and bakeries on 9th Avenue."
+            },
+            {
+              "place": "fort-calgary",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Check opening days on the day."
+            },
+            {
+              "place": "calgary-zoo",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Short visit only. Check last entry times."
+            },
+            {
+              "place": "stampede-park",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner near the park. Events vary, check the calendar."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and depart",
+          "stops": [
+            {
+              "place": "central-library",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Free, and a good rainy-day stop."
+            },
+            {
+              "place": "olympic-plaza",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short walk through the square."
+            },
+            {
+              "place": "stephen-ave",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Final lunch before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Beltline, close to 17th Avenue restaurants"
+    }
+  ]
+}

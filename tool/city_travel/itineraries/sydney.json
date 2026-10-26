@@ -1,0 +1,1813 @@
+{
+  "city": "Sydney",
+  "checked": "October 2026",
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro": "Sydney rewards visitors with iconic harbour views, world-class beaches and easy day trips into national parks. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -33.9132,
+      "west": 151.0395,
+      "north": -33.7847,
+      "east": 151.3162,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.6,
+      "flag_airport": 5.5,
+      "per_km": 2.2,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Trains, metro, light rail, ferries and buses run on one Opal card or contactless tap.",
+      "Ferries from Circular Quay are the scenic way to reach Manly, Taronga Zoo and Watsons Bay.",
+      "Buses fill the gaps in the inner suburbs; Google Maps and TripView show live times.",
+      "Taxis and Uber, DiDi and Ola all operate; taxis are easiest at ranks and the airport.",
+      "Driving is busy and tolled on most motorways; parking in the centre is costly.",
+      "The CBD is walkable; bikes and e-scooters suit the harbour foreshore paths."
+    ],
+    "sources": []
+  },
+  "places": {
+    "opera_house": {
+      "name": "Sydney Opera House",
+      "landmark": "Sydney Opera House",
+      "kind": "sight",
+      "lat": -33.8568,
+      "lon": 151.2153,
+      "price": null,
+      "price_text": "Free to walk around · guided tours roughly AUD 45–55 · check on the day",
+      "hours": "Forecourt open 24h · tours usually 09:00–17:00",
+      "tip": "Walk the outside for free, then book a guided tour to see inside the halls.",
+      "source": "https://www.sydneyoperahouse.com/visit"
+    },
+    "harbour_bridge": {
+      "name": "Sydney Harbour Bridge",
+      "landmark": "Sydney Harbour Bridge",
+      "kind": "sight",
+      "lat": -33.8523,
+      "lon": 151.2108,
+      "price": 0,
+      "price_text": "Free to walk across · BridgeClimb costs extra, check on the day",
+      "hours": "Pedestrian path open 24h",
+      "tip": "Walk from The Rocks to Milsons Point for free harbour views. The climb is optional and pricey.",
+      "source": "https://www.bridgeclimb.com/"
+    },
+    "bondi": {
+      "name": "Bondi Beach",
+      "landmark": "Bondi Beach",
+      "kind": "beach",
+      "lat": -33.8915,
+      "lon": 151.2767,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · lifeguards patrol in daylight hours",
+      "tip": "Swim between the red and yellow flags. The coastal walk to Coogee starts at the south end.",
+      "source": "https://www.bonditourism.com.au/"
+    },
+    "the_rocks": {
+      "name": "The Rocks",
+      "landmark": "The Rocks",
+      "kind": "sight",
+      "lat": -33.8599,
+      "lon": 151.2091,
+      "price": 0,
+      "price_text": "Free to wander",
+      "hours": "Streets always open · markets on weekends",
+      "tip": "Come for the weekend market and the old laneways behind the main street.",
+      "source": "https://www.therocks.com/"
+    },
+    "darling_harbour": {
+      "name": "Darling Harbour",
+      "landmark": "Darling Harbour",
+      "kind": "sight",
+      "lat": -33.8748,
+      "lon": 151.2009,
+      "price": 0,
+      "price_text": "Free to walk · attractions charge separately",
+      "hours": "Waterfront always open",
+      "tip": "Good for families in the evening. The walk to Barangaroo is short and scenic.",
+      "source": "https://www.darlingharbour.com/"
+    },
+    "botanic_garden": {
+      "name": "Royal Botanic Garden Sydney",
+      "landmark": "Royal Botanic Garden Sydney",
+      "kind": "park",
+      "lat": -33.8642,
+      "lon": 151.2166,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Usually 07:00–sunset, check on the day",
+      "tip": "Walk to Mrs Macquarie's Point for the classic Opera House and bridge view.",
+      "source": "https://www.botanicgardens.org.au/"
+    },
+    "taronga_zoo": {
+      "name": "Taronga Zoo Sydney",
+      "landmark": "Taronga Zoo Sydney",
+      "kind": "sight",
+      "lat": -33.8433,
+      "lon": 151.2413,
+      "price": null,
+      "price_text": "Adult tickets roughly AUD 45–55 · check on the day",
+      "hours": "Usually 09:30–17:00",
+      "tip": "Take the ferry from Circular Quay. It is part of the day out.",
+      "source": "https://taronga.org.au/sydney-zoo"
+    },
+    "fox_studios": {
+      "name": "Fox Studios Australia",
+      "landmark": "Fox Studios Australia (was part of Royal Agricultural Society Showground)",
+      "kind": "sight",
+      "lat": -33.8901,
+      "lon": 151.2291,
+      "price": null,
+      "price_text": "Working studio · not generally open to the public",
+      "hours": "Not a public attraction, check on the day",
+      "tip": "This is a film studio, not a visitor site. Skip it unless you have business there.",
+      "source": ""
+    },
+    "kaos_arcade": {
+      "name": "KAOS-Indoor Amusement arcade",
+      "landmark": "KAOS-Indoor Amusement arcade",
+      "kind": "activity",
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "price": null,
+      "price_text": "Pay per game · check on the day",
+      "hours": "Check on the day",
+      "tip": "Small arcade for a rainy hour. Confirm it is open before you go.",
+      "source": ""
+    },
+    "luna_park": {
+      "name": "Luna Park Sydney",
+      "landmark": "Luna Park Sydney",
+      "kind": "activity",
+      "lat": -33.8471,
+      "lon": 151.2055,
+      "price": 0,
+      "price_text": "Free entry · rides cost extra, check on the day",
+      "hours": "Usually around 11:00–18:00, longer in summer",
+      "tip": "Entry is free. The big smiling face gate is the photo. Buy ride passes only if you plan to ride.",
+      "source": "https://www.lunaparksydney.com/"
+    },
+    "manly_beach": {
+      "name": "Manly Beach",
+      "landmark": "Manly Beach",
+      "kind": "beach",
+      "lat": -33.7996,
+      "lon": 151.2882,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · lifeguards in daylight hours",
+      "tip": "Take the ferry from Circular Quay. The crossing is half the fun.",
+      "source": "https://www.manlyaustralia.com.au/"
+    },
+    "manly_waterworks": {
+      "name": "Manly Waterworks",
+      "landmark": "Manly Waterworks",
+      "kind": "activity",
+      "lat": -33.8037,
+      "lon": 151.289,
+      "price": null,
+      "price_text": "Check on the day",
+      "hours": "Seasonal, check on the day",
+      "tip": "Small waterslide park. Check it is open and running before you plan around it.",
+      "source": ""
+    },
+    "meat_pie": {
+      "name": "Meat pie",
+      "landmark": "Meat Pie",
+      "kind": "food",
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "price": null,
+      "price_text": "Roughly AUD 6–12 at a bakery or pie shop",
+      "hours": "Bakery hours vary",
+      "tip": "A classic Aussie snack. Try one from a local bakery, not a tourist stand.",
+      "source": ""
+    },
+    "qvb": {
+      "name": "Queen Victoria Building",
+      "landmark": "Queen Victoria Building",
+      "kind": "sight",
+      "lat": -33.8718,
+      "lon": 151.2067,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Usually 09:00–18:00, check on the day",
+      "tip": "Step inside for the stained glass and the hanging clock. Good rainy-day stop.",
+      "source": "https://www.qvb.com.au/"
+    },
+    "easter_show": {
+      "name": "Royal Easter Show",
+      "landmark": "Royal Easter Show",
+      "kind": "show",
+      "lat": -33.8427,
+      "lon": 151.0667,
+      "price": null,
+      "price_text": "Ticket prices vary by year · check on the day",
+      "hours": "Runs for about two weeks around Easter",
+      "tip": "Only on around Easter. Book tickets ahead if you are in town then.",
+      "source": "https://www.eastershow.com.au/"
+    },
+    "sea_life": {
+      "name": "SEA LIFE Sydney Aquarium",
+      "landmark": "SEA LIFE Sydney Aquarium",
+      "kind": "museum",
+      "lat": -33.8696,
+      "lon": 151.2023,
+      "price": null,
+      "price_text": "Adult tickets roughly AUD 40–50 · book online for less",
+      "hours": "Usually 10:00–17:00",
+      "tip": "Book online to skip the queue and pay less. Good for a rainy day.",
+      "source": "https://www.sydneyaquarium.com.au/"
+    },
+    "st_marys": {
+      "name": "St Mary's Cathedral",
+      "landmark": "St Mary's Cathedral",
+      "kind": "sight",
+      "lat": -33.8711,
+      "lon": 151.2133,
+      "price": 0,
+      "price_text": "Free entry · donations welcome",
+      "hours": "Usually open daily, check on the day",
+      "tip": "Quiet, cool and free. Dress respectfully and check mass times.",
+      "source": "https://www.stmaryscathedral.org.au/"
+    },
+    "fish_market": {
+      "name": "Sydney Fish Market",
+      "landmark": "Sydney Fish Market",
+      "kind": "food",
+      "lat": -33.8732,
+      "lon": 151.1925,
+      "price": null,
+      "price_text": "Pay per item · lunch roughly AUD 15–30",
+      "hours": "Usually from early morning to late afternoon",
+      "tip": "Go before lunch for the best choice. Eat outside and watch the seagulls.",
+      "source": "https://www.sydneyfishmarket.com.au/"
+    },
+    "mardi_gras": {
+      "name": "Sydney Gay and Lesbian Mardi Gras",
+      "landmark": "Sydney Gay and Lesbian Mardi Gras",
+      "kind": "show",
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "price": null,
+      "price_text": "Parade viewing often free · party tickets cost extra",
+      "hours": "Usually February–March, check on the day",
+      "tip": "Only around February–March. The parade is the free highlight.",
+      "source": "https://www.mardigras.org.au/"
+    },
+    "harbour": {
+      "name": "Sydney Harbour",
+      "landmark": "Sydney Harbour",
+      "kind": "sight",
+      "lat": -33.8611,
+      "lon": 151.2108,
+      "price": 0,
+      "price_text": "Free to view",
+      "hours": "Always open",
+      "tip": "The best free view is from the Botanic Garden or the ferry deck.",
+      "source": ""
+    },
+    "ferry": {
+      "name": "Sydney Harbour Ferry",
+      "landmark": "Sydney Harbour Ferry",
+      "kind": "tour",
+      "lat": -33.8611,
+      "lon": 151.2111,
+      "price": null,
+      "price_text": "Single fares roughly AUD 6–8 with an Opal card · check on the day",
+      "hours": "Runs from early morning to late evening",
+      "tip": "Take the Manly or Watsons Bay ferry for a cheap harbour cruise. Tap on with an Opal card.",
+      "source": "https://transportnsw.info/"
+    },
+    "tower_eye": {
+      "name": "Sydney Tower Eye",
+      "landmark": "Sydney Tower Eye",
+      "kind": "sight",
+      "lat": -33.8704,
+      "lon": 151.2088,
+      "price": null,
+      "price_text": "Adult tickets roughly AUD 30–40 · book online",
+      "hours": "Usually 10:00–19:00",
+      "tip": "Go near sunset for day and night views in one visit.",
+      "source": "https://www.sydneytowereye.com.au/"
+    },
+    "bondi_coogee_walk": {
+      "name": "Bondi to Coogee coastal walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -33.8955,
+      "lon": 151.2745,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · go in daylight",
+      "tip": "About 6 km one way. Take water, a hat and swim gear for the small beaches on the way.",
+      "source": "https://www.bonditourism.com.au/"
+    },
+    "barangaroo": {
+      "name": "Barangaroo Reserve and Wulugul Walk",
+      "landmark": null,
+      "kind": "park",
+      "lat": -33.8601,
+      "lon": 151.2011,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Quiet waterfront walk from Darling Harbour to the Rocks. Good sunset spot.",
+      "source": "https://www.barangaroo.com/"
+    },
+    "newtown_walk": {
+      "name": "Newtown King Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -33.8983,
+      "lon": 151.1794,
+      "price": 0,
+      "price_text": "Free to walk · food and drinks extra",
+      "hours": "Shops and cafes vary, busiest in the evening",
+      "tip": "A lively neighbourhood for cheap eats and street art. Take the train to Newtown station.",
+      "source": ""
+    },
+    "blue_mountains": {
+      "name": "Blue Mountains day tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -33.7122,
+      "lon": 150.3119,
+      "price": null,
+      "price_text": "Guided day tours roughly AUD 100–180 · check on the day",
+      "hours": "Full day, usually 08:00–18:00",
+      "tip": "A full day out of the city. Bring a jacket, it is cooler in the mountains.",
+      "source": "https://www.bluemountains.travel/"
+    },
+    "paddington_markets": {
+      "name": "Paddington Markets",
+      "landmark": null,
+      "kind": "food",
+      "lat": -33.8844,
+      "lon": 151.2269,
+      "price": 0,
+      "price_text": "Free entry · buy what you like",
+      "hours": "Usually Saturdays only, check on the day",
+      "tip": "Local crafts and food on Saturdays. Pair it with a walk down Oxford Street.",
+      "source": "https://www.paddingtonmarkets.com.au/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "One sunny day: Bondi in the morning, the coastal walk, then a ferry to Manly for sunset.",
+      "days": [
+        {
+          "title": "Bondi morning, Manly afternoon",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Arrive early on weekdays. Swim between the flags where lifeguards patrol."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "10:15",
+              "minutes": 150,
+              "note": "Go in daylight and carry water. Skip the full walk if it is hot."
+            },
+            {
+              "place": "meat_pie",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Quick lunch near Bondi or back at Circular Quay. Bakery hours vary."
+            },
+            {
+              "place": "ferry",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Take the Manly ferry from Circular Quay. Sit on the open deck."
+            },
+            {
+              "place": "manly_beach",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Swim, then walk to Shelly Beach if you have energy. Ferry back before dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or Bondi"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The classic first day: Opera House, The Rocks and the harbour, all on foot.",
+      "days": [
+        {
+          "title": "Circular Quay to The Rocks",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning light is best for photos. Tours usually run 09:00–17:00, check on the day."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "10:45",
+              "minutes": 75,
+              "note": "Walk through to Mrs Macquarie's Point for the bridge view. Usually open 07:00–sunset."
+            },
+            {
+              "place": "st_marys",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Quiet midday break. Usually open daily, check on the day."
+            },
+            {
+              "place": "meat_pie",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch stop in The Rocks. Bakery hours vary."
+            },
+            {
+              "place": "the_rocks",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Weekend markets are best. Streets always open."
+            },
+            {
+              "place": "harbour_bridge",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk part of the pedestrian path for sunset. Path open 24h."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or The Rocks"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Harbour ferries, a zoo with a view, and a sunset walk at Barangaroo.",
+      "days": [
+        {
+          "title": "Ferry, zoo and the harbour",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Ferry from Circular Quay to Taronga. Runs from early morning to late evening."
+            },
+            {
+              "place": "taronga_zoo",
+              "at": "09:45",
+              "minutes": 240,
+              "note": "Go early before it gets hot. Usually 09:30–17:00, check on the day."
+            },
+            {
+              "place": "meat_pie",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch back at Circular Quay."
+            },
+            {
+              "place": "harbour",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the waterfront. Always open."
+            },
+            {
+              "place": "barangaroo",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset on the Wulugul Walk. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One night, two beaches: Bondi in the morning and a ferry to Manly before you fly.",
+      "days": [
+        {
+          "title": "Bondi morning, harbour afternoon",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Go early on weekdays. Lifeguards patrol in daylight hours."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "10:45",
+              "minutes": 150,
+              "note": "Walk as far as you like and turn back. Avoid midday sun in summer."
+            },
+            {
+              "place": "meat_pie",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick lunch near Bondi. Bakery hours vary."
+            },
+            {
+              "place": "ferry",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Ferries run from early morning to late evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Manly beach day",
+          "stops": [
+            {
+              "place": "manly_beach",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Take the morning ferry from Circular Quay. Lifeguards in daylight hours."
+            },
+            {
+              "place": "meat_pie",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch near the beach. Check bakery hours on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Ferry back with harbour views. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for first-timers: the Opera House and The Rocks on day one, harbour views the next morning.",
+      "days": [
+        {
+          "title": "Circular Quay and The Rocks",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Tours usually 09:00–17:00. Book ahead."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Usually 07:00–sunset, check on the day."
+            },
+            {
+              "place": "meat_pie",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Lunch stop. Bakery hours vary."
+            },
+            {
+              "place": "the_rocks",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Markets on weekends. Streets always open."
+            },
+            {
+              "place": "harbour_bridge",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Pedestrian path open 24h. Sunset is best."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral, tower and harbour",
+          "stops": [
+            {
+              "place": "st_marys",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Usually open daily, check on the day."
+            },
+            {
+              "place": "qvb",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Usually 09:00–18:00, check on the day."
+            },
+            {
+              "place": "tower_eye",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Usually 10:00–19:00. Book a slot."
+            },
+            {
+              "place": "harbour",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk the waterfront before you leave. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Harbour ferries, a coastal walk and a garden sunset in one short trip.",
+      "days": [
+        {
+          "title": "Ferry, zoo and harbour",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Runs from early morning to late evening. Check times on the day."
+            },
+            {
+              "place": "taronga_zoo",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Usually 09:30–17:00. Go in the morning before it gets hot."
+            },
+            {
+              "place": "meat_pie",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Late lunch. Bakery hours vary."
+            },
+            {
+              "place": "barangaroo",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Always open. Good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Coastal walk before you fly",
+          "stops": [
+            {
+              "place": "bondi_coogee_walk",
+              "at": "08:00",
+              "minutes": 150,
+              "note": "Go in daylight, not midday in summer. Always open."
+            },
+            {
+              "place": "bondi",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Cool off at the beach. Lifeguards in daylight hours."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Usually 07:00–sunset, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "First-timers who want sand, surf and a ferry ride, with the harbour icons in between.",
+      "days": [
+        {
+          "title": "Arrive, Circular Quay and the harbour",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the forecourt for free. Tours usually run 09:00–17:00, so book ahead if you want inside."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "15:45",
+              "minutes": 75,
+              "note": "Usually open 07:00 to sunset. Check on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Sunset over the water. Bring a layer, it gets breezy."
+            },
+            {
+              "place": "the_rocks",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner here. Markets run on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Bondi morning, coastal walk",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Swim before the crowds. Lifeguards patrol in daylight hours."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "10:45",
+              "minutes": 150,
+              "note": "Go in daylight and start before midday heat in summer. Bring water."
+            },
+            {
+              "place": "meat_pie",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick lunch back near Bondi. Bakery hours vary."
+            },
+            {
+              "place": "paddington_markets",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Saturdays only. Check on the day before you go."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Manly, then fly",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Ferries run from early morning. Sit on the harbour side."
+            },
+            {
+              "place": "manly_beach",
+              "at": "09:45",
+              "minutes": 150,
+              "note": "Swim or walk the beach. Lifeguards in daylight hours."
+            },
+            {
+              "place": "meat_pie",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch near the wharf before the ferry back."
+            },
+            {
+              "place": "ferry",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Return to Circular Quay. Allow time for your onward trip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or The Rocks"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most visitors: the Opera House, The Rocks and harbour history, with an easy ferry day.",
+      "days": [
+        {
+          "title": "Arrive, Opera House and The Rocks",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Tours usually 09:00–17:00. Book a slot if you want to go inside."
+            },
+            {
+              "place": "st_marys",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Short midday-style break. Usually open daily, check on the day."
+            },
+            {
+              "place": "the_rocks",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Old lanes and pubs. Markets on weekends."
+            },
+            {
+              "place": "meat_pie",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Classic snack before dinner or a harbour walk."
+            },
+            {
+              "place": "harbour_bridge",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Pedestrian path open 24h. Sunset is the best light."
+            }
+          ]
+        },
+        {
+          "title": "Darling Harbour and the city",
+          "stops": [
+            {
+              "place": "qvb",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Usually 09:00–18:00. Good in rain."
+            },
+            {
+              "place": "tower_eye",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Usually 10:00–19:00. Clear days are best."
+            },
+            {
+              "place": "fish_market",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Late morning to early afternoon is busiest. Eat here for lunch."
+            },
+            {
+              "place": "barangaroo",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Waterfront walk, always open."
+            },
+            {
+              "place": "darling_harbour",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon into evening. Family-friendly waterfront."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Manly, then fly",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Runs from early morning to late evening. A cheap harbour cruise."
+            },
+            {
+              "place": "manly_beach",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Walk the beach and the shops. Always open."
+            },
+            {
+              "place": "meat_pie",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch near the wharf."
+            },
+            {
+              "place": "ferry",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Back to Circular Quay. Leave buffer for your flight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or The Rocks"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Walkers and wildlife fans: coastal cliffs, harbour ferries and a full Blue Mountains day.",
+      "days": [
+        {
+          "title": "Arrive, gardens and harbour",
+          "stops": [
+            {
+              "place": "botanic_garden",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Usually 07:00 to sunset. Check on the day."
+            },
+            {
+              "place": "opera_house",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Forecourt is open 24h. Free to walk around."
+            },
+            {
+              "place": "harbour_bridge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk part of the pedestrian path. Open 24h."
+            },
+            {
+              "place": "the_rocks",
+              "at": "18:15",
+              "minutes": 90,
+              "note": "Dinner in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Blue Mountains full day",
+          "stops": [
+            {
+              "place": "blue_mountains",
+              "at": "08:00",
+              "minutes": 600,
+              "note": "Full day, usually 08:00–18:00. Go on a clear day and start early."
+            },
+            {
+              "place": "darling_harbour",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Easy evening walk by the water after a long day."
+            }
+          ]
+        },
+        {
+          "title": "Bondi walk, then fly",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Morning swim or a look at the surf. Lifeguards in daylight hours."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "09:45",
+              "minutes": 150,
+              "note": "Go in daylight, not midday in summer. Bring water and sun cover."
+            },
+            {
+              "place": "meat_pie",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch near Bondi before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or The Rocks"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "First-timers who want sand, surf and the ferry to Manly, with the harbour icons on day one.",
+      "days": [
+        {
+          "title": "Arrive, Circular Quay and the harbour",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the forecourt for free. Tours usually run 09:00–17:00, so book ahead if you want inside."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "15:45",
+              "minutes": 75,
+              "note": "Ten minutes on foot past the Opera House. Usually open until sunset, check on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Sunset over the water near the ferry wharves."
+            },
+            {
+              "place": "the_rocks",
+              "at": "18:15",
+              "minutes": 90,
+              "note": "Dinner in the old lanes. Markets are on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Bondi and the coastal walk",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early on a weekday. Lifeguards patrol in daylight hours."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Start at Bondi and turn back when you like. Avoid midday heat in summer."
+            },
+            {
+              "place": "paddington_markets",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Saturdays only, check on the day. Short bus or taxi from Bondi."
+            },
+            {
+              "place": "meat_pie",
+              "at": "17:00",
+              "minutes": 15,
+              "note": "Quick snack. Bakery hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Manly",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Ferry from Circular Quay. Sit on the right side out for the best views."
+            },
+            {
+              "place": "manly_beach",
+              "at": "10:45",
+              "minutes": 180,
+              "note": "Swim, then lunch near the beach. Lifeguards in daylight hours."
+            },
+            {
+              "place": "manly_waterworks",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Seasonal, check on the day. Good for kids in summer."
+            },
+            {
+              "place": "ferry",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Ferry back to Circular Quay. Runs until late evening."
+            }
+          ]
+        },
+        {
+          "title": "Darling Harbour, then fly",
+          "stops": [
+            {
+              "place": "darling_harbour",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Waterfront walk. Always open."
+            },
+            {
+              "place": "sea_life",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Good in rain or heat."
+            },
+            {
+              "place": "fish_market",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Late lunch. Usually open from early morning to late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay & The Rocks"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for most visitors: the Opera House, The Rocks and easy harbour ferries, with one full day out.",
+      "days": [
+        {
+          "title": "Arrive, Opera House and The Rocks",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book a tour if you want inside. Forecourt open 24h."
+            },
+            {
+              "place": "st_marys",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Short walk inland. Usually open daily, check on the day."
+            },
+            {
+              "place": "the_rocks",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Old lanes and pubs. Weekend markets are busiest."
+            },
+            {
+              "place": "meat_pie",
+              "at": "18:00",
+              "minutes": 15,
+              "note": "Classic snack before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, gardens and harbour",
+          "stops": [
+            {
+              "place": "harbour_bridge",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Walk the pedestrian path from The Rocks. Open 24h."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Usually 07:00–sunset, check on the day."
+            },
+            {
+              "place": "ferry",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short harbour hop from Circular Quay. Runs all day."
+            },
+            {
+              "place": "qvb",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Usually 09:00–18:00. Good in rain."
+            },
+            {
+              "place": "tower_eye",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Usually 10:00–19:00. Sunset is the best slot."
+            }
+          ]
+        },
+        {
+          "title": "Blue Mountains day tour",
+          "stops": [
+            {
+              "place": "blue_mountains",
+              "at": "08:00",
+              "minutes": 600,
+              "note": "Full day, usually 08:00–18:00. Go on a clear day and start early."
+            },
+            {
+              "place": "darling_harbour",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Easy evening walk and dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Darling Harbour, then fly",
+          "stops": [
+            {
+              "place": "barangaroo",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Waterfront reserve. Always open."
+            },
+            {
+              "place": "sea_life",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00."
+            },
+            {
+              "place": "fish_market",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch. Usually open from early morning to late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay & The Rocks"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Walkers and ferry lovers: coastal paths, harbour views and a full day in the Blue Mountains.",
+      "days": [
+        {
+          "title": "Arrive, gardens and harbour",
+          "stops": [
+            {
+              "place": "botanic_garden",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Usually 07:00–sunset, check on the day."
+            },
+            {
+              "place": "opera_house",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Forecourt walk. Tours usually 09:00–17:00."
+            },
+            {
+              "place": "harbour",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset by the water."
+            },
+            {
+              "place": "the_rocks",
+              "at": "18:15",
+              "minutes": 90,
+              "note": "Dinner. Markets on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Bondi to Coogee",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early start beats the heat and crowds."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "10:15",
+              "minutes": 150,
+              "note": "Go in daylight. Not midday in summer."
+            },
+            {
+              "place": "meat_pie",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Snack in Coogee before heading back."
+            },
+            {
+              "place": "paddington_markets",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Saturdays only, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Manly and the beach",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Ferry from Circular Quay. Best views on deck."
+            },
+            {
+              "place": "manly_beach",
+              "at": "10:15",
+              "minutes": 180,
+              "note": "Walk to the ocean side. Lifeguards in daylight hours."
+            },
+            {
+              "place": "manly_waterworks",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Seasonal, check on the day."
+            },
+            {
+              "place": "ferry",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Back to the city. Runs until late evening."
+            }
+          ]
+        },
+        {
+          "title": "Blue Mountains, then fly",
+          "stops": [
+            {
+              "place": "blue_mountains",
+              "at": "08:00",
+              "minutes": 600,
+              "note": "Full day, usually 08:00–18:00. Only on a clear day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay & The Rocks"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "First-timers who want sand, surf and the ferry to Manly, with the harbour icons mixed in.",
+      "days": [
+        {
+          "title": "Arrive and ease into Circular Quay",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the forecourt for free. Tours usually run 09:00–17:00, so book ahead if you want inside."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Usually open until sunset. Check on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset over the water, then dinner near the Quay."
+            }
+          ]
+        },
+        {
+          "title": "Bondi morning and coastal walk",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Weekday mornings are calmer. Lifeguards patrol in daylight."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Go in daylight and carry water. Skip midday heat in summer."
+            },
+            {
+              "place": "meat_pie",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Quick bakery lunch back near Bondi."
+            },
+            {
+              "place": "paddington_markets",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Usually Saturdays only. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Manly",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Ferries run from early morning to late evening. Sit on the harbour side."
+            },
+            {
+              "place": "manly_beach",
+              "at": "10:15",
+              "minutes": 180,
+              "note": "Swim between the flags. Lifeguards in daylight hours."
+            },
+            {
+              "place": "manly_waterworks",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Seasonal, check on the day. Good for kids in summer."
+            },
+            {
+              "place": "ferry",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Return ferry to Circular Quay."
+            }
+          ]
+        },
+        {
+          "title": "Harbour icons and Darling Harbour",
+          "stops": [
+            {
+              "place": "harbour_bridge",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Pedestrian path open 24h. Early morning is cooler and quieter."
+            },
+            {
+              "place": "the_rocks",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekend markets are best. Streets always open."
+            },
+            {
+              "place": "luna_park",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Usually around 11:00–18:00, longer in summer."
+            },
+            {
+              "place": "darling_harbour",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Late afternoon into evening by the water."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "sea_life",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Indoor, good if it rains."
+            },
+            {
+              "place": "qvb",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Usually 09:00–18:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or The Rocks"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the Opera House, The Rocks, markets and harbour history at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive at Circular Quay",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Tours usually 09:00–17:00. Book a slot if you want to go inside."
+            },
+            {
+              "place": "st_marys",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Usually open daily. Check on the day."
+            },
+            {
+              "place": "harbour",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset walk, then dinner near the Quay."
+            }
+          ]
+        },
+        {
+          "title": "The Rocks and the bridge",
+          "stops": [
+            {
+              "place": "harbour_bridge",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Pedestrian path open 24h. Walk partway for the view."
+            },
+            {
+              "place": "the_rocks",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekend markets are busiest. Streets always open."
+            },
+            {
+              "place": "meat_pie",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "Classic quick lunch. Bakery hours vary."
+            },
+            {
+              "place": "luna_park",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Usually around 11:00–18:00, longer in summer."
+            }
+          ]
+        },
+        {
+          "title": "Darling Harbour and the city",
+          "stops": [
+            {
+              "place": "qvb",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Usually 09:00–18:00. Check on the day."
+            },
+            {
+              "place": "tower_eye",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Usually 10:00–19:00. Sunset is the best slot."
+            },
+            {
+              "place": "fish_market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Usually early morning to late afternoon. Go late morning if you can."
+            },
+            {
+              "place": "barangaroo",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Always open. Good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Garden, ferry and Newtown",
+          "stops": [
+            {
+              "place": "botanic_garden",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Usually 07:00–sunset. Check on the day."
+            },
+            {
+              "place": "ferry",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "A short harbour loop is a cheap way to see the water."
+            },
+            {
+              "place": "newtown_walk",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Cafes and shops vary. Busiest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "sea_life",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Indoor, good in rain."
+            },
+            {
+              "place": "darling_harbour",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Waterfront always open. Grab lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Rocks or Circular Quay"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "First-timers who want coastal walks, harbour ferries, gardens and a full Blue Mountains day.",
+      "days": [
+        {
+          "title": "Arrive, garden and harbour",
+          "stops": [
+            {
+              "place": "botanic_garden",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Usually 07:00–sunset. Check on the day."
+            },
+            {
+              "place": "opera_house",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Forecourt open 24h. Free to walk around."
+            },
+            {
+              "place": "harbour",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Sunset by the water."
+            }
+          ]
+        },
+        {
+          "title": "Bondi to Coogee",
+          "stops": [
+            {
+              "place": "bondi",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning is cooler and calmer on weekdays."
+            },
+            {
+              "place": "bondi_coogee_walk",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Daylight only. Carry water and sun cover."
+            },
+            {
+              "place": "meat_pie",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Quick bakery lunch."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Manly",
+          "stops": [
+            {
+              "place": "ferry",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Runs early morning to late evening. A great cheap harbour cruise."
+            },
+            {
+              "place": "manly_beach",
+              "at": "10:15",
+              "minutes": 180,
+              "note": "Always open. Lifeguards in daylight hours."
+            },
+            {
+              "place": "ferry",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Return to Circular Quay."
+            },
+            {
+              "place": "barangaroo",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Always open. Sunset is the best time."
+            }
+          ]
+        },
+        {
+          "title": "Blue Mountains day tour",
+          "stops": [
+            {
+              "place": "blue_mountains",
+              "at": "08:00",
+              "minutes": 600,
+              "note": "Full day, usually 08:00–18:00. Pick a clear day and start early."
+            }
+          ]
+        },
+        {
+          "title": "Bridge walk and last morning",
+          "stops": [
+            {
+              "place": "harbour_bridge",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Pedestrian path open 24h. Early morning is quiet."
+            },
+            {
+              "place": "the_rocks",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Streets always open. Weekend markets are best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Circular Quay or The Rocks"
+    }
+  ],
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Bondi, Coogee and a ferry to Manly."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Rocks, the Opera House and the harbour museums."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Coastal walks, harbour ferries and the Blue Mountains."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "The Rocks",
+      "range": [
+        180,
+        450
+      ],
+      "why": "Old sandstone lanes, weekend markets and a short walk to the Opera House and Circular Quay ferries.",
+      "center": [
+        -33.859,
+        151.208
+      ]
+    },
+    {
+      "area": "Circular Quay",
+      "range": [
+        250,
+        650
+      ],
+      "why": "Best base for first-timers: ferries, trains and the harbour icons on your doorstep.",
+      "center": [
+        -33.861,
+        151.211
+      ]
+    },
+    {
+      "area": "Darling Harbour",
+      "range": [
+        200,
+        500
+      ],
+      "why": "Family-friendly: aquarium, maritime museum and flat walks; light rail and buses nearby.",
+      "center": [
+        -33.874,
+        151.201
+      ]
+    },
+    {
+      "area": "Bondi",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Beach mornings and the coastal walk; 20–30 minutes by train and bus to the centre.",
+      "center": [
+        -33.891,
+        151.277
+      ]
+    }
+  ],
+  "food": [
+    "Try a flat white and a meat pie or a lamington for a cheap daytime bite.",
+    "Seafood by the water: fish and chips at Watsons Bay or Manly, or the Sydney Fish Market.",
+    "Asian food is excellent and good value: Chinatown, Haymarket and the Spice Alley laneway.",
+    "Book ahead for dinner in Surry Hills and Newtown; walk-ins are easier at lunch.",
+    "Alcohol is sold in bottle shops and licensed venues; many cafés stop serving coffee early afternoon."
+  ],
+  "more_time": [
+    "Swap a beach day for the Blue Mountains: train from Central (about 2 hours each way) to Katoomba for the Three Sisters and bush walks.",
+    "Take the ferry to Taronga Zoo for harbour views and a half-day with animals.",
+    "Walk the Bondi to Coogee coastal path (about 6 km, 2 hours) and swim at the beaches along the way."
+  ]
+}

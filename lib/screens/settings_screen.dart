@@ -169,6 +169,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
           'dna_responses': FieldValue.delete(),
           'dna_final_scores': FieldValue.delete(),
           'dna_is_calculated': FieldValue.delete(),
+          'dna_updated_at': FieldValue.delete(),
+          'ai_analysis_result': FieldValue.delete(),
+          'ai_analysis_updated_at': FieldValue.delete(),
           'selectedPassportIso': FieldValue.delete(),
           'user_visas': FieldValue.delete(),
         });

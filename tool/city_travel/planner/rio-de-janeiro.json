@@ -1,0 +1,648 @@
+{
+  "city": "Rio de Janeiro",
+  "checked": "October 2026",
+  "intro_line": "Rio blends mountains, beaches and samba into one vivid city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Copacabana",
+        "Ipanema",
+        "Botafogo",
+        "Centro"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Copacabana",
+        "Ipanema",
+        "Botafogo",
+        "Centro"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Copacabana",
+        "Ipanema",
+        "Botafogo",
+        "Centro"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Copacabana",
+        "Ipanema",
+        "Botafogo",
+        "Centro"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Copacabana",
+        "Ipanema",
+        "Botafogo",
+        "Centro"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 15,
+        "note": "Jan: hot and wet. Highs 30°C, 15 rain days. Plan indoor or early outings."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 15,
+        "note": "Feb: same as Jan. Carnival time; book far ahead and expect crowds."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 14,
+        "note": "Mar: still hot and rainy, 14 rain days. Good for beaches between showers."
+      },
+      {
+        "high": 27,
+        "low": 22,
+        "rain_days": 12,
+        "note": "Apr: cooler and drier. Highs 27°C, 12 rain days. Comfortable for walking."
+      },
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 10,
+        "note": "May: mild and drier. Highs 26°C, 10 rain days. Great all-round month."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 9,
+        "note": "Jun: coolest evenings, lows 19°C. Only 9 rain days. Bring a light layer."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 7,
+        "note": "Jul: driest month, 7 rain days. Cool nights around 18°C. Good for hikes."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 10,
+        "note": "Aug: dry and mild, 10 rain days. Pleasant days, cool evenings."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 9,
+        "note": "Sep: warming up, 9 rain days. Good balance of sun and comfort."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 15,
+        "note": "Oct: rain returns, 15 rain days. Short heavy showers are common."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 16,
+        "note": "Nov: wet, 16 rain days. Hot and humid; plan around afternoon rain."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 16,
+        "note": "Dec: hot and wet, 16 rain days. Festive season; book early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "beach": [
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "nature": [
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "nightlife": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85
+    ]
+  },
+  "places": {
+    "christ_redeemer": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning, dry season (May–Sep)",
+      "area": "Copacabana",
+      "popularity": 5
+    },
+    "sugarloaf": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Botafogo",
+      "popularity": 5
+    },
+    "copacabana": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Copacabana",
+      "popularity": 5
+    },
+    "ipanema": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon to sunset",
+      "area": "Ipanema",
+      "popularity": 5
+    },
+    "maracana": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match days or morning tours",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "cathedral": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Midday, any weather",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "selaron": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "aquario": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy days or hot afternoons",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "bobs": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Copacabana",
+      "popularity": 2
+    },
+    "botanical_garden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Botafogo",
+      "popularity": 4
+    },
+    "candelaria": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "feijoada": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekend lunch",
+      "area": "Ipanema",
+      "popularity": 4
+    },
+    "flamengo": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Botafogo",
+      "popularity": 3
+    },
+    "forte_copacabana": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Copacabana",
+      "popularity": 3
+    },
+    "guanabara_bay": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Botafogo",
+      "popularity": 3
+    },
+    "bay_cruise": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Botafogo",
+      "popularity": 3
+    },
+    "lapa_arches": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening for nightlife, daytime for photos",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "leblon": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Ipanema",
+      "popularity": 3
+    },
+    "museum_tomorrow": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "niteroi_mac": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Clear day, morning",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "parque_lage": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Botafogo",
+      "popularity": 4
+    },
+    "parque_shanghai": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Botafogo",
+      "popularity": 2
+    },
+    "santa_teresa_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning to early afternoon",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "municipal_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday lunchtime",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "mirante_dona_marta": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Botafogo",
+      "popularity": 2
+    },
+    "favela_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Ipanema",
+      "popularity": 2
+    },
+    "sunset_arpex": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Ipanema",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights lets you do the big sights, a beach day and one night out without rushing."
+  },
+  "airports": [
+    {
+      "code": "GIG",
+      "name": "Galeão - Antonio Carlos Jobim International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 13 km north of the centre.",
+      "options": [
+        {
+          "mode": "BRT + Metro",
+          "to": "Centro and Zona Sul",
+          "price": "R$5-10",
+          "time": "60-90 min",
+          "note": "Cheapest; needs a RioCard."
+        },
+        {
+          "mode": "Airport bus 2018/2918",
+          "to": "Botafogo, Copacabana, Ipanema, Barra",
+          "price": "R$16-20",
+          "time": "60-120 min",
+          "note": "Air-conditioned with luggage space."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro and Zona Sul",
+          "price": "R$80-150",
+          "time": "30-60 min",
+          "note": "Prepaid booths cost more but are fixed."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "Centro and Zona Sul",
+          "price": "R$50-100",
+          "time": "30-60 min",
+          "note": "Often cheaper than airport taxis."
+        }
+      ]
+    },
+    {
+      "code": "SDU",
+      "name": "Santos Dumont Airport",
+      "primary": false,
+      "note": "Domestic airport 1 km east of the centre, mainly São Paulo and Brasília flights.",
+      "options": [
+        {
+          "mode": "Metro",
+          "to": "Centro and Zona Sul",
+          "price": "R$4.70",
+          "time": "15-30 min",
+          "note": "Station is a short walk from the terminal."
+        },
+        {
+          "mode": "Local bus",
+          "to": "Centro and Zona Sul",
+          "price": "R$4.70",
+          "time": "20-40 min",
+          "note": "Cheap but crowded."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro and Zona Sul",
+          "price": "R$25-60",
+          "time": "10-30 min",
+          "note": "Short ride; insist on the meter."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "Centro and Zona Sul",
+          "price": "R$15-40",
+          "time": "10-30 min",
+          "note": "Convenient for beach areas."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Rio de Janeiro",
+      "https://en.wikivoyage.org/wiki/Rio%20de%20Janeiro"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Metro for the main areas; ride apps for nights and hillside spots.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1 and 2 are fast and safe; fares around R$4.70."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap (from R$4.70) but crowded; watch your belongings."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; Uber and 99 work well."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is confusing with poor signage; parking is hard. Skip it unless you leave the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in beach areas; bikes are popular along the coast."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Barcas link Centro's Praça XV to Niterói."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical climate: hot most of the year, wetter in summer (Dec–Mar) and drier in winter (Jun–Aug).",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best months: May to September",
+        "text": "Drier and milder, with highs 25–27°C and fewer rain days. Good for both beach and city walks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: December to March",
+        "text": "15–16 rain days a month. Showers are often short and heavy; carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer",
+        "text": "Highs around 29–30°C with warm nights near 24°C. Pace yourself and drink water."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings in winter",
+        "text": "June to August lows drop to 18–19°C. A light jacket helps at night and on the water."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach days",
+        "text": "Beaches are busiest on hot weekends. Go early morning for space and softer sun."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, swimwear, sunscreen and a rain jacket. Add a light layer for winter evenings."
+      }
+    ]
+  }
+}

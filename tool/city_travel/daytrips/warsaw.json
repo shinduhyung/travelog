@@ -1,0 +1,127 @@
+{
+ "city": "Warsaw",
+ "trips": [
+  {
+   "place": "Toruń",
+   "label": "",
+   "position": {
+    "id": 320822,
+    "name": "Toruń Główny",
+    "city": "Toruń",
+    "lat": 52.99861,
+    "lng": 18.61412
+   },
+   "town": {
+    "name": "Toruń",
+    "lat": 53.01375,
+    "lng": 18.59814
+   },
+   "road": {
+    "km": 259,
+    "min": 163,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 790,
+    "currency": "PLN"
+   },
+   "modes": {
+    "train": {
+     "from": "$29-$55",
+     "time": "2h 13m",
+     "via": "Warszawa Centralna to Torun Glowny",
+     "source": "https://www.rome2rio.com/s/Warsaw/Toru%C5%84"
+    },
+    "bus": {
+     "from": null,
+     "time": "3h",
+     "via": "Warsaw West to Torun",
+     "source": "https://www.rome2rio.com/s/Warsaw/Toru%C5%84"
+    }
+   },
+   "route_note": "Direct intercity trains from Warszawa Centralna reach Toruń Główny in roughly 2.5 to 3 hours; the old town is a short walk or local bus from the station.",
+   "see": [
+    "Medieval Old Town and Town Hall",
+    "Copernicus House Museum",
+    "Gothic Cathedral of SS. John",
+    "Vistula riverfront"
+   ],
+   "visit": "Full day",
+   "tour_query": "Torun day trip from Warsaw",
+   "quests": [
+    "Toruń Old Town"
+   ],
+   "recommended": "train",
+   "why": "Direct intercity trains reach Toruń Główny in 2h 13m, faster than the 3h bus, and the old town is a short walk or local bus from the station.",
+   "stars": 4,
+   "know": [
+    "Book intercity tickets ahead, especially on weekends",
+    "The old town is a UNESCO-listed Gothic gem, best explored on foot",
+    "Allow a full day to see the cathedral, town hall and Copernicus sights"
+   ]
+  },
+  {
+   "place": "Łódź",
+   "label": "",
+   "position": {
+    "id": 321995,
+    "name": "Łódź Widzew",
+    "city": "Łódź",
+    "lat": 51.76327,
+    "lng": 19.54249
+   },
+   "town": {
+    "name": "Łódź",
+    "lat": 51.77058,
+    "lng": 19.47395
+   },
+   "road": {
+    "km": 136,
+    "min": 92,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 420,
+    "currency": "PLN"
+   },
+   "modes": {
+    "train": {
+     "from": "€26",
+     "from_usd": 31.0,
+     "avg": "€30",
+     "time": "58m",
+     "per_day": 7,
+     "source": "https://www.omio.com/trains/warsaw/lodz"
+    },
+    "bus": {
+     "from": "$8-$13",
+     "time": "1h 40m",
+     "via": "Warsaw, Bus Station West to Lodz, Bus Station",
+     "source": "https://www.rome2rio.com/s/Warsaw/%C5%81%C3%B3d%C5%BA"
+    }
+   },
+   "route_note": "Frequent direct trains from Warszawa Centralna to Łódź Fabryczna take about 1.5 hours, with the station close to the city centre.",
+   "see": [
+    "Piotrkowska Street",
+    "Manufaktura complex",
+    "Poznański Palace",
+    "Central Museum of Textiles"
+   ],
+   "visit": "Full day",
+   "tour_query": "Lodz day trip from Warsaw",
+   "quests": [],
+   "recommended": "train",
+   "why": "Frequent direct trains take just 58m, far quicker than the 1h 40m bus, and Łódź Fabryczna station is close to the centre.",
+   "stars": 3,
+   "know": [
+    "Piotrkowska Street is the main draw, best on a warm day",
+    "Check train times for the last service back to Warsaw",
+    "Many museums close on Mondays"
+   ]
+  }
+ ],
+ "problems": [
+  "Żelazowa Wola: not a town in cities15000.json (PL), dropped",
+  "Kraków: 204 min by road, dropped (too far for a day trip)"
+ ]
+}

@@ -1,0 +1,513 @@
+{
+  "city": "Kampala",
+  "checked": "October 2026",
+  "intro_line": "Kampala: seven hills of chaos, colour and warm welcomes.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Kololo",
+        "Nakasero",
+        "Bugolobi",
+        "Munyonyo"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Kololo",
+        "Nakasero",
+        "Bugolobi",
+        "Munyonyo"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Kololo",
+        "Nakasero",
+        "Bugolobi",
+        "Munyonyo"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Kololo",
+        "Nakasero",
+        "Bugolobi",
+        "Munyonyo"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Kololo",
+        "Nakasero",
+        "Bugolobi",
+        "Munyonyo"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 13,
+        "note": "January: warm and fairly dry, about 13 rain days. Good for walking and markets."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 15,
+        "note": "February: the driest-feeling month, around 15 rain days. Expect hot afternoons."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 21,
+        "note": "March: rains pick up, about 21 rain days. Carry a rain jacket and plan indoor stops."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 26,
+        "note": "April: the wettest month, about 26 rain days. Expect heavy afternoon showers and muddy roads."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 25,
+        "note": "May: still very wet, about 25 rain days. Short trips and indoor sights work best."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 19,
+        "note": "June: drier, about 19 rain days. Comfortable highs near 25°C."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 13,
+        "note": "July: one of the driest months, about 13 rain days. Good for outdoor plans."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 20,
+        "note": "August: showers return, about 20 rain days. Mornings are often clearer."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 23,
+        "note": "September: wet again, about 23 rain days. Keep plans flexible."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 24,
+        "note": "October: rainy, about 24 rain days. Pack waterproofs and quick-dry shoes."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 25,
+        "note": "November: the wettest stretch, about 25 rain days. Allow extra time for traffic in rain."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 20,
+        "note": "December: drier, about 20 rain days. Warm days near 26°C and busy holiday mood."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.6,
+      0.8
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.8,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.6,
+      0.8
+    ],
+    "nature": [
+      0.85,
+      0.85,
+      0.75,
+      0.5,
+      0.5,
+      0.7,
+      0.9,
+      0.75,
+      0.65,
+      0.6,
+      0.55,
+      0.75
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.6,
+      0.8
+    ]
+  },
+  "places": {
+    "kasubi": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning, before the heat",
+      "area": "Nakasero",
+      "popularity": 4
+    },
+    "gaddafi-mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon for clear views",
+      "area": "Nakasero",
+      "popularity": 4
+    },
+    "namugongo": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning; busy around 3 June",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "bahai-temple": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Kololo",
+      "popularity": 3
+    },
+    "independence-monument": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "matooke": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or early dinner",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "national-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Kololo",
+      "popularity": 3
+    },
+    "owino-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "nakasero-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "kololo-view": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Kololo",
+      "popularity": 3
+    },
+    "city-walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "boda-tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning to avoid rain",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "craft-market": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Nakasero",
+      "popularity": 3
+    },
+    "ndere": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening; check the schedule",
+      "area": "Kololo",
+      "popularity": 3
+    },
+    "lake-victoria-beach": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon into sunset",
+      "area": "Munyonyo",
+      "popularity": 3
+    },
+    "bugolobi-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Dinner",
+      "area": "Bugolobi",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the markets, food and nightlife, with time for a lake or garden break; add a night for day trips."
+  },
+  "airports": [
+    {
+      "code": "EBB",
+      "name": "Entebbe International Airport",
+      "primary": true,
+      "note": "Main gateway, about 37 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Boda-boda + matatu",
+          "to": "Old Taxi Park, city centre",
+          "price": "UGX 7,000-8,000",
+          "time": "1.5-2.5 h",
+          "note": "Cheapest; boda to Entebbe town, then matatu to Kampala."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt/Faras)",
+          "to": "Anywhere in Kampala",
+          "price": "UGX 80,000-120,000",
+          "time": "45-90 min",
+          "note": "Price depends on traffic and your hotel area."
+        },
+        {
+          "mode": "Private hire taxi",
+          "to": "Anywhere in Kampala",
+          "price": "UGX 75,000-150,000",
+          "time": "45-90 min",
+          "note": "Agree the fare before you get in."
+        },
+        {
+          "mode": "Pineapple Express shuttle",
+          "to": "Central Kampala",
+          "price": "UGX 80,000 per person",
+          "time": "1-1.5 h",
+          "note": "Fixed departure times; book ahead."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "Central Kampala",
+          "price": "from US$30",
+          "time": "1-1.5 h",
+          "note": "About ten trips per day each way."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Kampala",
+      "https://en.wikivoyage.org/wiki/Kampala"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Use Uber, Bolt or SafeBoda for most trips; matatus are cheap but crowded.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail in the city."
+      },
+      {
+        "mode": "Matatu (minibus)",
+        "has": true,
+        "text": "Fixed routes from Old Taxi Park and other stages; fares roughly UGX 1,000–3,000. Cheap but crowded and slow in traffic."
+      },
+      {
+        "mode": "Boda-boda",
+        "has": true,
+        "text": "Fast but risky. Agree the fare first, usually UGX 3,000–20,000 in town. App bodas like SafeBoda include helmets."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber, Bolt, Faras and SafeBoda work in Kampala. Special-hire taxis rarely use meters; agree a fare, often UGX 15,000–20,000 for central trips."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible but hectic. Traffic is heavy and rain slows it further."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine by day in central areas. Use rides at night and in heavy rain."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Kampala sits near the equator: warm days, mild nights and rain in every month, heaviest from March to May and October to November.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Warm days, mild nights",
+        "text": "Highs stay around 25–28°C all year and lows around 17–19°C. Light layers are enough."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Every month has rain days, from about 13 in January and July to 26 in April."
+      },
+      {
+        "icon": "☔",
+        "title": "Wettest months",
+        "text": "April, May, October and November are the rainiest. Expect short, heavy afternoon showers."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Drier windows",
+        "text": "January, February and July have the fewest rain days. Still carry a rain jacket."
+      },
+      {
+        "icon": "🛣️",
+        "title": "Rain and traffic",
+        "text": "Heavy rain slows traffic and floods some roads. Build extra time into rides in wet months."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain jacket or umbrella, quick-dry shoes and mosquito repellent for evenings."
+      }
+    ]
+  }
+}

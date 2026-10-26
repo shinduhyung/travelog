@@ -1,0 +1,934 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day on foot through Milan's historic core, from the Duomo roof to the castle.",
+      "days": [
+        {
+          "title": "Duomo, Galleria and La Scala",
+          "stops": [
+            {
+              "place": "piazzaduomo",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Start early before the crowds. The square is always open."
+            },
+            {
+              "place": "duomo",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go up to the terraces on a clear day. Last entry is earlier than closing, so check on the day."
+            },
+            {
+              "place": "galleria",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Two minutes on foot. A quick walk through the arcade."
+            },
+            {
+              "place": "scala",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "The museum is open daily. Book a performance separately if you want an evening."
+            },
+            {
+              "place": "starbucks",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch stop in the old post office building. Expect a queue at peak times."
+            }
+          ]
+        },
+        {
+          "title": "Castle and Brera",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "About 15 minutes on foot. Museums are closed Monday; courtyards stay open."
+            },
+            {
+              "place": "brera",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk through the lanes. Shops and cafés run into the evening."
+            },
+            {
+              "place": "tram",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Ride line 1 back through the centre. Buy a ticket before boarding."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Leonardo's Last Supper plus the Duomo and Brera, all in one art-focused day.",
+      "days": [
+        {
+          "title": "Last Supper and Santa Maria",
+          "stops": [
+            {
+              "place": "lastsupper",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Timed slots only, closed Monday. Book far in advance; slots sell out."
+            },
+            {
+              "place": "santamaria",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Same complex. The church has a midday break, so check on the day."
+            },
+            {
+              "place": "duomo",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "About 15 minutes on foot. Terraces are worth it on a clear day."
+            },
+            {
+              "place": "starbucks",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch near the Duomo."
+            }
+          ]
+        },
+        {
+          "title": "Castle art and Brera",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Museums closed Monday. Check which galleries are open on the day."
+            },
+            {
+              "place": "brera",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk the district; check gallery hours on the day."
+            },
+            {
+              "place": "navigli",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Sunset walk, then dinner. Bars get busy from 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market morning, a coffee stop and an aperitivo-to-dinner evening on the canals.",
+      "days": [
+        {
+          "title": "Market and centre tastes",
+          "stops": [
+            {
+              "place": "market",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Mornings only, closed Sunday. Go early for the best stalls."
+            },
+            {
+              "place": "navigli",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Short canal walk before lunch."
+            },
+            {
+              "place": "galleria",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Walk through the arcade; shops open around 10:00."
+            },
+            {
+              "place": "starbucks",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Coffee and a light lunch. Expect a queue."
+            },
+            {
+              "place": "piazzaduomo",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Quick look at the cathedral square."
+            }
+          ]
+        },
+        {
+          "title": "Brera and Navigli evening",
+          "stops": [
+            {
+              "place": "brera",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Café stop and a wander through the lanes."
+            },
+            {
+              "place": "navigli",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Aperitivo from 18:00, then dinner by the water. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Navigli"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "The classic Milan day: cathedral and castle on foot, then a lit-up Piazza del Duomo at night.",
+      "days": [
+        {
+          "title": "Duomo, Galleria and La Scala",
+          "stops": [
+            {
+              "place": "piazzaduomo",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Start early for quiet photos."
+            },
+            {
+              "place": "duomo",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go up to the terraces on a clear day."
+            },
+            {
+              "place": "galleria",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short walk through the arcade."
+            },
+            {
+              "place": "scala",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Museum visit; check performance times if you want an evening show."
+            },
+            {
+              "place": "starbucks",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch stop in the old post office building."
+            }
+          ]
+        },
+        {
+          "title": "Castle, Brera and evening piazza",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Museums closed Monday; courtyards are free."
+            },
+            {
+              "place": "brera",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Wander the lanes and cafés."
+            },
+            {
+              "place": "piazzaduomo",
+              "at": "19:30",
+              "minutes": 20,
+              "note": "The cathedral is lit after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Leonardo first thing, then the Duomo terraces and an evening in Brera.",
+      "days": [
+        {
+          "title": "Last Supper and Santa Maria",
+          "stops": [
+            {
+              "place": "lastsupper",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Timed slot only, closed Monday. Book far in advance."
+            },
+            {
+              "place": "santamaria",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "The church next door; check the midday break."
+            },
+            {
+              "place": "duomo",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Terraces are the highlight on a clear day."
+            },
+            {
+              "place": "galleria",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch and a look at the mosaics."
+            }
+          ]
+        },
+        {
+          "title": "Castle art and Brera evening",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Museum closed Monday; check on the day."
+            },
+            {
+              "place": "brera",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Galleries and small shops; many close early evening."
+            },
+            {
+              "place": "navigli",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner by the canals; bars busiest from 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market morning, a tram ride across the centre, then aperitivo and dinner on the Navigli.",
+      "days": [
+        {
+          "title": "Market, tram and centre",
+          "stops": [
+            {
+              "place": "market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Mornings only, closed Sunday. Check on the day."
+            },
+            {
+              "place": "tram",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Line 1 historic trams run all day."
+            },
+            {
+              "place": "galleria",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Coffee or a pastry stop."
+            },
+            {
+              "place": "starbucks",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch; busy at midday, try mid-morning or late evening instead."
+            }
+          ]
+        },
+        {
+          "title": "Brera and Navigli dinner",
+          "stops": [
+            {
+              "place": "brera",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Aperitivo in the side streets."
+            },
+            {
+              "place": "navigli",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Canal walk at sunset, then dinner. Book ahead in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Navigli"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: Duomo, castle, La Scala and the canals.",
+      "days": [
+        {
+          "title": "Duomo, Galleria and La Scala",
+          "stops": [
+            {
+              "place": "piazzaduomo",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Start early for empty photos."
+            },
+            {
+              "place": "duomo",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Terraces are best on a clear morning. Book ahead."
+            },
+            {
+              "place": "galleria",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Two minutes on foot. Coffee stop inside."
+            },
+            {
+              "place": "scala",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Museum visit; check performance times if you want an evening show."
+            },
+            {
+              "place": "brera",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk 15 minutes north. Lunch and a wander."
+            }
+          ]
+        },
+        {
+          "title": "Castle, Last Supper and Navigli",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Museums closed Monday. Courtyards are free."
+            },
+            {
+              "place": "santamaria",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Church has a midday break; check on the day."
+            },
+            {
+              "place": "lastsupper",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Timed slots only, closed Monday. Book far in advance."
+            },
+            {
+              "place": "market",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Mornings are best; closed Sunday."
+            },
+            {
+              "place": "navigli",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset walk, then aperitivo by the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers: Leonardo's Last Supper, the Duomo terraces and Brera.",
+      "days": [
+        {
+          "title": "Last Supper and Brera",
+          "stops": [
+            {
+              "place": "lastsupper",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Book far ahead. Closed Monday."
+            },
+            {
+              "place": "santamaria",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Same square. Check the midday break."
+            },
+            {
+              "place": "sforza",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Museums closed Monday. Pair with the park."
+            },
+            {
+              "place": "brera",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Lunch, then galleries and small shops."
+            }
+          ]
+        },
+        {
+          "title": "Duomo terraces and centre",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Terraces first thing for light and fewer people."
+            },
+            {
+              "place": "galleria",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick look, then coffee."
+            },
+            {
+              "place": "scala",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Museum; check performance schedule."
+            },
+            {
+              "place": "walkingtour",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Several departures daily; book a morning slot if you prefer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters and drinkers: markets, aperitivo and long Navigli evenings.",
+      "days": [
+        {
+          "title": "Centre tastes and canals",
+          "stops": [
+            {
+              "place": "piazzaduomo",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Quick look before the crowds."
+            },
+            {
+              "place": "galleria",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Historic cafés inside."
+            },
+            {
+              "place": "starbucks",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Big roastery; mid-morning is calmer."
+            },
+            {
+              "place": "market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Mornings best; closed Sunday."
+            },
+            {
+              "place": "navigli",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Aperitivo then dinner along the canals."
+            }
+          ]
+        },
+        {
+          "title": "Brera and Duomo views",
+          "stops": [
+            {
+              "place": "brera",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning cafés and food shops."
+            },
+            {
+              "place": "sforza",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Courtyards free; museums closed Monday."
+            },
+            {
+              "place": "duomo",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Terraces for the view; book ahead."
+            },
+            {
+              "place": "tram",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Historic line 1 ride through the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Navigli"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights: the Duomo, La Scala, the castle and a canal evening.",
+      "days": [
+        {
+          "title": "Arrive and the Duomo square",
+          "stops": [
+            {
+              "place": "piazzaduomo",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Start here to get your bearings. The cathedral is lit after dark."
+            },
+            {
+              "place": "galleria",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Step through the glass arcade next door. Shops close around 19:30."
+            },
+            {
+              "place": "starbucks",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "A coffee stop in the old post office building. Busy mid-afternoon."
+            },
+            {
+              "place": "navigli",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Canal walk and dinner. Bars get busy from 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Duomo inside and up, then La Scala",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early for fewer crowds. Terraces are best on a clear day."
+            },
+            {
+              "place": "walkingtour",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Centre walking tour. Book ahead and check departure times."
+            },
+            {
+              "place": "scala",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Museum by day. Book a performance for the evening if you can."
+            },
+            {
+              "place": "brera",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Evening stroll and dinner in the side streets."
+            }
+          ]
+        },
+        {
+          "title": "Castle, park and the new skyline",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Courtyards are free. Museums are closed Monday."
+            },
+            {
+              "place": "tram",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Ride a historic tram across the centre. Buy a ticket before boarding."
+            },
+            {
+              "place": "portanuova",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Bosco Verticale viewpoint. Best after dark when the towers are lit."
+            }
+          ]
+        },
+        {
+          "title": "Last Supper and fly",
+          "stops": [
+            {
+              "place": "lastsupper",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Timed slots only, closed Monday. Book far in advance."
+            },
+            {
+              "place": "santamaria",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "The church next door. Check the midday break on the day."
+            },
+            {
+              "place": "duomo",
+              "at": "11:00",
+              "minutes": 0,
+              "note": "Head back to the centre for lunch and your transfer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Leonardo fans and gallery-goers: the Last Supper first, then art and design across the centre.",
+      "days": [
+        {
+          "title": "Arrive and the Duomo terraces",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Late afternoon is quieter. Terraces on a clear day."
+            },
+            {
+              "place": "galleria",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Quick look at the mosaics and glass roof."
+            },
+            {
+              "place": "brera",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the Brera lanes."
+            }
+          ]
+        },
+        {
+          "title": "Last Supper and Santa Maria",
+          "stops": [
+            {
+              "place": "lastsupper",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Timed slots only, closed Monday. Book far in advance."
+            },
+            {
+              "place": "santamaria",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "The church next door. Check the midday break on the day."
+            },
+            {
+              "place": "sforza",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Museums closed Monday. Courtyards are free."
+            },
+            {
+              "place": "brera",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Gallery and design shops in the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "La Scala and the new city",
+          "stops": [
+            {
+              "place": "scala",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Museum in the morning. Check performance dates."
+            },
+            {
+              "place": "walkingtour",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Centre walking tour with an art focus. Book ahead."
+            },
+            {
+              "place": "portanuova",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Modern architecture and the Bosco Verticale viewpoint."
+            }
+          ]
+        },
+        {
+          "title": "Tram and fly",
+          "stops": [
+            {
+              "place": "tram",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Historic tram ride past the centre's facades."
+            },
+            {
+              "place": "piazzaduomo",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Last look at the square before your transfer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Duomo"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, aperitivo and canal dinners, with the main sights in between.",
+      "days": [
+        {
+          "title": "Arrive, market and canals",
+          "stops": [
+            {
+              "place": "market",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Mornings are best; closed Sunday. Check on the day."
+            },
+            {
+              "place": "navigli",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Canal walk, then aperitivo and dinner. Busiest from 18:00."
+            },
+            {
+              "place": "portanuova",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Short walk to the lit towers."
+            }
+          ]
+        },
+        {
+          "title": "Duomo, Galleria and Brera",
+          "stops": [
+            {
+              "place": "duomo",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Early for fewer crowds."
+            },
+            {
+              "place": "galleria",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Arcade walk and a coffee."
+            },
+            {
+              "place": "starbucks",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Roastery stop. Busy at lunch."
+            },
+            {
+              "place": "brera",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Aperitivo and dinner in the lanes."
+            }
+          ]
+        },
+        {
+          "title": "Castle, tram and a long lunch",
+          "stops": [
+            {
+              "place": "sforza",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Courtyards free. Museums closed Monday."
+            },
+            {
+              "place": "tram",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Ride across the centre. Buy a ticket first."
+            },
+            {
+              "place": "walkingtour",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Centre walking tour. Book ahead."
+            },
+            {
+              "place": "navigli",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner by the canal."
+            }
+          ]
+        },
+        {
+          "title": "Last Supper and fly",
+          "stops": [
+            {
+              "place": "lastsupper",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Timed slots only, closed Monday. Book far in advance."
+            },
+            {
+              "place": "santamaria",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Church next door. Check the midday break."
+            },
+            {
+              "place": "piazzaduomo",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Final stop before your transfer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Navigli"
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "city": "Munich",
+  "checked": "October 2026",
+  "intro_line": "Munich blends royal grandeur with beer-hall warmth and Alpine air.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Altstadt",
+        "Maxvorstadt",
+        "Ludwigsvorstadt",
+        "Haidhausen"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Altstadt",
+        "Maxvorstadt",
+        "Ludwigsvorstadt",
+        "Haidhausen"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Altstadt",
+        "Maxvorstadt",
+        "Ludwigsvorstadt",
+        "Haidhausen"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Altstadt",
+        "Maxvorstadt",
+        "Ludwigsvorstadt",
+        "Haidhausen"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Altstadt",
+        "Maxvorstadt",
+        "Ludwigsvorstadt",
+        "Haidhausen"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -3,
+        "rain_days": 14,
+        "note": "January: cold, highs around 4°C, some rain. Pack a warm coat and plan indoor sights."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 12,
+        "note": "February: still cold, lows near -1°C. Fewer crowds at museums."
+      },
+      {
+        "high": 10,
+        "low": 0,
+        "rain_days": 12,
+        "note": "March: cool, highs near 10°C. Rain on about 12 days; bring a waterproof layer."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 13,
+        "note": "April: milder, highs around 14°C. Beer gardens start to open; evenings still chilly."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 16,
+        "note": "May: pleasant, highs near 18°C, but the wettest month with about 16 rain days. Keep an umbrella handy."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 15,
+        "note": "June: warm, highs around 23°C. Good for parks and outdoor cafés."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 14,
+        "note": "July: warmest month, highs near 24°C. Book hotels early; beer gardens are busy."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 14,
+        "note": "August: warm, highs around 24°C. Similar to July; expect some rain days."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 12,
+        "note": "September: mild, highs near 19°C. Comfortable for walking and sightseeing."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 11,
+        "note": "October: cooler, highs around 15°C. Rain on about 11 days; layers help."
+      },
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 12,
+        "note": "November: cold, highs near 9°C. Christmas market season starts late in the month."
+      },
+      {
+        "high": 6,
+        "low": -1,
+        "rain_days": 13,
+        "note": "December: cold, highs around 6°C, lows near -1°C. Christmas markets are the highlight; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "art": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.5,
+      0.4
+    ]
+  },
+  "places": {
+    "marienplatz": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late morning for the Glockenspiel",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "nymphenburg": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Maxvorstadt",
+      "popularity": 4
+    },
+    "english-garden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunny afternoon; summer for the surfers",
+      "area": "Maxvorstadt",
+      "popularity": 5
+    },
+    "residenz": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot midday",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "neues-rathaus": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Clear day for the tower",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "allianz-arena": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday tour; avoid match days if you only want the tour",
+      "area": "Maxvorstadt",
+      "popularity": 4
+    },
+    "oktoberfest": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning in late September",
+      "area": "Ludwigsvorstadt",
+      "popularity": 5
+    },
+    "bmw-welt": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday; closed Monday",
+      "area": "Maxvorstadt",
+      "popularity": 4
+    },
+    "bavaria-filmstadt": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Ludwigsvorstadt",
+      "popularity": 3
+    },
+    "cuvillies": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Same visit as the Residenz",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "dachau": {
+      "types": [
+        "history"
+      ],
+      "minutes": 210,
+      "setting": "mixed",
+      "best": "Morning; not for young children",
+      "area": "Maxvorstadt",
+      "popularity": 4
+    },
+    "deutsches-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Rainy day; go early",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "erdinger": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Booked weekday tour",
+      "area": "Haidhausen",
+      "popularity": 2
+    },
+    "herkulessaal": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening concert",
+      "area": "Altstadt",
+      "popularity": 2
+    },
+    "hofbrauhaus": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon; avoid peak dinner hours",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "lmu": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime walk",
+      "area": "Maxvorstadt",
+      "popularity": 2
+    },
+    "paulaner": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Booked weekday tour",
+      "area": "Ludwigsvorstadt",
+      "popularity": 3
+    },
+    "sense8": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Check listings first",
+      "area": "Altstadt",
+      "popularity": 1
+    },
+    "tum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime walk",
+      "area": "Maxvorstadt",
+      "popularity": 1
+    },
+    "viktualienmarkt": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday lunch; closed Sunday",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "frauenkirche-tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Clear morning",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "olympiapark": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Clear late afternoon",
+      "area": "Maxvorstadt",
+      "popularity": 4
+    },
+    "eisbach-surfers": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime; busy on sunny weekends",
+      "area": "Maxvorstadt",
+      "popularity": 4
+    },
+    "glockenbachviertel": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Ludwigsvorstadt",
+      "popularity": 3
+    },
+    "third-wave-coffee-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "First morning",
+      "area": "Altstadt",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Altstadt, the Residenz and the main museums; add a third for a day trip to the Alps or a palace."
+  },
+  "airports": [
+    {
+      "code": "MUC",
+      "name": "Munich International Airport",
+      "primary": true,
+      "note": "Main hub, about 28 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S1 or S8",
+          "to": "Hauptbahnhof / city centre",
+          "price": "€14.30",
+          "time": "40-50 min",
+          "note": "Needs a 5-zone ticket; runs every 15 min and through the night."
+        },
+        {
+          "mode": "Group day ticket",
+          "to": "City centre",
+          "price": "€30.50",
+          "time": "40-50 min",
+          "note": "Good value for 2-5 adults."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Hauptbahnhof",
+          "price": "€106",
+          "time": "35-50 min",
+          "note": "Fixed fare; traffic can be heavy."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€70-110",
+          "time": "35-50 min",
+          "note": "Prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "FMM",
+      "name": "Memmingen Airport",
+      "primary": false,
+      "note": "Ryanair's 'Munich West', about 110 km west.",
+      "options": [
+        {
+          "mode": "Shuttle bus + train",
+          "to": "Munich Hauptbahnhof",
+          "price": "€20-30",
+          "time": "2-2.5 hr",
+          "note": "Bus to Memmingen station, then hourly train."
+        },
+        {
+          "mode": "Ryanair direct bus",
+          "to": "Munich",
+          "price": "check locally",
+          "time": "2 hr",
+          "note": "Runs only with some flights."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Munich centre",
+          "price": "€200-250",
+          "time": "1.5-2 hr",
+          "note": "Expensive; train is better."
+        }
+      ]
+    },
+    {
+      "code": "FRA",
+      "name": "Frankfurt Airport",
+      "primary": false,
+      "note": "Intercontinental gateway, about 300 km northwest.",
+      "options": [
+        {
+          "mode": "Direct train",
+          "to": "Munich Hauptbahnhof",
+          "price": "€60-120",
+          "time": "3 hr 30 min",
+          "note": "Book ahead for cheaper fares."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Munich centre",
+          "price": "€500+",
+          "time": "3.5-4 hr",
+          "note": "Not practical; take the train."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Munich",
+      "https://en.wikivoyage.org/wiki/Munich"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "art"
+  ],
+  "transit": {
+    "best": "U-Bahn and S-Bahn for most trips; the centre is walkable.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "S-Bahn links the airport and main stations; U-Bahn covers north-south routes. One ticket works across S-Bahn, U-Bahn, tram and bus. Validate before travel or risk a €60 fine."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill outer gaps. Same ticket as trains and trams."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams circle the inner city and reach Nymphenburg Palace."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber and Bolt operate in Munich."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Fine on the fringes but ring roads are often congested. Use Park & Ride for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable and bike-friendly, with many cycle paths."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate continental climate: cold winters, warm summers and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 18–24°C. Best for parks, beer gardens and day trips."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs of 4–7°C and lows near -3 to -1°C. Snow is possible; pack a warm coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 11–16 rain days every month. May is wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild spring and autumn",
+        "text": "April and October highs of 14–15°C. Good for walking with a jacket."
+      },
+      {
+        "icon": "🧥",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes. Add gloves and a hat for winter."
+      },
+      {
+        "icon": "🍺",
+        "title": "Seasonal tips",
+        "text": "Beer gardens are best June to September; Christmas markets run in December."
+      }
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+ "city": "Frankfurt",
+ "trips": [
+  {
+   "place": "Heidelberg",
+   "label": "",
+   "position": {
+    "id": 331205,
+    "name": "Heidelberg-Altstadt station",
+    "city": "Heidelberg",
+    "lat": 49.41484,
+    "lng": 8.72009
+   },
+   "town": {
+    "name": "Heidelberg",
+    "lat": 49.40768,
+    "lng": 8.69079
+   },
+   "road": {
+    "km": 95,
+    "min": 65,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 210.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€5",
+     "from_usd": 6.0,
+     "avg": "€26",
+     "time": "32m",
+     "per_day": 39,
+     "source": "https://www.omio.com/trains/frankfurt/heidelberg"
+    },
+    "bus": {
+     "from": "$10-$16",
+     "time": "1h 44m",
+     "via": "Frankfurt central train station to Heidelberg Pre Waypoint",
+     "source": "https://www.rome2rio.com/s/Frankfurt/Heidelberg"
+    }
+   },
+   "route_note": "Direct IC/ICE trains run from Frankfurt Hbf to Heidelberg Hbf in about an hour, then the old town and castle are a short walk or funicular ride from the station.",
+   "see": [
+    "Heidelberg Castle and the funicular",
+    "Old Town and Heiliggeistkirche",
+    "Philosopher's Way viewpoint",
+    "Student Jail and university quarter"
+   ],
+   "visit": "Full day",
+   "tour_query": "Heidelberg day trip from Frankfurt",
+   "quests": [
+    "Heidelberg Castle",
+    "Old Bridge Heidelberg",
+    "Heidelberg Old Town",
+    "Neckar River Solar Boat",
+    "Heidelberg University"
+   ],
+   "recommended": "train",
+   "why": "Direct IC/ICE trains take about 32 minutes and the old town and castle are a short walk or funicular ride from the station.",
+   "stars": 5,
+   "know": [
+    "Book ICE/IC seats ahead for the fastest fares",
+    "Castle funicular and old town are the classic first visit",
+    "Spring to autumn is the best time to walk the old town"
+   ]
+  },
+  {
+   "place": "Mainz",
+   "label": "",
+   "position": {
+    "id": 329649,
+    "name": "Mainz-Bischofsheim station",
+    "city": "Bischofsheim",
+    "lat": 49.99282,
+    "lng": 8.35812
+   },
+   "town": {
+    "name": "Mainz",
+    "lat": 49.98419,
+    "lng": 8.2791
+   },
+   "road": {
+    "km": 41,
+    "min": 34,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 90.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$6-$29",
+     "time": "25m",
+     "via": "Frankfurt(Main)Hbf to Mainz-Kastel",
+     "source": "https://www.rome2rio.com/s/Frankfurt/Mainz"
+    },
+    "bus": {
+     "from": "$4-$7",
+     "time": "1h",
+     "via": "Frankfurt central train station to Mainz central train station",
+     "source": "https://www.rome2rio.com/s/Frankfurt/Mainz"
+    }
+   },
+   "route_note": "S-Bahn lines S8 run directly from Frankfurt to Mainz Hbf in about 40 minutes, and the cathedral and old town are a short walk away.",
+   "see": [
+    "Mainz Cathedral",
+    "Gutenberg Museum",
+    "Old Town and Marktplatz",
+    "Chagall windows at St. Stephan"
+   ],
+   "visit": "Half day",
+   "tour_query": "Mainz day trip from Frankfurt",
+   "quests": [],
+   "recommended": "train",
+   "why": "S-Bahn S8 runs directly in about 25 minutes and the cathedral and old town are a short walk from the station.",
+   "stars": 4,
+   "know": [
+    "S8 is direct from Frankfurt",
+    "Cathedral and Gutenberg Museum are the highlights",
+    "Check museum closing days before going"
+   ]
+  },
+  {
+   "place": "Wiesbaden",
+   "label": "",
+   "position": {
+    "id": 333331,
+    "name": "Wiesbaden-Erbenheim",
+    "city": "Wiesbaden",
+    "lat": 50.05441,
+    "lng": 8.29505
+   },
+   "town": {
+    "name": "Wiesbaden",
+    "lat": 50.08258,
+    "lng": 8.24932
+   },
+   "road": {
+    "km": 39,
+    "min": 31,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 90.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$8-$35",
+     "time": "32m",
+     "via": "Frankfurt(Main)Hbf to Wiesbaden Hbf",
+     "source": "https://www.rome2rio.com/s/Frankfurt/Wiesbaden"
+    },
+    "bus": {
+     "from": "$3-$6",
+     "time": "30m",
+     "via": "Frankfurt central train station to Wiesbaden central train station",
+     "source": "https://www.rome2rio.com/s/Frankfurt/Wiesbaden"
+    }
+   },
+   "route_note": "Frequent S-Bahn lines S1/S8/S9 connect Frankfurt city center to Wiesbaden Hbf in about 40 minutes with no changes.",
+   "see": [
+    "Kurhaus and hot springs",
+    "Neroberg hill and Nerotal",
+    "St. Elizabeth's Church",
+    "Wilhelmstrasse shopping street"
+   ],
+   "visit": "Half day",
+   "tour_query": "Wiesbaden day trip from Frankfurt",
+   "quests": [],
+   "recommended": "train",
+   "why": "Frequent S-Bahn lines connect Frankfurt city center to Wiesbaden Hbf in about 32 minutes with no changes.",
+   "stars": 3,
+   "know": [
+    "S1/S8/S9 run frequently with no changes",
+    "Kurhaus and hot springs are near the center",
+    "Good as a half-day add-on rather than a full day"
+   ]
+  }
+ ],
+ "problems": [
+  "Rudesheim am Rhein: not a town in cities15000.json (DE), dropped",
+  "Marburg: not a town in cities15000.json (DE), dropped"
+ ]
+}

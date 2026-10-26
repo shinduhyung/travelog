@@ -1,0 +1,183 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Atlanta rises from the pines, busy and green.",
+  "intro": "Atlanta rewards visitors with walkable neighbourhoods, world-class attractions and a deep civil rights history. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Midtown",
+    "Buckhead",
+    "Virginia-Highland"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 3,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "MARTA rail: four lines (Red, Gold, Blue, Green); $2.50 per ride, $9 for a 1-day pass.",
+    "Breeze Card costs $2 and is reloadable; tap on entry and exit.",
+    "Buses cover 100+ routes; weekend waits can reach an hour.",
+    "Ride apps Uber and Lyft work widely; taxis are available but less common.",
+    "Driving is fastest off-peak; rush hour is long and parking downtown is scarce.",
+    "Downtown is walkable and the Atlanta Streetcar links key sights; bikes are an option."
+  ],
+  "airports": [
+    {
+      "code": "ATL",
+      "name": "Hartsfield-Jackson Atlanta International Airport",
+      "primary": true,
+      "note": "World's busiest airport; about 13 km south of downtown.",
+      "options": [
+        {
+          "mode": "MARTA Red/Gold line",
+          "to": "Downtown and Midtown",
+          "price": "$2.50",
+          "time": "20-30 min",
+          "note": "Cheapest option; fare includes transfers."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city stops",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Slower than rail."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$30-40",
+          "time": "20-35 min",
+          "note": "Metered; traffic can add time."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$25-40",
+          "time": "20-35 min",
+          "note": "Pickup zones are signed in the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Georgia Aquarium",
+    "Fox Theatre",
+    "Mercedes-Benz Stadium",
+    "Six Flags Over Georgia",
+    "Fun Spot Atlanta",
+    "Arby's",
+    "Buffalo Wild Wings",
+    "Chick-fil-A",
+    "Church's Texas Chicken",
+    "Cinnabon",
+    "Emory University",
+    "Georgia Institute of Technology (Georgia Tech)",
+    "Moe's Southwest Grill",
+    "Round Table Pizza",
+    "Stranger Things",
+    "Waffle House"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Atlanta",
+      "https://en.wikivoyage.org/wiki/Atlanta"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    33.749,
+    -84.38798
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 15,
+      "low": 4,
+      "rain_days": 12
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 12
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 14
+    },
+    {
+      "high": 31,
+      "low": 22,
+      "rain_days": 17
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 17
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 10
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 8
+    },
+    {
+      "high": 13,
+      "low": 5,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

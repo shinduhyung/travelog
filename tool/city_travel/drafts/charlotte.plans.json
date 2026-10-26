@@ -1,0 +1,883 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed culture day in Uptown, all walkable or a short ride apart.",
+      "days": [
+        {
+          "title": "Museums and Uptown on foot",
+          "stops": [
+            {
+              "place": "levine_museum",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Start here for the city's history. Usually closed Mondays; check on the day."
+            },
+            {
+              "place": "mint_museum",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "A few minutes on foot. Art and craft across several floors."
+            },
+            {
+              "place": "seventh_street",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch at the market. Many stalls close early evening."
+            },
+            {
+              "place": "nascar_hall",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Short walk. Interactive exhibits suit all ages."
+            },
+            {
+              "place": "uptown_tour",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walking or trolley tour to finish. Book ahead; times vary by operator."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Sunset over the skyline. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way from breakfast biscuits to South End breweries.",
+      "days": [
+        {
+          "title": "Breakfast, market lunch, breweries",
+          "stops": [
+            {
+              "place": "bojangles",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Biscuits and sweet tea to start. Most branches open early; check on the day."
+            },
+            {
+              "place": "krispy_kreme",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Short ride to Dilworth for a warm doughnut."
+            },
+            {
+              "place": "bbq_spot",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Southern barbecue lunch. Hours vary by restaurant; check on the day."
+            },
+            {
+              "place": "rail_trail",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk off lunch along the trail through South End."
+            },
+            {
+              "place": "brewery_tour",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Tasting in South End. Usually open afternoon to late evening."
+            },
+            {
+              "place": "southend_market",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner and more taps along the strip. Busiest at weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South End"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "Hands-on science, a park break and an arcade evening.",
+      "days": [
+        {
+          "title": "Science, park and games",
+          "stops": [
+            {
+              "place": "discovery_place",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Usually closed some Mondays; check on the day. Book ahead in school holidays."
+            },
+            {
+              "place": "seventh_street",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch nearby. Many stalls close early evening."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Run-around time. Always open."
+            },
+            {
+              "place": "frankies",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Short ride to South End for games and mini-golf. Good rainy-day backup."
+            },
+            {
+              "place": "krispy_kreme",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Doughnut stop in Dilworth on the way back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want Uptown museums and a walkable evening, with one South End stop.",
+      "days": [
+        {
+          "title": "Arrive, Uptown museums and a sunset park",
+          "stops": [
+            {
+              "place": "uptown_tour",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Book ahead. A good orientation on day one."
+            },
+            {
+              "place": "mint_museum",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually Tue–Sun; check on the day."
+            },
+            {
+              "place": "bechtler",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Short walk from the Mint. Usually Tue–Sun."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Stay for sunset over the skyline."
+            },
+            {
+              "place": "seventh_street",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner at the market. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "NASCAR and history, then South End",
+          "stops": [
+            {
+              "place": "nascar_hall",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Roughly 10:00–17:00 daily; check on the day."
+            },
+            {
+              "place": "levine_museum",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Usually Tue–Sun. Closed some Mondays."
+            },
+            {
+              "place": "bojangles",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Quick Southern lunch. Check hours on the day."
+            },
+            {
+              "place": "skyline_view",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Dusk is best. Short walk from the light rail."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around meals, with a brewery evening in South End.",
+      "days": [
+        {
+          "title": "Market lunch, Uptown sights, South End evening",
+          "stops": [
+            {
+              "place": "krispy_kreme",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Morning stop in Dilworth. Check hours on the day."
+            },
+            {
+              "place": "uptown_tour",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk off the doughnuts. Book ahead."
+            },
+            {
+              "place": "seventh_street",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Usually daily; check on the day."
+            },
+            {
+              "place": "mint_museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Usually Tue–Sun; check on the day."
+            },
+            {
+              "place": "southend_market",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Food and brewery strip. Busiest evenings and weekends."
+            }
+          ]
+        },
+        {
+          "title": "BBQ lunch, Rail Trail and a tasting",
+          "stops": [
+            {
+              "place": "bbq_spot",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Charlotte barbecue lunch in Dilworth. Check hours on the day."
+            },
+            {
+              "place": "rail_trail",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Late afternoon is best, but any dry hour works."
+            },
+            {
+              "place": "frankies",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Good for a rainy afternoon. Usually open late morning to late night."
+            },
+            {
+              "place": "brewery_tour",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "South End tasting rooms. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South End"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Families with kids who want hands-on science, a park and an easy evening.",
+      "days": [
+        {
+          "title": "Discovery Place and Uptown park",
+          "stops": [
+            {
+              "place": "discovery_place",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Usually Tue–Sun, closed some Mondays. Check on the day."
+            },
+            {
+              "place": "seventh_street",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch nearby. Check hours on the day."
+            },
+            {
+              "place": "nascar_hall",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Roughly 10:00–17:00 daily; check on the day."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Run-around time before dinner."
+            },
+            {
+              "place": "bojangles",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Easy family dinner. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Carowinds day, then arcade",
+          "stops": [
+            {
+              "place": "carowinds",
+              "at": "10:00",
+              "minutes": 360,
+              "note": "Seasonal, usually spring to fall. Arrive at opening. Check on the day."
+            },
+            {
+              "place": "frankies",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Indoor games and food after the park. Usually open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want museums and Uptown history without rushing.",
+      "days": [
+        {
+          "title": "Arrive and get your bearings in Uptown",
+          "stops": [
+            {
+              "place": "uptown_tour",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Book ahead. Good orientation on day one."
+            },
+            {
+              "place": "levine_museum",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Usually Tue–Sun. Check hours before you go."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Relax before dinner. Best at sunset."
+            },
+            {
+              "place": "seventh_street",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Casual dinner. Check daily hours."
+            }
+          ]
+        },
+        {
+          "title": "NASCAR and modern art",
+          "stops": [
+            {
+              "place": "nascar_hall",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go at opening on a weekday. Roughly 10:00–17:00; check on the day."
+            },
+            {
+              "place": "mint_museum",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short walk in Uptown. Usually Tue–Sun."
+            },
+            {
+              "place": "bechtler",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Next door to the Mint. Usually Tue–Sun."
+            },
+            {
+              "place": "bojangles",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Quick Southern snack. Most locations open all day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around meals and breweries.",
+      "days": [
+        {
+          "title": "Uptown tastes and a skyline walk",
+          "stops": [
+            {
+              "place": "seventh_street",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Check daily hours."
+            },
+            {
+              "place": "uptown_tour",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk off lunch. Book ahead."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view before dinner."
+            },
+            {
+              "place": "southend_market",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Short ride to South End. Busiest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "BBQ, Rail Trail and breweries",
+          "stops": [
+            {
+              "place": "krispy_kreme",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Morning doughnuts in Dilworth."
+            },
+            {
+              "place": "freedom_park",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Easy walk nearby. Always open."
+            },
+            {
+              "place": "bbq_spot",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Hours vary by restaurant; check on the day."
+            },
+            {
+              "place": "rail_trail",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late-afternoon stroll through South End."
+            },
+            {
+              "place": "brewery_tour",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Tasting to finish. Usually afternoon to late evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South End"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids who want hands-on science and a theme park day.",
+      "days": [
+        {
+          "title": "Science and Uptown play",
+          "stops": [
+            {
+              "place": "discovery_place",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Usually Tue–Sun, closed some Mondays. Check on the day."
+            },
+            {
+              "place": "seventh_street",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Space for kids to run. Always open."
+            },
+            {
+              "place": "krispy_kreme",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Afternoon treat in Dilworth."
+            }
+          ]
+        },
+        {
+          "title": "Carowinds day",
+          "stops": [
+            {
+              "place": "carowinds",
+              "at": "09:30",
+              "minutes": 360,
+              "note": "Seasonal; usually spring to fall. Arrive at opening on a weekday."
+            },
+            {
+              "place": "frankies",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Indoor games and food to end the day. Usually open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South End"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, Uptown history and a taste of NoDa, all at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and get your bearings in Uptown",
+          "stops": [
+            {
+              "place": "uptown_tour",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book ahead. A good first look at the city layout."
+            },
+            {
+              "place": "mint_museum",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Usually Tue–Sun; check on the day. Closed Mondays."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Stay for sunset. Always open."
+            },
+            {
+              "place": "seventh_street",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner at the market. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "NASCAR and New South history",
+          "stops": [
+            {
+              "place": "nascar_hall",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Weekday morning is quietest. Roughly 10:00–17:00; check on the day."
+            },
+            {
+              "place": "levine_museum",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Usually Tue–Sun; check on the day."
+            },
+            {
+              "place": "bojangles",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Quick Southern lunch. Most locations open all day."
+            },
+            {
+              "place": "bechtler",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Modern art next door to the Mint. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "NoDa art and food",
+          "stops": [
+            {
+              "place": "optimist_hall",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Lunch at the food hall. Usually daily; check on the day."
+            },
+            {
+              "place": "noda_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Galleries and street art. Always open; shops have their own hours."
+            },
+            {
+              "place": "southend_market",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Evening food and breweries. Busiest on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "krispy_kreme",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Morning doughnuts in Dilworth."
+            },
+            {
+              "place": "freedom_park",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Easy walk by the pond. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around breakfast, BBQ and breweries, with light sightseeing in between.",
+      "days": [
+        {
+          "title": "Uptown tastes and market lunch",
+          "stops": [
+            {
+              "place": "bojangles",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Breakfast biscuit to start. Most locations open early."
+            },
+            {
+              "place": "uptown_tour",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk off breakfast. Book ahead."
+            },
+            {
+              "place": "seventh_street",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the market. Check hours on the day."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Short park break. Always open."
+            },
+            {
+              "place": "southend_market",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner and a first brewery stop. Busiest evenings and weekends."
+            }
+          ]
+        },
+        {
+          "title": "BBQ and breweries in South End",
+          "stops": [
+            {
+              "place": "krispy_kreme",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Morning stop in Dilworth."
+            },
+            {
+              "place": "rail_trail",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk the trail between neighbourhoods. Always open."
+            },
+            {
+              "place": "bbq_spot",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Barbecue lunch. Hours vary by restaurant; check on the day."
+            },
+            {
+              "place": "brewery_tour",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Tasting in South End. Usually afternoon to late evening; check on the day."
+            },
+            {
+              "place": "skyline_view",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Dusk skyline photo. Always open."
+            }
+          ]
+        },
+        {
+          "title": "NoDa food hall and night out",
+          "stops": [
+            {
+              "place": "optimist_hall",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Lunch at the food hall. Usually daily; check on the day."
+            },
+            {
+              "place": "noda_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Afternoon wander. Always open."
+            },
+            {
+              "place": "frankies",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening games and snacks. Usually late morning to late night; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast and go",
+          "stops": [
+            {
+              "place": "bojangles",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "One last Southern breakfast before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South End"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids who want hands-on science, rides and easy outdoor breaks.",
+      "days": [
+        {
+          "title": "Uptown science and park time",
+          "stops": [
+            {
+              "place": "discovery_place",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Usually Tue–Sun, closed some Mondays; check on the day."
+            },
+            {
+              "place": "seventh_street",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch at the market. Check hours on the day."
+            },
+            {
+              "place": "romare_bearden",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Run-around break. Always open."
+            },
+            {
+              "place": "mint_museum",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Optional, if energy holds. Usually Tue–Sun; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Carowinds day",
+          "stops": [
+            {
+              "place": "krispy_kreme",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Early doughnuts before the park."
+            },
+            {
+              "place": "carowinds",
+              "at": "09:30",
+              "minutes": 360,
+              "note": "Seasonal; usually spring to fall, check on the day. Arrive at opening."
+            },
+            {
+              "place": "southend_market",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Easy family dinner. Busiest evenings and weekends."
+            }
+          ]
+        },
+        {
+          "title": "Games, park and skyline",
+          "stops": [
+            {
+              "place": "freedom_park",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning play. Always open."
+            },
+            {
+              "place": "frankies",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Indoor games and lunch. Usually late morning to late night; check on the day."
+            },
+            {
+              "place": "rail_trail",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Flat walk, stroller-friendly. Always open."
+            },
+            {
+              "place": "skyline_view",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Dusk photo stop. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Last breakfast, then go",
+          "stops": [
+            {
+              "place": "bojangles",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quick breakfast before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown"
+    }
+  ]
+}

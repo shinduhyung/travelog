@@ -1,0 +1,528 @@
+{
+  "city": "San Salvador",
+  "checked": "October 2026",
+  "intro_line": "Central America's capital, ringed by volcanoes and full of energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Zona Rosa",
+        "Colonia Escalón",
+        "Colonia San Benito",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Zona Rosa",
+        "Colonia Escalón",
+        "Colonia San Benito",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Zona Rosa",
+        "Colonia Escalón",
+        "Colonia San Benito",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Zona Rosa",
+        "Colonia Escalón",
+        "Colonia San Benito",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Zona Rosa",
+        "Colonia Escalón",
+        "Colonia San Benito",
+        "Centro Histórico"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 2,
+        "note": "Dry and warm: highs near 30°C, lows around 19°C, only about 2 rain days. Great for walking."
+      },
+      {
+        "high": 31,
+        "low": 19,
+        "rain_days": 1,
+        "note": "The driest month, about 1 rain day. Sunny days, cool-ish evenings."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 6,
+        "note": "Warm and mostly dry, but rain days jump to about 6. Carry a light rain jacket."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 16,
+        "note": "The rainy season starts: about 16 rain days. Plan indoor sights and go out in the mornings."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 26,
+        "note": "Wet: about 26 rain days and slightly cooler highs near 29°C. Expect afternoon downpours."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 27,
+        "note": "The wettest stretch: about 27 rain days, highs near 27°C. Pack a raincoat and waterproof shoes."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 24,
+        "note": "Still wet, about 24 rain days. Mornings are usually the best window."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 26,
+        "note": "Wet again, about 26 rain days. Keep plans flexible."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 29,
+        "note": "The wettest month, about 29 rain days. Indoor museums and cafés are the safe bet."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 26,
+        "note": "Still very wet, about 26 rain days. Check road conditions for any day trip."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 14,
+        "note": "Rain eases to about 14 rain days. A good shoulder month."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 4,
+        "note": "Dry and pleasant: about 4 rain days, highs near 29°C. A strong month to visit."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.5,
+      0.6,
+      0.55,
+      0.45,
+      0.55,
+      0.85,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.6,
+      0.7,
+      0.65,
+      0.55,
+      0.65,
+      0.9,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.5,
+      0.6,
+      0.55,
+      0.45,
+      0.55,
+      0.85,
+      1
+    ],
+    "nature": [
+      0.95,
+      0.95,
+      0.85,
+      0.6,
+      0.35,
+      0.25,
+      0.4,
+      0.35,
+      0.2,
+      0.4,
+      0.8,
+      0.95
+    ],
+    "nightlife": [
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.6,
+      0.7,
+      0.65,
+      0.55,
+      0.65,
+      0.9,
+      1
+    ]
+  },
+  "places": {
+    "cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, before the heat",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "monument": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Late afternoon or after dark",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "rosario": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Midday for the light",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "joya": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, dry season",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "pupusa": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Colonia Escalón",
+      "popularity": 5
+    },
+    "mercado-ex": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning to early afternoon",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "plaza-libertad": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "el-boqueron": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Colonia Escalón",
+      "popularity": 4
+    },
+    "devil-gate": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Colonia San Benito",
+      "popularity": 3
+    },
+    "zona-rosa-walk": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Zona Rosa",
+      "popularity": 4
+    },
+    "escalon-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunch",
+      "area": "Colonia Escalón",
+      "popularity": 3
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "san-benito": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Colonia San Benito",
+      "popularity": 3
+    },
+    "art-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Colonia San Benito",
+      "popularity": 3
+    },
+    "national-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Colonia San Benito",
+      "popularity": 3
+    },
+    "coffee-tour": {
+      "types": [
+        "food",
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Colonia Escalón",
+      "popularity": 3
+    },
+    "pupuseria-evening": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Colonia Escalón",
+      "popularity": 4
+    },
+    "volcano-hike": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Early morning, dry season",
+      "area": "Colonia Escalón",
+      "popularity": 3
+    },
+    "nightlife-zona": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Thursday to Saturday night",
+      "area": "Zona Rosa",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the historic centre, the museums and a good food day; add a third for a day trip outside the city."
+  },
+  "airports": [
+    {
+      "code": "SAL",
+      "name": "El Salvador International Airport",
+      "primary": true,
+      "note": "Main gateway, about 33 km south of the centre.",
+      "options": [
+        {
+          "mode": "Public bus #138",
+          "to": "Terminal Sur bus station",
+          "price": "US$0.50-1",
+          "time": "60-90 min",
+          "note": "Stop is across the parking lot at the mall; crowded, not for big bags."
+        },
+        {
+          "mode": "Shared shuttle",
+          "to": "Major hotels in San Salvador",
+          "price": "US$10-20",
+          "time": "45-60 min",
+          "note": "Book ahead; limited departure times."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or hotel zones",
+          "price": "US$25-40",
+          "time": "45-60 min",
+          "note": "Agree the fare before you get in."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre or hotel zones",
+          "price": "US$20-35",
+          "time": "45-60 min",
+          "note": "Pickup point may be outside the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: San Salvador",
+      "https://en.wikivoyage.org/wiki/San%20Salvador"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Uber, InDrive or a taxi with the fare agreed first; walk only in Zona Rosa and San Benito.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. The city relies on buses."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are cheap but crowded. Keep valuables close."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are common; agree the fare before you get in. Uber and InDrive work in the city and to the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible, but traffic and aggressive driving make it stressful."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking suits Zona Rosa and San Benito; other areas are spread out."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical highland climate: warm all year, with a sharp dry season from November to March and a long, wet season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Highs around 29–31°C, lows near 19°C, and few rain days. Ideal for walking the centre."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "Rain on 24–29 days a month. Showers often hit in the afternoon; do outdoor sights early."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Warm year-round",
+        "text": "Highs stay between 27 and 31°C every month. Evenings are mild, around 19–21°C."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack rain gear in the wet months",
+        "text": "A light raincoat or umbrella and quick-dry shoes help from May to October."
+      },
+      {
+        "icon": "⛰️",
+        "title": "Cooler, greener hills",
+        "text": "The wet months turn the hills around the city lush; views are best on clear mornings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, sunscreen and a hat; a light layer for evenings; rain protection if you visit May to October."
+      }
+    ]
+  }
+}

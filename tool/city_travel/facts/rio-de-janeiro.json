@@ -1,0 +1,225 @@
+{
+  "currency": "BRL",
+  "usd_rate": 5.0428,
+  "intro_line": "Rio blends mountains, beaches and samba into one vivid city.",
+  "intro": "Rio rewards visitors with dramatic scenery, lively neighbourhoods and a culture that never sits still. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    }
+  ],
+  "areas": [
+    "Copacabana",
+    "Ipanema",
+    "Botafogo",
+    "Centro"
+  ],
+  "taxi": {
+    "flag_day": 6,
+    "flag_airport": 10,
+    "per_km": 3,
+    "min_fare": 10
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro lines 1 and 2 are fast and safe; fares around R$4.70.",
+    "City buses are cheap (from R$4.70) but crowded; watch your belongings.",
+    "Taxis are metered; ride apps like Uber and 99 work well.",
+    "Driving is confusing with poor signage; parking is hard.",
+    "Walking is good in beach areas; bikes are popular along the coast.",
+    "Ferries (barcas) link Centro's Praça XV to Niterói."
+  ],
+  "airports": [
+    {
+      "code": "GIG",
+      "name": "Galeão - Antonio Carlos Jobim International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 13 km north of the centre.",
+      "options": [
+        {
+          "mode": "BRT + Metro",
+          "to": "Centro and Zona Sul",
+          "price": "R$5-10",
+          "time": "60-90 min",
+          "note": "Cheapest; needs a RioCard."
+        },
+        {
+          "mode": "Airport bus 2018/2918",
+          "to": "Botafogo, Copacabana, Ipanema, Barra",
+          "price": "R$16-20",
+          "time": "60-120 min",
+          "note": "Air-conditioned with luggage space."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro and Zona Sul",
+          "price": "R$80-150",
+          "time": "30-60 min",
+          "note": "Prepaid booths cost more but are fixed."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "Centro and Zona Sul",
+          "price": "R$50-100",
+          "time": "30-60 min",
+          "note": "Often cheaper than airport taxis."
+        }
+      ]
+    },
+    {
+      "code": "SDU",
+      "name": "Santos Dumont Airport",
+      "primary": false,
+      "note": "Domestic airport 1 km east of the centre, mainly São Paulo and Brasília flights.",
+      "options": [
+        {
+          "mode": "Metro",
+          "to": "Centro and Zona Sul",
+          "price": "R$4.70",
+          "time": "15-30 min",
+          "note": "Station is a short walk from the terminal."
+        },
+        {
+          "mode": "Local bus",
+          "to": "Centro and Zona Sul",
+          "price": "R$4.70",
+          "time": "20-40 min",
+          "note": "Cheap but crowded."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro and Zona Sul",
+          "price": "R$25-60",
+          "time": "10-30 min",
+          "note": "Short ride; insist on the meter."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "Centro and Zona Sul",
+          "price": "R$15-40",
+          "time": "10-30 min",
+          "note": "Convenient for beach areas."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Christ the Redeemer",
+    "Sugarloaf Mountain",
+    "Copacabana Beach",
+    "Ipanema Beach",
+    "Maracanã",
+    "Metropolitan Cathedral of Saint Sebastian",
+    "Escadaria Selarón",
+    "AquaRio",
+    "Bob's",
+    "Botanical Garden of Rio de Janeiro",
+    "Candelaria Church",
+    "Feijoada",
+    "Flamengo Beach",
+    "Fort of Copacabana",
+    "Guanabara Bay",
+    "Guanabara Bay Cruise",
+    "Lapa Arches",
+    "Leblon Beach",
+    "Museum of Tomorrow",
+    "Niteroi Contemporary Art Museum",
+    "Parque Lage",
+    "Parque Shanghai"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Rio de Janeiro",
+      "https://en.wikivoyage.org/wiki/Rio%20de%20Janeiro"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -22.9068,
+    -43.1729
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 15
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 15
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 14
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 10
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 10
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 9
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 15
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 16
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 16
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

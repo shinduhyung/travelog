@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:jidoapp/models/landmarks_model.dart';
 import 'package:jidoapp/models/visit_date_model.dart';
+import 'package:jidoapp/utils/landmark_aliases.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,6 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class LandmarksProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -345,11 +347,7 @@ class LandmarksProvider with ChangeNotifier {
 
     if (user != null) {
       try {
-        final doc = await _firestore
-            .collection ('users')
-            .doc (user.uid)
-            .get ()
-            .timeout (const Duration (seconds: 5));
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists) {
           final data = doc.data ();
           if (data != null) {
@@ -388,7 +386,9 @@ class LandmarksProvider with ChangeNotifier {
   void _loadFromLocal (SharedPreferences prefs) {
     final ratingsJson = prefs.getString ('landmark_ratings');
     if (ratingsJson != null) {
-      final ratingsMap = Map<String, double>.from (json.decode (ratingsJson));
+      final ratingsMap = mergeLandmarkRatings(
+        Map<String, double>.from(json.decode(ratingsJson)),
+      );
       for (var landmark in _allLandmarks) {
         if (ratingsMap.containsKey (landmark.name)) {
           landmark.rating = ratingsMap[landmark.name];
@@ -397,22 +397,28 @@ class LandmarksProvider with ChangeNotifier {
     }
 
     final visited = prefs.getStringList ('visited_landmarks');
-    if (visited != null) _visitedLandmarks = visited.toSet ();
+    if (visited != null) {
+      _visitedLandmarks = visited.map(canonicalLandmarkName).toSet();
+    }
 
     final visitedSub = prefs.getStringList ('visited_landmark_sublocations');
-    if (visitedSub != null) _visitedSubLocations = visitedSub.toSet ();
+    if (visitedSub != null) {
+      _visitedSubLocations = visitedSub.map(canonicalLandmarkSubLocationKey).toSet();
+    }
 
     final wishlisted = prefs.getStringList ('wishlisted_landmarks');
-    if (wishlisted != null) _wishlistedLandmarks = wishlisted.toSet ();
+    if (wishlisted != null) {
+      _wishlistedLandmarks = wishlisted.map(canonicalLandmarkName).toSet();
+    }
 
     final historyJson = prefs.getString ('landmark_visit_history');
     if (historyJson != null) {
-      final historyMap = Map<String, List<dynamic>>.from (json.decode (historyJson));
+      final historyMap = mergeLandmarkVisitHistory(
+        Map<String, List<dynamic>>.from(json.decode(historyJson)),
+      );
       for (var landmark in _allLandmarks) {
         if (historyMap.containsKey (landmark.name)) {
-          landmark.visitDates = historyMap[landmark.name]!
-              .map ((visitJson) => VisitDate.fromJson (visitJson as Map<String, dynamic>))
-              .toList ();
+          landmark.visitDates = historyMap[landmark.name]!;
         }
       }
     }
@@ -704,7 +710,7 @@ class LandmarksProvider with ChangeNotifier {
 
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data() != null) {
           final data = doc.data()!;
           if (data.containsKey('landmark_ratings')) {

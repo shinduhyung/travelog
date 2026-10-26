@@ -1,0 +1,31 @@
+$ deepseek_prep.py Calgary
+  tokens in 645 out 217
+Calgary: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Calgary
+  tokens in 4337 out 687
+Calgary: 0 problems
+
+$ deepseek_city.py Calgary --stage places
+Calgary: places
+  tokens in 1132 out 3139
+
+$ deepseek_city.py Calgary --stage frame
+Calgary: frame
+  tokens in 2455 out 1914
+
+$ deepseek_city.py Calgary --stage plans
+Calgary: plans
+  plans for day
+  tokens in 2125 out 797
+  plans for 1n
+  tokens in 2126 out 988
+  plans for 2n
+  tokens in 2131 out 1361
+  plans for 3n
+  tokens in 2126 out 1663
+
+$ merge_city.py Calgary
+Calgary: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/calgary.json and planner/calgary.json
+

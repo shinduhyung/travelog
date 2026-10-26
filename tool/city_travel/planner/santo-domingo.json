@@ -1,0 +1,524 @@
+{
+  "city": "Santo Domingo",
+  "checked": "October 2026",
+  "intro_line": "Santo Domingo: the oldest colonial city in the Americas.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Zona Colonial",
+        "Piantini",
+        "Gazcue",
+        "Bella Vista"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Zona Colonial",
+        "Piantini",
+        "Gazcue",
+        "Bella Vista"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Zona Colonial",
+        "Piantini",
+        "Gazcue",
+        "Bella Vista"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Zona Colonial",
+        "Piantini",
+        "Gazcue",
+        "Bella Vista"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Zona Colonial",
+        "Piantini",
+        "Gazcue",
+        "Bella Vista"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 12,
+        "note": "January: dry-ish and mild, highs near 28°C. Great for walking the old city."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 12,
+        "note": "February: similar to January, around 29°C. Comfortable sightseeing weather."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 14,
+        "note": "March: warm at 29°C with about 14 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 18,
+        "note": "April: warmer and wetter, about 18 rain days. Plan indoor sights for afternoons."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 22,
+        "note": "May: rainy season builds, about 22 rain days. Short heavy showers are common."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 22,
+        "note": "June: hot and wet, highs near 30°C. Go out early and stay shaded at midday."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 22,
+        "note": "July: hottest month, highs around 31°C, still rainy. Hydrate and use sunscreen."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 23,
+        "note": "August: hot and very wet, about 23 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 22,
+        "note": "September: hot and rainy, around 30°C. Hurricane season peaks; watch forecasts."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 20,
+        "note": "October: still wet, about 20 rain days. Slightly cooler evenings."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 19,
+        "note": "November: rain eases to about 19 days. Pleasant for the city and the Malecón."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 14,
+        "note": "December: cooler and drier, highs near 28°C. One of the best months to visit."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1
+    ],
+    "culture": [
+      1,
+      1,
+      1,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      1,
+      1
+    ],
+    "beach": [
+      0.8,
+      0.85,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.8
+    ],
+    "nightlife": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9
+    ]
+  },
+  "places": {
+    "ciudad-colonial": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning for sights, evening for dinner and music",
+      "area": "Zona Colonial",
+      "popularity": 5
+    },
+    "alcazar-colon": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, right at opening",
+      "area": "Zona Colonial",
+      "popularity": 5
+    },
+    "catedral-primada": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "Zona Colonial",
+      "popularity": 5
+    },
+    "ozama-fortress": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Zona Colonial",
+      "popularity": 4
+    },
+    "faro-colon": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon into dusk",
+      "area": "Zona Colonial",
+      "popularity": 3
+    },
+    "la-bandera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Bella Vista",
+      "popularity": 2
+    },
+    "malecon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "Gazcue",
+      "popularity": 4
+    },
+    "national-palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Gazcue",
+      "popularity": 3
+    },
+    "mercado-modelo": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Zona Colonial",
+      "popularity": 3
+    },
+    "parque-colon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Zona Colonial",
+      "popularity": 4
+    },
+    "calle-el-conde": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Zona Colonial",
+      "popularity": 4
+    },
+    "zona-colonial-food-tour": {
+      "types": [
+        "food",
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Zona Colonial",
+      "popularity": 4
+    },
+    "gazcue-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Gazcue",
+      "popularity": 2
+    },
+    "piantini-dining": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Piantini",
+      "popularity": 3
+    },
+    "bella-vista-viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Bella Vista",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Colonial Zone and the Malecón at an easy pace. Add a night for a beach day or nightlife."
+  },
+  "airports": [
+    {
+      "code": "SDQ",
+      "name": "Las Américas International Airport",
+      "primary": true,
+      "note": "Main international gateway, 28 km east of centre.",
+      "options": [
+        {
+          "mode": "Minivan",
+          "to": "Zona Colonial",
+          "price": "RD$70",
+          "time": "30-40 min",
+          "note": "From Arrivals second floor; cheap but slow."
+        },
+        {
+          "mode": "Bus",
+          "to": "Boca Chica",
+          "price": "RD$40",
+          "time": "60 min",
+          "note": "Then walk 2 km to airport; avoid at night."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "US$25-40",
+          "time": "30-45 min",
+          "note": "Official airport taxis; fixed rate."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "May not be allowed for pickups; check app."
+        }
+      ]
+    },
+    {
+      "code": "JBQ",
+      "name": "La Isabela International Airport",
+      "primary": false,
+      "note": "Secondary airport for domestic and regional flights, 11 km north.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "RD$20-40",
+          "time": "40-60 min",
+          "note": "Local buses; ask for route."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RD$500-800",
+          "time": "20-30 min",
+          "note": "Negotiate fare."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Availability varies."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Santo Domingo",
+      "https://en.wikivoyage.org/wiki/Santo%20Domingo"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the Zona Colonial and Malecón; use Uber or InDrive for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Two lines, RD$20 per ride with a smartcard (RD$60 card plus RD$20 minimum). Useful for some cross-city trips."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap but confusing; fares around RD$20–40. Fine if you have time and local help."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis have no meters, so agree the fare before you get in. Uber and InDrive work and are often easier."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic; not recommended for short visits."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best in the Zona Colonial and along the Malecón. Sidewalks are uneven, so watch your step."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferry to Puerto Rico (Mayagüez or San Juan) is about US$200 roundtrip and takes around 12 hours."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical climate: warm all year, with a wetter season from May to October and a drier, slightly cooler stretch from November to April.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Highs around 28–29°C and fewer rain days. Ideal for walking the Colonial Zone."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "About 20–23 rain days a month. Showers are often short and heavy; plan around them."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hottest months: July and August",
+        "text": "Highs near 31°C with warm nights around 24°C. Go out early or after sunset."
+      },
+      {
+        "icon": "🌀",
+        "title": "Hurricane season: June to November",
+        "text": "Peaks around September. Check forecasts and keep plans flexible."
+      },
+      {
+        "icon": "👕",
+        "title": "What to pack",
+        "text": "Light, breathable clothes, a rain jacket or umbrella, sunscreen and a hat. A light layer for air-conditioned museums."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain timing",
+        "text": "Downpours often come in the afternoon. Do outdoor sights in the morning and keep a backup indoor plan."
+      }
+    ]
+  }
+}

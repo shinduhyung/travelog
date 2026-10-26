@@ -1,0 +1,511 @@
+{
+  "city": "Hyderabad",
+  "checked": "October 2026",
+  "intro_line": "Pearls, biryani and old-world charm in a booming tech city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Banjara Hills",
+        "Jubilee Hills",
+        "HITEC City",
+        "Secunderabad"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Banjara Hills",
+        "Jubilee Hills",
+        "HITEC City",
+        "Secunderabad"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Banjara Hills",
+        "Jubilee Hills",
+        "HITEC City",
+        "Secunderabad"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Banjara Hills",
+        "Jubilee Hills",
+        "HITEC City",
+        "Secunderabad"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Banjara Hills",
+        "Jubilee Hills",
+        "HITEC City",
+        "Secunderabad"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 1,
+        "note": "January: cool and dry, highs near 28°C. Best month for forts and walking tours."
+      },
+      {
+        "high": 31,
+        "low": 18,
+        "rain_days": 0,
+        "note": "February: warm days, cool nights, almost no rain. Great for sightseeing."
+      },
+      {
+        "high": 34,
+        "low": 21,
+        "rain_days": 1,
+        "note": "March: heating up to 34°C. Start early and rest in the afternoon."
+      },
+      {
+        "high": 37,
+        "low": 24,
+        "rain_days": 4,
+        "note": "April: hot at 37°C. Plan indoor sights and evening outings."
+      },
+      {
+        "high": 37,
+        "low": 26,
+        "rain_days": 6,
+        "note": "May: hottest month, 37°C highs and humid. Carry water and avoid midday sun."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 18,
+        "note": "June: monsoon starts, 18 rain days. Showers are short but streets get messy."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 21,
+        "note": "July: wet and cooler at 29°C. Keep a rain plan and flexible timings."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 18,
+        "note": "August: still rainy, 18 rain days. Good for museums and food halls."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 20,
+        "note": "September: rain continues, 20 rain days. Check forecasts before day trips."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 13,
+        "note": "October: rain easing, 13 rain days. Pleasant evenings return."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 4,
+        "note": "November: dry and mild at 29°C. Excellent for the old city and bazaars."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 2,
+        "note": "December: coolest month, 28°C highs and 17°C nights. Busy and comfortable."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.45,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.55,
+      0.85,
+      1,
+      1
+    ],
+    "culture": [
+      1,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.5,
+      0.45,
+      0.45,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.45,
+      0.8,
+      1,
+      1
+    ],
+    "family": [
+      1,
+      1,
+      0.85,
+      0.65,
+      0.55,
+      0.4,
+      0.35,
+      0.35,
+      0.4,
+      0.75,
+      0.95,
+      1
+    ]
+  },
+  "places": {
+    "charminar": {
+      "types": [
+        "history",
+        "culture",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning, October to February",
+      "area": "Banjara Hills",
+      "popularity": 5
+    },
+    "golconda": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon; avoid midday heat",
+      "area": "Banjara Hills",
+      "popularity": 5
+    },
+    "mecca-masjid": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning, outside prayer times",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "jalavihar": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday afternoons in summer",
+      "area": "Secunderabad",
+      "popularity": 3
+    },
+    "ramoji": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Start early; avoid weekends and holidays",
+      "area": "Secunderabad",
+      "popularity": 5
+    },
+    "snow-world": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; weekday mornings",
+      "area": "Secunderabad",
+      "popularity": 3
+    },
+    "wonderla": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday, arrive at opening",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "laad-bazaar": {
+      "types": [
+        "shopping",
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "hussain-sagar": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Secunderabad",
+      "popularity": 4
+    },
+    "birla-mandir": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "salar-jung": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning; closed Friday",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "chowmahalla": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "biryani-food-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Banjara Hills",
+      "popularity": 4
+    },
+    "kbr-park": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Jubilee Hills",
+      "popularity": 3
+    },
+    "golconda-bazaar": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Banjara Hills",
+      "popularity": 3
+    },
+    "necklace-road": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Secunderabad",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old city, Golconda and a proper biryani crawl without rushing in the heat."
+  },
+  "airports": [
+    {
+      "code": "HYD",
+      "name": "Rajiv Gandhi International Airport Shamshabad",
+      "primary": true,
+      "note": "Main airport, about 18-22 km south of the centre.",
+      "options": [
+        {
+          "mode": "Pushpak Airport Liner bus",
+          "to": "Secunderabad, Miyapur, BHEL, MGBS",
+          "price": "₹106-265",
+          "time": "45-75 min",
+          "note": "Cheapest public option; buses every 10-40 min."
+        },
+        {
+          "mode": "MMTS train",
+          "to": "Secunderabad and city stations",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Check schedules; limited service."
+        },
+        {
+          "mode": "Metered taxi (Meru, Sky Cabs)",
+          "to": "Anywhere in the city",
+          "price": "about ₹20/km",
+          "time": "40-70 min",
+          "note": "Book at airport counters; avoid touts."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "Anywhere in the city",
+          "price": "check locally",
+          "time": "40-70 min",
+          "note": "Book in the app at the baggage carousel."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Hyderabad",
+      "https://en.wikivoyage.org/wiki/Hyderabad"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "history",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Metro for long hops, ride apps for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast and clean. Red, Blue and Green lines, 57 stations, trains every ~4 min. Fares ₹10 to about ₹60 end to end."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "TSRTC buses are cheap but crowded. Routes are shown in English too."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Ola and Uber work well. Cabs cannot be hailed on the street, so book in the app."
+      },
+      {
+        "mode": "Auto-rickshaw",
+        "has": true,
+        "text": "Agree the fare first. Minimum ₹20 for 1.6 km, then about ₹11/km."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is for the brave. Traffic jams are common at rush hour."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Fine in the old city lanes and around Charminar in cool months. Too hot and spread out elsewhere."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot most of the year, with a warm monsoon from June to October. Best months are November to February.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Highs around 28–31°C and cool nights. Ideal for forts, bazaars and long walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot season: March to May",
+        "text": "Highs reach 34–37°C. Sightsee early morning and stay indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon: June to October",
+        "text": "18–21 rain days in the wettest months. Showers are often short; carry a light rain jacket."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity in the rains",
+        "text": "Sticky days from June to September. Loose cotton clothes help."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain plan",
+        "text": "Keep one indoor backup per day: museums, malls or a long lunch."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, a hat, sunscreen and a small umbrella for monsoon months. A light layer for December nights."
+      }
+    ]
+  }
+}

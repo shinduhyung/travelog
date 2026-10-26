@@ -1,0 +1,32 @@
+$ deepseek_facts.py Vancouver
+  tokens in 4066 out 770
+Vancouver: 2 problems
+  - ABB taxi CAD 100-140 vs tariff estimate 39561
+  - airport ABB is 12171 km away
+
+$ deepseek_city.py Vancouver --stage places
+Vancouver: places
+  tokens in 1201 out 2873
+
+$ deepseek_city.py Vancouver --stage frame
+Vancouver: frame
+  tokens in 2413 out 1740
+
+$ deepseek_city.py Vancouver --stage plans
+Vancouver: plans
+  plans for day
+  tokens in 2202 out 828
+  plans for 1n
+  tokens in 2203 out 1249
+  plans for 2n
+  tokens in 2208 out 1361
+  plans for 3n
+  tokens in 2203 out 1584
+  plans for 4n
+  tokens in 2203 out 1498
+
+$ merge_city.py Vancouver
+WARN  papa_murphys: 407 km from the center (day trip?)
+Vancouver: 21 places, 15 plans, 0 errors, 1 warnings
+wrote itineraries/vancouver.json and planner/vancouver.json
+

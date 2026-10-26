@@ -1,0 +1,638 @@
+{
+  "city": "Luxembourg",
+  "checked": "October 2026",
+  "intro_line": "Luxembourg blends medieval charm with modern finance in a green valley.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Ville Haute",
+        "Gare",
+        "Kirchberg",
+        "Grund"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Ville Haute",
+        "Gare",
+        "Kirchberg",
+        "Grund"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Ville Haute",
+        "Gare",
+        "Kirchberg",
+        "Grund"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Ville Haute",
+        "Gare",
+        "Kirchberg",
+        "Grund"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Ville Haute",
+        "Gare",
+        "Kirchberg",
+        "Grund"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": 0,
+        "rain_days": 14,
+        "note": "Cold and grey: highs near 4°C, some rain or snow. Pack a warm coat and plan museum time."
+      },
+      {
+        "high": 7,
+        "low": 0,
+        "rain_days": 12,
+        "note": "Still cold, highs around 7°C, fewer rain days. Good for indoor sights and quiet streets."
+      },
+      {
+        "high": 10,
+        "low": 2,
+        "rain_days": 13,
+        "note": "Warming slowly to 10°C with rain. Bring layers and waterproof shoes for the valley paths."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 11,
+        "note": "Mild at 13°C, spring flowers in the parks. Showers are common, so carry a small umbrella."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 12,
+        "note": "Pleasant at 17°C, good walking weather. Rain is still likely on some days."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 11,
+        "note": "Warm and green at 22°C, long evenings. Best month for outdoor cafés and valley walks."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Warmest month, highs near 23°C. Book hotels early; summer weekends fill up."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Similar to July at 24°C, the peak for outdoor plans. Expect some rain days."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 10,
+        "note": "Cooling to 19°C, still good for walking. Fewer crowds than midsummer."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 12,
+        "note": "Autumn colours at 15°C with more rain. Bring a jacket and check the forecast."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 14,
+        "note": "Cold and wet at 9°C, the rainiest stretch. Indoor sights and warm cafés."
+      },
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 15,
+        "note": "Dark and cold, highs near 6°C, most rain days. Christmas markets are the draw; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.5,
+      0.4
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "budget": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.6
+    ]
+  },
+  "places": {
+    "palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning in summer",
+      "area": "Ville Haute",
+      "popularity": 5
+    },
+    "casemates": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning to avoid crowds",
+      "area": "Grund",
+      "popularity": 5
+    },
+    "corniche": {
+      "types": [
+        "nature",
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Ville Haute",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time; quiet in the morning",
+      "area": "Ville Haute",
+      "popularity": 4
+    },
+    "adolphe": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime or sunset",
+      "area": "Ville Haute",
+      "popularity": 4
+    },
+    "gaardebounen": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Ville Haute",
+      "popularity": 3
+    },
+    "mudam": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon; closed Monday",
+      "area": "Kirchberg",
+      "popularity": 4
+    },
+    "parc-merveilleux": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Warm months, morning",
+      "area": "Gare",
+      "popularity": 3
+    },
+    "place-guillaume": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Midday",
+      "area": "Ville Haute",
+      "popularity": 4
+    },
+    "grund-walk": {
+      "types": [
+        "culture",
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Grund",
+      "popularity": 4
+    },
+    "petrusse": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Ville Haute",
+      "popularity": 3
+    },
+    "city-train": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Ville Haute",
+      "popularity": 3
+    },
+    "market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Ville Haute",
+      "popularity": 3
+    },
+    "kirchberg-view": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Kirchberg",
+      "popularity": 2
+    },
+    "gare-walk": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Gare",
+      "popularity": 2
+    },
+    "philharmonie": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Kirchberg",
+      "popularity": 3
+    },
+    "fort-thungen": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Kirchberg",
+      "popularity": 2
+    },
+    "moselle-tour": {
+      "types": [
+        "food",
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Spring to autumn",
+      "area": "Gare",
+      "popularity": 3
+    },
+    "chemin-rail": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Grund",
+      "popularity": 3
+    },
+    "casemates-petrusse": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Summer",
+      "area": "Ville Haute",
+      "popularity": 2
+    },
+    "chocolate-house": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Ville Haute",
+      "popularity": 3
+    },
+    "three-towers": {
+      "types": [
+        "history",
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Grund",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old town, casemates and museums with a valley walk; add a night for a Vianden or Moselle day trip."
+  },
+  "airports": [
+    {
+      "code": "LUX",
+      "name": "Luxembourg-Findel International Airport",
+      "primary": true,
+      "note": "Main gateway, 6 km from centre.",
+      "options": [
+        {
+          "mode": "Tram T1",
+          "to": "City centre (Hamilius)",
+          "price": "€0",
+          "time": "20-25 min",
+          "note": "Free and frequent, every 8 min."
+        },
+        {
+          "mode": "Bus 16",
+          "to": "Kirchberg, City Centre, Gare",
+          "price": "€0",
+          "time": "25-30 min",
+          "note": "Free, stops at Hamilius and Gare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "15-20 min",
+          "note": "Fixed fare zone, check locally."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€25-35",
+          "time": "15-20 min",
+          "note": "App-based, may surge."
+        }
+      ]
+    },
+    {
+      "code": "HHN",
+      "name": "Frankfurt-Hahn Airport",
+      "primary": false,
+      "note": "Secondary low-cost airport, ~80 km from centre.",
+      "options": [
+        {
+          "mode": "Bus (Flibco)",
+          "to": "Luxembourg Gare",
+          "price": "€15-20",
+          "time": "1h30-2h",
+          "note": "Direct bus, check schedule."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-180",
+          "time": "1h-1h15",
+          "note": "Expensive, pre-book."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€120-150",
+          "time": "1h-1h15",
+          "note": "May not be available, check app."
+        }
+      ]
+    },
+    {
+      "code": "CRL",
+      "name": "Brussels South Charleroi Airport",
+      "primary": false,
+      "note": "Low-cost airport, ~150 km from centre.",
+      "options": [
+        {
+          "mode": "Bus (Flibco)",
+          "to": "Luxembourg Gare",
+          "price": "€20-25",
+          "time": "3h",
+          "note": "Direct bus, book online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€250-300",
+          "time": "2h-2h30",
+          "note": "Very expensive, not recommended."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€200-250",
+          "time": "2h-2h30",
+          "note": "Check availability."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Luxembourg",
+      "https://en.wikivoyage.org/wiki/Luxembourg"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Walk the compact centre; use the free tram and buses for the airport, Gare and Kirchberg.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. The city is small and covered by tram and bus."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses 1–31 serve the city and most stop at Hamilius and Gare. Free to ride."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Tram T1 links the airport to the centre and Gare every 8 minutes. Free."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis exist but are limited; Uber and Bolt operate. Handy for late nights and heavy bags."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy driving, but centre parking is paid and scarce on weekends. Best for day trips outside the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Great option: the centre is compact and bike-friendly, though the Grund sits in a steep valley."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries; the country is landlocked."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and changeable: mild summers, cold winters and rain in every month. Pack layers and a rain jacket year-round.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: June to September",
+        "text": "Highs of 19–24°C and the most daylight. Ideal for the old town, valley walks and outdoor cafés."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "About 10–15 rain days a month, most in November to January. A light waterproof beats an umbrella in wind."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs of 4–7°C and lows near 0°C. Snow is possible but not guaranteed; check on the day."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layers are key",
+        "text": "Days can swing from cool mornings to warm afternoons. Bring a jacket even in summer evenings."
+      },
+      {
+        "icon": "☀️",
+        "title": "Long summer days",
+        "text": "July and August give late sunsets, good for evening walks on the ramparts and in the Grund."
+      },
+      {
+        "icon": "🎄",
+        "title": "Winter charm",
+        "text": "December is cold and wet but festive, with Christmas markets in the centre. Dress for damp cold."
+      }
+    ]
+  }
+}

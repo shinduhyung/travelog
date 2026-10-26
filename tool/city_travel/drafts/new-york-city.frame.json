@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Met, MoMA, Broadway and the old downtown streets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Bagels, pizza slices, Chinatown and a steakhouse night."
+    },
+    {
+      "id": "views",
+      "label": "Views",
+      "blurb": "Skyline decks, bridges and the Staten Island Ferry."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Midtown",
+      "range": [
+        180,
+        550
+      ],
+      "why": "Walk to Times Square, Central Park and Grand Central. Best for first-timers and short trips. Noisy and busy.",
+      "center": [
+        40.7549,
+        -73.984
+      ]
+    },
+    {
+      "area": "Lower Manhattan",
+      "range": [
+        170,
+        500
+      ],
+      "why": "Near the Statue of Liberty ferry, Wall Street and the Brooklyn Bridge. Quiet at night on weekends.",
+      "center": [
+        40.7075,
+        -74.0105
+      ]
+    },
+    {
+      "area": "Upper West Side",
+      "range": [
+        160,
+        450
+      ],
+      "why": "Next to Central Park and the Natural History Museum. Calmer, family-friendly, good subway links.",
+      "center": [
+        40.787,
+        -73.9754
+      ]
+    },
+    {
+      "area": "Brooklyn",
+      "range": [
+        140,
+        420
+      ],
+      "why": "Brooklyn Bridge Park, DUMBO and cheaper rooms. 20–30 minutes to Midtown by subway.",
+      "center": [
+        40.7033,
+        -73.9881
+      ]
+    }
+  ],
+  "food": [
+    "Start with a New York breakfast: a bagel with cream cheese and lox, or a bodega egg sandwich, about $8–15.",
+    "Grab a pizza slice for $4–6. Sit-down dinners run $30–60 a person before drinks.",
+    "Chinatown and Flushing have the best cheap eats: dumplings, noodles and roast meats for $10–20.",
+    "Food halls and markets (Chelsea Market, Essex Market) let a group split up and eat cheaply.",
+    "Book popular dinner spots a few days ahead. Many places add tax and tip on top of menu prices."
+  ],
+  "more_time": [
+    "Swap a Midtown day for Brooklyn: walk the Brooklyn Bridge, then DUMBO and Brooklyn Bridge Park.",
+    "Add a half-day at the American Museum of Natural History or the Met. Both need 3–4 hours.",
+    "Take the free Staten Island Ferry for skyline and Statue of Liberty views, then ride back."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.9
+    ],
+    "views": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.65
+    ],
+    "family": [
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      0.9,
+      0.75,
+      0.6
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "views"
+  ],
+  "recommend": {
+    "why": "Three nights covers the big museums, a skyline view and a Brooklyn walk without rushing."
+  },
+  "month_notes": [
+    "Coldest month: highs near 4°C, lows around -3°C. Pack a warm coat and layers.",
+    "Still cold, highs about 6°C. Good for museums and indoor sights.",
+    "Warming up to 10°C. Some rain; a light jacket works.",
+    "Spring: highs around 16°C, lows 6°C. Comfortable for walking.",
+    "Pleasant at 21°C. Busy with tourists; book hotels early.",
+    "Warm at 26°C. Good park weather; expect about 11 rain days.",
+    "Hottest month: highs near 30°C, lows 21°C. Plan shade and water.",
+    "Hot and humid, highs around 28°C. Evenings are best for walking.",
+    "Still warm at 25°C. A great month for parks and rooftops.",
+    "Cool and clear, highs near 19°C. Good for long walks.",
+    "Colder at 12°C. Fewer rain days; pack a jacket.",
+    "Cold again: highs about 7°C, lows near 0°C. Holiday crowds in December."
+  ],
+  "climate_guide": {
+    "summary": "Four clear seasons. Hot, humid summers and cold winters. Spring and autumn are the best times to walk the city.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Highs of 16–26°C. Comfortable for walking and parks. These are the busiest months."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (July to August)",
+        "text": "Highs near 28–30°C with muggy nights. Plan indoor sights at midday and walk in the morning or evening."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 4–7°C and lows near or below 0°C. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "About 8–13 rain days a month. April and July are the wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is crisp and clear",
+        "text": "October highs near 19°C and fewer rain days. Great for parks and skyline views."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, a rain jacket and sunscreen for summer. A warm coat for winter."
+      }
+    ]
+  },
+  "transit": {
+    "best": "The subway for most trips; walk Manhattan's grid for short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The subway runs 24 hours. Tap OMNY (contactless) for $3.00 a ride, with a weekly fare cap."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses use the same fare. The M-routes cover Manhattan avenues."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Yellow cabs are metered (plus congestion surcharges). Uber and Lyft work everywhere."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving and parking in Manhattan are slow and expensive. Skip the car."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Manhattan's grid is easy to walk. 20 blocks north-south is about a mile."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The free Staten Island Ferry passes the Statue of Liberty."
+      }
+    ]
+  }
+}

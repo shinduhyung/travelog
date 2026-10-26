@@ -1,0 +1,546 @@
+{
+  "city": "Islamabad",
+  "checked": "October 2026",
+  "intro_line": "A planned green capital beneath the Margalla Hills.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Blue Area",
+        "F-6 / F-7",
+        "G-6 / G-8",
+        "E-7 / F-5"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Blue Area",
+        "F-6 / F-7",
+        "G-6 / G-8",
+        "E-7 / F-5"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Blue Area",
+        "F-6 / F-7",
+        "G-6 / G-8",
+        "E-7 / F-5"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Blue Area",
+        "F-6 / F-7",
+        "G-6 / G-8",
+        "E-7 / F-5"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Blue Area",
+        "F-6 / F-7",
+        "G-6 / G-8",
+        "E-7 / F-5"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 8,
+        "note": "January: cold days around 16°C and chilly nights near 6°C. Pack a warm layer."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 6,
+        "note": "February: mild and dry-ish; good for walking the Margalla trails."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 11,
+        "note": "March: pleasant spring, but expect about 11 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 29,
+        "low": 17,
+        "rain_days": 9,
+        "note": "April: warm and comfortable, around 29°C highs. A great month for sightseeing."
+      },
+      {
+        "high": 34,
+        "low": 21,
+        "rain_days": 7,
+        "note": "May: heating up to 34°C. Do outdoor sights early morning."
+      },
+      {
+        "high": 36,
+        "low": 24,
+        "rain_days": 6,
+        "note": "June: hot, highs near 36°C. Plan indoor sights at midday."
+      },
+      {
+        "high": 33,
+        "low": 25,
+        "rain_days": 20,
+        "note": "July: monsoon starts; about 20 rain days and humid nights. Keep plans flexible."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 19,
+        "note": "August: still wet and humid, around 19 rain days. Carry an umbrella."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 10,
+        "note": "September: rain eases; warm and green. Good for hills and viewpoints."
+      },
+      {
+        "high": 29,
+        "low": 17,
+        "rain_days": 4,
+        "note": "October: dry and comfortable, around 29°C. One of the best months to visit."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 5,
+        "note": "November: cool and clear, highs near 22°C. Excellent for walking and ruins."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 3,
+        "note": "December: crisp and cold, highs around 18°C. Layer up for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.55,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.6,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.4,
+      0.4,
+      0.7,
+      0.95,
+      0.85,
+      0.6
+    ],
+    "history": [
+      0.75,
+      0.8,
+      0.9,
+      0.9,
+      0.75,
+      0.6,
+      0.45,
+      0.45,
+      0.7,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "shopping": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.8
+    ]
+  },
+  "places": {
+    "faisal-mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon or sunset",
+      "area": "E-7 / F-5",
+      "popularity": 5
+    },
+    "pakistan-monument": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "E-7 / F-5",
+      "popularity": 5
+    },
+    "jinnah-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "G-6 / G-8",
+      "popularity": 3
+    },
+    "jungle-world": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday afternoons, cooler months",
+      "area": "G-6 / G-8",
+      "popularity": 2
+    },
+    "lake-view-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "E-7 / F-5",
+      "popularity": 3
+    },
+    "shakarparian": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "E-7 / F-5",
+      "popularity": 3
+    },
+    "taxila": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Cooler months, early start",
+      "area": "E-7 / F-5",
+      "popularity": 4
+    },
+    "saidpur-village": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "E-7 / F-5",
+      "popularity": 4
+    },
+    "daman-e-koh": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "E-7 / F-5",
+      "popularity": 4
+    },
+    "pir-sohawa": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "E-7 / F-5",
+      "popularity": 3
+    },
+    "margalla-trail": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Early morning, cooler months",
+      "area": "E-7 / F-5",
+      "popularity": 3
+    },
+    "f6-market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon or evening",
+      "area": "F-6 / F-7",
+      "popularity": 3
+    },
+    "blue-area": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Blue Area",
+      "popularity": 3
+    },
+    "melody-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Blue Area",
+      "popularity": 3
+    },
+    "lok-virsa": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; confirm opening days",
+      "area": "E-7 / F-5",
+      "popularity": 3
+    },
+    "rawal-lake": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "E-7 / F-5",
+      "popularity": 2
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning start",
+      "area": "Blue Area",
+      "popularity": 3
+    },
+    "f7-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "F-6 / F-7",
+      "popularity": 2
+    },
+    "golra-sharif": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "G-6 / G-8",
+      "popularity": 2
+    },
+    "safa-gold": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday heat",
+      "area": "F-6 / F-7",
+      "popularity": 2
+    },
+    "bari-imam": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "E-7 / F-5",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover Faisal Mosque, a Margalla Hills walk and a Taxila or Rawalpindi half-day without rushing."
+  },
+  "airports": [
+    {
+      "code": "ISB",
+      "name": "Islamabad International Airport",
+      "primary": true,
+      "note": "Main gateway, about 25 km west of the centre.",
+      "options": [
+        {
+          "mode": "Orange Metro Bus shuttle",
+          "to": "Peshawar Morr / G-9 interchange",
+          "price": "Rs 90",
+          "time": "45-60 min",
+          "note": "Shuttle leaves from the parking lot, row 22."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rs 3500-4500",
+          "time": "30-45 min",
+          "note": "Bargain hard and set the price before the ride."
+        },
+        {
+          "mode": "Careem / InDrive",
+          "to": "City centre",
+          "price": "Rs 2500-4000",
+          "time": "30-45 min",
+          "note": "Book in the app; often cheaper than street taxis."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Islamabad",
+      "https://en.wikivoyage.org/wiki/Islamabad"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Ride apps or taxis for most trips; the Metro Bus is cheap for the Islamabad–Rawalpindi run.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metro Bus red line links Islamabad with Rawalpindi Saddar; a single ticket is about Rs 30. The Orange line shuttle runs from the airport parking lot (row 22) to the Metro network for about Rs 90."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Blue and green bus lines use a separate ticketing system and run on regular roads."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are plentiful; agree the fare first, roughly Rs 200 per sector. Careem and InDrive are the local favourite; Careem Bike is cheapest."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Car hire with driver is easy. Useful for Taxila, Murree and hill trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Pleasant in the planned sectors, but distances are long. Use a ride for anything far."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cool dry winters, a hot pre-monsoon spring, a wet humid monsoon in July–August, and a dry pleasant autumn.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: October to April",
+        "text": "Mild to cool days and low rain. Ideal for Faisal Mosque, Taxila and the Margalla trails."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot before the monsoon (May–June)",
+        "text": "Highs of 34–36°C. Sightsee early morning and rest at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon in July–August",
+        "text": "About 19–20 rain days a month and humid nights. Short heavy showers; keep plans flexible."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Spring showers",
+        "text": "March has about 11 rain days. A light rain jacket helps on hill walks."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold winter nights",
+        "text": "January lows near 6°C and December near 7°C. Bring a warm jacket for evenings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Modest, breathable clothing; sturdy shoes for trails; a warm layer in winter; sun protection year-round."
+      }
+    ]
+  }
+}

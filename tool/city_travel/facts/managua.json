@@ -1,0 +1,174 @@
+{
+  "currency": "NIO",
+  "usd_rate": 36.8194,
+  "intro_line": "Managua: gritty capital where volcanoes and lake breezes meet.",
+  "intro": "Managua rewards visitors who look past its rough edges to find markets, lakefront life and easy trips to volcanoes and colonial towns. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Centro Histórico",
+    "Monseñor Lezcano",
+    "Bolonia",
+    "Carretera a Masaya"
+  ],
+  "taxi": {
+    "flag_day": 60,
+    "flag_airport": 250,
+    "per_km": 25,
+    "min_fare": 50
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram; travel is by bus, taxi or car.",
+    "City buses are numbered, cheap (about C$2.50) and stop early; no night service.",
+    "Bus 266 runs from Mercado Oriental to the airport along Carretera Norte.",
+    "Taxis are collective or private; agree the fare first. No Uber.",
+    "Ride apps are limited; arrange taxis by phone or hotel.",
+    "Driving is congested and addresses use landmarks, not street numbers.",
+    "Walking is possible downtown and at Puerto Salvador Allende; cycling is for the bold."
+  ],
+  "airports": [
+    {
+      "code": "MGA",
+      "name": "Augusto C. Sandino International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 8 km east of the centre.",
+      "options": [
+        {
+          "mode": "City bus 266",
+          "to": "Mercado Oriental / eastern city",
+          "price": "C$2.50",
+          "time": "40-60 min",
+          "note": "Walk out to Carretera Norte to catch it; watch for the terminal on your right."
+        },
+        {
+          "mode": "Commuter bus to Tipitapa",
+          "to": "Carretera Norte stops",
+          "price": "C$10-20",
+          "time": "30-50 min",
+          "note": "Ask the driver to stop at the airport."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "C$250-400",
+          "time": "20-35 min",
+          "note": "Agree the fare before you get in."
+        },
+        {
+          "mode": "Private transfer",
+          "to": "Any hotel",
+          "price": "C$400-700",
+          "time": "20-40 min",
+          "note": "Book ahead through your hotel for safety."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Puerto Salvador Allende",
+    "National Palace of Culture, Managua",
+    "Masaya Artisan Market",
+    "Nicaraguan Gallo Pinto"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Managua",
+      "https://en.wikivoyage.org/wiki/Managua"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    12.115,
+    -86.2362
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 3
+    },
+    {
+      "high": 33,
+      "low": 23,
+      "rain_days": 3
+    },
+    {
+      "high": 34,
+      "low": 23,
+      "rain_days": 3
+    },
+    {
+      "high": 35,
+      "low": 24,
+      "rain_days": 6
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 21
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 24
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 27
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 27
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 18
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "MGA taxi C$250-400 vs tariff estimate 520"
+  ]
+}

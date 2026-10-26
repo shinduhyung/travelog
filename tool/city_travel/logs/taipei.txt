@@ -1,0 +1,30 @@
+$ deepseek_facts.py Taipei
+  tokens in 4052 out 811
+Taipei: 0 problems
+
+$ deepseek_city.py Taipei --stage places
+Taipei: places
+  tokens in 1258 out 4418
+
+$ deepseek_city.py Taipei --stage frame
+Taipei: frame
+  tokens in 2431 out 1751
+  repaired JSON
+
+$ deepseek_city.py Taipei --stage plans
+Taipei: plans
+  plans for day
+  tokens in 2604 out 1025
+  plans for 1n
+  tokens in 2605 out 1077
+  plans for 2n
+  tokens in 2605 out 1565
+  plans for 3n
+  tokens in 2610 out 1624
+  plans for 4n
+  tokens in 2605 out 2027
+
+$ merge_city.py Taipei
+Taipei: 27 places, 16 plans, 0 errors, 0 warnings
+wrote itineraries/taipei.json and planner/taipei.json
+

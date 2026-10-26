@@ -1,0 +1,177 @@
+{
+  "currency": "KHR",
+  "usd_rate": 4060.1509,
+  "intro_line": "A chaotic, charming riverside capital waking to a new airport.",
+  "intro": "Phnom Penh rewards visitors with grand royal palaces, sobering history, and a buzzing riverside food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Riverside (Sisowath Quay)",
+    "Royal Palace area",
+    "BKK1",
+    "Tonle Bassac"
+  ],
+  "taxi": {
+    "flag_day": 4000,
+    "flag_airport": 8000,
+    "per_km": 2000,
+    "min_fare": 4000
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "No metro or tram; the city bus network has 13 lines running about 05:30-20:30.",
+    "City bus fare is 1,500 riel per ride; drivers give no change, so pay exact.",
+    "Tuk-tuks cost about US$2-3 in town and US$8 to the airport; agree the fare first.",
+    "Ride apps PassApp, Grab and TADA work well and show fixed prices, so no haggling.",
+    "Motorbikes rent for US$5-6 a day; traffic is chaotic and theft is common, so park in guarded areas.",
+    "Cyclos and bicycles are slow but scenic; bike hire is US$1-3 a day."
+  ],
+  "airports": [
+    {
+      "code": "PNH",
+      "name": "Techo International Airport",
+      "primary": true,
+      "note": "New main airport since 9 Sep 2025; about 20 km from the centre, so allow extra time.",
+      "options": [
+        {
+          "mode": "Airport Express Bus (AEB)",
+          "to": "Kouch Kanong Roundabout via AEON Mall 3",
+          "price": "1500 KHR",
+          "time": "about 1 hr",
+          "note": "Runs 05:30-23:30 every 10 min; pay exact, no change given."
+        },
+        {
+          "mode": "Grab / PassApp",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-60 min",
+          "note": "App price is fixed; drivers may need help with pickup points."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-60 min",
+          "note": "Agree the fare first; show clean, untorn dollar notes before paying."
+        },
+        {
+          "mode": "Tuk-tuk",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "Cheaper but slow and exposed to traffic fumes."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Royal Palace of Cambodia",
+    "Tuol Sleng Genocide Museum",
+    "Killing Field",
+    "Wat Phnom",
+    "National Museum of Cambodia",
+    "Mekong River",
+    "Independence Monument of Cambodia",
+    "Phsar Thmei",
+    "Phsar Tuol Tom Poung",
+    "Fish Amok"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Phnom Penh",
+      "https://en.wikivoyage.org/wiki/Phnom%20Penh"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    11.5564,
+    104.9282
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 4
+    },
+    {
+      "high": 33,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 34,
+      "low": 25,
+      "rain_days": 5
+    },
+    {
+      "high": 35,
+      "low": 26,
+      "rain_days": 14
+    },
+    {
+      "high": 34,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 24
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 24
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 28
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 16
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

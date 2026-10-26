@@ -1,0 +1,276 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Design, architecture and the cathedral skyline."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Suomenlinna fortress and the harbour's past."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Island ferries, parks and seaside walks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Kluuvi",
+      "range": [
+        120,
+        260
+      ],
+      "why": "Central and walkable: main station, trams and the big sights are minutes away.",
+      "center": [
+        60.17,
+        24.94
+      ]
+    },
+    {
+      "area": "Kruununhaka",
+      "range": [
+        130,
+        280
+      ],
+      "why": "Quiet old streets near the cathedral and Market Square; good for first-time sightseeing.",
+      "center": [
+        60.174,
+        24.955
+      ]
+    },
+    {
+      "area": "Kallio",
+      "range": [
+        90,
+        200
+      ],
+      "why": "Livelier and cheaper, with bars and cafés; a short tram or metro ride to the centre.",
+      "center": [
+        60.184,
+        24.95
+      ]
+    },
+    {
+      "area": "Kamppi",
+      "range": [
+        120,
+        270
+      ],
+      "why": "Bus and metro hub under one roof; handy for day trips and late arrivals.",
+      "center": [
+        60.168,
+        24.931
+      ]
+    }
+  ],
+  "food": [
+    "Try Finnish basics: salmon soup (lohikeitto), rye bread and Karelian pasties.",
+    "Market Square (Kauppatori) stalls sell snacks and berries in season; check opening hours on the day.",
+    "Lunch is often cheaper than dinner; look for weekday lunch offers in the centre.",
+    "Cafés serve cinnamon buns (korvapuusti) and strong filter coffee; Finns drink a lot of it.",
+    "Book popular restaurants ahead on weekends; many kitchens close earlier than in bigger cities."
+  ],
+  "more_time": [
+    "Take the ferry to Suomenlinna and give the fortress half a day.",
+    "Day-trip to Porvoo old town by bus; check timetables on the day.",
+    "In summer, hop a ferry to an island like Pihlajasaari for a swim and a walk."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.4,
+      0.6,
+      0.85,
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.4,
+      0.3
+    ],
+    "history": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ],
+    "family": [
+      0.4,
+      0.4,
+      0.5,
+      0.65,
+      0.85,
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.5,
+      0.4
+    ]
+  },
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two nights covers the cathedral, design district and a Suomenlinna ferry trip; add a night for island or Porvoo time."
+  },
+  "month_notes": [
+    "Coldest month: highs near -1°C, lows -6°C, snow possible. Pack warm layers.",
+    "Still deep winter, around 0°C high and -5°C low. Short days; museums are a good bet.",
+    "Slowly warming to 2°C high, but nights stay below freezing. Watch for icy pavements.",
+    "Spring arrives: highs near 7°C, lows around 0°C. Mixed sun and showers.",
+    "Milder at 14°C high; parks green up. Still bring a jacket for evenings.",
+    "Bright and pleasant: 19°C high, 12°C low. Long daylight hours.",
+    "Warmest month, 21°C high and 14°C low. Some rain days; pack a light rain layer.",
+    "Similar to July, around 20°C high. Good for ferries and island walks.",
+    "Cooling to 15°C high; autumn colours start. Bring a warm layer.",
+    "Chilly at 9°C high and 5°C low, with more rain days. Waterproof shoes help.",
+    "Dark and damp: 5°C high, 1°C low, frequent rain days. Plan indoor sights.",
+    "Winter returns: around 1°C high and -3°C low. Snow and ice possible; dress warmly."
+  ],
+  "climate_guide": {
+    "summary": "Northern city with cold winters and mild, bright summers. Rain falls year-round, so pack layers.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to August",
+        "text": "Highs around 19–21°C with long daylight. Ideal for ferries, islands and walking."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (Dec–Feb)",
+        "text": "Highs near -1 to 1°C and lows down to -6°C. Snow and ice are possible; wear warm, grippy shoes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect roughly 9–14 rain days a month. A light waterproof layer is worth packing all year."
+      },
+      {
+        "icon": "🌱",
+        "title": "Spring is slow",
+        "text": "March stays near freezing; April warms to about 7°C. Bring a jacket even on sunny days."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn cools fast",
+        "text": "September around 15°C, October about 9°C. Layers and waterproof shoes help."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and comfortable walking shoes. Add a warm hat and gloves from November to March."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Trams and walking in the centre; one HSL ticket covers metro, buses, trains and the Suomenlinna ferry.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Runs on the HSL ticket system; useful for east-west trips and to the main station."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams cover the centre well on the same HSL ticket. Buy by contactless card, HSL app or R kiosk; cash is not accepted on board."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses run on the HSL ticket system and reach areas trams don't. Same ticket rules apply."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Local trains are part of HSL. Airport trains need an ABC ticket; city centre travel needs AB."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The Suomenlinna ferry is included in the HSL ticket system."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis wait at ranks and the airport; Bolt and Uber operate in Helsinki."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy but parking is costly. Walking and trams cover the centre well, so a car is rarely needed."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and walkable. Bikes are popular in summer, with city bike stations widespread."
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+$ deepseek_facts.py Tirana
+  tokens in 6596 out 558
+Tirana: 0 problems
+
+$ deepseek_city.py Tirana --stage places
+Tirana: places
+  tokens in 1184 out 3621
+
+$ deepseek_city.py Tirana --stage frame
+Tirana: frame
+  tokens in 2441 out 1945
+
+$ deepseek_city.py Tirana --stage plans
+Tirana: plans
+  plans for day
+  tokens in 2392 out 945
+  plans for 1n
+  tokens in 2393 out 888
+  plans for 2n
+  tokens in 2398 out 1685
+  plans for 3n
+  tokens in 2393 out 2166
+
+$ merge_city.py Tirana
+Tirana: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/tirana.json and planner/tirana.json
+

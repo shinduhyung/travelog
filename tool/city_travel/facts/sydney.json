@@ -1,0 +1,227 @@
+{
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro_line": "Harbour city where ferries, beaches and bush meet.",
+  "intro": "Sydney rewards visitors with iconic harbour views, world-class beaches and easy day trips into national parks. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "The Rocks",
+    "Circular Quay",
+    "Darling Harbour",
+    "Bondi"
+  ],
+  "taxi": {
+    "flag_day": 3.6,
+    "flag_airport": 5.5,
+    "per_km": 2.2,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Trains, metro, light rail, ferries and buses run on one Opal card or contactless tap.",
+    "Ferries from Circular Quay are the scenic way to reach Manly, Taronga Zoo and Watsons Bay.",
+    "Buses fill the gaps in the inner suburbs; Google Maps and TripView show live times.",
+    "Taxis and Uber, DiDi and Ola all operate; taxis are easiest at ranks and the airport.",
+    "Driving is busy and tolled on most motorways; parking in the centre is costly.",
+    "The CBD is walkable; bikes and e-scooters suit the harbour foreshore paths."
+  ],
+  "airports": [
+    {
+      "code": "SYD",
+      "name": "Sydney Kingsford Smith International Airport",
+      "primary": true,
+      "note": "Main gateway, 9 km south of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Central Station and City",
+          "price": "$17-20",
+          "time": "15-25 min",
+          "note": "Airport line has a station access fee; tap on with Opal or contactless."
+        },
+        {
+          "mode": "Public bus 400",
+          "to": "Bondi Junction and Mascot",
+          "price": "$3-5",
+          "time": "30-45 min",
+          "note": "Cheapest option but slower and needs a change for the CBD."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre and The Rocks",
+          "price": "$40-55",
+          "time": "20-35 min",
+          "note": "Use the official rank outside arrivals."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "$35-50",
+          "time": "20-35 min",
+          "note": "Pick-up zones are signposted in the car parks."
+        }
+      ]
+    },
+    {
+      "code": "WSI",
+      "name": "Western Sydney International Airport",
+      "primary": false,
+      "note": "Opens October 2026, about 44 km west of the CBD.",
+      "options": [
+        {
+          "mode": "WSI Link bus + T1 train",
+          "to": "St Marys then Central",
+          "price": "under $10",
+          "time": "1.5 hr",
+          "note": "Free shuttle every 30 min from 4:30am; budget choice."
+        },
+        {
+          "mode": "Super Shuttle bus",
+          "to": "Sydney Central Station",
+          "price": "$55",
+          "time": "45-60 min",
+          "note": "Direct and simple with luggage."
+        },
+        {
+          "mode": "Super Shuttle bus",
+          "to": "Parramatta",
+          "price": "$25",
+          "time": "30-45 min",
+          "note": "Good for western suburbs stays."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-70 min",
+          "note": "Long trip; agree on tolls and route."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Sydney Opera House",
+    "Sydney Harbour Bridge",
+    "Bondi Beach",
+    "The Rocks",
+    "Darling Harbour",
+    "Royal Botanic Garden Sydney",
+    "Taronga Zoo Sydney",
+    "Fox Studios Australia (was part of Royal Agricultural Society Showground)",
+    "KAOS-Indoor Amusement arcade",
+    "Luna Park Sydney",
+    "Manly Beach",
+    "Manly Waterworks",
+    "Meat Pie",
+    "Queen Victoria Building",
+    "Royal Easter Show",
+    "SEA LIFE Sydney Aquarium",
+    "St Mary's Cathedral",
+    "Sydney Fish Market",
+    "Sydney Gay and Lesbian Mardi Gras",
+    "Sydney Harbour",
+    "Sydney Harbour Ferry",
+    "Sydney Tower Eye"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Sydney",
+      "https://en.wikivoyage.org/wiki/Sydney"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -33.8688,
+    151.2093
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 13
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 7
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 8
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport WSI unknown code"
+  ]
+}

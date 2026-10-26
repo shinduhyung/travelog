@@ -1,0 +1,32 @@
+$ deepseek_facts.py Poznań
+  tokens in 3003 out 794
+Poznań: 1 problems
+  - airport BER is 233 km away
+
+$ deepseek_city.py Poznań --stage places
+Poznań: places
+  tokens in 1142 out 3038
+
+$ deepseek_city.py Poznań --stage frame
+Poznań: frame
+  tokens in 2437 out 1804
+
+$ deepseek_city.py Poznań --stage plans
+Poznań: plans
+  plans for day
+  tokens in 2170 out 1202
+  plans for 1n
+  tokens in 2171 out 1425
+  plans for 2n
+  tokens in 2176 out 1281
+  plans for 3n
+  tokens in 2171 out 2342
+
+$ merge_city.py Poznań
+ERROR plan day-culture: unknown place 'old-town-square'
+ERROR plan day-budget: unknown place 'old-town-square'
+ERROR plan 2n-culture: unknown place 'old-town-square'
+ERROR plan 2n-food: unknown place 'old-town-square'
+ERROR plan 2n-budget: unknown place 'old-town-square'
+Poznań: 20 places, 13 plans, 5 errors, 0 warnings
+

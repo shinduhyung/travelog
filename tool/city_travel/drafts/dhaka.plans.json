@@ -1,0 +1,982 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Old Dhaka lanes, river life and rickshaw art, with a biriyani dinner.",
+      "days": [
+        {
+          "title": "Old Dhaka heritage morning",
+          "stops": [
+            {
+              "place": "olddhakawalk",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Book ahead. Start early before the heat and traffic."
+            },
+            {
+              "place": "lalbagh",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Check on the day."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Old Dhaka biriyani is heavy, so go easy if you have more walking planned."
+            },
+            {
+              "place": "buriganga",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Short boat ride in daylight only. Agree the price first."
+            }
+          ]
+        },
+        {
+          "title": "Palaces, mosques and rickshaws",
+          "stops": [
+            {
+              "place": "ahsan",
+              "at": "15:45",
+              "minutes": 75,
+              "note": "Closed Friday. Last entry is usually before closing time."
+            },
+            {
+              "place": "starmosque",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Outside prayer times. Dress modestly."
+            },
+            {
+              "place": "rickshaw",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Late afternoon light. Agree the fare before you start."
+            },
+            {
+              "place": "paturi",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Hilsa is best June to September."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Dhaka or Gulshan (quieter, short taxi to Old Dhaka)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around Dhaka eating: market breakfast, biriyani, hilsa and sweets.",
+      "days": [
+        {
+          "title": "Market breakfast to Old Dhaka dinner",
+          "stops": [
+            {
+              "place": "kawran",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Busiest early. Go with an empty stomach and small notes."
+            },
+            {
+              "place": "newmarket",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed some days, check on the day. Good for sweets and snacks."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Expect queues at the famous places."
+            },
+            {
+              "place": "buriganga",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk off lunch on the water. Daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Cafés and a hilsa dinner",
+          "stops": [
+            {
+              "place": "bananiwalk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Cafés and small shops. Good break from the crowds."
+            },
+            {
+              "place": "paturi",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Mustard hilsa is a Dhaka classic; check the day's fish and price."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Mughal forts and mosques in the morning, the 1971 story in the afternoon.",
+      "days": [
+        {
+          "title": "Mughal Old Dhaka",
+          "stops": [
+            {
+              "place": "lalbagh",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Go early for cooler air."
+            },
+            {
+              "place": "ahsan",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Closed Friday. Pink Palace on the river."
+            },
+            {
+              "place": "starmosque",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Outside prayer times. Small but beautiful tilework."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch nearby in Old Dhaka."
+            }
+          ]
+        },
+        {
+          "title": "1971 and the river",
+          "stops": [
+            {
+              "place": "shaheed",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Open daily in daylight. A quiet, moving memorial."
+            },
+            {
+              "place": "dhakeshwari",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Open daily roughly 06:00–20:00. Remove shoes before entering."
+            },
+            {
+              "place": "buriganga",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Late afternoon boat ride. Avoid after dark."
+            },
+            {
+              "place": "martyrs",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Open daily in daylight, so go before sunset. It is outside the city centre; allow travel time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan (central for both Old Dhaka and the memorial)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Old Dhaka in one day: rickshaws, river life and Mughal lanes, with a calm morning after.",
+      "days": [
+        {
+          "title": "Old Dhaka lanes and river",
+          "stops": [
+            {
+              "place": "olddhakawalk",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Book ahead. Start early while it is cool and quiet."
+            },
+            {
+              "place": "lalbagh",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Check on the day."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch. Old Dhaka biriyani is heavy, so go easy at dinner."
+            },
+            {
+              "place": "buriganga",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short boat ride. Daylight only, avoid after dark."
+            },
+            {
+              "place": "ahsan",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Closed Friday. Last entry is earlier than closing, so arrive by mid-afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Monuments and a slow finish",
+          "stops": [
+            {
+              "place": "shaheed",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Open daily in daylight. A short, moving stop."
+            },
+            {
+              "place": "dhakeshwari",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Open daily. Remove shoes before entering."
+            },
+            {
+              "place": "starmosque",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Outside prayer times only. Dress modestly."
+            },
+            {
+              "place": "newmarket",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed some days, check on the day. Good for gifts and snacks."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Old Dhaka, then a café afternoon in Banani.",
+      "days": [
+        {
+          "title": "Market mornings and Old Dhaka classics",
+          "stops": [
+            {
+              "place": "kawran",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Busiest early to midday. Go now for the freshest produce and snacks."
+            },
+            {
+              "place": "olddhakawalk",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Book ahead. Ask your guide for sweet shops and kebab stalls."
+            },
+            {
+              "place": "paturi",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Hilsa is best June to September; ask what is fresh."
+            },
+            {
+              "place": "buriganga",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk off lunch on the water. Daylight hours only."
+            },
+            {
+              "place": "biriyani",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner. Busy in the evening, so arrive early or expect a wait."
+            }
+          ]
+        },
+        {
+          "title": "Cafés and a mall",
+          "stops": [
+            {
+              "place": "bananiwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Cafés and small shops. Good for a slow brunch."
+            },
+            {
+              "place": "bashundhara",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Roughly 10:00–20:00, check on the day. Food court upstairs."
+            },
+            {
+              "place": "gulshanlake",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset walk. Paths are lit in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Mughal Dhaka and the 1971 story in one packed day.",
+      "days": [
+        {
+          "title": "Forts, palaces and the river",
+          "stops": [
+            {
+              "place": "lalbagh",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Early is cooler."
+            },
+            {
+              "place": "ahsan",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Closed Friday. The museum inside tells the city's trading history."
+            },
+            {
+              "place": "buriganga",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Boat ride past the old riverfront. Daylight only."
+            },
+            {
+              "place": "biriyani",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Late lunch in Old Dhaka."
+            },
+            {
+              "place": "armenian",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Often closed, check on the day. A quiet survivor of old Dhaka."
+            }
+          ]
+        },
+        {
+          "title": "1971 and the parliament",
+          "stops": [
+            {
+              "place": "shaheed",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Open daily in daylight. The language movement memorial."
+            },
+            {
+              "place": "martyrs",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Open daily in daylight. Allow extra time for the taxi out."
+            },
+            {
+              "place": "sangsad",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Visitor access by prior arrangement only, check on the day. Bring ID."
+            },
+            {
+              "place": "gulshanlake",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy sunset walk to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want Old Dhaka's lanes, river and rickshaw life at an easy pace.",
+      "days": [
+        {
+          "title": "Old Dhaka lanes and the river",
+          "stops": [
+            {
+              "place": "olddhakawalk",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Book ahead. Start early while it is cool and quiet."
+            },
+            {
+              "place": "lalbagh",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Check the day before."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Old Dhaka biriyani spots get busy at midday."
+            },
+            {
+              "place": "buriganga",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short boat ride in daylight only. Agree the price first."
+            },
+            {
+              "place": "rickshaw",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "A slow loop through the lanes before dark."
+            }
+          ]
+        },
+        {
+          "title": "Palaces, temples and markets",
+          "stops": [
+            {
+              "place": "ahsan",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Closed Friday. Late morning is calmest."
+            },
+            {
+              "place": "starmosque",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Visit outside prayer times. Dress modestly."
+            },
+            {
+              "place": "dhakeshwari",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Open daily. Remove shoes before entering."
+            },
+            {
+              "place": "newmarket",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Afternoon browse and a snack. Some days closed, check on the day."
+            },
+            {
+              "place": "gulshanlake",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset walk. Taxi from Old Dhaka takes a while in traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want biriyani, hilsa and market food, with a little sightseeing between meals.",
+      "days": [
+        {
+          "title": "Market morning, Old Dhaka evening",
+          "stops": [
+            {
+              "place": "kawran",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Go early when the market is busiest and freshest."
+            },
+            {
+              "place": "bananiwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Cafés and shops. Good for a late breakfast."
+            },
+            {
+              "place": "paturi",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Hilsa is best June to September."
+            },
+            {
+              "place": "shaheed",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short stop in daylight hours."
+            },
+            {
+              "place": "biriyani",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in Old Dhaka. Expect a queue at peak times."
+            }
+          ]
+        },
+        {
+          "title": "Sweets, river and a mall",
+          "stops": [
+            {
+              "place": "buriganga",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early boat ride, then breakfast nearby."
+            },
+            {
+              "place": "newmarket",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Snack stalls and shopping. Check opening days."
+            },
+            {
+              "place": "bashundhara",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Food court lunch and a cool break indoors."
+            },
+            {
+              "place": "gulshanlake",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset walk before dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors here for Mughal Dhaka and the 1971 story, with time for the memorials.",
+      "days": [
+        {
+          "title": "Mughal Old Dhaka",
+          "stops": [
+            {
+              "place": "lalbagh",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Early morning is coolest."
+            },
+            {
+              "place": "ahsan",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Closed Friday. Late morning works well."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch break."
+            },
+            {
+              "place": "armenian",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Often closed. Check on the day before you go."
+            },
+            {
+              "place": "shaheed",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Daylight hours only."
+            }
+          ]
+        },
+        {
+          "title": "1971 and beyond the city",
+          "stops": [
+            {
+              "place": "martyrs",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Outside the city centre. Allow travel time by car."
+            },
+            {
+              "place": "panam",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Daylight hours. Best in the cool months, Nov to Feb."
+            },
+            {
+              "place": "sangsad",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Visitor access by prior arrangement only. Check on the day."
+            },
+            {
+              "place": "gulshanlake",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening walk near your hotel."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want Old Dhaka lanes, river life and rickshaw art at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into Gulshan",
+          "stops": [
+            {
+              "place": "gulshanlake",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Flat loop around the lake. Good sunset light. Stay on lit paths after dark."
+            },
+            {
+              "place": "bananiwalk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Short ride from Gulshan. Cafés and small shops. Dinner here."
+            }
+          ]
+        },
+        {
+          "title": "Old Dhaka heritage day",
+          "stops": [
+            {
+              "place": "olddhakawalk",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Book ahead. Start early before the heat and traffic build."
+            },
+            {
+              "place": "lalbagh",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Bring water and a hat."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Old Dhaka biriyani is heavy, so go easy at breakfast."
+            },
+            {
+              "place": "ahsan",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Closed Friday. Pink Palace by the river."
+            },
+            {
+              "place": "buriganga",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Short boat ride in daylight only. Agree the price first."
+            }
+          ]
+        },
+        {
+          "title": "Monuments and markets",
+          "stops": [
+            {
+              "place": "shaheed",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Open-air memorial. Quiet in the morning."
+            },
+            {
+              "place": "dhakeshwari",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Remove shoes. Photography rules vary, so ask."
+            },
+            {
+              "place": "starmosque",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Visit outside prayer times. Dress modestly."
+            },
+            {
+              "place": "newmarket",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Busy and bargain-friendly. Closed some days, so check on the day."
+            },
+            {
+              "place": "rickshaw",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Fun way to cover the last lanes. Daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Memorial and departure",
+          "stops": [
+            {
+              "place": "martyrs",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Outside the city centre. Allow extra taxi time."
+            },
+            {
+              "place": "sangsad",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Visitor access by prior arrangement only. Check on the day."
+            },
+            {
+              "place": "bashundhara",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch and last-minute shopping before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want biriyani, kebabs, river fish and market snacks without rushing.",
+      "days": [
+        {
+          "title": "Arrive and eat in Banani",
+          "stops": [
+            {
+              "place": "bananiwalk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Café strip. Good for a light first evening."
+            },
+            {
+              "place": "gulshanlake",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Walk off dinner. Lit paths in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Old Dhaka food crawl",
+          "stops": [
+            {
+              "place": "kawran",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Busiest early. Go with a local if you can."
+            },
+            {
+              "place": "olddhakawalk",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book ahead. Ask the guide for snack stops."
+            },
+            {
+              "place": "paturi",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Hilsa is best June–September."
+            },
+            {
+              "place": "ahsan",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Closed Friday. Walk it off before the next meal."
+            },
+            {
+              "place": "biriyani",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Busy in the evening, so arrive early."
+            }
+          ]
+        },
+        {
+          "title": "Markets and sweets",
+          "stops": [
+            {
+              "place": "newmarket",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Snack as you go. Closed some days, so check on the day."
+            },
+            {
+              "place": "starmosque",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Quick stop outside prayer times."
+            },
+            {
+              "place": "dhakeshwari",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Nearby. Remove shoes before entering."
+            },
+            {
+              "place": "bashundhara",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Food court and air conditioning in the afternoon heat."
+            }
+          ]
+        },
+        {
+          "title": "River and departure",
+          "stops": [
+            {
+              "place": "buriganga",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early morning is cooler and calmer. Daylight only."
+            },
+            {
+              "place": "rickshaw",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Short loop through the lanes."
+            },
+            {
+              "place": "paturi",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Early lunch before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want Mughal Dhaka, the 1971 story and colonial-era streets.",
+      "days": [
+        {
+          "title": "Arrive and the 1971 story",
+          "stops": [
+            {
+              "place": "martyrs",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Outside the centre. Allow extra taxi time."
+            },
+            {
+              "place": "sangsad",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Visitor access by prior arrangement only. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Mughal and colonial Old Dhaka",
+          "stops": [
+            {
+              "place": "lalbagh",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Coolest early."
+            },
+            {
+              "place": "ahsan",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Closed Friday. Riverside palace."
+            },
+            {
+              "place": "armenian",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Often closed. Check on the day."
+            },
+            {
+              "place": "biriyani",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "buriganga",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "River view of the old waterfront. Daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Memorials and temples",
+          "stops": [
+            {
+              "place": "shaheed",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Language movement memorial. Quiet in the morning."
+            },
+            {
+              "place": "dhakeshwari",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "One of the city's oldest temples. Remove shoes."
+            },
+            {
+              "place": "starmosque",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Outside prayer times. Dress modestly."
+            },
+            {
+              "place": "olddhakawalk",
+              "at": "11:30",
+              "minutes": 180,
+              "note": "Book ahead. Ask for the history angle."
+            }
+          ]
+        },
+        {
+          "title": "Day trip and departure",
+          "stops": [
+            {
+              "place": "panam",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Outside the city, so allow travel time each way. Check on the day."
+            },
+            {
+              "place": "bashundhara",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Lunch and shopping before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Gulshan or Banani"
+    }
+  ]
+}

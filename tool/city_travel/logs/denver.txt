@@ -1,0 +1,33 @@
+$ deepseek_prep.py Denver
+  tokens in 715 out 333
+Denver: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Denver
+  tokens in 4070 out 552
+Denver: 0 problems
+
+$ deepseek_city.py Denver --stage places
+Denver: places
+  tokens in 1171 out 3693
+
+$ deepseek_city.py Denver --stage frame
+Denver: frame
+  tokens in 2424 out 1836
+
+$ deepseek_city.py Denver --stage plans
+Denver: plans
+  plans for day
+  tokens in 2329 out 839
+  plans for 1n
+  tokens in 2330 out 1025
+  plans for 2n
+  tokens in 2335 out 1136
+  plans for 3n
+  tokens in 2330 out 1960
+  plans for 4n
+  tokens in 2330 out 1863
+
+$ merge_city.py Denver
+Denver: 23 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/denver.json and planner/denver.json
+

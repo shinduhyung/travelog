@@ -1,0 +1,1284 @@
+{
+  "city": "Manila",
+  "checked": "October 2026",
+  "currency": "PHP",
+  "usd_rate": 63.5266,
+  "intro": "Manila rewards visitors who look past the traffic to find Intramuros, old Binondo, and a restless food scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 14.5186,
+      "west": 120.9523,
+      "north": 14.6674,
+      "east": 121.1189,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 50,
+      "flag_airport": 70,
+      "per_km": 15,
+      "min_fare": 50
+    },
+    "road_factor": 1.4,
+    "city_kmh": 18,
+    "notes": [
+      "LRT Line 1 (green) links Malate, Ermita, Quiapo, Binondo and Santa Cruz; most sights sit along it.",
+      "LRT Line 2 (blue) serves Quiapo, Sampaloc and Santa Mesa; trains are packed at rush hour.",
+      "City buses start around PHP 16 and provincial buses around PHP 12; route numbers are shown on the bus.",
+      "Jeepneys start around PHP 10 for the first 4 km; routes are painted on the sides, not numbered.",
+      "Grab, Angkas, Gojek, Joyride and MyTaxi.PH ride apps work; taxis are plentiful but insist on the meter.",
+      "Tricycles, pedicabs and calesa horse carriages cover short trips; a one-hour calesa ride costs around PHP 50-70."
+    ],
+    "sources": []
+  },
+  "places": {
+    "intramuros": {
+      "name": "Intramuros",
+      "landmark": "Intramuros",
+      "kind": "sight",
+      "lat": 14.5896,
+      "lon": 120.9747,
+      "price": 0,
+      "price_text": "Free to walk · museum and church fees extra",
+      "hours": "Walled city streets always open · museums usually 09:00–17:00, check on the day",
+      "tip": "Walk or take a kalesa (horse cart) inside the walls; agree the fare before you ride.",
+      "source": "https://intramuros.gov.ph/"
+    },
+    "fort-santiago": {
+      "name": "Fort Santiago",
+      "landmark": "Fort Santiago",
+      "kind": "sight",
+      "lat": 14.5941,
+      "lon": 120.9704,
+      "price": 75,
+      "price_text": "Around PHP 75 for adults · students and seniors discounted · check on the day",
+      "hours": "Daily roughly 08:00–18:00 · check on the day",
+      "tip": "See the Rizal shrine and walk the walls for river views.",
+      "source": "https://intramuros.gov.ph/fs/"
+    },
+    "san-agustin": {
+      "name": "San Agustin Church",
+      "landmark": "San Agustin Church",
+      "kind": "sight",
+      "lat": 14.5893,
+      "lon": 120.9752,
+      "price": 200,
+      "price_text": "Museum entry around PHP 200 · church visit may be free · check on the day",
+      "hours": "Church open daily · museum roughly 08:00–12:00 and 13:00–18:00 · check on the day",
+      "tip": "The oldest stone church in the country; the attached museum is worth the small fee.",
+      "source": "https://sanagustinchurch.org/"
+    },
+    "rizal-park": {
+      "name": "Rizal Park",
+      "landmark": "Rizal Park",
+      "kind": "park",
+      "lat": 14.5826,
+      "lon": 120.9787,
+      "price": 0,
+      "price_text": "Free · some gardens and museums charge",
+      "hours": "Roughly 05:00–21:00 daily · check on the day",
+      "tip": "Go early for locals exercising; the Rizal Monument is the photo stop.",
+      "source": "https://www.nhcp.gov.ph/"
+    },
+    "abs-cbn": {
+      "name": "ABS-CBN Studios Experience (Closed)",
+      "landmark": "ABS-CBN Studios Experience (Closed)",
+      "kind": "museum",
+      "lat": 14.6508,
+      "lon": 121.0505,
+      "price": null,
+      "price_text": "Closed · do not plan a visit",
+      "hours": "Closed",
+      "tip": "This attraction is closed; skip it and check local listings for anything similar.",
+      "source": ""
+    },
+    "adobo": {
+      "name": "Adobo (classic Filipino dish)",
+      "landmark": "Adobo",
+      "kind": "food",
+      "lat": 14.5995,
+      "lon": 120.9842,
+      "price": 250,
+      "price_text": "Around PHP 150–400 per plate in casual restaurants · check on the day",
+      "hours": "Depends on the restaurant",
+      "tip": "Try both the pork and chicken versions; every family has its own recipe.",
+      "source": ""
+    },
+    "binondo": {
+      "name": "Binondo",
+      "landmark": "Binondo",
+      "kind": "sight",
+      "lat": 14.6002,
+      "lon": 120.9745,
+      "price": 0,
+      "price_text": "Free to walk · food tour fees extra",
+      "hours": "Streets busy roughly 08:00–20:00 · many shops close Sunday",
+      "tip": "The world's oldest Chinatown; come hungry for dumplings and hopia.",
+      "source": ""
+    },
+    "bhs": {
+      "name": "Bonifacio High Street",
+      "landmark": "Bonifacio High Street",
+      "kind": "sight",
+      "lat": 14.5517,
+      "lon": 121.0505,
+      "price": 0,
+      "price_text": "Free to walk · shops and food extra",
+      "hours": "Malls roughly 10:00–22:00 · park always open",
+      "tip": "Good for an evening stroll, coffee and people-watching in BGC.",
+      "source": ""
+    },
+    "chooks": {
+      "name": "Chooks-to-Go",
+      "landmark": "Chooks-to-Go",
+      "kind": "food",
+      "lat": 14.5547,
+      "lon": 121.0244,
+      "price": 120,
+      "price_text": "Around PHP 90–200 for roast chicken meals · check on the day",
+      "hours": "Most branches roughly 09:00–21:00",
+      "tip": "Cheap roast chicken to take away; a quick budget meal.",
+      "source": ""
+    },
+    "christmasaya": {
+      "name": "ChristmaSaya Carnival",
+      "landmark": "ChristmaSaya Carnival",
+      "kind": "activity",
+      "lat": 14.6508,
+      "lon": 121.1009,
+      "price": null,
+      "price_text": "Ride tickets sold on site · prices vary by season · check on the day",
+      "hours": "Seasonal, often evening hours · check on the day",
+      "tip": "A seasonal fair; confirm dates and location before you go.",
+      "source": ""
+    },
+    "circle-of-fun": {
+      "name": "Circle of Fun",
+      "landmark": "Circle of Fun",
+      "kind": "activity",
+      "lat": 14.6508,
+      "lon": 121.0505,
+      "price": null,
+      "price_text": "Ride tickets sold on site · check on the day",
+      "hours": "Roughly afternoon to evening · check on the day",
+      "tip": "Small carnival rides; good with kids, confirm it is open that day.",
+      "source": ""
+    },
+    "dreamplay": {
+      "name": "DreamPlay",
+      "landmark": "DreamPlay",
+      "kind": "activity",
+      "lat": 14.5369,
+      "lon": 120.9856,
+      "price": null,
+      "price_text": "Ticket prices vary · check on the day",
+      "hours": "Roughly 10:00–21:00 · check on the day",
+      "tip": "Indoor family play area near the bay; confirm it is open before travelling.",
+      "source": ""
+    },
+    "fiesta-carnival": {
+      "name": "Fiesta Carnival",
+      "landmark": "Fiesta Carnival",
+      "kind": "activity",
+      "lat": 14.5818,
+      "lon": 121.0712,
+      "price": null,
+      "price_text": "Ride tickets sold on site · check on the day",
+      "hours": "Roughly 10:00–21:00 · check on the day",
+      "tip": "Indoor carnival rides at a mall; check opening hours on the day.",
+      "source": ""
+    },
+    "greenbelt": {
+      "name": "Greenbelt",
+      "landmark": "Greenbelt",
+      "kind": "sight",
+      "lat": 14.552,
+      "lon": 121.0204,
+      "price": 0,
+      "price_text": "Free to walk · shops and food extra",
+      "hours": "Malls roughly 10:00–22:00",
+      "tip": "Shaded gardens and chapels between the malls; a calm break in Makati.",
+      "source": ""
+    },
+    "jollibee": {
+      "name": "Jollibee",
+      "landmark": "Jollibee",
+      "kind": "food",
+      "lat": 14.5547,
+      "lon": 121.0244,
+      "price": 120,
+      "price_text": "Around PHP 80–200 per meal · check on the day",
+      "hours": "Most branches roughly 07:00–22:00",
+      "tip": "Try Chickenjoy with rice; branches are everywhere and cheap.",
+      "source": "https://www.jollibee.com.ph/"
+    },
+    "kidzania": {
+      "name": "KidZania Manila (Closed)",
+      "landmark": "KidZania Manila (Closed)",
+      "kind": "activity",
+      "lat": 14.5552,
+      "lon": 121.0505,
+      "price": null,
+      "price_text": "Closed · do not plan a visit",
+      "hours": "Closed",
+      "tip": "This attraction is closed; skip it.",
+      "source": ""
+    },
+    "mang-inasal": {
+      "name": "Mang Inasal",
+      "landmark": "Mang Inasal",
+      "kind": "food",
+      "lat": 14.5547,
+      "lon": 121.0244,
+      "price": 150,
+      "price_text": "Around PHP 100–250 per meal · check on the day",
+      "hours": "Most branches roughly 09:00–22:00",
+      "tip": "Grilled chicken with unlimited rice; a cheap, filling local chain meal.",
+      "source": "https://www.manginasal.com/"
+    },
+    "baywalk": {
+      "name": "Manila Baywalk",
+      "landmark": "Manila Baywalk",
+      "kind": "sight",
+      "lat": 14.5647,
+      "lon": 120.984,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · busiest at sunset",
+      "tip": "Come for the sunset over the bay; keep valuables close in the evening.",
+      "source": ""
+    },
+    "ocean-park": {
+      "name": "Manila Ocean Park",
+      "landmark": "Manila Ocean Park",
+      "kind": "museum",
+      "lat": 14.5794,
+      "lon": 120.9729,
+      "price": null,
+      "price_text": "Ticket bundles vary · check on the day",
+      "hours": "Roughly 10:00–18:00 · check on the day",
+      "tip": "Good rainy-day option with kids; buy tickets online to skip queues.",
+      "source": "https://www.manilaoceanpark.com/"
+    },
+    "quiapo": {
+      "name": "Quiapo Market",
+      "landmark": "Quiapo Market",
+      "kind": "food",
+      "lat": 14.5986,
+      "lon": 120.9839,
+      "price": 0,
+      "price_text": "Free to enter · pay per item",
+      "hours": "Roughly 06:00–19:00 · busiest Friday",
+      "tip": "Crowded and lively; watch your bag and go with a local if you can.",
+      "source": ""
+    },
+    "sm-by-the-bay": {
+      "name": "SM By the Bay Amusement Park",
+      "landmark": "SM By the Bay Amusement Park",
+      "kind": "activity",
+      "lat": 14.5369,
+      "lon": 120.9856,
+      "price": null,
+      "price_text": "Ride tickets sold on site · check on the day",
+      "hours": "Roughly afternoon to evening · check on the day",
+      "tip": "Rides by the bay; the Ferris wheel view at sunset is the draw.",
+      "source": ""
+    },
+    "moa": {
+      "name": "SM Mall of Asia",
+      "landmark": "SM Mall of Asia",
+      "kind": "sight",
+      "lat": 14.5352,
+      "lon": 120.9826,
+      "price": 0,
+      "price_text": "Free to enter · shops and food extra",
+      "hours": "Roughly 10:00–22:00",
+      "tip": "Huge mall by the bay; walk the waterfront behind it at sunset.",
+      "source": "https://www.smsupermalls.com/mall-directory/sm-mall-of-asia/information"
+    },
+    "binondo-food-tour": {
+      "name": "Binondo food walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 14.6002,
+      "lon": 120.9747,
+      "price": 1200,
+      "price_text": "Around PHP 800–1,800 per person · check on the day",
+      "hours": "Tours usually morning or afternoon",
+      "tip": "A guided tasting walk is the easiest way to try many Chinese-Filipino dishes.",
+      "source": ""
+    },
+    "legazpi-market": {
+      "name": "Legazpi Public Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 14.5565,
+      "lon": 121.0244,
+      "price": 0,
+      "price_text": "Free to enter · pay per item",
+      "hours": "Roughly 05:00–19:00",
+      "tip": "Local wet market in Makati; go early for the freshest produce and cheap eats.",
+      "source": ""
+    },
+    "paco-park": {
+      "name": "Paco Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 14.5794,
+      "lon": 120.9922,
+      "price": 0,
+      "price_text": "Free or small fee · check on the day",
+      "hours": "Roughly 07:00–17:00 · check on the day",
+      "tip": "Quiet old cemetery-turned-garden; a calm stop between Intramuros sights.",
+      "source": ""
+    },
+    "escolta-walk": {
+      "name": "Escolta street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 14.5967,
+      "lon": 120.9788,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daytime hours; some shops close Sunday",
+      "tip": "Old commercial street with heritage buildings and small cafes; walk it in daylight.",
+      "source": ""
+    },
+    "bay-sunset-cruise": {
+      "name": "Manila Bay sunset cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 14.5794,
+      "lon": 120.9725,
+      "price": 800,
+      "price_text": "Around PHP 500–1,500 per person · check on the day",
+      "hours": "Usually late afternoon departures",
+      "tip": "Book ahead and confirm the meeting point; sunset is the best slot.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day inside the old walled city, best started early before the heat.",
+      "days": [
+        {
+          "title": "Intramuros on foot, then the bay at sunset",
+          "stops": [
+            {
+              "place": "intramuros",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Start early. Streets are always open; museums open around 09:00."
+            },
+            {
+              "place": "fort-santiago",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Rizal's story and the river views. Bring water and a hat."
+            },
+            {
+              "place": "san-agustin",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "The oldest stone church in the city. Museum closes for lunch around noon."
+            },
+            {
+              "place": "adobo",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby. Pick a busy local restaurant and try chicken adobo."
+            },
+            {
+              "place": "escolta-walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short walk through old commercial streets. Some shops close Sunday."
+            },
+            {
+              "place": "rizal-park",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "About 20 minutes by taxi. Shady in late afternoon."
+            },
+            {
+              "place": "baywalk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Walk south along the bay for sunset. Watch your belongings."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Intramuros or Ermita"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of eating: Binondo in the morning, Filipino classics and mall food later.",
+      "days": [
+        {
+          "title": "Binondo noodles, market snacks and a bay dinner",
+          "stops": [
+            {
+              "place": "binondo",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Go early. Many shops close Sunday. Come hungry."
+            },
+            {
+              "place": "binondo-food-tour",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Optional guided walk if you want the stories behind the food. Book ahead."
+            },
+            {
+              "place": "quiapo",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Short walk away. Busiest Friday; keep bags close."
+            },
+            {
+              "place": "adobo",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch of adobo and rice. Restaurants vary, so check on the day."
+            },
+            {
+              "place": "moa",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "About 30 minutes by taxi. Food court and bay views at sunset."
+            },
+            {
+              "place": "baywalk",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Optional stroll by the water after dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Binondo or Ermita"
+    },
+    {
+      "id": "day-shopping",
+      "length": "day",
+      "style": "shopping",
+      "nights": 0,
+      "for": "Malls and markets in one day, from bargain hunting to air-conditioned Makati.",
+      "days": [
+        {
+          "title": "Quiapo bargains, then Makati malls",
+          "stops": [
+            {
+              "place": "quiapo",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is calmer. Avoid Friday. Cash is easier here."
+            },
+            {
+              "place": "jollibee",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Quick early lunch. Most branches open from about 07:00."
+            },
+            {
+              "place": "greenbelt",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "About 30 minutes by taxi or Grab. Shaded walkways between malls."
+            },
+            {
+              "place": "bhs",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Short taxi ride. Open-air park and shops; better in late afternoon."
+            },
+            {
+              "place": "mang-inasal",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Chicken inasal snack or early dinner."
+            },
+            {
+              "place": "moa",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Big mall by the bay. Stay for sunset and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Makati"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One full day inside the old walled city, with the bay at sunset.",
+      "days": [
+        {
+          "title": "Intramuros on foot",
+          "stops": [
+            {
+              "place": "fort-santiago",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Start early, before the heat. Rizal's shrine is inside."
+            },
+            {
+              "place": "san-agustin",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk south. The museum closes for lunch, so go before noon."
+            },
+            {
+              "place": "adobo",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby in Intramuros. Try chicken adobo with rice."
+            },
+            {
+              "place": "intramuros",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Walk the walls and side streets. Carry water and a hat."
+            },
+            {
+              "place": "baywalk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Short ride west for the sunset over Manila Bay."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Intramuros & Ermita"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Binondo's noodle houses by day, mall food and a bay sunset at night.",
+      "days": [
+        {
+          "title": "Binondo and Quiapo eating",
+          "stops": [
+            {
+              "place": "binondo-food-tour",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book ahead. Come hungry and bring cash for small stalls."
+            },
+            {
+              "place": "quiapo",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Short walk east. Busiest on Fridays, so avoid that day."
+            },
+            {
+              "place": "binondo",
+              "at": "14:15",
+              "minutes": 150,
+              "note": "Wander the side streets for snacks. Many shops close Sunday."
+            },
+            {
+              "place": "moa",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Taxi south. Eat dinner here, then walk to the bay."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Binondo & Ermita"
+    },
+    {
+      "id": "1n-shopping",
+      "length": "1n",
+      "style": "shopping",
+      "nights": 1,
+      "for": "Old-city history in the morning, then Makati malls into the evening.",
+      "days": [
+        {
+          "title": "Markets, then Makati",
+          "stops": [
+            {
+              "place": "quiapo",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go early for bargains and fewer crowds. Cash only at most stalls."
+            },
+            {
+              "place": "jollibee",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Quick early lunch. Most branches open from about 07:00."
+            },
+            {
+              "place": "greenbelt",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Taxi to Makati. Shaded walkways between the malls."
+            },
+            {
+              "place": "bhs",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Short ride away. Best in late afternoon and evening."
+            },
+            {
+              "place": "mang-inasal",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Early dinner. Chicken inasal with rice."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Makati"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-time visitors who want the old city walls, Rizal's story and a bay sunset, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the walled city",
+          "stops": [
+            {
+              "place": "intramuros",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Start at the walls and get your bearings. Hot at midday, so go slow and drink water."
+            },
+            {
+              "place": "fort-santiago",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Rizal's story and the riverside walls. Last entry is usually before closing, so check on the day."
+            },
+            {
+              "place": "adobo",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner nearby. Classic Filipino adobo is a good first meal."
+            }
+          ]
+        },
+        {
+          "title": "Churches, park and bay sunset",
+          "stops": [
+            {
+              "place": "san-agustin",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Quietest in the morning. The museum may close over lunch, so go early."
+            },
+            {
+              "place": "rizal-park",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "About 15 minutes on foot from Intramuros. Shady in the morning."
+            },
+            {
+              "place": "paco-park",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "A short taxi ride away. A calm old cemetery-park."
+            },
+            {
+              "place": "baywalk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Come back for sunset over the bay. Busiest right at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Intramuros or Ermita"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around eating: Binondo noodle houses, markets and Filipino classics.",
+      "days": [
+        {
+          "title": "Binondo and Quiapo food day",
+          "stops": [
+            {
+              "place": "binondo-food-tour",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "A guided walk is the easy way to find the good stalls. Book ahead."
+            },
+            {
+              "place": "binondo",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Wander on your own after the tour. Many shops close Sunday."
+            },
+            {
+              "place": "quiapo",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Busy market streets. Avoid Friday, the busiest day. Watch your bag."
+            },
+            {
+              "place": "adobo",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sit-down dinner back in Ermita."
+            }
+          ]
+        },
+        {
+          "title": "Makati market and malls",
+          "stops": [
+            {
+              "place": "legazpi-market",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Go early for the freshest food and the least heat."
+            },
+            {
+              "place": "jollibee",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "A quick local breakfast or snack."
+            },
+            {
+              "place": "greenbelt",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Lunch and a walk around the gardens and shops."
+            },
+            {
+              "place": "bhs",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon is best. Food and shops along the open street."
+            },
+            {
+              "place": "mang-inasal",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Chicken inasal for an early dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ermita or Makati"
+    },
+    {
+      "id": "2n-shopping",
+      "length": "2n",
+      "style": "shopping",
+      "nights": 2,
+      "for": "Shoppers who want the big malls, bargain markets and an easy bay-side evening.",
+      "days": [
+        {
+          "title": "Makati malls",
+          "stops": [
+            {
+              "place": "greenbelt",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Malls usually open around 10:00. Lunch here is easy."
+            },
+            {
+              "place": "bhs",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "A short taxi or walk from Greenbelt. Outdoor street with shops and cafes."
+            },
+            {
+              "place": "jollibee",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Quick snack break."
+            },
+            {
+              "place": "chooks",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Fast roast chicken for dinner. Most branches close around 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Bargains and the bay",
+          "stops": [
+            {
+              "place": "quiapo",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is calmer. Avoid Friday. Keep valuables close."
+            },
+            {
+              "place": "binondo",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk over for lunch and small shops. Many close Sunday."
+            },
+            {
+              "place": "moa",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Big mall by the bay. Taxi is easiest with bags."
+            },
+            {
+              "place": "sm-by-the-bay",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Next to the mall. Rides and sunset views. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Makati or Malate"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the old city at an easy pace, with one day for markets and one for the bay.",
+      "days": [
+        {
+          "title": "Arrive and walk the walls",
+          "stops": [
+            {
+              "place": "intramuros",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Start at the walls and wander the streets. Hot at midday, so go slow and carry water."
+            },
+            {
+              "place": "san-agustin",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Quietest in the morning, but late afternoon is cooler. Museum hours can vary, check on the day."
+            },
+            {
+              "place": "adobo",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner nearby. Ask the hotel for a good local spot."
+            }
+          ]
+        },
+        {
+          "title": "Fort Santiago and Rizal Park",
+          "stops": [
+            {
+              "place": "fort-santiago",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go early before the heat. Roughly 08:00–18:00, check on the day."
+            },
+            {
+              "place": "rizal-park",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Short walk south. Open roughly 05:00–21:00."
+            },
+            {
+              "place": "paco-park",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "A short ride away. Morning is best."
+            },
+            {
+              "place": "ocean-park",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Good for the hot afternoon or rain. Roughly 10:00–18:00, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Binondo and Escolta",
+          "stops": [
+            {
+              "place": "binondo",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Streets busy roughly 08:00–20:00. Many shops close Sunday, so pick a weekday."
+            },
+            {
+              "place": "binondo-food-tour",
+              "at": "11:30",
+              "minutes": 180,
+              "note": "Book ahead. Tours usually run morning or afternoon. This covers lunch."
+            },
+            {
+              "place": "escolta-walk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Daytime walk past old buildings. Some shops close Sunday."
+            },
+            {
+              "place": "baywalk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset by the water. Busiest at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "quiapo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Busiest Friday, so avoid it. Roughly 06:00–19:00."
+            },
+            {
+              "place": "jollibee",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick early lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Intramuros or Ermita"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want Binondo noodles, market snacks and easy mall meals between sights.",
+      "days": [
+        {
+          "title": "Arrive and eat in Binondo",
+          "stops": [
+            {
+              "place": "binondo",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Streets busy roughly 08:00–20:00. Many shops close Sunday."
+            },
+            {
+              "place": "binondo-food-tour",
+              "at": "15:30",
+              "minutes": 180,
+              "note": "Book ahead. Tours usually morning or afternoon. This covers dinner."
+            },
+            {
+              "place": "baywalk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Walk off the food at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Markets and old town",
+          "stops": [
+            {
+              "place": "quiapo",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Morning is best. Avoid Friday crowds."
+            },
+            {
+              "place": "intramuros",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Wander the walls between snacks."
+            },
+            {
+              "place": "adobo",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Classic Filipino dish, depends on the restaurant."
+            },
+            {
+              "place": "san-agustin",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Cool and quiet inside. Museum hours can vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Makati food day",
+          "stops": [
+            {
+              "place": "legazpi-market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early morning is best. Roughly 05:00–19:00."
+            },
+            {
+              "place": "greenbelt",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Malls roughly 10:00–22:00. Good for a coffee stop."
+            },
+            {
+              "place": "mang-inasal",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch. Most branches roughly 09:00–22:00."
+            },
+            {
+              "place": "bhs",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late afternoon and evening are best here."
+            },
+            {
+              "place": "chooks",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Quick dinner. Most branches roughly 09:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Bay views, then fly",
+          "stops": [
+            {
+              "place": "moa",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Roughly 10:00–22:00. Many food choices inside."
+            },
+            {
+              "place": "jollibee",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Fast lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Binondo or Ermita"
+    },
+    {
+      "id": "3n-shopping",
+      "length": "3n",
+      "style": "shopping",
+      "nights": 3,
+      "for": "Shoppers who want Makati malls, bargain markets and a bay sunset between buys.",
+      "days": [
+        {
+          "title": "Arrive and Makati malls",
+          "stops": [
+            {
+              "place": "greenbelt",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Malls roughly 10:00–22:00."
+            },
+            {
+              "place": "bhs",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon and evening are best. Park always open."
+            },
+            {
+              "place": "mang-inasal",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Dinner. Most branches roughly 09:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Bargains in the old city",
+          "stops": [
+            {
+              "place": "quiapo",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Morning is best. Avoid Friday crowds."
+            },
+            {
+              "place": "binondo",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Many shops close Sunday, so pick a weekday."
+            },
+            {
+              "place": "adobo",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Depends on the restaurant."
+            },
+            {
+              "place": "intramuros",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Walls and small shops. Streets always open."
+            }
+          ]
+        },
+        {
+          "title": "Bay day",
+          "stops": [
+            {
+              "place": "moa",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Roughly 10:00–22:00."
+            },
+            {
+              "place": "jollibee",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick lunch."
+            },
+            {
+              "place": "sm-by-the-bay",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset and evening are best. Hours vary, check on the day."
+            },
+            {
+              "place": "baywalk",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Walk by the water at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Last buys, then fly",
+          "stops": [
+            {
+              "place": "legazpi-market",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early morning is best. Roughly 05:00–19:00."
+            },
+            {
+              "place": "chooks",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Quick bite before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Makati"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Intramuros walls, Fort Santiago and Rizal's story."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Binondo noodle houses and sizzling Filipino plates."
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "blurb": "Malls in Makati and bargain hunting in Divisoria."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Ermita",
+      "range": [
+        1500,
+        4500
+      ],
+      "why": "Walk to Rizal Park and the Intramuros gates; LRT Line 1 stops nearby. Good mix of budget and mid-range hotels.",
+      "center": [
+        14.579,
+        120.978
+      ]
+    },
+    {
+      "area": "Malate",
+      "range": [
+        1200,
+        4000
+      ],
+      "why": "Cheaper rooms, cafés and bars, and a short walk to the baywalk. LRT Line 1 runs through it.",
+      "center": [
+        14.567,
+        120.985
+      ]
+    },
+    {
+      "area": "Intramuros",
+      "range": [
+        2500,
+        7000
+      ],
+      "why": "Sleep inside the old walled city, steps from Fort Santiago and the churches. Quiet at night, few rooms.",
+      "center": [
+        14.589,
+        120.975
+      ]
+    },
+    {
+      "area": "Makati",
+      "range": [
+        2500,
+        8000
+      ],
+      "why": "Modern business district with the best malls and restaurants; more polished but farther from the old sights.",
+      "center": [
+        14.554,
+        121.024
+      ]
+    }
+  ],
+  "food": [
+    "Eat adobo, sinigang (sour soup) and lechon; a casual meal runs about PHP 150–350.",
+    "Binondo is the place for Chinese-Filipino food: noodles, dumplings and hopia pastries. Go hungry and share plates.",
+    "Try a halo-halo for dessert and a sizzling sisig with rice for a cheap, filling dinner.",
+    "Street food is everywhere: grilled skewers and fishballs. Pick busy stalls and eat food cooked hot in front of you.",
+    "Book ahead at popular restaurants on weekends; mall food courts are a cheap, safe fallback for first-timers."
+  ],
+  "more_time": [
+    "Add a day trip to Tagaytay for cooler air and volcano views; check travel time on the day, traffic is heavy.",
+    "Swap one city day for a ferry or drive to Corregidor Island for WWII history; book tours in advance.",
+    "Spend a morning in Quiapo and Santa Cruz markets for cheap finds and local life along LRT Line 1."
+  ]
+}

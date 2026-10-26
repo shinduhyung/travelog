@@ -1,0 +1,172 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "India's garden city, where tech towers meet old bazaars and dosa stalls.",
+  "intro": "Bengaluru rewards visitors with leafy streets, grand palaces, buzzing markets and some of India's best South Indian food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "MG Road",
+    "Indiranagar",
+    "Koramangala",
+    "Jayanagar"
+  ],
+  "taxi": {
+    "flag_day": 100,
+    "flag_airport": 800,
+    "per_km": 25,
+    "min_fare": 100
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Namma Metro has Green, Purple and Yellow lines; fares ₹10-90, smart card ₹50.",
+    "BMTC buses cover the city but are slow and crowded at peak times.",
+    "Use the metro to dodge traffic; Google Maps shows metro and bus schedules.",
+    "Uber, Ola and Rapido work well; auto-rickshaws are cheaper for short hops.",
+    "Driving yourself is stressful; hire a car with a driver instead.",
+    "Walking is fine in small pockets, but pavements are patchy and traffic heavy."
+  ],
+  "airports": [
+    {
+      "code": "BLR",
+      "name": "Kempegowda International Airport",
+      "primary": true,
+      "note": "Main airport, about 28-40 km north of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus (KSRTC Vayu Vajra)",
+          "to": "Majestic and city centre",
+          "price": "₹250-350",
+          "time": "60-90 min",
+          "note": "Cheapest option; runs often, but slow in traffic."
+        },
+        {
+          "mode": "Metro (Purple Line extension)",
+          "to": "City centre",
+          "price": "₹60-90",
+          "time": "50-70 min",
+          "note": "Check current airport link status locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹800-1,200",
+          "time": "45-75 min",
+          "note": "Use the prepaid counter or app; agree the fare first."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹700-1,100",
+          "time": "45-75 min",
+          "note": "Pick-up zones are marked outside the terminals."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Vidhana Soudha",
+    "Wonderla (Bangalore)",
+    "Café Coffee Day"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Bengaluru",
+      "https://en.wikivoyage.org/wiki/Bengaluru"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    12.9716,
+    77.5946
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 2
+    },
+    {
+      "high": 30,
+      "low": 16,
+      "rain_days": 1
+    },
+    {
+      "high": 33,
+      "low": 19,
+      "rain_days": 3
+    },
+    {
+      "high": 34,
+      "low": 21,
+      "rain_days": 5
+    },
+    {
+      "high": 32,
+      "low": 21,
+      "rain_days": 16
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 21
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 24
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 21
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 21
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 16
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "BLR taxi ₹800-1,200 vs tariff estimate 1745"
+  ]
+}

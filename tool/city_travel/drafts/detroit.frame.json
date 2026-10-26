@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Motown, the Detroit Institute of Arts and Eastern Market."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Motown, the Henry Ford and the story of the auto industry."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Science center, zoo and riverfront parks for kids."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        120,
+        320
+      ],
+      "why": "Walk to the riverfront, stadiums and the People Mover; easiest base without a car.",
+      "center": [
+        42.331,
+        -83.048
+      ]
+    },
+    {
+      "area": "Midtown",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Next to the Detroit Institute of Arts and the Motown Museum; QLine streetcar to downtown.",
+      "center": [
+        42.352,
+        -83.062
+      ]
+    },
+    {
+      "area": "Corktown",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Quiet, historic streets with bars and cafés; short ride to downtown and the riverfront.",
+      "center": [
+        42.328,
+        -83.075
+      ]
+    },
+    {
+      "area": "Greektown",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Restaurants and nightlife on the doorstep; People Mover stop and walk to downtown sights.",
+      "center": [
+        42.335,
+        -83.042
+      ]
+    }
+  ],
+  "food": [
+    "Try a Detroit-style square pizza: thick, crispy edges and cheese to the rim. Many local spots serve it.",
+    "Coney Island hot dogs are a Detroit staple; several long-running diners downtown and nearby.",
+    "Eastern Market on a Saturday morning: produce, food stalls and a lively local crowd.",
+    "Greektown is the place for Greek restaurants and late dinners near downtown.",
+    "Middle Eastern food in Dearborn, a short drive west, is a local favourite; check hours before you go."
+  ],
+  "more_time": [
+    "Add a day for Dearborn: the Henry Ford Museum and Greenfield Village show the auto and American history story.",
+    "Cross the river to Windsor, Canada for a different view of the skyline; bring your passport and check border rules.",
+    "Sports fans can swap a museum afternoon for a Tigers, Lions, Red Wings or Pistons game; check the schedule and prices on the day."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.4,
+      0.45,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.45
+    ],
+    "food": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.55
+    ],
+    "history": [
+      0.45,
+      0.5,
+      0.65,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.5
+    ],
+    "art": [
+      0.45,
+      0.5,
+      0.65,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.5
+    ],
+    "family": [
+      0.35,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.55,
+      0.4
+    ]
+  },
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights covers the art, Motown and history sights plus a good meal or two; add a night for Dearborn."
+  },
+  "month_notes": [
+    "Coldest month: highs near 1°C, lows around -6°C. Pack a warm coat, hat and gloves.",
+    "Still deep winter: highs near 2°C and lows around -7°C. Indoor sights are the plan.",
+    "Slowly warming: highs near 7°C, lows around -2°C. Still bring a winter layer.",
+    "Mild and showery: highs near 13°C with about 14 rain days, the wettest month. Carry an umbrella.",
+    "Pleasant spring: highs near 20°C, lows around 10°C. Good for walking and the riverfront.",
+    "Warm start to summer: highs near 26°C, lows around 16°C. Comfortable for most outdoor plans.",
+    "Hottest month: highs near 28°C, lows around 19°C. Plan outdoor time for mornings.",
+    "Warm and similar to July: highs near 27°C. Stay hydrated on long walks.",
+    "Comfortable early autumn: highs near 24°C, lows around 15°C. Great for parks and markets.",
+    "Crisp autumn: highs near 17°C, lows around 9°C. Bring a jacket for evenings.",
+    "Cool and damp: highs near 9°C, lows around 2°C. Layer up and expect some rain.",
+    "Cold again: highs near 4°C, lows around -2°C. Winter gear needed."
+  ],
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, snowy winters, mild springs, warm humid summers and crisp autumns. Rain falls year-round.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (Dec–Feb)",
+        "text": "Highs around 1–4°C and lows near -6°C. Snow is likely. Bring a heavy coat, hat and gloves."
+      },
+      {
+        "icon": "🌸",
+        "title": "Spring is mild and wet",
+        "text": "Highs climb from 7°C in March to 20°C in May. April is the wettest month with about 14 rain days."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is warm and humid",
+        "text": "Highs around 26–28°C from June to August. Not extreme, but muggy at times; mornings are best outdoors."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is crisp",
+        "text": "Highs fall from 24°C in September to 9°C in November. A light jacket helps in the evenings."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain any month",
+        "text": "Expect roughly 9–14 rain days each month. Keep a compact umbrella handy."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm winter coat for Dec–Feb, and light clothes for summer. Comfortable shoes for walking."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Drive or use ride apps for most trips; the QLine and People Mover help downtown and Midtown.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro rail. Don't plan around a subway."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The QLine streetcar runs along Woodward Ave from downtown to New Center; fare $1.50 for 3 hours. The People Mover loops downtown; fare $0.75 per ride."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "SMART and DDOT buses cover the metro; fare $2. Useful but slow for cross-town trips."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft are widely used; taxis also available. Handy for airport runs and late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "Driving is easiest; freeways are modern but rush hour can be slow. Check parking at your hotel."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is good downtown; biking is growing with rental options."
+      }
+    ]
+  }
+}

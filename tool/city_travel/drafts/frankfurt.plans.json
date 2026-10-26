@@ -1,0 +1,787 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Frankfurt highlights: old town, skyline views and a museum embankment stroll.",
+      "days": [
+        {
+          "title": "Old town and skyline",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quiet in the morning. The square is always open."
+            },
+            {
+              "place": "roemer",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "The three-gabled facade is right on the square."
+            },
+            {
+              "place": "paulskirche",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Short walk. Usually open from about 10:00; closed during events."
+            },
+            {
+              "place": "main_tower",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Ride up for the skyline. Hours vary; check on the day."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "museumsufer",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Cross the river and walk the promenade. Most museums close Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A compact history day: the old town's civic heart, Goethe and the Paulskirche story.",
+      "days": [
+        {
+          "title": "Old town history walk",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early before the crowds."
+            },
+            {
+              "place": "roemer",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "City hall for centuries; exterior always visible."
+            },
+            {
+              "place": "paulskirche",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Where the first German parliament met. Usually open from about 10:00."
+            },
+            {
+              "place": "goethe_house",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Usually open daily from about 10:00; check on the day."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Walk over the river. Always open."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch and a riverside stroll on the south bank."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way through Frankfurt: market hall lunch, street food and an apple-wine dinner.",
+      "days": [
+        {
+          "title": "Markets, street food and Apfelwein",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "A short wander to work up an appetite."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Grab lunch from the stalls. Closed Sunday; Saturday closes about 16:00."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Walk it off across the river."
+            },
+            {
+              "place": "bahnhofsviertel_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Street food is best in the evening; many places open late."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Finish with Apfelwein and local dishes. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "A compact culture day: old-town sights, the skyline view and a museum walk.",
+      "days": [
+        {
+          "title": "Old town and the skyline",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Start early before the crowds. The square is always open."
+            },
+            {
+              "place": "roemer",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "Just steps away. The facade is always visible."
+            },
+            {
+              "place": "paulskirche",
+              "at": "10:50",
+              "minutes": 30,
+              "note": "Short walk. Closed during events, so check on the day."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "main_tower",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Ride up for the view. Hours vary; check on the day."
+            },
+            {
+              "place": "museumsufer",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Walk the promenade. Most museums close Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "The old town's history in one day, from the Römer to the Paulskirche story.",
+      "days": [
+        {
+          "title": "Römerberg and the old town",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "The historic heart. Always open."
+            },
+            {
+              "place": "roemer",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "The city hall facade, right on the square."
+            },
+            {
+              "place": "paulskirche",
+              "at": "10:50",
+              "minutes": 30,
+              "note": "Where German democracy began. Check for event closures."
+            },
+            {
+              "place": "goethe_house",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Usually open daily 10:00–18:00; check on the day."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Cross the footbridge for skyline views."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Riverside walk south of the bridge. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market hall lunch, riverside stroll and an apple-wine dinner.",
+      "days": [
+        {
+          "title": "Markets, river and apple wine",
+          "stops": [
+            {
+              "place": "kleinmarkthalle",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "roemerberg",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Short walk to the square. Always open."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "13:45",
+              "minutes": 20,
+              "note": "Cross to Sachsenhausen."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Riverside walk. Always open."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Most taverns serve lunch and evening; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sachsenhausen"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the skyline, the old town and a museum or two without rushing.",
+      "days": [
+        {
+          "title": "Old town on foot, skyline at sunset",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quietest in the morning. The square is always open."
+            },
+            {
+              "place": "roemer",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "The three-gabled facade faces the square."
+            },
+            {
+              "place": "paulskirche",
+              "at": "10:50",
+              "minutes": 30,
+              "note": "A few minutes on foot. Closed during events, so check on the day."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "main_tower",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Go up for sunset on a clear day. Hours vary; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the river",
+          "stops": [
+            {
+              "place": "goethe_house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually opens around 10:00. Good rainy-day pick."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Walk across for the classic skyline photo."
+            },
+            {
+              "place": "museumsufer",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Promenade is always open. Most museums close Monday."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Riverside stroll, then dinner nearby."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt or near the main station"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the old town, the Paulskirche story and Goethe in two calm days.",
+      "days": [
+        {
+          "title": "Römerberg and the Paulskirche",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early is best; the square is always open."
+            },
+            {
+              "place": "roemer",
+              "at": "09:50",
+              "minutes": 20,
+              "note": "Exterior always visible."
+            },
+            {
+              "place": "paulskirche",
+              "at": "10:20",
+              "minutes": 30,
+              "note": "Roughly 10:00–17:00. Closed during events."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "main_river_cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal daytime departures. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Goethe and the museum bank",
+          "stops": [
+            {
+              "place": "goethe_house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; check on the day."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Cross to Sachsenhausen."
+            },
+            {
+              "place": "museumsufer",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Pick one museum. Most close Monday."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in Sachsenhausen."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want market halls, street food and apple wine, with a little sightseeing between meals.",
+      "days": [
+        {
+          "title": "Market hall and old town",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Walk it off before lunch."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekday lunchtime is best. Closed Sunday."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Short walk to the river."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon into evening."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Bahnhofsviertel street food",
+          "stops": [
+            {
+              "place": "main_tower",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Skyline view first. Hours vary; check on the day."
+            },
+            {
+              "place": "bahnhofsviertel_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening is best; many places open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt or Sachsenhausen"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the skyline, the old town and the big museums without rushing.",
+      "days": [
+        {
+          "title": "Arrive and the old town core",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. The square is always open."
+            },
+            {
+              "place": "roemer",
+              "at": "15:50",
+              "minutes": 20,
+              "note": "The stepped facade is a two-minute walk away."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Walk across for skyline views. Best near sunset."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Grab a snack before it shuts around 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the river",
+          "stops": [
+            {
+              "place": "museumsufer",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Promenade is always open. Most museums close Monday, so pick a museum and check hours."
+            },
+            {
+              "place": "main_river_cruise",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Seasonal daytime departures. Check times at the pier."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Riverside stroll south of the bridge."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Westend culture, then skyline",
+          "stops": [
+            {
+              "place": "palmengarten",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Shorter hours in winter. Check on the day."
+            },
+            {
+              "place": "alte_oper",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "See the building and the square. Box office open for evening tickets."
+            },
+            {
+              "place": "main_tower",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Go up for sunset. Hours vary by season, so check on the day."
+            },
+            {
+              "place": "bahnhofsviertel_walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Street food dinner nearby. Many places open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the Paulskirche story, the Römer and Goethe's Frankfurt at an easy pace.",
+      "days": [
+        {
+          "title": "Old town history loop",
+          "stops": [
+            {
+              "place": "roemerberg",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quiet early. The square is always open."
+            },
+            {
+              "place": "roemer",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "Exterior always visible."
+            },
+            {
+              "place": "paulskirche",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Roughly 10:00–17:00. Closed during events, so check on the day."
+            },
+            {
+              "place": "kleinmarkthalle",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Goethe and the river",
+          "stops": [
+            {
+              "place": "goethe_house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00. Check on the day."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Short walk south to the bridge."
+            },
+            {
+              "place": "museumsufer",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Promenade always open. Museums usually closed Monday."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon along the river."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Skyline and west end",
+          "stops": [
+            {
+              "place": "main_tower",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Morning is quieter. Hours vary, so check on the day."
+            },
+            {
+              "place": "alte_oper",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "See the building and square."
+            },
+            {
+              "place": "palmengarten",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Shorter hours in winter. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt (Old Town)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around the market hall, street food and apple-wine taverns.",
+      "days": [
+        {
+          "title": "Market hall and old town",
+          "stops": [
+            {
+              "place": "kleinmarkthalle",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Weekday lunchtime is best. Closed Sunday."
+            },
+            {
+              "place": "roemerberg",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Walk it off. Square always open."
+            },
+            {
+              "place": "eisenerner_steg",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Cross for skyline views."
+            },
+            {
+              "place": "sachsenhausen_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon stroll toward dinner."
+            },
+            {
+              "place": "apfelwein_tavern",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Street food and skyline",
+          "stops": [
+            {
+              "place": "main_tower",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Go up before lunch. Hours vary, so check on the day."
+            },
+            {
+              "place": "bahnhofsviertel_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening street-food walk. Many places open late."
+            }
+          ]
+        },
+        {
+          "title": "Westend and a concert",
+          "stops": [
+            {
+              "place": "palmengarten",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Spring and summer mornings are best. Check hours."
+            },
+            {
+              "place": "alte_oper",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening concert. Check the schedule and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sachsenhausen"
+    }
+  ]
+}

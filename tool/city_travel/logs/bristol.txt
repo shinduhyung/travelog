@@ -1,0 +1,36 @@
+$ deepseek_prep.py Bristol
+  tokens in 678 out 203
+Bristol: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bristol
+  tokens in 3958 out 1117
+Bristol: 4 problems
+  - LHR taxi £120-160 vs tariff estimate 444
+  - airport LHR is 148 km away
+  - BHX taxi £110-150 vs tariff estimate 376
+  - airport BHX is 125 km away
+
+$ deepseek_city.py Bristol --stage places
+Bristol: places
+  tokens in 1152 out 2228
+
+$ deepseek_city.py Bristol --stage frame
+Bristol: frame
+  tokens in 2453 out 1869
+
+$ deepseek_city.py Bristol --stage plans
+Bristol: plans
+  plans for day
+  tokens in 1942 out 827
+  plans for 1n
+  tokens in 1943 out 1130
+  plans for 2n
+  tokens in 1948 out 1453
+  plans for 3n
+  tokens in 1943 out 1803
+
+$ merge_city.py Bristol
+WARN  lake-compounce: 5275 km from the center (day trip?)
+Bristol: 17 places, 12 plans, 0 errors, 1 warnings
+wrote itineraries/bristol.json and planner/bristol.json
+

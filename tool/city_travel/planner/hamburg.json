@@ -1,0 +1,571 @@
+{
+  "city": "Hamburg",
+  "checked": "October 2026",
+  "intro_line": "Hamburg: a harbour city of water, music and grand brick halls.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Altstadt",
+        "HafenCity",
+        "St. Pauli",
+        "Altona"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Altstadt",
+        "HafenCity",
+        "St. Pauli",
+        "Altona"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Altstadt",
+        "HafenCity",
+        "St. Pauli",
+        "Altona"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Altstadt",
+        "HafenCity",
+        "St. Pauli",
+        "Altona"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Altstadt",
+        "HafenCity",
+        "St. Pauli",
+        "Altona"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 14,
+        "note": "January: cold, highs near 5°C, lows around 0°C. Pack a warm coat and waterproof shoes."
+      },
+      {
+        "high": 7,
+        "low": 1,
+        "rain_days": 13,
+        "note": "February: still cold, highs near 7°C. Short days; plan indoor sights."
+      },
+      {
+        "high": 9,
+        "low": 2,
+        "rain_days": 11,
+        "note": "March: cool at 9°C highs, about 11 rain days. Layers help."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 11,
+        "note": "April: milder, highs near 13°C. Good for walking the harbour."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 12,
+        "note": "May: pleasant, highs near 18°C. Busy weekends; book hotels early."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 11,
+        "note": "June: warm, highs near 22°C, about 11 rain days. Long evenings."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 14,
+        "note": "July: warmest month, highs near 23°C, but about 14 rain days. Keep a rain jacket handy."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 13,
+        "note": "August: warm at 23°C highs, about 13 rain days. Peak season for the harbour."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 10,
+        "note": "September: still mild, highs near 20°C. Fewer rain days; a good shoulder month."
+      },
+      {
+        "high": 14,
+        "low": 8,
+        "rain_days": 14,
+        "note": "October: cooler, highs near 14°C, about 14 rain days. Bring an umbrella."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 14,
+        "note": "November: cold and wet, highs near 9°C. Dark early; plan indoor time."
+      },
+      {
+        "high": 6,
+        "low": 2,
+        "rain_days": 14,
+        "note": "December: cold, highs near 6°C, about 14 rain days. Christmas markets are the draw; dress warm."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "history": [
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "miniatur_wunderland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning; rainy days fill up",
+      "area": "HafenCity",
+      "popularity": 5
+    },
+    "elbphilharmonie": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon for daylight, or evening for lights",
+      "area": "HafenCity",
+      "popularity": 5
+    },
+    "speicherstadt": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Dusk or early morning",
+      "area": "HafenCity",
+      "popularity": 5
+    },
+    "hafencity": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime; sunset by the water",
+      "area": "HafenCity",
+      "popularity": 4
+    },
+    "reeperbahn": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening into night",
+      "area": "St. Pauli",
+      "popularity": 4
+    },
+    "st_michaelis": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Clear morning",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "elbe_river": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Altona",
+      "popularity": 4
+    },
+    "fish_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Sunday early morning",
+      "area": "Altona",
+      "popularity": 4
+    },
+    "tropen_aquarium": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Altona",
+      "popularity": 4
+    },
+    "rathaus": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "harbor_boat_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon on a clear day",
+      "area": "St. Pauli",
+      "popularity": 5
+    },
+    "volksparkstadion": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match day",
+      "area": "Altona",
+      "popularity": 3
+    },
+    "wanderer": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any museum day",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "wildpark": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Dry weekday",
+      "area": "Altona",
+      "popularity": 3
+    },
+    "landungsbruecken": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "St. Pauli",
+      "popularity": 4
+    },
+    "schanzenviertel": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Altona",
+      "popularity": 3
+    },
+    "fischmarkt_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunday early morning",
+      "area": "Altona",
+      "popularity": 4
+    },
+    "planten_un_blomen": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "oewelgoenne": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Altona",
+      "popularity": 3
+    },
+    "dialogue_im_dunkeln": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "HafenCity",
+      "popularity": 3
+    },
+    "grosse_freiheit": {
+      "types": [
+        "nightlife",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "St. Pauli",
+      "popularity": 3
+    },
+    "alter_elbtunnel": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "St. Pauli",
+      "popularity": 3
+    },
+    "karolinenviertel": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Saturday afternoon",
+      "area": "St. Pauli",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Elbphilharmonie, Speicherstadt, the harbour and a good food evening; add a third for museums and a ferry."
+  },
+  "airports": [
+    {
+      "code": "HAM",
+      "name": "Hamburg Airport Helmut Schmidt",
+      "primary": true,
+      "note": "Main airport, about 9 km north of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S1",
+          "to": "Hauptbahnhof",
+          "price": "€3.81-4.10",
+          "time": "25-30 min",
+          "note": "Runs every 10 min; ride in the front cars from Ohlsdorf."
+        },
+        {
+          "mode": "Night bus 606",
+          "to": "Rathausmarkt",
+          "price": "€3.81-4.10",
+          "time": "35-45 min",
+          "note": "Use when no trains run, roughly 00:30-04:30."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€25-35",
+          "time": "25-35 min",
+          "note": "Fixed-ish fares; traffic can add time."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "25-35 min",
+          "note": "Pick-up points are signposted outside terminals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Hamburg",
+      "https://en.wikivoyage.org/wiki/Hamburg"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "S-Bahn and U-Bahn for most trips; walk or cycle in the flat centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "S-Bahn and U-Bahn cover the city. Buy a ticket before boarding; day tickets start around €8.20."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps. Buy your ticket before boarding; no ticket sales on board."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are plentiful. Uber and Bolt work too."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving is slow with roadworks and costly parking. Use park-and-ride if you must drive."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The city is flat and good for walking and cycling. Ferries cross the Elbe."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries cross the Elbe and are a cheap way to see the harbour."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cool and changeable: mild summers, cold winters, and rain in every month. Pack layers and rain gear year-round.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 10–14 rain days every month. A light waterproof jacket beats an umbrella in wind."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs around 20–23°C and long days. The busiest and most comfortable season."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold, not extreme",
+        "text": "January highs near 5°C and lows around 0°C. A warm coat, hat and gloves are enough."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Wind off the Elbe",
+        "text": "Harbour and waterfront areas feel colder and windier than the city centre. Layer up."
+      },
+      {
+        "icon": "🌂",
+        "title": "Shoulder months are mild but wet",
+        "text": "April, May, September and October are pleasant for walking, with frequent showers."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket, comfortable walking shoes and a warm hat for winter."
+      }
+    ]
+  }
+}

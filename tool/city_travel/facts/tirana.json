@@ -1,0 +1,168 @@
+{
+  "currency": "ALL",
+  "usd_rate": 80.8221,
+  "intro_line": "Tirana: colorful, chaotic, and full of surprises.",
+  "intro": "Tirana rewards visitors with vibrant streets, warm hospitality, and a growing food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Skanderbeg Square",
+    "Blloku",
+    "Rruga e Kavajës",
+    "Komuna e Parisit"
+  ],
+  "taxi": {
+    "flag_day": 300,
+    "flag_airport": 300,
+    "per_km": 100,
+    "min_fare": 400
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram; city buses are the main public transport.",
+    "Single bus ticket costs 40 lek, sold on board by a conductor.",
+    "Taxis: flag-fall 300 lek, cross-town ride 400–800 lek; demand the meter.",
+    "Ride apps: Speed Taxi, Patoko, Clust, VrapOn Taxi Albania work like Uber.",
+    "Walking is best in the compact centre; sidewalks can be uneven.",
+    "Bike lanes exist on some main streets; cycling can be risky due to traffic."
+  ],
+  "airports": [
+    {
+      "code": "TIA",
+      "name": "Tirana International Airport Mother Teresa",
+      "primary": true,
+      "note": "Main airport, 13 km from centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-40 min",
+          "note": "Cheapest option; runs to city centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Use official taxis or apps; agree on price."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Speed Taxi, Patoko, Clust, VrapOn operate."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Skanderbeg Square",
+    "Enver Hoxha Pyramid",
+    "Bunk'Art 1 Museum",
+    "National Historical Museum",
+    "Ethem Bey Mosque",
+    "Resurrection of Christ Orthodox Cathedral",
+    "Krujë Castle",
+    "Tavë Kosi"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tirana",
+      "https://en.wikivoyage.org/wiki/Tirana"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    41.3275,
+    19.8187
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 12
+    },
+    {
+      "high": 14,
+      "low": 4,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 12
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 7
+    },
+    {
+      "high": 32,
+      "low": 20,
+      "rain_days": 4
+    },
+    {
+      "high": 32,
+      "low": 21,
+      "rain_days": 5
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 8
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 11
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

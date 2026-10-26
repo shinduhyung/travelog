@@ -1,0 +1,208 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Fog, hills, and a bay that never stops moving.",
+  "intro": "San Francisco rewards walkers with steep views, waterfront paths, and dense neighbourhood food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Union Square",
+    "Fisherman's Wharf",
+    "SoMa",
+    "Mission District"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 5,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "BART is the fast regional metro; Muni Metro and buses cover the city.",
+    "Buy a Clipper card for BART, Muni, Caltrain, and ferries.",
+    "Taxis are metered; Uber and Lyft are widely used.",
+    "Driving is slow and parking is costly; skip a rental car in town.",
+    "Walking is the best way to see neighbourhoods; hills are steep.",
+    "Ferries from the Ferry Building reach Sausalito, Tiburon, and Alcatraz."
+  ],
+  "airports": [
+    {
+      "code": "SFO",
+      "name": "San Francisco International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 18 km south of the centre.",
+      "options": [
+        {
+          "mode": "BART",
+          "to": "Downtown SF stations",
+          "price": "$8.95",
+          "time": "30-40 min",
+          "note": "Trains every 15-20 min; AirTrain links terminals."
+        },
+        {
+          "mode": "SamTrans bus 292",
+          "to": "Downtown SF",
+          "price": "$2",
+          "time": "45-60 min",
+          "note": "Cheapest option; slower with stops."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown SF",
+          "price": "$35-60",
+          "time": "25-40 min",
+          "note": "Pickup at departures level, not arrivals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown SF",
+          "price": "$40-60",
+          "time": "25-40 min",
+          "note": "Metered; can exceed $60 in traffic."
+        }
+      ]
+    },
+    {
+      "code": "OAK",
+      "name": "Metropolitan Oakland International Airport",
+      "primary": false,
+      "note": "East Bay airport, about 18 km from the centre; often fog-free.",
+      "options": [
+        {
+          "mode": "BART plus people mover",
+          "to": "Downtown SF",
+          "price": "$10.20",
+          "time": "35-50 min",
+          "note": "Connector costs $6; total deducted from Clipper."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown SF",
+          "price": "$40-70",
+          "time": "25-45 min",
+          "note": "Pickup at signposted app rides area."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown SF",
+          "price": "$60-80",
+          "time": "25-45 min",
+          "note": "More expensive than SFO taxis."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Golden Gate Bridge",
+    "Alcatraz",
+    "Fisherman's Wharf",
+    "Painted Ladies",
+    "Palace of Fine Arts",
+    "Alcatraz Island Ferry",
+    "Children's Fairyland",
+    "City Lights Booksellers",
+    "Golden Gate Bay Cruise",
+    "San Francisco Bay",
+    "The Flower Carrier",
+    "University of California, Berkeley (UC Berkeley)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: San Francisco",
+      "https://en.wikivoyage.org/wiki/San%20Francisco"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    37.7749,
+    -122.4194
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 14,
+      "low": 8,
+      "rain_days": 10
+    },
+    {
+      "high": 15,
+      "low": 8,
+      "rain_days": 8
+    },
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 5
+    },
+    {
+      "high": 17,
+      "low": 11,
+      "rain_days": 2
+    },
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 0
+    },
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 0
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 0
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 1
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 3
+    },
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 7
+    },
+    {
+      "high": 13,
+      "low": 8,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

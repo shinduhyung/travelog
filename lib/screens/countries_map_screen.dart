@@ -9,6 +9,8 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jidoapp/models/country_model.dart';
 import 'package:jidoapp/widgets/visited_world_map_layer.dart';
+// TODO(old-map): 고지도 모드를 되살릴 때 주석 해제
+// import 'package:jidoapp/widgets/old_map_view.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/screens/country_selection_screen.dart';
 import 'package:latlong2/latlong.dart';
@@ -112,6 +114,9 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
   final MapController _mapController = MapController();
   bool _useWhiteBorders = false;
   bool _showRegions = false;
+  // TODO(old-map): 고지도 모드를 되살릴 때 주석 해제
+  // bool _oldMapTheme = false;
+  // static const _oldMapInk = Color(0xFFB3261E);
 
   // --- 색상 설정 관련 상태 변수 ---
   late CountriesColorMode _colorMode;
@@ -578,6 +583,41 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
     );
   }
 
+  // TODO(old-map): ⇄ 버튼에서 지도 모드(국가/지역/고지도)를 고르는 시트. 되살릴 때 주석 해제.
+  // void _showMapModeSheet() {
+  //   // 0: 국가 색칠, 1: 주(지역) 색칠, 2: 고지도(이드리시)
+  //   final modes = <(IconData, String, String, bool)>[
+  //     (Icons.public_rounded, tr('Visited countries'), tr('Color the countries you have visited'), !_showRegions && !_oldMapTheme),
+  //     (Icons.grid_view_rounded, tr('Visited regions'), tr('Color the regions you have visited'), _showRegions && !_oldMapTheme),
+  //     (Icons.auto_stories_rounded, tr('Idrisi map (1154)'), tr('Your countries on a medieval Islamic world map'), _oldMapTheme),
+  //   ];
+  //   showModalBottomSheet<void>(
+  //     context: context,
+  //     showDragHandle: true,
+  //     builder: (sheetContext) => SafeArea(
+  //       child: Column(
+  //         mainAxisSize: MainAxisSize.min,
+  //         children: [
+  //           for (var i = 0; i < modes.length; i++)
+  //             ListTile(
+  //               leading: Icon(modes[i].$1),
+  //               title: Text(modes[i].$2),
+  //               subtitle: Text(modes[i].$3),
+  //               trailing: modes[i].$4 ? const Icon(Icons.check_rounded, color: Colors.teal) : null,
+  //               onTap: () {
+  //                 Navigator.of(sheetContext).pop();
+  //                 setState(() {
+  //                   _oldMapTheme = i == 2;
+  //                   _showRegions = i == 1;
+  //                 });
+  //               },
+  //             ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
+
   Widget _buildBlurContainer({required Widget child, double borderRadius = 16.0}) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius),
@@ -614,6 +654,29 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           ? Center(child: CircularProgressIndicator(color: Colors.teal.shade300))
           : Stack(
         children: [
+          // TODO(old-map): 되살릴 때 아래 블록을 주석 해제하고, 바로 뒤의 `FlutterMap(` 앞에 `else`를 붙인다.
+          // if (_oldMapTheme)
+          //   Builder(builder: (context) {
+          //     final byIso = {for (final c in provider.allCountries) c.isoA3: c};
+          //     final highlightMap = _isHighlightMode
+          //         ? {for (final g in _currentHighlightGroups) for (final c in g.countryCodes) c: g}
+          //         : const <String, HighlightGroup>{};
+          //     return OldMapView(
+          //       colorFor: (iso) {
+          //         final country = byIso[iso];
+          //         if (country == null) return null;
+          //         if (widget.region != null && country.continent != widget.region) return null;
+          //         // 고지도에서는 국가별로 색을 나누지 않고 한 가지 잉크색만 쓴다.
+          //         if (_isHighlightMode) return highlightMap.containsKey(iso) ? _oldMapInk : null;
+          //         final d = provider.visitDetails[country.name];
+          //         final active = (d?.isVisited ?? false) ||
+          //             (d?.hasLived ?? false) ||
+          //             provider.homeCountryIsoA3 == iso;
+          //         return active ? _oldMapInk : null;
+          //       },
+          //     );
+          //   })
+          // else
           FlutterMap(
             mapController: _mapController,
             options: const MapOptions(
@@ -684,6 +747,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
           Positioned(
             bottom: MediaQuery.of(context).padding.bottom + 24,
             left: 16,
+            // TODO(old-map): 되살릴 때 `_oldMapTheme ? const SizedBox.shrink() :`를 child 맨 앞에 추가(고지도에서는 범례 숨김)
             child: _isHighlightMode
                 ? _buildHighlightLegend(_currentHighlightGroups)
                 : (_showLegend ? _buildLegendWidget() : const SizedBox.shrink()),
@@ -700,6 +764,7 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      // TODO(old-map): 되살릴 때 조건 맨 앞에 `!_oldMapTheme &&` 추가(고지도에서는 Show All 스위치 숨김)
                       if (!_isHighlightMode && (_colorMode == CountriesColorMode.byContinent || _colorMode == CountriesColorMode.bySubregion))
                         Padding(
                           padding: const EdgeInsets.only(left: 4, right: 12.0),
@@ -728,6 +793,13 @@ class _CountriesMapScreenState extends State<CountriesMapScreen> {
 
                       Container(width: 1, height: 20, color: Colors.grey.withOpacity(0.3), margin: const EdgeInsets.symmetric(horizontal: 4)),
 
+                      // TODO(old-map): 되살릴 때 아래 버튼을 다음으로 교체하고 _showMapModeSheet 주석 해제
+                      // _buildIconButton(
+                      //   icon: Icons.swap_horiz_rounded,
+                      //   selected: _showRegions || _oldMapTheme,
+                      //   onPressed: _showMapModeSheet,
+                      //   tooltip: tr('Map style'),
+                      // ),
                       _buildIconButton(
                         icon: Icons.swap_horiz_rounded,
                         selected: _showRegions,

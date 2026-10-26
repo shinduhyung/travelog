@@ -1,0 +1,37 @@
+$ deepseek_facts.py Kyoto
+  tokens in 4124 out 812
+Kyoto: 2 problems
+  - KIX taxi ¥15000-20000 vs tariff estimate 42820
+  - ITM taxi ¥8000-12000 vs tariff estimate 20980
+
+$ deepseek_city.py Kyoto --stage places
+Kyoto: places
+  tokens in 1263 out 4737
+
+$ deepseek_city.py Kyoto --stage frame
+Kyoto: frame
+  tokens in 2419 out 1857
+  repaired JSON
+
+$ deepseek_city.py Kyoto --stage plans
+Kyoto: plans
+  plans for day
+  tokens in 2784 out 876
+  plans for 1n
+  tokens in 2785 out 1475
+  plans for 2n
+  tokens in 2785 out 1863
+  plans for 3n
+  tokens in 2790 out 2105
+  plans for 4n
+  tokens in 2785 out 2356
+
+$ merge_city.py Kyoto
+ERROR plan 1n-culture: unknown place 'kyoto_station'
+ERROR plan 1n-culture: unknown place 'kyoto_station'
+ERROR plan 1n-history: unknown place 'kyoto_station'
+ERROR plan 1n-history: unknown place 'kyoto_station'
+ERROR plan 1n-nature: unknown place 'kyoto_station'
+ERROR plan 1n-nature: unknown place 'kyoto_station'
+Kyoto: 27 places, 15 plans, 6 errors, 0 warnings
+

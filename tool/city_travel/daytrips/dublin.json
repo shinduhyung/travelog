@@ -1,0 +1,122 @@
+{
+ "city": "Dublin",
+ "trips": [
+  {
+   "place": "Kilkenny",
+   "label": "",
+   "position": {
+    "id": 15089125,
+    "name": "Kilkenny Railway Station",
+    "city": "Kilkenny",
+    "lat": 52.65417,
+    "lng": -7.24332
+   },
+   "town": {
+    "name": "Kilkenny",
+    "lat": 52.65417,
+    "lng": -7.25222
+   },
+   "road": {
+    "km": 125,
+    "min": 97,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 190.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$13-$19",
+     "time": "1h 45m",
+     "via": "Dublin Heuston to Kilkenny",
+     "source": "https://www.rome2rio.com/s/Dublin/Kilkenny"
+    },
+    "bus": {
+     "from": "$11-$19",
+     "time": "1h 35m",
+     "via": "Heuston Station to Kilkenny Stn",
+     "source": "https://www.rome2rio.com/s/Dublin/Kilkenny"
+    }
+   },
+   "route_note": "Direct Irish Rail trains run from Dublin Heuston to Kilkenny in about 90 minutes, with the medieval centre a short walk from the station.",
+   "see": [
+    "Kilkenny Castle",
+    "St Canice's Cathedral and round tower",
+    "Medieval Mile",
+    "Smithwick's Experience"
+   ],
+   "visit": "Full day",
+   "tour_query": "Kilkenny day trip from Dublin",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct Irish Rail trains reach Kilkenny in about 1h45m with the medieval centre a short walk from the station.",
+   "stars": 4,
+   "know": [
+    "Book train tickets ahead for the best fares",
+    "Allow a full day to see the castle and medieval centre"
+   ]
+  },
+  {
+   "place": "Bray",
+   "label": "",
+   "position": {
+    "id": 15089185,
+    "name": "Bray",
+    "city": "Bray",
+    "lat": 53.20412,
+    "lng": -6.10044
+   },
+   "town": {
+    "name": "Bray",
+    "lat": 53.20278,
+    "lng": -6.09833
+   },
+   "road": {
+    "km": 25,
+    "min": 34,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 40.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$5",
+     "time": "38m",
+     "via": "Lansdowne Road to Bray",
+     "source": "https://www.rome2rio.com/s/Dublin/Bray"
+    },
+    "bus": {
+     "from": "$2-$3",
+     "time": "51m",
+     "via": "Leeson Street Upr to Cornerstone Church",
+     "source": "https://www.rome2rio.com/s/Dublin/Bray"
+    }
+   },
+   "route_note": "The DART runs directly from Dublin city centre stations to Bray station in about 45 minutes, with the seafront a short walk away.",
+   "see": [
+    "Bray Promenade and beach",
+    "Bray Head cliff walk",
+    "Bray to Greystones coastal trail",
+    "Victorian seafront architecture"
+   ],
+   "visit": "Half day",
+   "tour_query": "Bray and Wicklow day trip from Dublin",
+   "quests": [],
+   "recommended": "train",
+   "why": "The DART runs directly from the city centre to Bray station in about 38 minutes, with the seafront a short walk away.",
+   "stars": 3,
+   "know": [
+    "Best on a clear day for the cliff walk along the seafront",
+    "DART services are frequent throughout the day"
+   ]
+  }
+ ],
+ "problems": [
+  "Howth: not a town in cities15000.json (IE), dropped",
+  "Glendalough: no Omio position, dropped",
+  "Belfast: not a town in cities15000.json (IE), dropped"
+ ]
+}

@@ -1,0 +1,239 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Imperial palaces, coffee houses, and a city that waltzes.",
+  "intro": "Vienna rewards visitors with grand palaces, world-class museums, and a relaxed café culture. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Innere Stadt",
+    "Leopoldstadt",
+    "Mariahilf",
+    "Neubau"
+  ],
+  "taxi": {
+    "flag_day": 4.5,
+    "flag_airport": 4.5,
+    "per_km": 1.6,
+    "min_fare": 6
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "U-Bahn, trams, and buses run on one ticket; buy a 24/48/72-hour pass or single fares around €2.60.",
+    "Validate tickets before riding; inspectors fine on the spot.",
+    "Taxis are metered; Uber and Bolt both work in Vienna.",
+    "Driving is slow and parking is scarce; skip the rental car in town.",
+    "The centre is flat and walkable; bikes and e-scooters are easy to rent.",
+    "No ferries; the Danube is crossed by bridges and the U-Bahn."
+  ],
+  "airports": [
+    {
+      "code": "VIE",
+      "name": "Vienna International Airport",
+      "primary": true,
+      "note": "Main gateway, 18 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S7",
+          "to": "Wien-Mitte/Landstraße",
+          "price": "€4.60",
+          "time": "24 min",
+          "note": "Cheapest rail option; a zone 100 pass covers the city part."
+        },
+        {
+          "mode": "Long-distance train",
+          "to": "Wien Hauptbahnhof",
+          "price": "€4.20",
+          "time": "15 min",
+          "note": "Runs every 30 min."
+        },
+        {
+          "mode": "City Airport Train (CAT)",
+          "to": "Wien-Mitte/Landstraße",
+          "price": "from €11",
+          "time": "15 min",
+          "note": "Faster but pricier."
+        },
+        {
+          "mode": "Vienna Airport Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "25-35 min",
+          "note": "Several lines to different stops."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€35-45",
+          "time": "25-40 min",
+          "note": "Fixed-ish fares; agree or use meter."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "25-40 min",
+          "note": "Pickup at marked zones."
+        }
+      ]
+    },
+    {
+      "code": "BTS",
+      "name": "Bratislava Milan Rastislav Štefánik Airport",
+      "primary": false,
+      "note": "Budget option across the Slovak border, about 54 km from VIE.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Wien Hauptbahnhof",
+          "price": "€10-15",
+          "time": "1.5-2 hr",
+          "note": "Bus to Bratislava, then train to Vienna."
+        },
+        {
+          "mode": "Shuttle bus",
+          "to": "Vienna centre",
+          "price": "€10-20",
+          "time": "1-1.5 hr",
+          "note": "Book ahead; runs to main stops."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Vienna centre",
+          "price": "€90-120",
+          "time": "1-1.5 hr",
+          "note": "Cross-border; agree price first."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "Vienna centre",
+          "price": "check locally",
+          "time": "1-1.5 hr",
+          "note": "Cross-border rides may be limited."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Schönbrunn Palace",
+    "Hofburg Palace",
+    "St Stephen's Cathedral",
+    "Belvedere Palace",
+    "Vienna State Opera",
+    "Kunsthistorisches Museum",
+    "MuseumsQuartier",
+    "Naschmarkt",
+    "Albertina",
+    "Austrian National Library",
+    "Burgtheater",
+    "Danube Canal Cruise",
+    "Ernst-Happel-Stadion",
+    "Haus der Musik",
+    "Heiligenkreuz Abbey",
+    "Hundertwasserhaus",
+    "Kaisergruft",
+    "Kapuzinerkirche",
+    "Leopold Museum",
+    "Liechtenstein City Palace",
+    "Mariahilfer Strasse",
+    "Mozarthaus Vienna"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Vienna",
+      "https://en.wikivoyage.org/wiki/Vienna"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    48.2082,
+    16.3738
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": -2,
+      "rain_days": 10
+    },
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 7
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 10
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 8
+    },
+    {
+      "high": 6,
+      "low": 0,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,260 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Markets, murals and the old center."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Street grills, fritangas and strong coffee."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Volcano views and lake breezes nearby."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night",
+      "recommended": true
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Centro Histórico",
+      "range": [
+        700,
+        2200
+      ],
+      "why": "Walk to the plaza, cathedral ruins and Puerto Salvador Allende; handy for buses and cheap eats.",
+      "center": [
+        12.136,
+        -86.251
+      ]
+    },
+    {
+      "area": "Monseñor Lezcano",
+      "range": [
+        600,
+        1800
+      ],
+      "why": "Local neighborhood feel, markets and simple comedores; short taxi rides to the center.",
+      "center": [
+        12.147,
+        -86.263
+      ]
+    },
+    {
+      "area": "Bolonia",
+      "range": [
+        1200,
+        3500
+      ],
+      "why": "Quieter, greener streets near embassies and malls; good for business and longer stays.",
+      "center": [
+        12.128,
+        -86.27
+      ]
+    },
+    {
+      "area": "Carretera a Masaya",
+      "range": [
+        1500,
+        4500
+      ],
+      "why": "Modern hotels, malls and restaurants; easiest base if you have a car or plan day trips south.",
+      "center": [
+        12.11,
+        -86.265
+      ]
+    }
+  ],
+  "food": [
+    "Try a fritanga: a small local eatery serving grilled meat, fried cheese, plantains and gallo pinto.",
+    "Vigorón is a cheap classic: cabbage salad, chicharrón and yuca on a banana leaf.",
+    "Mercado Oriental and Mercado Roberto Huembes are good for cheap meals and fruit; go with a local and keep valuables close.",
+    "Coffee is a local pride: ask for a café de olla or a strong drip coffee at a market stall.",
+    "Seafood and lake fish appear on menus; ask what is fresh that day and check the price first."
+  ],
+  "more_time": [
+    "Swap a city afternoon for the Masaya volcano and craft market; go with a driver or tour and check opening hours on the day.",
+    "Add a day trip to Granada's colonial streets and the lake islets, about an hour south by road.",
+    "Spend a morning at the Museo Nacional and the old cathedral area, then lunch at Puerto Salvador Allende."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.6,
+      0.8,
+      0.9
+    ],
+    "food": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.5,
+      0.4,
+      0.45,
+      0.45,
+      0.4,
+      0.45,
+      0.7,
+      0.85
+    ],
+    "history": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.6,
+      0.8,
+      0.9
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "budget"
+  ],
+  "recommend": {
+    "why": "One night covers the old center, a market meal and the lakefront; add a night for a volcano or Granada day trip."
+  },
+  "month_notes": [
+    "Dry and hot: highs near 32°C, few rainy days. Good for walking the center.",
+    "Dry and hot, highs near 33°C. Carry water and plan shade breaks.",
+    "Hottest dry month, highs near 34°C. Start sightseeing early.",
+    "Very hot, highs near 35°C, with a few more rainy days. Pace yourself.",
+    "Rains arrive: about 20 rainy days and highs near 33°C. Pack a rain jacket.",
+    "Wet season: about 25 rainy days, highs near 30°C. Expect afternoon downpours.",
+    "Wet and warm, highs near 31°C, about 21 rainy days. Keep plans flexible.",
+    "Wet month, about 24 rainy days. Short showers are common.",
+    "Wettest month, about 27 rainy days. Carry an umbrella and waterproof bag.",
+    "Still very wet, about 27 rainy days, highs near 30°C.",
+    "Rains ease: about 18 rainy days, highs near 30°C.",
+    "Drier and slightly cooler, highs near 31°C, about 8 rainy days. A good month to visit."
+  ],
+  "climate_guide": {
+    "summary": "Tropical and hot all year, with a sharp dry season from December to April and a long wet season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Highs around 31–33°C with only a few rainy days. Best for walking and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hottest: March and April",
+        "text": "Highs near 34–35°C. Sightsee early morning and rest in the shade at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "Rain on 20–27 days a month. Showers are often heavy but short; plan indoor stops."
+      },
+      {
+        "icon": "☔",
+        "title": "Wettest: September and October",
+        "text": "About 27 rainy days each. Carry an umbrella and a waterproof bag for phones."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Warm nights",
+        "text": "Lows stay around 23–25°C all year. Air-conditioning or a fan helps at night."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a hat and sunscreen; a rain jacket in the wet months; modest clothes for churches."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Taxis for most trips; cheap numbered buses if you know the route and travel by day.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Numbered city buses are cheap (about C$2.50) but stop early; no night service. Bus 266 runs from Mercado Oriental to the airport along Carretera Norte."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are collective or private; agree the fare first. No Uber, and ride apps are limited, so book by phone or through your hotel."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is congested and addresses use landmarks, not street numbers. Useful for day trips; check insurance and parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine downtown and at Puerto Salvador Allende by day. Cycling is for the bold."
+      }
+    ]
+  }
+}

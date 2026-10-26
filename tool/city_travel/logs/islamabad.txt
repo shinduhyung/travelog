@@ -1,0 +1,32 @@
+$ deepseek_prep.py Islamabad
+  tokens in 684 out 251
+Islamabad: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Islamabad
+  tokens in 5347 out 557
+Islamabad: 1 problems
+  - ISB taxi Rs 3500-4500 vs tariff estimate 7250
+
+$ deepseek_city.py Islamabad --stage places
+Islamabad: places
+  tokens in 1166 out 3182
+
+$ deepseek_city.py Islamabad --stage frame
+Islamabad: frame
+  tokens in 2452 out 1801
+
+$ deepseek_city.py Islamabad --stage plans
+Islamabad: plans
+  plans for day
+  tokens in 2167 out 906
+  plans for 1n
+  tokens in 2168 out 1124
+  plans for 2n
+  tokens in 2173 out 1394
+  plans for 3n
+  tokens in 2168 out 1858
+
+$ merge_city.py Islamabad
+Islamabad: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/islamabad.json and planner/islamabad.json
+

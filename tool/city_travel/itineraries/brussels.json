@@ -1,0 +1,1401 @@
+{
+  "city": "Brussels",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Brussels rewards visitors with medieval squares, Art Nouveau gems and a lively food scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 50.6373,
+      "west": 4.2464,
+      "north": 51.0914,
+      "east": 4.7507,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 5,
+      "per_km": 2.2,
+      "min_fare": 8
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro, tram and bus run by STIB/MIVB; tickets cost about €2.10-2.60 per ride.",
+      "Buy a MOBIB card (about €6) or tap a contactless bank card for cheaper fares.",
+      "De Lijn buses serve the airport and Flanders; their tickets are not valid on STIB.",
+      "Uber, Bolt and local taxi apps work; taxis from the airport cost around €60.",
+      "Driving is slow and parking is costly; the low-emission zone covers the centre.",
+      "The centre is compact and walkable; shared bikes and scooters are common."
+    ],
+    "sources": []
+  },
+  "places": {
+    "grand_place": {
+      "name": "Grand Place",
+      "landmark": "Grand Place",
+      "kind": "sight",
+      "lat": 50.8467,
+      "lon": 4.3524,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Square always open · flower carpet every two years in August",
+      "tip": "Come early morning for empty photos, then return after dark when the guild houses are lit.",
+      "source": "https://www.visit.brussels/en/visitors/what-to-do/grand-place"
+    },
+    "atomium": {
+      "name": "Atomium",
+      "landmark": "Atomium",
+      "kind": "sight",
+      "lat": 50.8949,
+      "lon": 4.3415,
+      "price": 16,
+      "price_text": "≈ €16 adult · check current price online",
+      "hours": "Daily, roughly 10:00–18:00 · check on the day",
+      "tip": "Book a timed ticket online; the lift to the top sphere can queue for 30 minutes or more.",
+      "source": "https://www.atomium.be/"
+    },
+    "manneken_pis": {
+      "name": "Manneken Pis",
+      "landmark": "Manneken Pis",
+      "kind": "sight",
+      "lat": 50.8449,
+      "lon": 4.3499,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always visible · small statue in a street fountain",
+      "tip": "It is tiny and takes two minutes. Pair it with a walk to Grand Place, five minutes away.",
+      "source": "https://www.visit.brussels/en/visitors/what-to-do/manneken-pis"
+    },
+    "royal_palace": {
+      "name": "Royal Palace of Brussels",
+      "landmark": "Royal Palace of Brussels",
+      "kind": "sight",
+      "lat": 50.8416,
+      "lon": 4.3636,
+      "price": 0,
+      "price_text": "Free when open to the public",
+      "hours": "Usually open to visitors only in summer · check on the day",
+      "tip": "The palace interior is only open for a few weeks a year. Check dates before you plan around it.",
+      "source": "https://www.monarchie.be/en"
+    },
+    "cathedral": {
+      "name": "St Michael and St Gudula Cathedral",
+      "landmark": "St Michael and St Gudula Cathedral",
+      "kind": "sight",
+      "lat": 50.8478,
+      "lon": 4.3601,
+      "price": 0,
+      "price_text": "Free · small fee for the crypt",
+      "hours": "Daily, roughly 08:00–18:00 · check on the day",
+      "tip": "Climb the steps from the lower town for the best view of the facade, then go inside for the stained glass.",
+      "source": "https://www.cathedralisbruxellensis.be/"
+    },
+    "cinquantenaire": {
+      "name": "Parc du Cinquantenaire",
+      "landmark": "Parc du Cinquantenaire",
+      "kind": "park",
+      "lat": 50.8413,
+      "lon": 4.3907,
+      "price": 0,
+      "price_text": "Free · museums in the park charge entry",
+      "hours": "Park always open",
+      "tip": "Walk under the triumphal arch and pick one museum; the park is big and the walk between wings is long.",
+      "source": "https://www.visit.brussels/en/visitors/what-to-do/parc-du-cinquantenaire"
+    },
+    "cantillon": {
+      "name": "Brasserie Cantillon",
+      "landmark": "Brasserie Cantillon",
+      "kind": "activity",
+      "lat": 50.8416,
+      "lon": 4.3356,
+      "price": 8,
+      "price_text": "≈ €8 self-guided visit with tasting · check on the day",
+      "hours": "Mon–Sat, daytime only · closed Sunday",
+      "tip": "It is a working brewery, so wear closed shoes and expect cool, damp cellars. Tastings are small.",
+      "source": "https://www.cantillon.be/"
+    },
+    "cook_book": {
+      "name": "Cook & Book",
+      "landmark": "Cook & Book",
+      "kind": "food",
+      "lat": 50.8468,
+      "lon": 4.4326,
+      "price": null,
+      "price_text": "Bookshop free · café prices vary",
+      "hours": "Daily, roughly 10:00–19:00 · check on the day",
+      "tip": "It is a bookshop with themed rooms and a café, not a quick stop. Allow an hour to browse.",
+      "source": "https://www.cookandbook.be/"
+    },
+    "duvel": {
+      "name": "Duvel Moortgat",
+      "landmark": "Duvel Moortgat",
+      "kind": "activity",
+      "lat": 51.0494,
+      "lon": 4.2926,
+      "price": null,
+      "price_text": "Brewery tours by booking · price varies, check on the day",
+      "hours": "Tours by reservation only",
+      "tip": "The brewery is outside Brussels in Puurs. Check train times and book the tour before you travel.",
+      "source": "https://www.duvel.com/"
+    },
+    "begijnhof": {
+      "name": "Groot Begijnhof",
+      "landmark": "Groot Begijnhof",
+      "kind": "sight",
+      "lat": 50.8717,
+      "lon": 4.6967,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Courtyards open daytime · respect residents",
+      "tip": "This is a quiet university residence, so keep voices low and do not enter private gardens.",
+      "source": "https://www.visitleuven.be/en/groot-begijnhof"
+    },
+    "ku_leuven": {
+      "name": "KU Leuven",
+      "landmark": "KU Leuven",
+      "kind": "sight",
+      "lat": 50.8776,
+      "lon": 4.7045,
+      "price": 0,
+      "price_text": "Free to walk the old town · guided tours charge",
+      "hours": "Public streets always open",
+      "tip": "Leuven is 25 minutes by train from Brussels. The old university halls are best seen on a short walk.",
+      "source": "https://www.kuleuven.be/english"
+    },
+    "la_monnaie": {
+      "name": "La Monnaie",
+      "landmark": "La Monnaie",
+      "kind": "show",
+      "lat": 50.8494,
+      "lon": 4.354,
+      "price": null,
+      "price_text": "Ticket prices vary by production · check on the day",
+      "hours": "Box office daytime · performances evenings",
+      "tip": "Book opera or a guided tour ahead. The building is also worth a look from the outside.",
+      "source": "https://www.lamonnaie.be/"
+    },
+    "lions_mound": {
+      "name": "Lion's Mound",
+      "landmark": "Lion's Mound",
+      "kind": "sight",
+      "lat": 50.6793,
+      "lon": 4.4057,
+      "price": 10,
+      "price_text": "≈ €10 visitor centre · mound climb may be free, check on the day",
+      "hours": "Daytime · check on the day",
+      "tip": "It is a battlefield site outside the city. Wear walking shoes and bring a jacket; it is windy on top.",
+      "source": "https://www.waterloo1815.be/"
+    },
+    "magritte": {
+      "name": "Magritte Museum",
+      "landmark": "Magritte Museum",
+      "kind": "museum",
+      "lat": 50.8427,
+      "lon": 4.3582,
+      "price": 10,
+      "price_text": "≈ €10 · combined tickets available, check on the day",
+      "hours": "Closed Monday · Tue–Sun daytime",
+      "tip": "Buy a combined ticket with the other Royal Museums and go early; the galleries get busy at midday.",
+      "source": "https://www.musee-magritte-museum.be/"
+    },
+    "moules_frites": {
+      "name": "Moules-frites",
+      "landmark": "Moules-frites",
+      "kind": "food",
+      "lat": 50.8503,
+      "lon": 4.3517,
+      "price": null,
+      "price_text": "≈ €18–28 a plate in central restaurants",
+      "hours": "Lunch and dinner · mussels best in autumn and winter",
+      "tip": "Order it in a classic brasserie near Grand Place. Check the price per kilo, as portions vary.",
+      "source": ""
+    },
+    "oceade": {
+      "name": "Océade (closed in 2018)",
+      "landmark": "Océade (closed in 2018)",
+      "kind": "activity",
+      "lat": 50.8504,
+      "lon": 4.3488,
+      "price": null,
+      "price_text": "Closed permanently",
+      "hours": "Closed",
+      "tip": "This water park closed in 2018. Do not plan a visit; check for other pools if you want to swim.",
+      "source": ""
+    },
+    "stella": {
+      "name": "Stella Artois Brewery",
+      "landmark": "Stella Artois Brewery",
+      "kind": "activity",
+      "lat": 50.8871,
+      "lon": 4.7073,
+      "price": null,
+      "price_text": "Guided tours by booking · price varies, check on the day",
+      "hours": "Tours by reservation",
+      "tip": "The brewery is in Leuven, not central Brussels. Book ahead and allow half a day with the train.",
+      "source": "https://www.stellaartois.com/"
+    },
+    "icarus": {
+      "name": "The Fall of Icarus",
+      "landmark": "The Fall of Icarus",
+      "kind": "museum",
+      "lat": 50.8423,
+      "lon": 4.357,
+      "price": 10,
+      "price_text": "≈ €10 Royal Museums ticket · check on the day",
+      "hours": "Closed Monday · Tue–Sun daytime",
+      "tip": "The painting is in the Old Masters museum. Ask staff for its room; displays can move.",
+      "source": "https://www.fine-arts-museum.be/"
+    },
+    "son_of_man": {
+      "name": "The Son of Man",
+      "landmark": "The Son of Man",
+      "kind": "museum",
+      "lat": 50.8427,
+      "lon": 4.3582,
+      "price": 10,
+      "price_text": "≈ €10 Magritte Museum ticket · check on the day",
+      "hours": "Closed Monday · Tue–Sun daytime",
+      "tip": "It hangs in the Magritte Museum. Check it is on display before you buy a ticket, as works travel.",
+      "source": "https://www.musee-magritte-museum.be/"
+    },
+    "tomorrowland": {
+      "name": "Tomorrowland",
+      "landmark": "Tomorrowland",
+      "kind": "show",
+      "lat": 51.0914,
+      "lon": 4.3714,
+      "price": null,
+      "price_text": "Festival tickets sell out fast · price varies by year",
+      "hours": "Late July · multi-day festival",
+      "tip": "It is in Boom, outside Brussels, and tickets sell out. Plan transport and accommodation months ahead.",
+      "source": "https://www.tomorrowland.com/"
+    },
+    "walibi": {
+      "name": "Walibi Belgium",
+      "landmark": "Walibi Belgium",
+      "kind": "activity",
+      "lat": 50.7001,
+      "lon": 4.6037,
+      "price": 45,
+      "price_text": "≈ €45 day ticket · check on the day",
+      "hours": "Seasonal, roughly spring to autumn · check on the day",
+      "tip": "It is a theme park outside the city. Buy tickets online and go on a weekday to avoid queues.",
+      "source": "https://www.walibi.be/"
+    },
+    "zoetwater": {
+      "name": "ZoetWaterPark",
+      "landmark": "ZoetWaterPark",
+      "kind": "park",
+      "lat": 50.8122,
+      "lon": 4.6702,
+      "price": null,
+      "price_text": "Check locally for current access",
+      "hours": "Check on the day",
+      "tip": "Details are unclear, so confirm opening and access before you go.",
+      "source": ""
+    },
+    "sablon_market": {
+      "name": "Place du Sablon antique market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 50.8403,
+      "lon": 4.3561,
+      "price": 0,
+      "price_text": "Free to browse",
+      "hours": "Weekend mornings · check on the day",
+      "tip": "Come before noon for antiques and books, then walk to the nearby pastry shops.",
+      "source": ""
+    },
+    "mont_des_arts": {
+      "name": "Mont des Arts viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 50.8436,
+      "lon": 4.3564,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Best city view over the lower town. Go at sunset or after dark for the lit rooftops.",
+      "source": ""
+    },
+    "marolles_walk": {
+      "name": "Marolles neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 50.8403,
+      "lon": 4.3453,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Daytime · daily flea market in the morning",
+      "tip": "Wander the steep streets below the Palace of Justice and stop at a local café for lunch.",
+      "source": ""
+    },
+    "beer_tour": {
+      "name": "Brussels beer tasting tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 50.8467,
+      "lon": 4.3525,
+      "price": 35,
+      "price_text": "≈ €30–45 per person · check inclusions",
+      "hours": "Evening tours most days",
+      "tip": "Confirm tastings and snacks are included, and eat before you go; Belgian beers are strong.",
+      "source": ""
+    },
+    "comic_walk": {
+      "name": "Comic strip mural walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 50.8489,
+      "lon": 4.3512,
+      "price": 0,
+      "price_text": "Free · map from tourist office",
+      "hours": "Daytime",
+      "tip": "Pick up a mural map at the tourist office and walk the route at your own pace.",
+      "source": ""
+    },
+    "flagey_market": {
+      "name": "Flagey food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 50.8272,
+      "lon": 4.3714,
+      "price": 0,
+      "price_text": "Free to enter · pay per stall",
+      "hours": "Weekend mornings · check on the day",
+      "tip": "A local weekend market with food stalls. Bring cash and go hungry.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day on foot through the old centre, with a quick stop at the icons.",
+      "days": [
+        {
+          "title": "Grand-Place, old centre and the Marolles",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early before the crowds. The square is always open."
+            },
+            {
+              "place": "manneken_pis",
+              "at": "09:50",
+              "minutes": 10,
+              "note": "A short walk south. It is small, so look twice."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Walk up for the classic view over the city."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Roughly 08:00–18:00 daily. Check on the day."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Morning flea market, then lunch in the neighbourhood."
+            },
+            {
+              "place": "sablon_market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            },
+            {
+              "place": "royal_palace",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Usually summer only. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place / old centre"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: markets, a brewery visit and the classic plates.",
+      "days": [
+        {
+          "title": "Markets, beer and mussels",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start with the square before it fills up."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "09:45",
+              "minutes": 90,
+              "note": "Morning flea market. Good for a snack."
+            },
+            {
+              "place": "cantillon",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Mon–Sat daytime only, closed Sunday. Weekday late morning is calmest."
+            },
+            {
+              "place": "moules_frites",
+              "at": "13:15",
+              "minutes": 75,
+              "note": "Lunch. Mussels are best in autumn and winter."
+            },
+            {
+              "place": "sablon_market",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening tasting tour. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place / old centre"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Magritte and the museums, plus the comic-strip murals in the streets.",
+      "days": [
+        {
+          "title": "Magritte, murals and Mont des Arts",
+          "stops": [
+            {
+              "place": "magritte",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Go at opening time."
+            },
+            {
+              "place": "son_of_man",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Same museum area. Closed Monday."
+            },
+            {
+              "place": "icarus",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Old Masters nearby. Closed Monday."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Quick view, then lunch nearby."
+            },
+            {
+              "place": "comic_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Murals across the centre. Best on a dry day."
+            },
+            {
+              "place": "la_monnaie",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening performance. Check the programme and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sablon / Mont des Arts"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the old centre on foot plus one big view.",
+      "days": [
+        {
+          "title": "Grand-Place and the old centre",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early before the crowds. Look up at the guild houses."
+            },
+            {
+              "place": "manneken_pis",
+              "at": "10:00",
+              "minutes": 10,
+              "note": "Five minutes on foot. It is small, so do not expect much."
+            },
+            {
+              "place": "comic_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Murals are spread around the centre. Wear comfy shoes."
+            },
+            {
+              "place": "moules_frites",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch. Mussels are best in autumn and winter."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Short walk uphill. Best light near sunset."
+            }
+          ]
+        },
+        {
+          "title": "Sablon, cathedral and art",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning light through the windows. Check hours on the day."
+            },
+            {
+              "place": "sablon_market",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            },
+            {
+              "place": "magritte",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Closed Monday. Go at opening time."
+            },
+            {
+              "place": "royal_palace",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Usually summer only. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around beer, mussels and markets.",
+      "days": [
+        {
+          "title": "Old centre tastes",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start here before the crowds."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning flea market, then snack stalls."
+            },
+            {
+              "place": "moules_frites",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch. Cooler months are best for mussels."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tasting. Eat something first."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and market morning",
+          "stops": [
+            {
+              "place": "cantillon",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Sunday. Weekday late morning is calm."
+            },
+            {
+              "place": "sablon_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekend mornings. Check on the day."
+            },
+            {
+              "place": "flagey_market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day. Short tram ride."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers who want Magritte, murals and a bookshop lunch.",
+      "days": [
+        {
+          "title": "Murals and Magritte",
+          "stops": [
+            {
+              "place": "comic_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Dry daytime is best. Murals are outdoors."
+            },
+            {
+              "place": "grand_place",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Quick look on the way."
+            },
+            {
+              "place": "moules_frites",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch near the centre."
+            },
+            {
+              "place": "magritte",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Go early in the day if you can."
+            }
+          ]
+        },
+        {
+          "title": "Old Masters and books",
+          "stops": [
+            {
+              "place": "icarus",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Closed Monday. Weekday morning is quiet."
+            },
+            {
+              "place": "son_of_man",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Same museum area. Closed Monday."
+            },
+            {
+              "place": "cook_book",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch among the books. Good for a rainy day."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Viewpoint on the way back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sablon"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old centre on foot plus the big sights, at an easy pace.",
+      "days": [
+        {
+          "title": "Grand-Place and the old centre",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early before the crowds. The square is always open."
+            },
+            {
+              "place": "manneken_pis",
+              "at": "10:00",
+              "minutes": 10,
+              "note": "Five minutes on foot. It is small, so expect a quick photo stop."
+            },
+            {
+              "place": "comic_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Mural walk through the centre streets. Best in dry weather."
+            },
+            {
+              "place": "moules_frites",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch. Mussels are best in autumn and winter."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Short walk uphill for the city view. Come back at sunset if you like."
+            }
+          ]
+        },
+        {
+          "title": "Sablon, cathedral and art",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning light through the windows. Roughly 08:00–18:00, check on the day."
+            },
+            {
+              "place": "sablon_market",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            },
+            {
+              "place": "magritte",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Closed Monday. Go at opening time."
+            },
+            {
+              "place": "royal_palace",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Usually open only in summer. Check on the day."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Morning flea market is better, but the streets work all day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place / old centre"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around waffles, fries, mussels and beer.",
+      "days": [
+        {
+          "title": "Old centre tastes and beer",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Start here before the crowds."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Morning flea market and snack stops."
+            },
+            {
+              "place": "moules_frites",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch in the centre. Mussels best in cooler months."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tasting tour. Eat something first."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and market morning",
+          "stops": [
+            {
+              "place": "cantillon",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Mon–Sat daytime only, closed Sunday. Weekday late morning is calmest."
+            },
+            {
+              "place": "sablon_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekend mornings. Check on the day."
+            },
+            {
+              "place": "flagey_market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day. Short tram ride from the centre."
+            },
+            {
+              "place": "cook_book",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Bookshop with food. Good rainy-afternoon stop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place / old centre"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers: Magritte, Old Masters and comic-strip murals in two easy days.",
+      "days": [
+        {
+          "title": "Magritte and the Sablon",
+          "stops": [
+            {
+              "place": "magritte",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Arrive at opening time."
+            },
+            {
+              "place": "son_of_man",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Same museum area. Closed Monday."
+            },
+            {
+              "place": "icarus",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Old Masters nearby. Closed Monday."
+            },
+            {
+              "place": "moules_frites",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Lunch in the Sablon area."
+            },
+            {
+              "place": "sablon_market",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Murals, comics and the centre",
+          "stops": [
+            {
+              "place": "comic_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Mural walk. Best in dry weather."
+            },
+            {
+              "place": "grand_place",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Quick look before lunch."
+            },
+            {
+              "place": "cook_book",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch and book browsing. Roughly 10:00–19:00, check on the day."
+            },
+            {
+              "place": "la_monnaie",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead at the box office."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sablon / Grand-Place"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the old centre, the icons and a Leuven day trip on foot and by train.",
+      "days": [
+        {
+          "title": "Arrive, Grand-Place and the old centre",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start here. The square is always open and free."
+            },
+            {
+              "place": "manneken_pis",
+              "at": "15:00",
+              "minutes": 10,
+              "note": "Five minutes on foot. It is small, so don't expect much."
+            },
+            {
+              "place": "comic_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Murals are spread around the centre. Wear comfy shoes."
+            },
+            {
+              "place": "moules_frites",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Dinner near the centre. Mussels are best in autumn and winter."
+            }
+          ]
+        },
+        {
+          "title": "Sablon, art and views",
+          "stops": [
+            {
+              "place": "magritte",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Go at opening time."
+            },
+            {
+              "place": "sablon_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Roughly 08:00–18:00. Check on the day."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Best at sunset. Always open."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening stroll and dinner in the neighbourhood."
+            }
+          ]
+        },
+        {
+          "title": "Leuven day trip",
+          "stops": [
+            {
+              "place": "ku_leuven",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "About 25 minutes by train from Brussels. Public streets always open."
+            },
+            {
+              "place": "begijnhof",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Courtyards open daytime. Respect residents."
+            },
+            {
+              "place": "duvel",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Tours by reservation only. Book ahead."
+            },
+            {
+              "place": "grand_place",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Back in Brussels. See the square after dark."
+            }
+          ]
+        },
+        {
+          "title": "Parks and last stops",
+          "stops": [
+            {
+              "place": "cinquantenaire",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Park always open. Good on a sunny morning."
+            },
+            {
+              "place": "cook_book",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Bookshop with food. Roughly 10:00–19:00, check on the day."
+            },
+            {
+              "place": "royal_palace",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Usually open only in summer. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around markets, breweries and long lunches.",
+      "days": [
+        {
+          "title": "Arrive, square and first tastes",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Easy first stop. Always open."
+            },
+            {
+              "place": "manneken_pis",
+              "at": "15:00",
+              "minutes": 10,
+              "note": "Quick photo stop nearby."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tours most days. Eat before or during."
+            }
+          ]
+        },
+        {
+          "title": "Markets and brewing",
+          "stops": [
+            {
+              "place": "sablon_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekend mornings. Check on the day."
+            },
+            {
+              "place": "cantillon",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Mon–Sat daytime only, closed Sunday. Weekday late morning is best."
+            },
+            {
+              "place": "moules_frites",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch. Mussels best in autumn and winter."
+            },
+            {
+              "place": "marolles_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Morning flea market; walk and snack in the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Brewery day out",
+          "stops": [
+            {
+              "place": "stella",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Tours by reservation. Book a weekday slot."
+            },
+            {
+              "place": "duvel",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Also by reservation only. Check travel time between the two."
+            },
+            {
+              "place": "cook_book",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Light dinner among the books. Roughly 10:00–19:00."
+            }
+          ]
+        },
+        {
+          "title": "Ixelles market and farewell",
+          "stops": [
+            {
+              "place": "flagey_market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Weekend mornings. Check on the day."
+            },
+            {
+              "place": "cinquantenaire",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Walk off breakfast in the park. Always open."
+            },
+            {
+              "place": "grand_place",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Last look and a waffle before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grand-Place"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Museum-goers who want Magritte, Old Masters and murals without rushing.",
+      "days": [
+        {
+          "title": "Arrive, murals and the square",
+          "stops": [
+            {
+              "place": "grand_place",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start in the old centre. Always open."
+            },
+            {
+              "place": "comic_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Street art on foot. Best in dry weather."
+            },
+            {
+              "place": "moules_frites",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Dinner near the centre."
+            }
+          ]
+        },
+        {
+          "title": "Magritte and the museums",
+          "stops": [
+            {
+              "place": "magritte",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Go at opening time."
+            },
+            {
+              "place": "icarus",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Closed Monday. Tue–Sun daytime."
+            },
+            {
+              "place": "son_of_man",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Same museum area. Quick look."
+            },
+            {
+              "place": "mont_des_arts",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Sunset view over the city."
+            }
+          ]
+        },
+        {
+          "title": "Music and the cathedral",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Morning light through the windows."
+            },
+            {
+              "place": "sablon_market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Weekend mornings only. Check on the day."
+            },
+            {
+              "place": "la_monnaie",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening performance. Book the box office in advance."
+            }
+          ]
+        },
+        {
+          "title": "Parks, books and farewell",
+          "stops": [
+            {
+              "place": "cinquantenaire",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Park always open. Museums nearby, check hours."
+            },
+            {
+              "place": "cook_book",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Books, art and lunch. Roughly 10:00–19:00."
+            },
+            {
+              "place": "royal_palace",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Usually summer only. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sablon"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Grand-Place, comic-strip murals and the old centre on foot."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Waffles, fries, chocolate and mussels between sights."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Magritte, Old Masters and the comic-strip museum."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Grand-Place",
+      "range": [
+        120,
+        280
+      ],
+      "why": "Steps from the main square, waffle stands and the station. Noisiest and busiest area; book early.",
+      "center": [
+        50.8467,
+        4.3525
+      ]
+    },
+    {
+      "area": "Sablon",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Quiet, elegant streets with antique shops, chocolate makers and the Fine Arts museum nearby.",
+      "center": [
+        50.8395,
+        4.356
+      ]
+    },
+    {
+      "area": "Ixelles",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Local feel, good bars and restaurants, easy tram rides to the centre. Good value.",
+      "center": [
+        50.833,
+        4.365
+      ]
+    },
+    {
+      "area": "European Quarter",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Close to the EU buildings and parks; quiet on weekends. About 20 minutes by metro to the centre.",
+      "center": [
+        50.84,
+        4.38
+      ]
+    }
+  ],
+  "food": [
+    "Try Belgian classics: moules-frites, carbonnade (beef stew with beer) and waterzooi. Main dishes often €15–25.",
+    "Waffles come two ways: dense Liège-style and lighter Brussels-style. Street stalls charge about €3–6; sit-down cafés cost more.",
+    "Fries from a fritkot (chip stand) with mayonnaise are a local habit, roughly €3–5 a cone.",
+    "Chocolate and pralines: compare small makers around Grand-Place and Sablon. Prices vary widely; check the label for cocoa content.",
+    "Beer cafés serve hundreds of Belgian beers. Ask for a small tasting glass if you are unsure; strong beers are often 8–12%."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a half-day trip to Bruges or Ghent by train; check times and prices on the day.",
+    "Add the Atomium and Mini-Europe in the north if you want a break from the old centre.",
+    "Spend an extra morning at the Royal Museum of Fine Arts and the Magritte Museum in Sablon."
+  ]
+}

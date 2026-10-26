@@ -1,0 +1,172 @@
+{
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro_line": "Adelaide blends vineyards, beaches and easy city living.",
+  "intro": "Adelaide rewards visitors with compact streets, free city transport and wine country on its doorstep. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "CBD",
+    "North Adelaide",
+    "Glenelg",
+    "Port Adelaide"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 2,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Adelaide Metro runs trains, trams and buses with one tap-and-pay system.",
+    "Trams and some city buses are free within the city centre.",
+    "Taxis use the meter; airport pickups add a small surcharge.",
+    "Uber and other ride apps operate across the city.",
+    "Driving is easy but parking in the CBD costs money.",
+    "The city is flat and good for walking and cycling."
+  ],
+  "airports": [
+    {
+      "code": "ADL",
+      "name": "Adelaide International Airport",
+      "primary": true,
+      "note": "Main gateway, about 6-7 km west of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus J1/J2",
+          "to": "City centre",
+          "price": "A$2.60-4.55",
+          "time": "25-35 min",
+          "note": "Runs often; tap and pay on board."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "A$20-30",
+          "time": "15-25 min",
+          "note": "Metered plus airport surcharge."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "A$18-28",
+          "time": "15-25 min",
+          "note": "Pickup zone outside terminal."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City and beyond",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Kiosks near baggage claim."
+        }
+      ]
+    }
+  ],
+  "max_km": 75,
+  "place_landmarks": [
+    "Hahndorf",
+    "Adelaide Showgrounds",
+    "Coopers Brewery",
+    "University of Adelaide",
+    "Magic Mountain (replaced by The Beachouse)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Adelaide",
+      "https://en.wikivoyage.org/wiki/Adelaide"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -34.92866,
+    138.59863
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 4
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 2
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 4
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 7
+    },
+    {
+      "high": 17,
+      "low": 11,
+      "rain_days": 11
+    },
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 14,
+      "low": 8,
+      "rain_days": 13
+    },
+    {
+      "high": 15,
+      "low": 8,
+      "rain_days": 13
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 11
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 7
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

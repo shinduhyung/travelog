@@ -1,0 +1,30 @@
+$ deepseek_facts.py Nanjing
+  tokens in 3781 out 600
+Nanjing: 0 problems
+
+$ deepseek_city.py Nanjing --stage places
+Nanjing: places
+  tokens in 1170 out 3220
+
+$ deepseek_city.py Nanjing --stage frame
+Nanjing: frame
+  tokens in 2456 out 1952
+  repaired JSON
+
+$ deepseek_city.py Nanjing --stage plans
+Nanjing: plans
+  plans for day
+  tokens in 2293 out 1770
+  plans for 1n
+  tokens in 2294 out 1165
+  plans for 2n
+  tokens in 2299 out 1333
+  plans for 3n
+  tokens in 2294 out 2023
+  plans for 4n
+  tokens in 2294 out 1946
+
+$ merge_city.py Nanjing
+Nanjing: 20 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/nanjing.json and planner/nanjing.json
+

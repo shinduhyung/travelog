@@ -1,0 +1,586 @@
+{
+  "city": "Oslo",
+  "checked": "October 2026",
+  "intro_line": "Oslo rewards with fjord views, Viking history, and modern design.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Sentrum",
+        "Aker Brygge",
+        "Grünerløkka",
+        "Majorstuen"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Sentrum",
+        "Aker Brygge",
+        "Grünerløkka",
+        "Majorstuen"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Sentrum",
+        "Aker Brygge",
+        "Grünerløkka",
+        "Majorstuen"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Sentrum",
+        "Aker Brygge",
+        "Grünerløkka",
+        "Majorstuen"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Sentrum",
+        "Aker Brygge",
+        "Grünerløkka",
+        "Majorstuen"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -1,
+        "low": -6,
+        "rain_days": 12,
+        "note": "January: cold, highs near -1°C and lows around -6°C. Pack warm layers and expect icy pavements."
+      },
+      {
+        "high": 1,
+        "low": -5,
+        "rain_days": 10,
+        "note": "February: still cold, highs near 1°C. Short days; plan indoor sights."
+      },
+      {
+        "high": 5,
+        "low": -3,
+        "rain_days": 9,
+        "note": "March: slowly warmer, highs near 5°C, but nights still below freezing."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 8,
+        "note": "April: highs near 10°C, lows near 1°C. Mild days, but keep a jacket."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 12,
+        "note": "May: highs near 16°C and long bright evenings. A great month to walk the city."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 12,
+        "note": "June: mild and bright, highs near 21°C. Pack a light rain layer; about 12 rain days."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 13,
+        "note": "July: warmest month, highs near 21°C. Busy; book hotels early."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 13,
+        "note": "August: still warm, highs near 20°C. About 13 rain days, so bring an umbrella."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 11,
+        "note": "September: cooler, highs near 16°C. Good for museums and forest walks."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 12,
+        "note": "October: highs near 10°C, lows near 5°C. Wet and grey; dress for rain."
+      },
+      {
+        "high": 4,
+        "low": 0,
+        "rain_days": 12,
+        "note": "November: cold and dark, highs near 4°C. Fewer crowds, shorter days."
+      },
+      {
+        "high": 1,
+        "low": -4,
+        "rain_days": 13,
+        "note": "December: cold, highs near 1°C, lows near -4°C. Dark days; check for snow and ice."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.75,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.4
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "art": [
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ]
+  },
+  "places": {
+    "vigeland": {
+      "types": [
+        "culture",
+        "art",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or summer evening",
+      "area": "Majorstuen",
+      "popularity": 5
+    },
+    "akershus": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Sentrum",
+      "popularity": 5
+    },
+    "opera": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset or a clear afternoon",
+      "area": "Sentrum",
+      "popularity": 5
+    },
+    "vikingship": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Check status first",
+      "area": "Majorstuen",
+      "popularity": 4
+    },
+    "munch": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning on a rainy day",
+      "area": "Sentrum",
+      "popularity": 5
+    },
+    "palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Midday in summer",
+      "area": "Sentrum",
+      "popularity": 4
+    },
+    "fram": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning, then ferry back",
+      "area": "Majorstuen",
+      "popularity": 4
+    },
+    "farikal": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Autumn, especially September",
+      "area": "Sentrum",
+      "popularity": 3
+    },
+    "holmenkollen": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Clear day for the view",
+      "area": "Majorstuen",
+      "popularity": 4
+    },
+    "kontiki": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Majorstuen",
+      "popularity": 4
+    },
+    "scream": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Opening time",
+      "area": "Sentrum",
+      "popularity": 5
+    },
+    "tusenfryd": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Majorstuen",
+      "popularity": 3
+    },
+    "ullevaal": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Match day",
+      "area": "Majorstuen",
+      "popularity": 2
+    },
+    "mathallen": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Grünerløkka",
+      "popularity": 4
+    },
+    "grunerlokka": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Grünerløkka",
+      "popularity": 4
+    },
+    "akerbrygge": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Aker Brygge",
+      "popularity": 4
+    },
+    "fjordcruise": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Aker Brygge",
+      "popularity": 4
+    },
+    "akerselva": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Grünerløkka",
+      "popularity": 3
+    },
+    "karljohan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Sentrum",
+      "popularity": 4
+    },
+    "sognsvann": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny day",
+      "area": "Majorstuen",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the museums, the Opera and a fjord or forest outing; add a night for Bygdøy and Holmenkollen."
+  },
+  "airports": [
+    {
+      "code": "OSL",
+      "name": "Oslo Gardermoen Airport",
+      "primary": true,
+      "note": "Main international gateway, 37 km north of city.",
+      "options": [
+        {
+          "mode": "Train (Vy)",
+          "to": "Oslo Central Station",
+          "price": "134 kr",
+          "time": "23 min",
+          "note": "Cheapest public option; includes local transit for 2 hours."
+        },
+        {
+          "mode": "Airport Express Train (Flytoget)",
+          "to": "Oslo Central Station",
+          "price": "268 kr",
+          "time": "19-22 min",
+          "note": "Faster but pricier; departs every 10-20 min."
+        },
+        {
+          "mode": "Bus (Flybussen)",
+          "to": "Oslo city centre",
+          "price": "279-319 kr",
+          "time": "45-60 min",
+          "note": "Cheaper online; multiple routes."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Oslo city centre",
+          "price": "700-1000 kr",
+          "time": "40-50 min",
+          "note": "Book ahead; fixed prices available."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "Oslo city centre",
+          "price": "600-900 kr",
+          "time": "40-50 min",
+          "note": "Pick-up in designated area."
+        }
+      ]
+    },
+    {
+      "code": "TRF",
+      "name": "Sandefjord Airport, Torp",
+      "primary": false,
+      "note": "Secondary airport, 86 km south; used by low-cost carriers.",
+      "options": [
+        {
+          "mode": "Train (Vy)",
+          "to": "Oslo Central Station",
+          "price": "249-289 kr",
+          "time": "1h 45min",
+          "note": "Free shuttle to Torp station; student discounts."
+        },
+        {
+          "mode": "Bus (Torpekspressen)",
+          "to": "Oslo city centre",
+          "price": "279 kr",
+          "time": "1h 45min",
+          "note": "Scheduled around flights; book online for less."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Oslo city centre",
+          "price": "2000 kr",
+          "time": "1h 30min",
+          "note": "Very expensive; not recommended."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Oslo",
+      "https://en.wikivoyage.org/wiki/Oslo"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "nature",
+    "art"
+  ],
+  "transit": {
+    "best": "Walk in the centre and use the Ruter app for metro, trams and buses.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The T-bane covers the city and suburbs. Buy tickets in the Ruter app or at kiosks."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps; same Ruter tickets work across metro, tram and bus."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt operate. Taxis are expensive; Oslo Taxi and NorgesTaxi are reliable."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended: tolls and limited parking. Use transit instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and easy on foot; bike-sharing is available."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries connect to the Bygdøy museums and the fjord islands."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cool coastal climate: mild summers, cold winters and rain in every month. Days are very long in summer and short in winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 16–21°C and long daylight. Best for fjord ferries, parks and walking."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winters are cold",
+        "text": "January and February highs sit near -1 to 1°C with lows of -6 to -5°C. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 8–13 rain days every month. A waterproof jacket beats an umbrella in wind."
+      },
+      {
+        "icon": "🌗",
+        "title": "Big daylight swing",
+        "text": "Summer evenings stay bright late; December days are short. Plan outdoor sights for midday in winter."
+      },
+      {
+        "icon": "👟",
+        "title": "Watch for ice",
+        "text": "Winter pavements can be slippery. Wear shoes with grip or bring traction aids."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and comfortable walking shoes. Add a warm hat and gloves from November to March."
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+$ deepseek_prep.py San José
+  tokens in 681 out 329
+San José: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py San José
+  tokens in 2810 out 546
+San José: 0 problems
+
+$ deepseek_city.py San José --stage places
+San José: places
+  tokens in 1159 out 3766
+
+$ deepseek_city.py San José --stage frame
+San José: frame
+  tokens in 2431 out 1688
+
+$ deepseek_city.py San José --stage plans
+San José: plans
+  plans for day
+  tokens in 2513 out 1248
+  plans for 1n
+  tokens in 2514 out 1344
+  plans for 2n
+  tokens in 2519 out 1758
+  plans for 3n
+  tokens in 2514 out 2180
+
+$ merge_city.py San José
+San José: 24 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/san-jose-cr.json and planner/san-jose-cr.json
+

@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class PassportProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -147,11 +148,7 @@ class PassportProvider with ChangeNotifier {
     // 2. Load from Server (if logged in)
     if (user != null) {
       try {
-        final doc = await _firestore
-            .collection('users')
-            .doc(user.uid)
-            .get()
-            .timeout(const Duration(seconds: 5));
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('selectedPassportIso')) {
           String serverIso = doc.data()!['selectedPassportIso'];
           if (_passportDataMap.containsKey(serverIso)) {
@@ -217,11 +214,7 @@ class PassportProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore
-            .collection('users')
-            .doc(user.uid)
-            .get()
-            .timeout(const Duration(seconds: 5));
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('selectedPassportIso')) {
           final String serverIso = doc.data()!['selectedPassportIso'];
           if (_passportDataMap.containsKey(serverIso)) {

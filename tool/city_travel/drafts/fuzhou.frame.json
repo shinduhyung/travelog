@@ -1,0 +1,260 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old lanes, temples and jasmine-tea teahouses."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Fish balls, lychee pork and street snacks."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Hot springs, riverside walks and green hills."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Dongjiekou",
+      "range": [
+        250,
+        600
+      ],
+      "why": "City centre. Metro interchange, big malls and easy taxis to most sights.",
+      "center": [
+        26.081,
+        119.297
+      ]
+    },
+    {
+      "area": "Sanfang Qixiang",
+      "range": [
+        300,
+        750
+      ],
+      "why": "Stay inside the old lanes. Walk to teahouses and historic houses; quieter at night.",
+      "center": [
+        26.085,
+        119.293
+      ]
+    },
+    {
+      "area": "Taijiang",
+      "range": [
+        200,
+        500
+      ],
+      "why": "Riverside district with cheaper rooms and good local food streets.",
+      "center": [
+        26.058,
+        119.305
+      ]
+    },
+    {
+      "area": "Gulou",
+      "range": [
+        220,
+        550
+      ],
+      "why": "Central and green, near parks and universities. Good value with metro access.",
+      "center": [
+        26.093,
+        119.29
+      ]
+    }
+  ],
+  "food": [
+    "Try Fuzhou fish balls (yu wan): springy balls with pork filling, in a light soup. Cheap and everywhere.",
+    "Look for lychee pork (lizhi rou) and Buddha Jumps Over the Wall soup in sit-down restaurants.",
+    "Street snacks: guo bian hu rice rolls, oyster omelette and peanut soup. Expect ¥5–20 per item.",
+    "Teahouse stop in Sanfang Qixiang: jasmine tea is the local specialty. Prices vary; check the menu first.",
+    "Night food streets near Taijiang and student areas are busy and cheap. Most stalls close before midnight."
+  ],
+  "more_time": [
+    "Add a half-day for hot springs: Fuzhou is known for them. Ask your hotel for a nearby option and check prices on the day.",
+    "Swap one city day for the hills and tea country outside town. Arrange a car or join a day tour.",
+    "History fans can add a temple or old-house visit in the morning and keep the afternoon free for the riverside."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.5,
+      0.55,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.65,
+      0.8,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "nature": [
+      0.6,
+      0.6,
+      0.75,
+      0.85,
+      0.8,
+      0.55,
+      0.4,
+      0.45,
+      0.7,
+      0.9,
+      0.85,
+      0.6
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.5,
+      0.55,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.85,
+      0.8
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights covers the old lanes, temples and food streets at a relaxed pace; add a night for hot springs or a hill day."
+  },
+  "month_notes": [
+    "January: cool and fairly dry, highs around 16°C. Bring a warm layer for evenings.",
+    "February: similar to January but wetter, about 10 rain days. Keep an umbrella handy.",
+    "March: mild and warming, but rain picks up to around 13 days.",
+    "April: pleasant highs near 24°C. Rain is common, so plan indoor backups.",
+    "May: warm and humid, around 16 rain days. Light rain jacket helps.",
+    "June: hot and very wet, about 20 rain days. Expect heavy showers.",
+    "July: hottest month, highs near 34°C. Go out early or after sunset.",
+    "August: hot and wet again, around 20 rain days. Sticky and humid.",
+    "September: still hot but rain eases to about 15 days.",
+    "October: comfortable highs near 26°C and fewer rainy days. A good month.",
+    "November: mild and fairly dry, highs around 22°C. Great for walking.",
+    "December: cool and dry, highs near 17°C. Pack a jacket for the evenings."
+  ],
+  "climate_guide": {
+    "summary": "Subtropical and humid: mild winters, hot sticky summers, and rain in most months.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to December",
+        "text": "Mild highs of 17–26°C and fewer rain days. Good for walking the old lanes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is common",
+        "text": "Expect 7–20 rain days a month. June and August are the wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "July peaks near 34°C with lows around 26°C. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild but cool winters",
+        "text": "January and February highs around 16°C, lows near 8°C. A jacket is enough."
+      },
+      {
+        "icon": "💦",
+        "title": "Humidity all year",
+        "text": "Sticky from May to September. Light, breathable clothes work best."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket or umbrella, and comfortable shoes for wet lanes and hills."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for main trips; taxis are cheap for short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1, 2, 4, 5, 6 and the Binhai Express Line serve the city. Buy single tickets from machines (¥1 coins, ¥5/10/20 notes)."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses run often for ¥1, most air conditioned, but service stops around 22:00."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are cheap: ¥10 flagfall, about ¥1.4/km, under ¥30 for most trips in town. Didi works; foreigners can sign up with a Chinese phone number and a foreign credit card."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving is not advised for visitors; traffic jams are common due to metro construction."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is good in the old lanes and riverside areas; bikes and shared bikes suit short hops."
+      }
+    ]
+  }
+}

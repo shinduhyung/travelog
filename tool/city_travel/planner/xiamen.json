@@ -1,0 +1,583 @@
+{
+  "city": "Xiamen",
+  "checked": "October 2026",
+  "intro_line": "Harbour island of colonial lanes, seafood and sea breezes.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Zhongshan Road",
+        "Gulangyu",
+        "Yundang Lake",
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Zhongshan Road",
+        "Gulangyu",
+        "Yundang Lake",
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Zhongshan Road",
+        "Gulangyu",
+        "Yundang Lake",
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Zhongshan Road",
+        "Gulangyu",
+        "Yundang Lake",
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Zhongshan Road",
+        "Gulangyu",
+        "Yundang Lake",
+        "Xiamen University"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 6,
+        "note": "Cool and fairly dry: highs near 18°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 8,
+        "note": "Similar to January, a little wetter. Light layers are enough."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Mild at 21°C with more rain days. Carry a small umbrella."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 11,
+        "note": "Warm and pleasant at 25°C; rain days rise."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 16,
+        "note": "Warm and humid, with frequent rain. Plan indoor backups."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 20,
+        "note": "Hot and very wet: about 20 rain days. Expect heavy showers."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 15,
+        "note": "Hottest month, highs near 33°C. Go out early or late."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 19,
+        "note": "Hot and wet again, with many rain days. Keep plans flexible."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 14,
+        "note": "Still hot at 31°C but rain eases. Good beach weather."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 5,
+        "note": "A sweet spot: warm, drier and comfortable. Book ahead."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 6,
+        "note": "Mild and dry at 25°C. Great for walking the old town."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 5,
+        "note": "Cooler at 20°C and dry. Pack a warm layer for nights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.75,
+      0.6,
+      0.5,
+      0.55,
+      0.7,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.6,
+      0.75,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.8,
+      0.6,
+      0.5,
+      0.55,
+      0.7,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "beach": [
+      0.4,
+      0.4,
+      0.55,
+      0.75,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.8,
+      0.6,
+      0.45
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.75,
+      0.6,
+      0.5,
+      0.55,
+      0.7,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "gulangyu": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday morning; avoid Chinese public holidays",
+      "area": "Gulangyu",
+      "popularity": 5
+    },
+    "nanputuo": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Early morning for fewer crowds",
+      "area": "Xiamen University",
+      "popularity": 5
+    },
+    "kinmen": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Xiamen University",
+      "popularity": 2
+    },
+    "luckin": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Morning coffee",
+      "area": "Zhongshan Road",
+      "popularity": 3
+    },
+    "xiamen-island": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Any time; spring and autumn are mildest",
+      "area": "Zhongshan Road",
+      "popularity": 4
+    },
+    "zhongshan-road": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Zhongshan Road",
+      "popularity": 4
+    },
+    "eight-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late morning or lunch",
+      "area": "Zhongshan Road",
+      "popularity": 4
+    },
+    "yundang-lake": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "Yundang Lake",
+      "popularity": 3
+    },
+    "cafe-street": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Yundang Lake",
+      "popularity": 3
+    },
+    "xmu-campus": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Xiamen University",
+      "popularity": 4
+    },
+    "baicheng-beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Xiamen University",
+      "popularity": 4
+    },
+    "huandao-road": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Xiamen University",
+      "popularity": 4
+    },
+    "shapowei": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Zhongshan Road",
+      "popularity": 3
+    },
+    "seafood-dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Zhongshan Road",
+      "popularity": 4
+    },
+    "ferry-tour": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Zhongshan Road",
+      "popularity": 3
+    },
+    "gulangyu-villas": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Gulangyu",
+      "popularity": 5
+    },
+    "sunlight-rock": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Gulangyu",
+      "popularity": 4
+    },
+    "nanputuo-vegetarian": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Xiamen University",
+      "popularity": 3
+    },
+    "lujiang-night": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Zhongshan Road",
+      "popularity": 3
+    },
+    "museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy or hot afternoon",
+      "area": "Yundang Lake",
+      "popularity": 2
+    },
+    "zengcuoan": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Xiamen University",
+      "popularity": 3
+    },
+    "gulangyu-organ": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Midday heat",
+      "area": "Gulangyu",
+      "popularity": 3
+    },
+    "ferry-ticket": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Book the day before",
+      "area": "Zhongshan Road",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover Gulangyu, the old town and the beach road without rushing; add a night for a slower food day."
+  },
+  "airports": [
+    {
+      "code": "XMN",
+      "name": "Xiamen Gaoqi International Airport",
+      "primary": true,
+      "note": "Main airport on the island, about 9 km from the centre.",
+      "options": [
+        {
+          "mode": "BRT",
+          "to": "Downtown",
+          "price": "¥1-5",
+          "time": "30-40 min",
+          "note": "Use the T4 station, not Gaoji Airport station."
+        },
+        {
+          "mode": "Bus",
+          "to": "Train station and Xiamen University",
+          "price": "¥1-2",
+          "time": "30-50 min",
+          "note": "Route 18 goes to Xiamen University."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥30-40",
+          "time": "20-30 min",
+          "note": "Metered; avoid the scenic ring road detour."
+        },
+        {
+          "mode": "Ride app (Didi)",
+          "to": "City centre",
+          "price": "¥30-45",
+          "time": "20-30 min",
+          "note": "Works well; meet at the marked pickup zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Xiamen",
+      "https://en.wikivoyage.org/wiki/Xiamen"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro for the airport and main stops; ferries for Gulangyu.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1–3 link the airport area, Xiamen North station and downtown. Signs are bilingual."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap and frequent, but most route signs are Chinese only. BRT runs on elevated bus-only roads; use the T4 station for the airport."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥10. Ride-hailing apps like Didi work well."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for most trips; the metro, buses and ferries cover the main sights."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best in the old town and on Gulangyu. Note bikes are banned on Gulangyu."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries to Gulangyu leave from Dongdu Wharf for non-residents. Check times on the day."
+      },
+      {
+        "mode": "Payment",
+        "has": true,
+        "text": "Pay with the Alipay or WeChat transit mini-app, or an eKatong card."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and humid: mild, fairly dry winters and hot, wet summers with typhoon-season rain.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: October to December",
+        "text": "Warm days around 20–29°C and few rain days. Ideal for Gulangyu and the old town."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest months: May to August",
+        "text": "15–20 rain days a month. Showers can be heavy; keep a rain jacket and a backup plan."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer",
+        "text": "July and August peak near 32–33°C with warm nights. Sightsee early morning or after sunset."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Typhoon season",
+        "text": "Summer and early autumn can bring storms. Check forecasts and ferry status on the day."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild winters",
+        "text": "January and February sit around 11–19°C. A jacket is useful, especially near the water."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain layer, sunscreen and comfortable shoes for cobbled island lanes."
+      }
+    ]
+  }
+}

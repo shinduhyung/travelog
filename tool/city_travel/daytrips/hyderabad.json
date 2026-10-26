@@ -1,0 +1,171 @@
+{
+ "city": "Hyderabad",
+ "trips": [
+  {
+   "place": "Warangal",
+   "label": "",
+   "position": {
+    "id": 387386,
+    "name": "Warangal",
+    "city": "Warangal",
+    "lat": 18.0,
+    "lng": 79.58333
+   },
+   "town": {
+    "name": "Warangal",
+    "lat": 18.0,
+    "lng": 79.58333
+   },
+   "road": {
+    "km": 145,
+    "min": 121,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 2950,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$13",
+     "time": "2h 28m",
+     "via": "Hyderabad to Warangal",
+     "source": "https://www.rome2rio.com/s/Hyderabad/Warangal"
+    },
+    "bus": {
+     "from": "$4-$35",
+     "time": "4h",
+     "via": "Hyderabad to Warangal",
+     "source": "https://www.rome2rio.com/s/Hyderabad/Warangal"
+    }
+   },
+   "route_note": "Take a direct train or bus from Hyderabad to Warangal (roughly 2.5-3 hours), then use local autos to reach the fort and temple sites.",
+   "see": [
+    "Warangal Fort ruins and Kakatiya gateways",
+    "Thousand Pillar Temple",
+    "Ramappa Temple (UNESCO site, short taxi onward)",
+    "Bhadrakali Temple"
+   ],
+   "visit": "Full day",
+   "tour_query": "Warangal day trip from Hyderabad",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct train takes about 2h 28m and local autos connect the fort and temple sites.",
+   "stars": 4,
+   "know": [
+    "Warangal Fort and the Thousand Pillar Temple are the classic sights",
+    "Start early to fit fort and temples in one day"
+   ]
+  },
+  {
+   "place": "Bidar",
+   "label": "",
+   "position": {
+    "id": 384972,
+    "name": "Bīdar",
+    "city": "Bīdar",
+    "lat": 17.9,
+    "lng": 77.55
+   },
+   "town": {
+    "name": "Bidar",
+    "lat": 17.90802,
+    "lng": 77.51524
+   },
+   "road": {
+    "km": 147,
+    "min": 121,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 2990,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$14",
+     "time": "3h 39m",
+     "via": "Hyderabad to Bidar",
+     "source": "https://www.rome2rio.com/s/Hyderabad/Bidar"
+    },
+    "bus": {
+     "from": "$21-$34",
+     "time": "4h 11m",
+     "via": "FlixBus Hyderabad - Patancheru to FlixBus Kohinoor Family Dhaba",
+     "source": "https://www.rome2rio.com/s/Hyderabad/Bidar"
+    }
+   },
+   "route_note": "Direct trains and buses run from Hyderabad to Bidar in about 3 hours; the fort and monuments are a short auto ride from the station/bus stand.",
+   "see": [
+    "Bidar Fort and Rangeen Mahal",
+    "Guru Nanak Jhira Sahib",
+    "Bahmani tombs",
+    "Madrasa Mahmud Gawan"
+   ],
+   "visit": "Full day",
+   "tour_query": "Bidar day trip from Hyderabad",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct train is faster than the bus and the monuments are a short auto ride from the station.",
+   "stars": 3,
+   "know": [
+    "Bidar Fort is the main draw and is closed on certain days, so check before going",
+    "Allow time for the auto ride from the station to the fort"
+   ]
+  },
+  {
+   "place": "Medak",
+   "label": "",
+   "position": {
+    "id": 386265,
+    "name": "Medak",
+    "city": "Medak",
+    "lat": 18.03333,
+    "lng": 78.26667
+   },
+   "town": {
+    "name": "Medak",
+    "lat": 18.04531,
+    "lng": 78.26078
+   },
+   "road": {
+    "km": 95,
+    "min": 84,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1950,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$6-$18",
+     "time": "2h 25m",
+     "via": "Kacheguda to Mirzapali",
+     "source": "https://www.rome2rio.com/s/Hyderabad/Medak"
+    }
+   },
+   "route_note": "Buses from Hyderabad's MGBS reach Medak in about 2-2.5 hours; the cathedral and fort are close to the bus stand.",
+   "see": [
+    "Medak Cathedral",
+    "Medak Fort",
+    "Pocharam Reservoir (optional)",
+    "Local market"
+   ],
+   "visit": "Half day",
+   "tour_query": "Medak day trip from Hyderabad",
+   "quests": [],
+   "recommended": "tour",
+   "why": "Frequent buses from MGBS reach Medak in about 2-2.5 hours and the sights are near the bus stand.",
+   "stars": 3,
+   "know": [
+    "Medak Cathedral and the fort are close to the bus stand",
+    "Go in the cooler morning hours for the cathedral visit"
+   ]
+  }
+ ],
+ "problems": [
+  "Medak: model picked bus without data; set to tour",
+  "Bidar: train over 3h20"
+ ]
+}

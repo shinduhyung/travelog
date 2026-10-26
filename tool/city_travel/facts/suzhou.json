@@ -1,0 +1,244 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Canals, gardens and silk in an ancient water city.",
+  "intro": "Suzhou rewards visitors with classical gardens, quiet canals and a fast modern metro. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Guanqian Street",
+    "Pingjiang Road",
+    "Suzhou Industrial Park",
+    "Near Suzhou Station"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 10,
+    "per_km": 3.2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro: 9 lines; lines 1 and 4 cross downtown. Fares ¥2-6.",
+    "Buses run 05:00-21:00, every 10-20 min. Most fares ¥1-2; exact change needed.",
+    "Tourist buses Y1-Y5 link the railway station and main sights.",
+    "Taxis: flag ¥10 for 3 km, then about ¥3.2/km. Use the queue, not touts.",
+    "Ride apps: Didi works well. Few drivers speak English, so show Chinese addresses.",
+    "Walking is fine downtown; bikes rent for about ¥30/day. Keep bikes locked."
+  ],
+  "airports": [
+    {
+      "code": "WUX",
+      "name": "Sunan Shuofang International Airport",
+      "primary": true,
+      "note": "Closest airport, 26 km; mostly domestic with some international flights.",
+      "options": [
+        {
+          "mode": "Train + bus",
+          "to": "Wuxi station, then Suzhou",
+          "price": "¥20-40",
+          "time": "60-90 min",
+          "note": "Bus to Wuxi centre every 30 min, then high-speed train."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Suzhou city centre",
+          "price": "¥20-30",
+          "time": "50-70 min",
+          "note": "Check times at the airport; services are limited."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Suzhou city centre",
+          "price": "¥80-120",
+          "time": "40-60 min",
+          "note": "Fastest door-to-door option."
+        },
+        {
+          "mode": "Didi",
+          "to": "Suzhou city centre",
+          "price": "¥70-110",
+          "time": "40-60 min",
+          "note": "Book in the app; show the driver your Chinese address."
+        }
+      ]
+    },
+    {
+      "code": "SHA",
+      "name": "Shanghai Hongqiao International Airport",
+      "primary": false,
+      "note": "About 86 km; mostly domestic plus some nearby international flights.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Suzhou Station or Suzhou North",
+          "price": "¥30-60",
+          "time": "30-45 min",
+          "note": "Bullet trains go to Hongqiao Railway Station, one metro stop from the airport."
+        },
+        {
+          "mode": "Shuttle bus",
+          "to": "Suzhou city centre",
+          "price": "¥30-50",
+          "time": "60-80 min",
+          "note": "Runs from the airport; check the last departure."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Suzhou city centre",
+          "price": "¥250-350",
+          "time": "70-90 min",
+          "note": "Pricey; the train is usually better."
+        },
+        {
+          "mode": "Didi",
+          "to": "Suzhou city centre",
+          "price": "¥230-330",
+          "time": "70-90 min",
+          "note": "Long trip; agree on the route in the app."
+        }
+      ]
+    },
+    {
+      "code": "PVG",
+      "name": "Shanghai Pudong International Airport",
+      "primary": false,
+      "note": "About 120 km; the main gateway for international flights.",
+      "options": [
+        {
+          "mode": "Shuttle bus",
+          "to": "Suzhou city centre",
+          "price": "¥50-80",
+          "time": "100-120 min",
+          "note": "Direct and simple; book ahead in busy periods."
+        },
+        {
+          "mode": "Metro + train",
+          "to": "Suzhou Station",
+          "price": "¥40-70",
+          "time": "2-2.5 hr",
+          "note": "Metro line 2 to Hongqiao, then a bullet train. Slow but cheap."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Suzhou city centre",
+          "price": "¥350-450",
+          "time": "100-130 min",
+          "note": "Best for late arrivals with luggage."
+        },
+        {
+          "mode": "Didi",
+          "to": "Suzhou city centre",
+          "price": "¥330-430",
+          "time": "100-130 min",
+          "note": "Works well; confirm the pickup point in the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Humble Administrator's Garden",
+    "Suzhou Museum",
+    "Tiger Hill, Suzhou",
+    "Tongli Water Town",
+    "Grand Canal Boat"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Suzhou",
+      "https://en.wikivoyage.org/wiki/Suzhou"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    31.30408,
+    120.59538
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 9,
+      "low": 1,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 16
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 16
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

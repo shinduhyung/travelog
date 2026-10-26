@@ -1,0 +1,608 @@
+{
+  "city": "Johannesburg",
+  "checked": "October 2026",
+  "intro_line": "A sprawling gold-rush metropolis of energy, culture and green escapes.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Sandton",
+        "Rosebank",
+        "Maboneng",
+        "Melville"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Sandton",
+        "Rosebank",
+        "Maboneng",
+        "Melville"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Sandton",
+        "Rosebank",
+        "Maboneng",
+        "Melville"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Sandton",
+        "Rosebank",
+        "Maboneng",
+        "Melville"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Sandton",
+        "Rosebank",
+        "Maboneng",
+        "Melville"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 14,
+        "rain_days": 14,
+        "note": "January: warm and wet, about 14 rain days. Pack a rain jacket and plan indoor sights."
+      },
+      {
+        "high": 25,
+        "low": 14,
+        "rain_days": 13,
+        "note": "February: similar to January, warm with frequent afternoon showers."
+      },
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 9,
+        "note": "March: warm with fewer rainy days; good for walking tours."
+      },
+      {
+        "high": 22,
+        "low": 10,
+        "rain_days": 8,
+        "note": "April: mild days around 22°C and cool nights. Comfortable for sightseeing."
+      },
+      {
+        "high": 20,
+        "low": 7,
+        "rain_days": 2,
+        "note": "May: dry and cool, only about 2 rain days. Bring a warm layer for evenings."
+      },
+      {
+        "high": 17,
+        "low": 4,
+        "rain_days": 1,
+        "note": "June: cold nights near 4°C and dry. Sunny days but chilly mornings."
+      },
+      {
+        "high": 17,
+        "low": 4,
+        "rain_days": 0,
+        "note": "July: the driest month, cold nights. Best for clear skies and game drives."
+      },
+      {
+        "high": 21,
+        "low": 6,
+        "rain_days": 1,
+        "note": "August: dry and cool, warming by day. Good value before spring."
+      },
+      {
+        "high": 25,
+        "low": 10,
+        "rain_days": 3,
+        "note": "September: warming fast, around 25°C by day. Few rain days."
+      },
+      {
+        "high": 26,
+        "low": 12,
+        "rain_days": 7,
+        "note": "October: warm and mostly dry; a good shoulder month."
+      },
+      {
+        "high": 26,
+        "low": 13,
+        "rain_days": 11,
+        "note": "November: warm with more showers returning. Pack a light rain layer."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 16,
+        "note": "December: warm and the wettest month, about 16 rain days. Book indoor backups."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "history": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "art": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.8,
+      0.8,
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "apartheid-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Sandton",
+      "popularity": 5
+    },
+    "constitution-hill": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Sandton",
+      "popularity": 4
+    },
+    "mandela-house": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Sandton",
+      "popularity": 4
+    },
+    "hector-pieterson": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Sandton",
+      "popularity": 4
+    },
+    "gold-reef-city": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Weekday, full day",
+      "area": "Sandton",
+      "popularity": 4
+    },
+    "ponte-city": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Maboneng",
+      "popularity": 3
+    },
+    "sab-world-of-beer": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Maboneng",
+      "popularity": 3
+    },
+    "fnb-stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match day",
+      "area": "Sandton",
+      "popularity": 3
+    },
+    "carnival-city": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Sandton",
+      "popularity": 2
+    },
+    "castle-brewery": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Maboneng",
+      "popularity": 2
+    },
+    "emperors-palace": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Sandton",
+      "popularity": 3
+    },
+    "monte-casino": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Sandton",
+      "popularity": 3
+    },
+    "nandos": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Sandton",
+      "popularity": 4
+    },
+    "orlando-towers": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Sandton",
+      "popularity": 3
+    },
+    "satyagraha-house": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Rosebank",
+      "popularity": 2
+    },
+    "steers": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Sandton",
+      "popularity": 3
+    },
+    "wimpy": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Sandton",
+      "popularity": 2
+    },
+    "neighbourgoods-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Maboneng",
+      "popularity": 4
+    },
+    "maboneng-precinct": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Maboneng",
+      "popularity": 4
+    },
+    "soweto-tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Sandton",
+      "popularity": 5
+    },
+    "melville-7th": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Melville",
+      "popularity": 3
+    },
+    "rosebank-art": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Rosebank",
+      "popularity": 3
+    },
+    "zoo-lake": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Rosebank",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Apartheid Museum, Maboneng and a Soweto half-day; add a night for the Cradle of Humankind."
+  },
+  "airports": [
+    {
+      "code": "JNB",
+      "name": "O. R. Tambo International Airport",
+      "primary": true,
+      "note": "Africa's busiest hub, about 22 km east of the centre.",
+      "options": [
+        {
+          "mode": "Gautrain",
+          "to": "Sandton",
+          "price": "R200-250",
+          "time": "15-20 min",
+          "note": "Adds an airport surcharge of R155-185; card costs R21 extra."
+        },
+        {
+          "mode": "Airport shuttle",
+          "to": "Hotels in Sandton and Rosebank",
+          "price": "R150-300",
+          "time": "30-45 min",
+          "note": "Book through your hotel where possible."
+        },
+        {
+          "mode": "Uber or Bolt",
+          "to": "Sandton",
+          "price": "R250-400",
+          "time": "25-40 min",
+          "note": "Often cheaper than Gautrain for groups."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R300-500",
+          "time": "30-45 min",
+          "note": "Use licensed metered taxis outside arrivals; ignore touts inside."
+        }
+      ]
+    },
+    {
+      "code": "HLA",
+      "name": "Lanseria Airport",
+      "primary": false,
+      "note": "Smaller private airport northwest of the city, about 32 km away.",
+      "options": [
+        {
+          "mode": "Uber or Bolt",
+          "to": "Sandton",
+          "price": "R350-500",
+          "time": "40-60 min",
+          "note": "Check availability before landing."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R400-600",
+          "time": "45-70 min",
+          "note": "Traffic can be heavy; allow extra time."
+        },
+        {
+          "mode": "Airport shuttle",
+          "to": "Sandton and Pretoria hotels",
+          "price": "check locally",
+          "time": "45-70 min",
+          "note": "Pre-book with your hotel or airline."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Johannesburg",
+      "https://en.wikivoyage.org/wiki/Johannesburg"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "art"
+  ],
+  "transit": {
+    "best": "Uber or Bolt for most trips; Gautrain for the airport and Sandton.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Gautrain is the fast, safe rail link between OR Tambo, Sandton, Rosebank and Pretoria."
+      },
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Metrorail commuter trains are cheap but not advised for tourists."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City and Putco buses are limited; minibus taxis are cheap but risky for visitors."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Bolt work well; use comfort or black options where possible."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Renting a car gives the most flexibility; traffic peaks 06:30-09:00 and 15:30-18:30."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is fine in malls and some suburbs; avoid walking between distant areas."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "High-altitude city with warm, wet summers and dry, cold winters. Rain falls mostly as afternoon thunderstorms.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Dry, sunny days with few rain days. Cool to cold nights, so pack layers."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet summer (November to February)",
+        "text": "Around 11–16 rain days a month, usually short afternoon storms. Mornings are often clear."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winter nights",
+        "text": "June and July drop to about 4°C at night. Days stay near 17°C and sunny."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Mild shoulder months",
+        "text": "April, May, September and October are comfortable, with highs of 20–26°C."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Afternoon thunderstorms",
+        "text": "Summer storms can be sudden. Avoid open high ground late in the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for cool mornings and warm afternoons, a rain jacket in summer, and a warm jacket for winter nights."
+      }
+    ]
+  }
+}

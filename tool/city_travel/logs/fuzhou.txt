@@ -1,0 +1,32 @@
+$ deepseek_prep.py Fuzhou
+  tokens in 655 out 291
+Fuzhou: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Fuzhou
+  tokens in 2254 out 696
+Fuzhou: 0 problems
+
+$ deepseek_city.py Fuzhou --stage places
+Fuzhou: places
+  tokens in 1143 out 3058
+
+$ deepseek_city.py Fuzhou --stage frame
+Fuzhou: frame
+  tokens in 2486 out 1748
+  repaired JSON
+
+$ deepseek_city.py Fuzhou --stage plans
+Fuzhou: plans
+  plans for day
+  tokens in 2182 out 820
+  plans for 1n
+  tokens in 2183 out 1133
+  plans for 2n
+  tokens in 2188 out 1115
+  plans for 3n
+  tokens in 2183 out 2187
+
+$ merge_city.py Fuzhou
+Fuzhou: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/fuzhou.json and planner/fuzhou.json
+

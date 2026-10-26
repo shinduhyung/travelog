@@ -1,0 +1,28 @@
+$ deepseek_facts.py San Salvador
+  tokens in 2174 out 561
+San Salvador: 1 problems
+  - SAL taxi US$25-40 vs tariff estimate 75
+
+$ deepseek_city.py San Salvador --stage places
+San Salvador: places
+  tokens in 1165 out 2891
+
+$ deepseek_city.py San Salvador --stage frame
+San Salvador: frame
+  tokens in 2417 out 1740
+
+$ deepseek_city.py San Salvador --stage plans
+San Salvador: plans
+  plans for day
+  tokens in 2045 out 1088
+  plans for 1n
+  tokens in 2046 out 1029
+  plans for 2n
+  tokens in 2051 out 1164
+  plans for 3n
+  tokens in 2046 out 1932
+
+$ merge_city.py San Salvador
+ERROR joya: landmark 'Joya de Cerén' not in all_landmarks.json
+San Salvador: 19 places, 12 plans, 1 errors, 0 warnings
+

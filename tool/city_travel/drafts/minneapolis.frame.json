@@ -1,0 +1,260 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the riverfront and the old mill district."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Juicy Lucys, Nordic kitchens and brewery taprooms."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Chain of Lakes, the Mississippi and city parks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to the riverfront, theaters and stadiums; easy light-rail links to the airport and Mall of America.",
+      "center": [
+        44.9778,
+        -93.265
+      ]
+    },
+    {
+      "area": "Uptown",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Lakes, cafés and local shops; a relaxed base south of downtown.",
+      "center": [
+        44.948,
+        -93.298
+      ]
+    },
+    {
+      "area": "Northeast",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Breweries, art spaces and river paths in old industrial buildings.",
+      "center": [
+        44.999,
+        -93.27
+      ]
+    },
+    {
+      "area": "University",
+      "range": [
+        95,
+        220
+      ],
+      "why": "Campus energy, cheap eats and the Green Line to both downtowns.",
+      "center": [
+        44.973,
+        -93.235
+      ]
+    }
+  ],
+  "food": [
+    "Try a Juicy Lucy: a burger with cheese melted inside the patty. Several local bars claim to have invented it.",
+    "Look for Nordic and Scandinavian-influenced cooking; the Twin Cities have a strong Nordic food scene.",
+    "Grab walleye (a local fish) or a wild rice dish for a taste of Minnesota.",
+    "Brewery taprooms are everywhere; many allow outside food or host food trucks.",
+    "Check hours before you go: some kitchens close early on weeknights, and many places are closed on Mondays."
+  ],
+  "more_time": [
+    "Add a day in St. Paul: the Green Line light rail links both downtowns, with museums and old mansions to see.",
+    "Take the Blue Line to Mall of America for shopping and indoor rides on a rainy or cold day.",
+    "Head to Minnehaha Park and the river for a half-day of walking and a waterfall."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.45,
+      0.65,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.75,
+      0.45,
+      0.3
+    ],
+    "shopping": [
+      0.6,
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "family": [
+      0.5,
+      0.5,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ]
+  },
+  "best_for": [
+    "nature",
+    "food",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers the riverfront, a museum and the lakes; add a night for St. Paul or Mall of America."
+  },
+  "month_notes": [
+    "Coldest month: highs near -4°C, lows near -13°C. Bundle up and plan indoor sights.",
+    "Still deep winter: highs near -2°C, lows near -14°C. Watch for icy sidewalks.",
+    "Warming slowly: highs near 6°C, lows near -5°C. Expect some rain or snow days.",
+    "Spring arrives: highs near 12°C, lows near 1°C. Rain picks up; pack a layer.",
+    "Pleasant: highs near 20°C, lows near 9°C. Good for parks and walking.",
+    "Warm and green: highs near 27°C, lows near 16°C. Frequent rain showers.",
+    "Hottest month: highs near 28°C, lows near 18°C. Stay hydrated; some rain days.",
+    "Warm and humid: highs near 27°C, lows near 17°C. Good lake weather.",
+    "Comfortable: highs near 24°C, lows near 14°C. Great for outdoor plans.",
+    "Cooling down: highs near 14°C, lows near 6°C. Bring a jacket.",
+    "Chilly: highs near 6°C, lows near -2°C. Rain or snow possible.",
+    "Winter returns: highs near -1°C, lows near -9°C. Pack warm layers."
+  ],
+  "climate_guide": {
+    "summary": "Continental climate with cold, snowy winters and warm, humid summers. Rain is spread through the year.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Winters are very cold",
+        "text": "December to February highs sit near -4 to -1°C with lows near -9 to -14°C. Dress in layers and plan indoor stops."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs around 20–28°C. Ideal for the lakes, river paths and outdoor dining."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Rain days range from about 5 to 12 a month, peaking in spring and summer. Carry a light rain jacket."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer can be humid",
+        "text": "July and August highs near 27–28°C with warm nights. Go out early or late on hot days."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and fall are mild",
+        "text": "April and October highs near 12–14°C. Pleasant for walking but changeable; pack a layer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Warm coat, hat and gloves in winter; light clothes and rain gear in summer; a jacket for spring and fall."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Light rail and buses for most trips; ride apps or a car for scattered sights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "METRO Blue Line links the airport, downtown and Mall of America; fare $2 includes a 2.5-hour transfer. The Green Line connects downtown Minneapolis to St. Paul via the University."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover the city. Use the Metro Transit app or website for routes and schedules. Day passes cost $6; 7-day passes $24 (Go-To card required)."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis can be hailed or found at ranks. Uber and Lyft operate."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common. Rush hours (7-9 AM, 3-7 PM) are congested."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking and biking are pleasant in many areas."
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+$ deepseek_city.py Dhaka --stage plans
+Dhaka: plans
+  plans for day
+  tokens in 2246 out 1209
+  plans for 1n
+  tokens in 2247 out 1354
+  plans for 2n
+  tokens in 2252 out 1370
+  plans for 3n
+  tokens in 2247 out 1991
+
+$ merge_city.py Dhaka
+Dhaka: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/dhaka.json and planner/dhaka.json
+

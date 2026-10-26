@@ -1,0 +1,541 @@
+{
+  "city": "Valencia",
+  "checked": "October 2026",
+  "intro_line": "Valencia blends medieval streets, futuristic art and a sunny beach.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Ciutat Vella",
+        "El Carmen",
+        "Ruzafa",
+        "Eixample"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Ciutat Vella",
+        "El Carmen",
+        "Ruzafa",
+        "Eixample"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Ciutat Vella",
+        "El Carmen",
+        "Ruzafa",
+        "Eixample"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Ciutat Vella",
+        "El Carmen",
+        "Ruzafa",
+        "Eixample"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Ciutat Vella",
+        "El Carmen",
+        "Ruzafa",
+        "Eixample"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 3,
+        "note": "January: cool, highs near 16°C and only about 3 rain days. Pack a warm layer."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 4,
+        "note": "February: still cool, highs around 17°C, a few more rain days. Good for museums."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 8,
+        "note": "March: mild at 19°C but the wettest month, about 8 rain days. Keep an indoor plan."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 6,
+        "note": "April: pleasant 20°C days, some rain. Great for walking the old town."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 4,
+        "note": "May: warm at 24°C with few rain days. Beach season starts."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 4,
+        "note": "June: hot at 28°C, dry. Use mornings and evenings for sightseeing."
+      },
+      {
+        "high": 31,
+        "low": 22,
+        "rain_days": 2,
+        "note": "July: hot, 31°C highs and 22°C nights, almost no rain. Beach and shade."
+      },
+      {
+        "high": 31,
+        "low": 22,
+        "rain_days": 4,
+        "note": "August: as hot as July, humid nights. Book air-conditioned rooms."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 8,
+        "note": "September: still warm at 27°C but rain returns, about 8 rain days."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 6,
+        "note": "October: comfortable 24°C days, some rain. Good all-round month."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 6,
+        "note": "November: cooler at 20°C, about 6 rain days. Quieter and cheaper."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 3,
+        "note": "December: cool at 17°C, few rain days. Bring a jacket for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.2,
+      0.25,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.35,
+      0.25
+    ],
+    "history": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "art": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "city-arts-sciences": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Eixample",
+      "popularity": 5
+    },
+    "valencia-cathedral": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, right at opening",
+      "area": "Ciutat Vella",
+      "popularity": 5
+    },
+    "central-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Ciutat Vella",
+      "popularity": 5
+    },
+    "turia-gardens": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Eixample",
+      "popularity": 5
+    },
+    "la-lonja": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "Ciutat Vella",
+      "popularity": 4
+    },
+    "torres-serranos": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Ciutat Vella",
+      "popularity": 4
+    },
+    "bioparc": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Eixample",
+      "popularity": 4
+    },
+    "dunas": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer afternoon and sunset",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "oceanografic": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Eixample",
+      "popularity": 5
+    },
+    "mestalla": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Any day without a match",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "mountasia": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Ciutat Vella",
+      "popularity": 2
+    },
+    "paella": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Lunchtime, any season",
+      "area": "Ciutat Vella",
+      "popularity": 5
+    },
+    "russafa-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening, Thursday to Saturday",
+      "area": "Ruzafa",
+      "popularity": 4
+    },
+    "carmen-walk": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "El Carmen",
+      "popularity": 4
+    },
+    "albufera-boat": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon, spring or autumn",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "malvarrosa-beach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer morning or sunset",
+      "area": "Eixample",
+      "popularity": 4
+    },
+    "colon-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday lunchtime",
+      "area": "Eixample",
+      "popularity": 3
+    },
+    "serranos-viewpoint": {
+      "types": [
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Ciutat Vella",
+      "popularity": 3
+    },
+    "horchateria": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon, warm months",
+      "area": "Ciutat Vella",
+      "popularity": 3
+    },
+    "plaza-virgen": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Ciutat Vella",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old town, the City of Arts and Sciences and a beach afternoon; add a night for the Albufera and a slower food day."
+  },
+  "airports": [
+    {
+      "code": "VLC",
+      "name": "Valencia Airport",
+      "primary": true,
+      "note": "Main airport, in Manises about 9 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 150",
+          "to": "Àngel Guimerá, city centre",
+          "price": "€1.50",
+          "time": "30-40 min",
+          "note": "Yellow Fernanbus, every 15 min."
+        },
+        {
+          "mode": "Metro lines 3/5",
+          "to": "Xàtiva / Estació del Nord",
+          "price": "€3.90 plus €1 card",
+          "time": "about 21 min",
+          "note": "Runs every 8 min; no trains midnight to 05:30."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "20-30 min",
+          "note": "Airport supplement applies; return trip is often cheaper."
+        },
+        {
+          "mode": "Uber / Bolt / Cabify",
+          "to": "City centre",
+          "price": "€15-25",
+          "time": "20-30 min",
+          "note": "Check app pickup point outside arrivals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Valencia",
+      "https://en.wikivoyage.org/wiki/Valencia"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "beach"
+  ],
+  "transit": {
+    "best": "Walk the flat centre; use metro or bus for the beach and the City of Arts and Sciences.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metro València has 9 lines, some trams. Single zone fare about €1.50 plus €1 for the card."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "EMT buses reach most districts. Single ticket about €2, pay the driver by cash or card."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; airport trips add a supplement. Uber, Bolt and Cabify operate."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not needed in the city. Useful only for trips out to the Albufera or nearby towns."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is flat and walkable. Bikes and the Turia park paths are popular."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Regional trains leave from Estació del Nord. No ferry service for visitors."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: mild winters, hot dry summers and a short rainy spell in spring and autumn.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September to October",
+        "text": "Warm days around 24–28°C with few rain days. Good for both sightseeing and the beach."
+      },
+      {
+        "icon": "🥵",
+        "title": "July and August are hot",
+        "text": "Highs of 31°C and nights near 22°C. Sightsee early, rest at midday, swim in the evening."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in March and September",
+        "text": "About 8 rain days each. Showers are often short; carry a light rain jacket."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Mild winters",
+        "text": "January and December highs of 16–17°C with cool nights near 7–8°C. A coat is enough."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach season",
+        "text": "Sea and sand are best from June to September. May and October are fine for a walk, cooler for swimming."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer, a warm layer for winter, and a small umbrella in spring and autumn."
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Mile-high city where the Rockies meet a lively downtown.",
+  "intro": "Denver rewards visitors with mountain views, a walkable core and a booming food and beer scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "LoDo",
+    "Downtown CBD",
+    "Capitol Hill",
+    "RiNo"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 5,
+    "per_km": 2,
+    "min_fare": 15
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "RTD light rail and commuter rail link downtown, suburbs and the airport.",
+    "RTD buses cost $2.75 cash with a 3-hour transfer; day passes about $5.50.",
+    "Taxis are metered; Uber and Lyft both work well in Denver.",
+    "A car is handy outside downtown; toll roads are cashless, so check rental billing.",
+    "Downtown is walkable; bikes and scooters are common in summer.",
+    "No ferry service; the city is landlocked."
+  ],
+  "airports": [
+    {
+      "code": "DEN",
+      "name": "Denver International Airport",
+      "primary": true,
+      "note": "Main hub, about 30 km east-northeast of the centre.",
+      "options": [
+        {
+          "mode": "RTD A Line train",
+          "to": "Union Station",
+          "price": "$10.50",
+          "time": "35-40 min",
+          "note": "Cheapest reliable option; buy ticket before boarding."
+        },
+        {
+          "mode": "RTD bus",
+          "to": "Downtown",
+          "price": "$10.50",
+          "time": "60-75 min",
+          "note": "Slower; check schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$55-70",
+          "time": "35-50 min",
+          "note": "Flat-ish airport rates; traffic can add time."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$45-65",
+          "time": "35-50 min",
+          "note": "Pickup at designated rideshare zones."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Red Rocks Amphitheatre",
+    "Denver Art Museum",
+    "Colorado State Capitol",
+    "Colorado School of Mines",
+    "Coors Brewery",
+    "Elitch Gardens",
+    "Lakeside Amusement Park",
+    "Mile High Flea Market",
+    "Quiznos"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Denver",
+      "https://en.wikivoyage.org/wiki/Denver"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    39.73915,
+    -104.9847
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -10,
+      "rain_days": 5
+    },
+    {
+      "high": 6,
+      "low": -10,
+      "rain_days": 6
+    },
+    {
+      "high": 11,
+      "low": -5,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 0,
+      "rain_days": 8
+    },
+    {
+      "high": 20,
+      "low": 5,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 31,
+      "low": 16,
+      "rain_days": 7
+    },
+    {
+      "high": 30,
+      "low": 15,
+      "rain_days": 7
+    },
+    {
+      "high": 28,
+      "low": 11,
+      "rain_days": 4
+    },
+    {
+      "high": 19,
+      "low": 3,
+      "rain_days": 5
+    },
+    {
+      "high": 11,
+      "low": -3,
+      "rain_days": 5
+    },
+    {
+      "high": 7,
+      "low": -7,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

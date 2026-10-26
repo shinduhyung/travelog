@@ -1,0 +1,667 @@
+{
+  "city": "Shanghai",
+  "checked": "October 2026",
+  "intro_line": "Neon skyline, old lanes, and river breezes: Shanghai never stands still.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "The Bund",
+        "People's Square",
+        "French Concession",
+        "Jing'an"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "The Bund",
+        "People's Square",
+        "French Concession",
+        "Jing'an"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "The Bund",
+        "People's Square",
+        "French Concession",
+        "Jing'an"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "The Bund",
+        "People's Square",
+        "French Concession",
+        "Jing'an"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "The Bund",
+        "People's Square",
+        "French Concession",
+        "Jing'an"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": 2,
+        "rain_days": 8,
+        "note": "Cold and damp: highs near 9°C, lows near 2°C. Pack a warm coat."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 9,
+        "note": "Still chilly, highs around 11°C. Fewer crowds at indoor sights."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 11,
+        "note": "Milder at 16°C highs. Good for walking; expect about 11 rain days."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 10,
+        "note": "Pleasant spring: highs near 20°C. One of the best months to visit."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 12,
+        "note": "Warm at 25°C. Rain picks up; carry an umbrella."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 17,
+        "note": "Hot and wet: highs 28°C, about 17 rain days. Plan indoor breaks."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 18,
+        "note": "Hottest month: highs 32°C, lows 25°C. Go out early or after dark."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 15,
+        "note": "Still hot at 32°C and humid. Stay hydrated."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 14,
+        "note": "Cooling to 28°C highs. Comfortable again; about 14 rain days."
+      },
+      {
+        "high": 23,
+        "low": 16,
+        "rain_days": 8,
+        "note": "Great month: highs near 23°C and only about 8 rain days."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 10,
+        "note": "Mild at 18°C highs. Good for sightseeing; about 10 rain days."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 7,
+        "note": "Cold again: highs near 11°C, lows near 3°C. Dress in layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.65,
+      0.45,
+      0.45,
+      0.75,
+      1,
+      0.9,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.65,
+      0.45,
+      0.45,
+      0.75,
+      1,
+      0.9,
+      0.75
+    ],
+    "shopping": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      1,
+      0.9,
+      0.8
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.8,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      1,
+      0.85,
+      0.65
+    ]
+  },
+  "places": {
+    "bund": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset into evening; avoid weekend crowds",
+      "area": "The Bund",
+      "popularity": 5
+    },
+    "yugarden": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning, spring or autumn",
+      "area": "The Bund",
+      "popularity": 5
+    },
+    "pearltower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon for daylight and night views",
+      "area": "The Bund",
+      "popularity": 5
+    },
+    "shanghaitower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Clear days, late afternoon",
+      "area": "The Bund",
+      "popularity": 4
+    },
+    "nanjingroad": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening when lights are on",
+      "area": "People's Square",
+      "popularity": 5
+    },
+    "peoplessquare": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning for locals exercising",
+      "area": "People's Square",
+      "popularity": 3
+    },
+    "shanghaimuseum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "People's Square",
+      "popularity": 4
+    },
+    "xintiandi": {
+      "types": [
+        "food",
+        "shopping",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "French Concession",
+      "popularity": 4
+    },
+    "swfc": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Clear day, sunset",
+      "area": "The Bund",
+      "popularity": 4
+    },
+    "aunteajenny": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "People's Square",
+      "popularity": 3
+    },
+    "frenchconcession": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Weekend afternoon, spring or autumn",
+      "area": "French Concession",
+      "popularity": 4
+    },
+    "fudan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "French Concession",
+      "popularity": 2
+    },
+    "huangpucruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "The Bund",
+      "popularity": 4
+    },
+    "jingantemple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Jing'an",
+      "popularity": 4
+    },
+    "jinjiangactionpark": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday, mild weather",
+      "area": "French Concession",
+      "popularity": 2
+    },
+    "legoland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday, good weather",
+      "area": "French Concession",
+      "popularity": 3
+    },
+    "newyobo": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "People's Square",
+      "popularity": 1
+    },
+    "disneyland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday, avoid holidays",
+      "area": "French Concession",
+      "popularity": 5
+    },
+    "grandtheatre": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "People's Square",
+      "popularity": 3
+    },
+    "haichangocean": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "French Concession",
+      "popularity": 2
+    },
+    "sjtu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "French Concession",
+      "popularity": 2
+    },
+    "oceanaquarium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning on a rainy day",
+      "area": "The Bund",
+      "popularity": 3
+    },
+    "wetmarket": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "French Concession",
+      "popularity": 3
+    },
+    "skyviewpoint": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset into evening",
+      "area": "The Bund",
+      "popularity": 3
+    },
+    "wukangwalk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "French Concession",
+      "popularity": 4
+    },
+    "suzhoucreek": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Jing'an",
+      "popularity": 2
+    },
+    "tianzifang": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "French Concession",
+      "popularity": 3
+    },
+    "circus": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Jing'an",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Bund, the old city, the French Concession and a good food day without rushing."
+  },
+  "airports": [
+    {
+      "code": "PVG",
+      "name": "Shanghai Pudong International Airport",
+      "primary": true,
+      "note": "Main international gateway, 33 km southeast of centre.",
+      "options": [
+        {
+          "mode": "Metro line 2",
+          "to": "People's Square",
+          "price": "¥8-9",
+          "time": "60-75 min",
+          "note": "Cheapest; long ride, limited late hours."
+        },
+        {
+          "mode": "Maglev + Metro",
+          "to": "Longyang Road then city",
+          "price": "¥50-60",
+          "time": "40-60 min",
+          "note": "¥50 with same-day airline ticket; tops out at 300 km/h."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Downtown stops",
+          "price": "¥20-30",
+          "time": "60-90 min",
+          "note": "Six lines; good with heavy bags."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥200-500",
+          "time": "45-70 min",
+          "note": "Use the official taxi queue."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥200-400",
+          "time": "45-70 min",
+          "note": "Pick a marked pickup point."
+        }
+      ]
+    },
+    {
+      "code": "SHA",
+      "name": "Shanghai Hongqiao International Airport",
+      "primary": false,
+      "note": "Mostly domestic plus East Asia shuttles, 14 km west of centre.",
+      "options": [
+        {
+          "mode": "Metro line 2 or 10",
+          "to": "People's Square / centre",
+          "price": "¥4-6",
+          "time": "30-45 min",
+          "note": "Line 2 serves T2; line 10 serves both terminals."
+        },
+        {
+          "mode": "Night bus 316",
+          "to": "The Bund",
+          "price": "¥10-16",
+          "time": "45-60 min",
+          "note": "Runs 23:00-05:00 from T2."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥60-120",
+          "time": "20-40 min",
+          "note": "Allow extra for queues after 19:00."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥60-110",
+          "time": "20-40 min",
+          "note": "Good late-night option."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Shanghai",
+      "https://en.wikivoyage.org/wiki/Shanghai"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Metro for most trips: fast, cheap and English-signed.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast, cheap and English-signed; fares run about ¥3-9. Buy a Shanghai Public Transportation Card or use the metro app for tap-and-go."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover gaps the metro misses; fares are about ¥2."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; expect ¥200-500 to Pudong Airport and about ¥60-100 to Hongqiao. DiDi works well; Uber does not operate in mainland China."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is not advised for visitors."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking and shared bikes suit short trips."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries cross the Huangpu for about ¥2."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, damp winters. Spring and autumn are the best times to walk.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April and October",
+        "text": "Highs around 20–23°C with moderate rain. Ideal for the Bund and long walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid",
+        "text": "July and August hit 32°C with lows near 25–26°C. Plan indoor sights midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June to September",
+        "text": "Up to 18 rain days a month. Carry an umbrella and keep a backup indoor plan."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and damp",
+        "text": "January highs near 9°C and lows near 2°C. A warm coat and layers help."
+      },
+      {
+        "icon": "💨",
+        "title": "Humidity year-round",
+        "text": "Summers feel sticky; winters feel raw. Breathable clothes in summer, layers in winter."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, an umbrella, and layers. Add sunscreen and a hat for summer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+$ deepseek_facts.py Shenzhen
+  tokens in 4080 out 585
+Shenzhen: 0 problems
+
+$ deepseek_city.py Shenzhen --stage places
+Shenzhen: places
+  tokens in 1202 out 3309
+
+$ deepseek_city.py Shenzhen --stage frame
+Shenzhen: frame
+  tokens in 2423 out 1751
+
+$ deepseek_city.py Shenzhen --stage plans
+Shenzhen: plans
+  plans for day
+  tokens in 2185 out 826
+  plans for 1n
+  tokens in 2186 out 1093
+  plans for 2n
+  tokens in 2191 out 1240
+  plans for 3n
+  tokens in 2186 out 1624
+
+$ merge_city.py Shenzhen
+Shenzhen: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/shenzhen.json and planner/shenzhen.json
+

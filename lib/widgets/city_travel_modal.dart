@@ -6,13 +6,17 @@
 //
 // TODO (monetization wiring needed):
 //  - Flights: Trip.com affiliate program is wired up (Skyscanner's application was rejected).
-//    Sign up for the remaining real affiliate programs — Agoda/Booking (stays),
-//    GetYourGuide/Klook (tours), Airalo (eSIM) — and insert affiliate IDs into each URL
+//    GetYourGuide is wired up (partner_id=EMZVISH on the search link; curated tour links get it
+//    from tool/city_travel). Stays go to Hotels.com / Vrbo via Expedia Group (_hotelsComCamref).
+//    Sign up for the remaining real affiliate programs — Booking.com (stays), Klook (tours) —
+//    and insert affiliate IDs into each URL. Airalo (eSIM) is wired up
+//    through Impact (_airaloTrackingUrl); luggage storage goes to Bounce (_bounceRef).
 //  - Add url_launcher to pubspec.yaml if it's not already there (dependencies: url_launcher: ^6.x)
 //  - Travel tips (_travelTips) are currently generic placeholder text shared across all cities —
 //    replace with real per-city data later
-//  - The "More" section (rental car/luggage/travel insurance/ground transport) is lower priority on
-//    the roadmap, so it's shown as "Coming soon" for now
+//  - The "More" section (rental car/travel insurance/ground transport) is lower priority on
+//    the roadmap, so it's shown as "Coming soon" for now. Luggage storage has its own section (Bounce)
+//    (city pages listed in assets/bounce_city_pages.json, generic affiliate link otherwise)
 //  - Price attractiveness scoring (based on yearly avg / same period last year / recent trend) is
 //    week-2 scope — not included in this prototype
 //  - Destination IATA is matched from assets/top_city_hub_airport.json (city name -> IATA list,
@@ -57,6 +61,60 @@ import 'package:jidoapp/services/flight_price_service.dart';
 const String _tripComAllianceId = '8685083';
 const String _tripComSid = '319520097';
 const String _tripComSubId = 'D1919_3743'; // trip_sub3 — free-form tracking tag; safe to change per placement
+
+// Airalo affiliate tracking link from Impact (app.impact.com -> Create a link -> Airalo,
+// "Regular" link format). Append ?u=<encoded airalo.com URL> to land on a specific page.
+const String _airaloTrackingUrl = 'https://airalo.pxf.io/c/7592796/1268485/15608';
+
+// Expedia Group Travel Creator Program (Partnerize) affiliate refs, from the Creator Hub
+// Link builder (creator.expediagroup.com -> Link builder, "Shorten links" off). camref and
+// creativeref are fixed per brand; the per-link adref it adds is optional.
+const String _hotelsComCamref = '1011l6uqXc';
+const String _hotelsComCreativeref = '1011l66481';
+const String _vrboCamref = '1011l6uqXe';
+const String _vrboCreativeref = '1101l63118';
+
+String _expediaGroupAffiliateUrl(String host, String landingPage, String camref, String creativeref) =>
+    'https://$host/affiliate?landingPage=${Uri.encodeComponent(landingPage)}&camref=$camref&creativeref=$creativeref';
+
+// Bounce (luggage storage) affiliate referral code from partner.bounce.com.
+// bounce.com city pages accept ?ref= and carry it into their booking links.
+const String _bounceRef = 'TRAVELOG999083578969';
+
+// "city name -> bounce.com/luggage-storage/<slug>" from assets/bounce_city_pages.json.
+// Only checked slugs go in there (Bounce slugs aren't always the plain city name);
+// other cities fall back to the generic affiliate link.
+class _BounceCityPages {
+  static Map<String, String>? _cache;
+
+  static Future<Map<String, String>> load() async {
+    if (_cache != null) return _cache!;
+    try {
+      final str = await rootBundle.loadString('assets/bounce_city_pages.json');
+      _cache = Map<String, String>.from(json.decode(str) as Map);
+    } catch (_) {
+      _cache = {};
+    }
+    return _cache!;
+  }
+}
+
+// "city name -> published trip guide page" from assets/city_trip_pages.json
+// (built from tool/city_travel/logs/_pub_map.txt).
+class _TripGuidePages {
+  static Map<String, String>? _cache;
+
+  static Future<Map<String, String>> load() async {
+    if (_cache != null) return _cache!;
+    try {
+      final str = await rootBundle.loadString('assets/city_trip_pages.json');
+      _cache = Map<String, String>.from(json.decode(str) as Map);
+    } catch (_) {
+      _cache = {};
+    }
+    return _cache!;
+  }
+}
 
 String buildTripComFlightUrl(
     String originIata,
@@ -311,13 +369,26 @@ class _CityTravelSheet extends StatelessWidget {
   String get _flightSearchUrl => _tripComHomeUrl;
   String _flightRouteUrl(String originIata, String destIata) =>
       buildTripComFlightUrl(originIata, destIata, DateTime.now());
-  String get _hotelSearchUrl =>
-      'https://www.booking.com/searchresults.html?ss=${Uri.encodeComponent(city.name)}';
+  String get _hotelSearchUrl => _expediaGroupAffiliateUrl(
+      'www.hotels.com', 'https://www.hotels.com/Hotel-Search?destination=${Uri.encodeComponent(city.name)}',
+      _hotelsComCamref, _hotelsComCreativeref);
+  String get _rentalSearchUrl => _expediaGroupAffiliateUrl(
+      'vrbo.com', 'https://www.vrbo.com/search?destination=${Uri.encodeComponent(city.name)}',
+      _vrboCamref, _vrboCreativeref);
   String get _tourSearchUrlGyg =>
-      'https://www.getyourguide.com/s/?q=${Uri.encodeComponent(city.name)}';
+      'https://www.getyourguide.com/s/?q=${Uri.encodeComponent(city.name)}&partner_id=EMZVISH&utm_medium=online_publisher';
   String get _tourSearchUrlKlook =>
       'https://www.klook.com/search/result/?query=${Uri.encodeComponent(city.name)}';
-  String get _esimUrl => 'https://www.airalo.com/${_toDashSlug(city.country)}-esim';
+  Future<void> _openBounce() async {
+    final slug = (await _BounceCityPages.load())[city.name];
+    await _openUrl(slug == null
+        ? 'https://go.bounce.com/$_bounceRef'
+        : 'https://bounce.com/luggage-storage/$slug?ref=$_bounceRef&utm_source=affiliates&utm_medium=link');
+  }
+
+  // Airalo via Impact: the tracking link's `u` param deep-links to the country eSIM page.
+  String get _esimUrl =>
+      '$_airaloTrackingUrl?u=${Uri.encodeComponent('https://www.airalo.com/${_toDashSlug(city.country)}-esim')}';
 
   Future<void> _openUrl(String url) async {
     final uri = Uri.parse(url);
@@ -326,16 +397,14 @@ class _CityTravelSheet extends StatelessWidget {
     }
   }
 
+  // Hotels.com's search only filters hotel vs. home, so stays are split by brand instead.
   static const List<Map<String, String>> _stayTypes = [
-    {'label': 'Hotels', 'query': 'hotel'},
-    {'label': 'Hostels', 'query': 'hostel'},
-    {'label': 'Apartments', 'query': 'apartment'},
-    {'label': 'Resorts', 'query': 'resort'},
+    {'label': 'Hotels', 'query': 'hotel', 'provider': 'Hotels.com'},
+    {'label': 'Apartments', 'query': 'apartment', 'provider': 'Vrbo'},
   ];
 
   static const List<Map<String, dynamic>> _moreItems = [
     {'icon': Icons.directions_car_filled_outlined, 'label': 'Rental Car'},
-    {'icon': Icons.luggage_outlined, 'label': 'Luggage Storage'},
     {'icon': Icons.health_and_safety_outlined, 'label': 'Travel Insurance'},
     {'icon': Icons.directions_bus_outlined, 'label': 'Ground Transport'},
   ];
@@ -368,6 +437,7 @@ class _CityTravelSheet extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    _buildTripGuideCard(),
                     _buildSectionTitle('Flights & Transportation', Icons.flight_takeoff_rounded),
                     const SizedBox(height: 12),
                     _buildFlightCard(context),
@@ -386,6 +456,10 @@ class _CityTravelSheet extends StatelessWidget {
                     _buildSectionTitle('SIMs', Icons.sim_card_outlined),
                     const SizedBox(height: 12),
                     _buildEsimBanner(context),
+                    const SizedBox(height: 28),
+                    _buildSectionTitle('Luggage Storage', Icons.luggage_outlined),
+                    const SizedBox(height: 12),
+                    _buildBounceCard(),
                     const SizedBox(height: 28),
                     _buildSectionTitle('More', Icons.apps_rounded),
                     const SizedBox(height: 12),
@@ -608,7 +682,7 @@ class _CityTravelSheet extends StatelessWidget {
         itemBuilder: (context, index) {
           final type = _stayTypes[index];
           return GestureDetector(
-            onTap: () => _openUrl('$_hotelSearchUrl&nflt=ht_id%3D${type['query']}'),
+            onTap: () => _openUrl(type['query'] == 'apartment' ? _rentalSearchUrl : _hotelSearchUrl),
             child: Container(
               width: 108,
               padding: const EdgeInsets.all(14),
@@ -621,12 +695,7 @@ class _CityTravelSheet extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(
-                    switch (type['query']) {
-                      'hostel' => Icons.night_shelter_outlined,
-                      'apartment' => Icons.apartment_rounded,
-                      'resort' => Icons.beach_access_rounded,
-                      _ => Icons.hotel_rounded,
-                    },
+                    type['query'] == 'apartment' ? Icons.apartment_rounded : Icons.hotel_rounded,
                     color: themeColor,
                     size: 22,
                   ),
@@ -635,6 +704,7 @@ class _CityTravelSheet extends StatelessWidget {
                     tr(type['label']!),
                     style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: Color(0xFF111827)),
                   ),
+                  Text(type['provider']!, style: TextStyle(fontSize: 10, color: Colors.grey.shade500)),
                 ],
               ),
             ),
@@ -1173,6 +1243,89 @@ class _CityTravelSheet extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+
+  // ── Trip guide page (tool/city_travel output) ─────────────────────────
+  Widget _buildTripGuideCard() {
+    return FutureBuilder<Map<String, String>>(
+      future: _TripGuidePages.load(),
+      builder: (context, snap) {
+        final url = snap.data?[city.name];
+        if (url == null) return const SizedBox.shrink();
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 28),
+          child: GestureDetector(
+            onTap: () => _openUrl(url),
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: themeColor.withOpacity(0.08),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: themeColor.withOpacity(0.25)),
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.map_rounded, color: themeColor, size: 24),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(tr('${city.name} trip guide', entities: [city.name]),
+                            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+                        const SizedBox(height: 2),
+                        Text(tr('Itineraries, getting around, costs, weather and hotels'),
+                            style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+                      ],
+                    ),
+                  ),
+                  Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey.shade400),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  // ── Luggage Storage (Bounce) ──────────────────────────────────────────
+  Widget _buildBounceCard() {
+    return GestureDetector(
+      onTap: _openBounce,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: Colors.grey.shade200),
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 8, offset: const Offset(0, 3))],
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(color: themeColor.withOpacity(0.1), borderRadius: BorderRadius.circular(12)),
+              child: Icon(Icons.luggage_rounded, color: themeColor, size: 22),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(tr('Store your bags in ${city.name}', entities: [city.name]),
+                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF111827))),
+                  const SizedBox(height: 2),
+                  Text(tr('Drop luggage at nearby shops and hotels with Bounce'),
+                      style: TextStyle(fontSize: 12, color: Colors.grey.shade500)),
+                ],
+              ),
+            ),
+            Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey.shade300),
+          ],
+        ),
       ),
     );
   }

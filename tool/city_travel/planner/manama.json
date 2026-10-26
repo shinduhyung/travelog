@@ -1,0 +1,497 @@
+{
+  "city": "Manama",
+  "checked": "October 2026",
+  "intro_line": "A Gulf capital where pearl-diving past meets modern souks.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Manama Souq",
+        "Seef",
+        "Juffair",
+        "Diplomatic Area"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Manama Souq",
+        "Seef",
+        "Juffair",
+        "Diplomatic Area"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Manama Souq",
+        "Seef",
+        "Juffair",
+        "Diplomatic Area"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Manama Souq",
+        "Seef",
+        "Juffair",
+        "Diplomatic Area"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Manama Souq",
+        "Seef",
+        "Juffair",
+        "Diplomatic Area"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 20,
+        "low": 15,
+        "rain_days": 2,
+        "note": "January: mild days around 20°C and cool nights. The best month for walking the souq."
+      },
+      {
+        "high": 21,
+        "low": 16,
+        "rain_days": 3,
+        "note": "February: still mild, a few rain days. Carry a light jacket for evenings."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 2,
+        "note": "March: warming to 25°C. Comfortable for sightseeing and outdoor cafés."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 1,
+        "note": "April: hot at 30°C by day. Do outdoor sights in the morning."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 0,
+        "note": "May: 34°C and dry. Plan indoor stops and drink plenty of water."
+      },
+      {
+        "high": 37,
+        "low": 30,
+        "rain_days": 0,
+        "note": "June: very hot at 37°C. Keep to air-conditioned malls and museums at midday."
+      },
+      {
+        "high": 39,
+        "low": 31,
+        "rain_days": 0,
+        "note": "July: the hottest month, 39°C. Go out early or after sunset only."
+      },
+      {
+        "high": 39,
+        "low": 31,
+        "rain_days": 0,
+        "note": "August: as hot as July, 39°C. Expect humid evenings by the water."
+      },
+      {
+        "high": 37,
+        "low": 30,
+        "rain_days": 0,
+        "note": "September: still 37°C. Slightly better late in the month."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 0,
+        "note": "October: cooling to 33°C. Good again for the fort and corniche walks."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 2,
+        "note": "November: pleasant at 28°C. A strong month for the old town."
+      },
+      {
+        "high": 22,
+        "low": 17,
+        "rain_days": 2,
+        "note": "December: mild at 22°C with a few rain days. Busy and comfortable."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.45,
+      0.35,
+      0.35,
+      0.45,
+      0.75,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.85,
+      0.7,
+      0.5,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.45,
+      0.35,
+      0.35,
+      0.45,
+      0.75,
+      1,
+      1
+    ],
+    "shopping": [
+      0.95,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.5,
+      0.5,
+      0.6,
+      0.85,
+      1,
+      0.95
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.45,
+      0.45,
+      0.55,
+      0.8,
+      0.95,
+      0.9
+    ]
+  },
+  "places": {
+    "bahrain_fort": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon; avoid midday heat",
+      "area": "Seef",
+      "popularity": 5
+    },
+    "al_fateh_mosque": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or late afternoon, outside prayer times",
+      "area": "Juffair",
+      "popularity": 5
+    },
+    "bab_al_bahrain": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Manama Souq",
+      "popularity": 4
+    },
+    "manama_souq": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening",
+      "area": "Manama Souq",
+      "popularity": 5
+    },
+    "beit_al_quran": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or afternoon; avoid Friday",
+      "area": "Diplomatic Area",
+      "popularity": 3
+    },
+    "arad_fort": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Diplomatic Area",
+      "popularity": 3
+    },
+    "adhari_park": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening; cooler months",
+      "area": "Seef",
+      "popularity": 3
+    },
+    "pearling_path": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening; cooler months",
+      "area": "Diplomatic Area",
+      "popularity": 4
+    },
+    "souq_food_stalls": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Manama Souq",
+      "popularity": 4
+    },
+    "bahrain_national_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Midday or afternoon",
+      "area": "Diplomatic Area",
+      "popularity": 4
+    },
+    "seef_mall": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon and evening",
+      "area": "Seef",
+      "popularity": 3
+    },
+    "juffair_cafes": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Juffair",
+      "popularity": 3
+    },
+    "corniche_walk": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Diplomatic Area",
+      "popularity": 3
+    },
+    "dhow_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening; cooler months",
+      "area": "Diplomatic Area",
+      "popularity": 3
+    },
+    "muharraq_walk": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon; cooler months",
+      "area": "Diplomatic Area",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the souq, the fort and the museums at an easy pace; add a night for Muharraq and a beach afternoon."
+  },
+  "airports": [
+    {
+      "code": "BAH",
+      "name": "Bahrain International Airport",
+      "primary": true,
+      "note": "Main gateway, in Muharraq about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus A1",
+          "to": "Manama bus terminal",
+          "price": "300 fils",
+          "time": "30-45 min",
+          "note": "Runs every 20 minutes; pay on board or use a Go Card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "BD 5-6",
+          "time": "15-25 min",
+          "note": "Airport surcharge of BD 2 applies; insist on the meter."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "BD 4-7",
+          "time": "15-25 min",
+          "note": "Uber and Careem operate; check the pickup point."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City centre",
+          "price": "BD 10-20 per day",
+          "time": "15-25 min",
+          "note": "Buy a map for BD 0.50-1.00; driving styles vary."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Manama",
+      "https://en.wikivoyage.org/wiki/Manama"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Buses for cheap trips, ride apps or taxis for speed; rent a car if you plan to explore the island.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Bahrain Public Transport runs routes across the city; route A1 links the airport and Manama every 20 minutes. Single fare 300 fils paper, or 250 fils with a Go Card; daily cap 600 fils. Weekly pass BD 3 and 28-day pass BD 12 need a personalised Go Card from a terminal office."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered but pricey; airport rides add BD 2 and hotel pickups add BD 1. Uber and Careem work in Bahrain."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Renting a car is cheaper than relying on taxis for a full day of sightseeing."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the souq and old town in the cooler months. Use a bus or taxi for longer hops in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: long, very hot summers, mild winters and almost no rain.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Days around 20–28°C and cooler evenings. Ideal for the souq, the fort and walking."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to September)",
+        "text": "Highs of 37–39°C. Stay indoors at midday and go out early or after dark."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid by the water",
+        "text": "Muggy evenings from May to October, especially along the corniche."
+      },
+      {
+        "icon": "🌂",
+        "title": "Almost no rain",
+        "text": "A few short showers between December and March. No umbrella needed most of the year."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Dusty winds",
+        "text": "Occasional sand haze in spring and early summer can dull the sky."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a hat and sunscreen; a light layer for winter nights and indoor AC; modest clothing for mosques."
+      }
+    ]
+  }
+}

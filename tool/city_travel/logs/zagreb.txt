@@ -1,0 +1,27 @@
+$ deepseek_facts.py Zagreb
+  tokens in 4371 out 506
+Zagreb: 0 problems
+
+$ deepseek_city.py Zagreb --stage places
+Zagreb: places
+  tokens in 1156 out 3378
+
+$ deepseek_city.py Zagreb --stage frame
+Zagreb: frame
+  tokens in 2436 out 1860
+
+$ deepseek_city.py Zagreb --stage plans
+Zagreb: plans
+  plans for day
+  tokens in 2215 out 1210
+  plans for 1n
+  tokens in 2216 out 1331
+  plans for 2n
+  tokens in 2221 out 1682
+  plans for 3n
+  tokens in 2216 out 2206
+
+$ merge_city.py Zagreb
+Zagreb: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/zagreb.json and planner/zagreb.json
+

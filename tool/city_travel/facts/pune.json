@@ -1,0 +1,209 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "Pune blends Maratha history with a young, buzzing student energy.",
+  "intro": "Pune rewards visitors with hill forts, old wadas, a lively food scene and easy escapes into the Western Ghats. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    }
+  ],
+  "areas": [
+    "Koregaon Park",
+    "Deccan Gymkhana",
+    "Camp",
+    "Viman Nagar"
+  ],
+  "taxi": {
+    "flag_day": 18,
+    "flag_airport": 50,
+    "per_km": 12,
+    "min_fare": 18
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Pune Metro has two lines: Purple (PCMC to Swargate) and Aqua (Vanaz to Ramwadi).",
+    "PMPML city buses reach most areas; fares run about ₹5-30 and day passes cost ₹40-50.",
+    "Auto-rickshaws are everywhere; insist on the meter, roughly ₹18 for the first 1.5 km.",
+    "Uber and Ola work well across the city; local radio taxis also operate.",
+    "Driving is busy but manageable; two-wheelers are the local norm and helmets are compulsory.",
+    "Renting a scooter or motorbike costs about ₹200-300 a day for day trips."
+  ],
+  "airports": [
+    {
+      "code": "PNQ",
+      "name": "Pune Airport",
+      "primary": true,
+      "note": "Main city airport, about 10 km east of the centre.",
+      "options": [
+        {
+          "mode": "Auto-rickshaw",
+          "to": "City centre",
+          "price": "₹150-250",
+          "time": "25-40 min",
+          "note": "Agree on meter or fare before boarding."
+        },
+        {
+          "mode": "PMPML bus",
+          "to": "Shivajinagar / Swargate",
+          "price": "₹20-40",
+          "time": "40-60 min",
+          "note": "Cheapest option, slower with luggage."
+        },
+        {
+          "mode": "Prepaid taxi",
+          "to": "City centre",
+          "price": "₹400-600",
+          "time": "25-40 min",
+          "note": "Book at the prepaid stall in arrivals."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹250-450",
+          "time": "25-40 min",
+          "note": "Pickup zones are marked outside the terminal."
+        }
+      ]
+    },
+    {
+      "code": "BOM",
+      "name": "Mumbai Chhatrapati Shivaji Maharaj International Airport",
+      "primary": false,
+      "note": "Main international gateway, about 150 km northwest by road.",
+      "options": [
+        {
+          "mode": "MSRTC Shivneri bus",
+          "to": "Pune bus stands",
+          "price": "₹320-420",
+          "time": "3-4 hr",
+          "note": "Frequent Volvo service, book online."
+        },
+        {
+          "mode": "Shared taxi",
+          "to": "Pune city",
+          "price": "₹300-1000 per person",
+          "time": "3-4 hr",
+          "note": "Shared cabs run from Dadar and the airport area."
+        },
+        {
+          "mode": "Private taxi",
+          "to": "Pune city",
+          "price": "₹2500-3500",
+          "time": "3-4 hr",
+          "note": "Door-to-door, includes tolls."
+        },
+        {
+          "mode": "Uber Intercity",
+          "to": "Pune city",
+          "price": "₹2000-2500",
+          "time": "3-4 hr",
+          "note": "Book ahead; price varies with demand."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Shaniwar Wada",
+    "Aga Khan Palace"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Pune",
+      "https://en.wikivoyage.org/wiki/Pune"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    18.51957,
+    73.85535
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 29,
+      "low": 15,
+      "rain_days": 1
+    },
+    {
+      "high": 32,
+      "low": 17,
+      "rain_days": 0
+    },
+    {
+      "high": 34,
+      "low": 20,
+      "rain_days": 2
+    },
+    {
+      "high": 37,
+      "low": 22,
+      "rain_days": 2
+    },
+    {
+      "high": 36,
+      "low": 23,
+      "rain_days": 5
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 23
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 28
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 26
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 23
+    },
+    {
+      "high": 29,
+      "low": 20,
+      "rain_days": 12
+    },
+    {
+      "high": 30,
+      "low": 18,
+      "rain_days": 3
+    },
+    {
+      "high": 29,
+      "low": 16,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "BOM taxi ₹300-1000 per person vs tariff estimate 2026",
+    "BOM MSRTC Shivneri bus ₹320-420 costs more than taxi ₹300-1000 per person",
+    "airport BOM is 122 km away"
+  ]
+}

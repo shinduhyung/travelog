@@ -1,0 +1,36 @@
+$ deepseek_prep.py Athens
+  tokens in 859 out 548
+Athens: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Athens
+  tokens in 4064 out 592
+Athens: 1 problems
+  - ATH taxi €40-55 vs tariff estimate 12
+
+$ deepseek_city.py Athens --stage places
+Athens: places
+  tokens in 1264 out 4548
+
+$ deepseek_city.py Athens --stage frame
+Athens: frame
+  tokens in 2476 out 1875
+  repaired JSON
+
+$ deepseek_city.py Athens --stage plans
+Athens: plans
+  plans for day
+  tokens in 2726 out 955
+  plans for 1n
+  tokens in 2727 out 951
+  plans for 2n
+  tokens in 2732 out 1467
+  plans for 3n
+  tokens in 2727 out 2326
+
+$ merge_city.py Athens
+WARN  athens-lions-kiddie-carnival: 9225 km from the center (day trip?)
+WARN  university-georgia: 9039 km from the center (day trip?)
+WARN  zaxbys: 9038 km from the center (day trip?)
+Athens: 28 places, 12 plans, 0 errors, 3 warnings
+wrote itineraries/athens.json and planner/athens.json
+

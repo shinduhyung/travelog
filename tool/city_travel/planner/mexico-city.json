@@ -1,0 +1,719 @@
+{
+  "city": "Mexico City",
+  "checked": "October 2026",
+  "intro_line": "A sprawling highland capital of Aztec ruins, murals and tacos.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro Histórico",
+        "Roma-Condesa",
+        "Polanco",
+        "Coyoacán"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro Histórico",
+        "Roma-Condesa",
+        "Polanco",
+        "Coyoacán"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro Histórico",
+        "Roma-Condesa",
+        "Polanco",
+        "Coyoacán"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Centro Histórico",
+        "Roma-Condesa",
+        "Polanco",
+        "Coyoacán"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Centro Histórico",
+        "Roma-Condesa",
+        "Polanco",
+        "Coyoacán"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 22,
+        "low": 7,
+        "rain_days": 3,
+        "note": "Jan: cool, dry and clear. Cold mornings around 7°C; pack a jacket."
+      },
+      {
+        "high": 24,
+        "low": 8,
+        "rain_days": 2,
+        "note": "Feb: mild and dry, one of the best months to walk the city."
+      },
+      {
+        "high": 26,
+        "low": 10,
+        "rain_days": 6,
+        "note": "Mar: warm and mostly dry; strong sun at midday."
+      },
+      {
+        "high": 27,
+        "low": 12,
+        "rain_days": 8,
+        "note": "Apr: hot afternoons and little rain; go to ruins early."
+      },
+      {
+        "high": 27,
+        "low": 13,
+        "rain_days": 12,
+        "note": "May: hotter and wetter; afternoon showers start."
+      },
+      {
+        "high": 25,
+        "low": 13,
+        "rain_days": 19,
+        "note": "Jun: rainy season begins; carry a rain jacket."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 26,
+        "note": "Jul: wettest month; plan indoor museums for afternoons."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 27,
+        "note": "Aug: still very wet; mornings are usually clearer."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 23,
+        "note": "Sep: heavy rain continues; streets can flood briefly."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 14,
+        "note": "Oct: rain eases; comfortable days return."
+      },
+      {
+        "high": 23,
+        "low": 9,
+        "rain_days": 5,
+        "note": "Nov: dry and mild; good for outdoor sights."
+      },
+      {
+        "high": 22,
+        "low": 8,
+        "rain_days": 3,
+        "note": "Dec: cool and dry; festive in the Centro, chilly nights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.85,
+      0.7,
+      0.6,
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "nightlife": [
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "zocalo": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or after sunset",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "catedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning on weekdays",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "palacio-nacional": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "castillo": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning before the crowds and heat",
+      "area": "Polanco",
+      "popularity": 5
+    },
+    "antropologia": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Polanco",
+      "popularity": 5
+    },
+    "frida": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Booked morning slot",
+      "area": "Coyoacán",
+      "popularity": 5
+    },
+    "guadalupe": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning on weekdays",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "templo-mayor": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "bellas-artes": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Late morning or an evening show",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "angel": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Evening when lit",
+      "area": "Roma-Condesa",
+      "popularity": 4
+    },
+    "vasconcelos": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "aragon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "pendulo": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "Roma-Condesa",
+      "popularity": 3
+    },
+    "barragan": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Booked slot",
+      "area": "Polanco",
+      "popularity": 3
+    },
+    "azteca": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match day",
+      "area": "Coyoacán",
+      "popularity": 3
+    },
+    "imagic": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday to avoid crowds",
+      "area": "Polanco",
+      "popularity": 2
+    },
+    "kataplum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Rainy day or weekday",
+      "area": "Polanco",
+      "popularity": 2
+    },
+    "lago-mayer": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "revolucion": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Sunset or evening",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "postal": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "mineria": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "francisco-villa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Roma-Condesa",
+      "popularity": 2
+    },
+    "mercado-merced": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "torre-latino": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late afternoon or sunset",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "xochimilco": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Coyoacán",
+      "popularity": 4
+    },
+    "coyoacan-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Coyoacán",
+      "popularity": 4
+    },
+    "roma-walk": {
+      "types": [
+        "food",
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Roma-Condesa",
+      "popularity": 4
+    },
+    "tacos-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Late morning or early evening",
+      "area": "Roma-Condesa",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Centro, one big museum and a Teotihuacán or Coyoacán day without rushing."
+  },
+  "airports": [
+    {
+      "code": "MEX",
+      "name": "Licenciado Benito Juárez International Airport",
+      "primary": true,
+      "note": "Main airport, 6 km east of the centre; most international flights.",
+      "options": [
+        {
+          "mode": "Metro Line 5 + transfer",
+          "to": "Centro Histórico",
+          "price": "M$5-6",
+          "time": "30-45 min",
+          "note": "Cheapest; no heavy luggage allowed on Metro."
+        },
+        {
+          "mode": "Airport bus / Metrobús",
+          "to": "Downtown and bus terminals",
+          "price": "M$30-60",
+          "time": "30-60 min",
+          "note": "Check the stop and route before boarding."
+        },
+        {
+          "mode": "Taxi (authorised stand)",
+          "to": "Centro or Roma-Condesa",
+          "price": "M$250-400",
+          "time": "20-45 min",
+          "note": "Buy the ticket inside the terminal; traffic can be heavy."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "Centro or Roma-Condesa",
+          "price": "M$150-300",
+          "time": "20-45 min",
+          "note": "Pick-up zones are signposted outside the terminals."
+        }
+      ]
+    },
+    {
+      "code": "NLU",
+      "name": "Felipe Ángeles International Airport",
+      "primary": false,
+      "note": "Second airport, 38 km north; mostly domestic flights.",
+      "options": [
+        {
+          "mode": "Tren Suburbano (AIFA station)",
+          "to": "Buenavista, Centro",
+          "price": "M$11.50-26.50",
+          "time": "40-50 min",
+          "note": "Fast and cheap; Metro transfer at Buenavista, no heavy bags."
+        },
+        {
+          "mode": "Bus (ADO, Futura, Conexión)",
+          "to": "MEX airport, Norte or Taxqueña terminals",
+          "price": "about M$150",
+          "time": "about 1 hr",
+          "note": "Limited daily departures; check timetables first."
+        },
+        {
+          "mode": "Vivabus",
+          "to": "Norte or Taxqueña bus terminals",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Fastest easy option but departures are irregular."
+        },
+        {
+          "mode": "Taxi (fixed price)",
+          "to": "City centre",
+          "price": "about M$750",
+          "time": "60-90 min",
+          "note": "Allow at least 90 minutes to downtown."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Confirm you booked NLU, not MEX."
+        }
+      ]
+    },
+    {
+      "code": "TLC",
+      "name": "Licenciado Adolfo López Mateos International Airport",
+      "primary": false,
+      "note": "Toluca airport, 50 km southwest; domestic flights only.",
+      "options": [
+        {
+          "mode": "El Insurgente train + shuttle",
+          "to": "Observatorio, then Metro",
+          "price": "M$15 plus shuttle",
+          "time": "45-70 min",
+          "note": "Metepec station links to the airport by shuttle bus."
+        },
+        {
+          "mode": "Viva Transfer shuttle",
+          "to": "Observatorio Metro",
+          "price": "about M$76",
+          "time": "60-90 min",
+          "note": "Runs for Viva Aerobus flights."
+        },
+        {
+          "mode": "Caminante taxi",
+          "to": "Santa Fe or Observatorio",
+          "price": "M$600-650",
+          "time": "45-75 min",
+          "note": "Fixed price; good for western city areas."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Long ride; compare with the train."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Mexico City",
+      "https://en.wikivoyage.org/wiki/Mexico%20City"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro for cheap fast trips; ride apps for night and cross-town journeys.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "12 lines, M$5–6 per ride, 05:00–00:00 weekdays. Very crowded at rush hour; watch your pockets."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metrobús BRT and trolleybuses cover main avenues; pay with a rechargeable card."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "White and magenta taxis: agree the fare or use the meter, and prefer sitio stands at night. Uber, DiDi and inDrive are widely used and cheap; check the plate before getting in."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is hard. Not worth it inside the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best in Centro, Roma and Condesa. Sidewalks are uneven; watch your step."
+      },
+      {
+        "mode": "Bike-share",
+        "has": true,
+        "text": "EcoBici stations in central areas. Helmets are not common."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "High-altitude city with mild days all year and a wet summer. Rain falls mostly in afternoon storms from June to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to April",
+        "text": "Dry, sunny days around 22–27°C. Ideal for walking, ruins and markets."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season June to September",
+        "text": "Up to 26–27 rain days a month. Storms usually hit in the afternoon; keep mornings for outdoor plans."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool nights all year",
+        "text": "Lows of 7–13°C. Evenings need a light jacket, especially in December and January."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild, not hot",
+        "text": "Highs stay around 22–27°C. The altitude can make sun feel stronger; use sunscreen."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Afternoon downpours",
+        "text": "Summer storms are short but heavy. Carry a compact rain jacket and waterproof shoes."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a light rain jacket in summer, comfortable walking shoes and a hat."
+      }
+    ]
+  }
+}

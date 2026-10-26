@@ -1,0 +1,523 @@
+{
+  "city": "Hefei",
+  "checked": "October 2026",
+  "intro_line": "Hefei blends ancient Bao Zheng lore with fast modern metro lines.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City Centre",
+        "Swan Lake",
+        "Hefei South Station",
+        "Hefei Station"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City Centre",
+        "Swan Lake",
+        "Hefei South Station",
+        "Hefei Station"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "City Centre",
+        "Swan Lake",
+        "Hefei South Station",
+        "Hefei Station"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City Centre",
+        "Swan Lake",
+        "Hefei South Station",
+        "Hefei Station"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "City Centre",
+        "Swan Lake",
+        "Hefei South Station",
+        "Hefei Station"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 8,
+        "note": "Coldest month: highs near 8°C, lows near 0°C. Pack a warm coat."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 9,
+        "note": "Still cold, highs around 11°C. Few crowds at indoor sights."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 9,
+        "note": "Mild and warming, highs near 17°C. Good for walking."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 9,
+        "note": "Pleasant spring, highs around 22°C. Light layers are enough."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Warm and green, highs near 27°C. Good month for parks."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 11,
+        "note": "Warm start of summer, highs near 30°C. Carry water."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 16,
+        "note": "Hottest and wettest: highs near 32°C, about 16 rain days. Plan indoor time."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 12,
+        "note": "Hot and humid, highs near 32°C. Still about 12 rain days."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 9,
+        "note": "Cooling down, highs near 29°C. Comfortable again."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 9,
+        "note": "Best month: highs near 22°C, mild and dry-ish."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 8,
+        "note": "Cool and clear, highs near 17°C. Bring a jacket."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 5,
+        "note": "Cold, highs near 10°C, driest month with about 5 rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.85,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.55,
+      0.6,
+      0.85,
+      0.9,
+      0.7,
+      0.45
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.85,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "lord-bao-park": {
+      "types": [
+        "culture",
+        "history",
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Early morning or late afternoon",
+      "area": "City Centre",
+      "popularity": 5
+    },
+    "home-original-chicken": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch before the park crowds",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "tianlala": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Quick lunch",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "xiaoyaojin-park": {
+      "types": [
+        "nature",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or after lunch",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "swan-lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Swan Lake",
+      "popularity": 4
+    },
+    "anhui-museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Swan Lake",
+      "popularity": 3
+    },
+    "mingjiao-temple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "huaihe-road-walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "food-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "baohe-park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "hefei-south-station": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Before departure",
+      "area": "Hefei South Station",
+      "popularity": 2
+    },
+    "hefei-station": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Before departure",
+      "area": "Hefei Station",
+      "popularity": 2
+    },
+    "tea-house": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "city-walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "swan-lake-night": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Swan Lake",
+      "popularity": 3
+    },
+    "anhui-opera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "guided-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning start",
+      "area": "City Centre",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "One night covers the main sights; add a second night for a Chao Lake or Dashushan day out."
+  },
+  "airports": [
+    {
+      "code": "HFE",
+      "name": "Hefei Xinqiao International Airport",
+      "primary": true,
+      "note": "Main airport, about 33 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "City centre",
+          "price": "¥15-25",
+          "time": "50-70 min",
+          "note": "Cheapest option; check the desk for the next departure."
+        },
+        {
+          "mode": "Metro",
+          "to": "City centre",
+          "price": "¥5-8",
+          "time": "60-80 min",
+          "note": "Check locally for the current airport line connection."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-120",
+          "time": "40-55 min",
+          "note": "Use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "40-55 min",
+          "note": "Pick a marked pickup point in the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Hefei",
+      "https://en.wikivoyage.org/wiki/Hefei"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most trips; taxis or Didi for short hops and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1, 2, 3, 4 and 5 cover the city. Line 1 links both main train stations."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost ¥1 non-air-conditioned or ¥2 air-conditioned. Routes are in Chinese only."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Green, blue and orange taxis start at ¥8; black taxis start at ¥9. Didi works well; have a Chinese number or Alipay set up."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not advised for short visits; traffic and parking are stressful."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine around the centre and parks in mild months. Use metro or taxis for longer hops."
+      },
+      {
+        "mode": "Bike-share",
+        "has": true,
+        "text": "Mobike and Hellobike cost ¥1–2 per ride. Needs WeChat or Alipay."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: cold winters, hot humid summers, and the most rain in July. Spring and autumn are the best seasons.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 22–29°C with moderate rain. Ideal for parks, lakes and walking."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs near 30–32°C and lows near 21–25°C. Muggy nights; do outdoor sights early or late."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest month is July",
+        "text": "About 16 rain days. Keep an umbrella and a backup indoor plan."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold winter (December to February)",
+        "text": "Highs of 8–11°C and lows near 0–1°C. Bring a warm coat; indoor heating can be limited."
+      },
+      {
+        "icon": "☂️",
+        "title": "Rain is spread through the year",
+        "text": "Most months have 8–11 rain days. A small umbrella is worth packing any month."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers in spring and autumn, breathable clothes and sunscreen for summer, a warm coat for winter, and rain gear in July."
+      }
+    ]
+  }
+}

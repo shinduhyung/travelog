@@ -1,0 +1,556 @@
+{
+  "city": "Edinburgh",
+  "checked": "October 2026",
+  "intro_line": "Scotland's compact capital of stone, stories and sudden views.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Town",
+        "New Town",
+        "Leith",
+        "Haymarket"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town",
+        "New Town",
+        "Leith",
+        "Haymarket"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town",
+        "New Town",
+        "Leith",
+        "Haymarket"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Old Town",
+        "New Town",
+        "Leith",
+        "Haymarket"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Old Town",
+        "New Town",
+        "Leith",
+        "Haymarket"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": 2,
+        "rain_days": 14,
+        "note": "Cold and often wet: highs near 6°C, lows near 2°C, rain on about 14 days. Pack a warm waterproof coat."
+      },
+      {
+        "high": 7,
+        "low": 2,
+        "rain_days": 13,
+        "note": "Still cold: highs around 7°C, rain on about 13 days. Short daylight; plan indoor sights."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 16,
+        "note": "Cool and wet: highs near 9°C, rain on about 16 days. Good museum weather."
+      },
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 12,
+        "note": "Milder: highs near 11°C, rain on about 12 days. Pleasant for walking the Royal Mile."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 13,
+        "note": "Spring warmth: highs near 14°C, rain on about 13 days. Good for Arthur's Seat."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 14,
+        "note": "Long days: highs near 17°C, rain on about 14 days. Evenings stay light late."
+      },
+      {
+        "high": 18,
+        "low": 12,
+        "rain_days": 17,
+        "note": "Warmest month: highs near 18°C, rain on about 17 days. Busy festival season; book early."
+      },
+      {
+        "high": 18,
+        "low": 12,
+        "rain_days": 15,
+        "note": "Warm and busy: highs near 18°C, rain on about 15 days. Festival crowds and higher prices."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 13,
+        "note": "Cooling: highs near 16°C, rain on about 13 days. Quieter than August, still good for walks."
+      },
+      {
+        "high": 13,
+        "low": 8,
+        "rain_days": 15,
+        "note": "Autumn: highs near 13°C, rain on about 15 days. Bring layers and a rain jacket."
+      },
+      {
+        "high": 9,
+        "low": 5,
+        "rain_days": 14,
+        "note": "Cold and damp: highs near 9°C, rain on about 14 days. Dark early; indoor sights shine."
+      },
+      {
+        "high": 7,
+        "low": 3,
+        "rain_days": 16,
+        "note": "Coldest feel: highs near 7°C, rain on about 16 days. Short days and festive lights in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.45,
+      0.4
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      1,
+      0.9,
+      0.85,
+      0.75,
+      0.75
+    ]
+  },
+  "places": {
+    "edinburgh_castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning or late afternoon; avoid midday in summer",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "royal_mile": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning before the crowds, or evening",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "holyroodhouse": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning; check closure dates first",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "calton_hill": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset or clear morning",
+      "area": "New Town",
+      "popularity": 4
+    },
+    "forth_bridge": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear day; late afternoon light",
+      "area": "Leith",
+      "popularity": 3
+    },
+    "fringe": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "August; book accommodation months ahead",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "edinburgh_zoo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning; dry day",
+      "area": "Haymarket",
+      "popularity": 3
+    },
+    "haggis": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "ladies_waldegrave": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Old Town",
+      "popularity": 2
+    },
+    "university_edinburgh": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Old Town",
+      "popularity": 2
+    },
+    "grassmarket": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "dean_village": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "New Town",
+      "popularity": 3
+    },
+    "arthurs_seat": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear morning or sunset; avoid high wind",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "water_of_leith": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime, any season",
+      "area": "New Town",
+      "popularity": 3
+    },
+    "leith_walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon into dinner",
+      "area": "Leith",
+      "popularity": 3
+    },
+    "scott_monument": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Clear day, morning",
+      "area": "New Town",
+      "popularity": 3
+    },
+    "national_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "stockbridge_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunday morning",
+      "area": "New Town",
+      "popularity": 3
+    },
+    "underground_tour": {
+      "types": [
+        "history",
+        "nightlife"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "princes_street": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "New Town",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Castle, Royal Mile and a museum or two, with time for Arthur's Seat or Leith."
+  },
+  "airports": [
+    {
+      "code": "EDI",
+      "name": "Edinburgh Airport",
+      "primary": true,
+      "note": "Scotland's main airport, 11 km west of the centre.",
+      "options": [
+        {
+          "mode": "Lothian Bus 17/18",
+          "to": "Leith or south side (not centre)",
+          "price": "£2-3",
+          "time": "60 min",
+          "note": "Standard city fare; not useful for the centre."
+        },
+        {
+          "mode": "Airlink 100 bus",
+          "to": "Haymarket and Waverley Bridge",
+          "price": "£6 single, £8.50 return",
+          "time": "20-30 min",
+          "note": "Runs 24 hours every 10-20 min; contactless accepted."
+        },
+        {
+          "mode": "Tram",
+          "to": "Haymarket, Princes Street, Waverley, Leith",
+          "price": "£7.90 single, £9.50 return",
+          "time": "40 min",
+          "note": "Walk to Ingliston Park & Ride to cut the fare to about £2.40."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£25-35",
+          "time": "20-30 min",
+          "note": "Rank outside Arrivals; fixed-ish metered fares."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "£20-30",
+          "time": "20-30 min",
+          "note": "Pick-up points are signposted outside the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Edinburgh",
+      "https://en.wikivoyage.org/wiki/Edinburgh"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk the centre; use buses and trams for Leith, the airport and longer hops.",
+    "modes": [
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams link the airport, Haymarket, Princes Street, Waverley and Leith. Buy tickets at stop machines."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Lothian buses cover the city. Pay with exact cash or contactless; day and multi-day tickets available."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are plentiful. Uber and Bolt also operate in Edinburgh."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not worth it in the centre: many streets are closed and parking is scarce and pricey."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The centre is very walkable, though hilly with cobbles. Bikes and e-bikes are easy to hire, with some cycle lanes."
+      },
+      {
+        "mode": "Airport bus",
+        "has": true,
+        "text": "Airlink 100 runs 24 hours to Waverley Bridge, about 20–30 minutes."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cool and changeable: mild summers, cold winters and rain in every month. Rarely very hot or very cold.",
+    "items": [
+      {
+        "icon": "🌦️",
+        "title": "Rain any month",
+        "text": "Expect rain on roughly 12–17 days each month. Showers pass quickly; carry a light waterproof."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summers",
+        "text": "July and August highs sit near 18°C, lows near 12°C. Rarely hot; layers help."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters",
+        "text": "January highs near 6°C, lows near 2°C. Wind off the sea makes it feel colder; bring a warm coat."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Windy and exposed",
+        "text": "Hills and the coast are breezier. A windproof layer matters more than an umbrella."
+      },
+      {
+        "icon": "☀️",
+        "title": "Long summer days",
+        "text": "June and July give very long daylight, so late walks are easy. Winter days are short."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Waterproof jacket, layers, comfortable walking shoes for cobbles and hills, and a warm hat in winter."
+      }
+    ]
+  }
+}

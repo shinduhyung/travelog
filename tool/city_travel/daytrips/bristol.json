@@ -1,0 +1,137 @@
+{
+ "city": "Bristol",
+ "trips": [
+  {
+   "place": "Bath",
+   "label": "",
+   "position": {
+    "id": 318370,
+    "name": "Bath Spa",
+    "city": "Bath",
+    "lat": 51.37778,
+    "lng": -2.35712
+   },
+   "town": {
+    "name": "Bath",
+    "lat": 51.3751,
+    "lng": -2.36172
+   },
+   "road": {
+    "km": 23,
+    "min": 33,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 50.0,
+    "currency": "GBP"
+   },
+   "modes": {
+    "train": {
+     "from": "€13",
+     "from_usd": 15.0,
+     "avg": "€13",
+     "time": "11m",
+     "per_day": 8,
+     "source": "https://www.omio.com/trains/bristol/bath"
+    },
+    "bus": {
+     "from": "$3-$4",
+     "time": "41m",
+     "via": "Temple Meads Stn to James Street West",
+     "source": "https://www.rome2rio.com/s/Bristol/Bath"
+    }
+   },
+   "route_note": "Direct trains run from Bristol Temple Meads to Bath Spa in about 10 minutes, and the Roman Baths are a short walk from the station.",
+   "see": [
+    "Roman Baths",
+    "Bath Abbey",
+    "The Royal Crescent",
+    "Pulteney Bridge",
+    "Bath city centre walk"
+   ],
+   "visit": "Half day",
+   "tour_query": "Bath day trip from Bristol",
+   "quests": [
+    "The Roman Baths",
+    "Royal Crescent",
+    "University of Bath"
+   ],
+   "recommended": "train",
+   "why": "A direct train takes about 11 minutes with 8 departures a day and drops you a short walk from the Roman Baths.",
+   "stars": 5,
+   "know": [
+    "Direct trains run from Bristol Temple Meads to Bath Spa in about 11 minutes.",
+    "The Roman Baths are a short walk from Bath Spa station.",
+    "There are 8 trains a day, so check times for your return."
+   ]
+  },
+  {
+   "place": "Cardiff",
+   "label": "",
+   "position": {
+    "id": 318635,
+    "name": "Cardiff Central",
+    "city": "Cardiff",
+    "lat": 51.47619,
+    "lng": -3.17968
+   },
+   "town": {
+    "name": "Cardiff",
+    "lat": 51.48,
+    "lng": -3.18
+   },
+   "road": {
+    "km": 69,
+    "min": 61,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 160.0,
+    "currency": "GBP"
+   },
+   "modes": {
+    "train": {
+     "from": "€7",
+     "from_usd": 9.0,
+     "avg": "€23",
+     "time": "39m",
+     "per_day": 7,
+     "source": "https://www.omio.com/trains/bristol/cardiff"
+    },
+    "bus": {
+     "from": "$6-$16",
+     "time": "1h 5m",
+     "via": "Bus Station to University RE",
+     "source": "https://www.rome2rio.com/s/Bristol/Cardiff"
+    }
+   },
+   "route_note": "Direct trains run from Bristol Temple Meads to Cardiff Central in about 50 minutes, and the castle is a short walk from the station.",
+   "see": [
+    "Cardiff Castle",
+    "Principality Stadium exterior",
+    "Cardiff Bay",
+    "Central Market",
+    "Castle Quarter arcades"
+   ],
+   "visit": "Full day",
+   "tour_query": "Cardiff day trip from Bristol",
+   "quests": [
+    "Cardiff Castle",
+    "Principality Stadium"
+   ],
+   "recommended": "train",
+   "why": "A direct train takes about 39 minutes, much faster than the 1h 5m bus, with 7 departures a day.",
+   "stars": 3,
+   "know": [
+    "Direct trains run from Bristol Temple Meads to Cardiff Central in about 39 minutes.",
+    "Cardiff Castle is a short walk from Cardiff Central station.",
+    "There are 7 trains a day, so check times for your return."
+   ]
+  }
+ ],
+ "problems": [
+  "Wells: no Omio position, dropped",
+  "Cheddar: not a town in cities15000.json (GB), dropped",
+  "Glastonbury: no Omio position, dropped"
+ ]
+}

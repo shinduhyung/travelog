@@ -2,18 +2,18 @@
   "schema_version": 1,
   "dataset_id": "economy_data",
   "metadata": {
-    "source_url": null,
-    "reference_period": null,
-    "updated_at": null
+    "source_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+    "reference_period": "2026 (IMF WEO October 2026; current-year estimate/projection)",
+    "updated_at": "2026-10-24"
   },
   "legacy_layout": "list",
   "tables": [
     {
       "id": "main",
       "metadata": {
-        "source_url": null,
-        "reference_period": null,
-        "updated_at": null
+        "source_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+        "reference_period": "2026 (IMF WEO October 2026; current-year estimate/projection)",
+        "updated_at": "2026-10-24"
       },
       "dimensions": [
         "iso_a3"
@@ -21,24 +21,24 @@
       "metrics": [
         {
           "id": "gdp_nominal",
-          "unit": null,
-          "source_url": null,
-          "reference_period": null,
-          "updated_at": null
+          "unit": "USD billions",
+          "source_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+          "reference_period": "2026",
+          "updated_at": "2026-10-24"
         },
         {
           "id": "gdp_ppp",
-          "unit": null,
-          "source_url": null,
-          "reference_period": null,
-          "updated_at": null
+          "unit": "international dollars, billions",
+          "source_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+          "reference_period": "2026",
+          "updated_at": "2026-10-24"
         },
         {
           "id": "population",
-          "unit": null,
-          "source_url": null,
-          "reference_period": null,
-          "updated_at": null
+          "unit": "millions of people",
+          "source_url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+          "reference_period": "2026",
+          "updated_at": "2026-10-24"
         },
         {
           "id": "development_status",
@@ -73,9 +73,9 @@
             "iso_a3": "ALB"
           },
           "values": {
-            "gdp_nominal": 28.372,
-            "gdp_ppp": 63.08,
-            "population": 2.8,
+            "gdp_nominal": 32.769,
+            "gdp_ppp": 67.609,
+            "population": 2.346,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -85,9 +85,9 @@
             "iso_a3": "DZA"
           },
           "values": {
-            "gdp_nominal": 268.885,
-            "gdp_ppp": 875.334,
-            "population": 47.4,
+            "gdp_nominal": 331.894,
+            "gdp_ppp": 947.065,
+            "population": 48.028,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -109,9 +109,9 @@
             "iso_a3": "AGO"
           },
           "values": {
-            "gdp_nominal": 113.343,
-            "gdp_ppp": 402.155,
-            "population": 36.132,
+            "gdp_nominal": 157.297,
+            "gdp_ppp": 434.764,
+            "population": 40.584,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -121,9 +121,9 @@
             "iso_a3": "ARG"
           },
           "values": {
-            "gdp_nominal": 683.533,
-            "gdp_ppp": 1493.423,
-            "population": 47.067641,
+            "gdp_nominal": 768.206,
+            "gdp_ppp": 1577.46,
+            "population": 47.948,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -133,9 +133,9 @@
             "iso_a3": "ARM"
           },
           "values": {
-            "gdp_nominal": 26.258,
-            "gdp_ppp": 74.294,
-            "population": 2.7,
+            "gdp_nominal": 32.974,
+            "gdp_ppp": 83.239,
+            "population": 3.093,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -145,9 +145,9 @@
             "iso_a3": "AUS"
           },
           "values": {
-            "gdp_nominal": 1771.681,
-            "gdp_ppp": 1980.022,
-            "population": 26.9,
+            "gdp_nominal": 2110.657,
+            "gdp_ppp": 2106.908,
+            "population": 28.078,
             "development_status": "Developed",
             "continent": "Oceania"
           }
@@ -157,9 +157,9 @@
             "iso_a3": "AUT"
           },
           "values": {
-            "gdp_nominal": 534.301,
-            "gdp_ppp": 682.861,
-            "population": 9.0,
+            "gdp_nominal": 616.896,
+            "gdp_ppp": 725.583,
+            "population": 9.205,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -169,9 +169,9 @@
             "iso_a3": "AZE"
           },
           "values": {
-            "gdp_nominal": 78.87,
-            "gdp_ppp": 272.1,
-            "population": 10.1,
+            "gdp_nominal": 89.181,
+            "gdp_ppp": 281.143,
+            "population": 10.496,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -181,9 +181,9 @@
             "iso_a3": "BGD"
           },
           "values": {
-            "gdp_nominal": 467.218,
-            "gdp_ppp": 1783.42,
-            "population": 169.828911,
+            "gdp_nominal": 506.357,
+            "gdp_ppp": 1909.362,
+            "population": 175.423,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -193,9 +193,9 @@
             "iso_a3": "BLR"
           },
           "values": {
-            "gdp_nominal": 71.561,
-            "gdp_ppp": 311.791,
-            "population": 9.4,
+            "gdp_nominal": 108.11,
+            "gdp_ppp": 325.565,
+            "population": 9.037,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -205,9 +205,9 @@
             "iso_a3": "BEL"
           },
           "values": {
-            "gdp_nominal": 684.864,
-            "gdp_ppp": 899.114,
-            "population": 11.8,
+            "gdp_nominal": 772.699,
+            "gdp_ppp": 941.29,
+            "population": 11.929,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -217,9 +217,9 @@
             "iso_a3": "BEN"
           },
           "values": {
-            "gdp_nominal": 22.236,
-            "gdp_ppp": 69.509,
-            "population": 13.712,
+            "gdp_nominal": 27.41,
+            "gdp_ppp": 78.912,
+            "population": 15.232,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -229,9 +229,9 @@
             "iso_a3": "BTN"
           },
           "values": {
-            "gdp_nominal": 3.422,
-            "gdp_ppp": 14.106,
-            "population": 0.79,
+            "gdp_nominal": 3.909,
+            "gdp_ppp": 16.111,
+            "population": 0.792,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -241,9 +241,9 @@
             "iso_a3": "BOL"
           },
           "values": {
-            "gdp_nominal": 56.339,
-            "gdp_ppp": 144.098,
-            "population": 12.2,
+            "gdp_nominal": 53.843,
+            "gdp_ppp": 162.373,
+            "population": 12.749,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -253,9 +253,9 @@
             "iso_a3": "BIH"
           },
           "values": {
-            "gdp_nominal": 28.807,
-            "gdp_ppp": 78.655,
-            "population": 3.2,
+            "gdp_nominal": 37.264,
+            "gdp_ppp": 83.688,
+            "population": 3.436,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -265,9 +265,9 @@
             "iso_a3": "BWA"
           },
           "values": {
-            "gdp_nominal": 19.4,
-            "gdp_ppp": 52.961,
-            "population": 2.7,
+            "gdp_nominal": 22.125,
+            "gdp_ppp": 57.197,
+            "population": 2.584,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -277,9 +277,9 @@
             "iso_a3": "BRA"
           },
           "values": {
-            "gdp_nominal": 2125.958,
-            "gdp_ppp": 4958.122,
-            "population": 212.58375,
+            "gdp_nominal": 2654.761,
+            "gdp_ppp": 5266.506,
+            "population": 214.142,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -289,9 +289,9 @@
             "iso_a3": "BGR"
           },
           "values": {
-            "gdp_nominal": 117.007,
-            "gdp_ppp": 264.699,
-            "population": 6.4,
+            "gdp_nominal": 146.507,
+            "gdp_ppp": 284.116,
+            "population": 6.37,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -301,9 +301,9 @@
             "iso_a3": "BFA"
           },
           "values": {
-            "gdp_nominal": 27.056,
-            "gdp_ppp": 72.82,
-            "population": 23.025,
+            "gdp_nominal": 32.408,
+            "gdp_ppp": 79.822,
+            "population": 24.627,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -313,9 +313,9 @@
             "iso_a3": "BDI"
           },
           "values": {
-            "gdp_nominal": 2.64,
-            "gdp_ppp": 13.975,
-            "population": 13.2,
+            "gdp_nominal": 7.606,
+            "gdp_ppp": 15.443,
+            "population": 14.903,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -325,9 +325,9 @@
             "iso_a3": "KHM"
           },
           "values": {
-            "gdp_nominal": 49.799,
-            "gdp_ppp": 150.047,
-            "population": 16.9,
+            "gdp_nominal": 54.18,
+            "gdp_ppp": 160.111,
+            "population": 18.051,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -337,9 +337,9 @@
             "iso_a3": "CMR"
           },
           "values": {
-            "gdp_nominal": 56.011,
-            "gdp_ppp": 172.974,
-            "population": 28.6591,
+            "gdp_nominal": 64.81,
+            "gdp_ppp": 184.92,
+            "population": 30.646,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -349,9 +349,9 @@
             "iso_a3": "CAN"
           },
           "values": {
-            "gdp_nominal": 2225.341,
-            "gdp_ppp": 2730.11,
-            "population": 40.751963,
+            "gdp_nominal": 2490.256,
+            "gdp_ppp": 2915.715,
+            "population": 41.432,
             "development_status": "Developed",
             "continent": "North America"
           }
@@ -361,9 +361,9 @@
             "iso_a3": "CAF"
           },
           "values": {
-            "gdp_nominal": 2.932,
-            "gdp_ppp": 7.332,
-            "population": 5.9,
+            "gdp_nominal": 5.079,
+            "gdp_ppp": 12.365,
+            "population": 5.699,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -373,9 +373,9 @@
             "iso_a3": "TCD"
           },
           "values": {
-            "gdp_nominal": 18.792,
-            "gdp_ppp": 56.653,
-            "population": 18.278,
+            "gdp_nominal": 25.237,
+            "gdp_ppp": 66.904,
+            "population": 19.491,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -385,9 +385,9 @@
             "iso_a3": "CHL"
           },
           "values": {
-            "gdp_nominal": 343.823,
-            "gdp_ppp": 710.195,
-            "population": 19.6,
+            "gdp_nominal": 402.243,
+            "gdp_ppp": 745.751,
+            "population": 20.151,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -397,9 +397,9 @@
             "iso_a3": "CHN"
           },
           "values": {
-            "gdp_nominal": 19231.705,
-            "gdp_ppp": 40716.448,
-            "population": 1408.28,
+            "gdp_nominal": 21546.403,
+            "gdp_ppp": 44554.951,
+            "population": 1401.733,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -409,9 +409,9 @@
             "iso_a3": "COL"
           },
           "values": {
-            "gdp_nominal": 427.766,
-            "gdp_ppp": 1190.795,
-            "population": 52.695952,
+            "gdp_nominal": 572.735,
+            "gdp_ppp": 1262.046,
+            "population": 53.399,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -421,9 +421,9 @@
             "iso_a3": "COG"
           },
           "values": {
-            "gdp_nominal": 15.281,
-            "gdp_ppp": 42.763,
-            "population": 5.8,
+            "gdp_nominal": 19.115,
+            "gdp_ppp": 45.476,
+            "population": 6.668,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -433,9 +433,9 @@
             "iso_a3": "COD"
           },
           "values": {
-            "gdp_nominal": 79.119,
-            "gdp_ppp": 200.76,
-            "population": 112.832,
+            "gdp_nominal": 122.281,
+            "gdp_ppp": 235.277,
+            "population": 110.02,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -445,9 +445,9 @@
             "iso_a3": "CRI"
           },
           "values": {
-            "gdp_nominal": 102.591,
-            "gdp_ppp": 169.034,
-            "population": 5.2,
+            "gdp_nominal": 115.254,
+            "gdp_ppp": 185.286,
+            "population": 5.416,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -457,9 +457,9 @@
             "iso_a3": "CIV"
           },
           "values": {
-            "gdp_nominal": 94.483,
-            "gdp_ppp": 266.832,
-            "population": 29.389,
+            "gdp_nominal": 110.446,
+            "gdp_ppp": 294.178,
+            "population": 33.838,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -469,9 +469,9 @@
             "iso_a3": "HRV"
           },
           "values": {
-            "gdp_nominal": 98.951,
-            "gdp_ppp": 198.268,
-            "population": 3.8,
+            "gdp_nominal": 115.915,
+            "gdp_ppp": 211.61,
+            "population": 3.882,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -493,9 +493,9 @@
             "iso_a3": "CYP"
           },
           "values": {
-            "gdp_nominal": 38.736,
-            "gdp_ppp": 61.298,
-            "population": 1.2,
+            "gdp_nominal": 44.292,
+            "gdp_ppp": 67.972,
+            "population": 0.996,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -505,9 +505,9 @@
             "iso_a3": "CZE"
           },
           "values": {
-            "gdp_nominal": 360.244,
-            "gdp_ppp": 647.322,
-            "population": 10.5,
+            "gdp_nominal": 427.953,
+            "gdp_ppp": 692.166,
+            "population": 10.803,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -517,9 +517,9 @@
             "iso_a3": "DNK"
           },
           "values": {
-            "gdp_nominal": 449.94,
-            "gdp_ppp": 533.752,
-            "population": 5.9,
+            "gdp_nominal": 499.354,
+            "gdp_ppp": 560.707,
+            "population": 6.037,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -529,9 +529,9 @@
             "iso_a3": "DJI"
           },
           "values": {
-            "gdp_nominal": 4.587,
-            "gdp_ppp": 9.942,
-            "population": 1.1,
+            "gdp_nominal": 4.87,
+            "gdp_ppp": 10.754,
+            "population": 1.069,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -541,9 +541,9 @@
             "iso_a3": "DOM"
           },
           "values": {
-            "gdp_nominal": 127.828,
-            "gdp_ppp": 336.082,
-            "population": 11.3,
+            "gdp_nominal": 145.362,
+            "gdp_ppp": 357.746,
+            "population": 10.975,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -553,9 +553,9 @@
             "iso_a3": "ECU"
           },
           "values": {
-            "gdp_nominal": 125.677,
-            "gdp_ppp": 300.122,
-            "population": 18.27,
+            "gdp_nominal": 138.199,
+            "gdp_ppp": 325.302,
+            "population": 18.244,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -565,9 +565,9 @@
             "iso_a3": "EGY"
           },
           "values": {
-            "gdp_nominal": 347.342,
-            "gdp_ppp": 2371.53,
-            "population": 107.27126,
+            "gdp_nominal": 442.886,
+            "gdp_ppp": 2600.028,
+            "population": 110.058,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -577,9 +577,9 @@
             "iso_a3": "SLV"
           },
           "values": {
-            "gdp_nominal": 36.749,
-            "gdp_ppp": 88.282,
-            "population": 6.3,
+            "gdp_nominal": 39.379,
+            "gdp_ppp": 96.94,
+            "population": 6.43,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -589,9 +589,9 @@
             "iso_a3": "GNQ"
           },
           "values": {
-            "gdp_nominal": 12.684,
-            "gdp_ppp": 33.003,
-            "population": 1.7,
+            "gdp_nominal": 14.28,
+            "gdp_ppp": 31.781,
+            "population": 1.683,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -601,9 +601,9 @@
             "iso_a3": "EST"
           },
           "values": {
-            "gdp_nominal": 45.004,
-            "gdp_ppp": 68.235,
-            "population": 1.3,
+            "gdp_nominal": 51.029,
+            "gdp_ppp": 73.391,
+            "population": 1.368,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -613,9 +613,9 @@
             "iso_a3": "ETH"
           },
           "values": {
-            "gdp_nominal": 117.457,
-            "gdp_ppp": 484.408,
-            "population": 111.652998,
+            "gdp_nominal": 127.145,
+            "gdp_ppp": 561.348,
+            "population": 112.37,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -625,9 +625,9 @@
             "iso_a3": "FJI"
           },
           "values": {
-            "gdp_nominal": 6.257,
-            "gdp_ppp": 15.657,
-            "population": 0.9,
+            "gdp_nominal": 6.568,
+            "gdp_ppp": 16.005,
+            "population": 0.934,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -637,9 +637,9 @@
             "iso_a3": "FIN"
           },
           "values": {
-            "gdp_nominal": 303.945,
-            "gdp_ppp": 373.156,
-            "population": 5.6,
+            "gdp_nominal": 338.564,
+            "gdp_ppp": 395.396,
+            "population": 5.628,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -649,9 +649,9 @@
             "iso_a3": "FRA"
           },
           "values": {
-            "gdp_nominal": 3211.292,
-            "gdp_ppp": 4503.783,
-            "population": 68.649,
+            "gdp_nominal": 3554.155,
+            "gdp_ppp": 4756.403,
+            "population": 69.082,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -661,9 +661,9 @@
             "iso_a3": "GAB"
           },
           "values": {
-            "gdp_nominal": 20.391,
-            "gdp_ppp": 57.445,
-            "population": 2.4,
+            "gdp_nominal": 25.993,
+            "gdp_ppp": 61.776,
+            "population": 2.356,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -673,9 +673,9 @@
             "iso_a3": "GMB"
           },
           "values": {
-            "gdp_nominal": 2.771,
-            "gdp_ppp": 10.345,
-            "population": 2.7,
+            "gdp_nominal": 3.018,
+            "gdp_ppp": 11.387,
+            "population": 2.93,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -685,9 +685,9 @@
             "iso_a3": "GEO"
           },
           "values": {
-            "gdp_nominal": 35.353,
-            "gdp_ppp": 113.583,
-            "population": 3.7,
+            "gdp_nominal": 44.109,
+            "gdp_ppp": 128.236,
+            "population": 3.926,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -697,9 +697,9 @@
             "iso_a3": "DEU"
           },
           "values": {
-            "gdp_nominal": 4744.804,
-            "gdp_ppp": 6161.002,
-            "population": 83.57714,
+            "gdp_nominal": 5471.299,
+            "gdp_ppp": 6550.995,
+            "population": 83.278,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -709,9 +709,9 @@
             "iso_a3": "GHA"
           },
           "values": {
-            "gdp_nominal": 88.332,
-            "gdp_ppp": 295.118,
-            "population": 33.475877,
+            "gdp_nominal": 128.638,
+            "gdp_ppp": 329.911,
+            "population": 35.698,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -721,9 +721,9 @@
             "iso_a3": "GRC"
           },
           "values": {
-            "gdp_nominal": 267.348,
-            "gdp_ppp": 467.59,
-            "population": 10.3,
+            "gdp_nominal": 304.627,
+            "gdp_ppp": 490.55,
+            "population": 10.357,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -733,9 +733,9 @@
             "iso_a3": "GTM"
           },
           "values": {
-            "gdp_nominal": 121.177,
-            "gdp_ppp": 282.833,
-            "population": 18.0,
+            "gdp_nominal": 132.27,
+            "gdp_ppp": 305.119,
+            "population": 18.95,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -745,9 +745,9 @@
             "iso_a3": "GIN"
           },
           "values": {
-            "gdp_nominal": 30.094,
-            "gdp_ppp": 75.052,
-            "population": 14.1,
+            "gdp_nominal": 45.307,
+            "gdp_ppp": 129.755,
+            "population": 16.198,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -757,9 +757,9 @@
             "iso_a3": "GNB"
           },
           "values": {
-            "gdp_nominal": 2.274,
-            "gdp_ppp": 6.62,
-            "population": 2.1,
+            "gdp_nominal": 2.944,
+            "gdp_ppp": 7.239,
+            "population": 2.06,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -769,9 +769,9 @@
             "iso_a3": "GUY"
           },
           "values": {
-            "gdp_nominal": 25.822,
-            "gdp_ppp": 75.294,
-            "population": 0.81,
+            "gdp_nominal": 40.341,
+            "gdp_ppp": 103.446,
+            "population": 1.046,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -781,9 +781,9 @@
             "iso_a3": "HTI"
           },
           "values": {
-            "gdp_nominal": 33.548,
-            "gdp_ppp": 38.198,
-            "population": 11.5,
+            "gdp_nominal": 39.389,
+            "gdp_ppp": 38.251,
+            "population": 12.725,
             "development_status": "Underdeveloped",
             "continent": "North America"
           }
@@ -793,9 +793,9 @@
             "iso_a3": "HND"
           },
           "values": {
-            "gdp_nominal": 38.172,
-            "gdp_ppp": 85.984,
-            "population": 10.4,
+            "gdp_nominal": 40.969,
+            "gdp_ppp": 92.486,
+            "population": 11.185,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -805,9 +805,9 @@
             "iso_a3": "HUN"
           },
           "values": {
-            "gdp_nominal": 237.07,
-            "gdp_ppp": 464.419,
-            "population": 9.6,
+            "gdp_nominal": 265.911,
+            "gdp_ppp": 486.618,
+            "population": 9.536,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -817,9 +817,9 @@
             "iso_a3": "ISL"
           },
           "values": {
-            "gdp_nominal": 35.309,
-            "gdp_ppp": 31.763,
-            "population": 0.4,
+            "gdp_nominal": 42.772,
+            "gdp_ppp": 33.036,
+            "population": 0.398,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -829,9 +829,9 @@
             "iso_a3": "IND"
           },
           "values": {
-            "gdp_nominal": 4187.017,
-            "gdp_ppp": 17647.05,
-            "population": 1417.492,
+            "gdp_nominal": 4060.207,
+            "gdp_ppp": 19192.617,
+            "population": 1476.626,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -841,9 +841,9 @@
             "iso_a3": "IDN"
           },
           "values": {
-            "gdp_nominal": 1429.743,
-            "gdp_ppp": 5009.483,
-            "population": 284.438782,
+            "gdp_nominal": 1479.954,
+            "gdp_ppp": 5483.042,
+            "population": 287.198,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -853,9 +853,9 @@
             "iso_a3": "IRN"
           },
           "values": {
-            "gdp_nominal": 341.013,
-            "gdp_ppp": 1746.269,
-            "population": 85.961,
+            "gdp_nominal": 311.95,
+            "gdp_ppp": 1772.668,
+            "population": 87.934,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -865,9 +865,9 @@
             "iso_a3": "IRQ"
           },
           "values": {
-            "gdp_nominal": 258.02,
-            "gdp_ppp": 690.902,
-            "population": 46.118793,
+            "gdp_nominal": 245.234,
+            "gdp_ppp": 606.636,
+            "population": 46.64,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -877,9 +877,9 @@
             "iso_a3": "IRL"
           },
           "values": {
-            "gdp_nominal": 598.84,
-            "gdp_ppp": 736.732,
-            "population": 5.0,
+            "gdp_nominal": 709.972,
+            "gdp_ppp": 831.069,
+            "population": 5.554,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -889,9 +889,9 @@
             "iso_a3": "ISR"
           },
           "values": {
-            "gdp_nominal": 583.361,
-            "gdp_ppp": 569.985,
-            "population": 9.8,
+            "gdp_nominal": 746.982,
+            "gdp_ppp": 619.724,
+            "population": 10.312,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -901,9 +901,9 @@
             "iso_a3": "ITA"
           },
           "values": {
-            "gdp_nominal": 2422.855,
-            "gdp_ppp": 3719.11,
-            "population": 58.918231,
+            "gdp_nominal": 2701.737,
+            "gdp_ppp": 3898.99,
+            "population": 58.879,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -913,9 +913,9 @@
             "iso_a3": "JAM"
           },
           "values": {
-            "gdp_nominal": 21.411,
-            "gdp_ppp": 34.676,
-            "population": 2.8,
+            "gdp_nominal": 23.906,
+            "gdp_ppp": 38.991,
+            "population": 2.756,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -925,9 +925,9 @@
             "iso_a3": "JPN"
           },
           "values": {
-            "gdp_nominal": 4186.431,
-            "gdp_ppp": 6741.192,
-            "population": 123.36,
+            "gdp_nominal": 4341.986,
+            "gdp_ppp": 7324.055,
+            "population": 122.656,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -937,9 +937,9 @@
             "iso_a3": "JOR"
           },
           "values": {
-            "gdp_nominal": 56.102,
-            "gdp_ppp": 131.677,
-            "population": 11.3,
+            "gdp_nominal": 64.88,
+            "gdp_ppp": 154.467,
+            "population": 11.59,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -949,9 +949,9 @@
             "iso_a3": "KAZ"
           },
           "values": {
-            "gdp_nominal": 300.538,
-            "gdp_ppp": 904.496,
-            "population": 19.8,
+            "gdp_nominal": 397.921,
+            "gdp_ppp": 996.311,
+            "population": 20.606,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -961,9 +961,9 @@
             "iso_a3": "KEN"
           },
           "values": {
-            "gdp_nominal": 131.673,
-            "gdp_ppp": 401.968,
-            "population": 53.330978,
+            "gdp_nominal": 151.151,
+            "gdp_ppp": 436.129,
+            "population": 54.269,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -973,9 +973,9 @@
             "iso_a3": "KOR"
           },
           "values": {
-            "gdp_nominal": 1790.322,
-            "gdp_ppp": 3365.052,
-            "population": 51.164582,
+            "gdp_nominal": 2245.847,
+            "gdp_ppp": 3625.973,
+            "population": 51.615,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -985,9 +985,9 @@
             "iso_a3": "KWT"
           },
           "values": {
-            "gdp_nominal": 153.101,
-            "gdp_ppp": 260.503,
-            "population": 4.3,
+            "gdp_nominal": 146.911,
+            "gdp_ppp": 236.414,
+            "population": 5.078,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -997,9 +997,9 @@
             "iso_a3": "KGZ"
           },
           "values": {
-            "gdp_nominal": 19.849,
-            "gdp_ppp": 63.455,
-            "population": 7.0,
+            "gdp_nominal": 26.687,
+            "gdp_ppp": 76.238,
+            "population": 7.372,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -1009,9 +1009,9 @@
             "iso_a3": "LAO"
           },
           "values": {
-            "gdp_nominal": 16.322,
-            "gdp_ppp": 78.849,
-            "population": 7.5,
+            "gdp_nominal": 18.388,
+            "gdp_ppp": 95.09,
+            "population": 7.889,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -1021,9 +1021,9 @@
             "iso_a3": "LVA"
           },
           "values": {
-            "gdp_nominal": 45.535,
-            "gdp_ppp": 83.251,
-            "population": 1.8,
+            "gdp_nominal": 53.162,
+            "gdp_ppp": 85.532,
+            "population": 1.857,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1045,9 +1045,9 @@
             "iso_a3": "LSO"
           },
           "values": {
-            "gdp_nominal": 2.404,
-            "gdp_ppp": 7.41,
-            "population": 2.3,
+            "gdp_nominal": 3.102,
+            "gdp_ppp": 7.945,
+            "population": 2.39,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1057,9 +1057,9 @@
             "iso_a3": "LBR"
           },
           "values": {
-            "gdp_nominal": 5.166,
-            "gdp_ppp": 11.417,
-            "population": 5.5,
+            "gdp_nominal": 5.715,
+            "gdp_ppp": 12.371,
+            "population": 5.854,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1069,9 +1069,9 @@
             "iso_a3": "LBY"
           },
           "values": {
-            "gdp_nominal": 47.484,
-            "gdp_ppp": 123.987,
-            "population": 6.8,
+            "gdp_nominal": 56.948,
+            "gdp_ppp": 137.324,
+            "population": 7.535,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1081,9 +1081,9 @@
             "iso_a3": "LTU"
           },
           "values": {
-            "gdp_nominal": 89.192,
-            "gdp_ppp": 165.442,
-            "population": 2.8,
+            "gdp_nominal": 104.721,
+            "gdp_ppp": 177.443,
+            "population": 2.898,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1093,9 +1093,9 @@
             "iso_a3": "LUX"
           },
           "values": {
-            "gdp_nominal": 96.613,
-            "gdp_ppp": 104.822,
-            "population": 0.6,
+            "gdp_nominal": 108.33,
+            "gdp_ppp": 108.959,
+            "population": 0.696,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1105,9 +1105,9 @@
             "iso_a3": "MDG"
           },
           "values": {
-            "gdp_nominal": 18.708,
-            "gdp_ppp": 64.242,
-            "population": 29.611719,
+            "gdp_nominal": 20.975,
+            "gdp_ppp": 68.658,
+            "population": 32.319,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1117,9 +1117,9 @@
             "iso_a3": "MWI"
           },
           "values": {
-            "gdp_nominal": 13.959,
-            "gdp_ppp": 42.772,
-            "population": 20.412155,
+            "gdp_nominal": 18.309,
+            "gdp_ppp": 45.014,
+            "population": 24.75,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1129,9 +1129,9 @@
             "iso_a3": "MYS"
           },
           "values": {
-            "gdp_nominal": 444.984,
-            "gdp_ppp": 1471.655,
-            "population": 34.0,
+            "gdp_nominal": 547.1,
+            "gdp_ppp": 1624.495,
+            "population": 34.234,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1141,9 +1141,9 @@
             "iso_a3": "MLI"
           },
           "values": {
-            "gdp_nominal": 23.208,
-            "gdp_ppp": 72.738,
-            "population": 22.395489,
+            "gdp_nominal": 34.909,
+            "gdp_ppp": 95.793,
+            "population": 26.0,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1153,9 +1153,9 @@
             "iso_a3": "MRT"
           },
           "values": {
-            "gdp_nominal": 11.47,
-            "gdp_ppp": 40.06,
-            "population": 4.9,
+            "gdp_nominal": 14.264,
+            "gdp_ppp": 43.66,
+            "population": 4.732,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1165,9 +1165,9 @@
             "iso_a3": "MEX"
           },
           "values": {
-            "gdp_nominal": 1692.64,
-            "gdp_ppp": 3395.916,
-            "population": 130.417144,
+            "gdp_nominal": 2176.236,
+            "gdp_ppp": 3594.397,
+            "population": 134.407,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -1177,9 +1177,9 @@
             "iso_a3": "MDA"
           },
           "values": {
-            "gdp_nominal": 19.462,
-            "gdp_ppp": 46.365,
-            "population": 3.3,
+            "gdp_nominal": 22.223,
+            "gdp_ppp": 49.567,
+            "population": 2.34,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1189,9 +1189,9 @@
             "iso_a3": "SYC"
           },
           "values": {
-            "gdp_nominal": 2.2,
-            "gdp_ppp": 4.27,
-            "population": 0.13,
+            "gdp_nominal": 2.366,
+            "gdp_ppp": 4.593,
+            "population": 0.124,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1201,9 +1201,9 @@
             "iso_a3": "MNG"
           },
           "values": {
-            "gdp_nominal": 25.804,
-            "gdp_ppp": 73.279,
-            "population": 3.4,
+            "gdp_nominal": 31.131,
+            "gdp_ppp": 81.47,
+            "population": 3.633,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1213,9 +1213,9 @@
             "iso_a3": "MNE"
           },
           "values": {
-            "gdp_nominal": 8.562,
-            "gdp_ppp": 21.309,
-            "population": 0.62,
+            "gdp_nominal": 10.123,
+            "gdp_ppp": 22.833,
+            "population": 0.624,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1225,9 +1225,9 @@
             "iso_a3": "MAR"
           },
           "values": {
-            "gdp_nominal": 165.835,
-            "gdp_ppp": 424.871,
-            "population": 37.077,
+            "gdp_nominal": 195.632,
+            "gdp_ppp": 472.789,
+            "population": 38.05,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1237,9 +1237,9 @@
             "iso_a3": "MOZ"
           },
           "values": {
-            "gdp_nominal": 23.771,
-            "gdp_ppp": 61.953,
-            "population": 32.518569,
+            "gdp_nominal": 24.769,
+            "gdp_ppp": 63.38,
+            "population": 36.826,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1249,9 +1249,9 @@
             "iso_a3": "MMR"
           },
           "values": {
-            "gdp_nominal": 64.944,
-            "gdp_ppp": 326.894,
-            "population": 51.316756,
+            "gdp_nominal": 83.172,
+            "gdp_ppp": 291.559,
+            "population": 55.185,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -1261,9 +1261,9 @@
             "iso_a3": "NAM"
           },
           "values": {
-            "gdp_nominal": 14.214,
-            "gdp_ppp": 37.728,
-            "population": 2.6,
+            "gdp_nominal": 17.938,
+            "gdp_ppp": 39.091,
+            "population": 3.124,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1273,9 +1273,9 @@
             "iso_a3": "NPL"
           },
           "values": {
-            "gdp_nominal": 46.08,
-            "gdp_ppp": 180.64,
-            "population": 30.6,
+            "gdp_nominal": 45.593,
+            "gdp_ppp": 195.832,
+            "population": 29.604,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -1285,9 +1285,9 @@
             "iso_a3": "NLD"
           },
           "values": {
-            "gdp_nominal": 1272.011,
-            "gdp_ppp": 1526.239,
-            "population": 17.9,
+            "gdp_nominal": 1423.856,
+            "gdp_ppp": 1599.125,
+            "population": 18.13,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1297,9 +1297,9 @@
             "iso_a3": "NZL"
           },
           "values": {
-            "gdp_nominal": 248.666,
-            "gdp_ppp": 298.934,
-            "population": 5.1,
+            "gdp_nominal": 273.395,
+            "gdp_ppp": 313.675,
+            "population": 5.356,
             "development_status": "Developed",
             "continent": "Oceania"
           }
@@ -1309,9 +1309,9 @@
             "iso_a3": "NIC"
           },
           "values": {
-            "gdp_nominal": 21.155,
-            "gdp_ppp": 63.81,
-            "population": 7.0,
+            "gdp_nominal": 25.404,
+            "gdp_ppp": 69.819,
+            "population": 6.808,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -1321,9 +1321,9 @@
             "iso_a3": "NER"
           },
           "values": {
-            "gdp_nominal": 21.874,
-            "gdp_ppp": 61.035,
-            "population": 27.2,
+            "gdp_nominal": 23.367,
+            "gdp_ppp": 66.767,
+            "population": 30.204,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1333,9 +1333,9 @@
             "iso_a3": "NGA"
           },
           "values": {
-            "gdp_nominal": 188.271,
-            "gdp_ppp": 1584.958,
-            "population": 223.8,
+            "gdp_nominal": 386.671,
+            "gdp_ppp": 2438.18,
+            "population": 242.578,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1357,9 +1357,9 @@
             "iso_a3": "MKD"
           },
           "values": {
-            "gdp_nominal": 17.885,
-            "gdp_ppp": 53.345,
-            "population": 2.0,
+            "gdp_nominal": 21.236,
+            "gdp_ppp": 57.79,
+            "population": 1.805,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1369,9 +1369,9 @@
             "iso_a3": "NOR"
           },
           "values": {
-            "gdp_nominal": 504.276,
-            "gdp_ppp": 606.59,
-            "population": 5.5,
+            "gdp_nominal": 651.712,
+            "gdp_ppp": 657.258,
+            "population": 5.658,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1381,9 +1381,9 @@
             "iso_a3": "OMN"
           },
           "values": {
-            "gdp_nominal": 104.351,
-            "gdp_ppp": 231.16,
-            "population": 4.6,
+            "gdp_nominal": 121.397,
+            "gdp_ppp": 250.086,
+            "population": 5.414,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1393,9 +1393,9 @@
             "iso_a3": "PAK"
           },
           "values": {
-            "gdp_nominal": 263.69,
-            "gdp_ppp": 1671.868,
-            "population": 241.499431,
+            "gdp_nominal": 450.134,
+            "gdp_ppp": 1806.861,
+            "population": 245.117,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1405,9 +1405,9 @@
             "iso_a3": "PAN"
           },
           "values": {
-            "gdp_nominal": 91.675,
-            "gdp_ppp": 200.15,
-            "population": 4.4,
+            "gdp_nominal": 96.471,
+            "gdp_ppp": 217.782,
+            "population": 4.621,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -1417,9 +1417,9 @@
             "iso_a3": "PNG"
           },
           "values": {
-            "gdp_nominal": 32.835,
-            "gdp_ppp": 48.102,
-            "population": 9.9,
+            "gdp_nominal": 36.296,
+            "gdp_ppp": 52.269,
+            "population": 10.618,
             "development_status": "Underdeveloped",
             "continent": "Oceania"
           }
@@ -1429,9 +1429,9 @@
             "iso_a3": "PRY"
           },
           "values": {
-            "gdp_nominal": 45.465,
-            "gdp_ppp": 96.6,
-            "population": 6.9,
+            "gdp_nominal": 64.001,
+            "gdp_ppp": 152.86,
+            "population": 6.46,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -1441,9 +1441,9 @@
             "iso_a3": "PER"
           },
           "values": {
-            "gdp_nominal": 303.293,
-            "gdp_ppp": 643.052,
-            "population": 34.107,
+            "gdp_nominal": 399.593,
+            "gdp_ppp": 703.327,
+            "population": 34.753,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -1453,9 +1453,9 @@
             "iso_a3": "PHL"
           },
           "values": {
-            "gdp_nominal": 497.495,
-            "gdp_ppp": 1479.381,
-            "population": 114.1236,
+            "gdp_nominal": 501.692,
+            "gdp_ppp": 1569.841,
+            "population": 115.071,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1465,9 +1465,9 @@
             "iso_a3": "POL"
           },
           "values": {
-            "gdp_nominal": 979.96,
-            "gdp_ppp": 2017.513,
-            "population": 37.626,
+            "gdp_nominal": 1133.088,
+            "gdp_ppp": 2181.83,
+            "population": 36.333,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1477,9 +1477,9 @@
             "iso_a3": "PRT"
           },
           "values": {
-            "gdp_nominal": 321.44,
-            "gdp_ppp": 536.096,
-            "population": 10.2,
+            "gdp_nominal": 375.197,
+            "gdp_ppp": 570.956,
+            "population": 10.777,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1489,9 +1489,9 @@
             "iso_a3": "QAT"
           },
           "values": {
-            "gdp_nominal": 222.776,
-            "gdp_ppp": 378.083,
-            "population": 2.7,
+            "gdp_nominal": 203.044,
+            "gdp_ppp": 331.217,
+            "population": 3.191,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1501,9 +1501,9 @@
             "iso_a3": "ROU"
           },
           "values": {
-            "gdp_nominal": 403.395,
-            "gdp_ppp": 926.759,
-            "population": 19.053,
+            "gdp_nominal": 470.091,
+            "gdp_ppp": 942.929,
+            "population": 19.0,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1513,9 +1513,9 @@
             "iso_a3": "RUS"
           },
           "values": {
-            "gdp_nominal": 2076.396,
-            "gdp_ppp": 7191.718,
-            "population": 146.028325,
+            "gdp_nominal": 2861.156,
+            "gdp_ppp": 7542.897,
+            "population": 143.394,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1525,9 +1525,9 @@
             "iso_a3": "RWA"
           },
           "values": {
-            "gdp_nominal": 14.771,
-            "gdp_ppp": 58.117,
-            "population": 14.0,
+            "gdp_nominal": 18.673,
+            "gdp_ppp": 67.324,
+            "population": 14.471,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1537,9 +1537,9 @@
             "iso_a3": "SAU"
           },
           "values": {
-            "gdp_nominal": 1083.749,
-            "gdp_ppp": 2229.611,
-            "population": 36.17,
+            "gdp_nominal": 1343.346,
+            "gdp_ppp": 2728.584,
+            "population": 36.726,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1561,9 +1561,9 @@
             "iso_a3": "SRB"
           },
           "values": {
-            "gdp_nominal": 92.549,
-            "gdp_ppp": 128.5,
-            "population": 7.0,
+            "gdp_nominal": 111.204,
+            "gdp_ppp": 228.475,
+            "population": 6.493,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1573,9 +1573,9 @@
             "iso_a3": "SLE"
           },
           "values": {
-            "gdp_nominal": 8.386,
-            "gdp_ppp": 32.505,
-            "population": 8.4,
+            "gdp_nominal": 8.52,
+            "gdp_ppp": 35.399,
+            "population": 9.002,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1585,9 +1585,9 @@
             "iso_a3": "SVK"
           },
           "values": {
-            "gdp_nominal": 147.031,
-            "gdp_ppp": 257.02,
-            "population": 5.4,
+            "gdp_nominal": 167.062,
+            "gdp_ppp": 269.179,
+            "population": 5.409,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1597,9 +1597,9 @@
             "iso_a3": "SVN"
           },
           "values": {
-            "gdp_nominal": 75.224,
-            "gdp_ppp": 123.453,
-            "population": 2.1,
+            "gdp_nominal": 88.869,
+            "gdp_ppp": 132.894,
+            "population": 2.135,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1609,9 +1609,9 @@
             "iso_a3": "SLB"
           },
           "values": {
-            "gdp_nominal": 1.898,
-            "gdp_ppp": 2.165,
-            "population": 0.7,
+            "gdp_nominal": 1.866,
+            "gdp_ppp": 2.218,
+            "population": 0.813,
             "development_status": "Underdeveloped",
             "continent": "Oceania"
           }
@@ -1621,9 +1621,9 @@
             "iso_a3": "SOM"
           },
           "values": {
-            "gdp_nominal": 12.994,
-            "gdp_ppp": 32.496,
-            "population": 17.0,
+            "gdp_nominal": 14.82,
+            "gdp_ppp": 34.464,
+            "population": 17.438,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1633,9 +1633,9 @@
             "iso_a3": "ZAF"
           },
           "values": {
-            "gdp_nominal": 410.338,
-            "gdp_ppp": 1025.615,
-            "population": 63.015904,
+            "gdp_nominal": 489.083,
+            "gdp_ppp": 1075.434,
+            "population": 63.858,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1645,9 +1645,9 @@
             "iso_a3": "SSD"
           },
           "values": {
-            "gdp_nominal": 3.998,
-            "gdp_ppp": 11.386,
-            "population": 11.2,
+            "gdp_nominal": 7.983,
+            "gdp_ppp": 19.674,
+            "population": 12.436,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1657,9 +1657,9 @@
             "iso_a3": "ESP"
           },
           "values": {
-            "gdp_nominal": 1799.511,
-            "gdp_ppp": 2811.948,
-            "population": 49.153849,
+            "gdp_nominal": 2085.276,
+            "gdp_ppp": 3001.678,
+            "population": 49.94,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1669,9 +1669,9 @@
             "iso_a3": "LKA"
           },
           "values": {
-            "gdp_nominal": 84.53,
-            "gdp_ppp": 342.604,
-            "population": 21.803,
+            "gdp_nominal": 110.68,
+            "gdp_ppp": 398.953,
+            "population": 21.865,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1681,9 +1681,9 @@
             "iso_a3": "SDN"
           },
           "values": {
-            "gdp_nominal": 109.506,
-            "gdp_ppp": 117.773,
-            "population": 51.662,
+            "gdp_nominal": 30.861,
+            "gdp_ppp": 133.237,
+            "population": 51.729,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1693,9 +1693,9 @@
             "iso_a3": "SWE"
           },
           "values": {
-            "gdp_nominal": 620.297,
-            "gdp_ppp": 799.68,
-            "population": 10.5,
+            "gdp_nominal": 745.081,
+            "gdp_ppp": 844.411,
+            "population": 10.76,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1705,9 +1705,9 @@
             "iso_a3": "CHE"
           },
           "values": {
-            "gdp_nominal": 947.125,
-            "gdp_ppp": 881.083,
-            "population": 8.8,
+            "gdp_nominal": 1135.739,
+            "gdp_ppp": 975.753,
+            "population": 9.124,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1729,9 +1729,9 @@
             "iso_a3": "TWN"
           },
           "values": {
-            "gdp_nominal": 804.889,
-            "gdp_ppp": 1965.839,
-            "population": 23.9,
+            "gdp_nominal": 1019.596,
+            "gdp_ppp": 2406.687,
+            "population": 23.198,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -1741,9 +1741,9 @@
             "iso_a3": "TJK"
           },
           "values": {
-            "gdp_nominal": 14.836,
-            "gdp_ppp": 62.656,
-            "population": 10.1,
+            "gdp_nominal": 21.114,
+            "gdp_ppp": 70.835,
+            "population": 10.53,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1753,9 +1753,9 @@
             "iso_a3": "TZA"
           },
           "values": {
-            "gdp_nominal": 85.977,
-            "gdp_ppp": 293.592,
-            "population": 68.153004,
+            "gdp_nominal": 96.181,
+            "gdp_ppp": 322.693,
+            "population": 72.564,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1765,9 +1765,9 @@
             "iso_a3": "THA"
           },
           "values": {
-            "gdp_nominal": 546.224,
-            "gdp_ppp": 1851.258,
-            "population": 65.87061,
+            "gdp_nominal": 599.115,
+            "gdp_ppp": 1983.943,
+            "population": 71.56,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1777,9 +1777,9 @@
             "iso_a3": "TLS"
           },
           "values": {
-            "gdp_nominal": 2.115,
-            "gdp_ppp": 6.973,
-            "population": 1.3,
+            "gdp_nominal": 2.17,
+            "gdp_ppp": 7.548,
+            "population": 1.427,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -1789,9 +1789,9 @@
             "iso_a3": "TGO"
           },
           "values": {
-            "gdp_nominal": 10.023,
-            "gdp_ppp": 33.047,
-            "population": 9.2,
+            "gdp_nominal": 13.141,
+            "gdp_ppp": 37.956,
+            "population": 8.878,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1801,9 +1801,9 @@
             "iso_a3": "TTO"
           },
           "values": {
-            "gdp_nominal": 26.467,
-            "gdp_ppp": 51.682,
-            "population": 1.5,
+            "gdp_nominal": 26.818,
+            "gdp_ppp": 52.888,
+            "population": 1.442,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -1813,9 +1813,9 @@
             "iso_a3": "TUN"
           },
           "values": {
-            "gdp_nominal": 56.291,
-            "gdp_ppp": 183.725,
-            "population": 12.0,
+            "gdp_nominal": 62.738,
+            "gdp_ppp": 198.912,
+            "population": 12.415,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -1825,9 +1825,9 @@
             "iso_a3": "TUR"
           },
           "values": {
-            "gdp_nominal": 1437.406,
-            "gdp_ppp": 3651.873,
-            "population": 85.664944,
+            "gdp_nominal": 1817.987,
+            "gdp_ppp": 4025.804,
+            "population": 86.245,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1837,9 +1837,9 @@
             "iso_a3": "TKM"
           },
           "values": {
-            "gdp_nominal": 89.054,
-            "gdp_ppp": 186.106,
-            "population": 6.5,
+            "gdp_nominal": 83.0,
+            "gdp_ppp": 164.78,
+            "population": 6.753,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1849,9 +1849,9 @@
             "iso_a3": "UGA"
           },
           "values": {
-            "gdp_nominal": 64.277,
-            "gdp_ppp": 187.109,
-            "population": 45.935046,
+            "gdp_nominal": 72.242,
+            "gdp_ppp": 206.676,
+            "population": 49.706,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -1861,9 +1861,9 @@
             "iso_a3": "UKR"
           },
           "values": {
-            "gdp_nominal": 205.742,
-            "gdp_ppp": 690.059,
-            "population": 39.794,
+            "gdp_nominal": 229.406,
+            "gdp_ppp": 720.723,
+            "population": 32.423,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -1873,9 +1873,9 @@
             "iso_a3": "ARE"
           },
           "values": {
-            "gdp_nominal": 548.598,
-            "gdp_ppp": 905.227,
-            "population": 9.9,
+            "gdp_nominal": 661.018,
+            "gdp_ppp": 968.842,
+            "population": 11.575,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1885,9 +1885,9 @@
             "iso_a3": "GBR"
           },
           "values": {
-            "gdp_nominal": 3839.18,
-            "gdp_ppp": 4447.841,
-            "population": 68.265209,
+            "gdp_nominal": 4268.446,
+            "gdp_ppp": 4783.102,
+            "population": 69.85,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -1897,9 +1897,9 @@
             "iso_a3": "USA"
           },
           "values": {
-            "gdp_nominal": 30507.217,
-            "gdp_ppp": 30507.217,
-            "population": 340.110988,
+            "gdp_nominal": 32642.373,
+            "gdp_ppp": 32642.373,
+            "population": 342.838,
             "development_status": "Developed",
             "continent": "North America"
           }
@@ -1909,9 +1909,9 @@
             "iso_a3": "URY"
           },
           "values": {
-            "gdp_nominal": 79.731,
-            "gdp_ppp": 130.209,
-            "population": 3.5,
+            "gdp_nominal": 95.155,
+            "gdp_ppp": 135.773,
+            "population": 3.481,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -1921,9 +1921,9 @@
             "iso_a3": "UZB"
           },
           "values": {
-            "gdp_nominal": 132.484,
-            "gdp_ppp": 469.844,
-            "population": 36.7994,
+            "gdp_nominal": 178.167,
+            "gdp_ppp": 561.582,
+            "population": 38.943,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1933,9 +1933,9 @@
             "iso_a3": "VUT"
           },
           "values": {
-            "gdp_nominal": 1.267,
-            "gdp_ppp": 0.9,
-            "population": 0.3,
+            "gdp_nominal": 1.386,
+            "gdp_ppp": 1.416,
+            "population": 0.342,
             "development_status": "Underdeveloped",
             "continent": "Oceania"
           }
@@ -1945,9 +1945,9 @@
             "iso_a3": "VEN"
           },
           "values": {
-            "gdp_nominal": 108.511,
-            "gdp_ppp": 223.984,
-            "population": 28.833,
+            "gdp_nominal": 124.184,
+            "gdp_ppp": 282.366,
+            "population": 28.517,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -1957,9 +1957,9 @@
             "iso_a3": "VNM"
           },
           "values": {
-            "gdp_nominal": 490.97,
-            "gdp_ppp": 1786.203,
-            "population": 101.3438,
+            "gdp_nominal": 542.13,
+            "gdp_ppp": 2058.905,
+            "population": 103.077,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -1981,9 +1981,9 @@
             "iso_a3": "YEM"
           },
           "values": {
-            "gdp_nominal": 17.401,
-            "gdp_ppp": 69.96,
-            "population": 34.449825,
+            "gdp_nominal": 10.982,
+            "gdp_ppp": 30.433,
+            "population": 19.375,
             "development_status": "Underdeveloped",
             "continent": "Asia"
           }
@@ -1993,9 +1993,9 @@
             "iso_a3": "ZMB"
           },
           "values": {
-            "gdp_nominal": 28.91,
-            "gdp_ppp": 98.155,
-            "population": 20.8,
+            "gdp_nominal": 42.384,
+            "gdp_ppp": 104.733,
+            "population": 22.522,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -2005,9 +2005,9 @@
             "iso_a3": "ZWE"
           },
           "values": {
-            "gdp_nominal": 38.172,
-            "gdp_ppp": 93.871,
-            "population": 16.5,
+            "gdp_nominal": 65.916,
+            "gdp_ppp": 150.672,
+            "population": 17.728,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -2017,9 +2017,9 @@
             "iso_a3": "ABW"
           },
           "values": {
-            "gdp_nominal": 3.65,
-            "gdp_ppp": 4.83,
-            "population": 0.11,
+            "gdp_nominal": 4.679,
+            "gdp_ppp": 6.458,
+            "population": 0.109,
             "development_status": "Developed",
             "continent": "North America"
           }
@@ -2053,9 +2053,9 @@
             "iso_a3": "AND"
           },
           "values": {
-            "gdp_nominal": 4.64,
-            "gdp_ppp": 5.4,
-            "population": 0.08,
+            "gdp_nominal": 4.916,
+            "gdp_ppp": 6.947,
+            "population": 0.091,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -2077,9 +2077,9 @@
             "iso_a3": "ATG"
           },
           "values": {
-            "gdp_nominal": 2.36,
-            "gdp_ppp": 3.01,
-            "population": 0.1,
+            "gdp_nominal": 2.391,
+            "gdp_ppp": 3.506,
+            "population": 0.106,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2089,9 +2089,9 @@
             "iso_a3": "BHR"
           },
           "values": {
-            "gdp_nominal": 47.8,
-            "gdp_ppp": 94.85,
-            "population": 1.63,
+            "gdp_nominal": 46.018,
+            "gdp_ppp": 104.204,
+            "population": 1.635,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -2101,9 +2101,9 @@
             "iso_a3": "BHS"
           },
           "values": {
-            "gdp_nominal": 15.18,
-            "gdp_ppp": 14.68,
-            "population": 0.41,
+            "gdp_nominal": 18.279,
+            "gdp_ppp": 19.691,
+            "population": 0.417,
             "development_status": "Developed",
             "continent": "North America"
           }
@@ -2125,9 +2125,9 @@
             "iso_a3": "MUS"
           },
           "values": {
-            "gdp_nominal": 15.49,
-            "gdp_ppp": 41.352,
-            "population": 1.31,
+            "gdp_nominal": 16.944,
+            "gdp_ppp": 43.92,
+            "population": 1.239,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -2137,9 +2137,9 @@
             "iso_a3": "BLZ"
           },
           "values": {
-            "gdp_nominal": 2.22,
-            "gdp_ppp": 5.67,
-            "population": 0.44,
+            "gdp_nominal": 3.444,
+            "gdp_ppp": 6.657,
+            "population": 0.426,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2161,9 +2161,9 @@
             "iso_a3": "BRB"
           },
           "values": {
-            "gdp_nominal": 4.27,
-            "gdp_ppp": 5.02,
-            "population": 0.29,
+            "gdp_nominal": 8.256,
+            "gdp_ppp": 7.699,
+            "population": 0.292,
             "development_status": "Developed",
             "continent": "North America"
           }
@@ -2173,9 +2173,9 @@
             "iso_a3": "BRN"
           },
           "values": {
-            "gdp_nominal": 19.66,
-            "gdp_ppp": 31.1,
-            "population": 0.45,
+            "gdp_nominal": 18.873,
+            "gdp_ppp": 45.554,
+            "population": 0.465,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -2197,9 +2197,9 @@
             "iso_a3": "COM"
           },
           "values": {
-            "gdp_nominal": 2.37,
-            "gdp_ppp": 3.21,
-            "population": 0.87,
+            "gdp_nominal": 1.728,
+            "gdp_ppp": 3.899,
+            "population": 0.93,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -2209,9 +2209,9 @@
             "iso_a3": "CPV"
           },
           "values": {
-            "gdp_nominal": 2.42,
-            "gdp_ppp": 3.82,
-            "population": 0.6,
+            "gdp_nominal": 3.389,
+            "gdp_ppp": 6.961,
+            "population": 0.517,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -2245,9 +2245,9 @@
             "iso_a3": "DMA"
           },
           "values": {
-            "gdp_nominal": 0.62,
-            "gdp_ppp": 1.01,
-            "population": 0.07,
+            "gdp_nominal": 0.788,
+            "gdp_ppp": 1.564,
+            "population": 0.076,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2293,9 +2293,9 @@
             "iso_a3": "FSM"
           },
           "values": {
-            "gdp_nominal": 0.45,
-            "gdp_ppp": 0.41,
-            "population": 0.11,
+            "gdp_nominal": 0.531,
+            "gdp_ppp": 0.491,
+            "population": 0.076,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -2317,9 +2317,9 @@
             "iso_a3": "GRD"
           },
           "values": {
-            "gdp_nominal": 1.32,
-            "gdp_ppp": 2.19,
-            "population": 0.13,
+            "gdp_nominal": 1.554,
+            "gdp_ppp": 2.721,
+            "population": 0.117,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2353,9 +2353,9 @@
             "iso_a3": "HKG"
           },
           "values": {
-            "gdp_nominal": 397.32,
-            "gdp_ppp": 475.82,
-            "population": 7.5,
+            "gdp_nominal": 455.156,
+            "gdp_ppp": 647.727,
+            "population": 7.545,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -2389,9 +2389,9 @@
             "iso_a3": "KIR"
           },
           "values": {
-            "gdp_nominal": 0.24,
-            "gdp_ppp": 0.26,
-            "population": 0.14,
+            "gdp_nominal": 0.402,
+            "gdp_ppp": 0.517,
+            "population": 0.131,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -2401,9 +2401,9 @@
             "iso_a3": "KNA"
           },
           "values": {
-            "gdp_nominal": 1.2,
-            "gdp_ppp": 1.63,
-            "population": 0.05,
+            "gdp_nominal": 1.147,
+            "gdp_ppp": 1.816,
+            "population": 0.052,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2413,9 +2413,9 @@
             "iso_a3": "KOS"
           },
           "values": {
-            "gdp_nominal": 10.07,
-            "gdp_ppp": 22.64,
-            "population": 1.75,
+            "gdp_nominal": 14.154,
+            "gdp_ppp": 34.408,
+            "population": 1.59,
             "development_status": "Developing",
             "continent": "Europe"
           }
@@ -2425,9 +2425,9 @@
             "iso_a3": "LCA"
           },
           "values": {
-            "gdp_nominal": 2.09,
-            "gdp_ppp": 3.14,
-            "population": 0.18,
+            "gdp_nominal": 2.757,
+            "gdp_ppp": 5.403,
+            "population": 0.183,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2437,9 +2437,9 @@
             "iso_a3": "LIE"
           },
           "values": {
-            "gdp_nominal": 8.29,
-            "gdp_ppp": 4.98,
-            "population": 0.04,
+            "gdp_nominal": 9.592,
+            "gdp_ppp": 8.284,
+            "population": 0.042,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -2449,9 +2449,9 @@
             "iso_a3": "MAC"
           },
           "values": {
-            "gdp_nominal": 53.35,
-            "gdp_ppp": 73.36,
-            "population": 0.7,
+            "gdp_nominal": 54.656,
+            "gdp_ppp": 100.333,
+            "population": 0.709,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -2485,9 +2485,9 @@
             "iso_a3": "MDV"
           },
           "values": {
-            "gdp_nominal": 6.23,
-            "gdp_ppp": 10.04,
-            "population": 0.52,
+            "gdp_nominal": 8.148,
+            "gdp_ppp": 15.786,
+            "population": 0.418,
             "development_status": "Developing",
             "continent": "Asia"
           }
@@ -2497,9 +2497,9 @@
             "iso_a3": "MHL"
           },
           "values": {
-            "gdp_nominal": 0.29,
-            "gdp_ppp": 0.28,
-            "population": 0.04,
+            "gdp_nominal": 0.338,
+            "gdp_ppp": 0.297,
+            "population": 0.037,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -2509,9 +2509,9 @@
             "iso_a3": "MLT"
           },
           "values": {
-            "gdp_nominal": 19.07,
-            "gdp_ppp": 25.37,
-            "population": 0.54,
+            "gdp_nominal": 30.508,
+            "gdp_ppp": 46.813,
+            "population": 0.585,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -2581,9 +2581,9 @@
             "iso_a3": "NRU"
           },
           "values": {
-            "gdp_nominal": 0.14,
-            "gdp_ppp": 0.16,
-            "population": 0.01,
+            "gdp_nominal": 0.196,
+            "gdp_ppp": 0.151,
+            "population": 0.012,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -2593,9 +2593,9 @@
             "iso_a3": "PLW"
           },
           "values": {
-            "gdp_nominal": 0.26,
-            "gdp_ppp": 0.29,
-            "population": 0.02,
+            "gdp_nominal": 0.373,
+            "gdp_ppp": 0.365,
+            "population": 0.017,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -2605,9 +2605,9 @@
             "iso_a3": "PRI"
           },
           "values": {
-            "gdp_nominal": 113.06,
-            "gdp_ppp": 142.76,
-            "population": 3.26,
+            "gdp_nominal": 133.222,
+            "gdp_ppp": 171.634,
+            "population": 3.183,
             "development_status": "Developed",
             "continent": "North America"
           }
@@ -2641,9 +2641,9 @@
             "iso_a3": "SGP"
           },
           "values": {
-            "gdp_nominal": 497.37,
-            "gdp_ppp": 751.39,
-            "population": 6.01,
+            "gdp_nominal": 667.889,
+            "gdp_ppp": 1082.946,
+            "population": 6.121,
             "development_status": "Developed",
             "continent": "Asia"
           }
@@ -2665,9 +2665,9 @@
             "iso_a3": "SMR"
           },
           "values": {
-            "gdp_nominal": 2.84,
-            "gdp_ppp": 2.98,
-            "population": 0.03,
+            "gdp_nominal": 2.434,
+            "gdp_ppp": 3.014,
+            "population": 0.034,
             "development_status": "Developed",
             "continent": "Europe"
           }
@@ -2689,9 +2689,9 @@
             "iso_a3": "STP"
           },
           "values": {
-            "gdp_nominal": 0.59,
-            "gdp_ppp": 1.01,
-            "population": 0.24,
+            "gdp_nominal": 1.123,
+            "gdp_ppp": 1.593,
+            "population": 0.245,
             "development_status": "Underdeveloped",
             "continent": "Africa"
           }
@@ -2701,9 +2701,9 @@
             "iso_a3": "SUR"
           },
           "values": {
-            "gdp_nominal": 6.03,
-            "gdp_ppp": 10.71,
-            "population": 0.65,
+            "gdp_nominal": 5.981,
+            "gdp_ppp": 15.808,
+            "population": 0.667,
             "development_status": "Developing",
             "continent": "South America"
           }
@@ -2713,9 +2713,9 @@
             "iso_a3": "SWZ"
           },
           "values": {
-            "gdp_nominal": 5.48,
-            "gdp_ppp": 16.32,
-            "population": 1.26,
+            "gdp_nominal": 6.054,
+            "gdp_ppp": 16.982,
+            "population": 1.268,
             "development_status": "Developing",
             "continent": "Africa"
           }
@@ -2749,9 +2749,9 @@
             "iso_a3": "TON"
           },
           "values": {
-            "gdp_nominal": 0.53,
-            "gdp_ppp": 0.73,
-            "population": 0.11,
+            "gdp_nominal": 0.727,
+            "gdp_ppp": 0.855,
+            "population": 0.099,
             "development_status": "Developing",
             "continent": "Oceania"
           }
@@ -2761,8 +2761,8 @@
             "iso_a3": "TUV"
           },
           "values": {
-            "gdp_nominal": 0.06,
-            "gdp_ppp": 0.06,
+            "gdp_nominal": 0.083,
+            "gdp_ppp": 0.071,
             "population": 0.01,
             "development_status": "Developing",
             "continent": "Oceania"
@@ -2785,9 +2785,9 @@
             "iso_a3": "VCT"
           },
           "values": {
-            "gdp_nominal": 1.18,
-            "gdp_ppp": 1.99,
-            "population": 0.11,
+            "gdp_nominal": 1.27,
+            "gdp_ppp": 2.421,
+            "population": 0.111,
             "development_status": "Developing",
             "continent": "North America"
           }
@@ -2833,9 +2833,9 @@
             "iso_a3": "WSM"
           },
           "values": {
-            "gdp_nominal": 1.38,
-            "gdp_ppp": 2.45,
-            "population": 0.23,
+            "gdp_nominal": 1.347,
+            "gdp_ppp": 1.853,
+            "population": 0.214,
             "development_status": "Developing",
             "continent": "Oceania"
           }

@@ -1,0 +1,221 @@
+{
+  "currency": "JPY",
+  "usd_rate": 156.9206,
+  "intro_line": "Kyoto: a thousand temples, quiet gardens, and timeless streets.",
+  "intro": "Kyoto rewards visitors who slow down and wander beyond the headline sights. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    }
+  ],
+  "areas": [
+    "Kyoto Station",
+    "Downtown (Shijo-Kawaramachi)",
+    "Gion",
+    "Arashiyama"
+  ],
+  "taxi": {
+    "flag_day": 600,
+    "flag_airport": 700,
+    "per_km": 400,
+    "min_fare": 600
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Two subway lines (Karasuma and Tozai) cover central Kyoto; fares ¥220-330.",
+    "City buses reach most sights; flat fare ¥230, day pass ¥700.",
+    "Taxis are metered; ride-hailing apps like GO and Uber operate.",
+    "Driving is not recommended; parking is scarce and expensive.",
+    "Walking and cycling are ideal for temples and backstreets; bike rentals from ¥1000/day.",
+    "No ferry service in Kyoto."
+  ],
+  "airports": [
+    {
+      "code": "KIX",
+      "name": "Kansai International Airport",
+      "primary": true,
+      "note": "Main international gateway, 81 km southwest.",
+      "options": [
+        {
+          "mode": "Train (Nankai + Hankyu)",
+          "to": "Central Kyoto",
+          "price": "¥1250",
+          "time": "1 hr 45 min",
+          "note": "Kyoto Access Ticket; upgrade to Rapi:t for speed."
+        },
+        {
+          "mode": "Train (Haruka limited express)",
+          "to": "Kyoto Station",
+          "price": "¥2900-3430",
+          "time": "75-80 min",
+          "note": "Kansai Area Pass ¥2400 saves ¥500."
+        },
+        {
+          "mode": "Airport limousine bus",
+          "to": "Kyoto Station",
+          "price": "¥2600",
+          "time": "90-135 min",
+          "note": "Runs twice hourly; traffic can delay."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Kyoto city centre",
+          "price": "¥15000-20000",
+          "time": "90-120 min",
+          "note": "Fixed fares available; book ahead."
+        }
+      ]
+    },
+    {
+      "code": "ITM",
+      "name": "Osaka International Airport (Itami)",
+      "primary": false,
+      "note": "Domestic airport, 39 km southwest; closest to Kyoto.",
+      "options": [
+        {
+          "mode": "Train (monorail + Hankyu)",
+          "to": "Central Kyoto",
+          "price": "¥670-760",
+          "time": "1 hr",
+          "note": "One or two changes; cheaper than bus."
+        },
+        {
+          "mode": "Airport limousine bus",
+          "to": "Kyoto Station",
+          "price": "¥1340",
+          "time": "50 min",
+          "note": "Runs every 20 min; easy with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Kyoto city centre",
+          "price": "¥8000-12000",
+          "time": "60-80 min",
+          "note": "Shared taxis may be cheaper."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Fushimi Inari Taisha",
+    "Kinkaku-ji",
+    "Kiyomizu-dera",
+    "Arashiyama Bamboo Grove",
+    "Gion District",
+    "Nijo Castle",
+    "Ginkaku-ji",
+    "Ryoan-ji",
+    "Sanjusangendo",
+    "Tenryu-ji",
+    "Yasaka Shrine",
+    "Byodo-in",
+    "Daitoku-ji",
+    "Eikan-do Zenrin-ji",
+    "Gion Matsuri",
+    "Heian Jingu",
+    "Hozu River Boat Ride",
+    "Inception",
+    "Kamo River",
+    "Kyoto Aquarium",
+    "Kyoto Imperial Palace",
+    "Kyoto University"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Kyoto",
+      "https://en.wikivoyage.org/wiki/Kyoto"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    35.02107,
+    135.75385
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": -1,
+      "rain_days": 8
+    },
+    {
+      "high": 9,
+      "low": 0,
+      "rain_days": 8
+    },
+    {
+      "high": 14,
+      "low": 3,
+      "rain_days": 11
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 15
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 18
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 16,
+      "low": 7,
+      "rain_days": 7
+    },
+    {
+      "high": 11,
+      "low": 1,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "KIX taxi ¥15000-20000 vs tariff estimate 42820",
+    "ITM taxi ¥8000-12000 vs tariff estimate 20980"
+  ]
+}

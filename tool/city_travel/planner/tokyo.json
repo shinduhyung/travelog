@@ -1,0 +1,703 @@
+{
+  "city": "Tokyo",
+  "checked": "October 2026",
+  "intro_line": "Neon districts, quiet shrines and the best food city in the world.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Shinjuku",
+        "Shibuya",
+        "Ginza & Tokyo Station",
+        "Asakusa & Ueno"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Shinjuku",
+        "Shibuya",
+        "Ginza & Tokyo Station",
+        "Asakusa & Ueno"
+      ]
+    },
+    {
+      "id": "anime",
+      "label": "Anime",
+      "areas": [
+        "Shinjuku",
+        "Shibuya",
+        "Ginza & Tokyo Station",
+        "Asakusa & Ueno"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Shinjuku",
+        "Shibuya",
+        "Ginza & Tokyo Station",
+        "Asakusa & Ueno"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Shinjuku",
+        "Shibuya",
+        "Ginza & Tokyo Station",
+        "Asakusa & Ueno"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": 0,
+        "rain_days": 5,
+        "note": "Cold and dry: highs near 9°C, lows around 0°C. Pack a warm coat."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 7,
+        "note": "Still cold, highs near 10°C. A few rainy days; keep indoor plans ready."
+      },
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 11,
+        "note": "Warming up to 14°C. Cherry blossom timing varies; check forecasts on the day."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 11,
+        "note": "Mild and pleasant at 19°C. Busy blossom season; book hotels early."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Warm at 23°C and green. Good walking weather before the rains."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 15,
+        "note": "Rainy season: about 15 rain days and 26°C. Carry an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 16,
+        "note": "Hot and humid, highs near 30°C with 16 rain days. Plan indoor breaks."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 14,
+        "note": "Hottest month, highs near 31°C. Go out early and late; stay cool midday."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 15,
+        "note": "Still warm at 27°C with 15 rain days. Typhoon season; check forecasts."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 12,
+        "note": "Comfortable at 22°C. Great month for walking and day trips."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 10,
+        "note": "Cool and clear at 17°C. Autumn colours; popular, so book ahead."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 7,
+        "note": "Cold again at 11°C. Dry with about 7 rain days; pack layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.7,
+      0.9,
+      0.95,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "anime": [
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "family": [
+      0.6,
+      0.6,
+      0.8,
+      0.95,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.65,
+      0.9,
+      0.9,
+      0.7
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "sensoji": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning; cherry blossom in late March",
+      "area": "Asakusa & Ueno",
+      "popularity": 5
+    },
+    "nakamise": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning on weekdays",
+      "area": "Asakusa & Ueno",
+      "popularity": 4
+    },
+    "meijijingu": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning; autumn colours in November",
+      "area": "Shibuya",
+      "popularity": 5
+    },
+    "shibuyacrossing": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "After dark when the screens light up",
+      "area": "Shibuya",
+      "popularity": 5
+    },
+    "skytree": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon into sunset",
+      "area": "Asakusa & Ueno",
+      "popularity": 5
+    },
+    "tokyotower": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening for the lit tower",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 4
+    },
+    "imperialpalace": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning; spring for the gardens",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 4
+    },
+    "tsukiji": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning, not Sunday",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 5
+    },
+    "toyosu": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Very early morning",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 4
+    },
+    "akihabara": {
+      "types": [
+        "anime",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Asakusa & Ueno",
+      "popularity": 4
+    },
+    "takeshita": {
+      "types": [
+        "food",
+        "anime",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Shibuya",
+      "popularity": 4
+    },
+    "shinjukugyoen": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring for cherry blossom; morning",
+      "area": "Shinjuku",
+      "popularity": 4
+    },
+    "goldengai": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late evening, not too late on weekdays",
+      "area": "Shinjuku",
+      "popularity": 3
+    },
+    "tmgbuilding": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Sunset on a clear day",
+      "area": "Shinjuku",
+      "popularity": 3
+    },
+    "tnm": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Asakusa & Ueno",
+      "popularity": 4
+    },
+    "uenopark": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring for cherry blossom; morning",
+      "area": "Asakusa & Ueno",
+      "popularity": 4
+    },
+    "teamlabplanets": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning slot",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 5
+    },
+    "ghibli": {
+      "types": [
+        "anime",
+        "family",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday; book weeks ahead",
+      "area": "Shinjuku",
+      "popularity": 4
+    },
+    "odaiba": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Late afternoon to evening",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 3
+    },
+    "disneyland": {
+      "types": [
+        "family"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday, arrive at opening",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 5
+    },
+    "disneysea": {
+      "types": [
+        "family"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday, arrive at opening",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 5
+    },
+    "mori": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Sunset on a clear day",
+      "area": "Shibuya",
+      "popularity": 4
+    },
+    "ginza": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon or evening",
+      "area": "Ginza & Tokyo Station",
+      "popularity": 4
+    },
+    "omotesando": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Shibuya",
+      "popularity": 3
+    },
+    "sushilunch": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch before noon",
+      "area": "Shibuya",
+      "popularity": 4
+    },
+    "ramen": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Evening or late night",
+      "area": "Shinjuku",
+      "popularity": 4
+    },
+    "izakaya": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Shinjuku",
+      "popularity": 4
+    },
+    "sumidagawa": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon; cherry blossom in spring",
+      "area": "Asakusa & Ueno",
+      "popularity": 3
+    },
+    "yanaka": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Asakusa & Ueno",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the big sights, a food neighbourhood and one day trip without rushing."
+  },
+  "airports": [
+    {
+      "code": "HND",
+      "name": "Haneda Airport",
+      "primary": true,
+      "note": "Closest to the city, 15 km south.",
+      "options": [
+        {
+          "mode": "Keikyu Line",
+          "to": "Shinagawa, Asakusa",
+          "price": "¥327-600",
+          "time": "11-30 min",
+          "note": "Pay with a Suica/Pasmo IC card."
+        },
+        {
+          "mode": "Tokyo Monorail",
+          "to": "Hamamatsucho",
+          "price": "¥520-550",
+          "time": "13-19 min",
+          "note": "Change to JR Yamanote line."
+        },
+        {
+          "mode": "Limousine bus",
+          "to": "Major hotels and stations",
+          "price": "¥1,200-1,400",
+          "time": "30-60 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi (fixed fare)",
+          "to": "Central Tokyo",
+          "price": "from ¥6,900",
+          "time": "25-40 min",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "code": "NRT",
+      "name": "Narita Airport",
+      "primary": false,
+      "note": "60 km east; many international flights.",
+      "options": [
+        {
+          "mode": "Keisei Skyliner",
+          "to": "Nippori, Ueno",
+          "price": "¥2,300-2,580",
+          "time": "36-41 min",
+          "note": "Fastest train; cheaper online."
+        },
+        {
+          "mode": "Narita Express (N'EX)",
+          "to": "Tokyo, Shinjuku, Shibuya",
+          "price": "¥3,070-3,330",
+          "time": "53-80 min",
+          "note": "Round-trip ticket for visitors ¥5,200."
+        },
+        {
+          "mode": "Limousine bus",
+          "to": "Major hotels and stations",
+          "price": "¥3,100-3,600",
+          "time": "65-120 min",
+          "note": ""
+        },
+        {
+          "mode": "Low-cost bus (TYO-NRT)",
+          "to": "Tokyo Station",
+          "price": "¥1,500",
+          "time": "about 70 min",
+          "note": "¥3,000 late at night."
+        },
+        {
+          "mode": "Taxi (fixed fare)",
+          "to": "Central Tokyo",
+          "price": "¥19,000-21,000",
+          "time": "60-90 min",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Narita & Haneda to Tokyo 2026",
+      "https://glostravel.com/en/article/airport-access-tokyo-narita-haneda-2026"
+    ],
+    [
+      "Narita Airport to Tokyo compared",
+      "https://www.tokyotourism.org/narita-airport-to-tokyo/"
+    ],
+    [
+      "Tokyo airport transfer guide",
+      "https://blog.wego.com/tokyo-airport-transfer/"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "anime"
+  ],
+  "transit": {
+    "best": "Trains and subways with an IC card; taxis only for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "JR, Tokyo Metro and Toei reach everywhere. Tap a Suica or Pasmo IC card, about ¥180–330 a ride."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Same network as the metro for visitors; use it between neighbourhoods. Trains stop around midnight."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses exist but trains are almost always faster for visitors."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Clean and metered, ¥500 start. Apps like GO and Uber work. Best after the trains stop."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in central Tokyo is slow and parking expensive; not recommended."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Each neighbourhood is walkable, but you will take trains between them."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold dry winters, a humid rainy season in June, and hot, sticky summers.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: March to May and October to November",
+        "text": "Mild days around 17–23°C. Ideal for walking neighbourhoods and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (July to September)",
+        "text": "Highs near 30–31°C with muggy nights. Plan indoor sights midday and go out early or late."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy season in June",
+        "text": "About 15 rain days and 26°C. Carry an umbrella and keep a museum or shopping backup."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold, dry winters",
+        "text": "January highs near 9°C and lows around 0°C. A warm coat and layers matter; rain is light."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Late summer and September can bring storms. Check forecasts and train status on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers for cool evenings, an umbrella in June and September, and light breathable clothes in summer."
+      }
+    ]
+  }
+}

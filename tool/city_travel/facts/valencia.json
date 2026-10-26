@@ -1,0 +1,180 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Valencia blends medieval streets, futuristic art and a sunny beach.",
+  "intro": "Valencia rewards visitors with old-town charm, bold modern architecture and easy beach days. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    }
+  ],
+  "areas": [
+    "Ciutat Vella",
+    "El Carmen",
+    "Ruzafa",
+    "Eixample"
+  ],
+  "taxi": {
+    "flag_day": 2,
+    "flag_airport": 5,
+    "per_km": 1.2,
+    "min_fare": 4
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro València has 9 lines (some trams); single zone fare about €1.50 plus €1 for the card.",
+    "EMT buses reach most districts; single ticket about €2, pay the driver by cash or card.",
+    "SUMA 10 card gives 10 journeys on metro and bus, about €8 plus card fee.",
+    "Taxis are metered; airport trips add a supplement. Ride apps like Uber, Bolt and Cabify operate.",
+    "The centre is flat and walkable; bikes and the Turia park paths are popular.",
+    "No ferry service for visitors; regional trains leave from Estació del Nord."
+  ],
+  "airports": [
+    {
+      "code": "VLC",
+      "name": "Valencia Airport",
+      "primary": true,
+      "note": "Main airport, in Manises about 9 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 150",
+          "to": "Àngel Guimerá, city centre",
+          "price": "€1.50",
+          "time": "30-40 min",
+          "note": "Yellow Fernanbus, every 15 min."
+        },
+        {
+          "mode": "Metro lines 3/5",
+          "to": "Xàtiva / Estació del Nord",
+          "price": "€3.90 plus €1 card",
+          "time": "about 21 min",
+          "note": "Runs every 8 min; no trains midnight to 05:30."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "20-30 min",
+          "note": "Airport supplement applies; return trip is often cheaper."
+        },
+        {
+          "mode": "Uber / Bolt / Cabify",
+          "to": "City centre",
+          "price": "€15-25",
+          "time": "20-30 min",
+          "note": "Check app pickup point outside arrivals."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "City of Arts and Sciences",
+    "Valencia Cathedral",
+    "Central Market of Valencia",
+    "Turia Gardens (Jardín del Turia)",
+    "La Lonja de la Seda",
+    "Torres de Serranos",
+    "Bioparc Valencia",
+    "DUNAS",
+    "L'Oceanografic",
+    "Mestalla",
+    "Mountasia Family Fun Center",
+    "Paella",
+    "Six Flags Magic Mountain"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Valencia",
+      "https://en.wikivoyage.org/wiki/Valencia"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    39.47391,
+    -0.37966
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 16,
+      "low": 7,
+      "rain_days": 3
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 4
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 8
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 4
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 4
+    },
+    {
+      "high": 31,
+      "low": 22,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 22,
+      "rain_days": 4
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 8
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 3
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

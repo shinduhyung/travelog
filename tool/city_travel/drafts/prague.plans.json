@@ -1,0 +1,1576 @@
+{
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day on the left bank: castle hill in the morning, Old Town and the Jewish quarter after lunch.",
+      "days": [
+        {
+          "title": "Castle hill, then the old city",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Start when the grounds open. Buildings usually open at 09:00; check on the day."
+            },
+            {
+              "place": "st_vitus",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Inside the castle grounds. Go early to beat the queue."
+            },
+            {
+              "place": "strahov_library",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Short walk downhill from the castle. Lunch nearby first."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Walk down through Lesser Town to the bridge."
+            },
+            {
+              "place": "jewish_quarter",
+              "at": "15:45",
+              "minutes": 180,
+              "note": "Sites usually close around 18:00 and shut on Saturdays. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A culture-first day: libraries, the clock and an evening concert or theatre.",
+      "days": [
+        {
+          "title": "Old Town culture, evening show",
+          "stops": [
+            {
+              "place": "clementinum",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning tour of the library and tower. Check times on the day."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Five minutes on foot from Clementinum."
+            },
+            {
+              "place": "old_town_square",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch around the square."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Time it for the hour to see the figures move."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead and check the programme."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "day-budget",
+      "length": "day",
+      "style": "budget",
+      "nights": 0,
+      "for": "Free views, cheap eats and a beer tour: the city on a small budget.",
+      "days": [
+        {
+          "title": "Free sights and cheap beer",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Free and quiet before the crowds."
+            },
+            {
+              "place": "lesser_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Wander the lanes below the castle. Free."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Cross the river for the best free view of the bridges."
+            },
+            {
+              "place": "naplavka_market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Saturday mornings only. Cheap lunch from the stalls. Check on the day."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tasting. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day for first-timers: the castle hill in the morning, the Old Town and Jewish Quarter after lunch.",
+      "days": [
+        {
+          "title": "Castle hill, then the Old Town",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Take tram 22 up the hill. Buy tickets at the gate; buildings open around 09:00."
+            },
+            {
+              "place": "st_vitus",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Inside the castle grounds. Go early if crowds build up."
+            },
+            {
+              "place": "lesser_town",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Walk down through Malá Strana. Stop for lunch on the way."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Cross into Staré Město. Busiest in the afternoon."
+            },
+            {
+              "place": "old_town_square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "See the Astronomical Clock strike on the hour."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Strikes hourly 09:00–23:00. Arrive a few minutes early for a view."
+            }
+          ]
+        },
+        {
+          "title": "Jewish Quarter and evening",
+          "stops": [
+            {
+              "place": "jewish_quarter",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Sites usually closed Saturdays and Jewish holidays. Check on the day."
+            },
+            {
+              "place": "clementinum",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch first, then the library tour. Roughly 09:00–19:00 daily."
+            },
+            {
+              "place": "tyn_church",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Usually Tue–Sun afternoons; closed Mondays. Check on the day."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Book ahead. Good way to end the trip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museums and music: the library, the castle, and an evening at the theatre.",
+      "days": [
+        {
+          "title": "Old Town culture",
+          "stops": [
+            {
+              "place": "clementinum",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning tour is quieter. Roughly 09:00–19:00 daily."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Walk across to Malá Strana."
+            },
+            {
+              "place": "strahov_library",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch nearby first. Usually 09:00–17:00; check on the day."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk down through Petřín Park. Usually 10:00–18:00."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead; box office open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Castle and cathedral",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Grounds open from 06:00. Buildings usually 09:00–17:00."
+            },
+            {
+              "place": "st_vitus",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Shorter hours on Sundays. Check on the day."
+            },
+            {
+              "place": "lesser_town",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Lunch and a slow walk back to the river."
+            },
+            {
+              "place": "rudolfinum",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening concert. Check the programme and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "1n-budget",
+      "length": "1n",
+      "style": "budget",
+      "nights": 1,
+      "for": "Free views, cheap eats and a beer: the best of Prague without spending much.",
+      "days": [
+        {
+          "title": "Free sights and views",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Free and quiet early. Best before the crowds."
+            },
+            {
+              "place": "lesser_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Wander the streets. Cheap coffee and pastries."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Free view over the bridges. Bring a snack."
+            },
+            {
+              "place": "old_town_square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Free to walk. Watch the clock on the hour."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Strikes hourly 09:00–23:00. Free from the square."
+            }
+          ]
+        },
+        {
+          "title": "Market, river and beer",
+          "stops": [
+            {
+              "place": "naplavka_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Usually Saturday mornings only. Check on the day."
+            },
+            {
+              "place": "dancing_house",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Free to see from outside. Tram or walk along the river."
+            },
+            {
+              "place": "river_cruise",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Daytime departures; weather permitting. Check prices on the day."
+            },
+            {
+              "place": "vinohrady_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Cheap local food and drink. Good for dinner."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Optional. Book ahead; cheaper to drink in local pubs."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nové Město"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the castle, the bridge and the old Jewish quarter at an easy pace.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "old_town_square",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Start here to get your bearings. The square is always open."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "10:20",
+              "minutes": 20,
+              "note": "Stand back before the hour to see the apostles. Strikes 09:00–23:00."
+            },
+            {
+              "place": "tyn_church",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Usually open Tue–Sun afternoons only; if closed, come back later."
+            },
+            {
+              "place": "clementinum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Library tour. Roughly 09:00–19:00, check on the day."
+            },
+            {
+              "place": "jewish_quarter",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Sites usually 09:00–18:00 and closed Saturdays. Buy a combined ticket."
+            }
+          ]
+        },
+        {
+          "title": "Castle and Lesser Town",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early to beat the crowds. Always open."
+            },
+            {
+              "place": "lesser_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk up through the lanes toward the castle."
+            },
+            {
+              "place": "prague_castle",
+              "at": "10:30",
+              "minutes": 180,
+              "note": "Grounds daily 06:00–22:00. Building hours vary, check on the day."
+            },
+            {
+              "place": "st_vitus",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Inside the castle grounds. Usually 09:00–17:00, shorter on Sundays."
+            },
+            {
+              "place": "strahov_library",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short walk from the castle. Usually 09:00–17:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums, a library, a concert and the clock — culture without rushing.",
+      "days": [
+        {
+          "title": "Old Town culture",
+          "stops": [
+            {
+              "place": "clementinum",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning is quieter. Roughly 09:00–19:00, check on the day."
+            },
+            {
+              "place": "old_town_square",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Always open. Good spot for a coffee break."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Catch the hourly show. Strikes 09:00–23:00."
+            },
+            {
+              "place": "rudolfinum",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Book ahead; box office open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Castle, cathedral and theatre",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early morning is calmest."
+            },
+            {
+              "place": "prague_castle",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Grounds daily 06:00–22:00. Buildings usually 09:00–17:00."
+            },
+            {
+              "place": "st_vitus",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Usually 09:00–17:00, shorter on Sundays."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening performance. Check the programme and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "2n-budget",
+      "length": "2n",
+      "style": "budget",
+      "nights": 2,
+      "for": "Free views, cheap eats and a beer tour — big sights without big spending.",
+      "days": [
+        {
+          "title": "Free views and the old town",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Free and always open. Go early."
+            },
+            {
+              "place": "lesser_town",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Wander the lanes. Always open."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Free view over the bridges. Always open."
+            },
+            {
+              "place": "old_town_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Free to walk. Watch the clock on the hour."
+            },
+            {
+              "place": "beer_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tasting. Book ahead; prices vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market, tower and river",
+          "stops": [
+            {
+              "place": "naplavka_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Usually Saturday mornings only. Cheap breakfast by the river."
+            },
+            {
+              "place": "dancing_house",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Free to see from outside."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Climb the hill for free, pay only for the tower. Usually 10:00–18:00."
+            },
+            {
+              "place": "river_cruise",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short cruise. Departures vary, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nové Město"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the big sights in a calm order, with mornings for the busiest places.",
+      "days": [
+        {
+          "title": "Arrive, Old Town core",
+          "stops": [
+            {
+              "place": "old_town_square",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. Flat, easy walking."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "It strikes on the hour. Arrive a few minutes early for a spot."
+            },
+            {
+              "place": "tyn_church",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Usually open Tue–Sun afternoons; closed Mondays. Check on the day."
+            },
+            {
+              "place": "powder_tower",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Short climb for a view. Usually 10:00–18:00 in season."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening tasting. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Castle side, early start",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go early. By mid-morning it is packed."
+            },
+            {
+              "place": "lesser_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk up through Malá Strana toward the castle."
+            },
+            {
+              "place": "prague_castle",
+              "at": "10:45",
+              "minutes": 180,
+              "note": "Grounds are free and open long hours. Building tickets: check on the day."
+            },
+            {
+              "place": "st_vitus",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Inside the castle grounds. Usually 09:00–17:00, shorter on Sundays."
+            },
+            {
+              "place": "strahov_library",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short walk uphill. Usually 09:00–17:00."
+            }
+          ]
+        },
+        {
+          "title": "Jewish Quarter and river",
+          "stops": [
+            {
+              "place": "jewish_quarter",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Sites usually 09:00–18:00. Closed Saturdays and Jewish holidays."
+            },
+            {
+              "place": "clementinum",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Library and tower. Roughly 09:00–19:00 daily."
+            },
+            {
+              "place": "river_cruise",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Daytime departures, weather permitting. Check on the day."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view over the bridges. Free."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, a library, a concert and the classic sights, paced so you are not rushing.",
+      "days": [
+        {
+          "title": "Old Town culture",
+          "stops": [
+            {
+              "place": "clementinum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning is quieter. Roughly 09:00–19:00 daily."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Cross slowly and look at the statues."
+            },
+            {
+              "place": "old_town_square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby, then the square."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "On the hour. Free."
+            },
+            {
+              "place": "rudolfinum",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Box office open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Castle and cathedral",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Grounds open from 06:00. Building tickets: check on the day."
+            },
+            {
+              "place": "st_vitus",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Usually 09:00–17:00, shorter on Sundays."
+            },
+            {
+              "place": "strahov_library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Uphill walk. Usually 09:00–17:00."
+            },
+            {
+              "place": "lesser_town",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Wander back down through Malá Strana."
+            },
+            {
+              "place": "national_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Jewish Quarter and modern city",
+          "stops": [
+            {
+              "place": "jewish_quarter",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Closed Saturdays and Jewish holidays."
+            },
+            {
+              "place": "dancing_house",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Exterior only. Quick photo stop."
+            },
+            {
+              "place": "vinohrady_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Leafy streets and cafes. Free to walk."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Mozart played here. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "3n-budget",
+      "length": "3n",
+      "style": "budget",
+      "nights": 3,
+      "for": "Free views, cheap food and the sights that cost little or nothing.",
+      "days": [
+        {
+          "title": "Free Old Town",
+          "stops": [
+            {
+              "place": "old_town_square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Free to walk. Watch for pickpockets in crowds."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Free. On the hour."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Free. Cross on foot."
+            },
+            {
+              "place": "lesser_town",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Cheap lunch in Malá Strana, then walk."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Free sunset view."
+            }
+          ]
+        },
+        {
+          "title": "Castle grounds and parks",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Grounds are free. Skip paid interiors to save money."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Small ticket. Check hours on the day."
+            },
+            {
+              "place": "devils_channel",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Short boat trip. Weather permitting."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Beer is cheap in Prague."
+            }
+          ]
+        },
+        {
+          "title": "Market and neighbourhoods",
+          "stops": [
+            {
+              "place": "naplavka_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Usually Saturday mornings. Check on the day."
+            },
+            {
+              "place": "dancing_house",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Free exterior view."
+            },
+            {
+              "place": "vinohrady_walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Free. Cheap cafes for lunch."
+            },
+            {
+              "place": "river_cruise",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Compare prices at the docks. Check departures on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nové Město"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-time visitors who want the big story: castle, bridge, old town and the Jewish quarter at an easy pace.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "old_town_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early before the crowds. Look up at the Týn Church towers."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "The clock strikes on the hour. Arrive a few minutes early for a spot."
+            },
+            {
+              "place": "tyn_church",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Usually open Tue–Sun afternoons; closed Mondays. Check on the day."
+            },
+            {
+              "place": "powder_tower",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short climb for a view. Usually open 10:00–18:00 in season."
+            },
+            {
+              "place": "clementinum",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Guided tour only. Roughly 09:00–19:00 daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Charles Bridge and Lesser Town",
+          "stops": [
+            {
+              "place": "charles_bridge",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Go before 9am for space and photos. Always open."
+            },
+            {
+              "place": "lesser_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Wander the lanes below the castle. Stop for coffee on the way."
+            },
+            {
+              "place": "devils_channel",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Small boat trip on the canal. Weather permitting; check on the day."
+            },
+            {
+              "place": "strahov_library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00. The halls are seen from the doorway."
+            }
+          ]
+        },
+        {
+          "title": "Castle and cathedral",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Grounds open daily 06:00–22:00. Buildings usually 09:00–17:00; check on the day."
+            },
+            {
+              "place": "st_vitus",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Inside the castle grounds. Usually 09:00–17:00, shorter on Sundays."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk down through the park or take the funicular. Usually 10:00–18:00, longer in summer."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset over the bridges. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Jewish quarter, then out of town",
+          "stops": [
+            {
+              "place": "jewish_quarter",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Sites usually 09:00–18:00. Closed Saturdays and Jewish holidays."
+            },
+            {
+              "place": "karlstejn",
+              "at": "14:00",
+              "minutes": 240,
+              "note": "About an hour by train from the city. Usually Tue–Sun 09:00–17:00 in season, closed in winter. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museums, libraries, concerts and an evening at the theatre, with the classic sights in between.",
+      "days": [
+        {
+          "title": "Old Town culture",
+          "stops": [
+            {
+              "place": "clementinum",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning tour of the library and tower. Check times on the day."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Cross slowly and look at the statues. Always open."
+            },
+            {
+              "place": "tyn_church",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Usually Tue–Sun afternoons; closed Mondays."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead; box office open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Castle and Strahov",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Grounds daily 06:00–22:00. Buildings usually 09:00–17:00; check on the day."
+            },
+            {
+              "place": "st_vitus",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Early morning is quieter. Shorter hours on Sundays."
+            },
+            {
+              "place": "strahov_library",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00. A short walk uphill from the castle."
+            },
+            {
+              "place": "rudolfinum",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Book ahead; box office open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Jewish quarter and river",
+          "stops": [
+            {
+              "place": "jewish_quarter",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Sites usually 09:00–18:00. Closed Saturdays and Jewish holidays."
+            },
+            {
+              "place": "river_cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daytime and evening departures; check on the day."
+            },
+            {
+              "place": "dancing_house",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Exterior always visible. A short tram ride south."
+            },
+            {
+              "place": "national_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening performance. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Lesser Town and a last view",
+          "stops": [
+            {
+              "place": "lesser_town",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Quiet lanes and baroque churches. Always open."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Usually 10:00–18:00, longer in summer. Check on the day."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Last look over the city. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "4n-budget",
+      "length": "4n",
+      "style": "budget",
+      "nights": 4,
+      "for": "Cheap beer, trams and free views. Most of this plan costs little or nothing.",
+      "days": [
+        {
+          "title": "Free old town and a view",
+          "stops": [
+            {
+              "place": "old_town_square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Free to walk. Always open."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Free show on the hour, 09:00–23:00."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Free. Cross early or late to avoid crowds."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Free sunset spot. Bring a drink from a shop."
+            }
+          ]
+        },
+        {
+          "title": "Castle grounds and beer",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Grounds are free and open 06:00–22:00. Pay only for buildings."
+            },
+            {
+              "place": "st_vitus",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Free to enter part of the cathedral; check on the day."
+            },
+            {
+              "place": "lesser_town",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Free walk downhill. Cheap lunch in the side streets."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Evening departures."
+            }
+          ]
+        },
+        {
+          "title": "Market and river",
+          "stops": [
+            {
+              "place": "naplavka_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Usually Saturday mornings; check on the day. Cheap snacks."
+            },
+            {
+              "place": "dancing_house",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Free to see from outside. Always visible."
+            },
+            {
+              "place": "river_cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Compare prices at the docks. Check departures on the day."
+            },
+            {
+              "place": "vinohrady_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Free walk. Cheap food and drink in the side streets."
+            }
+          ]
+        },
+        {
+          "title": "Parks and towers",
+          "stops": [
+            {
+              "place": "petrin_tower",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Small entry fee. Usually 10:00–18:00, longer in summer."
+            },
+            {
+              "place": "powder_tower",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Small fee. Usually 10:00–18:00 in season."
+            },
+            {
+              "place": "tyn_church",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Usually Tue–Sun afternoons; closed Mondays. Small donation."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nové Město"
+    },
+    {
+      "id": "4n-history-family",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Families who want the history but need shorter days and something fun for the kids.",
+      "days": [
+        {
+          "title": "Old Town, short and sweet",
+          "stops": [
+            {
+              "place": "astronomical_clock",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Kids like the moving figures on the hour."
+            },
+            {
+              "place": "old_town_square",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Free space to run around. Always open."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Count the statues as you cross."
+            },
+            {
+              "place": "dinopark",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually 09:00–18:00 in season; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Castle morning",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Grounds daily 06:00–22:00. Keep it short with kids."
+            },
+            {
+              "place": "st_vitus",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Usually 09:00–17:00, shorter on Sundays."
+            },
+            {
+              "place": "lesser_town",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch and a slow walk downhill."
+            }
+          ]
+        },
+        {
+          "title": "Animals and water",
+          "stops": [
+            {
+              "place": "prague_zoo",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Usually 09:00–18:00 in season; check on the day. Take the bus."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Free play area nearby. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Jewish quarter, then fun",
+          "stops": [
+            {
+              "place": "jewish_quarter",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Sites usually 09:00–18:00. Closed Saturdays and Jewish holidays."
+            },
+            {
+              "place": "lunapark",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Seasonal, usually daytime to evening; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nové Město"
+    },
+    {
+      "id": "4n-culture-family",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Families mixing museums and shows with hands-on fun for children.",
+      "days": [
+        {
+          "title": "Clock, bridge and dinosaurs",
+          "stops": [
+            {
+              "place": "astronomical_clock",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Watch the hourly show."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Free and always open."
+            },
+            {
+              "place": "dinopark",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually 09:00–18:00 in season; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Castle and cathedral",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Grounds daily 06:00–22:00."
+            },
+            {
+              "place": "st_vitus",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Look for the colourful windows."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Funicular up, walk down. Usually 10:00–18:00, longer in summer."
+            }
+          ]
+        },
+        {
+          "title": "Zoo day",
+          "stops": [
+            {
+              "place": "prague_zoo",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Usually 09:00–18:00 in season; check on the day."
+            },
+            {
+              "place": "lunapark",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Seasonal; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Library and a show",
+          "stops": [
+            {
+              "place": "clementinum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Guided tour. Check times on the day."
+            },
+            {
+              "place": "river_cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daytime departures; check on the day."
+            },
+            {
+              "place": "estates_theatre",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Pick a family-friendly show. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Staré Město"
+    },
+    {
+      "id": "4n-budget-family",
+      "length": "4n",
+      "style": "budget",
+      "nights": 4,
+      "for": "Families keeping costs down: free sights, parks and a couple of paid treats.",
+      "days": [
+        {
+          "title": "Free old town",
+          "stops": [
+            {
+              "place": "old_town_square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Free. Always open."
+            },
+            {
+              "place": "astronomical_clock",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Free show on the hour."
+            },
+            {
+              "place": "charles_bridge",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Free. Cross and come back."
+            },
+            {
+              "place": "letna_viewpoint",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Free park and playground nearby."
+            }
+          ]
+        },
+        {
+          "title": "Castle grounds, cheap",
+          "stops": [
+            {
+              "place": "prague_castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Grounds free, open 06:00–22:00."
+            },
+            {
+              "place": "lesser_town",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Free walk. Cheap lunch."
+            },
+            {
+              "place": "petrin_tower",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Small fee. Usually 10:00–18:00, longer in summer."
+            }
+          ]
+        },
+        {
+          "title": "Market and dinosaurs",
+          "stops": [
+            {
+              "place": "naplavka_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Usually Saturday mornings; check on the day. Cheap snacks."
+            },
+            {
+              "place": "dinopark",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually 09:00–18:00 in season; check on the day."
+            },
+            {
+              "place": "lunapark",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Seasonal; check on the day. Pay per ride."
+            }
+          ]
+        },
+        {
+          "title": "Parks and a tower",
+          "stops": [
+            {
+              "place": "powder_tower",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Small fee. Usually 10:00–18:00 in season."
+            },
+            {
+              "place": "vinohrady_walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Free walk. Cheap food in the side streets."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nové Město"
+    }
+  ]
+}

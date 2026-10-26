@@ -1,0 +1,179 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Baltic capital of design, islands and cool northern light.",
+  "intro": "Helsinki rewards visitors with compact streets, ferries to fortress islands and a calm sea-facing calm. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Kluuvi",
+    "Kruununhaka",
+    "Kallio",
+    "Kamppi"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 8,
+    "per_km": 2,
+    "min_fare": 15
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "HSL runs metro, trams, buses, local trains and the Suomenlinna ferry on one ticket system.",
+    "Buy tickets by contactless card, HSL app or R kiosk; cash is not accepted on board.",
+    "Airport trains need an ABC ticket; city centre travel needs AB.",
+    "Taxis wait at ranks and the airport; ride apps like Bolt and Uber operate in Helsinki.",
+    "Driving is easy but parking is costly; walking and trams cover the centre well.",
+    "Bikes are popular in summer; city bike stations are widespread."
+  ],
+  "airports": [
+    {
+      "code": "HEL",
+      "name": "Helsinki Vantaa Airport",
+      "primary": true,
+      "note": "Main hub, about 16 km north of the centre in Vantaa.",
+      "options": [
+        {
+          "mode": "Commuter train (I or P)",
+          "to": "Central Railway Station",
+          "price": "€4.80",
+          "time": "30-35 min",
+          "note": "Runs every 10-30 min from about 04:30 to 01:15."
+        },
+        {
+          "mode": "Bus",
+          "to": "Central Helsinki",
+          "price": "€4.80",
+          "time": "35-45 min",
+          "note": "Slower but useful at night."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€35-50",
+          "time": "25-35 min",
+          "note": "Use official ranks outside the terminal."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€25-40",
+          "time": "25-35 min",
+          "note": "Pick-up points are signposted."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Helsinki Cathedral",
+    "Suomenlinna",
+    "Temppeliaukio Church",
+    "Uspenski Cathedral",
+    "Beautiful Canal Route",
+    "Finnish National Opera",
+    "Karjalanpaisti",
+    "Linnanmäki",
+    "National Museum of Finland",
+    "Oodi Helsinki Central Library",
+    "Planet FunFun (aka: Fanfaari)",
+    "Sibelius Monument"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Helsinki",
+      "https://en.wikivoyage.org/wiki/Helsinki"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    60.1699,
+    24.9384
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": -1,
+      "low": -6,
+      "rain_days": 14
+    },
+    {
+      "high": 0,
+      "low": -5,
+      "rain_days": 12
+    },
+    {
+      "high": 2,
+      "low": -4,
+      "rain_days": 11
+    },
+    {
+      "high": 7,
+      "low": 0,
+      "rain_days": 10
+    },
+    {
+      "high": 14,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 15,
+      "low": 10,
+      "rain_days": 11
+    },
+    {
+      "high": 9,
+      "low": 5,
+      "rain_days": 13
+    },
+    {
+      "high": 5,
+      "low": 1,
+      "rain_days": 14
+    },
+    {
+      "high": 1,
+      "low": -3,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

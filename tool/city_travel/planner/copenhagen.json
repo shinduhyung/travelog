@@ -1,0 +1,649 @@
+{
+  "city": "Copenhagen",
+  "checked": "October 2026",
+  "intro_line": "Copenhagen blends fairy-tale charm with modern Nordic cool.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Indre By (centre)",
+        "Vesterbro",
+        "Nørrebro",
+        "Østerbro"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Indre By (centre)",
+        "Vesterbro",
+        "Nørrebro",
+        "Østerbro"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Indre By (centre)",
+        "Vesterbro",
+        "Nørrebro",
+        "Østerbro"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Indre By (centre)",
+        "Vesterbro",
+        "Nørrebro",
+        "Østerbro"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Indre By (centre)",
+        "Vesterbro",
+        "Nørrebro",
+        "Østerbro"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": 1,
+        "rain_days": 13,
+        "note": "Jan: cold, highs near 4°C, 13 rain days. Pack a warm coat and waterproof shoes."
+      },
+      {
+        "high": 5,
+        "low": 1,
+        "rain_days": 11,
+        "note": "Feb: still cold at 5°C, slightly drier with 11 rain days. Short daylight; plan indoor sights."
+      },
+      {
+        "high": 7,
+        "low": 1,
+        "rain_days": 11,
+        "note": "Mar: cool at 7°C, 11 rain days. Layers and an umbrella help."
+      },
+      {
+        "high": 10,
+        "low": 4,
+        "rain_days": 9,
+        "note": "Apr: milder, around 10°C, 9 rain days. Good for walking and parks."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 10,
+        "note": "May: pleasant at 15°C, 10 rain days. Great month for bikes and the harbour."
+      },
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 10,
+        "note": "Jun: mild at 19°C, 10 rain days. Long evenings; book popular restaurants."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 13,
+        "note": "Jul: warmest at 20°C but 13 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 21,
+        "low": 15,
+        "rain_days": 12,
+        "note": "Aug: similar at 21°C, 12 rain days. Busy season; book hotels early."
+      },
+      {
+        "high": 18,
+        "low": 13,
+        "rain_days": 12,
+        "note": "Sep: still mild at 18°C, 12 rain days. Fewer crowds, good for museums."
+      },
+      {
+        "high": 13,
+        "low": 9,
+        "rain_days": 13,
+        "note": "Oct: cooler at 13°C, 13 rain days. Bring a waterproof layer."
+      },
+      {
+        "high": 8,
+        "low": 5,
+        "rain_days": 12,
+        "note": "Nov: chilly at 8°C, 12 rain days. Dark early; plan cosy indoor days."
+      },
+      {
+        "high": 6,
+        "low": 3,
+        "rain_days": 13,
+        "note": "Dec: cold at 6°C, 13 rain days. Christmas markets and lights; dress warm."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "art": [
+      0.65,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.4,
+      0.65,
+      0.9,
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.35,
+      0.3
+    ]
+  },
+  "places": {
+    "nyhavn": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Indre By (centre)",
+      "popularity": 5
+    },
+    "tivoli": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Indre By (centre)",
+      "popularity": 5
+    },
+    "little-mermaid": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Østerbro",
+      "popularity": 4
+    },
+    "amalienborg": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late morning for the guard change",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "rosenborg": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "christiansborg": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning or early afternoon",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "round-tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "canal-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Midday to afternoon",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "carlsberg": {
+      "types": [
+        "history",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Vesterbro",
+      "popularity": 3
+    },
+    "opera-house": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening for a performance",
+      "area": "Indre By (centre)",
+      "popularity": 3
+    },
+    "zoo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning on a dry day",
+      "area": "Vesterbro",
+      "popularity": 3
+    },
+    "bakken": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer daytime",
+      "area": "Østerbro",
+      "popularity": 3
+    },
+    "christiania": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Christianshavn",
+      "popularity": 3
+    },
+    "parken": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match evening",
+      "area": "Østerbro",
+      "popularity": 2
+    },
+    "royal-theatre": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Indre By (centre)",
+      "popularity": 2
+    },
+    "black-diamond": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Indre By (centre)",
+      "popularity": 3
+    },
+    "smorrebrod": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "stortorget": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Day trip, any season",
+      "area": "Malmö (day trip)",
+      "popularity": 3
+    },
+    "blue-planet": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Amager (near airport)",
+      "popularity": 3
+    },
+    "turning-torso": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Malmö (day trip)",
+      "popularity": 2
+    },
+    "torvehallerne": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Indre By (centre)",
+      "popularity": 4
+    },
+    "rundetaarn-view": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Clear afternoon",
+      "area": "Indre By (centre)",
+      "popularity": 3
+    },
+    "harbour-bus": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Indre By (centre)",
+      "popularity": 3
+    },
+    "norrebro-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Nørrebro",
+      "popularity": 3
+    },
+    "vesterbro-meatpacking": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Vesterbro",
+      "popularity": 3
+    },
+    "kongens-have": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon in summer",
+      "area": "Indre By (centre)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the old centre, a museum or two and a proper food day, with time for a harbour boat."
+  },
+  "airports": [
+    {
+      "code": "CPH",
+      "name": "Copenhagen Kastrup Airport",
+      "primary": true,
+      "note": "Main hub, about 8 km from the centre on Amager.",
+      "options": [
+        {
+          "mode": "Metro M2",
+          "to": "Kongens Nytorv / city centre",
+          "price": "DKK30",
+          "time": "14 min",
+          "note": "Runs every 4 min by day, every 15 min at night."
+        },
+        {
+          "mode": "Train",
+          "to": "Copenhagen Central Station",
+          "price": "DKK30",
+          "time": "12 min",
+          "note": "Buy a 3-zone ticket in the arrivals hall."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "DKK250-350",
+          "time": "20-30 min",
+          "note": "Fixed-ish fares; traffic can add time."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "DKK200-300",
+          "time": "20-30 min",
+          "note": "Pickup points are signed outside the terminals."
+        }
+      ]
+    },
+    {
+      "code": "MMX",
+      "name": "Malmö Airport",
+      "primary": false,
+      "note": "Across the Øresund bridge in Sweden, about 60 km away.",
+      "options": [
+        {
+          "mode": "Neptunbus",
+          "to": "Copenhagen Central Station",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "Timed to Wizzair flights."
+        },
+        {
+          "mode": "Train + bus",
+          "to": "Copenhagen Central Station",
+          "price": "check locally",
+          "time": "90-120 min",
+          "note": "Bus to Malmö, then Øresundstog train."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "DKK900-1200",
+          "time": "50-70 min",
+          "note": "Crosses the bridge; toll included."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Copenhagen",
+      "https://en.wikivoyage.org/wiki/Copenhagen"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro and S-trains for most trips; rent a bike for short hops in good weather.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Runs 24/7. M1/M2 link the airport to the centre in about 14 min."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "S-trains and buses cover the city; a 3-zone ticket costs about DKK 30."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps the trains miss. Same ticket zones apply."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered and pricey. Uber and Bolt operate in the city."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is slow and parking is costly. Park outside and take transit."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "The city is flat and bike-friendly; rental bikes are everywhere."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Harbour buses and small ferries cross the canals cheaply."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The old centre is compact and easy on foot; cobblestones need comfy shoes."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cool coastal climate: mild summers, cold winters, and rain in every month. Pack layers and a rain jacket.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 15–21°C and long days. Best for walking, bikes and the harbour."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "9–13 rain days every month. Showers pass quickly; a light waterproof beats an umbrella in wind."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and dark",
+        "text": "December to February highs of 4–6°C, lows near 1°C. Daylight is short; plan indoor sights."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Windy by the water",
+        "text": "The harbour and canals feel colder than the forecast. A windproof layer helps."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Summers are mild, not hot",
+        "text": "July and August peak around 20–21°C. Rarely need air-conditioning."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobblestones. Add a warm hat and gloves in winter."
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+$ deepseek_facts.py Milan
+  tokens in 4131 out 1024
+Milan: 0 problems
+
+$ deepseek_city.py Milan --stage places
+Milan: places
+  tokens in 1221 out 3535
+
+$ deepseek_city.py Milan --stage frame
+Milan: frame
+  tokens in 2427 out 1755
+  repaired JSON
+
+$ deepseek_city.py Milan --stage plans
+Milan: plans
+  plans for day
+  tokens in 2246 out 1194
+  plans for 1n
+  tokens in 2247 out 1088
+  plans for 2n
+  tokens in 2252 out 1275
+  plans for 3n
+  tokens in 2247 out 1935
+
+$ merge_city.py Milan
+Milan: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/milan.json and planner/milan.json
+

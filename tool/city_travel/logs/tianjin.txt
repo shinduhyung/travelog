@@ -1,0 +1,28 @@
+$ deepseek_facts.py Tianjin
+  tokens in 3352 out 901
+Tianjin: 1 problems
+  - airport PEK is 123 km away
+
+$ deepseek_city.py Tianjin --stage places
+Tianjin: places
+  tokens in 1160 out 3456
+
+$ deepseek_city.py Tianjin --stage frame
+Tianjin: frame
+  tokens in 2467 out 1848
+
+$ deepseek_city.py Tianjin --stage plans
+Tianjin: plans
+  plans for day
+  tokens in 2323 out 972
+  plans for 1n
+  tokens in 2329 out 1281
+  plans for 2n
+  tokens in 2324 out 1993
+  plans for 3n
+  tokens in 2324 out 2179
+
+$ merge_city.py Tianjin
+ERROR stay 'Binhai New Area' center 44 km away
+Tianjin: 22 places, 12 plans, 1 errors, 0 warnings
+

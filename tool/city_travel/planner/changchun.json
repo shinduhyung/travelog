@@ -1,0 +1,590 @@
+{
+  "city": "Changchun",
+  "checked": "October 2026",
+  "intro_line": "Changchun: wide Japanese-planned avenues, deep winter cold, and a rich rail history.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "People's Square",
+        "Chongqing Road",
+        "Guilin Road",
+        "Hongqi Street"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "People's Square",
+        "Chongqing Road",
+        "Guilin Road",
+        "Hongqi Street"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "People's Square",
+        "Chongqing Road",
+        "Guilin Road",
+        "Hongqi Street"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "People's Square",
+        "Chongqing Road",
+        "Guilin Road",
+        "Hongqi Street"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "People's Square",
+        "Chongqing Road",
+        "Guilin Road",
+        "Hongqi Street"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -8,
+        "low": -18,
+        "rain_days": 2,
+        "note": "January: very cold, highs near -8°C. Dress in layers and plan indoor sights."
+      },
+      {
+        "high": -3,
+        "low": -14,
+        "rain_days": 2,
+        "note": "February: still freezing, around -3°C by day. Short days; check opening hours."
+      },
+      {
+        "high": 7,
+        "low": -5,
+        "rain_days": 3,
+        "note": "March: warming to 7°C but windy and dusty. A coat still needed."
+      },
+      {
+        "high": 15,
+        "low": 2,
+        "rain_days": 5,
+        "note": "April: mild at 15°C, good for walking. A few rain days."
+      },
+      {
+        "high": 22,
+        "low": 9,
+        "rain_days": 9,
+        "note": "May: pleasant at 22°C, the best month to be outside."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 14,
+        "note": "June: warm at 26°C with frequent rain. Carry an umbrella."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 15,
+        "note": "July: hottest and wettest, highs near 28°C. Go out early."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 15,
+        "note": "August: hot and rainy, similar to July. Indoor sights are a good bet."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 9,
+        "note": "September: cooler at 22°C and drier. A great month to visit."
+      },
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 5,
+        "note": "October: crisp at 13°C, good light. Bring a jacket."
+      },
+      {
+        "high": 2,
+        "low": -6,
+        "rain_days": 5,
+        "note": "November: cold at 2°C, short days. Fewer crowds."
+      },
+      {
+        "high": -7,
+        "low": -15,
+        "rain_days": 2,
+        "note": "December: freezing at -7°C. Pack boots and a warm hat."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.8,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.5,
+      0.4
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "manchukuo_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning on a weekday; quieter than weekends",
+      "area": "Hongqi Street",
+      "popularity": 5
+    },
+    "jingyuetan": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Autumn for colour; summer mornings to avoid heat",
+      "area": "Hongqi Street",
+      "popularity": 4
+    },
+    "changchun_film_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Hongqi Street",
+      "popularity": 3
+    },
+    "nanhu_park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon; winter for ice skating",
+      "area": "Hongqi Street",
+      "popularity": 3
+    },
+    "guilin_road": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Guilin Road",
+      "popularity": 4
+    },
+    "chongqing_road": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Chongqing Road",
+      "popularity": 3
+    },
+    "peoples_square": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "People's Square",
+      "popularity": 3
+    },
+    "wenhua_square": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Hongqi Street",
+      "popularity": 3
+    },
+    "changchun_station_area": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "People's Square",
+      "popularity": 2
+    },
+    "northeast_dish": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Guilin Road",
+      "popularity": 3
+    },
+    "korean_town": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "Guilin Road",
+      "popularity": 3
+    },
+    "winter_ice_festival": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "December to February, evening",
+      "area": "Hongqi Street",
+      "popularity": 3
+    },
+    "city_tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "People's Square",
+      "popularity": 2
+    },
+    "south_lake_view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Hongqi Street",
+      "popularity": 2
+    },
+    "market_snacks": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Chongqing Road",
+      "popularity": 2
+    },
+    "hongqi_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Hongqi Street",
+      "popularity": 2
+    },
+    "park_cycling": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in summer or autumn",
+      "area": "Hongqi Street",
+      "popularity": 3
+    },
+    "history_museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Hongqi Street",
+      "popularity": 2
+    },
+    "tea_house": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Chongqing Road",
+      "popularity": 2
+    },
+    "snow_play": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "December to February, midday",
+      "area": "Hongqi Street",
+      "popularity": 2
+    },
+    "night_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Guilin Road",
+      "popularity": 3
+    },
+    "city_view": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "People's Square",
+      "popularity": 2
+    },
+    "day_trip": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Summer or autumn, full day",
+      "area": "Hongqi Street",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the wartime history, the film museum and a food evening; add a night for Jingyuetan or a winter day trip."
+  },
+  "airports": [
+    {
+      "code": "CGQ",
+      "name": "Longjia International Airport",
+      "primary": true,
+      "note": "Main airport, about 32 km east of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Changchun station",
+          "price": "¥10-20",
+          "time": "14 min",
+          "note": "Longjia rail station links to the terminal; no trains roughly 8pm-7am."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "People's Square",
+          "price": "¥20-30",
+          "time": "45 min",
+          "note": "Regular coaches to the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-100",
+          "time": "40-50 min",
+          "note": "Include toll; drivers may ask for at least ¥100 from the airport."
+        },
+        {
+          "mode": "Metro Line 9",
+          "to": "Line 2 network",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Planned to open by late 2025."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Changchun",
+      "https://en.wikivoyage.org/wiki/Changchun"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most trips; taxis are cheap for short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "6 lines (1, 2, 3, 4, 6, 8) cover many central areas. A T-Union card works."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams 54 and 55 run in the west; fare ¥2. Route 55 ends at West station."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Extensive and about ¥2. Chinese reading helps a lot."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Cheap and easy: flag fall ¥5 plus ¥1 fuel surcharge. Didi works; local apps may need Chinese registration."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for a city visit; traffic and parking are a hassle."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine May to mid-November. Cycling is risky in traffic."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cold continental climate: long freezing winters, short warm summers, and most rain from June to August.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Winter is long and harsh",
+        "text": "December to February highs sit near -8 to -3°C, lows to -18°C. Pack boots, a hat and layers."
+      },
+      {
+        "icon": "🌸",
+        "title": "Best time: May and September",
+        "text": "Around 22°C by day, mild evenings and fewer rain days. Ideal for parks and walking."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain peaks in summer",
+        "text": "June to August bring 14–15 rain days a month. Carry an umbrella and plan indoor backups."
+      },
+      {
+        "icon": "🥵",
+        "title": "Short, warm summer",
+        "text": "July highs near 28°C with humid nights around 20°C. Go out early or after sunset."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and autumn are short",
+        "text": "April and October are mild but changeable; March and November can still feel like winter."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Warm layers and boots for November to March; light clothes and rain gear for June to August."
+      }
+    ]
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Neon skyline, old lanes, and river breezes: Shanghai never stands still.",
+  "intro": "Shanghai rewards visitors who mix grand waterfront views with quiet lilong alleys and steaming dumpling shops. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "The Bund",
+    "People's Square",
+    "French Concession",
+    "Jing'an"
+  ],
+  "taxi": {
+    "flag_day": 16,
+    "flag_airport": 20,
+    "per_km": 2.5,
+    "min_fare": 16
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro is fast, cheap and English-signed; fares run about ¥3-9.",
+    "Buy a Shanghai Public Transportation Card or use the metro app for tap-and-go.",
+    "Buses cover gaps the metro misses; fares are about ¥2.",
+    "Taxis are metered; expect ¥200-500 to Pudong Airport and about ¥60-100 to Hongqiao.",
+    "DiDi works well for ride-hailing; Uber does not operate in mainland China.",
+    "Driving is not advised for visitors; walking and shared bikes suit short trips, and ferries cross the Huangpu for about ¥2."
+  ],
+  "airports": [
+    {
+      "code": "PVG",
+      "name": "Shanghai Pudong International Airport",
+      "primary": true,
+      "note": "Main international gateway, 33 km southeast of centre.",
+      "options": [
+        {
+          "mode": "Metro line 2",
+          "to": "People's Square",
+          "price": "¥8-9",
+          "time": "60-75 min",
+          "note": "Cheapest; long ride, limited late hours."
+        },
+        {
+          "mode": "Maglev + Metro",
+          "to": "Longyang Road then city",
+          "price": "¥50-60",
+          "time": "40-60 min",
+          "note": "¥50 with same-day airline ticket; tops out at 300 km/h."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Downtown stops",
+          "price": "¥20-30",
+          "time": "60-90 min",
+          "note": "Six lines; good with heavy bags."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥200-500",
+          "time": "45-70 min",
+          "note": "Use the official taxi queue."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥200-400",
+          "time": "45-70 min",
+          "note": "Pick a marked pickup point."
+        }
+      ]
+    },
+    {
+      "code": "SHA",
+      "name": "Shanghai Hongqiao International Airport",
+      "primary": false,
+      "note": "Mostly domestic plus East Asia shuttles, 14 km west of centre.",
+      "options": [
+        {
+          "mode": "Metro line 2 or 10",
+          "to": "People's Square / centre",
+          "price": "¥4-6",
+          "time": "30-45 min",
+          "note": "Line 2 serves T2; line 10 serves both terminals."
+        },
+        {
+          "mode": "Night bus 316",
+          "to": "The Bund",
+          "price": "¥10-16",
+          "time": "45-60 min",
+          "note": "Runs 23:00-05:00 from T2."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥60-120",
+          "time": "20-40 min",
+          "note": "Allow extra for queues after 19:00."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥60-110",
+          "time": "20-40 min",
+          "note": "Good late-night option."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "The Bund",
+    "Yu Garden",
+    "Oriental Pearl Tower",
+    "Shanghai Tower",
+    "Nanjing Road",
+    "People's Square",
+    "Shanghai Museum",
+    "Xintiandi",
+    "Shanghai World Financial Center",
+    "Auntea Jenny",
+    "French Concession",
+    "Fudan University",
+    "Huangpu River Cruise",
+    "Jing'an Temple",
+    "Jinjiang Action Park (Jinjiang Leyuan)",
+    "Legoland Shanghai",
+    "NewYobo",
+    "Shanghai Disneyland",
+    "Shanghai Grand Theatre",
+    "Shanghai Haichang Ocean Park",
+    "Shanghai Jiao Tong University",
+    "Shanghai Ocean Aquarium"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Shanghai",
+      "https://en.wikivoyage.org/wiki/Shanghai"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    31.2304,
+    121.4737
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 9,
+      "low": 2,
+      "rain_days": 8
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 10
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 17
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 18
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 15
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

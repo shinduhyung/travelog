@@ -1,0 +1,538 @@
+{
+  "city": "Frankfurt",
+  "checked": "October 2026",
+  "intro_line": "Frankfurt: banking towers, a riverside skyline, and cider taverns.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Altstadt (Old Town)",
+        "Bahnhofsviertel",
+        "Sachsenhausen",
+        "Westend"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Altstadt (Old Town)",
+        "Bahnhofsviertel",
+        "Sachsenhausen",
+        "Westend"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Altstadt (Old Town)",
+        "Bahnhofsviertel",
+        "Sachsenhausen",
+        "Westend"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Altstadt (Old Town)",
+        "Bahnhofsviertel",
+        "Sachsenhausen",
+        "Westend"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Altstadt (Old Town)",
+        "Bahnhofsviertel",
+        "Sachsenhausen",
+        "Westend"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 14,
+        "note": "Coldest month: highs near 5°C, lows around 0°C, and about 14 rain days. Pack a warm coat."
+      },
+      {
+        "high": 8,
+        "low": 1,
+        "rain_days": 11,
+        "note": "Still cold, highs near 8°C, with fewer rainy days (about 11)."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 13,
+        "note": "Mild but wet: highs near 11°C and about 13 rain days. Bring an umbrella."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 11,
+        "note": "Spring warms to highs near 15°C; about 11 rain days."
+      },
+      {
+        "high": 20,
+        "low": 10,
+        "rain_days": 11,
+        "note": "Pleasant: highs near 20°C, lows around 10°C. Good walking weather."
+      },
+      {
+        "high": 25,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Warm start to summer: highs near 25°C and about 11 rain days."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Warmest month: highs near 26°C, lows around 16°C, about 10 rain days."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Similar to July: highs near 26°C. Book hotels early for trade-fair weeks."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 9,
+        "note": "Cooling down: highs near 21°C and the driest month (about 9 rain days)."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 11,
+        "note": "Autumn: highs near 16°C, lows around 8°C, about 11 rain days."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 14,
+        "note": "Grey and wet: highs near 9°C and about 14 rain days."
+      },
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 14,
+        "note": "Cold and wet: highs near 6°C, lows around 1°C, about 14 rain days. Expect Christmas markets."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "shopping": [
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "roemerberg": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or evening; Christmas market in December",
+      "area": "Altstadt (Old Town)",
+      "popularity": 5
+    },
+    "main_tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset on a clear day",
+      "area": "Bahnhofsviertel",
+      "popularity": 4
+    },
+    "roemer": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any daytime hour",
+      "area": "Altstadt (Old Town)",
+      "popularity": 4
+    },
+    "goethe_house": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning on a rainy day",
+      "area": "Altstadt (Old Town)",
+      "popularity": 4
+    },
+    "paulskirche": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Combine with Römerberg nearby",
+      "area": "Altstadt (Old Town)",
+      "popularity": 3
+    },
+    "palmengarten": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Spring and summer mornings",
+      "area": "Westend",
+      "popularity": 4
+    },
+    "alte_oper": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening for a concert",
+      "area": "Westend",
+      "popularity": 3
+    },
+    "zoo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Altstadt (Old Town)",
+      "popularity": 3
+    },
+    "lochmuehle": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Warm weekends with children",
+      "area": "Westend",
+      "popularity": 2
+    },
+    "kleinmarkthalle": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday lunchtime",
+      "area": "Altstadt (Old Town)",
+      "popularity": 4
+    },
+    "eisenerner_steg": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Altstadt (Old Town)",
+      "popularity": 5
+    },
+    "sachsenhausen_walk": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Sachsenhausen",
+      "popularity": 4
+    },
+    "main_river_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Altstadt (Old Town)",
+      "popularity": 3
+    },
+    "bahnhofsviertel_walk": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Bahnhofsviertel",
+      "popularity": 3
+    },
+    "museumsufer": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekend daytime",
+      "area": "Sachsenhausen",
+      "popularity": 4
+    },
+    "apfelwein_tavern": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Sachsenhausen",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the museums, old town and a Sachsenhausen Apfelwein evening without rushing."
+  },
+  "airports": [
+    {
+      "code": "FRA",
+      "name": "Frankfurt am Main International Airport",
+      "primary": true,
+      "note": "Main hub, 14 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S8/S9",
+          "to": "Hauptbahnhof / Hauptwache",
+          "price": "€6.60",
+          "time": "20-30 min",
+          "note": "Buy a ticket at the machine before boarding."
+        },
+        {
+          "mode": "Bus 61",
+          "to": "Frankfurt Süd station",
+          "price": "€3.80-6.60",
+          "time": "30-40 min",
+          "note": "Slower than the S-Bahn; useful for the south side."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€35-45",
+          "time": "20-30 min",
+          "note": "Fares rise in traffic and during trade fairs."
+        },
+        {
+          "mode": "Uber / Bolt / Free Now",
+          "to": "City centre",
+          "price": "€30-45",
+          "time": "20-30 min",
+          "note": "Pick-up points are signed in the terminal."
+        }
+      ]
+    },
+    {
+      "code": "HHN",
+      "name": "Frankfurt-Hahn Airport",
+      "primary": false,
+      "note": "Budget airport far from the city, 103 km west.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Frankfurt Hauptbahnhof",
+          "price": "about €21",
+          "time": "90-110 min",
+          "note": "Runs roughly 12 times a day; buy at the kiosk outside."
+        },
+        {
+          "mode": "Bus + train via Traben-Trarbach",
+          "to": "Frankfurt Hauptbahnhof",
+          "price": "€25-35",
+          "time": "2.5-3 h",
+          "note": "Few late services; check timetables first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€180-230",
+          "time": "90-110 min",
+          "note": "Very expensive; only for groups or late arrivals."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "90-110 min",
+          "note": "Availability is limited at this airport."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Frankfurt",
+      "https://en.wikivoyage.org/wiki/Frankfurt"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk the centre; use U-Bahn and trams for longer hops, and ride apps at night.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "U-Bahn and S-Bahn run on one RMV network. Buy a ticket before boarding. Single ticket in the centre is €3.80; a day ticket is €7.75."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Trams and buses use the same RMV tickets. Buy before boarding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber, Bolt and Free Now all work in the city. Handy late at night."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy to reach by car but parking is hard. Use park-and-ride during trade fairs."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable. Bikes and e-scooters are widely available."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "S-Bahn lines S8/S9 link the airport and suburbs. They are often delayed, so allow buffer time."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate climate with warm summers and cold, grey winters. Rain is spread across the year, so pack layers and an umbrella any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 20–26°C and long evenings. Ideal for the riverbank, old town and beer gardens."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 5–8°C and lows near 0–1°C. Wear a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 9–14 rain days every month. November, December and January are the wettest."
+      },
+      {
+        "icon": "🌂",
+        "title": "Carry an umbrella",
+        "text": "Showers are common and can be sudden. A light rain jacket beats an umbrella in wind."
+      },
+      {
+        "icon": "🍂",
+        "title": "September is the driest",
+        "text": "About 9 rain days and highs near 21°C. A comfortable month for walking."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes. Add a warm coat and gloves for November to March."
+      }
+    ]
+  }
+}

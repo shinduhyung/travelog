@@ -1,0 +1,1299 @@
+{
+  "city": "Lyon",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Lyon rewards visitors who wander its two rivers, old town and bouchons. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 45.7241,
+      "west": 4.7972,
+      "north": 45.7866,
+      "east": 5.0034,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 5,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro lines A-D plus two funiculars run about 05:00-00:00.",
+      "Five tram lines link the centre, campuses and suburbs.",
+      "Tap any contactless bank card: about €2.10 per 1-hr journey, capped near €6.30/day.",
+      "Buses cover the city; some stop after 21:00.",
+      "Taxis and ride apps like Uber and Bolt work; taxis wait at stations and the airport.",
+      "The centre is walkable; Vélo'v bikes and the Navigône ferry help on nice days."
+    ],
+    "sources": []
+  },
+  "places": {
+    "fourviere": {
+      "name": "Basilica of Notre-Dame de Fourvière",
+      "landmark": "Basilica of Notre-Dame de Fourvière",
+      "kind": "sight",
+      "lat": 45.7623,
+      "lon": 4.8223,
+      "price": 0,
+      "price_text": "Free entry · guided rooftop tours cost extra",
+      "hours": "Daily roughly 07:00–19:00 · check on the day",
+      "tip": "Climb the hill on the funicular, then walk down through the gardens for city views.",
+      "source": "https://www.fourviere.org/"
+    },
+    "vieux-lyon": {
+      "name": "Vieux Lyon",
+      "landmark": "Vieux Lyon",
+      "kind": "sight",
+      "lat": 45.7621,
+      "lon": 4.8271,
+      "price": 0,
+      "price_text": "Free to wander",
+      "hours": "Always open · shops and cafés daytime",
+      "tip": "Look for the traboules, hidden covered passages through the old buildings.",
+      "source": ""
+    },
+    "groupama": {
+      "name": "Groupama Stadium",
+      "landmark": "Groupama Stadium",
+      "kind": "sight",
+      "lat": 45.7653,
+      "lon": 4.982,
+      "price": null,
+      "price_text": "Match and tour prices vary · check on the day",
+      "hours": "Only on match days or booked tours",
+      "tip": "It sits well outside the centre; allow extra time by tram or car.",
+      "source": "https://www.ol.fr/"
+    },
+    "saone-cruise": {
+      "name": "Saône River Cruise",
+      "landmark": "Saône River Cruise",
+      "kind": "tour",
+      "lat": 45.7601,
+      "lon": 4.8336,
+      "price": null,
+      "price_text": "≈ €15–25 per adult · check on the day",
+      "hours": "Departures mostly daytime, seasonal",
+      "tip": "Book a late-afternoon sailing to see the old town from the water in soft light.",
+      "source": ""
+    },
+    "fourviere-viewpoint": {
+      "name": "Fourvière esplanade viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.7623,
+      "lon": 4.8235,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Best free panorama over the city; come at dusk when lights come on.",
+      "source": ""
+    },
+    "croix-rousse-walk": {
+      "name": "Croix-Rousse hill walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.7745,
+      "lon": 4.8315,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk up through the traboules and silk-worker streets, then rest at the boulevard cafés.",
+      "source": ""
+    },
+    "les-halles": {
+      "name": "Les Halles de Lyon Paul Bocuse",
+      "landmark": null,
+      "kind": "food",
+      "lat": 45.7633,
+      "lon": 4.8515,
+      "price": 0,
+      "price_text": "Free to enter · food priced per item",
+      "hours": "Tue–Sat roughly 07:00–19:00 · check on the day",
+      "tip": "Go hungry and try a praline tart or a plate of charcuterie at a counter.",
+      "source": "https://www.halles-de-lyon-paulbocuse.com/"
+    },
+    "bouchon-dinner": {
+      "name": "Bouchon dinner in Vieux Lyon",
+      "landmark": null,
+      "kind": "food",
+      "lat": 45.7625,
+      "lon": 4.8275,
+      "price": null,
+      "price_text": "≈ €30–50 per person · check on the day",
+      "hours": "Mostly evening service",
+      "tip": "Book ahead and expect hearty Lyonnais dishes; portions are large.",
+      "source": ""
+    },
+    "presqu-ile-walk": {
+      "name": "Presqu'île walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.7635,
+      "lon": 4.8355,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Stroll from Place Bellecour to Place des Terreaux for shops, squares and cafés.",
+      "source": ""
+    },
+    "parc-tete-or": {
+      "name": "Parc de la Tête d'Or",
+      "landmark": null,
+      "kind": "park",
+      "lat": 45.7772,
+      "lon": 4.8555,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly dawn to dusk · check on the day",
+      "tip": "Big city park with a lake and free zoo; good for a slow morning with kids.",
+      "source": ""
+    },
+    "confluence-museum": {
+      "name": "Musée des Confluences",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 45.7335,
+      "lon": 4.8185,
+      "price": null,
+      "price_text": "≈ €9–12 adult · check on the day",
+      "hours": "Closed Monday · Tue–Sun daytime",
+      "tip": "Striking modern building at the river junction; allow a couple of hours inside.",
+      "source": "https://www.museedesconfluences.fr/"
+    },
+    "traboule-tour": {
+      "name": "Guided traboule walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 45.7645,
+      "lon": 4.8295,
+      "price": null,
+      "price_text": "≈ €12–20 per person · check on the day",
+      "hours": "Scheduled departures, mostly daytime",
+      "tip": "A guide opens the hidden passages you would miss alone; book a day ahead.",
+      "source": ""
+    },
+    "bellecour": {
+      "name": "Place Bellecour",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.7578,
+      "lon": 4.8325,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Central meeting point with a view up to Fourvière; good start for a city walk.",
+      "source": ""
+    },
+    "terreaux": {
+      "name": "Place des Terreaux and fountain",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.7675,
+      "lon": 4.8335,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Sit by the fountain and use it as a base for the museum and Croix-Rousse climb.",
+      "source": ""
+    },
+    "beaux-arts": {
+      "name": "Musée des Beaux-Arts de Lyon",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 45.7668,
+      "lon": 4.8335,
+      "price": null,
+      "price_text": "≈ €8–12 adult · check on the day",
+      "hours": "Closed Tuesday · Wed–Mon daytime",
+      "tip": "Calm, well-sized collection in an old abbey; good rainy-day stop.",
+      "source": "https://www.mba-lyon.fr/"
+    },
+    "saone-banks": {
+      "name": "Saône riverbank walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.7665,
+      "lon": 4.8235,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Follow the lower quays for a quiet walk below the old town walls.",
+      "source": ""
+    },
+    "st-jean-cathedral": {
+      "name": "Saint-Jean Cathedral",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 45.7605,
+      "lon": 4.8275,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily daytime · check on the day",
+      "tip": "Step inside for the old astronomical clock and quiet stone interior.",
+      "source": ""
+    },
+    "resistance-museum": {
+      "name": "Centre d'Histoire de la Résistance et de la Déportation",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 45.7465,
+      "lon": 4.8355,
+      "price": null,
+      "price_text": "≈ €6–10 adult · check on the day",
+      "hours": "Closed Monday · Tue–Sun daytime",
+      "tip": "Strong, well-presented museum on Lyon in the war years; allow time to read.",
+      "source": "https://www.chrd.lyon.fr/"
+    },
+    "guignol-show": {
+      "name": "Guignol puppet show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 45.7645,
+      "lon": 4.8285,
+      "price": null,
+      "price_text": "≈ €8–12 per person · check on the day",
+      "hours": "Weekend and holiday matinees",
+      "tip": "A classic Lyon tradition for families; check the schedule before you go.",
+      "source": ""
+    },
+    "confluence-walk": {
+      "name": "Confluence district walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 45.7385,
+      "lon": 4.8185,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "New riverside architecture and open space; pair it with the museum.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day for first-timers: the basilica, old Lyon and the river, all on foot.",
+      "days": [
+        {
+          "title": "Fourvière down to Vieux Lyon",
+          "stops": [
+            {
+              "place": "fourviere",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Take the funicular up. Mornings are quieter."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "10:20",
+              "minutes": 30,
+              "note": "Right outside the basilica. Clear mornings give the best view."
+            },
+            {
+              "place": "vieux-lyon",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk down through the old streets. Shops and cafés open in the daytime."
+            },
+            {
+              "place": "st-jean-cathedral",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Lunch nearby first, then the cathedral. Check opening on the day."
+            },
+            {
+              "place": "saone-banks",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Easy riverside stroll to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: the Halles market, old Lyon and a proper bouchon dinner.",
+      "days": [
+        {
+          "title": "Market, old town, bouchon",
+          "stops": [
+            {
+              "place": "les-halles",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Go Tuesday to Saturday. Closed Sunday and Monday. Graze as you go."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Cross to the centre. Cafés and shops along the way."
+            },
+            {
+              "place": "vieux-lyon",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Wander the old streets. Many shops close early evening."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead. Most bouchons serve evenings only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Lyon's layers in a day: Roman hill, silk hill and the Resistance museum.",
+      "days": [
+        {
+          "title": "Roman hill to silk hill",
+          "stops": [
+            {
+              "place": "fourviere",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "The hill was Roman Lugdunum. Funicular up."
+            },
+            {
+              "place": "traboule-tour",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Guided tour of the hidden passages. Book a morning slot."
+            },
+            {
+              "place": "croix-rousse-walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch first, then the silk workers' hill. Steep in places."
+            },
+            {
+              "place": "resistance-museum",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Closed Monday. Check last entry on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Presqu'île"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the basilica, old streets and a river view in one easy day.",
+      "days": [
+        {
+          "title": "Vieux Lyon and Fourvière",
+          "stops": [
+            {
+              "place": "vieux-lyon",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start early for quiet cobbled streets. Shops open later."
+            },
+            {
+              "place": "st-jean-cathedral",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Right in the old town. Check opening times on the day."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch in a bouchon. Book ahead for dinner; lunch is easier."
+            },
+            {
+              "place": "fourviere",
+              "at": "14:15",
+              "minutes": 75,
+              "note": "Take the funicular up from Vieux Lyon. Check hours on the day."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Right by the basilica. Best at sunset, but fine now too."
+            },
+            {
+              "place": "saone-banks",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Walk down and follow the river as the light softens."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A short trip built around markets, a bouchon and riverside strolling.",
+      "days": [
+        {
+          "title": "Halles, old town and a bouchon dinner",
+          "stops": [
+            {
+              "place": "les-halles",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Closed Sunday and Monday. Go late morning for the full buzz."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Cross into the centre. Grab a light lunch on the way."
+            },
+            {
+              "place": "bellecour",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Big open square, good meeting point."
+            },
+            {
+              "place": "vieux-lyon",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Wander and pick your dinner spot early."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead. Most serve dinner only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Presqu'île"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Roman roots, hidden passages and the Resistance in a single packed day.",
+      "days": [
+        {
+          "title": "Traboules, Resistance and the hill",
+          "stops": [
+            {
+              "place": "traboule-tour",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Guided tours explain the hidden passages. Book ahead."
+            },
+            {
+              "place": "st-jean-cathedral",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Steps from the tour end. Check hours on the day."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Lunch stop in Vieux Lyon."
+            },
+            {
+              "place": "resistance-museum",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Short walk or metro from the old town."
+            },
+            {
+              "place": "fourviere",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Funicular up. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want Vieux Lyon, the basilica views and the city's best museums at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, old Lyon and the hill",
+          "stops": [
+            {
+              "place": "vieux-lyon",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Start with the streets around Saint-Jean. Shops and cafés are open in the daytime."
+            },
+            {
+              "place": "st-jean-cathedral",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Short visit. Check opening times on the day."
+            },
+            {
+              "place": "fourviere",
+              "at": "17:00",
+              "minutes": 75,
+              "note": "Take the funicular up from Vieux Lyon. Basilica open roughly 07:00–19:00, check on the day."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Right outside the basilica. Best at sunset."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead. Most bouchons serve in the evening only."
+            }
+          ]
+        },
+        {
+          "title": "Presqu'île museums and river",
+          "stops": [
+            {
+              "place": "terreaux",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Start at the fountain, then walk to the museum."
+            },
+            {
+              "place": "beaux-arts",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Closed Tuesday. Check hours on the day."
+            },
+            {
+              "place": "bellecour",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Lunch nearby, then cross the square."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Shopping streets and squares between the two rivers."
+            },
+            {
+              "place": "saone-banks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Walk the riverbank toward Vieux Lyon at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Traboules and Croix-Rousse, then go",
+          "stops": [
+            {
+              "place": "traboule-tour",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Guided tour through the hidden passages. Book ahead; departures mostly daytime."
+            },
+            {
+              "place": "croix-rousse-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Climb from Vieux Lyon. Morning or late afternoon is best."
+            },
+            {
+              "place": "les-halles",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch stop. Open roughly Tue–Sat 07:00–19:00, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, bouchons and long dinners, with light sightseeing in between.",
+      "days": [
+        {
+          "title": "Arrive, old Lyon and a bouchon",
+          "stops": [
+            {
+              "place": "vieux-lyon",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Wander the streets and pick up snacks as you go."
+            },
+            {
+              "place": "saone-banks",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Easy riverbank stroll before dinner."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "The classic Lyon dinner. Book ahead; mostly evening service."
+            }
+          ]
+        },
+        {
+          "title": "Halles market and Presqu'île",
+          "stops": [
+            {
+              "place": "les-halles",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Late morning is best. Open roughly Tue–Sat, check on the day. Eat lunch here."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Walk off lunch through the shopping streets."
+            },
+            {
+              "place": "terreaux",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Fountain and square, then a café stop."
+            },
+            {
+              "place": "bellecour",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Cross the square toward the river."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Second bouchon, this time on the Presqu'île side."
+            }
+          ]
+        },
+        {
+          "title": "Hill walk and market lunch, then go",
+          "stops": [
+            {
+              "place": "croix-rousse-walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning walk on the hill. Stop for coffee and pastries."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Quick view over the city before lunch."
+            },
+            {
+              "place": "vieux-lyon",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Final lunch in the old town before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Travellers who want Roman Lyon, the traboules and the Resistance story, with the basilica as the highlight.",
+      "days": [
+        {
+          "title": "Arrive, old Lyon and the hill",
+          "stops": [
+            {
+              "place": "st-jean-cathedral",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Start with the cathedral. Daily daytime, check on the day."
+            },
+            {
+              "place": "vieux-lyon",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Renaissance streets and courtyards of the old town."
+            },
+            {
+              "place": "fourviere",
+              "at": "17:00",
+              "minutes": 75,
+              "note": "Funicular up from Vieux Lyon. Open roughly 07:00–19:00, check on the day."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset over the city."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner in the old town. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Traboules and the Resistance",
+          "stops": [
+            {
+              "place": "traboule-tour",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Guided walk through the hidden passages. Book ahead."
+            },
+            {
+              "place": "croix-rousse-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Silk-trade hill. Morning is best."
+            },
+            {
+              "place": "resistance-museum",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Evening walk through the centre."
+            }
+          ]
+        },
+        {
+          "title": "Confluence history, then go",
+          "stops": [
+            {
+              "place": "confluence-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Natural and human history."
+            },
+            {
+              "place": "confluence-walk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Modern district by the rivers. Lunch here."
+            },
+            {
+              "place": "bellecour",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Last stop before heading to the station."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the basilica, the old town and a river view without rushing.",
+      "days": [
+        {
+          "title": "Arrive and settle into Vieux Lyon",
+          "stops": [
+            {
+              "place": "vieux-lyon",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Wander the cobbled lanes and get your bearings."
+            },
+            {
+              "place": "st-jean-cathedral",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Daily daytime; check on the day."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead; most bouchons serve evenings only."
+            }
+          ]
+        },
+        {
+          "title": "Fourvière hill and the river",
+          "stops": [
+            {
+              "place": "fourviere",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Go early to beat the crowds. Funicular from Vieux Lyon."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Right outside the basilica."
+            },
+            {
+              "place": "saone-banks",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Easy flat walk along the water."
+            },
+            {
+              "place": "saone-cruise",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Seasonal departures; check times on the day."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Cross to the peninsula for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Traboules, Croix-Rousse and museums",
+          "stops": [
+            {
+              "place": "traboule-tour",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Guided tours mostly run in the morning."
+            },
+            {
+              "place": "croix-rousse-walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Climb up for views and the market streets."
+            },
+            {
+              "place": "terreaux",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Fountain and square in the afternoon."
+            },
+            {
+              "place": "beaux-arts",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Tuesday."
+            },
+            {
+              "place": "bellecour",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Short stop before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Confluence and departure",
+          "stops": [
+            {
+              "place": "confluence-walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Modern district by the water."
+            },
+            {
+              "place": "confluence-museum",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "les-halles",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Tue–Sat roughly 07:00–19:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want bouchons, markets and slow afternoons between meals.",
+      "days": [
+        {
+          "title": "Arrive, old town and first bouchon",
+          "stops": [
+            {
+              "place": "vieux-lyon",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Browse the food shops and cafés."
+            },
+            {
+              "place": "saone-banks",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Walk off the journey before dinner."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Classic Lyonnais dinner; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Halles and the peninsula",
+          "stops": [
+            {
+              "place": "les-halles",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Tue–Sat roughly 07:00–19:00; go hungry."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Shops and squares; grab lunch on the way."
+            },
+            {
+              "place": "bellecour",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Central meeting point."
+            },
+            {
+              "place": "terreaux",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Fountain and café terraces."
+            },
+            {
+              "place": "beaux-arts",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Closed Tuesday; a calm break between meals."
+            }
+          ]
+        },
+        {
+          "title": "Fourvière and a river cruise",
+          "stops": [
+            {
+              "place": "fourviere",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Morning visit before the crowds."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Views over the city."
+            },
+            {
+              "place": "saone-cruise",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Seasonal; check departure times on the day."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Second bouchon night; try a different one."
+            }
+          ]
+        },
+        {
+          "title": "Croix-Rousse market morning",
+          "stops": [
+            {
+              "place": "croix-rousse-walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is best; markets and food stalls."
+            },
+            {
+              "place": "traboule-tour",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Guided tours mostly daytime."
+            },
+            {
+              "place": "les-halles",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Last food stop before you leave; check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Presqu'île"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want Roman roots, silk history and the Resistance story.",
+      "days": [
+        {
+          "title": "Arrive in the old town",
+          "stops": [
+            {
+              "place": "vieux-lyon",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Start with the medieval streets."
+            },
+            {
+              "place": "st-jean-cathedral",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Daily daytime; check on the day."
+            },
+            {
+              "place": "bouchon-dinner",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening service; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Fourvière and Roman Lyon",
+          "stops": [
+            {
+              "place": "fourviere",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Basilica and hill history."
+            },
+            {
+              "place": "fourviere-viewpoint",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Look over the old town."
+            },
+            {
+              "place": "traboule-tour",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Hidden passages tied to the silk trade."
+            },
+            {
+              "place": "saone-banks",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Easy walk to end the day."
+            }
+          ]
+        },
+        {
+          "title": "Resistance and the peninsula",
+          "stops": [
+            {
+              "place": "resistance-museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "confluence-walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "See how the city has changed."
+            },
+            {
+              "place": "confluence-museum",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "presqu-ile-walk",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Evening stroll and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Croix-Rousse silk hill",
+          "stops": [
+            {
+              "place": "croix-rousse-walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning walk through the silk workers' quarter."
+            },
+            {
+              "place": "terreaux",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Fountain and square."
+            },
+            {
+              "place": "beaux-arts",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Closed Tuesday."
+            },
+            {
+              "place": "les-halles",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Tue–Sat roughly 07:00–19:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Vieux Lyon"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Vieux Lyon, the basilica and the traboules."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Bouchons, markets and the Halles de Lyon."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Roman Lugdunum, silk trade and the Resistance."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Presqu'île",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Between the two rivers. Walk to Vieux Lyon, the shops and most restaurants. Best all-round base.",
+      "center": [
+        45.763,
+        4.835
+      ]
+    },
+    {
+      "area": "Vieux Lyon",
+      "range": [
+        100,
+        260
+      ],
+      "why": "Cobbled lanes, traboules and the funicular up to Fourvière. Quiet at night, touristy by day.",
+      "center": [
+        45.762,
+        4.827
+      ]
+    },
+    {
+      "area": "Croix-Rousse",
+      "range": [
+        70,
+        170
+      ],
+      "why": "The old silk-workers' hill. Village feel, markets and views. Steep walks down to the centre.",
+      "center": [
+        45.774,
+        4.832
+      ]
+    },
+    {
+      "area": "Part-Dieu",
+      "range": [
+        80,
+        190
+      ],
+      "why": "Business district by the main train station and airport bus. Handy for day trips, less charming.",
+      "center": [
+        45.76,
+        4.858
+      ]
+    }
+  ],
+  "food": [
+    "Try a bouchon: small Lyonnais restaurants serving quenelles, andouillette and salade lyonnaise. Book ahead for dinner.",
+    "Les Halles de Lyon Paul Bocuse is the covered food market. Go hungry, taste cheese and charcuterie, and eat lunch at a counter.",
+    "Order local dishes: pike quenelle, rosette de Lyon sausage, and praline tart for dessert.",
+    "Cheap eats: a sandwich or kebab in Presqu'île, or a slice of pizza near the university, roughly €8–15.",
+    "Lunch menus (formule) are much cheaper than dinner. Expect about €18–30 at a mid-range bouchon."
+  ],
+  "more_time": [
+    "Add a half-day in the Beaujolais vineyards south of the city. Check tours and train times on the day.",
+    "Day trip to Annecy or Grenoble by train for lakes and mountains. Book seats in advance.",
+    "Spend a morning at the Musée des Confluences, then walk the riverside parks."
+  ]
+}

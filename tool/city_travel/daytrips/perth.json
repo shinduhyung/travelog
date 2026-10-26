@@ -1,0 +1,67 @@
+{
+ "city": "Perth",
+ "trips": [
+  {
+   "place": "Mandurah",
+   "label": "",
+   "position": {
+    "id": 368697,
+    "name": "Mandurah",
+    "city": "Mandurah",
+    "lat": -32.5269,
+    "lng": 115.7217
+   },
+   "town": {
+    "name": "Mandurah",
+    "lat": -32.5269,
+    "lng": 115.7217
+   },
+   "road": {
+    "km": 72,
+    "min": 59,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 180.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$4",
+     "time": "54m",
+     "via": "Perth Underground Stn Platform 2 to Mandurah Stn Platform 2",
+     "source": "https://www.rome2rio.com/s/Perth/Mandurah"
+    },
+    "bus": {
+     "from": "$4-$6",
+     "time": "1h 15m",
+     "via": "Transwa Bay Transwa East Perth to Mandurah Stn Transwa Mandurah",
+     "source": "https://www.rome2rio.com/s/Perth/Mandurah"
+    }
+   },
+   "route_note": "Take the Mandurah Line train from Perth Underground directly to Mandurah Station, roughly 50 minutes, then walk or take a local bus to the waterfront.",
+   "see": [
+    "Mandurah foreshore",
+    "Dolphin watching cruises",
+    "Mandurah Ocean Marina",
+    "Halls Head beach"
+   ],
+   "visit": "Full day",
+   "tour_query": "Mandurah day trip from Perth",
+   "quests": [],
+   "recommended": "train",
+   "why": "The Mandurah Line train runs direct from Perth Underground in about 54 minutes and drops you at Mandurah Station near the waterfront.",
+   "stars": 3,
+   "know": [
+    "Trains run frequently throughout the day on the Mandurah Line",
+    "Book ahead for dolphin cruises and waterfront activities in peak season",
+    "Summer weekends are busiest at the foreshore"
+   ]
+  }
+ ],
+ "problems": [
+  "Fremantle: not a town in cities15000.json (AU), dropped",
+  "Rottnest Island: not a town in cities15000.json (AU), dropped",
+  "Guildford: no Omio position, dropped"
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "city": "Managua",
+ "trips": [
+  {
+   "place": "Granada",
+   "label": "",
+   "position": {
+    "id": 393091,
+    "name": "Granada",
+    "city": "Granada",
+    "lat": 11.92988,
+    "lng": -85.95602
+   },
+   "town": {
+    "name": "Granada",
+    "lat": 11.93062,
+    "lng": -85.95368
+   },
+   "road": {
+    "km": 43,
+    "min": 48,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1140,
+    "currency": "NIO"
+   },
+   "modes": {
+    "train": {
+     "from": "$665-$1,186",
+     "time": "19h 53m",
+     "via": "Malaga Maria Zambrano to Granada",
+     "source": "https://www.rome2rio.com/s/Managua/Granada"
+    }
+   },
+   "route_note": "Direct interlocal buses run from Managua's UCA terminal to Granada in roughly an hour, or take a Managua–Rivas bus and get off at Granada.",
+   "see": [
+    "Granada Cathedral and Central Park",
+    "Calle La Calzada",
+    "Iglesia La Merced tower viewpoint",
+    "San Francisco Convent museum",
+    "Boat trip on Lake Nicaragua islets"
+   ],
+   "visit": "Full day",
+   "tour_query": "Granada day trip from Managua",
+   "quests": [
+    "Granada Old Town"
+   ],
+   "recommended": "tour",
+   "why": "Direct interlocal buses from UCA terminal reach Granada in about an hour, faster and simpler than the long train option.",
+   "stars": 5,
+   "know": [
+    "Colonial city with well-preserved architecture and lakefront setting",
+    "Best visited in the dry season (November to April)"
+   ]
+  },
+  {
+   "place": "Masaya",
+   "label": "",
+   "position": {
+    "id": 393104,
+    "name": "Masaya",
+    "city": "Masaya",
+    "lat": 11.97444,
+    "lng": -86.09417
+   },
+   "town": {
+    "name": "Masaya",
+    "lat": 11.97316,
+    "lng": -86.09587
+   },
+   "road": {
+    "km": 25,
+    "min": 29,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 680,
+    "currency": "NIO"
+   },
+   "modes": {
+    "bus": {
+     "from": null,
+     "time": "40m",
+     "via": "Managua Mercado Huembes to Nindiri",
+     "source": "https://www.rome2rio.com/s/Managua/Masaya"
+    }
+   },
+   "route_note": "Frequent direct buses from Managua's UCA or Mercado Roberto Huembes terminal reach Masaya in under an hour; local taxis or a short ride continue to the volcano.",
+   "see": [
+    "Masaya Volcano National Park and Santiago crater",
+    "Masaya Artisan Market",
+    "Coyotepe Fort viewpoint",
+    "Old Market (Mercado Viejo)"
+   ],
+   "visit": "Half day",
+   "tour_query": "Masaya volcano day trip from Managua",
+   "quests": [
+    "Masaya Artisan Market"
+   ],
+   "recommended": "bus",
+   "why": "Frequent direct buses from UCA or Mercado Roberto Huembes reach Masaya in under an hour.",
+   "stars": 4,
+   "know": [
+    "Masaya Volcano National Park is a highlight; go late afternoon for lava views",
+    "Famous craft market worth browsing"
+   ]
+  }
+ ],
+ "problems": [
+  "Leon: no Omio position, dropped",
+  "Puebla: no Omio position, dropped",
+  "Granada: model picked bus without data; set to tour"
+ ]
+}

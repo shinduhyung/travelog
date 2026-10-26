@@ -1,0 +1,31 @@
+$ deepseek_facts.py Santiago
+  tokens in 3199 out 610
+Santiago: 0 problems
+
+$ deepseek_city.py Santiago --stage places
+Santiago: places
+  tokens in 1304 out 3317
+
+$ deepseek_city.py Santiago --stage frame
+Santiago: frame
+  tokens in 2460 out 1964
+  repaired JSON
+
+$ deepseek_city.py Santiago --stage plans
+Santiago: plans
+  plans for day
+  tokens in 2233 out 1043
+  plans for 1n
+  tokens in 2234 out 955
+  plans for 2n
+  tokens in 2234 out 1531
+  plans for 3n
+  tokens in 2239 out 1754
+  plans for 4n
+  tokens in 2234 out 2046
+
+$ merge_city.py Santiago
+ERROR santalucia: landmark 'Santa Lucía Hill' not in all_landmarks.json
+ERROR plan 1n-nature: unknown place 'cerrosanCristobal'
+Santiago: 20 places, 15 plans, 2 errors, 0 warnings
+

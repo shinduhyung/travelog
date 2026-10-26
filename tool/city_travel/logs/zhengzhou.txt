@@ -1,0 +1,28 @@
+$ deepseek_facts.py Zhengzhou
+  tokens in 2730 out 684
+Zhengzhou: 0 problems
+
+$ deepseek_city.py Zhengzhou --stage places
+Zhengzhou: places
+  tokens in 1130 out 2332
+
+$ deepseek_city.py Zhengzhou --stage frame
+Zhengzhou: frame
+  tokens in 2459 out 1887
+  repaired JSON
+
+$ deepseek_city.py Zhengzhou --stage plans
+Zhengzhou: plans
+  plans for day
+  tokens in 1783 out 896
+  plans for 1n
+  tokens in 1784 out 1153
+  plans for 2n
+  tokens in 1789 out 1546
+  plans for 3n
+  tokens in 1784 out 1666
+
+$ merge_city.py Zhengzhou
+Zhengzhou: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/zhengzhou.json and planner/zhengzhou.json
+

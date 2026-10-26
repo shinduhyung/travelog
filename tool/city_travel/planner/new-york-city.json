@@ -1,0 +1,704 @@
+{
+  "city": "New York City",
+  "checked": "October 2026",
+  "intro_line": "Skyline views, world-class museums and a different city in every neighbourhood.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Midtown",
+        "Lower Manhattan",
+        "Upper West Side",
+        "Brooklyn"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Midtown",
+        "Lower Manhattan",
+        "Upper West Side",
+        "Brooklyn"
+      ]
+    },
+    {
+      "id": "views",
+      "label": "Views",
+      "areas": [
+        "Midtown",
+        "Lower Manhattan",
+        "Upper West Side",
+        "Brooklyn"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Midtown",
+        "Lower Manhattan",
+        "Upper West Side",
+        "Brooklyn"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Midtown",
+        "Lower Manhattan",
+        "Upper West Side",
+        "Brooklyn"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -3,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 4°C, lows around -3°C. Pack a warm coat and layers."
+      },
+      {
+        "high": 6,
+        "low": -3,
+        "rain_days": 10,
+        "note": "Still cold, highs about 6°C. Good for museums and indoor sights."
+      },
+      {
+        "high": 10,
+        "low": 0,
+        "rain_days": 10,
+        "note": "Warming up to 10°C. Some rain; a light jacket works."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 12,
+        "note": "Spring: highs around 16°C, lows 6°C. Comfortable for walking."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 12,
+        "note": "Pleasant at 21°C. Busy with tourists; book hotels early."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 11,
+        "note": "Warm at 26°C. Good park weather; expect about 11 rain days."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 13,
+        "note": "Hottest month: highs near 30°C, lows 21°C. Plan shade and water."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 12,
+        "note": "Hot and humid, highs around 28°C. Evenings are best for walking."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Still warm at 25°C. A great month for parks and rooftops."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 9,
+        "note": "Cool and clear, highs near 19°C. Good for long walks."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 8,
+        "note": "Colder at 12°C. Fewer rain days; pack a jacket."
+      },
+      {
+        "high": 7,
+        "low": 0,
+        "rain_days": 10,
+        "note": "Cold again: highs about 7°C, lows near 0°C. Holiday crowds in December."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.9
+    ],
+    "views": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.65
+    ],
+    "family": [
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      0.9,
+      0.75,
+      0.6
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "statue-liberty": {
+      "types": [
+        "culture",
+        "family",
+        "views"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning, spring to autumn",
+      "area": "Lower Manhattan",
+      "popularity": 5
+    },
+    "ellis-island": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Same trip as the Statue of Liberty",
+      "area": "Lower Manhattan",
+      "popularity": 4
+    },
+    "empire-state": {
+      "types": [
+        "views",
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset or after dark",
+      "area": "Midtown",
+      "popularity": 5
+    },
+    "times-square": {
+      "types": [
+        "budget",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Midtown",
+      "popularity": 5
+    },
+    "central-park": {
+      "types": [
+        "budget",
+        "family",
+        "views"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or autumn afternoon",
+      "area": "Upper West Side",
+      "popularity": 5
+    },
+    "met-museum": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Upper West Side",
+      "popularity": 5
+    },
+    "moma": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Midtown",
+      "popularity": 5
+    },
+    "amnh": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Upper West Side",
+      "popularity": 5
+    },
+    "guggenheim": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Upper West Side",
+      "popularity": 4
+    },
+    "brooklyn-bridge": {
+      "types": [
+        "budget",
+        "views",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Brooklyn",
+      "popularity": 5
+    },
+    "memorial-911": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Lower Manhattan",
+      "popularity": 5
+    },
+    "one-wtc": {
+      "types": [
+        "views",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Clear day, late afternoon",
+      "area": "Lower Manhattan",
+      "popularity": 4
+    },
+    "high-line": {
+      "types": [
+        "budget",
+        "views",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning, spring to autumn",
+      "area": "Lower Manhattan",
+      "popularity": 4
+    },
+    "rockefeller": {
+      "types": [
+        "culture",
+        "views",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Winter evening for the tree",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "grand-central": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "summit-vanderbilt": {
+      "types": [
+        "views",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "chrysler": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Midtown",
+      "popularity": 3
+    },
+    "wall-street": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Lower Manhattan",
+      "popularity": 3
+    },
+    "chelsea-market": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Lower Manhattan",
+      "popularity": 4
+    },
+    "broadway": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Midtown",
+      "popularity": 5
+    },
+    "st-patricks": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "staten-island-ferry": {
+      "types": [
+        "budget",
+        "views",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Daytime, clear weather",
+      "area": "Lower Manhattan",
+      "popularity": 4
+    },
+    "nypl": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Midtown",
+      "popularity": 3
+    },
+    "flatiron": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Lower Manhattan",
+      "popularity": 3
+    },
+    "smorgasburg": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend lunch, spring to autumn",
+      "area": "Brooklyn",
+      "popularity": 4
+    },
+    "brooklyn-heights": {
+      "types": [
+        "budget",
+        "views",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Brooklyn",
+      "popularity": 3
+    },
+    "top-of-the-rock": {
+      "types": [
+        "views",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Dusk",
+      "area": "Midtown",
+      "popularity": 4
+    },
+    "greenwich-village": {
+      "types": [
+        "budget",
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Lower Manhattan",
+      "popularity": 3
+    },
+    "circle-line": {
+      "types": [
+        "views",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Daytime, clear weather",
+      "area": "Midtown",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the big museums, a skyline view and a Brooklyn walk without rushing."
+  },
+  "airports": [
+    {
+      "code": "JFK",
+      "name": "John F. Kennedy International Airport",
+      "primary": true,
+      "note": "The main international airport, in Queens.",
+      "options": [
+        {
+          "mode": "AirTrain + subway",
+          "to": "Manhattan",
+          "price": "$11.75",
+          "time": "50-90 min",
+          "note": "AirTrain $8.75 + subway $3.00, paid with OMNY."
+        },
+        {
+          "mode": "AirTrain + LIRR",
+          "to": "Penn Station / Grand Central",
+          "price": "$14-16",
+          "time": "35-50 min",
+          "note": ""
+        },
+        {
+          "mode": "Yellow cab (flat fare)",
+          "to": "Manhattan",
+          "price": "$70 + tolls and tip",
+          "time": "45-75 min",
+          "note": "About $90-110 all in."
+        }
+      ]
+    },
+    {
+      "code": "EWR",
+      "name": "Newark Liberty International Airport",
+      "primary": false,
+      "note": "In New Jersey, 25 km west of Midtown.",
+      "options": [
+        {
+          "mode": "AirTrain + NJ Transit",
+          "to": "Penn Station",
+          "price": "$17.25",
+          "time": "about 30 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Midtown",
+          "price": "$70-110",
+          "time": "40-70 min",
+          "note": "Plus tolls."
+        }
+      ]
+    },
+    {
+      "code": "LGA",
+      "name": "LaGuardia Airport",
+      "primary": false,
+      "note": "Closest to Manhattan, mostly domestic flights.",
+      "options": [
+        {
+          "mode": "Q70 bus + subway",
+          "to": "Manhattan",
+          "price": "$3.00",
+          "time": "40-60 min",
+          "note": "Free Q70 LaGuardia Link to the subway."
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Midtown",
+          "price": "$35-60",
+          "time": "25-45 min",
+          "note": "Metered, plus tolls."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "JFK to Manhattan compared 2026",
+      "https://tripbuffer.com/compare/jfk-to-manhattan-taxi-vs-train-vs-rideshare/"
+    ],
+    [
+      "JFK taxi fixed fare 2026",
+      "https://www.hootling.com/blog/taxi-jfk-to-new-york"
+    ],
+    [
+      "JFK, LGA & EWR compared",
+      "https://smartsmssolutions.com/resources/blog/business/airport-to-manhattan-guide"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "views"
+  ],
+  "transit": {
+    "best": "The subway for most trips; walk Manhattan's grid for short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The subway runs 24 hours. Tap OMNY (contactless) for $3.00 a ride, with a weekly fare cap."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses use the same fare. The M-routes cover Manhattan avenues."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Yellow cabs are metered (plus congestion surcharges). Uber and Lyft work everywhere."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving and parking in Manhattan are slow and expensive. Skip the car."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Manhattan's grid is easy to walk. 20 blocks north-south is about a mile."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The free Staten Island Ferry passes the Statue of Liberty."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons. Hot, humid summers and cold winters. Spring and autumn are the best times to walk the city.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Highs of 16–26°C. Comfortable for walking and parks. These are the busiest months."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (July to August)",
+        "text": "Highs near 28–30°C with muggy nights. Plan indoor sights at midday and walk in the morning or evening."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 4–7°C and lows near or below 0°C. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "About 8–13 rain days a month. April and July are the wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is crisp and clear",
+        "text": "October highs near 19°C and fewer rain days. Great for parks and skyline views."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, a rain jacket and sunscreen for summer. A warm coat for winter."
+      }
+    ]
+  }
+}

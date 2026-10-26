@@ -1,0 +1,28 @@
+$ deepseek_facts.py Luxembourg
+  tokens in 3195 out 1001
+Luxembourg: 1 problems
+  - airport CRL is 152 km away
+
+$ deepseek_city.py Luxembourg --stage places
+Luxembourg: places
+  tokens in 1176 out 3449
+
+$ deepseek_city.py Luxembourg --stage frame
+Luxembourg: frame
+  tokens in 2420 out 1877
+
+$ deepseek_city.py Luxembourg --stage plans
+Luxembourg: plans
+  plans for day
+  tokens in 2241 out 847
+  plans for 1n
+  tokens in 2242 out 1350
+  plans for 2n
+  tokens in 2247 out 2865
+  plans for 3n
+  tokens in 2242 out 2139
+
+$ merge_city.py Luxembourg
+Luxembourg: 22 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/luxembourg.json and planner/luxembourg.json
+

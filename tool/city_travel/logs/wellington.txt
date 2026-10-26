@@ -1,0 +1,28 @@
+$ deepseek_facts.py Wellington
+  tokens in 3872 out 592
+Wellington: 0 problems
+
+$ deepseek_city.py Wellington --stage places
+Wellington: places
+  tokens in 1149 out 3403
+
+$ deepseek_city.py Wellington --stage frame
+Wellington: frame
+  tokens in 2459 out 1974
+  repaired JSON
+
+$ deepseek_city.py Wellington --stage plans
+Wellington: plans
+  plans for day
+  tokens in 2218 out 700
+  plans for 1n
+  tokens in 2219 out 1393
+  plans for 2n
+  tokens in 2224 out 1343
+  plans for 3n
+  tokens in 2219 out 1803
+
+$ merge_city.py Wellington
+Wellington: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/wellington.json and planner/wellington.json
+

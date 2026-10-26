@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class ItineraryProvider with ChangeNotifier {
   final AiService _aiService;
@@ -44,7 +45,7 @@ class ItineraryProvider with ChangeNotifier {
     // 1-2. 서버 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('saved_itineraries')) {
           final String serverJson = doc.data()!['saved_itineraries'];
           // 서버 데이터 파싱
@@ -170,7 +171,7 @@ class ItineraryProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('saved_itineraries')) {
           final String serverJson = doc.data()!['saved_itineraries'];
           final List<dynamic> jsonList = json.decode(serverJson);

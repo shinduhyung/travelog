@@ -1,0 +1,633 @@
+{
+  "city": "St. Petersburg",
+  "checked": "October 2026",
+  "intro_line": "Imperial canals, golden domes and white nights on the Neva.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Nevsky Prospekt",
+        "Vasilyevsky Island",
+        "Petrogradsky",
+        "Kolomna"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Nevsky Prospekt",
+        "Vasilyevsky Island",
+        "Petrogradsky",
+        "Kolomna"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Nevsky Prospekt",
+        "Vasilyevsky Island",
+        "Petrogradsky",
+        "Kolomna"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Nevsky Prospekt",
+        "Vasilyevsky Island",
+        "Petrogradsky",
+        "Kolomna"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Nevsky Prospekt",
+        "Vasilyevsky Island",
+        "Petrogradsky",
+        "Kolomna"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -3,
+        "low": -8,
+        "rain_days": 14,
+        "note": "January: highs near -3°C, lows -8°C. Bundle up; museums are warm and quiet."
+      },
+      {
+        "high": -2,
+        "low": -7,
+        "rain_days": 12,
+        "note": "February: still cold, -2°C to -7°C. Short days; plan indoor sights."
+      },
+      {
+        "high": 2,
+        "low": -4,
+        "rain_days": 10,
+        "note": "March: around 2°C by day, -4°C at night. Snow turns to slush; wear waterproof boots."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 12,
+        "note": "April: 8°C days, 0°C nights. Bridges and parks start to open up."
+      },
+      {
+        "high": 15,
+        "low": 6,
+        "rain_days": 10,
+        "note": "May: 15°C days, 6°C nights. White nights begin; long evenings for walks."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 10,
+        "note": "June: 20°C days, 13°C nights. White Nights peak; book hotels early."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 16,
+        "note": "July: warmest, 22°C high, 15°C low. Busiest month; expect 16 rain days."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 14,
+        "note": "August: 21°C high, 14°C low. Still warm and busy; carry a light rain jacket."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 12,
+        "note": "September: 16°C days, 10°C nights. Fewer crowds, good light for photos."
+      },
+      {
+        "high": 8,
+        "low": 4,
+        "rain_days": 14,
+        "note": "October: 8°C days, 4°C nights. Wet and grey; pack layers and an umbrella."
+      },
+      {
+        "high": 3,
+        "low": -1,
+        "rain_days": 13,
+        "note": "November: 3°C days, -1°C nights. Dark and damp; museums are the plan."
+      },
+      {
+        "high": -1,
+        "low": -4,
+        "rain_days": 15,
+        "note": "December: -1°C high, -4°C low. Cold and festive; short daylight hours."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "art": [
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.95,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.5,
+      0.5,
+      0.6,
+      0.8,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ]
+  },
+  "places": {
+    "hermitage": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Weekday morning; avoid Monday",
+      "area": "Nevsky Prospekt",
+      "popularity": 5
+    },
+    "savior": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning or late afternoon",
+      "area": "Nevsky Prospekt",
+      "popularity": 5
+    },
+    "peterhof": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Summer, morning start",
+      "area": "Petrogradsky",
+      "popularity": 5
+    },
+    "isaac": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Clear afternoon for the colonnade",
+      "area": "Nevsky Prospekt",
+      "popularity": 5
+    },
+    "peterpaul": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "Petrogradsky",
+      "popularity": 4
+    },
+    "nevsky": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Nevsky Prospekt",
+      "popularity": 5
+    },
+    "mariinsky": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Kolomna",
+      "popularity": 4
+    },
+    "bronze": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Nevsky Prospekt",
+      "popularity": 4
+    },
+    "summergarden": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Summer morning",
+      "area": "Nevsky Prospekt",
+      "popularity": 3
+    },
+    "alexander": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Any daylight hour",
+      "area": "Nevsky Prospekt",
+      "popularity": 3
+    },
+    "catherine": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning; avoid Tuesday",
+      "area": "Petrogradsky",
+      "popularity": 4
+    },
+    "dance2": {
+      "types": [
+        "art"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Nevsky Prospekt",
+      "popularity": 2
+    },
+    "eliseev": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Nevsky Prospekt",
+      "popularity": 3
+    },
+    "gagarin": {
+      "types": [
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Summer",
+      "area": "Kolomna",
+      "popularity": 2
+    },
+    "staffarch": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Nevsky Prospekt",
+      "popularity": 3
+    },
+    "kazan": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Nevsky Prospekt",
+      "popularity": 4
+    },
+    "lakhta": {
+      "types": [
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Petrogradsky",
+      "popularity": 3
+    },
+    "menshikov": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Vasilyevsky Island",
+      "popularity": 2
+    },
+    "neva": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Nevsky Prospekt",
+      "popularity": 4
+    },
+    "canals": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening in summer",
+      "area": "Nevsky Prospekt",
+      "popularity": 4
+    },
+    "parkalisa": {
+      "types": [
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Summer",
+      "area": "Kolomna",
+      "popularity": 1
+    },
+    "parkyulya": {
+      "types": [
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Summer",
+      "area": "Kolomna",
+      "popularity": 1
+    },
+    "market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Nevsky Prospekt",
+      "popularity": 3
+    },
+    "roofview": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Nevsky Prospekt",
+      "popularity": 3
+    },
+    "walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Kolomna",
+      "popularity": 2
+    },
+    "vasilyevskywalk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Vasilyevsky Island",
+      "popularity": 3
+    },
+    "petrogradwalk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Petrogradsky",
+      "popularity": 2
+    },
+    "boatcanal": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Nevsky Prospekt",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Hermitage, the fortress and a canal ride without rushing; add a night for Peterhof."
+  },
+  "airports": [
+    {
+      "code": "LED",
+      "name": "Pulkovo Airport",
+      "primary": true,
+      "note": "Main hub, about 16 km south of the centre.",
+      "options": [
+        {
+          "mode": "Bus 39E",
+          "to": "Moskovskaya metro station",
+          "price": "RUB80",
+          "time": "30-45 min",
+          "note": "Cheapest link to Metro Line 2; buses run 05:15-01:40."
+        },
+        {
+          "mode": "Bus 82",
+          "to": "Prospekt Veteranov metro station",
+          "price": "RUB80",
+          "time": "35-50 min",
+          "note": "Connects to Metro Line 1."
+        },
+        {
+          "mode": "Yandex Go taxi",
+          "to": "City centre",
+          "price": "RUB1000-2000",
+          "time": "30-50 min",
+          "note": "Book in the app or at the arrivals desk; ignore touts."
+        },
+        {
+          "mode": "Pre-booked taxi",
+          "to": "City centre",
+          "price": "RUB1500-2500",
+          "time": "30-50 min",
+          "note": "Driver meets you with a name sign; pay on arrival."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: St. Petersburg",
+      "https://en.wikivoyage.org/wiki/St.%20Petersburg"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "art"
+  ],
+  "transit": {
+    "best": "Metro for most trips; walk in the centre and use Yandex Go at night.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast and cheap: about RUB60 per entry with a Podorozhnik card, about RUB86 by contactless card or token. Runs roughly 05:45 to 00:15; stations are deep, so allow 1-2 min on escalators."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses, trolleybuses and trams cover the city; pay by Podorozhnik card or contactless."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Yandex Go (Yandex.Taxi) is the main ride app; local taxi firms also operate."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the centre; traffic and parking are hard. Use metro and taxis."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Central sights are walkable; bikes are limited and winter cycling is hard."
+      },
+      {
+        "mode": "Ferry / hydrofoil",
+        "has": true,
+        "text": "Hydrofoils run to Peterhof in season; check sailings on the day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid continental climate: cold winters, mild summers and frequent rain year-round.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Days of 15–22°C and long evenings. June and July bring the White Nights."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs near -3°C to -1°C and lows to -8°C. Snow and ice on pavements; wear warm boots."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "10–16 rain days a month. July is wettest. Always carry a small umbrella."
+      },
+      {
+        "icon": "🌗",
+        "title": "Very short winter days",
+        "text": "December daylight is brief; plan indoor sights and start early."
+      },
+      {
+        "icon": "🌉",
+        "title": "Bridge drawbridges",
+        "text": "Bridges rise at night from spring to autumn. Check the schedule before late trips."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes; a warm coat, hat and gloves in winter."
+      }
+    ]
+  }
+}

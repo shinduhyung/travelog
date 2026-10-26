@@ -1,0 +1,172 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Harbour island of colonial lanes, seafood and sea breezes.",
+  "intro": "Xiamen rewards visitors with leafy island streets, Gulangyu's car-free lanes and fresh seafood. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Zhongshan Road",
+    "Gulangyu",
+    "Yundang Lake",
+    "Xiamen University"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 30,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro lines 1-3 link the airport area, Xiamen North station and downtown; signs are bilingual.",
+    "BRT runs on elevated bus-only roads; use the T4 station for the airport.",
+    "Buses are cheap and frequent but most route signs are Chinese only.",
+    "Pay with the Alipay or WeChat transit mini-app, or an eKatong card.",
+    "Taxis start at ¥10; ride-hailing apps like Didi work well.",
+    "Ferries to Gulangyu leave from Dongdu Wharf for non-residents; bikes are banned on Gulangyu."
+  ],
+  "airports": [
+    {
+      "code": "XMN",
+      "name": "Xiamen Gaoqi International Airport",
+      "primary": true,
+      "note": "Main airport on the island, about 9 km from the centre.",
+      "options": [
+        {
+          "mode": "BRT",
+          "to": "Downtown",
+          "price": "¥1-5",
+          "time": "30-40 min",
+          "note": "Use the T4 station, not Gaoji Airport station."
+        },
+        {
+          "mode": "Bus",
+          "to": "Train station and Xiamen University",
+          "price": "¥1-2",
+          "time": "30-50 min",
+          "note": "Route 18 goes to Xiamen University."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥30-40",
+          "time": "20-30 min",
+          "note": "Metered; avoid the scenic ring road detour."
+        },
+        {
+          "mode": "Ride app (Didi)",
+          "to": "City centre",
+          "price": "¥30-45",
+          "time": "20-30 min",
+          "note": "Works well; meet at the marked pickup zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Gulangyu Island",
+    "Nanputuo Temple",
+    "Kinmen",
+    "Luckin Coffee",
+    "Xiamen Island"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Xiamen",
+      "https://en.wikivoyage.org/wiki/Xiamen"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    24.47979,
+    118.08187
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 18,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 8
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 16
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 15
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 19
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 5
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 13,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

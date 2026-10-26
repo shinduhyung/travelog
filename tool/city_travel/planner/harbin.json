@@ -1,0 +1,551 @@
+{
+  "city": "Harbin",
+  "checked": "October 2026",
+  "intro_line": "Harbin: ice palaces, Russian domes, and hearty northern food.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Zhongyang Dajie",
+        "Harbin Railway Station",
+        "Daowai",
+        "Songbei (Sun Island)"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Zhongyang Dajie",
+        "Harbin Railway Station",
+        "Daowai",
+        "Songbei (Sun Island)"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Zhongyang Dajie",
+        "Harbin Railway Station",
+        "Daowai",
+        "Songbei (Sun Island)"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Zhongyang Dajie",
+        "Harbin Railway Station",
+        "Daowai",
+        "Songbei (Sun Island)"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Zhongyang Dajie",
+        "Harbin Railway Station",
+        "Daowai",
+        "Songbei (Sun Island)"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -12,
+        "low": -22,
+        "rain_days": 2,
+        "note": "January: deepest winter, highs near -12°C. Ice Festival season; dress in layers."
+      },
+      {
+        "high": -6,
+        "low": -17,
+        "rain_days": 2,
+        "note": "February: still very cold, around -6°C. Ice sites may close late in the month; check on the day."
+      },
+      {
+        "high": 5,
+        "low": -7,
+        "rain_days": 3,
+        "note": "March: warming to about 5°C but icy underfoot. Few crowds."
+      },
+      {
+        "high": 14,
+        "low": 1,
+        "rain_days": 5,
+        "note": "April: mild days near 14°C, cool nights. Good for walking the old streets."
+      },
+      {
+        "high": 21,
+        "low": 9,
+        "rain_days": 10,
+        "note": "May: pleasant at 21°C; rain picks up. Bring a light jacket."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 14,
+        "note": "June: warm at 25°C with frequent rain. Parks are green."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 15,
+        "note": "July: hottest month, around 28°C and humid. Plan indoor breaks."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 15,
+        "note": "August: warm and wet, about 25°C. Sun Island is at its best."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 10,
+        "note": "September: comfortable at 21°C; a good shoulder month."
+      },
+      {
+        "high": 12,
+        "low": 2,
+        "rain_days": 6,
+        "note": "October: cooling to 12°C. Crisp air, fewer visitors."
+      },
+      {
+        "high": 0,
+        "low": -8,
+        "rain_days": 4,
+        "note": "November: near 0°C and windy. Ice sites not yet open; check dates."
+      },
+      {
+        "high": -10,
+        "low": -18,
+        "rain_days": 2,
+        "note": "December: cold at -10°C. Ice Festival usually opens late in the month; book early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.75,
+      0.7,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.8
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.6,
+      0.35,
+      0.3
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.8
+    ],
+    "family": [
+      0.9,
+      0.9,
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.65,
+      0.9
+    ]
+  },
+  "places": {
+    "sophia": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning; any season",
+      "area": "Zhongyang Dajie",
+      "popularity": 5
+    },
+    "icefestival": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening, Dec–Feb only",
+      "area": "Songbei (Sun Island)",
+      "popularity": 5
+    },
+    "songhua": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset; winter for the frozen river",
+      "area": "Songbei (Sun Island)",
+      "popularity": 4
+    },
+    "polarland": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon; any weather",
+      "area": "Songbei (Sun Island)",
+      "popularity": 4
+    },
+    "volga": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning start; summer or snow season",
+      "area": "Daowai",
+      "popularity": 3
+    },
+    "zhongyang": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Zhongyang Dajie",
+      "popularity": 5
+    },
+    "hongzhuan": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "Zhongyang Dajie",
+      "popularity": 4
+    },
+    "sophia_square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "Zhongyang Dajie",
+      "popularity": 4
+    },
+    "sun_island": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime; winter for snow sculptures",
+      "area": "Songbei (Sun Island)",
+      "popularity": 4
+    },
+    "daowai_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning to afternoon",
+      "area": "Daowai",
+      "popularity": 3
+    },
+    "ice_activity": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Midday, Dec–Feb",
+      "area": "Songbei (Sun Island)",
+      "popularity": 3
+    },
+    "sophia_night": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Zhongyang Dajie",
+      "popularity": 4
+    },
+    "russian_food": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Zhongyang Dajie",
+      "popularity": 4
+    },
+    "stalin_park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Zhongyang Dajie",
+      "popularity": 3
+    },
+    "railway_station_area": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Harbin Railway Station",
+      "popularity": 2
+    },
+    "snow_sculpture": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime, Dec–Feb",
+      "area": "Songbei (Sun Island)",
+      "popularity": 4
+    },
+    "local_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Daowai",
+      "popularity": 3
+    },
+    "museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Cold or rainy day",
+      "area": "Harbin Railway Station",
+      "popularity": 3
+    },
+    "guided_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Zhongyang Dajie",
+      "popularity": 3
+    },
+    "songhua_cruise": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Songbei (Sun Island)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Ice Festival or summer riverfront, the old streets and a food evening without rushing."
+  },
+  "airports": [
+    {
+      "code": "HRB",
+      "name": "Taiping International Airport",
+      "primary": true,
+      "note": "Sole airport, about 34 km from the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Harbin Railway Station / CAAC Building",
+          "price": "¥20",
+          "time": "about 1 hr",
+          "note": "Buy tickets at the booth inside the terminal."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Zhongyang Dajie / Daowai",
+          "price": "¥20",
+          "time": "about 1 hr",
+          "note": "Line 3 serves the old town."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥100-130",
+          "time": "40-60 min",
+          "note": "Agree the price first and ask for an invoice."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "40-60 min",
+          "note": "Use the app to avoid haggling."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Harbin",
+      "https://en.wikivoyage.org/wiki/Harbin"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "family"
+  ],
+  "transit": {
+    "best": "Metro for main sights; taxis or Didi for short hops, especially in winter cold.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1, 2 and 3 run 06:00–21:00; fares ¥2–5. Good for reaching the centre and Songbei."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover most of the city; fares ¥1–2, pay by IC card or cash."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are cheap; ask for the meter (请打表) and expect a ¥1 fuel surcharge. Didi works too; taxis often stop for extra passengers at peak."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not advised for short visits; traffic is dense and signage is mostly Chinese."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine around Zhongyang Dajie and the old town. In winter, ice makes pavements slippery."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Summer ferries cross the Songhua River to Sun Island; tickets sold at the dock."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Long, very cold winters and short, warm, rainy summers. Winter is the headline season; summer is green and humid.",
+    "items": [
+      {
+        "icon": "🧊",
+        "title": "Winter is the draw",
+        "text": "December to February highs sit between -12°C and -6°C. The Ice and Snow Festival runs in this window; check exact dates."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack for real cold",
+        "text": "Thermal layers, a heavy down coat, hat, gloves and boots with grip. Wind makes it feel colder than the numbers."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Summer is wet",
+        "text": "June to August brings 14–15 rain days a month. Carry an umbrella and plan indoor backups."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Best shoulder months",
+        "text": "May and September are mild and drier, around 21°C highs. Good for walking and river trips."
+      },
+      {
+        "icon": "☀️",
+        "title": "Short daylight in winter",
+        "text": "Days are short in December and January. Do outdoor sights in the morning and early afternoon."
+      },
+      {
+        "icon": "👟",
+        "title": "Watch your footing",
+        "text": "Ice and packed snow make pavements slippery from November to March. Grippy boots help."
+      }
+    ]
+  }
+}

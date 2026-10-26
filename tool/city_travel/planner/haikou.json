@@ -1,0 +1,554 @@
+{
+  "city": "Haikou",
+  "checked": "October 2026",
+  "intro_line": "Tropical island capital where old streets meet palm-lined bays.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Bo'ai Old Street",
+        "Haixiu Avenue",
+        "West Coast",
+        "Meilan District"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Bo'ai Old Street",
+        "Haixiu Avenue",
+        "West Coast",
+        "Meilan District"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Bo'ai Old Street",
+        "Haixiu Avenue",
+        "West Coast",
+        "Meilan District"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Bo'ai Old Street",
+        "Haixiu Avenue",
+        "West Coast",
+        "Meilan District"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Bo'ai Old Street",
+        "Haixiu Avenue",
+        "West Coast",
+        "Meilan District"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 21,
+        "low": 17,
+        "rain_days": 11,
+        "note": "January: mild and dry-ish, highs near 21°C. Bring a light jacket for evenings."
+      },
+      {
+        "high": 23,
+        "low": 17,
+        "rain_days": 9,
+        "note": "February: similar to January, around 23°C by day. Good walking weather."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 10,
+        "note": "March: warms to 27°C. Comfortable, with about 10 rain days."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 14,
+        "note": "April: hot at 30°C and wetter; plan indoor sights for midday."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 20,
+        "note": "May: 32°C with frequent rain (about 20 days). Carry a rain jacket."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 20,
+        "note": "June: hottest and wettest; highs 33°C. Go out early or after dark."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 20,
+        "note": "July: hot and rainy, around 32°C. Expect heavy downpours."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 23,
+        "note": "August: the wettest month, about 23 rain days. Keep plans flexible."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 21,
+        "note": "September: still hot and wet; typhoon season, so check forecasts."
+      },
+      {
+        "high": 28,
+        "low": 24,
+        "rain_days": 19,
+        "note": "October: rain eases a little at 28°C. Pleasant evenings return."
+      },
+      {
+        "high": 26,
+        "low": 22,
+        "rain_days": 12,
+        "note": "November: drier and cooler at 26°C. A good month to visit."
+      },
+      {
+        "high": 22,
+        "low": 18,
+        "rain_days": 8,
+        "note": "December: mild at 22°C and the driest month. Pack a light layer."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.55,
+      0.55,
+      0.5,
+      0.6,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "nature": [
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.6,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.9
+    ],
+    "beach": [
+      0.5,
+      0.6,
+      0.8,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.55,
+      0.65,
+      0.85,
+      0.8,
+      0.55
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.55,
+      0.55,
+      0.5,
+      0.6,
+      0.8,
+      0.9,
+      0.95
+    ]
+  },
+  "places": {
+    "qilou": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Bo'ai Old Street",
+      "popularity": 5
+    },
+    "century_bridge": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Haixiu Avenue",
+      "popularity": 4
+    },
+    "qiongzhou": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear mornings or sunset",
+      "area": "West Coast",
+      "popularity": 3
+    },
+    "qilou_snacks": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Bo'ai Old Street",
+      "popularity": 4
+    },
+    "wugongci": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Bo'ai Old Street",
+      "popularity": 3
+    },
+    "bihai_park": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "West Coast",
+      "popularity": 4
+    },
+    "holiday_beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning to late afternoon, warmest Apr–Oct",
+      "area": "West Coast",
+      "popularity": 4
+    },
+    "volcano_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, cooler months",
+      "area": "West Coast",
+      "popularity": 3
+    },
+    "hainan_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Haixiu Avenue",
+      "popularity": 3
+    },
+    "wanlv_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Haixiu Avenue",
+      "popularity": 2
+    },
+    "night_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Haixiu Avenue",
+      "popularity": 4
+    },
+    "coconut_drink": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Mid-morning or afternoon",
+      "area": "Bo'ai Old Street",
+      "popularity": 3
+    },
+    "meilan_beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Meilan District",
+      "popularity": 2
+    },
+    "airport_garden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Meilan District",
+      "popularity": 1
+    },
+    "ferry_view": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Haixiu Avenue",
+      "popularity": 2
+    },
+    "old_street_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Bo'ai Old Street",
+      "popularity": 3
+    },
+    "seafood_dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "West Coast",
+      "popularity": 4
+    },
+    "bike_ride": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "West Coast",
+      "popularity": 3
+    },
+    "temple_street": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Bo'ai Old Street",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old streets, the museum and a West Coast beach day, with time left for seafood dinners."
+  },
+  "airports": [
+    {
+      "code": "HAK",
+      "name": "Haikou Meilan International Airport",
+      "primary": true,
+      "note": "Main hub, about 16 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "Commuter train",
+          "to": "Haikou East Railway Station / city",
+          "price": "¥2-10",
+          "time": "15-25 min",
+          "note": "Cheapest and fastest; check timetable."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Haixiu Avenue downtown",
+          "price": "¥15",
+          "time": "30-40 min",
+          "note": "Goes to the old Civil Aviation Hotel area."
+        },
+        {
+          "mode": "City bus",
+          "to": "Various city stops",
+          "price": "¥2-5",
+          "time": "45-60 min",
+          "note": "Ask staff which route suits your hotel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥50-60",
+          "time": "30-40 min",
+          "note": "Use licensed taxis outside the terminal and insist on the meter."
+        },
+        {
+          "mode": "Ride app (DiDi)",
+          "to": "City centre",
+          "price": "¥45-65",
+          "time": "30-40 min",
+          "note": "Pick a marked pickup point."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Haikou",
+      "https://en.wikivoyage.org/wiki/Haikou"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "beach"
+  ],
+  "transit": {
+    "best": "Ride-hailing or metered taxis for most trips; buses are cheap but slow.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro in the city. Don't plan around rail inside Haikou."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Commuter trains on the Hainan high-speed line link the airport and main stations."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are cheap and cover most routes; fares are a few yuan."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis meter from about ¥10; insist on the meter (dabiao). DiDi and Amap work well; Uber does not operate."
+      },
+      {
+        "mode": "Bikes / scooters",
+        "has": true,
+        "text": "Bikes and electric scooters are easy to rent; riverside paths are good."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries cross to Xuwen and Beihai from New Port and Xiuying Port."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for a city visit; use taxis, buses and trains instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good around Bo'ai Old Street and the waterfront in the cooler months; use rides in summer heat."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and humid: warm all year, with a hot, very wet summer and a mild, drier winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Highs of 21–27°C and the fewest rain days. Ideal for walking the old streets and the coast."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season May to October",
+        "text": "About 19–23 rain days a month, often short heavy showers. Carry a light rain jacket."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer",
+        "text": "June peaks near 33°C with warm nights around 27°C. Do outdoor sights early morning."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Late summer and autumn can bring storms. Check forecasts and keep travel plans flexible."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid year-round",
+        "text": "Sea air keeps it muggy, especially May to September. Light, quick-dry clothes help."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, sunscreen and a hat; a rain jacket in summer; a light layer for winter evenings."
+      }
+    ]
+  }
+}

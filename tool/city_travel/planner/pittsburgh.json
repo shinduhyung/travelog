@@ -1,0 +1,578 @@
+{
+  "city": "Pittsburgh",
+  "checked": "October 2026",
+  "intro_line": "Steel city of rivers, bridges and steep hills.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Strip District",
+        "South Side",
+        "Oakland"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Strip District",
+        "South Side",
+        "Oakland"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Strip District",
+        "South Side",
+        "Oakland"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Strip District",
+        "South Side",
+        "Oakland"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Strip District",
+        "South Side",
+        "Oakland"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 3,
+        "low": -5,
+        "rain_days": 13,
+        "note": "January is cold: highs near 3°C, lows around -5°C, with about 13 wet days. Pack a warm coat."
+      },
+      {
+        "high": 6,
+        "low": -4,
+        "rain_days": 12,
+        "note": "February stays cold, highs near 6°C and lows near -4°C; ice is possible on steps and trails."
+      },
+      {
+        "high": 11,
+        "low": 0,
+        "rain_days": 14,
+        "note": "March warms to highs near 11°C but is wet, about 14 rain days. Bring a rain jacket."
+      },
+      {
+        "high": 16,
+        "low": 5,
+        "rain_days": 15,
+        "note": "April is mild, highs near 16°C, with about 15 rain days. Good for walking between showers."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 15,
+        "note": "May is pleasant, highs near 22°C and lows near 11°C. A great month for the parks and trails."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 16,
+        "note": "June is warm, highs near 26°C, with about 16 rain days, the wettest month. Keep an umbrella handy."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 15,
+        "note": "July is the hottest month: highs near 29°C, lows near 19°C. Plan outdoor sights for morning."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 14,
+        "note": "August is hot and humid, highs near 28°C. Carry water and take shade breaks."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 11,
+        "note": "September cools to highs near 25°C with fewer rain days, about 11. Comfortable for sightseeing."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 11,
+        "note": "October is crisp, highs near 18°C and lows near 9°C. Fall colours on the hills; a favourite month."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 10,
+        "note": "November cools to highs near 11°C with about 10 rain days. Layer up for the inclines."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 12,
+        "note": "December is cold, highs near 7°C and lows near -1°C, with about 12 wet days. Expect grey skies."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.5,
+      0.8,
+      0.95,
+      0.95,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.5,
+      0.3
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.4,
+      0.4,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.45
+    ]
+  },
+  "places": {
+    "duquesne-incline": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "point-state-park": {
+      "types": [
+        "nature",
+        "history",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early evening in summer",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "allegheny-river": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "cmu": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Oakland",
+      "popularity": 3
+    },
+    "carnegie-museum": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Oakland",
+      "popularity": 4
+    },
+    "kennywood": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer weekday morning",
+      "area": "South Side",
+      "popularity": 4
+    },
+    "pitt": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Oakland",
+      "popularity": 3
+    },
+    "strip-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Strip District",
+      "popularity": 4
+    },
+    "mt-washington-view": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset or after dark",
+      "area": "South Side",
+      "popularity": 5
+    },
+    "gateway-clipper": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon or sunset",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "phipps": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Any time; quieter on weekday mornings",
+      "area": "Oakland",
+      "popularity": 4
+    },
+    "andy-warhol": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "north-shore-walk": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "primanti": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Strip District",
+      "popularity": 4
+    },
+    "south-side-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "South Side",
+      "popularity": 3
+    },
+    "heinz-history": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or weekday morning",
+      "area": "Strip District",
+      "popularity": 3
+    },
+    "cathedral-learning": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Oakland",
+      "popularity": 3
+    },
+    "squirrel-hill": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunchtime",
+      "area": "Oakland",
+      "popularity": 2
+    },
+    "pnc-park": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer evening game",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "market-square": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Lunch or early evening",
+      "area": "Downtown",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the museums, the inclines and a Strip District food morning; add a night for a ballgame or a day trip."
+  },
+  "airports": [
+    {
+      "code": "PIT",
+      "name": "Pittsburgh International Airport",
+      "primary": true,
+      "note": "Main gateway, about 21 km west of downtown.",
+      "options": [
+        {
+          "mode": "Bus 28X",
+          "to": "Downtown and Oakland",
+          "price": "$2.75",
+          "time": "40-60 min",
+          "note": "Runs every 30 minutes; much cheaper than a taxi."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Downtown hotels",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Book ahead; can be cheaper than a cab."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$35-50",
+          "time": "25-40 min",
+          "note": "About $35 normally, more in rush hour."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$30-50",
+          "time": "25-40 min",
+          "note": "Pickup at designated rideshare zone."
+        }
+      ]
+    },
+    {
+      "code": "LBE",
+      "name": "Arnold Palmer Regional Airport",
+      "primary": false,
+      "note": "Small airport near Latrobe, about 53 km southeast; limited flights.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "No easy public transport; free parking at airport."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "Availability can be limited; book ahead."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Pittsburgh",
+      "https://en.wikivoyage.org/wiki/Pittsburgh"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk downtown and ride the free T there; use buses, the T or ride apps for hills and river crossings.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Light rail ('The T') serves downtown, the North Shore and the south. Free downtown between Allegheny and First Avenue stations."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses reach most neighbourhoods. Fare is $2.75 with ConnectCard or app; cash needs exact change. A $7 day pass gives unlimited rides, and tickets allow transfers for three hours."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft are widely used and often cheaper than taxis. Street hailing is hard, so book in the app."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Handy for day trips, but hills and rivers make driving confusing. A GPS helps."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable, but expect hills and steps. The two inclines are a paid ride, not a walk."
+      },
+      {
+        "mode": "Incline",
+        "has": true,
+        "text": "Two historic inclines climb the hills for views. Fare is $2.75 with ConnectCard or app; cash exact fare."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, grey winters and warm, humid summers, with rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to October",
+        "text": "Highs run about 18–29°C. May, September and October are the most comfortable for walking."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs near 3–7°C and lows down to about -5°C. Snow and ice are possible; wear warm, grippy shoes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 10–16 wet days every month, peaking in spring and early summer. Pack a light rain jacket."
+      },
+      {
+        "icon": "🥵",
+        "title": "Humid summers",
+        "text": "July and August highs near 28–29°C with muggy air. Do hilltop views and trails early in the day."
+      },
+      {
+        "icon": "🍂",
+        "title": "Crisp autumn",
+        "text": "October highs near 18°C and cool nights. Good light and fall colours on the hills."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable walking shoes for hills and steps; a warm coat and hat in winter."
+      }
+    ]
+  }
+}

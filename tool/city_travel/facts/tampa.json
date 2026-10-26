@@ -1,0 +1,236 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Tampa blends a lively downtown with Cuban-flavoured Ybor City and nearby Gulf beaches.",
+  "intro": "Tampa rewards visitors with waterfront parks, historic streetcars, and easy access to Gulf beaches. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Ybor City",
+    "Channelside",
+    "Westshore"
+  ],
+  "taxi": {
+    "flag_day": 2.5,
+    "flag_airport": 3.5,
+    "per_km": 2.0,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "TECO Line Streetcar is fare-free and links downtown to Ybor City, roughly every 20 min.",
+    "HART buses cover Hillsborough County; local fare about $1.75, commuter express about $2.75.",
+    "PSTA buses serve Pinellas County and connect the airport to downtown Tampa.",
+    "Ride apps like Uber and Lyft operate; taxis are metered and best booked by app or phone.",
+    "Driving is convenient but rush hours (7:30-9:30AM, 3:30-7:30PM) are slow, especially on I-275.",
+    "Downtown is walkable; bikes and scooters work for short trips, but summer heat is strong."
+  ],
+  "airports": [
+    {
+      "code": "TPA",
+      "name": "Tampa International Airport",
+      "primary": true,
+      "note": "Main gateway, about 8 km northwest of downtown.",
+      "options": [
+        {
+          "mode": "HART bus 10",
+          "to": "Downtown Tampa",
+          "price": "$1.75",
+          "time": "30-45 min",
+          "note": "Cheapest option; stops near the Rental Car Center."
+        },
+        {
+          "mode": "PSTA bus 300X",
+          "to": "Downtown Tampa",
+          "price": "$1.75-3",
+          "time": "35-50 min",
+          "note": "Useful if heading toward St Petersburg or Clearwater."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Tampa",
+          "price": "$25-35",
+          "time": "15-25 min",
+          "note": "Metered; expect surcharges at peak times."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Tampa",
+          "price": "$18-30",
+          "time": "15-25 min",
+          "note": "Pickup zones are signed at the terminal."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City and region",
+          "price": "check locally",
+          "time": "10-20 min to downtown",
+          "note": "Rental Car Center is reached by the SkyConnect train."
+        }
+      ]
+    },
+    {
+      "code": "PIE",
+      "name": "St. Petersburg-Clearwater International Airport",
+      "primary": false,
+      "note": "Alternative airport about 24 km southwest, mainly Allegiant and Sun Country flights.",
+      "options": [
+        {
+          "mode": "PSTA bus",
+          "to": "Downtown Tampa",
+          "price": "$2-4",
+          "time": "60-90 min",
+          "note": "Requires a transfer; check schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Tampa",
+          "price": "$40-55",
+          "time": "25-40 min",
+          "note": "Longer ride across the bay."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Tampa",
+          "price": "$30-50",
+          "time": "25-40 min",
+          "note": "Availability can vary late at night."
+        }
+      ]
+    },
+    {
+      "code": "SRQ",
+      "name": "Sarasota-Bradenton International Airport",
+      "primary": false,
+      "note": "Further south, about 70 km, with some international and domestic flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Downtown Tampa",
+          "price": "$5-10",
+          "time": "2-3 hr",
+          "note": "Multiple transfers; check locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Tampa",
+          "price": "$90-130",
+          "time": "60-80 min",
+          "note": "Best for groups or late arrivals."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Tampa",
+          "price": "$70-110",
+          "time": "60-80 min",
+          "note": "Compare prices before booking."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Busch Gardens Tampa Bay",
+    "The Florida Aquarium",
+    "Checkers / Rally's",
+    "Geopoliticus Child Watching the Birth of the New Man"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tampa",
+      "https://en.wikivoyage.org/wiki/Tampa"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    27.94752,
+    -82.45843
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 7
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 9
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 11
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 27
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 26
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 20
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 6
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

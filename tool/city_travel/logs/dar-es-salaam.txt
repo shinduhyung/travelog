@@ -1,0 +1,31 @@
+$ deepseek_prep.py Dar es Salaam
+  tokens in 639 out 278
+Dar es Salaam: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Dar es Salaam
+  tokens in 4078 out 643
+Dar es Salaam: 0 problems
+
+$ deepseek_city.py Dar es Salaam --stage places
+Dar es Salaam: places
+  tokens in 1136 out 2989
+
+$ deepseek_city.py Dar es Salaam --stage frame
+Dar es Salaam: frame
+  tokens in 2470 out 1751
+
+$ deepseek_city.py Dar es Salaam --stage plans
+Dar es Salaam: plans
+  plans for day
+  tokens in 2118 out 860
+  plans for 1n
+  tokens in 2119 out 877
+  plans for 2n
+  tokens in 2124 out 1450
+  plans for 3n
+  tokens in 2119 out 1795
+
+$ merge_city.py Dar es Salaam
+Dar es Salaam: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/dar-es-salaam.json and planner/dar-es-salaam.json
+

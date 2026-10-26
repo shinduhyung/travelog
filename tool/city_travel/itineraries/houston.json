@@ -1,0 +1,1606 @@
+{
+  "city": "Houston",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Houston mixes world-class museums, NASA history and a food scene built on immigration. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 29.6558,
+      "west": -95.5627,
+      "north": 29.7771,
+      "east": -95.3384,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 2.5,
+      "flag_airport": 3.5,
+      "per_km": 1.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 25,
+    "notes": [
+      "METRORail light rail covers about 37 km on Red, Green and Purple lines.",
+      "METRO buses fill the gaps; fare is about $1.25 each way.",
+      "Pay with a METRO Q Card or day pass for free transfers within 3 hours.",
+      "Uber and Lyft are widely used; Empower is a local lower-cost option.",
+      "Driving is easiest but rush hour runs roughly 7-9AM and 4-6:30PM.",
+      "Downtown is walkable; elsewhere sidewalks are patchy and heat is fierce."
+    ],
+    "sources": []
+  },
+  "places": {
+    "space-center": {
+      "name": "Space Center Houston",
+      "landmark": "Space Center Houston",
+      "kind": "museum",
+      "lat": 29.5502,
+      "lon": -95.097,
+      "price": 34.95,
+      "price_text": "≈ USD 30–40 adult · child and senior rates lower · check online for current price",
+      "hours": "Daily, roughly 10:00–17:00 · check on the day for closures",
+      "tip": "Book online and arrive at opening. The tram tour to the historic Mission Control is the highlight and fills up fast.",
+      "source": "https://spacecenter.org/"
+    },
+    "houston-zoo": {
+      "name": "Houston Zoo",
+      "landmark": "Houston Zoo",
+      "kind": "park",
+      "lat": 29.7126,
+      "lon": -95.3908,
+      "price": 28,
+      "price_text": "≈ USD 20–35 adult depending on date · buy online",
+      "hours": "Daily, roughly 09:00–17:00 · check on the day",
+      "tip": "Go early in the morning. Houston heat peaks midday, and the animals are more active before it.",
+      "source": "https://www.houstonzoo.org/"
+    },
+    "downtown-aquarium": {
+      "name": "Downtown Aquarium",
+      "landmark": "Downtown Aquarium",
+      "kind": "sight",
+      "lat": 29.7619,
+      "lon": -95.3698,
+      "price": 28,
+      "price_text": "≈ USD 20–30 aquarium admission · restaurant separate",
+      "hours": "Daily, roughly 10:00–20:00 · check on the day",
+      "tip": "Good for families and a rainy afternoon. The upstairs restaurant has tanks around the tables.",
+      "source": "https://www.aquariumrestaurants.com/downtownaquariumhouston/"
+    },
+    "rice-university": {
+      "name": "Rice University",
+      "landmark": "Rice University",
+      "kind": "sight",
+      "lat": 29.7174,
+      "lon": -95.4018,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds generally open daily · buildings vary",
+      "tip": "Walk the live-oak quad and the Moody Center for the Arts. It is a calm break from the museum crowds.",
+      "source": "https://www.rice.edu/"
+    },
+    "funplex": {
+      "name": "Funplex",
+      "landmark": "Funplex",
+      "kind": "activity",
+      "lat": 29.6701,
+      "lon": -95.5398,
+      "price": null,
+      "price_text": "Pay per ride or attraction · check current prices on site",
+      "hours": "Check on the day · hours vary by season",
+      "tip": "A family fun park with rides and games. Confirm opening hours before you drive out; it is far from downtown.",
+      "source": ""
+    },
+    "hermann-park": {
+      "name": "Hermann Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 29.7189,
+      "lon": -95.3926,
+      "price": 0,
+      "price_text": "Free · paddle boats and train cost extra",
+      "hours": "Daily, roughly 06:00–23:00",
+      "tip": "Rent a paddle boat on the lake or ride the small train. Shade is limited, so bring water.",
+      "source": "https://www.hermannpark.org/"
+    },
+    "museum-fine-arts": {
+      "name": "Museum of Fine Arts, Houston",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 29.7256,
+      "lon": -95.3906,
+      "price": 20,
+      "price_text": "≈ USD 15–25 adult · free on some days, check online",
+      "hours": "Closed Monday · otherwise roughly 11:00–17:00, later some days",
+      "tip": "Big collection across two buildings. Check the free-admission day before you go.",
+      "source": "https://www.mfah.org/"
+    },
+    "natural-science-museum": {
+      "name": "Houston Museum of Natural Science",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 29.7222,
+      "lon": -95.3896,
+      "price": 25,
+      "price_text": "≈ USD 20–30 permanent exhibits · planetarium and butterfly house extra",
+      "hours": "Daily, roughly 09:00–17:00 · check on the day",
+      "tip": "The dinosaur hall and butterfly center suit all ages. Buy timed tickets online to skip lines.",
+      "source": "https://www.hmns.org/"
+    },
+    "buffalo-bayou": {
+      "name": "Buffalo Bayou Park and hike-and-bike trail",
+      "landmark": null,
+      "kind": "park",
+      "lat": 29.7628,
+      "lon": -95.3922,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Trails open daily, dawn to dusk",
+      "tip": "Walk or rent a bike along the bayou. The skyline view from the west end is best near sunset.",
+      "source": "https://www.buffalobayou.org/"
+    },
+    "market-square": {
+      "name": "Market Square Park and historic district",
+      "landmark": null,
+      "kind": "food",
+      "lat": 29.7626,
+      "lon": -95.3613,
+      "price": 0,
+      "price_text": "Free to enter · food and drink extra",
+      "hours": "Park daily · nearby bars and cafes vary",
+      "tip": "A small downtown park with bars around it. Good stop on a downtown walk in the evening.",
+      "source": ""
+    },
+    "montrose-walk": {
+      "name": "Westheimer Road in Montrose",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 29.7435,
+      "lon": -95.3935,
+      "price": 0,
+      "price_text": "Free to walk · cafes and shops extra",
+      "hours": "Shops and cafes vary · liveliest afternoon to late evening",
+      "tip": "Walk Westheimer for cafes, vintage shops and restaurants. It is Houston's most walkable strip.",
+      "source": ""
+    },
+    "galleria": {
+      "name": "The Galleria",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 29.7392,
+      "lon": -95.4645,
+      "price": 0,
+      "price_text": "Free to enter · shopping and ice rink extra",
+      "hours": "Daily, roughly 10:00–20:00 · check on the day",
+      "tip": "A huge mall with an indoor ice rink. Handy on a hot or rainy day.",
+      "source": "https://www.simon.com/mall/the-galleria"
+    },
+    "food-hall-downtown": {
+      "name": "Downtown food hall and Finn Hall area",
+      "landmark": null,
+      "kind": "food",
+      "lat": 29.7589,
+      "lon": -95.3622,
+      "price": null,
+      "price_text": "Meals roughly USD 10–20 · check on the day",
+      "hours": "Roughly 11:00–20:00 weekdays · weekend hours vary",
+      "tip": "Many small vendors under one roof. Good for groups who want different food.",
+      "source": ""
+    },
+    "tunnel-walk": {
+      "name": "Downtown tunnel walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 29.7595,
+      "lon": -95.3631,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Weekdays roughly 06:00–18:00 · mostly closed weekends",
+      "tip": "An underground network of shops and food courts. It is air-conditioned and busy at lunch.",
+      "source": ""
+    },
+    "waterwall": {
+      "name": "Gerald D. Hines Waterwall Park",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 29.7355,
+      "lon": -95.4611,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 08:00–20:00",
+      "tip": "A tall curved water wall near the Galleria. A quick photo stop, best in cooler hours.",
+      "source": ""
+    },
+    "menil": {
+      "name": "The Menil Collection",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 29.7372,
+      "lon": -95.3986,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Closed Monday and Tuesday · otherwise roughly 11:00–19:00",
+      "tip": "A free art museum in a leafy neighbourhood. Combine it with a walk to the nearby Rothko Chapel.",
+      "source": "https://www.menil.org/"
+    },
+    "rothko-chapel": {
+      "name": "Rothko Chapel",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 29.7377,
+      "lon": -95.3966,
+      "price": 0,
+      "price_text": "Free · donations welcome",
+      "hours": "Daily, roughly 10:00–18:00 · check on the day",
+      "tip": "A quiet space for reflection. Keep voices low and skip it if you want lively sightseeing.",
+      "source": "https://rothkochapel.org/"
+    },
+    "city-tour": {
+      "name": "Houston city sightseeing tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 29.7604,
+      "lon": -95.3698,
+      "price": 40,
+      "price_text": "≈ USD 30–60 depending on operator and length",
+      "hours": "Departures vary · book ahead",
+      "tip": "A bus or van tour is an easy way to see the spread-out city without driving. Confirm pickup point.",
+      "source": ""
+    },
+    "sabercat-statue": {
+      "name": "Houston Sabercats and stadium area walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 29.7519,
+      "lon": -95.3622,
+      "price": null,
+      "price_text": "Event tickets vary · check on the day",
+      "hours": "Event days only",
+      "tip": "Check the sports calendar if you want a game. Otherwise skip this area.",
+      "source": ""
+    },
+    "kemah": {
+      "name": "Kemah Boardwalk day trip",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 29.5466,
+      "lon": -95.0202,
+      "price": null,
+      "price_text": "Free to walk · rides and restaurants extra",
+      "hours": "Rides and shops vary · check on the day",
+      "tip": "A waterfront boardwalk with rides and seafood, about an hour from downtown. Go for sunset.",
+      "source": ""
+    },
+    "bbq-stop": {
+      "name": "Classic Texas barbecue lunch",
+      "landmark": null,
+      "kind": "food",
+      "lat": 29.7441,
+      "lon": -95.3772,
+      "price": 25,
+      "price_text": "≈ USD 15–35 per person · check on the day",
+      "hours": "Often lunch only or until sold out · check on the day",
+      "tip": "Houston barbecue is a must. Go early; popular spots sell out by mid-afternoon.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Houston culture: Space Center in the morning, museums and a quiet chapel in the afternoon.",
+      "days": [
+        {
+          "title": "Space Center, then Museum District",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Arrive at opening. It is a long drive south of downtown, so go first."
+            },
+            {
+              "place": "rice-university",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Drive back north to the Museum District. Walk the leafy campus."
+            },
+            {
+              "place": "museum-fine-arts",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Closed Monday. Check closing time on the day."
+            },
+            {
+              "place": "menil",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Closed Monday and Tuesday. A short drive west in Montrose."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Next door to the Menil. A quiet end to the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A eating-focused day: barbecue lunch, downtown tunnels and food halls, Montrose in the evening.",
+      "days": [
+        {
+          "title": "Barbecue, downtown and Montrose",
+          "stops": [
+            {
+              "place": "bbq-stop",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Arrive early. Many places sell out and close after lunch."
+            },
+            {
+              "place": "tunnel-walk",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Weekdays only, roughly 06:00–18:00. Mostly closed weekends."
+            },
+            {
+              "place": "market-square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk the historic district nearby."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee or a snack. Weekday hours are the most reliable."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Cafes, bars and shops along Westheimer. Liveliest late afternoon into evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "A big family day: Space Center first, then the zoo and park in the Museum District.",
+      "days": [
+        {
+          "title": "Space Center, zoo and Hermann Park",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Allow half a day. Arrive at opening."
+            },
+            {
+              "place": "houston-zoo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Drive back to the Museum District. Check closing time on the day."
+            },
+            {
+              "place": "hermann-park",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Next to the zoo. Good for a run-around before dinner."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Drive downtown for dinner and the tanks. Open into the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museums and art in the Museum District and Montrose, with a quiet chapel stop.",
+      "days": [
+        {
+          "title": "Museum District afternoon",
+          "stops": [
+            {
+              "place": "museum-fine-arts",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "rice-university",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Short walk or quick ride. Campus grounds are open daily."
+            },
+            {
+              "place": "hermann-park",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Stroll the park before dinner."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Often lunch only or until sold out. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Montrose art morning",
+          "stops": [
+            {
+              "place": "menil",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "A few minutes on foot. Keep voices low."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch and browsing along Westheimer Road."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District or Montrose"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Barbecue, a downtown food hall and an evening in Montrose.",
+      "days": [
+        {
+          "title": "Downtown tastes",
+          "stops": [
+            {
+              "place": "tunnel-walk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekdays only. Mostly closed weekends."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Weekday lunch. Weekend hours vary."
+            },
+            {
+              "place": "market-square",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Park is open daily. Bars and cafes vary."
+            },
+            {
+              "place": "city-tour",
+              "at": "19:00",
+              "minutes": 0,
+              "note": "Skip if departures don't fit. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Barbecue and Montrose",
+          "stops": [
+            {
+              "place": "bbq-stop",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Arrive early. Often until sold out."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Cafes and shops. Liveliest afternoon to late evening."
+            },
+            {
+              "place": "buffalo-bayou",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Trails open dawn to dusk. Walk off lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Montrose"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Space Center and the zoo, with a park and a rainy-day backup.",
+      "days": [
+        {
+          "title": "Space Center day",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Allow half a day. Check closures on the day."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Roughly 30-40 minutes by car. Good for a rainy afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and park morning",
+          "stops": [
+            {
+              "place": "houston-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Go early before the heat. Check hours on the day."
+            },
+            {
+              "place": "hermann-park",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Next door. Picnic lunch in the park."
+            },
+            {
+              "place": "natural-science-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Short walk. Good indoor backup if it rains."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums and art first, Space Center and the historic downtown on day three.",
+      "days": [
+        {
+          "title": "Museum District: art and campus",
+          "stops": [
+            {
+              "place": "museum-fine-arts",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Closed Monday. Start when it opens."
+            },
+            {
+              "place": "rice-university",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch nearby, then a short campus walk."
+            },
+            {
+              "place": "menil",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday. Free entry."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "A few minutes on foot from the Menil."
+            }
+          ]
+        },
+        {
+          "title": "Space Center, then downtown evening",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Allow half a day. It is a drive south of the city."
+            },
+            {
+              "place": "market-square",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Historic downtown square. Bars and cafes vary."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner. Weekend hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Downtown tunnels and a city tour",
+          "stops": [
+            {
+              "place": "tunnel-walk",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Weekdays only, roughly 06:00–18:00. Mostly closed weekends."
+            },
+            {
+              "place": "city-tour",
+              "at": "11:30",
+              "minutes": 180,
+              "note": "Book ahead. Departures vary."
+            },
+            {
+              "place": "waterwall",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short taxi or drive to Uptown. Good light late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Barbecue, food halls and Montrose evenings, with museums and Space Center between meals.",
+      "days": [
+        {
+          "title": "Downtown lunch and Montrose evening",
+          "stops": [
+            {
+              "place": "tunnel-walk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekdays only. A good way to find lunch underground."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Weekday hours are the most reliable."
+            },
+            {
+              "place": "menil",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Cafes and bars along Westheimer. Liveliest late afternoon into evening."
+            }
+          ]
+        },
+        {
+          "title": "Barbecue lunch and Space Center",
+          "stops": [
+            {
+              "place": "bbq-stop",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Arrive early. Often lunch only or until sold out."
+            },
+            {
+              "place": "space-center",
+              "at": "13:00",
+              "minutes": 240,
+              "note": "Allow half a day. Check closing time on the day."
+            },
+            {
+              "place": "market-square",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening downtown. Nearby bars vary."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then out",
+          "stops": [
+            {
+              "place": "natural-science-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning on a weekday is calmest."
+            },
+            {
+              "place": "hermann-park",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the park next door."
+            },
+            {
+              "place": "kemah",
+              "at": "15:30",
+              "minutes": 240,
+              "note": "Boardwalk day trip. Rides and shops vary, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Montrose"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Space Center and zoo for the kids, with parks and an indoor backup for hot or rainy days.",
+      "days": [
+        {
+          "title": "Zoo and Hermann Park",
+          "stops": [
+            {
+              "place": "houston-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Morning is cooler. Check hours on the day."
+            },
+            {
+              "place": "hermann-park",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Picnic lunch and a run around."
+            },
+            {
+              "place": "natural-science-museum",
+              "at": "14:30",
+              "minutes": 180,
+              "note": "Indoor and air-conditioned. Good afternoon stop."
+            }
+          ]
+        },
+        {
+          "title": "Space Center day",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Allow half a day. It is a drive south of the city."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Indoor backup and dinner in one stop. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Uptown: waterwall and Galleria",
+          "stops": [
+            {
+              "place": "waterwall",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Short photo stop. Open roughly 08:00–20:00."
+            },
+            {
+              "place": "galleria",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Indoor mall, good in heat or rain. Lunch here."
+            },
+            {
+              "place": "funplex",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Weekend daytime is busiest. Hours vary by season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, Space Center and a quiet chapel — best on weekdays when the big sights are calm.",
+      "days": [
+        {
+          "title": "Arrive, Museum District museums",
+          "stops": [
+            {
+              "place": "museum-fine-arts",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. Start here after checking in."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Short drive or rideshare from the museum. Quiet inside."
+            },
+            {
+              "place": "menil",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday. Free entry, next to the chapel."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "18:15",
+              "minutes": 120,
+              "note": "Dinner and a stroll along Westheimer."
+            }
+          ]
+        },
+        {
+          "title": "Space Center, then downtown history",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "About 30–40 minutes by car from downtown. Allow half a day."
+            },
+            {
+              "place": "tunnel-walk",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Weekdays only, roughly 06:00–18:00. Cool and covered."
+            },
+            {
+              "place": "market-square",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Historic district. Bars and cafes vary."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Weekday lunch is best here; weekend hours vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Rice campus, park and city tour",
+          "stops": [
+            {
+              "place": "rice-university",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Walk the grounds in the morning cool."
+            },
+            {
+              "place": "hermann-park",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Next to campus. Morning is comfortable."
+            },
+            {
+              "place": "natural-science-museum",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "In the park. Grab lunch nearby first."
+            },
+            {
+              "place": "city-tour",
+              "at": "16:00",
+              "minutes": 180,
+              "note": "Book ahead; departures vary."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "waterwall",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Quick photo stop in Uptown."
+            },
+            {
+              "place": "galleria",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Indoor, good if it is hot or raining."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Museum District"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Barbecue, food halls and Montrose evenings — eat early at the barbecue spots before they sell out.",
+      "days": [
+        {
+          "title": "Arrive, Montrose food and art",
+          "stops": [
+            {
+              "place": "bbq-stop",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Often lunch only or until sold out. Arrive early."
+            },
+            {
+              "place": "menil",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday. Free entry."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Next door. Check hours on the day."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Cafes and bars, liveliest late afternoon into evening."
+            }
+          ]
+        },
+        {
+          "title": "Downtown tunnels and food hall",
+          "stops": [
+            {
+              "place": "tunnel-walk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekdays roughly 06:00–18:00, mostly closed weekends."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Weekday lunch is the safe bet."
+            },
+            {
+              "place": "market-square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk off lunch in the historic district."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Indoor; good for a rainy afternoon. Also has food."
+            }
+          ]
+        },
+        {
+          "title": "Space Center and bayou sunset",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "About 30–40 minutes by car. Eat before or after."
+            },
+            {
+              "place": "buffalo-bayou",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Trails open dawn to dusk. Sunset is the best light."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner in Montrose."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "bbq-stop",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Go early before it sells out. Check on the day."
+            },
+            {
+              "place": "waterwall",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short stop in Uptown before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Montrose or Downtown"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Space Center, zoo and hands-on museums — mornings outdoors, afternoons indoors when it gets hot.",
+      "days": [
+        {
+          "title": "Arrive, zoo and park",
+          "stops": [
+            {
+              "place": "houston-zoo",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning is cooler. Roughly 09:00–17:00, check on the day."
+            },
+            {
+              "place": "hermann-park",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Next to the zoo. Bring water and sunscreen."
+            },
+            {
+              "place": "natural-science-museum",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Indoor and in the park. Good for the hottest hours."
+            }
+          ]
+        },
+        {
+          "title": "Space Center day",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "About 30–40 minutes by car. Allow half a day."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Indoor; roughly 10:00–20:00. Dinner here works well."
+            }
+          ]
+        },
+        {
+          "title": "Galleria and Uptown fun",
+          "stops": [
+            {
+              "place": "waterwall",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick photo stop; roughly 08:00–20:00."
+            },
+            {
+              "place": "galleria",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Indoor mall; good in heat or rain."
+            },
+            {
+              "place": "funplex",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Hours vary by season, check on the day."
+            },
+            {
+              "place": "kemah",
+              "at": "17:00",
+              "minutes": 240,
+              "note": "Optional evening out; rides and shops vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "buffalo-bayou",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Trails open dawn to dusk. Easy walk before checkout."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District or Uptown/Galleria"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museums, Space Center and a quiet chapel, grouped by area so you spend less time in traffic.",
+      "days": [
+        {
+          "title": "Arrive and downtown",
+          "stops": [
+            {
+              "place": "tunnel-walk",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Weekdays only. A cool, dry walk under downtown."
+            },
+            {
+              "place": "market-square",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Short walk from the tunnels. Historic buildings around the park."
+            },
+            {
+              "place": "city-tour",
+              "at": "15:30",
+              "minutes": 180,
+              "note": "Book ahead. Departure times vary, so confirm the day before."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Weekend hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Museum District",
+          "stops": [
+            {
+              "place": "museum-fine-arts",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Closed Monday. Opens around 11:00."
+            },
+            {
+              "place": "rice-university",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the leafy campus. Buildings vary."
+            },
+            {
+              "place": "hermann-park",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Next to Rice. Morning or late afternoon is cooler."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Often lunch only or until sold out, so check hours and go early."
+            }
+          ]
+        },
+        {
+          "title": "Space Center day",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "About 30–40 minutes south by car. Allow half a day."
+            },
+            {
+              "place": "natural-science-museum",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Back in the Museum District. Check closing time on the day."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner and a wander. Liveliest late afternoon into evening."
+            }
+          ]
+        },
+        {
+          "title": "Montrose art, then fly",
+          "stops": [
+            {
+              "place": "menil",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday. Free entry in most galleries."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "A few minutes on foot from the Menil. Keep it quiet inside."
+            },
+            {
+              "place": "buffalo-bayou",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Trails open dawn to dusk. Grab lunch nearby first."
+            },
+            {
+              "place": "galleria",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Indoor backup if it rains. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Barbecue, food halls and Montrose evenings, with museums and parks in between meals.",
+      "days": [
+        {
+          "title": "Downtown eating",
+          "stops": [
+            {
+              "place": "tunnel-walk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Weekdays only. Lunch spots fill up fast at midday."
+            },
+            {
+              "place": "food-hall-downtown",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Roughly 11:00–20:00 on weekdays."
+            },
+            {
+              "place": "market-square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Coffee and a walk around the historic blocks."
+            },
+            {
+              "place": "city-tour",
+              "at": "15:30",
+              "minutes": 180,
+              "note": "Book ahead. Confirm departure time."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner on Westheimer. Busiest late evening."
+            }
+          ]
+        },
+        {
+          "title": "Barbecue and bayou",
+          "stops": [
+            {
+              "place": "bbq-stop",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Arrive early. Many places sell out or close after lunch."
+            },
+            {
+              "place": "menil",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Monday and Tuesday. Free entry in most galleries."
+            },
+            {
+              "place": "rothko-chapel",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Short walk from the Menil."
+            },
+            {
+              "place": "buffalo-bayou",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk off lunch. Trails open dawn to dusk."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Second dinner stop: tacos or Viet-Cajun nearby."
+            }
+          ]
+        },
+        {
+          "title": "Space Center and seafood",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Eat a light breakfast. Food on site is basic."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Aquarium plus a meal under one roof. Check hours on the day."
+            },
+            {
+              "place": "market-square",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening drink nearby if you are still hungry."
+            }
+          ]
+        },
+        {
+          "title": "Museums, then fly",
+          "stops": [
+            {
+              "place": "museum-fine-arts",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Closed Monday. Cafe inside for a light lunch."
+            },
+            {
+              "place": "hermann-park",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk it off. Shade is limited at midday."
+            },
+            {
+              "place": "galleria",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Food court and shops. Indoor and cool."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Montrose"
+    },
+    {
+      "id": "4n-family",
+      "length": "4n",
+      "style": "family",
+      "nights": 4,
+      "for": "Space Center, zoo and parks, with indoor backups for hot or rainy afternoons.",
+      "days": [
+        {
+          "title": "Space Center day",
+          "stops": [
+            {
+              "place": "space-center",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "About 30–40 minutes south by car. Book tickets ahead."
+            },
+            {
+              "place": "downtown-aquarium",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Drive back north. Good rainy-day backup."
+            },
+            {
+              "place": "market-square",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Short walk away. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and museums",
+          "stops": [
+            {
+              "place": "houston-zoo",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Go early before the heat. Check hours on the day."
+            },
+            {
+              "place": "hermann-park",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Picnic lunch, then the playgrounds."
+            },
+            {
+              "place": "natural-science-museum",
+              "at": "14:30",
+              "minutes": 180,
+              "note": "Indoor and cool. Check closing time."
+            },
+            {
+              "place": "bbq-stop",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Arrive early; many places sell out."
+            }
+          ]
+        },
+        {
+          "title": "Galleria and waterwall",
+          "stops": [
+            {
+              "place": "waterwall",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick photo stop. Best in the morning."
+            },
+            {
+              "place": "galleria",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Shops and food court. Indoor and cool."
+            },
+            {
+              "place": "funplex",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Games and rides. Hours vary by season, so check."
+            },
+            {
+              "place": "montrose-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Casual dinner. Liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Boardwalk or museums, then fly",
+          "stops": [
+            {
+              "place": "kemah",
+              "at": "11:00",
+              "minutes": 240,
+              "note": "About 45–60 minutes southeast by car. Check ride hours on the day."
+            },
+            {
+              "place": "museum-fine-arts",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Closed Monday. Short visit only if time allows."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Museum District"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Space Center, museums and the historic port."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Tex-Mex, barbecue, Viet-Cajun and taquerias."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Space Center, zoo, parks and hands-on museums."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        120,
+        320
+      ],
+      "why": "Walkable core near the theater district, sports arenas and the rail line; good base without a car.",
+      "center": [
+        29.7589,
+        -95.3677
+      ]
+    },
+    {
+      "area": "Museum District",
+      "range": [
+        140,
+        350
+      ],
+      "why": "Quiet, leafy and next to the big museums, Hermann Park and the zoo; easy rail to downtown.",
+      "center": [
+        29.7215,
+        -95.3905
+      ]
+    },
+    {
+      "area": "Uptown/Galleria",
+      "range": [
+        130,
+        400
+      ],
+      "why": "Mall shopping, many restaurants and hotels; handy if you plan to drive or shop.",
+      "center": [
+        29.7395,
+        -95.4645
+      ]
+    },
+    {
+      "area": "Montrose",
+      "range": [
+        110,
+        300
+      ],
+      "why": "Bars, cafés and galleries; central for nightlife and close to the Museum District.",
+      "center": [
+        29.7425,
+        -95.3905
+      ]
+    }
+  ],
+  "food": [
+    "Try Texas barbecue: brisket and ribs by the pound. Popular spots get long lines; go early or off-peak.",
+    "Tex-Mex is the local staple: breakfast tacos, fajitas and queso. Expect $8–15 for a plate.",
+    "Look for Viet-Cajun crawfish in season (roughly spring). Prices vary by market; check on the day.",
+    "Montrose and the Heights have dense clusters of cafés and casual restaurants; walk and pick one.",
+    "Tipping is expected: about 15–20% at sit-down restaurants."
+  ],
+  "more_time": [
+    "Add a beach day at Galveston, about an hour's drive southeast; check traffic and the weather first.",
+    "Museum lovers can spend a half day at the Museum of Fine Arts and the nearby Hermann Park.",
+    "Baseball or basketball fans: check the Astros and Rockets home schedules before booking."
+  ]
+}

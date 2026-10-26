@@ -1,0 +1,28 @@
+$ deepseek_facts.py Stockholm
+  tokens in 4485 out 1237
+Stockholm: 1 problems
+  - VST taxi 109 kr vs tariff estimate 1777
+
+$ deepseek_city.py Stockholm --stage places
+Stockholm: places
+  tokens in 1251 out 4519
+
+$ deepseek_city.py Stockholm --stage frame
+Stockholm: frame
+  tokens in 2427 out 1714
+
+$ deepseek_city.py Stockholm --stage plans
+Stockholm: plans
+  plans for day
+  tokens in 2629 out 828
+  plans for 1n
+  tokens in 2630 out 1222
+  plans for 2n
+  tokens in 2635 out 1486
+  plans for 3n
+  tokens in 2630 out 1479
+
+$ merge_city.py Stockholm
+Stockholm: 26 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/stockholm.json and planner/stockholm.json
+

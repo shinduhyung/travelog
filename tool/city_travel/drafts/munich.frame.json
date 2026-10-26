@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Marienplatz, the Residenz and the big museums."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Beer halls, market stalls and hearty Bavarian plates."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "The English Garden, the Isar and day trips to the Alps."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Altstadt",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to Marienplatz, the Residenz and the Viktualienmarkt. Best for a first visit with little time.",
+      "center": [
+        48.137,
+        11.575
+      ]
+    },
+    {
+      "area": "Maxvorstadt",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Museum quarter on the doorstep: Alte and Neue Pinakothek, Pinakothek der Moderne. Quiet streets, 10–15 minutes' walk to the centre.",
+      "center": [
+        48.148,
+        11.568
+      ]
+    },
+    {
+      "area": "Ludwigsvorstadt",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Around the main station: easy airport S-Bahn, cheap hotels, short walk to the Altstadt and Theresienwiese.",
+      "center": [
+        48.135,
+        11.555
+      ]
+    },
+    {
+      "area": "Haidhausen",
+      "range": [
+        110,
+        250
+      ],
+      "why": "Local feel east of the Isar: cafés, the Gasteig area and a short tram or walk to the centre. Good value.",
+      "center": [
+        48.13,
+        11.6
+      ]
+    }
+  ],
+  "food": [
+    "Try Bavarian classics: Weisswurst with sweet mustard before noon, roast pork with dumplings, and pretzels.",
+    "Beer gardens: sit outside with a Mass (1 litre) of beer and bring your own picnic if you like. Check opening months; many close in winter.",
+    "Viktualienmarkt in the Altstadt: stalls for cheese, bread, olives and snacks. Cheaper than restaurant lunches.",
+    "Lunch menus (Mittagsmenü) are good value, often EUR 10–16 for a main. Dinner mains run higher.",
+    "Book beer halls and popular restaurants on weekends. Tipping: round up or add about 5–10%."
+  ],
+  "more_time": [
+    "Day trip to Neuschwanstein or the Alps: trains run from the main station; check times and buy tickets on the day or in advance.",
+    "Add a half-day at Nymphenburg Palace and its park; tram reaches it from the centre.",
+    "On a hot day, swap a museum for the Isar river banks or a swim at the English Garden's streams."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "art": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.5,
+      0.4
+    ]
+  },
+  "best_for": [
+    "culture",
+    "history",
+    "art"
+  ],
+  "recommend": {
+    "why": "Two nights covers the Altstadt, the Residenz and the main museums; add a third for a day trip to the Alps or a palace."
+  },
+  "month_notes": [
+    "January: cold, highs around 4°C, some rain. Pack a warm coat and plan indoor sights.",
+    "February: still cold, lows near -1°C. Fewer crowds at museums.",
+    "March: cool, highs near 10°C. Rain on about 12 days; bring a waterproof layer.",
+    "April: milder, highs around 14°C. Beer gardens start to open; evenings still chilly.",
+    "May: pleasant, highs near 18°C, but the wettest month with about 16 rain days. Keep an umbrella handy.",
+    "June: warm, highs around 23°C. Good for parks and outdoor cafés.",
+    "July: warmest month, highs near 24°C. Book hotels early; beer gardens are busy.",
+    "August: warm, highs around 24°C. Similar to July; expect some rain days.",
+    "September: mild, highs near 19°C. Comfortable for walking and sightseeing.",
+    "October: cooler, highs around 15°C. Rain on about 11 days; layers help.",
+    "November: cold, highs near 9°C. Christmas market season starts late in the month.",
+    "December: cold, highs around 6°C, lows near -1°C. Christmas markets are the highlight; dress warmly."
+  ],
+  "climate_guide": {
+    "summary": "Temperate continental climate: cold winters, warm summers and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 18–24°C. Best for parks, beer gardens and day trips."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs of 4–7°C and lows near -3 to -1°C. Snow is possible; pack a warm coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 11–16 rain days every month. May is wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild spring and autumn",
+        "text": "April and October highs of 14–15°C. Good for walking with a jacket."
+      },
+      {
+        "icon": "🧥",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes. Add gloves and a hat for winter."
+      },
+      {
+        "icon": "🍺",
+        "title": "Seasonal tips",
+        "text": "Beer gardens are best June to September; Christmas markets run in December."
+      }
+    ]
+  },
+  "transit": {
+    "best": "U-Bahn and S-Bahn for most trips; the centre is walkable.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "S-Bahn links the airport and main stations; U-Bahn covers north-south routes. One ticket works across S-Bahn, U-Bahn, tram and bus. Validate before travel or risk a €60 fine."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill outer gaps. Same ticket as trains and trams."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams circle the inner city and reach Nymphenburg Palace."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber and Bolt operate in Munich."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Fine on the fringes but ring roads are often congested. Use Park & Ride for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable and bike-friendly, with many cycle paths."
+      }
+    ]
+  }
+}

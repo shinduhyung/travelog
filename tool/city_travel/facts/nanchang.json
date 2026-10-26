@@ -1,0 +1,170 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Nanchang: a river city of lakes, towers and spicy Jiangxi flavours.",
+  "intro": "Nanchang rewards visitors with riverside views, ancient towers and a lively street-food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Donghu",
+    "Xihu",
+    "Honggutan",
+    "Qingshanhu"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 120,
+    "per_km": 1.9,
+    "min_fare": 8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: 4 lines run across the city; a 5th is under construction.",
+    "Buses cost about ¥2 flat, more for double-deckers.",
+    "Taxis start at ¥6-8 and charge about ¥1.9/km; 20% night surcharge 23:00-05:00.",
+    "Ride apps like Didi work well; tell taxi drivers 'da biao' (use the meter).",
+    "Shared bikes and e-bikes are common; park in marked zones and wear a helmet.",
+    "Driving is busy; walking and metro are easier in the centre."
+  ],
+  "airports": [
+    {
+      "code": "KHN",
+      "name": "Nanchang Changbei International Airport",
+      "primary": true,
+      "note": "Main airport, about 21 km north of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown",
+          "price": "¥15-20",
+          "time": "40-60 min",
+          "note": "Cheapest public option; check the line for your stop."
+        },
+        {
+          "mode": "Metro + bus",
+          "to": "City centre",
+          "price": "¥5-10",
+          "time": "60-80 min",
+          "note": "Check locally for the current airport link."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown / Nanchang Station",
+          "price": "¥80-120",
+          "time": "30-50 min",
+          "note": "Ask for the meter; tolls may add to the fare."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "30-50 min",
+          "note": "Ride apps work; meet at the designated pickup point."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Tengwang Pavilion"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Nanchang",
+      "https://en.wikivoyage.org/wiki/Nanchang"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    28.68396,
+    115.85306
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 5,
+      "rain_days": 13
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 16
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 15
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 17
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 20
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 14
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 11
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 8
+    },
+    {
+      "high": 24,
+      "low": 17,
+      "rain_days": 7
+    },
+    {
+      "high": 19,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 12,
+      "low": 5,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "KHN taxi ¥80-120 vs tariff estimate 174"
+  ]
+}

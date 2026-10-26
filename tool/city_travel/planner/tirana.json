@@ -1,0 +1,583 @@
+{
+  "city": "Tirana",
+  "checked": "October 2026",
+  "intro_line": "Tirana: colorful, chaotic, and full of surprises.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Skanderbeg Square",
+        "Blloku",
+        "Rruga e Kavajës",
+        "Komuna e Parisit"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Skanderbeg Square",
+        "Blloku",
+        "Rruga e Kavajës",
+        "Komuna e Parisit"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Skanderbeg Square",
+        "Blloku",
+        "Rruga e Kavajës",
+        "Komuna e Parisit"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Skanderbeg Square",
+        "Blloku",
+        "Rruga e Kavajës",
+        "Komuna e Parisit"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Skanderbeg Square",
+        "Blloku",
+        "Rruga e Kavajës",
+        "Komuna e Parisit"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 12,
+        "note": "Coldest month: highs near 11°C, lows near 2°C, and about 12 rain days. Pack a warm coat."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 10,
+        "note": "Still chilly at about 14°C highs; rain on roughly 10 days. Good for museums."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 12,
+        "note": "Mild at 16°C highs, but one of the wettest months with about 12 rain days. Bring an umbrella."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 11,
+        "note": "Spring warms to 19°C highs with about 11 rain days. Pleasant for walking."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 14,
+        "note": "Warm at 23°C highs; the wettest month with about 14 rain days. Keep plans flexible."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 7,
+        "note": "Early summer: 28°C highs, only about 7 rain days. Long café evenings."
+      },
+      {
+        "high": 32,
+        "low": 20,
+        "rain_days": 4,
+        "note": "Hot and dry: 32°C highs, about 4 rain days. Sightsee early morning and evening."
+      },
+      {
+        "high": 32,
+        "low": 21,
+        "rain_days": 5,
+        "note": "Hot like July: 32°C highs, about 5 rain days. Stay hydrated and seek shade at midday."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 8,
+        "note": "Warm and comfortable: 27°C highs, about 8 rain days. A strong month to visit."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 9,
+        "note": "Mild at 22°C highs with about 9 rain days. Good for walking and day trips."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 11,
+        "note": "Cooler at 17°C highs, about 11 rain days. Bring a jacket for evenings."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 10,
+        "note": "Cold again: 13°C highs, lows near 4°C, about 10 rain days. Winter coat needed."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "history": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "nightlife": [
+      0.5,
+      0.6,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.6
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "skanderbeg": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening; summer evenings are cooler",
+      "area": "Skanderbeg Square",
+      "popularity": 5
+    },
+    "pyramid": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Blloku",
+      "popularity": 4
+    },
+    "bunkart1": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning; cool inside on hot days",
+      "area": "Komuna e Parisit",
+      "popularity": 5
+    },
+    "historical-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning or early afternoon",
+      "area": "Skanderbeg Square",
+      "popularity": 4
+    },
+    "ethem-bey": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Mid-morning or between prayers",
+      "area": "Skanderbeg Square",
+      "popularity": 4
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Skanderbeg Square",
+      "popularity": 3
+    },
+    "kruje-castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, before the tour buses",
+      "area": "Skanderbeg Square",
+      "popularity": 4
+    },
+    "tave-kosi": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Skanderbeg Square",
+      "popularity": 3
+    },
+    "new-bazaar": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Skanderbeg Square",
+      "popularity": 4
+    },
+    "dajti-express": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Komuna e Parisit",
+      "popularity": 4
+    },
+    "blloku-walk": {
+      "types": [
+        "nightlife",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Blloku",
+      "popularity": 4
+    },
+    "rruga-kavajes": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Rruga e Kavajës",
+      "popularity": 3
+    },
+    "free-walking-tour": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Skanderbeg Square",
+      "popularity": 4
+    },
+    "grand-park": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Komuna e Parisit",
+      "popularity": 4
+    },
+    "artificial-lake": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Komuna e Parisit",
+      "popularity": 3
+    },
+    "blloku-bars": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late evening, Thursday to Saturday",
+      "area": "Blloku",
+      "popularity": 3
+    },
+    "byrek": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Breakfast",
+      "area": "Skanderbeg Square",
+      "popularity": 3
+    },
+    "bunkart2": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; good on a rainy day",
+      "area": "Skanderbeg Square",
+      "popularity": 4
+    },
+    "komuna-parisit": {
+      "types": [
+        "budget",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Komuna e Parisit",
+      "popularity": 2
+    },
+    "raki-tasting": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Blloku",
+      "popularity": 3
+    },
+    "day-trip-berat": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Spring or autumn; start early",
+      "area": "Skanderbeg Square",
+      "popularity": 3
+    },
+    "clock-tower": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Skanderbeg Square",
+      "popularity": 3
+    },
+    "mother-teresa-square": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Blloku",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the square, Bunk'Art and Blloku at an easy pace; add a third for a day trip to Krujë or the cable car."
+  },
+  "airports": [
+    {
+      "code": "TIA",
+      "name": "Tirana International Airport Mother Teresa",
+      "primary": true,
+      "note": "Main airport, 13 km from centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-40 min",
+          "note": "Cheapest option; runs to city centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Use official taxis or apps; agree on price."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Speed Taxi, Patoko, Clust, VrapOn operate."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Tirana",
+      "https://en.wikivoyage.org/wiki/Tirana"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Walk the compact centre; use taxis or ride apps for longer hops and buses to save money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are the main public transport. A single ticket costs 40 lek, sold on board by a conductor."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Flag-fall 300 lek; a cross-town ride is 400–800 lek. Demand the meter. Apps like Speed Taxi, Patoko, Clust and VrapOn work like Uber."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Useful for day trips outside the city. Traffic in the centre is busy; check parking at your hotel."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best way to see the compact centre. Sidewalks can be uneven, so watch your step."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Bike lanes exist on some main streets, but cycling can be risky due to traffic."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean with hot, dry summers and cool, wet winters. Spring and autumn are the sweet spots.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September to October",
+        "text": "Highs of 22–28°C and fewer rainy days. Ideal for walking the centre and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "July and August are hot",
+        "text": "Highs around 32°C and lows near 20°C. Do sights in the morning, rest at midday, go out in the evening."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in autumn and early spring",
+        "text": "May and November see about 11–14 rain days. Showers are often short; carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "December to February highs of 11–14°C and lows near 2–4°C. Pack layers and a warm coat."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is spread across the year",
+        "text": "No month is fully dry. Even summer has a few wet days, so a light rain jacket helps."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable shoes for uneven sidewalks, layers for cool evenings, sunscreen for summer, and an umbrella in spring and autumn."
+      }
+    ]
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "city": "Calgary",
+  "checked": "October 2026",
+  "intro_line": "Where prairie energy meets Rocky Mountain skyline.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown Core",
+        "Beltline",
+        "Kensington",
+        "Inglewood"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown Core",
+        "Beltline",
+        "Kensington",
+        "Inglewood"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown Core",
+        "Beltline",
+        "Kensington",
+        "Inglewood"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown Core",
+        "Beltline",
+        "Kensington",
+        "Inglewood"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "Downtown Core",
+        "Beltline",
+        "Kensington",
+        "Inglewood"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -2,
+        "low": -12,
+        "rain_days": 4,
+        "note": "January: cold, highs near -2°C and lows around -12°C. Dress in layers and watch for ice."
+      },
+      {
+        "high": -2,
+        "low": -13,
+        "rain_days": 7,
+        "note": "February: still cold, about -2°C high and -13°C low, with the most snow days of winter. Warm boots help."
+      },
+      {
+        "high": 4,
+        "low": -8,
+        "rain_days": 7,
+        "note": "March: slowly warming, highs near 4°C but nights still below freezing. Expect slush."
+      },
+      {
+        "high": 10,
+        "low": -2,
+        "rain_days": 8,
+        "note": "April: highs around 10°C, lows near -2°C. Mild days mix with cold snaps; pack a warm layer."
+      },
+      {
+        "high": 17,
+        "low": 4,
+        "rain_days": 10,
+        "note": "May: pleasant at about 17°C, but the wettest-ish month with around 10 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 21,
+        "low": 8,
+        "rain_days": 13,
+        "note": "June: mild at about 21°C with around 13 rain days. Showers pass quickly; evenings are cool."
+      },
+      {
+        "high": 24,
+        "low": 11,
+        "rain_days": 12,
+        "note": "July: warmest month, highs near 24°C and lows around 11°C. Stampede time; book hotels early."
+      },
+      {
+        "high": 23,
+        "low": 10,
+        "rain_days": 9,
+        "note": "August: warm and similar to July, about 23°C high. Good for parks and day trips."
+      },
+      {
+        "high": 18,
+        "low": 6,
+        "rain_days": 7,
+        "note": "September: comfortable at about 18°C, fewer rain days. A strong month for walking and the Rockies."
+      },
+      {
+        "high": 11,
+        "low": 0,
+        "rain_days": 6,
+        "note": "October: cooling to about 11°C, nights near 0°C. First frosts possible; bring a jacket."
+      },
+      {
+        "high": 3,
+        "low": -7,
+        "rain_days": 6,
+        "note": "November: cold again, highs near 3°C and lows around -7°C. Short days; plan indoor sights."
+      },
+      {
+        "high": -3,
+        "low": -12,
+        "rain_days": 6,
+        "note": "December: cold, about -3°C high and -12°C low. Snow possible; check conditions before driving."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.4,
+      0.45,
+      0.55,
+      0.7,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.45,
+      0.4
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.5
+    ],
+    "adventure": [
+      0.45,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.5,
+      0.45
+    ]
+  },
+  "places": {
+    "calgary-tower": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon or sunset",
+      "area": "Downtown Core",
+      "popularity": 5
+    },
+    "calaway-park": {
+      "types": [
+        "family",
+        "adventure"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer, arrive at opening",
+      "area": "Downtown Core",
+      "popularity": 3
+    },
+    "the-last-of-us": {
+      "types": [
+        "culture",
+        "adventure"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime, any season",
+      "area": "Downtown Core",
+      "popularity": 2
+    },
+    "stephen-ave": {
+      "types": [
+        "culture",
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Midday to afternoon",
+      "area": "Downtown Core",
+      "popularity": 4
+    },
+    "glenbow": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Downtown Core",
+      "popularity": 3
+    },
+    "princes-island": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Summer afternoon or early evening",
+      "area": "Downtown Core",
+      "popularity": 4
+    },
+    "peace-bridge": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown Core",
+      "popularity": 3
+    },
+    "studio-bell": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown Core",
+      "popularity": 3
+    },
+    "central-library": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown Core",
+      "popularity": 3
+    },
+    "kensington": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Kensington",
+      "popularity": 3
+    },
+    "inglewood": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Inglewood",
+      "popularity": 3
+    },
+    "fort-calgary": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Inglewood",
+      "popularity": 2
+    },
+    "calgary-farmers-market": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "Beltline",
+      "popularity": 3
+    },
+    "calgary-zoo": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning in summer",
+      "area": "Inglewood",
+      "popularity": 4
+    },
+    "heritage-park": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer daytime",
+      "area": "Beltline",
+      "popularity": 3
+    },
+    "scotsman-hill": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Beltline",
+      "popularity": 3
+    },
+    "stampede-park": {
+      "types": [
+        "culture",
+        "family",
+        "adventure"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "July, or check event calendar",
+      "area": "Beltline",
+      "popularity": 4
+    },
+    "bow-river-path": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or evening in summer",
+      "area": "Downtown Core",
+      "popularity": 3
+    },
+    "devonian-gardens": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Winter or rainy day",
+      "area": "Downtown Core",
+      "popularity": 2
+    },
+    "beltline-food-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Beltline",
+      "popularity": 3
+    },
+    "olympic-plaza": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Winter for skating, summer for events",
+      "area": "Downtown Core",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers downtown, the river paths and one Rockies day; add a third night for Drumheller or the Stampede."
+  },
+  "airports": [
+    {
+      "code": "YYC",
+      "name": "Calgary International Airport",
+      "primary": true,
+      "note": "Main gateway, about 8 km straight-line and roughly 18 km by road northeast of the centre.",
+      "options": [
+        {
+          "mode": "Bus 300 BRT",
+          "to": "Downtown City Centre",
+          "price": "$4",
+          "time": "30-40 min",
+          "note": "Runs every 30 min from 5:30am to midnight; buy via My Fare app or ticket machine."
+        },
+        {
+          "mode": "Bus 100 + CTrain Blue line",
+          "to": "Downtown",
+          "price": "$4",
+          "time": "about 60 min",
+          "note": "Cheapest but slow; little luggage room at rush hour."
+        },
+        {
+          "mode": "Private shuttle",
+          "to": "Downtown hotels",
+          "price": "$15",
+          "time": "30-45 min",
+          "note": "Scheduled service; some airport hotels run free shuttles."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$40-45",
+          "time": "20-30 min",
+          "note": "Metered; pick up at Arrivals Doors 1, 9 and 15."
+        },
+        {
+          "mode": "Uber",
+          "to": "Downtown",
+          "price": "$35-50",
+          "time": "20-30 min",
+          "note": "Only authorized ride-share at YYC; pre-arranged pickup at Doors 3, 12 or 15."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Calgary",
+      "https://en.wikivoyage.org/wiki/Calgary"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "family",
+    "adventure"
+  ],
+  "transit": {
+    "best": "CTrain for downtown and nearby stops; walk the compact core and use buses or ride apps for the rest.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "CTrain light rail runs two lines, Red and Blue, through downtown on 7th Avenue South, which is transit-only."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Calgary Transit buses fill the gaps. A single fare is about $4 adult, $2.65 youth, free for ages 12 and under."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber is the main ride-hailing app and the only one authorized at the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside rush hour. Downtown parking is expensive, so use park-and-ride at suburban stations."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Downtown is compact and walkable. The Bow River pathways are good for bikes and rentals."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries; the city is inland."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cold, dry winters and short, mild summers. Rain is spread through the year, heaviest in June.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs of 18–24°C and long days. Ideal for the river paths, parks and Rockies day trips."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is genuinely cold",
+        "text": "December to February highs sit near -2 to -3°C, with lows around -12°C. Pack a real coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June",
+        "text": "About 13 rain days in June, versus 4–8 in most other months. Showers are usually short."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and fall swing widely",
+        "text": "April and October can be mild one day and cold the next. Layers beat a single heavy outfit."
+      },
+      {
+        "icon": "❄️",
+        "title": "Snow is possible in winter",
+        "text": "February has the most snow days in the averages. Watch for icy sidewalks and check road conditions."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Summer: light layers and a rain jacket. Winter: insulated coat, boots, hat and gloves. Always bring a warm layer for evenings."
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+$ deepseek_prep.py Sydney
+  tokens in 898 out 526
+Sydney: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Sydney
+  tokens in 3870 out 845
+Sydney: 1 problems
+  - airport WSI unknown code
+
+$ deepseek_city.py Sydney --stage places
+Sydney: places
+  tokens in 1253 out 4369
+
+$ deepseek_city.py Sydney --stage frame
+Sydney: frame
+  tokens in 2451 out 1869
+
+$ deepseek_city.py Sydney --stage plans
+Sydney: plans
+  plans for day
+  tokens in 2571 out 961
+  plans for 1n
+  tokens in 2572 out 1242
+  plans for 2n
+  tokens in 2572 out 1810
+  plans for 3n
+  tokens in 2577 out 2131
+  plans for 4n
+  tokens in 2572 out 2322
+
+$ merge_city.py Sydney
+Sydney: 27 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/sydney.json and planner/sydney.json
+

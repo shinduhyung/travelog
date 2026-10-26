@@ -1,0 +1,189 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "A warm, literary city of pubs, parks and Georgian streets.",
+  "intro": "Dublin rewards visitors with walkable history, lively pubs and easy trips to the coast. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Temple Bar",
+    "Georgian Quarter",
+    "Docklands",
+    "Rathmines"
+  ],
+  "taxi": {
+    "flag_day": 4.2,
+    "flag_airport": 5,
+    "per_km": 1.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Trams: Luas has two lines, Red and Green, across the centre.",
+    "Buses: Dublin Bus and Go-Ahead cover most of the city; pay exact coins or use a Leap Card.",
+    "Leap Card: €5 deposit; flat €2 adult fare on buses and trams; daily caps apply.",
+    "Taxis: metered; apps like Free Now and Uber work in Dublin.",
+    "Driving: heavy traffic and limited parking; use Park & Ride at Luas or DART stops.",
+    "Walking and bikes: the centre is compact; Dublinbikes stations are widely spread."
+  ],
+  "airports": [
+    {
+      "code": "DUB",
+      "name": "Dublin Airport",
+      "primary": true,
+      "note": "Main gateway, 8 km north of the centre; no rail link.",
+      "options": [
+        {
+          "mode": "Local bus 16 or 41",
+          "to": "O'Connell Street",
+          "price": "€2.60 or €2 with Leap",
+          "time": "45-60 min",
+          "note": "Cheapest; exact coins only, limited luggage space."
+        },
+        {
+          "mode": "Dublin Express bus",
+          "to": "City centre and Heuston Station",
+          "price": "€8 single, €10 return online",
+          "time": "25-40 min",
+          "note": "Runs every 10 min or so; last bus 11PM."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€34-40",
+          "time": "20-35 min",
+          "note": "Good value for groups of three or more."
+        },
+        {
+          "mode": "Uber / Free Now",
+          "to": "City centre",
+          "price": "€30-45",
+          "time": "20-35 min",
+          "note": "App pickup at designated zones."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "Guinness Storehouse",
+    "Trinity College Library",
+    "Temple Bar",
+    "Dublin Castle",
+    "St Patrick's Cathedral",
+    "Kilmainham Gaol",
+    "Christ Church Cathedral, Dublin",
+    "Dublin Zoo",
+    "Emerald Park",
+    "Fort Lucan",
+    "Funderland (travelling theme park)",
+    "General Post Office (GPO)",
+    "Grafton Street",
+    "Irish Stew",
+    "Liffey River Cruise",
+    "Molly Malone Statue",
+    "National Museum of Ireland",
+    "O'Connell Street",
+    "Saint Patrick's Festival",
+    "Scene75 Entertainment Center (Dublin)",
+    "Trinity College Dublin",
+    "Vikings"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Dublin",
+      "https://en.wikivoyage.org/wiki/Dublin"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    53.3498,
+    -6.2603
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": 4,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 4,
+      "rain_days": 13
+    },
+    {
+      "high": 10,
+      "low": 4,
+      "rain_days": 14
+    },
+    {
+      "high": 12,
+      "low": 6,
+      "rain_days": 12
+    },
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 18,
+      "low": 11,
+      "rain_days": 13
+    },
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 15
+    },
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 14
+    },
+    {
+      "high": 17,
+      "low": 11,
+      "rain_days": 13
+    },
+    {
+      "high": 14,
+      "low": 9,
+      "rain_days": 14
+    },
+    {
+      "high": 11,
+      "low": 6,
+      "rain_days": 13
+    },
+    {
+      "high": 9,
+      "low": 5,
+      "rain_days": 15
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

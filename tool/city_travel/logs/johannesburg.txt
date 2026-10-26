@@ -1,0 +1,33 @@
+$ deepseek_prep.py Johannesburg
+  tokens in 764 out 557
+Johannesburg: 8 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Johannesburg
+  tokens in 3888 out 774
+Johannesburg: 0 problems
+
+$ deepseek_city.py Johannesburg --stage places
+Johannesburg: places
+  tokens in 1210 out 3680
+
+$ deepseek_city.py Johannesburg --stage frame
+Johannesburg: frame
+  tokens in 2439 out 1785
+
+$ deepseek_city.py Johannesburg --stage plans
+Johannesburg: plans
+  plans for day
+  tokens in 2256 out 702
+  plans for 1n
+  tokens in 2257 out 1277
+  plans for 2n
+  tokens in 2262 out 1506
+  plans for 3n
+  tokens in 2257 out 1956
+  plans for 4n
+  tokens in 2257 out 2205
+
+$ merge_city.py Johannesburg
+Johannesburg: 23 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/johannesburg.json and planner/johannesburg.json
+

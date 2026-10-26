@@ -1,0 +1,37 @@
+$ deepseek_prep.py Adelaide
+  tokens in 671 out 417
+Adelaide: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Adelaide
+  tokens in 3892 out 533
+Adelaide: 0 problems
+
+$ deepseek_city.py Adelaide --stage places
+Adelaide: places
+  tokens in 1150 out 3102
+
+$ deepseek_city.py Adelaide --stage frame
+Adelaide: frame
+  tokens in 2402 out 1907
+  repaired JSON
+
+$ deepseek_city.py Adelaide --stage plans
+Adelaide: plans
+  plans for day
+  tokens in 2109 out 808
+  plans for 1n
+  tokens in 2110 out 800
+  plans for 2n
+  tokens in 2115 out 1507
+  plans for 3n
+  tokens in 2110 out 1406
+  plans for 4n
+  tokens in 2110 out 2287
+
+$ merge_city.py Adelaide
+WARN  hahndorf: area 'Adelaide Hills (day trip)' not one of the hotel areas
+WARN  barossa: area 'Barossa (day trip)' not one of the hotel areas
+WARN  mount-lofty: area 'Adelaide Hills (day trip)' not one of the hotel areas
+Adelaide: 19 places, 15 plans, 0 errors, 3 warnings
+wrote itineraries/adelaide.json and planner/adelaide.json
+

@@ -14,6 +14,7 @@ import 'package:jidoapp/providers/airline_provider.dart';
 import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
 import 'package:jidoapp/services/travel_persona_engine.dart';
+import 'package:jidoapp/services/traveler_type_store.dart';
 
 class TravelerTypeAiScreen extends StatefulWidget {
   const TravelerTypeAiScreen({super.key});
@@ -64,7 +65,7 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       if (savedJson != null) {
         final parsed = jsonDecode(savedJson) as Map<String, dynamic>;
 
-        if (_hasValidScores(parsed)) {
+        if (_hasValidScores(parsed) && TravelerTypeStore.isValid(savedJson)) {
           if (mounted) {
             setState(() {
               _rawResult = savedJson;
@@ -114,17 +115,18 @@ class _TravelerTypeAiScreenState extends State<TravelerTypeAiScreen> {
       // Only persist to cache when the analysis actually produced scores.
       // A failed/errored result must not overwrite a previously good cache
       // (or get treated as "successful" on the next app launch).
-      if (_hasValidScores(parsed)) {
-        final prefs = await SharedPreferences.getInstance();
-        await prefs.setString('ai_analysis_result', result);
-      }
-
       if (mounted) {
         setState(() {
           _rawResult = result;
           _parsed = parsed;
           _isLoading = false;
         });
+      }
+
+      // 로컬 저장 + Firestore 저장. 서버 저장이 실패해도 로컬에는 남고,
+      // 다음 앱 시작/로그인 때 TravelerTypeStore.sync가 다시 올린다.
+      if (_hasValidScores(parsed)) {
+        await TravelerTypeStore.saveResult(result);
       }
     } catch (e) {
       if (mounted) {

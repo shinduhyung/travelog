@@ -1,0 +1,739 @@
+{
+  "city": "London",
+  "checked": "October 2026",
+  "intro_line": "Royal palaces, free world-class museums and a river city that rewards walking.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "West End & Soho",
+        "South Kensington",
+        "South Bank & Southwark",
+        "King's Cross & Bloomsbury"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "West End & Soho",
+        "South Kensington",
+        "South Bank & Southwark",
+        "King's Cross & Bloomsbury"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "West End & Soho",
+        "South Kensington",
+        "South Bank & Southwark",
+        "King's Cross & Bloomsbury"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "West End & Soho",
+        "South Kensington",
+        "South Bank & Southwark",
+        "King's Cross & Bloomsbury"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "West End & Soho",
+        "South Kensington",
+        "South Bank & Southwark",
+        "King's Cross & Bloomsbury"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 12,
+        "note": "Jan: cold, highs near 8°C and about 12 rain days. Pack a warm coat."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 11,
+        "note": "Feb: still cold, highs near 9°C. Short days but quieter sights."
+      },
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 13,
+        "note": "Mar: warming to about 11°C, but the wettest month with around 13 rain days."
+      },
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 10,
+        "note": "Apr: mild at about 14°C. Good walking weather; showers possible."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 11,
+        "note": "May: pleasant highs near 17°C. A great month for parks and the river."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Jun: warm at about 21°C with long evenings. Busy season starts."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Jul: the warmest month, highs near 23°C. Book hotels and shows early."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Aug: warm at about 22°C. School holidays make sights crowded."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 11,
+        "note": "Sep: still mild near 20°C with fewer crowds. A strong month to visit."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Oct: cooling to about 16°C. Bring layers and a rain jacket."
+      },
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 12,
+        "note": "Nov: chilly at about 11°C with around 12 rain days. Dark by late afternoon."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 12,
+        "note": "Dec: cold at about 9°C. Festive lights, short days, book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "family": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ]
+  },
+  "places": {
+    "tower-of-london": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "South Bank & Southwark",
+      "popularity": 5
+    },
+    "westminster-abbey": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "First slot on a weekday",
+      "area": "West End & Soho",
+      "popularity": 5
+    },
+    "palace-of-westminster": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon light",
+      "area": "West End & Soho",
+      "popularity": 5
+    },
+    "big-ben": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Golden hour or after dark",
+      "area": "West End & Soho",
+      "popularity": 5
+    },
+    "buckingham-palace": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning for the ceremony",
+      "area": "West End & Soho",
+      "popularity": 5
+    },
+    "british-museum": {
+      "types": [
+        "culture",
+        "budget",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday opening or Friday evening",
+      "area": "King's Cross & Bloomsbury",
+      "popularity": 5
+    },
+    "national-gallery": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Friday evening or rainy morning",
+      "area": "West End & Soho",
+      "popularity": 5
+    },
+    "tate-modern": {
+      "types": [
+        "culture",
+        "budget",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon, then walk the river",
+      "area": "South Bank & Southwark",
+      "popularity": 5
+    },
+    "natural-history-museum": {
+      "types": [
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning, especially in rain",
+      "area": "South Kensington",
+      "popularity": 5
+    },
+    "v-and-a": {
+      "types": [
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Friday late or a quiet weekday",
+      "area": "South Kensington",
+      "popularity": 4
+    },
+    "science-museum": {
+      "types": [
+        "family",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "South Kensington",
+      "popularity": 4
+    },
+    "st-pauls": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning, before tour groups",
+      "area": "South Bank & Southwark",
+      "popularity": 4
+    },
+    "tower-bridge": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset from the north bank",
+      "area": "South Bank & Southwark",
+      "popularity": 5
+    },
+    "london-eye": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset, booked ahead",
+      "area": "South Bank & Southwark",
+      "popularity": 5
+    },
+    "the-shard": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear evening after dark",
+      "area": "South Bank & Southwark",
+      "popularity": 4
+    },
+    "borough-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Weekday late morning",
+      "area": "South Bank & Southwark",
+      "popularity": 5
+    },
+    "covent-garden": {
+      "types": [
+        "shopping",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon into early evening",
+      "area": "West End & Soho",
+      "popularity": 4
+    },
+    "camden-market": {
+      "types": [
+        "food",
+        "shopping",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday lunchtime",
+      "area": "King's Cross & Bloomsbury",
+      "popularity": 4
+    },
+    "hyde-park": {
+      "types": [
+        "budget",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "West End & Soho",
+      "popularity": 4
+    },
+    "churchill-war-rooms": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "First slot of the day",
+      "area": "West End & Soho",
+      "popularity": 4
+    },
+    "greenwich-observatory": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Clear morning, boat out",
+      "area": "South Bank & Southwark",
+      "popularity": 4
+    },
+    "kew-gardens": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Spring and summer mornings",
+      "area": "West End & Soho",
+      "popularity": 3
+    },
+    "windsor-castle": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "West End & Soho",
+      "popularity": 4
+    },
+    "harry-potter-studio": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 210,
+      "setting": "indoor",
+      "best": "Morning slot, pre-booked",
+      "area": "King's Cross & Bloomsbury",
+      "popularity": 5
+    },
+    "shakespeares-globe": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Summer evening performance",
+      "area": "South Bank & Southwark",
+      "popularity": 4
+    },
+    "notting-hill": {
+      "types": [
+        "shopping",
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Saturday morning or weekday",
+      "area": "West End & Soho",
+      "popularity": 4
+    },
+    "sky-garden": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset slot, booked early",
+      "area": "South Bank & Southwark",
+      "popularity": 4
+    },
+    "thames-clipper": {
+      "types": [
+        "budget",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime, any weather",
+      "area": "South Bank & Southwark",
+      "popularity": 4
+    },
+    "soho-walk": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early evening",
+      "area": "West End & Soho",
+      "popularity": 4
+    },
+    "primrose-hill": {
+      "types": [
+        "budget",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset on a clear day",
+      "area": "King's Cross & Bloomsbury",
+      "popularity": 3
+    },
+    "west-end-show": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 165,
+      "setting": "indoor",
+      "best": "Book ahead for weekends",
+      "area": "West End & Soho",
+      "popularity": 5
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the big sights, a museum or two and a West End show without rushing."
+  },
+  "airports": [
+    {
+      "code": "LHR",
+      "name": "Heathrow Airport",
+      "primary": true,
+      "note": "London's main airport, 24 km west of the centre.",
+      "options": [
+        {
+          "mode": "Elizabeth line",
+          "to": "Paddington, Bond Street, Tottenham Court Road",
+          "price": "£15.50",
+          "time": "30-45 min",
+          "note": "Contactless or Oyster; runs about every 5-10 minutes."
+        },
+        {
+          "mode": "Heathrow Express",
+          "to": "Paddington",
+          "price": "£10-26",
+          "time": "15 min",
+          "note": "Cheapest when booked 30+ days ahead."
+        },
+        {
+          "mode": "Piccadilly line (Tube)",
+          "to": "Central London",
+          "price": "£5.60-6.30",
+          "time": "50-60 min",
+          "note": "Slow but cheap; good for Kensington and Piccadilly."
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Central London",
+          "price": "£35-100",
+          "time": "45-75 min",
+          "note": "Uber from about £35; black cabs about £55-90 depending on traffic."
+        }
+      ]
+    },
+    {
+      "code": "LGW",
+      "name": "Gatwick Airport",
+      "primary": false,
+      "note": "45 km south of London.",
+      "options": [
+        {
+          "mode": "Train (Gatwick Express / Southern / Thameslink)",
+          "to": "Victoria, London Bridge",
+          "price": "£12-25",
+          "time": "30-45 min",
+          "note": "Thameslink and Southern are cheaper than the Gatwick Express."
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Central London",
+          "price": "£50-150",
+          "time": "70-100 min",
+          "note": "Uber about £50-90; black cab much more."
+        }
+      ]
+    },
+    {
+      "code": "STN",
+      "name": "Stansted Airport",
+      "primary": false,
+      "note": "55 km north-east; budget airlines.",
+      "options": [
+        {
+          "mode": "Stansted Express",
+          "to": "Liverpool Street",
+          "price": "£10-25",
+          "time": "about 46 min",
+          "note": "Every 15 minutes; cheaper booked ahead."
+        },
+        {
+          "mode": "Coach (National Express)",
+          "to": "Liverpool Street, Victoria",
+          "price": "£5-15",
+          "time": "60-100 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Central London",
+          "price": "£55-145",
+          "time": "60-90 min",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Heathrow to central London 2026",
+      "https://travelandtime.com/guides/heathrow-to-central-london"
+    ],
+    [
+      "Elizabeth line vs Heathrow Express",
+      "https://tripbuffer.com/compare/elizabeth-line-vs-heathrow-express/"
+    ],
+    [
+      "London airport transfer costs 2026",
+      "https://www.premiumtransfers.co.uk/blog/airport-transfer-costs-london"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "family"
+  ],
+  "transit": {
+    "best": "Contactless card on the Tube and buses; walk the centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The Underground, Elizabeth line and Overground take contactless cards and Oyster. Fares are capped per day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "A flat £1.75 per bus, and a second bus within an hour is free (Hopper fare). Good for sightseeing above ground."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Black cabs are metered and can be hailed. Uber, Bolt and FREENOW are widely used."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre means the Congestion Charge and ULEZ fees. Visitors rarely need a car."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Central London is very walkable; many sights are 15–30 minutes apart on foot."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Thames Clippers river boats link Westminster, the South Bank, the Tower and Greenwich."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and changeable: mild summers, cool winters, and rain in every month. Rarely extreme.",
+    "items": [
+      {
+        "icon": "🌦️",
+        "title": "Rain all year",
+        "text": "About 10–13 rain days every month. Showers are often short; carry a small umbrella or jacket."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 17–23°C and long daylight. July is warmest; September is mild with fewer crowds."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cool, not freezing",
+        "text": "January and February highs near 8–9°C and lows near 2–3°C. A warm coat and layers are enough."
+      },
+      {
+        "icon": "🌂",
+        "title": "March is the wettest",
+        "text": "Around 13 rain days. Plan indoor backups like museums and galleries."
+      },
+      {
+        "icon": "🕶️",
+        "title": "Summer days are long",
+        "text": "June to August gives the most daylight for parks, walks and the river. Evenings stay light."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for walking. Add sunglasses and a hat for summer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+$ deepseek_prep.py Bratislava
+  tokens in 721 out 390
+Bratislava: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bratislava
+  tokens in 4322 out 871
+Bratislava: 0 problems
+
+$ deepseek_city.py Bratislava --stage places
+Bratislava: places
+  tokens in 1198 out 2743
+
+$ deepseek_city.py Bratislava --stage frame
+Bratislava: frame
+  tokens in 2446 out 1861
+
+$ deepseek_city.py Bratislava --stage plans
+Bratislava: plans
+  plans for day
+  tokens in 1953 out 942
+  plans for 1n
+  tokens in 1954 out 1385
+  plans for 2n
+  tokens in 1959 out 1467
+  plans for 3n
+  tokens in 1954 out 1885
+
+$ merge_city.py Bratislava
+Bratislava: 17 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/bratislava.json and planner/bratislava.json
+

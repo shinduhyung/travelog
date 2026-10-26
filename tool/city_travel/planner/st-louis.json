@@ -1,0 +1,595 @@
+{
+  "city": "St. Louis",
+  "checked": "October 2026",
+  "intro_line": "A river city of arches, brick neighborhoods and blues.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Central West End",
+        "Soulard",
+        "The Loop"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Central West End",
+        "Soulard",
+        "The Loop"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Central West End",
+        "Soulard",
+        "The Loop"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Central West End",
+        "Soulard",
+        "The Loop"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Central West End",
+        "Soulard",
+        "The Loop"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -4,
+        "rain_days": 9,
+        "note": "January: cold, highs near 5°C and lows below freezing. Pack a warm coat."
+      },
+      {
+        "high": 8,
+        "low": -3,
+        "rain_days": 8,
+        "note": "February: still cold, highs around 8°C. Short indoor days are best."
+      },
+      {
+        "high": 14,
+        "low": 3,
+        "rain_days": 13,
+        "note": "March: milder at about 14°C but the wettest month, with around 13 rain days."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 11,
+        "note": "April: pleasant highs near 19°C; a good month for walking and parks."
+      },
+      {
+        "high": 25,
+        "low": 14,
+        "rain_days": 14,
+        "note": "May: warm at about 25°C with frequent rain; carry a light rain jacket."
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 11,
+        "note": "June: hot, highs near 30°C. Plan outdoor sights for mornings."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 13,
+        "note": "July: the hottest month, highs near 31°C and humid. Use shade and water."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 13,
+        "note": "August: hot and humid like July, highs near 30°C."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 8,
+        "note": "September: warm at about 28°C and drier; a strong month to visit."
+      },
+      {
+        "high": 21,
+        "low": 10,
+        "rain_days": 9,
+        "note": "October: comfortable highs near 21°C and crisp evenings. Great for walking."
+      },
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 9,
+        "note": "November: cooler at about 13°C; layer up for evenings."
+      },
+      {
+        "high": 8,
+        "low": -1,
+        "rain_days": 8,
+        "note": "December: cold, highs near 8°C with some freezing nights. Indoor sights shine."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.75,
+      0.65
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.75,
+      0.65
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.75,
+      0.65
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.7,
+      0.9,
+      0.95,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.6,
+      0.4
+    ],
+    "family": [
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.75,
+      0.6
+    ]
+  },
+  "places": {
+    "gateway-arch": {
+      "types": [
+        "history",
+        "family",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning for shorter lines; clear days for the view",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "st-louis-zoo": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Central West End",
+      "popularity": 5
+    },
+    "cahokia-mounds": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in spring or fall",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "anheuser-busch-brewery": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Soulard",
+      "popularity": 4
+    },
+    "missouri-river": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "st-louis-union-station": {
+      "types": [
+        "history",
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon or rainy day",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "washu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "panera-bread": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "The Loop",
+      "popularity": 2
+    },
+    "incredible-pizza": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekend afternoon",
+      "area": "The Loop",
+      "popularity": 2
+    },
+    "city-museum": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "soulard-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Soulard",
+      "popularity": 4
+    },
+    "citygarden": {
+      "types": [
+        "culture",
+        "family",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "forest-park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Central West End",
+      "popularity": 4
+    },
+    "art-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Central West End",
+      "popularity": 4
+    },
+    "delmar-loop": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "riverboat-cruise": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon in summer",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "bbq-stop": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Soulard",
+      "popularity": 3
+    },
+    "botanical-garden": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Spring morning",
+      "area": "Soulard",
+      "popularity": 4
+    },
+    "science-center": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekend morning",
+      "area": "Central West End",
+      "popularity": 3
+    },
+    "ted-drews": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening in summer",
+      "area": "Soulard",
+      "popularity": 4
+    },
+    "old-courthouse": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "lafayette-square": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Soulard",
+      "popularity": 2
+    },
+    "brewery-tour-alt": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Soulard",
+      "popularity": 2
+    },
+    "arch-grounds": {
+      "types": [
+        "nature",
+        "family",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Arch, Forest Park and a neighborhood or two; add a night for a ballgame or a day trip."
+  },
+  "airports": [
+    {
+      "code": "STL",
+      "name": "Lambert St Louis International Airport",
+      "primary": true,
+      "note": "Main airport, 20 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "MetroLink Red Line",
+          "to": "Downtown",
+          "price": "$4",
+          "time": "30-40 min",
+          "note": "Airport station ticket includes a 2-hour transfer."
+        },
+        {
+          "mode": "Uber",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Pickup allowed at the terminal."
+        },
+        {
+          "mode": "Lyft",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Compare fares with Uber."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$35-50",
+          "time": "20-30 min",
+          "note": "Use a reputable company."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: St. Louis",
+      "https://en.wikivoyage.org/wiki/St.%20Louis"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "family"
+  ],
+  "transit": {
+    "best": "MetroLink for the airport and Forest Park; walk or ride-share downtown.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "MetroLink light rail links the airport, Forest Park, downtown and Illinois. A 2-hour pass costs $3, or $4 at the airport station; a day pass is $5."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metro buses cover the region but run infrequently. Single fare $2."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft are popular. Taxis must be ordered by phone or app."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is the most common way around. Useful for trips outside downtown."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable. Use transit or a ride for longer hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid continental climate: hot, humid summers and cold winters, with rain spread through the year.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Mild highs of roughly 19–28°C make walking and parks comfortable."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid",
+        "text": "June to August sees highs near 30–31°C. Do outdoor sights early and take breaks indoors."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winters are cold",
+        "text": "December to February highs sit around 5–8°C, with nights below freezing. Bring a warm coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect roughly 8–14 rain days a month, most in spring. A small umbrella helps."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Shoulder seasons are steady",
+        "text": "April, May, September and October balance warmth and rain well for sightseeing."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for changing days, a rain jacket, and sunscreen and a hat for summer."
+      }
+    ]
+  }
+}

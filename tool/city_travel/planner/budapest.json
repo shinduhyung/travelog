@@ -1,0 +1,644 @@
+{
+  "city": "Budapest",
+  "checked": "October 2026",
+  "intro_line": "Danube splits a city of baths, cafés and grand boulevards.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Belváros",
+        "Castle District",
+        "Jewish Quarter",
+        "Palace District"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Belváros",
+        "Castle District",
+        "Jewish Quarter",
+        "Palace District"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Belváros",
+        "Castle District",
+        "Jewish Quarter",
+        "Palace District"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Belváros",
+        "Castle District",
+        "Jewish Quarter",
+        "Palace District"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Belváros",
+        "Castle District",
+        "Jewish Quarter",
+        "Palace District"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 10,
+        "note": "January is cold: highs near 4°C, lows around -2°C. Pack a warm coat and gloves."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 9,
+        "note": "February stays cold, highs near 8°C. Indoor sights and baths are the plan."
+      },
+      {
+        "high": 12,
+        "low": 2,
+        "rain_days": 8,
+        "note": "March warms a little to about 12°C. Expect a few rainy days."
+      },
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 9,
+        "note": "April is pleasant at around 17°C; bring a light jacket and an umbrella."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 12,
+        "note": "May is lovely, near 21°C, but one of the rainier months."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 11,
+        "note": "June is warm at about 26°C; long evenings suit outdoor bars."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 9,
+        "note": "July is the hottest month, highs near 28°C. Go sightseeing early and rest midday."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 8,
+        "note": "August is as hot as July, around 28°C, with fewer rainy days."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 8,
+        "note": "September is warm and dry-ish at about 23°C; a great month to visit."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 8,
+        "note": "October cools to around 17°C with some rain; still good for walking."
+      },
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 9,
+        "note": "November turns chilly, near 10°C. Bring layers and a waterproof."
+      },
+      {
+        "high": 5,
+        "low": -1,
+        "rain_days": 8,
+        "note": "December is cold, highs near 5°C. Christmas markets and baths feel cosy."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.8,
+      0.75
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "parliament": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning tour, then walk the Danube bank",
+      "area": "Belváros",
+      "popularity": 5
+    },
+    "buda-castle": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "Castle District",
+      "popularity": 5
+    },
+    "fishermans-bastion": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Castle District",
+      "popularity": 5
+    },
+    "chain-bridge": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Castle District",
+      "popularity": 5
+    },
+    "st-stephens": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Belváros",
+      "popularity": 5
+    },
+    "heroes-square": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Palace District",
+      "popularity": 4
+    },
+    "szechenyi-baths": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Palace District",
+      "popularity": 5
+    },
+    "zoo": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in good weather",
+      "area": "Palace District",
+      "popularity": 3
+    },
+    "danube-river": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Belváros",
+      "popularity": 4
+    },
+    "danube-sightseeing": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Belváros",
+      "popularity": 4
+    },
+    "dohany-synagogue": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Jewish Quarter",
+      "popularity": 4
+    },
+    "gellert-hill": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Castle District",
+      "popularity": 4
+    },
+    "goulash": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Belváros",
+      "popularity": 4
+    },
+    "great-market-hall": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Belváros",
+      "popularity": 4
+    },
+    "godollo-palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Palace District",
+      "popularity": 2
+    },
+    "house-of-terror": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Palace District",
+      "popularity": 3
+    },
+    "opera-house": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Palace District",
+      "popularity": 4
+    },
+    "matthias-church": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Castle District",
+      "popularity": 4
+    },
+    "mupa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Belváros",
+      "popularity": 2
+    },
+    "puskas-arena": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match day",
+      "area": "Palace District",
+      "popularity": 2
+    },
+    "shoes-danube": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Belváros",
+      "popularity": 4
+    },
+    "ruin-bar-tour": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening, weekdays",
+      "area": "Jewish Quarter",
+      "popularity": 4
+    },
+    "central-market-food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday late morning",
+      "area": "Belváros",
+      "popularity": 4
+    },
+    "citadel-viewpoint": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Castle District",
+      "popularity": 4
+    },
+    "castle-walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Castle District",
+      "popularity": 4
+    },
+    "thermal-bath-activity": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Castle District",
+      "popularity": 3
+    },
+    "jewish-quarter-walk": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Jewish Quarter",
+      "popularity": 3
+    },
+    "andrssy": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Palace District",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers Castle Hill, the Parliament, a thermal bath and a ruin-bar evening without rushing."
+  },
+  "airports": [
+    {
+      "code": "BUD",
+      "name": "Budapest Ferenc Liszt International Airport",
+      "primary": true,
+      "note": "Main airport, about 18 km south-east of the centre.",
+      "options": [
+        {
+          "mode": "Bus 200E + Metro 3",
+          "to": "Deák Ferenc tér",
+          "price": "1000 Ft",
+          "time": "45-60 min",
+          "note": "Cheapest route; change at Kőbánya-Kispest."
+        },
+        {
+          "mode": "Airport bus 100E",
+          "to": "Deák Ferenc tér",
+          "price": "2500 Ft",
+          "time": "30-40 min",
+          "note": "Runs 24 hours; buy the right ticket, not the 450 Ft one."
+        },
+        {
+          "mode": "Shared shuttle (MiniBud)",
+          "to": "Central hotels",
+          "price": "about 9000 Ft",
+          "time": "40-60 min",
+          "note": "Book online; extra passengers cost more."
+        },
+        {
+          "mode": "Taxi (Főtaxi)",
+          "to": "City centre",
+          "price": "from 13000 Ft",
+          "time": "30-45 min",
+          "note": "Use the taxi stand and get a written quote."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Budapest",
+      "https://en.wikivoyage.org/wiki/Budapest"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Metro, trams and walking cover the centre; use the 100E bus for the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1–4 plus trams and trolleybuses cover the centre. Buy tickets or passes at machines and validate every ticket."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses and trams are frequent. Bus 100E runs 24 hours between Deák Ferenc tér and the airport. Validate every ticket or risk a fine."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis have fixed citywide rates. Főtaxi is the licensed airport operator, and Bolt works well."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is hard. Skip it for city sightseeing; walking and cycling suit the flat Pest side."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The flat Pest side is easy on foot. Cross the river for Castle Hill, which involves some climbing."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A river ferry and hop-on boats link stops along the Danube."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm summers, and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days from about 21°C to 28°C. Ideal for walking, the river and outdoor bars."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs of 4–8°C and lows near or below freezing. Wear a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain any month",
+        "text": "Expect roughly 8–12 rainy days each month. Carry a small umbrella year-round."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Summer heat is mild",
+        "text": "July and August peak near 28°C, not extreme. Mornings and evenings are the best times out."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and autumn are sweet spots",
+        "text": "April–May and September–October give mild temperatures and fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, a rain jacket, and swimwear for the thermal baths."
+      }
+    ]
+  }
+}

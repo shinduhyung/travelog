@@ -1,0 +1,33 @@
+$ deepseek_prep.py Edinburgh
+  tokens in 717 out 444
+Edinburgh: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Edinburgh
+  tokens in 4236 out 682
+Edinburgh: 0 problems
+
+$ deepseek_city.py Edinburgh --stage places
+Edinburgh: places
+  tokens in 1169 out 2663
+
+$ deepseek_city.py Edinburgh --stage frame
+Edinburgh: frame
+  tokens in 2443 out 1864
+
+$ deepseek_city.py Edinburgh --stage plans
+Edinburgh: plans
+  plans for day
+  tokens in 2102 out 690
+  plans for 1n
+  tokens in 2103 out 974
+  plans for 2n
+  tokens in 2108 out 1477
+  plans for 3n
+  tokens in 2103 out 1903
+  plans for 4n
+  tokens in 2103 out 2046
+
+$ merge_city.py Edinburgh
+Edinburgh: 20 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/edinburgh.json and planner/edinburgh.json
+

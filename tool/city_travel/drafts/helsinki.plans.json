@@ -1,0 +1,802 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Helsinki's design and architecture highlights, all walkable or a short tram ride apart.",
+      "days": [
+        {
+          "title": "Cathedral skyline, harbour and design",
+          "stops": [
+            {
+              "place": "helsinki_cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early before tour groups. Check opening hours on the day."
+            },
+            {
+              "place": "uspenski",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Short walk downhill. Red-brick cathedral above the harbour."
+            },
+            {
+              "place": "market_square",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Browse the stalls. Summer is busiest and best."
+            },
+            {
+              "place": "old_market_hall",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Lunch inside. Closed Sunday."
+            },
+            {
+              "place": "oodi",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Walk up past the station. Free to enter, good in rain."
+            },
+            {
+              "place": "temppeliaukio",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Tram or 20-minute walk. Usually open roughly 10:00–17:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A history-first day: the sea fortress in the morning, museums and the harbour in the afternoon.",
+      "days": [
+        {
+          "title": "Fortress and the old harbour",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Ferry from Market Square. Island always open; check ferry times on the day."
+            },
+            {
+              "place": "market_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Back on the mainland. Grab a snack from the stalls."
+            },
+            {
+              "place": "uspenski",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Five minutes uphill. Check hours; Sunday opens at 12:00."
+            },
+            {
+              "place": "national_museum",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Tram to Kamppi. Closed Monday; roughly 11:00–18:00 other days."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kruununhaka"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Sea air, island walks and parks. Best on a dry summer day.",
+      "days": [
+        {
+          "title": "Islands, parks and the seaside",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Ferry over and walk the ramparts and shoreline. Bring a windproof layer."
+            },
+            {
+              "place": "market_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch from the stalls after the ferry back."
+            },
+            {
+              "place": "esplanadi",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk. Sit in the park and people-watch."
+            },
+            {
+              "place": "cafe_regatta",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Seaside coffee. Summer hours only, roughly 09:00–20:00."
+            },
+            {
+              "place": "seurasaari",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Bus or tram out. Island open year-round; museum buildings mainly summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One tight day of Helsinki design and architecture, all walkable from the centre.",
+      "days": [
+        {
+          "title": "Cathedral skyline and design quarter",
+          "stops": [
+            {
+              "place": "helsinki_cathedral",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early, before tour groups. Check opening hours on the day."
+            },
+            {
+              "place": "market_square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Five minutes downhill on foot. Best in summer."
+            },
+            {
+              "place": "uspenski",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short walk up the hill. Closed Monday; check on the day."
+            },
+            {
+              "place": "old_market_hall",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "temppeliaukio",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Take tram 2 or walk about 25 minutes. Hours vary; check on the day."
+            },
+            {
+              "place": "oodi",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Short walk to the library. Free entry."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi or Kruununhaka"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Fortress island in the morning, harbour and museum history after lunch.",
+      "days": [
+        {
+          "title": "Suomenlinna and the harbour",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Ferry from Market Square, about 15 minutes. Bring a windproof layer."
+            },
+            {
+              "place": "market_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Back on the mainland. Grab a snack here."
+            },
+            {
+              "place": "uspenski",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Closed Monday."
+            },
+            {
+              "place": "national_museum",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Tram or 20-minute walk. Closed Monday; last entry before closing."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kruununhaka"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Sea air, island ferries and parks, with a sauna to finish.",
+      "days": [
+        {
+          "title": "Islands, parks and sauna",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Ferry from Market Square. Walk the sea walls."
+            },
+            {
+              "place": "market_square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch from the stalls in summer."
+            },
+            {
+              "place": "esplanadi",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Sit in the park."
+            },
+            {
+              "place": "cafe_regatta",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Seaside coffee. Summer hours only; check on the day."
+            },
+            {
+              "place": "loyly",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Walk along the shore. Book a sauna slot ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kamppi or Kruununhaka"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the cathedral skyline, design and a sauna by the sea.",
+      "days": [
+        {
+          "title": "Arrive, harbour icons and Esplanadi",
+          "stops": [
+            {
+              "place": "helsinki_cathedral",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Climb the steps for the white skyline view. Check hours on the day."
+            },
+            {
+              "place": "uspenski",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Ten minutes downhill on foot. Red-brick Orthodox church."
+            },
+            {
+              "place": "market_square",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Stalls close around 18:00, earlier off-season."
+            },
+            {
+              "place": "esplanadi",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Short walk inland. Sit in the park."
+            },
+            {
+              "place": "oodi",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Five minutes from the park. Free, good in rain."
+            }
+          ]
+        },
+        {
+          "title": "Rock Church, museums and sauna",
+          "stops": [
+            {
+              "place": "temppeliaukio",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Go early; services may close it. Check on the day."
+            },
+            {
+              "place": "sibelius",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short tram or 20-minute walk. Outdoor monument."
+            },
+            {
+              "place": "national_museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed Monday. Lunch in the café."
+            },
+            {
+              "place": "loyly",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Book a sauna slot ahead. Seaside terrace for dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi & Kamppi"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the fortress island and the city's past, with time to walk.",
+      "days": [
+        {
+          "title": "Arrive, cathedral and harbour",
+          "stops": [
+            {
+              "place": "helsinki_cathedral",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start on Senate Square. Check hours on the day."
+            },
+            {
+              "place": "uspenski",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Walk down toward the harbour."
+            },
+            {
+              "place": "old_market_hall",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Closed Sunday. Late lunch inside."
+            },
+            {
+              "place": "market_square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Ferry pier for Suomenlinna is right here."
+            }
+          ]
+        },
+        {
+          "title": "Suomenlinna fortress day",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Ferry from Market Square, roughly 15 minutes. Wear good shoes."
+            },
+            {
+              "place": "kallio_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Ferry back, then tram to Kallio. Bars busy in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kruununhaka & harbour"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want ferries, parks and seaside walks, mostly outdoors.",
+      "days": [
+        {
+          "title": "Arrive, Esplanadi and the market",
+          "stops": [
+            {
+              "place": "esplanadi",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Easy start in the central park."
+            },
+            {
+              "place": "market_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Summer has the most stalls. Check on the day."
+            },
+            {
+              "place": "cafe_regatta",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Seaside café, summer hours only. Check on the day."
+            },
+            {
+              "place": "loyly",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Sea-view sauna and dinner. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Island day: Suomenlinna and Seurasaari",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Ferry from Market Square. Outdoor, so pick a dry day."
+            },
+            {
+              "place": "seurasaari",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Bus or tram west. Museum buildings mainly summer; island open year-round."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi & Kamppi"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the cathedral skyline, design and a sauna by the sea.",
+      "days": [
+        {
+          "title": "Arrive and the harbour icons",
+          "stops": [
+            {
+              "place": "helsinki_cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Steps up from Market Square. Quiet in the afternoon."
+            },
+            {
+              "place": "uspenski",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Check the day's hours, Sunday opens late."
+            },
+            {
+              "place": "market_square",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Ferries to Suomenlinna leave from here."
+            },
+            {
+              "place": "esplanadi",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Short walk inland. Good for a coffee."
+            },
+            {
+              "place": "old_market_hall",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Early dinner. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Design, library and rock church",
+          "stops": [
+            {
+              "place": "oodi",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Free. Walk from the station."
+            },
+            {
+              "place": "tram_tour",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Ride a loop to see the city. Buy a day ticket."
+            },
+            {
+              "place": "temppeliaukio",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Lunch nearby first. Hours vary, check on the day."
+            },
+            {
+              "place": "national_museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "loyly",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sauna and dinner by the sea. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Fortress day, then opera",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Ferry from Market Square. Bring a jacket, it is windy."
+            },
+            {
+              "place": "cafe_regatta",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Back on the mainland, a seaside coffee."
+            },
+            {
+              "place": "opera",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening performance. Book ahead and check the schedule."
+            }
+          ]
+        },
+        {
+          "title": "Kallio and out",
+          "stops": [
+            {
+              "place": "hakaniemi_hall",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Breakfast or lunch. Closed Sunday."
+            },
+            {
+              "place": "kallio_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Quiet by day, bars busy at night."
+            },
+            {
+              "place": "karjalanpaisti",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Kallio or Kluuvi. Check the restaurant."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi or Kruununhaka"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want the fortress, the museums and the harbour's past.",
+      "days": [
+        {
+          "title": "Arrive and the old harbour",
+          "stops": [
+            {
+              "place": "market_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start where the city grew."
+            },
+            {
+              "place": "uspenski",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Ten minutes uphill. Check the day's hours."
+            },
+            {
+              "place": "helsinki_cathedral",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "The white landmark above the harbour."
+            },
+            {
+              "place": "old_market_hall",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Dinner. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Suomenlinna fortress",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Ferry from Market Square. Wear good shoes."
+            },
+            {
+              "place": "cafe_regatta",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Coffee by the water after the ferry back."
+            },
+            {
+              "place": "loyly",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sauna and dinner. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the open-air past",
+          "stops": [
+            {
+              "place": "national_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "temppeliaukio",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch first. Hours vary, check on the day."
+            },
+            {
+              "place": "sibelius",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Short bus or tram ride. Always open."
+            },
+            {
+              "place": "seurasaari",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Old wooden buildings. Museum houses mainly in summer."
+            }
+          ]
+        },
+        {
+          "title": "Kallio and out",
+          "stops": [
+            {
+              "place": "hakaniemi_hall",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Lunch. Closed Sunday."
+            },
+            {
+              "place": "kallio_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Working-class history and food."
+            },
+            {
+              "place": "karjalanpaisti",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Try the Karelian stew. Check the restaurant."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kruununhaka or Kluuvi"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Visitors who want ferries, islands, parks and sea air.",
+      "days": [
+        {
+          "title": "Arrive and the waterfront",
+          "stops": [
+            {
+              "place": "esplanadi",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Green heart of the city."
+            },
+            {
+              "place": "market_square",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Watch the ferries come and go."
+            },
+            {
+              "place": "cafe_regatta",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Seaside coffee. Summer hours."
+            },
+            {
+              "place": "old_market_hall",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Dinner. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Island fortress",
+          "stops": [
+            {
+              "place": "suomenlinna",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Ferry from Market Square. Walk the ramparts and shore."
+            },
+            {
+              "place": "loyly",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Sauna and dinner by the sea. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Canal cruise and Seurasaari",
+          "stops": [
+            {
+              "place": "canal_route",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Summer only. Check departures on the day."
+            },
+            {
+              "place": "seurasaari",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Lunch first. Island open year-round, houses mainly summer."
+            },
+            {
+              "place": "sibelius",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "On the way back. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Parks and out",
+          "stops": [
+            {
+              "place": "kallio_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Hills with harbour views."
+            },
+            {
+              "place": "hakaniemi_hall",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Closed Sunday."
+            },
+            {
+              "place": "tram_tour",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Easy ride back through town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kluuvi or Kamppi"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import 'package:path/path.dart' as p;
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class CalendarProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -44,7 +45,7 @@ class CalendarProvider with ChangeNotifier {
     // 1-2. 서버 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey(_keyCalendarMemos)) {
           final String serverJson = doc.data()![_keyCalendarMemos];
           // 서버 데이터로 업데이트
@@ -183,7 +184,7 @@ class CalendarProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey(_keyCalendarMemos)) {
           final String serverJson = doc.data()![_keyCalendarMemos];
           final List<dynamic> jsonList = json.decode(serverJson);

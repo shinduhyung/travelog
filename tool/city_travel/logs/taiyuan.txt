@@ -1,0 +1,28 @@
+$ deepseek_facts.py Taiyuan
+  tokens in 1168 out 566
+Taiyuan: 0 problems
+
+$ deepseek_city.py Taiyuan --stage places
+Taiyuan: places
+  tokens in 1133 out 2509
+
+$ deepseek_city.py Taiyuan --stage frame
+Taiyuan: frame
+  tokens in 2432 out 1749
+  repaired JSON
+
+$ deepseek_city.py Taiyuan --stage plans
+Taiyuan: plans
+  plans for day
+  tokens in 1913 out 947
+  plans for 1n
+  tokens in 1919 out 1331
+  plans for 2n
+  tokens in 1914 out 1386
+  plans for 3n
+  tokens in 1914 out 1410
+
+$ merge_city.py Taiyuan
+Taiyuan: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/taiyuan.json and planner/taiyuan.json
+

@@ -1,0 +1,1380 @@
+{
+  "city": "Pittsburgh",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Pittsburgh rewards visitors with dramatic river views, compact walkable districts and a friendly, unpretentious vibe. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 40.3685,
+      "west": -80.0376,
+      "north": 40.4643,
+      "east": -79.8458,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 35,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.4,
+    "city_kmh": 20,
+    "notes": [
+      "Pittsburgh Regional Transit runs buses, light rail ('The T') and two inclines.",
+      "Bus and incline fare is $2.75 with ConnectCard or mobile app; cash exact fare, no change.",
+      "Day pass costs $7; tickets allow unlimited transfers for three hours.",
+      "The T is free within downtown between Allegheny and First Avenue stations.",
+      "Uber and Lyft are widely used and often cheaper than taxis; street hailing is hard.",
+      "Downtown is walkable, but hills and rivers make driving confusing; a GPS helps."
+    ],
+    "sources": []
+  },
+  "places": {
+    "duquesne-incline": {
+      "name": "Duquesne Incline",
+      "landmark": "Duquesne Incline",
+      "kind": "sight",
+      "lat": 40.4398,
+      "lon": -80.0175,
+      "price": 5.5,
+      "price_text": "≈ $2.50–3 one way, cash preferred; check on the day",
+      "hours": "Daily, roughly 05:30–00:30 · check on the day",
+      "tip": "Ride up near sunset and walk down the wooden steps or take the car back for the best skyline view.",
+      "source": "https://www.duquesneincline.org/"
+    },
+    "point-state-park": {
+      "name": "Point State Park",
+      "landmark": "Point State Park",
+      "kind": "park",
+      "lat": 40.4417,
+      "lon": -80.0131,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly dawn to dusk",
+      "tip": "Stand at the fountain where the three rivers meet, then look for the old Fort Pitt blockhouse.",
+      "source": "https://www.dcnr.pa.gov/StateParks/FindAPark/PointStatePark/"
+    },
+    "allegheny-river": {
+      "name": "Allegheny River",
+      "landmark": "Allegheny River",
+      "kind": "sight",
+      "lat": 40.4417,
+      "lon": -80.011,
+      "price": 0,
+      "price_text": "Free to walk; boat tours cost extra",
+      "hours": "Riverfront trails always open",
+      "tip": "Walk the North Shore trail for river and skyline views, and watch the rowers in the morning.",
+      "source": ""
+    },
+    "cmu": {
+      "name": "Carnegie Mellon University",
+      "landmark": "Carnegie Mellon University",
+      "kind": "sight",
+      "lat": 40.4432,
+      "lon": -79.9428,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily; buildings vary",
+      "tip": "Walk the grassy Cut between the buildings for the classic campus photo.",
+      "source": "https://www.cmu.edu/"
+    },
+    "carnegie-museum": {
+      "name": "Carnegie Museum of Natural History",
+      "landmark": "Carnegie Museum of Natural History",
+      "kind": "museum",
+      "lat": 40.4435,
+      "lon": -79.9489,
+      "price": 25,
+      "price_text": "≈ $20–25 adult; check current price online",
+      "hours": "Usually Tue–Sun, closed Monday · check on the day",
+      "tip": "See the dinosaur skeletons first, then the minerals hall if you have time.",
+      "source": "https://carnegiemnh.org/"
+    },
+    "kennywood": {
+      "name": "Kennywood",
+      "landmark": "Kennywood",
+      "kind": "activity",
+      "lat": 40.3807,
+      "lon": -79.866,
+      "price": 55,
+      "price_text": "≈ $45–70 day ticket; check current price online",
+      "hours": "Seasonal, roughly May–Oct · check on the day",
+      "tip": "Go on a weekday and ride the old wooden coasters early before lines build.",
+      "source": "https://www.kennywood.com/"
+    },
+    "pitt": {
+      "name": "University of Pittsburgh",
+      "landmark": "University of Pittsburgh",
+      "kind": "sight",
+      "lat": 40.4443,
+      "lon": -79.9532,
+      "price": 0,
+      "price_text": "Free to walk; Cathedral of Learning tours may cost",
+      "hours": "Campus open daily; Cathedral lobby on weekdays",
+      "tip": "Look up in the Cathedral of Learning's 42-storey lobby, then find the nationality rooms if open.",
+      "source": "https://www.pitt.edu/"
+    },
+    "strip-market": {
+      "name": "Strip District food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.452,
+      "lon": -79.985,
+      "price": 0,
+      "price_text": "Free to browse; food costs vary",
+      "hours": "Best Sat morning; many shops close early afternoon",
+      "tip": "Come hungry on a Saturday morning for the street food and old-style grocery shops.",
+      "source": ""
+    },
+    "mt-washington-view": {
+      "name": "Mount Washington overlook",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.4385,
+      "lon": -80.0175,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The Grandview overlook gives the postcard view of the three rivers and the stadiums.",
+      "source": ""
+    },
+    "gateway-clipper": {
+      "name": "Gateway Clipper river cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 40.4415,
+      "lon": -80.0085,
+      "price": 25,
+      "price_text": "≈ $20–30 sightseeing cruise; check on the day",
+      "hours": "Seasonal sailings, mostly daytime and evening",
+      "tip": "A short cruise is an easy way to see the skyline from the water without much walking.",
+      "source": "https://www.gatewayclipper.com/"
+    },
+    "phipps": {
+      "name": "Phipps Conservatory",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.4395,
+      "lon": -79.9477,
+      "price": 20,
+      "price_text": "≈ $18–22 adult; check current price online",
+      "hours": "Daily, roughly 09:30–17:00 · check on the day",
+      "tip": "Good rainy-day stop; the glasshouse rooms are warm, so dress in layers.",
+      "source": "https://www.phipps.conservatory.org/"
+    },
+    "andy-warhol": {
+      "name": "The Andy Warhol Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 40.4483,
+      "lon": -80.0022,
+      "price": 20,
+      "price_text": "≈ $15–25 adult; check current price online",
+      "hours": "Usually Tue–Sun, closed Monday · check on the day",
+      "tip": "Start at the top floor and work down; allow at least two hours.",
+      "source": "https://www.warhol.org/"
+    },
+    "north-shore-walk": {
+      "name": "North Shore riverfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.4468,
+      "lon": -80.0095,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk between the stadiums and the fountain for river views and public art.",
+      "source": ""
+    },
+    "primanti": {
+      "name": "Primanti Bros. sandwich",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.4522,
+      "lon": -79.9845,
+      "price": 12,
+      "price_text": "≈ $10–15 per sandwich",
+      "hours": "Daily, long hours · check on the day",
+      "tip": "Order the classic sandwich with fries and slaw inside the bread — that is the local way.",
+      "source": "https://primantibros.com/"
+    },
+    "south-side-walk": {
+      "name": "South Side East Carson Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.4285,
+      "lon": -79.9765,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; busiest at night",
+      "tip": "Walk the old commercial street by day for shops and bars, and avoid late weekend nights if you want quiet.",
+      "source": ""
+    },
+    "heinz-history": {
+      "name": "Senator John Heinz History Center",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 40.4465,
+      "lon": -79.9922,
+      "price": 20,
+      "price_text": "≈ $18–22 adult; check current price online",
+      "hours": "Daily, roughly 10:00–17:00 · check on the day",
+      "tip": "Good for Pittsburgh history and the local sports exhibits on a rainy day.",
+      "source": "https://www.heinzhistorycenter.org/"
+    },
+    "cathedral-learning": {
+      "name": "Cathedral of Learning nationality rooms",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 40.4444,
+      "lon": -79.9531,
+      "price": 5,
+      "price_text": "≈ $5 tour; check on the day",
+      "hours": "Weekday tours, limited hours · check on the day",
+      "tip": "Book a guided tour to see the decorated nationality rooms inside the tower.",
+      "source": "https://www.pitt.edu/"
+    },
+    "squirrel-hill": {
+      "name": "Squirrel Hill neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.4385,
+      "lon": -79.9225,
+      "price": 0,
+      "price_text": "Free to walk; food costs vary",
+      "hours": "Always open; shops have daytime hours",
+      "tip": "A good stop for lunch and a walk after the Oakland museums.",
+      "source": ""
+    },
+    "pnc-park": {
+      "name": "PNC Park baseball game",
+      "landmark": null,
+      "kind": "show",
+      "lat": 40.4469,
+      "lon": -80.0058,
+      "price": 25,
+      "price_text": "≈ $15–60 depending on seat; check on the day",
+      "hours": "Game days, roughly April–October",
+      "tip": "Sit on the river side for skyline views during the game.",
+      "source": "https://www.mlb.com/pirates"
+    },
+    "market-square": {
+      "name": "Market Square",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.4405,
+      "lon": -80.0022,
+      "price": 0,
+      "price_text": "Free to browse; meals vary",
+      "hours": "Always open; restaurants have their own hours",
+      "tip": "Central spot for a casual meal and people-watching downtown.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of museums and views, mostly in Oakland and Downtown.",
+      "days": [
+        {
+          "title": "Oakland museums, then Downtown art and the incline",
+          "stops": [
+            {
+              "place": "carnegie-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Start when doors open to beat school groups."
+            },
+            {
+              "place": "cathedral-learning",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Nationality rooms tours run on weekdays only. Check times on the day."
+            },
+            {
+              "place": "squirrel-hill",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch stop. Short ride from Oakland."
+            },
+            {
+              "place": "andy-warhol",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Monday. About 20 minutes by car or bus from Oakland."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Ride up for sunset. Walk to the Mount Washington overlook from the top."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market morning, a classic sandwich and an evening of neighbourhood eating.",
+      "days": [
+        {
+          "title": "Strip District to South Side",
+          "stops": [
+            {
+              "place": "strip-market",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Best on Saturday morning. Many shops close by early afternoon."
+            },
+            {
+              "place": "primanti",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Early lunch to skip the queue. Long daily hours, check on the day."
+            },
+            {
+              "place": "heinz-history",
+              "at": "12:45",
+              "minutes": 120,
+              "note": "Next door in the Strip. Good rainy-day backup."
+            },
+            {
+              "place": "south-side-walk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "East Carson Street. Quieter and safer in daytime."
+            },
+            {
+              "place": "market-square",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Downtown dinner. Restaurants set their own hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Rivers, gardens and hilltop views on foot and by incline.",
+      "days": [
+        {
+          "title": "Riverfront morning, Oakland garden, sunset views",
+          "stops": [
+            {
+              "place": "point-state-park",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Fountain and river paths. Open dawn to dusk."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Cross the bridge and follow the river past the stadiums."
+            },
+            {
+              "place": "phipps",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Quieter on weekday mornings. Check hours on the day."
+            },
+            {
+              "place": "allegheny-river",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Trails always open. Pick a stretch near your next stop."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset or after dark for the skyline. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museum-heavy day in Oakland, then the Warhol and the incline for views.",
+      "days": [
+        {
+          "title": "Oakland museums",
+          "stops": [
+            {
+              "place": "carnegie-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Start early to beat school groups."
+            },
+            {
+              "place": "cathedral-learning",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Weekday tours only, limited hours. Check on the day."
+            },
+            {
+              "place": "squirrel-hill",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch and a short walk. Shops are daytime only."
+            },
+            {
+              "place": "phipps",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Quieter on weekday afternoons. Check closing time."
+            }
+          ]
+        },
+        {
+          "title": "Warhol and the incline",
+          "stops": [
+            {
+              "place": "andy-warhol",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Allow two hours."
+            },
+            {
+              "place": "market-square",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch downtown."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Ride up for the view. Check hours on the day."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Walk the overlook after the incline."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Strip District morning, a Primanti lunch, and a South Side evening walk.",
+      "days": [
+        {
+          "title": "Strip District and downtown",
+          "stops": [
+            {
+              "place": "strip-market",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Best on Saturday morning. Many shops close early afternoon."
+            },
+            {
+              "place": "primanti",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch. Long hours, but expect a queue."
+            },
+            {
+              "place": "heinz-history",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Good rainy-day backup. Check hours on the day."
+            },
+            {
+              "place": "market-square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Coffee and a wander."
+            }
+          ]
+        },
+        {
+          "title": "South Side and a view",
+          "stops": [
+            {
+              "place": "south-side-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Daytime is calmer; it gets busy at night."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Short ride up for the skyline."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "andy-warhol",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Closed Monday. Last entry may be earlier."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Strip District or Downtown"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Riverfront trails, the Point, and hilltop views at sunset.",
+      "days": [
+        {
+          "title": "Rivers and the Point",
+          "stops": [
+            {
+              "place": "point-state-park",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Fountain and river views. Dawn to dusk."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Cross the bridge and follow the trail."
+            },
+            {
+              "place": "allegheny-river",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Trails always open. Bring water."
+            },
+            {
+              "place": "market-square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch downtown."
+            }
+          ]
+        },
+        {
+          "title": "Incline and overlook",
+          "stops": [
+            {
+              "place": "duquesne-incline",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Stay for sunset and the lights."
+            },
+            {
+              "place": "gateway-clipper",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Seasonal sailings. Book ahead and check times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums and history for first-timers: Warhol, the Carnegie halls and Oakland's campus landmarks.",
+      "days": [
+        {
+          "title": "Arrive, Downtown and the North Shore",
+          "stops": [
+            {
+              "place": "market-square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Good first stop for lunch and a feel for Downtown."
+            },
+            {
+              "place": "andy-warhol",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Usually closed Monday. Check hours on the day."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Cross the river on foot for skyline views."
+            },
+            {
+              "place": "pnc-park",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Only on game days, roughly April to October. Buy tickets ahead."
+            }
+          ]
+        },
+        {
+          "title": "Oakland museums and campus",
+          "stops": [
+            {
+              "place": "carnegie-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Usually closed Monday. Weekday mornings are quieter."
+            },
+            {
+              "place": "pitt",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Walk the campus; Cathedral lobby open weekdays."
+            },
+            {
+              "place": "cathedral-learning",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Nationality rooms run on weekday tours only. Check times on the day."
+            },
+            {
+              "place": "cmu",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Short walk from Pitt."
+            },
+            {
+              "place": "phipps",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Roughly 09:30 to 17:00 daily. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Incline, views and depart",
+          "stops": [
+            {
+              "place": "duquesne-incline",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Ride up early to beat crowds. Runs roughly 05:30 to 00:30."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Walk the overlooks at the top."
+            },
+            {
+              "place": "point-state-park",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Downtown at the point where the rivers meet."
+            },
+            {
+              "place": "heinz-history",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Roughly 10:00 to 17:00 daily. Good rainy-day backup."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through Pittsburgh: markets, sandwiches and neighbourhood food streets.",
+      "days": [
+        {
+          "title": "Arrive, Market Square and the Strip",
+          "stops": [
+            {
+              "place": "market-square",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch options all around the square."
+            },
+            {
+              "place": "heinz-history",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Roughly 10:00 to 17:00 daily. Check on the day."
+            },
+            {
+              "place": "strip-market",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Many shops close early afternoon, so go earlier if you can."
+            },
+            {
+              "place": "primanti",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "The classic sandwich. Long hours daily."
+            }
+          ]
+        },
+        {
+          "title": "Strip District Saturday and South Side",
+          "stops": [
+            {
+              "place": "strip-market",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Best on Saturday morning. Go hungry."
+            },
+            {
+              "place": "primanti",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Early lunch before the rush."
+            },
+            {
+              "place": "south-side-walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "East Carson Street. Busiest at night, calmer by day."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Ride up for sunset views."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Stay for the lights coming on."
+            }
+          ]
+        },
+        {
+          "title": "Oakland and Squirrel Hill, then depart",
+          "stops": [
+            {
+              "place": "squirrel-hill",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Lunchtime is liveliest; shops have daytime hours."
+            },
+            {
+              "place": "phipps",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Roughly 09:30 to 17:00 daily. Check on the day."
+            },
+            {
+              "place": "carnegie-museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Usually closed Monday. Check on the day."
+            },
+            {
+              "place": "pitt",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Short walk to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Rivers, trails and hilltop views: the outdoorsy side of Pittsburgh.",
+      "days": [
+        {
+          "title": "Arrive, rivers and the Point",
+          "stops": [
+            {
+              "place": "point-state-park",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Fountain and river paths. Open dawn to dusk."
+            },
+            {
+              "place": "allegheny-river",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Riverfront trails are always open."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Follow the water past the stadiums."
+            },
+            {
+              "place": "gateway-clipper",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Seasonal sailings. Book ahead and check times."
+            }
+          ]
+        },
+        {
+          "title": "Incline, overlook and Oakland green",
+          "stops": [
+            {
+              "place": "duquesne-incline",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Ride up early. Runs roughly 05:30 to 00:30."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Walk the overlooks."
+            },
+            {
+              "place": "phipps",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Indoor gardens, good in any weather. Check hours on the day."
+            },
+            {
+              "place": "squirrel-hill",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Lunch and a neighbourhood stroll."
+            },
+            {
+              "place": "cmu",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Campus grounds open daily."
+            }
+          ]
+        },
+        {
+          "title": "River morning, then depart",
+          "stops": [
+            {
+              "place": "allegheny-river",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quiet morning on the trails."
+            },
+            {
+              "place": "point-state-park",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Last look at the fountain."
+            },
+            {
+              "place": "strip-market",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Grab snacks for the trip. Many shops close early afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, history and the classic views without rushing.",
+      "days": [
+        {
+          "title": "Arrive, downtown and the incline",
+          "stops": [
+            {
+              "place": "market-square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Good first stop to get your bearings. Cafes and restaurants around the square."
+            },
+            {
+              "place": "point-state-park",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk to the fountain where the rivers meet. About 10 minutes on foot."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Ride up for sunset. Check the day's hours before you go."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Overlook is a short walk from the top station. Stay for the lights."
+            }
+          ]
+        },
+        {
+          "title": "Oakland museums",
+          "stops": [
+            {
+              "place": "carnegie-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday mornings are quietest."
+            },
+            {
+              "place": "cathedral-learning",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Nationality rooms run on weekday tours only. Check times on the day."
+            },
+            {
+              "place": "pitt",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Walk the campus around the Cathedral."
+            },
+            {
+              "place": "phipps",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Conservatory is a short walk or bus ride away. Usually closes around 17:00."
+            },
+            {
+              "place": "squirrel-hill",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in Squirrel Hill. Shops close earlier; restaurants run late."
+            }
+          ]
+        },
+        {
+          "title": "Strip District and Warhol",
+          "stops": [
+            {
+              "place": "strip-market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Best on Saturday morning. Many shops close early afternoon."
+            },
+            {
+              "place": "primanti",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Expect a queue at peak times."
+            },
+            {
+              "place": "heinz-history",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Good rainy-day backup. Usually open daily, roughly 10:00–17:00."
+            },
+            {
+              "place": "andy-warhol",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check closing time on the day."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Evening stroll along the river before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "allegheny-river",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Easy riverfront walk before checkout."
+            },
+            {
+              "place": "gateway-clipper",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Seasonal sailings only. Book ahead and check the day's schedule."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want the markets, the sandwiches and the neighbourhood tables.",
+      "days": [
+        {
+          "title": "Arrive and eat downtown",
+          "stops": [
+            {
+              "place": "market-square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start here for coffee and a look around."
+            },
+            {
+              "place": "point-state-park",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk off lunch by the fountain."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Riverfront path with skyline views."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset ride up, then dinner on Mount Washington."
+            }
+          ]
+        },
+        {
+          "title": "Strip District food day",
+          "stops": [
+            {
+              "place": "strip-market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go Saturday morning. Come hungry and bring cash for small stalls."
+            },
+            {
+              "place": "primanti",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "The classic sandwich with fries and slaw inside."
+            },
+            {
+              "place": "heinz-history",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Walk off lunch indoors. Usually open daily, roughly 10:00–17:00."
+            },
+            {
+              "place": "south-side-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "East Carson Street for bars and dinner. Busiest at night."
+            }
+          ]
+        },
+        {
+          "title": "Oakland and Squirrel Hill",
+          "stops": [
+            {
+              "place": "cmu",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Campus walk. Buildings vary; grounds are open."
+            },
+            {
+              "place": "cathedral-learning",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Weekday tours only. Check hours on the day."
+            },
+            {
+              "place": "squirrel-hill",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop. Good range of casual places."
+            },
+            {
+              "place": "carnegie-museum",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday afternoons are calmer."
+            },
+            {
+              "place": "phipps",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Check closing time; usually around 17:00, so go earlier if tight."
+            }
+          ]
+        },
+        {
+          "title": "Last bite, then go",
+          "stops": [
+            {
+              "place": "allegheny-river",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning walk before checkout."
+            },
+            {
+              "place": "market-square",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Coffee and a last snack before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Strip District"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Walkers and view-chasers: rivers, hills and greenhouses at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, rivers and the incline",
+          "stops": [
+            {
+              "place": "point-state-park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start at the fountain where the rivers meet."
+            },
+            {
+              "place": "allegheny-river",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Riverfront trails are always open."
+            },
+            {
+              "place": "north-shore-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Flat path, good skyline views."
+            },
+            {
+              "place": "duquesne-incline",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset ride. Check the day's hours."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Stay for the lights, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Oakland green day",
+          "stops": [
+            {
+              "place": "phipps",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Quieter on weekday mornings. Check hours on the day."
+            },
+            {
+              "place": "carnegie-museum",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Closed Monday. Indoor backup if it rains."
+            },
+            {
+              "place": "pitt",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Campus walk around the Cathedral."
+            },
+            {
+              "place": "squirrel-hill",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Coffee and a stroll before dinner."
+            }
+          ]
+        },
+        {
+          "title": "River cruise and South Side",
+          "stops": [
+            {
+              "place": "gateway-clipper",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Seasonal. Book ahead and check sailings on the day."
+            },
+            {
+              "place": "market-square",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch downtown."
+            },
+            {
+              "place": "south-side-walk",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Daytime is calmer than night."
+            },
+            {
+              "place": "mt-washington-view",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Second visit for a different light, or swap for a park walk."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "allegheny-river",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Easy final walk before checkout."
+            },
+            {
+              "place": "point-state-park",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "One last look at the fountain before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Andy Warhol Museum and the Carnegie halls."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Primanti sandwiches, pierogies and Strip District markets."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Inclines, riverfront trails and hilltop views."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Walk to Point State Park, the inclines and the ballparks. Free T rides inside downtown.",
+      "center": [
+        40.441,
+        -80.0
+      ]
+    },
+    {
+      "area": "Strip District",
+      "range": [
+        130,
+        300
+      ],
+      "why": "Food markets, cafés and the riverfront trail on the doorstep; short walk or bus to downtown.",
+      "center": [
+        40.452,
+        -79.985
+      ]
+    },
+    {
+      "area": "South Side",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Bars and restaurants on East Carson Street; walk over the bridge to downtown sights.",
+      "center": [
+        40.428,
+        -79.976
+      ]
+    },
+    {
+      "area": "Oakland",
+      "range": [
+        120,
+        280
+      ],
+      "why": "Next to the universities, museums and Phipps Conservatory; quieter evenings.",
+      "center": [
+        40.441,
+        -79.957
+      ]
+    }
+  ],
+  "food": [
+    "Order a Primanti Bros. sandwich: meat, fries and coleslaw stacked inside the bread.",
+    "Try pierogies and Polish plates in the Strip District and Lawrenceville.",
+    "Strip District on a Saturday morning: coffee, bakeries and food stalls; go early, it gets busy.",
+    "Cheap eats: a slice of pizza or a hoagie for roughly $8–15; sit-down dinners run about $20–40 a head.",
+    "Book ahead for popular Lawrenceville and Downtown restaurants on weekend evenings."
+  ],
+  "more_time": [
+    "Ride both inclines: Duquesne for the classic view, Monongahela for a quieter one. Fare is $2.75 each way.",
+    "Add a half-day at the Carnegie Museum of Natural History and the Andy Warhol Museum in Oakland and the North Shore.",
+    "Sports fans: check the Pirates, Steelers or Penguins schedule; tickets vary, so check on the day."
+  ]
+}

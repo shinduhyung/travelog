@@ -1,0 +1,1402 @@
+{
+  "city": "San Diego",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "San Diego rewards visitors with beaches, a historic harbour and easy day trips to Mexico. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 32.5451,
+      "west": -117.3047,
+      "north": 32.9151,
+      "east": -116.9695,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4,
+      "per_km": 2.5,
+      "min_fare": 15
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "MTS Trolley (light rail) links downtown, Old Town, Mission Valley and San Ysidro.",
+      "MTS buses cover the city; the #992 Flyer runs between SAN terminals and Santa Fe Depot.",
+      "Taxis are metered; Uber and Lyft operate widely and are usually cheaper.",
+      "A car is the most efficient way to see the sprawling county; expect rush-hour congestion.",
+      "Downtown and the bayfront are walkable; bikes and scooters are common near beaches.",
+      "The Coaster commuter train and Amtrak Pacific Surfliner serve the coast north to Oceanside and Los Angeles."
+    ],
+    "sources": []
+  },
+  "places": {
+    "zoo": {
+      "name": "San Diego Zoo",
+      "landmark": "San Diego Zoo",
+      "kind": "park",
+      "lat": 32.7353,
+      "lon": -117.149,
+      "price": null,
+      "price_text": "Check current ticket price on the official site; one-day passes are often around USD 70–80 for adults",
+      "hours": "Daily, usually 09:00–17:00 or later in summer; check on the day",
+      "tip": "Go early and take the guided bus tour first to get your bearings, then walk the rest.",
+      "source": "https://zoo.sandiegozoo.org/"
+    },
+    "coronado": {
+      "name": "Coronado Beach",
+      "landmark": "Coronado Beach",
+      "kind": "beach",
+      "lat": 32.6806,
+      "lon": -117.1849,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open all day; lifeguards usually daytime in summer",
+      "tip": "Walk south toward the Hotel del Coronado for the classic view, and bring layers — it can be cool even in summer.",
+      "source": "https://www.coronado.ca.us/"
+    },
+    "seaworld": {
+      "name": "SeaWorld San Diego",
+      "landmark": "SeaWorld San Diego",
+      "kind": "park",
+      "lat": 32.7645,
+      "lon": -117.2268,
+      "price": null,
+      "price_text": "Check current ticket prices online; buying ahead is usually cheaper",
+      "hours": "Usually daily, hours vary by season; check on the day",
+      "tip": "Book online in advance and arrive at opening to hit the big rides before queues build.",
+      "source": "https://seaworld.com/san-diego/"
+    },
+    "harbor_cruise": {
+      "name": "San Diego Harbor Cruise",
+      "landmark": "San Diego Harbor Cruise",
+      "kind": "tour",
+      "lat": 32.7166,
+      "lon": -117.1729,
+      "price": null,
+      "price_text": "Check operator prices; short cruises often around USD 30–40",
+      "hours": "Departures through the day; check schedule on the day",
+      "tip": "Take an afternoon or sunset departure for the best light on the skyline and the USS Midway.",
+      "source": ""
+    },
+    "belmont": {
+      "name": "Belmont Park",
+      "landmark": "Belmont Park",
+      "kind": "activity",
+      "lat": 32.7751,
+      "lon": -117.253,
+      "price": 0,
+      "price_text": "Free to enter; rides and the Giant Dipper cost extra",
+      "hours": "Usually daily, hours vary; check on the day",
+      "tip": "Ride the historic Giant Dipper wooden coaster and walk the boardwalk at sunset.",
+      "source": "https://www.belmontpark.com/"
+    },
+    "comiccon": {
+      "name": "San Diego Comic-Con",
+      "landmark": "San Diego Comic-Con",
+      "kind": "show",
+      "lat": 32.7071,
+      "lon": -117.1611,
+      "price": null,
+      "price_text": "Badge prices vary by day; badges sell out fast and are hard to get",
+      "hours": "Usually a long weekend in July; check the official dates",
+      "tip": "Badges are limited — plan months ahead, and enjoy the free downtown events even without one.",
+      "source": "https://www.comic-con.org/"
+    },
+    "sesame": {
+      "name": "Sesame Place San Diego",
+      "landmark": "Sesame Place San Diego",
+      "kind": "park",
+      "lat": 32.5801,
+      "lon": -117.0016,
+      "price": null,
+      "price_text": "Check current ticket prices online; advance tickets usually cheaper",
+      "hours": "Seasonal; usually daily in summer, check on the day",
+      "tip": "Best for families with young kids — bring swim gear for the water play areas.",
+      "source": "https://sesameplace.com/san-diego/"
+    },
+    "ucsd": {
+      "name": "University of California, San Diego (UCSD)",
+      "landmark": "University of California, San Diego (UCSD)",
+      "kind": "sight",
+      "lat": 32.8801,
+      "lon": -117.234,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds generally open daily; buildings vary",
+      "tip": "See the Stuart Collection public art, including the giant 'Sun God' statue, on a campus walk.",
+      "source": "https://www.ucsd.edu/"
+    },
+    "jackbox": {
+      "name": "Jack in the Box",
+      "landmark": "Jack in the Box",
+      "kind": "food",
+      "lat": 32.7157,
+      "lon": -117.1611,
+      "price": null,
+      "price_text": "Budget fast food; most items under USD 10",
+      "hours": "Many locations open long hours or 24h; check on the day",
+      "tip": "A San Diego-born fast-food chain — try the tacos, a local menu staple.",
+      "source": "https://www.jackinthebox.com/"
+    },
+    "mundo": {
+      "name": "Mundo Divertido",
+      "landmark": "Mundo Divertido",
+      "kind": "park",
+      "lat": 32.5028,
+      "lon": -116.9926,
+      "price": null,
+      "price_text": "Check current prices on site; family amusement park",
+      "hours": "Hours vary by season; check on the day",
+      "tip": "A family-friendly amusement park near the border — confirm opening days before you go.",
+      "source": ""
+    },
+    "qdoba": {
+      "name": "Qdoba",
+      "landmark": "Qdoba",
+      "kind": "food",
+      "lat": 32.7157,
+      "lon": -117.1611,
+      "price": null,
+      "price_text": "Budget fast-casual; most meals under USD 15",
+      "hours": "Varies by location; check on the day",
+      "tip": "Quick fast-casual burritos and bowls — handy for a fast meal between sights.",
+      "source": "https://www.qdoba.com/"
+    },
+    "gaslamp": {
+      "name": "Gaslamp Quarter walk",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 32.7115,
+      "lon": -117.1602,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; liveliest in the evening",
+      "tip": "Stroll the Victorian-era streets by day, then come back for dinner and nightlife.",
+      "source": ""
+    },
+    "lajolla_cove": {
+      "name": "La Jolla Cove",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 32.8505,
+      "lon": -117.2726,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open all day",
+      "tip": "Watch sea lions and seals from the cliffs — keep a respectful distance and don't approach them.",
+      "source": ""
+    },
+    "liberty_station": {
+      "name": "Liberty Public Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 32.7546,
+      "lon": -117.2116,
+      "price": null,
+      "price_text": "Free to enter; pay per vendor",
+      "hours": "Usually daily; check on the day",
+      "tip": "A food hall in a former naval training building — good for a casual lunch with varied choices.",
+      "source": ""
+    },
+    "cabrillo": {
+      "name": "Cabrillo National Monument",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 32.6737,
+      "lon": -117.2408,
+      "price": null,
+      "price_text": "Small entrance fee per vehicle or person; check current rates",
+      "hours": "Usually daily daytime; check on the day",
+      "tip": "Go for the tide pools and the sweeping view over the harbor and city skyline.",
+      "source": "https://www.nps.gov/cabr/"
+    },
+    "balboa": {
+      "name": "Balboa Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 32.7341,
+      "lon": -117.1446,
+      "price": 0,
+      "price_text": "Free to walk; museums charge separately",
+      "hours": "Park always open; museums daytime, check on the day",
+      "tip": "Walk the El Prado and the gardens, then pick one museum rather than trying to see them all.",
+      "source": ""
+    },
+    "sunset_cliffs": {
+      "name": "Sunset Cliffs",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 32.7166,
+      "lon": -117.2536,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open all day",
+      "tip": "Come for sunset over the Pacific — stay back from the cliff edges.",
+      "source": ""
+    },
+    "old_town": {
+      "name": "Old Town San Diego State Historic Park",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 32.7548,
+      "lon": -117.1972,
+      "price": 0,
+      "price_text": "Free to walk; some sites charge",
+      "hours": "Grounds usually open daily; check on the day",
+      "tip": "A good stop for early California history and Mexican food nearby.",
+      "source": ""
+    },
+    "midway": {
+      "name": "USS Midway Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 32.7135,
+      "lon": -117.1751,
+      "price": null,
+      "price_text": "Check current admission prices on the official site",
+      "hours": "Usually daily; check on the day",
+      "tip": "Allow a few hours — the self-guided audio tour on the aircraft carrier is the highlight.",
+      "source": "https://www.midway.org/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "One easy beach day: a cove morning, a bay beach afternoon and a sunset cliff walk.",
+      "days": [
+        {
+          "title": "La Jolla to Sunset Cliffs",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Come early for parking. Watch the seals from the walkway, not too close."
+            },
+            {
+              "place": "ucsd",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short campus wander if you like. Buildings vary, grounds are open."
+            },
+            {
+              "place": "liberty_station",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch from the food stalls. Check hours on the day."
+            },
+            {
+              "place": "coronado",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Calm bay side for families, ocean side for surf. Lifeguards usually daytime in summer."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Stay back from the edge. Bring a layer, it cools fast."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter or La Jolla"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "A full family day built around the Zoo, with a park break and an early dinner.",
+      "days": [
+        {
+          "title": "Zoo, Balboa Park, Gaslamp",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Arrive at opening. Book tickets ahead. Wear comfy shoes, it is hilly."
+            },
+            {
+              "place": "balboa",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Next door. Pick one museum or just the gardens. Museums usually daytime only."
+            },
+            {
+              "place": "gaslamp",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Walk the streets and eat. Liveliest in the evening."
+            },
+            {
+              "place": "qdoba",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Quick, cheap dinner option. Check the location on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Tide pools, harbor wildlife and a sunset over the Pacific.",
+      "days": [
+        {
+          "title": "Cabrillo, harbor, cliffs",
+          "stops": [
+            {
+              "place": "cabrillo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go at low tide for the pools. Check tide times and park hours on the day."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Check departure times on the day. Late afternoon is best, but book what fits."
+            },
+            {
+              "place": "liberty_station",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch. Usually open daily, check on the day."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset spot. Bring a jacket and stay on the paths."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbor Island / Airport area"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One relaxed beach day: La Jolla Cove in the morning, Mission Beach and a sunset at the end.",
+      "days": [
+        {
+          "title": "La Jolla morning, Mission Beach afternoon",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early for parking and calmer water. Watch the sea lions from a distance."
+            },
+            {
+              "place": "ucsd",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short drive north. Walk the campus grounds; buildings vary."
+            },
+            {
+              "place": "jackbox",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch. Many locations open long hours."
+            },
+            {
+              "place": "belmont",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Classic beachside rides and the boardwalk. Hours vary; check on the day."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Drive south for the sunset. Bring a jacket; it gets breezy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter or La Jolla"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "A big family day at the Zoo, then Balboa Park and an easy evening in the Gaslamp.",
+      "days": [
+        {
+          "title": "Zoo morning, Balboa Park and downtown",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Arrive at opening. Wear comfy shoes; the park is hilly. Hours can change; check on the day."
+            },
+            {
+              "place": "balboa",
+              "at": "14:30",
+              "minutes": 180,
+              "note": "Next door to the Zoo. Museums are daytime only; check on the day."
+            },
+            {
+              "place": "gaslamp",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner. Liveliest after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Tide pools, coastal views and a sunset over the Pacific in one full day.",
+      "days": [
+        {
+          "title": "Cabrillo, harbor and Sunset Cliffs",
+          "stops": [
+            {
+              "place": "cabrillo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go at low tide for the tide pools. Usually daytime only; check on the day."
+            },
+            {
+              "place": "liberty_station",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Lunch at the food stalls. Usually daily; check on the day."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Late-afternoon departures are best. Check the schedule on the day."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Finish with the sunset. Stay back from the cliff edge."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbor Island / Airport area"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Beach-first weekend: La Jolla coves, a harbor cruise and sunsets over the water.",
+      "days": [
+        {
+          "title": "Arrive, harbor and Gaslamp",
+          "stops": [
+            {
+              "place": "harbor_cruise",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Late-afternoon departures are calmer. Check the schedule on the day."
+            },
+            {
+              "place": "gaslamp",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening walk, then dinner. Liveliest after dark."
+            },
+            {
+              "place": "qdoba",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Quick casual dinner. Hours vary by location."
+            }
+          ]
+        },
+        {
+          "title": "La Jolla and Sunset Cliffs",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is quieter and the water is clearest. Watch the sea lions from a distance."
+            },
+            {
+              "place": "ucsd",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short campus wander if you want a change of pace. Buildings vary."
+            },
+            {
+              "place": "liberty_station",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch at the food stalls. Usually open daily; check on the day."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Arrive early for a parking spot. Stay back from the cliff edge."
+            }
+          ]
+        },
+        {
+          "title": "Coronado morning, then fly",
+          "stops": [
+            {
+              "place": "coronado",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Calm bay water, good for a swim or a walk. Lifeguards usually daytime in summer."
+            },
+            {
+              "place": "jackbox",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Fast lunch before the airport. Many locations open long hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Our pick for most families: the Zoo and Balboa Park, plus a beach and a harbor cruise.",
+      "days": [
+        {
+          "title": "Zoo day",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Go early for cooler weather and active animals. Hours vary by season; check on the day."
+            },
+            {
+              "place": "balboa",
+              "at": "14:30",
+              "minutes": 180,
+              "note": "The Zoo sits next to Balboa Park. Museums are daytime only; check on the day."
+            },
+            {
+              "place": "old_town",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Casual dinner and a short walk. Grounds usually open daily."
+            }
+          ]
+        },
+        {
+          "title": "Harbor, Midway and beach",
+          "stops": [
+            {
+              "place": "midway",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning is cooler on deck. Usually daily; check on the day."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Boards near the Midway. Check departure times on the day."
+            },
+            {
+              "place": "coronado",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Calm, shallow bay water for kids. Lifeguards usually daytime in summer."
+            },
+            {
+              "place": "qdoba",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Quick dinner. Hours vary by location."
+            }
+          ]
+        },
+        {
+          "title": "Belmont morning, then fly",
+          "stops": [
+            {
+              "place": "belmont",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Rides and the beach boardwalk. Hours vary; check on the day."
+            },
+            {
+              "place": "jackbox",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Fast lunch on the way to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mission Valley"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Outdoors-focused: tide pools, coastal cliffs and a sunset harbor cruise.",
+      "days": [
+        {
+          "title": "Cabrillo and the harbor",
+          "stops": [
+            {
+              "place": "cabrillo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go at low tide for the tide pools. Usually daily daytime; check on the day."
+            },
+            {
+              "place": "liberty_station",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch at the food stalls. Usually open daily."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Sunset departures are best. Check the schedule on the day."
+            },
+            {
+              "place": "gaslamp",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        },
+        {
+          "title": "La Jolla and Sunset Cliffs",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early morning is quiet and good for wildlife watching."
+            },
+            {
+              "place": "ucsd",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Optional campus walk. Grounds generally open daily."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Best at sunset. Bring a layer; it gets breezy."
+            }
+          ]
+        },
+        {
+          "title": "Balboa Park morning, then fly",
+          "stops": [
+            {
+              "place": "balboa",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Gardens and trails are free. Museums are daytime only; check on the day."
+            },
+            {
+              "place": "jackbox",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Harbor Island / Airport area"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "A relaxed beach-first trip: La Jolla, Mission Beach and sunsets by the water.",
+      "days": [
+        {
+          "title": "Arrive and ease into the water",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start here after check-in. Watch the seals and sea lions from the walkway."
+            },
+            {
+              "place": "ucsd",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short drive north. Walk the campus grounds; buildings vary."
+            },
+            {
+              "place": "gaslamp",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and an evening stroll in the Gaslamp Quarter."
+            }
+          ]
+        },
+        {
+          "title": "Mission Beach and the coaster",
+          "stops": [
+            {
+              "place": "belmont",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Rides and the beach boardwalk. Hours vary; check on the day."
+            },
+            {
+              "place": "coronado",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Drive or ferry over. Wide sand and calm water, good for families."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "End the day watching the sun go down over the cliffs."
+            }
+          ]
+        },
+        {
+          "title": "Harbor and bay",
+          "stops": [
+            {
+              "place": "harbor_cruise",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book a late-morning departure. Check the schedule on the day."
+            },
+            {
+              "place": "liberty_station",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch at the food stalls. Usually open daily; check on the day."
+            },
+            {
+              "place": "cabrillo",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Tide pools and harbor views. Usually daytime; check on the day."
+            },
+            {
+              "place": "gaslamp",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner downtown."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "One more quiet morning by the cove before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "La Jolla or Mission Beach"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Big-ticket family fun: the Zoo, Balboa Park and calm bay beaches.",
+      "days": [
+        {
+          "title": "Arrive and explore Balboa Park",
+          "stops": [
+            {
+              "place": "balboa",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Park is always open; museums are daytime only. Check on the day."
+            },
+            {
+              "place": "old_town",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Historic grounds and an easy early dinner. Grounds usually open daily."
+            }
+          ]
+        },
+        {
+          "title": "Zoo day",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Arrive at opening. Usually 09:00–17:00 or later in summer; check on the day."
+            },
+            {
+              "place": "gaslamp",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Rest and dinner downtown. Liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Beach and harbor",
+          "stops": [
+            {
+              "place": "coronado",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Calm water and wide sand. Lifeguards usually daytime in summer."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Afternoon departure. Check the schedule on the day."
+            },
+            {
+              "place": "midway",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Short walk from the harbor. Usually daily; check on the day."
+            },
+            {
+              "place": "qdoba",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Quick, easy dinner. Hours vary by location."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Seals and tide pools before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Coast and cliffs: tide pools, coves and sunset viewpoints.",
+      "days": [
+        {
+          "title": "Arrive and head to the cliffs",
+          "stops": [
+            {
+              "place": "sunset_cliffs",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy walk along the bluff tops."
+            },
+            {
+              "place": "cabrillo",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Tide pools and harbor views. Usually daytime; check on the day."
+            },
+            {
+              "place": "liberty_station",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner at the food stalls. Usually daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "La Jolla coast",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is calm and clear. Watch the sea lions from a distance."
+            },
+            {
+              "place": "ucsd",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Campus grounds generally open daily; buildings vary."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Late-afternoon departure. Check the schedule on the day."
+            },
+            {
+              "place": "gaslamp",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner downtown."
+            }
+          ]
+        },
+        {
+          "title": "Park and beach",
+          "stops": [
+            {
+              "place": "balboa",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Gardens and open lawns. Museums daytime; check on the day."
+            },
+            {
+              "place": "coronado",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Beach walk and sunset."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "sunset_cliffs",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "A final quiet walk before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "La Jolla or Harbor Island"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Four relaxed days built around coves, boardwalks and sunsets, with a harbor cruise and one big-ticket stop.",
+      "days": [
+        {
+          "title": "Arrive and ease into the Gaslamp",
+          "stops": [
+            {
+              "place": "gaslamp",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Flat walk past historic buildings. Liveliest after dark."
+            },
+            {
+              "place": "qdoba",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Quick burrito before an early night."
+            }
+          ]
+        },
+        {
+          "title": "La Jolla coves and cliffs",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early for parking and calmer water. Watch seals from a distance."
+            },
+            {
+              "place": "ucsd",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short drive north. Weekday daytime is best for the campus grounds."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "About 20 minutes south by car. Bring a layer; it cools fast."
+            }
+          ]
+        },
+        {
+          "title": "Harbor and downtown",
+          "stops": [
+            {
+              "place": "midway",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning is cooler and quieter. Wear flat shoes."
+            },
+            {
+              "place": "liberty_station",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch from the food stalls. Check hours on the day."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Late afternoon light is best. Check the schedule on the day."
+            }
+          ]
+        },
+        {
+          "title": "Mission Beach and Coronado",
+          "stops": [
+            {
+              "place": "belmont",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Rides and the boardwalk. Hours vary; check on the day."
+            },
+            {
+              "place": "coronado",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "About 30 minutes by car. Stay for sunset and a beach walk."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "cabrillo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Tide pools and harbor views. Usually daytime only; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Gaslamp Quarter"
+    },
+    {
+      "id": "4n-family",
+      "length": "4n",
+      "style": "family",
+      "nights": 4,
+      "for": "A kid-friendly four days: zoo, Balboa Park, calm bay beaches and one theme park day.",
+      "days": [
+        {
+          "title": "Arrive and Balboa Park",
+          "stops": [
+            {
+              "place": "balboa",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Park is always open; museums are daytime only. Pick one or two."
+            },
+            {
+              "place": "gaslamp",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Easy dinner walk. Kid-friendly early evening."
+            }
+          ]
+        },
+        {
+          "title": "Zoo day",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Arrive at opening. Bring water and snacks; it is hilly."
+            },
+            {
+              "place": "old_town",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Short drive. Grounds usually open daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Bay and beach",
+          "stops": [
+            {
+              "place": "harbor_cruise",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Short and calm for young kids. Check the schedule on the day."
+            },
+            {
+              "place": "coronado",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Calm, shallow water. Lifeguards usually daytime in summer."
+            },
+            {
+              "place": "qdoba",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Quick dinner on the way back."
+            }
+          ]
+        },
+        {
+          "title": "Theme park or aquarium day",
+          "stops": [
+            {
+              "place": "seaworld",
+              "at": "09:30",
+              "minutes": 300,
+              "note": "Weekday morning is quieter. Hours vary by season; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Short walk and a look at the seals before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mission Valley"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Coast and cliffs at a slow pace: tide pools, coves, a harbor cruise and sunset viewpoints.",
+      "days": [
+        {
+          "title": "Arrive and harbor",
+          "stops": [
+            {
+              "place": "liberty_station",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch stop. Check hours on the day."
+            },
+            {
+              "place": "harbor_cruise",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon is best for light and wildlife. Check the schedule on the day."
+            }
+          ]
+        },
+        {
+          "title": "Cabrillo and tide pools",
+          "stops": [
+            {
+              "place": "cabrillo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go at low tide for the pools. Usually daytime only; check on the day."
+            },
+            {
+              "place": "sunset_cliffs",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Stay for sunset. Paths are uneven; keep back from the edge."
+            }
+          ]
+        },
+        {
+          "title": "La Jolla and the coast",
+          "stops": [
+            {
+              "place": "lajolla_cove",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Morning is calmest and parking is easier."
+            },
+            {
+              "place": "ucsd",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekday daytime for the grounds. Buildings vary."
+            },
+            {
+              "place": "belmont",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Boardwalk walk by the water. Hours vary; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Park and gardens",
+          "stops": [
+            {
+              "place": "balboa",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Morning is cooler. Museums are daytime only; check on the day."
+            },
+            {
+              "place": "old_town",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Late lunch and a wander. Grounds usually open daily."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "coronado",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Beach walk before the airport. Open all day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "La Jolla"
+    }
+  ],
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "La Jolla coves, Mission Beach and sunset surfs."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Zoo, Balboa Park museums and calm bay beaches."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Torrey Pines trails, tide pools and whale watching."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown / Gaslamp Quarter",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Walk to the bayfront, Petco Park and the Gaslamp restaurants. Trolley and #992 airport bus start here.",
+      "center": [
+        32.712,
+        -117.162
+      ]
+    },
+    {
+      "area": "Harbor Island / Airport area",
+      "range": [
+        140,
+        300
+      ],
+      "why": "Quiet bayfront hotels, minutes from SAN airport and downtown. Good for early flights and families.",
+      "center": [
+        32.727,
+        -117.205
+      ]
+    },
+    {
+      "area": "La Jolla",
+      "range": [
+        220,
+        600
+      ],
+      "why": "Walk to the cove, sea lions and snorkel spots. Upscale and calm; 20–30 minutes from downtown by car.",
+      "center": [
+        32.847,
+        -117.274
+      ]
+    },
+    {
+      "area": "Mission Valley",
+      "range": [
+        120,
+        260
+      ],
+      "why": "Cheaper chain hotels near the trolley and shopping. Central for driving to the Zoo and beaches.",
+      "center": [
+        32.768,
+        -117.15
+      ]
+    }
+  ],
+  "food": [
+    "Try a fish taco: grilled or fried fish, cabbage slaw and crema. Cheap stands and sit-down spots both do it well.",
+    "California burrito: carne asada, fries, cheese and salsa wrapped in a tortilla. A full meal for one.",
+    "Little Italy on India Street for pasta, pizza and a lively evening scene; book ahead on weekends.",
+    "Seafood by the water in Point Loma and the Embarcadero; check the day's catch and prices on the board.",
+    "Craft beer is big here. Many tasting rooms in North Park and Miramar; expect about $8–10 a pint."
+  ],
+  "more_time": [
+    "Swap a beach afternoon for a day trip north on the Coaster or Pacific Surfliner to Oceanside or Encinitas.",
+    "Add a morning at Torrey Pines State Reserve: short cliff trails and ocean views; parking fills early, check on the day.",
+    "Cross to Coronado by ferry for the beach, the Hotel del Coronado and a slow lunch."
+  ]
+}

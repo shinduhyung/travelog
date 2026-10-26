@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, music venues and the Victorian city."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Curry Mile, Northern Quarter cafés and markets."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Pubs, gigs and clubs in the Northern Quarter."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Piccadilly",
+      "range": [
+        70,
+        160
+      ],
+      "why": "Next to the main train station and tram stops; easiest base for a short first visit.",
+      "center": [
+        53.477,
+        -2.23
+      ]
+    },
+    {
+      "area": "Northern Quarter",
+      "range": [
+        80,
+        180
+      ],
+      "why": "Independent bars, cafés and record shops on your doorstep; walkable to the centre.",
+      "center": [
+        53.484,
+        -2.236
+      ]
+    },
+    {
+      "area": "Deansgate",
+      "range": [
+        90,
+        200
+      ],
+      "why": "Central and close to the canal, museums and big shopping streets.",
+      "center": [
+        53.477,
+        -2.25
+      ]
+    },
+    {
+      "area": "Ancoats",
+      "range": [
+        75,
+        170
+      ],
+      "why": "Quiet former mill district with good food and drink; about 15 minutes' walk to Piccadilly.",
+      "center": [
+        53.485,
+        -2.228
+      ]
+    }
+  ],
+  "food": [
+    "Try a proper Northern Sunday roast or a pie in a traditional pub; prices vary, so check the menu.",
+    "Curry Mile on Wilmslow Road is the classic spot for South Asian food; many places are cheap and casual.",
+    "The Northern Quarter has the densest cluster of independent cafés and brunch spots.",
+    "Look for food halls and markets for a mix of stalls at mid-range prices; check opening days on the day.",
+    "Book popular restaurants ahead for Friday and Saturday nights, especially in Ancoats and the Northern Quarter."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a tram or train trip out to a nearby town or the countryside; check times on the day.",
+    "Football fans can add a stadium tour; book ahead as slots sell out.",
+    "Add a live music night at a smaller venue instead of a second museum."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "shopping": [
+      0.65,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ]
+  },
+  "best_for": [
+    "culture",
+    "nightlife",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights covers the museums, the Northern Quarter and a good meal or gig, with time for a rainy afternoon indoors."
+  },
+  "month_notes": [
+    "Jan: cold and wet, highs near 7°C. Pack a warm waterproof coat.",
+    "Feb: still cold, highs around 8°C, with about 16 rain days.",
+    "Mar: slowly milder, highs near 10°C; keep the rain jacket.",
+    "Apr: brighter, highs around 13°C and fewer rain days.",
+    "May: pleasant, highs near 16°C; good for walking the centre.",
+    "Jun: mild and long days, highs around 19°C, but expect showers.",
+    "Jul: warmest month, highs near 20°C, and the wettest by rain days.",
+    "Aug: similar to July, highs around 20°C; carry an umbrella.",
+    "Sep: still mild at 18°C; a good shoulder month.",
+    "Oct: cooler at 14°C and wetter again; layers help.",
+    "Nov: cold and damp, highs near 10°C, about 17 rain days.",
+    "Dec: cold at 8°C with the most rain days; pack waterproofs."
+  ],
+  "climate_guide": {
+    "summary": "Temperate and often wet: mild summers, cool winters, and rain possible in any month.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 12–19 rain days every month. A waterproof jacket beats an umbrella in the wind."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summers",
+        "text": "July and August peak near 20°C with lows around 12°C. Rarely hot."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "January and February highs near 7–8°C and lows around 2°C. Bring a warm coat."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Best odds: April to June",
+        "text": "April has the fewest rain days and May–June are mild and bright."
+      },
+      {
+        "icon": "☂️",
+        "title": "Wettest: July and December",
+        "text": "July has about 19 rain days and December about 18. Plan indoor backups."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof shell and comfortable shoes for wet pavements."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the compact centre; use the Metrolink tram for anything further.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metrolink tram is quick and covers the centre and suburbs. Zone 1 is free with some train tickets."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Bee Network buses are yellow and franchised; single fares are around £2."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber, Bolt and local apps all work in the city."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is slow and parking is costly. Use park and ride instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and walkable. Starling Bikes offers bike share with e-bikes."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry in the city. The nearest cruise terminal is Liverpool."
+      }
+    ]
+  }
+}

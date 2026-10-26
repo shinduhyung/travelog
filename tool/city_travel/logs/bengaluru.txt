@@ -1,0 +1,33 @@
+$ deepseek_prep.py Bengaluru
+  tokens in 650 out 313
+Bengaluru: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bengaluru
+  tokens in 4207 out 600
+Bengaluru: 1 problems
+  - BLR taxi ₹800-1,200 vs tariff estimate 1745
+
+$ deepseek_city.py Bengaluru --stage places
+Bengaluru: places
+  tokens in 1140 out 3066
+
+$ deepseek_city.py Bengaluru --stage frame
+Bengaluru: frame
+  tokens in 2431 out 1710
+  repaired JSON
+
+$ deepseek_city.py Bengaluru --stage plans
+Bengaluru: plans
+  plans for day
+  tokens in 2138 out 924
+  plans for 1n
+  tokens in 2139 out 1218
+  plans for 2n
+  tokens in 2144 out 1533
+  plans for 3n
+  tokens in 2139 out 2050
+
+$ merge_city.py Bengaluru
+Bengaluru: 19 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/bengaluru.json and planner/bengaluru.json
+

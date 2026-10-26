@@ -1,0 +1,29 @@
+$ deepseek_facts.py Tel Aviv
+  tokens in 4011 out 642
+Tel Aviv: 0 problems
+
+$ deepseek_city.py Tel Aviv --stage places
+Tel Aviv: places
+  tokens in 1154 out 3390
+
+$ deepseek_city.py Tel Aviv --stage frame
+Tel Aviv: frame
+  tokens in 2444 out 1801
+
+$ deepseek_city.py Tel Aviv --stage plans
+Tel Aviv: plans
+  plans for day
+  tokens in 2238 out 875
+  plans for 1n
+  tokens in 2239 out 1234
+  plans for 2n
+  tokens in 2239 out 1878
+  plans for 3n
+  tokens in 2244 out 1913
+  plans for 4n
+  tokens in 2239 out 2419
+
+$ merge_city.py Tel Aviv
+Tel Aviv: 22 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/tel-aviv.json and planner/tel-aviv.json
+

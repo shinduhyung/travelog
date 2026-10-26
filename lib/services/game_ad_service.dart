@@ -50,6 +50,11 @@ class GameAdService {
   InterstitialAd? _interstitialAd;
   bool _isLoadingAd = false;
 
+  // 로드 실패 시 20·60·120초 간격으로 최대 3회 재시도.
+  static const List<int> _retryDelaysSec = [20, 60, 120];
+  int _loadRetryAttempt = 0;
+  Timer? _loadRetryTimer;
+
   int _finishedGamesCount = 0;
   Timer? _pendingAdTimer;
 
@@ -127,7 +132,10 @@ class GameAdService {
 
   void _preloadAd() {
     if (_isPremium || _interstitialAd != null || _isLoadingAd) return;
+    // 동의(UMP)/MobileAds 초기화가 끝나기 전에는 요청하지 않는다.
+    if (!AdService.instance.adsInitialized) return;
     _isLoadingAd = true;
+    _loadRetryTimer?.cancel();
 
     InterstitialAd.load(
       adUnitId: _adUnitId,
@@ -136,11 +144,16 @@ class GameAdService {
         onAdLoaded: (ad) {
           _interstitialAd = ad;
           _isLoadingAd = false;
+          _loadRetryAttempt = 0;
         },
         onAdFailedToLoad: (error) {
           _interstitialAd = null;
           _isLoadingAd = false;
           debugPrint('[GameAdService] failed to load: $error');
+          if (!_isPremium && _loadRetryAttempt < _retryDelaysSec.length) {
+            final int seconds = _retryDelaysSec[_loadRetryAttempt++];
+            _loadRetryTimer = Timer(Duration(seconds: seconds), _preloadAd);
+          }
         },
       ),
     );

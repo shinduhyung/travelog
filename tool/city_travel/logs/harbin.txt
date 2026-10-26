@@ -1,0 +1,32 @@
+$ deepseek_prep.py Harbin
+  tokens in 664 out 458
+Harbin: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Harbin
+  tokens in 2910 out 599
+Harbin: 0 problems
+
+$ deepseek_city.py Harbin --stage places
+Harbin: places
+  tokens in 1155 out 3072
+
+$ deepseek_city.py Harbin --stage frame
+Harbin: frame
+  tokens in 2460 out 1786
+  repaired JSON
+
+$ deepseek_city.py Harbin --stage plans
+Harbin: plans
+  plans for day
+  tokens in 2126 out 986
+  plans for 1n
+  tokens in 2127 out 1339
+  plans for 2n
+  tokens in 2132 out 1331
+  plans for 3n
+  tokens in 2127 out 2126
+
+$ merge_city.py Harbin
+Harbin: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/harbin.json and planner/harbin.json
+

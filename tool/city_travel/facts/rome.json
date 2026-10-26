@@ -1,0 +1,239 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Rome: an open-air museum where every street tells a story.",
+  "intro": "Rome rewards visitors with ancient ruins, world-class art and honest food around every corner. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "romance",
+      "label": "Romance"
+    }
+  ],
+  "areas": [
+    "Centro Storico",
+    "Trastevere",
+    "Monti",
+    "Prati / Vatican"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 5,
+    "per_km": 1.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro has two main lines (A and B) plus a short branch; useful but limited coverage.",
+    "Trams and city buses fill the gaps; buy tickets before boarding.",
+    "Taxis use fixed airport fares and meters in town; Uber works in Rome.",
+    "Driving in the centre is chaotic and ZTL cameras fine you; don't do it.",
+    "Walking is the best way to see the centre; bikes and scooters are common.",
+    "No ferry needed in the city; cruise ships dock at Civitavecchia."
+  ],
+  "airports": [
+    {
+      "code": "FCO",
+      "name": "Leonardo Da Vinci (Fiumicino) International Airport",
+      "primary": true,
+      "note": "Main international airport, 23 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Regional train",
+          "to": "Rome stations (not Termini)",
+          "price": "€8",
+          "time": "30-45 min",
+          "note": "Cheaper than the express but skips Termini."
+        },
+        {
+          "mode": "Leonardo Express train",
+          "to": "Roma Termini",
+          "price": "€14",
+          "time": "30 min",
+          "note": "Non-stop; validate your ticket to avoid fines."
+        },
+        {
+          "mode": "Airport coach",
+          "to": "Roma Termini",
+          "price": "€7-9",
+          "time": "45-60 min",
+          "note": "Book ahead for the lowest fare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre (Aurelian Walls)",
+          "price": "€50-55",
+          "time": "30-50 min",
+          "note": "Fixed fare includes luggage."
+        },
+        {
+          "mode": "Uber / private transfer",
+          "to": "City centre hotels",
+          "price": "€45-60",
+          "time": "30-50 min",
+          "note": "Book online in advance."
+        }
+      ]
+    },
+    {
+      "code": "CIA",
+      "name": "Ciampino Airport",
+      "primary": false,
+      "note": "Small low-cost airport, 14 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "ATAC bus 720 + Metro B",
+          "to": "Laurentina then centre",
+          "price": "€1.50",
+          "time": "60-75 min",
+          "note": "Cheapest; one ticket valid 100 min, buy before boarding."
+        },
+        {
+          "mode": "ATRAL bus + Metro A",
+          "to": "Anagnina then centre",
+          "price": "€2.70",
+          "time": "50-60 min",
+          "note": "Bus ticket €1.20 plus metro €1.50."
+        },
+        {
+          "mode": "Airport coach (SIT, Terravision, COTRAL)",
+          "to": "Roma Termini",
+          "price": "€4-7",
+          "time": "40 min",
+          "note": "Several companies; compare prices online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre (Aurelian Walls)",
+          "price": "€30-35",
+          "time": "25-40 min",
+          "note": "Fixed fare for up to four people with luggage."
+        },
+        {
+          "mode": "Uber / shared shuttle",
+          "to": "City centre",
+          "price": "€15-55",
+          "time": "25-45 min",
+          "note": "Shared shuttles cost about €15 per person."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Colosseum",
+    "St. Peter's Basilica",
+    "Pantheon",
+    "Trevi Fountain",
+    "Roman Forum",
+    "Vatican Museums",
+    "Spanish Steps",
+    "Piazza Navona",
+    "Castel Sant'Angelo",
+    "Altare della Patria",
+    "Basilica di Santa Maria Maggiore",
+    "Baths of Caracalla",
+    "Apollo and Daphne",
+    "Bibliotheca Hertziana",
+    "Bioparco Zoo",
+    "Cinecittà World",
+    "Discobolus",
+    "Ecstasy of Saint Teresa",
+    "Fettuccine alla Papalina",
+    "Hadrian's Villa",
+    "Laocoön and His Sons",
+    "Luneur"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Rome",
+      "https://en.wikivoyage.org/wiki/Rome"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    41.9028,
+    12.4964
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 10
+    },
+    {
+      "high": 14,
+      "low": 5,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 18,
+      "rain_days": 5
+    },
+    {
+      "high": 33,
+      "low": 21,
+      "rain_days": 4
+    },
+    {
+      "high": 33,
+      "low": 21,
+      "rain_days": 5
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 13
+    },
+    {
+      "high": 14,
+      "low": 5,
+      "rain_days": 9
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

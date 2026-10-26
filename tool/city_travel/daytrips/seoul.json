@@ -1,0 +1,184 @@
+{
+ "city": "Seoul",
+ "trips": [
+  {
+   "place": "Gangneung",
+   "label": "",
+   "position": {
+    "id": 457734,
+    "name": "Gangneung",
+    "city": "Gangneung",
+    "lat": 37.75556,
+    "lng": 128.89611
+   },
+   "town": {
+    "name": "Gangneung",
+    "lat": 37.75266,
+    "lng": 128.87239
+   },
+   "road": {
+    "km": 216,
+    "min": 177,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 220800,
+    "currency": "KRW"
+   },
+   "modes": {
+    "train": {
+     "from": "$19-$40",
+     "time": "1h 57m",
+     "via": "Seoul Station to Gangneung Station",
+     "source": "https://www.rome2rio.com/s/Seoul/Gangneung"
+    },
+    "bus": {
+     "from": "$11-$23",
+     "time": "2h 20m",
+     "via": "Dong Seoul Bus Terminal to Gangneung Intercity Bus Terminal",
+     "source": "https://www.rome2rio.com/s/Seoul/Gangneung"
+    }
+   },
+   "route_note": "The KTX Gangneung line runs from Seoul Station (or Cheongnyangni) directly to Gangneung Station, with a short local bus ride to the coast.",
+   "see": [
+    "Gyeongpo Beach",
+    "Gyeongpo Lake",
+    "Ojukheon House",
+    "Anmok Coffee Street",
+    "Jumunjin Beach"
+   ],
+   "visit": "Full day",
+   "tour_query": "Gangneung day trip from Seoul",
+   "quests": [
+    "Gangneung Ojukheon House"
+   ],
+   "recommended": "train",
+   "why": "KTX reaches Gangneung in under 2 hours with a short local bus ride to the coast.",
+   "stars": 4,
+   "know": [
+    "Book KTX seats ahead on weekends and holidays",
+    "Best in summer for the beaches, but crowded then",
+    "Gangneung Station is a short bus ride from the coast"
+   ]
+  },
+  {
+   "place": "Chuncheon",
+   "label": "",
+   "position": {
+    "id": 457747,
+    "name": "Chuncheon",
+    "city": "Chuncheon",
+    "lat": 37.87472,
+    "lng": 127.73417
+   },
+   "town": {
+    "name": "Chuncheon",
+    "lat": 37.87472,
+    "lng": 127.73417
+   },
+   "road": {
+    "km": 96,
+    "min": 86,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 100800,
+    "currency": "KRW"
+   },
+   "modes": {
+    "train": {
+     "from": "$8-$16",
+     "time": "1h 4m",
+     "via": "Oksu Station to Namchuncheon Station",
+     "source": "https://www.rome2rio.com/s/Seoul/Chuncheon"
+    },
+    "bus": {
+     "from": "$4-$11",
+     "time": "1h 10m",
+     "via": "Dong Seoul Bus Terminal to Chuncheon Intercity Bus Terminal",
+     "source": "https://www.rome2rio.com/s/Seoul/Chuncheon"
+    }
+   },
+   "route_note": "Take the ITX-Cheongchun or a subway/ITX combination from Seoul to Chuncheon Station, then a local bus or taxi to the lake and island areas.",
+   "see": [
+    "Nami Island",
+    "Soyang River",
+    "Chuncheon Myeongdong dakgalbi street",
+    "Gongjicheon sculpture park",
+    "Jade Garden"
+   ],
+   "visit": "Full day",
+   "tour_query": "Nami Island and Chuncheon day trip from Seoul",
+   "quests": [
+    "Legoland Korea"
+   ],
+   "recommended": "train",
+   "why": "ITX-Cheongchun is fast and frequent, then a local bus or taxi to the lake and island areas.",
+   "stars": 3,
+   "know": [
+    "Best in spring for cherry blossoms and autumn for foliage",
+    "Local bus or taxi needed from the station to the lake",
+    "Book ITX seats ahead on weekends"
+   ]
+  },
+  {
+   "place": "Incheon",
+   "label": "",
+   "position": {
+    "id": 457737,
+    "name": "Incheon",
+    "city": "Incheon",
+    "lat": 37.45361,
+    "lng": 126.73167
+   },
+   "town": {
+    "name": "Incheon",
+    "lat": 37.45646,
+    "lng": 126.70515
+   },
+   "road": {
+    "km": 32,
+    "min": 33,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 36800,
+    "currency": "KRW"
+   },
+   "modes": {
+    "bus": {
+     "from": "$4-$8",
+     "time": "1h 10m",
+     "via": "Dong Seoul Bus Terminal to Incheon Terminal Complex",
+     "source": "https://www.rome2rio.com/s/Seoul/Incheon"
+    }
+   },
+   "route_note": "Subway Line 1 or the Suin-Bundang line reaches Incheon Station directly; from there local buses serve Chinatown, Wolmido and the airport area.",
+   "see": [
+    "Incheon Chinatown",
+    "Wolmido waterfront",
+    "Songwol-dong Fairy Tale Village",
+    "Incheon Grand Park",
+    "Jeondeungsa Temple on Ganghwado"
+   ],
+   "visit": "Full day",
+   "tour_query": "Incheon day trip from Seoul",
+   "quests": [
+    "Paramount Movie Park Korea"
+   ],
+   "recommended": "tour",
+   "why": "Subway Line 1 runs directly to Incheon Station, with local buses to Chinatown and Wolmido.",
+   "stars": 3,
+   "know": [
+    "Chinatown and Wolmido are a short local bus from Incheon Station",
+    "Weekdays are quieter than weekends",
+    "Allow extra time if continuing to the airport area"
+   ]
+  }
+ ],
+ "problems": [
+  "Gyeongju: 247 min by road, dropped (too far for a day trip)",
+  "Paju: no Omio position, dropped",
+  "Incheon: model picked train without data; set to tour"
+ ]
+}

@@ -1,0 +1,176 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Zhengzhou: China's transport hub with surprises beyond the tracks.",
+  "intro": "Zhengzhou rewards visitors with its dynamic Erqi Square, rich Henan cuisine, and easy access to ancient wonders. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Erqi Square",
+    "Zhengzhou East Station",
+    "Jinshui Road",
+    "CBD"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 10,
+    "per_km": 1.5,
+    "min_fare": 8
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Metro: 7 lines, fares ¥2-9, first trains ~06:00, last ~23:00 (Chengjiao line ends 22:00).",
+    "Buses: ¥1-2 per ride, extensive network, BRT lines available.",
+    "Taxis: flagfall ¥8 day, ¥10 night, ¥1.5/km after 2 km; meters used but watch for cheating.",
+    "Ride apps: Didi works widely; international apps like Uber not available.",
+    "Driving: not recommended for visitors due to traffic and complex rules.",
+    "Walking/bikes: city is spread out but central areas walkable; shared bikes available."
+  ],
+  "airports": [
+    {
+      "code": "CGO",
+      "name": "Xinzheng Airport",
+      "primary": true,
+      "note": "Main airport, 32 km from centre.",
+      "options": [
+        {
+          "mode": "Metro Line 2 + Chengjiao line",
+          "to": "city centre",
+          "price": "¥2-9",
+          "time": "50-60 min",
+          "note": "Cheapest, but last train 22:00."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Zhengzhou Hotel",
+          "price": "¥15",
+          "time": "45-60 min",
+          "note": "Runs from central location."
+        },
+        {
+          "mode": "Public bus",
+          "to": "Aviation Hotel (Jinshui Road)",
+          "price": "¥25",
+          "time": "50-70 min",
+          "note": "Less frequent."
+        },
+        {
+          "mode": "Taxi",
+          "to": "city centre",
+          "price": "¥120-140",
+          "time": "40-60 min",
+          "note": "Fixed round-trip pricing; bargain rarely helps."
+        },
+        {
+          "mode": "Train",
+          "to": "Zhengzhou East Station",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Runs every 30-60 min."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Mixue Ice Cream & Tea",
+    "Yellow River"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Zhengzhou",
+      "https://en.wikivoyage.org/wiki/Zhengzhou"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    34.75778,
+    113.64861
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 7,
+      "low": -3,
+      "rain_days": 3
+    },
+    {
+      "high": 11,
+      "low": 0,
+      "rain_days": 3
+    },
+    {
+      "high": 18,
+      "low": 6,
+      "rain_days": 4
+    },
+    {
+      "high": 23,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 29,
+      "low": 17,
+      "rain_days": 5
+    },
+    {
+      "high": 33,
+      "low": 22,
+      "rain_days": 7
+    },
+    {
+      "high": 33,
+      "low": 24,
+      "rain_days": 12
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 8
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 15,
+      "low": 5,
+      "rain_days": 5
+    },
+    {
+      "high": 9,
+      "low": -1,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

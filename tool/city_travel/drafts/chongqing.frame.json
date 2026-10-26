@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hotpot, noodles and street snacks all day."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old towns, river views and mountain-city life."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Neon skylines, river cruises and late-night eats."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Jiefangbei",
+      "range": [
+        250,
+        900
+      ],
+      "why": "The central peninsula: walk to Hongya Cave, the riverfront and the main metro lines. Best for first-timers.",
+      "center": [
+        29.557,
+        106.577
+      ]
+    },
+    {
+      "area": "Jiangbei",
+      "range": [
+        200,
+        700
+      ],
+      "why": "Across the river from the skyline; good views back at Jiefangbei and easy metro links. Slightly quieter nights.",
+      "center": [
+        29.573,
+        106.532
+      ]
+    },
+    {
+      "area": "Nanping",
+      "range": [
+        180,
+        600
+      ],
+      "why": "South bank, near the Yangtze and the cableway area. Cheaper rooms and a local feel; a short metro ride to the centre.",
+      "center": [
+        29.523,
+        106.562
+      ]
+    },
+    {
+      "area": "Shapingba",
+      "range": [
+        150,
+        500
+      ],
+      "why": "University district with cheap eats and a busy station. Good value if you plan day trips by train.",
+      "center": [
+        29.556,
+        106.457
+      ]
+    }
+  ],
+  "food": [
+    "Order Chongqing hotpot: a spicy bubbling broth with beef, tripe and vegetables. Ask for mild (微辣) if unsure; prices are often per dish, roughly ¥60–120 a person.",
+    "Try Chongqing xiaomian (small noodles) for breakfast or a cheap lunch, about ¥8–15 a bowl.",
+    "Snack streets and night markets are everywhere; Jiefangbei and the old town lanes are easy starting points. Pay by phone app or cash.",
+    "River fish and spicy chicken dishes are local favourites. Look for busy places with local diners.",
+    "Street stalls are cheap and tasty; drink bottled water and pick stalls with high turnover."
+  ],
+  "more_time": [
+    "Add a Yangtze River Three Gorges day or overnight trip from the Chaotianmen docks; check schedules and prices on the day.",
+    "Visit Ciqikou old town for teahouses and snacks, or the Three Gorges Museum for regional history (check opening hours).",
+    "Take the Yangtze cableway across the river for views, then walk the south bank; queues can be long, so go early."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.75,
+      0.7,
+      0.6,
+      0.5,
+      0.45,
+      0.65,
+      0.8,
+      0.75,
+      0.65
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8,
+      0.85,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.7,
+      0.75,
+      0.7,
+      0.6,
+      0.5,
+      0.45,
+      0.65,
+      0.75,
+      0.65,
+      0.5
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.8,
+      0.7,
+      0.6
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.75,
+      0.7,
+      0.6,
+      0.5,
+      0.45,
+      0.65,
+      0.8,
+      0.75,
+      0.65
+    ]
+  },
+  "best_for": [
+    "food",
+    "nightlife",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers the old town, river views and a hotpot dinner; add a night for a Yangtze side trip."
+  },
+  "month_notes": [
+    "January: cold and damp, highs near 11°C. Pack warm layers; hotpot weather.",
+    "February: still cool, highs around 14°C. Fewer rain days than spring.",
+    "March: warming to 19°C but rain picks up (about 14 wet days). Bring an umbrella.",
+    "April: mild at 23°C, but one of the wettest months. Plan indoor backups.",
+    "May: warm and humid, highs 26°C, frequent rain. Light rain jacket helps.",
+    "June: hot and sticky, highs 29°C, many rainy days. Go out early and late.",
+    "July: hot, highs 32°C, humid. Carry water and take midday breaks.",
+    "August: the hottest month, highs 34°C. Limit midday walking; evenings are busy.",
+    "September: still warm at 28°C with plenty of rain. Watch for slippery stairs.",
+    "October: comfortable at 22°C, though rain is common. Good month for walking.",
+    "November: cooler at 17°C with fewer dry spells than autumn; layers advised.",
+    "December: cool and fairly dry, highs 12°C. Quiet season for sightseeing."
+  ],
+  "climate_guide": {
+    "summary": "Humid subtropical climate: mild winters, hot sticky summers, and rain in most months. Expect hills, stairs and haze.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best months: October to December",
+        "text": "Highs of 12–22°C and fewer rainy days. Comfortable for walking the hills and riverfront."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs of 29–34°C with high humidity. Move slowly, carry water and rest at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in most months",
+        "text": "Spring and autumn are wettest, with 14–17 rain days. Pack a compact umbrella and grippy shoes."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cool, damp winter",
+        "text": "January highs near 11°C and lows around 6°C. Buildings can feel cold; bring warm layers."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Haze and mist",
+        "text": "River mist and haze can hide the skyline. Views are clearest after rain or on cooler days."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes for stairs and hills, a rain jacket, and light breathable clothes for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for most trips; ride apps for hills, stairs and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast, cheap and air-conditioned, with announcements in Mandarin and English. Lines 3 and 10 link the airport to the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent and cheap, but signs are mostly in Chinese. Useful for short local hops."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are yellow and metered; few drivers speak English, so show your destination in Chinese. DiDi works well; set up the app before you arrive."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not advised for visitors: steep, confusing roads and hard parking. Use metro and apps instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Expect stairs and hills everywhere. Biking is not advised in the centre. Wear good shoes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A short Liangjiang ferry crosses the river for about ¥10. A cheap way to see the skyline from the water."
+      }
+    ]
+  }
+}

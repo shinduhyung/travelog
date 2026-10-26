@@ -1,0 +1,32 @@
+$ deepseek_prep.py Atlanta
+  tokens in 761 out 446
+Atlanta: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Atlanta
+  tokens in 3997 out 571
+Atlanta: 0 problems
+
+$ deepseek_city.py Atlanta --stage places
+Atlanta: places
+  tokens in 1207 out 3701
+
+$ deepseek_city.py Atlanta --stage frame
+Atlanta: frame
+  tokens in 2440 out 1757
+  repaired JSON
+
+$ deepseek_city.py Atlanta --stage plans
+Atlanta: plans
+  plans for day
+  tokens in 2296 out 829
+  plans for 1n
+  tokens in 2297 out 1226
+  plans for 2n
+  tokens in 2302 out 1122
+  plans for 3n
+  tokens in 2297 out 2293
+
+$ merge_city.py Atlanta
+Atlanta: 24 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/atlanta.json and planner/atlanta.json
+

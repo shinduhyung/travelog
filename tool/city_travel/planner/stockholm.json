@@ -1,0 +1,712 @@
+{
+  "city": "Stockholm",
+  "checked": "October 2026",
+  "intro_line": "Stockholm: islands, spires, and water everywhere.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Norrmalm",
+        "Gamla Stan",
+        "Södermalm",
+        "Östermalm"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Norrmalm",
+        "Gamla Stan",
+        "Södermalm",
+        "Östermalm"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Norrmalm",
+        "Gamla Stan",
+        "Södermalm",
+        "Östermalm"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Norrmalm",
+        "Gamla Stan",
+        "Södermalm",
+        "Östermalm"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Norrmalm",
+        "Gamla Stan",
+        "Södermalm",
+        "Östermalm"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 1,
+        "low": -4,
+        "rain_days": 11,
+        "note": "January: cold, highs near 1°C and lows around -4°C. Pack warm layers and expect short daylight."
+      },
+      {
+        "high": 2,
+        "low": -3,
+        "rain_days": 9,
+        "note": "February: still cold, highs near 2°C. Fewer crowds; museums are calm."
+      },
+      {
+        "high": 5,
+        "low": -2,
+        "rain_days": 9,
+        "note": "March: slowly warming, highs near 5°C, but nights still below freezing. Watch for icy pavements."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 8,
+        "note": "April: highs near 10°C. Pleasant for walking; keep a rain jacket handy."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 9,
+        "note": "May: mild and bright, highs near 16°C. Great for ferries and parks."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 10,
+        "note": "June: warm, highs near 21°C. Long days; pack for occasional showers."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 12,
+        "note": "July: warmest month, highs near 22°C, but the most rain days. Book hotels early."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 11,
+        "note": "August: warm at about 21°C. Still busy; evenings cool down."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 8,
+        "note": "September: highs near 17°C. Comfortable and quieter; good for walking."
+      },
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 10,
+        "note": "October: cooler, highs near 11°C. Bring a warm layer and an umbrella."
+      },
+      {
+        "high": 5,
+        "low": 1,
+        "rain_days": 10,
+        "note": "November: cold and grey, highs near 5°C. Short days; plan indoor sights."
+      },
+      {
+        "high": 2,
+        "low": -2,
+        "rain_days": 11,
+        "note": "December: cold, highs near 2°C. Dark early; dress for wind and damp."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.4,
+      0.6,
+      0.9,
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.35,
+      0.3
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "family": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.5
+    ]
+  },
+  "places": {
+    "vasa": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Early morning or late afternoon; any season",
+      "area": "Östermalm",
+      "popularity": 5
+    },
+    "gamla-stan": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or evening; summer evenings are lovely",
+      "area": "Gamla Stan",
+      "popularity": 5
+    },
+    "stockholm-palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning; summer for the guard ceremony",
+      "area": "Gamla Stan",
+      "popularity": 4
+    },
+    "city-hall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday tour; the waterfront outside is best at sunset",
+      "area": "Norrmalm",
+      "popularity": 4
+    },
+    "skansen": {
+      "types": [
+        "family",
+        "history",
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning in summer; dress for weather",
+      "area": "Östermalm",
+      "popularity": 5
+    },
+    "abba": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Booked morning slot; any weather",
+      "area": "Östermalm",
+      "popularity": 4
+    },
+    "metro-art": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; a good rainy-day plan",
+      "area": "Norrmalm",
+      "popularity": 3
+    },
+    "birka": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 360,
+      "setting": "mixed",
+      "best": "Summer only; book a morning boat",
+      "area": "Norrmalm",
+      "popularity": 3
+    },
+    "drottningholm": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Summer; boat out in the morning",
+      "area": "Östermalm",
+      "popularity": 4
+    },
+    "friends-arena": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Event evenings; check the calendar first",
+      "area": "Norrmalm",
+      "popularity": 3
+    },
+    "grona-lund": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Östermalm",
+      "popularity": 4
+    },
+    "junibacken": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning with kids; any weather",
+      "area": "Östermalm",
+      "popularity": 3
+    },
+    "kth": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Östermalm",
+      "popularity": 2
+    },
+    "kottbullar": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday lunch for better prices",
+      "area": "Norrmalm",
+      "popularity": 4
+    },
+    "national-library": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Östermalm",
+      "popularity": 2
+    },
+    "riddarholmen": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Summer daytime; waterfront at sunset",
+      "area": "Gamla Stan",
+      "popularity": 3
+    },
+    "sergels-torg": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time; lively in the evening",
+      "area": "Norrmalm",
+      "popularity": 3
+    },
+    "public-library": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Daytime; quiet in the morning",
+      "area": "Norrmalm",
+      "popularity": 2
+    },
+    "stortorget": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning; Christmas market in December",
+      "area": "Gamla Stan",
+      "popularity": 4
+    },
+    "under-bridges": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer; late afternoon light",
+      "area": "Norrmalm",
+      "popularity": 3
+    },
+    "ostermalms-saluhall": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday lunch",
+      "area": "Östermalm",
+      "popularity": 3
+    },
+    "monteliusvagen": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset; clear evenings",
+      "area": "Södermalm",
+      "popularity": 4
+    },
+    "sofo-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon; any season",
+      "area": "Södermalm",
+      "popularity": 3
+    },
+    "fika": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Mid-morning or mid-afternoon",
+      "area": "Gamla Stan",
+      "popularity": 4
+    },
+    "archipelago-tour": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer daytime",
+      "area": "Östermalm",
+      "popularity": 3
+    },
+    "sodermalm-view": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening in summer",
+      "area": "Södermalm",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Vasa Museum, Gamla Stan and a ferry; add a night for the archipelago or a slower museum day."
+  },
+  "airports": [
+    {
+      "code": "ARN",
+      "name": "Stockholm-Arlanda Airport",
+      "primary": true,
+      "note": "Main international airport, 37 km north of the city.",
+      "options": [
+        {
+          "mode": "FlixBus",
+          "to": "City Terminal",
+          "price": "79-99 kr",
+          "time": "45 min",
+          "note": "Cheapest bus; book in advance for lower fares."
+        },
+        {
+          "mode": "SL commuter train",
+          "to": "Stockholm Central",
+          "price": "180 kr",
+          "time": "40-50 min",
+          "note": "Requires SL ticket; includes airport surcharge."
+        },
+        {
+          "mode": "Arlanda Express",
+          "to": "Stockholm Central",
+          "price": "175-350 kr",
+          "time": "20 min",
+          "note": "Fastest, but pricey; discounts for youth and groups."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "500-700 kr",
+          "time": "30-40 min",
+          "note": "Use fixed-price taxis from major companies."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "400-600 kr",
+          "time": "30-40 min",
+          "note": "App-based; may have surge pricing."
+        }
+      ]
+    },
+    {
+      "code": "BMA",
+      "name": "Stockholm-Bromma Airport",
+      "primary": false,
+      "note": "City airport, 8 km west of centre; limited flights.",
+      "options": [
+        {
+          "mode": "Tram 31 + Metro",
+          "to": "T-Centralen",
+          "price": "40-60 kr",
+          "time": "30 min",
+          "note": "Tram to Alvik, then metro green line."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "200-300 kr",
+          "time": "15-20 min",
+          "note": "Short ride but can be slow in traffic."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "150-250 kr",
+          "time": "15-20 min",
+          "note": "Often cheaper than taxi."
+        }
+      ]
+    },
+    {
+      "code": "NYO",
+      "name": "Stockholm Skavsta Airport",
+      "primary": false,
+      "note": "Budget airport, 89 km southwest; used by Wizz Air and Norwegian.",
+      "options": [
+        {
+          "mode": "Local bus + SJ train",
+          "to": "Stockholm Central",
+          "price": "100-150 kr",
+          "time": "80-90 min",
+          "note": "Bus 515/715 to Nyköping, then train."
+        },
+        {
+          "mode": "Airport coach",
+          "to": "City Terminal",
+          "price": "229 kr",
+          "time": "80 min",
+          "note": "Direct and convenient; book online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "1000-1500 kr",
+          "time": "70-80 min",
+          "note": "Very expensive; not recommended."
+        }
+      ]
+    },
+    {
+      "code": "VST",
+      "name": "Stockholm Västerås Airport",
+      "primary": false,
+      "note": "Ryanair airport, 86 km west; serves London Stansted.",
+      "options": [
+        {
+          "mode": "Taxi shuttle + regional train",
+          "to": "Stockholm Central",
+          "price": "109 kr",
+          "time": "65 min",
+          "note": "Shuttle to Västerås station, then train."
+        },
+        {
+          "mode": "Airport coach",
+          "to": "City Terminal",
+          "price": "139 kr",
+          "time": "80 min",
+          "note": "Direct coach; slower but simple."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "1200-1600 kr",
+          "time": "70-80 min",
+          "note": "Very expensive; not recommended."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Stockholm",
+      "https://en.wikivoyage.org/wiki/Stockholm"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Metro for most trips; walk in the centre and take ferries for the islands.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The Tunnelbana is fast and covers the city. Buy an SL card or use the app."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Trams and buses fill the gaps. The SL travel card is best value."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are pricey. Use Uber or Bolt for app-based rides."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is not recommended in the centre due to congestion and tolls."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking and cycling are great in warm months, with many bike lanes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries connect the islands and are part of the transit network."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Northern coastal climate: cold winters, mild summers, and rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs from about 16°C to 22°C. Long daylight makes walking and ferries easy."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (Dec–Feb)",
+        "text": "Highs near 1–2°C and lows around -4°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 8–12 rain days each month. July is the wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summer, not hot",
+        "text": "July highs near 22°C. Evenings can be cool, so bring a light layer."
+      },
+      {
+        "icon": "🌗",
+        "title": "Big daylight swing",
+        "text": "Very long days in June, very short in December. Plan winter sightseeing for midday."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes. Add warm winter gear from November to March."
+      }
+    ]
+  }
+}

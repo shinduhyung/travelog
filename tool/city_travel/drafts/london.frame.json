@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Tower, Westminster and the West End stage."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, pubs and a world of restaurants."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Free museums, parks and the South Bank."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "West End & Soho",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Walk to theatres, Oxford Street and most central sights. Busy and noisy at night; book early.",
+      "center": [
+        51.513,
+        -0.132
+      ]
+    },
+    {
+      "area": "South Kensington",
+      "range": [
+        140,
+        380
+      ],
+      "why": "Next to the Natural History and Science Museums and Hyde Park. Quiet streets, good for families.",
+      "center": [
+        51.494,
+        -0.174
+      ]
+    },
+    {
+      "area": "South Bank & Southwark",
+      "range": [
+        120,
+        350
+      ],
+      "why": "Riverside walks, the Eye and the Tower within reach. Good Tube links from Waterloo and London Bridge.",
+      "center": [
+        51.505,
+        -0.09
+      ]
+    },
+    {
+      "area": "King's Cross & Bloomsbury",
+      "range": [
+        110,
+        300
+      ],
+      "why": "The British Museum, the British Library and fast trains from King's Cross and St Pancras.",
+      "center": [
+        51.53,
+        -0.124
+      ]
+    }
+  ],
+  "food": [
+    "Try a proper Sunday roast in a pub, and fish and chips from a chippy. Expect roughly £12–20 a main.",
+    "Markets are the best value: Borough Market for snacks, Brick Lane for curry, Camden for street food.",
+    "Book popular restaurants ahead, especially for dinner Thursday to Saturday.",
+    "Lunch is often cheaper than dinner at the same place; many pubs do good-value set lunches.",
+    "Tap water is safe and free to ask for. A pint of beer is roughly £5–7 in central pubs."
+  ],
+  "more_time": [
+    "Greenwich: take the Thames Clippers boat for the Cutty Sark, the market and the park.",
+    "Swap a museum day for a half-day trip to Hampton Court Palace or Kew Gardens by train.",
+    "Camden and Regent's Canal: walk the towpath from Camden Lock to Little Venice."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "family": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "family"
+  ],
+  "recommend": {
+    "why": "Three nights covers the big sights, a museum or two and a West End show without rushing."
+  },
+  "month_notes": [
+    "Jan: cold, highs near 8°C and about 12 rain days. Pack a warm coat.",
+    "Feb: still cold, highs near 9°C. Short days but quieter sights.",
+    "Mar: warming to about 11°C, but the wettest month with around 13 rain days.",
+    "Apr: mild at about 14°C. Good walking weather; showers possible.",
+    "May: pleasant highs near 17°C. A great month for parks and the river.",
+    "Jun: warm at about 21°C with long evenings. Busy season starts.",
+    "Jul: the warmest month, highs near 23°C. Book hotels and shows early.",
+    "Aug: warm at about 22°C. School holidays make sights crowded.",
+    "Sep: still mild near 20°C with fewer crowds. A strong month to visit.",
+    "Oct: cooling to about 16°C. Bring layers and a rain jacket.",
+    "Nov: chilly at about 11°C with around 12 rain days. Dark by late afternoon.",
+    "Dec: cold at about 9°C. Festive lights, short days, book ahead."
+  ],
+  "climate_guide": {
+    "summary": "Temperate and changeable: mild summers, cool winters, and rain in every month. Rarely extreme.",
+    "items": [
+      {
+        "icon": "🌦️",
+        "title": "Rain all year",
+        "text": "About 10–13 rain days every month. Showers are often short; carry a small umbrella or jacket."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 17–23°C and long daylight. July is warmest; September is mild with fewer crowds."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cool, not freezing",
+        "text": "January and February highs near 8–9°C and lows near 2–3°C. A warm coat and layers are enough."
+      },
+      {
+        "icon": "🌂",
+        "title": "March is the wettest",
+        "text": "Around 13 rain days. Plan indoor backups like museums and galleries."
+      },
+      {
+        "icon": "🕶️",
+        "title": "Summer days are long",
+        "text": "June to August gives the most daylight for parks, walks and the river. Evenings stay light."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for walking. Add sunglasses and a hat for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Contactless card on the Tube and buses; walk the centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The Underground, Elizabeth line and Overground take contactless cards and Oyster. Fares are capped per day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "A flat £1.75 per bus, and a second bus within an hour is free (Hopper fare). Good for sightseeing above ground."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Black cabs are metered and can be hailed. Uber, Bolt and FREENOW are widely used."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre means the Congestion Charge and ULEZ fees. Visitors rarely need a car."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Central London is very walkable; many sights are 15–30 minutes apart on foot."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Thames Clippers river boats link Westminster, the South Bank, the Tower and Greenwich."
+      }
+    ]
+  }
+}

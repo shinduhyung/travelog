@@ -1,0 +1,34 @@
+$ deepseek_prep.py Beirut
+  tokens in 703 out 597
+Beirut: 7 sig, 0 tours, 1 problems
+
+$ deepseek_facts.py Beirut
+  tokens in 3646 out 618
+Beirut: 0 problems
+
+$ deepseek_city.py Beirut --stage places
+Beirut: places
+  tokens in 1177 out 2466
+
+$ deepseek_city.py Beirut --stage frame
+Beirut: frame
+  tokens in 2455 out 1851
+  repaired JSON
+
+$ deepseek_city.py Beirut --stage plans
+Beirut: plans
+  plans for day
+  tokens in 1821 out 1201
+  plans for 1n
+  tokens in 1822 out 1186
+  plans for 2n
+  tokens in 1827 out 1637
+  plans for 3n
+  tokens in 1822 out 1903
+  plans for 4n
+  tokens in 1822 out 1506
+
+$ merge_city.py Beirut
+Beirut: 16 places, 16 plans, 0 errors, 0 warnings
+wrote itineraries/beirut.json and planner/beirut.json
+

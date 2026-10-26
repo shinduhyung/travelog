@@ -1,0 +1,285 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Skyline views, world-class museums and a different city in every neighbourhood.",
+  "intro": "New York is big but its sights cluster in Manhattan. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "views",
+      "label": "Views"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Midtown",
+    "Lower Manhattan",
+    "Upper West Side",
+    "Brooklyn"
+  ],
+  "place_landmarks": [
+    "Statue of Liberty",
+    "Ellis Island",
+    "Empire State Building",
+    "Times Square",
+    "Central Park",
+    "Metropolitan Museum of Art",
+    "The Museum of Modern Art",
+    "American Museum of Natural History",
+    "Solomon R. Guggenheim Museum",
+    "Brooklyn Bridge",
+    "9/11 Memorial",
+    "One World Trade Center",
+    "The High Line",
+    "Rockefeller Center",
+    "Grand Central Terminal",
+    "SUMMIT One Vanderbilt",
+    "Chrysler Building",
+    "Wall Street",
+    "Chelsea Market",
+    "Broadway Theater District",
+    "St. Patrick's Cathedral",
+    "Staten Island Ferry",
+    "New York Public Library (Main Branch)",
+    "Flatiron Building"
+  ],
+  "taxi": {
+    "flag_day": 7,
+    "flag_airport": 7,
+    "per_km": 2.2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 14,
+  "transit_facts": [
+    "The subway runs 24 hours; tap OMNY (contactless) for $3.00 a ride, with a weekly fare cap.",
+    "Buses use the same fare; the M-routes cover Manhattan avenues.",
+    "Yellow cabs are metered (plus congestion surcharges); Uber and Lyft work everywhere.",
+    "Driving and parking in Manhattan are slow and expensive; skip the car.",
+    "Manhattan's grid is easy to walk; 20 blocks north-south is about a mile.",
+    "The free Staten Island Ferry passes the Statue of Liberty."
+  ],
+  "airports": [
+    {
+      "code": "JFK",
+      "name": "John F. Kennedy International Airport",
+      "primary": true,
+      "note": "The main international airport, in Queens.",
+      "options": [
+        {
+          "mode": "AirTrain + subway",
+          "to": "Manhattan",
+          "price": "$11.75",
+          "time": "50-90 min",
+          "note": "AirTrain $8.75 + subway $3.00, paid with OMNY."
+        },
+        {
+          "mode": "AirTrain + LIRR",
+          "to": "Penn Station / Grand Central",
+          "price": "$14-16",
+          "time": "35-50 min",
+          "note": ""
+        },
+        {
+          "mode": "Yellow cab (flat fare)",
+          "to": "Manhattan",
+          "price": "$70 + tolls and tip",
+          "time": "45-75 min",
+          "note": "About $90-110 all in."
+        }
+      ]
+    },
+    {
+      "code": "EWR",
+      "name": "Newark Liberty International Airport",
+      "primary": false,
+      "note": "In New Jersey, 25 km west of Midtown.",
+      "options": [
+        {
+          "mode": "AirTrain + NJ Transit",
+          "to": "Penn Station",
+          "price": "$17.25",
+          "time": "about 30 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Midtown",
+          "price": "$70-110",
+          "time": "40-70 min",
+          "note": "Plus tolls."
+        }
+      ]
+    },
+    {
+      "code": "LGA",
+      "name": "LaGuardia Airport",
+      "primary": false,
+      "note": "Closest to Manhattan, mostly domestic flights.",
+      "options": [
+        {
+          "mode": "Q70 bus + subway",
+          "to": "Manhattan",
+          "price": "$3.00",
+          "time": "40-60 min",
+          "note": "Free Q70 LaGuardia Link to the subway."
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Midtown",
+          "price": "$35-60",
+          "time": "25-45 min",
+          "note": "Metered, plus tolls."
+        }
+      ]
+    }
+  ],
+  "airports_sources": [
+    [
+      "JFK to Manhattan compared 2026",
+      "https://tripbuffer.com/compare/jfk-to-manhattan-taxi-vs-train-vs-rideshare/"
+    ],
+    [
+      "JFK taxi fixed fare 2026",
+      "https://www.hootling.com/blog/taxi-jfk-to-new-york"
+    ],
+    [
+      "JFK, LGA & EWR compared",
+      "https://smartsmssolutions.com/resources/blog/business/airport-to-manhattan-guide"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    40.7128,
+    -74.006
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": -3,
+      "rain_days": 10
+    },
+    {
+      "high": 6,
+      "low": -3,
+      "rain_days": 10
+    },
+    {
+      "high": 10,
+      "low": 0,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 12
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 8
+    },
+    {
+      "high": 7,
+      "low": 0,
+      "rain_days": 10
+    }
+  ],
+  "tours": [
+    {
+      "title": "NYC: Statue of Liberty and Ellis Island Guided Tour",
+      "duration": "2-4 hrs",
+      "price": "$59",
+      "covers": [
+        "statue-liberty",
+        "ellis-island"
+      ]
+    },
+    {
+      "title": "SUMMIT One Vanderbilt Tickets",
+      "duration": "1.5-2 hrs",
+      "price": "$48",
+      "covers": [
+        "summit-vanderbilt"
+      ]
+    },
+    {
+      "title": "9/11 Memorial & Museum Timed Ticket",
+      "duration": "1 day",
+      "price": "$25",
+      "covers": [
+        "memorial-911"
+      ]
+    },
+    {
+      "title": "Empire State Building Observation Deck & Museum Ticket",
+      "duration": "1 day",
+      "price": "$50",
+      "covers": [
+        "empire-state"
+      ]
+    },
+    {
+      "title": "Top of the Rock Observation Deck Ticket",
+      "duration": "2 hours",
+      "price": "$46",
+      "covers": [
+        "rockefeller"
+      ]
+    },
+    {
+      "title": "Museum of Modern Art (MoMA) Entry Ticket",
+      "duration": "1 day",
+      "price": "$30",
+      "covers": [
+        "moma"
+      ]
+    }
+  ],
+  "max_km": 45
+}

@@ -1,0 +1,558 @@
+{
+  "city": "Shenyang",
+  "checked": "October 2026",
+  "intro_line": "Imperial old capital where Qing history meets hearty northeast food.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Shenhe (Old City)",
+        "Taiyuan Street",
+        "Shenyang North Station",
+        "Hunnan"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Shenhe (Old City)",
+        "Taiyuan Street",
+        "Shenyang North Station",
+        "Hunnan"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Shenhe (Old City)",
+        "Taiyuan Street",
+        "Shenyang North Station",
+        "Hunnan"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Shenhe (Old City)",
+        "Taiyuan Street",
+        "Shenyang North Station",
+        "Hunnan"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Shenhe (Old City)",
+        "Taiyuan Street",
+        "Shenyang North Station",
+        "Hunnan"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -4,
+        "low": -14,
+        "rain_days": 2,
+        "note": "January: very cold, highs around -4°C and lows near -14°C. Dress in layers and plan indoor sights."
+      },
+      {
+        "high": 0,
+        "low": -10,
+        "rain_days": 2,
+        "note": "February: still freezing, highs near 0°C. Few rainy days; watch for ice on pavements."
+      },
+      {
+        "high": 9,
+        "low": -3,
+        "rain_days": 4,
+        "note": "March: warming to about 9°C but windy and dusty. A light coat is enough by late month."
+      },
+      {
+        "high": 17,
+        "low": 4,
+        "rain_days": 6,
+        "note": "April: pleasant at around 17°C. Good for walking the old city and tomb parks."
+      },
+      {
+        "high": 24,
+        "low": 11,
+        "rain_days": 8,
+        "note": "May: mild and green, highs near 24°C. One of the best months to visit."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 11,
+        "note": "June: warm at about 28°C with more rain days. Carry a small umbrella."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 14,
+        "note": "July: hottest and wettest, highs near 30°C and about 14 rain days. Go out early."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 13,
+        "note": "August: hot and humid, similar to July. Indoor museums are a good midday plan."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 9,
+        "note": "September: comfortable again around 24°C. A strong month for parks and walking."
+      },
+      {
+        "high": 16,
+        "low": 5,
+        "rain_days": 6,
+        "note": "October: cool and clear at about 16°C. Great for sightseeing before the cold."
+      },
+      {
+        "high": 5,
+        "low": -4,
+        "rain_days": 6,
+        "note": "November: cold returns, highs near 5°C. Pack a warm coat."
+      },
+      {
+        "high": -3,
+        "low": -11,
+        "rain_days": 3,
+        "note": "December: freezing, highs near -3°C. Short days; check opening hours on the day."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      0.9,
+      0.75,
+      0.6
+    ],
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      0.9,
+      0.75,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.8,
+      0.5,
+      0.3
+    ],
+    "family": [
+      0.4,
+      0.45,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.8,
+      0.6,
+      0.4
+    ]
+  },
+  "places": {
+    "imperial_palace": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning, spring or autumn",
+      "area": "Shenhe (Old City)",
+      "popularity": 5
+    },
+    "zhongjie": {
+      "types": [
+        "food",
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Shenhe (Old City)",
+      "popularity": 4
+    },
+    "old_city_walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Shenhe (Old City)",
+      "popularity": 3
+    },
+    "zhang_residence": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any daytime",
+      "area": "Shenhe (Old City)",
+      "popularity": 3
+    },
+    "wuai_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Shenhe (Old City)",
+      "popularity": 3
+    },
+    "north_tomb": {
+      "types": [
+        "history",
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Shenyang North Station",
+      "popularity": 4
+    },
+    "east_tomb": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, mild weather",
+      "area": "Shenhe (Old City)",
+      "popularity": 3
+    },
+    "mukden_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any daytime; closed Monday",
+      "area": "Shenyang North Station",
+      "popularity": 3
+    },
+    "north_station_square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Any time",
+      "area": "Shenyang North Station",
+      "popularity": 3
+    },
+    "taiyuan_street": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Taiyuan Street",
+      "popularity": 4
+    },
+    "middle_street": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Taiyuan Street",
+      "popularity": 3
+    },
+    "liaoning_museum": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Any daytime; closed Monday",
+      "area": "Hunnan",
+      "popularity": 4
+    },
+    "botanical_garden": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Spring and autumn",
+      "area": "Hunnan",
+      "popularity": 3
+    },
+    "hunnan_park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Hunnan",
+      "popularity": 2
+    },
+    "northeast_food": {
+      "types": [
+        "food",
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Taiyuan Street",
+      "popularity": 4
+    },
+    "night_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Shenhe (Old City)",
+      "popularity": 3
+    },
+    "metro_tour": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Any time",
+      "area": "Shenhe (Old City)",
+      "popularity": 3
+    },
+    "winter_ice": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "December to February",
+      "area": "Shenyang North Station",
+      "popularity": 3
+    },
+    "tea_house": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Shenhe (Old City)",
+      "popularity": 2
+    },
+    "sightseeing_bus": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Shenhe (Old City)",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Imperial Palace, one Qing tomb and a good food evening; add a night for the 918 Museum and Dongling."
+  },
+  "airports": [
+    {
+      "code": "SHE",
+      "name": "Taoxian International Airport",
+      "primary": true,
+      "note": "Main airport, about 17-20 km south of downtown.",
+      "options": [
+        {
+          "mode": "Tram line 2 + Metro",
+          "to": "City centre",
+          "price": "¥2-5",
+          "time": "60-75 min",
+          "note": "Cheapest option; transfer to the metro."
+        },
+        {
+          "mode": "Airport shuttle",
+          "to": "117 Zhonghua Road",
+          "price": "¥15-20",
+          "time": "40-60 min",
+          "note": "Runs frequently to the China Northern Airlines office."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥70-100",
+          "time": "30-40 min",
+          "note": "Agree the meter at the official rank."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "30-40 min",
+          "note": "Transparent pricing, no language barrier."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Shenyang",
+      "https://en.wikivoyage.org/wiki/Shenyang"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for central sights and Didi for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1, 2, 9 and 10 cover the city. Fares ¥2-5; trains run about 06:00-22:30."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost ¥1-2 and take cash or Alipay/WeChat QR codes. Routes are hard to read without Chinese."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥8 for 3 km then about ¥1.8/km; insist the meter is visible. Didi works well and is easiest for foreign visitors."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed. Traffic and parking are hard for visitors; use metro and Didi instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Central sights in Shenhe are walkable. Beiling and Dongling need transport."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Tram line 2 links Taoxian Airport to the metro; the total trip downtown takes just over an hour."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "A cold northeast China climate: freezing winters, warm humid summers, and the best weather in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Mild days around 16–24°C. Ideal for the palace, tomb parks and walking."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is very cold",
+        "text": "December to February highs sit near -4 to 0°C with lows around -14°C. Bring a heavy coat, hat and gloves."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain peaks in summer",
+        "text": "July and August have the most rain days, around 13–14. Keep a compact umbrella handy."
+      },
+      {
+        "icon": "🥵",
+        "title": "Short hot summer",
+        "text": "June to August reach about 28–30°C and stay humid. Plan outdoor sights for morning."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Spring can be windy and dusty",
+        "text": "March and April are drier but breezy. A light scarf helps."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Warm layers and boots for winter; light clothes and rain gear for summer; a jacket for spring and autumn evenings."
+      }
+    ]
+  }
+}

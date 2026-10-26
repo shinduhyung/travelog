@@ -1,0 +1,32 @@
+$ deepseek_prep.py Kuwait City
+  tokens in 774 out 587
+Kuwait City: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Kuwait City
+  tokens in 1451 out 609
+Kuwait City: 1 problems
+  - KWI taxi KD 5 vs tariff estimate 16
+
+$ deepseek_city.py Kuwait City --stage places
+Kuwait City: places
+  tokens in 1210 out 3038
+
+$ deepseek_city.py Kuwait City --stage frame
+Kuwait City: frame
+  tokens in 2428 out 1643
+
+$ deepseek_city.py Kuwait City --stage plans
+Kuwait City: plans
+  plans for day
+  tokens in 2058 out 723
+  plans for 1n
+  tokens in 2059 out 1242
+  plans for 2n
+  tokens in 2064 out 1518
+  plans for 3n
+  tokens in 2059 out 1695
+
+$ merge_city.py Kuwait City
+Kuwait City: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/kuwait-city.json and planner/kuwait-city.json
+

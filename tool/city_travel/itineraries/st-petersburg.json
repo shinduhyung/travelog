@@ -1,0 +1,1639 @@
+{
+  "city": "St. Petersburg",
+  "checked": "October 2026",
+  "currency": "RUB",
+  "usd_rate": 81.5205,
+  "intro": "St. Petersburg rewards visitors with world-class art, grand palaces and long summer evenings. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 59.8657,
+      "west": 29.8486,
+      "north": 60.0593,
+      "east": 30.4654,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 300,
+      "flag_airport": 500,
+      "per_km": 40,
+      "min_fare": 300
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "Metro is fast and cheap: about RUB60 per entry with a Podorozhnik card, about RUB86 by contactless card or token.",
+      "Metro runs roughly 05:45 to 00:15; stations are deep, so allow 1-2 min on escalators.",
+      "Buses, trolleybuses and trams cover the city; pay by Podorozhnik card or contactless.",
+      "Yandex Go (Yandex.Taxi) is the main ride app; local taxi firms also operate.",
+      "Bridges are drawn at night from spring to autumn; check the schedule before late trips.",
+      "Central sights are walkable; bikes are limited and winter cycling is hard."
+    ],
+    "sources": []
+  },
+  "places": {
+    "hermitage": {
+      "name": "Hermitage Museum",
+      "landmark": "Hermitage Museum",
+      "kind": "museum",
+      "lat": 59.9405,
+      "lon": 30.3086,
+      "price": 500,
+      "price_text": "≈ RUB 400–500 main collection · check on the day",
+      "hours": "Closed Monday · Tue–Sun roughly 10:30–18:00, later on some days",
+      "tip": "Book a timed ticket online and start with the Old Masters upstairs before the crowds build.",
+      "source": "https://www.hermitagemuseum.org"
+    },
+    "savior": {
+      "name": "Church of the Savior on Spilled Blood",
+      "landmark": "Church of the Savior on Spilled Blood",
+      "kind": "sight",
+      "lat": 59.9405,
+      "lon": 30.328,
+      "price": 450,
+      "price_text": "≈ RUB 350–450 · check on the day",
+      "hours": "Daily, roughly 10:00–18:00 (closed some days for services)",
+      "tip": "The mosaic interior is the point — go early or late to avoid tour groups.",
+      "source": "https://www.cathedral.ru"
+    },
+    "peterhof": {
+      "name": "Peterhof Palace",
+      "landmark": "Peterhof Palace",
+      "kind": "sight",
+      "lat": 59.886,
+      "lon": 29.9042,
+      "price": 1000,
+      "price_text": "≈ RUB 700–1,200 palace + park · check on the day",
+      "hours": "Park daily in season · palace closed Monday, roughly 10:30–18:00",
+      "tip": "Time your visit for the fountain switch-on; the hydrofoil from the city centre is the fastest way out.",
+      "source": "https://www.peterhofmuseum.ru"
+    },
+    "isaac": {
+      "name": "St. Isaac's Cathedral",
+      "landmark": "St. Isaac's Cathedral",
+      "kind": "sight",
+      "lat": 59.9308,
+      "lon": 30.3079,
+      "price": 400,
+      "price_text": "≈ RUB 350–450 cathedral · colonnade extra",
+      "hours": "Daily, roughly 10:30–18:00 · check on the day",
+      "tip": "Climb the colonnade for the best rooftop view over the centre.",
+      "source": "https://www.cathedral.ru"
+    },
+    "peterpaul": {
+      "name": "Peter and Paul Fortress",
+      "landmark": "Peter and Paul Fortress",
+      "kind": "sight",
+      "lat": 59.9497,
+      "lon": 30.3168,
+      "price": 450,
+      "price_text": "≈ RUB 350–550 cathedral and grounds · check on the day",
+      "hours": "Grounds daily · cathedral roughly 10:00–18:00",
+      "tip": "Walk the walls for river views, and catch the noon cannon if you can.",
+      "source": "https://www.spbmuseum.ru"
+    },
+    "nevsky": {
+      "name": "Nevsky Prospect",
+      "landmark": "Nevsky Prospect",
+      "kind": "sight",
+      "lat": 59.9351,
+      "lon": 30.3475,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk it end to end in the evening when the buildings are lit.",
+      "source": ""
+    },
+    "mariinsky": {
+      "name": "Mariinsky Theatre",
+      "landmark": "Mariinsky Theatre",
+      "kind": "show",
+      "lat": 59.9254,
+      "lon": 30.2954,
+      "price": 3000,
+      "price_text": "≈ RUB 1,500–6,000 depending on seat and show",
+      "hours": "Performances mostly evening · box office daytime",
+      "tip": "Book ballet or opera well ahead; the historic stage is the one to aim for.",
+      "source": "https://www.mariinsky.ru"
+    },
+    "bronze": {
+      "name": "Bronze Horseman",
+      "landmark": "Bronze Horseman",
+      "kind": "sight",
+      "lat": 59.9372,
+      "lon": 30.3015,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Come at dusk for the classic view across Senate Square.",
+      "source": ""
+    },
+    "summergarden": {
+      "name": "Summer Garden",
+      "landmark": "Summer Garden",
+      "kind": "park",
+      "lat": 59.9439,
+      "lon": 30.3375,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 10:00–22:00 in summer · shorter in winter",
+      "tip": "Quiet early morning walk; combine with the nearby Field of Mars.",
+      "source": ""
+    },
+    "alexander": {
+      "name": "Alexander Column",
+      "landmark": "Alexander Column",
+      "kind": "sight",
+      "lat": 59.9391,
+      "lon": 30.3134,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Best seen as part of the Palace Square loop with the Hermitage.",
+      "source": ""
+    },
+    "catherine": {
+      "name": "Catherine Palace",
+      "landmark": "Catherine Palace",
+      "kind": "sight",
+      "lat": 59.7169,
+      "lon": 30.3953,
+      "price": 1200,
+      "price_text": "≈ RUB 900–1,500 · check on the day",
+      "hours": "Closed Tuesday · roughly 10:00–18:00",
+      "tip": "The Amber Room draws queues — book ahead and go first thing.",
+      "source": "https://www.tzar.ru"
+    },
+    "dance2": {
+      "name": "Dance II",
+      "landmark": "Dance II",
+      "kind": "sight",
+      "lat": 59.9398,
+      "lon": 30.3146,
+      "price": null,
+      "price_text": "Check locally",
+      "hours": "Check on the day",
+      "tip": "Confirm the exact location before you go — details vary.",
+      "source": ""
+    },
+    "eliseev": {
+      "name": "Eliseev Brothers' Store",
+      "landmark": "Eliseev Brothers' Store",
+      "kind": "food",
+      "lat": 59.936,
+      "lon": 30.3479,
+      "price": null,
+      "price_text": "Free to browse · food priced per item",
+      "hours": "Daily, roughly 09:00–21:00",
+      "tip": "Go for the ornate interior and the food hall, not for bargains.",
+      "source": ""
+    },
+    "gagarin": {
+      "name": "Gagarin Park",
+      "landmark": "Gagarin Park",
+      "kind": "park",
+      "lat": 59.9341,
+      "lon": 30.335,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A local park away from the tourist core — good for a quiet stroll.",
+      "source": ""
+    },
+    "staffarch": {
+      "name": "General Staff Building Arch",
+      "landmark": "General Staff Building Arch",
+      "kind": "sight",
+      "lat": 59.9393,
+      "lon": 30.3117,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk through the arch for the classic Palace Square framing shot.",
+      "source": ""
+    },
+    "kazan": {
+      "name": "Kazan Cathedral",
+      "landmark": "Kazan Cathedral",
+      "kind": "sight",
+      "lat": 59.9365,
+      "lon": 30.3244,
+      "price": 0,
+      "price_text": "Free · donations welcome",
+      "hours": "Daily, roughly 08:00–20:00",
+      "tip": "It is an active church — keep quiet and dress modestly.",
+      "source": ""
+    },
+    "lakhta": {
+      "name": "Lakhta Center",
+      "landmark": "Lakhta Center",
+      "kind": "sight",
+      "lat": 59.9872,
+      "lon": 30.1777,
+      "price": null,
+      "price_text": "Viewing access varies · check on the day",
+      "hours": "Check on the day",
+      "tip": "Best seen from across the water; check whether observation access is open.",
+      "source": ""
+    },
+    "menshikov": {
+      "name": "Menshikov Palace",
+      "landmark": "Menshikov Palace",
+      "kind": "museum",
+      "lat": 59.9416,
+      "lon": 30.2974,
+      "price": 400,
+      "price_text": "≈ RUB 300–500 · check on the day",
+      "hours": "Closed Monday · roughly 10:30–18:00",
+      "tip": "Pair it with the Hermitage ticket if you have time — it is a branch museum.",
+      "source": "https://www.hermitagemuseum.org"
+    },
+    "neva": {
+      "name": "Neva River",
+      "landmark": "Neva River",
+      "kind": "sight",
+      "lat": 59.9343,
+      "lon": 30.3351,
+      "price": 0,
+      "price_text": "Free to walk the embankments",
+      "hours": "Always open",
+      "tip": "Walk the Palace Embankment at sunset for the widest views.",
+      "source": ""
+    },
+    "canals": {
+      "name": "Neva River & Canals",
+      "landmark": "Neva River & Canals",
+      "kind": "tour",
+      "lat": 59.9398,
+      "lon": 30.3146,
+      "price": 700,
+      "price_text": "≈ RUB 500–1,000 boat tour · check on the day",
+      "hours": "Boat tours run daytime and evening in season",
+      "tip": "Evening boat tours are the classic St. Petersburg experience; check the route covers the canals.",
+      "source": ""
+    },
+    "parkalisa": {
+      "name": "Park Alisa",
+      "landmark": "Park Alisa",
+      "kind": "park",
+      "lat": 59.9524,
+      "lon": 30.3044,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A local green space — check the exact entrance before you go.",
+      "source": ""
+    },
+    "parkyulya": {
+      "name": "Park Yulya",
+      "landmark": "Park Yulya",
+      "kind": "park",
+      "lat": 60.039,
+      "lon": 30.4098,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Small neighbourhood park; combine with a walk in the area.",
+      "source": ""
+    },
+    "market": {
+      "name": "Kuznechny Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 59.9272,
+      "lon": 30.3444,
+      "price": null,
+      "price_text": "Free to enter · food priced per item",
+      "hours": "Daily, roughly 08:00–20:00",
+      "tip": "Go for cheese, smoked fish and berries — a good picnic stop.",
+      "source": ""
+    },
+    "roofview": {
+      "name": "Rooftop viewpoint over the centre",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.9342,
+      "lon": 30.325,
+      "price": 500,
+      "price_text": "≈ RUB 300–800 rooftop access · check on the day",
+      "hours": "Varies by venue",
+      "tip": "Rooftop access changes often — book through a reputable operator and check safety.",
+      "source": ""
+    },
+    "walk": {
+      "name": "Kolomna neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.925,
+      "lon": 30.29,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Wander the quiet canals and courtyards south of the Mariinsky for a calmer side of the city.",
+      "source": ""
+    },
+    "vasilyevskywalk": {
+      "name": "Vasilyevsky Island embankment walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.94,
+      "lon": 30.29,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk from the Menshikov Palace to the Spit for river views and the Rostral Columns.",
+      "source": ""
+    },
+    "petrogradwalk": {
+      "name": "Petrogradsky side-streets walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.96,
+      "lon": 30.31,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Explore the quieter streets around the fortress for a local feel.",
+      "source": ""
+    },
+    "boatcanal": {
+      "name": "Canal boat tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 59.933,
+      "lon": 30.33,
+      "price": 700,
+      "price_text": "≈ RUB 500–1,000 · check on the day",
+      "hours": "Daytime and evening in season",
+      "tip": "Choose a smaller boat for the narrow canals; check the route and duration first.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: the Hermitage first thing, then the churches and a canal boat at dusk.",
+      "days": [
+        {
+          "title": "Hermitage morning, Nevsky afternoon",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Go straight to the main collection; buy tickets online if you can."
+            },
+            {
+              "place": "eliseev",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Lunch or a snack in the historic food hall on Nevsky Prospect."
+            },
+            {
+              "place": "savior",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Short walk along the canal. Mosaics are the highlight."
+            },
+            {
+              "place": "kazan",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Five minutes back along Nevsky. Quiet inside."
+            },
+            {
+              "place": "canals",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening boat tour from a central jetty. Book on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "The city's founding story in a day: fortress, cathedral and an evening walk by the water.",
+      "days": [
+        {
+          "title": "Fortress, cathedral, sunset walk",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cross to Petrogradsky side. Cathedral holds the Romanov tombs."
+            },
+            {
+              "place": "market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Back on the Nevsky side. Good spot for a cheap lunch."
+            },
+            {
+              "place": "isaac",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Climb the colonnade on a clear day for the rooftop view."
+            },
+            {
+              "place": "bronze",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Short walk through the park to the statue."
+            },
+            {
+              "place": "nevsky",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening stroll back along the prospect. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Art-heavy day: Hermitage masterpieces, church mosaics and an evening at the Mariinsky if tickets allow.",
+      "days": [
+        {
+          "title": "Hermitage and the arts",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Pick two or three rooms and don't try to see it all."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "The arch links the square to the embankment. Quick photo stop."
+            },
+            {
+              "place": "savior",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Mosaic interiors, a short walk away."
+            },
+            {
+              "place": "mariinsky",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening performance. Book well ahead; check the programme on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day: the Hermitage first thing, then the Nevsky Prospekt sights on foot.",
+      "days": [
+        {
+          "title": "Hermitage and Nevsky Prospekt",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Book ahead and go straight to the main collections."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Step through the arch to Palace Square for the classic view."
+            },
+            {
+              "place": "alexander",
+              "at": "15:20",
+              "minutes": 15,
+              "note": "The column in the middle of Palace Square."
+            },
+            {
+              "place": "nevsky",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk the main street; stop for coffee or a snack along the way."
+            },
+            {
+              "place": "savior",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Mosaics inside. Check on the day for service closures."
+            },
+            {
+              "place": "canals",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening boat tour in summer; dinner before or after near the embankment."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "The city's founding story: the fortress in the morning, canals and the Bronze Horseman at dusk.",
+      "days": [
+        {
+          "title": "Peter and Paul, then the Neva",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Grounds daily; cathedral roughly 10:00–18:00. Walk over from the centre or take the metro."
+            },
+            {
+              "place": "petrogradwalk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Quiet side streets nearby. Lunch in the area."
+            },
+            {
+              "place": "isaac",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Climb the colonnade on a clear day. Check on the day."
+            },
+            {
+              "place": "bronze",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Best at dusk."
+            },
+            {
+              "place": "neva",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset walk along the embankment."
+            },
+            {
+              "place": "boatcanal",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Evening canal tour in season; check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art first: the Hermitage in the morning, church mosaics and street art later.",
+      "days": [
+        {
+          "title": "Hermitage, mosaics and street art",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Pick two or three galleries rather than trying to see it all."
+            },
+            {
+              "place": "savior",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "The mosaic interior is the draw. Check on the day for closures."
+            },
+            {
+              "place": "dance2",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Outdoor artwork; check on the day."
+            },
+            {
+              "place": "nevsky",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk toward the centre; dinner stop on the way."
+            },
+            {
+              "place": "roofview",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset in summer. Venues vary; book or check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: the Hermitage, the canals and a Mariinsky evening.",
+      "days": [
+        {
+          "title": "Arrive, Nevsky Prospekt and the canals",
+          "stops": [
+            {
+              "place": "nevsky",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start at the Moscow Station end and walk toward the Admiralty. Always open."
+            },
+            {
+              "place": "eliseev",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Historic food hall on Nevsky. Good for a coffee and a snack."
+            },
+            {
+              "place": "kazan",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Open daily, roughly 08:00–20:00. Cover shoulders and head inside."
+            },
+            {
+              "place": "canals",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening boat tour in season. Book ahead in summer; check on the day for times."
+            },
+            {
+              "place": "nevsky",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Dinner near Nevsky. Book popular places ahead."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage morning, then the Mariinsky",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Buy timed tickets online. Pick two or three wings, not everything."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Arch of the General Staff Building, a two-minute walk across the square."
+            },
+            {
+              "place": "isaac",
+              "at": "15:45",
+              "minutes": 75,
+              "note": "Daily, roughly 10:30–18:00; check on the day. The colonnade gives the best view on a clear afternoon."
+            },
+            {
+              "place": "bronze",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Always open. Ten minutes on foot through the park."
+            },
+            {
+              "place": "mariinsky",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening performance. Book well ahead; arrive 30 minutes early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the city's story: the fortress, the palaces and long walks by the water.",
+      "days": [
+        {
+          "title": "Peter and Paul Fortress and the Petrogradsky side",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Grounds daily; cathedral roughly 10:00–18:00. Go inside the cathedral for the Romanov tombs."
+            },
+            {
+              "place": "petrogradwalk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Quiet side streets and old apartment blocks. Daytime is best."
+            },
+            {
+              "place": "market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch from the stalls or a nearby cafe. Roughly 08:00–20:00 daily."
+            },
+            {
+              "place": "vasilyevskywalk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Cross to Vasilyevsky Island. Best at sunset; bring a layer for wind."
+            },
+            {
+              "place": "menshikov",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Closed Monday; roughly 10:30–18:00. Check closing time before you go."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage and the centre",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Book online. Focus on the state rooms and one collection."
+            },
+            {
+              "place": "alexander",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "In Palace Square, right outside. Always open."
+            },
+            {
+              "place": "nevsky",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk toward the Admiralty and back. Always open."
+            },
+            {
+              "place": "isaac",
+              "at": "17:15",
+              "minutes": 75,
+              "note": "Daily, roughly 10:30–18:00; check on the day. Climb the colonnade if the sky is clear."
+            },
+            {
+              "place": "nevsky",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers: the Hermitage, the mosaics and a night at the Mariinsky.",
+      "days": [
+        {
+          "title": "Hermitage and Palace Square",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Book a timed ticket. The Rembrandts and Matisse rooms are worth the walk."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "The arch frames the square. Daylight is best."
+            },
+            {
+              "place": "alexander",
+              "at": "15:30",
+              "minutes": 15,
+              "note": "Always open. Quick photo stop."
+            },
+            {
+              "place": "nevsky",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk Nevsky and stop for coffee. Always open."
+            },
+            {
+              "place": "mariinsky",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening ballet or opera. Book well ahead."
+            }
+          ]
+        },
+        {
+          "title": "Mosaics, icons and the embankment",
+          "stops": [
+            {
+              "place": "savior",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Daily, roughly 10:00–18:00; closed some days for services. Go early for fewer crowds."
+            },
+            {
+              "place": "kazan",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Open daily, roughly 08:00–20:00. Look up at the colonnade from Nevsky."
+            },
+            {
+              "place": "market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch stop. Roughly 08:00–20:00 daily."
+            },
+            {
+              "place": "isaac",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Daily, roughly 10:30–18:00; check on the day. The mosaics and the colonnade view."
+            },
+            {
+              "place": "bronze",
+              "at": "15:45",
+              "minutes": 20,
+              "note": "Always open. Ten minutes on foot."
+            },
+            {
+              "place": "roofview",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Rooftop viewpoint over the centre. Hours vary by venue; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights at an easy pace, with evenings for the theatre and canals.",
+      "days": [
+        {
+          "title": "Arrive and walk Nevsky Prospect",
+          "stops": [
+            {
+              "place": "nevsky",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Start at the Moscow Station end and walk toward the river. The street is always open."
+            },
+            {
+              "place": "staffarch",
+              "at": "17:45",
+              "minutes": 15,
+              "note": "The arch of the General Staff Building frames Palace Square. Daylight is best."
+            },
+            {
+              "place": "alexander",
+              "at": "18:10",
+              "minutes": 15,
+              "note": "In the middle of Palace Square, a two-minute walk from the arch."
+            },
+            {
+              "place": "eliseev",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Historic food hall on Nevsky. Good for a light dinner or snacks. Open until about 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage morning, cathedral afternoon",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Book online and go straight to the entrance. Pick two or three wings, not everything."
+            },
+            {
+              "place": "isaac",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "About 20 minutes on foot. Climb the colonnade on a clear day. Check hours on the day."
+            },
+            {
+              "place": "bronze",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Short walk through Senate Square. Best at dusk."
+            },
+            {
+              "place": "nevsky",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening stroll back up the prospect. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Fortress, then a canal boat",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cross to Petrogradsky. Grounds are always open; the cathedral is roughly 10:00–18:00."
+            },
+            {
+              "place": "petrogradwalk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Quiet side streets nearby. Lunch in the area."
+            },
+            {
+              "place": "savior",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Back across the river. Closed some days for services, so check on the day."
+            },
+            {
+              "place": "canals",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening boat tour in summer is the best light. Book ahead in high season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the city's story in order: the fortress, the palaces, the siege and the canals.",
+      "days": [
+        {
+          "title": "Where the city began",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "The fortress is the birthplace of St. Petersburg. Cathedral roughly 10:00–18:00."
+            },
+            {
+              "place": "petrogradwalk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk the old Petrogradsky streets. Lunch nearby."
+            },
+            {
+              "place": "bronze",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "The Bronze Horseman, the city's founding monument. Always open."
+            },
+            {
+              "place": "isaac",
+              "at": "15:45",
+              "minutes": 75,
+              "note": "Ten minutes on foot. Check hours on the day."
+            },
+            {
+              "place": "nevsky",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner on the prospect."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage and Palace Square",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Focus on the state rooms and the history of the collection."
+            },
+            {
+              "place": "alexander",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Palace Square, right outside."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:20",
+              "minutes": 15,
+              "note": "Walk through the arch for the square's best view."
+            },
+            {
+              "place": "kazan",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Short walk up Nevsky. Open roughly 08:00–20:00."
+            }
+          ]
+        },
+        {
+          "title": "Peterhof, then the canals",
+          "stops": [
+            {
+              "place": "peterhof",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Go by hydrofoil from the centre in summer. Park is daily in season; palace closed Monday."
+            },
+            {
+              "place": "boatcanal",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Back in the centre, an evening canal tour. Runs in season."
+            },
+            {
+              "place": "eliseev",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Dinner or snacks at the historic food hall. Open until about 21:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Art lovers: the Hermitage, mosaics, icons and a Mariinsky evening, with time to look properly.",
+      "days": [
+        {
+          "title": "Hermitage, unhurried",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Pre-book. Choose one wing: Dutch and Flemish, or French to the early 20th century."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "The arch frames Palace Square. Daylight."
+            },
+            {
+              "place": "dance2",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Outdoor sculpture nearby. Check on the day."
+            },
+            {
+              "place": "mariinsky",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening performance. Book well ahead; box office open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Mosaics and icons",
+          "stops": [
+            {
+              "place": "savior",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "The mosaic interior is the draw. Closed some days for services, so check on the day."
+            },
+            {
+              "place": "isaac",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Mosaics and sculpture inside; colonnade for the view. Check hours on the day."
+            },
+            {
+              "place": "market",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch from the stalls at Kuznechny Market. Open roughly 08:00–20:00."
+            },
+            {
+              "place": "menshikov",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Cross to Vasilyevsky Island. Closed Monday; roughly 10:30–18:00."
+            },
+            {
+              "place": "vasilyevskywalk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Embankment walk at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Catherine Palace, then rooftops",
+          "stops": [
+            {
+              "place": "catherine",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Tuesday. Go early; the Amber Room gets crowded. Allow travel time from the centre."
+            },
+            {
+              "place": "roofview",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Back in the centre, a rooftop view. Venues vary, so check on the day."
+            },
+            {
+              "place": "nevsky",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the big sights plus a theatre night, paced so you are not queuing all day.",
+      "days": [
+        {
+          "title": "Arrive, Nevsky Prospekt and the canals",
+          "stops": [
+            {
+              "place": "nevsky",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the main street from the station end. Many sights are along it."
+            },
+            {
+              "place": "eliseev",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Historic food hall. Good for a coffee and a snack."
+            },
+            {
+              "place": "kazan",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Open daily, roughly 08:00–20:00. Cover shoulders inside."
+            },
+            {
+              "place": "canals",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening boat tour in season. Book on the day at the pier."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage morning, centre in the afternoon",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Buy tickets online and go straight to the main collections."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Arch of the General Staff Building, right by the palace square."
+            },
+            {
+              "place": "alexander",
+              "at": "15:30",
+              "minutes": 15,
+              "note": "The column in Palace Square. Always open."
+            },
+            {
+              "place": "isaac",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Climb the colonnade on a clear day. Check opening on the day."
+            },
+            {
+              "place": "bronze",
+              "at": "18:00",
+              "minutes": 20,
+              "note": "Dusk is the best light. Short walk from the cathedral."
+            }
+          ]
+        },
+        {
+          "title": "Fortress, then an evening at the Mariinsky",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Grounds daily. Cathedral roughly 10:00–18:00."
+            },
+            {
+              "place": "petrogradwalk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Quiet side streets nearby. Good for lunch on the way."
+            },
+            {
+              "place": "mariinsky",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book a performance ahead. Most shows are evening."
+            }
+          ]
+        },
+        {
+          "title": "Savior on Spilled Blood, then fly",
+          "stops": [
+            {
+              "place": "savior",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go early to beat the crowd. Closed some days for services."
+            },
+            {
+              "place": "summergarden",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Open roughly 10:00–22:00 in summer, shorter in winter."
+            },
+            {
+              "place": "market",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch and snacks before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Visitors who want the city's story in order: the fortress, the palaces, the canals and the sieges.",
+      "days": [
+        {
+          "title": "Arrive, Nevsky Prospekt and the Bronze Horseman",
+          "stops": [
+            {
+              "place": "nevsky",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start at the station end and walk toward the river."
+            },
+            {
+              "place": "kazan",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Open daily, roughly 08:00–20:00."
+            },
+            {
+              "place": "bronze",
+              "at": "18:30",
+              "minutes": 20,
+              "note": "Dusk light. The statue faces the river."
+            },
+            {
+              "place": "canals",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Evening boat tour in season. Book on the day."
+            }
+          ]
+        },
+        {
+          "title": "Peter and Paul Fortress and the Petrogradsky side",
+          "stops": [
+            {
+              "place": "peterpaul",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Grounds daily. Cathedral roughly 10:00–18:00."
+            },
+            {
+              "place": "petrogradwalk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch on the way, then quiet streets."
+            },
+            {
+              "place": "lakhta",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "View from outside. Check access on the day."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage and Palace Square",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Focus on the state rooms and the history of the collection."
+            },
+            {
+              "place": "alexander",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "The column in Palace Square."
+            },
+            {
+              "place": "staffarch",
+              "at": "15:30",
+              "minutes": 15,
+              "note": "Arch of the General Staff Building."
+            },
+            {
+              "place": "isaac",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Check opening on the day. Colonnade for the view."
+            }
+          ]
+        },
+        {
+          "title": "Savior on Spilled Blood, then fly",
+          "stops": [
+            {
+              "place": "savior",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Early is quieter. Closed some days for services."
+            },
+            {
+              "place": "mariinsky",
+              "at": "12:00",
+              "minutes": 0,
+              "note": "Box office is open daytime if you want a ticket for later."
+            },
+            {
+              "place": "market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Travellers who want the collections first: the Hermitage, the palaces and the theatre.",
+      "days": [
+        {
+          "title": "Arrive, Nevsky Prospekt and the General Staff arch",
+          "stops": [
+            {
+              "place": "nevsky",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the main street toward the river."
+            },
+            {
+              "place": "staffarch",
+              "at": "16:45",
+              "minutes": 15,
+              "note": "Arch of the General Staff Building, next to the Hermitage."
+            },
+            {
+              "place": "alexander",
+              "at": "17:15",
+              "minutes": 15,
+              "note": "Palace Square. Always open."
+            },
+            {
+              "place": "dance2",
+              "at": "17:45",
+              "minutes": 20,
+              "note": "Outdoor sculpture. Check on the day."
+            },
+            {
+              "place": "canals",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening boat tour in season."
+            }
+          ]
+        },
+        {
+          "title": "Hermitage day",
+          "stops": [
+            {
+              "place": "hermitage",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Closed Monday. Pick two or three galleries and go deep."
+            },
+            {
+              "place": "isaac",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Mosaics and the colonnade view. Check opening on the day."
+            },
+            {
+              "place": "bronze",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Dusk light by the river."
+            }
+          ]
+        },
+        {
+          "title": "Savior on Spilled Blood, then the Mariinsky",
+          "stops": [
+            {
+              "place": "savior",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Mosaics inside. Go early. Closed some days for services."
+            },
+            {
+              "place": "summergarden",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Sculpture and trees. Shorter hours in winter."
+            },
+            {
+              "place": "mariinsky",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book a performance ahead. Most shows are evening."
+            }
+          ]
+        },
+        {
+          "title": "Menshikov Palace, then fly",
+          "stops": [
+            {
+              "place": "menshikov",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Closed Monday. Weekday is quieter."
+            },
+            {
+              "place": "vasilyevskywalk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Embankment walk with river views."
+            },
+            {
+              "place": "market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nevsky Prospekt"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Hermitage, the Russian Museum and the Mariinsky."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Peter and Paul Fortress, the siege story and the canals."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "World-class collections, from icons to the avant-garde."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Nevsky Prospekt",
+      "range": [
+        4500,
+        14000
+      ],
+      "why": "Walk to the Hermitage, Kazan Cathedral and the main metro lines. Noisiest and busiest area.",
+      "center": [
+        59.9311,
+        30.3609
+      ]
+    },
+    {
+      "area": "Vasilyevsky Island",
+      "range": [
+        4000,
+        11000
+      ],
+      "why": "Quiet streets, the Kunstkamera and the Spit views. Two metro stops from the centre.",
+      "center": [
+        59.94,
+        30.28
+      ]
+    },
+    {
+      "area": "Petrogradsky",
+      "range": [
+        3500,
+        9500
+      ],
+      "why": "Green, local and cheaper. Close to the Peter and Paul Fortress and the zoo.",
+      "center": [
+        59.9667,
+        30.3167
+      ]
+    },
+    {
+      "area": "Kolomna",
+      "range": [
+        4000,
+        12000
+      ],
+      "why": "Calm historic streets near St Isaac's and the Mariinsky Theatre. Good for walkers.",
+      "center": [
+        59.925,
+        30.295
+      ]
+    }
+  ],
+  "food": [
+    "Try borscht, pelmeni and blini; lunch deals (business lunch) are much cheaper than dinner, often RUB400–800.",
+    "Pyshechnaya on Bolshaya Konyushennaya: cheap hot doughnuts and coffee, a local institution.",
+    "Book the famous restaurants ahead; walk-in queues are long on weekends.",
+    "Georgian and Uzbek food is popular and good value: khachapuri and plov, about RUB600–1200 a main.",
+    "Tipping is not required but 5–10% is welcome. Check if service is already added."
+  ],
+  "more_time": [
+    "Add a half-day to Peterhof by hydrofoil from the centre; check sailings and palace closures on the day.",
+    "Swap one museum for a canal boat ride: about 1 hour, best in the long evening light of June–July.",
+    "Take a day trip to Pushkin (Tsarskoye Selo) for the Catherine Palace; go early to beat the queues."
+  ]
+}

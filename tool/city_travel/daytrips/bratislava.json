@@ -1,0 +1,65 @@
+{
+ "city": "Bratislava",
+ "trips": [
+  {
+   "place": "Trnava",
+   "label": "",
+   "position": {
+    "id": 327450,
+    "name": "Trnava",
+    "city": "Trnava",
+    "lat": 48.36949,
+    "lng": 17.58416
+   },
+   "town": {
+    "name": "Trnava",
+    "lat": 48.37741,
+    "lng": 17.58723
+   },
+   "road": {
+    "km": 57,
+    "min": 41,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 90.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$5",
+     "time": "31m",
+     "via": "Bratislava Hlavna Stanica to Trnava",
+     "source": "https://www.rome2rio.com/s/Bratislava/Trnava"
+    },
+    "bus": {
+     "from": "$5-$13",
+     "time": "50m",
+     "via": "Bratislava Central Bus Station to Trnava Staničná",
+     "source": "https://www.rome2rio.com/s/Bratislava/Trnava"
+    }
+   },
+   "route_note": "Take a regional train from Bratislava Hlavná stanica to Trnava (about 45 to 60 minutes); the historic centre is a short walk from the station.",
+   "see": [
+    "Cathedral of St. John the Baptist",
+    "Trnava Old Town walls and St. Nicholas Church",
+    "Holy Trinity Square and Municipal Tower",
+    "Trnava University campus"
+   ],
+   "visit": "Half day",
+   "tour_query": "Trnava day trip from Bratislava",
+   "quests": [],
+   "recommended": "train",
+   "why": "The train takes about 31 minutes and the historic centre is a short walk from the station, which is faster and more direct than the 50-minute bus.",
+   "stars": 3,
+   "know": [
+    "Trnava is often called 'Little Rome' for its many churches and its historic centre.",
+    "The train from Bratislava Hlavná stanica is the quicker option; the bus departs from Bratislava Central Bus Station."
+   ]
+  }
+ ],
+ "problems": [
+  "Vienna: not a town in cities15000.json (SK), dropped",
+  "Budapest: not a town in cities15000.json (SK), dropped"
+ ]
+}

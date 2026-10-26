@@ -1,0 +1,30 @@
+$ deepseek_facts.py Pune
+  tokens in 3539 out 732
+Pune: 3 problems
+  - BOM taxi ₹300-1000 per person vs tariff estimate 2026
+  - BOM MSRTC Shivneri bus ₹320-420 costs more than taxi ₹300-1000 per person
+  - airport BOM is 122 km away
+
+$ deepseek_city.py Pune --stage places
+Pune: places
+  tokens in 1132 out 3174
+
+$ deepseek_city.py Pune --stage frame
+Pune: frame
+  tokens in 2463 out 1566
+
+$ deepseek_city.py Pune --stage plans
+Pune: plans
+  plans for day
+  tokens in 2212 out 873
+  plans for 1n
+  tokens in 2213 out 1289
+  plans for 2n
+  tokens in 2218 out 1328
+  plans for 3n
+  tokens in 2213 out 1928
+
+$ merge_city.py Pune
+Pune: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/pune.json and planner/pune.json
+

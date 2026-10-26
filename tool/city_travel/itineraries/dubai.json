@@ -1,0 +1,1615 @@
+{
+  "city": "Dubai",
+  "checked": "October 2026",
+  "currency": "AED",
+  "usd_rate": 3.6725,
+  "intro": "Dubai rewards visitors with big sights, old creek districts and easy desert escapes. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 24.9709,
+      "west": 55.1009,
+      "north": 25.403,
+      "east": 55.4339,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 5,
+      "flag_airport": 25,
+      "per_km": 2,
+      "min_fare": 12
+    },
+    "road_factor": 1.4,
+    "city_kmh": 25,
+    "notes": [
+      "Metro Red and Green lines link the airport, Downtown and Marina; fares AED 3-7.50 with a Silver nol card.",
+      "Nol Silver card costs AED 25 with AED 19 balance; a Red ticket suits up to 5 rides.",
+      "Buses cover the rest of the city; tap out at the end of every ride.",
+      "Taxis are easy to flag; Careem and Uber both work in Dubai.",
+      "Driving is common; rent a car with an International Driving Permit.",
+      "Walking is fine in Marina and Deira but hard in summer heat; abras cross the creek for AED 1-2."
+    ],
+    "sources": []
+  },
+  "places": {
+    "burj-khalifa": {
+      "name": "Burj Khalifa",
+      "landmark": "Burj Khalifa",
+      "kind": "sight",
+      "lat": 25.1972,
+      "lon": 55.2744,
+      "price": 169,
+      "price_text": "≈ AED 169+ for At the Top, levels 124–125; higher decks cost more. Book online for lower prices",
+      "hours": "Daily, roughly 08:30–23:00; sunset slots sell out first",
+      "tip": "Book a sunset slot online days ahead and arrive 30 minutes early for security.",
+      "source": "https://www.burjkhalifa.ae"
+    },
+    "dubai-mall": {
+      "name": "Dubai Mall",
+      "landmark": "Dubai Mall",
+      "kind": "sight",
+      "lat": 25.1985,
+      "lon": 55.2796,
+      "price": 0,
+      "price_text": "Free to enter; individual attractions and shops charge",
+      "hours": "Daily, roughly 10:00–24:00; some restaurants later",
+      "tip": "It is huge. Pick one or two zones and use the mall map app to avoid walking in circles.",
+      "source": "https://thedubaimall.com"
+    },
+    "palm-jumeirah": {
+      "name": "Palm Jumeirah",
+      "landmark": "Palm Jumeirah",
+      "kind": "sight",
+      "lat": 25.1147,
+      "lon": 55.139,
+      "price": 0,
+      "price_text": "Free to drive or taxi across; attractions on the island charge",
+      "hours": "Always accessible; The View at The Palm has timed slots",
+      "tip": "See the palm shape from above at The View at The Palm, or ride the monorail for a cheap look.",
+      "source": "https://www.visitpalmjumeirah.com"
+    },
+    "dubai-fountain": {
+      "name": "Dubai Fountain",
+      "landmark": "Dubai Fountain",
+      "kind": "show",
+      "lat": 25.1972,
+      "lon": 55.2744,
+      "price": 0,
+      "price_text": "Free to watch from the promenade",
+      "hours": "Evening shows every 30 minutes, roughly 18:00–23:00; times change by season",
+      "tip": "Stand on the Dubai Mall waterfront or book a lake-side restaurant table for a clear view.",
+      "source": "https://thedubaimall.com/en/entertainment/dubai-fountain"
+    },
+    "burj-al-arab": {
+      "name": "Burj Al Arab",
+      "landmark": "Burj Al Arab",
+      "kind": "sight",
+      "lat": 25.1412,
+      "lon": 55.1853,
+      "price": null,
+      "price_text": "Viewing from outside is free; inside access needs a restaurant or tour booking (prices vary, check on the day)",
+      "hours": "Exterior viewable anytime; inside only with a booking",
+      "tip": "Best free view is from Jumeirah Beach or the Madinat Jumeirah walkways at sunset.",
+      "source": "https://www.jumeirah.com/en/stay/dubai/burj-al-arab-jumeirah"
+    },
+    "museum-future": {
+      "name": "Museum of the Future",
+      "landmark": "Museum of the Future",
+      "kind": "museum",
+      "lat": 25.2193,
+      "lon": 55.2818,
+      "price": 149,
+      "price_text": "≈ AED 149 adult; child rates lower. Book online",
+      "hours": "Daily, roughly 10:00–18:00; last entry earlier",
+      "tip": "Timed tickets sell out. Book online and go early to avoid queues.",
+      "source": "https://museumofthefuture.ae"
+    },
+    "dubai-frame": {
+      "name": "The Dubai Frame",
+      "landmark": "The Dubai Frame",
+      "kind": "sight",
+      "lat": 25.2356,
+      "lon": 55.3003,
+      "price": 50,
+      "price_text": "≈ AED 50 adult; child rates lower. Check current price online",
+      "hours": "Daily, roughly 09:00–21:00",
+      "tip": "The glass sky bridge gives old-Dubai views on one side and new Dubai on the other. Go near sunset.",
+      "source": "https://www.dubaiframe.ae"
+    },
+    "al-fahidi": {
+      "name": "Al Fahidi Historical Neighbourhood",
+      "landmark": "Al Fahidi Historical Neighbourhood",
+      "kind": "sight",
+      "lat": 25.2638,
+      "lon": 55.3007,
+      "price": 0,
+      "price_text": "Free to walk; small museums and cafés charge",
+      "hours": "Lanes always open; museums roughly 08:00–18:00, closed some days",
+      "tip": "Walk the wind-tower lanes in the morning, then cool off in a courtyard café.",
+      "source": "https://www.visitdubai.com/en/places-to-visit/al-fahidi-historical-neighbourhood"
+    },
+    "adventureland-sharjah": {
+      "name": "Adventureland, Sharjah",
+      "landmark": "Adventureland, Sharajah",
+      "kind": "park",
+      "lat": 25.334,
+      "lon": 55.402,
+      "price": null,
+      "price_text": "Ticket prices vary by ride pass; check on the day",
+      "hours": "Roughly afternoon to late evening; hours vary by season",
+      "tip": "It is an indoor family amusement park in Sharjah. Confirm opening hours before you travel out.",
+      "source": ""
+    },
+    "dubai-aquarium": {
+      "name": "Dubai Aquarium & Underwater Zoo",
+      "landmark": "Dubai Aquarium & Underwater Zoo",
+      "kind": "museum",
+      "lat": 25.1973,
+      "lon": 55.2796,
+      "price": 120,
+      "price_text": "≈ AED 120+ for the basic tunnel pass; combos cost more",
+      "hours": "Daily, roughly 10:00–22:00; later on weekends",
+      "tip": "The big tank is visible free from the mall walkway. Pay only if you want the tunnel and zoo.",
+      "source": "https://thedubaimall.com/en/entertainment/dubai-aquarium-underwater-zoo"
+    },
+    "creek-abra": {
+      "name": "Dubai Creek Abra",
+      "landmark": "Dubai Creek Abra",
+      "kind": "activity",
+      "lat": 25.2662,
+      "lon": 55.2972,
+      "price": 1,
+      "price_text": "≈ AED 1 per crossing on the public abra; private tours cost more",
+      "hours": "Public abra runs most of the day into the evening",
+      "tip": "Take the public abra between Bur Dubai and Deira for a one-dirham creek crossing.",
+      "source": "https://www.rta.ae"
+    },
+    "gold-souk": {
+      "name": "Dubai Gold Souk",
+      "landmark": "Dubai Gold Souk",
+      "kind": "food",
+      "lat": 25.2678,
+      "lon": 55.2977,
+      "price": 0,
+      "price_text": "Free to browse; you pay for what you buy",
+      "hours": "Roughly 10:00–22:00, shorter on Fridays",
+      "tip": "Prices are by weight plus making charge. Compare a few shops and ask for the day rate.",
+      "source": "https://www.visitdubai.com/en/places-to-visit/dubai-gold-souk"
+    },
+    "marina-dhow": {
+      "name": "Dubai Marina Dhow Cruise",
+      "landmark": "Dubai Marina Dhow Cruise",
+      "kind": "tour",
+      "lat": 25.0784,
+      "lon": 55.1407,
+      "price": 150,
+      "price_text": "≈ AED 120–250 depending on dinner and boat; check inclusions",
+      "hours": "Evening departures, usually around 20:00",
+      "tip": "Confirm pickup, dinner and drinks are included before booking.",
+      "source": ""
+    },
+    "dubai-opera": {
+      "name": "Dubai Opera",
+      "landmark": "Dubai Opera",
+      "kind": "show",
+      "lat": 25.1958,
+      "lon": 55.2758,
+      "price": null,
+      "price_text": "Ticket prices vary by show; check the programme",
+      "hours": "Box office and shows in the evening; check schedule",
+      "tip": "Book ahead for popular shows and arrive early for the Downtown views.",
+      "source": "https://www.dubaiopera.com"
+    },
+    "dubai-parks": {
+      "name": "Dubai Parks and Resorts",
+      "landmark": "Dubai Parks and Resorts",
+      "kind": "park",
+      "lat": 24.9398,
+      "lon": 55.021,
+      "price": 295,
+      "price_text": "≈ AED 295+ per park; multi-park passes cost more",
+      "hours": "Daily, roughly 11:00–20:00; hours vary by season",
+      "tip": "It is far out near the Abu Dhabi border. Plan a full day and check park hours first.",
+      "source": "https://www.dubaiparksandresorts.com"
+    },
+    "img-worlds": {
+      "name": "IMG Worlds of Adventure",
+      "landmark": "IMG Worlds of Adventure",
+      "kind": "park",
+      "lat": 25.0111,
+      "lon": 55.304,
+      "price": 250,
+      "price_text": "≈ AED 250+; check online deals",
+      "hours": "Daily, roughly 12:00–20:00; check on the day",
+      "tip": "It is a large indoor park, good for hot days. Book online for discounts.",
+      "source": "https://www.imgworlds.com"
+    },
+    "jbr-beach": {
+      "name": "JBR Beach",
+      "landmark": "JBR Beach",
+      "kind": "beach",
+      "lat": 25.0763,
+      "lon": 55.1328,
+      "price": 0,
+      "price_text": "Free public beach; sunbeds and watersports charge",
+      "hours": "Open daily; swimming usually until evening",
+      "tip": "The beach has showers and a running track. Go early morning or sunset for cooler air.",
+      "source": "https://www.visitdubai.com/en/places-to-visit/jbr-beach"
+    },
+    "kite-beach": {
+      "name": "Kite Beach",
+      "landmark": "Kite Beach",
+      "kind": "beach",
+      "lat": 25.1652,
+      "lon": 55.2084,
+      "price": 0,
+      "price_text": "Free public beach; food trucks and watersports charge",
+      "hours": "Open daily; lifeguards during daylight",
+      "tip": "Good for families and food trucks. Bring your own towel and shade.",
+      "source": "https://www.visitdubai.com/en/places-to-visit/kite-beach"
+    },
+    "legoland-dubai": {
+      "name": "Legoland Dubai",
+      "landmark": "Legoland Dubai",
+      "kind": "park",
+      "lat": 24.9398,
+      "lon": 55.021,
+      "price": 250,
+      "price_text": "≈ AED 250+; check online combos",
+      "hours": "Daily, roughly 10:00–18:00; hours vary",
+      "tip": "Best for younger children. Check height rules and park hours before booking.",
+      "source": "https://www.legoland.com/dubai"
+    },
+    "motiongate": {
+      "name": "Motiongate Dubai",
+      "landmark": "Motiongate Dubai",
+      "kind": "park",
+      "lat": 24.9398,
+      "lon": 55.021,
+      "price": 295,
+      "price_text": "≈ AED 295+; check online deals",
+      "hours": "Daily, roughly 11:00–20:00; hours vary",
+      "tip": "Movie-themed rides for teens and adults. Plan a full day and check hours.",
+      "source": "https://www.motiongatedubai.com"
+    },
+    "real-madrid-world": {
+      "name": "Real Madrid World",
+      "landmark": "Real Madrid World",
+      "kind": "park",
+      "lat": 24.9398,
+      "lon": 55.021,
+      "price": null,
+      "price_text": "Ticket prices vary; check on the day",
+      "hours": "Daily, roughly 11:00–20:00; check on the day",
+      "tip": "Football-themed rides at Dubai Parks and Resorts. Confirm opening days before you go.",
+      "source": "https://www.realmadridworld.com"
+    },
+    "sharjah-islamic-museum": {
+      "name": "Sharjah Museum of Islamic Civilization",
+      "landmark": "Sharjah Museum of Islamic Civilization",
+      "kind": "museum",
+      "lat": 25.3628,
+      "lon": 55.3837,
+      "price": 10,
+      "price_text": "≈ AED 10; check current price",
+      "hours": "Roughly Sat–Thu 09:00–17:00, Fri shorter; closed some days",
+      "tip": "It is in Sharjah, a separate emirate. Allow travel time and check opening days.",
+      "source": "https://www.sharjahmuseums.ae"
+    },
+    "spice-souk": {
+      "name": "Spice Souk, Deira",
+      "landmark": null,
+      "kind": "food",
+      "lat": 25.2685,
+      "lon": 55.2972,
+      "price": 0,
+      "price_text": "Free to browse; you pay for what you buy",
+      "hours": "Roughly 10:00–22:00, shorter on Fridays",
+      "tip": "Walk here from the abra landing and bargain politely. Buy spices by weight.",
+      "source": "https://www.visitdubai.com/en/places-to-visit/spice-souk"
+    },
+    "al-seef-walk": {
+      "name": "Al Seef waterfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 25.2611,
+      "lon": 55.2952,
+      "price": 0,
+      "price_text": "Free to walk; cafés and shops charge",
+      "hours": "Open daily; liveliest in the evening",
+      "tip": "A restored creek-side promenade near Al Fahidi. Good for an evening stroll and photos.",
+      "source": "https://www.alseef.ae"
+    },
+    "desert-safari": {
+      "name": "Desert safari with BBQ dinner",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 24.8,
+      "lon": 55.6,
+      "price": 300,
+      "price_text": "≈ AED 200–400 shared, hotel pickup included; check inclusions",
+      "hours": "Afternoon pickup, back late evening",
+      "tip": "Dune drive, camel ride and camp dinner. Confirm pickup, dinner and VAT are included.",
+      "source": ""
+    },
+    "madinat-view": {
+      "name": "Madinat Jumeirah waterways",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 25.1339,
+      "lon": 55.1847,
+      "price": 0,
+      "price_text": "Free to walk; abra rides and restaurants charge",
+      "hours": "Open daily; restaurants later",
+      "tip": "A calm canal walk with the best free view of Burj Al Arab. Go at sunset.",
+      "source": "https://www.jumeirah.com/en/stay/dubai/madinat-jumeirah"
+    },
+    "marina-walk": {
+      "name": "Dubai Marina promenade walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 25.0805,
+      "lon": 55.1401,
+      "price": 0,
+      "price_text": "Free to walk; cafés and boats charge",
+      "hours": "Open daily; liveliest after dark",
+      "tip": "Walk the full loop at night for the skyline lights, then eat at JBR.",
+      "source": "https://www.visitdubai.com/en/places-to-visit/dubai-marina"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Old Dubai in one day: the creek, the souks and the Al Fahidi lanes, with a modern icon at sunset.",
+      "days": [
+        {
+          "title": "Creek, souks and old lanes",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Cross from Bur Dubai to Deira. Pay the small fare in cash."
+            },
+            {
+              "place": "spice-souk",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "A short walk from the abra landing. Cooler in the morning."
+            },
+            {
+              "place": "gold-souk",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Five minutes on foot. Prices are negotiable; compare a few shops."
+            },
+            {
+              "place": "al-fahidi",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Take an abra back, then a short taxi. Shaded lanes and wind towers. Some museums close on Fridays."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch by the water, then a slow walk. Liveliest in the evening if you stay on."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Deira or Bur Dubai"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Sand, sea and a desert sunset: Jumeirah beaches by day, dunes in the evening.",
+      "days": [
+        {
+          "title": "Jumeirah coast, then the desert",
+          "stops": [
+            {
+              "place": "kite-beach",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Early is cooler and quieter. Lifeguards in daylight. Bring water."
+            },
+            {
+              "place": "burj-al-arab",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "View the sail-shaped hotel from the public beach nearby. Inside only with a booking."
+            },
+            {
+              "place": "madinat-view",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch by the waterways. Shaded and easy in the heat of the day."
+            },
+            {
+              "place": "desert-safari",
+              "at": "15:00",
+              "minutes": 360,
+              "note": "Afternoon pickup, back late evening. Book ahead; cooler months are best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Jumeirah or Dubai Marina"
+    },
+    {
+      "id": "day-shopping",
+      "length": "day",
+      "style": "shopping",
+      "nights": 0,
+      "for": "From souk haggling to the Dubai Mall: gold, spices and a fountain show to finish.",
+      "days": [
+        {
+          "title": "Souks in the morning, mall in the afternoon",
+          "stops": [
+            {
+              "place": "gold-souk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Start early before the heat. Shorter hours on Fridays."
+            },
+            {
+              "place": "spice-souk",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "A few minutes on foot. Good for saffron, dates and small gifts."
+            },
+            {
+              "place": "creek-abra",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Cross the creek for the view and a cheap ride."
+            },
+            {
+              "place": "dubai-mall",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Taxi across town, about 20–30 minutes. Lunch in the mall, then shop. Weekday afternoons are calmer."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Outside the mall. Shows every 30 minutes in the evening; check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Old Dubai first: creek, souks and the Al Fahidi lanes, then Downtown icons.",
+      "days": [
+        {
+          "title": "Creek, souks and old lanes",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Cross from Deira to Bur Dubai. Pay the small fare in cash."
+            },
+            {
+              "place": "al-fahidi",
+              "at": "09:40",
+              "minutes": 90,
+              "note": "Shaded lanes and wind-tower houses. Some museums close on Fridays."
+            },
+            {
+              "place": "spice-souk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short abra ride back to Deira, then walk."
+            },
+            {
+              "place": "gold-souk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Haggle politely. Shorter hours on Fridays."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late lunch by the water, then rest at the hotel."
+            }
+          ]
+        },
+        {
+          "title": "Downtown icons at sunset",
+          "stops": [
+            {
+              "place": "museum-future",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Book a timed slot ahead. Last entry is earlier than closing."
+            },
+            {
+              "place": "dubai-mall",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the mall. Weekday evenings are busy."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Shows every 30 minutes after dark. Check times on the day."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "Sunset slots sell out first, so book online. Night views are also good."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown (walkable to Burj Khalifa and the mall)"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Sand and sea in the morning, Marina and desert in the evening.",
+      "days": [
+        {
+          "title": "Jumeirah beaches and views",
+          "stops": [
+            {
+              "place": "kite-beach",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Early is cooler and quieter. Lifeguards in daylight. Winter is best."
+            },
+            {
+              "place": "burj-al-arab",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "View from the public beach. Inside needs a booking."
+            },
+            {
+              "place": "madinat-view",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch by the waterways, then a short abra ride."
+            },
+            {
+              "place": "palm-jumeirah",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "The View at The Palm uses timed slots. Book ahead for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Marina evening",
+          "stops": [
+            {
+              "place": "jbr-beach",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset walk on the sand."
+            },
+            {
+              "place": "marina-walk",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Dinner on the promenade. Liveliest after dark."
+            },
+            {
+              "place": "marina-dhow",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Evening departures, usually around 20:00. Confirm your slot when booking."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Dubai Marina or JBR (beach on the doorstep)"
+    },
+    {
+      "id": "1n-shopping",
+      "length": "1n",
+      "style": "shopping",
+      "nights": 1,
+      "for": "Souk bargaining in Deira, then the Dubai Mall and fountain at night.",
+      "days": [
+        {
+          "title": "Deira souks",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Cross the creek by public abra. Pay in cash."
+            },
+            {
+              "place": "gold-souk",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Compare prices before you buy. Shorter hours on Fridays."
+            },
+            {
+              "place": "spice-souk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Spices, dried fruit and small gifts."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch by the water, then head back to the hotel."
+            }
+          ]
+        },
+        {
+          "title": "Dubai Mall and fountain",
+          "stops": [
+            {
+              "place": "dubai-mall",
+              "at": "16:00",
+              "minutes": 180,
+              "note": "Weekday mornings are quietest, but evenings suit the fountain. Some restaurants open later."
+            },
+            {
+              "place": "dubai-aquarium",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Inside the mall. Weekday mornings are best, so book a slot."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Shows every 30 minutes after dark. Check times on the day."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "Optional. Book online; sunset slots sell out first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown (next to the Dubai Mall)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want old Dubai's lanes and souks plus the big modern sights, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, creek and old Deira",
+          "stops": [
+            {
+              "place": "al-fahidi",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Shaded lanes and wind-tower houses. Museums close some days, so check on the day."
+            },
+            {
+              "place": "creek-abra",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Cross to Deira by public abra. Pay the small fare in cash."
+            },
+            {
+              "place": "spice-souk",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Narrow lanes of spices and teas. Expect friendly selling."
+            },
+            {
+              "place": "gold-souk",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "A short walk from the spice souk. Cooler and lit up in the evening."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner by the water on the creek. Liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Downtown icons",
+          "stops": [
+            {
+              "place": "museum-future",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book a timed slot ahead. Weekday mornings are calmer."
+            },
+            {
+              "place": "dubai-mall",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch and a wander. It is huge, so pick a few areas."
+            },
+            {
+              "place": "dubai-aquarium",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Inside the mall, so no extra travel."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Book a sunset slot well ahead; they sell out first."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Shows every 30 minutes in the evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Jumeirah and fly out",
+          "stops": [
+            {
+              "place": "burj-al-arab",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Best seen from the public beach. Inside needs a booking."
+            },
+            {
+              "place": "madinat-view",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Waterways and a slow coffee. Good spot for lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Deira"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Sun-seekers who want sand, a marina cruise and a desert evening, with one skyline highlight.",
+      "days": [
+        {
+          "title": "Arrive, Jumeirah sand",
+          "stops": [
+            {
+              "place": "kite-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Lifeguards in daylight. Early morning or late afternoon is cooler."
+            },
+            {
+              "place": "burj-al-arab",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view from the beach nearby."
+            },
+            {
+              "place": "madinat-view",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Dinner by the waterways."
+            }
+          ]
+        },
+        {
+          "title": "Marina and desert",
+          "stops": [
+            {
+              "place": "jbr-beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Swim early before the heat. Winter is best."
+            },
+            {
+              "place": "marina-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch and a stroll along the promenade."
+            },
+            {
+              "place": "palm-jumeirah",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "The View at The Palm uses timed slots; book ahead."
+            },
+            {
+              "place": "desert-safari",
+              "at": "15:30",
+              "minutes": 360,
+              "note": "Afternoon pickup, back late evening. Confirm your pickup time."
+            }
+          ]
+        },
+        {
+          "title": "Creek morning and fly out",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "A cheap, quick creek crossing in the morning."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Coffee and a last walk before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Dubai Marina or Jumeirah"
+    },
+    {
+      "id": "2n-shopping",
+      "length": "2n",
+      "style": "shopping",
+      "nights": 2,
+      "for": "Shoppers who want the gold and spice souks, the Dubai Mall and a marina evening.",
+      "days": [
+        {
+          "title": "Arrive, souks of Deira",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Cross the creek by public abra. Pay in cash."
+            },
+            {
+              "place": "spice-souk",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Buy spices and tea. Bargain politely."
+            },
+            {
+              "place": "gold-souk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Compare prices before you buy. Shorter hours on Fridays."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner on the waterfront."
+            }
+          ]
+        },
+        {
+          "title": "The Dubai Mall day",
+          "stops": [
+            {
+              "place": "dubai-mall",
+              "at": "10:00",
+              "minutes": 240,
+              "note": "Weekday mornings are quietest. Wear comfy shoes."
+            },
+            {
+              "place": "dubai-aquarium",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Inside the mall. Book ahead to skip queues."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset slots sell out first, so book early."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Free evening show. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Marina and fly out",
+          "stops": [
+            {
+              "place": "marina-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Lunch and a last look at the towers."
+            },
+            {
+              "place": "jbr-beach",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "A quick walk on the sand before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Old Dubai first, then the big-ticket sights, with an evening at the Opera.",
+      "days": [
+        {
+          "title": "Arrive and see the creek",
+          "stops": [
+            {
+              "place": "al-fahidi",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Cooler late afternoon. Some museums close on Fridays."
+            },
+            {
+              "place": "creek-abra",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Cross to Deira for a few dirhams. Pay the driver in cash."
+            },
+            {
+              "place": "spice-souk",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Right by the abra landing."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Dinner by the water. Liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Downtown icons",
+          "stops": [
+            {
+              "place": "museum-future",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book a morning slot online. Last entry is earlier than closing."
+            },
+            {
+              "place": "dubai-frame",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Late afternoon is best but the queue is shorter at midday."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Book a sunset slot days ahead. Arrive 20 minutes early."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Free. Shows every 30 minutes in the evening; check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Jumeirah and an evening show",
+          "stops": [
+            {
+              "place": "burj-al-arab",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Best from the public beach. Going inside needs a booking."
+            },
+            {
+              "place": "madinat-view",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Short abra ride on the waterways, then dinner."
+            },
+            {
+              "place": "dubai-opera",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Check the schedule and book ahead. Smart-casual dress."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Deira"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sand in the morning, sunsets from the Palm and a desert evening.",
+      "days": [
+        {
+          "title": "Arrive and unwind by the sea",
+          "stops": [
+            {
+              "place": "jbr-beach",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Swim in the late afternoon. Winter is the best season."
+            },
+            {
+              "place": "marina-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner along the promenade. Liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Palm and Marina",
+          "stops": [
+            {
+              "place": "palm-jumeirah",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Book a timed slot at The View at The Palm for sunset."
+            },
+            {
+              "place": "marina-dhow",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening departures usually around 20:00. Book ahead and confirm the pier."
+            }
+          ]
+        },
+        {
+          "title": "Desert day",
+          "stops": [
+            {
+              "place": "kite-beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning swim and breakfast. Lifeguards in daylight."
+            },
+            {
+              "place": "desert-safari",
+              "at": "15:00",
+              "minutes": 360,
+              "note": "Afternoon pickup, back late evening. Wear closed shoes and bring a layer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Dubai Marina or Jumeirah"
+    },
+    {
+      "id": "3n-shopping",
+      "length": "3n",
+      "style": "shopping",
+      "nights": 3,
+      "for": "Souk haggling, the Dubai Mall and a fountain show to finish.",
+      "days": [
+        {
+          "title": "Arrive and shop the souks",
+          "stops": [
+            {
+              "place": "gold-souk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Cooler late afternoon. Shorter hours on Fridays. Agree the price first."
+            },
+            {
+              "place": "spice-souk",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "A short walk away. Bring small cash notes."
+            },
+            {
+              "place": "creek-abra",
+              "at": "18:15",
+              "minutes": 20,
+              "note": "Cross the creek for the view."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "The Dubai Mall",
+          "stops": [
+            {
+              "place": "dubai-mall",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Weekday mornings are calmest. Wear comfortable shoes."
+            },
+            {
+              "place": "dubai-aquarium",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Inside the mall. Book online to skip the queue."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Free show outside. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Downtown views, then fly",
+          "stops": [
+            {
+              "place": "museum-future",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book a morning slot online."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Book ahead. Morning slots are quieter than sunset."
+            },
+            {
+              "place": "dubai-frame",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Leave time for the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want old Dubai, the creek and the big modern sights, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and see the creek",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Cross from Bur Dubai to Deira. Pay the small fare in cash."
+            },
+            {
+              "place": "spice-souk",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Right by the abra landing. Shorter hours on Fridays."
+            },
+            {
+              "place": "gold-souk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Haggling is normal."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner by the water. Liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Old Deira and the creek",
+          "stops": [
+            {
+              "place": "al-fahidi",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Cool lanes in the morning. Some museums close on certain days, check first."
+            },
+            {
+              "place": "sharjah-islamic-museum",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "About 30 minutes by taxi. Closed some days, check before you go."
+            },
+            {
+              "place": "dubai-frame",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Late afternoon light is best. Book a slot if you can."
+            }
+          ]
+        },
+        {
+          "title": "Downtown icons",
+          "stops": [
+            {
+              "place": "museum-future",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Weekday morning is calmest. Last entry is earlier than closing."
+            },
+            {
+              "place": "dubai-mall",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Lunch and a walk. Weekday afternoons are quieter."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Sunset slots sell out first, book ahead."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Shows every 30 minutes in the evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Jumeirah and the coast",
+          "stops": [
+            {
+              "place": "burj-al-arab",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Best from the public beach. Inside only with a booking."
+            },
+            {
+              "place": "madinat-view",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch by the waterways. Short abra rides run here."
+            },
+            {
+              "place": "kite-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Late afternoon is cooler. Lifeguards in daylight."
+            },
+            {
+              "place": "dubai-opera",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening show. Check the schedule and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Bur Dubai"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Sun, sand and sunsets, with one big desert evening and a marina cruise.",
+      "days": [
+        {
+          "title": "Arrive and the Marina",
+          "stops": [
+            {
+              "place": "jbr-beach",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Swim before sunset. Winter is the best season."
+            },
+            {
+              "place": "marina-walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner on the promenade. Liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Palm and Jumeirah",
+          "stops": [
+            {
+              "place": "palm-jumeirah",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "The View at The Palm has timed slots, book ahead."
+            },
+            {
+              "place": "burj-al-arab",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset from the beach nearby."
+            },
+            {
+              "place": "madinat-view",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner by the waterways."
+            }
+          ]
+        },
+        {
+          "title": "Desert day",
+          "stops": [
+            {
+              "place": "desert-safari",
+              "at": "15:00",
+              "minutes": 360,
+              "note": "Afternoon pickup, back late evening. Book ahead and bring a light layer."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning and cruise",
+          "stops": [
+            {
+              "place": "kite-beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning is cooler. Food trucks nearby."
+            },
+            {
+              "place": "dubai-mall",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch and a look around."
+            },
+            {
+              "place": "marina-dhow",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening departure, usually around 20:00. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Dubai Marina or JBR"
+    },
+    {
+      "id": "4n-shopping",
+      "length": "4n",
+      "style": "shopping",
+      "nights": 4,
+      "for": "Souk haggling, big malls and a bit of old Dubai between the shops.",
+      "days": [
+        {
+          "title": "Arrive and the souks",
+          "stops": [
+            {
+              "place": "creek-abra",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Cross to Deira. Pay the small fare in cash."
+            },
+            {
+              "place": "spice-souk",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Shorter hours on Fridays."
+            },
+            {
+              "place": "gold-souk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Compare prices before you buy. Haggling is normal."
+            },
+            {
+              "place": "al-seef-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "The big mall",
+          "stops": [
+            {
+              "place": "dubai-mall",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Weekday mornings are quietest. Wear comfy shoes."
+            },
+            {
+              "place": "dubai-aquarium",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Inside the mall. Weekday afternoons are calmer."
+            },
+            {
+              "place": "burj-khalifa",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Sunset slots sell out first, book ahead."
+            },
+            {
+              "place": "dubai-fountain",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Check show times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Old Dubai and culture",
+          "stops": [
+            {
+              "place": "al-fahidi",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is cooler. Some museums close on certain days."
+            },
+            {
+              "place": "dubai-frame",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Book a slot if you can."
+            },
+            {
+              "place": "museum-future",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Last entry is earlier than closing, check first."
+            }
+          ]
+        },
+        {
+          "title": "Marina and last buys",
+          "stops": [
+            {
+              "place": "marina-walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning is cooler. Shops open later."
+            },
+            {
+              "place": "jbr-beach",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Lunch and a swim."
+            },
+            {
+              "place": "marina-dhow",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening cruise, usually around 20:00. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Dubai Marina"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old Deira, the creek abras and the Al Fahidi lanes."
+    },
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Jumeirah sand, Marina promenade and desert sunsets."
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "blurb": "Gold souk haggling to the Dubai Mall."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        400,
+        1500
+      ],
+      "why": "Walk to Burj Khalifa and Dubai Mall; Metro Red Line on the doorstep.",
+      "center": [
+        25.197,
+        55.274
+      ]
+    },
+    {
+      "area": "Dubai Marina",
+      "range": [
+        350,
+        1200
+      ],
+      "why": "Beach and promenade at the door; Metro and tram nearby for the rest of the city.",
+      "center": [
+        25.08,
+        55.14
+      ]
+    },
+    {
+      "area": "Deira",
+      "range": [
+        150,
+        500
+      ],
+      "why": "Cheapest beds, gold and spice souks, creek abras; Metro Green Line links Downtown.",
+      "center": [
+        25.265,
+        55.32
+      ]
+    },
+    {
+      "area": "Jumeirah",
+      "range": [
+        500,
+        2500
+      ],
+      "why": "Beach hotels and quiet streets; taxis needed for most sights.",
+      "center": [
+        25.2,
+        55.24
+      ]
+    }
+  ],
+  "food": [
+    "Try Emirati dishes: machboos rice, harees and luqaimat dumplings with date syrup.",
+    "Cheap eats in Deira and Bur Dubai: shawarma, karak tea and Indian cafeterias, roughly AED 10–30 a meal.",
+    "Fish and grills along Jumeirah Beach Road; book ahead for weekend brunch in hotels.",
+    "Alcohol is served only in licensed hotel bars and restaurants. Dress modestly in souks and malls.",
+    "During Ramadan, daytime eating is restricted in public; many hotels serve iftar buffets in the evening."
+  ],
+  "more_time": [
+    "Swap a mall afternoon for a desert safari: dune drive and dinner, roughly AED 150–350, book a licensed operator.",
+    "Take an abra across the creek (AED 1–2) and wander the Al Fahidi historic lanes and the souks.",
+    "Add a day trip to Abu Dhabi or Hatta; check bus and tour prices on the day."
+  ]
+}

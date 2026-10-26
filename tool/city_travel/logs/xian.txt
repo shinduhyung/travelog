@@ -1,0 +1,29 @@
+$ deepseek_facts.py Xi'an
+  tokens in 3996 out 513
+Xi'an: 0 problems
+
+$ deepseek_city.py Xi'an --stage places
+Xi'an: places
+  tokens in 1171 out 3937
+
+$ deepseek_city.py Xi'an --stage frame
+Xi'an: frame
+  tokens in 2454 out 1854
+
+$ deepseek_city.py Xi'an --stage plans
+Xi'an: plans
+  plans for day
+  tokens in 2516 out 886
+  plans for 1n
+  tokens in 2517 out 1247
+  plans for 2n
+  tokens in 2522 out 1861
+  plans for 3n
+  tokens in 2517 out 2364
+  plans for 4n
+  tokens in 2517 out 2369
+
+$ merge_city.py Xi'an
+Xi'an: 24 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/xian.json and planner/xian.json
+

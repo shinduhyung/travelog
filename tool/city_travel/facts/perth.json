@@ -1,0 +1,178 @@
+{
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro_line": "Sun-soaked, isolated, and ringed by river and sea.",
+  "intro": "Perth rewards visitors with beaches, river foreshore, and easy day trips to Rottnest and the Swan Valley. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "CBD",
+    "Northbridge",
+    "Fremantle",
+    "Scarborough"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 8,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Transperth trains run eight lines, every 5-10 min at peak and about 15 min off-peak.",
+    "Buses cover the CBD and suburbs; CAT buses are free on five colour-coded routes.",
+    "Pay with contactless card, a SmartRider card ($10), or a cash ticket.",
+    "A Go Anywhere fare is about $3.50 for three hours including transfers.",
+    "Uber and DiDi operate; taxis are Swan Taxis and Black and White.",
+    "A ferry links Elizabeth Quay to South Perth; bikes are barred on peak trains into the CBD."
+  ],
+  "airports": [
+    {
+      "code": "PER",
+      "name": "Perth Airport",
+      "primary": true,
+      "note": "Main gateway, 10 km east of the centre; T1/T2 and T3/T4 are separate precincts.",
+      "options": [
+        {
+          "mode": "Airport Line train",
+          "to": "Perth city centre",
+          "price": "$5",
+          "time": "20-30 min",
+          "note": "Flat fare; serves T1/T2 only."
+        },
+        {
+          "mode": "Bus 292 + train",
+          "to": "Redcliffe Station, then city",
+          "price": "$3.50-5",
+          "time": "35-45 min",
+          "note": "For T3/T4; bus stop is 20 m outside T4."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$35-50",
+          "time": "20-35 min",
+          "note": "Plentiful outside peak; book for airport runs."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "$30-45",
+          "time": "20-35 min",
+          "note": "Pickup zones are signposted at each precinct."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Fremantle Prison",
+    "Elizabeth Quay",
+    "Cottesloe Beach",
+    "AQWA (The Aquarium of Western Australia)",
+    "Adventure World",
+    "Fremantle Fishing Boat Harbour",
+    "Kalamunda Water Park",
+    "Perth Royal Showgrounds",
+    "Swan River",
+    "The Great Escape Amusement Park",
+    "University of Western Australia"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Perth",
+      "https://en.wikivoyage.org/wiki/Perth"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -31.95224,
+    115.8614
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 2
+    },
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 2
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 5
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 8
+    },
+    {
+      "high": 18,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 15
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 13
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 7
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 4
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,15 @@
+$ deepseek_city.py Hyderabad --stage plans
+Hyderabad: plans
+  plans for day
+  tokens in 1895 out 956
+  plans for 1n
+  tokens in 1896 out 1031
+  plans for 2n
+  tokens in 1901 out 1561
+  plans for 3n
+  tokens in 1896 out 1582
+
+$ merge_city.py Hyderabad
+Hyderabad: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/hyderabad.json and planner/hyderabad.json
+

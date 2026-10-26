@@ -1,0 +1,576 @@
+{
+  "city": "Kunming",
+  "checked": "October 2026",
+  "intro_line": "Kunming, China's Spring City, gateway to Yunnan and Southeast Asia.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "City centre (Tangzixiang)",
+        "Kunming Railway Station area",
+        "Dianchi lakeside",
+        "Kunming South Station area"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City centre (Tangzixiang)",
+        "Kunming Railway Station area",
+        "Dianchi lakeside",
+        "Kunming South Station area"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City centre (Tangzixiang)",
+        "Kunming Railway Station area",
+        "Dianchi lakeside",
+        "Kunming South Station area"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City centre (Tangzixiang)",
+        "Kunming Railway Station area",
+        "Dianchi lakeside",
+        "Kunming South Station area"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "City centre (Tangzixiang)",
+        "Kunming Railway Station area",
+        "Dianchi lakeside",
+        "Kunming South Station area"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 15,
+        "low": 4,
+        "rain_days": 8,
+        "note": "January: cold nights near 4°C and mild days. Pack a warm layer."
+      },
+      {
+        "high": 17,
+        "low": 5,
+        "rain_days": 6,
+        "note": "February: still cool, few rainy days. Good for walking the old streets."
+      },
+      {
+        "high": 22,
+        "low": 9,
+        "rain_days": 6,
+        "note": "March: warming up, around 22°C days. Comfortable for parks and day trips."
+      },
+      {
+        "high": 24,
+        "low": 12,
+        "rain_days": 10,
+        "note": "April: warm and mostly dry, but rain days rise. Carry a light rain jacket."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 13,
+        "note": "May: warm with more showers. Plan indoor sights for wet afternoons."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 24,
+        "note": "June: rainy season starts, about 24 rain days. Bring a raincoat and waterproof shoes."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 26,
+        "note": "July: wettest month, around 26 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 26,
+        "note": "August: still very wet. Keep plans flexible and check the day's forecast."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 22,
+        "note": "September: rain eases a little but stays high. Mushroom season is at its peak."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 18,
+        "note": "October: cooler and drier. A good month for the lake and hills."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 8,
+        "note": "November: mild days, cool nights, few rain days. Great for sightseeing."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 7,
+        "note": "December: cool and dry with cold nights. Layer up for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.85,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "budget": [
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.7,
+      0.85,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "shilin": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning, dry season (Nov–Apr)",
+      "area": "Dianchi lakeside",
+      "popularity": 5
+    },
+    "yuantong": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 4
+    },
+    "greenlake": {
+      "types": [
+        "nature",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 4
+    },
+    "chagee": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "zhuanxin": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "xishan": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Dianchi lakeside",
+      "popularity": 4
+    },
+    "dianchi": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Winter mornings; sunset year-round",
+      "area": "Dianchi lakeside",
+      "popularity": 4
+    },
+    "guandu": {
+      "types": [
+        "history",
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning to early afternoon",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "cuihu_food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 4
+    },
+    "flower_market": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Dianchi lakeside",
+      "popularity": 3
+    },
+    "yuantong_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "yunnan_museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "ethnic_village": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Dianchi lakeside",
+      "popularity": 3
+    },
+    "bird_lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Winter mornings",
+      "area": "Dianchi lakeside",
+      "popularity": 4
+    },
+    "tea_horse": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Dry season",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "stone_forest_tour": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Morning start",
+      "area": "Dianchi lakeside",
+      "popularity": 4
+    },
+    "nanping": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "cuihu_cafe": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 2
+    },
+    "jindian": {
+      "types": [
+        "history",
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City centre (Tangzixiang)",
+      "popularity": 3
+    },
+    "railway_station_food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Before departure",
+      "area": "Kunming Railway Station area",
+      "popularity": 2
+    },
+    "south_station": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Before a high-speed train",
+      "area": "Kunming South Station area",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the city sights and a Stone Forest day; add a night for lake and hill time."
+  },
+  "airports": [
+    {
+      "code": "KMG",
+      "name": "Kunming Changshui International Airport",
+      "primary": true,
+      "note": "Main airport, about 25 km north-east of the city area.",
+      "options": [
+        {
+          "mode": "Metro Line 6",
+          "to": "East Bus Station, then Line 3 downtown",
+          "price": "¥6",
+          "time": "45-60 min",
+          "note": "Get off at Airport Center/Kunming Airport station, not Airport Front."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "City centre",
+          "price": "¥25",
+          "time": "40-60 min",
+          "note": "Six lines; most popular run about 08:00-00:00."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-120",
+          "time": "30-40 min",
+          "note": "Double at peak times due to heavy traffic."
+        },
+        {
+          "mode": "Ride app (Didi)",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "30-40 min",
+          "note": "Book in-app; prices vary with demand."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Kunming",
+      "https://en.wikivoyage.org/wiki/Kunming"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for most trips; Didi or taxi for late nights and the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Five lines run about 07:00–22:00, fares ¥2–10. Ticket machines take paper cash only, so keep small notes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cost ¥2 and run roughly 06:00–22:00. A bus card cuts fares to about ¥0.90."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥8 plus a ¥3 fuel surcharge; insist on the meter. Didi works, and WeChat or Alipay are widely used to pay."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for city sights. Use trains and buses for day trips instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the centre and parks. Distances grow outside downtown, so mix walking with the metro."
+      },
+      {
+        "mode": "Bikes / e-bikes",
+        "has": true,
+        "text": "Hostels rent bikes for about ¥20 a day. Shared e-bikes cost about ¥2.5 for the first 20 minutes."
+      },
+      {
+        "mode": "Airport link",
+        "has": true,
+        "text": "Line 6 links Changshui Airport to East Bus Station, then Line 3 into downtown."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild highland climate: cool, dry winters and a long, wet summer. Rarely hot, rarely freezing.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to April",
+        "text": "Mild days around 15–24°C and fewer rainy days. Ideal for parks, temples and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet summer (June to September)",
+        "text": "Rain on most days, up to 26 rain days in July and August. Showers often pass; carry rain gear."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool nights all year",
+        "text": "Lows drop to 4–8°C in winter. Even summer evenings are mild, so bring a light jacket."
+      },
+      {
+        "icon": "☀️",
+        "title": "Strong highland sun",
+        "text": "Days are bright even in the wet season. Use sunscreen and a hat at altitude."
+      },
+      {
+        "icon": "🍄",
+        "title": "Mushroom season",
+        "text": "Wild mushrooms peak in the wet months. Eat them only at busy restaurants, always cooked."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and waterproof shoes for summer; a warm coat for winter nights."
+      }
+    ]
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "currency": "IDR",
+  "usd_rate": 18082.4775,
+  "intro_line": "Jakarta is a sprawling, steamy capital where chaos and charm collide.",
+  "intro": "Jakarta rewards visitors who embrace its energy, from street food to colonial relics. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Central Jakarta (Thamrin)",
+    "South Jakarta (Kemang)",
+    "West Jakarta (Kota)",
+    "North Jakarta (Ancol)"
+  ],
+  "taxi": {
+    "flag_day": 10000,
+    "flag_airport": 20000,
+    "per_km": 7000,
+    "min_fare": 25000
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Jakarta MRT runs Lebak Bulus to Bundaran HI, every 5-10 min, 05:00-midnight.",
+    "TransJakarta BRT has 14 mainlines on dedicated lanes; fares Rp2,000-20,000 with one card.",
+    "KAI Commuter trains link suburbs and run 04:30-midnight; Jabodebek and Jakarta LRT cover more areas.",
+    "Grab and Gojek are the main ride apps; metered taxis exist but agree on price or use the meter.",
+    "Driving is slow and congested; odd-even plate rules apply on some toll roads on weekdays.",
+    "Walking long distances is impractical; use apps or transit between areas."
+  ],
+  "airports": [
+    {
+      "code": "CGK",
+      "name": "Soekarno-Hatta International Airport",
+      "primary": true,
+      "note": "Main gateway, 23 km northwest in Tangerang.",
+      "options": [
+        {
+          "mode": "Airport Commuter Line",
+          "to": "Downtown Jakarta",
+          "price": "Rp70,000",
+          "time": "45-90 min",
+          "note": "Cheapest rail option; check schedule."
+        },
+        {
+          "mode": "JAConnexion bus",
+          "to": "Hotels and malls",
+          "price": "up to Rp50,000",
+          "time": "60-120 min",
+          "note": "Serves many hotels and malls."
+        },
+        {
+          "mode": "DAMRI bus",
+          "to": "Major transport hubs",
+          "price": "check locally",
+          "time": "60-120 min",
+          "note": "Runs to train and bus terminals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rp150,000-300,000",
+          "time": "45-90 min",
+          "note": "Avoid rush hour; tolls extra."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "Rp150,000-300,000",
+          "time": "45-90 min",
+          "note": "Book at designated pickup points."
+        }
+      ]
+    },
+    {
+      "code": "HLP",
+      "name": "Halim Perdanakusuma International Airport",
+      "primary": false,
+      "note": "Smaller domestic airport, 8 km east of centre.",
+      "options": [
+        {
+          "mode": "DAMRI bus",
+          "to": "Gambir, Pulogebang, Bekasi, Depok, Bogor",
+          "price": "check locally",
+          "time": "30-90 min",
+          "note": "Cheap but slow in traffic."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rp50,000-150,000",
+          "time": "20-45 min",
+          "note": "Avoid touts inside the airport area."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "Rp50,000-150,000",
+          "time": "20-45 min",
+          "note": "Use the app pickup zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Monas",
+    "Istiqlal Mosque",
+    "Kota Tua Jakarta",
+    "Ancol Dreamland",
+    "Dunia Fantasy (Dufan)",
+    "Gelora Bung Karno Stadium",
+    "Kidzania Jakarta",
+    "Mall of Indonesia",
+    "Nasi Goreng",
+    "National Museum of Indonesia",
+    "Taman Buah Mekarsari",
+    "Taman Mini Indonesia Indah",
+    "Trans Studio Cibubur",
+    "Transpark Snow World",
+    "World of Wanders Theme Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Jakarta",
+      "https://en.wikivoyage.org/wiki/Jakarta"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -6.2088,
+    106.8456
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 27
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 29
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 20
+    },
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 12
+    },
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 11
+    },
+    {
+      "high": 33,
+      "low": 24,
+      "rain_days": 14
+    },
+    {
+      "high": 33,
+      "low": 24,
+      "rain_days": 21
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 26
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 26
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,1173 @@
+{
+  "city": "Minneapolis",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Minneapolis rewards visitors with a mix of outdoor beauty, vibrant culture, and friendly neighborhoods. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 44.821,
+      "west": -93.3367,
+      "north": 45.0083,
+      "east": -93.063,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 3.5,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "METRO Blue Line light rail connects the airport, downtown, and Mall of America; fare $2 includes 2.5-hour transfer.",
+      "METRO Green Line links downtown Minneapolis to downtown St. Paul via the University of Minnesota.",
+      "Buses cover the city; use the Metro Transit app or website for routes and schedules.",
+      "Day passes cost $6; 7-day passes $24 (requires Go-To card).",
+      "Taxis and ride apps like Uber and Lyft operate; taxis can be hailed or found at ranks.",
+      "Driving is common; rush hours (7-9 AM, 3-7 PM) are congested. Walking and biking are pleasant in many areas."
+    ],
+    "sources": []
+  },
+  "places": {
+    "sculpture_garden": {
+      "name": "Minneapolis Sculpture Garden",
+      "landmark": "Minneapolis Sculpture Garden",
+      "kind": "park",
+      "lat": 44.9692,
+      "lon": -93.2892,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park open daily roughly 06:00–24:00 · check on the day",
+      "tip": "The giant Spoonbridge and Cherry is the photo everyone wants. Go early to avoid crowds.",
+      "source": "https://www.walkerart.org/visit/sculpture-garden"
+    },
+    "stone_arch": {
+      "name": "Stone Arch Bridge",
+      "landmark": "Stone Arch Bridge",
+      "kind": "sight",
+      "lat": 44.981,
+      "lon": -93.253,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Walk across at sunset for the skyline and the river. Wear shoes with grip; the deck is uneven.",
+      "source": "https://www.minneapolisparks.org/"
+    },
+    "nickelodeon_universe": {
+      "name": "Nickelodeon Universe",
+      "landmark": "Nickelodeon Universe",
+      "kind": "activity",
+      "lat": 44.854,
+      "lon": -93.2427,
+      "price": null,
+      "price_text": "All-day ride wristband; price varies by date — check on the day",
+      "hours": "Varies by day; usually opens late morning · check on the day",
+      "tip": "It is indoors inside the Mall of America, so it works on a rainy or cold day. Buy tickets online first.",
+      "source": "https://www.nickelodeonuniverse.com/"
+    },
+    "valleyfair": {
+      "name": "Valleyfair",
+      "landmark": "Valleyfair",
+      "kind": "activity",
+      "lat": 44.7933,
+      "lon": -93.4478,
+      "price": null,
+      "price_text": "Day ticket varies by date — check on the day",
+      "hours": "Seasonal, roughly May–October · check on the day",
+      "tip": "It is about 30–40 minutes southwest of downtown by car. Plan a full day and arrive at opening.",
+      "source": "https://www.valleyfair.com/"
+    },
+    "university_minnesota": {
+      "name": "University of Minnesota Twin Cities",
+      "landmark": "University of Minnesota Twin Cities",
+      "kind": "sight",
+      "lat": 44.9739,
+      "lon": -93.2277,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily · buildings have set hours",
+      "tip": "Walk the East Bank and cross the Washington Avenue Bridge for river views. The Weisman Art Museum is free and worth a look.",
+      "source": "https://twin-cities.umn.edu/"
+    },
+    "como_town": {
+      "name": "Como Town",
+      "landmark": "Como Town",
+      "kind": "activity",
+      "lat": 44.9818,
+      "lon": -93.1492,
+      "price": null,
+      "price_text": "Ride wristbands and single tickets; price varies — check on the day",
+      "hours": "Seasonal, roughly May–September · check on the day",
+      "tip": "It sits next to Como Park Zoo and Conservatory, which are free. Combine both in one trip.",
+      "source": "https://www.comotown.com/"
+    },
+    "dairy_queen": {
+      "name": "Dairy Queen",
+      "landmark": "Dairy Queen",
+      "kind": "food",
+      "lat": 44.8408,
+      "lon": -93.2983,
+      "price": 6,
+      "price_text": "≈ $4–8 for a treat",
+      "hours": "Varies by branch · check on the day",
+      "tip": "This is a chain with many branches, not one landmark spot. Use it for a cheap Blizzard break.",
+      "source": "https://www.dairyqueen.com/"
+    },
+    "dogs_playing_poker": {
+      "name": "Dogs Playing Poker",
+      "landmark": "Dogs Playing Poker",
+      "kind": "sight",
+      "lat": 44.9537,
+      "lon": -93.09,
+      "price": null,
+      "price_text": "Check locally — location and access not confirmed",
+      "hours": "Check on the day",
+      "tip": "I cannot confirm a public Minneapolis location for this. Confirm the address before you go.",
+      "source": ""
+    },
+    "haagen_dazs": {
+      "name": "Häagen-Dazs",
+      "landmark": "Häagen-Dazs",
+      "kind": "food",
+      "lat": 44.9778,
+      "lon": -93.265,
+      "price": 7,
+      "price_text": "≈ $5–9 per scoop or cone",
+      "hours": "Varies by branch · check on the day",
+      "tip": "A chain shop, not a sight. Treat it as a quick stop, not a destination.",
+      "source": "https://www.haagendazs.us/"
+    },
+    "minnesota_river": {
+      "name": "Minnesota River",
+      "landmark": "Minnesota River",
+      "kind": "sight",
+      "lat": 44.9,
+      "lon": -93.1,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "The river runs well southwest of downtown. Pick a riverside park and check access before you drive out.",
+      "source": ""
+    },
+    "orange_julius": {
+      "name": "Orange Julius",
+      "landmark": "Orange Julius",
+      "kind": "food",
+      "lat": 44.8408,
+      "lon": -93.2983,
+      "price": 6,
+      "price_text": "≈ $4–8 per drink",
+      "hours": "Varies by branch · check on the day",
+      "tip": "Often found inside malls such as Mall of America. Good quick drink stop, not a landmark.",
+      "source": "https://www.orangejulius.com/"
+    },
+    "mill_city_market": {
+      "name": "Mill City Museum and Mill City Farmers Market",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 44.9786,
+      "lon": -93.2569,
+      "price": null,
+      "price_text": "Museum admission varies — check on the day · farmers market free to enter",
+      "hours": "Museum usually Tue–Sun · Saturday farmers market in season · check on the day",
+      "tip": "The rooftop view of the river and Stone Arch Bridge is the highlight. Saturday morning pairs the market with the museum.",
+      "source": "https://www.millcitymuseum.org/"
+    },
+    "guthrie_viewpoint": {
+      "name": "Guthrie Theater observation deck",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 44.9781,
+      "lon": -93.2557,
+      "price": 0,
+      "price_text": "Free to enter the public areas",
+      "hours": "Building hours vary by show schedule · check on the day",
+      "tip": "The amber 'Endless Bridge' balcony gives a free framed view of the river and Stone Arch Bridge.",
+      "source": "https://www.guthrietheater.org/"
+    },
+    "minnehaha_park": {
+      "name": "Minnehaha Regional Park and Falls",
+      "landmark": null,
+      "kind": "park",
+      "lat": 44.9153,
+      "lon": -93.2103,
+      "price": 0,
+      "price_text": "Free · parking may have a fee",
+      "hours": "Park open daily · check on the day",
+      "tip": "A short walk from the parking area reaches the falls. Best after rain or in spring melt.",
+      "source": "https://www.minneapolisparks.org/"
+    },
+    "north_loop_walk": {
+      "name": "North Loop neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 44.9885,
+      "lon": -93.276,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; shops and cafes have their own hours",
+      "tip": "Brick warehouses, coffee shops and boutiques. Wander without a plan and stop for lunch.",
+      "source": ""
+    },
+    "chain_of_lakes": {
+      "name": "Chain of Lakes parkway walk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 44.9497,
+      "lon": -93.3097,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Walk or rent a bike around Lake Calhoun (Bde Maka Ska) and Lake Harriet. Busy but easy and flat.",
+      "source": "https://www.minneapolisparks.org/"
+    },
+    "mall_of_america": {
+      "name": "Mall of America",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 44.8547,
+      "lon": -93.2425,
+      "price": 0,
+      "price_text": "Free to enter · attractions cost extra",
+      "hours": "Mall hours vary; usually open daily · check on the day",
+      "tip": "Huge indoor mall with an aquarium and theme park inside. Good rainy-day backup.",
+      "source": "https://www.mallofamerica.com/"
+    },
+    "walker_art": {
+      "name": "Walker Art Center",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 44.9686,
+      "lon": -93.2886,
+      "price": null,
+      "price_text": "Admission varies; free days offered — check on the day",
+      "hours": "Usually closed Monday · check on the day",
+      "tip": "Modern art next door to the Sculpture Garden. Check for free-entry days before you buy.",
+      "source": "https://www.walkerart.org/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A single day of art, riverfront and the old mill district, all close together.",
+      "days": [
+        {
+          "title": "Sculpture, art centre and the riverfront",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early and walk the garden before it gets busy."
+            },
+            {
+              "place": "walker_art",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Next to the garden. Usually closed Monday, so check on the day."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Quick snack before heading to the river."
+            },
+            {
+              "place": "mill_city_market",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Museum usually Tue–Sun. Saturday morning is market day."
+            },
+            {
+              "place": "stone_arch",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk from the mill district. Best near sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets, snacks and a walkable neighbourhood of cafes and taprooms.",
+      "days": [
+        {
+          "title": "Market morning and North Loop afternoon",
+          "stops": [
+            {
+              "place": "mill_city_market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Saturday is best for the farmers market in season. Check on the day."
+            },
+            {
+              "place": "stone_arch",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk off breakfast along the bridge."
+            },
+            {
+              "place": "orange_julius",
+              "at": "12:45",
+              "minutes": 15,
+              "note": "Quick drink. Branch hours vary."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Cafes, shops and taprooms. Weekend daytime is liveliest."
+            },
+            {
+              "place": "haagen_dazs",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Afternoon treat. Check branch hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Falls, lakes and river paths in one relaxed outdoor day.",
+      "days": [
+        {
+          "title": "Falls in the morning, lakes at sunset",
+          "stops": [
+            {
+              "place": "minnehaha_park",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is quietest. Park open daily; check on the day."
+            },
+            {
+              "place": "university_minnesota",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short drive. Campus grounds open daily."
+            },
+            {
+              "place": "minnesota_river",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Daylight walk by the water."
+            },
+            {
+              "place": "chain_of_lakes",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Parkway walk. Best at sunset in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown or Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want art, the riverfront and the old mill district in one easy day.",
+      "days": [
+        {
+          "title": "Sculpture garden, Walker and the riverfront",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early; the park is free and open daily. Check hours on the day."
+            },
+            {
+              "place": "walker_art",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Next to the garden. Usually closed Monday; check on the day."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick snack. Branch hours vary."
+            },
+            {
+              "place": "mill_city_market",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Museum usually Tue–Sun. The Saturday farmers market is best in season."
+            },
+            {
+              "place": "stone_arch",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Walk the bridge at sunset; open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "North Loop and the Guthrie view",
+          "stops": [
+            {
+              "place": "guthrie_viewpoint",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Late morning light. Building hours vary by show schedule."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Shops and cafes have their own hours."
+            },
+            {
+              "place": "orange_julius",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Quick drink before you go. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around snacks, a market and a neighbourhood food walk.",
+      "days": [
+        {
+          "title": "Market morning and North Loop grazing",
+          "stops": [
+            {
+              "place": "mill_city_market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Saturday morning in season is the pick. Museum usually Tue–Sun."
+            },
+            {
+              "place": "stone_arch",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Short walk after the market; open 24 hours."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Afternoon snack. Branch hours vary."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Cafes and shops have their own hours; check on the day."
+            },
+            {
+              "place": "haagen_dazs",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Sweet stop before dinner. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Sculpture garden and a slow lunch",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning walk; park open daily roughly 06:00–24:00."
+            },
+            {
+              "place": "walker_art",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Usually closed Monday; check on the day."
+            },
+            {
+              "place": "orange_julius",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Quick drink. Branch hours vary."
+            },
+            {
+              "place": "guthrie_viewpoint",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Late afternoon view. Hours vary by show schedule."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Travellers who want lakes, the Mississippi and parks without a car-heavy day.",
+      "days": [
+        {
+          "title": "Chain of Lakes and the riverfront",
+          "stops": [
+            {
+              "place": "chain_of_lakes",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Parkway walk; open 24 hours. Best in summer."
+            },
+            {
+              "place": "haagen_dazs",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Snack stop. Branch hours vary."
+            },
+            {
+              "place": "stone_arch",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Open 24 hours; sunset is best but midday works."
+            },
+            {
+              "place": "mill_city_market",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Museum usually Tue–Sun; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Minnehaha Falls and the campus",
+          "stops": [
+            {
+              "place": "minnehaha_park",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning at the falls; park open daily, check on the day."
+            },
+            {
+              "place": "minnesota_river",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Daylight walk; open 24 hours."
+            },
+            {
+              "place": "university_minnesota",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Campus grounds open daily; buildings have set hours."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Afternoon snack. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the riverfront, the mills and the art museums without rushing.",
+      "days": [
+        {
+          "title": "Arrive, riverfront and the old mills",
+          "stops": [
+            {
+              "place": "stone_arch",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk the bridge for skyline views. Open all day."
+            },
+            {
+              "place": "mill_city_market",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Museum is usually closed Monday. The Saturday farmers market is the best time."
+            },
+            {
+              "place": "guthrie_viewpoint",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Observation deck hours follow the show schedule. Check on the day."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "18:15",
+              "minutes": 90,
+              "note": "Dinner and a wander. Shops and cafes keep their own hours."
+            }
+          ]
+        },
+        {
+          "title": "Sculpture garden and Walker, then campus",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Park is open daily, roughly 06:00–24:00. Check on the day."
+            },
+            {
+              "place": "walker_art",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Usually closed Monday. Check on the day."
+            },
+            {
+              "place": "university_minnesota",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "About 15–20 minutes by car. Grounds are open daily; buildings have set hours."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Afternoon snack. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Mill District"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around the farmers market, taprooms and a North Loop dinner.",
+      "days": [
+        {
+          "title": "Market morning and North Loop evening",
+          "stops": [
+            {
+              "place": "mill_city_market",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Come Saturday for the farmers market in season. Museum usually Tue–Sun."
+            },
+            {
+              "place": "stone_arch",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Short walk from the mill district. Open 24 hours."
+            },
+            {
+              "place": "orange_julius",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "Quick drink. Branch hours vary."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner and taprooms. Weekend daytime is liveliest."
+            }
+          ]
+        },
+        {
+          "title": "Sculpture garden, art and a sweet stop",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Open daily, roughly 06:00–24:00. Check on the day."
+            },
+            {
+              "place": "walker_art",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Usually closed Monday. Check on the day."
+            },
+            {
+              "place": "haagen_dazs",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Afternoon treat. Branch hours vary."
+            },
+            {
+              "place": "mall_of_america",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Food halls and shops. Mall hours vary; usually open daily."
+            }
+          ]
+        }
+      ],
+      "stay_area": "North Loop or Downtown"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want lakes, the Mississippi and the falls, with easy walks each day.",
+      "days": [
+        {
+          "title": "Chain of Lakes and the riverfront",
+          "stops": [
+            {
+              "place": "chain_of_lakes",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Parkway walk. Open 24 hours. Best at sunset, but mornings are quieter."
+            },
+            {
+              "place": "stone_arch",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "About 15 minutes by car. Open 24 hours."
+            },
+            {
+              "place": "mill_city_market",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Museum usually Tue–Sun. Check on the day."
+            },
+            {
+              "place": "guthrie_viewpoint",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Late-afternoon view. Hours follow the show schedule."
+            }
+          ]
+        },
+        {
+          "title": "Minnehaha Falls and campus",
+          "stops": [
+            {
+              "place": "minnehaha_park",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Park open daily. Check on the day. Morning is best."
+            },
+            {
+              "place": "minnesota_river",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Daylight walk. Open 24 hours."
+            },
+            {
+              "place": "university_minnesota",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Grounds open daily; buildings have set hours."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Snack before you go. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Uptown or Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, the riverfront and the old mill district at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the riverfront",
+          "stops": [
+            {
+              "place": "guthrie_viewpoint",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start high for a free view over the river. Building hours vary by show schedule."
+            },
+            {
+              "place": "stone_arch",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk the bridge at golden hour. Open 24 hours."
+            },
+            {
+              "place": "mill_city_market",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Museum is usually Tue–Sun. The Saturday farmers market is the best time; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Sculpture and art",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Outdoor park, open daily roughly 06:00–24:00. Morning light is best."
+            },
+            {
+              "place": "walker_art",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Next to the garden. Usually closed Monday; check on the day."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Shops and cafes have their own hours. Good for a late lunch."
+            }
+          ]
+        },
+        {
+          "title": "Campus and falls",
+          "stops": [
+            {
+              "place": "university_minnesota",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Grounds open daily; buildings have set hours. Weekday daytime is best."
+            },
+            {
+              "place": "minnehaha_park",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Falls and trails. Park open daily; check on the day."
+            },
+            {
+              "place": "minnesota_river",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "A short riverside wander. Open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "dogs_playing_poker",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Quick look. Hours vary; check on the day."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Snack before you go. Branch hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around markets, taprooms and sweet stops.",
+      "days": [
+        {
+          "title": "Market morning and river walk",
+          "stops": [
+            {
+              "place": "mill_city_market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Saturday farmers market in season is the pick. Museum usually Tue–Sun; check on the day."
+            },
+            {
+              "place": "stone_arch",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk off lunch across the river. Open 24 hours."
+            },
+            {
+              "place": "guthrie_viewpoint",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Free view. Building hours vary by show schedule."
+            },
+            {
+              "place": "haagen_dazs",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Afternoon treat. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "North Loop eating",
+          "stops": [
+            {
+              "place": "north_loop_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Cafes and shops have their own hours. Weekend daytime is liveliest."
+            },
+            {
+              "place": "orange_julius",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Quick drink. Branch hours vary."
+            },
+            {
+              "place": "sculpture_garden",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk it off outdoors. Park open daily roughly 06:00–24:00."
+            }
+          ]
+        },
+        {
+          "title": "Mall and snacks",
+          "stops": [
+            {
+              "place": "mall_of_america",
+              "at": "10:30",
+              "minutes": 180,
+              "note": "Lots of food options under one roof. Mall hours vary; check on the day."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Classic stop. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Slow last morning",
+          "stops": [
+            {
+              "place": "walker_art",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually closed Monday; check on the day. Cafe on site."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Walkers who want lakes, the Mississippi and green space, with easy city breaks.",
+      "days": [
+        {
+          "title": "Lakes and sunset",
+          "stops": [
+            {
+              "place": "chain_of_lakes",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Parkway walk. Open 24 hours; sunset in summer is best."
+            },
+            {
+              "place": "haagen_dazs",
+              "at": "18:15",
+              "minutes": 20,
+              "note": "Cool down after the walk. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "River and falls",
+          "stops": [
+            {
+              "place": "stone_arch",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Open 24 hours. Morning is quieter."
+            },
+            {
+              "place": "minnehaha_park",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Falls and trails. Park open daily; check on the day."
+            },
+            {
+              "place": "minnesota_river",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Riverside stroll. Open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Garden and campus",
+          "stops": [
+            {
+              "place": "sculpture_garden",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Outdoor park, open daily roughly 06:00–24:00."
+            },
+            {
+              "place": "university_minnesota",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Grounds open daily; buildings have set hours."
+            },
+            {
+              "place": "dairy_queen",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Snack stop. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Last look at the river",
+          "stops": [
+            {
+              "place": "guthrie_viewpoint",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Indoor backup if it rains. Building hours vary by show schedule."
+            },
+            {
+              "place": "north_loop_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Easy final wander. Shops and cafes have their own hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the riverfront and the old mill district."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Juicy Lucys, Nordic kitchens and brewery taprooms."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Chain of Lakes, the Mississippi and city parks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to the riverfront, theaters and stadiums; easy light-rail links to the airport and Mall of America.",
+      "center": [
+        44.9778,
+        -93.265
+      ]
+    },
+    {
+      "area": "Uptown",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Lakes, cafés and local shops; a relaxed base south of downtown.",
+      "center": [
+        44.948,
+        -93.298
+      ]
+    },
+    {
+      "area": "Northeast",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Breweries, art spaces and river paths in old industrial buildings.",
+      "center": [
+        44.999,
+        -93.27
+      ]
+    },
+    {
+      "area": "University",
+      "range": [
+        95,
+        220
+      ],
+      "why": "Campus energy, cheap eats and the Green Line to both downtowns.",
+      "center": [
+        44.973,
+        -93.235
+      ]
+    }
+  ],
+  "food": [
+    "Try a Juicy Lucy: a burger with cheese melted inside the patty. Several local bars claim to have invented it.",
+    "Look for Nordic and Scandinavian-influenced cooking; the Twin Cities have a strong Nordic food scene.",
+    "Grab walleye (a local fish) or a wild rice dish for a taste of Minnesota.",
+    "Brewery taprooms are everywhere; many allow outside food or host food trucks.",
+    "Check hours before you go: some kitchens close early on weeknights, and many places are closed on Mondays."
+  ],
+  "more_time": [
+    "Add a day in St. Paul: the Green Line light rail links both downtowns, with museums and old mansions to see.",
+    "Take the Blue Line to Mall of America for shopping and indoor rides on a rainy or cold day.",
+    "Head to Minnehaha Park and the river for a half-day of walking and a waterfall."
+  ]
+}

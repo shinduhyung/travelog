@@ -1,0 +1,175 @@
+{
+  "currency": "GHS",
+  "usd_rate": 11.6593,
+  "intro_line": "Accra: Atlantic rhythms, warm streets, and a heartbeat of gold",
+  "intro": "Accra rewards visitors with lively markets, Atlantic beaches, and a deep cultural pulse. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Osu",
+    "Airport Residential",
+    "Labone",
+    "Cantonments"
+  ],
+  "taxi": {
+    "flag_day": 40,
+    "flag_airport": 120,
+    "per_km": 4,
+    "min_fare": 20
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "No metro or tram; TroTros (minibuses) are the main public transport.",
+    "TroTros run fixed routes; a 'mate' calls out destinations.",
+    "Taxis rarely use meters; agree the fare before you ride.",
+    "Ride apps that work: Uber, Bolt, Yango, InDrive.",
+    "Hiring a car with driver is common for sightseeing.",
+    "Walking is fine by day; watch for open drains and traffic."
+  ],
+  "airports": [
+    {
+      "code": "ACC",
+      "name": "Kotoka International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 2 km from the centre.",
+      "options": [
+        {
+          "mode": "TroTro / shared taxi",
+          "to": "City centre",
+          "price": "GHS 5-15",
+          "time": "20-40 min",
+          "note": "Cheapest; walk out to the main road."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt/Yango)",
+          "to": "City centre",
+          "price": "GHS 40-80",
+          "time": "15-30 min",
+          "note": "Fixed app price, no haggling."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "GHS 80-150",
+          "time": "15-30 min",
+          "note": "Use the official stand for a regulated fare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Accra Mall / East Legon",
+          "price": "GHS 100-180",
+          "time": "20-35 min",
+          "note": "Agree price first; drivers use landmarks."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Kwame Nkrumah Memorial Park",
+    "Independence Square, Accra",
+    "Osu Castle",
+    "Makola Market",
+    "Jamestown Lighthouse",
+    "Jollof Rice (Ghana)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Accra",
+      "https://en.wikivoyage.org/wiki/Accra"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    5.6037,
+    -0.187
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 4
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 8
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 13
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 28,
+      "low": 24,
+      "rain_days": 24
+    },
+    {
+      "high": 27,
+      "low": 23,
+      "rain_days": 17
+    },
+    {
+      "high": 27,
+      "low": 23,
+      "rain_days": 15
+    },
+    {
+      "high": 28,
+      "low": 23,
+      "rain_days": 20
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 21
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 14
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ACC taxi GHS 5-15 vs tariff estimate 131"
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "city": "Brisbane",
+  "checked": "October 2026",
+  "intro_line": "Brisbane blends river life, sunshine and a laid-back outdoor buzz.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "CBD",
+        "Fortitude Valley",
+        "South Bank",
+        "West End"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "CBD",
+        "Fortitude Valley",
+        "South Bank",
+        "West End"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "CBD",
+        "Fortitude Valley",
+        "South Bank",
+        "West End"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "CBD",
+        "Fortitude Valley",
+        "South Bank",
+        "West End"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "CBD",
+        "Fortitude Valley",
+        "South Bank",
+        "West End"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 16,
+        "note": "January: hot and wet. Highs near 29°C, about 16 rain days. Plan indoor sights and carry a rain jacket."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 13,
+        "note": "February: hot and wet, similar to January. Around 13 rain days. Mornings are best for walking."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 16,
+        "note": "March: still warm and wet, about 16 rain days. Highs near 28°C. Keep plans flexible."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 8,
+        "note": "April: cooler and drier. Highs near 26°C, about 8 rain days. Great month for outdoor days."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 7,
+        "note": "May: mild and dry. Highs near 23°C, about 7 rain days. Comfortable for walking and ferries."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 6,
+        "note": "June: cool and dry. Highs near 21°C, lows near 11°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 21,
+        "low": 10,
+        "rain_days": 6,
+        "note": "July: the coolest month. Highs near 21°C, lows near 10°C, about 6 rain days. Pack warm layers."
+      },
+      {
+        "high": 23,
+        "low": 11,
+        "rain_days": 5,
+        "note": "August: cool and dry, highs near 23°C. About 5 rain days. Good for outdoor plans."
+      },
+      {
+        "high": 25,
+        "low": 13,
+        "rain_days": 7,
+        "note": "September: warming up, highs near 25°C, about 7 rain days. Pleasant and mostly dry."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 10,
+        "note": "October: warm, highs near 26°C, about 10 rain days. Showers return; carry a light rain jacket."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 11,
+        "note": "November: hot and wetter, highs near 28°C, about 11 rain days. Start early to beat the heat."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 12,
+        "note": "December: hot and wet, highs near 29°C, about 12 rain days. Book indoor backup plans."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.7,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "family": [
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7
+    ],
+    "adventure": [
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "southbank": {
+      "types": [
+        "family",
+        "nature",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Late afternoon into sunset; summer mornings to avoid heat",
+      "area": "South Bank",
+      "popularity": 5
+    },
+    "brisbane-river": {
+      "types": [
+        "nature",
+        "family",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or golden hour; evening for lit-up bridges",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "uq": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday mornings in cooler months",
+      "area": "West End",
+      "popularity": 3
+    },
+    "citycat": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon or early evening",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "storybridge": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Sunset or night climb",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "kangaroopoint": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "howardsmith": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to evening",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "qagoma": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Hot afternoons or wet days",
+      "area": "South Bank",
+      "popularity": 4
+    },
+    "qmuseum": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; good in rain or heat",
+      "area": "South Bank",
+      "popularity": 4
+    },
+    "westend-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "West End",
+      "popularity": 3
+    },
+    "boundary-st": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "West End",
+      "popularity": 3
+    },
+    "fortitude-valley": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Daytime for shopping, night for music",
+      "area": "Fortitude Valley",
+      "popularity": 3
+    },
+    "roma-st": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning in cooler months",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "botanic": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "eagle-st": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "powerhouse": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; good in rain",
+      "area": "South Bank",
+      "popularity": 3
+    },
+    "lonepine": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning, cooler months",
+      "area": "West End",
+      "popularity": 4
+    },
+    "mtcoottha": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "West End",
+      "popularity": 4
+    },
+    "eatstreet": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Friday or Saturday evening",
+      "area": "Fortitude Valley",
+      "popularity": 4
+    },
+    "newfarm": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Fortitude Valley",
+      "popularity": 3
+    },
+    "queen-st": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday or Friday late shopping",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "xxxx": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Fortitude Valley",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the river, South Bank and the museums, with time for a koala sanctuary or a day trip."
+  },
+  "airports": [
+    {
+      "code": "BNE",
+      "name": "Brisbane International Airport",
+      "primary": true,
+      "note": "Main gateway, about 13 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Airtrain",
+          "to": "Roma Street and Central",
+          "price": "A$22.30",
+          "time": "20-25 min",
+          "note": "Book online for a 15% discount."
+        },
+        {
+          "mode": "Bus + train",
+          "to": "CBD via Gold Coast Airport",
+          "price": "A$0.50",
+          "time": "2-3 hours",
+          "note": "Cheap but slow; 760 bus to Varsity Lakes then train."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "A$45-60",
+          "time": "20-35 min",
+          "note": "Fixed ranks outside terminals."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "CBD",
+          "price": "A$35-50",
+          "time": "20-35 min",
+          "note": "Pickup zones are signposted."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Brisbane",
+      "https://en.wikivoyage.org/wiki/Brisbane"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the CBD and South Bank, then use the 50c Translink fares and CityCat ferries for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Brisbane Metro M1 and M2 buses run every 5–15 minutes along the busway. Fast and frequent."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Translink buses cover the city. A 50c flat fare covers most trips with up to 3 transfers."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Translink trains link the CBD with the suburbs and airport line. Same 50c flat fare on most trips."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": true,
+        "text": "CityCat ferries are a scenic and practical way to cross the river. A cheap sightseeing ride too."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and DiDi operate; taxis are plentiful and take cards."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside peak hours, but parking in the CBD is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The CBD is walkable, with riverside paths good for walking and cycling."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical: warm to hot most of the year, with a wet summer and a mild, dry winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to September",
+        "text": "Mild highs of 21–26°C and few rain days. Ideal for walking, ferries and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet summer (December to March)",
+        "text": "About 12–16 rain days a month. Showers can be heavy but often short. Carry a rain jacket."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid in summer",
+        "text": "Highs near 28–29°C with muggy air. Plan outdoor sights for early morning."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter nights",
+        "text": "June to August lows drop to 10–11°C. Bring a jacket for evenings by the river."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is uneven",
+        "text": "August is the driest month with about 5 rain days. January and March are the wettest."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket, sunscreen and a hat. Add a warm layer for winter evenings."
+      }
+    ]
+  }
+}

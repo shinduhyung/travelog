@@ -1,0 +1,634 @@
+{
+  "city": "Abu Dhabi",
+  "checked": "October 2026",
+  "note": "Typical figures for planning. Opening hours and prices come from itineraries/abu-dhabi.json; check on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Breakwater & Marina",
+        "Corniche & Downtown",
+        "Saadiyat Island"
+      ]
+    },
+    {
+      "id": "parks",
+      "label": "Thrills",
+      "areas": [
+        "Yas Island"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "areas": [
+        "Saadiyat Island",
+        "Corniche & Downtown"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Yas Island",
+        "Saadiyat Island"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Corniche & Downtown",
+        "Grand Mosque & Al Maqta"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Typical monthly averages for Abu Dhabi (rounded)",
+    "months": [
+      {
+        "high": 24,
+        "low": 14,
+        "sea": 21,
+        "note": "Mild and sunny; evenings can feel cool.",
+        "rain_days": 2
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "sea": 21,
+        "note": "Mild; the occasional windy or hazy day.",
+        "rain_days": 2
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "sea": 23,
+        "note": "Warm days, still easy outdoors.",
+        "rain_days": 2
+      },
+      {
+        "high": 33,
+        "low": 21,
+        "sea": 26,
+        "note": "Hot by midday; plan outdoor time early and late.",
+        "rain_days": 1
+      },
+      {
+        "high": 37,
+        "low": 24,
+        "sea": 29,
+        "note": "Very hot; outdoor sights before 10:00 or after 17:00.",
+        "rain_days": 0
+      },
+      {
+        "high": 39,
+        "low": 27,
+        "sea": 31,
+        "note": "Extreme heat and humidity; mostly indoor days.",
+        "rain_days": 0
+      },
+      {
+        "high": 41,
+        "low": 30,
+        "sea": 33,
+        "note": "Peak heat; outdoors only at sunrise or after dark.",
+        "rain_days": 0
+      },
+      {
+        "high": 41,
+        "low": 30,
+        "sea": 33,
+        "note": "Peak heat and humidity; indoor plans.",
+        "rain_days": 0
+      },
+      {
+        "high": 39,
+        "low": 27,
+        "sea": 32,
+        "note": "Still very hot; evenings slowly ease.",
+        "rain_days": 0
+      },
+      {
+        "high": 35,
+        "low": 23,
+        "sea": 30,
+        "note": "Hot days, pleasant evenings; season starts.",
+        "rain_days": 0
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "sea": 27,
+        "note": "Warm and dry; one of the best months.",
+        "rain_days": 0
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "sea": 23,
+        "note": "Pleasant all day; busy holiday season.",
+        "rain_days": 1
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.8,
+      0.6,
+      0.5,
+      0.45,
+      0.45,
+      0.5,
+      0.75,
+      1,
+      1
+    ],
+    "parks": [
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.95,
+      1,
+      0.95
+    ],
+    "beach": [
+      0.75,
+      0.8,
+      0.95,
+      1,
+      0.7,
+      0.4,
+      0.3,
+      0.3,
+      0.4,
+      0.85,
+      1,
+      0.85
+    ],
+    "family": [
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.55,
+      0.5,
+      0.5,
+      0.55,
+      0.8,
+      1,
+      1
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.65,
+      0.8,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "mosque": {
+      "types": [
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or sunset",
+      "area": "Grand Mosque & Al Maqta",
+      "popularity": 5
+    },
+    "aquarium": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Any time; good for hot afternoons",
+      "area": "Grand Mosque & Al Maqta",
+      "popularity": 3
+    },
+    "watan": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Breakwater & Marina",
+      "popularity": 4
+    },
+    "watan_show": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening (after dark)",
+      "area": "Breakwater & Marina",
+      "popularity": 2
+    },
+    "palace": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Lunch or afternoon coffee",
+      "area": "Breakwater & Marina",
+      "popularity": 4
+    },
+    "etihad": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon for the view",
+      "area": "Breakwater & Marina",
+      "popularity": 3
+    },
+    "heritage": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Breakwater & Marina",
+      "popularity": 3
+    },
+    "hosn": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Corniche & Downtown",
+      "popularity": 3
+    },
+    "corniche": {
+      "types": [
+        "beach",
+        "family",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Corniche & Downtown",
+      "popularity": 4
+    },
+    "corniche_beach": {
+      "types": [
+        "beach",
+        "family",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Corniche & Downtown",
+      "popularity": 3
+    },
+    "louvre": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Saadiyat Island",
+      "popularity": 5
+    },
+    "teamlab": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; book a time slot",
+      "area": "Saadiyat Island",
+      "popularity": 4
+    },
+    "saadiyat_beach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Saadiyat Island",
+      "popularity": 3
+    },
+    "jubail": {
+      "types": [
+        "beach",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Early morning, low tide",
+      "area": "Saadiyat Island",
+      "popularity": 2
+    },
+    "mangroves": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Al Reem & Al Maryah Island",
+      "popularity": 3
+    },
+    "ferrari": {
+      "types": [
+        "parks",
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "indoor",
+      "best": "From opening, before queues",
+      "area": "Yas Island",
+      "popularity": 5
+    },
+    "wbworld": {
+      "types": [
+        "parks",
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Yas Island",
+      "popularity": 4
+    },
+    "waterworld": {
+      "types": [
+        "parks",
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Cooler months, October to April",
+      "area": "Yas Island",
+      "popularity": 4
+    },
+    "yasbay": {
+      "types": [
+        "parks",
+        "family",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Yas Island",
+      "popularity": 3
+    },
+    "safari": {
+      "types": [
+        "parks",
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Afternoon into evening (hotel pickup)",
+      "area": "Desert (pickup)",
+      "popularity": 4
+    },
+    "alain_oasis": {
+      "types": [
+        "culture",
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning · Al Ain day trip, 2 h each way",
+      "area": "Al Ain",
+      "popularity": 2
+    },
+    "alain_jahili": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning · Al Ain day trip",
+      "area": "Al Ain",
+      "popularity": 2
+    },
+    "alain_hafeet": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset · Al Ain day trip",
+      "area": "Al Ain",
+      "popularity": 2
+    }
+  },
+  "popularity_note": "Stars: how popular a place is with visitors overall (1-5), our editorial estimate.",
+  "recommend": {
+    "why": "The big sights fit in two days. Add a night if you want both the Yas Island parks and a Saadiyat beach day."
+  },
+  "airports": [
+    {
+      "code": "AUH",
+      "name": "Zayed International Airport",
+      "primary": true,
+      "note": "Abu Dhabi's own airport, 35 km from downtown.",
+      "options": [
+        {
+          "mode": "Taxi / Uber / Careem",
+          "to": "Downtown & Corniche",
+          "price": "AED 75–100",
+          "time": "30–40 min",
+          "note": "Metered; airport pickups start higher. About 20% more from 22:00 to 06:00."
+        },
+        {
+          "mode": "Taxi / Uber / Careem",
+          "to": "Yas Island",
+          "price": "AED 35–50",
+          "time": "10–15 min",
+          "note": "Closest hotel area to the airport."
+        },
+        {
+          "mode": "Taxi / Uber / Careem",
+          "to": "Saadiyat Island",
+          "price": "AED 70–90",
+          "time": "25–35 min",
+          "note": ""
+        },
+        {
+          "mode": "Airport bus A1",
+          "to": "Central Bus Station, Al Zahiyah",
+          "price": "AED 4",
+          "time": "45–60 min",
+          "note": "24/7, every 30–60 min. Pay with a Hafilat card sold at the stop."
+        },
+        {
+          "mode": "Airport bus A2",
+          "to": "Yas Island",
+          "price": "AED 4",
+          "time": "≈ 25 min",
+          "note": "24/7. Hafilat card."
+        },
+        {
+          "mode": "Private / hotel transfer",
+          "to": "Any hotel",
+          "price": "AED 150–250",
+          "time": "30–40 min",
+          "note": "Fixed price, meet at arrivals; book ahead."
+        }
+      ]
+    },
+    {
+      "code": "DXB",
+      "name": "Dubai International Airport",
+      "primary": false,
+      "note": "Many flights land here; Abu Dhabi is 140 km away.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Abu Dhabi hotels",
+          "price": "AED 220–350",
+          "time": "1 h 30 min – 2 h",
+          "note": "Metered from Dubai; traffic decides the price."
+        },
+        {
+          "mode": "Metro + bus E101",
+          "to": "Abu Dhabi Central Bus Station",
+          "price": "≈ AED 35",
+          "time": "2 h 30 min – 3 h",
+          "note": "Red Line to Ibn Battuta, then bus E101 (AED 25, Nol card). Taxi from the bus station to your hotel."
+        },
+        {
+          "mode": "Private transfer",
+          "to": "Any Abu Dhabi hotel",
+          "price": "AED 350–450",
+          "time": "1 h 30 min",
+          "note": "Fixed price; book ahead."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Abu Dhabi airport transport guide",
+      "https://airconnect.live/en/airports/abu-dhabi-airport-transport-guide"
+    ],
+    [
+      "AUH airport guide",
+      "https://www.airporttransferportal.com/en/airport-guides/auh"
+    ],
+    [
+      "Taxi fares (Abu Dhabi Mobility)",
+      "https://admobility.gov.ae/en/taxi-fares"
+    ],
+    [
+      "Dubai to Abu Dhabi by bus",
+      "https://www.dubai-online.com/transport/buses/routes/dubai-to-abu-dhabi/"
+    ]
+  ],
+  "best_for": [
+    "parks",
+    "beach"
+  ],
+  "transit": {
+    "best": "Taxi, Uber or Careem for most trips; city buses if you're saving money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cover the island and Yas. AED 2 + 5 fils per km with a Hafilat card. Cheap but slow. The free Yas Express shuttle links the Yas parks, mall and hotels."
+      },
+      {
+        "mode": "Taxi / Uber / Careem",
+        "has": true,
+        "best": true,
+        "text": "Silver metered taxis everywhere: AED 5 flag (AED 20 from the airport), AED 1.82/km, AED 12 minimum. Uber and Careem cost about the same and are handy for airport and late-night rides."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Wide, easy roads and cheap fuel. Strict speed cameras. Check whether your licence needs an International Driving Permit."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Only pleasant November to March, and the city is spread out. Use taxis for anything over a few blocks in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: sunny almost every day, very little rain, and a long, humid summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Warm days around 24–30°C and cool evenings. Ideal for the Corniche, beaches and the desert."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to September)",
+        "text": "Highs over 40°C with heavy humidity. Plan indoor sights by day; go outside only at sunrise or after dark."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid, especially by the sea",
+        "text": "Muggy evenings from May to October; sunglasses fog up stepping out of air-conditioning."
+      },
+      {
+        "icon": "🌂",
+        "title": "Almost no rain",
+        "text": "A few short showers between December and March. No umbrella needed most of the year."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Occasional sandstorms",
+        "text": "Dusty shamal winds, mostly in spring and early summer, can haze the sky and cancel desert trips."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a hat and strong sunscreen; a light layer for chilly indoor AC and winter nights; modest clothing for the Grand Mosque."
+      }
+    ]
+  },
+  "intro_line": "A city of grand mosques, island museums and desert horizons."
+}

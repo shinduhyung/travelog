@@ -1,0 +1,826 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day on foot and by water: the rebuilt centre, the old harbour and a windmill trip if time allows.",
+      "days": [
+        {
+          "title": "Centre icons and the old harbour",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "09:00",
+              "minutes": 15,
+              "note": "Start at the station and look up at the pointed roof before heading into town."
+            },
+            {
+              "place": "markthal",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Arrive early for the food stalls and the ceiling artwork. Some stalls close earlier on Sunday."
+            },
+            {
+              "place": "cube_houses",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Two minutes on foot from Markthal. The show house is usually open 10:00–17:00; check on the day."
+            },
+            {
+              "place": "watertaxi",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Short hop across the Maas from the Oude Haven. A cheap thrill and a good skyline view."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Walk the bridge or photograph it from the Kop van Zuid side."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and a wander. Bars pick up later, but cafes serve food at midday."
+            },
+            {
+              "place": "delfshaven",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Tram or water taxi west. Quiet old harbour, best in the late afternoon light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, near Markthal or the Oude Haven"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "A day of bold architecture and modern art, with the best views saved for sunset.",
+      "days": [
+        {
+          "title": "Architecture, art and a sunset tower",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "09:15",
+              "minutes": 15,
+              "note": "Quick look at the station hall, a landmark in its own right."
+            },
+            {
+              "place": "cube_houses",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Morning is quieter. Check show house hours on the day."
+            },
+            {
+              "place": "markthal",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Coffee and a snack under the painted ceiling."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Walk across for the classic view back to the centre."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Lunch, then browse the small galleries along the street."
+            },
+            {
+              "place": "euromast",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Go up late for sunset. Usually open until 21:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, walking distance to Witte de Withstraat"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "A kid-friendly day mixing boats, animals and windmills, with an easy meal stop.",
+      "days": [
+        {
+          "title": "Harbour, zoo and windmills",
+          "stops": [
+            {
+              "place": "harbour_tour",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Book the first departure if you can. Departures usually daily; check on the day."
+            },
+            {
+              "place": "markthal",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Early lunch — plenty of choice for fussy eaters."
+            },
+            {
+              "place": "rotterdam_zoo",
+              "at": "12:15",
+              "minutes": 240,
+              "note": "Tram to Blijdorp. Hours vary by season, so check before you go."
+            },
+            {
+              "place": "kinderdijk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Optional if energy allows — it is a trip out of the city. The outdoor area is always open; the visitor centre hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, near the Oude Haven for easy boat access"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the old harbour, the Markthal and the rebuilt centre in one tight day.",
+      "days": [
+        {
+          "title": "Arrive, old harbour and the centre",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Start at Rotterdam Centraal. Step outside for the station roof view, then take tram or metro into the centre."
+            },
+            {
+              "place": "cube_houses",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Show house usually daily 10:00–17:00; check on the day. Short walk from the station area."
+            },
+            {
+              "place": "markthal",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Lunch under the big arch. Some stalls close earlier on Sunday."
+            },
+            {
+              "place": "delfshaven",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Tram or metro west. Quiet old harbour, best in late afternoon light."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and a drink. Bars usually open from late afternoon into the night."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, water and windmills",
+          "stops": [
+            {
+              "place": "erasmus_bridge",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Walk the bridge early for clear views. Open 24 hours."
+            },
+            {
+              "place": "watertaxi",
+              "at": "09:45",
+              "minutes": 20,
+              "note": "Short hop across the Maas from near Oude Haven. Usually runs daytime into evening."
+            },
+            {
+              "place": "kinderdijk",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Waterbus or tour from the centre; allow travel time. Outdoor area always open; visitor centre hours vary. Check the day before."
+            },
+            {
+              "place": "euromast",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Usually daily 09:30–21:00; check on the day. Good last view before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, near Markthal or Oude Haven"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers who want bold modern architecture and a museum morning before heading home.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and modern architecture",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Arrive at Rotterdam Centraal. Take a moment for the station roof view."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Walk the bridge for the classic skyline photo. Open 24 hours."
+            },
+            {
+              "place": "watertaxi",
+              "at": "14:45",
+              "minutes": 20,
+              "note": "Cross the Maas by water taxi for a different view of the riverfront."
+            },
+            {
+              "place": "cube_houses",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Show house usually daily 10:00–17:00; check on the day."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner on the street with the city's best galleries and bars."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then go",
+          "stops": [
+            {
+              "place": "mauritshuis",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "In The Hague, about an hour by train. Usually daily; check on the day. Go at opening."
+            },
+            {
+              "place": "pearl_earring",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Inside the Mauritshuis. See it before the midday crowds."
+            },
+            {
+              "place": "peace_palace",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Grounds viewable daily; tours by booking only. Short tram ride from the museum."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, near Witte de Withstraat"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Families with kids: animals, a boat trip and windmills, kept short and close together.",
+      "days": [
+        {
+          "title": "Arrive, harbour and zoo",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "12:30",
+              "minutes": 15,
+              "note": "Arrive at Rotterdam Centraal and get your bearings."
+            },
+            {
+              "place": "markthal",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quick lunch. Some stalls close earlier on Sunday."
+            },
+            {
+              "place": "harbour_tour",
+              "at": "14:15",
+              "minutes": 75,
+              "note": "Departures usually daily; check on the day. Boats leave from near Oude Haven."
+            },
+            {
+              "place": "rotterdam_zoo",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "In Blijdorp, a short tram ride. Usually daily; hours vary by season. Two hours is enough for the highlights."
+            }
+          ]
+        },
+        {
+          "title": "Windmills, then home",
+          "stops": [
+            {
+              "place": "kinderdijk",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Outdoor area always open; visitor centre hours vary. Allow travel time from the centre."
+            },
+            {
+              "place": "kralingse_plas",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Open 24 hours. A lakeside walk or snack before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, near Blijdorp tram stops"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old harbour, the Markthal and the rebuilt centre at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Markthal and the Cube Houses",
+          "stops": [
+            {
+              "place": "markthal",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Grab lunch here. Some stalls close earlier on Sunday."
+            },
+            {
+              "place": "cube_houses",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Two minutes on foot. Show house usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "watertaxi",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Short hop across the Maas from Oude Haven."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Walk the bridge for skyline views. Best late afternoon."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and a drink. Bars pick up in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Old Delfshaven, then the Euromast",
+          "stops": [
+            {
+              "place": "delfshaven",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet historic harbour. Best in the morning."
+            },
+            {
+              "place": "euromast",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Usually daily 09:30–21:00; check on the day. Lunch nearby first."
+            },
+            {
+              "place": "harbour_tour",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Departures usually daily; check on the day. Bring a jacket."
+            },
+            {
+              "place": "centraal_view",
+              "at": "16:30",
+              "minutes": 15,
+              "note": "Quick look at the station hall roof."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers who want bold architecture, the waterfront and a museum morning.",
+      "days": [
+        {
+          "title": "Arrive, Markthal and the waterfront",
+          "stops": [
+            {
+              "place": "markthal",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch under the ceiling mural."
+            },
+            {
+              "place": "cube_houses",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Bold 1980s architecture next door. Check show house hours on the day."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Walk across for the best skyline photos."
+            },
+            {
+              "place": "watertaxi",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Fast ride back across the Maas."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner on the city's liveliest street."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, harbour views",
+          "stops": [
+            {
+              "place": "mauritshuis",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go at opening time. Usually daily; check on the day."
+            },
+            {
+              "place": "pearl_earring",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Inside the Mauritshuis; see its hours."
+            },
+            {
+              "place": "harbour_tour",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "See the port and modern waterfront from the water. Check departures on the day."
+            },
+            {
+              "place": "euromast",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Stay for sunset. Usually open to 21:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids: zoo, boats and windmills, with short hops between stops.",
+      "days": [
+        {
+          "title": "Arrive, Markthal and the Cube Houses",
+          "stops": [
+            {
+              "place": "markthal",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Easy lunch with kids. Some stalls close earlier on Sunday."
+            },
+            {
+              "place": "cube_houses",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Kids like the tilted houses. Check show house hours on the day."
+            },
+            {
+              "place": "watertaxi",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Short, fun boat ride across the Maas."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Walk part of the bridge, then back."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Casual dinner, early enough for bedtime."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, windmills after",
+          "stops": [
+            {
+              "place": "rotterdam_zoo",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Go at opening. Hours vary by season; check on the day."
+            },
+            {
+              "place": "kinderdijk",
+              "at": "14:30",
+              "minutes": 180,
+              "note": "Windmills and walking paths. Outdoor area always open; visitor centre hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the old harbour, the Markthal and the rebuilt centre at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and explore the centre",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Start at the station. The roof view is free and quick."
+            },
+            {
+              "place": "markthal",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Good spot for a late lunch."
+            },
+            {
+              "place": "cube_houses",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Right next door. Show house usually open until 17:00; check on the day."
+            },
+            {
+              "place": "watertaxi",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Short ride across the Maas from Oude Haven."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Walk the bridge at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Old harbour and the Maas",
+          "stops": [
+            {
+              "place": "delfshaven",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet in the morning. Old harbour streets."
+            },
+            {
+              "place": "harbour_tour",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Boat tour from Oude Haven. Check departure times on the day."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Lunch and galleries along the street."
+            },
+            {
+              "place": "euromast",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Usually open until 21:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Windmills and a slow finish",
+          "stops": [
+            {
+              "place": "kinderdijk",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Outdoor area always open. Go early and bring a jacket."
+            },
+            {
+              "place": "kralingse_plas",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk by the lake on the way back."
+            },
+            {
+              "place": "de_kuip",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Stadium tours run on selected days; check the schedule."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Visitors who want bold architecture, museums and the best of the modern city.",
+      "days": [
+        {
+          "title": "Arrive and the modern centre",
+          "stops": [
+            {
+              "place": "centraal_view",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Quick look from the station roof."
+            },
+            {
+              "place": "cube_houses",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Bold 1980s architecture. Show house usually until 17:00; check on the day."
+            },
+            {
+              "place": "markthal",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Lunch or a snack under the ceiling mural."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Late afternoon light is best."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the Maas",
+          "stops": [
+            {
+              "place": "mauritshuis",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go at opening. Usually daily; check on the day."
+            },
+            {
+              "place": "pearl_earring",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Inside the Mauritshuis. See it before the midday crowds."
+            },
+            {
+              "place": "binnenhof",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Outer courtyard open daily. Renovation works ongoing; check on the day."
+            },
+            {
+              "place": "peace_palace",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Grounds viewable daily. Tours by booking only."
+            },
+            {
+              "place": "witte_de_with",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Galleries, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "Harbour and a slow finish",
+          "stops": [
+            {
+              "place": "harbour_tour",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "See the port from the water. Check departures on the day."
+            },
+            {
+              "place": "delfshaven",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and old streets."
+            },
+            {
+              "place": "euromast",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Usually open until 21:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids: zoo, boats and windmills, with short days and easy walks.",
+      "days": [
+        {
+          "title": "Arrive and the Markthal",
+          "stops": [
+            {
+              "place": "markthal",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Easy lunch. Some stalls close earlier on Sunday."
+            },
+            {
+              "place": "cube_houses",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Kids like the strange shapes. Show house usually until 17:00; check on the day."
+            },
+            {
+              "place": "watertaxi",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Short boat ride across the Maas."
+            },
+            {
+              "place": "erasmus_bridge",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Walk across at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Zoo day",
+          "stops": [
+            {
+              "place": "rotterdam_zoo",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Go in the morning. Hours vary by season."
+            },
+            {
+              "place": "kralingse_plas",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Play and walk by the lake if the weather is dry."
+            }
+          ]
+        },
+        {
+          "title": "Windmills and home",
+          "stops": [
+            {
+              "place": "kinderdijk",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Outdoor area always open. Go early, spring to autumn is best."
+            },
+            {
+              "place": "harbour_tour",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Boat trip if time allows. Check departures on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    }
+  ]
+}

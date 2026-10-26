@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Red Rocks, foothills trails and mountain views."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Green chile, food halls and brewery taps."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, street art and a gold-rush past."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "LoDo",
+      "range": [
+        180,
+        380
+      ],
+      "why": "Historic core by Union Station. Walk to Coors Field, the river and most of downtown. Best first-timer base.",
+      "center": [
+        39.753,
+        -104.999
+      ]
+    },
+    {
+      "area": "Downtown CBD",
+      "range": [
+        150,
+        320
+      ],
+      "why": "Central, close to the 16th Street Mall and light rail. Quieter at weekends when offices empty.",
+      "center": [
+        39.744,
+        -104.99
+      ]
+    },
+    {
+      "area": "Capitol Hill",
+      "range": [
+        120,
+        260
+      ],
+      "why": "Cheaper, leafy streets near museums and Cheesman Park. Good cafés and nightlife on nearby Colfax.",
+      "center": [
+        39.734,
+        -104.981
+      ]
+    },
+    {
+      "area": "RiNo",
+      "range": [
+        160,
+        340
+      ],
+      "why": "Mural-covered warehouse district with breweries and food halls. Lively, a short ride from downtown.",
+      "center": [
+        39.769,
+        -104.979
+      ]
+    }
+  ],
+  "food": [
+    "Try a green chile dish: smothered burritos and breakfast burritos are a local staple. Ask about heat level.",
+    "Denver has many breweries and taprooms. RiNo and LoDo are the easiest clusters to walk between.",
+    "Food halls are handy for groups: look for one downtown or in RiNo and check current opening hours.",
+    "Rocky Mountain oysters and bison appear on menus; try them if you are curious.",
+    "High altitude can affect you: drink water, go easy on alcohol on day one, and eat a proper meal before a big hike."
+  ],
+  "more_time": [
+    "Add a day in the mountains: Boulder or Golden are short drives or bus rides from Denver; check current schedules.",
+    "Swap a city afternoon for Red Rocks Park and Amphitheatre; check whether a show or event is on.",
+    "Museum lovers can spend a half day at the Denver Art Museum or the Denver Museum of Nature & Science."
+  ],
+  "type_month_fit": {
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.55,
+      0.4
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "adventure": [
+      0.35,
+      0.4,
+      0.55,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.5,
+      0.35
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ]
+  },
+  "best_for": [
+    "nature",
+    "adventure",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights covers downtown, a museum and a foothills or Red Rocks outing; add a night if you want a full mountain day."
+  },
+  "month_notes": [
+    "January: cold, highs near 5°C and lows around -10°C. Pack layers and watch for snow and ice.",
+    "February: still cold, similar to January. A good month for museums and indoor sights.",
+    "March: warming to highs near 11°C but lows still below freezing. Snow is possible.",
+    "April: mild days near 16°C, cold nights near 0°C. Rain and snow showers are common.",
+    "May: pleasant highs near 20°C. Wettest month by rain days, so carry a light rain jacket.",
+    "June: warm and mostly dry, highs near 28°C. Strong sun at altitude; use sunscreen.",
+    "July: hottest month, highs near 31°C. Afternoon thunderstorms are common; plan hikes for the morning.",
+    "August: hot like July, highs near 30°C. Stay hydrated and watch afternoon storms.",
+    "September: warm days near 28°C and fewer rain days. A great month for trails and patios.",
+    "October: cooler, highs near 19°C and lows near 3°C. Crisp days; pack a warm layer.",
+    "November: chilly, highs near 11°C with freezing nights. Snow becomes more likely.",
+    "December: cold, highs near 7°C and lows around -7°C. Dress warm for downtown evenings."
+  ],
+  "climate_guide": {
+    "summary": "High-altitude, semi-arid climate: sunny much of the year, cold winters, warm summers and quick afternoon storms in summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm, mostly dry days with highs around 28–31°C. Ideal for trails and outdoor sights."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs near 5–7°C and lows around -10°C. Snow and ice are possible; bring a warm coat and boots."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Summer afternoon storms",
+        "text": "July and August often bring afternoon thunderstorms. Hike early and be off exposed ridges by midday."
+      },
+      {
+        "icon": "🌂",
+        "title": "Wettest in spring",
+        "text": "May has the most rain days (about 13). Carry a light rain jacket in spring."
+      },
+      {
+        "icon": "🏔️",
+        "title": "High altitude",
+        "text": "Denver sits about a mile high. Take it easy on day one, drink water and use sunscreen."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers year-round, a warm jacket for winter, sun protection in summer and sturdy shoes for trails."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk downtown and use RTD light rail or buses; use ride apps for late nights and spots outside the core.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "RTD light rail and commuter rail link downtown, suburbs and the airport. Check fares and schedules on the day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "RTD buses cost $2.75 cash with a 3-hour transfer; day passes about $5.50."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber and Lyft both work well in Denver."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "A car is handy outside downtown; toll roads are cashless, so check rental billing."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Downtown is walkable; bikes and scooters are common in summer."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service; the city is landlocked."
+      }
+    ]
+  }
+}

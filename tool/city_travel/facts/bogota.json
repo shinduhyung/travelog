@@ -1,0 +1,176 @@
+{
+  "currency": "COP",
+  "usd_rate": 3183.9865,
+  "intro_line": "Andean capital of gold, graffiti and endless salsa.",
+  "intro": "Bogotá rewards visitors with world-class museums, street art and highland food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "La Candelaria",
+    "Zona Rosa",
+    "Chapinero",
+    "Usaquén"
+  ],
+  "taxi": {
+    "flag_day": 25,
+    "flag_airport": 30,
+    "per_km": 1,
+    "min_fare": 25
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "TransMilenio BRT and green SITP buses use a rechargeable Tullave card.",
+    "TransMilenio fare is about COP$3,600 and SITP about COP$3,200; the card costs about COP$8,000.",
+    "TransMiCable gondola links Ciudad Bolívar to TransMilenio; a tourist cable car climbs Monserrate.",
+    "Uber, Cabify, DiDi and InDrive work but are officially unregulated; drivers may ask you to sit in front.",
+    "Call taxis by dispatch or app, never hail on the street; check the meter starts and lock doors.",
+    "No intercity trains; Turistren steam trains run to Zipaquirá several times a week."
+  ],
+  "airports": [
+    {
+      "code": "BOG",
+      "name": "El Dorado International Airport",
+      "primary": true,
+      "note": "Main gateway, about 8 km straight-line west of the centre.",
+      "options": [
+        {
+          "mode": "Bus 16-14 + TransMilenio",
+          "to": "Portal El Dorado then city",
+          "price": "COP$0-3,600",
+          "time": "60-90 min",
+          "note": "Free green bus to the portal; buy a Tullave card there. Small luggage only."
+        },
+        {
+          "mode": "Regulated taxi",
+          "to": "City centre",
+          "price": "COP$40,000-70,000",
+          "time": "20-40 min",
+          "note": "Buy a fixed-price ticket at the stand before boarding."
+        },
+        {
+          "mode": "Uber / Cabify / DiDi",
+          "to": "City centre",
+          "price": "COP$35,000-60,000",
+          "time": "20-40 min",
+          "note": "Meet the driver at the app pickup point; apps are officially unregulated."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Gold Museum",
+    "Monserrate Sanctuary",
+    "La Candelaria",
+    "Plaza de Bolivar",
+    "Botero Museum",
+    "Teatro Colon, Bogota",
+    "Casa de Nariño",
+    "Divercity",
+    "La Chorrera Falls",
+    "Mundo Aventura",
+    "Parque Jaime Duque",
+    "Salitre Magico",
+    "Tequendama Falls",
+    "Virgilio Barco Library"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Bogotá",
+      "https://en.wikivoyage.org/wiki/Bogot%C3%A1"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    4.711,
+    -74.0721
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 20,
+      "low": 8,
+      "rain_days": 13
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 16
+    },
+    {
+      "high": 20,
+      "low": 10,
+      "rain_days": 24
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 20
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 19
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 16
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 16
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 10
+    },
+    {
+      "high": 20,
+      "low": 8,
+      "rain_days": 8
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 16
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 22
+    },
+    {
+      "high": 20,
+      "low": 8,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "BOG taxi COP$40,000-70,000 vs tariff estimate 41"
+  ]
+}

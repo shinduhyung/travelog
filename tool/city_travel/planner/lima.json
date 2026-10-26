@@ -1,0 +1,581 @@
+{
+  "city": "Lima",
+  "checked": "October 2026",
+  "intro_line": "Lima: grey skies, ceviche, and cliffs above the Pacific.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Miraflores",
+        "Barranco",
+        "San Isidro",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Miraflores",
+        "Barranco",
+        "San Isidro",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Miraflores",
+        "Barranco",
+        "San Isidro",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Miraflores",
+        "Barranco",
+        "San Isidro",
+        "Centro Histórico"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Miraflores",
+        "Barranco",
+        "San Isidro",
+        "Centro Histórico"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 25,
+        "low": 20,
+        "rain_days": 4,
+        "note": "January: warm and mostly dry, highs near 25°C. Good beach weather south of the city."
+      },
+      {
+        "high": 26,
+        "low": 21,
+        "rain_days": 5,
+        "note": "February: the warmest month, highs near 26°C. A few rain days; pack a light layer for evenings."
+      },
+      {
+        "high": 25,
+        "low": 21,
+        "rain_days": 7,
+        "note": "March: still warm, highs near 25°C, with the most rain days of the year (about 7)."
+      },
+      {
+        "high": 24,
+        "low": 19,
+        "rain_days": 2,
+        "note": "April: warm and drier, highs near 24°C. Comfortable for walking the centre."
+      },
+      {
+        "high": 22,
+        "low": 17,
+        "rain_days": 0,
+        "note": "May: cooler and grey, highs near 22°C. The coastal fog (garúa) starts; bring a jacket."
+      },
+      {
+        "high": 20,
+        "low": 15,
+        "rain_days": 0,
+        "note": "June: grey and cool, highs near 20°C, no rain. Damp mornings; layers help."
+      },
+      {
+        "high": 19,
+        "low": 15,
+        "rain_days": 0,
+        "note": "July: the coolest, greyest month, highs near 19°C. No rain but little sun."
+      },
+      {
+        "high": 19,
+        "low": 14,
+        "rain_days": 0,
+        "note": "August: cool and grey, highs near 19°C. Same as July; plan indoor sights and long lunches."
+      },
+      {
+        "high": 19,
+        "low": 15,
+        "rain_days": 0,
+        "note": "September: still cool and grey, highs near 19°C. Fog eases slowly."
+      },
+      {
+        "high": 20,
+        "low": 15,
+        "rain_days": 1,
+        "note": "October: mild, highs near 20°C, one rain day. A good shoulder month."
+      },
+      {
+        "high": 21,
+        "low": 16,
+        "rain_days": 0,
+        "note": "November: brighter and warmer, highs near 21°C. Pleasant for sightseeing."
+      },
+      {
+        "high": 23,
+        "low": 18,
+        "rain_days": 2,
+        "note": "December: warm and mostly dry, highs near 23°C. Busy holiday season; book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      1,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      1,
+      1
+    ],
+    "beach": [
+      0.8,
+      0.85,
+      0.8,
+      0.6,
+      0.3,
+      0.15,
+      0.1,
+      0.1,
+      0.15,
+      0.35,
+      0.6,
+      0.75
+    ],
+    "nightlife": [
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1
+    ]
+  },
+  "places": {
+    "plaza_mayor": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning, before 10:00",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Mid-morning on a weekday",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "san_francisco": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "huaca_pucllana": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Late afternoon or an evening slot",
+      "area": "Miraflores",
+      "popularity": 4
+    },
+    "pachacamac": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning, before the heat",
+      "area": "San Isidro",
+      "popularity": 3
+    },
+    "larco_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon, then dinner in the café",
+      "area": "San Isidro",
+      "popularity": 5
+    },
+    "government_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Midday for the guard change, if scheduled",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "archbishops_palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "bridge_of_sighs": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "ceviche": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch, Monday to Saturday",
+      "area": "Miraflores",
+      "popularity": 5
+    },
+    "monumental": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Match day",
+      "area": "San Isidro",
+      "popularity": 2
+    },
+    "estadio_nacional": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Event day",
+      "area": "San Isidro",
+      "popularity": 2
+    },
+    "huaca_huallamarca": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "San Isidro",
+      "popularity": 2
+    },
+    "mali": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "torre_tagle": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "miraflores_malecon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and sunset",
+      "area": "Miraflores",
+      "popularity": 5
+    },
+    "barranco_walk": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Barranco",
+      "popularity": 4
+    },
+    "surquillo_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Miraflores",
+      "popularity": 3
+    },
+    "paragliding": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon, on a clear day",
+      "area": "Miraflores",
+      "popularity": 3
+    },
+    "barranco_bars": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Thursday to Saturday night",
+      "area": "Barranco",
+      "popularity": 4
+    },
+    "costa_verde_beach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer afternoons (Dec–Mar)",
+      "area": "Miraflores",
+      "popularity": 2
+    },
+    "city_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "pisco_tasting": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Barranco",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the historic centre, Miraflores and Barranco with time for a serious meal; add a night for a day trip south."
+  },
+  "airports": [
+    {
+      "code": "LIM",
+      "name": "Jorge Chávez International Airport",
+      "primary": true,
+      "note": "Main gateway, in Callao about 8 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "AeroDirecto public bus",
+          "to": "City routes, including Miraflores (Sur route)",
+          "price": "S/2-5",
+          "time": "1-3 hr",
+          "note": "Cheapest but slow and the airport area is dodgy at night."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "Miraflores (four stops)",
+          "price": "S/20 one way",
+          "time": "45-60 min",
+          "note": "Hourly; last bus leaves at 10 PM."
+        },
+        {
+          "mode": "Taxi (certified desk inside)",
+          "to": "Centro Histórico",
+          "price": "S/50-65",
+          "time": "30-50 min",
+          "note": "Green Taxi and Taxi365 desks are safe; prices are inflated."
+        },
+        {
+          "mode": "Taxi (outside terminal grounds)",
+          "to": "Miraflores",
+          "price": "S/25-35",
+          "time": "30-50 min",
+          "note": "Cheaper but less safe; avoid touts outside the airport."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "Miraflores or centre",
+          "price": "S/25-45",
+          "time": "30-50 min",
+          "note": "Verify driver name and plate; some fake drivers wait outside."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Lima",
+      "https://en.wikivoyage.org/wiki/Lima"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "Ride apps or agreed-price taxis for most trips; walk in Miraflores and Barranco.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Line 1 is elevated and runs north-south east of the centre. It misses most tourist areas, so it is rarely useful for visitors."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metropolitano is a fast bus rapid transit with dedicated lanes. Card costs S/4.5 and the fare is S/2.50. City buses and combis are cheap but confusing; agree the fare first."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber, DiDi and Cabify work in Lima; check the driver name and plate before getting in. Street taxis have no meters: agree the price first and confirm soles, not dollars."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic. Only rent if you plan to leave the city; parking and traffic are hard."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Fine in Miraflores and Barranco, and bike lanes are growing. Use care in the historic centre at night."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild desert coast: warm and sunny December to April, cool and grey May to November. Rain is rare; the fog is the main weather story.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to April",
+        "text": "Warm days around 23–26°C and little rain. Best for the beach and long walks."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Grey season (May to November)",
+        "text": "Cool, damp fog called garúa. Highs drop to about 19–22°C and the sun is rare. Pack a jacket."
+      },
+      {
+        "icon": "🌂",
+        "title": "Very little rain",
+        "text": "Most months see zero rain days. March is the wettest with about 7 days, still light."
+      },
+      {
+        "icon": "🌊",
+        "title": "Cold sea",
+        "text": "The Pacific here is chilly most of the year. Swimming is for the brave; beaches south are warmer in summer."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layers, not umbrellas",
+        "text": "Mornings are damp and cool even in summer. A light jacket and comfortable shoes work all year."
+      },
+      {
+        "icon": "🧴",
+        "title": "Sun in summer",
+        "text": "December to April the sun is strong. Use sunscreen and a hat on the malecón and at ruins."
+      }
+    ]
+  }
+}

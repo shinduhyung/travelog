@@ -1,0 +1,550 @@
+{
+  "city": "Shenzhen",
+  "checked": "October 2026",
+  "intro_line": "Shenzhen: China's boomtown where tech towers meet tropical coast.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Futian",
+        "Luohu",
+        "Nanshan",
+        "Shekou"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Futian",
+        "Luohu",
+        "Nanshan",
+        "Shekou"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Futian",
+        "Luohu",
+        "Nanshan",
+        "Shekou"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Futian",
+        "Luohu",
+        "Nanshan",
+        "Shekou"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Futian",
+        "Luohu",
+        "Nanshan",
+        "Shekou"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 6,
+        "note": "Cool and dry: highs near 20°C, lows near 12°C. Pack a jacket for evenings."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 7,
+        "note": "Similar to January: mild days, cool nights, about 7 rain days."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 11,
+        "note": "Warming up to 24°C; more showers, so carry a light rain jacket."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 14,
+        "note": "Warm and wetter: 27°C highs and around 14 rain days."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 21,
+        "note": "Hot and rainy: 29°C highs, 21 rain days. Plan indoor breaks."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 25,
+        "note": "Peak rainy season: 30°C highs, 25 rain days, humid and sticky."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 24,
+        "note": "Hot and very wet: 31°C highs, 24 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 25,
+        "note": "Similar to July: hot, humid, 25 rain days."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 21,
+        "note": "Still hot and wet: 30°C highs, 21 rain days. Typhoon season; check forecasts."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 9,
+        "note": "Rain eases: 28°C highs, 9 rain days. Comfortable again."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 7,
+        "note": "Pleasant: 25°C highs, 18°C lows, about 7 rain days."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 4,
+        "note": "Cool and dry: 21°C highs, 13°C lows, only 4 rain days. Great for walking."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.5,
+      0.5,
+      0.5,
+      0.6,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "nature": [
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.5,
+      0.4,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.4,
+      0.45,
+      0.6,
+      0.75,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.7,
+      0.6,
+      0.45
+    ],
+    "shopping": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ]
+  },
+  "places": {
+    "window_world": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Nanshan",
+      "popularity": 5
+    },
+    "ping_an": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Clear afternoon or sunset",
+      "area": "Futian",
+      "popularity": 4
+    },
+    "folk_village": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Afternoon with evening shows",
+      "area": "Nanshan",
+      "popularity": 4
+    },
+    "happy_valley": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday morning start",
+      "area": "Nanshan",
+      "popularity": 4
+    },
+    "heytea": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Mid-afternoon",
+      "area": "Futian",
+      "popularity": 4
+    },
+    "hk_disneyland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday, arrive at opening",
+      "area": "Nanshan",
+      "popularity": 4
+    },
+    "wetland_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Cooler morning, winter for birds",
+      "area": "Nanshan",
+      "popularity": 3
+    },
+    "ma_wan": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Nanshan",
+      "popularity": 2
+    },
+    "minsk_world": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 0,
+      "setting": "outdoor",
+      "best": "Not applicable",
+      "area": "Luohu",
+      "popularity": 1
+    },
+    "naixue": {
+      "types": [
+        "food"
+      ],
+      "minutes": 25,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Futian",
+      "popularity": 3
+    },
+    "oct_east": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday, start early",
+      "area": "Luohu",
+      "popularity": 3
+    },
+    "snoopys_world": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Luohu",
+      "popularity": 2
+    },
+    "splendid_china": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Nanshan",
+      "popularity": 3
+    },
+    "dafen": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Luohu",
+      "popularity": 3
+    },
+    "lianhuashan": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Futian",
+      "popularity": 4
+    },
+    "shekou_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into dinner",
+      "area": "Shekou",
+      "popularity": 3
+    },
+    "seaworld": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Shekou",
+      "popularity": 3
+    },
+    "nanshan_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Nanshan",
+      "popularity": 3
+    },
+    "shenzhen_bay": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Nanshan",
+      "popularity": 4
+    },
+    "ping_an_mall": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Futian",
+      "popularity": 2
+    },
+    "border_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Weekday, early start",
+      "area": "Luohu",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the main parks, a museum and plenty of eating; add a night for a coastal walk or a Hong Kong day trip."
+  },
+  "airports": [
+    {
+      "code": "SZX",
+      "name": "Shenzhen Bao'an International Airport",
+      "primary": true,
+      "note": "Main airport, about 28 km west of the centre.",
+      "options": [
+        {
+          "mode": "Metro line 11",
+          "to": "Downtown Shenzhen",
+          "price": "¥10",
+          "time": "30 min",
+          "note": "Runs 06:17-00:18; business class car costs about triple."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Downtown Shenzhen",
+          "price": "¥20",
+          "time": "45-60 min",
+          "note": "Check the schedule; English may be limited."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Futian",
+          "price": "¥100-120",
+          "time": "35-50 min",
+          "note": "About ¥150 to Luohu including tolls."
+        },
+        {
+          "mode": "Ride app (Didi)",
+          "to": "Central districts",
+          "price": "¥90-130",
+          "time": "35-50 min",
+          "note": "Pickup area has numbered bays; tell the driver your bay."
+        }
+      ],
+      "max_km": 60
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Shenzhen",
+      "https://en.wikivoyage.org/wiki/Shenzhen"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "shopping",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for most trips; use Didi or taxis for late nights and airport runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast, cheap and covers most sights; fares from about ¥2."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps; use a transit card or phone app to pay."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis and ride apps like Didi work well; airport to Futian about ¥100."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving yourself is not advised for short visits; traffic is heavy."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is fine in central districts; shared bikes are everywhere."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries link Shekou and Fuyong to Hong Kong, Macau and Zhuhai."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and humid: mild dry winters, hot wet summers, and a long rainy season from spring to autumn.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Mild, mostly dry days around 20–25°C. Ideal for parks, walking and sightseeing."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "June to September brings 30–31°C highs and heavy humidity. Move slowly and use air-conditioned breaks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Long rainy season",
+        "text": "May to September has 21–25 rain days a month. Carry an umbrella and keep plans flexible."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Storms are possible roughly summer to early autumn. Check forecasts and transport alerts before travel."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack for rain and sun",
+        "text": "Light layers, a compact umbrella, quick-dry shoes and sunscreen. A light jacket helps in winter."
+      },
+      {
+        "icon": "🧳",
+        "title": "Indoor backups",
+        "text": "Malls, museums and food halls are good rainy-day options; save outdoor trails for dry days."
+      }
+    ]
+  }
+}

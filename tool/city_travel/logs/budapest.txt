@@ -1,0 +1,33 @@
+$ deepseek_prep.py Budapest
+  tokens in 886 out 478
+Budapest: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Budapest
+  tokens in 4240 out 610
+Budapest: 0 problems
+
+$ deepseek_city.py Budapest --stage places
+Budapest: places
+  tokens in 1268 out 4500
+
+$ deepseek_city.py Budapest --stage frame
+Budapest: frame
+  tokens in 2443 out 1834
+
+$ deepseek_city.py Budapest --stage plans
+Budapest: plans
+  plans for day
+  tokens in 2687 out 1170
+  plans for 1n
+  tokens in 2688 out 1132
+  plans for 2n
+  tokens in 2688 out 1879
+  plans for 3n
+  tokens in 2693 out 2078
+  plans for 4n
+  tokens in 2688 out 2314
+
+$ merge_city.py Budapest
+Budapest: 28 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/budapest.json and planner/budapest.json
+

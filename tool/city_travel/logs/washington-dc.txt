@@ -1,0 +1,32 @@
+$ deepseek_facts.py Washington D.C.
+  tokens in 4196 out 1080
+Washington D.C.: 2 problems
+  - IAD taxi $50-70 vs tariff estimate 126
+  - BWI taxi $60-90 vs tariff estimate 152
+
+$ deepseek_city.py Washington D.C. --stage places
+Washington D.C.: places
+  tokens in 1257 out 4831
+
+$ deepseek_city.py Washington D.C. --stage frame
+Washington D.C.: frame
+  tokens in 2439 out 1748
+  repaired JSON
+
+$ deepseek_city.py Washington D.C. --stage plans
+Washington D.C.: plans
+  plans for day
+  tokens in 2890 out 940
+  plans for 1n
+  tokens in 2891 out 1352
+  plans for 2n
+  tokens in 2896 out 1373
+  plans for 3n
+  tokens in 2891 out 2206
+  plans for 4n
+  tokens in 2891 out 2344
+
+$ merge_city.py Washington D.C.
+Washington D.C.: 28 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/washington-dc.json and planner/washington-dc.json
+

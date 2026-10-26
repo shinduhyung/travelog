@@ -1,0 +1,66 @@
+{
+ "city": "Pune",
+ "trips": [
+  {
+   "place": "Lonavla",
+   "label": "Lonavala",
+   "position": {
+    "id": 386093,
+    "name": "Lonavla",
+    "city": "Lonavla",
+    "lat": 18.75,
+    "lng": 73.41667
+   },
+   "town": {
+    "name": "Lonavla",
+    "lat": 18.75275,
+    "lng": 73.40575
+   },
+   "road": {
+    "km": 63,
+    "min": 52,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 770,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$11",
+     "time": "43m",
+     "via": "Pune Jn to Lonavala",
+     "source": "https://www.rome2rio.com/s/Pune/Lonavala"
+    },
+    "bus": {
+     "from": "$3-$29",
+     "time": "1h 30m",
+     "via": "Pune Ma Na Pa Bus Stop to Lonavala",
+     "source": "https://www.rome2rio.com/s/Pune/Lonavala"
+    }
+   },
+   "route_note": "Frequent local and express trains run from Pune Junction to Lonavala in about an hour through the hill section; no changes needed.",
+   "see": [
+    "Bhushi Dam",
+    "Karla Caves",
+    "Tiger Point",
+    "Bhaja Caves"
+   ],
+   "visit": "Full day",
+   "tour_query": "Lonavala day trip from Pune",
+   "quests": [],
+   "recommended": "train",
+   "why": "Trains take just 43 minutes, run frequently with no changes, and drop you right in the hill town.",
+   "stars": 4,
+   "know": [
+    "Weekends get crowded, so go on a weekday if you can",
+    "Monsoon is the most scenic season but expect mist and slippery paths",
+    "Book return tickets early on weekends"
+   ]
+  }
+ ],
+ "problems": [
+  "Mahabaleshwar: not a town in cities15000.json (IN), dropped",
+  "Matheran: not a town in cities15000.json (IN), dropped"
+ ]
+}

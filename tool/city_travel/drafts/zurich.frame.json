@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old Town lanes, world-class museums and the lakefront."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Lake boats, hilltop views and mountain day trips."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Fondue, chocolate and market halls."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Altstadt",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Right in the old town by the river and lake; walk to most sights. Quiet at night.",
+      "center": [
+        47.372,
+        8.542
+      ]
+    },
+    {
+      "area": "Bahnhofstrasse",
+      "range": [
+        220,
+        550
+      ],
+      "why": "Central and handy for the main station and trams; the shopping street on your doorstep.",
+      "center": [
+        47.372,
+        8.538
+      ]
+    },
+    {
+      "area": "Niederdorf",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Lively old-town quarter with bars and cheap eats; good for nightlife and budget stays.",
+      "center": [
+        47.375,
+        8.546
+      ]
+    },
+    {
+      "area": "Enge",
+      "range": [
+        170,
+        400
+      ],
+      "why": "Quiet, leafy area near the lake and museums; a short tram ride to the centre.",
+      "center": [
+        47.364,
+        8.531
+      ]
+    }
+  ],
+  "food": [
+    "Try cheese fondue or raclette in an old-town restaurant; portions are big, so share.",
+    "Zurich-style sliced veal in cream sauce (Zürcher Geschnetzeltes) is the local classic.",
+    "Markthalle im Viadukt under the railway arches has many small food stalls; good for lunch.",
+    "Chocolate shops and cafés are everywhere; a hot chocolate is a cheap treat.",
+    "Supermarket sandwiches and takeaway are the budget option; restaurant meals cost much more."
+  ],
+  "more_time": [
+    "Take a lake boat from Bürkliplatz in summer and stop at a lakeside village for a walk.",
+    "Ride the train to Uetliberg hill for a short hike and city views; check the weather first.",
+    "Swap a city afternoon for a day trip to Lucerne or the Rhine Falls by train."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.4
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "shopping": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ]
+  },
+  "best_for": [
+    "culture",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two nights cover the old town, the museums and a lake or hill outing; add a night for a mountain day trip."
+  },
+  "month_notes": [
+    "Coldest month: highs near 4°C, lows around -2°C. Pack a warm coat and expect about 14 rain days.",
+    "Still cold, highs near 7°C. Fewer rain days than January, so outdoor walks are possible.",
+    "Mild and changeable: highs near 11°C, lows near 1°C, with about 13 rain days.",
+    "Spring warms up: highs near 15°C. Bring a light jacket and an umbrella.",
+    "Pleasant but the wettest month: highs near 18°C and about 18 rain days. Keep plans flexible.",
+    "Warm start to summer: highs near 23°C, lows near 13°C. Good for lake walks and boat trips.",
+    "Warmest month: highs near 25°C. Pack light clothes and sunscreen.",
+    "Warm like July, highs near 25°C, with fewer rain days. Great for the lake and hills.",
+    "Still mild: highs near 20°C. A good month for walking and day trips.",
+    "Cooler and often clear: highs near 15°C. Bring layers for evenings.",
+    "Chilly: highs near 9°C, lows near 3°C, with about 13 rain days. A warm jacket is needed.",
+    "Cold again: highs near 6°C, lows near 0°C. Expect about 14 rain days; pack rain gear."
+  ],
+  "climate_guide": {
+    "summary": "Temperate climate with four clear seasons. Summers are warm, winters are cold, and rain is possible in any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs around 20–25°C and lows around 11–15°C. Best for the lake, boats and hill walks."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs around 4–7°C and lows near -2 to 0°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "About 12–18 rain days a month. May is the wettest. Always carry a small umbrella."
+      },
+      {
+        "icon": "🌂",
+        "title": "Plan indoor backups",
+        "text": "Museums and cafés are good rainy-day options. Check the forecast each morning."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings between seasons",
+        "text": "From about 4°C in January to 25°C in July. Layers work best in spring and autumn."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a waterproof layer and a warm jacket for winter. Light clothes for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Trams and S-Bahn trains for almost everything; walking in the centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Use trams and S-Bahn trains instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Trams and buses cover the centre. Buy and validate tickets before boarding. Single zone 110 tickets cost about CHF 4-5; 24-hour cards about CHF 9-10."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "S-Bahn suburban trains link the centre with suburbs and the airport. Fast and frequent."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt operate; local taxi apps also work. Useful late at night."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is congested and parking is expensive. Public transport is usually faster."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is easy in the centre. Lake boats run from Bürkliplatz in summer."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Lake boats from Bürkliplatz run in summer; a pleasant way to see the lake."
+      }
+    ]
+  }
+}

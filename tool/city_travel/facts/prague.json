@@ -1,0 +1,196 @@
+{
+  "currency": "CZK",
+  "usd_rate": 21.6349,
+  "intro_line": "A thousand spires, a river of light, and beer cheaper than water.",
+  "intro": "Prague rewards slow wanderers with hidden courtyards, grand squares, and river views at every turn. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Staré Město",
+    "Malá Strana",
+    "Vinohrady",
+    "Nové Město"
+  ],
+  "taxi": {
+    "flag_day": 40,
+    "flag_airport": 60,
+    "per_km": 30,
+    "min_fare": 100
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro has 3 lines (A, B, C) and runs roughly 05:00–24:00.",
+    "Trams cover the centre well; buy tickets at yellow machines or in apps.",
+    "A 90-minute ticket costs about 50 CZK; a 24-hour ticket about 150 CZK.",
+    "Ride apps Uber and Bolt work in Prague; use them to avoid taxi touts.",
+    "Driving in the centre is slow and parking is restricted; use P+R lots.",
+    "The centre is walkable; Charles Bridge and Old Town are best on foot."
+  ],
+  "airports": [
+    {
+      "code": "PRG",
+      "name": "Václav Havel Airport Prague",
+      "primary": true,
+      "note": "Main international gateway, about 13 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Bus 59 + Metro A",
+          "to": "Nádraží Veleslavín, then centre",
+          "price": "50 CZK",
+          "time": "35-45 min",
+          "note": "Fastest and cheapest; 90-minute ticket covers the whole trip."
+        },
+        {
+          "mode": "Bus 100 + Metro B",
+          "to": "Zličín, then centre",
+          "price": "50 CZK",
+          "time": "40-50 min",
+          "note": "Good for the western side of town."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "Hlavní nádraží (main station)",
+          "price": "200 CZK",
+          "time": "30-40 min",
+          "note": "Direct but pricey; buy from the driver."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "600-800 CZK",
+          "time": "30-40 min",
+          "note": "Use the official rank or app; ignore touts in 'Info' clothes."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "500-750 CZK",
+          "time": "30-40 min",
+          "note": "Order in the app; fixed price shown before you ride."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Charles Bridge",
+    "Prague Castle",
+    "Old Town Square",
+    "St. Vitus Cathedral",
+    "Prague Astronomical Clock",
+    "Petřín Lookout Tower",
+    "Church of Our Lady before Týn",
+    "Dancing House",
+    "Aquapalace Prague",
+    "Clementinum National Library",
+    "Devil's Channel Cruise",
+    "Dinopark (Prague)",
+    "Estates Theatre",
+    "Jewish Quarter",
+    "Karlštejn Castle",
+    "Lesser Town",
+    "National Theatre of Czech",
+    "Powder Tower",
+    "Prague Lunapark",
+    "Prague Zoo",
+    "Rudolfinum",
+    "Strahov Monastery Library"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Prague",
+      "https://en.wikivoyage.org/wiki/Prague"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    50.0755,
+    14.4378
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": -2,
+      "rain_days": 12
+    },
+    {
+      "high": 7,
+      "low": -1,
+      "rain_days": 10
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 15,
+      "low": 4,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 8
+    },
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 5,
+      "low": 0,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

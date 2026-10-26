@@ -1,0 +1,1575 @@
+{
+  "city": "Luxembourg",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Luxembourg rewards visitors with free public transport, a walkable old town, and easy access to nature. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 49.4751,
+      "west": 6.1036,
+      "north": 49.725,
+      "east": 6.3224,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4.5,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Tram T1 connects the airport to the city centre and Gare, every 8 minutes, free.",
+      "Buses 1-31 serve the city; most stop at Hamilius and Gare, free.",
+      "Taxis are available but limited; ride apps like Uber and Bolt operate.",
+      "Driving is easy but parking in the centre is paid and scarce on weekends.",
+      "Walking and cycling are great; the city is compact and bike-friendly.",
+      "No ferries; the country is landlocked."
+    ],
+    "sources": []
+  },
+  "places": {
+    "palace": {
+      "name": "Grand Ducal Palace",
+      "landmark": "Grand Ducal Palace",
+      "kind": "sight",
+      "lat": 49.6106,
+      "lon": 6.1317,
+      "price": null,
+      "price_text": "Check on the day; guided tours in summer only, fee varies",
+      "hours": "Exterior always viewable · guided tours usually mid-July to early September, check on the day",
+      "tip": "Book a summer guided tour early; otherwise come for the changing of the guard, which is short and free.",
+      "source": "https://www.monarchie.lu"
+    },
+    "casemates": {
+      "name": "Bock Casemates",
+      "landmark": "Bock Casemates",
+      "kind": "sight",
+      "lat": 49.6119,
+      "lon": 6.1356,
+      "price": 8,
+      "price_text": "≈ EUR 7–9 adult, reduced for children; check on the day",
+      "hours": "Usually daily spring–autumn, shorter hours in winter; check on the day",
+      "tip": "Wear shoes with grip and bring a light layer; the tunnels are cool and uneven.",
+      "source": "https://www.visitluxembourg.com"
+    },
+    "corniche": {
+      "name": "Le Chemin de la Corniche",
+      "landmark": "Le Chemin de la Corniche",
+      "kind": "sight",
+      "lat": 49.6108,
+      "lon": 6.1344,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk it slowly at golden hour; the view over the Grund is the classic Luxembourg photo.",
+      "source": "https://www.visitluxembourg.com"
+    },
+    "cathedral": {
+      "name": "Notre-Dame Cathedral, Luxembourg",
+      "landmark": "Notre-Dame Cathedral, Luxembourg",
+      "kind": "sight",
+      "lat": 49.6096,
+      "lon": 6.1316,
+      "price": 0,
+      "price_text": "Free entry; donations welcome",
+      "hours": "Usually open daily, roughly 08:00–18:00; check on the day",
+      "tip": "Step inside quietly during services and look up at the crypt below.",
+      "source": "https://www.cathol.lu"
+    },
+    "adolphe": {
+      "name": "Adolphe Bridge",
+      "landmark": "Adolphe Bridge",
+      "kind": "sight",
+      "lat": 49.6083,
+      "lon": 6.1269,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk across for the best view down into the Pétrusse valley, then take the path below.",
+      "source": "https://www.visitluxembourg.com"
+    },
+    "gaardebounen": {
+      "name": "Judd mat Gaardebounen (dish)",
+      "landmark": "Judd mat Gaardebounen",
+      "kind": "food",
+      "lat": 49.6116,
+      "lon": 6.1319,
+      "price": null,
+      "price_text": "≈ EUR 18–28 in a traditional restaurant; check on the day",
+      "hours": "Served at lunch and dinner in most traditional restaurants",
+      "tip": "Try it at a classic city restaurant; it is smoked pork with broad beans, hearty and filling.",
+      "source": ""
+    },
+    "mudam": {
+      "name": "Mudam Luxembourg",
+      "landmark": "Mudam Luxembourg",
+      "kind": "museum",
+      "lat": 49.6163,
+      "lon": 6.1407,
+      "price": 12,
+      "price_text": "≈ EUR 10–14 adult; check on the day",
+      "hours": "Usually closed Monday; check on the day",
+      "tip": "The building by I. M. Pei is as good as the art; allow time for the terrace view.",
+      "source": "https://www.mudam.com"
+    },
+    "parc-merveilleux": {
+      "name": "Parc Merveilleux",
+      "landmark": "Parc Merveilleux",
+      "kind": "park",
+      "lat": 49.5001,
+      "lon": 6.1307,
+      "price": 8,
+      "price_text": "≈ EUR 6–10 entry; check on the day",
+      "hours": "Seasonal, usually spring–autumn; check on the day",
+      "tip": "A short train ride from the city; good with children and for the fairy-tale figures.",
+      "source": "https://www.bettembourg.lu"
+    },
+    "place-guillaume": {
+      "name": "Place Guillaume II (Knuedler)",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 49.6106,
+      "lon": 6.1298,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; market mornings vary",
+      "tip": "The main square for a coffee stop; markets and events run here through the week.",
+      "source": ""
+    },
+    "grund-walk": {
+      "name": "Grund old town walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.611,
+      "lon": 6.136,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Take the lift down from the city and wander the riverside lanes; it feels like a village.",
+      "source": ""
+    },
+    "petrusse": {
+      "name": "Pétrusse valley walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.6075,
+      "lon": 6.126,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; daylight only",
+      "tip": "A green path under the bridges; go down from the Adolphe Bridge side.",
+      "source": ""
+    },
+    "city-train": {
+      "name": "City tourist train (Pétrusse Express)",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 49.61,
+      "lon": 6.13,
+      "price": 12,
+      "price_text": "≈ EUR 10–14 adult; check on the day",
+      "hours": "Seasonal, usually spring–autumn; check on the day",
+      "tip": "A quick way to see the upper and lower town if you have limited time or limited mobility.",
+      "source": ""
+    },
+    "market": {
+      "name": "Place d'Armes food and flower market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 49.611,
+      "lon": 6.13,
+      "price": 0,
+      "price_text": "Free to browse; pay per item",
+      "hours": "Usually weekend mornings; check on the day",
+      "tip": "Come early for fresh produce and a pastry; the square is full of cafés after.",
+      "source": ""
+    },
+    "kirchberg-view": {
+      "name": "Kirchberg plateau viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 49.618,
+      "lon": 6.142,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Combine with Mudam and the Philharmonie; the modern quarter is a contrast to the old town.",
+      "source": ""
+    },
+    "gare-walk": {
+      "name": "Gare district walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.6,
+      "lon": 6.134,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The station area is practical for food and shops; walk toward the centre for the old town.",
+      "source": ""
+    },
+    "philharmonie": {
+      "name": "Philharmonie Luxembourg",
+      "landmark": null,
+      "kind": "show",
+      "lat": 49.6185,
+      "lon": 6.1425,
+      "price": null,
+      "price_text": "Ticket prices vary by concert; check on the day",
+      "hours": "Performance times vary; box office daytime",
+      "tip": "Check the programme online; even the foyer architecture is worth a look.",
+      "source": "https://www.philharmonie.lu"
+    },
+    "fort-thungen": {
+      "name": "Fort Thüngen (Dräi Eechelen)",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 49.619,
+      "lon": 6.139,
+      "price": 0,
+      "price_text": "Free entry to the museum; check on the day",
+      "hours": "Usually closed Monday; check on the day",
+      "tip": "Quiet fort museum near Mudam; good for the city's fortress history without crowds.",
+      "source": ""
+    },
+    "moselle-tour": {
+      "name": "Day trip to the Moselle wine region",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 49.7,
+      "lon": 6.3,
+      "price": 20,
+      "price_text": "≈ EUR 15–30 for transport and tastings; check on the day",
+      "hours": "Day trip; trains run daily",
+      "tip": "Take the train to Remich or Wasserbillig and taste local wines along the river.",
+      "source": ""
+    },
+    "chemin-rail": {
+      "name": "Chemin de la Corniche to Grund stairs",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.6115,
+      "lon": 6.135,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Link the corniche to the Grund on foot for the best half-day loop in the city.",
+      "source": ""
+    },
+    "casemates-petrusse": {
+      "name": "Pétrusse casemates (if open)",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 49.608,
+      "lon": 6.128,
+      "price": 6,
+      "price_text": "≈ EUR 5–8; check on the day",
+      "hours": "Seasonal, often summer only; check on the day",
+      "tip": "Smaller and quieter than the Bock Casemates; confirm opening before you go.",
+      "source": ""
+    },
+    "chocolate-house": {
+      "name": "Chocolate House café",
+      "landmark": null,
+      "kind": "food",
+      "lat": 49.6112,
+      "lon": 6.1305,
+      "price": 8,
+      "price_text": "≈ EUR 5–12 for a drink and spoon chocolate; check on the day",
+      "hours": "Usually daily daytime; check on the day",
+      "tip": "A sweet stop near the palace; good for a quick local treat.",
+      "source": ""
+    },
+    "three-towers": {
+      "name": "Three Towers (Dräi Tierm) walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 49.6125,
+      "lon": 6.1375,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Short walk along the old ramparts; combine with the Bock area.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A compact day of the old town's highlights, best for first-time visitors on foot.",
+      "days": [
+        {
+          "title": "Old town icons and the Grund below",
+          "stops": [
+            {
+              "place": "palace",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start in Ville Haute. The exterior is always viewable; guided tours usually run mid-July to early September, check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "A short walk away. Usually open daily, roughly 08:00–18:00; check on the day."
+            },
+            {
+              "place": "corniche",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "The famous balcony walk. Best light is late afternoon, but mornings are quieter."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop. Try Judd mat Gaardebounen, the local smoked pork and bean dish."
+            },
+            {
+              "place": "casemates",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "The Bock Casemates in the Grund. Usually daily spring–autumn, shorter in winter; check on the day."
+            },
+            {
+              "place": "grund-walk",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Wander the Grund old town below the walls, then take the lift or stairs back up."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "For visitors who want the UNESCO fortifications and the city's layered past.",
+      "days": [
+        {
+          "title": "Walls, casemates and fortresses",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early to beat crowds. Usually daily spring–autumn, shorter in winter; check on the day."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "10:15",
+              "minutes": 40,
+              "note": "Walk the Corniche and take the stairs down to the Grund for the wall views."
+            },
+            {
+              "place": "three-towers",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short walk past the old tower remains in the Grund."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch in the old town. Traditional Luxembourgish food."
+            },
+            {
+              "place": "fort-thungen",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Take the bus to Kirchberg. Usually closed Monday; check on the day."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Viewpoint over the plateau and the city below."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "A gentle day of valley walks, viewpoints and green corners of the city.",
+      "days": [
+        {
+          "title": "Valleys and viewpoints",
+          "stops": [
+            {
+              "place": "petrusse",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Start with the Pétrusse valley walk. Daylight only."
+            },
+            {
+              "place": "adolphe",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Walk across the Adolphe Bridge for valley views."
+            },
+            {
+              "place": "corniche",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "The Corniche balcony walk, one of Europe's prettiest."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop in the old town."
+            },
+            {
+              "place": "grund-walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Down into the Grund for riverside paths and old streets."
+            },
+            {
+              "place": "parc-merveilleux",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Seasonal, usually spring–autumn; check on the day. A short bus or train ride away."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One easy day in the old town: the big sights on foot, then a museum or a concert.",
+      "days": [
+        {
+          "title": "Old town on foot",
+          "stops": [
+            {
+              "place": "place-guillaume",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start on the main square. Weekend mornings often have a market nearby."
+            },
+            {
+              "place": "palace",
+              "at": "10:10",
+              "minutes": 60,
+              "note": "Exterior always viewable. Guided tours usually only mid-July to early September; check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:20",
+              "minutes": 30,
+              "note": "Usually open daily, roughly 08:00–18:00; check on the day."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch: try Judd mat Gaardebounen, the local smoked pork and broad bean dish."
+            },
+            {
+              "place": "corniche",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "The famous balcony walk over the valley. Best light late in the day, but fine now."
+            },
+            {
+              "place": "chocolate-house",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Afternoon break. Usually open daytime; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the valley",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early to avoid crowds. Usually daily spring–autumn, shorter in winter; check on the day."
+            },
+            {
+              "place": "grund-walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk down into the Grund old town below the city."
+            },
+            {
+              "place": "mudam",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Short bus or tram to Kirchberg. Usually closed Monday; check on the day."
+            },
+            {
+              "place": "philharmonie",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Evening concert if something is on. Box office open daytime; check the programme."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Fortifications first: casemates, walls and the Grund, with a fort on day two.",
+      "days": [
+        {
+          "title": "Walls and casemates",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "The Bock casemates cut into the rock. Usually daily spring–autumn; check on the day."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "10:45",
+              "minutes": 40,
+              "note": "Stairs from the Corniche down to the Grund. Wear good shoes."
+            },
+            {
+              "place": "grund-walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Old town below the walls. Good spot for lunch."
+            },
+            {
+              "place": "three-towers",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short walk past the old tower remains."
+            },
+            {
+              "place": "corniche",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Back up top for the classic view over the valley."
+            }
+          ]
+        },
+        {
+          "title": "Kirchberg forts",
+          "stops": [
+            {
+              "place": "fort-thungen",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually closed Monday; check on the day."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Viewpoint over the plateau and the city."
+            },
+            {
+              "place": "casemates-petrusse",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Seasonal, often summer only; check on the day. Have a backup plan."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Valleys and views: the Corniche, the Grund and the Pétrusse on foot.",
+      "days": [
+        {
+          "title": "Corniche and Grund",
+          "stops": [
+            {
+              "place": "corniche",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Quiet in the morning. Best light is late afternoon, but it is lovely any time."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "10:10",
+              "minutes": 40,
+              "note": "Stairs down into the Grund."
+            },
+            {
+              "place": "grund-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Riverside lanes below the city. Lunch here."
+            },
+            {
+              "place": "adolphe",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Walk across the bridge for valley views."
+            },
+            {
+              "place": "petrusse",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Valley walk. Daylight only."
+            }
+          ]
+        },
+        {
+          "title": "Parks and a day trip",
+          "stops": [
+            {
+              "place": "parc-merveilleux",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Seasonal, usually spring–autumn; check on the day."
+            },
+            {
+              "place": "moselle-tour",
+              "at": "13:30",
+              "minutes": 300,
+              "note": "Train to the Moselle wine region. Trains run daily; check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers: the walled old town, the casemates and one big museum, all on foot.",
+      "days": [
+        {
+          "title": "Arrive, old town highlights",
+          "stops": [
+            {
+              "place": "place-guillaume",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Central square, good orientation point. The tourist office is here."
+            },
+            {
+              "place": "palace",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Exterior always viewable. Guided tours usually only mid-July to early September; check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Usually open daily, roughly 08:00–18:00. Quiet in the morning."
+            },
+            {
+              "place": "corniche",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "The balcony of Europe. Best light late afternoon."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Try the national dish, Judd mat Gaardebounen, at a traditional restaurant. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Casemates, Grund and Mudam",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early to avoid crowds. Usually daily spring–autumn; check on the day."
+            },
+            {
+              "place": "grund-walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk down into the valley. Cobbled lanes and river views."
+            },
+            {
+              "place": "chocolate-house",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick sweet stop in the old town."
+            },
+            {
+              "place": "mudam",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually closed Monday. Short bus or walk from the centre to Kirchberg."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Look back over the city from the plateau."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Fortress fans: UNESCO walls, casemates and the Dräi Eechelen fort on Kirchberg.",
+      "days": [
+        {
+          "title": "Walls and casemates",
+          "stops": [
+            {
+              "place": "corniche",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start with the old ramparts above the valley."
+            },
+            {
+              "place": "casemates",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Underground tunnels in the Bock rock. Usually daily spring–autumn; check on the day."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "11:00",
+              "minutes": 40,
+              "note": "Stairs down from the Corniche to the Grund."
+            },
+            {
+              "place": "three-towers",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short walk past the old towers."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch of the national dish in the old town."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Usually open daily, roughly 08:00–18:00."
+            }
+          ]
+        },
+        {
+          "title": "Kirchberg forts and museum",
+          "stops": [
+            {
+              "place": "fort-thungen",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually closed Monday; check on the day."
+            },
+            {
+              "place": "mudam",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Usually closed Monday. Next to Fort Thüngen."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Afternoon view over the city."
+            },
+            {
+              "place": "casemates-petrusse",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Seasonal, often summer only; check on the day before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Green Luxembourg: valley walks, the Grund and a day out to the Moselle.",
+      "days": [
+        {
+          "title": "Valleys and the Grund",
+          "stops": [
+            {
+              "place": "petrusse",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Daylight only. Quiet green valley under the city."
+            },
+            {
+              "place": "adolphe",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Walk across for valley views."
+            },
+            {
+              "place": "corniche",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Ramparts view over the Grund."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "12:15",
+              "minutes": 40,
+              "note": "Stairs down to the Grund."
+            },
+            {
+              "place": "grund-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the valley, then wander the old lanes."
+            }
+          ]
+        },
+        {
+          "title": "Moselle day trip",
+          "stops": [
+            {
+              "place": "moselle-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Trains run daily from Gare. Vineyards and river walks. Spring to autumn is best."
+            },
+            {
+              "place": "gare-walk",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Back in the city, a short look around the Gare district."
+            },
+            {
+              "place": "parc-merveilleux",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Seasonal, usually spring–autumn; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers: the walled old town, the casemates and one big museum, all on foot.",
+      "days": [
+        {
+          "title": "Arrive, old town highlights",
+          "stops": [
+            {
+              "place": "place-guillaume",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Central square, good orientation point. The tourist office is here."
+            },
+            {
+              "place": "palace",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Exterior always viewable. Guided tours usually only mid-July to early September; check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Usually open daily, roughly 08:00–18:00. Quiet in the morning."
+            },
+            {
+              "place": "corniche",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "The balcony of Europe. Best light late afternoon."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Try the national dish, Judd mat Gaardebounen, at a traditional restaurant. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Casemates, Grund and Mudam",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early to avoid crowds. Usually daily spring–autumn; check on the day."
+            },
+            {
+              "place": "grund-walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk down into the valley. Cobbled lanes and river views."
+            },
+            {
+              "place": "chocolate-house",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick sweet stop in the old town."
+            },
+            {
+              "place": "mudam",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually closed Monday. Short bus or walk from the centre to Kirchberg."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Look back over the city from the plateau."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Fortress fans: UNESCO walls, casemates and the Dräi Eechelen fort on Kirchberg.",
+      "days": [
+        {
+          "title": "Walls and casemates",
+          "stops": [
+            {
+              "place": "corniche",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start with the old ramparts above the valley."
+            },
+            {
+              "place": "casemates",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Underground tunnels in the Bock rock. Usually daily spring–autumn; check on the day."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "11:00",
+              "minutes": 40,
+              "note": "Stairs down from the Corniche to the Grund."
+            },
+            {
+              "place": "three-towers",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short walk past the old towers."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch of the national dish in the old town."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Usually open daily, roughly 08:00–18:00."
+            }
+          ]
+        },
+        {
+          "title": "Kirchberg forts and museum",
+          "stops": [
+            {
+              "place": "fort-thungen",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually closed Monday; check on the day."
+            },
+            {
+              "place": "mudam",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Usually closed Monday. Next to Fort Thüngen."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Afternoon view over the city."
+            },
+            {
+              "place": "casemates-petrusse",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Seasonal, often summer only; check on the day before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Green Luxembourg: valley walks, the Grund and a day out to the Moselle.",
+      "days": [
+        {
+          "title": "Valleys and the Grund",
+          "stops": [
+            {
+              "place": "petrusse",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Daylight only. Quiet green valley under the city."
+            },
+            {
+              "place": "adolphe",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Walk across for valley views."
+            },
+            {
+              "place": "corniche",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Ramparts view over the Grund."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "12:15",
+              "minutes": 40,
+              "note": "Stairs down to the Grund."
+            },
+            {
+              "place": "grund-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the valley, then wander the old lanes."
+            }
+          ]
+        },
+        {
+          "title": "Moselle day trip",
+          "stops": [
+            {
+              "place": "moselle-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Trains run daily from Gare. Vineyards and river walks. Spring to autumn is best."
+            },
+            {
+              "place": "gare-walk",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Back in the city, a short look around the Gare district."
+            },
+            {
+              "place": "parc-merveilleux",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Seasonal, usually spring–autumn; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the old town, the big museum and the best views without rushing.",
+      "days": [
+        {
+          "title": "Arrive and walk the old town",
+          "stops": [
+            {
+              "place": "place-guillaume",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Good starting point in Ville Haute. Market mornings vary, check on the day."
+            },
+            {
+              "place": "palace",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Exterior always viewable. Guided tours usually mid-July to early September, check on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Usually open daily, roughly 08:00–18:00. Quiet in the morning."
+            },
+            {
+              "place": "corniche",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Best late afternoon or sunset. The classic viewpoint over the Grund."
+            },
+            {
+              "place": "gaardebounen",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Try the national dish at a traditional restaurant in Ville Haute."
+            }
+          ]
+        },
+        {
+          "title": "Fortifications and the Grund",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early to avoid crowds. Usually daily spring–autumn, check on the day."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "10:45",
+              "minutes": 40,
+              "note": "Stairs down from the Corniche to the Grund. Wear good shoes."
+            },
+            {
+              "place": "grund-walk",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Wander the old quarter below the city."
+            },
+            {
+              "place": "three-towers",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short walk past the old towers. Lunch in the Grund afterwards."
+            },
+            {
+              "place": "chocolate-house",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Afternoon break back up in Ville Haute. Usually daily daytime, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Kirchberg museums",
+          "stops": [
+            {
+              "place": "mudam",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually closed Monday. Check on the day."
+            },
+            {
+              "place": "fort-thungen",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Next to Mudam. Usually closed Monday, check on the day. Lunch nearby."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Look back over the city from the plateau."
+            },
+            {
+              "place": "philharmonie",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening concert. Performance times vary, box office daytime."
+            }
+          ]
+        },
+        {
+          "title": "Last morning and depart",
+          "stops": [
+            {
+              "place": "adolphe",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Walk across the bridge for daytime views."
+            },
+            {
+              "place": "petrusse",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Valley walk below the bridge. Daylight only."
+            },
+            {
+              "place": "market",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Place d'Armes market if it is a weekend morning. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the UNESCO walls, the casemates and the wartime story in depth.",
+      "days": [
+        {
+          "title": "Old town and the palace",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Quiet in the morning. Usually open daily, roughly 08:00–18:00."
+            },
+            {
+              "place": "palace",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Exterior always viewable. Guided tours usually mid-July to early September, check on the day."
+            },
+            {
+              "place": "place-guillaume",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Lunch around the square."
+            },
+            {
+              "place": "corniche",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Late afternoon light over the valley."
+            }
+          ]
+        },
+        {
+          "title": "Casemates day",
+          "stops": [
+            {
+              "place": "casemates",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning to avoid crowds. Usually daily spring–autumn, check on the day."
+            },
+            {
+              "place": "three-towers",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Old fortification towers in the Grund."
+            },
+            {
+              "place": "grund-walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch in the Grund, then walk the quarter."
+            },
+            {
+              "place": "casemates-petrusse",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Seasonal, often summer only. Check on the day."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "15:45",
+              "minutes": 40,
+              "note": "Stairs back up to the Corniche."
+            }
+          ]
+        },
+        {
+          "title": "Kirchberg fort and museum",
+          "stops": [
+            {
+              "place": "fort-thungen",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Usually closed Monday, check on the day."
+            },
+            {
+              "place": "mudam",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Usually closed Monday. Lunch at the museum."
+            },
+            {
+              "place": "kirchberg-view",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Afternoon view over the city."
+            }
+          ]
+        },
+        {
+          "title": "Moselle day trip or last walk",
+          "stops": [
+            {
+              "place": "moselle-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Trains run daily. Wine villages and river views. Spring to autumn is best."
+            },
+            {
+              "place": "gare-walk",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Back at the station district. Daytime walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want valley walks, parks and the Grund, with the city sights in between.",
+      "days": [
+        {
+          "title": "Valley and bridges",
+          "stops": [
+            {
+              "place": "adolphe",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Daytime views from the bridge."
+            },
+            {
+              "place": "petrusse",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Valley walk below the city. Daylight only."
+            },
+            {
+              "place": "corniche",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Lunch in Ville Haute, then the viewpoint."
+            },
+            {
+              "place": "chemin-rail",
+              "at": "14:00",
+              "minutes": 40,
+              "note": "Stairs down to the Grund."
+            },
+            {
+              "place": "grund-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late afternoon in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Park and casemates",
+          "stops": [
+            {
+              "place": "parc-merveilleux",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Seasonal, usually spring–autumn. Check on the day. Warm months, morning is best."
+            },
+            {
+              "place": "casemates",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Usually daily spring–autumn, check on the day."
+            },
+            {
+              "place": "three-towers",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short walk in the Grund."
+            }
+          ]
+        },
+        {
+          "title": "Kirchberg and river views",
+          "stops": [
+            {
+              "place": "kirchberg-view",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Afternoon is best but morning works too."
+            },
+            {
+              "place": "fort-thungen",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Usually closed Monday, check on the day. Lunch nearby."
+            },
+            {
+              "place": "mudam",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually closed Monday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Moselle or a slow last morning",
+          "stops": [
+            {
+              "place": "moselle-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Trains run daily. River and vineyard walks. Spring to autumn is best."
+            },
+            {
+              "place": "gare-walk",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Daytime walk near the station."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Haute or Grund"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old town, fortifications and world-class museums."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "UNESCO walls, casemates and WWII memory."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Valley walks, parks and the Grund below the city."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Ville Haute",
+      "range": [
+        130,
+        280
+      ],
+      "why": "Inside the old town: walk to the Bock, casemates and Grand Ducal Palace. Quiet at night, few budget rooms.",
+      "center": [
+        49.6116,
+        6.1319
+      ]
+    },
+    {
+      "area": "Gare",
+      "range": [
+        90,
+        180
+      ],
+      "why": "Around the main station: most hotels, best value, free tram and buses to the centre in minutes.",
+      "center": [
+        49.6,
+        6.1345
+      ]
+    },
+    {
+      "area": "Kirchberg",
+      "range": [
+        110,
+        220
+      ],
+      "why": "Modern business district with big hotels and museums; good for parking and the EU quarter.",
+      "center": [
+        49.6337,
+        6.1696
+      ]
+    },
+    {
+      "area": "Grund",
+      "range": [
+        120,
+        240
+      ],
+      "why": "The old lower town in the valley: pretty, quiet and close to nightlife; steep walk or lift up to the centre.",
+      "center": [
+        49.6103,
+        6.1357
+      ]
+    }
+  ],
+  "food": [
+    "Try Luxembourgish classics: judd mat gaardebounen (smoked pork with broad beans), gromperekichelcher potato fritters and bouneschlupp soup.",
+    "Look for a 'Kniddelen' or 'Mettwurst' lunch in the old town; portions are big, so share.",
+    "Place d'Armes and the Grund have the densest café and restaurant clusters; book dinner on weekends.",
+    "Cheap eats: bakery sandwiches, kebab and Asian lunch spots near the Gare, roughly EUR 8–15 a meal.",
+    "Wine and beer are local: try a Moselle wine or a Luxembourgish craft beer. Prices in the centre are high, so compare menus."
+  ],
+  "more_time": [
+    "Day trip to Vianden: castle and river valley, roughly an hour by train and bus; check connections on the day.",
+    "Add a half-day to the Moselle wine villages (Remich, Grevenmacher) by bus or car.",
+    "History fans can swap a museum for the American Military Cemetery in Hamm or the Schueberfouer fair if it is on."
+  ]
+}

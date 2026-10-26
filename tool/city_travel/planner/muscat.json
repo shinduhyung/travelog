@@ -1,0 +1,480 @@
+{
+  "city": "Muscat",
+  "checked": "October 2026",
+  "intro_line": "Where desert forts meet a turquoise Gulf and old souks.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Mutrah",
+        "Ruwi",
+        "Qurum",
+        "Al Ghubrah"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Mutrah",
+        "Ruwi",
+        "Qurum",
+        "Al Ghubrah"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Mutrah",
+        "Ruwi",
+        "Qurum",
+        "Al Ghubrah"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Mutrah",
+        "Ruwi",
+        "Qurum",
+        "Al Ghubrah"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Mutrah",
+        "Ruwi",
+        "Qurum",
+        "Al Ghubrah"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 3,
+        "note": "January: mild days around 25°C and cool nights. Great for walking and forts."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 1,
+        "note": "February: warm and dry, about 26°C. One of the best months to be outside."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 2,
+        "note": "March: warming to 29°C. Still comfortable; mornings are best for sightseeing."
+      },
+      {
+        "high": 34,
+        "low": 25,
+        "rain_days": 1,
+        "note": "April: hot at 34°C. Do outdoor sights early and rest in the afternoon."
+      },
+      {
+        "high": 38,
+        "low": 29,
+        "rain_days": 0,
+        "note": "May: very hot, 38°C, no rain. Stay indoors midday and drink plenty of water."
+      },
+      {
+        "high": 39,
+        "low": 31,
+        "rain_days": 0,
+        "note": "June: peak heat at 39°C with warm nights. Plan air-conditioned sights and evening walks."
+      },
+      {
+        "high": 38,
+        "low": 31,
+        "rain_days": 1,
+        "note": "July: hot and humid, 38°C. Keep outdoor time to early morning or after sunset."
+      },
+      {
+        "high": 37,
+        "low": 29,
+        "rain_days": 0,
+        "note": "August: similar heat, 37°C. Beaches are warm but the sun is strong; use shade."
+      },
+      {
+        "high": 36,
+        "low": 28,
+        "rain_days": 0,
+        "note": "September: still hot at 36°C. Slightly easier evenings; carry water everywhere."
+      },
+      {
+        "high": 34,
+        "low": 25,
+        "rain_days": 1,
+        "note": "October: cooling to 34°C. Better for outdoor trips later in the month."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 1,
+        "note": "November: pleasant at 29°C. Good for wadis, forts and the corniche."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 1,
+        "note": "December: mild at 26°C with cool nights. A top month for sightseeing."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "nature": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.5,
+      0.3,
+      0.25,
+      0.25,
+      0.35,
+      0.75,
+      0.95,
+      1
+    ],
+    "beach": [
+      0.8,
+      0.85,
+      0.95,
+      0.9,
+      0.6,
+      0.35,
+      0.3,
+      0.3,
+      0.4,
+      0.85,
+      1,
+      0.9
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ]
+  },
+  "places": {
+    "grand_mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Early morning, Sat–Thu",
+      "area": "Al Ghubrah",
+      "popularity": 5
+    },
+    "opera_house": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening for a show; late afternoon for the building",
+      "area": "Qurum",
+      "popularity": 4
+    },
+    "alam_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Mutrah",
+      "popularity": 4
+    },
+    "muttrah_souq": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Mutrah",
+      "popularity": 5
+    },
+    "mutrah_corniche": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Mutrah",
+      "popularity": 4
+    },
+    "forts": {
+      "types": [
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning light or sunset",
+      "area": "Mutrah",
+      "popularity": 3
+    },
+    "shuwa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Qurum",
+      "popularity": 3
+    },
+    "fish_market": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Mutrah",
+      "popularity": 3
+    },
+    "qurum_beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon and sunset",
+      "area": "Qurum",
+      "popularity": 3
+    },
+    "royal_opera_walk": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Qurum",
+      "popularity": 2
+    },
+    "dhow_cruise": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Mutrah",
+      "popularity": 3
+    },
+    "ruwi_market": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Ruwi",
+      "popularity": 2
+    },
+    "bait_al_zubair": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Mutrah",
+      "popularity": 3
+    },
+    "qantab_viewpoint": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Mutrah",
+      "popularity": 2
+    },
+    "mutrah_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Mutrah",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Grand Mosque, Mutrah and old Muscat at an easy pace; add a night for a wadi or Nizwa day trip."
+  },
+  "airports": [
+    {
+      "code": "MCT",
+      "name": "Muscat International Airport",
+      "primary": true,
+      "note": "Main gateway, about 10 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Mwasalat bus (Route 1)",
+          "to": "Ruwi and city sights",
+          "price": "OMR 0.3-1",
+          "time": "40-60 min",
+          "note": "Cheapest option; cash only, exact change helps."
+        },
+        {
+          "mode": "OTaxi app",
+          "to": "City centre hotels",
+          "price": "OMR 5-10",
+          "time": "20-30 min",
+          "note": "Fixed fare, no haggling."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or Mutrah",
+          "price": "OMR 6-12",
+          "time": "20-35 min",
+          "note": "Agree the fare before you start; prepay at the counter."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Muscat",
+      "https://en.wikivoyage.org/wiki/Muscat"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Taxi or the OTaxi app for most trips; rent a car for wadis and mountains.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Mwasalat buses cover key sights and the airport. Fares about 300 baisa to OMR 1; pay the driver in cash and buy a new ticket for each bus."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Orange-and-white taxis are metered-ish; agree the fare first. OTaxi gives fixed fares. Maxi taxis cost about OMR 0.2–0.4 per hop."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "Cheap and flexible. A 4WD helps for wadis and mountains. Check your licence and insurance before booking."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Only pleasant November to March, and sights are spread out. Use taxis for longer hops in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: sunny most of the year, very little rain, and a very hot, humid summer from May to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Days around 25–29°C and cooler nights. Ideal for forts, the souq and wadi walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (May to September)",
+        "text": "Highs of 36–39°C with warm nights. Do outdoor sights at sunrise or after dark."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid near the coast",
+        "text": "Muggy evenings in summer; the sea breeze helps but shade and water matter more."
+      },
+      {
+        "icon": "🌂",
+        "title": "Almost no rain",
+        "text": "Only a few rain days a year, mostly December to March. No umbrella needed most trips."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Dust and haze",
+        "text": "Occasional dusty winds can haze the sky and make mountain or wadi trips less pleasant."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a hat and strong sunscreen; a light layer for cool winter nights and indoor AC; modest clothing for mosques."
+      }
+    ]
+  }
+}

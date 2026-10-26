@@ -1,0 +1,169 @@
+{
+  "currency": "PKR",
+  "usd_rate": 276.9862,
+  "intro_line": "A planned green capital beneath the Margalla Hills.",
+  "intro": "Islamabad rewards visitors with leafy sectors, hill views and easy trips to Rawalpindi's bazaars. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Blue Area",
+    "F-6 / F-7",
+    "G-6 / G-8",
+    "E-7 / F-5"
+  ],
+  "taxi": {
+    "flag_day": 200,
+    "flag_airport": 4000,
+    "per_km": 100,
+    "min_fare": 200
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro Bus red line links Islamabad with Rawalpindi Saddar; single ticket about Rs 30.",
+    "Orange line shuttle runs from the airport parking lot (row 22) to the Metro network for about Rs 90.",
+    "Blue and green bus lines use a separate ticketing system and run on regular roads.",
+    "Taxis are plentiful; agree the fare first, roughly Rs 200 per sector.",
+    "Careem and InDrive ride apps are the local favourite; Careem Bike is cheapest.",
+    "Car hire with driver is easy; walking is pleasant in the planned sectors but distances are long."
+  ],
+  "airports": [
+    {
+      "code": "ISB",
+      "name": "Islamabad International Airport",
+      "primary": true,
+      "note": "Main gateway, about 25 km west of the centre.",
+      "options": [
+        {
+          "mode": "Orange Metro Bus shuttle",
+          "to": "Peshawar Morr / G-9 interchange",
+          "price": "Rs 90",
+          "time": "45-60 min",
+          "note": "Shuttle leaves from the parking lot, row 22."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rs 3500-4500",
+          "time": "30-45 min",
+          "note": "Bargain hard and set the price before the ride."
+        },
+        {
+          "mode": "Careem / InDrive",
+          "to": "City centre",
+          "price": "Rs 2500-4000",
+          "time": "30-45 min",
+          "note": "Book in the app; often cheaper than street taxis."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Faisal Mosque",
+    "Pakistan Monument",
+    "Jinnah Park",
+    "Jungle World",
+    "Lake View Park",
+    "Shakarparian",
+    "Taxila"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Islamabad",
+      "https://en.wikivoyage.org/wiki/Islamabad"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    33.6844,
+    73.0479
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 8
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 6
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 11
+    },
+    {
+      "high": 29,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 34,
+      "low": 21,
+      "rain_days": 7
+    },
+    {
+      "high": 36,
+      "low": 24,
+      "rain_days": 6
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 19
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 10
+    },
+    {
+      "high": 29,
+      "low": 17,
+      "rain_days": 4
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 5
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 3
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ISB taxi Rs 3500-4500 vs tariff estimate 7250"
+  ]
+}

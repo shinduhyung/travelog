@@ -1,0 +1,1047 @@
+{
+  "city": "Casablanca",
+  "checked": "October 2026",
+  "currency": "MAD",
+  "usd_rate": 9.8106,
+  "intro": "Casablanca rewards visitors who look past the business suits to the old medina, the great mosque and the ocean corniche. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 33.5646,
+      "west": -7.7037,
+      "north": 33.617,
+      "east": -7.5749,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 7,
+      "flag_airport": 280,
+      "per_km": 5,
+      "min_fare": 7
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Tram line runs 05:30-22:30; one ride about 6-8 MAD with a rechargeable card.",
+      "Al Bidaoui train links the airport and some city stops, but stops are far apart.",
+      "Buses are cheap at about 5 MAD but routes are unclear and pickpockets are a risk.",
+      "Red petits taxis use meters; minimum fare 7 MAD, and drivers may pick up others.",
+      "White grand taxis run fixed routes and leave only when full; cheaper for long trips.",
+      "Ride apps like Careem and inDrive work; walking is fine in the centre and medina."
+    ],
+    "sources": []
+  },
+  "places": {
+    "hassan2": {
+      "name": "Hassan II Mosque",
+      "landmark": "Hassan II Mosque",
+      "kind": "sight",
+      "lat": 33.6085,
+      "lon": -7.6327,
+      "price": 140,
+      "price_text": "≈ MAD 130–150 guided tour; check on the day",
+      "hours": "Guided visits several times daily except during prayers · check on the day",
+      "tip": "Book a morning tour slot and arrive early; cover arms, legs and hair, and remove shoes inside.",
+      "source": "https://www.fmh2.ma/"
+    },
+    "crazy_park": {
+      "name": "Crazy Park",
+      "landmark": "Crazy Park",
+      "kind": "park",
+      "lat": 33.5731,
+      "lon": -7.5898,
+      "price": null,
+      "price_text": "Entry price varies by ride · check on the day",
+      "hours": "Typically daytime into evening · check on the day",
+      "tip": "Good for families with kids; confirm opening hours and ride prices before you go.",
+      "source": ""
+    },
+    "loupi_park": {
+      "name": "Loupi Park Land",
+      "landmark": "Loupi Park Land",
+      "kind": "park",
+      "lat": 33.5731,
+      "lon": -7.5898,
+      "price": null,
+      "price_text": "Entry price varies by activity · check on the day",
+      "hours": "Typically daytime · check on the day",
+      "tip": "A play park for younger children; call ahead to confirm it is open.",
+      "source": ""
+    },
+    "magic_forest": {
+      "name": "Magic Forest",
+      "landmark": "Magic Forest",
+      "kind": "park",
+      "lat": 33.5731,
+      "lon": -7.5898,
+      "price": null,
+      "price_text": "Entry price varies · check on the day",
+      "hours": "Typically daytime · check on the day",
+      "tip": "Family-friendly green space; confirm hours and prices locally before visiting.",
+      "source": ""
+    },
+    "parc_sindibad": {
+      "name": "Parc Sindibad",
+      "landmark": "Parc Sindibad",
+      "kind": "park",
+      "lat": 33.5731,
+      "lon": -7.6888,
+      "price": null,
+      "price_text": "Entry price varies · check on the day",
+      "hours": "Typically daytime · check on the day",
+      "tip": "Amusement park near the coast; check which rides are running before you buy tickets.",
+      "source": ""
+    },
+    "stade_mohammed_v": {
+      "name": "Stade Mohammed V",
+      "landmark": "Stade Mohammed V",
+      "kind": "sight",
+      "lat": 33.5822,
+      "lon": -7.6473,
+      "price": null,
+      "price_text": "Match tickets vary · check on the day",
+      "hours": "Only on match or event days · check on the day",
+      "tip": "Catch a Raja or Wydad match for the atmosphere; buy tickets through official channels only.",
+      "source": ""
+    },
+    "central_market": {
+      "name": "Marché Central (Central Market)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 33.5953,
+      "lon": -7.6186,
+      "price": 0,
+      "price_text": "Free to browse · meals paid separately",
+      "hours": "Morning to early evening · check on the day",
+      "tip": "Walk the fish and produce stalls, then eat at one of the small restaurants inside.",
+      "source": ""
+    },
+    "habous_walk": {
+      "name": "Quartier Habous walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.5892,
+      "lon": -7.6031,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops daytime",
+      "tip": "Wander the arcades and souk streets; dress modestly near the mosques.",
+      "source": ""
+    },
+    "corniche_walk": {
+      "name": "Corniche seaside walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.5947,
+      "lon": -7.6625,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk west along the waterfront at sunset for sea views and the mosque silhouette.",
+      "source": ""
+    },
+    "old_medina": {
+      "name": "Old Medina of Casablanca",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.5992,
+      "lon": -7.6119,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Daytime",
+      "tip": "Explore the narrow lanes near the port; keep valuables close and go with a local guide if unsure.",
+      "source": ""
+    },
+    "food_tour": {
+      "name": "Casablanca street food tasting walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 33.5953,
+      "lon": -7.6186,
+      "price": null,
+      "price_text": "≈ MAD 200–400 per person · check on the day",
+      "hours": "Usually morning or evening tours",
+      "tip": "Sample msemen, harira and mint tea; confirm what is included and whether pickup is offered.",
+      "source": ""
+    },
+    "anfa_view": {
+      "name": "Anfa waterfront viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 33.6011,
+      "lon": -7.6511,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A calm spot for ocean views and photos; go in the cooler late afternoon.",
+      "source": ""
+    },
+    "beach_day": {
+      "name": "Ain Diab beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 33.5892,
+      "lon": -7.6711,
+      "price": 0,
+      "price_text": "Free public beach · private clubs charge",
+      "hours": "Daytime",
+      "tip": "Public stretches are free; private beach clubs charge for access and sunbeds.",
+      "source": ""
+    },
+    "ville_walk": {
+      "name": "Centre Ville art deco walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.5953,
+      "lon": -7.6186,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Daytime",
+      "tip": "Look up at the 20th-century facades around Place Mohammed V and the old post office.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day for first-timers: the mosque, the old medina and the Art Deco centre, grouped by area.",
+      "days": [
+        {
+          "title": "Mosque, medina and the modern centre",
+          "stops": [
+            {
+              "place": "hassan2",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Join an early guided visit. Check times on the day; closed to visitors during prayers."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk the seafront right outside the mosque. Taxis are easy to find here."
+            },
+            {
+              "place": "central_market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Late morning is best. Grab a simple lunch nearby in Centre Ville."
+            },
+            {
+              "place": "old_medina",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "About 10 minutes by taxi. Wander the lanes in daylight only."
+            },
+            {
+              "place": "ville_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Art Deco streets on foot from the medina. Finish before dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: the market, the Habous quarter and an evening street food walk.",
+      "days": [
+        {
+          "title": "Market morning, Habous afternoon, food walk at night",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Come late morning for the freshest stalls. Bring small cash."
+            },
+            {
+              "place": "old_medina",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk. Good for cheap snacks and people-watching."
+            },
+            {
+              "place": "habous_walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Shops are daytime only. Lunch around the quarter."
+            },
+            {
+              "place": "food_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tours are common. Book ahead and confirm the meeting point on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Old walls and colonial streets: the medina, the Habous quarter and the Art Deco centre.",
+      "days": [
+        {
+          "title": "Walls, Habous and colonial streets",
+          "stops": [
+            {
+              "place": "old_medina",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go in the morning while it is calm. Daylight hours only."
+            },
+            {
+              "place": "ville_walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk the Art Deco centre on foot from the medina. Stop for lunch on the way."
+            },
+            {
+              "place": "habous_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Shops close in the evening, so go in the afternoon."
+            },
+            {
+              "place": "hassan2",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "See the exterior and the esplanade at golden hour. Interior visits depend on tour times; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the mosque, the old medina and the Art Deco centre in one tight day.",
+      "days": [
+        {
+          "title": "Mosque, Corniche and sunset",
+          "stops": [
+            {
+              "place": "hassan2",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Join an early guided visit. Dress modestly. Times change daily, so check on the day."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk the seafront from the mosque. About 15 minutes on foot."
+            },
+            {
+              "place": "beach_day",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch and a rest on Ain Diab beach. Summer mornings are cooler."
+            },
+            {
+              "place": "anfa_view",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Late-afternoon light over the water. Short taxi ride."
+            }
+          ]
+        },
+        {
+          "title": "Centre Ville on foot",
+          "stops": [
+            {
+              "place": "ville_walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Art Deco streets are best in the morning light."
+            },
+            {
+              "place": "central_market",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Late morning is liveliest. Grab a snack here."
+            },
+            {
+              "place": "old_medina",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Daytime only. Walk before lunch crowds build."
+            },
+            {
+              "place": "habous_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Shops open in the daytime. About 15 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville & Corniche"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want markets, street snacks and a seaside dinner on a short stay.",
+      "days": [
+        {
+          "title": "Market morning, Corniche evening",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Late morning is best. Look for fresh produce and small eateries."
+            },
+            {
+              "place": "old_medina",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Short walk away. Snack stalls are busiest around midday."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Stroll before dinner. About 20 minutes by taxi."
+            },
+            {
+              "place": "beach_day",
+              "at": "18:45",
+              "minutes": 120,
+              "note": "Seafood dinner by the water. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Habous and a tasting walk",
+          "stops": [
+            {
+              "place": "habous_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is calm. Try bread and pastries from the bakeries."
+            },
+            {
+              "place": "food_tour",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Tours usually run morning or evening. Confirm the start point when you book."
+            },
+            {
+              "place": "hassan2",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Outside views at sunset are free. Guided visits depend on prayer times, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville & Corniche"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Travellers who want old walls, the Habous quarter and colonial streets in a day.",
+      "days": [
+        {
+          "title": "Old medina and the centre",
+          "stops": [
+            {
+              "place": "old_medina",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early while it is quiet. Daytime only."
+            },
+            {
+              "place": "central_market",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short walk. Good spot for a coffee break."
+            },
+            {
+              "place": "ville_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Colonial and Art Deco buildings. Morning light is best, so start here if you can."
+            },
+            {
+              "place": "hassan2",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Guided visits run several times daily except during prayers. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Habous and the Corniche",
+          "stops": [
+            {
+              "place": "habous_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning or late afternoon. Shops are daytime only."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi. Walk toward sunset."
+            },
+            {
+              "place": "anfa_view",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Late-afternoon view over the water to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville & Corniche"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the mosque, the old medina and the Art Deco centre at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, mosque and Corniche sunset",
+          "stops": [
+            {
+              "place": "hassan2",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Guided visits run several times daily except during prayers. Check times on the day and dress modestly."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walk north along the water from the mosque. Best at sunset."
+            },
+            {
+              "place": "anfa_view",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Short taxi hop for the waterfront view. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Centre Ville and the old medina",
+          "stops": [
+            {
+              "place": "ville_walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Art Deco streets are best in the morning light. Many buildings are exteriors only."
+            },
+            {
+              "place": "central_market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Late morning is liveliest. Good spot for a cheap lunch."
+            },
+            {
+              "place": "old_medina",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Daytime only. Keep valuables close and expect friendly touts."
+            },
+            {
+              "place": "habous_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Short taxi ride. Shops are daytime; the quarter itself is always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville or Corniche"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, street snacks and a seaside dinner.",
+      "days": [
+        {
+          "title": "Market morning, Corniche evening",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go late morning for the freshest produce and fish. Bring small cash."
+            },
+            {
+              "place": "old_medina",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Graze on snacks in the lanes. Daytime only."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset walk, then pick a seafood spot by the water."
+            }
+          ]
+        },
+        {
+          "title": "Street food walk and Habous",
+          "stops": [
+            {
+              "place": "food_tour",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Tours usually run morning or evening. Book ahead and say if you have allergies."
+            },
+            {
+              "place": "habous_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Bakery and sweet shops in the quarter. Shops are daytime."
+            },
+            {
+              "place": "hassan2",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Check tour times on the day. The outside at sunset is worth the trip alone."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want old walls, the Habous quarter and colonial streets.",
+      "days": [
+        {
+          "title": "Old medina and colonial centre",
+          "stops": [
+            {
+              "place": "old_medina",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early while it is quiet. Daytime only."
+            },
+            {
+              "place": "ville_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Art Deco and colonial facades. Many are exteriors only."
+            },
+            {
+              "place": "central_market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop. Open morning to early evening."
+            }
+          ]
+        },
+        {
+          "title": "Habous and the mosque",
+          "stops": [
+            {
+              "place": "habous_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is calm. Shops open daytime."
+            },
+            {
+              "place": "hassan2",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Check guided visit times on the day; they pause during prayers."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "End the trip with the seaside walk at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville or Habous"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the mosque, the medina and the Art Deco centre at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the Corniche",
+          "stops": [
+            {
+              "place": "corniche_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Easy first stroll by the sea. Watch the sunset."
+            },
+            {
+              "place": "hassan2",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "See the mosque lit up from outside. Guided visits are daytime only."
+            }
+          ]
+        },
+        {
+          "title": "Mosque and old medina",
+          "stops": [
+            {
+              "place": "hassan2",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Take a morning guided tour. Dress modestly. Times vary, check on the day."
+            },
+            {
+              "place": "old_medina",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Wander the lanes and small shops."
+            },
+            {
+              "place": "central_market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch and a look at the produce stalls."
+            }
+          ]
+        },
+        {
+          "title": "Centre Ville Art Deco",
+          "stops": [
+            {
+              "place": "ville_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Self-guided loop past the colonial facades. Start near the main square."
+            },
+            {
+              "place": "habous_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Short taxi ride. Shops are open in daytime. Good spot for lunch."
+            }
+          ]
+        },
+        {
+          "title": "Habous and depart",
+          "stops": [
+            {
+              "place": "anfa_view",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Quick waterfront stop on the way out."
+            },
+            {
+              "place": "hassan2",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Last look from the esplanade if you missed it. Check tour times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville near the old medina"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, tagines and cheap street eats.",
+      "days": [
+        {
+          "title": "Market first",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Go late morning when stalls are busy. Try fresh fruit and olives."
+            },
+            {
+              "place": "old_medina",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Walk off lunch in the lanes. Small bakeries and snack stalls."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Seaside walk, then pick a fish spot for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Street food walk",
+          "stops": [
+            {
+              "place": "food_tour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tasting tour through Centre Ville. Book ahead and come hungry."
+            }
+          ]
+        },
+        {
+          "title": "Habous tastes",
+          "stops": [
+            {
+              "place": "habous_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning is calm. Look for bread, pastries and mint tea."
+            },
+            {
+              "place": "hassan2",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Guided visit if times allow, otherwise view from outside. Check on the day."
+            },
+            {
+              "place": "central_market",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Second pass for snacks and spices to take home."
+            }
+          ]
+        },
+        {
+          "title": "Beach and depart",
+          "stops": [
+            {
+              "place": "beach_day",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning by the water in summer. Bring sun cover."
+            },
+            {
+              "place": "anfa_view",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Quick viewpoint stop, then head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville, walkable to the market"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want old walls, the Habous quarter and colonial streets.",
+      "days": [
+        {
+          "title": "Old medina and centre",
+          "stops": [
+            {
+              "place": "old_medina",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go in the morning while it is cool and quiet."
+            },
+            {
+              "place": "ville_walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Art Deco and colonial buildings on foot. Bring water."
+            },
+            {
+              "place": "central_market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch stop nearby."
+            }
+          ]
+        },
+        {
+          "title": "Mosque and Corniche",
+          "stops": [
+            {
+              "place": "hassan2",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning guided tour. Times change with prayers, check on the day."
+            },
+            {
+              "place": "corniche_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Evening walk along the seafront."
+            }
+          ]
+        },
+        {
+          "title": "Habous quarter",
+          "stops": [
+            {
+              "place": "habous_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Built in the French era, with arcades and a market feel. Shops daytime only."
+            },
+            {
+              "place": "anfa_view",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light over the water."
+            }
+          ]
+        },
+        {
+          "title": "Last morning and depart",
+          "stops": [
+            {
+              "place": "ville_walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Short repeat loop for any buildings you missed. Daytime only."
+            },
+            {
+              "place": "central_market",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Coffee and a snack before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centre Ville, close to the medina"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Hassan II Mosque, the old medina and the Art Deco centre."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, tagines and cheap street eats."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Old walls, the Habous quarter and colonial streets."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Centre Ville",
+      "range": [
+        350,
+        900
+      ],
+      "why": "Walk to the medina, the old walls and the Art Deco streets. Best base for first-timers without a car.",
+      "center": [
+        33.594,
+        -7.618
+      ]
+    },
+    {
+      "area": "Anfa",
+      "range": [
+        600,
+        1600
+      ],
+      "why": "Quieter business and shopping district with big hotels; short taxi ride to the Corniche and the centre.",
+      "center": [
+        33.588,
+        -7.66
+      ]
+    },
+    {
+      "area": "Corniche",
+      "range": [
+        500,
+        1400
+      ],
+      "why": "Sea views and beach clubs; good for evenings by the water, but you will need taxis for the sights.",
+      "center": [
+        33.594,
+        -7.675
+      ]
+    },
+    {
+      "area": "Habous",
+      "range": [
+        300,
+        800
+      ],
+      "why": "Near the new medina, the royal palace gates and the market; calm and traditional, a bit away from nightlife.",
+      "center": [
+        33.585,
+        -7.6
+      ]
+    }
+  ],
+  "food": [
+    "Try Moroccan classics: tagine, couscous (often on Fridays) and harira soup. A simple sit-down meal is often around 60–120 MAD.",
+    "Head to the Central Market (Marché Central) area for fish and seafood; pick your fish and agree the price first.",
+    "Cheap eats: msemen pancakes, fresh orange juice and grilled sandwiches in the medina for about 15–40 MAD.",
+    "Mint tea and pastries in the Habous quarter make a good mid-afternoon break.",
+    "Alcohol is limited outside hotels and licensed restaurants. Check before you plan a drink with dinner."
+  ],
+  "more_time": [
+    "Add a coastal day to El Jadida for the Portuguese cistern and old walls; check train times on the day.",
+    "Swap one city afternoon for Rabat by train if you want more history and a calmer medina.",
+    "Beach lovers can spend a lazy afternoon at a Corniche beach club instead of another museum."
+  ]
+}

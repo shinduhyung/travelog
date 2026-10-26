@@ -1,0 +1,844 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A compact culture day: old town first, then the waterfront at sunset.",
+      "days": [
+        {
+          "title": "Old town on foot, Rambla at sunset",
+          "stops": [
+            {
+              "place": "free_walking_tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Good orientation on your first morning. Check times on the day."
+            },
+            {
+              "place": "plaza_independencia",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short walk from the old town. Good photo stop."
+            },
+            {
+              "place": "palacio_salvo",
+              "at": "12:20",
+              "minutes": 30,
+              "note": "Lobby hours vary; check on the day."
+            },
+            {
+              "place": "chivito",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Try the national sandwich at a simple cafe."
+            },
+            {
+              "place": "teatro_solis",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Afternoon tour or evening show; times vary, check on the day."
+            },
+            {
+              "place": "rambla",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Walk the waterfront to sunset. Take a taxi to Pocitos."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja or El Centro"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way through the markets, with a light walk between meals.",
+      "days": [
+        {
+          "title": "Markets and asado",
+          "stops": [
+            {
+              "place": "mercado_agricola",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Coffee and a look around. Daytime into evening; check on the day."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch is the main event here. Busiest at weekends; many stalls close early evening."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Walk off lunch through the old streets."
+            },
+            {
+              "place": "catedral_metropolitana",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Open daytime; check on the day."
+            },
+            {
+              "place": "chivito",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Late dinner. Most places serve into the evening; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja or El Centro"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Waterfront day: old town in the morning, sand and sunset in Pocitos.",
+      "days": [
+        {
+          "title": "Old town, then Pocitos beach",
+          "stops": [
+            {
+              "place": "puerto_viewpoint",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick look over the port and bay."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "10:40",
+              "minutes": 120,
+              "note": "Morning is liveliest and safest-feeling. Weekdays are quieter."
+            },
+            {
+              "place": "chivito",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch before heading to the beach."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Swim in daytime only. Summer afternoons are best."
+            },
+            {
+              "place": "rambla",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk the waterfront from Pocitos into sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pocitos"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "A quick culture hit: old town on foot, markets and a tango evening.",
+      "days": [
+        {
+          "title": "Old town on foot",
+          "stops": [
+            {
+              "place": "free_walking_tour",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually daily; check on the day. Good first look at Ciudad Vieja."
+            },
+            {
+              "place": "plaza_independencia",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Short walk from the old town. Good spot for photos."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch. Busiest at lunch; many stalls close early evening."
+            },
+            {
+              "place": "teatro_solis",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Box office and tour times vary; check on the day."
+            },
+            {
+              "place": "tango_show",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening show in Ciudad Vieja. Book ahead; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through markets and try the chivito.",
+      "days": [
+        {
+          "title": "Markets and a big lunch",
+          "stops": [
+            {
+              "place": "mercado_agricola",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Daytime into evening; check on the day. Good for coffee and snacks."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch, especially good at weekends. Many stalls close early evening."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Walk off lunch. Liveliest daytime and early evening."
+            },
+            {
+              "place": "chivito",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Late dinner. Most restaurants lunch and evening; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Rambla sunset, a Pocitos swim and an easy old town morning.",
+      "days": [
+        {
+          "title": "Old town, then the waterfront",
+          "stops": [
+            {
+              "place": "ciudad_vieja",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning walk. Liveliest daytime and early evening."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch. Busiest at lunch; many stalls close early evening."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Swim in daytime. Summer afternoons are best."
+            },
+            {
+              "place": "rambla",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Late afternoon to sunset walk along the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pocitos"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old town, the waterfront and a tango night.",
+      "days": [
+        {
+          "title": "Old town on foot",
+          "stops": [
+            {
+              "place": "free_walking_tour",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Good orientation on day one. Check the start point and time on the day."
+            },
+            {
+              "place": "plaza_independencia",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Short walk from the old town. Gateway between the two halves of the centre."
+            },
+            {
+              "place": "chivito",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch on the national sandwich. Portions are big; share if unsure."
+            },
+            {
+              "place": "palacio_salvo",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Look at the lobby and facade. Hours vary, so check on the day."
+            },
+            {
+              "place": "teatro_solis",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Afternoon tour if running. Book a show for later in the evening if you prefer."
+            }
+          ]
+        },
+        {
+          "title": "Markets, port views and tango",
+          "stops": [
+            {
+              "place": "puerto_viewpoint",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Quick look over the port and bay. Daytime only."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Arrive before the lunch rush. Many stalls close early evening."
+            },
+            {
+              "place": "catedral_metropolitana",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Short visit in the old town. Open daytime; check on the day."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Wander the streets and squares at your own pace."
+            },
+            {
+              "place": "tango_show",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Book ahead. Confirm the venue and start time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around lunch and dinner, with light sightseeing between.",
+      "days": [
+        {
+          "title": "Old town and the port market",
+          "stops": [
+            {
+              "place": "plaza_independencia",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Easy start between the centre and the old town."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Walk toward the port. Keep it short so you beat the lunch crowd."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "The main meal of the day: grilled meat and fish. Busiest at lunch, especially weekends."
+            },
+            {
+              "place": "puerto_viewpoint",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Walk off lunch with a bay view."
+            },
+            {
+              "place": "catedral_metropolitana",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Quiet stop nearby. Check opening on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market lunch and a slow evening",
+          "stops": [
+            {
+              "place": "mercado_agricola",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Food stalls and small shops. Good for a late-morning bite; check hours on the day."
+            },
+            {
+              "place": "legislative_palace",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Weekday guided visits only. Check times on the day; skip if closed."
+            },
+            {
+              "place": "rambla",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Waterfront walk toward Pocitos. Late afternoon is best."
+            },
+            {
+              "place": "chivito",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner on the national sandwich. Many places serve late; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "El Centro"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Warm-weather visitors who want the Rambla, Pocitos sand and an easy old-town morning.",
+      "days": [
+        {
+          "title": "Rambla and Pocitos",
+          "stops": [
+            {
+              "place": "rambla",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk the waterfront. Morning is cooler and quieter."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Swim in daytime only. Summer afternoons are busiest."
+            },
+            {
+              "place": "chivito",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch near Pocitos or the centre. Check opening on the day."
+            },
+            {
+              "place": "castillo_pittamiglio",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Guided visits on set days only; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Old town, then sunset by the water",
+          "stops": [
+            {
+              "place": "ciudad_vieja",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning is liveliest. Weekdays are calmer."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch before the stalls wind down."
+            },
+            {
+              "place": "plaza_independencia",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short stop on the way back."
+            },
+            {
+              "place": "rambla",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Late afternoon to sunset is the best light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pocitos"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Old-town history, markets and the waterfront at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the old town",
+          "stops": [
+            {
+              "place": "plaza_independencia",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Good orientation point between the old town and El Centro."
+            },
+            {
+              "place": "palacio_salvo",
+              "at": "15:35",
+              "minutes": 30,
+              "note": "Look at the lobby and facade; hours vary, check on the day."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Wander the streets at an easy pace. Weekdays are quieter."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Early dinner. Many stalls close early evening, so go soon."
+            }
+          ]
+        },
+        {
+          "title": "Museums, theatre and a show",
+          "stops": [
+            {
+              "place": "free_walking_tour",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually daily; check on the day and tip the guide."
+            },
+            {
+              "place": "catedral_metropolitana",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Open daytime; check on the day."
+            },
+            {
+              "place": "chivito",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch on the national sandwich."
+            },
+            {
+              "place": "teatro_solis",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Afternoon tour or evening show; times vary, check on the day."
+            },
+            {
+              "place": "tango_show",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Evening tango or candombe; book ahead and check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Waterfront and viewpoints",
+          "stops": [
+            {
+              "place": "puerto_viewpoint",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Port and bay views in daytime."
+            },
+            {
+              "place": "fortaleza_cerro",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Daytime only; check on the day. Take a taxi."
+            },
+            {
+              "place": "rambla",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Late-afternoon walk toward sunset."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Optional summer swim; swim in daytime."
+            },
+            {
+              "place": "mercado_agricola",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner among the food stalls; check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Parliament and Carrasco, then go",
+          "stops": [
+            {
+              "place": "legislative_palace",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekday guided visits only; check on the day."
+            },
+            {
+              "place": "carrasco_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Quiet garden streets; daytime. Lunch locally."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja or El Centro"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Markets, asado and the chivito, with old-town walks between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat at the port market",
+          "stops": [
+            {
+              "place": "plaza_independencia",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk before dinner."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "15:40",
+              "minutes": 60,
+              "note": "Easy stroll to build an appetite."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Early grilled-fish and asado dinner. Busiest at lunch; many stalls close early evening."
+            }
+          ]
+        },
+        {
+          "title": "Market lunch and old town",
+          "stops": [
+            {
+              "place": "free_walking_tour",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually daily; check on the day."
+            },
+            {
+              "place": "chivito",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch on the national sandwich."
+            },
+            {
+              "place": "catedral_metropolitana",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Open daytime; check on the day."
+            },
+            {
+              "place": "teatro_solis",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Afternoon tour; times vary, check on the day."
+            },
+            {
+              "place": "tango_show",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Dinner and a show; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Mercado Agrícola and the Rambla",
+          "stops": [
+            {
+              "place": "mercado_agricola",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunchtime is best; check hours on the day."
+            },
+            {
+              "place": "rambla",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk off lunch toward sunset."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Optional summer swim in daytime."
+            },
+            {
+              "place": "chivito",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Late dinner; check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Carrasco and a last lunch, then go",
+          "stops": [
+            {
+              "place": "carrasco_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning walk; daytime only."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Final long lunch; weekends are busiest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ciudad Vieja or El Centro"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Rambla sunsets, Pocitos swims and a little old-town culture.",
+      "days": [
+        {
+          "title": "Arrive and catch the sunset",
+          "stops": [
+            {
+              "place": "plaza_independencia",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Orientation stop."
+            },
+            {
+              "place": "rambla",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late-afternoon walk toward sunset."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Swim in daytime; the water gets cool after sunset."
+            },
+            {
+              "place": "chivito",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Dinner nearby; check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning, old town afternoon",
+          "stops": [
+            {
+              "place": "pocitos_beach",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Summer mornings are calmer."
+            },
+            {
+              "place": "ciudad_vieja",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Weekday afternoons are quieter."
+            },
+            {
+              "place": "catedral_metropolitana",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Open daytime; check on the day."
+            },
+            {
+              "place": "mercado_puerto",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Early dinner; many stalls close early evening."
+            }
+          ]
+        },
+        {
+          "title": "Rambla east and Carrasco",
+          "stops": [
+            {
+              "place": "rambla",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk east along the waterfront."
+            },
+            {
+              "place": "carrasco_walk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Daytime; lunch locally."
+            },
+            {
+              "place": "pocitos_beach",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Summer afternoon swim."
+            },
+            {
+              "place": "mercado_agricola",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner at the food stalls; check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then go",
+          "stops": [
+            {
+              "place": "pocitos_beach",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning swim in summer."
+            },
+            {
+              "place": "chivito",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pocitos"
+    }
+  ]
+}

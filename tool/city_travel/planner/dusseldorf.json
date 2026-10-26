@@ -1,0 +1,604 @@
+{
+  "city": "Düsseldorf",
+  "checked": "October 2026",
+  "intro_line": "Düsseldorf blends Rhine-side charm with world-class art and nightlife.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Altstadt",
+        "MedienHafen",
+        "Stadtmitte",
+        "Oberkassel"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Altstadt",
+        "MedienHafen",
+        "Stadtmitte",
+        "Oberkassel"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Altstadt",
+        "MedienHafen",
+        "Stadtmitte",
+        "Oberkassel"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Altstadt",
+        "MedienHafen",
+        "Stadtmitte",
+        "Oberkassel"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Altstadt",
+        "MedienHafen",
+        "Stadtmitte",
+        "Oberkassel"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 17,
+        "note": "Cold and often wet: highs near 6°C, lows near 1°C, about 17 rain days. Pack a warm coat and an umbrella."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 14,
+        "note": "Still chilly: highs near 8°C, lows near 2°C, about 14 rain days. Indoor sights are a good bet."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 14,
+        "note": "Milder: highs near 11°C, lows near 3°C, about 14 rain days. Layers help."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 11,
+        "note": "Spring arrives: highs near 15°C, lows near 5°C, about 11 rain days. Good for walking the Rhine."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Pleasant: highs near 19°C, lows near 9°C, about 12 rain days. Outdoor cafés open up."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Warm: highs near 23°C, lows near 14°C, about 11 rain days. Long evenings in the Altstadt."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Warmest month: highs near 24°C, lows near 15°C, about 13 rain days. Book hotels early."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Similar to July: highs near 24°C, lows near 15°C, about 13 rain days. Busy and lively."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 11,
+        "note": "Still mild: highs near 21°C, lows near 12°C, about 11 rain days. A good shoulder month."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 14,
+        "note": "Cooler: highs near 16°C, lows near 9°C, about 14 rain days. Bring a jacket."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 15,
+        "note": "Cold and grey: highs near 10°C, lows near 5°C, about 15 rain days. Christmas markets may be on; check dates."
+      },
+      {
+        "high": 8,
+        "low": 3,
+        "rain_days": 17,
+        "note": "Coldest and wettest: highs near 8°C, lows near 3°C, about 17 rain days. Warm layers and waterproof shoes."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.55
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.55,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "shopping": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ]
+  },
+  "places": {
+    "rheinturm": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset or evening",
+      "area": "MedienHafen",
+      "popularity": 5
+    },
+    "altstadt": {
+      "types": [
+        "culture",
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "koenigsallee": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Stadtmitte",
+      "popularity": 5
+    },
+    "thefox": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "carlsplatz_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday lunch",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "medienhafen_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon to sunset",
+      "area": "MedienHafen",
+      "popularity": 4
+    },
+    "rhine_promenade": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset on a warm day",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "oberkassel_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Oberkassel",
+      "popularity": 3
+    },
+    "rhine_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring to autumn, daytime",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "kunstpalette": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or weekday",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "schlossturm": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Altstadt",
+      "popularity": 2
+    },
+    "hofgarten": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Stadtmitte",
+      "popularity": 3
+    },
+    "altbier_tasting": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon or evening",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "stadtmitte_shopping": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Stadtmitte",
+      "popularity": 2
+    },
+    "rheinpark_viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Oberkassel",
+      "popularity": 3
+    },
+    "medienhafen_food": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon or early evening",
+      "area": "MedienHafen",
+      "popularity": 3
+    },
+    "altstadt_nightlife": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Friday or Saturday evening",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "rhine_ferry": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime, spring to autumn",
+      "area": "Altstadt",
+      "popularity": 2
+    },
+    "stadtmitte_cafe": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Stadtmitte",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Altstadt, the Rhine promenade and the main art museums, with time for Altbier and a market lunch."
+  },
+  "airports": [
+    {
+      "code": "DUS",
+      "name": "Düsseldorf International Airport",
+      "primary": true,
+      "note": "Main airport, 8 km from centre; S-Bahn and new U-Bahn connect.",
+      "options": [
+        {
+          "mode": "S-Bahn S11",
+          "to": "Hauptbahnhof",
+          "price": "€3.50",
+          "time": "12 min",
+          "note": "Runs every 20 min; ticket valid for onward travel in Düsseldorf."
+        },
+        {
+          "mode": "U-Bahn U80/U81",
+          "to": "City centre",
+          "price": "€3.80",
+          "time": "20-25 min",
+          "note": "New subway extension since Sep 2026; drops you below the city."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40",
+          "time": "20 min",
+          "note": "Fixed rate to Messe is €25."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "20-30 min",
+          "note": "App-based; prices vary."
+        }
+      ]
+    },
+    {
+      "code": "CGN",
+      "name": "Cologne/Bonn Airport",
+      "primary": false,
+      "note": "Alternative entry, 60 min by train; use for cheaper flights.",
+      "options": [
+        {
+          "mode": "Train RE 6 (RRX)",
+          "to": "Düsseldorf Hauptbahnhof",
+          "price": "€15",
+          "time": "60 min",
+          "note": "Direct; buy local transport ticket."
+        },
+        {
+          "mode": "Train S19 + RE 1/RE 5",
+          "to": "Düsseldorf Hauptbahnhof",
+          "price": "€15",
+          "time": "60-70 min",
+          "note": "Change at Köln Messe/Deutz."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€80-100",
+          "time": "50-60 min",
+          "note": "Expensive; train is better."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€70-90",
+          "time": "50-60 min",
+          "note": "Check app for availability."
+        }
+      ]
+    },
+    {
+      "code": "NRN",
+      "name": "Weeze Airport",
+      "primary": false,
+      "note": "Low-cost airport 80 km from Düsseldorf; not directly connected to rail.",
+      "options": [
+        {
+          "mode": "Train RE 10 + bus SW1",
+          "to": "Weeze Airport",
+          "price": "€18-20",
+          "time": "90-120 min",
+          "note": "Train to Weeze, then shuttle bus."
+        },
+        {
+          "mode": "Shuttle bus",
+          "to": "Düsseldorf Hauptbahnhof",
+          "price": "€15-20",
+          "time": "75-90 min",
+          "note": "Check schedule; book in advance."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€120-150",
+          "time": "60-75 min",
+          "note": "Fixed rates may vary."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "€100-130",
+          "time": "60-75 min",
+          "note": "May be limited; check app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Düsseldorf",
+      "https://en.wikivoyage.org/wiki/D%C3%BCsseldorf"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "art",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk in the centre; use U-Bahn and trams for longer hops and always validate your ticket.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Rheinbahn runs U-Bahn, trams and buses. Single ticket €3.80, 24-hour pass €7.60 (2026). Validate before boarding; fines €60 for unstamped tickets."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Rheinbahn buses fill the gaps where trams don't run. Same tickets as U-Bahn and trams; validate before boarding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber, Bolt and Free Now work in Düsseldorf. Handy for late nights and airport runs."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "The city centre is an environmental zone; cars need a pollution sticker. Parking is limited, so a car is best for day trips out of town."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is easy in the compact centre. Bike hire from about €9 a day is a good alternative."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry across the Rhine. Use the bridges to cross between the centre and Oberkassel."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and changeable: mild summers, cool winters, and rain in every month. Pack layers and an umbrella year-round.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 11–17 rain days every month. Showers pass quickly; a small umbrella and a waterproof jacket help."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs around 19–24°C and long evenings. Ideal for the Rhine promenade, Altstadt terraces and parks."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "December to February highs are 6–8°C with lows near 1–3°C. A warm coat, scarf and gloves are worth packing."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Rarely very hot",
+        "text": "Summer highs top out near 24°C. Heatwaves are short; most days are comfortable for walking."
+      },
+      {
+        "icon": "🍂",
+        "title": "Good shoulder months",
+        "text": "April, May, September and October are mild and less crowded. Rain is still likely, so keep plans flexible."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket, an umbrella and comfortable walking shoes. Add a warm coat and gloves for November to March."
+      }
+    ]
+  }
+}

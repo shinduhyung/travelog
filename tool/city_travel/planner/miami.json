@@ -1,0 +1,580 @@
+{
+  "city": "Miami",
+  "checked": "October 2026",
+  "intro_line": "Miami: sun, salsa, and skyline where the Americas meet.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "South Beach",
+        "Downtown/Brickell",
+        "Coconut Grove",
+        "Coral Gables"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "South Beach",
+        "Downtown/Brickell",
+        "Coconut Grove",
+        "Coral Gables"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "South Beach",
+        "Downtown/Brickell",
+        "Coconut Grove",
+        "Coral Gables"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "South Beach",
+        "Downtown/Brickell",
+        "Coconut Grove",
+        "Coral Gables"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "South Beach",
+        "Downtown/Brickell",
+        "Coconut Grove",
+        "Coral Gables"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 11,
+        "note": "Jan: mild and dry, highs near 24°C. Good for walking and the beach on sunny days."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 11,
+        "note": "Feb: similar to Jan, around 25°C. Comfortable, with about 11 rain days."
+      },
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 10,
+        "note": "Mar: warming to 26°C. Pleasant spring weather for sightseeing."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 12,
+        "note": "Apr: warm at 28°C. Beach days get better; rain days rise slightly."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 16,
+        "note": "May: hot and humid, 29°C, with more rain (about 16 days). Plan indoor breaks."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 22,
+        "note": "Jun: hot and wet, 30°C and about 22 rain days. Afternoon storms are common."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 22,
+        "note": "Jul: hottest stretch, 31°C highs and muggy. Carry water and seek shade."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 25,
+        "note": "Aug: hot and the wettest month, about 25 rain days. Watch for storms."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 24,
+        "note": "Sep: still hot and wet, 30°C, about 24 rain days. Hurricane season is active; check forecasts."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 19,
+        "note": "Oct: easing to 29°C, rain days drop to about 19. Still warm and humid."
+      },
+      {
+        "high": 27,
+        "low": 21,
+        "rain_days": 13,
+        "note": "Nov: nicer at 27°C with about 13 rain days. Good all-round month."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 11,
+        "note": "Dec: mild at 25°C and drier. Busy holiday season; book hotels early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.75,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ]
+  },
+  "places": {
+    "south-beach": {
+      "types": [
+        "beach",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon; busiest in spring break season",
+      "area": "South Beach",
+      "popularity": 5
+    },
+    "art-deco": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening when the neon lights come on",
+      "area": "South Beach",
+      "popularity": 5
+    },
+    "miami-beach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning for calm water; avoid midday sun in summer",
+      "area": "South Beach",
+      "popularity": 5
+    },
+    "wynwood-walls": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning; the area gets busy on weekends",
+      "area": "Downtown/Brickell",
+      "popularity": 5
+    },
+    "vizcaya": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning, before the heat and tour buses",
+      "area": "Coconut Grove",
+      "popularity": 4
+    },
+    "millionaires-row-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Downtown/Brickell",
+      "popularity": 4
+    },
+    "american-dream": {
+      "types": [
+        "art"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Weekday to avoid crowds; good rainy-day option",
+      "area": "Downtown/Brickell",
+      "popularity": 3
+    },
+    "burger-king": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time; quick stop",
+      "area": "Downtown/Brickell",
+      "popularity": 2
+    },
+    "popeyes": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch or late evening",
+      "area": "Downtown/Brickell",
+      "popularity": 2
+    },
+    "santas-enchanted-forest": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening in the holiday season",
+      "area": "Downtown/Brickell",
+      "popularity": 3
+    },
+    "zoo-miami": {
+      "types": [
+        "art"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning in cooler months; avoid midday summer heat",
+      "area": "Coconut Grove",
+      "popularity": 4
+    },
+    "lincoln-road": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening when it is cooler",
+      "area": "South Beach",
+      "popularity": 4
+    },
+    "espanola-way": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Dusk into evening",
+      "area": "South Beach",
+      "popularity": 3
+    },
+    "bayside-marketplace": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon before a sunset cruise",
+      "area": "Downtown/Brickell",
+      "popularity": 4
+    },
+    "little-havana-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Downtown/Brickell",
+      "popularity": 4
+    },
+    "coconut-grove-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Coconut Grove",
+      "popularity": 3
+    },
+    "everglades-airboat": {
+      "types": [
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, before the heat",
+      "area": "Coconut Grove",
+      "popularity": 4
+    },
+    "south-pointe-park": {
+      "types": [
+        "beach",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "South Beach",
+      "popularity": 4
+    },
+    "perez-art-museum": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon; check for free or discounted days",
+      "area": "Downtown/Brickell",
+      "popularity": 3
+    },
+    "ocean-drive": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "South Beach",
+      "popularity": 5
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the beach, Wynwood and Little Havana; add a night for the Everglades or the Keys."
+  },
+  "airports": [
+    {
+      "code": "MIA",
+      "name": "Miami International Airport",
+      "primary": true,
+      "note": "Main hub for Latin America and the Caribbean, 10 km west of centre.",
+      "options": [
+        {
+          "mode": "Metrorail",
+          "to": "Government Center downtown",
+          "price": "$2.25",
+          "time": "20-30 min",
+          "note": "Buy an EASY Card or ticket at the station; ride from the MIC via the MIA mover."
+        },
+        {
+          "mode": "Metrobus 150 express",
+          "to": "Miami Beach",
+          "price": "$2.25",
+          "time": "35-50 min",
+          "note": "Cheapest way to the beach; slower with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown or South Beach",
+          "price": "$25-45",
+          "time": "20-35 min",
+          "note": "Fixed rates to the beach areas; ask before you ride."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown or South Beach",
+          "price": "$20-40",
+          "time": "20-35 min",
+          "note": "Pick-up at the rideshare zone."
+        }
+      ]
+    },
+    {
+      "code": "FLL",
+      "name": "Fort Lauderdale Hollywood International Airport",
+      "primary": false,
+      "note": "Smaller low-cost airport 35 km north; easier security.",
+      "options": [
+        {
+          "mode": "Tri-Rail",
+          "to": "Miami Airport station (then Metrorail)",
+          "price": "$5-8",
+          "time": "45-70 min",
+          "note": "Free shuttle bus to the Tri-Rail station; not downtown."
+        },
+        {
+          "mode": "Brightline",
+          "to": "Downtown Miami",
+          "price": "$10-30",
+          "time": "40-60 min",
+          "note": "Fast and comfortable; reach the station by shuttle or taxi."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Miami",
+          "price": "$70-100",
+          "time": "35-60 min",
+          "note": "Traffic can double the time."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Miami",
+          "price": "$50-80",
+          "time": "35-60 min",
+          "note": "Often cheaper than a taxi."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Miami",
+      "https://en.wikivoyage.org/wiki/Miami"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "Walk in dense areas; use Uber or Lyft for longer trips and the beach.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Metrorail runs elevated trains to downtown, the airport and Dadeland; fare about $2.25. Metromover is free and links downtown and Brickell."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metrobus covers the county; route S runs downtown to Miami Beach."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered and pricey; Uber and Lyft work well."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common but traffic and parking are hard; walking is best in dense areas."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best in dense areas like South Beach, Brickell and Coconut Grove."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Tri-Rail commuter trains link Miami, Fort Lauderdale and West Palm Beach."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical Miami: warm most of the year, with a wet, humid summer and a drier, milder winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to April",
+        "text": "Highs around 24–28°C with fewer rain days. Ideal for the beach, walking and outdoor sights."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: June to September",
+        "text": "About 22–25 rain days a month. Expect short, heavy afternoon storms; mornings are often clearer."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid summer",
+        "text": "Highs near 30–31°C and lows around 25–26°C. Muggy nights; plan indoor breaks midday."
+      },
+      {
+        "icon": "🌀",
+        "title": "Hurricane season",
+        "text": "Runs roughly June to November, peaking late summer and autumn. Check forecasts and travel insurance."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach days",
+        "text": "Comfortable from spring to autumn, but summer sun is strong. Use shade and sunscreen."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain jacket or umbrella for summer, sunscreen and a hat; a light layer for cooler winter evenings."
+      }
+    ]
+  }
+}

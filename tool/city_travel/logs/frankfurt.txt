@@ -1,0 +1,31 @@
+$ deepseek_prep.py Frankfurt
+  tokens in 711 out 659
+Frankfurt: 8 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Frankfurt
+  tokens in 4227 out 865
+Frankfurt: 0 problems
+
+$ deepseek_city.py Frankfurt --stage places
+Frankfurt: places
+  tokens in 1175 out 2539
+
+$ deepseek_city.py Frankfurt --stage frame
+Frankfurt: frame
+  tokens in 2447 out 1842
+
+$ deepseek_city.py Frankfurt --stage plans
+Frankfurt: plans
+  plans for day
+  tokens in 1888 out 947
+  plans for 1n
+  tokens in 1889 out 916
+  plans for 2n
+  tokens in 1894 out 1324
+  plans for 3n
+  tokens in 1889 out 1656
+
+$ merge_city.py Frankfurt
+Frankfurt: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/frankfurt.json and planner/frankfurt.json
+

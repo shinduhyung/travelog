@@ -1,0 +1,182 @@
+{
+  "currency": "UYU",
+  "usd_rate": 40.1664,
+  "intro_line": "Montevideo: a calm riverside capital of old cafés and long ramblas.",
+  "intro": "Montevideo rewards visitors with a walkable old town, a lively food scene and a breezy waterfront promenade. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Ciudad Vieja",
+    "El Centro",
+    "Pocitos",
+    "Carrasco"
+  ],
+  "taxi": {
+    "flag_day": 100,
+    "flag_airport": 150,
+    "per_km": 40,
+    "min_fare": 100
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "No metro or tram; buses are the only mass transit.",
+    "Get a free STM card at Abitab; cash fare is about UYU 36, card fares cheaper.",
+    "STM gives 2 buses in 1 hr for about UYU 29, or unlimited buses in 2 hr for about UYU 44.",
+    "Ride apps like Uber work and are often cheaper and safer than street taxis.",
+    "Taxis are metered; a 10-minute ride costs about UYU 100.",
+    "Driving is possible but parking is scarce and expensive; walking is easy in the centre.",
+    "Buquebus ferries link Ciudad Vieja with Buenos Aires and Colonia."
+  ],
+  "airports": [
+    {
+      "code": "MVD",
+      "name": "Carrasco International / General C L Berisso Airport",
+      "primary": true,
+      "note": "Main gateway, about 14 km east of the centre.",
+      "options": [
+        {
+          "mode": "Public bus",
+          "to": "Rio Branco Terminal, city centre",
+          "price": "UYU 107",
+          "time": "60-90 min",
+          "note": "Buses every 10-20 min; pay the driver, get off early for Pocitos or Cordón."
+        },
+        {
+          "mode": "Intercity coach (COT)",
+          "to": "Tres Cruces bus station",
+          "price": "UYU 134",
+          "time": "45-70 min",
+          "note": "Buy in the COT office or on board; check the bus heads west into the city."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or Pocitos",
+          "price": "US$60",
+          "time": "30-45 min",
+          "note": "Private airport taxis are pricey; agree the fare first."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Often cheaper than airport taxis; pick-up point may vary."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ciudad Vieja",
+    "Palacio Salvo",
+    "Plaza Independencia",
+    "Teatro Solis",
+    "Castillo Pittamiglio",
+    "Chivito",
+    "Estadio Centenario",
+    "Fortaleza del Cerro",
+    "Legislative Palace of Uruguay",
+    "Mercado del Puerto",
+    "Metropolitan Cathedral of Montevideo"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Montevideo",
+      "https://en.wikivoyage.org/wiki/Montevideo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -34.9011,
+    -56.1645
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 9
+    },
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 8
+    },
+    {
+      "high": 24,
+      "low": 18,
+      "rain_days": 10
+    },
+    {
+      "high": 21,
+      "low": 16,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 15,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 14,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 11,
+      "rain_days": 7
+    },
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 16,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "MVD taxi US$60 vs tariff estimate 878",
+    "MVD Public bus UYU 107 costs more than taxi US$60"
+  ]
+}

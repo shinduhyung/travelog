@@ -1,0 +1,973 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A compact culture day: Old Town first, then a museum, with a lakeside finish.",
+      "days": [
+        {
+          "title": "Old Town, cathedral and a museum",
+          "stops": [
+            {
+              "place": "oldtown_walk",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start at Place du Bourg-de-Four. Lanes are quiet in the morning."
+            },
+            {
+              "place": "stpierre",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Climb the towers for the view if it is clear. Shorter hours on Sunday."
+            },
+            {
+              "place": "bastions",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Ten minutes downhill. Look for the Reformation Wall."
+            },
+            {
+              "place": "plainpalais_market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch from stalls if the market is on; often Wednesday and Saturday. Check on the day."
+            },
+            {
+              "place": "mamco",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. A short walk from the park."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Tram or a 25-minute walk to the lake. Good light late in the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Lake, parks and a mountain view, all on foot and by tram.",
+      "days": [
+        {
+          "title": "Lakeside morning, Salève afternoon",
+          "stops": [
+            {
+              "place": "english_garden",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "See the flower clock and the Jet d'Eau from the shore."
+            },
+            {
+              "place": "jetdeau",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Walk along the pier. It sprays in season; check on the day."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Swim or sit on the deck. Simple lunch here is a local favourite."
+            },
+            {
+              "place": "telepherique",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Bus to the cable car, then ride up. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "mont_saleve_view",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short walk from the top station. Clear afternoons give the best Alpine views."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eaux-Vives"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets, lakeside snacks and a fondue dinner, with light sightseeing between.",
+      "days": [
+        {
+          "title": "Market morning, lake afternoon",
+          "stops": [
+            {
+              "place": "plainpalais_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Browse stalls and snack. Often Wednesday and Saturday; check on the day."
+            },
+            {
+              "place": "carouge_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short tram ride. Cafes and food shops; shops closed Sunday."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch by the water. Seasonal hours."
+            },
+            {
+              "place": "jetdeau",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Walk the pier to work off lunch."
+            },
+            {
+              "place": "oldtown_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "End in the Old Town for fondue or lake fish. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pâquis"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Old Town lanes, the cathedral and a museum on a short first visit.",
+      "days": [
+        {
+          "title": "Old Town and the lakefront",
+          "stops": [
+            {
+              "place": "oldtown_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Start at Place du Bourg-de-Four. Cobbled lanes, easy to wander."
+            },
+            {
+              "place": "stpierre",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Climb the towers if the weather is clear. Shorter hours on Sunday."
+            },
+            {
+              "place": "english_garden",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Lunch nearby, then walk to the flower clock and lake."
+            },
+            {
+              "place": "jetdeau",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short walk along the waterfront. Best light late afternoon."
+            },
+            {
+              "place": "rues_basses",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Shopping streets. Shops closed on Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Pâquis",
+          "stops": [
+            {
+              "place": "unog",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Book a weekday guided tour ahead. Bring photo ID."
+            },
+            {
+              "place": "broken_chair",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Across the road from the UN entrance."
+            },
+            {
+              "place": "red_cross",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Lunch or a swim in summer. Seasonal hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town or Pâquis"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Lake views, a boat ride and a mountain panorama in one day.",
+      "days": [
+        {
+          "title": "Lake and waterfront",
+          "stops": [
+            {
+              "place": "english_garden",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Start by the flower clock."
+            },
+            {
+              "place": "jetdeau",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Walk the pier for the spray. Often runs into the evening in season."
+            },
+            {
+              "place": "lakegenevatour",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Short cruise from the Eaux-Vives side. Seasonal timetable."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch by the lake, then stroll. Good at sunset too."
+            }
+          ]
+        },
+        {
+          "title": "Salève and parks",
+          "stops": [
+            {
+              "place": "telepherique",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Cable car up the Salève. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "mont_saleve_view",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Ridge walk with city views. Bring a layer, it is cooler up top."
+            },
+            {
+              "place": "bastions",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Back in town. Shady park with the Reformation Wall."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Swim or a lakeside drink. Seasonal hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eaux-Vives or Pâquis"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets, lakeside snacks and a proper fondue dinner.",
+      "days": [
+        {
+          "title": "Old Town tastes",
+          "stops": [
+            {
+              "place": "oldtown_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Wander the lanes and note chocolate and cheese shops."
+            },
+            {
+              "place": "stpierre",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Quick look inside. Shorter hours on Sunday."
+            },
+            {
+              "place": "rues_basses",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the shopping streets. Shops closed Sunday."
+            },
+            {
+              "place": "english_garden",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Walk off lunch by the lake."
+            },
+            {
+              "place": "jetdeau",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Waterfront stroll. Late afternoon light is best."
+            }
+          ]
+        },
+        {
+          "title": "Market and Pâquis",
+          "stops": [
+            {
+              "place": "plainpalais_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Often Wednesday and Saturday mornings. Check on the day."
+            },
+            {
+              "place": "plaine_de_plainpalais",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Open square next to the market."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Simple lakeside lunch. Seasonal hours."
+            },
+            {
+              "place": "broken_chair",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Short stop on the way to the UN area."
+            },
+            {
+              "place": "red_cross",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pâquis or Plainpalais"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want Old Town lanes, the cathedral and Geneva's best museums, with a lakefront breather.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "oldtown_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start at Place du Bourg-de-Four. Cobbles, so wear flat shoes."
+            },
+            {
+              "place": "stpierre",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Climb the tower for the view if it is clear. Shorter hours on Sunday."
+            },
+            {
+              "place": "bastions",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch nearby, then the Reformation Wall in the park."
+            },
+            {
+              "place": "mamco",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "plaine_de_plainpalais",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Open square; easy tram back to the centre."
+            }
+          ]
+        },
+        {
+          "title": "International Geneva and the lake",
+          "stops": [
+            {
+              "place": "broken_chair",
+              "at": "09:15",
+              "minutes": 15,
+              "note": "Quick photo stop opposite the UN gates."
+            },
+            {
+              "place": "unog",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday guided tours only; book ahead. Bring photo ID."
+            },
+            {
+              "place": "red_cross",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Closed Monday. Short walk from the UN."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Coffee or a swim, depending on the season."
+            },
+            {
+              "place": "jetdeau",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Walk the pier for the closest view. Often runs into the evening in season."
+            }
+          ]
+        },
+        {
+          "title": "Carouge, then depart",
+          "stops": [
+            {
+              "place": "carouge_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops closed Sunday. Trams run from the centre."
+            },
+            {
+              "place": "plainpalais_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Often Wednesday and Saturday mornings; check on the day."
+            },
+            {
+              "place": "patek",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "english_garden",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Flower clock and lake views before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town or Pâquis"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want the lake, the mountains and long walks, with museums only for rainy hours.",
+      "days": [
+        {
+          "title": "Lakefront and the Jet d'Eau",
+          "stops": [
+            {
+              "place": "english_garden",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Start here and follow the water east."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Flat lakeside path; benches all along."
+            },
+            {
+              "place": "jetdeau",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "You will get wet if the wind turns. Check on the day."
+            },
+            {
+              "place": "lakegenevatour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal timetable; book a slot in summer."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Swim or just sit on the terrace. Seasonal hours."
+            }
+          ]
+        },
+        {
+          "title": "Up the Salève",
+          "stops": [
+            {
+              "place": "telepherique",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Mondays in some seasons; check on the day. Bring a jacket."
+            },
+            {
+              "place": "mont_saleve_view",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Ridge paths above the cable car. Clear afternoons are best."
+            },
+            {
+              "place": "carouge_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Back down via Carouge for an early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Parks and a rainy-day backup",
+          "stops": [
+            {
+              "place": "bastions",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quiet in the morning."
+            },
+            {
+              "place": "plaine_de_plainpalais",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Open square; trams on all sides."
+            },
+            {
+              "place": "red_cross",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Closed Monday. Good indoor option if it rains."
+            },
+            {
+              "place": "rues_basses",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Shops closed Sunday. Last-minute gifts."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eaux-Vives or Pâquis"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, fondue and lakeside terraces, with light sightseeing in between.",
+      "days": [
+        {
+          "title": "Markets and the Old Town",
+          "stops": [
+            {
+              "place": "plainpalais_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Often Wednesday and Saturday mornings; check on the day. Bring cash."
+            },
+            {
+              "place": "oldtown_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Work up an appetite through the lanes."
+            },
+            {
+              "place": "stpierre",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Short visit; the tower climb is optional."
+            },
+            {
+              "place": "mamco",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "carouge_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Good dinner territory; book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Lake day with a long lunch",
+          "stops": [
+            {
+              "place": "english_garden",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Easy start by the water."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk east along the lake."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Canteen-style lunch on the pier. Seasonal hours."
+            },
+            {
+              "place": "lakegenevatour",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Seasonal timetable; check sailings on the day."
+            },
+            {
+              "place": "jetdeau",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Five minutes from the pier."
+            }
+          ]
+        },
+        {
+          "title": "Pâquis bites, then depart",
+          "stops": [
+            {
+              "place": "broken_chair",
+              "at": "10:00",
+              "minutes": 15,
+              "note": "Quick stop near the UN."
+            },
+            {
+              "place": "unog",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Weekday tours only; book ahead."
+            },
+            {
+              "place": "rues_basses",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Chocolate and bakery stops. Shops closed Sunday."
+            },
+            {
+              "place": "patek",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pâquis or Old Town"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want Old Town lanes, the cathedral and Geneva's best museums at an easy pace.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "oldtown_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start at Place du Bourg-de-Four. Cobbled lanes, so wear comfy shoes."
+            },
+            {
+              "place": "stpierre",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Climb the tower for views if the weather is clear. Shorter hours on Sunday."
+            },
+            {
+              "place": "english_garden",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby, then the flower clock and lakefront."
+            },
+            {
+              "place": "jetdeau",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short walk along the lake. Best late afternoon or evening light."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Plainpalais",
+          "stops": [
+            {
+              "place": "bastions",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Reformation Wall and big chess boards. Open daily."
+            },
+            {
+              "place": "unige",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Campus next to the park. Generally open on weekdays."
+            },
+            {
+              "place": "mamco",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "patek",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Watches and enamel, a Geneva classic."
+            },
+            {
+              "place": "plainpalais_market",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Only some mornings, often Wednesday and Saturday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "International Geneva, then Carouge",
+          "stops": [
+            {
+              "place": "broken_chair",
+              "at": "09:00",
+              "minutes": 15,
+              "note": "Photo stop before the UN. Always open."
+            },
+            {
+              "place": "unog",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday guided tours only. Book ahead and bring photo ID."
+            },
+            {
+              "place": "red_cross",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Closed Monday. A short walk from the UN."
+            },
+            {
+              "place": "carouge_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Tram from the centre. Shops closed on Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town or Pâquis"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want the lake, lakeside walks and a mountain day above the city.",
+      "days": [
+        {
+          "title": "Lakefront and the Jet d'Eau",
+          "stops": [
+            {
+              "place": "english_garden",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Start by the flower clock. Open daily."
+            },
+            {
+              "place": "jetdeau",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Walk the pier to the fountain. Spray can soak you."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Follow the lake east. Best at sunset, but fine now too."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and a swim in summer. Seasonal hours."
+            }
+          ]
+        },
+        {
+          "title": "Lake cruise and parks",
+          "stops": [
+            {
+              "place": "lakegenevatour",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Departures through the day. Seasonal timetable, so check on the day."
+            },
+            {
+              "place": "plaine_de_plainpalais",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Open space in the city centre. Open daily."
+            },
+            {
+              "place": "bastions",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Shady park, good for a picnic."
+            },
+            {
+              "place": "carouge_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Leafy streets and cafés. Shops closed on Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Up the Salève",
+          "stops": [
+            {
+              "place": "telepherique",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Cable car is just over the French border. Closed Mondays in some seasons, so check on the day."
+            },
+            {
+              "place": "mont_saleve_view",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Ridge views over the city and lake. Bring a jacket."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Back down for an evening lakeside stroll."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Eaux-Vives or Pâquis"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, fondue, lake fish and chocolate.",
+      "days": [
+        {
+          "title": "Old Town tastes",
+          "stops": [
+            {
+              "place": "oldtown_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Build an appetite in the lanes. Always open."
+            },
+            {
+              "place": "stpierre",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Quick visit before lunch. Shorter hours on Sunday."
+            },
+            {
+              "place": "rues_basses",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Shopping streets with chocolate and pastry shops. Closed Sunday."
+            },
+            {
+              "place": "jetdeau",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Walk off lunch along the lake."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and Carouge",
+          "stops": [
+            {
+              "place": "plainpalais_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Often Wednesday and Saturday mornings. Check on the day and bring cash."
+            },
+            {
+              "place": "plaine_de_plainpalais",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Next to the market. Open daily."
+            },
+            {
+              "place": "carouge_walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Cafés and food shops. Shops closed on Sunday."
+            },
+            {
+              "place": "bains_des_paquis",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Lakeside lunch, fondue in cooler months. Seasonal hours."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a lake dinner",
+          "stops": [
+            {
+              "place": "patek",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "mamco",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "eauxvives_promenade",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Sunset walk before dinner."
+            },
+            {
+              "place": "lakegenevatour",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening departures depend on the season. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Pâquis or Plainpalais"
+    }
+  ]
+}

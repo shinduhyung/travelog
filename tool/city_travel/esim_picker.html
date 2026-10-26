@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>eSIM Plan Picker</title>
+<!--
+  tool/city_travel/esim_picker.html
+
+  Pick a country, trip dates and data use, and see Airalo plans and prices here;
+  only "Checkout on Airalo" leaves the page, through our Impact tracking link for
+  that exact package. Plans come from airalo/packages.js, built from the Impact
+  catalog export by airalo/build_packages.py. Open with ?country=Japan to preselect.
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;600;700&display=swap">
+<style>
+:root {
+  --bg: #f8f5f3; --surface: #ffffff; --ink: #1e1715; --muted: #6f625e; --line: #ebe2de;
+  --accent: #c42a1f; --accent-ink: #ffffff; --accent-soft: rgba(196, 42, 31, .08);
+  --good: #0f6e56; --good-soft: rgba(15, 110, 86, .1);
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #141010; --surface: #1e1817; --ink: #f4ece9; --muted: #ab9e99; --line: #332a28;
+  --accent: #ff6b5d; --accent-ink: #1e0d0b; --accent-soft: rgba(255, 107, 93, .12);
+  --good: #5fd3ad; --good-soft: rgba(95, 211, 173, .12); color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 var(--font-body);
+  padding: 20px max(16px, env(safe-area-inset-left, 0px)) 40px; }
+main { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+h1 { font: 800 28px/1.1 var(--font-display); margin: 0; }
+.lede { margin: 4px 0 0; color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+label, .lbl { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+input, select { font: 15px var(--font-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; text-transform: none; letter-spacing: 0; }
+input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { font: 600 14px var(--font-body); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.use { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.use button { text-align: left; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 10px; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+.use button b { font-size: 14px; }
+.use button span { font-size: 12px; color: var(--muted); }
+.use button[aria-pressed="true"] { border: 2px solid var(--accent); background: var(--accent-soft); padding: 9px; }
+.need { margin: 0; font-size: 14px; }
+.need b { font-variant-numeric: tabular-nums; }
+.plans { display: flex; flex-direction: column; gap: 10px; }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+.plan.best { border: 2px solid var(--good); padding: 13px 15px; }
+.tag { grid-column: 1 / -1; justify-self: start; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--good); background: var(--good-soft); padding: 3px 8px; border-radius: 999px; }
+.tag.warn { color: var(--accent); background: var(--accent-soft); }
+.plan h3 { margin: 0; font: 800 20px/1.2 var(--font-display); font-variant-numeric: tabular-nums; }
+.plan .sub { margin: 0; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.price { text-align: right; }
+.price b { font: 800 24px/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.price span { display: block; font-size: 12px; color: var(--muted); }
+.buy { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.buy a { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 700; font-size: 14px; padding: 9px 16px; border-radius: 999px; }
+.buy small { color: var(--muted); font-size: 12px; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px 16px; }
+details summary { cursor: pointer; font-weight: 700; }
+details .plans { margin-top: 10px; }
+.note { font-size: 13px; color: var(--muted); }
+.empty { padding: 16px; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; }
+@media (max-width: 480px) { .use { grid-template-columns: 1fr; } .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Stay connected</h1>
+    <p class="lede">Compare Airalo eSIM plans for your trip. You only leave Travelog to pay.</p>
+  </header>
+
+  <section class="card" aria-label="Your trip">
+    <label for="country">Country
+      <input id="country" list="countryList" autocomplete="off" placeholder="Start typing a country">
+      <datalist id="countryList"></datalist>
+    </label>
+    <div class="row">
+      <label for="from">Arrive<input id="from" type="date"></label>
+      <label for="to">Leave<input id="to" type="date"></label>
+    </div>
+    <div>
+      <p class="lbl" id="lblDays">Or pick a trip length</p>
+      <div class="chips" role="group" aria-labelledby="lblDays" id="dayChips"></div>
+    </div>
+    <div>
+      <p class="lbl" id="lblUse">How do you use data?</p>
+      <div class="use" role="group" aria-labelledby="lblUse" id="useBtns"></div>
+    </div>
+    <p class="need" id="need" aria-live="polite"></p>
+  </section>
+
+  <section aria-label="Plans" aria-live="polite">
+    <div class="plans" id="plans"></div>
+    <details id="moreBox" hidden><summary id="moreTitle">More plans</summary><div class="plans" id="more"></div></details>
+    <details id="regionBox" hidden><summary>Visiting more than one country?</summary><p class="note" id="regionNote"></p><div class="plans" id="regions"></div></details>
+  </section>
+
+  <p class="note" id="foot"></p>
+</main>
+
+<script src="airalo/packages.js"></script>
+<script>
+"use strict";
+const data = window.AIRALO_PACKAGES;
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const money = (v) => "$" + (Number.isInteger(v) ? v : v.toFixed(2));
+
+// GB per day, rough: messaging + maps; + photos and social; + streaming and hotspot
+const USES = [
+  { id: "light", label: "Light", hint: "Maps & messaging", perDay: 0.3 },
+  { id: "normal", label: "Regular", hint: "Plus photos & social", perDay: 0.8 },
+  { id: "heavy", label: "Heavy", hint: "Video & hotspot", perDay: 2 },
+];
+const DAY_CHIPS = [1, 3, 5, 7, 10, 14, 30];
+// Countries in each regional plan aren't listed in the catalog; these are the
+// regions that plainly cover a given country.
+const REGION_HINTS = { "Middle East and North Africa": ["United Arab Emirates", "Saudi Arabia", "Qatar", "Oman", "Bahrain", "Kuwait", "Jordan", "Egypt", "Morocco", "Tunisia", "Israel", "Turkey"] };
+
+const state = { country: "United Arab Emirates", days: 3, use: "normal" };
+try {
+  const q = new URLSearchParams(location.search).get("country");
+  if (q && data.countries[q]) state.country = q;
+} catch (_) {}
+
+$("countryList").innerHTML = Object.keys(data.countries).map((c) => `<option value="${esc(c)}">`).join("");
+$("country").value = state.country;
+$("dayChips").innerHTML = DAY_CHIPS.map((d) => `<button type="button" data-days="${d}">${d} day${d > 1 ? "s" : ""}</button>`).join("");
+$("useBtns").innerHTML = USES.map((u) => `<button type="button" data-use="${u.id}"><b>${u.label}</b><span>${u.hint}</span></button>`).join("");
+$("foot").textContent = `Prices from Airalo's affiliate catalog, last updated ${data.prices_as_of}. The final price is shown at Airalo checkout and may differ. We may earn a commission at no extra cost to you.`;
+
+function needGB() {
+  const u = USES.find((x) => x.id === state.use);
+  return Math.max(1, Math.ceil(state.days * u.perDay));
+}
+
+function planCard(p, opts = {}) {
+  const gb = p.gb == null ? "Unlimited" : `${p.gb % 1 ? p.gb : p.gb.toFixed(0)} GB`;
+  const perDay = p.price / Math.min(p.days, state.days);
+  const tag = opts.best ? '<span class="tag">Best fit for your trip</span>'
+    : opts.short ? '<span class="tag warn">Shorter than your trip</span>'
+    : opts.low ? '<span class="tag warn">Less data than you may need</span>' : "";
+  return `<article class="plan${opts.best ? " best" : ""}">
+    ${tag}
+    <div><h3>${esc(gb)} · ${p.days} days</h3>
+      <p class="sub">${esc(opts.place || state.country)}${p.region_of ? ` · ${p.region_of} countries` : ""} · ≈ ${money(+perDay.toFixed(2))} a day of your trip</p></div>
+    <div class="price"><b>${money(p.price)}</b><span>${esc(p.currency)}</span></div>
+    <div class="buy"><small>Price checked ${esc(p.updated)}</small>
+      <a href="${esc(p.url)}" target="_blank" rel="noopener sponsored">Checkout on Airalo
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </article>`;
+}
+
+function render() {
+  document.querySelectorAll("#dayChips button").forEach((b) => b.setAttribute("aria-pressed", +b.dataset.days === state.days && !$("from").value));
+  document.querySelectorAll("#useBtns button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.use === state.use));
+  const plans = data.countries[state.country];
+  if (!plans) {
+    $("need").textContent = "";
+    $("plans").innerHTML = `<p class="empty">No Airalo plans found for "${esc(state.country)}". Check the spelling, or choose a country from the list.</p>`;
+    $("moreBox").hidden = $("regionBox").hidden = true;
+    return;
+  }
+  const need = needGB();
+  $("need").innerHTML = `For <b>${state.days} day${state.days > 1 ? "s" : ""}</b> of ${USES.find((u) => u.id === state.use).label.toLowerCase()} use you'll want about <b>${need} GB</b>.`;
+
+  const enough = (p) => p.gb == null || p.gb >= need;
+  const covers = plans.filter((p) => p.days >= state.days);
+  const fits = covers.filter(enough).sort((a, b) => a.price - b.price);
+  const best = fits[0];
+  let shown = [];
+  if (best) {
+    shown.push(planCard(best, { best: true }));
+    fits.slice(1, 3).forEach((p) => shown.push(planCard(p)));
+  } else if (covers.length) {
+    const biggest = covers.sort((a, b) => (b.gb ?? 1e9) - (a.gb ?? 1e9) || a.price - b.price)[0];
+    shown.push(planCard(biggest, { low: true }));
+  } else {
+    const longest = [...plans].sort((a, b) => b.days - a.days || a.price - b.price)[0];
+    shown.push(planCard(longest, { short: true }));
+    shown.push(`<p class="note">No single ${esc(state.country)} plan lasts ${state.days} days. You can top up the same eSIM in the Airalo app when it runs out.</p>`);
+  }
+  $("plans").innerHTML = shown.join("");
+
+  $("moreBox").hidden = plans.length < 2;
+  $("moreTitle").textContent = `All ${plans.length} ${state.country} plans`;
+  $("more").innerHTML = plans.map((p) => planCard(p, { short: p.days < state.days, low: p.days >= state.days && !enough(p) })).join("");
+
+  const regionNames = Object.keys(REGION_HINTS).filter((r) => REGION_HINTS[r].includes(state.country) && data.regions[r]);
+  const regionPlans = regionNames.flatMap((r) => data.regions[r].filter((p) => p.days >= state.days && enough(p)).map((p) => ({ ...p, _place: r })))
+    .sort((a, b) => a.price - b.price).slice(0, 3);
+  $("regionBox").hidden = !regionPlans.length;
+  $("regionNote").textContent = regionPlans.length ? "One eSIM for several countries in the region. Usually costs more than a single-country plan." : "";
+  $("regions").innerHTML = regionPlans.map((p) => planCard(p, { place: p._place })).join("");
+}
+
+function daysFromDates() {
+  const a = $("from").value, b = $("to").value;
+  if (!a || !b) return null;
+  const d = Math.round((new Date(b) - new Date(a)) / 864e5) + 1;   // arrival and departure days both count
+  return d >= 1 ? d : null;
+}
+
+$("country").addEventListener("change", () => { state.country = $("country").value.trim(); render(); });
+$("country").addEventListener("input", () => { if (data.countries[$("country").value]) { state.country = $("country").value; render(); } });
+["from", "to"].forEach((id) => $(id).addEventListener("change", () => {
+  const d = daysFromDates();
+  if (d) { state.days = d; render(); }
+  else if ($("from").value && $("to").value) { $("need").textContent = "The leaving date is before the arrival date."; }
+}));
+$("dayChips").addEventListener("click", (e) => {
+  const b = e.target.closest("button"); if (!b) return;
+  $("from").value = $("to").value = "";
+  state.days = +b.dataset.days; render();
+});
+$("useBtns").addEventListener("click", (e) => {
+  const b = e.target.closest("button"); if (!b) return;
+  state.use = b.dataset.use; render();
+});
+render();
+</script>
+</body>
+</html>

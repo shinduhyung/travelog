@@ -42,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A18B1018C0DE000000003BC4 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = "th.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A18B1018C0DE00000000361F /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = "id.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A18B1018C0DE346F6A856B1E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A18B1018C0DE346F6A856B1D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A18B1018C0DE000000003ACB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -241,6 +243,8 @@
 				ru,
 				"zh-Hans",
 				"zh-Hant",
+				id,
+				th,
 				Base,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
@@ -398,6 +402,8 @@
 		A18B10180000000000000002 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
+				A18B1018C0DE000000003BC4 /* th */,
+				A18B1018C0DE00000000361F /* id */,
 				A18B1018C0DE346F6A856B1E /* zh-Hant */,
 				A18B1018C0DE346F6A856B1D /* zh-Hans */,
 				A18B1018C0DE000000003ACB /* ru */,

@@ -1,0 +1,27 @@
+$ deepseek_facts.py Riga
+  tokens in 4031 out 612
+Riga: 0 problems
+
+$ deepseek_city.py Riga --stage places
+Riga: places
+  tokens in 1191 out 2410
+
+$ deepseek_city.py Riga --stage frame
+Riga: frame
+  tokens in 2512 out 1914
+
+$ deepseek_city.py Riga --stage plans
+Riga: plans
+  plans for day
+  tokens in 1844 out 833
+  plans for 1n
+  tokens in 1845 out 1213
+  plans for 2n
+  tokens in 1850 out 1426
+  plans for 3n
+  tokens in 1845 out 1869
+
+$ merge_city.py Riga
+Riga: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/riga.json and planner/riga.json
+

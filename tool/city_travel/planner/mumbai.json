@@ -1,0 +1,581 @@
+{
+  "city": "Mumbai",
+  "checked": "October 2026",
+  "intro_line": "Mumbai: where dreams, chaos and the Arabian Sea collide.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Colaba",
+        "Fort",
+        "Bandra",
+        "Juhu"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Colaba",
+        "Fort",
+        "Bandra",
+        "Juhu"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Colaba",
+        "Fort",
+        "Bandra",
+        "Juhu"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Colaba",
+        "Fort",
+        "Bandra",
+        "Juhu"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Colaba",
+        "Fort",
+        "Bandra",
+        "Juhu"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 0,
+        "note": "January: dry and mild, highs near 29°C. Great for walking and sightseeing."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 0,
+        "note": "February: dry and warm, around 31°C. Comfortable days, cool evenings."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 0,
+        "note": "March: dry and hotter, up to 32°C. Start sightseeing early."
+      },
+      {
+        "high": 33,
+        "low": 25,
+        "rain_days": 0,
+        "note": "April: hot at 33°C and dry. Carry water and plan indoor breaks."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 3,
+        "note": "May: hot and humid, a few rain days. Pre-monsoon showers can appear."
+      },
+      {
+        "high": 30,
+        "low": 27,
+        "rain_days": 26,
+        "note": "June: monsoon starts; heavy rain on most days. Pack rain gear and expect delays."
+      },
+      {
+        "high": 28,
+        "low": 26,
+        "rain_days": 31,
+        "note": "July: wettest month, rain almost daily. Indoor sights and cafés are best."
+      },
+      {
+        "high": 28,
+        "low": 25,
+        "rain_days": 30,
+        "note": "August: still very wet. Flooding is possible; check conditions before going out."
+      },
+      {
+        "high": 28,
+        "low": 25,
+        "rain_days": 27,
+        "note": "September: rain continues but eases late in the month. Carry an umbrella."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 11,
+        "note": "October: rain tapers off; warmer and drier days return."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 2,
+        "note": "November: dry and pleasant, around 32°C. A good month to visit."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 1,
+        "note": "December: dry and mild, highs near 31°C. Busy season; book hotels early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.4,
+      0.35,
+      0.35,
+      0.45,
+      0.85,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.95,
+      0.9,
+      0.75,
+      0.5,
+      0.45,
+      0.45,
+      0.55,
+      0.9,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.4,
+      0.35,
+      0.35,
+      0.45,
+      0.85,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.85,
+      1,
+      1
+    ],
+    "beach": [
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.6,
+      0.25,
+      0.2,
+      0.2,
+      0.3,
+      0.75,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "gateway": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or after sunset",
+      "area": "Colaba",
+      "popularity": 5
+    },
+    "cst": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Late afternoon light on the facade",
+      "area": "Fort",
+      "popularity": 5
+    },
+    "elephanta": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Morning ferry, cooler months",
+      "area": "Colaba",
+      "popularity": 4
+    },
+    "taj": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon tea or evening",
+      "area": "Colaba",
+      "popularity": 5
+    },
+    "marine": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Fort",
+      "popularity": 5
+    },
+    "dhobi": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "chor": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "mandai": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "slumdog": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime with a guide",
+      "area": "Bandra",
+      "popularity": 2
+    },
+    "snow": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday to avoid queues",
+      "area": "Bandra",
+      "popularity": 2
+    },
+    "colaba_causeway": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Colaba",
+      "popularity": 4
+    },
+    "cafe_leopold": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or late evening",
+      "area": "Colaba",
+      "popularity": 4
+    },
+    "bandra_promenade": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Bandra",
+      "popularity": 3
+    },
+    "juhu_beach": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Juhu",
+      "popularity": 4
+    },
+    "haji_ali": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or low tide",
+      "area": "Bandra",
+      "popularity": 4
+    },
+    "dharavi_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Bandra",
+      "popularity": 3
+    },
+    "fort_walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "crawford_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Lunch or early evening",
+      "area": "Fort",
+      "popularity": 4
+    },
+    "malabar_hill": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Colaba",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Colaba, the Gateway, Elephanta and a food crawl; add a night for Bandra and the suburbs."
+  },
+  "airports": [
+    {
+      "code": "BOM",
+      "name": "Chhatrapati Shivaji Maharaj International Airport",
+      "primary": true,
+      "note": "Main gateway, about 2 km from the centre.",
+      "options": [
+        {
+          "mode": "Metro Aqua Line",
+          "to": "BKC and Colaba",
+          "price": "₹10-70",
+          "time": "30-50 min",
+          "note": "Cheapest and most comfortable option."
+        },
+        {
+          "mode": "Suburban train",
+          "to": "Andheri and Western Line",
+          "price": "₹5-50",
+          "time": "15-25 min",
+          "note": "Vile Parle and Andheri stations are close to the airport."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city points",
+          "price": "₹50-150",
+          "time": "40-70 min",
+          "note": "Check locally for routes."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹400-700",
+          "time": "30-60 min",
+          "note": "Use the prepaid counter inside the terminal."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹350-650",
+          "time": "30-60 min",
+          "note": "Pick-up zones are signposted."
+        }
+      ]
+    },
+    {
+      "code": "NMI",
+      "name": "Navi Mumbai International Airport",
+      "primary": false,
+      "note": "New airport opened 2025, mainly domestic; far from central Mumbai.",
+      "options": [
+        {
+          "mode": "Suburban train",
+          "to": "Navi Mumbai and Central Line",
+          "price": "₹10-60",
+          "time": "check locally",
+          "note": "Nearest stations serve the Central and Harbour lines."
+        },
+        {
+          "mode": "Bus",
+          "to": "Navi Mumbai and Mumbai",
+          "price": "₹50-150",
+          "time": "check locally",
+          "note": "Check locally for routes."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Mumbai",
+          "price": "₹800-1200",
+          "time": "60-90 min",
+          "note": "Long ride; agree the fare first."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "Central Mumbai",
+          "price": "₹700-1100",
+          "time": "60-90 min",
+          "note": "Check app availability on arrival."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Mumbai",
+      "https://en.wikivoyage.org/wiki/Mumbai"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Use the metro and local trains for speed; Uber or Ola for door-to-door trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Modern and fast. The Aqua Line links the airport to BKC and Colaba."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Suburban 'local' trains are the city's artery. Buy a ₹275 Tourist Ticket for first class all day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap and everywhere. Use the m-Indicator app to plan routes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered black-and-yellow taxis and blue cabs are common; agree the fare or insist on the meter. Uber and Ola work well."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries from Ferry Wharf reach Elephanta Island and nearby beaches."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not practical for most visitors; traffic is heavy and parking is hard. Use taxis and trains instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in Colaba and Fort for sights. Use transport for longer trips, especially in heat or rain."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical monsoon climate: hot and humid most of the year, with a long, very wet monsoon from June to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Dry days around 29–32°C with cooler evenings. Ideal for walking, ferries and street food."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon: June to September",
+        "text": "Rain on most days, heaviest in July and August. Expect wet streets and possible travel delays."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid April to May",
+        "text": "Highs near 33°C with rising humidity. Sightsee early morning and rest in the afternoon."
+      },
+      {
+        "icon": "🌂",
+        "title": "Carry rain gear in monsoon",
+        "text": "An umbrella or light raincoat is essential from June to September."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity all year",
+        "text": "It feels hotter than the numbers. Light, breathable clothes help."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, comfortable walking shoes, sunscreen and a hat; add rain gear for the monsoon months."
+      }
+    ]
+  }
+}

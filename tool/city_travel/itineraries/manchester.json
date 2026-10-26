@@ -1,0 +1,1239 @@
+{
+  "city": "Manchester",
+  "checked": "October 2026",
+  "currency": "GBP",
+  "usd_rate": 0.7467,
+  "intro": "Manchester rewards visitors with world-class museums, a legendary music scene and a buzzing food and bar culture. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 53.4461,
+      "west": -2.3054,
+      "north": 53.4941,
+      "east": -2.1863,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4.5,
+      "per_km": 2.0,
+      "min_fare": 4.0
+    },
+    "road_factor": 1.35,
+    "city_kmh": 18,
+    "notes": [
+      "Metrolink tram is quick and covers the centre and suburbs; Zone 1 is free with some train tickets.",
+      "Bee Network buses are yellow and franchised; single fares are around £2.",
+      "Taxis are metered; Uber, Bolt and local apps all work in the city.",
+      "Driving in the centre is slow and parking is costly; use park and ride instead.",
+      "The centre is compact and walkable; Starling Bikes offers bike share with e-bikes.",
+      "No ferry in the city; the nearest cruise terminal is Liverpool."
+    ],
+    "sources": []
+  },
+  "places": {
+    "old_trafford": {
+      "name": "Old Trafford",
+      "landmark": "Old Trafford",
+      "kind": "sight",
+      "lat": 53.4631,
+      "lon": -2.2913,
+      "price": null,
+      "price_text": "Stadium tour prices vary; check on the day",
+      "hours": "Tour times vary by match calendar; check on the day",
+      "tip": "Book a stadium tour online in advance and avoid home match days if you want a quiet visit.",
+      "source": "https://www.manutd.com/en/visit-old-trafford"
+    },
+    "science_industry_museum": {
+      "name": "Science and Industry Museum",
+      "landmark": "Science and Industry Museum",
+      "kind": "museum",
+      "lat": 53.4772,
+      "lon": -2.2511,
+      "price": 0,
+      "price_text": "Free entry; some special exhibitions charge",
+      "hours": "Daily roughly 10:00–17:00; check on the day",
+      "tip": "Start with the Power Hall and textile machinery to understand why Manchester grew.",
+      "source": "https://www.scienceandindustrymuseum.org.uk/"
+    },
+    "manchester_art_gallery": {
+      "name": "Manchester Art Gallery",
+      "landmark": "Manchester Art Gallery",
+      "kind": "museum",
+      "lat": 53.4792,
+      "lon": -2.2375,
+      "price": 0,
+      "price_text": "Free entry; some exhibitions charge",
+      "hours": "Tue–Sun roughly 10:00–17:00; closed Monday, check on the day",
+      "tip": "The Pre-Raphaelite rooms are the highlight; allow an hour and a half.",
+      "source": "https://manchesterartgallery.org/"
+    },
+    "chethams_library": {
+      "name": "Chetham's Library",
+      "landmark": "Chetham's Library",
+      "kind": "sight",
+      "lat": 53.4859,
+      "lon": -2.2427,
+      "price": null,
+      "price_text": "Small fee or donation; check on the day",
+      "hours": "Weekdays only, limited hours; check on the day",
+      "tip": "This is the oldest free public library in the English-speaking world; book a short tour slot.",
+      "source": "https://www.chethams.com/"
+    },
+    "etihad_stadium": {
+      "name": "Etihad Stadium",
+      "landmark": "Etihad Stadium",
+      "kind": "sight",
+      "lat": 53.4831,
+      "lon": -2.2004,
+      "price": null,
+      "price_text": "Stadium tour prices vary; check on the day",
+      "hours": "Tour times vary by match calendar; check on the day",
+      "tip": "The stadium is a short tram ride east of the centre; combine it with a walk in nearby Ancoats.",
+      "source": "https://www.mancity.com/"
+    },
+    "university_of_manchester": {
+      "name": "University of Manchester",
+      "landmark": "University of Manchester",
+      "kind": "sight",
+      "lat": 53.4668,
+      "lon": -2.2331,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily; buildings vary",
+      "tip": "Walk Oxford Road past the main quad and the Whitworth is a short bus ride further on.",
+      "source": "https://www.manchester.ac.uk/"
+    },
+    "afflecks": {
+      "name": "Afflecks",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.4824,
+      "lon": -2.2362,
+      "price": 0,
+      "price_text": "Free to browse",
+      "hours": "Daily roughly 10:00–18:00; check on the day",
+      "tip": "Four floors of independent stalls in the Northern Quarter; good for quirky gifts.",
+      "source": "https://www.afflecks.com/"
+    },
+    "northern_quarter_walk": {
+      "name": "Northern Quarter street-art walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.4835,
+      "lon": -2.2355,
+      "price": 0,
+      "price_text": "Free self-guided; paid tours from about GBP 12",
+      "hours": "Anytime; daylight best",
+      "tip": "Wander the side streets around Thomas Street and Oldham Street for murals and record shops.",
+      "source": ""
+    },
+    "mackie_mayor": {
+      "name": "Mackie Mayor food hall",
+      "landmark": null,
+      "kind": "food",
+      "lat": 53.4844,
+      "lon": -2.2347,
+      "price": null,
+      "price_text": "Mains roughly GBP 8–15",
+      "hours": "Daily, lunch to late evening; check on the day",
+      "tip": "Busy at weekends; go early for a seat at the communal tables.",
+      "source": "https://mackiemayor.co.uk/"
+    },
+    "john_rylands": {
+      "name": "John Rylands Library",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 53.4802,
+      "lon": -2.2472,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Tue–Sat roughly 10:00–17:00; check on the day",
+      "tip": "The neo-Gothic reading room looks like a cathedral; go for opening time to avoid crowds.",
+      "source": "https://www.library.manchester.ac.uk/rylands/"
+    },
+    "castlefield_urban_heritage": {
+      "name": "Castlefield Urban Heritage Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 53.4753,
+      "lon": -2.2545,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the canal towpaths past the Roman fort remains and old brick warehouses.",
+      "source": ""
+    },
+    "canal_street": {
+      "name": "Canal Street",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.4772,
+      "lon": -2.2365,
+      "price": 0,
+      "price_text": "Free to walk; bars charge for drinks",
+      "hours": "Bars from afternoon to late",
+      "tip": "The heart of the Gay Village; liveliest on weekend evenings.",
+      "source": ""
+    },
+    "piccadilly_market": {
+      "name": "Piccadilly Gardens and market area",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.4808,
+      "lon": -2.2374,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; stalls vary",
+      "tip": "A central meeting point and tram hub; use it as a start for a walk down Market Street.",
+      "source": ""
+    },
+    "ancoats_canals": {
+      "name": "Ancoats canal walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.4844,
+      "lon": -2.2266,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Old cotton mills turned into flats and cafes; walk the Ashton Canal towards the Etihad.",
+      "source": ""
+    },
+    "cutting_room_square": {
+      "name": "Cutting Room Square",
+      "landmark": null,
+      "kind": "food",
+      "lat": 53.4849,
+      "lon": -2.2282,
+      "price": null,
+      "price_text": "Cafe and bar prices vary",
+      "hours": "Venues vary; check on the day",
+      "tip": "A small square of independent food and drink spots in Ancoats; good for a relaxed lunch.",
+      "source": ""
+    },
+    "st_anns_square": {
+      "name": "St Ann's Square",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.4819,
+      "lon": -2.2454,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Quiet square with the Royal Exchange theatre nearby; a good pause between shopping streets.",
+      "source": ""
+    },
+    "royal_exchange": {
+      "name": "Royal Exchange Theatre",
+      "landmark": null,
+      "kind": "show",
+      "lat": 53.4823,
+      "lon": -2.2443,
+      "price": null,
+      "price_text": "Ticket prices vary by show",
+      "hours": "Box office and bar daytime; shows evenings",
+      "tip": "The theatre-in-the-round sits inside a grand old cotton exchange; check what is on.",
+      "source": "https://www.royalexchange.co.uk/"
+    },
+    "manchester_cathedral": {
+      "name": "Manchester Cathedral",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 53.4854,
+      "lon": -2.2438,
+      "price": 0,
+      "price_text": "Free entry; donations welcome",
+      "hours": "Daily roughly 08:30–17:00; check on the day",
+      "tip": "Step inside for the carved choir stalls, then walk to Chetham's next door.",
+      "source": "https://www.manchestercathedral.org/"
+    },
+    "whitworth": {
+      "name": "The Whitworth",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 53.4602,
+      "lon": -2.2294,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Tue–Sun roughly 10:00–17:00; check on the day",
+      "tip": "Art gallery and park in one; the cafe looks over the park.",
+      "source": "https://www.whitworth.manchester.ac.uk/"
+    },
+    "curry_mile": {
+      "name": "Curry Mile, Rusholme",
+      "landmark": null,
+      "kind": "food",
+      "lat": 53.4543,
+      "lon": -2.2247,
+      "price": null,
+      "price_text": "Mains roughly GBP 8–15",
+      "hours": "Restaurants from lunch to late",
+      "tip": "A long strip of South Asian restaurants; take the bus down Oxford Road.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Victorian history and world-class museums, all walkable or a short hop apart.",
+      "days": [
+        {
+          "title": "Deansgate history morning",
+          "stops": [
+            {
+              "place": "john_rylands",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Start early; it opens around 10:00 Tue–Sat. Check on the day."
+            },
+            {
+              "place": "chethams_library",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Weekdays only, limited hours. Check on the day before you go."
+            },
+            {
+              "place": "manchester_cathedral",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "A short walk towards the river."
+            },
+            {
+              "place": "castlefield_urban_heritage",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Canals and Roman fort remains. Always open."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch at the food hall. About 15 minutes on foot."
+            }
+          ]
+        },
+        {
+          "title": "Museums and galleries afternoon",
+          "stops": [
+            {
+              "place": "science_industry_museum",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Great if it rains. Closes around 17:00; check on the day."
+            },
+            {
+              "place": "manchester_art_gallery",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Closed Monday. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Deansgate"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day through markets, food halls and the Curry Mile, with a little shopping in between.",
+      "days": [
+        {
+          "title": "Northern Quarter tastes",
+          "stops": [
+            {
+              "place": "afflecks",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Independent shops over several floors. Opens around 10:00."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Street art and cafés. Best in dry daylight."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch from many stalls under one roof."
+            },
+            {
+              "place": "piccadilly_market",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Stalls vary; a quick wander."
+            }
+          ]
+        },
+        {
+          "title": "Ancoats, then Curry Mile",
+          "stops": [
+            {
+              "place": "ancoats_canals",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Old mills and new cafés along the water."
+            },
+            {
+              "place": "cutting_room_square",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Drinks or a snack. Venues vary; check on the day."
+            },
+            {
+              "place": "curry_mile",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner in Rusholme. A short taxi or bus ride south."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter"
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "Culture by day, then pubs, bars and a show or club night after dark.",
+      "days": [
+        {
+          "title": "Culture and shopping by day",
+          "stops": [
+            {
+              "place": "manchester_art_gallery",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "st_anns_square",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Shops and a coffee stop nearby."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late lunch before an easy afternoon."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Spot the street art while it is still light."
+            }
+          ]
+        },
+        {
+          "title": "Evening out",
+          "stops": [
+            {
+              "place": "royal_exchange",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Check the show schedule and book ahead."
+            },
+            {
+              "place": "canal_street",
+              "at": "21:45",
+              "minutes": 60,
+              "note": "Bars run late. About 15 minutes on foot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the Victorian city and its best museums in one tight day.",
+      "days": [
+        {
+          "title": "Arrive, Deansgate history cluster",
+          "stops": [
+            {
+              "place": "john_rylands",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start here. Closed Sunday and Monday, so check the day."
+            },
+            {
+              "place": "chethams_library",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Five minutes on foot. Weekdays only, limited hours."
+            },
+            {
+              "place": "manchester_cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk. Quiet in the afternoon."
+            },
+            {
+              "place": "castlefield_urban_heritage",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Canals and Roman fort remains. Always open."
+            },
+            {
+              "place": "st_anns_square",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Walk back through the centre, then find dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museums, then fly",
+          "stops": [
+            {
+              "place": "science_industry_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Check out first. Opens roughly 10:00 daily."
+            },
+            {
+              "place": "manchester_art_gallery",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Short walk or one tram stop. Closed Monday."
+            },
+            {
+              "place": "piccadilly_market",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Grab lunch nearby. Stalls vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Deansgate"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want markets, food halls and the Curry Mile in a single overnight.",
+      "days": [
+        {
+          "title": "Arrive, Northern Quarter tastes",
+          "stops": [
+            {
+              "place": "afflecks",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Independent shops and cafés over several floors."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Street art between snacks. Daylight best."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Early dinner from the stalls. Check hours on the day."
+            },
+            {
+              "place": "canal_street",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening drinks. Bars run late."
+            }
+          ]
+        },
+        {
+          "title": "Ancoats brunch, then Curry Mile",
+          "stops": [
+            {
+              "place": "ancoats_canals",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Sunny morning walk along the water."
+            },
+            {
+              "place": "cutting_room_square",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Brunch stop. Venue hours vary."
+            },
+            {
+              "place": "curry_mile",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Bus or taxi south to Rusholme. Restaurants open from lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "A night out in the Northern Quarter with a calm daytime warm-up.",
+      "days": [
+        {
+          "title": "Arrive, art and bars",
+          "stops": [
+            {
+              "place": "manchester_art_gallery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late-morning or early-afternoon visit. Closed Monday."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Early dinner before the bars fill up."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Street art while it is still light."
+            },
+            {
+              "place": "canal_street",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars from afternoon to late. Check door policies on the day."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "afflecks",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Opens roughly 10:00. Good for a browse and coffee."
+            },
+            {
+              "place": "piccadilly_market",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short walk to the station area afterwards."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the museums, the Victorian city and a theatre night, grouped by area.",
+      "days": [
+        {
+          "title": "Deansgate: library, cathedral and industrial history",
+          "stops": [
+            {
+              "place": "john_rylands",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Start early; it is quietest in the morning. Check it is open on the day."
+            },
+            {
+              "place": "manchester_cathedral",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Free to enter; donations welcome."
+            },
+            {
+              "place": "chethams_library",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Weekdays only, limited hours. Check on the day before you go."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. It is in the Northern Quarter, a short walk or taxi away."
+            },
+            {
+              "place": "science_industry_museum",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Good for a rainy afternoon. Roughly 10:00–17:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Piccadilly galleries, then an evening show",
+          "stops": [
+            {
+              "place": "manchester_art_gallery",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Free entry."
+            },
+            {
+              "place": "piccadilly_market",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick look around; stalls vary."
+            },
+            {
+              "place": "whitworth",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "A bus or taxi ride south. Tue–Sun roughly 10:00–17:00; check on the day."
+            },
+            {
+              "place": "royal_exchange",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Book a show in advance. The box office and bar are open in the daytime."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Deansgate or Piccadilly"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around lunch and dinner, with easy walks between meals.",
+      "days": [
+        {
+          "title": "Northern Quarter eating and street art",
+          "stops": [
+            {
+              "place": "afflecks",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Independent shops over several floors. Daily roughly 10:00–18:00; check on the day."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Many stalls; go early to get a table."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Street-art walk at your own pace. Daylight is best."
+            },
+            {
+              "place": "cutting_room_square",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Early dinner in Ancoats. Venues vary; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ancoats canals, then Curry Mile",
+          "stops": [
+            {
+              "place": "ancoats_canals",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Sunny morning is best. Flat, easy walking."
+            },
+            {
+              "place": "science_industry_museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Nearby. Roughly 10:00–17:00; check on the day."
+            },
+            {
+              "place": "st_anns_square",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "A short walk for a coffee and a look at the shops."
+            },
+            {
+              "place": "curry_mile",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in Rusholme. A bus or taxi ride south; restaurants run late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter"
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "A relaxed daytime, then pubs, gigs and bars after dark in the Northern Quarter and Canal Street.",
+      "days": [
+        {
+          "title": "City sights, then Northern Quarter bars",
+          "stops": [
+            {
+              "place": "manchester_cathedral",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Morning visit. Daily roughly 08:30–17:00; check on the day."
+            },
+            {
+              "place": "john_rylands",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Tue–Sat roughly 10:00–17:00; check on the day."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch and a rest before a late night."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Street art in daylight, then pick a bar."
+            },
+            {
+              "place": "afflecks",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Daily roughly 10:00–18:00; check on the day. Then stay out in the Northern Quarter."
+            }
+          ]
+        },
+        {
+          "title": "Canal Street evening and a show",
+          "stops": [
+            {
+              "place": "manchester_art_gallery",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Closed Monday. Free entry."
+            },
+            {
+              "place": "piccadilly_market",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Daytime wander; stalls vary."
+            },
+            {
+              "place": "royal_exchange",
+              "at": "17:30",
+              "minutes": 150,
+              "note": "Early evening show; book ahead."
+            },
+            {
+              "place": "canal_street",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Bars run from afternoon to late. A short walk from the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter or Piccadilly"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, Victorian libraries and the city's industrial story at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Deansgate classics",
+          "stops": [
+            {
+              "place": "john_rylands",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start here; it is a short walk from Deansgate stations. Closed Sunday and Monday."
+            },
+            {
+              "place": "manchester_cathedral",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Five minutes on foot. Quiet in the afternoon."
+            },
+            {
+              "place": "chethams_library",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Weekdays only with limited hours; check on the day before you go."
+            },
+            {
+              "place": "castlefield_urban_heritage",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Canals and Roman fort remains. Always open."
+            },
+            {
+              "place": "st_anns_square",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Wander the square, then eat nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, Northern Quarter afternoon",
+          "stops": [
+            {
+              "place": "science_industry_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Good rainy-day backup. Check opening times on the day."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the food hall; about 15 minutes on foot."
+            },
+            {
+              "place": "afflecks",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Independent shops over several floors."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Street art is best in daylight and dry weather."
+            }
+          ]
+        },
+        {
+          "title": "Art, stadium and an evening show",
+          "stops": [
+            {
+              "place": "manchester_art_gallery",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Free entry."
+            },
+            {
+              "place": "old_trafford",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Tour times vary by the match calendar; check on the day. Allow time to travel there."
+            },
+            {
+              "place": "royal_exchange",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Book a show in advance; the theatre-in-the-round is the draw."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Deansgate & Piccadilly"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, food halls and a proper Curry Mile dinner.",
+      "days": [
+        {
+          "title": "Arrive and graze the Northern Quarter",
+          "stops": [
+            {
+              "place": "afflecks",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Browse the shops before eating."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late lunch or a snack; stalls vary, check on the day."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walk off lunch and spot the street art."
+            },
+            {
+              "place": "canal_street",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Bars run from afternoon to late."
+            }
+          ]
+        },
+        {
+          "title": "Ancoats and Castlefield",
+          "stops": [
+            {
+              "place": "ancoats_canals",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Sunny-morning walk along the water."
+            },
+            {
+              "place": "cutting_room_square",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch spot; venues vary, check on the day."
+            },
+            {
+              "place": "science_industry_museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Good indoor break; check hours on the day."
+            },
+            {
+              "place": "castlefield_urban_heritage",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Canalside stroll before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Curry Mile and a show",
+          "stops": [
+            {
+              "place": "manchester_art_gallery",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "curry_mile",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in Rusholme; restaurants run lunch to late. Check the bus or taxi route."
+            },
+            {
+              "place": "royal_exchange",
+              "at": "20:30",
+              "minutes": 150,
+              "note": "Only if you book a later show; otherwise swap the order."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter & Ancoats"
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Visitors who want pubs, gigs and clubs, with lighter days to recover.",
+      "days": [
+        {
+          "title": "Arrive, Canal Street evening",
+          "stops": [
+            {
+              "place": "piccadilly_market",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Easy first stop near the station; stalls vary."
+            },
+            {
+              "place": "manchester_art_gallery",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Monday. A calm start before the night out."
+            },
+            {
+              "place": "canal_street",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bars from afternoon to late; busiest at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Northern Quarter day to night",
+          "stops": [
+            {
+              "place": "afflecks",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Shops open roughly 10:00–18:00; check on the day."
+            },
+            {
+              "place": "mackie_mayor",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch; it runs into the evening too."
+            },
+            {
+              "place": "northern_quarter_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Daylight is best for the street art."
+            },
+            {
+              "place": "royal_exchange",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening show; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Recovery walk and a last night out",
+          "stops": [
+            {
+              "place": "ancoats_canals",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Slow morning by the water."
+            },
+            {
+              "place": "cutting_room_square",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch; venues vary, check on the day."
+            },
+            {
+              "place": "castlefield_urban_heritage",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Always open; good for a quiet wander."
+            },
+            {
+              "place": "canal_street",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Final night; bars go late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northern Quarter & Canal Street"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, music venues and the Victorian city."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Curry Mile, Northern Quarter cafés and markets."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Pubs, gigs and clubs in the Northern Quarter."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Piccadilly",
+      "range": [
+        70,
+        160
+      ],
+      "why": "Next to the main train station and tram stops; easiest base for a short first visit.",
+      "center": [
+        53.477,
+        -2.23
+      ]
+    },
+    {
+      "area": "Northern Quarter",
+      "range": [
+        80,
+        180
+      ],
+      "why": "Independent bars, cafés and record shops on your doorstep; walkable to the centre.",
+      "center": [
+        53.484,
+        -2.236
+      ]
+    },
+    {
+      "area": "Deansgate",
+      "range": [
+        90,
+        200
+      ],
+      "why": "Central and close to the canal, museums and big shopping streets.",
+      "center": [
+        53.477,
+        -2.25
+      ]
+    },
+    {
+      "area": "Ancoats",
+      "range": [
+        75,
+        170
+      ],
+      "why": "Quiet former mill district with good food and drink; about 15 minutes' walk to Piccadilly.",
+      "center": [
+        53.485,
+        -2.228
+      ]
+    }
+  ],
+  "food": [
+    "Try a proper Northern Sunday roast or a pie in a traditional pub; prices vary, so check the menu.",
+    "Curry Mile on Wilmslow Road is the classic spot for South Asian food; many places are cheap and casual.",
+    "The Northern Quarter has the densest cluster of independent cafés and brunch spots.",
+    "Look for food halls and markets for a mix of stalls at mid-range prices; check opening days on the day.",
+    "Book popular restaurants ahead for Friday and Saturday nights, especially in Ancoats and the Northern Quarter."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a tram or train trip out to a nearby town or the countryside; check times on the day.",
+    "Football fans can add a stadium tour; book ahead as slots sell out.",
+    "Add a live music night at a smaller venue instead of a second museum."
+  ]
+}

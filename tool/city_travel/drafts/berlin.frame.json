@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Reichstag and the old centre."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Wall, Cold War sites and memorials."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Late clubs, bars and street food after dark."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Mitte",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Walk to Museum Island, the Reichstag and Unter den Linden. Best first-time base; central transport.",
+      "center": [
+        52.52,
+        13.405
+      ]
+    },
+    {
+      "area": "Kreuzberg",
+      "range": [
+        80,
+        190
+      ],
+      "why": "Cheaper, lively and full of food. Close to the East Side Gallery and nightlife; grittier streets.",
+      "center": [
+        52.498,
+        13.42
+      ]
+    },
+    {
+      "area": "Prenzlauer Berg",
+      "range": [
+        90,
+        210
+      ],
+      "why": "Quiet, leafy and family-friendly. Cafés and parks; a short tram or U-Bahn ride to the centre.",
+      "center": [
+        52.54,
+        13.424
+      ]
+    },
+    {
+      "area": "Charlottenburg",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Classic west Berlin near the palace, Kurfürstendamm shopping and the zoo. Calmer evenings.",
+      "center": [
+        52.505,
+        13.305
+      ]
+    }
+  ],
+  "food": [
+    "Try Berlin classics: currywurst, döner kebab and a hearty lunch at a traditional Kneipe.",
+    "Street food markets are a cheap, fun dinner. Check days and locations online before you go.",
+    "Book popular restaurants ahead, especially at weekends. Many kitchens close by about 22:00.",
+    "Vegetarian and vegan options are widespread and good value.",
+    "Tap water is safe to drink. A sit-down lunch is often cheaper than dinner."
+  ],
+  "more_time": [
+    "Swap a museum afternoon for Potsdam: take the S-Bahn out and walk the parks and palaces.",
+    "Add a Spree river cruise for a different view of the centre.",
+    "Spend a half day at a former airport park or a lake beach in summer; check transport on the day."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "art": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ]
+  },
+  "best_for": [
+    "history",
+    "culture",
+    "nightlife"
+  ],
+  "recommend": {
+    "why": "Three nights covers the Wall, Museum Island and a proper night out without rushing."
+  },
+  "month_notes": [
+    "Coldest month: highs around 4°C, lows near -1°C. Pack a warm coat; expect about 14 rain days.",
+    "Still cold: highs near 6°C, lows around 0°C. Fewer rain days, about 11.",
+    "Warming slowly: highs around 9°C, lows near 1°C. Keep layers; about 12 rain days.",
+    "Spring arrives: highs near 14°C, lows around 4°C. Good walking weather; about 9 rain days.",
+    "Pleasant: highs around 19°C, lows near 9°C. One of the drier months, about 8 rain days.",
+    "Warm: highs near 24°C, lows around 14°C. About 10 rain days; pack a light rain layer.",
+    "Warmest: highs around 25°C, lows near 15°C. About 11 rain days.",
+    "Warm: highs near 25°C, lows around 16°C. About 9 rain days; good for parks and lakes.",
+    "Mild and dry-ish: highs around 21°C, lows near 12°C. About 8 rain days.",
+    "Cooler: highs near 15°C, lows around 8°C. About 11 rain days; bring a jacket.",
+    "Cold and grey: highs around 8°C, lows near 3°C. About 10 rain days.",
+    "Cold: highs near 6°C, lows around 1°C. About 12 rain days; Christmas markets in season."
+  ],
+  "climate_guide": {
+    "summary": "Temperate climate with cold winters and mild summers. Rain is spread through the year, so pack layers.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs around 19–25°C and lows of 9–16°C. Best for walking, parks and outdoor sights."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 4–6°C and lows near or below freezing. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 8–14 rain days a month. No dry season; carry a small umbrella or rain jacket."
+      },
+      {
+        "icon": "🌂",
+        "title": "Wettest months",
+        "text": "January and December have the most rain days, around 12–14. Plan indoor backups."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and autumn are mild",
+        "text": "April and October sit around 14–15°C highs. Good for sightseeing with fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes. Add a warm coat and gloves for November to March."
+      }
+    ]
+  },
+  "transit": {
+    "best": "U-Bahn and S-Bahn for most trips; buy a ticket before boarding.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "U-Bahn and S-Bahn cover most of the city. Buy tickets from machines before boarding."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and trams fill the gaps. Night buses run when trains stop."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Bolt operate, but local apps like Free Now are common."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful: heavy traffic, a low-emission zone and limited parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking and cycling are great. Watch for bike lanes."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries in the city centre, but river cruises run on the Spree."
+      }
+    ]
+  }
+}

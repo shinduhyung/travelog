@@ -1,0 +1,584 @@
+{
+  "city": "Poznań",
+  "checked": "October 2026",
+  "intro_line": "Poznań: a compact Polish city of trams, history, and vibrant squares.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town",
+        "Jeżyce",
+        "Wilda",
+        "Grunwald"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town",
+        "Jeżyce",
+        "Wilda",
+        "Grunwald"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Old Town",
+        "Jeżyce",
+        "Wilda",
+        "Grunwald"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Old Town",
+        "Jeżyce",
+        "Wilda",
+        "Grunwald"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Old Town",
+        "Jeżyce",
+        "Wilda",
+        "Grunwald"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 3,
+        "low": -2,
+        "rain_days": 14,
+        "note": "Coldest month: highs near 3°C, lows around -2°C. Pack a warm coat and gloves."
+      },
+      {
+        "high": 6,
+        "low": -1,
+        "rain_days": 11,
+        "note": "Still cold, highs near 6°C. Expect some rain and grey days."
+      },
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 11,
+        "note": "Slowly warmer, highs near 9°C. Rain on about 11 days."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 10,
+        "note": "Spring arrives: highs near 14°C. Good for walking the Old Town."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 10,
+        "note": "Pleasant, highs near 19°C. Rain on about 10 days."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Warm and bright, highs near 24°C. Long evenings."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 12,
+        "note": "Warmest month, highs near 25°C. Some rain showers."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Warm, highs near 25°C and the most daylight. Busy and lively."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 8,
+        "note": "Still mild, highs near 21°C. Fewer rain days — a good month."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 10,
+        "note": "Cooler, highs near 14°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 8,
+        "low": 3,
+        "rain_days": 9,
+        "note": "Cold and damp, highs near 8°C. Rain on about 9 days."
+      },
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 11,
+        "note": "Winter, highs near 5°C, lows around 0°C. Short days; festive lights in December."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      0.95,
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "old-market-square": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or evening; summer for outdoor seating",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "town-hall": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late morning, just before the clock show",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, quieter before tour groups",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "croissant-museum": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Book a late-morning session",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "stary-rynek-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Lunchtime",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "ostrow-tumski": {
+      "types": [
+        "culture",
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "jezyce-walk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday morning or early afternoon",
+      "area": "Jeżyce",
+      "popularity": 3
+    },
+    "jezyce-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Jeżyce",
+      "popularity": 3
+    },
+    "cytadela-park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring and summer, morning",
+      "area": "Grunwald",
+      "popularity": 3
+    },
+    "lake-malta": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Warm afternoons, spring to autumn",
+      "area": "Grunwald",
+      "popularity": 4
+    },
+    "wilda-walk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Wilda",
+      "popularity": 3
+    },
+    "imperial-castle": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Rainy-day option",
+      "area": "Jeżyce",
+      "popularity": 3
+    },
+    "old-town-tour": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning departure",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "croissant-street-food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "cathedral-viewpoint": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "stary-browar": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Wilda",
+      "popularity": 3
+    },
+    "citadel-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Grunwald",
+      "popularity": 2
+    },
+    "nightlife-rynek": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Friday or Saturday night",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "wilda-food-hall": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Wilda",
+      "popularity": 2
+    },
+    "jezyce-cafe": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Mid-morning",
+      "area": "Jeżyce",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Old Town, the cathedral island and a food wander; add a night for a day trip."
+  },
+  "airports": [
+    {
+      "code": "POZ",
+      "name": "Poznań–Ławica Airport",
+      "primary": true,
+      "note": "Main airport, 7 km from centre.",
+      "options": [
+        {
+          "mode": "Bus 159",
+          "to": "Main train station",
+          "price": "4-6 zł",
+          "time": "25-30 min",
+          "note": "Runs every 15 min; ticket machine at stop."
+        },
+        {
+          "mode": "Bus 148",
+          "to": "Rondo Kaponiera",
+          "price": "4-6 zł",
+          "time": "25-30 min",
+          "note": "Also every 15 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "30-50 zł",
+          "time": "15-20 min",
+          "note": "Use official taxi rank."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "25-40 zł",
+          "time": "15-20 min",
+          "note": "Check app for availability."
+        }
+      ]
+    },
+    {
+      "code": "BER",
+      "name": "Berlin Brandenburg Airport",
+      "primary": false,
+      "note": "Alternative international hub, about 270 km away.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Poznań Główny",
+          "price": "80-120 zł",
+          "time": "3-4 hours",
+          "note": "Change in Berlin; book in advance."
+        },
+        {
+          "mode": "Flixbus",
+          "to": "Poznań coach station",
+          "price": "50-90 zł",
+          "time": "4-5 hours",
+          "note": "Direct buses available."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "3 hours",
+          "note": "Long and expensive; not recommended."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Poznań",
+      "https://en.wikivoyage.org/wiki/Pozna%C5%84"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "budget"
+  ],
+  "transit": {
+    "best": "Walk in the compact centre; use trams for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro in Poznań. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MPK runs buses and trams. Tickets are time-based: 15 min 4 zł, 45 min 6 zł, 90 min 8 zł. A 24-hour ticket is 15 zł and a 7-day ticket is 50 zł."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams are the quickest way around the centre and to Jeżyce and Wilda. Same time-based tickets as buses."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt operate in Poznań. Handy for late nights and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended in the centre: traffic and limited parking. Useful only for day trips out of the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and pleasant on foot. Cycling is okay but bike paths are inconsistent."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate climate with cold winters and mild, warm summers. Rain falls year-round on roughly 8–14 days a month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 19–25°C and long days. Ideal for walking and outdoor cafés."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold winters (Dec–Feb)",
+        "text": "Highs of 3–6°C and lows near or below freezing. Pack a proper coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect rain on 8–14 days each month. A small umbrella or rain jacket is worth packing any month."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings between seasons",
+        "text": "From around 3°C in January to 25°C in July and August. Layer your clothes."
+      },
+      {
+        "icon": "🍂",
+        "title": "September is a sweet spot",
+        "text": "Highs near 21°C with fewer rain days (about 8). Comfortable for sightseeing."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a rain layer, and a warm jacket outside summer. Sunglasses for the long summer days."
+      }
+    ]
+  }
+}

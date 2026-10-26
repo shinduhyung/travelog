@@ -1,0 +1,182 @@
+{
+  "currency": "VND",
+  "usd_rate": 25831.1533,
+  "intro_line": "Saigon: motorbikes, markets and motorbike-fuelled energy",
+  "intro": "Ho Chi Minh City rewards visitors with street food, history and relentless energy. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "District 1",
+    "Pham Ngu Lao",
+    "District 3",
+    "District 7"
+  ],
+  "taxi": {
+    "flag_day": 12000,
+    "flag_airport": 15000,
+    "per_km": 14000,
+    "min_fare": 20000
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metro Line 1 links Ben Thanh Market to Suoi Tien and the Eastern Bus Terminus; fares 7,000-20,000 VND, trains every 8-12 min, 5AM-10PM.",
+    "Green and blue city buses cover 170+ routes; fares 5,000-7,000 VND local, 10,000-50,000 VND intercity; tap a contactless Visa or Mastercard.",
+    "Grab, Xanh SM and beTaxi apps work well for cars and motorbike taxis; fares are fixed and often cheaper than street taxis.",
+    "Use Mai Linh or Vinasun metered taxis and check the meter is on; other firms may overcharge.",
+    "Motorbike taxis (xe om) are everywhere; agree a price first or book via app; short hops about 20,000 VND.",
+    "Saigon Waterbus runs on the Saigon River from District 1 to Thu Duc; walking long distances is impractical in the heat."
+  ],
+  "airports": [
+    {
+      "code": "SGN",
+      "name": "Tan Son Nhat International Airport",
+      "primary": true,
+      "note": "Vietnam's largest airport, about 2 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Bus 152",
+          "to": "City centre",
+          "price": "5,000 VND plus 5,000 VND luggage",
+          "time": "30-45 min",
+          "note": "Cheapest option; departs every 15 min."
+        },
+        {
+          "mode": "Bus 109",
+          "to": "City centre",
+          "price": "20,000 VND plus 20,000 VND luggage",
+          "time": "25-40 min",
+          "note": "Express bus, every 45 min."
+        },
+        {
+          "mode": "Ride app (Grab, Xanh SM, beTaxi)",
+          "to": "City centre",
+          "price": "70,000-150,000 VND",
+          "time": "15-30 min",
+          "note": "Fixed fare; easiest with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "100,000-180,000 VND",
+          "time": "15-30 min",
+          "note": "Use Mai Linh or Vinasun; insist on the meter."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "War Remnants Museum",
+    "Cu Chi Tunnels",
+    "Notre Dame Cathedral of Saigon",
+    "Independence Palace",
+    "Saigon Central Post Office",
+    "Ben Thanh Market",
+    "Bach Dang Wharf",
+    "Bitexco Financial Tower",
+    "Jade Emperor Pagoda",
+    "Landmark 81",
+    "Saigon River",
+    "Suối Tiên Amusement Park",
+    "Tan Dinh Church",
+    "Đại Nam Văn Hiến",
+    "Đầm Sen Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Ho Chi Minh City",
+      "https://en.wikivoyage.org/wiki/Ho%20Chi%20Minh%20City"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    10.82302,
+    106.62965
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 4
+    },
+    {
+      "high": 34,
+      "low": 23,
+      "rain_days": 3
+    },
+    {
+      "high": 35,
+      "low": 25,
+      "rain_days": 4
+    },
+    {
+      "high": 35,
+      "low": 26,
+      "rain_days": 11
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 27
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 29
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 29
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 29
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 28
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 19
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

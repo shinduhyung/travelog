@@ -1,0 +1,203 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Madrid: grand boulevards, late nights and world-class art.",
+  "intro": "Madrid rewards visitors with royal palaces, three great art museums and tapas bars that fill after dark. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Sol",
+    "Gran Vía",
+    "La Latina",
+    "Salamanca"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 33,
+    "per_km": 1.3,
+    "min_fare": 4
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro: 13 lines, fast and cheap; single Zone A fare €1.50-2, airport supplement €3.",
+    "Multi Card costs €2.50 and is reloadable; ten-trip Metrobús ticket about €12.20.",
+    "Tourist Travel Cards: 1 day €10, 2 days €17, 3 days €22.50, 5 days €32.50, 7 days €41.",
+    "Buses share the same tickets; night buses run when the metro closes around 01:30.",
+    "Taxis are plentiful and metered; Uber, Cabify and Bolt operate in Madrid.",
+    "Walking is best in the centre; bikes and e-scooters are widely rented."
+  ],
+  "airports": [
+    {
+      "code": "MAD",
+      "name": "Madrid Barajas International Airport",
+      "primary": true,
+      "note": "Only commercial airport; 14 km north-east of the centre.",
+      "options": [
+        {
+          "mode": "Cercanías C1 train",
+          "to": "Chamartín and Atocha",
+          "price": "€2.60-3.50",
+          "time": "25-35 min",
+          "note": "No airport supplement; tap a contactless bank card at the barrier."
+        },
+        {
+          "mode": "Metro line 8",
+          "to": "Nuevos Ministerios",
+          "price": "€5",
+          "time": "15-20 min",
+          "note": "Includes €3 airport supplement; runs 06:00-01:30."
+        },
+        {
+          "mode": "Airport bus 203",
+          "to": "Atocha and Cibeles",
+          "price": "€5",
+          "time": "30-40 min",
+          "note": "Every 15-20 min from 06:00 to 23:30."
+        },
+        {
+          "mode": "Night bus N27",
+          "to": "Cibeles",
+          "price": "€1.50-2",
+          "time": "30-40 min",
+          "note": "Only public option late at night; every 35 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Madrid inside M-30",
+          "price": "€33 fixed",
+          "time": "20-35 min",
+          "note": "Fixed fare to the centre."
+        },
+        {
+          "mode": "Uber / Cabify",
+          "to": "Central Madrid",
+          "price": "€30-40",
+          "time": "20-35 min",
+          "note": "Pick-up points are signposted at each terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Prado Museum",
+    "Royal Palace of Madrid",
+    "Plaza Mayor",
+    "Retiro Park",
+    "Reina Sofia Museum",
+    "Puerta del Sol",
+    "Temple of Debod",
+    "Gran Vía",
+    "Almudena Cathedral",
+    "Autonomous University of Madrid",
+    "Estadio Metropolitano",
+    "Guernica",
+    "Las Meninas",
+    "Parque Warner Madrid",
+    "Parque de Atracciones de Madrid",
+    "Plaza de Cibeles",
+    "Puerta de Alcalá",
+    "Royal Theatre (Teatro Real)",
+    "Santiago Bernabeu",
+    "Teleférico de Madrid",
+    "Telepizza",
+    "The Garden of Earthly Delights"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Madrid",
+      "https://en.wikivoyage.org/wiki/Madrid"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    40.4168,
+    -3.7038
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 6
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 5
+    },
+    {
+      "high": 16,
+      "low": 5,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 24,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 30,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 34,
+      "low": 20,
+      "rain_days": 1
+    },
+    {
+      "high": 33,
+      "low": 20,
+      "rain_days": 2
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 5
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 15,
+      "low": 6,
+      "rain_days": 8
+    },
+    {
+      "high": 12,
+      "low": 3,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

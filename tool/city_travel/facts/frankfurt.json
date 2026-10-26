@@ -1,0 +1,212 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Frankfurt: banking towers, a riverside skyline, and cider taverns.",
+  "intro": "Frankfurt rewards visitors with a compact old town, world-class museums and a lively riverfront. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Altstadt (Old Town)",
+    "Bahnhofsviertel",
+    "Sachsenhausen",
+    "Westend"
+  ],
+  "taxi": {
+    "flag_day": 4.5,
+    "flag_airport": 4.5,
+    "per_km": 2.2,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "U-Bahn (metro), trams and buses run on one RMV fare network; buy a ticket before boarding.",
+    "S-Bahn lines S8/S9 link the airport and suburbs; they are often delayed, so allow buffer time.",
+    "Single ticket in central Frankfurt is €3.80; a day ticket is €7.75.",
+    "Uber, Bolt and Free Now all work in the city.",
+    "Driving is easy to reach but parking is hard; use park-and-ride during trade fairs.",
+    "The centre is walkable; bikes and e-scooters are widely available."
+  ],
+  "airports": [
+    {
+      "code": "FRA",
+      "name": "Frankfurt am Main International Airport",
+      "primary": true,
+      "note": "Main hub, 14 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S8/S9",
+          "to": "Hauptbahnhof / Hauptwache",
+          "price": "€6.60",
+          "time": "20-30 min",
+          "note": "Buy a ticket at the machine before boarding."
+        },
+        {
+          "mode": "Bus 61",
+          "to": "Frankfurt Süd station",
+          "price": "€3.80-6.60",
+          "time": "30-40 min",
+          "note": "Slower than the S-Bahn; useful for the south side."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€35-45",
+          "time": "20-30 min",
+          "note": "Fares rise in traffic and during trade fairs."
+        },
+        {
+          "mode": "Uber / Bolt / Free Now",
+          "to": "City centre",
+          "price": "€30-45",
+          "time": "20-30 min",
+          "note": "Pick-up points are signed in the terminal."
+        }
+      ]
+    },
+    {
+      "code": "HHN",
+      "name": "Frankfurt-Hahn Airport",
+      "primary": false,
+      "note": "Budget airport far from the city, 103 km west.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Frankfurt Hauptbahnhof",
+          "price": "about €21",
+          "time": "90-110 min",
+          "note": "Runs roughly 12 times a day; buy at the kiosk outside."
+        },
+        {
+          "mode": "Bus + train via Traben-Trarbach",
+          "to": "Frankfurt Hauptbahnhof",
+          "price": "€25-35",
+          "time": "2.5-3 h",
+          "note": "Few late services; check timetables first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€180-230",
+          "time": "90-110 min",
+          "note": "Very expensive; only for groups or late arrivals."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "90-110 min",
+          "note": "Availability is limited at this airport."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Römerberg",
+    "Main Tower",
+    "Römer",
+    "Goethe House",
+    "St. Paul's Church",
+    "Palmengarten",
+    "Alte Oper",
+    "Zoo Frankfurt",
+    "Freizeitpark Lochmühle"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Frankfurt",
+      "https://en.wikivoyage.org/wiki/Frankfurt"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    50.11552,
+    8.68417
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": 0,
+      "rain_days": 14
+    },
+    {
+      "high": 8,
+      "low": 1,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 13
+    },
+    {
+      "high": 15,
+      "low": 5,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 10,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 11
+    },
+    {
+      "high": 9,
+      "low": 4,
+      "rain_days": 14
+    },
+    {
+      "high": 6,
+      "low": 1,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

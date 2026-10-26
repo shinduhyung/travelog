@@ -1,0 +1,34 @@
+$ deepseek_prep.py Baltimore
+  tokens in 652 out 328
+Baltimore: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Baltimore
+  tokens in 3943 out 982
+Baltimore: 2 problems
+  - DCA taxi $80-110 vs tariff estimate 162
+  - IAD taxi $100-130 vs tariff estimate 216
+
+$ deepseek_city.py Baltimore --stage places
+Baltimore: places
+  tokens in 1130 out 2223
+
+$ deepseek_city.py Baltimore --stage frame
+Baltimore: frame
+  tokens in 2438 out 1780
+  repaired JSON
+
+$ deepseek_city.py Baltimore --stage plans
+Baltimore: plans
+  plans for day
+  tokens in 1687 out 871
+  plans for 1n
+  tokens in 1688 out 1157
+  plans for 2n
+  tokens in 1693 out 1429
+  plans for 3n
+  tokens in 1688 out 1592
+
+$ merge_city.py Baltimore
+Baltimore: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/baltimore.json and planner/baltimore.json
+

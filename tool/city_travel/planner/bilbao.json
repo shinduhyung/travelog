@@ -1,0 +1,530 @@
+{
+  "city": "Bilbao",
+  "checked": "October 2026",
+  "intro_line": "Basque grit, river light, and a museum that changed a city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Casco Viejo",
+        "Abando",
+        "Indautxu",
+        "Deusto"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Casco Viejo",
+        "Abando",
+        "Indautxu",
+        "Deusto"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Casco Viejo",
+        "Abando",
+        "Indautxu",
+        "Deusto"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Casco Viejo",
+        "Abando",
+        "Indautxu",
+        "Deusto"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Casco Viejo",
+        "Abando",
+        "Indautxu",
+        "Deusto"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 12,
+        "low": 6,
+        "rain_days": 15,
+        "note": "January: cool and wet, highs near 12°C and about 15 rain days. Pack a rain jacket."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 14,
+        "note": "February: still cool and showery, highs around 14°C. Quiet museums."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 17,
+        "note": "March: mild at 16°C but the wettest month, about 17 rain days. Bring an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 14,
+        "note": "April: pleasant at 17°C with fewer wet days. Good for walking."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 14,
+        "note": "May: warming to 20°C and mostly dry-ish. A lovely month."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 12,
+        "note": "June: mild and bright, highs near 23°C. Long evenings outdoors."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 10,
+        "note": "July: warmest and driest, highs about 25°C with around 10 rain days. Busy."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 10,
+        "note": "August: hot at 26°C and dry. Book ahead; beaches get crowded."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 12,
+        "note": "September: still warm at 24°C with a little more rain. Good value."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 13,
+        "note": "October: cooler at 21°C and wetter, about 13 rain days. Bring layers."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 16,
+        "note": "November: cool and rainy, highs near 16°C and 16 rain days. Indoor plans."
+      },
+      {
+        "high": 14,
+        "low": 8,
+        "rain_days": 14,
+        "note": "December: cool at 14°C with about 14 rain days. Festive but damp."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.65,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.5
+    ]
+  },
+  "places": {
+    "guggenheim": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning for the galleries, sunset outside",
+      "area": "Abando",
+      "popularity": 5
+    },
+    "fine-arts": {
+      "types": [
+        "art",
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon or a rainy morning",
+      "area": "Abando",
+      "popularity": 3
+    },
+    "casco-viejo": {
+      "types": [
+        "history",
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late morning or evening for pintxos",
+      "area": "Casco Viejo",
+      "popularity": 5
+    },
+    "san-mames": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match day or a booked tour slot",
+      "area": "Indautxu",
+      "popularity": 3
+    },
+    "ribera-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Casco Viejo",
+      "popularity": 4
+    },
+    "artxanda": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset or clear morning",
+      "area": "Abando",
+      "popularity": 4
+    },
+    "gran-via": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Abando",
+      "popularity": 3
+    },
+    "pintxos-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening, Thursday to Saturday",
+      "area": "Casco Viejo",
+      "popularity": 5
+    },
+    "azkuna": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; handy on a rainy day",
+      "area": "Indautxu",
+      "popularity": 3
+    },
+    "zubizuri": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Abando",
+      "popularity": 3
+    },
+    "gaztelugatxe": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning, avoid midday summer heat",
+      "area": "Deusto",
+      "popularity": 4
+    },
+    "arriaga": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Casco Viejo",
+      "popularity": 2
+    },
+    "bilbao-la-vieja": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Casco Viejo",
+      "popularity": 2
+    },
+    "puente-colgante": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Deusto",
+      "popularity": 3
+    },
+    "mercado-indautxu": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Lunch or early evening",
+      "area": "Indautxu",
+      "popularity": 3
+    },
+    "deusto-riverside": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Deusto",
+      "popularity": 2
+    },
+    "bizkaia-bridge-tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime, spring to autumn",
+      "area": "Abando",
+      "popularity": 2
+    },
+    "catedral-santiago": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Casco Viejo",
+      "popularity": 3
+    },
+    "doa-casilda": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime, spring and autumn",
+      "area": "Abando",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Guggenheim, the old town and a proper pintxos crawl; add a night for a coast or hill day."
+  },
+  "airports": [
+    {
+      "code": "BIO",
+      "name": "Bilbao Airport",
+      "primary": true,
+      "note": "Main airport, about 4 km straight-line to the centre.",
+      "options": [
+        {
+          "mode": "Airport bus (Bizkaibus A3247)",
+          "to": "Gran Vía, Plaza Elíptica, Bilbao Intermodal",
+          "price": "€4.50",
+          "time": "20-30 min",
+          "note": "Runs about 4 times an hour; card tap accepted."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€25-30",
+          "time": "15-25 min",
+          "note": "Fixed-ish fare; ask before you ride."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt)",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "15-25 min",
+          "note": "Pickup point may be outside the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Bilbao",
+      "https://en.wikivoyage.org/wiki/Bilbao"
+    ]
+  ],
+  "best_for": [
+    "art",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk the centre and use the metro or tram for longer hops; get a Barik card.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Clean and fast. Single tickets cost about €1.70–1.95 by zone."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "The green Euskotren tram runs along the river past the Guggenheim; single ticket €1.50."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Bilbobus city buses are red with a flat fare; Bizkaibus green buses serve the province."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are easy to find; ride apps like Uber and Bolt operate in Bilbao."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is hard: hilly one-ways, works, and a low emissions zone. Walk or cycle instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best for the old town and riverside. The centre is compact and walkable."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Oceanic climate: mild all year, rain in every month, and rarely very hot or cold.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain any month",
+        "text": "Expect 10–17 rain days every month. March and November are wettest. Always carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild temperatures",
+        "text": "Highs run from about 12°C in January to 26°C in August. Rarely freezing, rarely hot."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best months: June to September",
+        "text": "Warmest and driest, highs 23–26°C with fewer rain days. Best for the river and the coast."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layers, not heavy coats",
+        "text": "Mornings and evenings are cool even in summer. A light jacket and a rain layer cover most trips."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Grey skies are normal",
+        "text": "Cloudy days are common. Plan museums and pintxos bars as backup on wet days."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a waterproof jacket and an umbrella. Sunglasses for summer."
+      }
+    ]
+  }
+}

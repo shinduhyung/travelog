@@ -1,0 +1,177 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Tropical island capital where old streets meet palm-lined bays.",
+  "intro": "Haikou rewards visitors with historic arcade streets, volcanic parks and fresh seafood by the strait. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Bo'ai Old Street",
+    "Haixiu Avenue",
+    "West Coast",
+    "Meilan District"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 50,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "No metro; commuter trains on the Hainan high-speed line link the airport and main stations.",
+    "City buses are cheap and cover most routes; fares are a few yuan.",
+    "Taxis meter from about ¥10; insist on the meter (dabiao).",
+    "Ride-hailing apps DiDi and Amap work well; Uber does not operate.",
+    "Bikes and electric scooters are easy to rent; riverside paths are good.",
+    "Ferries cross to Xuwen and Beihai from New Port and Xiuying Port."
+  ],
+  "airports": [
+    {
+      "code": "HAK",
+      "name": "Haikou Meilan International Airport",
+      "primary": true,
+      "note": "Main hub, about 16 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "Commuter train",
+          "to": "Haikou East Railway Station / city",
+          "price": "¥2-10",
+          "time": "15-25 min",
+          "note": "Cheapest and fastest; check timetable."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Haixiu Avenue downtown",
+          "price": "¥15",
+          "time": "30-40 min",
+          "note": "Goes to the old Civil Aviation Hotel area."
+        },
+        {
+          "mode": "City bus",
+          "to": "Various city stops",
+          "price": "¥2-5",
+          "time": "45-60 min",
+          "note": "Ask staff which route suits your hotel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥50-60",
+          "time": "30-40 min",
+          "note": "Use licensed taxis outside the terminal and insist on the meter."
+        },
+        {
+          "mode": "Ride app (DiDi)",
+          "to": "City centre",
+          "price": "¥45-65",
+          "time": "30-40 min",
+          "note": "Pick a marked pickup point."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Qilou Old Street",
+    "Haikou Century Bridge",
+    "Qiongzhou Strait"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Haikou",
+      "https://en.wikivoyage.org/wiki/Haikou"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    20.03421,
+    110.34651
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 21,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 10
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 14
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 20
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 20
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 23
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 28,
+      "low": 24,
+      "rain_days": 19
+    },
+    {
+      "high": 26,
+      "low": 22,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 18,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

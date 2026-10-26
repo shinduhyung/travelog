@@ -1,0 +1,33 @@
+$ deepseek_prep.py Ho Chi Minh City
+  tokens in 803 out 497
+Ho Chi Minh City: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Ho Chi Minh City
+  tokens in 3955 out 719
+Ho Chi Minh City: 0 problems
+
+$ deepseek_city.py Ho Chi Minh City --stage places
+Ho Chi Minh City: places
+  tokens in 1230 out 3656
+
+$ deepseek_city.py Ho Chi Minh City --stage frame
+Ho Chi Minh City: frame
+  tokens in 2543 out 1983
+
+$ deepseek_city.py Ho Chi Minh City --stage plans
+Ho Chi Minh City: plans
+  plans for day
+  tokens in 2305 out 917
+  plans for 1n
+  tokens in 2306 out 1080
+  plans for 2n
+  tokens in 2311 out 1496
+  plans for 3n
+  tokens in 2306 out 1404
+  plans for 4n
+  tokens in 2306 out 1930
+
+$ merge_city.py Ho Chi Minh City
+Ho Chi Minh City: 22 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/ho-chi-minh-city.json and planner/ho-chi-minh-city.json
+

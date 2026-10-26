@@ -1,0 +1,561 @@
+{
+  "city": "Baltimore",
+  "checked": "October 2026",
+  "intro_line": "Baltimore is a gritty, charming harbor city with real character.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Inner Harbor",
+        "Fells Point",
+        "Mount Vernon",
+        "Federal Hill"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Inner Harbor",
+        "Fells Point",
+        "Mount Vernon",
+        "Federal Hill"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Inner Harbor",
+        "Fells Point",
+        "Mount Vernon",
+        "Federal Hill"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Inner Harbor",
+        "Fells Point",
+        "Mount Vernon",
+        "Federal Hill"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Inner Harbor",
+        "Fells Point",
+        "Mount Vernon",
+        "Federal Hill"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 10,
+        "note": "Cold and often grey; highs near 6°C. Pack a warm coat for harbor walks."
+      },
+      {
+        "high": 8,
+        "low": -1,
+        "rain_days": 11,
+        "note": "Still cold, highs around 8°C. Indoor museums are the safe bet."
+      },
+      {
+        "high": 12,
+        "low": 2,
+        "rain_days": 11,
+        "note": "Milder, highs near 12°C. Rain on about 11 days, so bring a jacket."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Spring warms up to 18°C. Good walking weather with some rain."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 14,
+        "note": "Pleasant at 23°C. One of the rainiest months, so keep an indoor plan."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 13,
+        "note": "Warm and humid, highs near 28°C. Crab season is on."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 15,
+        "note": "Hot and sticky, highs around 30°C. Plan outdoor sights for morning."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 15,
+        "note": "Similar to July: hot, humid and often wet. Carry water."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 11,
+        "note": "Warm and comfortable at 26°C. A good month for the waterfront."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 9,
+        "note": "Crisp and dry-ish at 20°C. Fewer rain days; great for walking."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 8,
+        "note": "Cooler at 13°C. Layers help; rain on about 8 days."
+      },
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 10,
+        "note": "Cold again, highs near 9°C. Holiday lights and indoor sights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.55,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.75,
+      0.6
+    ]
+  },
+  "places": {
+    "aquarium": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Inner Harbor",
+      "popularity": 5
+    },
+    "peabody": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Mount Vernon",
+      "popularity": 4
+    },
+    "jhu": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Mount Vernon",
+      "popularity": 3
+    },
+    "lexington": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday lunch",
+      "area": "Mount Vernon",
+      "popularity": 4
+    },
+    "fellspoint": {
+      "types": [
+        "culture",
+        "food",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Fells Point",
+      "popularity": 4
+    },
+    "fortmchenry": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Federal Hill",
+      "popularity": 4
+    },
+    "federalhill": {
+      "types": [
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Federal Hill",
+      "popularity": 4
+    },
+    "americanvisionary": {
+      "types": [
+        "art",
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Federal Hill",
+      "popularity": 3
+    },
+    "watertaxi": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Inner Harbor",
+      "popularity": 3
+    },
+    "mtvernonwalk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Mount Vernon",
+      "popularity": 3
+    },
+    "bmoremuseum": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Mount Vernon",
+      "popularity": 3
+    },
+    "crabcake": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Fells Point",
+      "popularity": 4
+    },
+    "harborplace": {
+      "types": [
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Inner Harbor",
+      "popularity": 4
+    },
+    "orioles": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Inner Harbor",
+      "popularity": 4
+    },
+    "powhatan": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Fells Point",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the harbor, Fort McHenry and a museum or two, with time for a proper crab dinner."
+  },
+  "airports": [
+    {
+      "code": "BWI",
+      "name": "Baltimore/Washington International Thurgood Marshall Airport",
+      "primary": true,
+      "note": "Main airport, about 14 km south of the centre.",
+      "options": [
+        {
+          "mode": "Light rail",
+          "to": "Inner Harbor",
+          "price": "$2",
+          "time": "30-40 min",
+          "note": "Departs directly from the terminal."
+        },
+        {
+          "mode": "Free shuttle + MARC train",
+          "to": "Penn Station",
+          "price": "$6",
+          "time": "15 min train plus shuttle",
+          "note": "Weekday commuter service; check times."
+        },
+        {
+          "mode": "Free shuttle + Amtrak",
+          "to": "Penn Station",
+          "price": "$7-35",
+          "time": "15 min train plus shuttle",
+          "note": "More frequent than MARC."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Flat-rate zone fares are common."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Pickup at designated rideshare zones."
+        }
+      ]
+    },
+    {
+      "code": "DCA",
+      "name": "Ronald Reagan Washington National Airport",
+      "primary": false,
+      "note": "Alternative airport near Washington, D.C., about 60 km southwest.",
+      "options": [
+        {
+          "mode": "Metro + MARC/Amtrak train",
+          "to": "Penn Station",
+          "price": "$10-30",
+          "time": "1.5-2 hr",
+          "note": "Transfer at Washington Union Station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$80-110",
+          "time": "50-75 min",
+          "note": "Traffic can be heavy at peak times."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$70-100",
+          "time": "50-75 min",
+          "note": "Often cheaper than a taxi."
+        }
+      ]
+    },
+    {
+      "code": "IAD",
+      "name": "Washington Dulles International Airport",
+      "primary": false,
+      "note": "Alternative airport in Virginia, about 80 km southwest.",
+      "options": [
+        {
+          "mode": "Metro + MARC/Amtrak train",
+          "to": "Penn Station",
+          "price": "$12-35",
+          "time": "2-2.5 hr",
+          "note": "Silver Line to Washington Union Station first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$100-130",
+          "time": "60-90 min",
+          "note": "Long ride; agree on price first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$90-120",
+          "time": "60-90 min",
+          "note": "Book ahead for early flights."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Baltimore",
+      "https://en.wikivoyage.org/wiki/Baltimore"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "Walk the harbor and Fells Point; use the free Circulator bus and light rail for the rest.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "The subway and light rail cost $2 per ride; a day pass is $4.60. The light rail runs from BWI Airport to the Inner Harbor in about 30 minutes for $2."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "MTA buses cost $2 per ride, $4.60 for a day pass. The Charm City Circulator is free and links the harbor, Fells Point and Mount Vernon."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Lyft both operate widely. Taxis are metered but less common."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is optional. Parking downtown runs about $5 per hour near the harbor."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The Inner Harbor, Fells Point and Federal Hill are close together and easy on foot in mild weather."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "MARC and Amtrak trains connect Penn Station to Washington, D.C. in about an hour."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold winters, warm humid summers, and mild spring and fall. Rain falls year-round.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April, May, September and October",
+        "text": "Highs of 18–26°C and comfortable evenings. Ideal for the harbor and Fort McHenry."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid",
+        "text": "July and August reach about 30°C with muggy air. Do outdoor sights early and stay in the shade."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold",
+        "text": "January highs near 6°C and lows below freezing. Bring a warm coat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain any month",
+        "text": "Expect rain on 8–15 days each month. Summer is wettest; a small umbrella helps."
+      },
+      {
+        "icon": "☀️",
+        "title": "Long summer days",
+        "text": "June to August gives the most daylight for walking the waterfront in the evening."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobbled streets. Add sunscreen and a hat for summer."
+      }
+    ]
+  }
+}

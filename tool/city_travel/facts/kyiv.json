@@ -1,0 +1,217 @@
+{
+  "currency": "UAH",
+  "usd_rate": 45.0666,
+  "intro_line": "Kyiv: golden domes, river bluffs, and stubborn, generous spirit.",
+  "intro": "Kyiv rewards visitors with grand monasteries, leafy hills and a lively cafe scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Maidan / Khreshchatyk",
+    "Podil",
+    "Pechersk",
+    "Lypky"
+  ],
+  "taxi": {
+    "flag_day": 60,
+    "flag_airport": 160,
+    "per_km": 11,
+    "min_fare": 60
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro is fast and cheap; base fare is 8 грн per trip.",
+    "Pay by tapping a contactless card or phone at orange gates.",
+    "Trams, trolleybuses and buses share the same 8 грн fare; transfers cost extra.",
+    "Bolt and Uber work well; Uklon is the local favourite.",
+    "Curfew is 01:00-05:00 daily, so plan your ride home early.",
+    "Central streets are walkable but hilly; underground crossings have stairs, not lifts."
+  ],
+  "airports": [
+    {
+      "code": "KBP",
+      "name": "Boryspil International Airport",
+      "primary": true,
+      "note": "Main hub, 29 km east; airspace closed to civil flights, check status.",
+      "options": [
+        {
+          "mode": "Kyiv Boryspil Express train",
+          "to": "Vokzalna / Central station",
+          "price": "80 грн",
+          "time": "about 40 min",
+          "note": "Buy at the kiosk; card accepted, city transport card not."
+        },
+        {
+          "mode": "Sky Bus",
+          "to": "Central Railway Station",
+          "price": "100-106 грн",
+          "time": "50-70 min",
+          "note": "Runs 24 hr every 20-30 min; online is cheaper."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "550-700 грн",
+          "time": "40-60 min",
+          "note": "Book ahead for a fixed price."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "350-500 грн",
+          "time": "40-60 min",
+          "note": "Best value for last-minute calls."
+        }
+      ]
+    },
+    {
+      "code": "IEV",
+      "name": "Kyiv Zhuliany International Airport",
+      "primary": false,
+      "note": "Budget airport 7 km southwest; currently closed with all Ukrainian airspace.",
+      "options": [
+        {
+          "mode": "Trolleybus 9",
+          "to": "M1 Vokzalna",
+          "price": "8 грн",
+          "time": "30-40 min",
+          "note": "Cheapest link to the metro."
+        },
+        {
+          "mode": "Bus 78",
+          "to": "M2 Vasylkivska",
+          "price": "8 грн",
+          "time": "25-35 min",
+          "note": "Good for the right bank."
+        },
+        {
+          "mode": "Volynsky suburban train",
+          "to": "Central Railway Station",
+          "price": "check locally",
+          "time": "about 15 min",
+          "note": "Station is 500 m west of the terminal."
+        },
+        {
+          "mode": "Uber / Bolt / Uklon",
+          "to": "City centre",
+          "price": "200-250 грн",
+          "time": "20-30 min",
+          "note": "Fastest door-to-door option."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Kyiv Pechersk Lavra",
+    "St. Sophia's Cathedral",
+    "Maidan Nezalezhnosti",
+    "St. Andrew's Church",
+    "Golden Gate, Zoloti Vorota",
+    "Motherland Monument, Kyiv",
+    "Andriyivskyy Descent",
+    "Ancient Kyiv, Principality of Kyivan Rus",
+    "Dnieper River",
+    "Khreshchatyk Street",
+    "NSC Olimpiyskiy",
+    "Shevchenko National Museum",
+    "St. Cyril's Monastery",
+    "St. Volodymyr's Cathedral"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Kyiv",
+      "https://en.wikivoyage.org/wiki/Kyiv"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    50.4501,
+    30.5234
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 0,
+      "low": -5,
+      "rain_days": 11
+    },
+    {
+      "high": 2,
+      "low": -4,
+      "rain_days": 8
+    },
+    {
+      "high": 7,
+      "low": -1,
+      "rain_days": 9
+    },
+    {
+      "high": 15,
+      "low": 5,
+      "rain_days": 10
+    },
+    {
+      "high": 20,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 7
+    },
+    {
+      "high": 13,
+      "low": 6,
+      "rain_days": 8
+    },
+    {
+      "high": 6,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 2,
+      "low": -2,
+      "rain_days": 13
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

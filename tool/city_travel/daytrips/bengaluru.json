@@ -1,0 +1,69 @@
+{
+ "city": "Bengaluru",
+ "trips": [
+  {
+   "place": "Mysuru",
+   "label": "",
+   "position": {
+    "id": 16872702,
+    "name": "Mysore Airport",
+    "city": "Mandakalli",
+    "lat": 12.23218,
+    "lng": 76.65425
+   },
+   "town": {
+    "name": "Mysuru",
+    "lat": 12.29791,
+    "lng": 76.63925
+   },
+   "road": {
+    "km": 143,
+    "min": 118,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 3680,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$13",
+     "time": "3h",
+     "via": "Ksr Bengaluru to Mysore Jn",
+     "source": "https://www.rome2rio.com/s/Bengaluru/Mysuru"
+    },
+    "bus": {
+     "from": "$1-$35",
+     "time": "2h 45m",
+     "via": "Bengaluru to Mysuru",
+     "source": "https://www.rome2rio.com/s/Bengaluru/Mysuru"
+    }
+   },
+   "route_note": "Take an express train from Bengaluru City Junction to Mysuru Junction, about 2.5 to 3 hours, then an auto or taxi to the palace; buses also run but take longer.",
+   "see": [
+    "Mysore Palace",
+    "Chamundi Hill and Chamundeshwari Temple",
+    "Devaraja Market",
+    "Brindavan Gardens (evening light show)"
+   ],
+   "visit": "Full day",
+   "tour_query": "Mysore day trip from Bangalore",
+   "quests": [
+    "Mysore Palace",
+    "Devaraja Market"
+   ],
+   "recommended": "bus",
+   "why": "The bus is the fastest listed option at 2h 45m, versus 3h by train, and it avoids the last-mile trip from the station to the palace.",
+   "stars": 5,
+   "know": [
+    "Mysore Palace is the main draw; the palace is illuminated on Sunday evenings and on some public holidays.",
+    "Cooler months, roughly October to March, are the most comfortable for sightseeing.",
+    "Frequency per day is not confirmed here, so check timetables before you set off."
+   ]
+  }
+ ],
+ "problems": [
+  "Ramanagara: not a town in cities15000.json (IN), dropped",
+  "Nandi Hills: no Omio position, dropped"
+ ]
+}

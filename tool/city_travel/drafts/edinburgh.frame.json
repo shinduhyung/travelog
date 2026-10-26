@@ -1,0 +1,269 @@
+{
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Castle, Royal Mile and the Old Town closes."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, galleries and festival shows."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Arthur's Seat, Calton Hill and the coast."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town",
+      "range": [
+        90,
+        260
+      ],
+      "why": "Walk to the Castle, Royal Mile and Grassmarket. Lively and central, but hilly and noisy at night.",
+      "center": [
+        55.949,
+        -3.19
+      ]
+    },
+    {
+      "area": "New Town",
+      "range": [
+        100,
+        300
+      ],
+      "why": "Georgian streets, Princes Street shops and gardens. Quieter, flatter and close to Waverley station.",
+      "center": [
+        55.954,
+        -3.199
+      ]
+    },
+    {
+      "area": "Leith",
+      "range": [
+        70,
+        200
+      ],
+      "why": "Waterfront bars and restaurants, cheaper rooms. Trams and buses reach the centre in about 20 minutes.",
+      "center": [
+        55.975,
+        -3.17
+      ]
+    },
+    {
+      "area": "Haymarket",
+      "range": [
+        75,
+        210
+      ],
+      "why": "Near the station, airport tram and bus links. Good value and a short walk to the West End.",
+      "center": [
+        55.946,
+        -3.218
+      ]
+    }
+  ],
+  "food": [
+    "Try Scottish classics: haggis, neeps and tatties, Cullen skink soup and a full Scottish breakfast.",
+    "Look for a pub lunch in the Old Town or Stockbridge; expect roughly GBP 12–20 for a main.",
+    "Seafood is good in Leith: check the day's catch and book ahead for dinner.",
+    "Cheap eats: pies, baked potatoes and sandwiches for about GBP 5–9; many museums have cafés.",
+    "Book dinner ahead in August, when festival crowds fill central restaurants."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a climb up Arthur's Seat: a rough walk of about 1–1.5 hours up and down; wear grippy shoes.",
+    "Take a train or bus to South Queensferry to see the Forth Bridges, or a boat trip to Inchcolm Abbey; check sailings on the day.",
+    "History fans can add a day trip to Stirling Castle or Rosslyn Chapel; times and tickets vary, so check on the day."
+  ],
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.45,
+      0.4
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      1,
+      0.9,
+      0.85,
+      0.75,
+      0.75
+    ]
+  },
+  "best_for": [
+    "history",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers the Castle, Royal Mile and a museum or two, with time for Arthur's Seat or Leith."
+  },
+  "month_notes": [
+    "Cold and often wet: highs near 6°C, lows near 2°C, rain on about 14 days. Pack a warm waterproof coat.",
+    "Still cold: highs around 7°C, rain on about 13 days. Short daylight; plan indoor sights.",
+    "Cool and wet: highs near 9°C, rain on about 16 days. Good museum weather.",
+    "Milder: highs near 11°C, rain on about 12 days. Pleasant for walking the Royal Mile.",
+    "Spring warmth: highs near 14°C, rain on about 13 days. Good for Arthur's Seat.",
+    "Long days: highs near 17°C, rain on about 14 days. Evenings stay light late.",
+    "Warmest month: highs near 18°C, rain on about 17 days. Busy festival season; book early.",
+    "Warm and busy: highs near 18°C, rain on about 15 days. Festival crowds and higher prices.",
+    "Cooling: highs near 16°C, rain on about 13 days. Quieter than August, still good for walks.",
+    "Autumn: highs near 13°C, rain on about 15 days. Bring layers and a rain jacket.",
+    "Cold and damp: highs near 9°C, rain on about 14 days. Dark early; indoor sights shine.",
+    "Coldest feel: highs near 7°C, rain on about 16 days. Short days and festive lights in the centre."
+  ],
+  "climate_guide": {
+    "summary": "Cool and changeable: mild summers, cold winters and rain in every month. Rarely very hot or very cold.",
+    "items": [
+      {
+        "icon": "🌦️",
+        "title": "Rain any month",
+        "text": "Expect rain on roughly 12–17 days each month. Showers pass quickly; carry a light waterproof."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summers",
+        "text": "July and August highs sit near 18°C, lows near 12°C. Rarely hot; layers help."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters",
+        "text": "January highs near 6°C, lows near 2°C. Wind off the sea makes it feel colder; bring a warm coat."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Windy and exposed",
+        "text": "Hills and the coast are breezier. A windproof layer matters more than an umbrella."
+      },
+      {
+        "icon": "☀️",
+        "title": "Long summer days",
+        "text": "June and July give very long daylight, so late walks are easy. Winter days are short."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Waterproof jacket, layers, comfortable walking shoes for cobbles and hills, and a warm hat in winter."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the centre; use buses and trams for Leith, the airport and longer hops.",
+    "modes": [
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams link the airport, Haymarket, Princes Street, Waverley and Leith. Buy tickets at stop machines."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Lothian buses cover the city. Pay with exact cash or contactless; day and multi-day tickets available."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are plentiful. Uber and Bolt also operate in Edinburgh."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not worth it in the centre: many streets are closed and parking is scarce and pricey."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The centre is very walkable, though hilly with cobbles. Bikes and e-bikes are easy to hire, with some cycle lanes."
+      },
+      {
+        "mode": "Airport bus",
+        "has": true,
+        "text": "Airlink 100 runs 24 hours to Waverley Bridge, about 20–30 minutes."
+      }
+    ]
+  }
+}

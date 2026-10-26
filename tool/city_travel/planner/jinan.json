@@ -1,0 +1,569 @@
+{
+  "city": "Jinan",
+  "checked": "October 2026",
+  "intro_line": "Jinan, the City of Springs, blends ancient charm with modern energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City Centre (Daming Lake)",
+        "Train Station Area",
+        "Olympic Centre",
+        "High-tech Zone"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City Centre (Daming Lake)",
+        "Train Station Area",
+        "Olympic Centre",
+        "High-tech Zone"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "City Centre (Daming Lake)",
+        "Train Station Area",
+        "Olympic Centre",
+        "High-tech Zone"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City Centre (Daming Lake)",
+        "Train Station Area",
+        "Olympic Centre",
+        "High-tech Zone"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "City Centre (Daming Lake)",
+        "Train Station Area",
+        "Olympic Centre",
+        "High-tech Zone"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -4,
+        "rain_days": 2,
+        "note": "January: cold, highs near 5°C and lows around -4°C. Pack a warm coat; few rainy days."
+      },
+      {
+        "high": 9,
+        "low": -2,
+        "rain_days": 3,
+        "note": "February: still cold, highs around 9°C. Short days; indoor sights are a good bet."
+      },
+      {
+        "high": 16,
+        "low": 5,
+        "rain_days": 3,
+        "note": "March: warming to about 16°C. Good for walking the lake and springs; a few wet days."
+      },
+      {
+        "high": 22,
+        "low": 10,
+        "rain_days": 6,
+        "note": "April: pleasant, highs near 22°C. One of the best months for outdoor sightseeing."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 6,
+        "note": "May: warm at about 27°C. Comfortable mornings; carry water and sun protection."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 7,
+        "note": "June: hot, highs near 32°C. Sightsee early and rest in the afternoon."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 14,
+        "note": "July: hottest and wettest, highs around 32°C with about 14 rain days. Bring an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 13,
+        "note": "August: hot and rainy, similar to July. Plan indoor backups."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 6,
+        "note": "September: cools to about 27°C. A strong month for the springs and lake."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 4,
+        "note": "October: mild at about 20°C. Arguably the best month; clear and comfortable."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 4,
+        "note": "November: cooler, highs near 13°C. Fewer crowds; bring a jacket."
+      },
+      {
+        "high": 6,
+        "low": -3,
+        "rain_days": 2,
+        "note": "December: cold again, highs around 6°C. Quiet season; wrap up warm."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.7,
+      0.9,
+      0.95,
+      0.75,
+      0.55,
+      0.55,
+      0.85,
+      0.95,
+      0.7,
+      0.45
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "baotu_spring": {
+      "types": [
+        "nature",
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning, spring and autumn",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 5
+    },
+    "daming_lake": {
+      "types": [
+        "nature",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening; summer for lotus flowers",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 5
+    },
+    "thousand_buddha": {
+      "types": [
+        "nature",
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning for cooler air and clearer views",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 4
+    },
+    "shandong_university": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "furong_street": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 5
+    },
+    "qushuiting": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 4
+    },
+    "black_tiger_spring": {
+      "types": [
+        "nature",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 4
+    },
+    "moat_boat": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 4
+    },
+    "shandong_museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning; closed Monday",
+      "area": "High-tech Zone",
+      "popularity": 4
+    },
+    "olympic_centre": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Olympic Centre",
+      "popularity": 3
+    },
+    "hero_mountain": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "quancheng_square": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "wulongtan": {
+      "types": [
+        "nature",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "jinan_food_market": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "baotu_tea": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "train_station_walk": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Train Station Area",
+      "popularity": 2
+    },
+    "shandong_opera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 2
+    },
+    "qianfo_street": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 3
+    },
+    "city_wall_park": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 2
+    },
+    "spring_culture_museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; good in rain",
+      "area": "City Centre (Daming Lake)",
+      "popularity": 2
+    },
+    "high_tech_park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "High-tech Zone",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the springs, the lake and the old streets at an easy pace; add a night for a Mount Tai day trip."
+  },
+  "airports": [
+    {
+      "code": "TNA",
+      "name": "Yaoqiang Airport",
+      "primary": true,
+      "note": "Main airport, 29 km northeast of centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown",
+          "price": "¥20",
+          "time": "60 min",
+          "note": "Hourly 06:00-17:00."
+        },
+        {
+          "mode": "Bus 16 subroute",
+          "to": "Downtown",
+          "price": "¥1-2",
+          "time": "check locally",
+          "note": "Cheapest but slow."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "¥150",
+          "time": "60 min",
+          "note": "Fixed price, agree before."
+        },
+        {
+          "mode": "Didi",
+          "to": "Downtown",
+          "price": "¥120-150",
+          "time": "60 min",
+          "note": "App-based, may be cheaper."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Jinan",
+      "https://en.wikivoyage.org/wiki/Jinan"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro and buses for cheap trips; taxis or Didi when you don't speak Chinese.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Three lines (1, 2, 3) cover west, east and north. No line through the city centre yet, so you may still need a bus or taxi."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "¥1 or ¥2 for air-conditioned buses. Use a transit card or Apple Pay for a discount."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis flag at ¥7.50. Drivers rarely speak English, so have your destination in Chinese. Didi works well."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended for visitors: traffic and parking are difficult."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The city centre around Daming Lake is walkable. Shared bikes are available but need an app."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold dry winters, hot humid summers with the most rain, and pleasant spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Mild highs of about 20–27°C. Ideal for the springs, Daming Lake and walking the old streets."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs near 32°C with lows around 22–24°C. Go out early or after sunset."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in July and August",
+        "text": "About 13–14 rain days each month. Pack a light umbrella and a waterproof layer."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold, dry winter (December to February)",
+        "text": "Highs of 5–9°C and lows down to -4°C. Very few rainy days; wear a warm coat."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Spring can be breezy and dry",
+        "text": "March to May warms quickly with only a few wet days. A light jacket helps on windy days."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, and light breathable clothes plus an umbrella for summer."
+      }
+    ]
+  }
+}

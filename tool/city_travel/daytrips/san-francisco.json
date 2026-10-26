@@ -1,0 +1,62 @@
+{
+ "city": "San Francisco",
+ "trips": [
+  {
+   "place": "Napa",
+   "label": "",
+   "position": {
+    "id": 408939,
+    "name": "Napa, CA",
+    "city": "Napa",
+    "lat": 38.29714,
+    "lng": -122.28553
+   },
+   "town": {
+    "name": "Napa",
+    "lat": 38.29714,
+    "lng": -122.28553
+   },
+   "road": {
+    "km": 75,
+    "min": 63,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 190.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$5-$10",
+     "time": "2h 33m",
+     "via": "El Cerrito Del Norte Station to Redwood Park n Ride",
+     "source": "https://www.rome2rio.com/s/San%20Francisco/Napa"
+    }
+   },
+   "route_note": "Take the Vallejo ferry or BART to El Cerrito, then a bus or the Napa Valley Vine line into Napa; most visitors use a wine-tour shuttle for the last leg.",
+   "see": [
+    "Downtown Napa tasting rooms",
+    "Napa Valley wine estates",
+    "Oxbow Public Market",
+    "Riverfront promenade"
+   ],
+   "visit": "Full day",
+   "tour_query": "Napa Valley wine tour from San Francisco",
+   "quests": [],
+   "recommended": "tour",
+   "why": "Public transit takes over 2.5 hours with a ferry/BART-plus-bus transfer and a last-mile problem to the wineries, so a wine-tour shuttle is the practical choice.",
+   "stars": 3,
+   "know": [
+    "Book wine-tour shuttles ahead, especially on weekends",
+    "Most wineries require reservations for tastings",
+    "Harvest season (late summer to fall) is the most popular time to visit"
+   ]
+  }
+ ],
+ "problems": [
+  "Sausalito: not a town in cities15000.json (US), dropped",
+  "Muir Beach: no Omio position, dropped",
+  "Sausalito: not a town in cities15000.json (US), dropped",
+  "Half Moon Bay: not a town in cities15000.json (US), dropped"
+ ]
+}

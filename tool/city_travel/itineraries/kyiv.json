@@ -1,0 +1,1410 @@
+{
+  "city": "Kyiv",
+  "checked": "October 2026",
+  "currency": "UAH",
+  "usd_rate": 45.0666,
+  "intro": "Kyiv rewards visitors with grand monasteries, leafy hills and a lively cafe scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 50.4181,
+      "west": 30.4543,
+      "north": 50.4956,
+      "east": 30.5763,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 60,
+      "flag_airport": 160,
+      "per_km": 11,
+      "min_fare": 60
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Metro is fast and cheap; base fare is 8 грн per trip.",
+      "Pay by tapping a contactless card or phone at orange gates.",
+      "Trams, trolleybuses and buses share the same 8 грн fare; transfers cost extra.",
+      "Bolt and Uber work well; Uklon is the local favourite.",
+      "Curfew is 01:00-05:00 daily, so plan your ride home early.",
+      "Central streets are walkable but hilly; underground crossings have stairs, not lifts."
+    ],
+    "sources": []
+  },
+  "places": {
+    "lavra": {
+      "name": "Kyiv Pechersk Lavra",
+      "landmark": "Kyiv Pechersk Lavra",
+      "kind": "sight",
+      "lat": 50.4336,
+      "lon": 30.5592,
+      "price": 150,
+      "price_text": "≈ UAH 100–200 entry per zone; cave tickets extra. Check on the day.",
+      "hours": "Grounds roughly 09:00–18:00 daily; caves and some churches close earlier",
+      "tip": "Cover shoulders and knees. The Far Caves are a separate ticket and a long walk downhill.",
+      "source": "https://lavra.ua/"
+    },
+    "sophia": {
+      "name": "St. Sophia's Cathedral",
+      "landmark": "St. Sophia's Cathedral",
+      "kind": "sight",
+      "lat": 50.4528,
+      "lon": 30.5238,
+      "price": 120,
+      "price_text": "≈ UAH 80–180 depending on zones; bell tower extra",
+      "hours": "Roughly 10:00–18:00, closed Thursday; check on the day",
+      "tip": "The 11th-century mosaics and frescoes are the highlight. Buy the combined ticket if you want the bell tower view.",
+      "source": "https://st-sophia.org.ua/"
+    },
+    "maidan": {
+      "name": "Maidan Nezalezhnosti",
+      "landmark": "Maidan Nezalezhnosti",
+      "kind": "sight",
+      "lat": 50.4491,
+      "lon": 30.5228,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Start here to get your bearings. The glass dome and Independence Monument are the meeting points.",
+      "source": ""
+    },
+    "andrew": {
+      "name": "St. Andrew's Church",
+      "landmark": "St. Andrew's Church",
+      "kind": "sight",
+      "lat": 50.4589,
+      "lon": 30.5186,
+      "price": 80,
+      "price_text": "≈ UAH 50–100 entry; check on the day",
+      "hours": "Roughly 10:00–18:00, closed certain weekdays",
+      "tip": "Climb the steps from Andriyivskyy Descent for the best photo of the blue-and-gold facade.",
+      "source": ""
+    },
+    "goldengate": {
+      "name": "Golden Gate, Zoloti Vorota",
+      "landmark": "Golden Gate, Zoloti Vorota",
+      "kind": "sight",
+      "lat": 50.4475,
+      "lon": 30.5133,
+      "price": 60,
+      "price_text": "≈ UAH 40–80; check on the day",
+      "hours": "Roughly 10:00–18:00 daily",
+      "tip": "Small museum inside the reconstructed gate. The little park around it is a good rest stop.",
+      "source": ""
+    },
+    "motherland": {
+      "name": "Motherland Monument, Kyiv",
+      "landmark": "Motherland Monument, Kyiv",
+      "kind": "sight",
+      "lat": 50.4287,
+      "lon": 30.562,
+      "price": 200,
+      "price_text": "≈ UAH 150–300 for the museum and viewing platforms; check on the day",
+      "hours": "Roughly 10:00–18:00, closed Monday",
+      "tip": "The terrace under the statue gives a wide Dnieper view. Book ahead if you want the top platform.",
+      "source": "https://military-historical-museum.org.ua/"
+    },
+    "andriyivskyy": {
+      "name": "Andriyivskyy Descent",
+      "landmark": "Andriyivskyy Descent",
+      "kind": "sight",
+      "lat": 50.4589,
+      "lon": 30.5186,
+      "price": 0,
+      "price_text": "Free to walk; souvenirs cost extra",
+      "hours": "Always open; stalls busiest late morning to evening",
+      "tip": "Cobblestones are uneven, wear flat shoes. Walk down from St. Andrew's Church toward Podil.",
+      "source": ""
+    },
+    "ancientkyiv": {
+      "name": "Ancient Kyiv, Principality of Kyivan Rus",
+      "landmark": "Ancient Kyiv, Principality of Kyivan Rus",
+      "kind": "sight",
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "price": 250,
+      "price_text": "≈ UAH 150–350 entry; check on the day",
+      "hours": "Roughly 10:00–18:00; seasonal, check before going",
+      "tip": "Open-air recreation of Kyivan Rus outside the centre. Allow half a day with transport.",
+      "source": ""
+    },
+    "dnieper": {
+      "name": "Dnieper River embankment",
+      "landmark": "Dnieper River",
+      "kind": "park",
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "price": 0,
+      "price_text": "Free; boat trips cost extra",
+      "hours": "Always open",
+      "tip": "Walk the embankment near the Lavra for river views. Boat trips run in summer, check on the day.",
+      "source": ""
+    },
+    "khreshchatyk": {
+      "name": "Khreshchatyk Street",
+      "landmark": "Khreshchatyk Street",
+      "kind": "sight",
+      "lat": 50.4449,
+      "lon": 30.5229,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; shops roughly 10:00–20:00",
+      "tip": "Main street, closed to cars at weekends. Good for a stroll between Maidan and the Golden Gate.",
+      "source": ""
+    },
+    "olimpiyskiy": {
+      "name": "NSC Olimpiyskiy",
+      "landmark": "NSC Olimpiyskiy",
+      "kind": "activity",
+      "lat": 50.4334,
+      "lon": 30.5218,
+      "price": null,
+      "price_text": "Ticket price depends on the event; check on the day",
+      "hours": "Only open for events and tours",
+      "tip": "Check the fixture list before you go. Stadium tours run on some days only.",
+      "source": "https://nsc-olimpiyskiy.com.ua/"
+    },
+    "shevchenkomuseum": {
+      "name": "Shevchenko National Museum",
+      "landmark": "Shevchenko National Museum",
+      "kind": "museum",
+      "lat": 50.4431,
+      "lon": 30.5188,
+      "price": 100,
+      "price_text": "≈ UAH 60–150; check on the day",
+      "hours": "Roughly 10:00–17:00, closed Monday",
+      "tip": "Good introduction to Ukraine's national poet. Labels are mostly in Ukrainian.",
+      "source": ""
+    },
+    "cyril": {
+      "name": "St. Cyril's Monastery",
+      "landmark": "St. Cyril's Monastery",
+      "kind": "sight",
+      "lat": 50.485,
+      "lon": 30.4686,
+      "price": 80,
+      "price_text": "≈ UAH 50–100; check on the day",
+      "hours": "Roughly 10:00–17:00, closed certain days",
+      "tip": "Quiet church with rare 12th-century frescoes. It is away from the centre, so plan transport.",
+      "source": ""
+    },
+    "volodymyr": {
+      "name": "St. Volodymyr's Cathedral",
+      "landmark": "St. Volodymyr's Cathedral",
+      "kind": "sight",
+      "lat": 50.4431,
+      "lon": 30.5119,
+      "price": 0,
+      "price_text": "Free entry; donations welcome",
+      "hours": "Roughly 08:00–19:00 daily; services may limit visits",
+      "tip": "Dress modestly. The interior paintings are the reason to come.",
+      "source": ""
+    },
+    "besarabka": {
+      "name": "Besarabsky Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 50.4472,
+      "lon": 30.5219,
+      "price": 0,
+      "price_text": "Free to enter; food priced per item",
+      "hours": "Roughly 08:00–20:00 daily",
+      "tip": "Go for cheese, honey and smoked fish. Bring cash for small stalls.",
+      "source": ""
+    },
+    "volodymyrhill": {
+      "name": "Volodymyr Hill viewpoint",
+      "landmark": null,
+      "kind": "park",
+      "lat": 50.4561,
+      "lon": 30.5256,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Best Dnieper and Podil panorama in the centre. Walk down to the river if you have time.",
+      "source": ""
+    },
+    "podilwalk": {
+      "name": "Podil neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 50.4653,
+      "lon": 30.5194,
+      "price": 0,
+      "price_text": "Free to walk; cafés cost extra",
+      "hours": "Always open",
+      "tip": "Wander between Kontraktova Square and the river port. Good cafés and old streets.",
+      "source": ""
+    },
+    "chernobyltour": {
+      "name": "Chernobyl exclusion zone day tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 51.3892,
+      "lon": 30.0992,
+      "price": 4000,
+      "price_text": "≈ UAH 3,000–5,000 per person; check current rules before booking",
+      "hours": "Full-day tours, early departure",
+      "tip": "Rules and access change often. Book only with a licensed operator and confirm it is running.",
+      "source": ""
+    },
+    "riverboat": {
+      "name": "Dnieper river boat trip",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 50.4514,
+      "lon": 30.5583,
+      "price": 300,
+      "price_text": "≈ UAH 200–500; check on the day",
+      "hours": "Seasonal, roughly May–September",
+      "tip": "Boats leave from the river station area. Sit on the open deck for the best views.",
+      "source": ""
+    },
+    "lvivchocolate": {
+      "name": "Lviv Chocolate Workshop, Kyiv",
+      "landmark": null,
+      "kind": "food",
+      "lat": 50.4497,
+      "lon": 30.5225,
+      "price": 150,
+      "price_text": "≈ UAH 100–250 for drinks and sweets",
+      "hours": "Roughly 09:00–21:00 daily",
+      "tip": "Warm chocolate drink is the classic order. Small café, so it fills up fast.",
+      "source": ""
+    },
+    "peremoha": {
+      "name": "Peremoha Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 50.4417,
+      "lon": 30.5472,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Green riverside park near the Lavra. Good for a quiet walk after the monastery.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day of golden domes, Soviet relics and river views, grouped by area.",
+      "days": [
+        {
+          "title": "Monasteries and monuments in Pechersk",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Start when the grounds open. Caves and some churches close earlier, so go there first."
+            },
+            {
+              "place": "motherland",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Short taxi or bus ride. Closed Monday."
+            },
+            {
+              "place": "dnieper",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch near the embankment, then a short walk by the river."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Sunset is best, but late afternoon light works too."
+            },
+            {
+              "place": "goldengate",
+              "at": "16:45",
+              "minutes": 40,
+              "note": "Roughly 10:00–18:00 daily. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Cathedrals, a market and a river walk, all close together in the centre.",
+      "days": [
+        {
+          "title": "Centre and Podil on foot",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Thursday. Check on the day."
+            },
+            {
+              "place": "goldengate",
+              "at": "11:45",
+              "minutes": 40,
+              "note": "A short walk up the street."
+            },
+            {
+              "place": "besarabka",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch and produce inside the market hall."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Stalls busiest late morning to evening. Weekend is best."
+            },
+            {
+              "place": "andrew",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Closed certain weekdays. Check before going."
+            },
+            {
+              "place": "podilwalk",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Late afternoon into evening. End with dinner in Podil."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Podil"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market halls, chocolate and a long Podil walk with meals along the way.",
+      "days": [
+        {
+          "title": "Eat your way from Maidan to Podil",
+          "stops": [
+            {
+              "place": "besarabka",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Morning is freshest. Try the produce and cheese stalls."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Shops roughly 10:00–20:00. Good for a coffee stop."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Afternoon break works too, but go early to avoid queues."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then browse the stalls."
+            },
+            {
+              "place": "podilwalk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late afternoon into evening. Ask locally for borscht and varenyky spots."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day: the caves monastery in the morning, Soviet and medieval sights after lunch.",
+      "days": [
+        {
+          "title": "Lavra, Motherland and the river",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Start at opening. Caves and some churches close earlier than the grounds. Dress modestly."
+            },
+            {
+              "place": "motherland",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Short ride or a long walk uphill. Closed Monday."
+            },
+            {
+              "place": "dnieper",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch near the embankment, then a flat walk along the river."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sunset viewpoint over Podil. Bring a jacket."
+            }
+          ]
+        },
+        {
+          "title": "Old Kyiv on foot",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Thursday. Check on the day."
+            },
+            {
+              "place": "goldengate",
+              "at": "11:15",
+              "minutes": 40,
+              "note": "Ten minutes on foot from Sophia."
+            },
+            {
+              "place": "besarabka",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Quick lunch inside the market hall."
+            },
+            {
+              "place": "maidan",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Walk down Khreshchatyk to the square."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Main street stroll before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Art and architecture first, then the river and Podil's market street.",
+      "days": [
+        {
+          "title": "Cathedrals and the centre",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Thursday. Grounds are lovely in spring."
+            },
+            {
+              "place": "volodymyr",
+              "at": "12:00",
+              "minutes": 40,
+              "note": "Morning is best; services may limit visits."
+            },
+            {
+              "place": "shevchenkomuseum",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Monday. Good for rain or midday heat."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Afternoon break and a hot drink."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Weekend afternoons the street goes car-free."
+            }
+          ]
+        },
+        {
+          "title": "Podil and the river",
+          "stops": [
+            {
+              "place": "andrew",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Closed certain weekdays; check first."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Market stalls busiest late morning to evening."
+            },
+            {
+              "place": "podilwalk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Lunch on the way. Late afternoon into evening is best."
+            },
+            {
+              "place": "riverboat",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Seasonal, roughly May to September. Check sailings on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Podil"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market halls, chocolate and a long walk between meals.",
+      "days": [
+        {
+          "title": "Market morning, centre afternoon",
+          "stops": [
+            {
+              "place": "besarabka",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning for the freshest produce. Try the dairy stalls."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Walk off breakfast. Shops open around 10:00."
+            },
+            {
+              "place": "maidan",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick look at the square."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Sweet stop before lunch."
+            },
+            {
+              "place": "sophia",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Thursday. Walk it off afterwards."
+            }
+          ]
+        },
+        {
+          "title": "Podil eating walk",
+          "stops": [
+            {
+              "place": "podilwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Cafes and cheap cafeterias along the way. Ask locally for borscht spots."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Weekend stalls sell snacks and souvenirs."
+            },
+            {
+              "place": "andrew",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Closed certain weekdays; check first."
+            },
+            {
+              "place": "dnieper",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Sunset in summer. End with dinner near the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the big monasteries, the old gates and the river views in two full days.",
+      "days": [
+        {
+          "title": "Arrive, Maidan and Khreshchatyk",
+          "stops": [
+            {
+              "place": "maidan",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Central square; easy to reach from most hotels."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "14:40",
+              "minutes": 45,
+              "note": "Walk the main street. Shops open about 10:00–20:00."
+            },
+            {
+              "place": "goldengate",
+              "at": "15:45",
+              "minutes": 40,
+              "note": "Roughly 10:00–18:00 daily. Short walk uphill."
+            },
+            {
+              "place": "volodymyr",
+              "at": "16:45",
+              "minutes": 40,
+              "note": "About 08:00–19:00; skip inside during services."
+            },
+            {
+              "place": "besarabka",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Market hall, roughly 08:00–20:00. Good spot for a casual dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Pechersk: Lavra and the river",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early on a weekday. Caves and some churches close earlier than the grounds."
+            },
+            {
+              "place": "motherland",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Roughly 10:00–18:00, closed Monday. Short ride from the Lavra."
+            },
+            {
+              "place": "dnieper",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk the embankment. Always open."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Sunset viewpoint over the river."
+            }
+          ]
+        },
+        {
+          "title": "Podil old streets, then leave",
+          "stops": [
+            {
+              "place": "andriyivskyy",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Stalls busiest late morning. Always open."
+            },
+            {
+              "place": "andrew",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Roughly 10:00–18:00, closed some weekdays. Check on the day."
+            },
+            {
+              "place": "podilwalk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Late-morning walk through the old quarter; grab lunch on the way."
+            },
+            {
+              "place": "cyril",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Roughly 10:00–17:00, closed certain days. Check before going."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "A relaxed mix of churches, art museums, market food and an evening on the river.",
+      "days": [
+        {
+          "title": "Maidan, Sophia and the market",
+          "stops": [
+            {
+              "place": "maidan",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Start at the central square."
+            },
+            {
+              "place": "sophia",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Roughly 10:00–18:00, closed Thursday. Grounds are lovely in spring."
+            },
+            {
+              "place": "shevchenkomuseum",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Roughly 10:00–17:00, closed Monday. Good for midday heat."
+            },
+            {
+              "place": "besarabka",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Lunch and produce. Roughly 08:00–20:00."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Afternoon break, roughly 09:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Podil art and the descent",
+          "stops": [
+            {
+              "place": "andriyivskyy",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Weekend daytime is best for stalls."
+            },
+            {
+              "place": "andrew",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Afternoon light on the descent. Check weekday closures."
+            },
+            {
+              "place": "podilwalk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Late afternoon into evening is nicest; eat lunch on the way."
+            },
+            {
+              "place": "cyril",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Morning is best but this fits the area. Check opening days."
+            }
+          ]
+        },
+        {
+          "title": "Pechersk and the river, then leave",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Weekday morning to avoid crowds."
+            },
+            {
+              "place": "dnieper",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Embankment walk; always open."
+            },
+            {
+              "place": "riverboat",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal, roughly May–September. Check on the day."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sunset view before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market halls, chocolate and long neighbourhood walks with plenty of eating stops.",
+      "days": [
+        {
+          "title": "Market morning and central sights",
+          "stops": [
+            {
+              "place": "besarabka",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning for the freshest produce. Roughly 08:00–20:00."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Walk off breakfast along the main street."
+            },
+            {
+              "place": "maidan",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Always open."
+            },
+            {
+              "place": "sophia",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Closed Thursday. Check on the day."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon sweet stop, roughly 09:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Podil eating walk",
+          "stops": [
+            {
+              "place": "podilwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Late morning into afternoon; plenty of cafes on the way."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Stalls busiest late morning to evening."
+            },
+            {
+              "place": "andrew",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Roughly 10:00–18:00, closed some weekdays."
+            },
+            {
+              "place": "cyril",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Roughly 10:00–17:00, closed certain days. Check before going."
+            }
+          ]
+        },
+        {
+          "title": "Pechersk and a river evening",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Weekday morning is calmest."
+            },
+            {
+              "place": "dnieper",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Walk and find lunch nearby."
+            },
+            {
+              "place": "riverboat",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Seasonal, roughly May–September."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Sunset, then dinner in the centre."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "A steady history run: the two great monasteries, the old Rus gate, and a full day in the exclusion zone.",
+      "days": [
+        {
+          "title": "Arrive, Maidan and Khreshchatyk",
+          "stops": [
+            {
+              "place": "maidan",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Central square, easy to reach from most hotels."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "15:40",
+              "minutes": 45,
+              "note": "Walk the main street. Shops roughly 10:00–20:00."
+            },
+            {
+              "place": "besarabka",
+              "at": "16:40",
+              "minutes": 45,
+              "note": "Covered market, good for a snack. Roughly 08:00–20:00."
+            },
+            {
+              "place": "volodymyr",
+              "at": "17:45",
+              "minutes": 40,
+              "note": "Short visit outside service times. Roughly 08:00–19:00."
+            }
+          ]
+        },
+        {
+          "title": "Pechersk: Lavra and WWII sites",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early on a weekday. Caves close earlier than the grounds."
+            },
+            {
+              "place": "motherland",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Monday. Clear afternoon is best."
+            },
+            {
+              "place": "dnieper",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk the embankment and rest your legs."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view over Podil."
+            }
+          ]
+        },
+        {
+          "title": "Chernobyl day tour",
+          "stops": [
+            {
+              "place": "chernobyltour",
+              "at": "08:00",
+              "minutes": 720,
+              "note": "Full day, early start. Book ahead and bring your passport."
+            }
+          ]
+        },
+        {
+          "title": "Old Kyiv and Podil",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Thursday. Check on the day."
+            },
+            {
+              "place": "goldengate",
+              "at": "12:00",
+              "minutes": 40,
+              "note": "Short walk from St. Sophia's."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk down toward Podil. Stalls busiest late morning to evening."
+            },
+            {
+              "place": "andrew",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Closed certain weekdays. Check on the day."
+            },
+            {
+              "place": "podilwalk",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Late afternoon into evening, with a meal stop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Art, churches and river views at an easy pace, with a boat trip in the warm months.",
+      "days": [
+        {
+          "title": "Arrive, Maidan and the main street",
+          "stops": [
+            {
+              "place": "maidan",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start here to get your bearings."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "15:40",
+              "minutes": 45,
+              "note": "Weekend afternoons are liveliest."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "16:40",
+              "minutes": 45,
+              "note": "Afternoon break. Roughly 09:00–21:00."
+            },
+            {
+              "place": "volodymyr",
+              "at": "17:45",
+              "minutes": 40,
+              "note": "Morning is quieter, but late afternoon works outside services."
+            }
+          ]
+        },
+        {
+          "title": "St. Sophia's and Podil art",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Thursday. Grounds are lovely in spring."
+            },
+            {
+              "place": "goldengate",
+              "at": "12:00",
+              "minutes": 40,
+              "note": "Nearby, roughly 10:00–18:00 daily."
+            },
+            {
+              "place": "andriyivskyy",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Market stalls and galleries on the descent."
+            },
+            {
+              "place": "andrew",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Afternoon light on the descent. Check weekday closures."
+            },
+            {
+              "place": "cyril",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Short ride away. Closed certain days, so check first."
+            }
+          ]
+        },
+        {
+          "title": "Pechersk and the river",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Morning on a weekday avoids midday crowds."
+            },
+            {
+              "place": "riverboat",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Seasonal, roughly May–September. Check on the day."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sunset view."
+            },
+            {
+              "place": "podilwalk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Late afternoon into evening, with dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museums, then go",
+          "stops": [
+            {
+              "place": "shevchenkomuseum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Monday. Good for a rainy morning."
+            },
+            {
+              "place": "peremoha",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Spring and summer daytime."
+            },
+            {
+              "place": "besarabka",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch and snacks before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maidan / Khreshchatyk"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Markets, chocolate and long Podil dinners, with the big sights slotted in between meals.",
+      "days": [
+        {
+          "title": "Arrive, market and main street",
+          "stops": [
+            {
+              "place": "besarabka",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Morning for the freshest produce. Roughly 08:00–20:00."
+            },
+            {
+              "place": "khreshchatyk",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Walk off breakfast. Shops roughly 10:00–20:00."
+            },
+            {
+              "place": "maidan",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Always open."
+            },
+            {
+              "place": "lvivchocolate",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Afternoon break. Roughly 09:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Podil eating walk",
+          "stops": [
+            {
+              "place": "andriyivskyy",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Weekend daytime for stalls and snacks."
+            },
+            {
+              "place": "andrew",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Check weekday closures."
+            },
+            {
+              "place": "podilwalk",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Late afternoon into evening; plan dinner here."
+            },
+            {
+              "place": "cyril",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Short ride away. Closed certain days."
+            }
+          ]
+        },
+        {
+          "title": "Pechersk and the river",
+          "stops": [
+            {
+              "place": "lavra",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Go early on a weekday."
+            },
+            {
+              "place": "riverboat",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Seasonal, roughly May–September."
+            },
+            {
+              "place": "volodymyrhill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sunset view, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "sophia",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Thursday. Check on the day."
+            },
+            {
+              "place": "besarabka",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Pick up food gifts before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Podil"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Golden-domed monasteries, WWII sites and Soviet relics."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Opera, folk art and the wide river boulevards."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Borscht, varenyky and cheap cafeterias."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Maidan / Khreshchatyk",
+      "range": [
+        1800,
+        4500
+      ],
+      "why": "Central and walkable to Maidan, Khreshchatyk and the metro; easiest base for a first visit.",
+      "center": [
+        50.45,
+        30.523
+      ]
+    },
+    {
+      "area": "Podil",
+      "range": [
+        1500,
+        3800
+      ],
+      "why": "Old riverside quarter with cafés and bars; quieter streets, still close to the centre.",
+      "center": [
+        50.465,
+        30.519
+      ]
+    },
+    {
+      "area": "Pechersk",
+      "range": [
+        2200,
+        6000
+      ],
+      "why": "Near the Pechersk Lavra and museum district; leafy and calm, good for history lovers.",
+      "center": [
+        50.434,
+        30.557
+      ]
+    },
+    {
+      "area": "Lypky",
+      "range": [
+        2500,
+        6500
+      ],
+      "why": "Upscale government quarter beside the centre; quiet, safe-feeling and close to Khreshchatyk.",
+      "center": [
+        50.445,
+        30.535
+      ]
+    }
+  ],
+  "food": [
+    "Try borscht (beet soup with sour cream), varenyky (filled dumplings) and chicken Kyiv; portions are big and prices low.",
+    "Cheap eats: cafeteria-style 'stolova' places and bakery cafés serve a full lunch for a few hundred грн.",
+    "Book a table for dinner on weekends in Podil; popular spots fill up.",
+    "Drink local: try uzvar (dried-fruit drink) and honey-based drinks; coffee culture is strong, with many small roasters.",
+    "Check opening hours on the day; some places change hours at short notice."
+  ],
+  "more_time": [
+    "Add a half-day at the Pechersk Lavra and the nearby WWII museum if you like history.",
+    "Swap one city day for a river walk and the Kyiv Sea embankment on a warm day.",
+    "Art lovers can spend an afternoon at the PinchukArtCentre and the folk-art museum."
+  ]
+}

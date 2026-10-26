@@ -1,0 +1,179 @@
+{
+ "city": "Chennai",
+ "trips": [
+  {
+   "place": "Tirupati",
+   "label": "",
+   "position": {
+    "id": 315373,
+    "name": "Tirupati",
+    "city": "Renigunta",
+    "lat": 13.63572,
+    "lng": 79.54293
+   },
+   "town": {
+    "name": "Tirupati",
+    "lat": 13.63551,
+    "lng": 79.41989
+   },
+   "road": {
+    "km": 136,
+    "min": 105,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 2490,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$13",
+     "time": "3h 10m",
+     "via": "Chennai Central to Tirupati",
+     "source": "https://www.rome2rio.com/s/Chennai/Tirupati"
+    },
+    "bus": {
+     "from": null,
+     "time": "3h 40m",
+     "via": "Chennai to Tirupati",
+     "source": "https://www.rome2rio.com/s/Chennai/Tirupati"
+    }
+   },
+   "route_note": "Take a direct train from Chennai Central or Egmore to Tirupati in about 3 hours, then a local bus or taxi up the hill to Tirumala for the main temple, which is about 25 km from the town.",
+   "see": [
+    "Sri Venkateswara Temple at Tirumala",
+    "Tirupati town temples",
+    "Kapila Theertham waterfall",
+    "Tirumala hilltop views"
+   ],
+   "visit": "Full day",
+   "tour_query": "Tirupati Tirumala temple day trip from Chennai",
+   "quests": [],
+   "recommended": "train",
+   "why": "The direct train takes about 3h 10m, and a local bus or taxi covers the last leg up to Tirumala.",
+   "stars": 5,
+   "know": [
+    "The main temple at Tirumala draws huge crowds, so book darshan slots online in advance where possible.",
+    "Queues can take many hours at peak times, so allow a full day for the round trip."
+   ]
+  },
+  {
+   "place": "Puducherry",
+   "label": "",
+   "position": {
+    "id": 456962,
+    "name": "Puducherry",
+    "city": "Puducherry",
+    "lat": 11.93,
+    "lng": 79.83
+   },
+   "town": {
+    "name": "Puducherry",
+    "lat": 11.93381,
+    "lng": 79.82979
+   },
+   "road": {
+    "km": 150,
+    "min": 150,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 2740,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$15",
+     "time": "4h 5m",
+     "via": "Chennai Egmore to Pondicherry",
+     "source": "https://www.rome2rio.com/s/Chennai/Puducherry"
+    },
+    "bus": {
+     "from": "$4-$15",
+     "time": "3h 35m",
+     "via": "Chennai to Pondicherry Rajiv Gandhi Statue",
+     "source": "https://www.rome2rio.com/s/Chennai/Puducherry"
+    }
+   },
+   "route_note": "Direct trains run from Chennai Egmore to Puducherry in about 3 to 4 hours, and frequent express buses from Koyambedu take a similar time; the French Quarter is a short walk or auto ride from the bus stand.",
+   "see": [
+    "Promenade beach",
+    "French Quarter streets",
+    "Sri Aurobindo Ashram",
+    "Paradise Beach by boat"
+   ],
+   "visit": "Full day",
+   "tour_query": "Pondicherry day trip from Chennai",
+   "quests": [
+    "White Town"
+   ],
+   "recommended": "bus",
+   "why": "The bus takes about 3h 35m versus about 4h 5m by train, and frequent express buses leave from Koyambedu.",
+   "stars": 4,
+   "know": [
+    "The French Quarter is best explored on foot in the early morning or evening.",
+    "Plan a full day or more if you want to combine the French Quarter with the beaches and the Auroville area."
+   ]
+  },
+  {
+   "place": "Kanchipuram",
+   "label": "",
+   "position": {
+    "id": 385775,
+    "name": "Kanchipuram",
+    "city": "Kanchipuram",
+    "lat": 12.83515,
+    "lng": 79.70006
+   },
+   "town": {
+    "name": "Kanchipuram",
+    "lat": 12.83515,
+    "lng": 79.70006
+   },
+   "road": {
+    "km": 77,
+    "min": 60,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1430,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$12",
+     "time": "2h 39m",
+     "via": "Chennai Fort to Kanchipuram East",
+     "source": "https://www.rome2rio.com/s/Chennai/Kanchipuram"
+    },
+    "bus": {
+     "from": "$3-$29",
+     "time": "1h 40m",
+     "via": "Chennai to Kanchipuram",
+     "source": "https://www.rome2rio.com/s/Chennai/Kanchipuram"
+    }
+   },
+   "route_note": "Take a train from Chennai Egmore or Chennai Beach toward Kanchipuram Road station, or a frequent bus from Koyambedu; temples are a short auto ride from the station or bus stand.",
+   "see": [
+    "Kailasanathar Temple",
+    "Ekambareswarar Temple",
+    "Kamakshi Amman Temple",
+    "Silk weaving workshops"
+   ],
+   "visit": "Half day",
+   "tour_query": "Kanchipuram temples day trip from Chennai",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The bus takes about 1h 40m versus about 2h 39m by train, and it runs frequently from Koyambedu.",
+   "stars": 3,
+   "know": [
+    "Known for its temples and handwoven silk saris, with weaving workshops and shops in town.",
+    "Many temples close for a midday break, so plan visits for morning or late afternoon."
+   ]
+  }
+ ],
+ "problems": [
+  "Mamallapuram: not a town in cities15000.json (IN), dropped",
+  "Puducherry: bus over 3h20"
+ ]
+}

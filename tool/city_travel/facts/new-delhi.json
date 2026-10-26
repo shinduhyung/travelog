@@ -1,0 +1,171 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "Delhi: where ancient empires meet modern chaos.",
+  "intro": "Delhi rewards visitors with layers of history, vibrant markets and rich food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Paharganj",
+    "Connaught Place",
+    "Aerocity",
+    "Karol Bagh"
+  ],
+  "taxi": {
+    "flag_day": 100,
+    "flag_airport": 150,
+    "per_km": 25,
+    "min_fare": 100
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Delhi Metro is cheap, air-conditioned and fast; fares ₹10-60, more on the Airport Express.",
+    "Metro runs 9 lines; Yellow and Orange lines serve New Delhi station.",
+    "DTC and Blue-Line buses are frequent and very cheap, ₹5-25, but crowded.",
+    "Ride apps Uber and Ola work well; use prepaid taxi booths at stations and the airport.",
+    "Driving is chaotic; hiring a car with driver is common for day trips.",
+    "Central New Delhi is fairly walkable with footbridges and subways; no ferries."
+  ],
+  "airports": [
+    {
+      "code": "DEL",
+      "name": "Indira Gandhi International Airport",
+      "primary": true,
+      "note": "Main gateway, about 12 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport Express (Orange Line)",
+          "to": "New Delhi station",
+          "price": "₹60-110",
+          "time": "20-30 min",
+          "note": "Fastest and cheapest; check hours, it does not run all night."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre / ISBTs",
+          "price": "₹50-100",
+          "time": "40-60 min",
+          "note": "Cheap but slow in traffic."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹400-600",
+          "time": "20-40 min",
+          "note": "Use the official prepaid taxi booth."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹350-550",
+          "time": "20-40 min",
+          "note": "Pick-up points are signposted in the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Appu Ghar (Gurgaon)",
+    "Butter Chicken",
+    "Kingdom of Dreams",
+    "Worlds of Wonder Amusement Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: New Delhi",
+      "https://en.wikivoyage.org/wiki/New%20Delhi"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    28.62137,
+    77.2148
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 4
+    },
+    {
+      "high": 24,
+      "low": 11,
+      "rain_days": 3
+    },
+    {
+      "high": 29,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 36,
+      "low": 22,
+      "rain_days": 3
+    },
+    {
+      "high": 39,
+      "low": 25,
+      "rain_days": 4
+    },
+    {
+      "high": 38,
+      "low": 28,
+      "rain_days": 9
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 23
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 19
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 11
+    },
+    {
+      "high": 32,
+      "low": 20,
+      "rain_days": 2
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 1
+    },
+    {
+      "high": 21,
+      "low": 9,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

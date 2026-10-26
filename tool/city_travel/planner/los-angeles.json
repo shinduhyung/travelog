@@ -1,0 +1,696 @@
+{
+  "city": "Los Angeles",
+  "checked": "October 2026",
+  "intro_line": "Sun, sprawl, and screen dreams under endless blue sky.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Hollywood",
+        "Santa Monica",
+        "West Hollywood"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Hollywood",
+        "Santa Monica",
+        "West Hollywood"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Downtown",
+        "Hollywood",
+        "Santa Monica",
+        "West Hollywood"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown",
+        "Hollywood",
+        "Santa Monica",
+        "West Hollywood"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Hollywood",
+        "Santa Monica",
+        "West Hollywood"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 6,
+        "note": "January: cool days around 19°C, nights near 8°C. Bring a jacket; some rain."
+      },
+      {
+        "high": 20,
+        "low": 8,
+        "rain_days": 5,
+        "note": "February: similar to January, mild days and cool nights. A few wet days."
+      },
+      {
+        "high": 21,
+        "low": 9,
+        "rain_days": 8,
+        "note": "March: warming to about 21°C; more rain days than mid-year, pack a light layer."
+      },
+      {
+        "high": 24,
+        "low": 11,
+        "rain_days": 2,
+        "note": "April: pleasant, highs near 24°C and little rain. Good for walking and beaches."
+      },
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 3,
+        "note": "May: mild and mostly dry; mornings can be overcast near the coast."
+      },
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 1,
+        "note": "June: warm, highs around 28°C; coastal fog often clears by afternoon."
+      },
+      {
+        "high": 31,
+        "low": 18,
+        "rain_days": 1,
+        "note": "July: hot inland near 31°C; beaches cooler. Very little rain."
+      },
+      {
+        "high": 32,
+        "low": 18,
+        "rain_days": 1,
+        "note": "August: the hottest month, highs near 32°C. Plan shade and water."
+      },
+      {
+        "high": 31,
+        "low": 18,
+        "rain_days": 1,
+        "note": "September: still hot at about 31°C; evenings start to cool."
+      },
+      {
+        "high": 28,
+        "low": 15,
+        "rain_days": 2,
+        "note": "October: comfortable highs near 28°C, dry and good for sightseeing."
+      },
+      {
+        "high": 24,
+        "low": 11,
+        "rain_days": 2,
+        "note": "November: cooler, about 24°C, with a few rain days returning."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 5,
+        "note": "December: back to about 19°C days and 8°C nights; expect some rain."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.4,
+      0.45,
+      0.55,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.5,
+      0.4
+    ],
+    "nightlife": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "family": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "universal": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Weekday morning, avoid summer weekends",
+      "area": "Hollywood",
+      "popularity": 5
+    },
+    "hollywood-sign": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon for clear light",
+      "area": "Hollywood",
+      "popularity": 5
+    },
+    "griffith": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Sunset into evening",
+      "area": "Hollywood",
+      "popularity": 5
+    },
+    "santa-monica-pier": {
+      "types": [
+        "beach",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and sunset",
+      "area": "Santa Monica",
+      "popularity": 5
+    },
+    "walk-of-fame": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning before crowds",
+      "area": "Hollywood",
+      "popularity": 5
+    },
+    "chinese-theatre": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Hollywood",
+      "popularity": 4
+    },
+    "getty": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "West Hollywood",
+      "popularity": 5
+    },
+    "venice-beach": {
+      "types": [
+        "beach",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon, sunset",
+      "area": "Santa Monica",
+      "popularity": 5
+    },
+    "caltech": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Hollywood",
+      "popularity": 2
+    },
+    "dolby": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Hollywood",
+      "popularity": 3
+    },
+    "golf-n-stuff": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Hollywood",
+      "popularity": 2
+    },
+    "grand-central-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late morning or early afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "hollywood-bowl": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer evenings",
+      "area": "Hollywood",
+      "popularity": 4
+    },
+    "irises": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "West Hollywood",
+      "popularity": 3
+    },
+    "johns-pizza": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekend afternoon",
+      "area": "Santa Monica",
+      "popularity": 2
+    },
+    "la-la-land": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Hollywood",
+      "popularity": 3
+    },
+    "la-zoo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Hollywood",
+      "popularity": 3
+    },
+    "pacific-park": {
+      "types": [
+        "family",
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Santa Monica",
+      "popularity": 4
+    },
+    "panda-express": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Hollywood",
+      "popularity": 2
+    },
+    "pretty-woman": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "West Hollywood",
+      "popularity": 2
+    },
+    "rose-bowl": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Event days or morning walk",
+      "area": "Hollywood",
+      "popularity": 3
+    },
+    "santa-monica-beach": {
+      "types": [
+        "beach",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon, sunset",
+      "area": "Santa Monica",
+      "popularity": 5
+    },
+    "rodeo-drive": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "West Hollywood",
+      "popularity": 3
+    },
+    "venice-canals": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Santa Monica",
+      "popularity": 3
+    },
+    "runyon-canyon": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Hollywood",
+      "popularity": 4
+    },
+    "angels-flight": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "last-bookstore": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "melrose-trading": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "West Hollywood",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights lets you see Hollywood and downtown, then slow down at the beach without long drives every day."
+  },
+  "airports": [
+    {
+      "code": "LAX",
+      "name": "Los Angeles International Airport",
+      "primary": true,
+      "note": "Main gateway, 19 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Metro C Line + K Line",
+          "to": "Downtown LA",
+          "price": "$1.75-3.50",
+          "time": "60-80 min",
+          "note": "Cheapest; shuttle to the C Line first."
+        },
+        {
+          "mode": "LAX FlyAway bus",
+          "to": "Union Station, Downtown",
+          "price": "$10-12",
+          "time": "45-70 min",
+          "note": "Comfortable express bus, frequent."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown LA",
+          "price": "$50-70",
+          "time": "30-60 min",
+          "note": "Flat-ish airport fares; traffic varies."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown LA",
+          "price": "$35-60",
+          "time": "30-60 min",
+          "note": "Pick-up at the LAXit lot; expect surge."
+        }
+      ]
+    },
+    {
+      "code": "BUR",
+      "name": "Hollywood Burbank Airport",
+      "primary": false,
+      "note": "Smaller airport closer to Hollywood and Downtown, about 20 km north.",
+      "options": [
+        {
+          "mode": "Free shuttle + Metro B Line",
+          "to": "Hollywood",
+          "price": "$1.75",
+          "time": "35-50 min",
+          "note": "Shuttle to North Hollywood station, then 2 stops."
+        },
+        {
+          "mode": "Metrolink / Amtrak",
+          "to": "Union Station, Downtown",
+          "price": "$5-15",
+          "time": "30-45 min",
+          "note": "Check schedules; infrequent off-peak."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown LA",
+          "price": "$35-50",
+          "time": "25-45 min",
+          "note": "Short hop without traffic."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Hollywood",
+          "price": "$20-35",
+          "time": "20-40 min",
+          "note": "Often cheaper than taxi here."
+        }
+      ]
+    },
+    {
+      "code": "LGB",
+      "name": "Long Beach Airport",
+      "primary": false,
+      "note": "Small airport in southern LA County, about 30 km south.",
+      "options": [
+        {
+          "mode": "Bus + Metro A Line",
+          "to": "Downtown LA",
+          "price": "$1.75-3.50",
+          "time": "70-90 min",
+          "note": "Local bus to the A Line, then rail north."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown LA",
+          "price": "$55-75",
+          "time": "30-50 min",
+          "note": "Long ride; traffic on I-710."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown LA",
+          "price": "$40-65",
+          "time": "30-50 min",
+          "note": "Usually the easiest option."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Los Angeles",
+      "https://en.wikivoyage.org/wiki/Los%20Angeles"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "beach"
+  ],
+  "transit": {
+    "best": "Ride apps or a rental car for most trips; Metro rail for downtown, Hollywood and Santa Monica.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Subway and light rail link Downtown, Hollywood, Santa Monica and Long Beach. Fares about $1.75 per ride."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metro buses cover the whole sprawl. Use a TAP card or contactless tap on rail and bus."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered and costlier than apps. Uber and Lyft operate widely and are the usual choice."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is fastest off-peak, but freeways jam roughly 7–10am and 3–7pm."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Pleasant in beach towns and Hollywood. Bikes and e-scooters are common near the coast."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "No ferries serve the city centre. Harbour boats run from San Pedro to Catalina Island."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Warm and mostly dry, with mild winters and hot, sunny summers. Coastal areas stay cooler than inland.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild to warm days with little rain. Good for both sightseeing and the beach."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot late summer",
+        "text": "July and August reach about 31–32°C inland. Beaches are cooler; carry water and seek shade."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Coastal fog",
+        "text": "Mornings near Santa Monica and Venice can be grey in late spring and early summer; it often clears later."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is light",
+        "text": "Most rain falls between November and March, usually a few days a month. An umbrella is handy in winter."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter nights",
+        "text": "January and December nights drop to about 8°C. Pack a warm layer for evenings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, sunglasses and sunscreen; a jacket for winter nights and coastal fog."
+      }
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Jinan, the City of Springs, blends ancient charm with modern energy.",
+  "intro": "Jinan rewards visitors with its famous springs, lakes, and lively street food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "City Centre (Daming Lake)",
+    "Train Station Area",
+    "Olympic Centre",
+    "High-tech Zone"
+  ],
+  "taxi": {
+    "flag_day": 7.5,
+    "flag_airport": 7.5,
+    "per_km": 1.5,
+    "min_fare": 7.5
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro: 3 lines (1, 2, 3) cover west, east, and north; no line through city centre yet.",
+    "Buses: ¥1 or ¥2 for air-conditioned; use transit card or Apple Pay for discount.",
+    "Taxis: flag fall ¥7.50; drivers rarely speak English, have destination in Chinese.",
+    "Ride apps: Didi works; taxis often use apps, may avoid ranks.",
+    "Driving: not recommended for visitors; traffic and parking difficult.",
+    "Walking/bikes: city centre is walkable; shared bikes available but need app."
+  ],
+  "airports": [
+    {
+      "code": "TNA",
+      "name": "Yaoqiang Airport",
+      "primary": true,
+      "note": "Main airport, 29 km northeast of centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown",
+          "price": "¥20",
+          "time": "60 min",
+          "note": "Hourly 06:00-17:00."
+        },
+        {
+          "mode": "Bus 16 subroute",
+          "to": "Downtown",
+          "price": "¥1-2",
+          "time": "check locally",
+          "note": "Cheapest but slow."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "¥150",
+          "time": "60 min",
+          "note": "Fixed price, agree before."
+        },
+        {
+          "mode": "Didi",
+          "to": "Downtown",
+          "price": "¥120-150",
+          "time": "60 min",
+          "note": "App-based, may be cheaper."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "Baotu Spring",
+    "Daming Lake",
+    "Thousand Buddha Mountain",
+    "Shandong University"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Jinan",
+      "https://en.wikivoyage.org/wiki/Jinan"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    36.66833,
+    116.99722
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -4,
+      "rain_days": 2
+    },
+    {
+      "high": 9,
+      "low": -2,
+      "rain_days": 3
+    },
+    {
+      "high": 16,
+      "low": 5,
+      "rain_days": 3
+    },
+    {
+      "high": 22,
+      "low": 10,
+      "rain_days": 6
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 6
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 7
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 13
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 4
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 4
+    },
+    {
+      "high": 6,
+      "low": -3,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "TNA taxi ¥150 vs tariff estimate 64"
+  ]
+}

@@ -1,0 +1,1164 @@
+{
+  "city": "Muscat",
+  "checked": "October 2026",
+  "currency": "OMR",
+  "usd_rate": 0.3845,
+  "intro": "Muscat rewards visitors with grand mosques, rugged mountains and a lively waterfront corniche. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 23.575,
+      "west": 58.3627,
+      "north": 23.6307,
+      "east": 58.6234,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 1.5,
+      "flag_airport": 5,
+      "per_km": 0.3,
+      "min_fare": 1.5
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "No metro or tram; travel is by bus, taxi or car.",
+      "Mwasalat buses cover key sights and the airport; fares about 300 baisa to OMR 1.",
+      "Pay the bus driver in cash; each bus needs a new ticket.",
+      "Orange-and-white taxis are metered-ish; agree the fare first.",
+      "OTaxi app gives fixed fares; maxi taxis cost about OMR 0.2-0.4 per hop.",
+      "Renting a car is cheap and flexible; a 4WD helps for wadis and mountains."
+    ],
+    "sources": []
+  },
+  "places": {
+    "grand_mosque": {
+      "name": "Sultan Qaboos Grand Mosque",
+      "landmark": "Sultan Qaboos Grand Mosque",
+      "kind": "sight",
+      "lat": 23.5838,
+      "lon": 58.3886,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Sat–Thu roughly 08:00–11:00 for non-Muslim visitors · closed Friday · check on the day",
+      "tip": "Go early morning to see the chandelier and carpet with fewer people. Women cover hair, arms and legs; men wear long trousers.",
+      "source": ""
+    },
+    "opera_house": {
+      "name": "Royal Opera House Muscat",
+      "landmark": "Royal Opera House Muscat",
+      "kind": "show",
+      "lat": 23.6133,
+      "lon": 58.4682,
+      "price": null,
+      "price_text": "Tour tickets vary; performance prices vary by show — check the official programme",
+      "hours": "Box office and building visits vary by season · check on the day",
+      "tip": "Book performances online in advance and arrive early to walk the gardens and arcades.",
+      "source": "https://www.rohmuscat.org.om"
+    },
+    "alam_palace": {
+      "name": "Al Alam Palace",
+      "landmark": "Al Alam Palace",
+      "kind": "sight",
+      "lat": 23.6158,
+      "lon": 58.5947,
+      "price": 0,
+      "price_text": "Free · view from outside only",
+      "hours": "Exterior viewable any time; not open inside",
+      "tip": "You can only see the gates and facade from the square. Combine it with the forts and Mutrah walk.",
+      "source": ""
+    },
+    "muttrah_souq": {
+      "name": "Muttrah Souq",
+      "landmark": "Muttrah Souq",
+      "kind": "food",
+      "lat": 23.6199,
+      "lon": 58.5636,
+      "price": 0,
+      "price_text": "Free to enter · bring cash for shopping",
+      "hours": "Roughly 09:00–13:00 and 16:00–21:00 · longer on weekends · check on the day",
+      "tip": "Haggle politely and start around half the asking price. Best for frankincense, silver and spices.",
+      "source": ""
+    },
+    "mutrah_corniche": {
+      "name": "Mutrah Corniche",
+      "landmark": "Mutrah Corniche",
+      "kind": "sight",
+      "lat": 23.6219,
+      "lon": 58.5633,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the full curve at sunset for harbour views and the forts behind you.",
+      "source": ""
+    },
+    "forts": {
+      "name": "Al Jalali & Al Mirani Forts",
+      "landmark": "Al Jalali & Al Mirani Forts",
+      "kind": "sight",
+      "lat": 23.6169,
+      "lon": 58.5975,
+      "price": 0,
+      "price_text": "Free · view from outside only",
+      "hours": "Exterior viewable any time; interiors generally closed to visitors",
+      "tip": "Photograph them from the Corniche or the palace square. Do not expect to go inside.",
+      "source": ""
+    },
+    "shuwa": {
+      "name": "Shuwa",
+      "landmark": "Shuwa",
+      "kind": "food",
+      "lat": 23.588,
+      "lon": 58.4089,
+      "price": null,
+      "price_text": "Varies by restaurant — expect a mid-range main course",
+      "hours": "Lunch and dinner at most Omani restaurants",
+      "tip": "Traditional slow-cooked lamb, often served at Eid and festivals. Ask your hotel or a local restaurant where to try it.",
+      "source": ""
+    },
+    "fish_market": {
+      "name": "Muttrah Fish Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 23.6208,
+      "lon": 58.5897,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Busiest early morning · check on the day",
+      "tip": "Arrive before 08:00 to see the catch and the auction buzz.",
+      "source": ""
+    },
+    "qurum_beach": {
+      "name": "Qurum Beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 23.5853,
+      "lon": 58.4197,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · swim in daylight",
+      "tip": "Good for an evening stroll; the water is calm but check local advice before swimming.",
+      "source": ""
+    },
+    "royal_opera_walk": {
+      "name": "Shati Al Qurum walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 23.5872,
+      "lon": 58.4152,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A shaded seafront path linking the Opera area to the beach — good for an easy evening walk.",
+      "source": ""
+    },
+    "dhow_cruise": {
+      "name": "Muscat harbour dhow cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 23.6189,
+      "lon": 58.5966,
+      "price": null,
+      "price_text": "Prices vary by operator — book locally or through your hotel",
+      "hours": "Usually late afternoon and sunset departures",
+      "tip": "A short boat trip from Mutrah shows the forts and palace from the water. Confirm the price and duration before boarding.",
+      "source": ""
+    },
+    "ruwi_market": {
+      "name": "Ruwi high street and market area",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 23.5906,
+      "lon": 58.5431,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Shops roughly 09:00–13:00 and 16:00–21:00 · check on the day",
+      "tip": "A busy everyday shopping district, not a tourist souq. Good for cheap eats and local life.",
+      "source": ""
+    },
+    "bait_al_zubair": {
+      "name": "Bait Al Zubair museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 23.6167,
+      "lon": 58.5903,
+      "price": null,
+      "price_text": "Small entry fee — check on the day",
+      "hours": "Closed Friday · otherwise daytime hours · check on the day",
+      "tip": "A compact private museum on Omani life and heritage, close to the palace and souq.",
+      "source": "https://www.baitalzubair.com"
+    },
+    "qantab_viewpoint": {
+      "name": "Qantab coastal viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 23.5486,
+      "lon": 58.6256,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A short drive east of Mutrah for rocky coves and clear water. Go early or near sunset.",
+      "source": ""
+    },
+    "mutrah_walk": {
+      "name": "Old Mutrah neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 23.6186,
+      "lon": 58.5939,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · walk in daylight or early evening",
+      "tip": "Wander the lanes behind the souq for old houses and small shops. Dress modestly.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day: the Grand Mosque early, then Mutrah's souq, coffee and waterfront.",
+      "days": [
+        {
+          "title": "Grand Mosque, then Mutrah",
+          "stops": [
+            {
+              "place": "grand_mosque",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Go early, Sat–Thu only. Dress modestly: covered arms, legs and hair for women."
+            },
+            {
+              "place": "bait_al_zubair",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "About 20 minutes by taxi. Closed Friday."
+            },
+            {
+              "place": "mutrah_walk",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk the old lanes, then stop for lunch nearby."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Try slow-cooked shuwa with rice at a local restaurant."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Reopens around 16:00. Bargain politely; cash is easiest."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset stroll past the harbour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mutrah or Qurum"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Old Muscat and Mutrah on foot: forts, palace gates and the corniche.",
+      "days": [
+        {
+          "title": "Old Muscat and the harbour",
+          "stops": [
+            {
+              "place": "alam_palace",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Exterior only. Morning light is best for photos."
+            },
+            {
+              "place": "forts",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "View the twin forts from outside; interiors are generally closed."
+            },
+            {
+              "place": "mutrah_walk",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Quiet lanes and old houses. Walk in daylight."
+            },
+            {
+              "place": "fish_market",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Busiest early morning; late morning is calmer. Check on the day."
+            },
+            {
+              "place": "shuwa",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in Mutrah or Qurum."
+            },
+            {
+              "place": "bait_al_zubair",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Closed Friday. Check on the day."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "End with the harbour at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mutrah"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Coast and sea: a viewpoint, a beach and a sunset dhow cruise.",
+      "days": [
+        {
+          "title": "Coast and harbour",
+          "stops": [
+            {
+              "place": "qantab_viewpoint",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early morning is cooler. About 25 minutes by taxi from Mutrah."
+            },
+            {
+              "place": "qurum_beach",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Swim in daylight. Modest swimwear is respectful."
+            },
+            {
+              "place": "shuwa",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch near Qurum."
+            },
+            {
+              "place": "royal_opera_walk",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Shaded waterfront walk; evening is livelier."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Sunset departures from Mutrah. Book ahead and check the day's timing."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers: the Grand Mosque early, then Mutrah's souq and waterfront in the evening.",
+      "days": [
+        {
+          "title": "Grand Mosque, then Mutrah",
+          "stops": [
+            {
+              "place": "grand_mosque",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Go early on a Sat–Thu morning. Dress modestly: covered arms, legs and hair. Closed Friday."
+            },
+            {
+              "place": "opera_house",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "About 20 minutes by taxi. Building visits vary by season, so check on the day."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Qurum. Slow-cooked lamb or goat, often served with rice."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "About 20 minutes by taxi. Reopens around 16:00. Expect to bargain."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Walk the waterfront as the lights come on."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum or Mutrah"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Old Muscat and Mutrah on foot: forts, palace gates and a harbour cruise.",
+      "days": [
+        {
+          "title": "Old Muscat and the harbour",
+          "stops": [
+            {
+              "place": "alam_palace",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Exterior only. The gates and blue-and-gold facade are the draw."
+            },
+            {
+              "place": "forts",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "The twin forts frame the bay. Interiors are generally closed, so view from outside."
+            },
+            {
+              "place": "bait_al_zubair",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Closed Friday. Check daytime hours on the day."
+            },
+            {
+              "place": "mutrah_walk",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Old lanes and low houses. Walk before the midday heat."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby in Mutrah or Qurum."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset departures are usual. Book ahead and confirm the time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mutrah"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Coast and sea: an early viewpoint, a beach afternoon and a sunset boat.",
+      "days": [
+        {
+          "title": "Coast, beach and sunset",
+          "stops": [
+            {
+              "place": "qantab_viewpoint",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early light is best. The road winds along the cliffs."
+            },
+            {
+              "place": "qurum_beach",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Swim in daylight. Shade is limited, so bring water and sun cover."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Qurum."
+            },
+            {
+              "place": "royal_opera_walk",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "A flat seafront walk near the Opera House."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset departure from Mutrah harbour. Confirm times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Grand Mosque, the souq and Omani food at an easy pace.",
+      "days": [
+        {
+          "title": "Grand Mosque, then Mutrah old town",
+          "stops": [
+            {
+              "place": "grand_mosque",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Non-Muslim visiting hours are roughly 08:00–11:00, Sat–Thu. Closed Friday. Dress modestly: covered arms, legs and hair. Check on the day."
+            },
+            {
+              "place": "bait_al_zubair",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "About 20–25 minutes by taxi to Mutrah. Closed Friday. Check hours on the day."
+            },
+            {
+              "place": "mutrah_walk",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk the old lanes in daylight. A good spot for lunch nearby."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Reopens around 16:00. Browse frankincense and silver. Expect to bargain."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset walk along the water. Dinner from the harbour-side restaurants."
+            }
+          ]
+        },
+        {
+          "title": "Opera House and Qurum",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Building visits and box office hours vary by season. Check on the day."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Slow-cooked Omani lamb or goat. Most Omani restaurants serve it at lunch."
+            },
+            {
+              "place": "royal_opera_walk",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Easy evening stroll along Shati Al Qurum."
+            },
+            {
+              "place": "qurum_beach",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Swim in daylight only. Sunset is the best light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum or Mutrah"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want forts, the palace and old Muscat's walls, with time by the sea.",
+      "days": [
+        {
+          "title": "Old Muscat and the forts",
+          "stops": [
+            {
+              "place": "alam_palace",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Exterior only; not open inside. Morning light is best for photos."
+            },
+            {
+              "place": "forts",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Al Jalali and Al Mirani from outside. Interiors are generally closed to visitors."
+            },
+            {
+              "place": "mutrah_walk",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Old Mutrah lanes and old houses. Walk in daylight."
+            },
+            {
+              "place": "bait_al_zubair",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Closed Friday. Otherwise daytime hours. Check on the day."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Late afternoon into evening is the liveliest time."
+            }
+          ]
+        },
+        {
+          "title": "Harbour, fish market and Grand Mosque",
+          "stops": [
+            {
+              "place": "fish_market",
+              "at": "07:30",
+              "minutes": 30,
+              "note": "Busiest early morning. Check on the day."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Usually late afternoon and sunset departures. Book ahead."
+            },
+            {
+              "place": "grand_mosque",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Sat–Thu only, roughly 08:00–11:00 for non-Muslim visitors. Closed Friday. Check on the day."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at an Omani restaurant."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mutrah"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want the coast, the water and open views rather than museums.",
+      "days": [
+        {
+          "title": "Coast and harbour",
+          "stops": [
+            {
+              "place": "qantab_viewpoint",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early morning is cooler and clearer. Bring water."
+            },
+            {
+              "place": "qurum_beach",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Swim in daylight. Shade is limited."
+            },
+            {
+              "place": "royal_opera_walk",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Evening walk along Shati Al Qurum."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Sunset departure from Mutrah. Book ahead and check the day's timing."
+            }
+          ]
+        },
+        {
+          "title": "Mutrah morning, then the Mosque",
+          "stops": [
+            {
+              "place": "mutrah_corniche",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Quiet in the morning. Good for photos of the forts."
+            },
+            {
+              "place": "fish_market",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Busiest early. Check on the day."
+            },
+            {
+              "place": "grand_mosque",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Sat–Thu only, roughly 08:00–11:00. Closed Friday. Dress modestly. Check on the day."
+            },
+            {
+              "place": "shuwa",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the Grand Mosque, the souq and Omani food without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease into Qurum",
+          "stops": [
+            {
+              "place": "qurum_beach",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Flat sand, easy stroll. Swim only in daylight."
+            },
+            {
+              "place": "royal_opera_walk",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Paved waterfront path next to the beach."
+            },
+            {
+              "place": "shuwa",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Try shuwa and Omani coffee at a local restaurant in Qurum."
+            }
+          ]
+        },
+        {
+          "title": "Grand Mosque morning, Mutrah evening",
+          "stops": [
+            {
+              "place": "grand_mosque",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Non-Muslim visiting hours are short and morning-only. Dress modestly: long sleeves, trousers, headscarf for women."
+            },
+            {
+              "place": "bait_al_zubair",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Closed Friday. Small museum, good intro to Omani life."
+            },
+            {
+              "place": "alam_palace",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Exterior only. Quick photo stop."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Reopens late afternoon. Expect to bargain gently."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Sunset walk past the harbour."
+            }
+          ]
+        },
+        {
+          "title": "Old Muscat and the water",
+          "stops": [
+            {
+              "place": "mutrah_walk",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quiet lanes in the morning heat."
+            },
+            {
+              "place": "forts",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "View from outside only; interiors generally closed."
+            },
+            {
+              "place": "fish_market",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Best very early; late morning is quieter but still open."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset departures from Mutrah. Book a day ahead."
+            },
+            {
+              "place": "shuwa",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner near the corniche."
+            }
+          ]
+        },
+        {
+          "title": "Opera House and depart",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Building visits depend on the season. Check the box office the day before."
+            },
+            {
+              "place": "qurum_beach",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Last swim or coffee before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum or Mutrah"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who like forts, old walls and the story of Omani trade.",
+      "days": [
+        {
+          "title": "Arrive, old Muscat walls",
+          "stops": [
+            {
+              "place": "alam_palace",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Exterior only. Late afternoon light is best."
+            },
+            {
+              "place": "forts",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "The twin forts guard the bay. View from the corniche."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Walk the harbour between the forts and the souq."
+            },
+            {
+              "place": "shuwa",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Mutrah."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the souq",
+          "stops": [
+            {
+              "place": "bait_al_zubair",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Friday. Check daytime hours on the day."
+            },
+            {
+              "place": "mutrah_walk",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Old houses and lanes behind the souq."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Reopens late afternoon. Good for frankincense and silver."
+            },
+            {
+              "place": "fish_market",
+              "at": "18:15",
+              "minutes": 30,
+              "note": "Most active early morning; evening visit is short."
+            }
+          ]
+        },
+        {
+          "title": "Grand Mosque and harbour",
+          "stops": [
+            {
+              "place": "grand_mosque",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Morning-only visiting window for non-Muslims, Sat–Thu. Modest dress required."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "See the forts and palace from the water. Book ahead."
+            },
+            {
+              "place": "shuwa",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Qurum."
+            }
+          ]
+        },
+        {
+          "title": "Opera House and depart",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Check the box office for building-visit times."
+            },
+            {
+              "place": "qurum_beach",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Coffee by the sea before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mutrah"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Outdoor lovers: coastline, viewpoints and a boat on the water.",
+      "days": [
+        {
+          "title": "Arrive and beach time",
+          "stops": [
+            {
+              "place": "qurum_beach",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Swim in daylight only. Lifeguards are not always present."
+            },
+            {
+              "place": "royal_opera_walk",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Evening walk along the shore."
+            },
+            {
+              "place": "shuwa",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Qurum."
+            }
+          ]
+        },
+        {
+          "title": "Coast and harbour",
+          "stops": [
+            {
+              "place": "qantab_viewpoint",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Early light on the cliffs. Bring water."
+            },
+            {
+              "place": "mutrah_corniche",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Harbour walk past the forts."
+            },
+            {
+              "place": "dhow_cruise",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset sail from Mutrah. Book a day ahead."
+            },
+            {
+              "place": "muttrah_souq",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Quick browse before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Mosque and market morning",
+          "stops": [
+            {
+              "place": "grand_mosque",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Morning-only window for non-Muslims, Sat–Thu. Dress modestly."
+            },
+            {
+              "place": "fish_market",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Busiest early; late morning is calmer."
+            },
+            {
+              "place": "ruwi_market",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Shops reopen late afternoon. Check hours on the day."
+            },
+            {
+              "place": "shuwa",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Ruwi or Qurum."
+            }
+          ]
+        },
+        {
+          "title": "Last swim and depart",
+          "stops": [
+            {
+              "place": "qurum_beach",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning swim before checkout."
+            },
+            {
+              "place": "opera_house",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Optional stop. Check opening times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Qurum"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Grand Mosque, Mutrah souq and Omani coffee."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Forts, palaces and old Muscat's walls."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Wadis, mountains and dolphin boat trips."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Mutrah",
+      "range": [
+        25,
+        90
+      ],
+      "why": "Walk to the corniche, fish market and souq. Good for a first visit and evening strolls.",
+      "center": [
+        23.617,
+        58.567
+      ]
+    },
+    {
+      "area": "Ruwi",
+      "range": [
+        20,
+        70
+      ],
+      "why": "Central and cheap, with bus links. Handy if you are travelling on a budget.",
+      "center": [
+        23.588,
+        58.545
+      ]
+    },
+    {
+      "area": "Qurum",
+      "range": [
+        35,
+        120
+      ],
+      "why": "Beaches, cafés and the Royal Opera House nearby. A calm base between old and new Muscat.",
+      "center": [
+        23.585,
+        58.405
+      ]
+    },
+    {
+      "area": "Al Ghubrah",
+      "range": [
+        30,
+        110
+      ],
+      "why": "Close to the Grand Mosque and the airport road. Good for early flights and mosque visits.",
+      "center": [
+        23.577,
+        58.395
+      ]
+    }
+  ],
+  "food": [
+    "Try Omani dishes: shuwa (slow-cooked meat), harees and majboos rice with fish or chicken.",
+    "Mutrah fish market: see the catch, then eat grilled fish at simple nearby restaurants.",
+    "Omani halwa and dates with cardamom coffee (kahwa) are the classic snack; buy halwa in Mutrah souq.",
+    "Cheap eats: shawarma, biryani and cafeteria meals in Ruwi, roughly OMR 1–3 a plate.",
+    "Alcohol is limited to licensed hotel restaurants and bars. Dress modestly and ask before photographing people."
+  ],
+  "more_time": [
+    "Swap a city day for Nizwa: the fort and Friday goat market, about 1.5–2 hours by car each way.",
+    "Add a wadi day: Wadi Shab or Wadi Bani Khalid for pools and walking; check conditions and take a 4WD if unsure.",
+    "Take a boat trip from the Marina to watch dolphins, usually a morning outing; book ahead and check the price on the day."
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "currency": "COP",
+  "usd_rate": 3183.9865,
+  "intro_line": "Salsa capital where green mountains meet warm Pacific spirit.",
+  "intro": "Cali rewards visitors with lively salsa, colonial streets and nearby Andean escapes. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Granada",
+    "El Peñón",
+    "San Antonio",
+    "Centro"
+  ],
+  "taxi": {
+    "flag_day": 3700,
+    "flag_airport": 45000,
+    "per_km": 900,
+    "min_fare": 3700
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "MIO buses run in exclusive lanes with air-conditioned cars and smart-card payment.",
+    "MIO card costs about COP$6,000; a single ride is about COP$3,500.",
+    "About 23 urban bus companies also cover the city; a regular trip is about COP$3,500.",
+    "Taxis are fast and affordable; call one and check the meter is running.",
+    "Ride apps like Uber and DiDi operate in Cali; use official taxis at night.",
+    "Walking works in Granada and San Antonio; use taxis after dark."
+  ],
+  "airports": [
+    {
+      "code": "CLO",
+      "name": "Alfonso Bonilla Aragon International Airport",
+      "primary": true,
+      "note": "Main gateway, about 20 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Mini-van",
+          "to": "Terminal de Transportes",
+          "price": "COP$4,000",
+          "time": "20-30 min",
+          "note": "Cheapest option; then take a local bus or taxi onward."
+        },
+        {
+          "mode": "MIO bus",
+          "to": "City centre",
+          "price": "COP$3,500-6,000",
+          "time": "45-60 min",
+          "note": "Needs a smart card; check routes locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "COP$45,000-60,000",
+          "time": "25-40 min",
+          "note": "Agree fare or use the meter before leaving."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "COP$35,000-55,000",
+          "time": "25-40 min",
+          "note": "Pickup points may be outside the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Cristo Rey"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Cali",
+      "https://en.wikivoyage.org/wiki/Cali"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    3.43054,
+    -76.5199
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 24
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 22
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 27
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 26
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 25
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 23
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 22
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 22
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 24
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 28
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 28
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 26
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

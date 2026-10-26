@@ -1,0 +1,572 @@
+{
+  "city": "Doha",
+  "checked": "October 2026",
+  "intro_line": "Doha blends futuristic skyline with old souqs and desert calm.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "West Bay",
+        "Souq Waqif",
+        "Msheireb",
+        "The Pearl"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "West Bay",
+        "Souq Waqif",
+        "Msheireb",
+        "The Pearl"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "West Bay",
+        "Souq Waqif",
+        "Msheireb",
+        "The Pearl"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "West Bay",
+        "Souq Waqif",
+        "Msheireb",
+        "The Pearl"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "West Bay",
+        "Souq Waqif",
+        "Msheireb",
+        "The Pearl"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 2,
+        "note": "Jan: mild days around 23°C, cool nights. Best month for walking the souq."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 2,
+        "note": "Feb: like January, a little warmer. Great for outdoor sights."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 2,
+        "note": "Mar: warming to 27°C. Comfortable mornings and evenings."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 1,
+        "note": "Apr: hot at 32°C by day. Do sights early, rest at midday."
+      },
+      {
+        "high": 38,
+        "low": 26,
+        "rain_days": 0,
+        "note": "May: 38°C and dry. Stick to malls, museums and the metro."
+      },
+      {
+        "high": 41,
+        "low": 29,
+        "rain_days": 0,
+        "note": "Jun: 41°C. Very hot. Go out only early or after sunset."
+      },
+      {
+        "high": 41,
+        "low": 31,
+        "rain_days": 0,
+        "note": "Jul: 41°C with humid nights. Indoor plans only."
+      },
+      {
+        "high": 41,
+        "low": 31,
+        "rain_days": 0,
+        "note": "Aug: as hot as July. Book hotels with pools."
+      },
+      {
+        "high": 39,
+        "low": 29,
+        "rain_days": 0,
+        "note": "Sep: still 39°C. Slightly easier evenings late in the month."
+      },
+      {
+        "high": 35,
+        "low": 26,
+        "rain_days": 1,
+        "note": "Oct: cooling to 35°C. Outdoor evenings become pleasant."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 2,
+        "note": "Nov: 30°C days, warm nights. Good all-round month."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 1,
+        "note": "Dec: 25°C days, cool nights. Peak season; book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.8,
+      0.55,
+      0.4,
+      0.35,
+      0.35,
+      0.45,
+      0.75,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.8,
+      0.55,
+      0.4,
+      0.35,
+      0.35,
+      0.45,
+      0.75,
+      1,
+      1
+    ],
+    "family": [
+      1,
+      1,
+      1,
+      0.8,
+      0.5,
+      0.35,
+      0.3,
+      0.3,
+      0.4,
+      0.7,
+      1,
+      1
+    ]
+  },
+  "places": {
+    "souq-waqif": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening, October to April",
+      "area": "Souq Waqif",
+      "popularity": 5
+    },
+    "mia": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning; closed Tuesday",
+      "area": "Souq Waqif",
+      "popularity": 5
+    },
+    "pearl": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "The Pearl",
+      "popularity": 4
+    },
+    "nmq": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning or early afternoon; closed Monday",
+      "area": "Souq Waqif",
+      "popularity": 5
+    },
+    "katara": {
+      "types": [
+        "culture",
+        "family",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon and evening",
+      "area": "West Bay",
+      "popularity": 4
+    },
+    "corniche": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening, October to April",
+      "area": "West Bay",
+      "popularity": 5
+    },
+    "kidzania": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday mornings; indoor escape from the heat",
+      "area": "West Bay",
+      "popularity": 3
+    },
+    "lusail-stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Only on event days",
+      "area": "West Bay",
+      "popularity": 3
+    },
+    "machboos": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Souq Waqif",
+      "popularity": 4
+    },
+    "souq-market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Souq Waqif",
+      "popularity": 4
+    },
+    "mia-park": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset, cooler months",
+      "area": "Souq Waqif",
+      "popularity": 4
+    },
+    "dhow-cruise": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "After sunset",
+      "area": "West Bay",
+      "popularity": 4
+    },
+    "msheireb": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Msheireb",
+      "popularity": 3
+    },
+    "souq-waqif-camel": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Souq Waqif",
+      "popularity": 3
+    },
+    "katara-beach": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning in cooler months",
+      "area": "West Bay",
+      "popularity": 3
+    },
+    "west-bay-view": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "West Bay",
+      "popularity": 3
+    },
+    "porto-arabia": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "The Pearl",
+      "popularity": 3
+    },
+    "souq-waqif-restaurants": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Dinner",
+      "area": "Souq Waqif",
+      "popularity": 4
+    },
+    "mia-cafe": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Souq Waqif",
+      "popularity": 3
+    },
+    "souq-waqif-shopping": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Souq Waqif",
+      "popularity": 3
+    },
+    "corniche-cycle": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning, October to April",
+      "area": "West Bay",
+      "popularity": 3
+    },
+    "katara-shows": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "West Bay",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the museums, Souq Waqif and the Corniche without rushing; add a night for the desert or a beach day."
+  },
+  "airports": [
+    {
+      "code": "DOH",
+      "name": "Hamad International Airport",
+      "primary": true,
+      "note": "Main gateway and Qatar Airways hub, about 9 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro Red Line",
+          "to": "Msheireb and central Doha",
+          "price": "QR 2",
+          "time": "15-25 min",
+          "note": "Cheapest option; airport station is on the Red Line."
+        },
+        {
+          "mode": "Karwa bus",
+          "to": "City bus station and centre",
+          "price": "QR 5-10",
+          "time": "40-60 min",
+          "note": "Cheap but slow and infrequent."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Anywhere in central Doha",
+          "price": "QR 25-60",
+          "time": "20-35 min",
+          "note": "Airport taxis start at QR 25; insist on the meter."
+        },
+        {
+          "mode": "Uber",
+          "to": "Anywhere in central Doha",
+          "price": "QR 30-70",
+          "time": "20-35 min",
+          "note": "Pick-up points are signposted outside arrivals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Doha",
+      "https://en.wikivoyage.org/wiki/Doha"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Doha Metro for the main sights, with taxis or ride apps for the last stretch.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Three lines (Red, Gold, Green); Msheireb is the main transfer station. About QR 2 per trip and QR 6 for a day pass; VIP cars cost more. Free metrolink buses connect stations to nearby areas."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap but infrequent and often late; route maps are hard to read. Use the free metrolink feeder buses instead where you can."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Karwa and Al Million are the main taxis; Uber works well in Doha. Handy for the airport and late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is on the right. Traffic jams and roadworks are common, so allow extra time."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Only pleasant November to March, and sights are spread out. Use the metro or a taxi in summer."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "A free tram runs in Lusail and Msheireb Downtown. Useful for short hops in those areas."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: sunny nearly every day, very little rain, and a long, humid summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Days around 23–30°C with cool evenings. Ideal for the souq, Corniche and desert trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to September)",
+        "text": "Highs of 39–41°C. Plan indoor sights by day and go outside only at sunrise or after dark."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid by the water",
+        "text": "Muggy evenings from May to October, especially on the Corniche and at The Pearl."
+      },
+      {
+        "icon": "🌂",
+        "title": "Almost no rain",
+        "text": "Only a few short showers between December and March. No umbrella needed most of the year."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Occasional dust",
+        "text": "Dusty winds can haze the sky and spoil desert views. Check the forecast before booking a dune trip."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a hat and strong sunscreen; a light layer for cold indoor AC and winter nights; modest clothing for mosques and souqs."
+      }
+    ]
+  }
+}

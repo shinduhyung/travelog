@@ -1,0 +1,35 @@
+$ deepseek_prep.py Beijing
+  tokens in 1036 out 558
+Beijing: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Beijing
+  tokens in 3965 out 912
+Beijing: 0 problems
+
+$ deepseek_city.py Beijing --stage places
+Beijing: places
+  tokens in 1257 out 4543
+
+$ deepseek_city.py Beijing --stage frame
+Beijing: frame
+  tokens in 2473 out 1878
+
+$ deepseek_city.py Beijing --stage plans
+Beijing: plans
+  plans for day
+  tokens in 2835 out 883
+  plans for 1n
+  tokens in 2836 out 1370
+  plans for 2n
+  tokens in 2836 out 1257
+  repaired JSON
+  plans for 3n
+  tokens in 2841 out 2224
+  plans for 4n
+  tokens in 2836 out 2219
+  repaired JSON
+
+$ merge_city.py Beijing
+Beijing: 27 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/beijing.json and planner/beijing.json
+

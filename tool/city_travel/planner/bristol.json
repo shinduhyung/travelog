@@ -1,0 +1,584 @@
+{
+  "city": "Bristol",
+  "checked": "October 2026",
+  "intro_line": "Bristol blends a working harbour, street art and green hills.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Harbourside",
+        "Old City",
+        "Clifton",
+        "Temple Meads"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Harbourside",
+        "Old City",
+        "Clifton",
+        "Temple Meads"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Harbourside",
+        "Old City",
+        "Clifton",
+        "Temple Meads"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Harbourside",
+        "Old City",
+        "Clifton",
+        "Temple Meads"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Harbourside",
+        "Old City",
+        "Clifton",
+        "Temple Meads"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 13,
+        "note": "Coldest month: highs near 8°C, lows near 2°C. Pack a warm coat and expect 13 rain days."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 12,
+        "note": "Still cold, highs around 9°C. Quiet season with cheaper rooms."
+      },
+      {
+        "high": 10,
+        "low": 4,
+        "rain_days": 15,
+        "note": "Cool and wet: about 15 rain days, the wettest of the year. Bring a waterproof."
+      },
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 10,
+        "note": "Milder at around 13°C. Fewer rain days (about 10), good for walking."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 12,
+        "note": "Pleasant spring: highs near 16°C. Pack layers for cool evenings."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 12,
+        "note": "Warm start to summer, highs around 19°C. Long evenings outdoors."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 13,
+        "note": "Warmest month: highs near 21°C, lows near 13°C. Book dinner ahead."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 13,
+        "note": "Similar to July, around 20°C. Busy with festivals; check on the day."
+      },
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 13,
+        "note": "Cooling to about 18°C. Still good for the harbour and parks."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 14,
+        "note": "Autumn: highs near 15°C, about 14 rain days. Bring a rain jacket."
+      },
+      {
+        "high": 11,
+        "low": 6,
+        "rain_days": 14,
+        "note": "Cooler at around 11°C with 14 rain days. Dark by late afternoon."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 15,
+        "note": "Cold again: highs near 9°C, lows near 4°C, 15 rain days. Christmas markets draw crowds."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.65,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.55,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.4
+    ]
+  },
+  "places": {
+    "clifton-suspension-bridge": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset; clear days",
+      "area": "Clifton",
+      "popularity": 5
+    },
+    "ss-great-britain": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Harbourside",
+      "popularity": 5
+    },
+    "bristol-museum-art-gallery": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Clifton",
+      "popularity": 4
+    },
+    "st-nicholas-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday lunchtime",
+      "area": "Old City",
+      "popularity": 4
+    },
+    "brandon-hill": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear morning or sunset",
+      "area": "Clifton",
+      "popularity": 3
+    },
+    "harbourside-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon into evening",
+      "area": "Harbourside",
+      "popularity": 4
+    },
+    "m-shed": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Harbourside",
+      "popularity": 4
+    },
+    "clifton-village": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Clifton",
+      "popularity": 3
+    },
+    "bristol-cathedral": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Clifton",
+      "popularity": 3
+    },
+    "harbour-ferry": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime in good weather",
+      "area": "Harbourside",
+      "popularity": 3
+    },
+    "clifton-observatory": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Dry daytime",
+      "area": "Clifton",
+      "popularity": 3
+    },
+    "royal-crescent": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": null,
+      "setting": "outdoor",
+      "best": "Daytime, any season",
+      "area": "Temple Meads",
+      "popularity": 2
+    },
+    "severn-river": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Check tide times; dry days",
+      "area": "Harbourside",
+      "popularity": 2
+    },
+    "roman-baths": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Early morning, weekday",
+      "area": "Temple Meads",
+      "popularity": 3
+    },
+    "university-of-bath": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Temple Meads",
+      "popularity": 1
+    },
+    "university-of-bristol": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Clifton",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Harbourside, Old City and Clifton at an easy pace. Add a night for a Bath day trip."
+  },
+  "airports": [
+    {
+      "code": "BRS",
+      "name": "Bristol International Airport",
+      "primary": true,
+      "note": "Main airport, 12 km south-west of the centre.",
+      "options": [
+        {
+          "mode": "Bus U2",
+          "to": "City centre",
+          "price": "£3",
+          "time": "35-45 min",
+          "note": "Stops at The Airport Tavern, a 10-15 min walk from the terminal; check timetable."
+        },
+        {
+          "mode": "WESTlink on-demand bus",
+          "to": "South Bristol",
+          "price": "£2",
+          "time": "check locally",
+          "note": "Pre-booking required; limited area."
+        },
+        {
+          "mode": "Bus A1 Flyer",
+          "to": "Temple Meads and Marlborough Street",
+          "price": "£9 single, £15 return",
+          "time": "about 35 min",
+          "note": "Runs up to every 8 min; student discounts with ID."
+        },
+        {
+          "mode": "Falcon coach",
+          "to": "Bond Street",
+          "price": "£8.10 return",
+          "time": "check locally",
+          "note": "Book a week ahead via Megabus."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£25-35",
+          "time": "20-30 min",
+          "note": "Drop-off and pick-up cost £8.50 for up to 10 min; free waiting zone with shuttle."
+        }
+      ]
+    },
+    {
+      "code": "LHR",
+      "name": "Heathrow Airport",
+      "primary": false,
+      "note": "London hub, about 2 hours by road; many onward options.",
+      "options": [
+        {
+          "mode": "Coach (National Express or Megabus)",
+          "to": "Marlborough Street or Bond Street",
+          "price": "£15-30",
+          "time": "2-2.5 hr",
+          "note": "Often cheaper than rail, especially at peak times."
+        },
+        {
+          "mode": "RailAir bus plus train",
+          "to": "Bristol Temple Meads",
+          "price": "£30-50",
+          "time": "about 2 hr",
+          "note": "Change at Reading."
+        },
+        {
+          "mode": "Heathrow Express plus train",
+          "to": "Bristol Temple Meads",
+          "price": "£60-100",
+          "time": "2.5-3 hr",
+          "note": "Via London Paddington; pricier but convenient."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£120-160",
+          "time": "2-2.5 hr",
+          "note": "Book ahead; fixed fares vary."
+        }
+      ]
+    },
+    {
+      "code": "BHX",
+      "name": "Birmingham Airport",
+      "primary": false,
+      "note": "Closer and cheaper than London airports, about 2 hours by car.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Bristol Temple Meads",
+          "price": "£25-45",
+          "time": "2-2.5 hr",
+          "note": "Change at Birmingham New Street; frequent at peak."
+        },
+        {
+          "mode": "Coach",
+          "to": "Marlborough Street",
+          "price": "£15-30",
+          "time": "2.5-3 hr",
+          "note": "Check National Express and Megabus timetables."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£110-150",
+          "time": "about 2 hr",
+          "note": "Avoids M25 congestion."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Bristol",
+      "https://en.wikivoyage.org/wiki/Bristol"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "Walk the centre and Harbourside; use buses or e-scooters for Clifton and longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram in Bristol. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses cover the centre and suburbs. Contactless tap fares are around £2–3."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The Severn Beach line links Temple Meads with Clifton Down and Avonmouth. Handy for a car-free day out."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are common; Uber and Bolt both operate in Bristol."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow in the centre. Use Park and Ride at Portway, Brislington or Long Ashton."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre and Harbourside are easy on foot. Temple Meads is about a 15 min walk."
+      },
+      {
+        "mode": "E-scooter / e-bike",
+        "has": true,
+        "text": "Dott e-scooters and e-bikes cost £0.99 to unlock plus about £0.16 per minute."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate maritime climate: mild, often cloudy and rain in any month. Rarely very hot or very cold.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: May to September",
+        "text": "Highs of 16–21°C and long daylight. Best for walking the harbour and Clifton."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 10–15 rain days every month. Showers pass quickly; carry a small umbrella or waterproof."
+      },
+      {
+        "icon": "❄️",
+        "title": "Mild winters",
+        "text": "January and February highs near 8–9°C, lows near 2–4°C. Frost is possible but snow is rare."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layers work best",
+        "text": "Days can warm up then cool fast. A light jacket and a warm mid-layer cover most trips."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is gentle",
+        "text": "July peaks near 21°C. No need for air-conditioning; evenings stay around 13°C."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Waterproof jacket, comfortable walking shoes for hills and cobbles, and a warm layer for evenings."
+      }
+    ]
+  }
+}

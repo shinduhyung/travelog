@@ -1,0 +1,27 @@
+$ deepseek_facts.py Lahore
+  tokens in 3337 out 633
+Lahore: 0 problems
+
+$ deepseek_city.py Lahore --stage places
+Lahore: places
+  tokens in 1166 out 2409
+
+$ deepseek_city.py Lahore --stage frame
+Lahore: frame
+  tokens in 2429 out 1688
+
+$ deepseek_city.py Lahore --stage plans
+Lahore: plans
+  plans for day
+  tokens in 1876 out 794
+  plans for 1n
+  tokens in 1877 out 1206
+  plans for 2n
+  tokens in 1882 out 968
+  plans for 3n
+  tokens in 1877 out 1669
+
+$ merge_city.py Lahore
+ERROR plan 1n-food: unknown place 'gawalmandi'
+Lahore: 15 places, 12 plans, 1 errors, 0 warnings
+

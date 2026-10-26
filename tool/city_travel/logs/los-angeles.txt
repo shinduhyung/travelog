@@ -1,0 +1,33 @@
+$ deepseek_facts.py Los Angeles
+  tokens in 3962 out 1030
+Los Angeles: 1 problems
+  - BUR taxi $35-50 vs tariff estimate 80
+
+$ deepseek_city.py Los Angeles --stage places
+Los Angeles: places
+  tokens in 1241 out 4393
+
+$ deepseek_city.py Los Angeles --stage frame
+Los Angeles: frame
+  tokens in 2460 out 1741
+  repaired JSON
+
+$ deepseek_city.py Los Angeles --stage plans
+Los Angeles: plans
+  plans for day
+  tokens in 2589 out 840
+  plans for 1n
+  tokens in 2590 out 1451
+  plans for 2n
+  tokens in 2590 out 1348
+  plans for 3n
+  tokens in 2595 out 2080
+  plans for 4n
+  tokens in 2590 out 1884
+  plans for 5n
+  tokens in 2590 out 2452
+
+$ merge_city.py Los Angeles
+ERROR plan 1n-family: unknown length/style
+Los Angeles: 28 places, 19 plans, 1 errors, 0 warnings
+

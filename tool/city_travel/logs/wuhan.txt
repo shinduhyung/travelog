@@ -1,0 +1,28 @@
+$ deepseek_facts.py Wuhan
+  tokens in 4277 out 705
+Wuhan: 0 problems
+
+$ deepseek_city.py Wuhan --stage places
+Wuhan: places
+  tokens in 1153 out 2838
+
+$ deepseek_city.py Wuhan --stage frame
+Wuhan: frame
+  tokens in 2491 out 1817
+  repaired JSON
+
+$ deepseek_city.py Wuhan --stage plans
+Wuhan: plans
+  plans for day
+  tokens in 2082 out 758
+  plans for 1n
+  tokens in 2083 out 896
+  plans for 2n
+  tokens in 2088 out 1150
+  plans for 3n
+  tokens in 2083 out 2023
+
+$ merge_city.py Wuhan
+Wuhan: 18 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/wuhan.json and planner/wuhan.json
+

@@ -1,0 +1,223 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Sun-soaked harbour city where beaches meet a famous zoo.",
+  "intro": "San Diego rewards visitors with beaches, a historic harbour and easy day trips to Mexico. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Downtown / Gaslamp Quarter",
+    "Harbor Island / Airport area",
+    "La Jolla",
+    "Mission Valley"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "MTS Trolley (light rail) links downtown, Old Town, Mission Valley and San Ysidro.",
+    "MTS buses cover the city; the #992 Flyer runs between SAN terminals and Santa Fe Depot.",
+    "Taxis are metered; Uber and Lyft operate widely and are usually cheaper.",
+    "A car is the most efficient way to see the sprawling county; expect rush-hour congestion.",
+    "Downtown and the bayfront are walkable; bikes and scooters are common near beaches.",
+    "The Coaster commuter train and Amtrak Pacific Surfliner serve the coast north to Oceanside and Los Angeles."
+  ],
+  "airports": [
+    {
+      "code": "SAN",
+      "name": "San Diego International Airport",
+      "primary": true,
+      "note": "Main airport, about 3 km from downtown.",
+      "options": [
+        {
+          "mode": "MTS bus #992 Flyer",
+          "to": "Santa Fe Depot, downtown",
+          "price": "$2.25",
+          "time": "10-15 min",
+          "note": "Day ticket $6 allows transfers to trolley and buses."
+        },
+        {
+          "mode": "Free shuttle",
+          "to": "Old Town Transit Center",
+          "price": "$0",
+          "time": "10-15 min",
+          "note": "Connects to trolley, Greyhound and Old Town."
+        },
+        {
+          "mode": "Shared shuttle",
+          "to": "Downtown hotels",
+          "price": "$15",
+          "time": "15-25 min",
+          "note": "Per person; book ahead."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$15-20",
+          "time": "10-15 min",
+          "note": "Short ride; traffic can slow it."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$12-20",
+          "time": "10-15 min",
+          "note": "Pickup zones at both terminals."
+        }
+      ]
+    },
+    {
+      "code": "TIJ",
+      "name": "Tijuana International Airport (via CBX)",
+      "primary": false,
+      "note": "Across the Mexican border, about 25 km southeast; useful for Mexico flights.",
+      "options": [
+        {
+          "mode": "CBX pedestrian bridge",
+          "to": "Tijuana airport terminal",
+          "price": "$19.95-26.95",
+          "time": "5-10 min",
+          "note": "Each way; much faster than vehicle lanes."
+        },
+        {
+          "mode": "CBX shuttle",
+          "to": "Santa Fe Depot, downtown",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Last bus from CBX leaves around 20:30."
+        },
+        {
+          "mode": "Trolley Blue Line + walk",
+          "to": "San Ysidro border, then taxi",
+          "price": "$2.50-5 plus taxi",
+          "time": "60-90 min",
+          "note": "Cheapest but slower; cross on foot."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$45-70",
+          "time": "30-45 min",
+          "note": "Border waits can add time."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "San Diego Zoo",
+    "Coronado Beach",
+    "SeaWorld San Diego",
+    "San Diego Harbor Cruise",
+    "Belmont Park",
+    "San Diego Comic-Con",
+    "Sesame Place San Diego",
+    "University of California, San Diego (UCSD)",
+    "Jack in the Box",
+    "Mundo Divertido",
+    "Qdoba"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: San Diego",
+      "https://en.wikivoyage.org/wiki/San%20Diego"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    32.71571,
+    -117.16472
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 5
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 3
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 3
+    },
+    {
+      "high": 22,
+      "low": 16,
+      "rain_days": 0
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 0
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 0
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 2
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 4
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "TIJ taxi $45-70 vs tariff estimate 95"
+  ]
+}

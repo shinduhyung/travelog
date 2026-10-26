@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Mountains, water and ferries within an hour of Downtown."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Pike Place, coffee culture and seafood on the waterfront."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, music history and the Space Needle."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to Pike Place, the waterfront and the Space Needle; Link light rail to the airport and University of Washington.",
+      "center": [
+        47.6062,
+        -122.3321
+      ]
+    },
+    {
+      "area": "Capitol Hill",
+      "range": [
+        150,
+        380
+      ],
+      "why": "Best food and nightlife on foot; a Link light rail stop and a short ride to Downtown.",
+      "center": [
+        47.6231,
+        -122.3165
+      ]
+    },
+    {
+      "area": "Belltown",
+      "range": [
+        160,
+        400
+      ],
+      "why": "Between Downtown and the Space Needle; good bars and restaurants, walkable to the waterfront.",
+      "center": [
+        47.6142,
+        -122.3455
+      ]
+    },
+    {
+      "area": "South Lake Union",
+      "range": [
+        170,
+        400
+      ],
+      "why": "Quieter and modern, near the Space Needle and Lake Union; good for longer stays, less nightlife.",
+      "center": [
+        47.6236,
+        -122.3362
+      ]
+    }
+  ],
+  "food": [
+    "Start at Pike Place Market: walk the stalls, watch the fish throwers, and grab a cheap pastry or chowder.",
+    "Seattle is a coffee city. Try a local roaster's café rather than a chain; expect about $4–6 for a latte.",
+    "Seafood is the local specialty: salmon, crab and oysters. Waterfront and market restaurants cost more; check menus first.",
+    "Budget eats: teriyaki, pho and food trucks around Capitol Hill and the University District, often $10–15 a meal.",
+    "Book popular dinner spots ahead, especially on weekends. Many kitchens close earlier than in bigger cities."
+  ],
+  "more_time": [
+    "Take a Washington State Ferries trip from Downtown to Bainbridge Island: a short crossing with skyline views. Check fares and times on the day.",
+    "Swap a city afternoon for a day trip toward the mountains or water; ask your hotel about current options and conditions.",
+    "Museum lovers can add the Museum of Pop Culture or the Seattle Art Museum; check opening days and prices before you go."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.4,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.35
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.55
+    ]
+  },
+  "best_for": [
+    "nature",
+    "food",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers Pike Place, the waterfront, a museum and a ferry trip; add a night for a mountain or island day."
+  },
+  "month_notes": [
+    "January: cold and wet, highs near 8°C with about 18 rain days. Pack a waterproof jacket and warm layers.",
+    "February: still cold, highs near 8°C and lows near 2°C. About 15 rain days; plan indoor backups.",
+    "March: slowly warming, highs near 11°C. Still about 15 rain days, so keep the rain gear handy.",
+    "April: milder, highs near 14°C with about 14 rain days. Good for walking between showers.",
+    "May: pleasant, highs near 18°C and fewer rainy days (about 10). A good shoulder month.",
+    "June: mild and drier, highs near 21°C with about 8 rain days. Long daylight hours help sightseeing.",
+    "July: the driest, sunniest month, highs near 25°C and only about 3 rain days. Book hotels early.",
+    "August: warm like July, highs near 25°C, about 5 rain days. Popular and busy; reserve ahead.",
+    "September: still mild, highs near 20°C with about 10 rain days. A comfortable, quieter month.",
+    "October: cooler, highs near 15°C and about 14 rain days. Bring layers and an umbrella.",
+    "November: wet and cool, highs near 10°C with about 18 rain days. Indoor sights and cafés shine.",
+    "December: the wettest month, highs near 7°C and about 19 rain days. Cold, dark and damp; dress warmly."
+  ],
+  "climate_guide": {
+    "summary": "Mild, wet winters and dry, sunny summers. Rain is common from October to March; July and August are the driest.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: July and August",
+        "text": "Highs near 25°C and only about 3–5 rain days. The driest, sunniest stretch for outdoor plans."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: November to January",
+        "text": "About 18–19 rain days a month and highs of 7–10°C. Bring a waterproof jacket, not just an umbrella."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Spring is showery",
+        "text": "March to May warms from about 11°C to 18°C, but expect around 10–15 rain days a month."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layers beat a heavy coat",
+        "text": "Days are rarely very cold or very hot. A light waterproof shell over layers works most of the year."
+      },
+      {
+        "icon": "🌥️",
+        "title": "Grey skies are normal",
+        "text": "Cloud cover is common outside summer. Plan one indoor sight per day as a backup."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Waterproof jacket, comfortable walking shoes and layers. Add sunglasses and a hat for July and August."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Link light rail for the airport, Downtown and Capitol Hill; walk or ride apps for short hops.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Link light rail 1 Line links Sea-Tac, Downtown, Capitol Hill and the University of Washington. Easy for airport trips."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "King County Metro buses cover the city. Pay with an ORCA card or tap your phone."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Lyft both operate widely, handy for late nights and airport runs."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy to arrange, but Downtown traffic is heavy at most hours. Consider skipping it in the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Good Downtown and on the waterfront. Bikes and e-scooters are common for longer hops."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Washington State Ferries leave Downtown for Bainbridge Island and Bremerton. Check times and fares on the day."
+      }
+    ]
+  }
+}

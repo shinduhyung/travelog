@@ -11,6 +11,7 @@ import 'package:crypto/crypto.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:jidoapp/services/storage_service.dart';
 import 'package:jidoapp/services/country_regions_notice_service.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class AuthProvider extends ChangeNotifier {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -117,6 +118,14 @@ class AuthProvider extends ChangeNotifier {
   }
 
   Future<void> _saveUserToFirestore(User user) async {
+    // users/{uid}를 서버에서 한 번 읽은 뒤에 쓴다. 이 기기 캐시에 문서가
+    // 없는 상태(새로 설치 → 튜토리얼에서 로그인)에서 merge 쓰기가 먼저
+    // 나가면, Firestore 캐시에 이 6개 필드만 있는 문서가 생기고 이후
+    // 조회가 그 반쪽 문서를 돌려줘서 방문 기록이 전부 0으로 보였다.
+    // 프로바이더들도 같은 조회를 공유하므로 추가 읽기는 생기지 않는다.
+    try {
+      await UserDocLoader.instance.load(user.uid);
+    } catch (_) {}
     try {
       await _firestore.collection('users').doc(user.uid).set({
         'uid': user.uid,

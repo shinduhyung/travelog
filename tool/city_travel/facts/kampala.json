@@ -1,0 +1,184 @@
+{
+  "currency": "UGX",
+  "usd_rate": 4126.4313,
+  "intro_line": "Kampala: seven hills of chaos, colour and warm welcomes.",
+  "intro": "Kampala rewards visitors with lively markets, green hills and a buzzing food and music scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Kololo",
+    "Nakasero",
+    "Bugolobi",
+    "Munyonyo"
+  ],
+  "taxi": {
+    "flag_day": 15000,
+    "flag_airport": 75000,
+    "per_km": 3000,
+    "min_fare": 10000
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "No metro or tram; public transport is matatu minibuses, boda-bodas and special-hire taxis.",
+    "Matatus run fixed routes from the Old Taxi Park and other stages; fares are roughly UGX 1,000-3,000.",
+    "Boda-bodas are fast but risky; agree the fare first, usually UGX 3,000-20,000 in town.",
+    "Uber, Bolt, Faras and SafeBoda apps work in Kampala; app bodas include helmets.",
+    "Special-hire taxis rarely use meters; agree a fare, often UGX 15,000-20,000 for central trips.",
+    "Driving is possible but hectic; walking is fine by day in central areas, and there is no ferry service."
+  ],
+  "airports": [
+    {
+      "code": "EBB",
+      "name": "Entebbe International Airport",
+      "primary": true,
+      "note": "Main gateway, about 37 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Boda-boda + matatu",
+          "to": "Old Taxi Park, city centre",
+          "price": "UGX 7,000-8,000",
+          "time": "1.5-2.5 h",
+          "note": "Cheapest; boda to Entebbe town, then matatu to Kampala."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt/Faras)",
+          "to": "Anywhere in Kampala",
+          "price": "UGX 80,000-120,000",
+          "time": "45-90 min",
+          "note": "Price depends on traffic and your hotel area."
+        },
+        {
+          "mode": "Private hire taxi",
+          "to": "Anywhere in Kampala",
+          "price": "UGX 75,000-150,000",
+          "time": "45-90 min",
+          "note": "Agree the fare before you get in."
+        },
+        {
+          "mode": "Pineapple Express shuttle",
+          "to": "Central Kampala",
+          "price": "UGX 80,000 per person",
+          "time": "1-1.5 h",
+          "note": "Fixed departure times; book ahead."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "Central Kampala",
+          "price": "from US$30",
+          "time": "1-1.5 h",
+          "note": "About ten trips per day each way."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Kasubi Tombs",
+    "Gaddafi National Mosque",
+    "Namugongo Martyrs Shrine",
+    "Baha'i House of Worship",
+    "Independence Monument, Uganda",
+    "Matooke",
+    "Uganda National Museum"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Kampala",
+      "https://en.wikivoyage.org/wiki/Kampala"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    0.3476,
+    32.5825
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 13
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 15
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 21
+    },
+    {
+      "high": 25,
+      "low": 19,
+      "rain_days": 26
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 25
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 19
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 20
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 23
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 24
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 25
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 20
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "EBB taxi UGX 75,000-150,000 vs tariff estimate 230400",
+    "EBB Pineapple Express shuttle UGX 80,000 per person costs more than taxi UGX 75,000-150,000"
+  ]
+}

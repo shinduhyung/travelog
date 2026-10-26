@@ -1,0 +1,172 @@
+{
+  "currency": "NZD",
+  "usd_rate": 1.7596,
+  "intro_line": "A compact harbour capital where wind, coffee and culture collide.",
+  "intro": "Wellington packs museums, cafes and a dramatic waterfront into a walkable core. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "CBD Golden Mile",
+    "Te Aro and Cuba Street",
+    "Waterfront",
+    "Oriental Bay"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 4,
+    "per_km": 3,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Buses and suburban trains run under Metlink; pay with Snapper card or contactless card.",
+    "Cash single bus fares are about $3-6 by zone; Snapper and contactless cost less.",
+    "Day passes cost about $13-30 depending on zones; after 9AM weekdays and all day weekends.",
+    "Uber and DiDi work in Wellington; taxis include Combined, Corporate, Green and Kiwi.",
+    "The central city is compact and best on foot; the Golden Mile links the station to Courtenay Place.",
+    "The Kelburn cable car climbs from Lambton Quay to the Botanic Gardens; ferries cross to Picton."
+  ],
+  "airports": [
+    {
+      "code": "WLG",
+      "name": "Wellington International Airport",
+      "primary": true,
+      "note": "Main airport, about 5 km southeast of the centre at Rongotai.",
+      "options": [
+        {
+          "mode": "Metlink Route 2 bus",
+          "to": "CBD",
+          "price": "$4",
+          "time": "30-40 min",
+          "note": "Cheapest; board on Hobart Street, a 700 m walk from the terminal."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "CBD",
+          "price": "$8.95 with Snapper",
+          "time": "20-30 min",
+          "note": "Stops next to the arrivals hall."
+        },
+        {
+          "mode": "Uber",
+          "to": "CBD",
+          "price": "$20-25",
+          "time": "15-25 min",
+          "note": "Use the app-based pickup zone; turn right out of the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "$25-40",
+          "time": "15-25 min",
+          "note": "Ranks are right outside the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 65,
+  "place_landmarks": [
+    "Te Papa Tongarewa",
+    "Wellington Botanic Garden",
+    "The Beehive",
+    "Wellington Waterfront",
+    "Pavlova"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Wellington",
+      "https://en.wikivoyage.org/wiki/Wellington"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -41.2865,
+    174.7762
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 7
+    },
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 7
+    },
+    {
+      "high": 18,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 13,
+      "rain_days": 10
+    },
+    {
+      "high": 15,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 13,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 12,
+      "low": 8,
+      "rain_days": 14
+    },
+    {
+      "high": 12,
+      "low": 9,
+      "rain_days": 14
+    },
+    {
+      "high": 13,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 15,
+      "low": 10,
+      "rain_days": 12
+    },
+    {
+      "high": 16,
+      "low": 12,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 14,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

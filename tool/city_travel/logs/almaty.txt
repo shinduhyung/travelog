@@ -1,0 +1,35 @@
+$ deepseek_prep.py Almaty
+  tokens in 670 out 437
+Almaty: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Almaty
+  tokens in 3035 out 724
+Almaty: 1 problems
+  - ALA taxi 1500-3000 KZT vs tariff estimate 3525
+
+$ deepseek_city.py Almaty --stage places
+Almaty: places
+  tokens in 1154 out 2680
+
+$ deepseek_city.py Almaty --stage frame
+Almaty: frame
+  tokens in 2487 out 1854
+
+$ deepseek_city.py Almaty --stage plans
+Almaty: plans
+  plans for day
+  tokens in 1984 out 1078
+  plans for 1n
+  tokens in 1985 out 1289
+  plans for 2n
+  tokens in 1990 out 1718
+  plans for 3n
+  tokens in 1985 out 2017
+  plans for 4n
+  tokens in 1985 out 2115
+
+$ merge_city.py Almaty
+WARN  green_hill: 589 km from the center (day trip?)
+Almaty: 18 places, 17 plans, 0 errors, 1 warnings
+wrote itineraries/almaty.json and planner/almaty.json
+

@@ -1,0 +1,640 @@
+{
+  "city": "Berlin",
+  "checked": "October 2026",
+  "intro_line": "Berlin: a sprawling capital where history and creativity collide.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Mitte",
+        "Kreuzberg",
+        "Prenzlauer Berg",
+        "Charlottenburg"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Mitte",
+        "Kreuzberg",
+        "Prenzlauer Berg",
+        "Charlottenburg"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Mitte",
+        "Kreuzberg",
+        "Prenzlauer Berg",
+        "Charlottenburg"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Mitte",
+        "Kreuzberg",
+        "Prenzlauer Berg",
+        "Charlottenburg"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Mitte",
+        "Kreuzberg",
+        "Prenzlauer Berg",
+        "Charlottenburg"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -1,
+        "rain_days": 14,
+        "note": "Coldest month: highs around 4°C, lows near -1°C. Pack a warm coat; expect about 14 rain days."
+      },
+      {
+        "high": 6,
+        "low": 0,
+        "rain_days": 11,
+        "note": "Still cold: highs near 6°C, lows around 0°C. Fewer rain days, about 11."
+      },
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 12,
+        "note": "Warming slowly: highs around 9°C, lows near 1°C. Keep layers; about 12 rain days."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 9,
+        "note": "Spring arrives: highs near 14°C, lows around 4°C. Good walking weather; about 9 rain days."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 8,
+        "note": "Pleasant: highs around 19°C, lows near 9°C. One of the drier months, about 8 rain days."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Warm: highs near 24°C, lows around 14°C. About 10 rain days; pack a light rain layer."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 11,
+        "note": "Warmest: highs around 25°C, lows near 15°C. About 11 rain days."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 9,
+        "note": "Warm: highs near 25°C, lows around 16°C. About 9 rain days; good for parks and lakes."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 8,
+        "note": "Mild and dry-ish: highs around 21°C, lows near 12°C. About 8 rain days."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 11,
+        "note": "Cooler: highs near 15°C, lows around 8°C. About 11 rain days; bring a jacket."
+      },
+      {
+        "high": 8,
+        "low": 3,
+        "rain_days": 10,
+        "note": "Cold and grey: highs around 8°C, lows near 3°C. About 10 rain days."
+      },
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 12,
+        "note": "Cold: highs near 6°C, lows around 1°C. About 12 rain days; Christmas markets in season."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "art": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "brandenburg_gate": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning or after dark",
+      "area": "Mitte",
+      "popularity": 5
+    },
+    "reichstag": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon or evening",
+      "area": "Mitte",
+      "popularity": 5
+    },
+    "wall_memorial": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or afternoon",
+      "area": "Mitte",
+      "popularity": 4
+    },
+    "checkpoint_charlie": {
+      "types": [
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time; quick stop",
+      "area": "Kreuzberg",
+      "popularity": 4
+    },
+    "pergamon": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Mitte",
+      "popularity": 5
+    },
+    "berlin_cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Mitte",
+      "popularity": 4
+    },
+    "east_side_gallery": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Kreuzberg",
+      "popularity": 5
+    },
+    "jewish_museum": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Kreuzberg",
+      "popularity": 4
+    },
+    "holocaust_memorial": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Mitte",
+      "popularity": 5
+    },
+    "sanssouci": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Charlottenburg",
+      "popularity": 4
+    },
+    "abenteuerpark_potsdam": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Warm months, morning",
+      "area": "Charlottenburg",
+      "popularity": 2
+    },
+    "alexanderplatz": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Mitte",
+      "popularity": 4
+    },
+    "sealife": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy days or afternoons",
+      "area": "Mitte",
+      "popularity": 3
+    },
+    "berlinale": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "February",
+      "area": "Mitte",
+      "popularity": 3
+    },
+    "philharmonie": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Mitte",
+      "popularity": 3
+    },
+    "tv_tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Mitte",
+      "popularity": 5
+    },
+    "cecilienhof": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Charlottenburg",
+      "popularity": 3
+    },
+    "charlottenburg": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Spring and summer",
+      "area": "Charlottenburg",
+      "popularity": 3
+    },
+    "dark": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Check on the day",
+      "area": "Mitte",
+      "popularity": 1
+    },
+    "filmpark_babelsberg": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Warm months",
+      "area": "Charlottenburg",
+      "popularity": 2
+    },
+    "free_university": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Charlottenburg",
+      "popularity": 1
+    },
+    "gendarmenmarkt": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Mitte",
+      "popularity": 4
+    },
+    "markthalle_neun": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Thursday evening",
+      "area": "Kreuzberg",
+      "popularity": 4
+    },
+    "teufelsberg": {
+      "types": [
+        "history",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Charlottenburg",
+      "popularity": 3
+    },
+    "spree_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Mitte",
+      "popularity": 4
+    },
+    "prenzlauer_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Prenzlauer Berg",
+      "popularity": 3
+    },
+    "tiergarten": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny day",
+      "area": "Mitte",
+      "popularity": 4
+    },
+    "kreuzberg_food": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Kreuzberg",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Wall, Museum Island and a proper night out without rushing."
+  },
+  "airports": [
+    {
+      "code": "BER",
+      "name": "Berlin Brandenburg Airport",
+      "primary": true,
+      "note": "Main airport, 18 km southeast of centre.",
+      "options": [
+        {
+          "mode": "Train FEX or RE20",
+          "to": "Berlin Hauptbahnhof",
+          "price": "€5.00",
+          "time": "23-30 min",
+          "note": "Buy an ABC ticket; AB is not valid."
+        },
+        {
+          "mode": "S-Bahn S9 or S85",
+          "to": "Berlin Hauptbahnhof",
+          "price": "€5.00",
+          "time": "40-50 min",
+          "note": "Slower but useful during disruptions."
+        },
+        {
+          "mode": "Bus X7 + U-Bahn",
+          "to": "Rudow (U7) then city",
+          "price": "€5.00",
+          "time": "45-60 min",
+          "note": "Only if heading to south Berlin."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€60-70",
+          "time": "30-50 min",
+          "note": "Taxi stand outside terminals."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€50-70",
+          "time": "30-50 min",
+          "note": "Check app for availability."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Berlin",
+      "https://en.wikivoyage.org/wiki/Berlin"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "U-Bahn and S-Bahn for most trips; buy a ticket before boarding.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "U-Bahn and S-Bahn cover most of the city. Buy tickets from machines before boarding."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and trams fill the gaps. Night buses run when trains stop."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Bolt operate, but local apps like Free Now are common."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful: heavy traffic, a low-emission zone and limited parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking and cycling are great. Watch for bike lanes."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries in the city centre, but river cruises run on the Spree."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate climate with cold winters and mild summers. Rain is spread through the year, so pack layers.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs around 19–25°C and lows of 9–16°C. Best for walking, parks and outdoor sights."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 4–6°C and lows near or below freezing. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 8–14 rain days a month. No dry season; carry a small umbrella or rain jacket."
+      },
+      {
+        "icon": "🌂",
+        "title": "Wettest months",
+        "text": "January and December have the most rain days, around 12–14. Plan indoor backups."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and autumn are mild",
+        "text": "April and October sit around 14–15°C highs. Good for sightseeing with fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes. Add a warm coat and gloves for November to March."
+      }
+    ]
+  }
+}

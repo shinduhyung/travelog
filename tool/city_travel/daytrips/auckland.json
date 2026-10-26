@@ -1,0 +1,64 @@
+{
+ "city": "Auckland",
+ "trips": [
+  {
+   "place": "Rotorua",
+   "label": "",
+   "position": {
+    "id": 458816,
+    "name": "Rotorua",
+    "city": "Rotorua",
+    "lat": -38.13874,
+    "lng": 176.24516
+   },
+   "town": {
+    "name": "Rotorua",
+    "lat": -38.13874,
+    "lng": 176.24516
+   },
+   "road": {
+    "km": 227,
+    "min": 172,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 570.0,
+    "currency": "NZD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$8-$40",
+     "time": "4h 9m",
+     "via": "Auckland - Central to Rotorua",
+     "source": "https://www.rome2rio.com/s/Auckland/Rotorua"
+    }
+   },
+   "route_note": "Take a direct intercity coach or bus to Rotorua's central bus station, which takes about three hours; the town is then walkable or reachable by local bus.",
+   "see": [
+    "Te Puia geothermal area and Pohutu Geyser",
+    "Government Gardens",
+    "Lake Rotorua lakefront",
+    "Wai-O-Tapu Thermal Wonderland (requires a shuttle or tour)"
+   ],
+   "visit": "Full day",
+   "tour_query": "Rotorua day trip from Auckland",
+   "quests": [
+    "Whakarewarewa",
+    "Rotorua Geothermal Area"
+   ],
+   "recommended": "bus",
+   "why": "The direct coach is the only public transport option and drops you at the central bus station, where the town is walkable, though the journey is long at over four hours each way.",
+   "stars": 4,
+   "know": [
+    "Rotorua is known for geothermal areas, with geysers, mud pools, and a sulphur smell in parts of town.",
+    "The bus takes over four hours each way, so a day trip leaves little time on site; a car is faster if you can drive."
+   ]
+  }
+ ],
+ "problems": [
+  "Oneroa: no Omio position, dropped",
+  "Matamata: not a town in cities15000.json (NZ), dropped",
+  "Te Kuiti: no Omio position, dropped",
+  "Rotorua: bus over 3h20"
+ ]
+}

@@ -1,0 +1,1645 @@
+{
+  "city": "Boston",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Boston rewards visitors with colonial streets, world-class museums and a lively waterfront. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 42.1284,
+      "west": -71.2851,
+      "north": 42.4385,
+      "east": -71.017,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 4,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "The T subway has four colour-coded lines; the Blue Line links the airport area to downtown.",
+      "The Silver Line bus runs free from Logan to South Station and connects to the Red Line.",
+      "Buses and the subway use a CharlieCard; tap or buy at stations.",
+      "Taxis are mostly white and cost $25-50 from Logan to downtown.",
+      "Uber and Lyft pick up and drop off at Logan; check the current pickup zone.",
+      "Central Boston is compact and walkable; bikes and ferries serve the harbour."
+    ],
+    "sources": []
+  },
+  "places": {
+    "faneuil-hall": {
+      "name": "Faneuil Hall Marketplace",
+      "landmark": "Faneuil Hall Marketplace",
+      "kind": "sight",
+      "lat": 42.36,
+      "lon": -71.0561,
+      "price": 0,
+      "price_text": "Free to walk; food and shops extra",
+      "hours": "Marketplace roughly 10:00–21:00 daily; check on the day",
+      "tip": "Start at Quincy Market for food stalls, then walk to the historic hall behind it.",
+      "source": "https://www.faneuilhallmarketplace.com/"
+    },
+    "uss-constitution": {
+      "name": "USS Constitution",
+      "landmark": "USS Constitution",
+      "kind": "sight",
+      "lat": 42.3723,
+      "lon": -71.0566,
+      "price": 0,
+      "price_text": "Free; ID needed for adults at the gate",
+      "hours": "Tue–Sun roughly 10:00–16:00; closed Mondays; check on the day",
+      "tip": "Bring photo ID for all adults. The ship is in Charlestown, a short walk from the North End.",
+      "source": "https://www.nps.gov/bost/planyourvisit/ussconstitution.htm"
+    },
+    "baskin-robbins": {
+      "name": "Baskin-Robbins",
+      "landmark": "Baskin-Robbins",
+      "kind": "food",
+      "lat": 42.1584,
+      "lon": -71.1448,
+      "price": 6,
+      "price_text": "≈ $4–8 per scoop or cone",
+      "hours": "Varies by branch; most open late morning to evening",
+      "tip": "A quick, cheap ice-cream stop; branches are all over the city, so use the nearest one.",
+      "source": "https://www.baskinrobbins.com/"
+    },
+    "boston-college": {
+      "name": "Boston College",
+      "landmark": "Boston College",
+      "kind": "sight",
+      "lat": 42.3355,
+      "lon": -71.1685,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily; buildings vary",
+      "tip": "It is outside the city centre in Chestnut Hill; go only if you have a reason, such as a campus visit.",
+      "source": "https://www.bc.edu/"
+    },
+    "duck-tours": {
+      "name": "Boston Duck Tours",
+      "landmark": "Boston Duck Tours",
+      "kind": "tour",
+      "lat": 42.3622,
+      "lon": -71.0822,
+      "price": 50,
+      "price_text": "≈ $45–55 adult; child rates lower; book ahead",
+      "hours": "Departures roughly 09:00–dusk, seasonal; check on the day",
+      "tip": "Book online in advance and arrive 20 minutes early; the ride ends with a splash into the Charles River.",
+      "source": "https://www.bostonducktours.com/"
+    },
+    "public-library": {
+      "name": "Boston Public Library",
+      "landmark": "Boston Public Library",
+      "kind": "sight",
+      "lat": 42.3494,
+      "lon": -71.0791,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Mon–Thu roughly 09:00–21:00, Fri–Sat shorter, Sun afternoon; check on the day",
+      "tip": "Do not miss the Italian courtyard and the Bates Hall reading room upstairs.",
+      "source": "https://www.bpl.org/"
+    },
+    "boston-university": {
+      "name": "Boston University",
+      "landmark": "Boston University",
+      "kind": "sight",
+      "lat": 42.3505,
+      "lon": -71.1054,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Campus open daily",
+      "tip": "The campus stretches along Commonwealth Avenue; the walk down the avenue is the main sight.",
+      "source": "https://www.bu.edu/"
+    },
+    "brandeis": {
+      "name": "Brandeis University",
+      "landmark": "Brandeis University",
+      "kind": "sight",
+      "lat": 42.3654,
+      "lon": -71.2586,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Campus open daily",
+      "tip": "It is in Waltham, well outside Boston; skip unless you are visiting someone there.",
+      "source": "https://www.brandeis.edu/"
+    },
+    "charles-river": {
+      "name": "Charles River Esplanade",
+      "landmark": "Charles River",
+      "kind": "park",
+      "lat": 42.36,
+      "lon": -71.05,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, dawn to dusk",
+      "tip": "Walk or rent a bike along the river path; the view back to Back Bay is best near sunset.",
+      "source": "https://www.esplanade.org/"
+    },
+    "dunkin": {
+      "name": "Dunkin'",
+      "landmark": "Dunkin'",
+      "kind": "food",
+      "lat": 42.1584,
+      "lon": -71.1448,
+      "price": 4,
+      "price_text": "≈ $2–6 for coffee and a donut",
+      "hours": "Many branches open early to late; hours vary",
+      "tip": "Cheap breakfast on the go; branches are everywhere downtown, so pick the nearest.",
+      "source": "https://www.dunkindonuts.com/"
+    },
+    "harvard": {
+      "name": "Harvard University",
+      "landmark": "Harvard University",
+      "kind": "sight",
+      "lat": 42.3744,
+      "lon": -71.1169,
+      "price": 0,
+      "price_text": "Free to walk; Harvard Yard open to visitors",
+      "hours": "Yard open daily; some buildings need a student guide",
+      "tip": "Start in Harvard Yard, then walk through Harvard Square for coffee and bookshops.",
+      "source": "https://www.harvard.edu/"
+    },
+    "mit": {
+      "name": "Massachusetts Institute of Technology (MIT)",
+      "landmark": "Massachusetts Institute of Technology (MIT)",
+      "kind": "sight",
+      "lat": 42.3601,
+      "lon": -71.0942,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Campus open daily; some buildings restricted",
+      "tip": "Walk along the Charles from MIT for the best view of the Boston skyline.",
+      "source": "https://www.mit.edu/"
+    },
+    "aquarium": {
+      "name": "New England Aquarium",
+      "landmark": "New England Aquarium",
+      "kind": "museum",
+      "lat": 42.3591,
+      "lon": -71.0496,
+      "price": 35,
+      "price_text": "≈ $30–40 adult; child rates lower; book a timed ticket",
+      "hours": "Daily roughly 09:00–17:00, later in summer; check on the day",
+      "tip": "Book a timed entry online and go early; the giant ocean tank is the highlight.",
+      "source": "https://www.neaq.org/"
+    },
+    "northeastern": {
+      "name": "Northeastern University",
+      "landmark": "Northeastern University",
+      "kind": "sight",
+      "lat": 42.3398,
+      "lon": -71.0892,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Campus open daily",
+      "tip": "A short walk from the Museum of Fine Arts; combine the two if you are in the area.",
+      "source": "https://www.northeastern.edu/"
+    },
+    "old-north-church": {
+      "name": "Old North Church",
+      "landmark": "Old North Church",
+      "kind": "sight",
+      "lat": 42.3663,
+      "lon": -71.0544,
+      "price": 10,
+      "price_text": "≈ $8–12 for the church and crypt tour; check on the day",
+      "hours": "Roughly 10:00–17:00, seasonal; check on the day",
+      "tip": "Pair it with a walk through the North End for pastries on the same street.",
+      "source": "https://www.oldnorth.com/"
+    },
+    "sam-adams-brewery": {
+      "name": "Samuel Adams Brewery",
+      "landmark": "Samuel Adams Brewery",
+      "kind": "tour",
+      "lat": 42.3144,
+      "lon": -71.1033,
+      "price": 10,
+      "price_text": "≈ $10–15 tour with tasting; check on the day",
+      "hours": "Tours most days, afternoon and evening; book ahead",
+      "tip": "It is in Jamaica Plain, a short ride from downtown; book a tour slot online.",
+      "source": "https://www.samueladams.com/brewery"
+    },
+    "symphony-hall": {
+      "name": "Symphony Hall",
+      "landmark": "Symphony Hall",
+      "kind": "show",
+      "lat": 42.3429,
+      "lon": -71.0858,
+      "price": 40,
+      "price_text": "≈ $30–100+ depending on the concert; some cheap seats",
+      "hours": "Show times vary; box office daytime",
+      "tip": "Check the Boston Symphony Orchestra schedule and book the cheapest upper seats for good sound.",
+      "source": "https://www.bso.org/"
+    },
+    "trinity-church": {
+      "name": "Trinity Church",
+      "landmark": "Trinity Church",
+      "kind": "sight",
+      "lat": 42.3499,
+      "lon": -71.0753,
+      "price": 10,
+      "price_text": "≈ $8–12 donation or entry; check on the day",
+      "hours": "Roughly 09:00–17:00 daily; services free",
+      "tip": "Step inside for the painted interior, then look back at it from Copley Square.",
+      "source": "https://www.trinitychurchboston.org/"
+    },
+    "tufts": {
+      "name": "Tufts University",
+      "landmark": "Tufts University",
+      "kind": "sight",
+      "lat": 42.4085,
+      "lon": -71.1183,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Campus open daily",
+      "tip": "It is in Medford, outside the city; only worth it for a campus visit.",
+      "source": "https://www.tufts.edu/"
+    },
+    "harbor-cruise": {
+      "name": "USS Constitution Harbor Cruise",
+      "landmark": "USS Constitution Harbor Cruise",
+      "kind": "tour",
+      "lat": 42.3562,
+      "lon": -71.0504,
+      "price": 35,
+      "price_text": "≈ $30–40 adult; child rates lower; check on the day",
+      "hours": "Seasonal departures, spring to autumn; check on the day",
+      "tip": "Sit on the open deck for skyline views; bring a jacket, it is cooler on the water.",
+      "source": ""
+    },
+    "watson-shark": {
+      "name": "Watson and the Shark (John Singleton Copley painting)",
+      "landmark": "Watson and the Shark",
+      "kind": "museum",
+      "lat": 42.3394,
+      "lon": -71.094,
+      "price": 27,
+      "price_text": "≈ $25–30 museum entry; check on the day",
+      "hours": "Museum of Fine Arts roughly 10:00–17:00, closed some days; check on the day",
+      "tip": "The painting hangs at the Museum of Fine Arts; check the gallery before you go.",
+      "source": "https://www.mfa.org/"
+    },
+    "quincy-market-food": {
+      "name": "Quincy Market food hall",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.36,
+      "lon": -71.055,
+      "price": 15,
+      "price_text": "≈ $10–20 per meal",
+      "hours": "Roughly 10:00–21:00 daily; check on the day",
+      "tip": "Good for a quick, varied lunch; it gets crowded at midday, so go early or late.",
+      "source": "https://www.faneuilhallmarketplace.com/"
+    },
+    "skywalk-view": {
+      "name": "Skywalk Observatory viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 42.3475,
+      "lon": -71.0825,
+      "price": 25,
+      "price_text": "≈ $20–30; check current opening and price on the day",
+      "hours": "Check on the day; some observatories close seasonally",
+      "tip": "Go on a clear day for views over the Back Bay and the river.",
+      "source": ""
+    },
+    "freedom-trail-walk": {
+      "name": "Freedom Trail walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3575,
+      "lon": -71.0575,
+      "price": 0,
+      "price_text": "Free to walk; some sites charge entry",
+      "hours": "Always open; sites have their own hours",
+      "tip": "Follow the red brick line from Boston Common to Charlestown; wear comfortable shoes.",
+      "source": "https://www.thefreedomtrail.org/"
+    },
+    "beacon-hill-walk": {
+      "name": "Beacon Hill and Acorn Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3588,
+      "lon": -71.0705,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; it is a residential street",
+      "tip": "Acorn Street is tiny and lived in; keep quiet and do not block doorways for photos.",
+      "source": ""
+    },
+    "seaport-walk": {
+      "name": "Seaport waterfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3515,
+      "lon": -71.0435,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the harbour edge at sunset, then eat at the nearby food spots.",
+      "source": ""
+    },
+    "north-end-food-walk": {
+      "name": "North End food walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.3645,
+      "lon": -71.0545,
+      "price": 20,
+      "price_text": "≈ $15–30 for a few small tastes",
+      "hours": "Shops and bakeries roughly 08:00–20:00; check on the day",
+      "tip": "Try a cannoli and a slice of pizza; the side streets are quieter than Hanover Street.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day on the Freedom Trail, from the waterfront to the North End.",
+      "days": [
+        {
+          "title": "Freedom Trail morning, harbour afternoon",
+          "stops": [
+            {
+              "place": "freedom-trail-walk",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Start at Boston Common and follow the red line. Wear comfortable shoes."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Quick lunch in the food hall. It gets busy at peak times."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Next door to Quincy Market. Look inside the historic hall."
+            },
+            {
+              "place": "uss-constitution",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Short walk along the waterfront. Closed Mondays; check on the day."
+            },
+            {
+              "place": "old-north-church",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk back through the North End. Check seasonal hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: market halls, the North End and a waterfront sunset.",
+      "days": [
+        {
+          "title": "Markets, North End and Seaport",
+          "stops": [
+            {
+              "place": "dunkin",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Quick coffee and a donut to start. Branches are everywhere."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Browse the marketplace before the crowds build."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Early lunch: chowder or a lobster roll. Check prices before you order."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Bakeries and Italian delis. Many shops close mid-afternoon; check on the day."
+            },
+            {
+              "place": "baskin-robbins",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Afternoon treat. Hours vary by branch."
+            },
+            {
+              "place": "seaport-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Waterfront stroll at sunset, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Back Bay landmarks and a museum highlight in a single day.",
+      "days": [
+        {
+          "title": "Back Bay culture loop",
+          "stops": [
+            {
+              "place": "trinity-church",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start at Copley Square. Services are free; check visiting hours."
+            },
+            {
+              "place": "public-library",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Across the square. See the courtyard and the reading room."
+            },
+            {
+              "place": "watson-shark",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts. Check which days it is open."
+            },
+            {
+              "place": "charles-river",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the Esplanade. Good spot for a picnic lunch."
+            },
+            {
+              "place": "skywalk-view",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "City views on a clear afternoon. Check opening on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Back Bay"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day on the Freedom Trail and the waterfront, for first-time visitors who like to walk.",
+      "days": [
+        {
+          "title": "Freedom Trail morning, harbour afternoon",
+          "stops": [
+            {
+              "place": "freedom-trail-walk",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Start at Boston Common. Follow the red line. Wear comfortable shoes."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch stop inside Faneuil Hall Marketplace. Busy at midday."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Look inside the hall itself, then browse the market stalls."
+            },
+            {
+              "place": "old-north-church",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Short walk into the North End. Check opening hours on the day."
+            },
+            {
+              "place": "uss-constitution",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "About 20 minutes on foot. Closed Mondays. Bring photo ID for the ship tour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A tasting day: market halls, the North End and a brewery tour, with a waterfront walk to finish.",
+      "days": [
+        {
+          "title": "Markets, North End and the waterfront",
+          "stops": [
+            {
+              "place": "dunkin",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Quick local breakfast. Branches are everywhere downtown."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Quiet before the crowds. Good for a first look at the market."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Early lunch to beat the queues. Try a lobster roll or chowder."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Bakeries and delis in the Italian lanes. Many shops close mid-afternoon, so go early."
+            },
+            {
+              "place": "seaport-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "About 25 minutes on foot or a short taxi. Good sunset spot, with dinner options nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Back Bay in a day: the library, a church, a painting and an evening concert.",
+      "days": [
+        {
+          "title": "Back Bay culture loop",
+          "stops": [
+            {
+              "place": "public-library",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "See the courtyard and the reading room. Free to enter."
+            },
+            {
+              "place": "trinity-church",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Right across the square from the library."
+            },
+            {
+              "place": "watson-shark",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts, a short ride away. Check which days it is open."
+            },
+            {
+              "place": "charles-river",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk the Esplanade. Nice in good weather."
+            },
+            {
+              "place": "symphony-hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book tickets ahead. Show times vary, so check the box office."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Back Bay"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the Freedom Trail, the harbour's oldest ship and Beacon Hill's brick lanes at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, waterfront history",
+          "stops": [
+            {
+              "place": "faneuil-hall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Start here for orientation. Marketplace hours vary; check on the day."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Late lunch inside the food hall next door."
+            },
+            {
+              "place": "freedom-trail-walk",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Walk the North End stretch only today; the full trail is long. Sites keep their own hours."
+            },
+            {
+              "place": "old-north-church",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Check closing time on the day; roughly 10:00–17:00, seasonal."
+            }
+          ]
+        },
+        {
+          "title": "Charlestown ship, then Beacon Hill",
+          "stops": [
+            {
+              "place": "uss-constitution",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Mondays. Go early before the tour buses."
+            },
+            {
+              "place": "harbor-cruise",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Seasonal, spring to autumn. Check departures on the day."
+            },
+            {
+              "place": "beacon-hill-walk",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Acorn Street is residential; keep voices down."
+            },
+            {
+              "place": "public-library",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Good indoor finish. Sunday hours are afternoon only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want chowder, the North End's bakeries and a brewery tour, with history in between meals.",
+      "days": [
+        {
+          "title": "Market halls and the North End",
+          "stops": [
+            {
+              "place": "dunkin",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Quick local breakfast; branches are everywhere."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Browse the stalls before the crowds build."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Chowder and lobster rolls are the classics."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Bakeries and delis; many close by 20:00."
+            },
+            {
+              "place": "old-north-church",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short history stop between snacks. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and waterfront",
+          "stops": [
+            {
+              "place": "sam-adams-brewery",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Book ahead; tours run afternoons and evenings."
+            },
+            {
+              "place": "seaport-walk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Stroll the waterfront; plenty of places to eat."
+            },
+            {
+              "place": "baskin-robbins",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Afternoon treat; branch hours vary."
+            },
+            {
+              "place": "harbor-cruise",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Seasonal; check on the day. Sunset sail if available."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Visitors who want museums, a concert and student-city energy, with the river and library as easy breaks.",
+      "days": [
+        {
+          "title": "Back Bay culture",
+          "stops": [
+            {
+              "place": "trinity-church",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Midday light through the windows is best."
+            },
+            {
+              "place": "public-library",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "See the courtyard and reading room. Hours shorten Fri–Sat."
+            },
+            {
+              "place": "watson-shark",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts; closed some days, check on the day."
+            },
+            {
+              "place": "charles-river",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Esplanade walk at golden hour."
+            },
+            {
+              "place": "symphony-hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Across the river, then home",
+          "stops": [
+            {
+              "place": "harvard",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Some buildings need a student guide."
+            },
+            {
+              "place": "mit",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk from the T; some buildings restricted."
+            },
+            {
+              "place": "duck-tours",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Seasonal departures; book ahead in good weather."
+            },
+            {
+              "place": "skywalk-view",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Clear-afternoon view. Check on the day; some close seasonally."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Back Bay"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the Freedom Trail, the harbour's old ships and the city's oldest corners at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the heart of the Trail",
+          "stops": [
+            {
+              "place": "faneuil-hall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Start here for orientation. Marketplace roughly 10:00–21:00; check on the day."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Late lunch in the food hall next door."
+            },
+            {
+              "place": "freedom-trail-walk",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Do the downtown stretch only today; the full trail is 3 hours. Always open."
+            },
+            {
+              "place": "beacon-hill-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Golden hour on Acorn Street. It is a residential street, so keep voices low."
+            }
+          ]
+        },
+        {
+          "title": "North End and the harbour",
+          "stops": [
+            {
+              "place": "old-north-church",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Roughly 10:00–17:00, seasonal; check on the day."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Bakeries and lanes after the church. Shops roughly 08:00–20:00."
+            },
+            {
+              "place": "uss-constitution",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Tue–Sun roughly 10:00–16:00; closed Mondays. Check on the day."
+            },
+            {
+              "place": "harbor-cruise",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Seasonal, spring to autumn; check on the day. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Back Bay history, then fly",
+          "stops": [
+            {
+              "place": "trinity-church",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Roughly 09:00–17:00 daily; services are free."
+            },
+            {
+              "place": "public-library",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Mon–Thu roughly 09:00–21:00, Fri–Sat shorter, Sun afternoon; check on the day."
+            },
+            {
+              "place": "watson-shark",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts, roughly 10:00–17:00; closed some days, so check on the day."
+            },
+            {
+              "place": "dunkin",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Quick coffee before you go. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around chowder, lobster rolls and the North End's Italian lanes.",
+      "days": [
+        {
+          "title": "Market halls and the waterfront",
+          "stops": [
+            {
+              "place": "quincy-market-food",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Late-morning lunch. Roughly 10:00–21:00; check on the day."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Walk it off between the halls. Marketplace roughly 10:00–21:00."
+            },
+            {
+              "place": "seaport-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Waterfront stroll; always open."
+            },
+            {
+              "place": "baskin-robbins",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Afternoon treat. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "North End eating day",
+          "stops": [
+            {
+              "place": "old-north-church",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Roughly 10:00–17:00, seasonal; check on the day."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Bakeries and delis. Shops roughly 08:00–20:00; check on the day."
+            },
+            {
+              "place": "uss-constitution",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Tue–Sun roughly 10:00–16:00; closed Mondays."
+            },
+            {
+              "place": "dunkin",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Coffee break. Many branches open early to late."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and Back Bay, then fly",
+          "stops": [
+            {
+              "place": "sam-adams-brewery",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Tours most days, afternoon and evening; book ahead."
+            },
+            {
+              "place": "public-library",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Rainy-day backup. Mon–Thu roughly 09:00–21:00; check on the day."
+            },
+            {
+              "place": "trinity-church",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Roughly 09:00–17:00 daily."
+            },
+            {
+              "place": "baskin-robbins",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Last treat before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museum-goers and student-city fans who want art, music and campus walks in one trip.",
+      "days": [
+        {
+          "title": "Back Bay art and architecture",
+          "stops": [
+            {
+              "place": "public-library",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Mon–Thu roughly 09:00–21:00, Fri–Sat shorter, Sun afternoon; check on the day."
+            },
+            {
+              "place": "trinity-church",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Roughly 09:00–17:00 daily; services free."
+            },
+            {
+              "place": "watson-shark",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts, roughly 10:00–17:00; closed some days, so check on the day."
+            },
+            {
+              "place": "charles-river",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Esplanade walk; open dawn to dusk."
+            },
+            {
+              "place": "symphony-hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Show times vary; box office daytime."
+            }
+          ]
+        },
+        {
+          "title": "Cambridge campuses",
+          "stops": [
+            {
+              "place": "harvard",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Yard open daily; some buildings need a student guide. Weekday morning is best."
+            },
+            {
+              "place": "mit",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Campus open daily; some buildings restricted."
+            },
+            {
+              "place": "dunkin",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Quick lunch stop. Hours vary by branch."
+            },
+            {
+              "place": "skywalk-view",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Clear-afternoon view. Check on the day; some observatories close seasonally."
+            }
+          ]
+        },
+        {
+          "title": "City campuses, then fly",
+          "stops": [
+            {
+              "place": "boston-college",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Campus grounds open daily; buildings vary."
+            },
+            {
+              "place": "boston-university",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Campus open daily."
+            },
+            {
+              "place": "northeastern",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Campus open daily."
+            },
+            {
+              "place": "beacon-hill-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Morning or golden hour is best; always open. Residential street."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Back Bay"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-timers who want the Revolution story end to end, with time to walk the old streets.",
+      "days": [
+        {
+          "title": "Arrive, waterfront history",
+          "stops": [
+            {
+              "place": "faneuil-hall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Good first stop. Quincy Market is next door for lunch."
+            },
+            {
+              "place": "quincy-market-food",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Late lunch. Busy at midday, easier after 14:00."
+            },
+            {
+              "place": "old-north-church",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk into the North End. Check hours on the day."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Dinner in the Italian lanes. Bakeries close around 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Freedom Trail and the Navy Yard",
+          "stops": [
+            {
+              "place": "freedom-trail-walk",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Start early. Wear comfortable shoes; the red line is easy to follow."
+            },
+            {
+              "place": "uss-constitution",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Closed Mondays. Free tours, but lines build by late morning."
+            },
+            {
+              "place": "harbor-cruise",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Seasonal, spring to autumn. Book ahead on sunny days."
+            },
+            {
+              "place": "dunkin",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Quick coffee before heading back."
+            }
+          ]
+        },
+        {
+          "title": "Back Bay and Beacon Hill",
+          "stops": [
+            {
+              "place": "beacon-hill-walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Acorn Street is a residential lane. Keep voices low."
+            },
+            {
+              "place": "trinity-church",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Midday is fine. Services are free to attend."
+            },
+            {
+              "place": "public-library",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Good rain plan. The courtyard is the highlight."
+            },
+            {
+              "place": "watson-shark",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts. Check which days it is open."
+            },
+            {
+              "place": "symphony-hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Book ahead; box office open in the day."
+            }
+          ]
+        },
+        {
+          "title": "Cambridge and departure",
+          "stops": [
+            {
+              "place": "harvard",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Some halls need a student guide."
+            },
+            {
+              "place": "mit",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short ride across the river. Some buildings are restricted."
+            },
+            {
+              "place": "charles-river",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Walk the Esplanade before you leave. Open dawn to dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Visitors who plan the day around markets, bakeries and the North End.",
+      "days": [
+        {
+          "title": "Arrive, market food",
+          "stops": [
+            {
+              "place": "quincy-market-food",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Chowder and lobster rolls under one roof. Cash helps at some stalls."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Marketplace roughly 10:00–21:00. Check on the day."
+            },
+            {
+              "place": "north-end-food-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dinner route through the Italian lanes. Go hungry."
+            },
+            {
+              "place": "baskin-robbins",
+              "at": "19:00",
+              "minutes": 20,
+              "note": "Afternoon or evening treat. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "North End and the harbour",
+          "stops": [
+            {
+              "place": "old-north-church",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Morning visit, then lunch nearby. Check hours on the day."
+            },
+            {
+              "place": "uss-constitution",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Closed Mondays. Free entry, short security line."
+            },
+            {
+              "place": "harbor-cruise",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Sunny afternoons, May to October. Book ahead."
+            },
+            {
+              "place": "seaport-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset walk, then dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Back Bay tastes",
+          "stops": [
+            {
+              "place": "public-library",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "The courtyard cafe is a good coffee stop."
+            },
+            {
+              "place": "trinity-church",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Midday, roughly 09:00–17:00."
+            },
+            {
+              "place": "sam-adams-brewery",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Afternoon tour. Book ahead; most days have tours."
+            },
+            {
+              "place": "dunkin",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Quick break. Many branches open early to late."
+            },
+            {
+              "place": "symphony-hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Optional evening concert. Show times vary."
+            }
+          ]
+        },
+        {
+          "title": "Cambridge and a last bite",
+          "stops": [
+            {
+              "place": "harvard",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday morning. Food stalls near the square at lunch."
+            },
+            {
+              "place": "charles-river",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk the Esplanade. Open dawn to dusk."
+            },
+            {
+              "place": "beacon-hill-walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Golden hour is best, but midday works for a short loop."
+            },
+            {
+              "place": "baskin-robbins",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Last treat before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown and Waterfront"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museum-goers and campus wanderers who want the city's art and student energy.",
+      "days": [
+        {
+          "title": "Arrive, Back Bay culture",
+          "stops": [
+            {
+              "place": "public-library",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start here. Rain-friendly and central."
+            },
+            {
+              "place": "trinity-church",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Across the square. Roughly 09:00–17:00."
+            },
+            {
+              "place": "watson-shark",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "At the Museum of Fine Arts. Check open days."
+            },
+            {
+              "place": "skywalk-view",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Clear afternoon or sunset. Check on the day."
+            },
+            {
+              "place": "symphony-hall",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Cambridge campuses",
+          "stops": [
+            {
+              "place": "harvard",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Weekday morning is quietest. Some halls need a guide."
+            },
+            {
+              "place": "mit",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Cross the river by train. Some buildings restricted."
+            },
+            {
+              "place": "charles-river",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk the Esplanade after lunch."
+            },
+            {
+              "place": "beacon-hill-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Golden hour is best. Acorn Street is residential."
+            }
+          ]
+        },
+        {
+          "title": "More campuses and the waterfront",
+          "stops": [
+            {
+              "place": "boston-university",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Campus open daily. Daytime is fine."
+            },
+            {
+              "place": "boston-college",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Grounds open daily; buildings vary."
+            },
+            {
+              "place": "northeastern",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch nearby, then walk the campus."
+            },
+            {
+              "place": "faneuil-hall",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Marketplace roughly 10:00–21:00. Check on the day."
+            },
+            {
+              "place": "old-north-church",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Check hours on the day; seasonal."
+            }
+          ]
+        },
+        {
+          "title": "Harbour and departure",
+          "stops": [
+            {
+              "place": "uss-constitution",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Mondays. Go early to beat the buses."
+            },
+            {
+              "place": "harbor-cruise",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Seasonal, spring to autumn. Check on the day."
+            },
+            {
+              "place": "seaport-walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Last walk by the water before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Back Bay"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Freedom Trail, Old North Church and the harbour's past."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Chowder, lobster rolls and the North End's Italian lanes."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, Fenway Park and student-city energy."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown and Waterfront",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to the Freedom Trail, Faneuil Hall and the aquarium. Best base for a first visit.",
+      "center": [
+        42.356,
+        -71.057
+      ]
+    },
+    {
+      "area": "Back Bay",
+      "range": [
+        200,
+        480
+      ],
+      "why": "Pretty streets, shopping on Newbury Street and easy T rides to the centre.",
+      "center": [
+        42.35,
+        -71.08
+      ]
+    },
+    {
+      "area": "Beacon Hill",
+      "range": [
+        190,
+        450
+      ],
+      "why": "Quiet brick lanes next to Boston Common and the State House; small inns and guesthouses.",
+      "center": [
+        42.358,
+        -71.07
+      ]
+    },
+    {
+      "area": "Seaport",
+      "range": [
+        220,
+        520
+      ],
+      "why": "New waterfront hotels, harbour views and the ICA museum; 15–20 minutes' walk to downtown.",
+      "center": [
+        42.351,
+        -71.043
+      ]
+    }
+  ],
+  "food": [
+    "Try a lobster roll and New England clam chowder; prices vary a lot, so compare menus before you sit down.",
+    "Walk the North End for Italian pastries and pasta; it is busy at weekends, so go early or on a weekday.",
+    "Faneuil Hall and Quincy Market have many food stalls — handy for groups with different tastes.",
+    "For cheap eats, look around Chinatown and the student areas near universities.",
+    "Book popular dinner spots ahead, especially in summer and on game nights near Fenway Park."
+  ],
+  "more_time": [
+    "Swap a city day for Cambridge: walk or take the Red Line to Harvard Square and the MIT area.",
+    "Take a harbour ferry or water taxi for a cheap view of the skyline and the waterfront.",
+    "Add a day trip by train to Salem or Providence; check timetables on the day."
+  ]
+}

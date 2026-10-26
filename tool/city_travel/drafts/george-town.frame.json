@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hawker stalls, kopitiam coffee and Peranakan classics."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "UNESCO shophouses, clan houses and colonial streets."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Street murals, galleries and old trades in the lanes."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "UNESCO Heritage Site",
+      "range": [
+        120,
+        450
+      ],
+      "why": "Walk to the murals, clan houses and hawker food. Best for first-timers without a car.",
+      "center": [
+        5.4141,
+        100.3388
+      ]
+    },
+    {
+      "area": "Gurney Drive",
+      "range": [
+        180,
+        500
+      ],
+      "why": "Seafront promenade and the famous hawker centre; short ride to the heritage core.",
+      "center": [
+        5.4374,
+        100.3122
+      ]
+    },
+    {
+      "area": "Tanjung Tokong",
+      "range": [
+        160,
+        420
+      ],
+      "why": "Quieter local area with cafés and malls; between the city and the beaches.",
+      "center": [
+        5.4586,
+        100.3056
+      ]
+    },
+    {
+      "area": "Batu Ferringhi",
+      "range": [
+        200,
+        700
+      ],
+      "why": "Beach resorts and night market; far from town, so plan on buses or Grab.",
+      "center": [
+        5.4717,
+        100.2453
+      ]
+    }
+  ],
+  "food": [
+    "Eat at hawker centres: char kway teow, laksa, and cendol. Expect roughly RM5–15 a dish; check prices on the day.",
+    "Kopitiam breakfast: kaya toast, half-boiled eggs and local coffee. Cheap and quick.",
+    "Peranakan (Nyonya) dishes are the local signature: try a set meal in a heritage shophouse.",
+    "Gurney Drive hawker centre is busy at night; go early for a seat.",
+    "Little India and Chinatown lanes are good for cheap eats. Many stalls close on one weekday; check on the day."
+  ],
+  "more_time": [
+    "Penang Hill: take the funicular for cooler air and views. Go early to beat queues.",
+    "Kek Lok Si temple in Air Itam is a half-day trip; combine with a laksa lunch nearby.",
+    "Beach time at Batu Ferringhi, or a day trip to the national park and beaches on the north coast."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "nature": [
+      0.7,
+      0.75,
+      0.65,
+      0.55,
+      0.55,
+      0.65,
+      0.7,
+      0.65,
+      0.6,
+      0.55,
+      0.5,
+      0.65
+    ]
+  },
+  "best_for": [
+    "food",
+    "history",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers the heritage core, the food and the murals at an easy pace; add a night for Penang Hill and the beaches."
+  },
+  "month_notes": [
+    "January: warm and fairly dry (19 rain days). Good for walking the heritage core.",
+    "February: the driest month (15 rain days). One of the best times to visit.",
+    "March: rain picks up (23 days). Plan indoor food stops for afternoon showers.",
+    "April: wet (28 rain days). Carry a light rain jacket and keep plans flexible.",
+    "May: wet (28 days) and warm nights. Short heavy showers are likely.",
+    "June: still wet (23 days) but a little drier than May. Mornings are best.",
+    "July: moderate rain (22 days). Good window for outdoor sights early in the day.",
+    "August: wetter again (26 days). Expect afternoon downpours.",
+    "September: wet (27 days). Indoor markets and cafés are good backups.",
+    "October: very wet (28 days). Check forecasts before hill or beach trips.",
+    "November: the wettest month (30 rain days). Pack rain gear and plan short walks.",
+    "December: still wet (23 days) but easing. Warm days around 29°C."
+  ],
+  "climate_guide": {
+    "summary": "Tropical and hot all year, around 29–31°C by day and 25–26°C at night. Rain is common in every month, heaviest from September to November.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Hot all year",
+        "text": "Highs stay near 29–31°C and lows near 25–26°C. No cool season; pack light clothes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect 15–30 rain days a month. Showers are often short and heavy, not all-day."
+      },
+      {
+        "icon": "☂️",
+        "title": "Driest window: January to February",
+        "text": "15–19 rain days. The best odds for dry sightseeing and outdoor walks."
+      },
+      {
+        "icon": "🌊",
+        "title": "Wettest: September to November",
+        "text": "27–30 rain days. Keep indoor backups and check forecasts before hill or beach trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Humidity and heat",
+        "text": "Muggy most days. Walk early morning or evening and rest in air-conditioned cafés at midday."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a compact umbrella or rain jacket, sandals, and sunscreen."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the heritage core and use Grab or Rapid Penang buses for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram on Penang Island. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Rapid Penang buses fan out from Weld Quay via KOMTAR; fares RM1.40–4. Free CAT buses loop the heritage core and modern centre."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Grab is the main ride app. Taxis use a coupon system or meter; agree the price first."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible but traffic and parking in the heritage core are hard. Most visitors skip it."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The heritage core is compact and walkable. Link Bike day pass is RM6."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Rapid Ferry links Butterworth rail station to Weld Quay, RM1.20."
+      }
+    ]
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "city": "Nicosia",
+  "checked": "October 2026",
+  "intro_line": "A divided capital where old walls hold both histories.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Laiki Geitonia",
+        "Old City centre",
+        "Ledra Street area",
+        "North Nicosia"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Laiki Geitonia",
+        "Old City centre",
+        "Ledra Street area",
+        "North Nicosia"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Laiki Geitonia",
+        "Old City centre",
+        "Ledra Street area",
+        "North Nicosia"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Laiki Geitonia",
+        "Old City centre",
+        "Ledra Street area",
+        "North Nicosia"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Laiki Geitonia",
+        "Old City centre",
+        "Ledra Street area",
+        "North Nicosia"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 9,
+        "note": "January: cool and wet, highs near 15°C. Pack a jacket and an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 6,
+        "note": "February: still cool, fewer rain days. Good for walking the old town."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 7,
+        "note": "March: mild and pleasant, around 20°C. A good month to visit."
+      },
+      {
+        "high": 25,
+        "low": 12,
+        "rain_days": 5,
+        "note": "April: warm and dry, highs near 25°C. Ideal for sightseeing on foot."
+      },
+      {
+        "high": 30,
+        "low": 17,
+        "rain_days": 4,
+        "note": "May: hot by afternoon, around 30°C. Sightsee early and rest at midday."
+      },
+      {
+        "high": 34,
+        "low": 21,
+        "rain_days": 3,
+        "note": "June: hot, highs near 34°C. Carry water and use shade."
+      },
+      {
+        "high": 38,
+        "low": 24,
+        "rain_days": 1,
+        "note": "July: very hot, up to 38°C. Plan indoor sights and evenings outside."
+      },
+      {
+        "high": 37,
+        "low": 23,
+        "rain_days": 2,
+        "note": "August: as hot as July, around 37°C. Avoid midday sun."
+      },
+      {
+        "high": 34,
+        "low": 21,
+        "rain_days": 2,
+        "note": "September: still hot, around 34°C, but cooling at night."
+      },
+      {
+        "high": 29,
+        "low": 17,
+        "rain_days": 4,
+        "note": "October: warm and comfortable, near 29°C. A strong month to visit."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 5,
+        "note": "November: mild, around 23°C, with some rain. Bring a light layer."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 7,
+        "note": "December: cool and wetter, highs near 18°C. Pack warm clothes."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.75,
+      0.6,
+      0.45,
+      0.45,
+      0.6,
+      0.85,
+      0.9,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.75,
+      0.6,
+      0.45,
+      0.45,
+      0.6,
+      0.85,
+      0.9,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.8
+    ],
+    "shopping": [
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.75,
+      0.65,
+      0.5,
+      0.5,
+      0.65,
+      0.8,
+      0.85,
+      0.75
+    ],
+    "budget": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.8
+    ]
+  },
+  "places": {
+    "buyuk_han": {
+      "types": [
+        "history",
+        "culture",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late morning or early evening",
+      "area": "North Nicosia",
+      "popularity": 5
+    },
+    "selimiye": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning, avoiding Friday prayers",
+      "area": "North Nicosia",
+      "popularity": 4
+    },
+    "bellapais": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning; spring and autumn",
+      "area": "North Nicosia",
+      "popularity": 4
+    },
+    "kyrenia_castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "North Nicosia",
+      "popularity": 4
+    },
+    "souvla": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Old City centre",
+      "popularity": 3
+    },
+    "ledra_walk": {
+      "types": [
+        "culture",
+        "budget",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Ledra Street area",
+      "popularity": 5
+    },
+    "laiki_walk": {
+      "types": [
+        "culture",
+        "shopping",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late morning to afternoon",
+      "area": "Laiki Geitonia",
+      "popularity": 4
+    },
+    "bandabulya": {
+      "types": [
+        "food",
+        "shopping",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old City centre",
+      "popularity": 3
+    },
+    "shacolas_view": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Clear afternoon",
+      "area": "Ledra Street area",
+      "popularity": 4
+    },
+    "cyprus_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning; closed Monday",
+      "area": "Old City centre",
+      "popularity": 3
+    },
+    "buyuk_han_cafe": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "North Nicosia",
+      "popularity": 4
+    },
+    "arasta": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "North Nicosia",
+      "popularity": 3
+    },
+    "green_line": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daylight only",
+      "area": "Ledra Street area",
+      "popularity": 3
+    },
+    "hamam": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "North Nicosia",
+      "popularity": 3
+    },
+    "city_walls": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Old City centre",
+      "popularity": 2
+    },
+    "meze_dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Old City centre",
+      "popularity": 4
+    },
+    "halloumi_breakfast": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old City centre",
+      "popularity": 3
+    },
+    "ledra_palace": {
+      "types": [
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Ledra Street area",
+      "popularity": 2
+    },
+    "buffavento": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning; clear day",
+      "area": "North Nicosia",
+      "popularity": 2
+    },
+    "selimiye_square": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "North Nicosia",
+      "popularity": 2
+    },
+    "sweets_shop": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "North Nicosia",
+      "popularity": 2
+    },
+    "walking_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Old City centre",
+      "popularity": 3
+    },
+    "park_bench": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Midday shade",
+      "area": "Old City centre",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "One night covers the walled old city on foot; add a night for museums and the north side."
+  },
+  "airports": [
+    {
+      "code": "ECN",
+      "name": "Ercan International Airport",
+      "primary": true,
+      "note": "Closest airport, 11 km north of the centre in Northern Cyprus.",
+      "options": [
+        {
+          "mode": "Shared shuttle / dolmuş",
+          "to": "North Nicosia",
+          "price": "€5-10",
+          "time": "20-30 min",
+          "note": "Cheapest option; confirm the drop-off point."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€15-25",
+          "time": "15-25 min",
+          "note": "Agree the fare before you ride."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "App coverage in the north is limited."
+        }
+      ]
+    },
+    {
+      "code": "LCA",
+      "name": "Larnaca International Airport",
+      "primary": false,
+      "note": "Main south-side gateway, about 40 km and a 30-min drive.",
+      "options": [
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Nicosia (near highway)",
+          "price": "€8-10",
+          "time": "45-60 min",
+          "note": "Does not stop near the centre; take a taxi or local bus onward."
+        },
+        {
+          "mode": "Intercity bus",
+          "to": "Central bus station, Solomos Square",
+          "price": "€4-6",
+          "time": "60-75 min",
+          "note": "Cheap and reliable; check the timetable."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€45-60",
+          "time": "30-40 min",
+          "note": "Fixed fares are common; agree first."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-40 min",
+          "note": "Bolt and Uber may serve the airport."
+        }
+      ]
+    },
+    {
+      "code": "PFO",
+      "name": "Paphos International Airport",
+      "primary": false,
+      "note": "Smaller airport, about 140 km and a 1 hr 40 min drive.",
+      "options": [
+        {
+          "mode": "Intercity bus",
+          "to": "Nicosia via Limassol",
+          "price": "€10-15",
+          "time": "2.5-3 hr",
+          "note": "Requires a change; slow but cheap."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€120-150",
+          "time": "1 hr 40 min",
+          "note": "Expensive; share if possible."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "1 hr 40 min",
+          "note": "Long-distance app rides are unreliable."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Nicosia",
+      "https://en.wikivoyage.org/wiki/Nicosia"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the old city; use taxis or ride apps for anything further.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. The Old City is best on foot."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses are cheap but timetables are unreliable and few are air conditioned."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are diesel Mercedes with 'T' plates; check the meter is on. Bolt and Uber operate in the south; coverage varies."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Car hire is affordable and useful for day trips beyond the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The walled Old City is compact and best explored on foot."
+      },
+      {
+        "mode": "Bike sharing",
+        "has": true,
+        "text": "Bike in Action needs a smart card. Ferries leave from Limassol and Larnaca, not Nicosia."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: mild, wet winters and very hot, dry summers. Spring and autumn are best.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: March to May and October to November",
+        "text": "Mild days around 20–29°C, good for walking the old city."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is very hot (June to September)",
+        "text": "Highs of 34–38°C. Sightsee early morning and evening; stay indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in winter",
+        "text": "December to February has the most rain days (7–9 a month). Showers are usually short."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cool winter nights",
+        "text": "Lows around 7–9°C from December to February. Bring a warm jacket."
+      },
+      {
+        "icon": "☀️",
+        "title": "Sunny most of the year",
+        "text": "Rain days drop to 1–4 from June to September. Sunscreen all year."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and a hat for summer; a jacket and umbrella for winter; comfortable shoes for cobbled lanes."
+      }
+    ]
+  }
+}

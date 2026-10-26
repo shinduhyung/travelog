@@ -1,0 +1,1627 @@
+{
+  "city": "London",
+  "checked": "October 2026",
+  "currency": "GBP",
+  "usd_rate": 0.75,
+  "intro": "London's big sights cluster along the Thames and in the West End. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 51.4654,
+      "west": -0.3302,
+      "north": 51.5531,
+      "east": 0.0351,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.8,
+      "flag_airport": 3.8,
+      "per_km": 2.6,
+      "min_fare": 3.8
+    },
+    "road_factor": 1.35,
+    "city_kmh": 17,
+    "notes": [
+      "The Underground (Tube), Elizabeth line, Overground and buses all take contactless cards and Oyster; fares are capped per day.",
+      "Buses cost a flat £1.75 and a second bus within an hour is free (Hopper fare).",
+      "Black cabs are metered and can be hailed; Uber, Bolt and FREENOW are widely used.",
+      "Driving in the centre means the Congestion Charge and ULEZ fees; visitors rarely need a car.",
+      "Central London is very walkable; many sights are 15-30 minutes apart on foot.",
+      "Thames Clippers river boats link Westminster, the South Bank, the Tower and Greenwich."
+    ],
+    "sources": []
+  },
+  "places": {
+    "tower-of-london": {
+      "name": "Tower of London",
+      "landmark": "Tower of London",
+      "kind": "sight",
+      "lat": 51.5081,
+      "lon": -0.0759,
+      "price": 35,
+      "price_text": "≈ £30–37 adult · cheaper online · under 5 free",
+      "hours": "Tue–Sat 09:00–17:30 · Sun–Mon 10:00–17:30 · check on the day",
+      "tip": "Go at opening and see the Crown Jewels first before queues build.",
+      "source": "https://www.hrp.org.uk/tower-of-london/"
+    },
+    "westminster-abbey": {
+      "name": "Westminster Abbey",
+      "landmark": "Westminster Abbey",
+      "kind": "sight",
+      "lat": 51.4993,
+      "lon": -0.1273,
+      "price": 30,
+      "price_text": "≈ £27–30 adult · check on the day",
+      "hours": "Mon–Sat from 09:30 · closed to tourists on Sundays",
+      "tip": "Book a timed ticket online and arrive early; entry lines are long by mid-morning.",
+      "source": "https://www.westminster-abbey.org/visit-us"
+    },
+    "palace-of-westminster": {
+      "name": "Palace of Westminster",
+      "landmark": "Palace of Westminster",
+      "kind": "sight",
+      "lat": 51.4995,
+      "lon": -0.1248,
+      "price": 0,
+      "price_text": "Free to view outside · tours paid, book ahead",
+      "hours": "Exterior always visible · tours on selected days · check on the day",
+      "tip": "Walk the river side from Westminster Bridge for the classic photo.",
+      "source": "https://www.parliament.uk/visiting/"
+    },
+    "big-ben": {
+      "name": "Big Ben",
+      "landmark": "Big Ben",
+      "kind": "sight",
+      "lat": 51.5007,
+      "lon": -0.1246,
+      "price": 0,
+      "price_text": "Free from outside · clock tower tours for UK residents via MP",
+      "hours": "Visible 24 hours",
+      "tip": "Best view is from the south end of Westminster Bridge, not right underneath.",
+      "source": ""
+    },
+    "buckingham-palace": {
+      "name": "Buckingham Palace",
+      "landmark": "Buckingham Palace",
+      "kind": "sight",
+      "lat": 51.5014,
+      "lon": -0.1419,
+      "price": 32,
+      "price_text": "≈ £30–35 state rooms · check on the day · exterior free",
+      "hours": "State rooms usually summer only · check on the day",
+      "tip": "Watch the Changing of the Guard from the Victoria Memorial, not the gates.",
+      "source": "https://www.royalcollection.org.uk/visit/buckinghampalace"
+    },
+    "british-museum": {
+      "name": "British Museum",
+      "landmark": "British Museum",
+      "kind": "museum",
+      "lat": 51.5194,
+      "lon": -0.127,
+      "price": 0,
+      "price_text": "Free · special exhibitions paid",
+      "hours": "Daily 10:00–17:00 · Fri until 20:30 · check on the day",
+      "tip": "Book a free timed slot and head straight to the Rosetta Stone at opening.",
+      "source": "https://www.britishmuseum.org/visit"
+    },
+    "national-gallery": {
+      "name": "National Gallery",
+      "landmark": "National Gallery",
+      "kind": "museum",
+      "lat": 51.5089,
+      "lon": -0.1283,
+      "price": 0,
+      "price_text": "Free · special exhibitions paid",
+      "hours": "Daily 10:00–18:00 · Fri until 21:00 · check on the day",
+      "tip": "Pick three rooms rather than trying to see it all; the Van Goghs are near the Sainsbury Wing.",
+      "source": "https://www.nationalgallery.org.uk/visiting"
+    },
+    "tate-modern": {
+      "name": "Tate Modern",
+      "landmark": "Tate Modern",
+      "kind": "museum",
+      "lat": 51.5076,
+      "lon": -0.0994,
+      "price": 0,
+      "price_text": "Free · major exhibitions paid",
+      "hours": "Daily 10:00–18:00 · check on the day",
+      "tip": "Use the free viewing level in the Blavatnik Building for a river panorama.",
+      "source": "https://www.tate.org.uk/visit/tate-modern"
+    },
+    "natural-history-museum": {
+      "name": "Natural History Museum",
+      "landmark": "Natural History Museum",
+      "kind": "museum",
+      "lat": 51.4967,
+      "lon": -0.1764,
+      "price": 0,
+      "price_text": "Free · some exhibitions paid",
+      "hours": "Daily 10:00–17:50 · check on the day",
+      "tip": "Enter via the Exhibition Road side to skip the main Cromwell Road queue.",
+      "source": "https://www.nhm.ac.uk/visit.html"
+    },
+    "v-and-a": {
+      "name": "Victoria and Albert Museum",
+      "landmark": "Victoria and Albert Museum",
+      "kind": "museum",
+      "lat": 51.4966,
+      "lon": -0.1722,
+      "price": 0,
+      "price_text": "Free · special exhibitions paid",
+      "hours": "Daily 10:00–17:45 · Fri until 22:00 · check on the day",
+      "tip": "The Cast Courts and the jewellery gallery are the quick highlights if time is short.",
+      "source": "https://www.vam.ac.uk/visit"
+    },
+    "science-museum": {
+      "name": "Science Museum",
+      "landmark": "Science Museum",
+      "kind": "museum",
+      "lat": 51.4978,
+      "lon": -0.1745,
+      "price": 0,
+      "price_text": "Free · IMAX and some galleries paid",
+      "hours": "Daily 10:00–18:00 · check on the day",
+      "tip": "Book free entry in advance; the Wonderlab is the best bit for kids and costs extra.",
+      "source": "https://www.sciencemuseum.org.uk/visit"
+    },
+    "st-pauls": {
+      "name": "St Paul's Cathedral",
+      "landmark": "St Paul's Cathedral",
+      "kind": "sight",
+      "lat": 51.5138,
+      "lon": -0.0984,
+      "price": 25,
+      "price_text": "≈ £23–26 adult · check on the day",
+      "hours": "Mon–Sat from 08:30 · Sunday worship only",
+      "tip": "Climb the dome for the best view in the City; it is 500+ steps with narrow stairs.",
+      "source": "https://www.stpauls.co.uk/visit"
+    },
+    "tower-bridge": {
+      "name": "Tower Bridge",
+      "landmark": "Tower Bridge",
+      "kind": "sight",
+      "lat": 51.5055,
+      "lon": -0.0754,
+      "price": 13,
+      "price_text": "≈ £12–15 exhibition · walking across is free",
+      "hours": "Exhibition usually 09:30–18:00 · check on the day",
+      "tip": "Crossing the bridge is free; pay only if you want the glass floor walkway.",
+      "source": "https://www.towerbridge.org.uk/"
+    },
+    "london-eye": {
+      "name": "London Eye",
+      "landmark": "London Eye",
+      "kind": "sight",
+      "lat": 51.5033,
+      "lon": -0.1195,
+      "price": 35,
+      "price_text": "≈ £29–39 adult · cheaper online · check on the day",
+      "hours": "Daily, usually 11:00–18:00 · seasonal · check on the day",
+      "tip": "Book a timed slot online and go near sunset for the best light.",
+      "source": "https://www.londoneye.com/"
+    },
+    "the-shard": {
+      "name": "The Shard",
+      "landmark": "The Shard",
+      "kind": "sight",
+      "lat": 51.5045,
+      "lon": -0.0865,
+      "price": 32,
+      "price_text": "≈ £28–35 viewing gallery · check on the day",
+      "hours": "Daily, usually 10:00–22:00 · check on the day",
+      "tip": "The viewing gallery is pricey; a drink at a bar in the building can be similar value.",
+      "source": "https://www.theviewfromtheshard.com/"
+    },
+    "borough-market": {
+      "name": "Borough Market",
+      "landmark": "Borough Market",
+      "kind": "food",
+      "lat": 51.5055,
+      "lon": -0.0903,
+      "price": 0,
+      "price_text": "Free to enter · food £5–15 per item",
+      "hours": "Mon–Sat, roughly 08:00–17:00 · closed Sunday · check on the day",
+      "tip": "Come hungry at opening on a weekday; Saturday is packed by noon.",
+      "source": "https://boroughmarket.org.uk/"
+    },
+    "covent-garden": {
+      "name": "Covent Garden",
+      "landmark": "Covent Garden",
+      "kind": "sight",
+      "lat": 51.5117,
+      "lon": -0.124,
+      "price": 0,
+      "price_text": "Free · street performers tip-based",
+      "hours": "Shops roughly 10:00–20:00 · piazza always open",
+      "tip": "Watch the street performers in the piazza, then walk to Neal's Yard for a quieter corner.",
+      "source": "https://www.coventgarden.london/"
+    },
+    "camden-market": {
+      "name": "Camden Market",
+      "landmark": "Camden Market",
+      "kind": "food",
+      "lat": 51.5416,
+      "lon": -0.1463,
+      "price": 0,
+      "price_text": "Free to enter · street food £6–12",
+      "hours": "Daily roughly 10:00–18:00 · check on the day",
+      "tip": "The food stalls by the canal lock are the main draw; go on a weekday to avoid crowds.",
+      "source": "https://www.camdenmarket.com/"
+    },
+    "hyde-park": {
+      "name": "Hyde Park",
+      "landmark": "Hyde Park",
+      "kind": "park",
+      "lat": 51.5073,
+      "lon": -0.1657,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily 05:00–24:00",
+      "tip": "Walk from Marble Arch to the Serpentine for the best loop; rent a deckchair in summer.",
+      "source": "https://www.royalparks.org.uk/visit/parks/hyde-park"
+    },
+    "churchill-war-rooms": {
+      "name": "Churchill War Rooms",
+      "landmark": "Churchill War Rooms",
+      "kind": "museum",
+      "lat": 51.5021,
+      "lon": -0.1291,
+      "price": 32,
+      "price_text": "≈ £30–35 adult · book ahead",
+      "hours": "Daily 09:30–18:00 · last entry 17:00 · check on the day",
+      "tip": "Book a timed slot; the bunker is cramped and sells out on weekends.",
+      "source": "https://www.iwm.org.uk/visits/churchill-war-rooms"
+    },
+    "greenwich-observatory": {
+      "name": "Royal Observatory Greenwich",
+      "landmark": "Royal Observatory Greenwich",
+      "kind": "sight",
+      "lat": 51.4769,
+      "lon": 0.0005,
+      "price": 18,
+      "price_text": "≈ £16–20 · Meridian line included · check on the day",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "Take the Thames Clipper boat from central London; the ride is half the fun.",
+      "source": "https://www.rmg.co.uk/royal-observatory"
+    },
+    "kew-gardens": {
+      "name": "Royal Botanic Gardens, Kew",
+      "landmark": "Royal Botanic Gardens, Kew",
+      "kind": "park",
+      "lat": 51.4787,
+      "lon": -0.2956,
+      "price": 15,
+      "price_text": "≈ £12–18 adult · check on the day",
+      "hours": "Daily from 10:00 · closing varies by season · check on the day",
+      "tip": "It is a 30–40 minute trip from central London; allow at least half a day.",
+      "source": "https://www.kew.org/kew-gardens"
+    },
+    "windsor-castle": {
+      "name": "Windsor Castle",
+      "landmark": "Windsor Castle",
+      "kind": "sight",
+      "lat": 51.4839,
+      "lon": -0.6044,
+      "price": 30,
+      "price_text": "≈ £28–33 adult · book ahead · check on the day",
+      "hours": "Usually Tue–Sun 10:00–17:00 · closed some dates · check on the day",
+      "tip": "Take the train from Paddington or Waterloo; allow a full day out of London.",
+      "source": "https://www.rct.uk/visit/windsor-castle"
+    },
+    "harry-potter-studio": {
+      "name": "Warner Bros. Studio Tour London - The Making of Harry Potter",
+      "landmark": "Warner Bros. Studio Tour London - The Making of Harry Potter",
+      "kind": "tour",
+      "lat": 51.6904,
+      "lon": -0.4181,
+      "price": 55,
+      "price_text": "≈ £50–60 adult · book far ahead · transport extra",
+      "hours": "Daily, timed slots · check on the day",
+      "tip": "Book weeks ahead and add the shuttle bus from Watford Junction station.",
+      "source": "https://www.wbstudiotour.co.uk/"
+    },
+    "shakespeares-globe": {
+      "name": "Shakespeare's Globe",
+      "landmark": "Shakespeare's Globe",
+      "kind": "show",
+      "lat": 51.5081,
+      "lon": -0.0972,
+      "price": 5,
+      "price_text": "£5 standing yard · seats ≈ £25–60 · check on the day",
+      "hours": "Exhibition daily · performances seasonal · check on the day",
+      "tip": "Standing tickets are cheap but you stand for the whole play; bring a rain jacket.",
+      "source": "https://www.shakespearesglobe.com/"
+    },
+    "notting-hill": {
+      "name": "Notting Hill",
+      "landmark": "Notting Hill",
+      "kind": "activity",
+      "lat": 51.5119,
+      "lon": -0.2036,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · Portobello Road market Sat, roughly 09:00–19:00",
+      "tip": "Come on Saturday for Portobello Road market, or a weekday for quiet pastel streets.",
+      "source": ""
+    },
+    "sky-garden": {
+      "name": "Sky Garden",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 51.5113,
+      "lon": -0.0836,
+      "price": 0,
+      "price_text": "Free with booking · some slots paid",
+      "hours": "Weekdays from 10:00 · weekends from 11:00 · book ahead",
+      "tip": "Free tickets release a few weeks ahead; book the moment slots open.",
+      "source": "https://skygarden.london/"
+    },
+    "thames-clipper": {
+      "name": "Thames Clipper river boat",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.5074,
+      "lon": -0.1196,
+      "price": 10,
+      "price_text": "≈ £8–15 per hop · Oyster and contactless accepted",
+      "hours": "Roughly 06:00–23:00 · check on the day",
+      "tip": "Cheaper than a sightseeing cruise and the same views; sit at the back outside.",
+      "source": "https://www.thamesclippers.com/"
+    },
+    "soho-walk": {
+      "name": "Soho and Chinatown evening walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.5134,
+      "lon": -0.133,
+      "price": 0,
+      "price_text": "Free to walk · dinner £15–30",
+      "hours": "Always open · busiest after 18:00",
+      "tip": "Wander the small streets between Oxford Street and Shaftesbury Avenue, then eat in Chinatown.",
+      "source": ""
+    },
+    "primrose-hill": {
+      "name": "Primrose Hill viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 51.5395,
+      "lon": -0.1612,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park open daily, roughly 05:00–dusk",
+      "tip": "Best free skyline view in London; combine with Camden Market on foot.",
+      "source": ""
+    },
+    "west-end-show": {
+      "name": "West End theatre show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 51.5117,
+      "lon": -0.128,
+      "price": 40,
+      "price_text": "≈ £25–90 · day seats and rush tickets cheaper",
+      "hours": "Evenings, some matinees · check on the day",
+      "tip": "Try the TKTS booth in Leicester Square or the theatre's own day seats for cheaper tickets.",
+      "source": "https://officiallondontheatre.com/tkts/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of London's headline sights, walking the river between them.",
+      "days": [
+        {
+          "title": "Westminster to the Tower along the river",
+          "stops": [
+            {
+              "place": "westminster-abbey",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot on a weekday. Closed to tourists on Sundays."
+            },
+            {
+              "place": "big-ben",
+              "at": "11:10",
+              "minutes": 20,
+              "note": "Two minutes on foot. Best photos from Westminster Bridge."
+            },
+            {
+              "place": "palace-of-westminster",
+              "at": "11:35",
+              "minutes": 45,
+              "note": "Walk the outside. Tours only on selected days, check on the day."
+            },
+            {
+              "place": "borough-market",
+              "at": "12:45",
+              "minutes": 75,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "tower-of-london",
+              "at": "14:15",
+              "minutes": 180,
+              "note": "Book ahead. Last entry is well before closing, check on the day."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Five minutes on foot. Walk the north bank for sunset views."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Bank & Southwark"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets, snacks and an evening in Soho, all on foot or a short Tube ride.",
+      "days": [
+        {
+          "title": "Markets by day, Soho by night",
+          "stops": [
+            {
+              "place": "borough-market",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Weekday late morning is calmest. Closed Sunday."
+            },
+            {
+              "place": "covent-garden",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Tube from London Bridge. Grab a coffee and watch the street acts."
+            },
+            {
+              "place": "camden-market",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Northern line north. Lunch from the food stalls."
+            },
+            {
+              "place": "primrose-hill",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short walk or bus. Skyline view, good at sunset."
+            },
+            {
+              "place": "soho-walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Back south. Eat in Chinatown or a Soho pub, busiest after 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "Free museums and the South Bank, with plenty of space for kids to run.",
+      "days": [
+        {
+          "title": "Dinosaurs, then the river",
+          "stops": [
+            {
+              "place": "natural-history-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday opening is quietest. Free entry, book a slot ahead."
+            },
+            {
+              "place": "hyde-park",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Picnic lunch. Short walk north from the museum."
+            },
+            {
+              "place": "london-eye",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Book a timed slot ahead. Tube to Waterloo."
+            },
+            {
+              "place": "tate-modern",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Ten minutes along the river. Free, with family activities."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Boat ride to finish. Check the last departure on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Bank & Southwark"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day of London's headline sights, grouped so you walk less and see more.",
+      "days": [
+        {
+          "title": "Westminster icons, then the South Bank",
+          "stops": [
+            {
+              "place": "westminster-abbey",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot on a weekday is calmest. Closed to tourists on Sundays."
+            },
+            {
+              "place": "big-ben",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Two minutes on foot. Best photos from Westminster Bridge."
+            },
+            {
+              "place": "palace-of-westminster",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk the outside. Tours run on selected days only, so check on the day."
+            },
+            {
+              "place": "borough-market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch from the stalls. Closed Sunday, so plan this for another day."
+            },
+            {
+              "place": "tate-modern",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Free entry. Then walk the river back toward the Eye."
+            },
+            {
+              "place": "london-eye",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Book ahead for sunset. Hours are seasonal, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Bank & Southwark"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets and street food by day, Soho and Chinatown for dinner.",
+      "days": [
+        {
+          "title": "Markets, then Soho after dark",
+          "stops": [
+            {
+              "place": "borough-market",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Weekday late morning is best. Closed Sunday."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Ride the river east for a cheap view of the city."
+            },
+            {
+              "place": "camden-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch from the food stalls. Weekday lunchtime is quieter."
+            },
+            {
+              "place": "covent-garden",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Coffee and a wander. Street performers in the piazza."
+            },
+            {
+              "place": "soho-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Eat your way through Soho and Chinatown. Busiest after 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Free museums, the South Bank and a park, all easy with kids.",
+      "days": [
+        {
+          "title": "South Kensington museums, then the river",
+          "stops": [
+            {
+              "place": "natural-history-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free entry. Go at opening, especially in rain."
+            },
+            {
+              "place": "science-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Next door. Grab lunch in the museum cafe or on the street."
+            },
+            {
+              "place": "hyde-park",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Short walk north. Space to run around on a sunny afternoon."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Take the Tube east. The exhibition hours vary, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Kensington"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: Tower, Abbey, Big Ben and a West End show, grouped by area.",
+      "days": [
+        {
+          "title": "Westminster morning, South Bank evening",
+          "stops": [
+            {
+              "place": "westminster-abbey",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot on a weekday. Closed to tourists on Sundays."
+            },
+            {
+              "place": "big-ben",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Five minutes on foot. Best from Westminster Bridge."
+            },
+            {
+              "place": "palace-of-westminster",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk the outside. Tours only on selected days, check on the day."
+            },
+            {
+              "place": "borough-market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "tate-modern",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Free. Then walk the river back."
+            }
+          ]
+        },
+        {
+          "title": "Tower, river and a show",
+          "stops": [
+            {
+              "place": "tower-of-london",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Weekday morning is quietest. Book ahead."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short walk along the river. Check exhibition times on the day."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Boat west to the West End. Buy a ticket at the pier."
+            },
+            {
+              "place": "covent-garden",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee and street performers."
+            },
+            {
+              "place": "west-end-show",
+              "at": "19:30",
+              "minutes": 165,
+              "note": "Book ahead, especially weekends. Check the day's times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through markets and Soho, with the big sights slotted in between meals.",
+      "days": [
+        {
+          "title": "Borough Market and the South Bank",
+          "stops": [
+            {
+              "place": "borough-market",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Weekday late morning is calmest. Closed Sunday."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk it off along the river."
+            },
+            {
+              "place": "tower-of-london",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Book ahead. Check hours on the day."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Boat to the West End for dinner."
+            },
+            {
+              "place": "soho-walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Eat your way through Soho and Chinatown. Busiest after 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Camden lunch, West End evening",
+          "stops": [
+            {
+              "place": "british-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Weekday opening is quietest."
+            },
+            {
+              "place": "camden-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch from the food stalls. About 20 minutes by Tube."
+            },
+            {
+              "place": "primrose-hill",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Short walk up for the skyline view."
+            },
+            {
+              "place": "covent-garden",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Shops until about 20:00."
+            },
+            {
+              "place": "west-end-show",
+              "at": "19:30",
+              "minutes": 165,
+              "note": "Book ahead. Check the day's times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Free museums, the Tower and parks, with short hops so kids don't tire.",
+      "days": [
+        {
+          "title": "South Kensington museums",
+          "stops": [
+            {
+              "place": "natural-history-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Weekday morning is best, especially in rain."
+            },
+            {
+              "place": "science-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Next door. Free. Lunch in the museum cafe."
+            },
+            {
+              "place": "hyde-park",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Short walk. Space to run around."
+            }
+          ]
+        },
+        {
+          "title": "Tower, river and the Eye",
+          "stops": [
+            {
+              "place": "tower-of-london",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book ahead. Weekday morning is quietest."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Walk along the river. Check times on the day."
+            },
+            {
+              "place": "borough-market",
+              "at": "13:45",
+              "minutes": 75,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "london-eye",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Book ahead. Check seasonal hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Bank & Southwark"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights plus two world-class museums, grouped by area so you walk less.",
+      "days": [
+        {
+          "title": "Westminster icons and the West End stage",
+          "stops": [
+            {
+              "place": "westminster-abbey",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot on a weekday. Closed to tourists on Sundays."
+            },
+            {
+              "place": "big-ben",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Two minutes from the Abbey. Photo stop from the bridge."
+            },
+            {
+              "place": "palace-of-westminster",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk the outside. Tours only on selected days, check on the day."
+            },
+            {
+              "place": "churchill-war-rooms",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Book the first afternoon slot. Lunch nearby first."
+            },
+            {
+              "place": "west-end-show",
+              "at": "19:30",
+              "minutes": 165,
+              "note": "Book ahead for weekends. Arrive 30 minutes early."
+            }
+          ]
+        },
+        {
+          "title": "Tower morning, South Bank afternoon",
+          "stops": [
+            {
+              "place": "tower-of-london",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Weekday morning is quietest. Book ahead for the Crown Jewels queue."
+            },
+            {
+              "place": "borough-market",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Short walk along the river. Check exhibition times on the day."
+            },
+            {
+              "place": "tate-modern",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Free entry. Then walk the river at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Bloomsbury museum, then fly or rest",
+          "stops": [
+            {
+              "place": "british-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Go at opening or on Friday evening for fewer crowds."
+            },
+            {
+              "place": "covent-garden",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch and a wander. Piazza always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through markets, Soho and the South Bank, with a few sights between meals.",
+      "days": [
+        {
+          "title": "Borough Market and the South Bank",
+          "stops": [
+            {
+              "place": "borough-market",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Weekday late morning is calmer. Closed Sunday."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk it off along the river. Check times on the day."
+            },
+            {
+              "place": "tate-modern",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Free. Good coffee stop inside."
+            },
+            {
+              "place": "soho-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Chinatown and Soho for dinner. Busiest after 18:00, book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Westminster, then Covent Garden",
+          "stops": [
+            {
+              "place": "westminster-abbey",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday first slot. Closed to tourists on Sundays."
+            },
+            {
+              "place": "big-ben",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Quick photo stop."
+            },
+            {
+              "place": "covent-garden",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and street performers."
+            },
+            {
+              "place": "national-gallery",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Free. Friday until 21:00."
+            },
+            {
+              "place": "west-end-show",
+              "at": "19:30",
+              "minutes": 165,
+              "note": "Pre-theatre dinner nearby, then the show."
+            }
+          ]
+        },
+        {
+          "title": "Camden and Notting Hill markets",
+          "stops": [
+            {
+              "place": "camden-market",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Weekday lunchtime. Street food everywhere."
+            },
+            {
+              "place": "notting-hill",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Portobello Road market is Saturday, roughly 09:00–19:00."
+            },
+            {
+              "place": "hyde-park",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset stroll. Open until 24:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Free museums, the Tower and parks, with short hops so kids do not tire out.",
+      "days": [
+        {
+          "title": "South Kensington museums",
+          "stops": [
+            {
+              "place": "natural-history-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Weekday morning, especially in rain."
+            },
+            {
+              "place": "science-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Free. Five minutes on foot. Lunch in the museum cafe."
+            },
+            {
+              "place": "hyde-park",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Run around before dinner. Open until 24:00."
+            }
+          ]
+        },
+        {
+          "title": "Tower, river and the Eye",
+          "stops": [
+            {
+              "place": "tower-of-london",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Weekday morning. Book ahead."
+            },
+            {
+              "place": "borough-market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch from the stalls. Closed Sunday."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Boat ride to the South Bank. Check times on the day."
+            },
+            {
+              "place": "london-eye",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Book ahead for sunset. Seasonal hours, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Harry Potter day",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "harry-potter-studio"
+              ],
+              "at": "09:00",
+              "minutes": 450,
+              "note": "Morning slot, pre-booked. Bus from central London."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Bank & Southwark"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the big sights plus two of the world's great museums, grouped by area to cut travel.",
+      "days": [
+        {
+          "title": "Westminster and the river",
+          "stops": [
+            {
+              "place": "westminster-abbey",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot on a weekday is calmest. Closed to tourists on Sundays."
+            },
+            {
+              "place": "big-ben",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Two minutes' walk. Visible 24 hours."
+            },
+            {
+              "place": "palace-of-westminster",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Walk the outside. Tours run on selected days only, so check on the day."
+            },
+            {
+              "place": "churchill-war-rooms",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Book the first afternoon slot. Last entry 17:00."
+            },
+            {
+              "place": "national-gallery",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Open daily to 18:00, Friday to 21:00. Free."
+            }
+          ]
+        },
+        {
+          "title": "Tower, bridge and the South Bank",
+          "stops": [
+            {
+              "place": "tower-of-london",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Weekday morning. Check opening times on the day."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short walk east. Exhibition usually 09:30–18:00."
+            },
+            {
+              "place": "borough-market",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "shakespeares-globe",
+              "at": "15:45",
+              "minutes": 150,
+              "note": "Exhibition daily. Summer evening performances are worth booking."
+            },
+            {
+              "place": "tate-modern",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Open to 18:00 most days, so go earlier if you want the galleries. The riverside walk is free."
+            }
+          ]
+        },
+        {
+          "title": "Bloomsbury and the West End",
+          "stops": [
+            {
+              "place": "british-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday opening or Friday evening. Free."
+            },
+            {
+              "place": "covent-garden",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch and street performers. Piazza always open."
+            },
+            {
+              "place": "soho-walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Wander Soho and Chinatown. Busiest after 18:00."
+            },
+            {
+              "place": "west-end-show",
+              "at": "19:00",
+              "minutes": 165,
+              "note": "Book ahead for weekends. Check the day's schedule."
+            }
+          ]
+        },
+        {
+          "title": "South Kensington museums, then home",
+          "stops": [
+            {
+              "place": "natural-history-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning. Free. Check hours on the day."
+            },
+            {
+              "place": "v-and-a",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Five minutes' walk. Free. Friday late until 22:00."
+            },
+            {
+              "place": "hyde-park",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk north through the park to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want markets, pubs and neighbourhood flavour, with a few big sights in between.",
+      "days": [
+        {
+          "title": "Borough, the Tower and the river",
+          "stops": [
+            {
+              "place": "borough-market",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Weekday late morning is best. Closed Sunday."
+            },
+            {
+              "place": "tower-of-london",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Check opening times on the day."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Walk east along the river. Exhibition usually 09:30–18:00."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Boat back towards the centre. Roughly 06:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Camden and King's Cross",
+          "stops": [
+            {
+              "place": "british-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Quick morning visit. Free."
+            },
+            {
+              "place": "camden-market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunchtime food stalls. Roughly 10:00–18:00."
+            },
+            {
+              "place": "primrose-hill",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Short walk up for the skyline view."
+            },
+            {
+              "place": "soho-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Early evening dinner wander. Busiest after 18:00."
+            }
+          ]
+        },
+        {
+          "title": "West End and Covent Garden",
+          "stops": [
+            {
+              "place": "covent-garden",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–20:00. Piazza always open."
+            },
+            {
+              "place": "national-gallery",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Free. Open daily to 18:00."
+            },
+            {
+              "place": "west-end-show",
+              "at": "19:00",
+              "minutes": 165,
+              "note": "Book ahead. Check the day's schedule."
+            }
+          ]
+        },
+        {
+          "title": "Notting Hill and Kensington",
+          "stops": [
+            {
+              "place": "notting-hill",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Portobello Road market is Saturday, roughly 09:00–19:00. Weekdays are quieter."
+            },
+            {
+              "place": "hyde-park",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Walk east through the park."
+            },
+            {
+              "place": "v-and-a",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Free. Friday late until 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "West End & Soho"
+    },
+    {
+      "id": "4n-family",
+      "length": "4n",
+      "style": "family",
+      "nights": 4,
+      "for": "Families with kids: free museums, parks, boats and one big pre-booked day out.",
+      "days": [
+        {
+          "title": "South Kensington museums",
+          "stops": [
+            {
+              "place": "natural-history-museum",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning, especially in rain. Free."
+            },
+            {
+              "place": "science-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Next door. Free. Check hours on the day."
+            },
+            {
+              "place": "hyde-park",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Run off steam. Open 05:00–24:00."
+            }
+          ]
+        },
+        {
+          "title": "Tower, bridge and the South Bank",
+          "stops": [
+            {
+              "place": "tower-of-london",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Weekday morning. Check opening times on the day."
+            },
+            {
+              "place": "tower-bridge",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short walk east. Exhibition usually 09:30–18:00."
+            },
+            {
+              "place": "borough-market",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "tate-modern",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Free. Open to 18:00. Then walk the river."
+            }
+          ]
+        },
+        {
+          "title": "Harry Potter studio day",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "harry-potter-studio"
+              ],
+              "at": "09:00",
+              "minutes": 450,
+              "note": "Pre-booked morning slot with branded bus. Check the meeting point and time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Westminster, boats and the Eye",
+          "stops": [
+            {
+              "place": "buckingham-palace",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning for the ceremony. State rooms usually summer only, so check on the day."
+            },
+            {
+              "place": "big-ben",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Walk down to Westminster."
+            },
+            {
+              "place": "thames-clipper",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Boat to the South Bank. Roughly 06:00–23:00."
+            },
+            {
+              "place": "london-eye",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Book ahead. Usually 11:00–18:00, seasonal."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Kensington"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Tower, Westminster and the West End stage."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, pubs and a world of restaurants."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Free museums, parks and the South Bank."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "West End & Soho",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Walk to theatres, Oxford Street and most central sights. Busy and noisy at night; book early.",
+      "center": [
+        51.513,
+        -0.132
+      ]
+    },
+    {
+      "area": "South Kensington",
+      "range": [
+        140,
+        380
+      ],
+      "why": "Next to the Natural History and Science Museums and Hyde Park. Quiet streets, good for families.",
+      "center": [
+        51.494,
+        -0.174
+      ]
+    },
+    {
+      "area": "South Bank & Southwark",
+      "range": [
+        120,
+        350
+      ],
+      "why": "Riverside walks, the Eye and the Tower within reach. Good Tube links from Waterloo and London Bridge.",
+      "center": [
+        51.505,
+        -0.09
+      ]
+    },
+    {
+      "area": "King's Cross & Bloomsbury",
+      "range": [
+        110,
+        300
+      ],
+      "why": "The British Museum, the British Library and fast trains from King's Cross and St Pancras.",
+      "center": [
+        51.53,
+        -0.124
+      ]
+    }
+  ],
+  "food": [
+    "Try a proper Sunday roast in a pub, and fish and chips from a chippy. Expect roughly £12–20 a main.",
+    "Markets are the best value: Borough Market for snacks, Brick Lane for curry, Camden for street food.",
+    "Book popular restaurants ahead, especially for dinner Thursday to Saturday.",
+    "Lunch is often cheaper than dinner at the same place; many pubs do good-value set lunches.",
+    "Tap water is safe and free to ask for. A pint of beer is roughly £5–7 in central pubs."
+  ],
+  "more_time": [
+    "Greenwich: take the Thames Clippers boat for the Cutty Sark, the market and the park.",
+    "Swap a museum day for a half-day trip to Hampton Court Palace or Kew Gardens by train.",
+    "Camden and Regent's Canal: walk the towpath from Camden Lock to Little Venice."
+  ]
+}

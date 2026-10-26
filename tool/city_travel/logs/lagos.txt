@@ -1,0 +1,31 @@
+$ deepseek_facts.py Lagos
+  tokens in 3928 out 626
+Lagos: 0 problems
+
+$ deepseek_city.py Lagos --stage places
+Lagos: places
+  tokens in 1185 out 3228
+
+$ deepseek_city.py Lagos --stage frame
+Lagos: frame
+  tokens in 2463 out 1945
+  repaired JSON
+
+$ deepseek_city.py Lagos --stage plans
+Lagos: plans
+  plans for day
+  tokens in 2211 out 665
+  plans for 1n
+  tokens in 2212 out 1225
+  plans for 2n
+  tokens in 2217 out 1400
+  plans for 3n
+  tokens in 2212 out 1662
+  plans for 4n
+  tokens in 2212 out 1973
+
+$ merge_city.py Lagos
+WARN  praia-dona-ana: 3612 km from the center (day trip?)
+Lagos: 21 places, 15 plans, 0 errors, 1 warnings
+wrote itineraries/lagos.json and planner/lagos.json
+

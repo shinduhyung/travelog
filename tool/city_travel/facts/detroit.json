@@ -1,0 +1,200 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Detroit: where Motor City muscle meets a riverfront revival.",
+  "intro": "Detroit rewards visitors with world-class museums, a resurgent downtown, and a gritty creative spirit. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Midtown",
+    "Corktown",
+    "Greektown"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 3.5,
+    "per_km": 1.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "QLine streetcar runs along Woodward Ave from downtown to New Center; fare $1.50 for 3 hours.",
+    "People Mover loops downtown; fare $0.75 per ride.",
+    "SMART and DDOT buses cover the metro; fare $2.",
+    "Ride apps Uber and Lyft are widely used; taxis also available.",
+    "Driving is easiest; freeways are modern but rush hour can be slow.",
+    "Walking is good downtown; biking is growing with rental options."
+  ],
+  "airports": [
+    {
+      "code": "DTW",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "primary": true,
+      "note": "Major Delta hub, 29 km west of downtown.",
+      "options": [
+        {
+          "mode": "SMART bus #125",
+          "to": "Downtown Detroit",
+          "price": "$2",
+          "time": "75 min",
+          "note": "Weekday peak only; check schedule."
+        },
+        {
+          "mode": "Detroit Air Xpress bus",
+          "to": "Downtown Detroit",
+          "price": "$6-8",
+          "time": "30-60 min",
+          "note": "Book online for $6 or pay $8 at door."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Detroit",
+          "price": "$45-50",
+          "time": "20-30 min",
+          "note": "Standard fare; airport fee may apply."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Detroit",
+          "price": "$30-50",
+          "time": "20-30 min",
+          "note": "Popular; prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "YQG",
+      "name": "Windsor International Airport",
+      "primary": false,
+      "note": "Canadian alternative across the border, 10 km from downtown Detroit.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Downtown Detroit",
+          "price": "$40-60",
+          "time": "20-30 min",
+          "note": "Requires border crossing; have passport ready."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Detroit",
+          "price": "$30-50",
+          "time": "20-30 min",
+          "note": "Check if cross-border rides are available."
+        },
+        {
+          "mode": "Bus + Tunnel Bus",
+          "to": "Downtown Detroit",
+          "price": "$5-10",
+          "time": "60-90 min",
+          "note": "Take local bus to Windsor tunnel, then Tunnel Bus."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Detroit Institute of Arts",
+    "Motown Museum",
+    "Hungry Howie's",
+    "Little Caesars"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Detroit",
+      "https://en.wikivoyage.org/wiki/Detroit"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    42.33143,
+    -83.04575
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 1,
+      "low": -6,
+      "rain_days": 10
+    },
+    {
+      "high": 2,
+      "low": -7,
+      "rain_days": 9
+    },
+    {
+      "high": 7,
+      "low": -2,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 14
+    },
+    {
+      "high": 20,
+      "low": 10,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 2,
+      "rain_days": 9
+    },
+    {
+      "high": 4,
+      "low": -2,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

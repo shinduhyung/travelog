@@ -1,0 +1,27 @@
+$ deepseek_facts.py Manila
+  tokens in 1901 out 660
+Manila: 0 problems
+
+$ deepseek_city.py Manila --stage places
+Manila: places
+  tokens in 1244 out 4263
+
+$ deepseek_city.py Manila --stage frame
+Manila: frame
+  tokens in 2492 out 1974
+
+$ deepseek_city.py Manila --stage plans
+Manila: plans
+  plans for day
+  tokens in 2604 out 1029
+  plans for 1n
+  tokens in 2605 out 809
+  plans for 2n
+  tokens in 2610 out 1299
+  plans for 3n
+  tokens in 2605 out 1616
+
+$ merge_city.py Manila
+Manila: 27 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/manila.json and planner/manila.json
+

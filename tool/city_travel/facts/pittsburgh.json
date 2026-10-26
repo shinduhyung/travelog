@@ -1,0 +1,198 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Steel city of rivers, bridges and steep hills.",
+  "intro": "Pittsburgh rewards visitors with dramatic river views, compact walkable districts and a friendly, unpretentious vibe. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Strip District",
+    "South Side",
+    "Oakland"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 35,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Pittsburgh Regional Transit runs buses, light rail ('The T') and two inclines.",
+    "Bus and incline fare is $2.75 with ConnectCard or mobile app; cash exact fare, no change.",
+    "Day pass costs $7; tickets allow unlimited transfers for three hours.",
+    "The T is free within downtown between Allegheny and First Avenue stations.",
+    "Uber and Lyft are widely used and often cheaper than taxis; street hailing is hard.",
+    "Downtown is walkable, but hills and rivers make driving confusing; a GPS helps."
+  ],
+  "airports": [
+    {
+      "code": "PIT",
+      "name": "Pittsburgh International Airport",
+      "primary": true,
+      "note": "Main gateway, about 21 km west of downtown.",
+      "options": [
+        {
+          "mode": "Bus 28X",
+          "to": "Downtown and Oakland",
+          "price": "$2.75",
+          "time": "40-60 min",
+          "note": "Runs every 30 minutes; much cheaper than a taxi."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Downtown hotels",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Book ahead; can be cheaper than a cab."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$35-50",
+          "time": "25-40 min",
+          "note": "About $35 normally, more in rush hour."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$30-50",
+          "time": "25-40 min",
+          "note": "Pickup at designated rideshare zone."
+        }
+      ]
+    },
+    {
+      "code": "LBE",
+      "name": "Arnold Palmer Regional Airport",
+      "primary": false,
+      "note": "Small airport near Latrobe, about 53 km southeast; limited flights.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "No easy public transport; free parking at airport."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "60-75 min",
+          "note": "Availability can be limited; book ahead."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Duquesne Incline",
+    "Point State Park",
+    "Allegheny River",
+    "Carnegie Mellon University",
+    "Carnegie Museum of Natural History",
+    "Kennywood",
+    "University of Pittsburgh"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Pittsburgh",
+      "https://en.wikivoyage.org/wiki/Pittsburgh"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    40.44062,
+    -79.99589
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 3,
+      "low": -5,
+      "rain_days": 13
+    },
+    {
+      "high": 6,
+      "low": -4,
+      "rain_days": 12
+    },
+    {
+      "high": 11,
+      "low": 0,
+      "rain_days": 14
+    },
+    {
+      "high": 16,
+      "low": 5,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 15
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 16
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 15
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 14
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 7,
+      "low": -1,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "PIT taxi $35-50 vs tariff estimate 94"
+  ]
+}

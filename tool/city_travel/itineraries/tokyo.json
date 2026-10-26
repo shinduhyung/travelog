@@ -1,0 +1,1738 @@
+{
+  "city": "Tokyo",
+  "checked": "October 2026",
+  "currency": "JPY",
+  "usd_rate": 150,
+  "intro": "Tokyo is a cluster of neighbourhoods, each a day of its own. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 35.6097,
+      "west": 139.5344,
+      "north": 35.7428,
+      "east": 139.9164,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 500,
+      "flag_airport": 500,
+      "per_km": 400,
+      "min_fare": 500
+    },
+    "road_factor": 1.3,
+    "city_kmh": 18,
+    "notes": [
+      "Trains and subways (JR, Tokyo Metro, Toei) reach everywhere; tap a Suica or Pasmo IC card, about ¥180-330 a ride.",
+      "Buses exist but trains are almost always faster for visitors.",
+      "Taxis are clean and metered (¥500 start); apps like GO and Uber work.",
+      "Driving in central Tokyo is slow and parking expensive; not recommended.",
+      "Each neighbourhood is walkable, but you will take trains between them.",
+      "Trains stop around midnight; plan late nights or take a taxi."
+    ],
+    "sources": []
+  },
+  "places": {
+    "sensoji": {
+      "name": "Senso-ji",
+      "landmark": "Senso-ji",
+      "kind": "sight",
+      "lat": 35.7148,
+      "lon": 139.7967,
+      "price": 0,
+      "price_text": "Free · main hall grounds open 24h",
+      "hours": "Main hall 06:00–17:00 (Oct–Mar from 06:30) · grounds always open",
+      "tip": "Come before 08:00 to see the temple and Nakamise-dori without crowds.",
+      "source": "https://www.senso-ji.jp/english/"
+    },
+    "nakamise": {
+      "name": "Nakamise-dori",
+      "landmark": "Nakamise-dori",
+      "kind": "food",
+      "lat": 35.7118,
+      "lon": 139.7963,
+      "price": null,
+      "price_text": "Free to walk · snacks from around JPY 300",
+      "hours": "Most shops about 09:00–19:00 · check on the day",
+      "tip": "Snack stalls are cash-friendly; try melonpan and ningyo-yaki as you walk to the temple.",
+      "source": ""
+    },
+    "meijijingu": {
+      "name": "Meiji Jingu",
+      "landmark": "Meiji Jingu",
+      "kind": "sight",
+      "lat": 35.6764,
+      "lon": 139.6993,
+      "price": 0,
+      "price_text": "Free · inner garden about JPY 500 in season",
+      "hours": "Sunrise to sunset (varies by month) · check on the day",
+      "tip": "Walk the gravel path from Harajuku gate early; the forest feels quiet even on busy days.",
+      "source": "https://www.meijijingu.or.jp/en/"
+    },
+    "shibuyacrossing": {
+      "name": "Shibuya Crossing",
+      "landmark": "Shibuya Crossing",
+      "kind": "sight",
+      "lat": 35.6595,
+      "lon": 139.7004,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Watch from the station's upper walkways or a café window rather than standing in the road.",
+      "source": ""
+    },
+    "skytree": {
+      "name": "Tokyo Skytree",
+      "landmark": "Tokyo Skytree",
+      "kind": "sight",
+      "lat": 35.71,
+      "lon": 139.8107,
+      "price": 2100,
+      "price_text": "≈ JPY 2,100–3,100 depending on deck · book online",
+      "hours": "About 10:00–21:00 · check on the day",
+      "tip": "Buy a timed ticket online and go on a clear day; clouds can hide the view.",
+      "source": "https://www.tokyo-skytree.jp/en/"
+    },
+    "tokyotower": {
+      "name": "Tokyo Tower",
+      "landmark": "Tokyo Tower",
+      "kind": "sight",
+      "lat": 35.6586,
+      "lon": 139.7454,
+      "price": 1200,
+      "price_text": "≈ JPY 1,200 main deck · top deck extra",
+      "hours": "About 09:00–23:00 · check on the day",
+      "tip": "The red-and-white tower looks best from outside at night; the deck view is fine but not the city's highest.",
+      "source": "https://www.tokyotower.co.jp/en/"
+    },
+    "imperialpalace": {
+      "name": "Imperial Palace",
+      "landmark": "Imperial Palace",
+      "kind": "sight",
+      "lat": 35.6852,
+      "lon": 139.7528,
+      "price": 0,
+      "price_text": "Free · East Gardens free, closed some days",
+      "hours": "East Gardens about 09:00–17:00 · closed Mon and Fri · check on the day",
+      "tip": "The East Gardens are the easy free visit; the inner palace tour needs an advance booking.",
+      "source": "https://sankan.kunaicho.go.jp/english/"
+    },
+    "tsukiji": {
+      "name": "Tsukiji Outer Market",
+      "landmark": "Tsukiji Outer Market",
+      "kind": "food",
+      "lat": 35.6655,
+      "lon": 139.7707,
+      "price": null,
+      "price_text": "Free to enter · food from about JPY 500",
+      "hours": "Most stalls about 06:00–14:00 · many closed Sunday",
+      "tip": "Arrive before 09:00 for the best stalls; bring cash and eat where you buy.",
+      "source": ""
+    },
+    "toyosu": {
+      "name": "Toyosu Market",
+      "landmark": "Toyosu Market",
+      "kind": "food",
+      "lat": 35.6455,
+      "lon": 139.7853,
+      "price": 0,
+      "price_text": "Free to visit · tuna auction viewing free, limited places",
+      "hours": "Market about 05:00–17:00 · closed Sunday and some Wednesdays · check on the day",
+      "tip": "The tuna auction viewing deck needs an early arrival and lottery on some days; sushi shops upstairs open early.",
+      "source": "https://www.shijou.metro.tokyo.lg.jp/english/"
+    },
+    "akihabara": {
+      "name": "Akihabara",
+      "landmark": "Akihabara",
+      "kind": "sight",
+      "lat": 35.6983,
+      "lon": 139.7731,
+      "price": 0,
+      "price_text": "Free to walk · shops vary",
+      "hours": "Shops about 10:00–20:00 · arcades later",
+      "tip": "Compare prices across a few shops before buying electronics; many are tax-free for visitors.",
+      "source": ""
+    },
+    "takeshita": {
+      "name": "Takeshita Street",
+      "landmark": "Takeshita Street",
+      "kind": "food",
+      "lat": 35.6717,
+      "lon": 139.705,
+      "price": null,
+      "price_text": "Free to walk · snacks from about JPY 300",
+      "hours": "Shops about 10:00–20:00 · check on the day",
+      "tip": "Very crowded on weekends; go on a weekday morning and try a crepe.",
+      "source": ""
+    },
+    "shinjukugyoen": {
+      "name": "Shinjuku Gyoen National Garden",
+      "landmark": "Shinjuku Gyoen National Garden",
+      "kind": "park",
+      "lat": 35.6852,
+      "lon": 139.7101,
+      "price": 500,
+      "price_text": "JPY 500 · under 15 free",
+      "hours": "About 09:00–16:00 (to 18:30 in summer) · closed Monday · check on the day",
+      "tip": "No alcohol and no tripods; the cherry blossom season needs a timed online ticket.",
+      "source": "https://www.env.go.jp/garden/shinjukugyoen/english/"
+    },
+    "goldengai": {
+      "name": "Shinjuku Golden Gai",
+      "landmark": "Shinjuku Golden Gai",
+      "kind": "activity",
+      "lat": 35.6938,
+      "lon": 139.7046,
+      "price": null,
+      "price_text": "Free to walk · bars often charge JPY 500–1,500 seating fee",
+      "hours": "Bars about 19:00–late · many closed one night a week",
+      "tip": "Small bars seat a handful; check for a cover charge sign and keep groups small.",
+      "source": ""
+    },
+    "tmgbuilding": {
+      "name": "Tokyo Metropolitan Government Building",
+      "landmark": "Tokyo Metropolitan Government Building",
+      "kind": "sight",
+      "lat": 35.6896,
+      "lon": 139.6917,
+      "price": 0,
+      "price_text": "Free observation deck",
+      "hours": "About 09:30–22:00 · check on the day",
+      "tip": "A free viewpoint; go on a clear day and skip it if Mount Fuji is hidden.",
+      "source": "https://www.yokoso.metro.tokyo.lg.jp/en/"
+    },
+    "tnm": {
+      "name": "Tokyo National Museum",
+      "landmark": "Tokyo National Museum",
+      "kind": "museum",
+      "lat": 35.7188,
+      "lon": 139.7765,
+      "price": 1000,
+      "price_text": "≈ JPY 1,000 general · special shows extra",
+      "hours": "About 09:30–17:00 · closed Monday · check on the day",
+      "tip": "Start with the Japanese Gallery; allow at least two hours.",
+      "source": "https://www.tnm.jp/?lang=en"
+    },
+    "uenopark": {
+      "name": "Ueno Park",
+      "landmark": "Ueno Park",
+      "kind": "park",
+      "lat": 35.7141,
+      "lon": 139.7736,
+      "price": 0,
+      "price_text": "Free · museums and zoo charge separately",
+      "hours": "Always open · museums have own hours",
+      "tip": "Combine the park with the museum and a walk to Shinobazu Pond.",
+      "source": "https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/en_index.html"
+    },
+    "teamlabplanets": {
+      "name": "teamLab Planets Tokyo",
+      "landmark": "teamLab Planets Tokyo",
+      "kind": "museum",
+      "lat": 35.6485,
+      "lon": 139.7897,
+      "price": 3800,
+      "price_text": "≈ JPY 3,800–4,500 · timed online ticket",
+      "hours": "About 09:00–22:00 · check on the day",
+      "tip": "You walk barefoot through water; wear trousers you can roll up and book a timed slot.",
+      "source": "https://www.teamlab.art/e/planets/"
+    },
+    "ghibli": {
+      "name": "Ghibli Museum",
+      "landmark": "Ghibli Museum",
+      "kind": "museum",
+      "lat": 35.6962,
+      "lon": 139.5704,
+      "price": 1000,
+      "price_text": "≈ JPY 1,000 · timed ticket, sold in advance",
+      "hours": "About 10:00–18:00 · closed Tuesday · check on the day",
+      "tip": "Tickets sell out early; buy online well ahead and bring the named ticket holder's ID.",
+      "source": "https://www.ghibli-museum.jp/en/"
+    },
+    "odaiba": {
+      "name": "Odaiba",
+      "landmark": "Odaiba",
+      "kind": "sight",
+      "lat": 35.625,
+      "lon": 139.775,
+      "price": 0,
+      "price_text": "Free to walk · attractions charge separately",
+      "hours": "Always open · shops about 10:00–21:00",
+      "tip": "Ride the Yurikamome line for the bay view and walk the waterfront at sunset.",
+      "source": ""
+    },
+    "disneyland": {
+      "name": "Tokyo Disneyland",
+      "landmark": "Tokyo Disneyland",
+      "kind": "activity",
+      "lat": 35.6329,
+      "lon": 139.8804,
+      "price": 8900,
+      "price_text": "≈ JPY 7,900–10,900 by date · buy online",
+      "hours": "About 09:00–21:00 · varies by day · check on the day",
+      "tip": "Arrive at opening and use the app for queues; weekdays are quieter.",
+      "source": "https://www.tokyodisneyresort.jp/en/"
+    },
+    "disneysea": {
+      "name": "Tokyo DisneySea",
+      "landmark": "Tokyo DisneySea",
+      "kind": "activity",
+      "lat": 35.6329,
+      "lon": 139.8804,
+      "price": 8900,
+      "price_text": "≈ JPY 7,900–10,900 by date · buy online",
+      "hours": "About 09:00–21:00 · varies by day · check on the day",
+      "tip": "Popular rides fill fast; pick two must-dos and plan around them.",
+      "source": "https://www.tokyodisneyresort.jp/en/"
+    },
+    "mori": {
+      "name": "Roppongi Hills Mori Tower",
+      "landmark": "Roppongi Hills Mori Tower",
+      "kind": "sight",
+      "lat": 35.6604,
+      "lon": 139.7292,
+      "price": 2200,
+      "price_text": "≈ JPY 2,200 Tokyo City View · Sky Deck extra",
+      "hours": "About 10:00–22:00 (Sky Deck to 20:00) · check on the day",
+      "tip": "The open-air Sky Deck is the draw; go near sunset on a clear day.",
+      "source": "https://www.roppongihills.com/en/"
+    },
+    "ginza": {
+      "name": "Ginza District",
+      "landmark": "Ginza District",
+      "kind": "sight",
+      "lat": 35.6712,
+      "lon": 139.7665,
+      "price": 0,
+      "price_text": "Free to walk · shops and cafés vary",
+      "hours": "Department stores about 10:00–20:00 · check on the day",
+      "tip": "On weekend afternoons the main street closes to cars; good for a slow walk.",
+      "source": ""
+    },
+    "omotesando": {
+      "name": "Omotesando",
+      "landmark": "Omotesando",
+      "kind": "sight",
+      "lat": 35.6653,
+      "lon": 139.7114,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops about 11:00–20:00",
+      "tip": "Walk from Omotesando to Harajuku for architecture and cafés; quieter than Takeshita Street.",
+      "source": ""
+    },
+    "sushilunch": {
+      "name": "Conveyor-belt sushi lunch",
+      "landmark": null,
+      "kind": "food",
+      "lat": 35.6595,
+      "lon": 139.701,
+      "price": 2500,
+      "price_text": "≈ JPY 1,500–3,500 per person",
+      "hours": "Usually about 11:00–22:00 · check on the day",
+      "tip": "Go before noon to skip the queue; order by touchscreen and pay at the till.",
+      "source": ""
+    },
+    "ramen": {
+      "name": "Ramen shop dinner",
+      "landmark": null,
+      "kind": "food",
+      "lat": 35.6938,
+      "lon": 139.703,
+      "price": 1200,
+      "price_text": "≈ JPY 900–1,500 a bowl",
+      "hours": "Often 11:00–23:00 · some close one weekday",
+      "tip": "Buy the ticket from the machine first, then hand it to staff; cash is common.",
+      "source": ""
+    },
+    "izakaya": {
+      "name": "Izakaya evening",
+      "landmark": null,
+      "kind": "food",
+      "lat": 35.6938,
+      "lon": 139.7034,
+      "price": 4000,
+      "price_text": "≈ JPY 3,000–5,000 per person with drinks",
+      "hours": "Usually about 17:00–24:00",
+      "tip": "Order a few small plates to share; some places charge a small seating fee.",
+      "source": ""
+    },
+    "sumidagawa": {
+      "name": "Sumida River walk and cruise",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 35.7107,
+      "lon": 139.8025,
+      "price": 1500,
+      "price_text": "≈ JPY 1,000–2,000 one-way cruise · riverside walk free",
+      "hours": "Cruises about 10:00–17:00 · check on the day",
+      "tip": "Walk the riverside promenade from Asakusa and take a boat one way for a different view.",
+      "source": ""
+    },
+    "yanaka": {
+      "name": "Yanaka neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 35.7275,
+      "lon": 139.7665,
+      "price": 0,
+      "price_text": "Free · snacks and cafés extra",
+      "hours": "Always open · shops about 10:00–18:00",
+      "tip": "A quiet old-Tokyo area near Ueno; wander the cemetery and small shopping street.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of temples, old lanes and a garden, grouped by area.",
+      "days": [
+        {
+          "title": "Asakusa morning, Ueno afternoon",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early before the crowds. Main hall opens 06:00."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "The shopping street leads from the temple gate. Most shops open about 09:00."
+            },
+            {
+              "place": "sumidagawa",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk the river or take a short cruise. Check cruise times on the day."
+            },
+            {
+              "place": "yanaka",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch in the old low-city lanes, then wander. Shops about 10:00–18:00."
+            },
+            {
+              "place": "tnm",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. A good indoor break if it rains."
+            },
+            {
+              "place": "uenopark",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Walk through the park on the way out. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market breakfast, sushi lunch and an izakaya night in Shinjuku.",
+      "days": [
+        {
+          "title": "Markets, sushi, Shinjuku night",
+          "stops": [
+            {
+              "place": "tsukiji",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Arrive early. Many stalls close Sunday and by 14:00."
+            },
+            {
+              "place": "imperialpalace",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "East Gardens closed Mon and Fri. Check on the day."
+            },
+            {
+              "place": "ginza",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Walk the district, then head to Shibuya for lunch."
+            },
+            {
+              "place": "sushilunch",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Conveyor-belt sushi. Go before the noon rush if you can."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Quick look, then move on."
+            },
+            {
+              "place": "izakaya",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Shinjuku izakaya evening. Usually 17:00–24:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shinjuku"
+    },
+    {
+      "id": "day-anime",
+      "length": "day",
+      "style": "anime",
+      "nights": 0,
+      "for": "Akihabara shops, Harajuku street food and a themed afternoon.",
+      "days": [
+        {
+          "title": "Akihabara, then Harajuku and Shibuya",
+          "stops": [
+            {
+              "place": "akihabara",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Shops open about 10:00. Arcades run later."
+            },
+            {
+              "place": "uenopark",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Short walk and a quick lunch nearby."
+            },
+            {
+              "place": "takeshita",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Weekday morning is calmer, but afternoon works. Shops about 10:00–20:00."
+            },
+            {
+              "place": "omotesando",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk down from Harajuku. Shops about 11:00–20:00."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Better after dark when the screens light up."
+            },
+            {
+              "place": "ramen",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Ramen dinner. Some shops close one weekday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shibuya"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One full day for temples, gardens and the old low-city lanes, grouped by area.",
+      "days": [
+        {
+          "title": "Asakusa morning, Ueno afternoon",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early to beat the crowds. Grounds always open."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Shops open about 09:00. Snack as you walk."
+            },
+            {
+              "place": "sumidagawa",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk the river bank, or take a short cruise. Check times on the day."
+            },
+            {
+              "place": "tnm",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. A good indoor break after lunch."
+            },
+            {
+              "place": "uenopark",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Stroll the park. Cherry blossom in spring."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya and Shinjuku",
+          "stops": [
+            {
+              "place": "meijijingu",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Open sunrise to sunset. Forest walk to the shrine."
+            },
+            {
+              "place": "takeshita",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Weekday morning is calmer."
+            },
+            {
+              "place": "omotesando",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Tree-lined street. Lunch nearby."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Always open. Busiest after dark."
+            },
+            {
+              "place": "tmgbuilding",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Free observatory. Go for sunset on a clear day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market mornings, sushi and ramen, then an izakaya night in Shinjuku.",
+      "days": [
+        {
+          "title": "Markets and Ginza",
+          "stops": [
+            {
+              "place": "tsukiji",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Most stalls open 06:00–14:00. Many closed Sunday."
+            },
+            {
+              "place": "imperialpalace",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "East Gardens closed Mon and Fri. Check on the day."
+            },
+            {
+              "place": "ginza",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch, then browse the department stores."
+            },
+            {
+              "place": "sushilunch",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Conveyor-belt sushi. Go before the late-afternoon rush."
+            }
+          ]
+        },
+        {
+          "title": "Asakusa snacks and Shinjuku night",
+          "stops": [
+            {
+              "place": "nakamise",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Street snacks along the approach."
+            },
+            {
+              "place": "sensoji",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Main hall 06:00–17:00."
+            },
+            {
+              "place": "yanaka",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Old lanes and small shops. Lunch here."
+            },
+            {
+              "place": "ramen",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Quick bowl before the bars."
+            },
+            {
+              "tour": 0,
+              "covers": [
+                "goldengai"
+              ],
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Izakaya food and culture tour in Shinjuku. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shinjuku"
+    },
+    {
+      "id": "1n-anime",
+      "length": "1n",
+      "style": "anime",
+      "nights": 1,
+      "for": "Akihabara, Harajuku and a Ghibli stop, with time for food in between.",
+      "days": [
+        {
+          "title": "Akihabara and Ueno",
+          "stops": [
+            {
+              "place": "akihabara",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Shops open about 10:00. Arcades run later."
+            },
+            {
+              "place": "uenopark",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch nearby, then a park walk."
+            },
+            {
+              "place": "sensoji",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Temple and old lanes in Asakusa."
+            },
+            {
+              "place": "nakamise",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Snacks and souvenirs."
+            }
+          ]
+        },
+        {
+          "title": "Harajuku and Ghibli",
+          "stops": [
+            {
+              "place": "takeshita",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday morning is best."
+            },
+            {
+              "place": "omotesando",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Walk to the shops and cafés."
+            },
+            {
+              "place": "ghibli",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Book weeks ahead."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Always open. Screens light up after dark."
+            },
+            {
+              "place": "sushilunch",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Early dinner in Shibuya."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shibuya"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old city, the big shrines and one skyline view.",
+      "days": [
+        {
+          "title": "Asakusa and the old low city",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come at opening to beat the crowds. Grounds are always open."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:05",
+              "minutes": 45,
+              "note": "The approach street to the temple. Shops open around 09:00."
+            },
+            {
+              "place": "sumidagawa",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk the riverbank, then take a short cruise if boats are running. Check on the day."
+            },
+            {
+              "place": "yanaka",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch first, then the old lanes. Shops close around 18:00."
+            },
+            {
+              "place": "uenopark",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk through the park. Museums here have their own hours."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya, Shinjuku and a tower view",
+          "stops": [
+            {
+              "place": "meijijingu",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Sunrise to sunset. The forest walk is quiet in the morning."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Busy but fine by day. Come back after dark if you can."
+            },
+            {
+              "place": "shinjukugyoen",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. About 09:00–16:00, later in summer."
+            },
+            {
+              "place": "tmgbuilding",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Free observation deck. Go for sunset on a clear day."
+            },
+            {
+              "place": "ramen",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner in Shinjuku. Many shops close one weekday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets at dawn, sushi at noon and izakaya at night.",
+      "days": [
+        {
+          "title": "Markets and Ginza",
+          "stops": [
+            {
+              "place": "tsukiji",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Go early. Many stalls close Sunday and by 14:00."
+            },
+            {
+              "place": "toyosu",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Closed Sunday and some Wednesdays. Check on the day."
+            },
+            {
+              "place": "ginza",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch, then the department store food halls. Stores close about 20:00."
+            },
+            {
+              "place": "imperialpalace",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "East Gardens closed Mon and Fri. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya, Shinjuku and izakaya night",
+          "stops": [
+            {
+              "place": "sushilunch",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Arrive before noon to skip the queue."
+            },
+            {
+              "place": "takeshita",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Sweet snacks on the street. Weekday morning is calmest."
+            },
+            {
+              "place": "omotesando",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Coffee and a walk. Shops about 11:00–20:00."
+            },
+            {
+              "tour": 0,
+              "covers": [
+                "goldengai"
+              ],
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Izakaya food and drink tour in Shinjuku. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ginza & Tokyo Station"
+    },
+    {
+      "id": "2n-anime",
+      "length": "2n",
+      "style": "anime",
+      "nights": 2,
+      "for": "Fans who want arcades, anime shops and one booked-ahead museum.",
+      "days": [
+        {
+          "title": "Akihabara and Asakusa",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early start before the shops open."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:05",
+              "minutes": 45,
+              "note": "Snack street. Most shops about 09:00–19:00."
+            },
+            {
+              "place": "akihabara",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Shops about 10:00–20:00. Arcades run later."
+            },
+            {
+              "place": "ramen",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner, then back to the arcades if you like."
+            }
+          ]
+        },
+        {
+          "title": "Ghibli, Harajuku and Shinjuku",
+          "stops": [
+            {
+              "place": "ghibli",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Tickets sell out weeks ahead, so book early."
+            },
+            {
+              "place": "takeshita",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch nearby, then the street. Shops about 10:00–20:00."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Short stop for photos."
+            },
+            {
+              "place": "goldengai",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Tiny bars. Many close one night a week."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shinjuku"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want temples, gardens and old neighbourhoods at an easy pace.",
+      "days": [
+        {
+          "title": "Asakusa temples and the river",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early to beat the crowds. Grounds are always open."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:10",
+              "minutes": 45,
+              "note": "The approach street to the temple. Most shops open around 09:00."
+            },
+            {
+              "place": "sumidagawa",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk the riverbank or take a short cruise. Check cruise times on the day."
+            },
+            {
+              "place": "yanaka",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch first, then wander the old lanes. Shops close around 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Ueno museums and park",
+          "stops": [
+            {
+              "place": "uenopark",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning stroll. Museums have their own hours."
+            },
+            {
+              "place": "tnm",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Closed Monday. Good for a rainy or hot day."
+            },
+            {
+              "place": "akihabara",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Short train ride away. Shops open about 10:00–20:00."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya, Meiji Jingu and Shinjuku",
+          "stops": [
+            {
+              "place": "meijijingu",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Opens at sunrise. Quiet forest walk in the morning."
+            },
+            {
+              "place": "takeshita",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Weekday morning is calmer. Shops open about 10:00."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "See it by day, then come back after dark if you like."
+            },
+            {
+              "place": "shinjukugyoen",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Check closing time, it changes by season."
+            },
+            {
+              "place": "tmgbuilding",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Free observatory. Best at sunset on a clear day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around markets, sushi and late-night alleys.",
+      "days": [
+        {
+          "title": "Markets and Ginza",
+          "stops": [
+            {
+              "place": "toyosu",
+              "at": "05:30",
+              "minutes": 90,
+              "note": "Very early start. Closed Sunday and some Wednesdays, check on the day."
+            },
+            {
+              "place": "tsukiji",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Breakfast of skewers and tamago. Many stalls closed Sunday."
+            },
+            {
+              "place": "ginza",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk it off. Department stores open about 10:00."
+            },
+            {
+              "place": "sushilunch",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Conveyor-belt sushi before the noon rush."
+            }
+          ]
+        },
+        {
+          "title": "Asakusa snacks and Shinjuku night",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early visit before the shops fill up."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:10",
+              "minutes": 45,
+              "note": "Snack street. Most shops open around 09:00."
+            },
+            {
+              "place": "yanaka",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Old lanes with small bakeries and cafes. Lunch here."
+            },
+            {
+              "place": "izakaya",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Shinjuku izakaya evening. Usually open from about 17:00."
+            },
+            {
+              "place": "goldengai",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "Tiny bars. Many close one night a week."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya eats and a food tour",
+          "stops": [
+            {
+              "place": "takeshita",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Sweet and fried snacks. Weekday morning is calmer."
+            },
+            {
+              "place": "omotesando",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Cafes and bakeries. Shops open about 11:00."
+            },
+            {
+              "place": "sushilunch",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch before noon is quieter."
+            },
+            {
+              "tour": 0,
+              "covers": [
+                "goldengai"
+              ],
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Shinjuku izakaya food and culture tour. Book ahead and check the meeting point."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shinjuku"
+    },
+    {
+      "id": "3n-anime",
+      "length": "3n",
+      "style": "anime",
+      "nights": 3,
+      "for": "Fans who want Akihabara, themed shops and a Ghibli day.",
+      "days": [
+        {
+          "title": "Akihabara all afternoon",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Start with the temple before the crowds."
+            },
+            {
+              "place": "uenopark",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Short walk or one train stop from Akihabara."
+            },
+            {
+              "place": "akihabara",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Lunch, then arcades and shops. Shops about 10:00–20:00, arcades later."
+            }
+          ]
+        },
+        {
+          "title": "Ghibli and Shinjuku",
+          "stops": [
+            {
+              "place": "ghibli",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Tickets sell out weeks ahead, book early."
+            },
+            {
+              "place": "shinjukugyoen",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Check seasonal closing time."
+            },
+            {
+              "place": "tmgbuilding",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Free view. Sunset is best on a clear day."
+            },
+            {
+              "place": "ramen",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Ramen dinner in Shinjuku. Often open to about 23:00."
+            }
+          ]
+        },
+        {
+          "title": "Harajuku and Shibuya",
+          "stops": [
+            {
+              "place": "meijijingu",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Opens at sunrise. Walk the forest path first."
+            },
+            {
+              "place": "takeshita",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Anime and character shops. Weekday morning is calmer."
+            },
+            {
+              "place": "omotesando",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Shops open about 11:00. Good for lunch."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "See it by day, then return after dark for the screens."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-time culture pick: old Asakusa, the big shrines and gardens, with a low-city lane walk.",
+      "days": [
+        {
+          "title": "Asakusa: Senso-ji and the river",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Come early. The grounds are always open and the main hall opens at 06:00."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:10",
+              "minutes": 45,
+              "note": "The shopping street leads to the temple. Most shops open about 09:00."
+            },
+            {
+              "place": "sumidagawa",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk the river bank or take a short cruise. Check cruise times on the day."
+            },
+            {
+              "place": "yanaka",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Old lanes and small shops. A good place for a slow lunch."
+            }
+          ]
+        },
+        {
+          "title": "Ueno museums and park",
+          "stops": [
+            {
+              "place": "uenopark",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Always open. Spring is best for cherry blossom."
+            },
+            {
+              "place": "tnm",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Closed Monday. Check the day's hours."
+            },
+            {
+              "place": "akihabara",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "About 10 minutes by train. Shops open about 10:00."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya and Harajuku",
+          "stops": [
+            {
+              "place": "meijijingu",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Sunrise to sunset. Walk in from Harajuku station."
+            },
+            {
+              "place": "takeshita",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Weekday mornings are calmer."
+            },
+            {
+              "place": "omotesando",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Tree-lined street. Good lunch stop."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "19:00",
+              "minutes": 20,
+              "note": "After dark the screens light up."
+            }
+          ]
+        },
+        {
+          "title": "Imperial Palace, then Ginza",
+          "stops": [
+            {
+              "place": "imperialpalace",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "East Gardens closed Monday and Friday. Check on the day."
+            },
+            {
+              "place": "ginza",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Department stores open about 10:00. Good for lunch."
+            },
+            {
+              "place": "tokyotower",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening is best for the lit tower. About 09:00–23:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eat your way through Tokyo: early markets, sushi, ramen and an izakaya night.",
+      "days": [
+        {
+          "title": "Markets and Ginza",
+          "stops": [
+            {
+              "place": "tsukiji",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Most stalls about 06:00–14:00. Many closed Sunday."
+            },
+            {
+              "place": "ginza",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk it off. Department store food halls are worth a look."
+            },
+            {
+              "place": "sushilunch",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Go before noon to skip the queue."
+            },
+            {
+              "place": "tokyotower",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening view. About 09:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Asakusa and Yanaka",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early morning is quiet."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:10",
+              "minutes": 45,
+              "note": "Snack stalls along the way. Check on the day."
+            },
+            {
+              "place": "yanaka",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Old lanes, small bakeries and lunch spots."
+            },
+            {
+              "place": "sumidagawa",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Afternoon river walk. Cruises about 10:00–17:00."
+            }
+          ]
+        },
+        {
+          "title": "Shibuya and Shinjuku",
+          "stops": [
+            {
+              "place": "takeshita",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Weekday morning. Sweet snacks on the street."
+            },
+            {
+              "place": "omotesando",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Cafés and lunch."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Always open."
+            },
+            {
+              "place": "ramen",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Often 11:00–23:00. Some close one weekday."
+            },
+            {
+              "place": "goldengai",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Bars about 19:00–late. Many closed one night a week."
+            }
+          ]
+        },
+        {
+          "title": "Izakaya tour night",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "goldengai"
+              ],
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Shinjuku izakaya food and culture tour. Book ahead."
+            },
+            {
+              "place": "tmgbuilding",
+              "at": "21:30",
+              "minutes": 45,
+              "note": "Free observatory, about 09:30–22:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shinjuku"
+    },
+    {
+      "id": "4n-anime",
+      "length": "4n",
+      "style": "anime",
+      "nights": 4,
+      "for": "Anime and pop culture first: Akihabara, Harajuku and a Ghibli day, with the classic sights too.",
+      "days": [
+        {
+          "title": "Akihabara and Ueno",
+          "stops": [
+            {
+              "place": "uenopark",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Always open."
+            },
+            {
+              "place": "akihabara",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Shops about 10:00–20:00. Arcades run later."
+            },
+            {
+              "place": "tnm",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Harajuku and Shibuya",
+          "stops": [
+            {
+              "place": "meijijingu",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Sunrise to sunset."
+            },
+            {
+              "place": "takeshita",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Weekday morning. Crepes and small shops."
+            },
+            {
+              "place": "omotesando",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch and shops."
+            },
+            {
+              "place": "shibuyacrossing",
+              "at": "19:00",
+              "minutes": 20,
+              "note": "After dark."
+            }
+          ]
+        },
+        {
+          "title": "Ghibli day",
+          "stops": [
+            {
+              "place": "ghibli",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Book weeks ahead."
+            },
+            {
+              "place": "shinjukugyoen",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. About 09:00–16:00, later in summer."
+            },
+            {
+              "place": "ramen",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Shinjuku ramen. Often 11:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Asakusa and Akihabara again",
+          "stops": [
+            {
+              "place": "sensoji",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Early morning."
+            },
+            {
+              "place": "nakamise",
+              "at": "09:10",
+              "minutes": 45,
+              "note": "Snacks. Check on the day."
+            },
+            {
+              "place": "akihabara",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Second look for shops and arcades."
+            },
+            {
+              "place": "goldengai",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Small bars. Many closed one night a week."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Asakusa & Ueno"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Senso-ji, Meiji Jingu and the old low-city lanes."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Sushi counters, ramen shops and izakaya alleys."
+    },
+    {
+      "id": "anime",
+      "label": "Anime",
+      "blurb": "Akihabara, Nakano Broadway and themed cafés."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Shinjuku",
+      "range": [
+        9000,
+        30000
+      ],
+      "why": "Biggest train hub, endless food and nightlife, easy day trips west. Busy and bright at night.",
+      "center": [
+        35.6938,
+        139.7034
+      ]
+    },
+    {
+      "area": "Shibuya",
+      "range": [
+        10000,
+        35000
+      ],
+      "why": "Central for youth culture, shopping and nightlife. Good links to Shinjuku and the west side.",
+      "center": [
+        35.658,
+        139.7016
+      ]
+    },
+    {
+      "area": "Ginza & Tokyo Station",
+      "range": [
+        14000,
+        45000
+      ],
+      "why": "Quiet, polished and walkable; best for Shinkansen day trips and first-time comfort.",
+      "center": [
+        35.6812,
+        139.7671
+      ]
+    },
+    {
+      "area": "Asakusa & Ueno",
+      "range": [
+        7000,
+        22000
+      ],
+      "why": "Cheapest rooms, old-town feel, Senso-ji on the doorstep and good airport links.",
+      "center": [
+        35.7148,
+        139.7967
+      ]
+    }
+  ],
+  "food": [
+    "Try sushi at a conveyor-belt shop for a cheap first taste; sit-down counters cost much more. Check prices before you sit.",
+    "Ramen and standing soba shops are the cheap lunch: expect roughly ¥800–1,300 a bowl.",
+    "Izakaya alleys (Omoide Yokocho in Shinjuku, Harmonica Yokocho in Kichijoji) are best for small plates and a beer.",
+    "Convenience stores (7-Eleven, Lawson, FamilyMart) are good, cheap breakfasts and picnic food.",
+    "Many small restaurants are cash-only and some are ticket-machine only. Carry some yen and have a translation app ready."
+  ],
+  "more_time": [
+    "Add a day trip to Nikko or Kamakura by train; both are easy returns from central stations. Check times on the day.",
+    "Swap one city day for teamLab or a sumo morning session (tickets sell out; check the schedule).",
+    "Anime fans can swap a shopping afternoon for Nakano Broadway and a themed café; book popular cafés ahead."
+  ]
+}

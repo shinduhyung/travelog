@@ -1,0 +1,884 @@
+{
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of Cantonese eating, from dim sum to a late street-food walk.",
+      "days": [
+        {
+          "title": "Dim sum, market and old-town snacks",
+          "stops": [
+            {
+              "place": "dim_sum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Arrive early on weekends; queues build after 09:30."
+            },
+            {
+              "place": "qingping_market",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short taxi or metro ride. Browse dried goods and herbs."
+            },
+            {
+              "place": "shamian_walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Leafy colonial streets nearby. Good for a slow walk before lunch."
+            },
+            {
+              "place": "kungfu",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quick Cantonese lunch in Tianhe. Check the day's hours."
+            },
+            {
+              "place": "food_street",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late afternoon into evening is best. Bring small cash for stalls."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Optional evening cruise or riverside walk to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The classic Guangzhou day: ancestral hall, tower and river lights.",
+      "days": [
+        {
+          "title": "Old crafts, then the new skyline",
+          "stops": [
+            {
+              "place": "chen_clan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go on a weekday morning. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Check opening hours on the day."
+            },
+            {
+              "place": "dim_sum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch near Yuexiu. Most dim sum places serve until early afternoon."
+            },
+            {
+              "place": "canton_tower",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon into evening gives you daylight and lights. Book ahead."
+            },
+            {
+              "place": "huacheng_square",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Walk the square after dark for tower views."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening cruise if you have energy; riverside paths are free."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhujiang New Town"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Colonial Shamian, old-town streets and the Sun Yat-sen story in one day.",
+      "days": [
+        {
+          "title": "Shamian, old town and memorials",
+          "stops": [
+            {
+              "place": "shamian_walk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quiet in the morning. Wear comfortable shoes."
+            },
+            {
+              "place": "qingping_market",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk or taxi. Busy but manageable mid-morning."
+            },
+            {
+              "place": "dim_sum",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Lunch in Yuexiu before the afternoon sights."
+            },
+            {
+              "place": "chen_clan",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Weekday afternoon is calmer. Check Monday closures."
+            },
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Check hours on the day; it usually closes late afternoon."
+            },
+            {
+              "place": "beijing_road",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Evening stroll and dinner on the pedestrian street."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A quick eating trip: dim sum in the morning, market snacks and street food after dark.",
+      "days": [
+        {
+          "title": "Dim sum, old town tastes, night street food",
+          "stops": [
+            {
+              "place": "dim_sum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go early on a weekday to beat the queue. Order a few baskets and share."
+            },
+            {
+              "place": "qingping_market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "About 15 minutes by taxi. Wander the dried goods and herb stalls."
+            },
+            {
+              "place": "shamian_walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Shady tree-lined streets, good for a walk after eating."
+            },
+            {
+              "place": "kungfu",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch. Simple Cantonese plates; expect a short wait at peak times."
+            },
+            {
+              "place": "beijing_road",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening stroll. Snack as you go; shops stay open late."
+            },
+            {
+              "place": "food_street",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi or metro. Busiest late afternoon into evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: the tower and river at night, the ancestral hall and opera house the next day.",
+      "days": [
+        {
+          "title": "Arrive, tower and river lights",
+          "stops": [
+            {
+              "place": "huacheng_square",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Open all day. A flat walk with the tower in view."
+            },
+            {
+              "place": "opera_house",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Exterior always visible; go inside only with a show or tour."
+            },
+            {
+              "place": "canton_tower",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Late afternoon into evening is best. Check hours on the day."
+            },
+            {
+              "place": "pearl_river",
+              "at": "21:00",
+              "minutes": 90,
+              "note": "Evening cruise or a riverside walk. Book cruises ahead."
+            }
+          ]
+        },
+        {
+          "title": "Ancestral hall and old town",
+          "stops": [
+            {
+              "place": "chen_clan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning on a weekday. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Check hours on the day."
+            },
+            {
+              "place": "dim_sum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch nearby in Yuexiu."
+            },
+            {
+              "place": "sysu",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Campus grounds in daytime; check access rules on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhujiang New Town"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Old Guangzhou on foot: Shamian Island, the ancestral hall and the Sun Yat-sen sites.",
+      "days": [
+        {
+          "title": "Arrive, Shamian and the river",
+          "stops": [
+            {
+              "place": "shamian_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late afternoon light is best. Always open."
+            },
+            {
+              "place": "qingping_market",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Short taxi ride. Morning is busiest; late afternoon is calmer."
+            },
+            {
+              "place": "pearl_river",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Riverside walk after dark, or an evening cruise."
+            }
+          ]
+        },
+        {
+          "title": "Sun Yat-sen sites and old town",
+          "stops": [
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning. Check hours on the day."
+            },
+            {
+              "place": "chen_clan",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "dim_sum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch in Yuexiu."
+            },
+            {
+              "place": "sysu",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Campus grounds in daytime; check access rules on the day."
+            },
+            {
+              "place": "beijing_road",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Evening walk through the old shopping streets."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shamian Island"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Dim sum mornings, market snacking and a late-night Cantonese dinner, kept close to Yuexiu and Tianhe.",
+      "days": [
+        {
+          "title": "Arrive, old-town eating",
+          "stops": [
+            {
+              "place": "dim_sum",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start with a classic Cantonese dim sum breakfast in Yuexiu. Go early; popular rooms fill up."
+            },
+            {
+              "place": "qingping_market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "About 10 minutes by taxi. Wander the dried goods and seafood aisles."
+            },
+            {
+              "place": "shamian_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Shaded colonial streets, good for a slow walk after eating."
+            },
+            {
+              "place": "food_street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Shangxiajiu for skewers, noodles and sweets. Busiest late afternoon into evening."
+            }
+          ]
+        },
+        {
+          "title": "Tianhe tastes and skyline",
+          "stops": [
+            {
+              "place": "kungfu",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quick Cantonese lunch in Tianhe. Expect a short wait at peak times."
+            },
+            {
+              "place": "huacheng_square",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk it off on the big open square. Always open."
+            },
+            {
+              "place": "opera_house",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "See the exterior; interior only with a show or tour."
+            },
+            {
+              "place": "canton_tower",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Late afternoon into evening gives you daylight and the lit-up skyline. Check hours on the day."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening cruise or a riverside walk after dark. Book cruises ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu or Zhujiang New Town"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "The essential Guangzhou culture loop: ancestral hall, tower and river, with time for the opera house.",
+      "days": [
+        {
+          "title": "Yuexiu culture morning",
+          "stops": [
+            {
+              "place": "chen_clan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go on a weekday morning. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "About 10 minutes by taxi. Check hours on the day."
+            },
+            {
+              "place": "dim_sum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch nearby in Yuexiu."
+            },
+            {
+              "place": "sysu",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Green campus walk. Check access rules on the day."
+            },
+            {
+              "place": "beijing_road",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening stroll and dinner. Shops run late morning to late evening."
+            }
+          ]
+        },
+        {
+          "title": "Zhujiang New Town and the river",
+          "stops": [
+            {
+              "place": "ctf_finance",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Clear afternoon for the observation deck. Check hours on the day."
+            },
+            {
+              "place": "opera_house",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short walk. Exterior always visible; interior only with a show or tour."
+            },
+            {
+              "place": "huacheng_square",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Open square between the tower and the opera house."
+            },
+            {
+              "place": "canton_tower",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Late afternoon into evening. Check hours on the day."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:45",
+              "minutes": 90,
+              "note": "Evening cruise or riverside walk to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhujiang New Town"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Old Guangzhou on foot: Shamian, the ancestral hall and the Sun Yat-sen sites, plus a skyline evening.",
+      "days": [
+        {
+          "title": "Shamian and the old town",
+          "stops": [
+            {
+              "place": "shamian_walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet in the morning. Always open."
+            },
+            {
+              "place": "qingping_market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi ride. Traditional market streets."
+            },
+            {
+              "place": "dim_sum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch in Yuexiu."
+            },
+            {
+              "place": "chen_clan",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed some Mondays; check on the day."
+            },
+            {
+              "place": "beijing_road",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner. Some old street remains under the glass."
+            }
+          ]
+        },
+        {
+          "title": "Sun Yat-sen sites and the river",
+          "stops": [
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning visit. Check hours on the day."
+            },
+            {
+              "place": "sysu",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Short ride. Check campus access rules on the day."
+            },
+            {
+              "place": "kungfu",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch in Tianhe."
+            },
+            {
+              "place": "canton_tower",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Afternoon into evening. Check hours on the day."
+            },
+            {
+              "place": "pearl_river",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Riverside walk or evening cruise."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu or Shamian Island"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "First-timers who plan the day around dim sum, markets and street food.",
+      "days": [
+        {
+          "title": "Arrive, old town flavours",
+          "stops": [
+            {
+              "place": "dim_sum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Start with a classic Cantonese morning tea. Go early, queues build."
+            },
+            {
+              "place": "chen_clan",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Ten minutes by taxi from Yuexiu. Check Monday closures."
+            },
+            {
+              "place": "qingping_market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Herbs, dried goods and snacks. Bargain politely."
+            },
+            {
+              "place": "shamian_walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Shaded old streets by the river. Good late-afternoon light."
+            }
+          ]
+        },
+        {
+          "title": "Yuexiu eating day",
+          "stops": [
+            {
+              "place": "beijing_road",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Snack as you walk. Shops open late morning."
+            },
+            {
+              "place": "food_street",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Shangxiajiu for roast meats and sweets. Cash and phone pay both work."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening cruise or riverside walk after dinner. Check cruise times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Tianhe and skyline",
+          "stops": [
+            {
+              "place": "kungfu",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quick Cantonese lunch in Tianhe."
+            },
+            {
+              "place": "ctf_finance",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Observation deck on a clear day. Check hours on the day."
+            },
+            {
+              "place": "huacheng_square",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Open square, best after dark when the towers light up."
+            },
+            {
+              "place": "canton_tower",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead for evening. Last entry can be early, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "dim_sum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "One more dim sum breakfast before the airport."
+            },
+            {
+              "place": "baiyun",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Only if your flight is late. Cable car saves time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu (old town)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the halls, the tower and the river in three calm days.",
+      "days": [
+        {
+          "title": "Old town culture",
+          "stops": [
+            {
+              "place": "chen_clan",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go at opening on a weekday. Check Monday closures."
+            },
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short taxi ride. Check hours on the day."
+            },
+            {
+              "place": "dim_sum",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch nearby in Yuexiu."
+            },
+            {
+              "place": "shamian_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Colonial-era streets, easy walking."
+            }
+          ]
+        },
+        {
+          "title": "Zhujiang New Town",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Exterior always visible. Book a show or tour for inside."
+            },
+            {
+              "place": "ctf_finance",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Clear afternoon gives the best view. Check hours on the day."
+            },
+            {
+              "place": "huacheng_square",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Walk to the river edge."
+            },
+            {
+              "place": "canton_tower",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening lights. Book ahead, check last entry on the day."
+            }
+          ]
+        },
+        {
+          "title": "River and campus",
+          "stops": [
+            {
+              "place": "sysu",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekday morning. Check campus access rules on the day."
+            },
+            {
+              "place": "baiyun",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Cable car up saves time. Bring water."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening cruise. Check departure times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "beijing_road",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops open late morning. Good for last gifts."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zhujiang New Town"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the old town, Shamian and the Sun Yat-sen story at an easy pace.",
+      "days": [
+        {
+          "title": "Yuexiu history",
+          "stops": [
+            {
+              "place": "sun_yat_sen_hall",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is quiet. Check hours on the day."
+            },
+            {
+              "place": "chen_clan",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Ten minutes by taxi. Check Monday closures."
+            },
+            {
+              "place": "dim_sum",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch in Yuexiu."
+            },
+            {
+              "place": "qingping_market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Old market streets, still busy with locals."
+            }
+          ]
+        },
+        {
+          "title": "Shamian and the river",
+          "stops": [
+            {
+              "place": "shamian_walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Cooler in the morning. Flat, easy walking."
+            },
+            {
+              "place": "sysu",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Check campus access rules on the day."
+            },
+            {
+              "place": "pearl_river",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening cruise past the old and new banks. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "New city and views",
+          "stops": [
+            {
+              "place": "opera_house",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Exterior always visible. Interior only with a show or tour."
+            },
+            {
+              "place": "ctf_finance",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Clear afternoon. Check hours on the day."
+            },
+            {
+              "place": "canton_tower",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Book ahead. Check last entry on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "beijing_road",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Old street with some excavated paving on show. Shops open late morning."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yuexiu (old town)"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Sun, sprawl, and screen dreams under endless blue sky.",
+  "intro": "Los Angeles rewards visitors who pick a few neighbourhoods and slow down between them. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Hollywood",
+    "Santa Monica",
+    "West Hollywood"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4.5,
+    "per_km": 2.8,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro Rail subway and light rail link Downtown, Hollywood, Santa Monica and Long Beach; fares about $1.75 per ride.",
+    "Metro buses cover the whole sprawl; a TAP card or contactless tap works on rail and bus.",
+    "Taxis are metered and costlier than apps; Uber and Lyft operate widely and are the usual choice.",
+    "Driving is fastest off-peak but freeways jam from roughly 7-10am and 3-7pm.",
+    "Walking is pleasant in beach towns and Hollywood; bikes and e-scooters are common near the coast.",
+    "No ferries serve the city centre; harbour boats run from San Pedro to Catalina Island."
+  ],
+  "airports": [
+    {
+      "code": "LAX",
+      "name": "Los Angeles International Airport",
+      "primary": true,
+      "note": "Main gateway, 19 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Metro C Line + K Line",
+          "to": "Downtown LA",
+          "price": "$1.75-3.50",
+          "time": "60-80 min",
+          "note": "Cheapest; shuttle to the C Line first."
+        },
+        {
+          "mode": "LAX FlyAway bus",
+          "to": "Union Station, Downtown",
+          "price": "$10-12",
+          "time": "45-70 min",
+          "note": "Comfortable express bus, frequent."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown LA",
+          "price": "$50-70",
+          "time": "30-60 min",
+          "note": "Flat-ish airport fares; traffic varies."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown LA",
+          "price": "$35-60",
+          "time": "30-60 min",
+          "note": "Pick-up at the LAXit lot; expect surge."
+        }
+      ]
+    },
+    {
+      "code": "BUR",
+      "name": "Hollywood Burbank Airport",
+      "primary": false,
+      "note": "Smaller airport closer to Hollywood and Downtown, about 20 km north.",
+      "options": [
+        {
+          "mode": "Free shuttle + Metro B Line",
+          "to": "Hollywood",
+          "price": "$1.75",
+          "time": "35-50 min",
+          "note": "Shuttle to North Hollywood station, then 2 stops."
+        },
+        {
+          "mode": "Metrolink / Amtrak",
+          "to": "Union Station, Downtown",
+          "price": "$5-15",
+          "time": "30-45 min",
+          "note": "Check schedules; infrequent off-peak."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown LA",
+          "price": "$35-50",
+          "time": "25-45 min",
+          "note": "Short hop without traffic."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Hollywood",
+          "price": "$20-35",
+          "time": "20-40 min",
+          "note": "Often cheaper than taxi here."
+        }
+      ]
+    },
+    {
+      "code": "LGB",
+      "name": "Long Beach Airport",
+      "primary": false,
+      "note": "Small airport in southern LA County, about 30 km south.",
+      "options": [
+        {
+          "mode": "Bus + Metro A Line",
+          "to": "Downtown LA",
+          "price": "$1.75-3.50",
+          "time": "70-90 min",
+          "note": "Local bus to the A Line, then rail north."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown LA",
+          "price": "$55-75",
+          "time": "30-50 min",
+          "note": "Long ride; traffic on I-710."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown LA",
+          "price": "$40-65",
+          "time": "30-50 min",
+          "note": "Usually the easiest option."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Universal Studios Hollywood",
+    "Hollywood Sign",
+    "Griffith Observatory",
+    "Santa Monica Pier",
+    "Hollywood Walk of Fame",
+    "TCL Chinese Theatre",
+    "The Getty Center",
+    "Venice Beach",
+    "California Institute of Technology (Caltech)",
+    "Dolby Theatre",
+    "Golf N' Stuff (Norwalk)",
+    "Grand Central Market",
+    "Hollywood Bowl",
+    "Irises",
+    "John's Incredible Pizza Company (Carson)",
+    "La La Land",
+    "Los Angeles Zoo",
+    "Pacific Park",
+    "Panda Express",
+    "Pretty Woman",
+    "Rose Bowl",
+    "Santa Monica Beach"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Los Angeles",
+      "https://en.wikivoyage.org/wiki/Los%20Angeles"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    34.0522,
+    -118.2437
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 8,
+      "rain_days": 5
+    },
+    {
+      "high": 21,
+      "low": 9,
+      "rain_days": 8
+    },
+    {
+      "high": 24,
+      "low": 11,
+      "rain_days": 2
+    },
+    {
+      "high": 24,
+      "low": 13,
+      "rain_days": 3
+    },
+    {
+      "high": 28,
+      "low": 16,
+      "rain_days": 1
+    },
+    {
+      "high": 31,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 32,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 31,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 28,
+      "low": 15,
+      "rain_days": 2
+    },
+    {
+      "high": 24,
+      "low": 11,
+      "rain_days": 2
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "BUR taxi $35-50 vs tariff estimate 80"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Minneapolis: lakes, arts, and a lively riverfront.",
+  "intro": "Minneapolis rewards visitors with a mix of outdoor beauty, vibrant culture, and friendly neighborhoods. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Uptown",
+    "Northeast",
+    "University"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 3.5,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "METRO Blue Line light rail connects the airport, downtown, and Mall of America; fare $2 includes 2.5-hour transfer.",
+    "METRO Green Line links downtown Minneapolis to downtown St. Paul via the University of Minnesota.",
+    "Buses cover the city; use the Metro Transit app or website for routes and schedules.",
+    "Day passes cost $6; 7-day passes $24 (requires Go-To card).",
+    "Taxis and ride apps like Uber and Lyft operate; taxis can be hailed or found at ranks.",
+    "Driving is common; rush hours (7-9 AM, 3-7 PM) are congested. Walking and biking are pleasant in many areas."
+  ],
+  "airports": [
+    {
+      "code": "MSP",
+      "name": "Minneapolis-St Paul International Airport",
+      "primary": true,
+      "note": "Main airport, 11 km southeast of downtown.",
+      "options": [
+        {
+          "mode": "METRO Blue Line",
+          "to": "Downtown Minneapolis",
+          "price": "$2",
+          "time": "25-30 min",
+          "note": "Trains run frequently; fare includes 2.5-hour transfer."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Minneapolis",
+          "price": "$20-30",
+          "time": "15-25 min",
+          "note": "Taxis available at both terminals."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Minneapolis",
+          "price": "$15-25",
+          "time": "15-25 min",
+          "note": "Ride apps pick up at designated zones."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "Minneapolis Sculpture Garden",
+    "Stone Arch Bridge",
+    "Nickelodeon Universe",
+    "Valleyfair",
+    "University of Minnesota Twin Cities",
+    "Como Town",
+    "Dairy Queen",
+    "Dogs Playing Poker",
+    "Häagen-Dazs",
+    "Minnesota River",
+    "Orange Julius"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Minneapolis",
+      "https://en.wikivoyage.org/wiki/Minneapolis"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    44.97997,
+    -93.26384
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": -4,
+      "low": -13,
+      "rain_days": 5
+    },
+    {
+      "high": -2,
+      "low": -14,
+      "rain_days": 6
+    },
+    {
+      "high": 6,
+      "low": -5,
+      "rain_days": 8
+    },
+    {
+      "high": 12,
+      "low": 1,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 10
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 14,
+      "low": 6,
+      "rain_days": 10
+    },
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 8
+    },
+    {
+      "high": -1,
+      "low": -9,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,901 @@
+{
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One full day of Osaka eating, from market stalls to neon-lit Dotonbori.",
+      "days": [
+        {
+          "title": "Market, takoyaki class and Dotonbori night",
+          "stops": [
+            {
+              "place": "kuromon",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Arrive hungry. Many stalls close before 18:00, so go late morning."
+            },
+            {
+              "place": "takoyaki_class",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Book ahead. You make and eat your own takoyaki."
+            },
+            {
+              "place": "shinsaibashi_suji",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Covered arcade, good if it rains. Grab lunch at a noodle shop."
+            },
+            {
+              "place": "amerikamura",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk west. Snack stalls and street food."
+            },
+            {
+              "place": "dotonbori",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Okonomiyaki or kushikatsu for dinner. Neon is best after dark."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "20:30",
+              "minutes": 30,
+              "note": "Boats run roughly every 20–30 minutes until about 21:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Castle, old temples and a market in one efficient day.",
+      "days": [
+        {
+          "title": "Castle in the morning, temples and market after",
+          "stops": [
+            {
+              "place": "osaka_castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Main tower opens 09:00. Go early to beat the queues. Park is free."
+            },
+            {
+              "place": "nakanoshima_park",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Riverside walk and a coffee stop."
+            },
+            {
+              "place": "kuromon",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Many close earlier than 18:00."
+            },
+            {
+              "place": "shitennoji",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Halls close around 16:30, so don't arrive late."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Old-school neighbourhood. Dinner at a kushikatsu stand."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "A slow start, then neon, izakaya and late karaoke in Namba.",
+      "days": [
+        {
+          "title": "Afternoon warm-up, night in the neon",
+          "stops": [
+            {
+              "place": "umeda_sky",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Time it for sunset. Hours vary, check on the day."
+            },
+            {
+              "place": "dotonbori",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner at an izakaya or okonomiyaki counter."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "20:30",
+              "minutes": 30,
+              "note": "Short river ride under the signs. Last boats around 21:00."
+            },
+            {
+              "place": "amerikamura",
+              "at": "21:15",
+              "minutes": 60,
+              "note": "Bars and small clubs. Streets stay busy late."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "22:30",
+              "minutes": 90,
+              "note": "Karaoke and late snacks. Trains run until around midnight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Namba: market bites, takoyaki and a neon night in Dotonbori.",
+      "days": [
+        {
+          "title": "Arrive, market and Dotonbori",
+          "stops": [
+            {
+              "place": "kuromon",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Late morning is best. Many stalls close before 18:00. Bring cash."
+            },
+            {
+              "place": "dotonbori",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch stop. Try takoyaki and okonomiyaki. About 10 minutes on foot from the market."
+            },
+            {
+              "place": "takoyaki_class",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Book ahead. Classes run by booking only."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "After dark is best for the neon. Departures every 20–30 minutes."
+            },
+            {
+              "place": "dotonbori",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Dinner and a wander. Streets stay busy late."
+            }
+          ]
+        },
+        {
+          "title": "Shinsekai and out",
+          "stops": [
+            {
+              "place": "shinsekai_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Kushikatsu for an early lunch. Liveliest in the evening but fine by day."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Roughly 10:00–20:00. Check on the day."
+            },
+            {
+              "place": "shinsaibashi_suji",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Covered street, good in rain. Snacks along the way."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: the castle and old temples, with market food in between.",
+      "days": [
+        {
+          "title": "Castle and north Osaka",
+          "stops": [
+            {
+              "place": "osaka_castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Main tower opens 09:00, last entry 16:30. Park is always open."
+            },
+            {
+              "place": "nakanoshima_park",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch nearby. About 20 minutes by train."
+            },
+            {
+              "place": "umeda_sky",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Stay for sunset. Roughly 09:30–22:30, check on the day."
+            },
+            {
+              "place": "yodo_river",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset walk. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Temples in Tennoji, then out",
+          "stops": [
+            {
+              "place": "shitennoji",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Halls roughly 08:30–16:30. Grounds open daily."
+            },
+            {
+              "place": "tennoji_park",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Gardens roughly 09:30–17:00."
+            },
+            {
+              "place": "sumiyoshi",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Roughly 06:00–17:00. Check on the day. Short tram or train ride."
+            },
+            {
+              "place": "kuromon",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Late lunch from the stalls. Many close before 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Umeda"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "Neon, izakaya and late karaoke: Namba and Shinsekai after dark.",
+      "days": [
+        {
+          "title": "Arrive and go out in Namba",
+          "stops": [
+            {
+              "place": "shinsaibashi_suji",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–20:00. Good in rain."
+            },
+            {
+              "place": "amerikamura",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Afternoon into evening. Bars and street food."
+            },
+            {
+              "place": "dotonbori",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner at an izakaya. Neon best after dark."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "21:00",
+              "minutes": 30,
+              "note": "Roughly 11:00–21:00. Departures every 20–30 minutes."
+            }
+          ]
+        },
+        {
+          "title": "Shinsekai, then out",
+          "stops": [
+            {
+              "place": "shinsekai_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Liveliest in the evening. Kushikatsu and standing bars."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Roughly 10:00–20:00. Check on the day."
+            },
+            {
+              "place": "dotonbori",
+              "at": "21:00",
+              "minutes": 90,
+              "note": "Late karaoke and snacks. About 15 minutes by train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "First-timers who want market snacks, takoyaki and a neon night in Dotonbori.",
+      "days": [
+        {
+          "title": "Arrive in Namba, market and neon",
+          "stops": [
+            {
+              "place": "kuromon",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Late morning is best. Many stalls close earlier than 18:00, so go before lunch rush fades."
+            },
+            {
+              "place": "dotonbori",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Grab lunch here. Look for takoyaki and okonomiyaki stalls."
+            },
+            {
+              "place": "shinsaibashi_suji",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Covered arcade, good if it rains. Snack stalls along the way."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "After dark is the point. Departures every 20–30 min; buy a ticket earlier."
+            },
+            {
+              "place": "dotonbori",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Dinner and neon. Book popular places or expect a queue."
+            }
+          ]
+        },
+        {
+          "title": "Cooking class, castle park, Shinsekai dinner",
+          "stops": [
+            {
+              "place": "takoyaki_class",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Book ahead. Afternoon slots also exist."
+            },
+            {
+              "place": "osaka_castle",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Main tower last entry 16:30. Park is always open."
+            },
+            {
+              "place": "nakanoshima_park",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Easy stroll by the water before heading south."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Kushikatsu and retro streets. Liveliest in the evening."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Roughly 10:00–20:00; check on the day before you go up."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most visitors: castle and market on day one, temples and a day trip after.",
+      "days": [
+        {
+          "title": "Castle, market and Dotonbori",
+          "stops": [
+            {
+              "place": "osaka_castle",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early. Main tower 09:00–17:00, last entry 16:30."
+            },
+            {
+              "place": "kuromon",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Many close earlier than 18:00."
+            },
+            {
+              "place": "dotonbori",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk the canal and side streets."
+            },
+            {
+              "place": "bunraku",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Performances on set dates only. Check the schedule and book ahead."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Short canal ride after dark."
+            }
+          ]
+        },
+        {
+          "title": "Temples and a day trip south",
+          "stops": [
+            {
+              "place": "shitennoji",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Halls roughly 08:30–16:30. Quiet in the morning."
+            },
+            {
+              "place": "sumiyoshi",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Roughly 06:00–17:00; check on the day."
+            },
+            {
+              "place": "horyuji",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Day trip by train. Roughly 08:00–17:00; check on the day. Eat lunch near the station."
+            },
+            {
+              "place": "tennoji_park",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Gardens roughly 09:30–17:00."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the retro streets."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "Late starters: neon canals, izakaya alleys and karaoke until the small hours.",
+      "days": [
+        {
+          "title": "Slow start, then Dotonbori after dark",
+          "stops": [
+            {
+              "place": "shinsaibashi_suji",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–20:00. Good in rain."
+            },
+            {
+              "place": "amerikamura",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Afternoon into evening. Bars start filling later."
+            },
+            {
+              "place": "dotonbori",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner first, then the neon."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "20:30",
+              "minutes": 30,
+              "note": "After dark. Departures every 20–30 min."
+            },
+            {
+              "place": "dotonbori",
+              "at": "21:30",
+              "minutes": 120,
+              "note": "Izakaya and karaoke nearby. Stay as late as you like."
+            }
+          ]
+        },
+        {
+          "title": "Shinsekai crawl and skyline",
+          "stops": [
+            {
+              "place": "umeda_sky",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Sunset into evening. Roughly 09:30–22:30; check on the day."
+            },
+            {
+              "place": "yodo_river",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset walk by the water."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Kushikatsu and standing bars. Liveliest in the evening."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Roughly 10:00–20:00, so the tower may be closed. Check on the day; the streets stay busy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through Osaka: market breakfasts, takoyaki classes and neon dinners in Dotonbori.",
+      "days": [
+        {
+          "title": "Arrive, Namba and Dotonbori at night",
+          "stops": [
+            {
+              "place": "dotonbori",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Start with the canal-side signs. Many stalls take cash only."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "19:15",
+              "minutes": 30,
+              "note": "Short loop. Boats run every 20–30 minutes; buy a ticket on the spot."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "20:15",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi or subway. Kushikatsu bars are the local speciality."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and a cooking class",
+          "stops": [
+            {
+              "place": "kuromon",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go before noon; many stalls close early. Graze as you walk."
+            },
+            {
+              "place": "takoyaki_class",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Book ahead. You make and eat your own takoyaki."
+            },
+            {
+              "place": "shinsaibashi_suji",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Covered arcade, good if it rains. Snack stalls along the way."
+            },
+            {
+              "place": "amerikamura",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Casual food and people-watching."
+            }
+          ]
+        },
+        {
+          "title": "Castle park, then Tennoji food streets",
+          "stops": [
+            {
+              "place": "osaka_castle",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk the park first, then the main tower. Last entry 16:30."
+            },
+            {
+              "place": "nakanoshima_park",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "About 20 minutes by subway. Grab lunch nearby."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Ride up for the view, then eat in the streets below."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Dinner stop: kushikatsu and standing bars. Liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "umeda_sky",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Floating Garden opens around 09:30. Check hours on the day."
+            },
+            {
+              "place": "asahi_suita",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Tours need booking and run mainly on weekdays. Check before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for first-timers: castle, old temples and the market, with one easy day trip.",
+      "days": [
+        {
+          "title": "Arrive, castle and Umeda sunset",
+          "stops": [
+            {
+              "place": "osaka_castle",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Main tower 09:00–17:00, last entry 16:30. Park is always open."
+            },
+            {
+              "place": "nakanoshima_park",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "About 20 minutes by subway. Riverside walk."
+            },
+            {
+              "place": "umeda_sky",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Time it for sunset. Hours roughly 09:30–22:30; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Tennoji temples and Shinsekai",
+          "stops": [
+            {
+              "place": "shitennoji",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Grounds open daily; halls roughly 08:30–16:30. Go early."
+            },
+            {
+              "place": "tennoji_park",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Next door. Gardens roughly 09:30–17:00."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Roughly 10:00–20:00; check on the day."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Retro streets under the tower. Good lunch stop."
+            }
+          ]
+        },
+        {
+          "title": "Market, Bunraku and Dotonbori",
+          "stops": [
+            {
+              "place": "kuromon",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Late morning is best. Many stalls close before 18:00."
+            },
+            {
+              "place": "bunraku",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Performances run on set dates only. Check the calendar and book ahead."
+            },
+            {
+              "place": "dotonbori",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Walk the canal. Neon is best after dark."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "After-dark ride. Departures every 20–30 minutes."
+            }
+          ]
+        },
+        {
+          "title": "Day trip, then fly",
+          "stops": [
+            {
+              "place": "sumiyoshi",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Roughly 06:00–17:00; check on the day. Quiet in the morning."
+            },
+            {
+              "place": "horyuji",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "About an hour by train. Roughly 08:00–17:00; check on the day."
+            },
+            {
+              "place": "yakushiji",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short train hop. Roughly 08:30–17:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Late starts and later nights: neon canals, izakaya alleys and karaoke in Namba.",
+      "days": [
+        {
+          "title": "Arrive and hit Dotonbori",
+          "stops": [
+            {
+              "place": "dotonbori",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Eat as you walk. Cash is handy at small stalls."
+            },
+            {
+              "place": "dotonbori_cruise",
+              "at": "20:15",
+              "minutes": 30,
+              "note": "Best after dark. Boats every 20–30 minutes."
+            },
+            {
+              "place": "amerikamura",
+              "at": "21:15",
+              "minutes": 60,
+              "note": "About 10 minutes on foot. Bars and late shops."
+            }
+          ]
+        },
+        {
+          "title": "Shinsekai and Tennoji evening",
+          "stops": [
+            {
+              "place": "tennoji_park",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Easy daytime start. Gardens roughly 09:30–17:00."
+            },
+            {
+              "place": "tsutenkaku",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Roughly 10:00–20:00; check on the day."
+            },
+            {
+              "place": "shinsekai_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Kushikatsu dinner, then standing bars. Liveliest in the evening."
+            },
+            {
+              "place": "dotonbori",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "About 15 minutes by taxi. Karaoke places line the side streets."
+            }
+          ]
+        },
+        {
+          "title": "Slow day, big night in Umeda",
+          "stops": [
+            {
+              "place": "shinsaibashi_suji",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Covered arcade; good in rain. Shops roughly 10:00–20:00."
+            },
+            {
+              "place": "umeda_sky",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view first. Hours roughly 09:30–22:30; check on the day."
+            },
+            {
+              "place": "yodo_river",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Short walk. Sunset by the water, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "kuromon",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Late-morning snacks. Many stalls close early."
+            },
+            {
+              "place": "nakanoshima_park",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Quiet riverside walk before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Namba"
+    }
+  ]
+}

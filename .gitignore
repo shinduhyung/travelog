@@ -40,3 +40,12 @@ test_ios_build/
 # Translation work in progress (tool/l10n/README.md)
 tool/l10n/*/work/
 __pycache__/
+tool/affiliate_stats/out/
+tool/persona_validation/out/
+# Generated city pages / images and downloaded source pages (~900MB, rebuilt by the scripts)
+tool/city_travel/out/
+tool/city_travel/images/
+audit/sources/
+audit/*_sources/
+# Local Claude workspace (recovery snapshots contain user data)
+.claude/

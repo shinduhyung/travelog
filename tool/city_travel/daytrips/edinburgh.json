@@ -1,0 +1,194 @@
+{
+ "city": "Edinburgh",
+ "trips": [
+  {
+   "place": "Glasgow",
+   "label": "",
+   "position": {
+    "id": 4939455,
+    "name": "Glasgow, Buchanan Bus Station",
+    "city": "Glasgow",
+    "lat": 55.8652,
+    "lng": -4.25032
+   },
+   "town": {
+    "name": "Glasgow",
+    "lat": 55.86515,
+    "lng": -4.25763
+   },
+   "road": {
+    "km": 74,
+    "min": 65,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 170.0,
+    "currency": "GBP"
+   },
+   "modes": {
+    "train": {
+     "from": "€12",
+     "from_usd": 14.0,
+     "avg": "€21",
+     "time": "43m",
+     "per_day": 8,
+     "source": "https://www.omio.com/trains/edinburgh/glasgow"
+    },
+    "bus": {
+     "from": "$11-$22",
+     "time": "1h 21m",
+     "via": "Princes Street to Buchanan Bus Station",
+     "source": "https://www.rome2rio.com/s/Edinburgh/Glasgow"
+    }
+   },
+   "route_note": "Frequent direct trains connect Edinburgh Waverley to Glasgow Queen Street in about 50 minutes, putting the city centre within easy walking reach.",
+   "see": [
+    "Kelvingrove Art Gallery",
+    "Glasgow Cathedral",
+    "Necropolis",
+    "Riverside Museum"
+   ],
+   "visit": "Full day",
+   "tour_query": "Glasgow day trip from Edinburgh",
+   "quests": [
+    "Kelvingrove Art Gallery and Museum",
+    "Christ of Saint John of the Cross",
+    "Celtic Park",
+    "Ibrox Stadium",
+    "Hampden Park",
+    "University of Glasgow",
+    "River Clyde"
+   ],
+   "recommended": "train",
+   "why": "Frequent direct trains reach the centre in about 50 minutes, far quicker than the bus.",
+   "stars": 5,
+   "know": [
+    "Trains run frequently throughout the day",
+    "Most sights are walkable from Queen Street station",
+    "Book ahead for popular attractions in summer"
+   ]
+  },
+  {
+   "place": "Stirling",
+   "label": "",
+   "position": {
+    "id": 320353,
+    "name": "Stirling",
+    "city": "Stirling",
+    "lat": 56.12011,
+    "lng": -3.9353
+   },
+   "town": {
+    "name": "Stirling",
+    "lat": 56.11903,
+    "lng": -3.93682
+   },
+   "road": {
+    "km": 58,
+    "min": 58,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 130.0,
+    "currency": "GBP"
+   },
+   "modes": {
+    "train": {
+     "from": "€7",
+     "from_usd": 8.0,
+     "avg": "€15",
+     "time": "40m",
+     "per_day": 6,
+     "source": "https://www.omio.com/trains/edinburgh/stirling"
+    },
+    "bus": {
+     "from": "$10-$19",
+     "time": "1h 29m",
+     "via": "Princes Street to Islamic Centre",
+     "source": "https://www.rome2rio.com/s/Edinburgh/Stirling"
+    }
+   },
+   "route_note": "Direct ScotRail trains from Edinburgh Waverley reach Stirling in under an hour, and the castle is a steep but walkable climb from the station.",
+   "see": [
+    "Stirling Castle",
+    "Wallace Monument",
+    "Old Town",
+    "Bannockburn heritage site"
+   ],
+   "visit": "Full day",
+   "tour_query": "Stirling Castle day trip from Edinburgh",
+   "quests": [
+    "Stirling Castle"
+   ],
+   "recommended": "train",
+   "why": "Direct trains take under an hour and the castle is a walkable climb from the station.",
+   "stars": 4,
+   "know": [
+    "Book castle tickets ahead in peak season",
+    "The climb to the castle is steep—wear comfortable shoes",
+    "Trains run frequently from Waverley"
+   ]
+  },
+  {
+   "place": "Dunfermline",
+   "label": "",
+   "position": {
+    "id": 318936,
+    "name": "Dunfermline Queen Margaret",
+    "city": "Dunfermline",
+    "lat": 56.08008,
+    "lng": -3.42221
+   },
+   "town": {
+    "name": "Dunfermline",
+    "lat": 56.07156,
+    "lng": -3.45887
+   },
+   "road": {
+    "km": 28,
+    "min": 34,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 70.0,
+    "currency": "GBP"
+   },
+   "modes": {
+    "train": {
+     "from": "$8-$14",
+     "time": "32m",
+     "via": "Edinburgh Waverley to Dunfermline Town",
+     "source": "https://www.rome2rio.com/s/Edinburgh/Dunfermline"
+    },
+    "bus": {
+     "from": "$6-$9",
+     "time": "44m",
+     "via": "Queensferry Street to Bothwell Street",
+     "source": "https://www.rome2rio.com/s/Edinburgh/Dunfermline"
+    }
+   },
+   "route_note": "Direct ScotRail trains run from Edinburgh to Dunfermline Town in about 30 minutes, with the abbey and palace a short walk away.",
+   "see": [
+    "Dunfermline Abbey",
+    "Pittencrieff Park",
+    "Carnegie Birthplace Museum",
+    "Abbey ruins"
+   ],
+   "visit": "Half day",
+   "tour_query": "Dunfermline day trip from Edinburgh",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct trains take about 30 minutes and the abbey and palace are a short walk away.",
+   "stars": 3,
+   "know": [
+    "Abbey may have limited opening hours—check before going",
+    "A quieter, less touristy day out",
+    "Combine with a walk through the old town"
+   ]
+  }
+ ],
+ "problems": [
+  "North Berwick: not a town in cities15000.json (GB), dropped",
+  "Linlithgow: not a town in cities15000.json (GB), dropped"
+ ]
+}

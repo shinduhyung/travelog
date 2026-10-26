@@ -1,0 +1,32 @@
+$ deepseek_prep.py Accra
+  tokens in 694 out 567
+Accra: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Accra
+  tokens in 2383 out 562
+Accra: 1 problems
+  - ACC taxi GHS 5-15 vs tariff estimate 131
+
+$ deepseek_city.py Accra --stage places
+Accra: places
+  tokens in 1161 out 2903
+
+$ deepseek_city.py Accra --stage frame
+Accra: frame
+  tokens in 2415 out 1816
+
+$ deepseek_city.py Accra --stage plans
+Accra: plans
+  plans for day
+  tokens in 1993 out 842
+  plans for 1n
+  tokens in 1994 out 2411
+  plans for 2n
+  tokens in 1999 out 1517
+  plans for 3n
+  tokens in 1994 out 2133
+
+$ merge_city.py Accra
+Accra: 20 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/accra.json and planner/accra.json
+

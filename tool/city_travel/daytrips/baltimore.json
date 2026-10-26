@@ -1,0 +1,185 @@
+{
+ "city": "Baltimore",
+ "trips": [
+  {
+   "place": "Washington D.C.",
+   "label": "",
+   "position": {
+    "id": 16897167,
+    "name": "Washington Union Station, DC",
+    "city": "Washington",
+    "lat": 38.89906,
+    "lng": -77.00679
+   },
+   "town": {
+    "name": "Washington D.C.",
+    "lat": 38.89511,
+    "lng": -77.03637
+   },
+   "road": {
+    "km": 63,
+    "min": 60,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 130,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$600",
+     "time": "1h 2m",
+     "via": "Baltimore Penn Station to Washington Union Station",
+     "source": "https://www.rome2rio.com/s/Baltimore/Washington%20DC"
+    },
+    "bus": {
+     "from": "$5-$26",
+     "time": "1h",
+     "via": "Baltimore to Washington",
+     "source": "https://www.rome2rio.com/s/Baltimore/Washington%20DC"
+    }
+   },
+   "route_note": "Take a direct MARC or Amtrak train from Baltimore Penn Station to Washington Union Station (about 40 minutes), then use the Metro or walk to the National Mall.",
+   "see": [
+    "U.S. Capitol and Capitol grounds",
+    "National Mall museums (Smithsonian)",
+    "Lincoln Memorial and Reflecting Pool",
+    "White House exterior from Lafayette Square"
+   ],
+   "visit": "Full day",
+   "tour_query": "Washington DC day trip from Baltimore",
+   "quests": [
+    "Lincoln Memorial",
+    "United States Capitol",
+    "Thomas Jefferson Memorial",
+    "Martin Luther King Jr. Memorial",
+    "Vietnam Veterans Memorial",
+    "Korean War Veterans Memorial",
+    "Franklin Delano Roosevelt Memorial",
+    "Smithsonian National Museum of Natural History"
+   ],
+   "recommended": "train",
+   "why": "The direct MARC or Amtrak train from Baltimore Penn Station to Washington Union Station is the fastest option and leaves you a short Metro or walk from the National Mall.",
+   "stars": 5,
+   "know": [
+    "Many Smithsonian museums on the National Mall are free to enter.",
+    "Train fares vary widely, so compare prices before booking."
+   ]
+  },
+  {
+   "place": "Philadelphia",
+   "label": "",
+   "position": {
+    "id": 16894836,
+    "name": "30th Street Station, PA",
+    "city": "Philadelphia",
+    "lat": 39.95578,
+    "lng": -75.18197
+   },
+   "town": {
+    "name": "Philadelphia",
+    "lat": 39.95238,
+    "lng": -75.16362
+   },
+   "road": {
+    "km": 160,
+    "min": 131,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 320,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$21-$600",
+     "time": "1h 10m",
+     "via": "Baltimore Penn Station to 30th Street Station",
+     "source": "https://www.rome2rio.com/s/Baltimore/Philadelphia"
+    },
+    "bus": {
+     "from": "$15-$27",
+     "time": "1h 55m",
+     "via": "Baltimore Downtown Bus Station to Philadelphia Bus Station",
+     "source": "https://www.rome2rio.com/s/Baltimore/Philadelphia"
+    }
+   },
+   "route_note": "Take a direct Amtrak Northeast Regional train from Baltimore Penn Station to Philadelphia 30th Street Station (about 1 hour 45 minutes), then walk or take a short transit ride to Independence Hall.",
+   "see": [
+    "Liberty Bell Center",
+    "Independence Hall",
+    "Reading Terminal Market",
+    "Philadelphia Museum of Art steps"
+   ],
+   "visit": "Full day",
+   "tour_query": "Philadelphia day trip from Baltimore",
+   "quests": [
+    "Philadelphia City Hall",
+    "Elfreth's Alley",
+    "Barnes Foundation",
+    "Betsy Ross House",
+    "National Constitution Center",
+    "Independence Hall",
+    "Liberty Bell",
+    "Philadelphia Museum of Art"
+   ],
+   "recommended": "train",
+   "why": "The direct Amtrak Northeast Regional train from Baltimore Penn Station to Philadelphia 30th Street Station is faster than the bus and needs no changes.",
+   "stars": 4,
+   "know": [
+    "Visits to Independence Hall are by timed ticket, so book ahead.",
+    "Train fares vary widely, so compare prices before booking."
+   ]
+  },
+  {
+   "place": "Annapolis",
+   "label": "",
+   "position": {
+    "id": 410117,
+    "name": "Annapolis, MD",
+    "city": "Annapolis",
+    "lat": 38.97845,
+    "lng": -76.49218
+   },
+   "town": {
+    "name": "Annapolis",
+    "lat": 38.97859,
+    "lng": -76.49184
+   },
+   "road": {
+    "km": 49,
+    "min": 41,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 100,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$22",
+     "time": "56m",
+     "via": "GREENE ST & LOMBARD ST sb fs to Church Cir & School St",
+     "source": "https://www.rome2rio.com/s/Baltimore/Annapolis"
+    }
+   },
+   "route_note": "Take a direct commuter bus from central Baltimore to downtown Annapolis (roughly 45 to 60 minutes), then walk to the historic district.",
+   "see": [
+    "Maryland State House",
+    "City Dock and waterfront",
+    "United States Naval Academy grounds",
+    "Historic Main Street shops and restaurants"
+   ],
+   "visit": "Half day",
+   "tour_query": "Annapolis day trip from Baltimore",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The commuter bus runs from central Baltimore into downtown Annapolis, where the historic district is easy to explore on foot.",
+   "stars": 3,
+   "know": [
+    "The historic district is best explored on foot once you arrive downtown."
+   ]
+  }
+ ],
+ "problems": []
+}

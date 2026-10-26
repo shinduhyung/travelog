@@ -1,0 +1,2138 @@
+{
+  "city": "Istanbul",
+  "checked": "October 2026",
+  "currency": "TRY",
+  "usd_rate": 49.6802,
+  "intro": "Istanbul rewards visitors with layers of history, vibrant markets, and stunning waterfronts. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 40.9464,
+      "west": 28.7315,
+      "north": 41.1006,
+      "east": 29.0915,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 30,
+      "flag_airport": 40,
+      "per_km": 20,
+      "min_fare": 100
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Metro and tram: M11 connects IST airport to city; trams serve old city; use Istanbulkart.",
+      "Buses: extensive but crowded; Havaist and Havabüs for airport transfers.",
+      "Taxis: yellow, blue, black; use apps like Uber and Bolt to avoid scams.",
+      "Ride apps: Uber and Bolt operate in Istanbul.",
+      "Driving: not recommended due to heavy traffic; parking is scarce.",
+      "Walking: best in Sultanahmet and Beyoğlu; ferries cross the Bosphorus for views."
+    ],
+    "sources": []
+  },
+  "places": {
+    "hagia-sophia": {
+      "name": "Hagia Sophia",
+      "landmark": "Hagia Sophia",
+      "kind": "sight",
+      "lat": 41.0086,
+      "lon": 28.9802,
+      "price": null,
+      "price_text": "Entry fee for visitors; price changes often — check on the day",
+      "hours": "Open daily; closed to visitors during prayer times",
+      "tip": "Go right at opening to beat the queues. Dress modestly and cover hair if you are a woman.",
+      "source": "https://muze.gov.tr"
+    },
+    "topkapi": {
+      "name": "Topkapi Palace",
+      "landmark": "Topkapi Palace",
+      "kind": "museum",
+      "lat": 41.0115,
+      "lon": 28.9833,
+      "price": null,
+      "price_text": "Ticket plus separate Harem ticket; check current prices on the day",
+      "hours": "Usually Tue–Sun, roughly 09:00–17:00; closed one weekday — check on the day",
+      "tip": "Buy the Harem add-on; it is the best part. Allow at least half a day.",
+      "source": "https://muze.gov.tr"
+    },
+    "blue-mosque": {
+      "name": "Blue Mosque",
+      "landmark": "Blue Mosque",
+      "kind": "sight",
+      "lat": 41.0054,
+      "lon": 28.9768,
+      "price": 0,
+      "price_text": "Free; donations welcome",
+      "hours": "Open daily outside the five prayer times",
+      "tip": "Visit between prayers. Carry a scarf; shoes come off at the door.",
+      "source": ""
+    },
+    "basilica-cistern": {
+      "name": "Basilica Cistern",
+      "landmark": "Basilica Cistern",
+      "kind": "sight",
+      "lat": 41.0084,
+      "lon": 28.9779,
+      "price": null,
+      "price_text": "Paid entry; check the current ticket price on the day",
+      "hours": "Daily, roughly 09:00–19:00 — check on the day",
+      "tip": "Cool and dim inside — a good break on a hot afternoon. Look for the Medusa heads at the far end.",
+      "source": ""
+    },
+    "galata-tower": {
+      "name": "Galata Tower",
+      "landmark": "Galata Tower",
+      "kind": "sight",
+      "lat": 41.0256,
+      "lon": 28.9741,
+      "price": null,
+      "price_text": "Paid entry; check on the day",
+      "hours": "Daily, usually until evening — check on the day",
+      "tip": "The narrow balcony gets crowded. Go early or near closing for the best city view.",
+      "source": ""
+    },
+    "grand-bazaar": {
+      "name": "Grand Bazaar of Istanbul",
+      "landmark": "Grand Bazaar of Istanbul",
+      "kind": "sight",
+      "lat": 41.0102,
+      "lon": 28.968,
+      "price": 0,
+      "price_text": "Free to enter; you pay for what you buy",
+      "hours": "Mon–Sat roughly 09:00–19:00; closed Sunday",
+      "tip": "Haggle politely and walk away if the price feels wrong. Know your price before you start.",
+      "source": ""
+    },
+    "dolmabahce": {
+      "name": "Dolmabahce Palace",
+      "landmark": "Dolmabahce Palace",
+      "kind": "museum",
+      "lat": 41.0391,
+      "lon": 29.0007,
+      "price": null,
+      "price_text": "Paid entry; separate tickets for the Selamlik and Harem sections",
+      "hours": "Tue–Sun, roughly 09:00–16:00; closed Monday — check on the day",
+      "tip": "Entry is by timed guided tour. Arrive early and bring your passport for security.",
+      "source": ""
+    },
+    "suleymaniye": {
+      "name": "Suleymaniye Mosque",
+      "landmark": "Suleymaniye Mosque",
+      "kind": "sight",
+      "lat": 41.0162,
+      "lon": 28.9638,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily outside prayer times",
+      "tip": "The terrace behind the mosque has one of the best free views over the Golden Horn.",
+      "source": ""
+    },
+    "maidens-tower": {
+      "name": "Maiden's Tower",
+      "landmark": "Maiden's Tower",
+      "kind": "sight",
+      "lat": 41.0211,
+      "lon": 29.0041,
+      "price": null,
+      "price_text": "Small boat fare plus tower entry; check on the day",
+      "hours": "Daily; boats run from the Üsküdar shore — check times on the day",
+      "tip": "The view from the Üsküdar shore at sunset is free and just as good as going up.",
+      "source": ""
+    },
+    "rumeli-fortress": {
+      "name": "Rumeli Fortress",
+      "landmark": "Rumeli Fortress",
+      "kind": "sight",
+      "lat": 41.0836,
+      "lon": 29.0573,
+      "price": null,
+      "price_text": "Paid entry; check on the day",
+      "hours": "Usually Tue–Sun; closed one weekday — check on the day",
+      "tip": "Steep steps and uneven ground — wear good shoes. Combine it with a Bosphorus boat trip.",
+      "source": ""
+    },
+    "ataturk-stadium": {
+      "name": "Ataturk Olympic Stadium",
+      "landmark": "Ataturk Olympic Stadium",
+      "kind": "sight",
+      "lat": 41.0745,
+      "lon": 28.7657,
+      "price": null,
+      "price_text": "Match tickets vary; stadium tours only on event days — check on the day",
+      "hours": "Only on match or event days",
+      "tip": "It is far from the centre. Go only for a match and plan the trip back in advance.",
+      "source": ""
+    },
+    "balat": {
+      "name": "Balat",
+      "landmark": "Balat",
+      "kind": "sight",
+      "lat": 41.0311,
+      "lon": 28.9483,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; cafés and shops daytime",
+      "tip": "Walk the coloured houses and side streets on a weekday morning. It gets busy at weekends.",
+      "source": ""
+    },
+    "beylerbeyi": {
+      "name": "Beylerbeyi Palace",
+      "landmark": "Beylerbeyi Palace",
+      "kind": "museum",
+      "lat": 41.0428,
+      "lon": 29.0397,
+      "price": null,
+      "price_text": "Paid entry; check on the day",
+      "hours": "Tue–Sun, roughly 09:00–16:00; closed Monday — check on the day",
+      "tip": "Quieter than Dolmabahce. Combine it with a walk along the Asian shore.",
+      "source": ""
+    },
+    "bosphorus-bridge": {
+      "name": "Bosphorus Bridge",
+      "landmark": "Bosphorus Bridge",
+      "kind": "sight",
+      "lat": 41.0461,
+      "lon": 29.0335,
+      "price": 0,
+      "price_text": "Free to see; no pedestrian crossing",
+      "hours": "Always visible",
+      "tip": "Best seen from a Bosphorus boat or from the Ortaköy waterfront. You cannot walk across.",
+      "source": ""
+    },
+    "bosphorus-cruise": {
+      "name": "Bosphorus Cruise",
+      "landmark": "Bosphorus Cruise",
+      "kind": "tour",
+      "lat": 41.0182,
+      "lon": 28.9745,
+      "price": null,
+      "price_text": "Short trips from a few hundred TRY; long tours cost more — check on the day",
+      "hours": "Boats run daily from Eminönü and other piers; times vary",
+      "tip": "Take the short public ferry rather than a private tour if you want to save money.",
+      "source": ""
+    },
+    "bosporus": {
+      "name": "Bosporus",
+      "landmark": "Bosporus",
+      "kind": "sight",
+      "lat": 41.0351,
+      "lon": 29.0275,
+      "price": 0,
+      "price_text": "Free to view; boat trips cost extra",
+      "hours": "Always open",
+      "tip": "The waterfront at Ortaköy or Arnavutköy is a good free spot to watch the boats.",
+      "source": ""
+    },
+    "chora": {
+      "name": "Chora Mosque",
+      "landmark": "Chora Mosque",
+      "kind": "sight",
+      "lat": 41.0312,
+      "lon": 28.9392,
+      "price": null,
+      "price_text": "Free or small entry fee — check on the day",
+      "hours": "Open daily outside prayer times",
+      "tip": "The mosaics are the highlight. Go in the morning for better light.",
+      "source": ""
+    },
+    "eyup-sultan": {
+      "name": "Eyüp Sultan Mosque",
+      "landmark": "Eyüp Sultan Mosque",
+      "kind": "sight",
+      "lat": 41.0475,
+      "lon": 28.9338,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily outside prayer times",
+      "tip": "A calm, local mosque away from the crowds. Ride the cable car up to Pierre Loti for the view.",
+      "source": ""
+    },
+    "fatih-mosque": {
+      "name": "Fatih Mosque",
+      "landmark": "Fatih Mosque",
+      "kind": "sight",
+      "lat": 41.0196,
+      "lon": 28.9497,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily outside prayer times",
+      "tip": "Visit the market streets around it for a real local feel.",
+      "source": ""
+    },
+    "galata-bridge": {
+      "name": "Galata Bridge",
+      "landmark": "Galata Bridge",
+      "kind": "sight",
+      "lat": 41.0202,
+      "lon": 28.9733,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk the lower level for the fish restaurants and the view of the fishermen above.",
+      "source": ""
+    },
+    "gulhane-park": {
+      "name": "Gulhane Park",
+      "landmark": "Gulhane Park",
+      "kind": "park",
+      "lat": 41.0136,
+      "lon": 28.9814,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, daytime to early evening",
+      "tip": "A quiet green break next to Topkapi. Good for a picnic or a rest between sights.",
+      "source": ""
+    },
+    "istanbul-aquarium": {
+      "name": "Istanbul Aquarium",
+      "landmark": "Istanbul Aquarium",
+      "kind": "sight",
+      "lat": 40.9634,
+      "lon": 28.7994,
+      "price": null,
+      "price_text": "Paid entry; check on the day",
+      "hours": "Daily, roughly 10:00–20:00 — check on the day",
+      "tip": "Good for families and rainy days. It is far from the old city — allow travel time.",
+      "source": ""
+    },
+    "kadikoy-market": {
+      "name": "Kadıköy Market streets",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.9903,
+      "lon": 29.0267,
+      "price": 0,
+      "price_text": "Free to browse; pay for what you eat",
+      "hours": "Daily, busiest late morning to evening",
+      "tip": "Eat your way through the market streets — cheese, olives, and fresh fish. Cheaper than the tourist side.",
+      "source": ""
+    },
+    "pierre-loti": {
+      "name": "Pierre Loti viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.0508,
+      "lon": 28.9347,
+      "price": 0,
+      "price_text": "Free; cable car costs a small fare",
+      "hours": "Daily, daytime to evening",
+      "tip": "Take the cable car up and walk down through the old cemetery for the Golden Horn view.",
+      "source": ""
+    },
+    "istiklal-walk": {
+      "name": "İstiklal Avenue walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.0345,
+      "lon": 28.9772,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; liveliest in the evening",
+      "tip": "Walk from Taksim down to Galata. Watch your bag in the crowds.",
+      "source": ""
+    },
+    "turkish-bath": {
+      "name": "Historic Turkish bath (hamam)",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.0086,
+      "lon": 28.976,
+      "price": null,
+      "price_text": "Entry plus scrub varies widely; check on the day",
+      "hours": "Daily, usually morning to late evening",
+      "tip": "Book ahead and bring a swimsuit. Men and women are usually separate or on different hours.",
+      "source": ""
+    },
+    "ortakoy-walk": {
+      "name": "Ortaköy waterfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.0472,
+      "lon": 29.0272,
+      "price": 0,
+      "price_text": "Free; snacks cost extra",
+      "hours": "Always open; stalls daytime to evening",
+      "tip": "Try a baked potato (kumpir) and watch the bridge light up at sunset.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day in the old city: Hagia Sophia, Topkapı and the cistern on foot.",
+      "days": [
+        {
+          "title": "Sultanahmet on foot",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Go at opening. Closed to visitors during prayer times; dress modestly."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Five minutes on foot. Open outside the five prayer times."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Cool and dim inside — good before lunch."
+            },
+            {
+              "place": "topkapi",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Lunch first, then the palace. Closed one weekday — check on the day."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Uphill walk. Late afternoon light over the Golden Horn."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way from the bazaar to the ferry and across to Asia.",
+      "days": [
+        {
+          "title": "Bazaar, bridge and two continents",
+          "stops": [
+            {
+              "place": "grand-bazaar",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday morning is calmest."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Walk down to Eminönü. Balık ekmek stalls under the bridge."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Short hop boats leave from Eminönü; times vary — check on the day."
+            },
+            {
+              "place": "kadikoy-market",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Ferry to Kadıköy. Graze the market streets for meze and baklava."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Optional: ferry back and finish with kumpir by the water at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Mosques, a hamam and a Bosphorus sunset — the classic first day.",
+      "days": [
+        {
+          "title": "Old city to the water",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Start early before the queues build."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk downhill. Spring tulips are the highlight."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Book ahead. Late morning slots are quieter."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Boats from Eminönü; late afternoon light is best."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Sunset over the water, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day: the old city's headline sights on foot, then a palace morning before you fly.",
+      "days": [
+        {
+          "title": "Sultanahmet on foot",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Go at opening on a weekday. Closed to visitors during prayer times."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Five minutes on foot. Open outside the five prayer times; dress modestly."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Cool and dry inside — good at midday. Check hours on the day."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch nearby first. Closed Sunday."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Uphill walk. Late afternoon light over the Golden Horn."
+            }
+          ]
+        },
+        {
+          "title": "Palace morning, then go",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Arrive at opening. Closed one weekday — check on the day. Leave bags at the hotel."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Exit downhill from the palace. Good spot for a quick lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way from the bazaar streets to the Asian side, with a ferry ride in between.",
+      "days": [
+        {
+          "title": "Old city tastes and the bridge",
+          "stops": [
+            {
+              "place": "grand-bazaar",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Closed Sunday."
+            },
+            {
+              "place": "balat",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Cafés and small bakeries. Walk downhill to the water."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Balık ekmek stalls and restaurants under the bridge."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk up from the bridge. Meze and baklava spots all along the avenue."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Asia, market lunch",
+          "stops": [
+            {
+              "place": "bosphorus-cruise",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Short hop from Eminönü. Check boat times on the day."
+            },
+            {
+              "place": "kadikoy-market",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Busiest late morning to evening. Graze as you go."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Boats from the Üsküdar shore. Check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet or Beyoğlu"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: mosques and bazaars on day one, a hamam and the Bosphorus on day two.",
+      "days": [
+        {
+          "title": "Mosques, bazaar and a hamam",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Early morning on a weekday is quietest."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk. Open outside prayer times."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Lunch in the surrounding streets."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Book ahead if you can. Bring a swimsuit or spare underwear."
+            }
+          ]
+        },
+        {
+          "title": "Bosphorus and Beyoğlu",
+          "stops": [
+            {
+              "place": "bosphorus-cruise",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Boats from Eminönü. Times vary — check on the day."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch by the water; kumpir stalls are the local classic."
+            },
+            {
+              "place": "galata-tower",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Expect a queue. Check hours on the day."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Walk down from the tower. Liveliest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the big imperial sights done calmly, all in the old city.",
+      "days": [
+        {
+          "title": "Arrive and the old city core",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Closed to visitors during prayer times. Weekday afternoons are quieter than mornings in high season."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Five minutes on foot. Cool and dry if it rains."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Easy stroll downhill toward the water."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Walk over for sunset; fish restaurants sit under the deck."
+            }
+          ]
+        },
+        {
+          "title": "Palace morning, mosques and bazaar afternoon",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Usually closed one weekday — check on the day. Go straight to the Harem ticket queue."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby first, then the courtyard view over the Golden Horn."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday afternoons are busy but fine."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Open outside the five prayer times. Cover shoulders and knees."
+            }
+          ]
+        },
+        {
+          "title": "Bosphorus and the walls",
+          "stops": [
+            {
+              "place": "chora",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Open outside prayer times. A taxi from Sultanahmet is easiest."
+            },
+            {
+              "place": "eyup-sultan",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Quiet morning atmosphere; modest dress."
+            },
+            {
+              "place": "pierre-loti",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Cable car or a short walk up. Coffee with the Golden Horn view."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Boats leave from Eminönü; times vary, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, street snacks and a ferry across to Asia.",
+      "days": [
+        {
+          "title": "Arrive, spice streets and the bridge",
+          "stops": [
+            {
+              "place": "galata-bridge",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Start with balık ekmek from the boats at Eminönü."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Good for Turkish delight and tea glasses."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk up from Galata; snack stalls all along the avenue."
+            },
+            {
+              "place": "galata-tower",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Usually open until evening — check on the day. Sunset slot is popular."
+            }
+          ]
+        },
+        {
+          "title": "Asia side market day",
+          "stops": [
+            {
+              "place": "kadikoy-market",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Ferry from Eminönü or Karaköy. Busiest late morning; go hungry."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short boat from the Üsküdar shore; check times on the day."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Ferry back and along the water. Kumpir stalls and the bridge view."
+            },
+            {
+              "place": "bosphorus-bridge",
+              "at": "18:45",
+              "minutes": 20,
+              "note": "Best at sunset or lit up after dark."
+            }
+          ]
+        },
+        {
+          "title": "Old city tastes and a hammam",
+          "stops": [
+            {
+              "place": "blue-mosque",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Outside prayer times. Then breakfast or simit nearby."
+            },
+            {
+              "place": "balat",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Cafés and small bakeries; weekday morning is calmest."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Book ahead. Late afternoon is a good slot before dinner."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Outside prayer times. Rooftop tea gardens nearby for the view."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet or Karaköy"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "A balanced first trip: mosques, bazaar, hammam and a Bosphorus ferry.",
+      "days": [
+        {
+          "title": "Arrive and Sultanahmet icons",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Closed during prayer times. Early afternoon on a weekday is calmer."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Outside the five prayer times. Modest dress; scarves are lent at the door."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Check hours on the day. Cool and dry if it rains."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead; historic hamams fill up in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Palace, bazaar and the water",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Usually closed one weekday — check on the day. Arrive at opening."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday afternoons are busy but fine."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "From Eminönü; times vary, so check on the day. Late afternoon light is best."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Sunset over the Golden Horn; dinner under the bridge."
+            }
+          ]
+        },
+        {
+          "title": "Towers, avenue and Asia",
+          "stops": [
+            {
+              "place": "galata-tower",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Usually open until evening — check on the day. Go early to skip the queue."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Walk down from the tower; liveliest in the evening but fine now."
+            },
+            {
+              "place": "kadikoy-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Ferry across, then lunch in the market streets."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Boat from the Üsküdar shore; check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet or Beyoğlu"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the big imperial sights done calmly, area by area.",
+      "days": [
+        {
+          "title": "Arrive and the old city core",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Go early afternoon; it closes to visitors during prayer times."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Five minutes on foot. Cool and dry if it rains."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Easy stroll downhill toward the water."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner near the bridge; fish restaurants sit under the deck."
+            }
+          ]
+        },
+        {
+          "title": "Topkapı and the bazaar",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Arrive at opening. Closed one weekday — check on the day."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby first, then the courtyard view over the Golden Horn."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday afternoons are busy but fine."
+            },
+            {
+              "place": "chora",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Short taxi ride. Open outside prayer times."
+            }
+          ]
+        },
+        {
+          "title": "Palaces on the Bosphorus, then fly",
+          "stops": [
+            {
+              "place": "dolmabahce",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Bring your passport for security."
+            },
+            {
+              "place": "beylerbeyi",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Cross by ferry or taxi. Also closed Monday."
+            },
+            {
+              "place": "rumeli-fortress",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Outdoor and hilly. Closed one weekday — check on the day."
+            },
+            {
+              "place": "bosphorus-bridge",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Viewpoint stop on the way back to town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, ferries and street food on both sides of the water.",
+      "days": [
+        {
+          "title": "Arrive, spice streets and the bridge",
+          "stops": [
+            {
+              "place": "grand-bazaar",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Skip the hard sell and head for the food lanes."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk the lower deck; balık ekmek boats are nearby."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Ride the old tram uphill, then walk down."
+            },
+            {
+              "place": "galata-tower",
+              "at": "19:30",
+              "minutes": 45,
+              "note": "Sunset slot; expect a queue. Check closing time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Kadıköy market day",
+          "stops": [
+            {
+              "place": "kadikoy-market",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Ferry from Eminönü. Busiest late morning; go hungry."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Boat from the Üsküdar shore. Check times on the day."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Kumpir and waffle stalls; sunset over the bridge."
+            }
+          ]
+        },
+        {
+          "title": "Old city tastes, then fly",
+          "stops": [
+            {
+              "place": "balat",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Café breakfast in the back streets. Shops open daytime."
+            },
+            {
+              "place": "eyup-sultan",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Open outside prayer times. Good lunch spots around the square."
+            },
+            {
+              "place": "pierre-loti",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Cable car up, tea with the view."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late-afternoon boat from Eminönü. Times vary — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Beyoğlu"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for most visitors: mosques, bazaars, a hammam and a Bosphorus ferry.",
+      "days": [
+        {
+          "title": "Arrive, Sultanahmet icons",
+          "stops": [
+            {
+              "place": "blue-mosque",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Open outside the five prayer times. Cover shoulders and hair."
+            },
+            {
+              "place": "hagia-sophia",
+              "at": "15:15",
+              "minutes": 75,
+              "note": "Two minutes on foot. Closed to visitors during prayer times."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Check closing time on the day."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead for late afternoon or evening."
+            }
+          ]
+        },
+        {
+          "title": "Palace, bazaar and the water",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "At opening. Closed one weekday — check on the day."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Sunday."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "From Eminönü, a short tram ride away. Times vary."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner with the ferry traffic going by."
+            }
+          ]
+        },
+        {
+          "title": "Beyoğlu and Beşiktaş, then fly",
+          "stops": [
+            {
+              "place": "galata-tower",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early beats the queue. Check opening time on the day."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Quiet in the morning, good for photos."
+            },
+            {
+              "place": "dolmabahce",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Closed Monday. Bring your passport."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Last stop before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-time visitors who want the big imperial sights without rushing.",
+      "days": [
+        {
+          "title": "Arrive and the old city core",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Go early if you can; it closes to visitors during prayer times."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Cool and dry — good after a flight."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Easy stroll downhill toward the water."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset over the Golden Horn, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Topkapı and the bazaar",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Closed one weekday — check on the day. Bring your passport for the Harem ticket."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch in the streets below, then the mosque courtyard."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday afternoons are calmer."
+            }
+          ]
+        },
+        {
+          "title": "Churches, mosques and the city walls",
+          "stops": [
+            {
+              "place": "chora",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Outside prayer times. A taxi from Sultanahmet is easiest."
+            },
+            {
+              "place": "eyup-sultan",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "A short ride further up the Golden Horn."
+            },
+            {
+              "place": "pierre-loti",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch and the view over the water."
+            },
+            {
+              "place": "fatih-mosque",
+              "at": "15:30",
+              "minutes": 40,
+              "note": "Quiet, local and rarely crowded."
+            }
+          ]
+        },
+        {
+          "title": "Palaces and the Bosphorus",
+          "stops": [
+            {
+              "place": "dolmabahce",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "beylerbeyi",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Cross by ferry or taxi; closed Monday."
+            },
+            {
+              "place": "rumeli-fortress",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Outdoor and steep in places. Closed one weekday — check on the day."
+            },
+            {
+              "place": "bosphorus-bridge",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "View from the Beşiktaş shore at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want markets, ferries and two continents in four days.",
+      "days": [
+        {
+          "title": "Arrive, bridge snacks and the old city",
+          "stops": [
+            {
+              "place": "galata-bridge",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Balık ekmek from the boats below the bridge."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Cool break between meals."
+            },
+            {
+              "place": "hagia-sophia",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Outside prayer times."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening stroll; meze and baklava along the way."
+            }
+          ]
+        },
+        {
+          "title": "Bazaar and the spice streets",
+          "stops": [
+            {
+              "place": "grand-bazaar",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday mornings are best."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch nearby, then the courtyard view."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Book ahead; late afternoon is a good slot."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset and grilled fish downstairs."
+            }
+          ]
+        },
+        {
+          "title": "Ferry to Asia",
+          "stops": [
+            {
+              "place": "kadikoy-market",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Busiest late morning. Graze as you go."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Boats from the Üsküdar shore — check times on the day."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon light; times vary by pier."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Kumpir and waffles by the water."
+            }
+          ]
+        },
+        {
+          "title": "Palaces and a last long lunch",
+          "stops": [
+            {
+              "place": "dolmabahce",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "balat",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Cafés and bakeries in the old streets."
+            },
+            {
+              "place": "bosporus",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Sunset from the Beşiktaş side."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Beyoğlu"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Our pick for most visitors: mosques, bazaars, a hammam and a ferry ride.",
+      "days": [
+        {
+          "title": "Arrive and Sultanahmet",
+          "stops": [
+            {
+              "place": "blue-mosque",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Outside the five prayer times. Dress modestly."
+            },
+            {
+              "place": "hagia-sophia",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Closed to visitors during prayer times."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Check closing time on the day."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "Palace and bazaar",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Closed one weekday — check on the day."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Sunday."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon for the view."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Beyoğlu and the tower",
+          "stops": [
+            {
+              "place": "galata-tower",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early to beat the queue. Check hours on the day."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch off the avenue."
+            },
+            {
+              "place": "balat",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Colourful streets and cafés."
+            },
+            {
+              "place": "chora",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Outside prayer times."
+            }
+          ]
+        },
+        {
+          "title": "Bosphorus and Asia",
+          "stops": [
+            {
+              "place": "dolmabahce",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch by the water."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Times vary by pier — check on the day."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset; boats from the Üsküdar shore."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "5n-history",
+      "length": "5n",
+      "style": "history",
+      "nights": 5,
+      "for": "Five days of Ottoman and Byzantine sights, grouped by area so you walk less and see more.",
+      "days": [
+        {
+          "title": "Old city icons",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Go early. It closes to visitors during prayer times."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Five minutes on foot. Open outside the five prayer times."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Cool and dark — good at midday."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch nearby, then a slow walk through the park."
+            }
+          ]
+        },
+        {
+          "title": "Topkapı and the bazaar",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Usually closed one weekday — check on the day. Bring your passport."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch in the streets below, then the mosque and its view."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Weekday afternoons are calmer."
+            }
+          ]
+        },
+        {
+          "title": "Chora, Eyüp and Pierre Loti",
+          "stops": [
+            {
+              "place": "chora",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Open outside prayer times. Check the mosaics are viewable on the day."
+            },
+            {
+              "place": "eyup-sultan",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "A short taxi or bus ride north."
+            },
+            {
+              "place": "pierre-loti",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Cable car or a steep walk up. Late afternoon light is best."
+            },
+            {
+              "place": "fatih-mosque",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "On the way back to the old city."
+            }
+          ]
+        },
+        {
+          "title": "Palaces on the Bosphorus",
+          "stops": [
+            {
+              "place": "dolmabahce",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "beylerbeyi",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Cross by ferry or taxi. Closed Monday."
+            },
+            {
+              "place": "rumeli-fortress",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Usually closed one weekday — check on the day. Outdoor, so pick a dry day."
+            }
+          ]
+        },
+        {
+          "title": "Balat and a last walk",
+          "stops": [
+            {
+              "place": "balat",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Colourful old streets. Weekday mornings are quiet."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Lunch at the fish restaurants under the bridge."
+            },
+            {
+              "place": "galata-tower",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Check opening hours on the day. Queues can be long."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Eat your way across both continents, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Old city tastes",
+          "stops": [
+            {
+              "place": "gulhane-park",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Walk off breakfast. Spring is best for tulips."
+            },
+            {
+              "place": "hagia-sophia",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Closed to visitors during prayer times."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Snack on simit and Turkish delight."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Nearby streets are good for a late lunch."
+            }
+          ]
+        },
+        {
+          "title": "Kadıköy market day",
+          "stops": [
+            {
+              "place": "kadikoy-market",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Ferry from Eminönü. Busiest late morning to evening."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Boats from the Üsküdar shore — check times on the day."
+            },
+            {
+              "place": "bosphorus-cruise",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Late afternoon light. Times vary — check at the pier."
+            }
+          ]
+        },
+        {
+          "title": "Beyoğlu grazing",
+          "stops": [
+            {
+              "place": "galata-tower",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Early to beat the queue. Check hours on the day."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Snack stalls and cafés all along the avenue."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Sunset, then dinner at the fish restaurants below."
+            }
+          ]
+        },
+        {
+          "title": "Ortaköy and the water",
+          "stops": [
+            {
+              "place": "ortakoy-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Kumpir and waffle stalls. Best at sunset but busy then."
+            },
+            {
+              "place": "bosporus",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk the shoreline or take a short ferry hop."
+            },
+            {
+              "place": "bosphorus-bridge",
+              "at": "18:00",
+              "minutes": 20,
+              "note": "Lit up in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Balat and a hamam",
+          "stops": [
+            {
+              "place": "balat",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Cafés and bakeries in the old streets."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Book ahead. Usually open morning to late evening."
+            },
+            {
+              "place": "eyup-sultan",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Open outside prayer times. Good for a quiet end to the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Beyoğlu"
+    },
+    {
+      "id": "5n-culture",
+      "length": "5n",
+      "style": "culture",
+      "nights": 5,
+      "for": "Mosques, bazaars, a hamam and ferries — the city at an easy pace.",
+      "days": [
+        {
+          "title": "Sultanahmet essentials",
+          "stops": [
+            {
+              "place": "hagia-sophia",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Closed to visitors during prayer times."
+            },
+            {
+              "place": "blue-mosque",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Open outside the five prayer times. Dress modestly."
+            },
+            {
+              "place": "basilica-cistern",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "turkish-bath",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Book ahead. A good way to end the day."
+            }
+          ]
+        },
+        {
+          "title": "Palace and bazaar",
+          "stops": [
+            {
+              "place": "topkapi",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Usually closed one weekday — check on the day."
+            },
+            {
+              "place": "grand-bazaar",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Sunday."
+            },
+            {
+              "place": "suleymaniye",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon for the view over the water."
+            }
+          ]
+        },
+        {
+          "title": "Two continents",
+          "stops": [
+            {
+              "place": "bosphorus-cruise",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Boats from Eminönü and other piers. Times vary."
+            },
+            {
+              "place": "kadikoy-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch on the Asian side."
+            },
+            {
+              "place": "maidens-tower",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Boats from the Üsküdar shore — check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Beyoğlu and the bridge",
+          "stops": [
+            {
+              "place": "galata-tower",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "istiklal-walk",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Liveliest in the evening, but quieter now."
+            },
+            {
+              "place": "galata-bridge",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Sunset over the old city."
+            }
+          ]
+        },
+        {
+          "title": "Palaces and parks",
+          "stops": [
+            {
+              "place": "dolmabahce",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday — check on the day."
+            },
+            {
+              "place": "ortakoy-walk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch by the water."
+            },
+            {
+              "place": "gulhane-park",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "A gentle finish near the old city."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sultanahmet"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Hagia Sophia, Topkapı and the old city walls."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Balık ekmek, meze and baklava across two continents."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Mosques, bazaars, hammams and Bosphorus ferries."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Sultanahmet",
+      "range": [
+        2500,
+        7000
+      ],
+      "why": "Walk to Hagia Sophia, the Blue Mosque and Topkapı. Quiet at night; tram nearby.",
+      "center": [
+        41.0055,
+        28.9768
+      ]
+    },
+    {
+      "area": "Beyoğlu",
+      "range": [
+        3000,
+        9000
+      ],
+      "why": "İstiklal Avenue, cafés and nightlife. Central for the new city and the Galata area.",
+      "center": [
+        41.0335,
+        28.9772
+      ]
+    },
+    {
+      "area": "Kadıköy",
+      "range": [
+        2000,
+        6000
+      ],
+      "why": "Asian side: food markets, bars and a local feel. Ferries to the old city.",
+      "center": [
+        40.9903,
+        29.027
+      ]
+    },
+    {
+      "area": "Beşiktaş",
+      "range": [
+        2800,
+        8000
+      ],
+      "why": "Ferry and bus hub on the European shore; close to Dolmabahçe Palace and Ortaköy.",
+      "center": [
+        41.0422,
+        29.0075
+      ]
+    }
+  ],
+  "food": [
+    "Try Turkish classics: balık ekmek (fish sandwich) by the water, meze plates, and baklava with pistachio.",
+    "Kadıköy market streets are great for cheap eats: simit, döner and fresh produce. Expect roughly 50–200 TRY a snack.",
+    "Breakfast (kahvaltı) is a big spread of cheese, olives, eggs and tea. Many cafés serve it all morning.",
+    "Street food: simit rings, roasted corn and chestnuts in season. Check prices first in tourist areas.",
+    "Alcohol is widely sold in Beyoğlu and Kadıköy bars; it is limited near mosques in Sultanahmet."
+  ],
+  "more_time": [
+    "Swap a day for a Bosphorus ferry ride to the villages near the Black Sea; check the timetable on the day.",
+    "Add a hammam visit: historic baths in Sultanahmet and Beyoğlu; prices vary, book ahead.",
+    "Take a day trip to the Princes' Islands by ferry for car-free streets and seafood."
+  ]
+}

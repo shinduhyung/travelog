@@ -1,0 +1,283 @@
+{
+  "currency": "SEK",
+  "usd_rate": 9.9102,
+  "intro_line": "Stockholm: islands, spires, and water everywhere.",
+  "intro": "Stockholm rewards visitors with walkable islands, world-class museums, and a calm, watery beauty. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Norrmalm",
+    "Gamla Stan",
+    "Södermalm",
+    "Östermalm"
+  ],
+  "taxi": {
+    "flag_day": 50,
+    "flag_airport": 100,
+    "per_km": 15,
+    "min_fare": 100
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Metro (Tunnelbana) is fast and covers the city; buy an SL card or use the app.",
+    "Trams and buses fill the gaps; SL travel card is best value.",
+    "Taxis are pricey; use Uber or Bolt for app-based rides.",
+    "Driving is not recommended in the centre due to congestion and tolls.",
+    "Walking and cycling are great in warm months; many bike lanes.",
+    "Ferries connect the islands and are part of the transit network."
+  ],
+  "airports": [
+    {
+      "code": "ARN",
+      "name": "Stockholm-Arlanda Airport",
+      "primary": true,
+      "note": "Main international airport, 37 km north of the city.",
+      "options": [
+        {
+          "mode": "FlixBus",
+          "to": "City Terminal",
+          "price": "79-99 kr",
+          "time": "45 min",
+          "note": "Cheapest bus; book in advance for lower fares."
+        },
+        {
+          "mode": "SL commuter train",
+          "to": "Stockholm Central",
+          "price": "180 kr",
+          "time": "40-50 min",
+          "note": "Requires SL ticket; includes airport surcharge."
+        },
+        {
+          "mode": "Arlanda Express",
+          "to": "Stockholm Central",
+          "price": "175-350 kr",
+          "time": "20 min",
+          "note": "Fastest, but pricey; discounts for youth and groups."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "500-700 kr",
+          "time": "30-40 min",
+          "note": "Use fixed-price taxis from major companies."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "400-600 kr",
+          "time": "30-40 min",
+          "note": "App-based; may have surge pricing."
+        }
+      ]
+    },
+    {
+      "code": "BMA",
+      "name": "Stockholm-Bromma Airport",
+      "primary": false,
+      "note": "City airport, 8 km west of centre; limited flights.",
+      "options": [
+        {
+          "mode": "Tram 31 + Metro",
+          "to": "T-Centralen",
+          "price": "40-60 kr",
+          "time": "30 min",
+          "note": "Tram to Alvik, then metro green line."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "200-300 kr",
+          "time": "15-20 min",
+          "note": "Short ride but can be slow in traffic."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "150-250 kr",
+          "time": "15-20 min",
+          "note": "Often cheaper than taxi."
+        }
+      ]
+    },
+    {
+      "code": "NYO",
+      "name": "Stockholm Skavsta Airport",
+      "primary": false,
+      "note": "Budget airport, 89 km southwest; used by Wizz Air and Norwegian.",
+      "options": [
+        {
+          "mode": "Local bus + SJ train",
+          "to": "Stockholm Central",
+          "price": "100-150 kr",
+          "time": "80-90 min",
+          "note": "Bus 515/715 to Nyköping, then train."
+        },
+        {
+          "mode": "Airport coach",
+          "to": "City Terminal",
+          "price": "229 kr",
+          "time": "80 min",
+          "note": "Direct and convenient; book online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "1000-1500 kr",
+          "time": "70-80 min",
+          "note": "Very expensive; not recommended."
+        }
+      ]
+    },
+    {
+      "code": "VST",
+      "name": "Stockholm Västerås Airport",
+      "primary": false,
+      "note": "Ryanair airport, 86 km west; serves London Stansted.",
+      "options": [
+        {
+          "mode": "Taxi shuttle + regional train",
+          "to": "Stockholm Central",
+          "price": "109 kr",
+          "time": "65 min",
+          "note": "Shuttle to Västerås station, then train."
+        },
+        {
+          "mode": "Airport coach",
+          "to": "City Terminal",
+          "price": "139 kr",
+          "time": "80 min",
+          "note": "Direct coach; slower but simple."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "1200-1600 kr",
+          "time": "70-80 min",
+          "note": "Very expensive; not recommended."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Vasa Museum",
+    "Gamla Stan",
+    "Stockholm Palace",
+    "Stockholm City Hall",
+    "Skansen",
+    "ABBA The Museum",
+    "Stockholm Metro Art",
+    "Birka and Hovgården",
+    "Drottningholm Palace",
+    "Friends Arena",
+    "Gröna Lund",
+    "Junibacken",
+    "KTH Royal Institute of Technology",
+    "Köttbullar",
+    "National Library of Sweden",
+    "Riddarholmen Church",
+    "Sergels Torg",
+    "Stockholm Public Library",
+    "Stortorget, Stockholm",
+    "Under the Bridges of Stockholm"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Stockholm",
+      "https://en.wikivoyage.org/wiki/Stockholm"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    59.3293,
+    18.0686
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 1,
+      "low": -4,
+      "rain_days": 11
+    },
+    {
+      "high": 2,
+      "low": -3,
+      "rain_days": 9
+    },
+    {
+      "high": 5,
+      "low": -2,
+      "rain_days": 9
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 12
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 8
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 10
+    },
+    {
+      "high": 5,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 2,
+      "low": -2,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "VST taxi 109 kr vs tariff estimate 1777"
+  ]
+}

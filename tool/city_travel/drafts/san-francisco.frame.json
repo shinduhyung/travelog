@@ -1,0 +1,275 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Alcatraz, cable cars and the Golden Gate."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Mission burritos, Ferry Building and dim sum."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Coastal trails, redwoods and bay views."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Union Square",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Central for shopping, cable cars and transit; easy walk to Chinatown and the waterfront.",
+      "center": [
+        37.788,
+        -122.407
+      ]
+    },
+    {
+      "area": "Fisherman's Wharf",
+      "range": [
+        200,
+        480
+      ],
+      "why": "Steps from Alcatraz ferries, Pier 39 and the cable car; family-friendly but touristy.",
+      "center": [
+        37.808,
+        -122.417
+      ]
+    },
+    {
+      "area": "SoMa",
+      "range": [
+        170,
+        400
+      ],
+      "why": "Close to Oracle Park, museums and BART; good value and quick airport links.",
+      "center": [
+        37.778,
+        -122.405
+      ]
+    },
+    {
+      "area": "Mission District",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Best food and nightlife; sunny, walkable streets and BART nearby.",
+      "center": [
+        37.759,
+        -122.414
+      ]
+    }
+  ],
+  "food": [
+    "Get a Mission-style burrito in the Mission District; portions are huge, so share or go hungry.",
+    "Ferry Building Marketplace: sample local cheese, bread and coffee; check opening days on the day.",
+    "Chinatown dim sum is cheap and filling; go before noon for the freshest trays.",
+    "Cioppino (seafood stew) and sourdough bread bowls are the classic wharf dishes; expect tourist prices.",
+    "Book popular restaurants ahead; walk-ins are hard at dinner on weekends."
+  ],
+  "more_time": [
+    "Swap a city day for Muir Woods redwoods or Sausalito by ferry; check tour and shuttle options on the day.",
+    "Add a Golden Gate Park half-day: gardens, museums and Ocean Beach at the end.",
+    "Take a ferry to Alcatraz; tickets sell out, so book well ahead."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.85
+    ],
+    "nature": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      0.85,
+      0.85,
+      0.85,
+      1,
+      0.95,
+      0.7,
+      0.6
+    ],
+    "nightlife": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.6
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Three nights covers Alcatraz, the Golden Gate and a food neighbourhood without rushing; add a day for redwoods or the coast."
+  },
+  "month_notes": [
+    "Jan: cool and wet, highs near 14°C. Pack a rain jacket and layers.",
+    "Feb: still wet, highs around 15°C. Indoor sights are a good bet.",
+    "Mar: rain lingers, highs near 15°C. Bring an umbrella.",
+    "Apr: drier and milder, highs around 16°C. Good walking weather.",
+    "May: mostly dry, highs near 17°C. Fog can roll in by evening.",
+    "Jun: dry but cool, highs around 19°C. Mornings are often foggy.",
+    "Jul: dry and mild, highs near 19°C. Fog is common near the coast.",
+    "Aug: similar to July, highs around 20°C. Warmest evenings inland.",
+    "Sep: often the sunniest month, highs near 21°C. Great for outdoor plans.",
+    "Oct: warm and mostly dry, highs around 21°C. A few showers late in the month.",
+    "Nov: cooler and wetter, highs near 16°C. Carry a rain layer.",
+    "Dec: cool and rainy, highs around 13°C. Pack warm layers and an umbrella."
+  ],
+  "climate_guide": {
+    "summary": "Mild and Mediterranean-style: cool, wet winters and dry, foggy summers. Rarely hot or freezing.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: September to October",
+        "text": "Warmest and driest months, highs near 21°C. Ideal for walking and the coast."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winters (Dec–Mar)",
+        "text": "Around 8–10 rain days a month and highs of 13–15°C. Bring a waterproof jacket."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Summer fog",
+        "text": "June to August is dry but cool and foggy, highs 19–20°C. The coast is chillier than inland."
+      },
+      {
+        "icon": "🧥",
+        "title": "Layer up",
+        "text": "Mornings and evenings are cool year-round. A light jacket helps every month."
+      },
+      {
+        "icon": "💨",
+        "title": "Wind on the bridge and coast",
+        "text": "The Golden Gate and beaches are windy and colder than downtown. Wear a windproof layer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes for hills, layers, a rain jacket in winter, and sunglasses for fog-free afternoons."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk neighbourhoods and use Muni or BART for longer hops; skip a rental car in town.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "BART is the fast regional metro; Muni Metro covers the city. Buy a Clipper card to ride both."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Muni buses fill the gaps; use the same Clipper card. Slow at peak times."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber and Lyft are widely used and handy for late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is costly; skip a rental car in town."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The best way to see neighbourhoods, but hills are steep. Wear good shoes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries from the Ferry Building reach Sausalito, Tiburon and Alcatraz. Pay with Clipper."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Caltrain runs regional services; use the Clipper card."
+      }
+    ]
+  }
+}

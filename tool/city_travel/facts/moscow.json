@@ -1,0 +1,264 @@
+{
+  "currency": "RUB",
+  "usd_rate": 81.5205,
+  "intro_line": "Moscow: onion domes, metro palaces, and endless ambition.",
+  "intro": "Moscow rewards visitors with grand history, world-class art, and a fast, cheap metro. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Tverskoy",
+    "Kitay-Gorod",
+    "Arbat",
+    "Khamovniki"
+  ],
+  "taxi": {
+    "flag_day": 250,
+    "flag_airport": 500,
+    "per_km": 40,
+    "min_fare": 300
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro is fast, cheap and runs about 05:30-01:00; stations are attractions in themselves.",
+    "Buses, trolleybuses and trams fill the gaps; a Troika card cuts fares.",
+    "Yandex Go is the main ride app; taxis are metered but agree the price first.",
+    "Driving in the centre is slow and parking is costly; use park-and-ride.",
+    "Central streets are walkable; bike lanes are limited and winter is icy.",
+    "No useful ferry service in the city."
+  ],
+  "airports": [
+    {
+      "code": "SVO",
+      "name": "Sheremetyevo International Airport",
+      "primary": true,
+      "note": "Aeroflot hub, 27 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Bus 851",
+          "to": "Rechnoy Vokzal metro",
+          "price": "₽57",
+          "time": "40-60 min",
+          "note": "Cheapest; validate your ticket on board."
+        },
+        {
+          "mode": "Aeroexpress train",
+          "to": "Belorussky station",
+          "price": "₽525",
+          "time": "50 min",
+          "note": "Runs every 30-60 min, 05:00-00:30."
+        },
+        {
+          "mode": "Night bus H1",
+          "to": "City centre",
+          "price": "₽61",
+          "time": "40-60 min",
+          "note": "Every 30 min, 00:30-05:30."
+        },
+        {
+          "mode": "Taxi / Yandex Go",
+          "to": "City centre",
+          "price": "₽1,000-1,500",
+          "time": "40-70 min",
+          "note": "Book in the app; ignore touts."
+        }
+      ]
+    },
+    {
+      "code": "DME",
+      "name": "Domodedovo International Airport",
+      "primary": true,
+      "note": "Main airport for foreign airlines, 43 km southeast.",
+      "options": [
+        {
+          "mode": "Bus 308",
+          "to": "Domodedovskaya metro",
+          "price": "₽100",
+          "time": "30 min",
+          "note": "Runs 24 hours, every 15 min."
+        },
+        {
+          "mode": "Commuter train",
+          "to": "Paveletsky station",
+          "price": "₽120",
+          "time": "75 min",
+          "note": "Cheaper but slower than Aeroexpress."
+        },
+        {
+          "mode": "Aeroexpress train",
+          "to": "Paveletsky station",
+          "price": "₽525",
+          "time": "50 min",
+          "note": "Every 30 min, 06:00-00:30."
+        },
+        {
+          "mode": "Taxi / Yandex Go",
+          "to": "City centre",
+          "price": "₽1,000-1,500",
+          "time": "50-90 min",
+          "note": "Traffic can be heavy; allow extra time."
+        }
+      ]
+    },
+    {
+      "code": "VKO",
+      "name": "Vnukovo International Airport",
+      "primary": false,
+      "note": "Smaller airport, 29 km southwest.",
+      "options": [
+        {
+          "mode": "Bus 911",
+          "to": "Salaryevo metro",
+          "price": "₽36-55",
+          "time": "35-40 min",
+          "note": "Troika card is cheaper than paying the driver."
+        },
+        {
+          "mode": "Metro line 8A",
+          "to": "City centre",
+          "price": "₽60-80",
+          "time": "60-75 min",
+          "note": "Direct metro link; no changes needed."
+        },
+        {
+          "mode": "Night bus H11",
+          "to": "Salaryevo metro",
+          "price": "₽55",
+          "time": "35-40 min",
+          "note": "Covers the overnight gap."
+        },
+        {
+          "mode": "Taxi / Yandex Go",
+          "to": "City centre",
+          "price": "₽1,000-1,500",
+          "time": "40-70 min",
+          "note": "Official app is the safe choice."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Red Square",
+    "Moscow Kremlin",
+    "St. Basil's Cathedral",
+    "Lenin's Mausoleum",
+    "Moscow Metro Stations",
+    "Tretyakov Gallery",
+    "Cathedral of Christ the Saviour",
+    "GUM",
+    "Bolshoi Theatre",
+    "Novodevichy Convent",
+    "Sparrow Hills",
+    "State Historical Museum",
+    "VDNKh",
+    "Kolomenskoye Estate",
+    "Attractionmania",
+    "Blue Dancers",
+    "Borscht",
+    "Dodo Pizza",
+    "Dream Island",
+    "Gorky Park, Moscow",
+    "Kazansky Cathedral",
+    "Luzhniki Stadium"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Moscow",
+      "https://en.wikivoyage.org/wiki/Moscow"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    55.7558,
+    37.6173
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": -5,
+      "low": -10,
+      "rain_days": 13
+    },
+    {
+      "high": -3,
+      "low": -8,
+      "rain_days": 10
+    },
+    {
+      "high": 2,
+      "low": -6,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 12
+    },
+    {
+      "high": 2,
+      "low": -2,
+      "rain_days": 11
+    },
+    {
+      "high": -2,
+      "low": -6,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "DME taxi ₽1,000-1,500 vs tariff estimate 2822",
+    "VKO taxi ₽1,000-1,500 vs tariff estimate 2066"
+  ]
+}

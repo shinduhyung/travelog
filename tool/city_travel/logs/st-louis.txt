@@ -1,0 +1,27 @@
+$ deepseek_facts.py St. Louis
+  tokens in 3407 out 527
+St. Louis: 0 problems
+
+$ deepseek_city.py St. Louis --stage places
+St. Louis: places
+  tokens in 1176 out 3156
+
+$ deepseek_city.py St. Louis --stage frame
+St. Louis: frame
+  tokens in 2416 out 1678
+
+$ deepseek_city.py St. Louis --stage plans
+St. Louis: plans
+  plans for day
+  tokens in 2430 out 661
+  plans for 1n
+  tokens in 2431 out 1196
+  plans for 2n
+  tokens in 2436 out 977
+  plans for 3n
+  tokens in 2431 out 1774
+
+$ merge_city.py St. Louis
+St. Louis: 24 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/st-louis.json and planner/st-louis.json
+

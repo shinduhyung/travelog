@@ -1,0 +1,19 @@
+$ deepseek_city.py Seoul --stage plans
+Seoul: plans
+  plans for day
+  tokens in 2610 out 876
+  plans for 1n
+  tokens in 2611 out 926
+  plans for 2n
+  tokens in 2611 out 1401
+  plans for 3n
+  tokens in 2616 out 1795
+  plans for 4n
+  tokens in 2611 out 2178
+  plans for 5n
+  tokens in 2611 out 2776
+
+$ merge_city.py Seoul
+Seoul: 28 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/seoul.json and planner/seoul.json
+

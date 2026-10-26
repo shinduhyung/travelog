@@ -1,0 +1,28 @@
+$ deepseek_facts.py Rotterdam
+  tokens in 4072 out 969
+Rotterdam: 0 problems
+
+$ deepseek_city.py Rotterdam --stage places
+Rotterdam: places
+  tokens in 1244 out 3935
+
+$ deepseek_city.py Rotterdam --stage frame
+Rotterdam: frame
+  tokens in 2444 out 1831
+  repaired JSON
+
+$ deepseek_city.py Rotterdam --stage plans
+Rotterdam: plans
+  plans for day
+  tokens in 2431 out 1032
+  plans for 1n
+  tokens in 2432 out 1369
+  plans for 2n
+  tokens in 2437 out 1317
+  plans for 3n
+  tokens in 2432 out 1610
+
+$ merge_city.py Rotterdam
+Rotterdam: 26 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/rotterdam.json and planner/rotterdam.json
+

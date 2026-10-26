@@ -1,0 +1,568 @@
+{
+  "city": "Colombo",
+  "checked": "October 2026",
+  "intro_line": "Colombo blends colonial charm with bustling South Asian energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Fort",
+        "Pettah",
+        "Kollupitiya",
+        "Mount Lavinia"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Fort",
+        "Pettah",
+        "Kollupitiya",
+        "Mount Lavinia"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Fort",
+        "Pettah",
+        "Kollupitiya",
+        "Mount Lavinia"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Fort",
+        "Pettah",
+        "Kollupitiya",
+        "Mount Lavinia"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Fort",
+        "Pettah",
+        "Kollupitiya",
+        "Mount Lavinia"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 11,
+        "note": "January: one of the driest, sunniest months. Great for walking Fort and Pettah."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 11,
+        "note": "February: dry and warm. Good all-round month for sightseeing."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 18,
+        "note": "March: rain picks up. Carry a light rain jacket for afternoon showers."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 25,
+        "note": "April: wet, with about 25 rain days. Plan indoor sights and short outings."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 30,
+        "note": "May: the wettest month, around 30 rain days. Expect heavy downpours; keep plans flexible."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 29,
+        "note": "June: still very wet. Short dry windows; check the sky before long walks."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 28,
+        "note": "July: wet and slightly cooler. Good for museums and covered markets."
+      },
+      {
+        "high": 28,
+        "low": 25,
+        "rain_days": 28,
+        "note": "August: coolest highs around 28°C but still rainy. Pack a rain layer."
+      },
+      {
+        "high": 28,
+        "low": 25,
+        "rain_days": 28,
+        "note": "September: similar to August: mild and wet. Fewer crowds at sights."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 29,
+        "note": "October: very wet again, about 29 rain days. Avoid tight outdoor schedules."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 25,
+        "note": "November: rain eases. Better for walking and the seafront."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 18,
+        "note": "December: drier and warmer. A good month for city sightseeing and the beach."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.95,
+      0.95,
+      0.8,
+      0.6,
+      0.45,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.45,
+      0.6,
+      0.85
+    ],
+    "food": [
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.55,
+      0.7,
+      0.9
+    ],
+    "history": [
+      0.95,
+      0.95,
+      0.8,
+      0.6,
+      0.45,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.45,
+      0.6,
+      0.85
+    ],
+    "shopping": [
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.85
+    ],
+    "beach": [
+      0.85,
+      0.9,
+      0.75,
+      0.5,
+      0.3,
+      0.35,
+      0.35,
+      0.35,
+      0.35,
+      0.35,
+      0.55,
+      0.75
+    ]
+  },
+  "places": {
+    "gangaramaya": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning, before the heat",
+      "area": "Kollupitiya",
+      "popularity": 5
+    },
+    "lotus-tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon to sunset",
+      "area": "Fort",
+      "popularity": 4
+    },
+    "galle-face-green": {
+      "types": [
+        "food",
+        "beach"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon and sunset",
+      "area": "Fort",
+      "popularity": 5
+    },
+    "pettah-market": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Pettah",
+      "popularity": 4
+    },
+    "red-mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Mid-morning, outside prayer times",
+      "area": "Pettah",
+      "popularity": 4
+    },
+    "independence-memorial": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Kollupitiya",
+      "popularity": 3
+    },
+    "viharamahadevi": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Kollupitiya",
+      "popularity": 3
+    },
+    "diyatha-uyana": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Kollupitiya",
+      "popularity": 3
+    },
+    "rice-and-curry": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Kollupitiya",
+      "popularity": 5
+    },
+    "fort-station-walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "colombo-city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning start",
+      "area": "Fort",
+      "popularity": 4
+    },
+    "mount-lavinia-beach": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Mount Lavinia",
+      "popularity": 4
+    },
+    "kollupitiya-food-walk": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Kollupitiya",
+      "popularity": 3
+    },
+    "pettah-floating-market": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Pettah",
+      "popularity": 2
+    },
+    "seema-malaka": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Kollupitiya",
+      "popularity": 3
+    },
+    "colombo-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Midday, when it is hot outside",
+      "area": "Kollupitiya",
+      "popularity": 3
+    },
+    "beira-lake-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Kollupitiya",
+      "popularity": 2
+    },
+    "one-galle-face-city": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; evening for the seafront",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "kelaniya-temple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Fort",
+      "popularity": 3
+    },
+    "colombo-street-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Kollupitiya",
+      "popularity": 4
+    },
+    "colombo-fort-railway": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Fort",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Fort, Pettah and the seafront at an easy pace; add a night for a beach or day trip."
+  },
+  "airports": [
+    {
+      "code": "CMB",
+      "name": "Bandaranaike International Colombo Airport",
+      "primary": true,
+      "note": "Main international gateway, 28 km north near Negombo.",
+      "options": [
+        {
+          "mode": "Public bus #187",
+          "to": "Colombo Fort bus stand",
+          "price": "Rs 200",
+          "time": "80-100 min",
+          "note": "Cheapest; no A/C, runs every 20 min until late."
+        },
+        {
+          "mode": "Private A/C bus #187",
+          "to": "Pettah bus depot",
+          "price": "Rs 300-320",
+          "time": "40-50 min",
+          "note": "Uses expressway; extra fee for large luggage."
+        },
+        {
+          "mode": "Train",
+          "to": "Colombo Fort station",
+          "price": "Rs 100-200",
+          "time": "60 min",
+          "note": "Only 5-8 trains a day; reach Katunayake South station first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Colombo Fort",
+          "price": "Rs 7,500",
+          "time": "45-60 min",
+          "note": "Fixed voucher at airport counter; tolls about Rs 450."
+        },
+        {
+          "mode": "PickMe / Uber",
+          "to": "City centre",
+          "price": "Rs 5,000-8,000",
+          "time": "45-60 min",
+          "note": "Book via app; confirm pickup point outside arrivals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Colombo",
+      "https://en.wikivoyage.org/wiki/Colombo"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Tuk-tuks and ride apps for most trips; buses are cheap but slow.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses are the main public transport. Fares start at Rs 30, pay the conductor onboard."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "PickMe and Uber both work well. Tuk-tuks are everywhere; agree a price or use a meter taxi."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not covered in our checked facts. Most visitors use tuk-tuks, apps and buses instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Works in Fort and Pettah, but pavements are uneven. Use a tuk-tuk for longer hops."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Commuter trains run on four lines, including the coastal line to Mount Lavinia."
+      },
+      {
+        "mode": "Tuk-tuk",
+        "has": true,
+        "best": true,
+        "text": "Everywhere and easy to flag. Agree the price first or ask for the meter."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, with a long wet season from April to October and drier, sunnier months from December to February.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to February",
+        "text": "Warm days around 30–31°C and the fewest rain days, about 11 a month. Best for walking and the beach."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: April to October",
+        "text": "Rain on 25–30 days a month, heaviest in May. Expect short heavy downpours, often in the afternoon."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Hot and humid year-round",
+        "text": "Highs stay near 28–31°C and lows near 23–25°C. Humidity makes it feel hotter."
+      },
+      {
+        "icon": "🌂",
+        "title": "Always carry rain cover",
+        "text": "Even in dry months a shower is possible. A small umbrella or light rain jacket helps."
+      },
+      {
+        "icon": "👕",
+        "title": "What to pack",
+        "text": "Light breathable clothes, sandals, sunscreen and a hat. A light layer for air-conditioned places."
+      },
+      {
+        "icon": "🕌",
+        "title": "Dress for temples",
+        "text": "Cover shoulders and knees at religious sites. Remove shoes where asked."
+      }
+    ]
+  }
+}

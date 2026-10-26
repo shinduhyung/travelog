@@ -1,0 +1,228 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Turin: elegant arcades, royal palaces, and the Alps on the horizon.",
+  "intro": "Turin rewards visitors with world-class museums, rich chocolate and coffee culture, and a relaxed, authentic Italian atmosphere. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Centro",
+    "Porta Nuova",
+    "Porta Susa",
+    "Lingotto"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 8,
+    "per_km": 1.5,
+    "min_fare": 8
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro Linea 1 runs driverless trains from Bengasi to Fermi, linking Porta Nuova and Porta Susa.",
+    "Buses and trams run 06:00-00:30; buy tickets before boarding from tobacconists or machines.",
+    "A standard 'City + Suburban 100' ticket costs €2 and is valid for 100 minutes.",
+    "Taxis are available but ride apps like Uber are limited; use FreeNow or local apps.",
+    "Driving in the centre is not recommended due to restricted streets and trams.",
+    "Walking is ideal in the centre; bike sharing is available via Lime and RideMovi."
+  ],
+  "airports": [
+    {
+      "code": "TRN",
+      "name": "Torino / Caselle International Airport",
+      "primary": true,
+      "note": "Main airport, 15 km north of the city centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Torino Porta Susa",
+          "price": "€4",
+          "time": "19 min",
+          "note": "Runs every 30 min; buy ticket at machines or app."
+        },
+        {
+          "mode": "Bus (Arriva 268)",
+          "to": "Porta Susa / Porta Nuova",
+          "price": "€8 single, €11 return",
+          "time": "40-55 min",
+          "note": "Buy ticket in arrivals; cash on board costs €1 extra."
+        },
+        {
+          "mode": "Bus (Flibco)",
+          "to": "Porta Susa (Corso Vittorio Emanuele II)",
+          "price": "€7.5 single, €11 return",
+          "time": "25 min",
+          "note": "Runs every 30 min; buy online or from driver."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€36-40",
+          "time": "30-40 min",
+          "note": "Fixed fare; confirm with driver."
+        }
+      ]
+    },
+    {
+      "code": "MXP",
+      "name": "Milan Malpensa Airport",
+      "primary": false,
+      "note": "Alternative airport with more flights, 120 km northeast.",
+      "options": [
+        {
+          "mode": "Bus (SADEM)",
+          "to": "Torino Porta Susa",
+          "price": "€22",
+          "time": "2 hr",
+          "note": "Hourly 08:00-22:00 and midnight; buy in arrival hall."
+        },
+        {
+          "mode": "Train + Metro",
+          "to": "Torino Porta Nuova",
+          "price": "€20-30",
+          "time": "2-2.5 hr",
+          "note": "Malpensa Express to Milan, then train to Turin."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-200",
+          "time": "1.5-2 hr",
+          "note": "Private transfer; book ahead."
+        }
+      ]
+    },
+    {
+      "code": "LIN",
+      "name": "Milan Linate Airport",
+      "primary": false,
+      "note": "Closer to Milan, 140 km east; fewer international flights.",
+      "options": [
+        {
+          "mode": "Bus + Train",
+          "to": "Torino Porta Nuova",
+          "price": "€15-25",
+          "time": "2-2.5 hr",
+          "note": "Bus to Milan Centrale, then train to Turin."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-200",
+          "time": "1.5-2 hr",
+          "note": "Private transfer; book ahead."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Mole Antonelliana",
+    "Egyptian Museum, Turin",
+    "Royal Palace of Turin",
+    "La Venaria Reale",
+    "Basilica of Superga",
+    "Sacra di San Michele",
+    "Allianz Stadium",
+    "Teatro Regio"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Turin",
+      "https://en.wikivoyage.org/wiki/Turin"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    45.0703,
+    7.6869
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": -2,
+      "rain_days": 5
+    },
+    {
+      "high": 10,
+      "low": 0,
+      "rain_days": 7
+    },
+    {
+      "high": 14,
+      "low": 3,
+      "rain_days": 8
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 10
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 16
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 12
+    },
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 11
+    },
+    {
+      "high": 29,
+      "low": 18,
+      "rain_days": 9
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 12,
+      "low": 3,
+      "rain_days": 9
+    },
+    {
+      "high": 8,
+      "low": -1,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport LIN is 131 km away"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Hangzhou: a lake of legend wrapped in tea hills and silk.",
+  "intro": "Hangzhou rewards visitors with a serene lake, temple-lined hills and a fast, modern city. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "West Lake (Hubin)",
+    "Wulin Square",
+    "Hangzhou East Station",
+    "Xixi / Yuhang"
+  ],
+  "taxi": {
+    "flag_day": 11,
+    "flag_airport": 11,
+    "per_km": 2.5,
+    "min_fare": 11
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro: 13 lines and about 270 stations; fastest way around town.",
+    "Buses: extensive network; K-prefixed routes are air-conditioned, fares about ¥2-3.",
+    "Taxis: metered, start at ¥11; drivers rarely speak English, so show your destination in Chinese.",
+    "Ride apps: Didi works widely; international apps like Uber are not the norm here.",
+    "Bikes: public share bikes cost about ¥1-2 per ride; bike lanes are common.",
+    "Water bus: Grand Canal ferry from Wulin Gate to Gongchen Bridge, about ¥3, a few trips daily."
+  ],
+  "airports": [
+    {
+      "code": "HGH",
+      "name": "Hangzhou Xiaoshan International Airport",
+      "primary": true,
+      "note": "Main gateway, about 27-30 km east of the centre.",
+      "options": [
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Wulin Square / Tiyuchang Road",
+          "price": "¥20",
+          "time": "about 60 min",
+          "note": "Runs every 15-30 min in daytime; buy ticket at booth outside arrivals."
+        },
+        {
+          "mode": "Metro",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Metro line links the airport; check current line and fare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "about ¥90",
+          "time": "30-60 min",
+          "note": "Metered; confirm the driver will take the trip before loading bags."
+        },
+        {
+          "mode": "Ride app (Didi)",
+          "to": "City centre",
+          "price": "¥80-110",
+          "time": "30-60 min",
+          "note": "Useful if you have no Chinese; set pickup point carefully."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "West Lake",
+    "Lingyin Temple",
+    "Leifeng Pagoda",
+    "West Lake Boat Ride",
+    "Zhejiang University",
+    "Zhongshuge Bookstore"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Hangzhou",
+      "https://en.wikivoyage.org/wiki/Hangzhou"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    30.29365,
+    120.16142
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 11
+    },
+    {
+      "high": 12,
+      "low": 3,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 13
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 18
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 16
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 15
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 13
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

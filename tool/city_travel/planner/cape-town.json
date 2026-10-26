@@ -1,0 +1,621 @@
+{
+  "city": "Cape Town",
+  "checked": "October 2026",
+  "intro_line": "Where mountains meet two oceans and a vibrant city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "City Bowl",
+        "V&A Waterfront",
+        "Sea Point",
+        "Camps Bay"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "City Bowl",
+        "V&A Waterfront",
+        "Sea Point",
+        "Camps Bay"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City Bowl",
+        "V&A Waterfront",
+        "Sea Point",
+        "Camps Bay"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City Bowl",
+        "V&A Waterfront",
+        "Sea Point",
+        "Camps Bay"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City Bowl",
+        "V&A Waterfront",
+        "Sea Point",
+        "Camps Bay"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 3,
+        "note": "Jan: hot and dry, highs near 26°C. Best beach month; book ahead."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 2,
+        "note": "Feb: warm and dry, similar to Jan. Great for the coast and mountains."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 4,
+        "note": "Mar: still warm at 24°C, a few more rain days. Good all-round month."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 5,
+        "note": "Apr: cooler at 22°C and more showers. Pack a light jacket."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 7,
+        "note": "May: mild at 20°C with about 7 rain days. Fewer crowds."
+      },
+      {
+        "high": 17,
+        "low": 11,
+        "rain_days": 11,
+        "note": "Jun: cool and wet, highs near 17°C with 11 rain days. Plan indoor days."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 10,
+        "note": "Jul: coldest month, highs around 16°C. Wet and windy; bring warm layers."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 10,
+        "note": "Aug: still cool at 17°C with 10 rain days. Watch the weather for mountain days."
+      },
+      {
+        "high": 18,
+        "low": 11,
+        "rain_days": 8,
+        "note": "Sep: warming to 18°C, rain easing. A quiet, good-value month."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 6,
+        "note": "Oct: pleasant at 21°C with 6 rain days. Good for hiking and wine farms."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 5,
+        "note": "Nov: warm at 22°C and drier. A strong shoulder month."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 5,
+        "note": "Dec: hot at 24°C and busy. Book hotels and restaurants early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "beach": [
+      0.9,
+      0.9,
+      0.8,
+      0.6,
+      0.45,
+      0.3,
+      0.25,
+      0.3,
+      0.45,
+      0.65,
+      0.8,
+      0.9
+    ],
+    "food": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "culture": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "history": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95
+    ]
+  },
+  "places": {
+    "cableway": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning, clear day; avoid windy days",
+      "area": "City Bowl",
+      "popularity": 5
+    },
+    "va-waterfront": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "V&A Waterfront",
+      "popularity": 5
+    },
+    "robben-island-prison": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning ferry; calm-weather days",
+      "area": "V&A Waterfront",
+      "popularity": 5
+    },
+    "boulders": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, before tour buses arrive",
+      "area": "Camps Bay",
+      "popularity": 5
+    },
+    "kirstenbosch": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "City Bowl",
+      "popularity": 5
+    },
+    "bo-kaap": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning light for photos",
+      "area": "City Bowl",
+      "popularity": 4
+    },
+    "table-mountain": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Early morning; not in heat or wind",
+      "area": "City Bowl",
+      "popularity": 5
+    },
+    "artscape": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "bobotie": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "camps-bay": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon and sunset",
+      "area": "Camps Bay",
+      "popularity": 5
+    },
+    "castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Mid-morning",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "companys-garden": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or midday shade",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "district-six": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "iziko-sa-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy or hot midday",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "lions-head": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Sunrise or full moon (with a group)",
+      "area": "City Bowl",
+      "popularity": 4
+    },
+    "rhodes-memorial": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "City Bowl",
+      "popularity": 3
+    },
+    "robben-island": {
+      "types": [
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning ferry",
+      "area": "V&A Waterfront",
+      "popularity": 4
+    },
+    "slave-lodge": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "City Bowl",
+      "popularity": 2
+    },
+    "st-georges": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "City Bowl",
+      "popularity": 2
+    },
+    "table-bay": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "V&A Waterfront",
+      "popularity": 2
+    },
+    "harbour-cruise": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Midday on a calm day",
+      "area": "V&A Waterfront",
+      "popularity": 3
+    },
+    "zeitz-mocaa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon; check opening days",
+      "area": "V&A Waterfront",
+      "popularity": 4
+    },
+    "old-biscuit-mill": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "City Bowl",
+      "popularity": 4
+    },
+    "signal-hill": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "City Bowl",
+      "popularity": 4
+    },
+    "sea-point-promenade": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Sea Point",
+      "popularity": 4
+    },
+    "cape-point-drive": {
+      "types": [
+        "nature",
+        "beach"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Full day, start early, clear weather",
+      "area": "Camps Bay",
+      "popularity": 4
+    },
+    "woodstock-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "City Bowl",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers Table Mountain, the beaches and a Winelands day without rushing."
+  },
+  "airports": [
+    {
+      "code": "CPT",
+      "name": "Cape Town International Airport",
+      "primary": true,
+      "note": "Main gateway, about 17 km east of the centre near the N2.",
+      "options": [
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "R150-250",
+          "time": "25-40 min",
+          "note": "Cheapest reliable option; book in the app before exiting."
+        },
+        {
+          "mode": "Official metered taxi",
+          "to": "City centre",
+          "price": "R300-450",
+          "time": "25-40 min",
+          "note": "Agree the fare first; avoid touts in fake vests."
+        },
+        {
+          "mode": "Car rental",
+          "to": "City and beyond",
+          "price": "R400-900 per day",
+          "time": "25-40 min",
+          "note": "Good value; book ahead in peak season."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "City hotels",
+          "price": "R200-400",
+          "time": "30-45 min",
+          "note": "Confirm with your hotel before arrival."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Cape Town",
+      "https://en.wikivoyage.org/wiki/Cape%20Town"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "food",
+    "beach"
+  ],
+  "transit": {
+    "best": "Uber or Bolt for most trips; drive yourself for the peninsula and Winelands.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "MetroRail links the centre to the Southern Suburbs and Simon's Town, but there is no Sunday service. Safe by day; avoid night travel."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover main routes and show on Google Maps. Useful but slower than ride apps."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Bolt are the easiest way around; airport to centre costs about R150. Ignore unofficial 'airport taxi' touts."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "Easy driving on good roads. Keep doors locked and avoid unknown areas after dark."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the City Bowl, Waterfront and Sea Point by day. Use rides at night or for longer trips."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: warm, dry summers and cool, wet winters. Wind and cloud can change mountain plans fast.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Warm, mostly dry days around 22–26°C. Ideal for beaches, Table Mountain and the Winelands."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest: June to August",
+        "text": "Around 10–11 rain days a month and highs near 16–17°C. Keep indoor plans ready."
+      },
+      {
+        "icon": "💨",
+        "title": "Windy days",
+        "text": "The Cape is windy, especially in summer. Check the cableway status before heading up Table Mountain."
+      },
+      {
+        "icon": "🌊",
+        "title": "Cold Atlantic water",
+        "text": "The sea stays cold even in summer. Bring a wetsuit or swim briefly at Camps Bay."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool evenings",
+        "text": "Nights drop to 10–18°C. A light jacket helps year-round."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, sunscreen, a hat, a rain jacket for winter, and sturdy shoes for hiking."
+      }
+    ]
+  }
+}

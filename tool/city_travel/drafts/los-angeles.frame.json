@@ -1,0 +1,274 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, studios and the movie-star walk of fame."
+    },
+    {
+      "id": "beach",
+      "label": "Coast",
+      "blurb": "Santa Monica, Venice and Malibu sunsets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Tacos, food trucks and Koreatown nights."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Central for Metro rail, museums and food halls; good value on weekends.",
+      "center": [
+        34.05,
+        -118.24
+      ]
+    },
+    {
+      "area": "Hollywood",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Walk to the Walk of Fame and the studios; easy subway rides downtown.",
+      "center": [
+        34.101,
+        -118.33
+      ]
+    },
+    {
+      "area": "Santa Monica",
+      "range": [
+        220,
+        550
+      ],
+      "why": "Beach and pier on the doorstep; light rail to downtown LA.",
+      "center": [
+        34.015,
+        -118.49
+      ]
+    },
+    {
+      "area": "West Hollywood",
+      "range": [
+        200,
+        480
+      ],
+      "why": "Nightlife, restaurants and walkable streets between Hollywood and the beaches.",
+      "center": [
+        34.09,
+        -118.36
+      ]
+    }
+  ],
+  "food": [
+    "Try tacos and burritos at taquerias and food trucks; a meal often costs $10–15.",
+    "Koreatown is great for late-night Korean BBQ and noodles; expect $25–40 a person.",
+    "Grand Central Market downtown has many stalls under one roof; budget $10–20.",
+    "Book popular dinner spots ahead, especially on weekends in West Hollywood.",
+    "Beach towns have casual seafood and burger shacks; check hours, some close early."
+  ],
+  "more_time": [
+    "Add a day for the Getty Center or the Getty Villa; both are free or low cost, check parking fees.",
+    "Swap a beach afternoon for a studio tour in Burbank or Hollywood; book ahead.",
+    "Take a harbour boat from San Pedro to Catalina Island if you have a full extra day."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.4,
+      0.45,
+      0.55,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.5,
+      0.4
+    ],
+    "nightlife": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "family": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "beach"
+  ],
+  "recommend": {
+    "why": "Three nights lets you see Hollywood and downtown, then slow down at the beach without long drives every day."
+  },
+  "month_notes": [
+    "January: cool days around 19°C, nights near 8°C. Bring a jacket; some rain.",
+    "February: similar to January, mild days and cool nights. A few wet days.",
+    "March: warming to about 21°C; more rain days than mid-year, pack a light layer.",
+    "April: pleasant, highs near 24°C and little rain. Good for walking and beaches.",
+    "May: mild and mostly dry; mornings can be overcast near the coast.",
+    "June: warm, highs around 28°C; coastal fog often clears by afternoon.",
+    "July: hot inland near 31°C; beaches cooler. Very little rain.",
+    "August: the hottest month, highs near 32°C. Plan shade and water.",
+    "September: still hot at about 31°C; evenings start to cool.",
+    "October: comfortable highs near 28°C, dry and good for sightseeing.",
+    "November: cooler, about 24°C, with a few rain days returning.",
+    "December: back to about 19°C days and 8°C nights; expect some rain."
+  ],
+  "climate_guide": {
+    "summary": "Warm and mostly dry, with mild winters and hot, sunny summers. Coastal areas stay cooler than inland.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild to warm days with little rain. Good for both sightseeing and the beach."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot late summer",
+        "text": "July and August reach about 31–32°C inland. Beaches are cooler; carry water and seek shade."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Coastal fog",
+        "text": "Mornings near Santa Monica and Venice can be grey in late spring and early summer; it often clears later."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is light",
+        "text": "Most rain falls between November and March, usually a few days a month. An umbrella is handy in winter."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter nights",
+        "text": "January and December nights drop to about 8°C. Pack a warm layer for evenings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, sunglasses and sunscreen; a jacket for winter nights and coastal fog."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Ride apps or a rental car for most trips; Metro rail for downtown, Hollywood and Santa Monica.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Subway and light rail link Downtown, Hollywood, Santa Monica and Long Beach. Fares about $1.75 per ride."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metro buses cover the whole sprawl. Use a TAP card or contactless tap on rail and bus."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered and costlier than apps. Uber and Lyft operate widely and are the usual choice."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is fastest off-peak, but freeways jam roughly 7–10am and 3–7pm."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Pleasant in beach towns and Hollywood. Bikes and e-scooters are common near the coast."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "No ferries serve the city centre. Harbour boats run from San Pedro to Catalina Island."
+      }
+    ]
+  }
+}

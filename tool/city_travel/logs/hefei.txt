@@ -1,0 +1,32 @@
+$ deepseek_prep.py Hefei
+  tokens in 654 out 212
+Hefei: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Hefei
+  tokens in 1837 out 596
+Hefei: 0 problems
+
+$ deepseek_city.py Hefei --stage places
+Hefei: places
+  tokens in 1144 out 2470
+
+$ deepseek_city.py Hefei --stage frame
+Hefei: frame
+  tokens in 2466 out 1820
+  repaired JSON
+
+$ deepseek_city.py Hefei --stage plans
+Hefei: plans
+  plans for day
+  tokens in 1877 out 847
+  plans for 1n
+  tokens in 1883 out 1399
+  plans for 2n
+  tokens in 1878 out 1688
+  plans for 3n
+  tokens in 1878 out 2085
+
+$ merge_city.py Hefei
+Hefei: 17 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/hefei.json and planner/hefei.json
+

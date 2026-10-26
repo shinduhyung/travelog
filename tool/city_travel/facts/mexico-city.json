@@ -1,0 +1,268 @@
+{
+  "currency": "MXN",
+  "usd_rate": 18.734,
+  "intro_line": "A sprawling highland capital of Aztec ruins, murals and tacos.",
+  "intro": "Mexico City rewards visitors with world-class museums, street food and layered history at every turn. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Centro Histórico",
+    "Roma-Condesa",
+    "Polanco",
+    "Coyoacán"
+  ],
+  "taxi": {
+    "flag_day": 15,
+    "flag_airport": 60,
+    "per_km": 12,
+    "min_fare": 40
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metro: 12 lines, M$5-6 per ride, 05:00-00:00 weekdays; very crowded at rush hour.",
+    "Metrobús BRT and trolleybuses cover many main avenues; pay with a rechargeable card.",
+    "Taxis are white and magenta; agree the fare or use the meter, and prefer sitio stands at night.",
+    "Uber, DiDi and inDrive work widely and are cheap; check the plate before getting in.",
+    "Driving is slow and parking is hard; walking is best in Centro, Roma and Condesa.",
+    "Bikes: EcoBici bike-share has stations in central areas; helmets are not common."
+  ],
+  "airports": [
+    {
+      "code": "MEX",
+      "name": "Licenciado Benito Juárez International Airport",
+      "primary": true,
+      "note": "Main airport, 6 km east of the centre; most international flights.",
+      "options": [
+        {
+          "mode": "Metro Line 5 + transfer",
+          "to": "Centro Histórico",
+          "price": "M$5-6",
+          "time": "30-45 min",
+          "note": "Cheapest; no heavy luggage allowed on Metro."
+        },
+        {
+          "mode": "Airport bus / Metrobús",
+          "to": "Downtown and bus terminals",
+          "price": "M$30-60",
+          "time": "30-60 min",
+          "note": "Check the stop and route before boarding."
+        },
+        {
+          "mode": "Taxi (authorised stand)",
+          "to": "Centro or Roma-Condesa",
+          "price": "M$250-400",
+          "time": "20-45 min",
+          "note": "Buy the ticket inside the terminal; traffic can be heavy."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "Centro or Roma-Condesa",
+          "price": "M$150-300",
+          "time": "20-45 min",
+          "note": "Pick-up zones are signposted outside the terminals."
+        }
+      ]
+    },
+    {
+      "code": "NLU",
+      "name": "Felipe Ángeles International Airport",
+      "primary": false,
+      "note": "Second airport, 38 km north; mostly domestic flights.",
+      "options": [
+        {
+          "mode": "Tren Suburbano (AIFA station)",
+          "to": "Buenavista, Centro",
+          "price": "M$11.50-26.50",
+          "time": "40-50 min",
+          "note": "Fast and cheap; Metro transfer at Buenavista, no heavy bags."
+        },
+        {
+          "mode": "Bus (ADO, Futura, Conexión)",
+          "to": "MEX airport, Norte or Taxqueña terminals",
+          "price": "about M$150",
+          "time": "about 1 hr",
+          "note": "Limited daily departures; check timetables first."
+        },
+        {
+          "mode": "Vivabus",
+          "to": "Norte or Taxqueña bus terminals",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Fastest easy option but departures are irregular."
+        },
+        {
+          "mode": "Taxi (fixed price)",
+          "to": "City centre",
+          "price": "about M$750",
+          "time": "60-90 min",
+          "note": "Allow at least 90 minutes to downtown."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Confirm you booked NLU, not MEX."
+        }
+      ]
+    },
+    {
+      "code": "TLC",
+      "name": "Licenciado Adolfo López Mateos International Airport",
+      "primary": false,
+      "note": "Toluca airport, 50 km southwest; domestic flights only.",
+      "options": [
+        {
+          "mode": "El Insurgente train + shuttle",
+          "to": "Observatorio, then Metro",
+          "price": "M$15 plus shuttle",
+          "time": "45-70 min",
+          "note": "Metepec station links to the airport by shuttle bus."
+        },
+        {
+          "mode": "Viva Transfer shuttle",
+          "to": "Observatorio Metro",
+          "price": "about M$76",
+          "time": "60-90 min",
+          "note": "Runs for Viva Aerobus flights."
+        },
+        {
+          "mode": "Caminante taxi",
+          "to": "Santa Fe or Observatorio",
+          "price": "M$600-650",
+          "time": "45-75 min",
+          "note": "Fixed price; good for western city areas."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Long ride; compare with the train."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Zocalo",
+    "Metropolitan Cathedral of Mexico City",
+    "National Palace",
+    "Chapultepec Castle",
+    "National Museum of Anthropology",
+    "Frida Kahlo Museum",
+    "Basilica of Our Lady of Guadalupe",
+    "Templo Mayor",
+    "Palacio de Bellas Artes",
+    "Angel of Independence",
+    "Biblioteca Vasconcelos",
+    "Bosque de Aragon",
+    "Cafebrería El Péndulo",
+    "Casa Luis Barragan",
+    "Estadio Azteca",
+    "Imagic Park",
+    "Kataplum",
+    "Lago Mayer Alameda Oriente",
+    "Monument to the Revolution",
+    "Palacio Postal",
+    "Palacio de Mineria",
+    "Parque Francisco Villa"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Mexico City",
+      "https://en.wikivoyage.org/wiki/Mexico%20City"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    19.4326,
+    -99.1332
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 22,
+      "low": 7,
+      "rain_days": 3
+    },
+    {
+      "high": 24,
+      "low": 8,
+      "rain_days": 2
+    },
+    {
+      "high": 26,
+      "low": 10,
+      "rain_days": 6
+    },
+    {
+      "high": 27,
+      "low": 12,
+      "rain_days": 8
+    },
+    {
+      "high": 27,
+      "low": 13,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 13,
+      "rain_days": 19
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 26
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 27
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 23
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 9,
+      "rain_days": 5
+    },
+    {
+      "high": 22,
+      "low": 8,
+      "rain_days": 3
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

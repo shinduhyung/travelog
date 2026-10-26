@@ -1,0 +1,264 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Power, monuments and museums on the Potomac.",
+  "intro": "Washington rewards visitors with free world-class museums, grand monuments and lively neighbourhoods. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Downtown / Penn Quarter",
+    "Capitol Hill",
+    "Georgetown",
+    "Dupont Circle"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metrorail is fast and clean; fares about $2-6 depending on distance and time.",
+    "Metrobus covers the city; fares are low and exact change or a card is needed.",
+    "Uber and Lyft work well; taxis are metered and easy to find downtown.",
+    "Driving is stressful: heavy rush-hour traffic, confusing parking rules and toll lanes.",
+    "Walking is the best way to see the Mall and monuments; bikeshare docks are everywhere.",
+    "No ferry service in the city centre; the Potomac water taxi links some waterfront spots."
+  ],
+  "airports": [
+    {
+      "code": "DCA",
+      "name": "Ronald Reagan Washington National Airport",
+      "primary": true,
+      "note": "Closest and most convenient airport, about 6 km south of the centre.",
+      "options": [
+        {
+          "mode": "Metro Blue/Yellow line",
+          "to": "East End / downtown",
+          "price": "$3",
+          "time": "15-20 min",
+          "note": "Cheapest and quickest; runs roughly 5AM to 11PM-1AM."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Washington, D.C.",
+          "price": "$15-25",
+          "time": "10-20 min",
+          "note": "Pickup at the designated app zones."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Washington, D.C.",
+          "price": "$15-25",
+          "time": "10-20 min",
+          "note": "Metered; short ride into town."
+        }
+      ]
+    },
+    {
+      "code": "IAD",
+      "name": "Washington Dulles International Airport",
+      "primary": false,
+      "note": "Main international gateway, about 36 km west of the centre.",
+      "options": [
+        {
+          "mode": "Metro Silver line",
+          "to": "East End / downtown",
+          "price": "$6",
+          "time": "55-65 min",
+          "note": "Cheap but slow; check late-night hours."
+        },
+        {
+          "mode": "Fairfax Connector bus 983",
+          "to": "Udvar-Hazy Air and Space Museum",
+          "price": "$2",
+          "time": "12 min",
+          "note": "Only useful for the museum, not downtown."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Washington, D.C.",
+          "price": "$45-65",
+          "time": "40-60 min",
+          "note": "Pickup up the ramps from baggage claim."
+        },
+        {
+          "mode": "Washington Flyer Taxi",
+          "to": "Washington, D.C.",
+          "price": "$50-70",
+          "time": "40-60 min",
+          "note": "Exclusive taxi provider; stand down the ramp from baggage claim."
+        }
+      ]
+    },
+    {
+      "code": "BWI",
+      "name": "Baltimore/Washington International Thurgood Marshall Airport",
+      "primary": false,
+      "note": "About 44 km northeast; serves Baltimore and the region.",
+      "options": [
+        {
+          "mode": "MARC train (Penn line)",
+          "to": "Union Station",
+          "price": "$8",
+          "time": "30-40 min",
+          "note": "Free shuttle to BWI Rail Station; infrequent on weekends."
+        },
+        {
+          "mode": "Amtrak",
+          "to": "Union Station",
+          "price": "$13-22",
+          "time": "30-40 min",
+          "note": "Cheaper if booked online in advance."
+        },
+        {
+          "mode": "ICC Bus 201",
+          "to": "Shady Grove Metro (Red line)",
+          "price": "$5",
+          "time": "70 min",
+          "note": "Hourly; no change given; then 35 min by Metro."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Washington, D.C.",
+          "price": "$50-80",
+          "time": "45-75 min",
+          "note": "Traffic can be heavy at rush hour."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Washington, D.C.",
+          "price": "$60-90",
+          "time": "45-75 min",
+          "note": "Metered; longer ride than DCA."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Lincoln Memorial",
+    "National Mall",
+    "The White House",
+    "United States Capitol",
+    "Washington Monument",
+    "Smithsonian National Air and Space Museum",
+    "Smithsonian National Museum of Natural History",
+    "National Gallery of Art",
+    "Arlington National Cemetery",
+    "Breezing Up",
+    "Georgetown University",
+    "Jefferson Memorial",
+    "Kennedy Center",
+    "Library of Congress",
+    "Luncheon of the Boating Party",
+    "Mount Vernon",
+    "Potomac River",
+    "Potomac River Monuments Cruise",
+    "Saint George and the Dragon",
+    "Smithsonian National Zoological Park",
+    "Supreme Court of the United States",
+    "The Avenue in the Rain"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Washington D.C.",
+      "https://en.wikivoyage.org/wiki/Washington%20D.C."
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    38.9072,
+    -77.0369
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 9
+    },
+    {
+      "high": 9,
+      "low": -1,
+      "rain_days": 10
+    },
+    {
+      "high": 13,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 11
+    },
+    {
+      "high": 24,
+      "low": 13,
+      "rain_days": 13
+    },
+    {
+      "high": 29,
+      "low": 18,
+      "rain_days": 13
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 14
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 14,
+      "low": 4,
+      "rain_days": 8
+    },
+    {
+      "high": 9,
+      "low": 1,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "IAD taxi $50-70 vs tariff estimate 126",
+    "BWI taxi $60-90 vs tariff estimate 152"
+  ]
+}

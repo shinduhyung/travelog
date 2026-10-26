@@ -1,0 +1,38 @@
+$ deepseek_prep.py Copenhagen
+  tokens in 907 out 496
+Copenhagen: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Copenhagen
+  tokens in 4004 out 767
+Copenhagen: 0 problems
+
+$ deepseek_city.py Copenhagen --stage places
+Copenhagen: places
+  tokens in 1252 out 4494
+
+$ deepseek_city.py Copenhagen --stage frame
+Copenhagen: frame
+  tokens in 2440 out 1889
+  repaired JSON
+
+$ deepseek_city.py Copenhagen --stage plans
+Copenhagen: plans
+  plans for day
+  tokens in 2674 out 888
+  plans for 1n
+  tokens in 2675 out 1027
+  plans for 2n
+  tokens in 2675 out 1496
+  plans for 3n
+  tokens in 2680 out 2017
+  plans for 4n
+  tokens in 2675 out 1999
+
+$ merge_city.py Copenhagen
+WARN  christiania: area 'Christianshavn' not one of the hotel areas
+WARN  stortorget: area 'Malmö (day trip)' not one of the hotel areas
+WARN  blue-planet: area 'Amager (near airport)' not one of the hotel areas
+WARN  turning-torso: area 'Malmö (day trip)' not one of the hotel areas
+Copenhagen: 26 places, 15 plans, 0 errors, 4 warnings
+wrote itineraries/copenhagen.json and planner/copenhagen.json
+

@@ -1,0 +1,29 @@
+$ deepseek_facts.py Ningbo
+  tokens in 1509 out 562
+Ningbo: 0 problems
+
+$ deepseek_city.py Ningbo --stage places
+Ningbo: places
+  tokens in 1137 out 3663
+
+$ deepseek_city.py Ningbo --stage frame
+Ningbo: frame
+  tokens in 2425 out 1750
+  repaired JSON
+
+$ deepseek_city.py Ningbo --stage plans
+Ningbo: plans
+  plans for day
+  tokens in 2428 out 922
+  plans for 1n
+  tokens in 2429 out 1329
+  plans for 2n
+  tokens in 2434 out 1951
+  plans for 3n
+  tokens in 2429 out 2307
+
+$ merge_city.py Ningbo
+WARN  qiantong_old_town: 78 km from the center (day trip?)
+Ningbo: 24 places, 12 plans, 0 errors, 1 warnings
+wrote itineraries/ningbo.json and planner/ningbo.json
+

@@ -1,0 +1,34 @@
+$ deepseek_prep.py Boston
+  tokens in 790 out 325
+Boston: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Boston
+  tokens in 4023 out 563
+Boston: 0 problems
+
+$ deepseek_city.py Boston --stage places
+Boston: places
+  tokens in 1233 out 4451
+
+$ deepseek_city.py Boston --stage frame
+Boston: frame
+  tokens in 2428 out 1900
+  repaired JSON
+
+$ deepseek_city.py Boston --stage plans
+Boston: plans
+  plans for day
+  tokens in 2641 out 899
+  plans for 1n
+  tokens in 2642 out 902
+  plans for 2n
+  tokens in 2647 out 1359
+  plans for 3n
+  tokens in 2642 out 1982
+  plans for 4n
+  tokens in 2642 out 2373
+
+$ merge_city.py Boston
+Boston: 27 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/boston.json and planner/boston.json
+

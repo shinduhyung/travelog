@@ -1,0 +1,261 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Ragù, tortellini and market grazing all day."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Porticoes, piazzas and the oldest university."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Cheap eats, free sights and walkable streets."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Historical Centre",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Walk to Piazza Maggiore, the porticoes and most trattorias. Best for first-timers.",
+      "center": [
+        44.4938,
+        11.3431
+      ]
+    },
+    {
+      "area": "Bologna Centrale",
+      "range": [
+        70,
+        160
+      ],
+      "why": "Next to the station for day trips to Florence or Modena; 15 minutes on foot to the centre.",
+      "center": [
+        44.5055,
+        11.3431
+      ]
+    },
+    {
+      "area": "University Quarter",
+      "range": [
+        65,
+        150
+      ],
+      "why": "Lively bars and cheap eats around Via Zamboni; good budget base, can be noisy at night.",
+      "center": [
+        44.4965,
+        11.3515
+      ]
+    },
+    {
+      "area": "Saragozza",
+      "range": [
+        70,
+        170
+      ],
+      "why": "Quieter residential area near the station and Porta Saragozza; good value, still walkable.",
+      "center": [
+        44.4905,
+        11.3285
+      ]
+    }
+  ],
+  "food": [
+    "Order tagliatelle al ragù, not spaghetti bolognese; locals eat tortellini in brodo too.",
+    "Try a plate of mortadella and crescentine (fried dough) at a casual osteria.",
+    "The Quadrilatero market streets near Piazza Maggiore are good for a cheap grazing lunch.",
+    "Book dinner ahead on weekends; popular trattorias fill up fast.",
+    "Aperitivo around 18:00–19:00 often comes with snacks; check the price before ordering."
+  ],
+  "more_time": [
+    "Day trip to Modena by train for balsamic and the food market; check times on the day.",
+    "Swap a museum morning for a walk up to San Luca under the long portico; check opening hours.",
+    "Take a train to Ferrara or Parma for a half-day of Renaissance streets and food."
+  ],
+  "type_month_fit": {
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "art": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "recommend": {
+    "why": "Two nights covers the centre, the porticoes and a proper food day, with time for one day trip."
+  },
+  "month_notes": [
+    "January: cold, highs near 8°C, lows around 1°C. Pack a warm coat.",
+    "February: still cold, highs near 11°C, about 8 rain days.",
+    "March: mild at 15°C, mixed sun and showers.",
+    "April: pleasant at 19°C, but one of the wetter months.",
+    "May: warm at 22°C and the wettest month, around 13 rain days.",
+    "June: warm and drier, highs near 28°C.",
+    "July: hot, highs near 32°C; sightsee early and late.",
+    "August: hot and often quiet, highs near 31°C; some places close.",
+    "September: warm at 25°C, good all-round month.",
+    "October: mild at 20°C, about 9 rain days.",
+    "November: cooler at 13°C and wetter, around 10 rain days.",
+    "December: cold, highs near 9°C; festive lights in the centre."
+  ],
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, damp winters and hot, humid summers, with the best weather in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild days around 19–25°C, good for walking the porticoes."
+      },
+      {
+        "icon": "🥵",
+        "title": "July and August are hot",
+        "text": "Highs near 31–32°C with warm nights. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and damp",
+        "text": "January highs near 8°C and lows around 1°C. Bring a warm coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in spring and autumn",
+        "text": "May has the most rain days, around 13. Carry a small umbrella."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is fairly dry",
+        "text": "July and August see around 7–8 rain days, often short storms."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, and a light rain jacket in spring and autumn."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the centre; use TPER buses for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro yet; a tram network is under construction."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "TPER buses cover the city. Single ticket €2.30, valid 75 min; €2.50 on board. Day pass about €9. Buy at tabacchi or newsstands."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber is limited; local apps work better."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is restricted; cars are banned in parts during the day."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is easy and pleasant. Bike hire is cheap, about €1–2 per 15 min."
+      }
+    ]
+  }
+}

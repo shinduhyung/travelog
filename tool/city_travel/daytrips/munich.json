@@ -1,0 +1,129 @@
+{
+ "city": "Munich",
+ "trips": [
+  {
+   "place": "Dachau",
+   "label": "",
+   "position": {
+    "id": 330400,
+    "name": "Dachau Bahnhof",
+    "city": "Dachau",
+    "lat": 48.25465,
+    "lng": 11.44426
+   },
+   "town": {
+    "name": "Dachau",
+    "lat": 48.26,
+    "lng": 11.43402
+   },
+   "road": {
+    "km": 19,
+    "min": 29,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 50.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€31",
+     "from_usd": 37.0,
+     "avg": "€33",
+     "time": "10m",
+     "per_day": 7,
+     "source": "https://www.omio.com/trains/munich/dachau"
+    },
+    "bus": {
+     "from": null,
+     "time": "40m",
+     "via": "Hauptbahnhof Nord to Dachau Bahnhof",
+     "source": "https://www.rome2rio.com/s/Munich/Dachau"
+    }
+   },
+   "route_note": "Take the S2 S-Bahn from Munich Hauptbahnhof or Marienplatz directly to Dachau station, then a short local bus (726) to the memorial site.",
+   "see": [
+    "Dachau Concentration Camp Memorial Site",
+    "Old Town and Dachau Palace gardens",
+    "Rathaus and Altstadt stroll"
+   ],
+   "visit": "Half day",
+   "tour_query": "Dachau memorial day trip from Munich",
+   "quests": [
+    "Dachau Concentration Camp Memorial Site"
+   ],
+   "recommended": "train",
+   "why": "The S-Bahn reaches Dachau station in about 10 minutes with frequent service, then a short local bus to the memorial.",
+   "stars": 5,
+   "know": [
+    "The memorial site is closed on certain days, so check opening days before going",
+    "Allow several hours to see the grounds and exhibitions properly"
+   ]
+  },
+  {
+   "place": "Garmisch-Partenkirchen",
+   "label": "",
+   "position": {
+    "id": 376497,
+    "name": "Garmisch-Partenkirchen",
+    "city": "Garmisch-Partenkirchen",
+    "lat": 47.49209,
+    "lng": 11.09576
+   },
+   "town": {
+    "name": "Garmisch-Partenkirchen",
+    "lat": 47.49209,
+    "lng": 11.09576
+   },
+   "road": {
+    "km": 90,
+    "min": 67,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 230.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "€7",
+     "from_usd": 9.0,
+     "avg": "€33",
+     "time": "1h 9m",
+     "per_day": 5,
+     "source": "https://www.omio.com/trains/munich/garmisch-partenkirchen"
+    },
+    "bus": {
+     "from": "$8-$13",
+     "time": "1h 10m",
+     "via": "Munich central bus station to Garmisch-Partenkirchen station",
+     "source": "https://www.rome2rio.com/s/Munich/Garmisch-Partenkirchen"
+    }
+   },
+   "route_note": "Direct regional trains run from Munich Hauptbahnhof to Garmisch-Partenkirchen, then the Zugspitzbahn or a bus takes you up to the Zugspitze or Partnachklamm.",
+   "see": [
+    "Zugspitze summit",
+    "Partnach Gorge",
+    "Historic Ludwigstrasse",
+    "Höllentalklamm valley"
+   ],
+   "visit": "Full day",
+   "tour_query": "Zugspitze day trip from Munich",
+   "quests": [
+    "Spielpark Leutasch"
+   ],
+   "recommended": "train",
+   "why": "Direct regional trains take about 1h 9m with frequent departures, far better than driving or a costly taxi.",
+   "stars": 4,
+   "know": [
+    "Book Zugspitze tickets ahead in peak season",
+    "Mountain weather changes fast, so bring layers even in summer"
+   ]
+  }
+ ],
+ "problems": [
+  "Schwangau: no Omio position, dropped",
+  "Salzburg: not a town in cities15000.json (DE), dropped",
+  "Nuremberg: not a town in cities15000.json (DE), dropped"
+ ]
+}

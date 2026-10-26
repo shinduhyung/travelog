@@ -1,0 +1,646 @@
+{
+  "city": "Osaka",
+  "checked": "October 2026",
+  "intro_line": "Osaka: Japan's kitchen of neon and castles.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Namba",
+        "Umeda",
+        "Shinsaibashi",
+        "Tennoji"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Namba",
+        "Umeda",
+        "Shinsaibashi",
+        "Tennoji"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Namba",
+        "Umeda",
+        "Shinsaibashi",
+        "Tennoji"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Namba",
+        "Umeda",
+        "Shinsaibashi",
+        "Tennoji"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Namba",
+        "Umeda",
+        "Shinsaibashi",
+        "Tennoji"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 7,
+        "note": "Cold and dry; highs near 9°C, lows near 1°C. Pack a warm coat."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 7,
+        "note": "Still cold, highs around 10°C. Few rainy days."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 11,
+        "note": "Milder, highs near 14°C; more rain days, bring an umbrella."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 10,
+        "note": "Pleasant spring weather, highs near 19°C."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 11,
+        "note": "Warm and green, highs near 23°C; some rain."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 14,
+        "note": "Warm and wetter, highs near 26°C with more rainy days."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 16,
+        "note": "Hot and humid, highs near 30°C; stay hydrated."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 14,
+        "note": "Hottest month, highs near 32°C; plan indoor breaks."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 14,
+        "note": "Still warm, highs near 29°C; rain days stay high."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Comfortable autumn, highs near 23°C."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 8,
+        "note": "Cooler, highs near 17°C; good for walking."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 7,
+        "note": "Cold again, highs near 11°C; pack layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "culture": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.65,
+      0.65,
+      0.8,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.65
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.65,
+      0.65,
+      0.8,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "shopping": [
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.8
+    ]
+  },
+  "places": {
+    "osaka_castle": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; late March–early April for blossom",
+      "area": "Umeda",
+      "popularity": 5
+    },
+    "dotonbori": {
+      "types": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening and night",
+      "area": "Namba",
+      "popularity": 5
+    },
+    "umeda_sky": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset into evening",
+      "area": "Umeda",
+      "popularity": 4
+    },
+    "tsutenkaku": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Tennoji",
+      "popularity": 4
+    },
+    "shitennoji": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Tennoji",
+      "popularity": 3
+    },
+    "sumiyoshi": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Tennoji",
+      "popularity": 3
+    },
+    "usj": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday morning arrival",
+      "area": "Umeda",
+      "popularity": 5
+    },
+    "asahi_suita": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Umeda",
+      "popularity": 2
+    },
+    "bunraku": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Check the performance calendar",
+      "area": "Namba",
+      "popularity": 3
+    },
+    "dotonbori_cruise": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Namba",
+      "popularity": 4
+    },
+    "horyuji": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning day trip",
+      "area": "Tennoji",
+      "popularity": 3
+    },
+    "kobe_harborland": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Dusk into evening",
+      "area": "Umeda",
+      "popularity": 3
+    },
+    "kuromon": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Namba",
+      "popularity": 4
+    },
+    "kaiyukan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Umeda",
+      "popularity": 4
+    },
+    "osaka_university": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Umeda",
+      "popularity": 1
+    },
+    "rokko_arima": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear day; autumn for colour",
+      "area": "Umeda",
+      "popularity": 2
+    },
+    "toshodaiji": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning day trip",
+      "area": "Tennoji",
+      "popularity": 2
+    },
+    "yakushiji": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning day trip",
+      "area": "Tennoji",
+      "popularity": 2
+    },
+    "yodo_river": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Umeda",
+      "popularity": 2
+    },
+    "shinsekai_walk": {
+      "types": [
+        "food",
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Tennoji",
+      "popularity": 3
+    },
+    "amerikamura": {
+      "types": [
+        "shopping",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Shinsaibashi",
+      "popularity": 3
+    },
+    "shinsaibashi_suji": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; good in rain",
+      "area": "Shinsaibashi",
+      "popularity": 4
+    },
+    "takoyaki_class": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Namba",
+      "popularity": 2
+    },
+    "nakanoshima_park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Umeda",
+      "popularity": 2
+    },
+    "tennoji_park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Tennoji",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Dotonbori, Osaka Castle and the markets; add a night for a Kyoto or Nara day trip."
+  },
+  "airports": [
+    {
+      "code": "KIX",
+      "name": "Kansai International Airport",
+      "primary": true,
+      "note": "Main international gateway, 38 km from centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Osaka Station",
+          "price": "¥1,500-2,000",
+          "time": "50-60 min",
+          "note": "Cheapest direct option; runs frequently."
+        },
+        {
+          "mode": "Train (Nankai Rapi:t)",
+          "to": "Namba",
+          "price": "¥1,500",
+          "time": "35-40 min",
+          "note": "Limited express; comfortable and fast."
+        },
+        {
+          "mode": "Train (JR Haruka)",
+          "to": "Shin-Osaka",
+          "price": "¥3,000",
+          "time": "50 min",
+          "note": "Good for Shinkansen connections."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥15,000-20,000",
+          "time": "50-60 min",
+          "note": "Fixed fares available; check before boarding."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "¥15,000-20,000",
+          "time": "50-60 min",
+          "note": "App-based; similar to taxi."
+        }
+      ]
+    },
+    {
+      "code": "ITM",
+      "name": "Osaka International Airport (Itami)",
+      "primary": false,
+      "note": "Domestic airport, 12 km from centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Osaka Station",
+          "price": "¥500-600",
+          "time": "30-40 min",
+          "note": "Frequent limousine buses."
+        },
+        {
+          "mode": "Monorail + train",
+          "to": "Umeda",
+          "price": "¥420",
+          "time": "30-40 min",
+          "note": "Cheapest; transfer at Hotarugaike."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Osaka Castle area",
+          "price": "¥4,000-5,000",
+          "time": "20-30 min",
+          "note": "Plus tolls; faster than bus."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "¥4,000-5,000",
+          "time": "20-30 min",
+          "note": "App-based; similar to taxi."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Osaka",
+      "https://en.wikivoyage.org/wiki/Osaka"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Osaka Metro and JR trains for most trips; use an IC card like ICOCA.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Osaka Metro and JR trains cover the city; tap in with an IC card like ICOCA."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses are useful but less frequent than trains."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are easy to hail; Uber and GO work in Osaka."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is not recommended for visitors; parking is expensive."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking and cycling are great in central areas; rent bikes from stations."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries connect to Kansai Airport and nearby islands."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, fairly dry winters and hot, humid, rainy summers.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: spring and autumn",
+        "text": "April, May and October bring mild highs around 19–23°C, ideal for walking and sightseeing."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "July and August reach highs near 30–32°C with many rain days. Take indoor breaks and carry water."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy spells",
+        "text": "June and September have the most rain days. Keep an umbrella and a backup indoor plan."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold, drier winter",
+        "text": "January and February highs near 9–10°C, lows near 1°C. Few rain days; dress warmly."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack an umbrella",
+        "text": "Rain days range from about 7 to 16 a month, so a compact umbrella helps year-round."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, light breathable clothes for summer, and a warm coat for winter."
+      }
+    ]
+  }
+}

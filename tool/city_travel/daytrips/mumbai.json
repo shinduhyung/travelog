@@ -1,0 +1,117 @@
+{
+ "city": "Mumbai",
+ "trips": [
+  {
+   "place": "Lonavla",
+   "label": "Lonavala",
+   "position": {
+    "id": 386093,
+    "name": "Lonavla",
+    "city": "Lonavla",
+    "lat": 18.75,
+    "lng": 73.41667
+   },
+   "town": {
+    "name": "Lonavla",
+    "lat": 18.75275,
+    "lng": 73.40575
+   },
+   "road": {
+    "km": 82,
+    "min": 65,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1510,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$12",
+     "time": "2h",
+     "via": "Dadar to Lonavala",
+     "source": "https://www.rome2rio.com/s/Mumbai/Lonavala"
+    },
+    "bus": {
+     "from": "$4-$30",
+     "time": "2h 40m",
+     "via": "Kharghar to Lonavala",
+     "source": "https://www.rome2rio.com/s/Mumbai/Lonavala"
+    }
+   },
+   "route_note": "Direct suburban and express trains run from Mumbai's CSMT and Dadar stations to Lonavala, with local taxis for the hill viewpoints.",
+   "see": [
+    "Bhushi Dam",
+    "Karla Caves",
+    "Tiger Point",
+    "Rajmachi viewpoint"
+   ],
+   "visit": "Full day",
+   "tour_query": "Lonavala day trip from Mumbai",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct trains from Dadar reach Lonavala in 2 hours, faster than the bus and right by the town.",
+   "stars": 4,
+   "know": [
+    "Book express train seats ahead, especially for weekends",
+    "The monsoon (June-September) is the classic season for the hill views and waterfalls",
+    "Local taxis are needed to reach the viewpoints from the station"
+   ]
+  },
+  {
+   "place": "Alībāg",
+   "label": "Alibaug",
+   "position": {
+    "id": 384579,
+    "name": "Alībāg",
+    "city": "Alībāg",
+    "lat": 18.64111,
+    "lng": 72.87917
+   },
+   "town": {
+    "name": "Alībāg",
+    "lat": 18.64813,
+    "lng": 72.87579
+   },
+   "road": {
+    "km": 94,
+    "min": 73,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1720,
+    "currency": "INR"
+   },
+   "modes": {
+    "bus": {
+     "from": "$1-$5",
+     "time": "2h 59m",
+     "via": "Dadar East to Alibaug",
+     "source": "https://www.rome2rio.com/s/Mumbai/Alibaug"
+    }
+   },
+   "route_note": "Take a ferry from the Gateway of India or a bus/train via Panvel, then a short road transfer into Alibaug town.",
+   "see": [
+    "Alibaug Beach",
+    "Kolaba Fort",
+    "Murud-Janjira area coastline",
+    "Local seafood lunch"
+   ],
+   "visit": "Full day",
+   "tour_query": "Alibaug day trip from Mumbai",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The bus runs in under 3 hours and drops you in Alibaug town, while the ferry route needs a road transfer at the far end.",
+   "stars": 3,
+   "know": [
+    "Ferries from the Gateway of India are the scenic alternative but depend on sea conditions",
+    "Weekends get crowded, so go on a weekday if you can",
+    "The beaches and forts are spread out, so expect local transport once there"
+   ]
+  }
+ ],
+ "problems": [
+  "Elephanta: no Omio position, dropped",
+  "Matheran: not a town in cities15000.json (IN), dropped"
+ ]
+}

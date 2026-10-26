@@ -1,0 +1,553 @@
+{
+  "city": "Quito",
+  "checked": "October 2026",
+  "intro_line": "Andean capital where colonial gold glitters under volcano skies.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro Histórico",
+        "La Mariscal",
+        "La Carolina",
+        "La Floresta"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro Histórico",
+        "La Mariscal",
+        "La Carolina",
+        "La Floresta"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro Histórico",
+        "La Mariscal",
+        "La Carolina",
+        "La Floresta"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Centro Histórico",
+        "La Mariscal",
+        "La Carolina",
+        "La Floresta"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Centro Histórico",
+        "La Mariscal",
+        "La Carolina",
+        "La Floresta"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 25,
+        "note": "Jan: rainy month, about 25 rain days. Mornings are often clearer; carry a rain jacket."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 25,
+        "note": "Feb: similar to Jan, wet with mild days around 17°C. Pack layers."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 29,
+        "note": "Mar: the wettest month, about 29 rain days. Plan indoor sights and short walks."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 28,
+        "note": "Apr: still wet, around 28 rain days. Showers are common in the afternoon."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 25,
+        "note": "May: rain eases a little, about 25 rain days. Cool nights near 8°C."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 18,
+        "note": "Jun: drier, about 18 rain days. Good month for views and hikes."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Jul: one of the driest months, about 12 rain days. Cool nights; bring a warm layer."
+      },
+      {
+        "high": 19,
+        "low": 7,
+        "rain_days": 13,
+        "note": "Aug: driest and slightly warmer, highs near 19°C. Great for the cable car and day trips."
+      },
+      {
+        "high": 19,
+        "low": 7,
+        "rain_days": 15,
+        "note": "Sep: still fairly dry, about 15 rain days. Pleasant for walking the old town."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 25,
+        "note": "Oct: rain returns, about 25 rain days. Keep plans flexible."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 27,
+        "note": "Nov: wet, about 27 rain days. Mornings are your best window."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 26,
+        "note": "Dec: wet with about 26 rain days. Mild days, cool nights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.7,
+      0.7
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.7,
+      0.7
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "nature": [
+      0.55,
+      0.55,
+      0.5,
+      0.5,
+      0.55,
+      0.8,
+      0.95,
+      0.95,
+      0.85,
+      0.6,
+      0.55,
+      0.55
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.65,
+      0.65,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.7,
+      0.7
+    ]
+  },
+  "places": {
+    "historic-centre": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, before the afternoon showers",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "middle-of-world": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday morning; clear skies for photos",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "la-compania": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late morning when light comes through the windows",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "panecillo": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Clear morning or late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "basilica": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning for the tower views",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "capilla-hombre": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "La Floresta",
+      "popularity": 4
+    },
+    "carondelet": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, on a tour day",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "el-pisque": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Dry weekend morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "la-ronda": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "vulqano": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "La Carolina",
+      "popularity": 2
+    },
+    "mercado-central": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "teleferico": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "La Carolina",
+      "popularity": 5
+    },
+    "parque-carolina": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "La Carolina",
+      "popularity": 4
+    },
+    "la-floresta-walk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "La Floresta",
+      "popularity": 3
+    },
+    "la-mariscal-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "La Mariscal",
+      "popularity": 4
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning departure",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "panecillo-view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear morning or late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "mercado-san-francisco": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "plaza-grande": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "cafe-culture": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon, when it rains",
+      "area": "La Mariscal",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the old town and the cable car; add a night for a Cotopaxi or equator day trip."
+  },
+  "airports": [
+    {
+      "code": "UIO",
+      "name": "Nuevo Aeropuerto Internacional Mariscal Sucre",
+      "primary": true,
+      "note": "Main gateway, about 14 km straight-line and 18 km by road east of the centre near Tababela.",
+      "options": [
+        {
+          "mode": "Public bus",
+          "to": "Río Coca, Quitumbe or Carcelén terminals",
+          "price": "$2.40",
+          "time": "about 1 hour",
+          "note": "Three routes stop outside the terminal; pay in US cash."
+        },
+        {
+          "mode": "Airport express bus",
+          "to": "City centre",
+          "price": "$8 one way, $14 return",
+          "time": "check locally",
+          "note": "Look for red signs on the terminal ground floor."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro Histórico or hotel zones",
+          "price": "$25-35",
+          "time": "45-70 min",
+          "note": "Use the taxi kiosk left of the information desk; fares are listed by zone."
+        },
+        {
+          "mode": "Uber",
+          "to": "City hotels",
+          "price": "$20-30",
+          "time": "45-70 min",
+          "note": "App pickup points may be outside the terminal; check the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Quito",
+      "https://en.wikivoyage.org/wiki/Quito"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Metro for main corridors; taxis or apps for short hops and evenings.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Runs Quitumbe to El Labrador via Centro Histórico and La Mariscal in about 30 min. Fares $0.45 general, $0.22 reduced. Hours 05:30–23:00 Mon–Fri, 07:00–23:00 Sat, 07:00–22:00 Sun and holidays."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "El Trole, Metrobus and Ecovia cost about $0.35 per ride; pay at station entrances."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Yellow taxis with door numbers: day minimum $1, night minimum $2, most city trips under $5. Easy Taxi and Uber work; hotels can call a vetted taxi."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Useful for day trips outside the city. Traffic and parking in the centre are hard; check licence rules."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best in the old town, which is car-free on Sundays. Watch traffic and take care at altitude."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "High-altitude equatorial climate: mild all year, cool nights, and rain possible in any month. July to September is driest.",
+    "items": [
+      {
+        "icon": "🌦️",
+        "title": "Rain in most months",
+        "text": "Rain days range from about 12 in July to 29 in March. A light rain jacket beats an umbrella in the wind."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild days, cool nights",
+        "text": "Highs stay near 17–19°C all year; lows are 7–9°C. Bring a warm layer for evenings."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best time: July to September",
+        "text": "Fewer rain days and slightly warmer days. Best odds for volcano views and hikes."
+      },
+      {
+        "icon": "⛰️",
+        "title": "Altitude matters",
+        "text": "Quito sits very high. Take the first day easy, drink water and go slow on stairs."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Mornings are clearer",
+        "text": "Clouds and showers often build in the afternoon. Do outdoor sights early."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket, sturdy shoes and sunscreen. The sun is strong at altitude even when cloudy."
+      }
+    ]
+  }
+}

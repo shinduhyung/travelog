@@ -1,0 +1,218 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Tianjin blends colonial riverside charm with fast modern metro life.",
+  "intro": "Tianjin rewards visitors with historic streets, riverside walks and a lively food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Heping (Five Great Avenues)",
+    "Italian Style Town",
+    "Tianjin Railway Station",
+    "Binhai New Area"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 8,
+    "per_km": 1.7,
+    "min_fare": 8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro has 10+ lines and fares run ¥2-8; trains about 06:00-22:30.",
+    "Metro Line 2 links Tianjin Railway Station to Tianjin Binhai Airport for ¥3.",
+    "Buses cost about ¥1.5-2; the system is old and extensive.",
+    "Taxis are plentiful: flag fall ¥8 for 3 km, then about ¥1.7/km; avoid touts at stations.",
+    "Didi ride-hailing works widely; have your destination written in Chinese.",
+    "Line 9 plus the TEDA tram reach the Binhai seaside area; ferries run to Dalian and Incheon."
+  ],
+  "airports": [
+    {
+      "code": "TSN",
+      "name": "Tianjin Binhai International Airport",
+      "primary": true,
+      "note": "Main hub, about 13-15 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 2",
+          "to": "Tianjin Railway Station",
+          "price": "¥3",
+          "time": "25-35 min",
+          "note": "Cheapest and avoids traffic."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Major hotels and railway station",
+          "price": "¥15",
+          "time": "40-60 min",
+          "note": "Stops about 200 m from the station's north gate."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥50-65",
+          "time": "30-45 min",
+          "note": "Use the official taxi stand only."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥45-70",
+          "time": "30-45 min",
+          "note": "Have the address in Chinese."
+        }
+      ]
+    },
+    {
+      "code": "PKX",
+      "name": "Beijing Daxing International Airport",
+      "primary": false,
+      "note": "Big international hub about 100+ km away; intercity trains reach Tianjin.",
+      "options": [
+        {
+          "mode": "Intercity train",
+          "to": "Tianjin city centre",
+          "price": "¥34-60",
+          "time": "under 75 min",
+          "note": "Station is directly under the airport; check evening schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tianjin city centre",
+          "price": "¥300-450",
+          "time": "1.5-2 hr",
+          "note": "Long and costly; train is better."
+        }
+      ]
+    },
+    {
+      "code": "PEK",
+      "name": "Beijing Capital International Airport",
+      "primary": false,
+      "note": "Good for long-haul flights; about 130+ km from Tianjin.",
+      "options": [
+        {
+          "mode": "Airport Express + subway + bullet train",
+          "to": "Tianjin Railway Station",
+          "price": "¥80-120",
+          "time": "3.5 hr or more",
+          "note": "Transfer via Beijing South Station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tianjin city centre",
+          "price": "¥400-550",
+          "time": "2-2.5 hr",
+          "note": "Only sensible late at night."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Tianjin Eye",
+    "Five Great Avenues",
+    "Ancient Culture Street",
+    "Tianjin Binhai Library",
+    "Tianjin CTF Finance Centre"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tianjin",
+      "https://en.wikivoyage.org/wiki/Tianjin"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    39.0842,
+    117.2009
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 2,
+      "low": -7,
+      "rain_days": 1
+    },
+    {
+      "high": 6,
+      "low": -4,
+      "rain_days": 2
+    },
+    {
+      "high": 15,
+      "low": 2,
+      "rain_days": 3
+    },
+    {
+      "high": 21,
+      "low": 9,
+      "rain_days": 4
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 5
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 8
+    },
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 13
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 13
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 5
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 4
+    },
+    {
+      "high": 10,
+      "low": 2,
+      "rain_days": 3
+    },
+    {
+      "high": 3,
+      "low": -5,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport PEK is 123 km away"
+  ]
+}

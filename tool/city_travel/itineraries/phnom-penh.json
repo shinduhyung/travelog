@@ -1,0 +1,1194 @@
+{
+  "city": "Phnom Penh",
+  "checked": "October 2026",
+  "currency": "KHR",
+  "usd_rate": 4060.1509,
+  "intro": "Phnom Penh rewards visitors with grand royal palaces, sobering history, and a buzzing riverside food scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 11.4702,
+      "west": 104.8935,
+      "north": 11.5903,
+      "east": 104.9439,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4000,
+      "flag_airport": 8000,
+      "per_km": 2000,
+      "min_fare": 4000
+    },
+    "road_factor": 1.35,
+    "city_kmh": 18,
+    "notes": [
+      "No metro or tram; the city bus network has 13 lines running about 05:30-20:30.",
+      "City bus fare is 1,500 riel per ride; drivers give no change, so pay exact.",
+      "Tuk-tuks cost about US$2-3 in town and US$8 to the airport; agree the fare first.",
+      "Ride apps PassApp, Grab and TADA work well and show fixed prices, so no haggling.",
+      "Motorbikes rent for US$5-6 a day; traffic is chaotic and theft is common, so park in guarded areas.",
+      "Cyclos and bicycles are slow but scenic; bike hire is US$1-3 a day."
+    ],
+    "sources": []
+  },
+  "places": {
+    "royal-palace": {
+      "name": "Royal Palace of Cambodia",
+      "landmark": "Royal Palace of Cambodia",
+      "kind": "sight",
+      "lat": 11.5637,
+      "lon": 104.9318,
+      "price": 40000,
+      "price_text": "≈ KHR 40,000 (check on the day; camera fee may apply)",
+      "hours": "Daily roughly 08:00–11:00 and 14:00–17:00 · closed on some royal holidays",
+      "tip": "Dress modestly — cover shoulders and knees — and go at opening to beat the heat and crowds.",
+      "source": ""
+    },
+    "tuol-sleng": {
+      "name": "Tuol Sleng Genocide Museum",
+      "landmark": "Tuol Sleng Genocide Museum",
+      "kind": "museum",
+      "lat": 11.5494,
+      "lon": 104.9177,
+      "price": 20000,
+      "price_text": "≈ KHR 20,000 plus optional audio guide (check on the day)",
+      "hours": "Daily roughly 08:00–17:00 · last entry mid-afternoon",
+      "tip": "Take the audio guide; the site is heavy, so allow quiet time afterwards.",
+      "source": ""
+    },
+    "killing-field": {
+      "name": "Killing Field (Choeung Ek)",
+      "landmark": "Killing Field",
+      "kind": "sight",
+      "lat": 11.4844,
+      "lon": 104.9019,
+      "price": 20000,
+      "price_text": "≈ KHR 20,000 plus optional audio guide (check on the day)",
+      "hours": "Daily roughly 08:00–17:30",
+      "tip": "It is about 15 km out of town — agree a tuk-tuk round trip and price before you go.",
+      "source": ""
+    },
+    "wat-phnom": {
+      "name": "Wat Phnom",
+      "landmark": "Wat Phnom",
+      "kind": "sight",
+      "lat": 11.5761,
+      "lon": 104.923,
+      "price": 1000,
+      "price_text": "≈ KHR 1,000–2,000 (check on the day)",
+      "hours": "Daily roughly 07:00–18:30",
+      "tip": "Climb the hill in the late afternoon for shade and a breeze.",
+      "source": ""
+    },
+    "national-museum": {
+      "name": "National Museum of Cambodia",
+      "landmark": "National Museum of Cambodia",
+      "kind": "museum",
+      "lat": 11.5658,
+      "lon": 104.9294,
+      "price": 10000,
+      "price_text": "≈ KHR 10,000 (check on the day)",
+      "hours": "Daily roughly 08:00–17:00",
+      "tip": "The shaded courtyard is a calm break between the palace and the riverside.",
+      "source": ""
+    },
+    "mekong-river": {
+      "name": "Mekong River waterfront",
+      "landmark": "Mekong River",
+      "kind": "sight",
+      "lat": 11.5564,
+      "lon": 104.9282,
+      "price": 0,
+      "price_text": "Free to walk; sunset cruises cost extra",
+      "hours": "Always open",
+      "tip": "Walk the Sisowath Quay promenade at sunset, then eat nearby.",
+      "source": ""
+    },
+    "independence-monument": {
+      "name": "Independence Monument of Cambodia",
+      "landmark": "Independence Monument of Cambodia",
+      "kind": "sight",
+      "lat": 11.5564,
+      "lon": 104.9282,
+      "price": 0,
+      "price_text": "Free to view from outside",
+      "hours": "Always visible; lit at night",
+      "tip": "Best seen after dark when it is floodlit — a quick photo stop.",
+      "source": ""
+    },
+    "phsar-thmei": {
+      "name": "Phsar Thmei (Central Market)",
+      "landmark": "Phsar Thmei",
+      "kind": "food",
+      "lat": 11.5696,
+      "lon": 104.921,
+      "price": 0,
+      "price_text": "Free to enter; pay per item",
+      "hours": "Daily roughly 07:00–17:00",
+      "tip": "The art-deco dome is worth the visit alone; bargain politely.",
+      "source": ""
+    },
+    "phsar-toul-tom-poung": {
+      "name": "Phsar Tuol Tom Poung (Russian Market)",
+      "landmark": "Phsar Tuol Tom Poung",
+      "kind": "food",
+      "lat": 11.5408,
+      "lon": 104.9147,
+      "price": 0,
+      "price_text": "Free to enter; pay per item",
+      "hours": "Daily roughly 07:00–17:00",
+      "tip": "Come hungry for the food stalls and go early before it gets stifling.",
+      "source": ""
+    },
+    "fish-amok": {
+      "name": "Fish Amok (national dish)",
+      "landmark": "Fish Amok",
+      "kind": "food",
+      "lat": 11.5564,
+      "lon": 104.9282,
+      "price": 25000,
+      "price_text": "≈ KHR 15,000–40,000 depending on the restaurant",
+      "hours": "Lunch and dinner at most Khmer restaurants",
+      "tip": "Try it at a local Khmer restaurant rather than a tourist menu for a fresher version.",
+      "source": ""
+    },
+    "riverside-walk": {
+      "name": "Sisowath Quay riverside walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 11.5669,
+      "lon": 104.9342,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Stroll north from the palace end at sunset for the liveliest stretch.",
+      "source": ""
+    },
+    "sunset-cruise": {
+      "name": "Mekong sunset boat cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 11.5686,
+      "lon": 104.9355,
+      "price": 30000,
+      "price_text": "≈ KHR 20,000–60,000 (check on the day)",
+      "hours": "Departures late afternoon to early evening",
+      "tip": "Confirm the departure point and price on the quay before boarding.",
+      "source": ""
+    },
+    "bkk1-food": {
+      "name": "BKK1 café and restaurant streets",
+      "landmark": null,
+      "kind": "food",
+      "lat": 11.5536,
+      "lon": 104.9244,
+      "price": 20000,
+      "price_text": "≈ KHR 10,000–50,000 per meal",
+      "hours": "Mostly 07:00–22:00",
+      "tip": "Good for a modern coffee stop or a mix of Khmer and international food.",
+      "source": ""
+    },
+    "tonle-bassac-walk": {
+      "name": "Tonle Bassac neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 11.5486,
+      "lon": 104.9286,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daylight hours",
+      "tip": "A quieter area to wander; keep valuables close and stick to busy streets.",
+      "source": ""
+    },
+    "cyclo-tour": {
+      "name": "Cyclo city tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 11.5656,
+      "lon": 104.9306,
+      "price": 40000,
+      "price_text": "≈ KHR 30,000–60,000 per hour (negotiate first)",
+      "hours": "Daylight hours",
+      "tip": "Agree the route and total price before you set off.",
+      "source": ""
+    },
+    "night-market": {
+      "name": "Riverside night market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 11.5706,
+      "lon": 104.9339,
+      "price": 10000,
+      "price_text": "≈ KHR 5,000–20,000 per snack",
+      "hours": "Evenings, roughly 17:00–22:00 (check on the day)",
+      "tip": "Come for cheap street food and a lively evening atmosphere.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One focused day on Cambodia's royal and modern history, grouped by area.",
+      "days": [
+        {
+          "title": "Royal Palace morning, dark history afternoon",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go at opening. Dress modestly: shoulders and knees covered. Closed on some royal holidays, so check on the day."
+            },
+            {
+              "place": "national-museum",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "A short walk north. Good shade and cool rooms as the heat builds."
+            },
+            {
+              "place": "fish-amok",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby. Ask for the national dish; prices vary by restaurant."
+            },
+            {
+              "place": "tuol-sleng",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "A short tuk-tuk ride. Last entry is mid-afternoon, so do not arrive late. Allow quiet time afterwards."
+            },
+            {
+              "place": "killing-field",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "About 30–40 minutes by tuk-tuk. It closes around 17:30, so keep the visit short. Pair with Tuol Sleng as planned."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Royal Palace area"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of markets, Khmer classics and riverside eating.",
+      "days": [
+        {
+          "title": "Markets, amok and the riverside",
+          "stops": [
+            {
+              "place": "phsar-thmei",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Start early. The domed Central Market is busiest and freshest in the morning. Bring small notes."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Short tuk-tuk ride. Coffee and a late breakfast on the café streets. Most places open around 07:00."
+            },
+            {
+              "place": "fish-amok",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Try amok and a fresh spring roll; prices range from cheap to mid-range."
+            },
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Russian Market. Snack stalls and spices. It gets hot inside, so carry water."
+            },
+            {
+              "place": "night-market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Riverside evening market. Graze from stalls. Hours are roughly 17:00–22:00; check on the day."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Easy stroll along Sisowath Quay to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "day-budget",
+      "length": "day",
+      "style": "budget",
+      "nights": 0,
+      "for": "Cheap sights, markets and a sunset on the water without spending much.",
+      "days": [
+        {
+          "title": "Free and cheap Phnom Penh",
+          "stops": [
+            {
+              "place": "wat-phnom",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Small entry fee. A short walk or cheap tuk-tuk from the riverside. Go early before the heat."
+            },
+            {
+              "place": "phsar-thmei",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Cheap breakfast and snacks inside the market. Carry small riel notes."
+            },
+            {
+              "place": "independence-monument",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Free to see from outside. A quick photo stop; it is lit at night too."
+            },
+            {
+              "place": "mekong-river",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Rest in the afternoon heat, then come back for the waterfront. Free to walk."
+            },
+            {
+              "place": "sunset-cruise",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Short boat trips leave from the riverside late afternoon. Agree the price first; it is usually modest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day: the Royal Palace and National Museum, then the Tuol Sleng and Choeung Ek memorials.",
+      "days": [
+        {
+          "title": "Royal Palace area in the morning",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go at opening. Dress modestly: cover shoulders and knees."
+            },
+            {
+              "place": "national-museum",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "A short walk north. Cool and shaded inside."
+            },
+            {
+              "place": "fish-amok",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby. Ask for fish amok, the national dish."
+            },
+            {
+              "place": "tuol-sleng",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "A short tuk-tuk ride. Last entry is mid-afternoon, so do not arrive late."
+            },
+            {
+              "place": "killing-field",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "About 30–40 minutes by tuk-tuk. Check the gate closes around 17:30."
+            }
+          ]
+        },
+        {
+          "title": "Monuments and the river at dusk",
+          "stops": [
+            {
+              "place": "independence-monument",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Quick photo stop. Lit up after dark."
+            },
+            {
+              "place": "wat-phnom",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Late afternoon is cooler. Check the gate closes around 18:30."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset along Sisowath Quay, then dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Royal Palace area or Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets, Khmer classics and riverside dinners in one easy day.",
+      "days": [
+        {
+          "title": "Markets and Khmer classics",
+          "stops": [
+            {
+              "place": "phsar-thmei",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Central Market. Go early for the freshest food stalls."
+            },
+            {
+              "place": "fish-amok",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch at a Khmer restaurant. Prices vary; check the menu first."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Rest in the shade during the hottest hours."
+            },
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Russian Market. Snacks and coffee. A short tuk-tuk ride from the centre."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner in BKK1. Many cafés and restaurants, mostly open until about 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Riverside evening",
+          "stops": [
+            {
+              "place": "riverside-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset walk along Sisowath Quay."
+            },
+            {
+              "place": "night-market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Street food and snacks. Hours vary, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay) or BKK1"
+    },
+    {
+      "id": "1n-budget",
+      "length": "1n",
+      "style": "budget",
+      "nights": 1,
+      "for": "Cheap eats, markets and free river views, with short tuk-tuk hops.",
+      "days": [
+        {
+          "title": "Cheap and central",
+          "stops": [
+            {
+              "place": "phsar-thmei",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Breakfast at the market. Agree the tuk-tuk price before you ride."
+            },
+            {
+              "place": "wat-phnom",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Small entry fee. A short walk from the market area."
+            },
+            {
+              "place": "mekong-river",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Cheap lunch near the waterfront."
+            },
+            {
+              "place": "cyclo-tour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Negotiate the price first. Daylight hours only."
+            },
+            {
+              "place": "independence-monument",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Free to see from outside. Lit at night."
+            }
+          ]
+        },
+        {
+          "title": "Sunset on the water",
+          "stops": [
+            {
+              "place": "riverside-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Free sunset walk."
+            },
+            {
+              "place": "night-market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Cheap dinner. Check opening on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-time visitors who want the Royal Palace, the national museum and the memorial sites without rushing.",
+      "days": [
+        {
+          "title": "Arrive, Royal Palace and riverside",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go at opening. Dress modestly: shoulders and knees covered. Closed on some royal holidays, so check on the day."
+            },
+            {
+              "place": "national-museum",
+              "at": "10:15",
+              "minutes": 75,
+              "note": "A short walk north. Cool and shaded, good before the midday heat."
+            },
+            {
+              "place": "fish-amok",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby. Fish amok is the national dish; most Khmer restaurants serve it."
+            },
+            {
+              "place": "independence-monument",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Lit at night. A quick photo stop on the way to the river."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset along Sisowath Quay, then dinner at the night market."
+            }
+          ]
+        },
+        {
+          "title": "Memorials, then markets",
+          "stops": [
+            {
+              "place": "tuol-sleng",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Start early, before the heat peaks. The visit is heavy; allow quiet time after."
+            },
+            {
+              "place": "killing-field",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "About 30–40 minutes by tuk-tuk from Tuol Sleng. Agree the fare first."
+            },
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late lunch and a wander at Russian Market. Mostly closes around 17:00."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner in BKK1. Many cafés and restaurants, mostly open until about 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Royal Palace area or Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, street noodles and riverside dinners with a little history in between.",
+      "days": [
+        {
+          "title": "Markets and the riverside",
+          "stops": [
+            {
+              "place": "phsar-thmei",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Central Market. Go early for the freshest food stalls. Mostly closes around 17:00."
+            },
+            {
+              "place": "fish-amok",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Early lunch. Ask for amok with fish, steamed in banana leaf."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Indoor and shaded during the hottest hours."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk the quay at sunset."
+            },
+            {
+              "place": "night-market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Street food dinner. Hours vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Russian Market and BKK1",
+          "stops": [
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Best from morning to midday. Try the food stalls inside."
+            },
+            {
+              "place": "tonle-bassac-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "A short tuk-tuk ride away. Daylight hours only."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch on the café streets. Many places open 07:00–22:00."
+            },
+            {
+              "place": "sunset-cruise",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Book a late-afternoon Mekong cruise from the riverside. Confirm departure time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay) or BKK1"
+    },
+    {
+      "id": "2n-budget",
+      "length": "2n",
+      "style": "budget",
+      "nights": 2,
+      "for": "Travellers keeping costs low: cheap beds, short tuk-tuk hops and free riverside evenings.",
+      "days": [
+        {
+          "title": "Free sights and the river",
+          "stops": [
+            {
+              "place": "wat-phnom",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Small entry fee. Go early before the heat."
+            },
+            {
+              "place": "phsar-thmei",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Cheap breakfast and snacks at Central Market."
+            },
+            {
+              "place": "independence-monument",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Free to see from outside. Lit in the evening."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Free sunset walk along Sisowath Quay."
+            },
+            {
+              "place": "night-market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Cheap dinner. Hours vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "History and markets",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Entry fee applies. Dress modestly. Closed on some royal holidays."
+            },
+            {
+              "place": "cyclo-tour",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Agree the price before you start. Daylight hours only."
+            },
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Cheap lunch and souvenirs at Russian Market."
+            },
+            {
+              "place": "tonle-bassac-walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Free neighbourhood walk in daylight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the Royal Palace, the national museum and the memorial sites at a calm pace.",
+      "days": [
+        {
+          "title": "Arrive, riverside and the old quarter",
+          "stops": [
+            {
+              "place": "mekong-river",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy first walk along Sisowath Quay after checking in."
+            },
+            {
+              "place": "wat-phnom",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Small hilltop temple. Late afternoon is cooler."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Sunset on the water, then pick a Khmer restaurant nearby."
+            },
+            {
+              "place": "fish-amok",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Try the national dish on your first evening."
+            }
+          ]
+        },
+        {
+          "title": "Royal Palace and the museum",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:15",
+              "minutes": 90,
+              "note": "Go at opening. Closed on some royal holidays, so check the day before. Cover shoulders and knees."
+            },
+            {
+              "place": "national-museum",
+              "at": "10:15",
+              "minutes": 75,
+              "note": "A few minutes on foot. Good shade and fans inside."
+            },
+            {
+              "place": "fish-amok",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then rest through the hottest hours."
+            },
+            {
+              "place": "independence-monument",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Short stop. It is lit at night."
+            },
+            {
+              "place": "phsar-thmei",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Central Market dome. Most stalls close around 17:00, so treat this as a quick look."
+            }
+          ]
+        },
+        {
+          "title": "Memorials, then fly",
+          "stops": [
+            {
+              "place": "tuol-sleng",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Sombre and important. Take the audio guide. Last entry is mid-afternoon."
+            },
+            {
+              "place": "killing-field",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "About 30–40 minutes by tuk-tuk from Tuol Sleng. Agree the fare first."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Late lunch in BKK1 on the way back to town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, street noodles and riverside dinners between the main sights.",
+      "days": [
+        {
+          "title": "Markets and the riverside",
+          "stops": [
+            {
+              "place": "phsar-thmei",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Go early for fresh food stalls and cheap breakfast."
+            },
+            {
+              "place": "fish-amok",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch at a Khmer restaurant near the palace."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Cool indoor break at the hottest part of the day."
+            },
+            {
+              "place": "night-market",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening food stalls. Hours vary, so check on the day."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Short stroll after eating."
+            }
+          ]
+        },
+        {
+          "title": "Palace, then BKK1 dinner",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:15",
+              "minutes": 90,
+              "note": "Early start beats the heat and the crowds."
+            },
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Russian Market. Snack stalls inside are good and cheap."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch on the café streets. Many places run all day."
+            },
+            {
+              "place": "tonle-bassac-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Neighbourhood walk between BKK1 and the river."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner. Book ahead at popular spots on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Memorials and a last meal",
+          "stops": [
+            {
+              "place": "tuol-sleng",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Morning visit before the heat."
+            },
+            {
+              "place": "fish-amok",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Early lunch near the museum."
+            },
+            {
+              "place": "killing-field",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Pair with Tuol Sleng. Take water and sun cover."
+            },
+            {
+              "place": "mekong-river",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Wind down by the water before your flight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "BKK1"
+    },
+    {
+      "id": "3n-budget",
+      "length": "3n",
+      "style": "budget",
+      "nights": 3,
+      "for": "Travellers keeping costs low with markets, walking routes and short tuk-tuk hops.",
+      "days": [
+        {
+          "title": "Walk the old quarter",
+          "stops": [
+            {
+              "place": "phsar-thmei",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Cheap breakfast stalls. Most stalls close around 17:00."
+            },
+            {
+              "place": "wat-phnom",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Small entry fee. Short walk from the market."
+            },
+            {
+              "place": "fish-amok",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at a simple Khmer spot. Agree prices first."
+            },
+            {
+              "place": "mekong-river",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Free sunset walk along the quay."
+            },
+            {
+              "place": "night-market",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Cheap dinner. Check opening on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palace and a cyclo ride",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "08:15",
+              "minutes": 90,
+              "note": "Entry fee applies. Dress modestly."
+            },
+            {
+              "place": "cyclo-tour",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Agree the price before you start. Daylight hours only."
+            },
+            {
+              "place": "phsar-toul-tom-poung",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Cheap lunch and browsing at Russian Market."
+            },
+            {
+              "place": "independence-monument",
+              "at": "17:30",
+              "minutes": 20,
+              "note": "Free to see from the street. Lit at night."
+            },
+            {
+              "place": "riverside-walk",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Evening stroll, then a budget dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Memorials, then fly",
+          "stops": [
+            {
+              "place": "tuol-sleng",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "Entry fee applies. Go early."
+            },
+            {
+              "place": "killing-field",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Share a tuk-tuk to split the fare. Agree the price first."
+            },
+            {
+              "place": "bkk1-food",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch on the cheaper café streets before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Riverside (Sisowath Quay)"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Royal Palace, Silver Pagoda and the Killing Fields memorials."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Street noodles, markets and riverside dinners."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Cheap beds, 1,500-riel buses and US$2 tuk-tuks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Riverside (Sisowath Quay)",
+      "range": [
+        60000,
+        350000
+      ],
+      "why": "Walk to the Royal Palace, night market and riverside bars; most tuk-tuks and restaurants are on your doorstep.",
+      "center": [
+        11.564,
+        104.931
+      ]
+    },
+    {
+      "area": "Royal Palace area",
+      "range": [
+        80000,
+        400000
+      ],
+      "why": "Quiet streets right by the main sights and the National Museum; good for early starts before the heat.",
+      "center": [
+        11.563,
+        104.928
+      ]
+    },
+    {
+      "area": "BKK1",
+      "range": [
+        100000,
+        500000
+      ],
+      "why": "Modern cafés, embassies and mid-range hotels; a short ride from the sights and the best food street in town.",
+      "center": [
+        11.548,
+        104.924
+      ]
+    },
+    {
+      "area": "Tonle Bassac",
+      "range": [
+        120000,
+        600000
+      ],
+      "why": "Newer high-rises and malls near the Independence Monument; calm nights and easy ride-app pickups.",
+      "center": [
+        11.545,
+        104.928
+      ]
+    }
+  ],
+  "food": [
+    "Start the day with kuy teav (rice-noodle soup) or bai sach chrouk (grilled pork and rice) at a street stall; expect a few thousand riel.",
+    "Try fish amok (coconut curry steamed in a banana leaf) and lok lak (stir-fried beef with lime-pepper dip) at a mid-range Khmer restaurant.",
+    "Eat at the evening food stalls and night market near the riverside; point at what looks busy and pay in small riel notes.",
+    "Drink only bottled or filtered water, and be careful with ice from street carts; hotel and restaurant ice is usually fine.",
+    "Vegetarian and halal options are easy to find around BKK1 and the riverside; ask before ordering fish sauce or prahok."
+  ],
+  "more_time": [
+    "Add a half-day to the Tuol Sleng Genocide Museum and the Killing Fields of Choeung Ek; go early, it is emotional and hot.",
+    "Take a slow boat or bus to Siem Reap for Angkor Wat if you have two spare days; check times and tickets on the day.",
+    "Cross the river to Areyksat for a quiet half-day of village lanes and river views, a short ferry ride from the city."
+  ]
+}

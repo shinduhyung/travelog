@@ -1,4 +1,5 @@
 // lib/screens/my_journey_screen.dart
+import 'package:jidoapp/widgets/new_tag.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:jidoapp/l10n/app_localizations.dart';
@@ -198,13 +199,21 @@ class _MyJourneyScreenState extends State<MyJourneyScreen> {
         ),
         child: Row(
           children: [
-            Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: mint.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: Icon(_getTravelerTypeIcon(), color: darkMint, size: 24)),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: mint.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Icon(_getTravelerTypeIcon(), color: darkMint, size: 24)),
+                // 새 계산식으로 다시 분석해야 하는 동안 NEW 표시
+                if (_travelerType?.isNotEmpty != true)
+                  const Positioned(top: -8, right: -10, child: NewTag()),
+              ],
+            ),
             const SizedBox(width: 16),
             Expanded(
               child: Column(

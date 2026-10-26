@@ -1,0 +1,29 @@
+$ deepseek_facts.py Ljubljana
+  tokens in 5710 out 1041
+Ljubljana: 1 problems
+  - airport VCE is 178 km away
+
+$ deepseek_city.py Ljubljana --stage places
+Ljubljana: places
+  tokens in 1184 out 3577
+
+$ deepseek_city.py Ljubljana --stage frame
+Ljubljana: frame
+  tokens in 2453 out 1855
+  repaired JSON
+
+$ deepseek_city.py Ljubljana --stage plans
+Ljubljana: plans
+  plans for day
+  tokens in 2363 out 1227
+  plans for 1n
+  tokens in 2364 out 1394
+  plans for 2n
+  tokens in 2369 out 1859
+  plans for 3n
+  tokens in 2364 out 2527
+
+$ merge_city.py Ljubljana
+Ljubljana: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/ljubljana.json and planner/ljubljana.json
+

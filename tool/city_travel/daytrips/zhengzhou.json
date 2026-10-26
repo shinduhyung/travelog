@@ -1,0 +1,118 @@
+{
+ "city": "Zhengzhou",
+ "trips": [
+  {
+   "place": "Luoyang",
+   "label": "",
+   "position": {
+    "id": 464013,
+    "name": "Luoyang, Henan",
+    "city": "Luoyang",
+    "lat": 34.68361,
+    "lng": 112.45361
+   },
+   "town": {
+    "name": "Luoyang",
+    "lat": 34.67345,
+    "lng": 112.43684
+   },
+   "road": {
+    "km": 131,
+    "min": 95,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 200.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$12",
+     "time": "1h 30m",
+     "via": "Zhengzhou to Luoyang",
+     "source": "https://www.rome2rio.com/s/Zhengzhou/Luoyang"
+    }
+   },
+   "route_note": "High-speed trains connect Zhengzhou to Luoyang in about 40 minutes, then take a local bus or taxi to the Longmen Grottoes south of town.",
+   "see": [
+    "Longmen Grottoes",
+    "White Horse Temple",
+    "Luoyang Old Town",
+    "Guanlin Temple"
+   ],
+   "visit": "Full day",
+   "tour_query": "Longmen Grottoes day trip from Zhengzhou",
+   "quests": [
+    "Longmen Grottoes"
+   ],
+   "recommended": "train",
+   "why": "High-speed trains take about 40 minutes, then a short local bus or taxi reaches the Longmen Grottoes.",
+   "stars": 5,
+   "know": [
+    "Longmen Grottoes are best visited in spring or autumn",
+    "Allow several hours to walk the grottoes site",
+    "Book train tickets ahead during holidays"
+   ]
+  },
+  {
+   "place": "Kaifeng",
+   "label": "",
+   "position": {
+    "id": 17405489,
+    "name": "Kaifeng, Kaifengbei",
+    "city": "Kaifeng",
+    "lat": 34.84063,
+    "lng": 114.25605
+   },
+   "town": {
+    "name": "Kaifeng",
+    "lat": 34.7986,
+    "lng": 114.30742
+   },
+   "road": {
+    "km": 69,
+    "min": 60,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 110.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$7-$10",
+     "time": "40m",
+     "via": "Zhengzhou to Kaifeng",
+     "source": "https://www.rome2rio.com/s/Zhengzhou/Kaifeng"
+    },
+    "bus": {
+     "from": "$9",
+     "time": "2h 30m",
+     "via": "Zhengzhou Airport to Kaifeng Haode Zhuanpan",
+     "source": "https://www.rome2rio.com/s/Zhengzhou/Kaifeng"
+    }
+   },
+   "route_note": "Frequent high-speed trains run from Zhengzhou to Kaifeng in under half an hour, with local buses or taxis onward to the old town sights.",
+   "see": [
+    "Iron Pagoda",
+    "Dragon Pavilion",
+    "Qingming Riverside Landscape Garden",
+    "Kaifeng Fu"
+   ],
+   "visit": "Full day",
+   "tour_query": "Kaifeng day trip from Zhengzhou",
+   "quests": [],
+   "recommended": "train",
+   "why": "High-speed trains take under half an hour and local transport reaches the old town sights easily.",
+   "stars": 4,
+   "know": [
+    "Book train tickets ahead on busy weekends and holidays",
+    "The night market is best visited in the evening",
+    "Several old-town sights charge separate entry fees"
+   ]
+  }
+ ],
+ "problems": [
+  "Dengfeng: not a town in cities15000.json (CN), dropped"
+ ]
+}

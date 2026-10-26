@@ -1,0 +1,179 @@
+{
+  "currency": "NZD",
+  "usd_rate": 1.7596,
+  "intro_line": "Auckland: harbours, volcanoes and Pacific energy in one spread-out city.",
+  "intro": "Auckland rewards visitors with volcanic views, island ferries and a lively waterfront food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "CBD / Britomart",
+    "Viaduct Harbour",
+    "Ponsonby",
+    "Parnell"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 5,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.4,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Trains run from Waitematā Station on four lines; a new underground city loop is open.",
+    "Buses cover most suburbs; cash is not accepted, use an AT HOP card or contactless card.",
+    "Fares start around NZ$2.80 per zone, with free transfers within 30 minutes.",
+    "Uber works widely; taxis are plentiful and take cards.",
+    "Driving is easy off-peak but motorways jam at rush hour and parking is hard.",
+    "Ferries leave the CBD for Hauraki Gulf islands and Devonport; walking suits the CBD."
+  ],
+  "airports": [
+    {
+      "code": "AKL",
+      "name": "Auckland International Airport",
+      "primary": true,
+      "note": "Main gateway, about 18-22 km south of the centre.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Waitematā Station, CBD",
+          "price": "NZ$10 HOP card plus fare",
+          "time": "60-90 min",
+          "note": "Take the AIR bus to Puhinui, then a train; buy a HOP card at the airport."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "CBD hotels",
+          "price": "NZ$35",
+          "time": "40-60 min",
+          "note": "Shared shuttle; book ahead at busy times."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "NZ$35-90",
+          "time": "30-50 min",
+          "note": "Ask for a fixed fare; metered runs cost more."
+        },
+        {
+          "mode": "Uber",
+          "to": "CBD",
+          "price": "NZ$40-70",
+          "time": "30-50 min",
+          "note": "Pickup zone is signposted outside the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Sky Tower",
+    "Auckland War Memorial Museum",
+    "Viaduct Harbour",
+    "Auckland Harbour Bridge",
+    "Waiheke Island",
+    "Piha Beach",
+    "Auckland Adventure Park",
+    "Crystal Mountain",
+    "Lion Brewery",
+    "Rainbow's End",
+    "The Civic Theatre",
+    "University of Auckland"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Auckland",
+      "https://en.wikivoyage.org/wiki/Auckland"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -36.8485,
+    174.7633
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 23,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 22,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 12,
+      "rain_days": 13
+    },
+    {
+      "high": 15,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 14,
+      "low": 10,
+      "rain_days": 13
+    },
+    {
+      "high": 14,
+      "low": 9,
+      "rain_days": 14
+    },
+    {
+      "high": 15,
+      "low": 11,
+      "rain_days": 15
+    },
+    {
+      "high": 17,
+      "low": 12,
+      "rain_days": 13
+    },
+    {
+      "high": 19,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 21,
+      "low": 16,
+      "rain_days": 13
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

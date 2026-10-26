@@ -1,0 +1,264 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Night markets, beef noodles and dumplings all day."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Temples, museums and old streets in the city core."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Hot springs, hills and easy day trips out of town."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Ximending",
+      "range": [
+        1200,
+        3500
+      ],
+      "why": "Young, busy and central. Walk to the MRT, night markets and the old Wanhua temples. Good for first-timers who want nightlife.",
+      "center": [
+        25.042,
+        121.507
+      ]
+    },
+    {
+      "area": "Zhongshan",
+      "range": [
+        1800,
+        4500
+      ],
+      "why": "Quiet lanes, small shops and cafés. Two MRT lines and short rides to most sights.",
+      "center": [
+        25.052,
+        121.52
+      ]
+    },
+    {
+      "area": "Da'an",
+      "range": [
+        2000,
+        5000
+      ],
+      "why": "Leafy and calm, near the park and Yongkang Street food. A good base for couples and slower trips.",
+      "center": [
+        25.027,
+        121.543
+      ]
+    },
+    {
+      "area": "Taipei Main Station",
+      "range": [
+        1400,
+        3800
+      ],
+      "why": "Best for transport: MRT, trains and the airport line in one place. Practical for short stays and day trips.",
+      "center": [
+        25.047,
+        121.517
+      ]
+    }
+  ],
+  "food": [
+    "Eat at night markets: Shilin and Raohe are the big ones. Go hungry, share dishes, and carry small cash.",
+    "Try the classics: beef noodle soup, soup dumplings, oyster omelette, stinky tofu and shaved ice.",
+    "Yongkang Street in Da'an is good for a sit-down food walk with tea shops and dessert.",
+    "Convenience stores are cheap and open late. A quick meal or snack costs about NT$60–150.",
+    "Many small eateries are cash-first. Keep some TWD on you; card use is common but not everywhere."
+  ],
+  "more_time": [
+    "Add a day trip to Jiufen and the coast by bus or train; check times on the day.",
+    "Take a hot-spring trip to Beitou on the MRT, about 30 minutes from the center.",
+    "Swap one city day for the National Palace Museum if you like art and history; allow half a day."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.95
+    ],
+    "nature": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.7,
+      0.5,
+      0.45,
+      0.45,
+      0.6,
+      0.85,
+      0.85,
+      0.7
+    ],
+    "nightlife": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "shopping": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      0.9
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "shopping"
+  ],
+  "recommend": {
+    "why": "Three nights covers the night markets, temples and museums, plus one day trip to the hills or hot springs."
+  },
+  "month_notes": [
+    "Jan: cool and damp, highs near 19°C. Pack a jacket and an umbrella.",
+    "Feb: similar to Jan, around 20°C. Rain on about 11 days.",
+    "Mar: warming to 23°C. A good shoulder month with fewer crowds.",
+    "Apr: mild and pleasant at 26°C, but rain days rise to 14.",
+    "May: warm and wet. Expect showers on about 19 days.",
+    "Jun: hot and rainy, highs near 31°C. Plan indoor breaks.",
+    "Jul: hottest month, around 33°C, with 18 rain days. Go out early and late.",
+    "Aug: still very hot at 32°C and wet. Carry water.",
+    "Sep: hot at 30°C but rain eases a little.",
+    "Oct: comfortable at 27°C. A strong month to visit.",
+    "Nov: mild at 25°C with 13 rain days. Good for walking.",
+    "Dec: cooler at 20°C and damp. Bring layers."
+  ],
+  "climate_guide": {
+    "summary": "Subtropical and humid. Summers are hot and wet; winters are mild but grey and damp. Rain falls in every month.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 11–21 rain days each month. June is the wettest. Always carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "July and August reach about 33°C with high humidity. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Best months: October to April",
+        "text": "Highs of 19–27°C and less intense heat. Best for walking and day trips."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild winter",
+        "text": "January and February sit around 14–20°C. A light jacket is enough; indoor spaces can feel cold."
+      },
+      {
+        "icon": "☂️",
+        "title": "Typhoon season",
+        "text": "Late summer and early autumn can bring storms. Check forecasts on the day and keep plans flexible."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket or umbrella, and comfortable shoes. Add a warm layer for winter evenings."
+      }
+    ]
+  },
+  "transit": {
+    "best": "MRT for most trips; EasyCard makes it cheaper and works on buses too.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Clean, safe and cheap: NT$20–65 per ride. Trains run about 06:00–00:00. EasyCard gives 20% off."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent city buses. Pay with EasyCard on boarding; transfers within an hour cost NT$7."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are plentiful and Uber operates in Taipei. Good for late nights and luggage."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not advised for visitors. Parking is hard and scooters dominate the roads."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Sidewalks are good in central areas. YouBike share bikes are widely available for longer hops."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+$ deepseek_prep.py Amman
+  tokens in 670 out 286
+Amman: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Amman
+  tokens in 3903 out 548
+Amman: 0 problems
+
+$ deepseek_city.py Amman --stage places
+Amman: places
+  tokens in 1162 out 3289
+
+$ deepseek_city.py Amman --stage frame
+Amman: frame
+  tokens in 2468 out 1779
+  repaired JSON
+
+$ deepseek_city.py Amman --stage plans
+Amman: plans
+  plans for day
+  tokens in 2278 out 870
+  plans for 1n
+  tokens in 2279 out 996
+  plans for 2n
+  tokens in 2284 out 1654
+  plans for 3n
+  tokens in 2279 out 1891
+
+$ merge_city.py Amman
+Amman: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/amman.json and planner/amman.json
+

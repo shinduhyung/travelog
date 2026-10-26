@@ -1,0 +1,615 @@
+{
+  "city": "Cleveland",
+  "checked": "October 2026",
+  "intro_line": "A lakefront city of rock, rust, and revival.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Ohio City",
+        "University Circle",
+        "Tremont"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Ohio City",
+        "University Circle",
+        "Tremont"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Ohio City",
+        "University Circle",
+        "Tremont"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Ohio City",
+        "University Circle",
+        "Tremont"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Ohio City",
+        "University Circle",
+        "Tremont"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 2,
+        "low": -4,
+        "rain_days": 15,
+        "note": "January: cold, highs near 2°C and lows around -4°C. About 15 wet days; pack a warm coat."
+      },
+      {
+        "high": 3,
+        "low": -4,
+        "rain_days": 12,
+        "note": "February: still cold, highs near 3°C. Slightly fewer wet days, around 12."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 14,
+        "note": "March: cool and changeable, highs near 7°C with lows near -1°C. Keep a rain layer."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 16,
+        "note": "April: mild but wet, highs near 13°C and about 16 rain days. Bring an umbrella."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 13,
+        "note": "May: pleasant, highs near 19°C. Good month for walking and parks."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 13,
+        "note": "June: warm, highs near 24°C. Comfortable days, some rain."
+      },
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 13,
+        "note": "July: warmest, highs near 26°C and lows near 20°C. Book hotels early."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 14,
+        "note": "August: warm and humid, highs near 26°C. Similar to July; good for the lakefront."
+      },
+      {
+        "high": 23,
+        "low": 16,
+        "rain_days": 10,
+        "note": "September: mild and drier, highs near 23°C with about 10 rain days. A strong month to visit."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 14,
+        "note": "October: cool and often wet, highs near 17°C with about 14 rain days."
+      },
+      {
+        "high": 10,
+        "low": 4,
+        "rain_days": 13,
+        "note": "November: chilly, highs near 10°C. Bring layers and a rain jacket."
+      },
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 15,
+        "note": "December: cold, highs near 5°C and lows near 0°C. About 15 wet days; expect grey skies."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.6
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.6
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.45,
+      0.7,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.45,
+      0.3
+    ],
+    "history": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.6
+    ],
+    "family": [
+      0.4,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.4
+    ]
+  },
+  "places": {
+    "rock_hall": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "cleveland_museum_art": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "University Circle",
+      "popularity": 5
+    },
+    "west_side_market": {
+      "types": [
+        "food",
+        "history",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Saturday morning",
+      "area": "Ohio City",
+      "popularity": 5
+    },
+    "severance_hall": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening concert",
+      "area": "University Circle",
+      "popularity": 4
+    },
+    "case_western": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime, spring or fall",
+      "area": "University Circle",
+      "popularity": 3
+    },
+    "memphis_kiddie_park": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Ohio City",
+      "popularity": 2
+    },
+    "edgewater_park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Sunset, summer",
+      "area": "Ohio City",
+      "popularity": 4
+    },
+    "tremont_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Tremont",
+      "popularity": 4
+    },
+    "flats_east_bank": {
+      "types": [
+        "food",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening, summer",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "great_lakes_science": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "lola_bistro": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "ohio_city_brewery": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekend afternoon",
+      "area": "Ohio City",
+      "popularity": 3
+    },
+    "lake_view_cemetery": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning, spring or fall",
+      "area": "University Circle",
+      "popularity": 3
+    },
+    "little_italy": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Lunchtime or early evening",
+      "area": "University Circle",
+      "popularity": 3
+    },
+    "cleveland_metroparks_zoo": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning, summer",
+      "area": "Tremont",
+      "popularity": 3
+    },
+    "playhouse_square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "soldiers_sailors": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Midday",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "towpath_trail": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, spring to fall",
+      "area": "Ohio City",
+      "popularity": 2
+    },
+    "market_garden": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "Ohio City",
+      "popularity": 3
+    },
+    "achristmasstoryhouse": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; busy near holidays",
+      "area": "Tremont",
+      "popularity": 3
+    },
+    "cleveland_museum_natural_histo": {
+      "types": [
+        "family",
+        "history",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "University Circle",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Rock Hall, the museums and the West Side Market without rushing; add a night in summer for the lakefront."
+  },
+  "airports": [
+    {
+      "code": "CLE",
+      "name": "Cleveland Hopkins International Airport",
+      "primary": true,
+      "note": "Main airport, about 16 km southwest of downtown.",
+      "options": [
+        {
+          "mode": "RTA Red Line",
+          "to": "Tower City Center downtown",
+          "price": "$2.50",
+          "time": "25-30 min",
+          "note": "Cheapest and fastest rail link; trains run frequently."
+        },
+        {
+          "mode": "Bus",
+          "to": "Downtown",
+          "price": "$2.50",
+          "time": "40-60 min",
+          "note": "Slower than the Red Line; use RTA trip planner."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Metered; expect surcharges at night."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Pickup at designated rideshare zones."
+        }
+      ]
+    },
+    {
+      "code": "BKL",
+      "name": "Cleveland Burke Lakefront Airport",
+      "primary": false,
+      "note": "Small downtown airport on Lake Erie for private and business flights.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$10-15",
+          "time": "5-10 min",
+          "note": "Very close to the city core."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$8-15",
+          "time": "5-10 min",
+          "note": "Short hop; availability can vary."
+        },
+        {
+          "mode": "Walk / bike",
+          "to": "Downtown",
+          "price": "free",
+          "time": "20-30 min",
+          "note": "Lakeside paths connect toward the core."
+        }
+      ]
+    },
+    {
+      "code": "CAK",
+      "name": "Akron–Canton Airport",
+      "primary": false,
+      "note": "About 80 km south of Cleveland; serves major U.S. airlines.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Downtown Cleveland",
+          "price": "check locally",
+          "time": "1.5-2.5 hr",
+          "note": "Limited service; check schedules in advance."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Cleveland",
+          "price": "$80-110",
+          "time": "60-75 min",
+          "note": "Long ride; agree on fare first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Cleveland",
+          "price": "$70-100",
+          "time": "60-75 min",
+          "note": "Availability may be thin at night."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Cleveland",
+      "https://en.wikivoyage.org/wiki/Cleveland"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "family"
+  ],
+  "transit": {
+    "best": "RTA Rapid trains and buses for most trips; walk downtown; ride apps for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "RTA Rapid rail: the Red Line links the airport to downtown. Blue and Green Lines serve the east side. The Waterfront Line tram connects Tower City to the Flats, stadium and Rock Hall."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "RTA buses cover the city. The Health Line BRT runs Euclid Avenue from downtown to University Circle. An all-day RTA pass costs about $5 and covers buses and trains."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Lyft both operate widely."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy with grid streets and light traffic. Downtown has purple district signs."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking works well downtown. Bike trails and paths are expanding."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid continental climate: cold, grey winters and warm, pleasant summers. Rain is spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs around 23–26°C and lows near 16–20°C. Best for walking, parks and the lakefront."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs near 2–5°C and lows around -4°C. Dress in warm layers and plan indoor sights."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 10–16 wet days every month. April is the wettest; September the driest."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and autumn are mild",
+        "text": "Highs near 13–19°C in spring and 10–17°C in autumn. Changeable, so pack layers."
+      },
+      {
+        "icon": "💨",
+        "title": "Lake-effect weather",
+        "text": "Winds off Lake Erie can bring sudden cold and snow in winter. Check the forecast on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "A waterproof jacket and umbrella any month; warm coat, hat and gloves for winter; light layers for summer."
+      }
+    ]
+  }
+}

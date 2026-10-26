@@ -1,0 +1,29 @@
+$ deepseek_facts.py Lima
+  tokens in 4261 out 708
+Lima: 0 problems
+
+$ deepseek_city.py Lima --stage places
+Lima: places
+  tokens in 1230 out 3007
+
+$ deepseek_city.py Lima --stage frame
+Lima: frame
+  tokens in 2465 out 1892
+
+$ deepseek_city.py Lima --stage plans
+Lima: plans
+  plans for day
+  tokens in 2368 out 1027
+  plans for 1n
+  tokens in 2369 out 1210
+  plans for 2n
+  tokens in 2369 out 1480
+  plans for 3n
+  tokens in 2374 out 1801
+  plans for 4n
+  tokens in 2369 out 2483
+
+$ merge_city.py Lima
+Lima: 23 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/lima.json and planner/lima.json
+

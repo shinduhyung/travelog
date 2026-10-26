@@ -1,0 +1,560 @@
+{
+  "city": "Tegucigalpa",
+  "checked": "October 2026",
+  "intro_line": "Honduras' highland capital, where colonial streets meet chaotic energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro",
+        "Comayagüela",
+        "Boulevard Morazán",
+        "Lomas del Guijarro"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro",
+        "Comayagüela",
+        "Boulevard Morazán",
+        "Lomas del Guijarro"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro",
+        "Comayagüela",
+        "Boulevard Morazán",
+        "Lomas del Guijarro"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Centro",
+        "Comayagüela",
+        "Boulevard Morazán",
+        "Lomas del Guijarro"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Centro",
+        "Comayagüela",
+        "Boulevard Morazán",
+        "Lomas del Guijarro"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 9,
+        "note": "January: mild and fairly dry, about 26°C by day and 16°C at night. Good for walking."
+      },
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 5,
+        "note": "February: the driest month, around 5 rain days. Comfortable days near 28°C."
+      },
+      {
+        "high": 30,
+        "low": 17,
+        "rain_days": 6,
+        "note": "March: warm and mostly dry, highs near 30°C. Start early for sightseeing."
+      },
+      {
+        "high": 31,
+        "low": 18,
+        "rain_days": 11,
+        "note": "April: hotter at about 31°C with more showers (11 rain days). Carry a light rain jacket."
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 19,
+        "note": "May: rainy season starts, around 19 rain days. Plan indoor sights and afternoon breaks."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 25,
+        "note": "June: wet, about 25 rain days. Expect heavy afternoon rain; keep plans flexible."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 20,
+        "note": "July: still wet (20 rain days) but a little cooler at 27°C. Mornings are usually best."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 23,
+        "note": "August: rainy again, around 23 rain days. Pack waterproof shoes."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 26,
+        "note": "September: the wettest month, about 26 rain days. Check road and trip conditions on the day."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 26,
+        "note": "October: still very wet (26 rain days), highs near 26°C. Good museum weather."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 18,
+        "note": "November: rain eases to about 18 days and days cool to 25°C. A pleasant shoulder month."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 12,
+        "note": "December: drier (12 rain days) and cool at night (17°C). A good month to visit."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "food": [
+      0.95,
+      0.95,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.75,
+      0.75,
+      0.7,
+      0.75,
+      0.9,
+      0.95
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.65,
+      0.65,
+      0.6,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "nature": [
+      0.85,
+      0.9,
+      0.9,
+      0.75,
+      0.55,
+      0.4,
+      0.45,
+      0.45,
+      0.4,
+      0.5,
+      0.7,
+      0.8
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ]
+  },
+  "places": {
+    "picacho": {
+      "types": [
+        "culture",
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Clear morning; avoid rainy afternoons",
+      "area": "Comayagüela",
+      "popularity": 5
+    },
+    "baleada": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Breakfast or late evening",
+      "area": "Centro",
+      "popularity": 5
+    },
+    "min": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "mercado": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "parque-central": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "morazan-walk": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Boulevard Morazán",
+      "popularity": 4
+    },
+    "guijarro-view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Lomas del Guijarro",
+      "popularity": 3
+    },
+    "valle-angeles-tour": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Morning start, dry season",
+      "area": "Comayagüela",
+      "popularity": 4
+    },
+    "suyapa": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Comayagüela",
+      "popularity": 3
+    },
+    "chiminike": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Boulevard Morazán",
+      "popularity": 3
+    },
+    "cafe-centro": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Midday",
+      "area": "Centro",
+      "popularity": 2
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "pupuseria": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Boulevard Morazán",
+      "popularity": 4
+    },
+    "parque-naciones": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Lomas del Guijarro",
+      "popularity": 2
+    },
+    "mercado-morazan": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Boulevard Morazán",
+      "popularity": 2
+    },
+    "mirador-taxi": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Comayagüela",
+      "popularity": 2
+    },
+    "souvenir-shop": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Boulevard Morazán",
+      "popularity": 2
+    },
+    "iglesia-los-dolores": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Centro",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old centre, museums and a hill-town day trip without rushing."
+  },
+  "airports": [
+    {
+      "code": "TGU",
+      "name": "Toncontín International Airport",
+      "primary": true,
+      "note": "In-town airport, 3 km from the centre, for domestic and some regional flights.",
+      "options": [
+        {
+          "mode": "City bus",
+          "to": "Centro",
+          "price": "L 10-20",
+          "time": "20-30 min",
+          "note": "Cheapest but routes are unlabeled; ask locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro or hotel areas",
+          "price": "L 100-200",
+          "time": "10-20 min",
+          "note": "Agree the fare before getting in."
+        },
+        {
+          "mode": "Uber",
+          "to": "Centro or hotel areas",
+          "price": "L 60-120",
+          "time": "10-20 min",
+          "note": "Often cheaper than taxis; help the driver find you."
+        }
+      ]
+    },
+    {
+      "code": "XPL",
+      "name": "Tegucigalpa Palmerola International Airport",
+      "primary": true,
+      "note": "Main international gateway, 58 km northwest near Comayagua.",
+      "options": [
+        {
+          "mode": "Shared shuttle",
+          "to": "Tegucigalpa city",
+          "price": "L 200-400",
+          "time": "1-1.5 hr",
+          "note": "Book ahead; cheaper than a private transfer."
+        },
+        {
+          "mode": "Bus to Comayagua then onward bus",
+          "to": "Tegucigalpa",
+          "price": "L 100-250",
+          "time": "2-3 hr",
+          "note": "Cheapest but slower; check schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tegucigalpa city",
+          "price": "L 800-1500",
+          "time": "1-1.5 hr",
+          "note": "Agree the fare before departure."
+        },
+        {
+          "mode": "Uber",
+          "to": "Tegucigalpa city",
+          "price": "L 600-1200",
+          "time": "1-1.5 hr",
+          "note": "Availability varies; confirm before relying on it."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Tegucigalpa",
+      "https://en.wikivoyage.org/wiki/Tegucigalpa"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "budget"
+  ],
+  "transit": {
+    "best": "Uber or a taxi with the price agreed first; buses only if you're saving money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses run fixed routes but stops are unlabeled; look for crowds on the sidewalk. Colectivos follow set routes and often have long lines."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are everywhere; agree the price before you get in and walk away from high offers. Uber works and is often safer and about half the taxi price; drivers may ignore the app map."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "An option for hill-town day trips. Traffic is busy and streets are steep; check your licence needs first."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the centre by day. Avoid strolling Comayagüela after dark."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild highland climate: warm days, cool nights, and a long rainy season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Days around 25–30°C and nights near 16–17°C, with the fewest rain days. Ideal for walking the centre."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy season May to October",
+        "text": "Rain days climb to 19–26 a month. Showers often come in the afternoon; plan indoor sights then."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild, not tropical-hot",
+        "text": "Highs stay between 25 and 31°C all year thanks to the altitude. Nights are cool, 16–19°C."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack a light layer",
+        "text": "Evenings and early mornings are cool. Bring a light jacket and an umbrella in the wet months."
+      },
+      {
+        "icon": "🥾",
+        "title": "Wet-season shoes",
+        "text": "Streets and hills can be slick from May to October. Waterproof shoes help."
+      },
+      {
+        "icon": "📅",
+        "title": "Shoulder months",
+        "text": "November and April are in-between: some rain, comfortable temperatures, fewer crowds."
+      }
+    ]
+  }
+}

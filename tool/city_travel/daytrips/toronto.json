@@ -1,0 +1,181 @@
+{
+ "city": "Toronto",
+ "trips": [
+  {
+   "place": "Niagara Falls",
+   "label": "",
+   "position": {
+    "id": 16893831,
+    "name": "Niagara Falls, ON",
+    "city": "Niagara Falls",
+    "lat": 43.10883,
+    "lng": -79.06343
+   },
+   "town": {
+    "name": "Niagara Falls",
+    "lat": 43.10012,
+    "lng": -79.06627
+   },
+   "road": {
+    "km": 130,
+    "min": 97,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 230.0,
+    "currency": "CAD"
+   },
+   "modes": {
+    "train": {
+     "from": "$10-$160",
+     "time": "2h 28m",
+     "via": "Union Station GO to Niagara Falls GO",
+     "source": "https://www.rome2rio.com/s/Toronto/Niagara%20Falls"
+    },
+    "bus": {
+     "from": "$12-$19",
+     "time": "1h 35m",
+     "via": "Union Stn Bus Terminal, 81 Bay St at Lakeshore Blvd, 2nd Floor to Bus Terminal",
+     "source": "https://www.rome2rio.com/s/Toronto/Niagara%20Falls"
+    }
+   },
+   "route_note": "Take a GO Transit Lakeshore West train to Burlington or Aldershot, then a connecting GO bus to Niagara Falls, or a seasonal direct GO train; the whole trip is roughly 2 to 2.5 hours each way.",
+   "see": [
+    "Horseshoe Falls",
+    "Clifton Hill",
+    "Journey Behind the Falls",
+    "Niagara-on-the-Lake side trip",
+    "Whirlpool Aero Car"
+   ],
+   "visit": "Full day",
+   "tour_query": "Niagara Falls day trip from Toronto",
+   "quests": [
+    "Niagara Falls",
+    "Maid of the Mist",
+    "Clifton Hill",
+    "House of Frankenstein",
+    "Niagara River"
+   ],
+   "recommended": "bus",
+   "why": "The bus is the fastest option at 1h 35m and drops you near the falls.",
+   "stars": 5,
+   "know": [
+    "Book ahead in summer as it is peak season",
+    "Best time to go is late spring to early fall",
+    "Bring a light rain layer for the mist"
+   ]
+  },
+  {
+   "place": "Niagara-on-the-Lake",
+   "label": "",
+   "position": {
+    "id": 16869795,
+    "name": "Niagara-on-the-lake, ON",
+    "city": "Niagara-on-the-lake",
+    "lat": 43.255,
+    "lng": -79.07726
+   },
+   "town": {
+    "name": "Niagara-on-the-Lake",
+    "lat": 43.25655,
+    "lng": -79.08527
+   },
+   "road": {
+    "km": 127,
+    "min": 102,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 230.0,
+    "currency": "CAD"
+   },
+   "modes": {
+    "train": {
+     "from": "$64-$211",
+     "time": "1h 59m",
+     "via": "Toronto Union Station to St. Catharines",
+     "source": "https://www.rome2rio.com/s/Toronto/Niagara-on-the-Lake"
+    },
+    "bus": {
+     "from": "$12-$19",
+     "time": "1h 45m",
+     "via": "Toronto to Niagara-on-the-Lake",
+     "source": "https://www.rome2rio.com/s/Toronto/Niagara-on-the-Lake"
+    }
+   },
+   "route_note": "Take a GO train or bus to Niagara Falls, then a local bus or short taxi to Niagara-on-the-Lake; total travel is about 2.5 to 3 hours each way.",
+   "see": [
+    "Queen Street shops",
+    "Fort George",
+    "Winery tastings",
+    "Lake Ontario waterfront"
+   ],
+   "visit": "Full day",
+   "tour_query": "Niagara-on-the-Lake wine tour from Toronto",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The bus is the quicker of the two at 1h 45m, though the last mile needs a local bus or short taxi.",
+   "stars": 3,
+   "know": [
+    "Best in summer when the town and wineries are in full swing",
+    "Book winery visits ahead",
+    "Expect a last-mile transfer from Niagara Falls"
+   ]
+  },
+  {
+   "place": "Stratford",
+   "label": "",
+   "position": {
+    "id": 16896813,
+    "name": "Stratford, ON",
+    "city": "Stratford",
+    "lat": 43.36455,
+    "lng": -80.97552
+   },
+   "town": {
+    "name": "Stratford",
+    "lat": 43.36679,
+    "lng": -80.94972
+   },
+   "road": {
+    "km": 147,
+    "min": 119,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 260.0,
+    "currency": "CAD"
+   },
+   "modes": {
+    "train": {
+     "from": "$323-$785",
+     "time": "10h 26m",
+     "via": "Gatwick Airport to London Bridge",
+     "source": "https://www.rome2rio.com/s/Toronto/Stratford"
+    }
+   },
+   "route_note": "Take a VIA Rail train from Toronto Union to Stratford, about 2 to 2.5 hours each way, with the station a short walk from downtown.",
+   "see": [
+    "Stratford Festival theatres",
+    "Avon River",
+    "Downtown shops",
+    "Shakespearean Gardens"
+   ],
+   "visit": "Full day",
+   "tour_query": "Stratford Ontario day trip from Toronto",
+   "quests": [],
+   "recommended": "car",
+   "why": "With the train showing 10h 26m each way and no bus listed, the 119-minute drive is clearly better.",
+   "stars": 3,
+   "know": [
+    "Best in the festival season for theatre",
+    "Book performances well ahead",
+    "The station is a short walk from downtown if you do take rail"
+   ]
+  }
+ ],
+ "problems": [
+  "St. Jacobs: no Omio position, dropped",
+  "Elora: no Omio position, dropped"
+ ]
+}

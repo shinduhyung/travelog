@@ -1,0 +1,33 @@
+$ deepseek_prep.py Colombo
+  tokens in 703 out 571
+Colombo: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Colombo
+  tokens in 3819 out 617
+Colombo: 1 problems
+  - CMB taxi Rs 7,500 vs tariff estimate 1756
+
+$ deepseek_city.py Colombo --stage places
+Colombo: places
+  tokens in 1175 out 3343
+
+$ deepseek_city.py Colombo --stage frame
+Colombo: frame
+  tokens in 2408 out 1803
+  repaired JSON
+
+$ deepseek_city.py Colombo --stage plans
+Colombo: plans
+  plans for day
+  tokens in 2227 out 872
+  plans for 1n
+  tokens in 2228 out 1341
+  plans for 2n
+  tokens in 2233 out 1229
+  plans for 3n
+  tokens in 2228 out 1836
+
+$ merge_city.py Colombo
+Colombo: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/colombo.json and planner/colombo.json
+

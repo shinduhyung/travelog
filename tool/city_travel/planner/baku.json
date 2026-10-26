@@ -1,0 +1,574 @@
+{
+  "city": "Baku",
+  "checked": "October 2026",
+  "intro_line": "Baku blends ancient walls with futuristic towers on the Caspian Sea.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old City",
+        "Fountain Square",
+        "Seafront Boulevard",
+        "Nizami Street"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old City",
+        "Fountain Square",
+        "Seafront Boulevard",
+        "Nizami Street"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old City",
+        "Fountain Square",
+        "Seafront Boulevard",
+        "Nizami Street"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Old City",
+        "Fountain Square",
+        "Seafront Boulevard",
+        "Nizami Street"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Old City",
+        "Fountain Square",
+        "Seafront Boulevard",
+        "Nizami Street"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": 3,
+        "rain_days": 7,
+        "note": "Cold and damp: highs near 8°C, lows near 3°C, about 7 rain days. Pack a warm coat."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 5,
+        "note": "Still cold, highs near 9°C, but fewer wet days (about 5)."
+      },
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 7,
+        "note": "Mild start to spring: highs near 11°C, lows near 5°C, around 7 rain days."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 4,
+        "note": "Pleasant: highs near 17°C, lows near 9°C, only about 4 rain days."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 6,
+        "note": "Warm and green: highs near 22°C, lows near 14°C, around 6 rain days."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 2,
+        "note": "Hot and dry: highs near 29°C, lows near 20°C, only about 2 rain days."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 2,
+        "note": "Peak heat: highs near 31°C, lows near 23°C, very dry. Sightsee early or late."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 2,
+        "note": "Hot like July: highs near 31°C, lows near 23°C, about 2 rain days."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 4,
+        "note": "Warm and comfortable: highs near 26°C, lows near 19°C, around 4 rain days."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 8,
+        "note": "Mild and pleasant: highs near 20°C, lows near 14°C, but about 8 rain days."
+      },
+      {
+        "high": 14,
+        "low": 9,
+        "rain_days": 9,
+        "note": "Cooler: highs near 14°C, lows near 9°C, the wettest month with about 9 rain days."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 7,
+        "note": "Cold again: highs near 10°C, lows near 5°C, around 7 rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.75,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.8,
+      0.9,
+      0.75,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "icherisheher": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Old City",
+      "popularity": 5
+    },
+    "maiden_tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, before tour groups",
+      "area": "Old City",
+      "popularity": 5
+    },
+    "shirvanshahs": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old City",
+      "popularity": 5
+    },
+    "flame_towers": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "After sunset",
+      "area": "Seafront Boulevard",
+      "popularity": 4
+    },
+    "heydar_aliyev": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Seafront Boulevard",
+      "popularity": 5
+    },
+    "boulevard": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Seafront Boulevard",
+      "popularity": 5
+    },
+    "carpet_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Seafront Boulevard",
+      "popularity": 4
+    },
+    "ateshgah": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "yanar_dag": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon into dusk",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "bibi_heybat": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Seafront Boulevard",
+      "popularity": 3
+    },
+    "dolma": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Old City",
+      "popularity": 4
+    },
+    "nizami_street": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Nizami Street",
+      "popularity": 4
+    },
+    "yasil_bazar": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Nizami Street",
+      "popularity": 3
+    },
+    "fountain_square": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Fountain Square",
+      "popularity": 4
+    },
+    "highland_park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Seafront Boulevard",
+      "popularity": 4
+    },
+    "old_city_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "carpet_shop": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "tea_house": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Fountain Square",
+      "popularity": 3
+    },
+    "boat_trip": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Seafront Boulevard",
+      "popularity": 3
+    },
+    "mud_volcanoes": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning departure",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "funicular": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Morning or sunset",
+      "area": "Seafront Boulevard",
+      "popularity": 4
+    },
+    "martyrs_alley": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Seafront Boulevard",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Old City, the boulevard and a day trip; add a third for Gobustan or the fire sites."
+  },
+  "airports": [
+    {
+      "code": "GYD",
+      "name": "Heydar Aliyev International Airport",
+      "primary": true,
+      "note": "Main international gateway, 17 km northeast of centre.",
+      "options": [
+        {
+          "mode": "Bus T1 Airport Express",
+          "to": "Railway station (via Koroglu metro)",
+          "price": "1.30 AZN with BakiKart",
+          "time": "30–40 min",
+          "note": "Runs every 30 min; contactless cards accepted."
+        },
+        {
+          "mode": "Bus N16",
+          "to": "Samed Vurgun Park (city centre)",
+          "price": "1 AZN",
+          "time": "40–60 min",
+          "note": "Every 30 min, early morning to late night."
+        },
+        {
+          "mode": "Minibus 135",
+          "to": "28 May Metro Station",
+          "price": "0.40 AZN",
+          "time": "60 min",
+          "note": "Stops at airport traffic circle, 15-min walk from terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "15–50 AZN",
+          "time": "20–30 min",
+          "note": "Negotiate before; airport monopoly can be pricey."
+        },
+        {
+          "mode": "Ride app (Bolt)",
+          "to": "City centre",
+          "price": "10–20 AZN",
+          "time": "20–30 min",
+          "note": "Often cheaper than airport taxis; use app to avoid haggling."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Baku",
+      "https://en.wikivoyage.org/wiki/Baku"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for cheap cross-city hops; taxis or ride apps for the Old City and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Runs 06:00–24:00. Fare 0.60 AZN with a Bakı Metropoliten Kart (3 AZN refundable deposit)."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost 0.60 AZN. Newer red buses need a metro card to pay."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Agree on the fare beforehand; a typical city trip is 4–10 AZN. Ride apps like Bolt work."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Speed cameras are common and fines arrive by SMS. Drive carefully."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Pedestrian zones around Fountain Square and the Old City. Crossings can be risky at night."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "The city is fairly flat and bike-friendly, but there are no dedicated lanes."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Baku has cold, damp winters and hot, dry summers. Spring and autumn are the most comfortable for walking.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 17–26°C with moderate rain. Good for the Old City and the boulevard."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and dry",
+        "text": "July and August reach about 31°C with lows near 23°C. Go out early or after sunset."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and damp",
+        "text": "January and February sit near 8–9°C highs and 3°C lows, with around 5–7 rain days."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in autumn and early winter",
+        "text": "November has about 9 rain days and October about 8. Bring a light rain jacket."
+      },
+      {
+        "icon": "💨",
+        "title": "Windy city",
+        "text": "Baku is known as the City of Winds. The seafront can feel cooler and breezier than inland streets."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, and light breathable clothes plus sunscreen for summer."
+      }
+    ]
+  }
+}

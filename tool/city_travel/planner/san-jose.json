@@ -1,0 +1,546 @@
+{
+  "city": "San Jose",
+  "checked": "October 2026",
+  "intro_line": "Silicon Valley's sunny heart, where orchards became innovation.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "SoFA District",
+        "Santana Row",
+        "Japantown"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "SoFA District",
+        "Santana Row",
+        "Japantown"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "SoFA District",
+        "Santana Row",
+        "Japantown"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "SoFA District",
+        "Santana Row",
+        "Japantown"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Downtown",
+        "SoFA District",
+        "Santana Row",
+        "Japantown"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 10,
+        "note": "January: cool and wet, highs near 15°C. Pack a rain jacket and layers."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 8,
+        "note": "February: similar to January, around 17°C highs; a few dry days for walking."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 10,
+        "note": "March: still showery (about 10 rain days) but warming to 18°C."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 5,
+        "note": "April: drier and milder, highs near 20°C. Good month for walking and parks."
+      },
+      {
+        "high": 23,
+        "low": 11,
+        "rain_days": 3,
+        "note": "May: mostly dry and pleasant, highs around 23°C. Great for outdoors."
+      },
+      {
+        "high": 28,
+        "low": 14,
+        "rain_days": 0,
+        "note": "June: dry and warm, highs near 28°C. Start hikes early; afternoons get hot."
+      },
+      {
+        "high": 29,
+        "low": 15,
+        "rain_days": 0,
+        "note": "July: hot and dry, highs near 29°C. Plan indoor sights at midday."
+      },
+      {
+        "high": 29,
+        "low": 15,
+        "rain_days": 0,
+        "note": "August: as hot as July, around 29°C, and dry. Carry water."
+      },
+      {
+        "high": 28,
+        "low": 15,
+        "rain_days": 1,
+        "note": "September: still warm at 28°C but rain returns (about 1 day)."
+      },
+      {
+        "high": 25,
+        "low": 13,
+        "rain_days": 3,
+        "note": "October: cooling to 25°C with a few rain days; comfortable for everything."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 6,
+        "note": "November: cooler and wetter, highs near 19°C. Bring a jacket."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 9,
+        "note": "December: cool and rainy, highs near 15°C. Indoor plans are safest."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.7,
+      0.5
+    ],
+    "family": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "art": [
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "winchester": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "rosicrucian": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "sjma": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekend midday",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "happy-hollow": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning on a weekday",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "rose-garden": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Spring morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "great-america": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer weekday morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "scu": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "stanford": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "golfland-milpitas": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "golfland-sanjose": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon or evening",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "golfland-sunnyvale": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon or evening",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "san-pedro-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "sofa-walk": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "First Friday evening",
+      "area": "SoFA District",
+      "popularity": 3
+    },
+    "santana-row": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Santana Row",
+      "popularity": 4
+    },
+    "japantown": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunchtime",
+      "area": "Japantown",
+      "popularity": 3
+    },
+    "guadalupe-river": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "city-hall-view": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "history-park": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend midday",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "tech-museum": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "kelley-park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Midday",
+      "area": "Downtown",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers downtown museums, the food markets and a half-day outdoors; add a night if you want a coast or hill trip."
+  },
+  "airports": [
+    {
+      "code": "SJC",
+      "name": "Norman Y. Mineta San Jose International Airport",
+      "primary": true,
+      "note": "Main hub, about 4 km from downtown.",
+      "options": [
+        {
+          "mode": "VTA bus 60",
+          "to": "Downtown transit center",
+          "price": "$2-3",
+          "time": "20-30 min",
+          "note": "Cheapest option; runs frequently."
+        },
+        {
+          "mode": "VTA light rail",
+          "to": "Downtown San Jose",
+          "price": "$2-3",
+          "time": "15-25 min",
+          "note": "Short shuttle or walk to the station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$15-25",
+          "time": "10-15 min",
+          "note": "Metered; short ride."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$12-22",
+          "time": "10-15 min",
+          "note": "Pickup at designated rideshare zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [],
+  "best_for": [
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk or ride apps downtown; use light rail and buses for wider trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. VTA light rail is the closest thing; it links downtown, the airport area and suburbs."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "VTA buses cover the city. Pay with a Clipper card or contactless."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; Uber and Lyft operate widely and are handy for airport and late-night trips."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy but downtown parking costs money and rush hour is slow."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Downtown is walkable; bikes and scooters are common for short hops."
+      },
+      {
+        "mode": "Light rail",
+        "has": true,
+        "text": "VTA light rail links downtown, the airport area and suburbs. Check the day's timetable."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service in San Jose."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean-style: mild, wet winters and warm, almost rain-free summers.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to October",
+        "text": "Warm and mostly dry, highs 23–29°C. Ideal for parks, trails and outdoor dining."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winters",
+        "text": "December to March brings about 9–10 rain days a month. Pack a rain jacket and plan indoor backups."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer afternoons",
+        "text": "July and August reach about 29°C. Do hikes and walks in the morning; stay in the shade at midday."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Cool evenings year-round",
+        "text": "Lows drop to 7–9°C in winter and about 15°C in summer. Bring a light layer for evenings."
+      },
+      {
+        "icon": "🍂",
+        "title": "Pleasant shoulder months",
+        "text": "April, May and October are mild and mostly dry — good all-round months to visit."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket for winter, comfortable shoes for walking, and sunscreen and a hat for summer."
+      }
+    ]
+  }
+}

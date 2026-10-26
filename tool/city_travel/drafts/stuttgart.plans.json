@@ -1,0 +1,859 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Stuttgart's big museums and the central square, grouped by area.",
+      "days": [
+        {
+          "title": "Cars in Bad Cannstatt, then the centre",
+          "stops": [
+            {
+              "place": "mercedes",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Start early on a weekday. Closed Monday."
+            },
+            {
+              "place": "porsche",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Short ride away in Bad Cannstatt. Closed Monday."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch: Maultaschen or Spätzle."
+            },
+            {
+              "place": "schlossplatz",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Walk the square and the Neues Schloss grounds."
+            },
+            {
+              "place": "kunstmuseum",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Closed Monday. Glass cube on Schlossplatz."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green Stuttgart: a park, a vineyard walk and a sunset tower view.",
+      "days": [
+        {
+          "title": "Parks, vines and the tower",
+          "stops": [
+            {
+              "place": "killesberg",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Park is always open. Climb the lookout tower."
+            },
+            {
+              "place": "weinberge",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Vineyard paths in daylight. Best late summer and autumn."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch stop in the centre."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Viewpoint over the city. Always open."
+            },
+            {
+              "place": "fernsehturm",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Go for sunset. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-West"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market morning, a neighbourhood walk and Swabian plates.",
+      "days": [
+        {
+          "title": "Markets and Swabian food",
+          "stops": [
+            {
+              "place": "marktplatz",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Markthalle closed Sunday. Best Saturday morning."
+            },
+            {
+              "place": "schlossplatz",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk from the market. Always open."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch: Maultaschen and Spätzle."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Small streets with cafes and wine taverns."
+            },
+            {
+              "place": "weinberge",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Evening vineyard walk in daylight. Best late summer and autumn."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the car museums and the old centre in one night.",
+      "days": [
+        {
+          "title": "Arrive, city centre and Schlossplatz",
+          "stops": [
+            {
+              "place": "schlossplatz",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start here for orientation. Always open."
+            },
+            {
+              "place": "library",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk. Check hours on the day."
+            },
+            {
+              "place": "kunstmuseum",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Closed Monday. Glass cube on Schlossplatz."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk, then dinner nearby."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "19:15",
+              "minutes": 60,
+              "note": "Maultaschen or Spätzle. Book or check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Car museums, then leave",
+          "stops": [
+            {
+              "place": "mercedes",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go early on a weekday."
+            },
+            {
+              "place": "porsche",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Short drive or S-Bahn between the two. Closed Monday."
+            },
+            {
+              "place": "bad-cannstatt",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Old town walk and a late lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Visitors who want parks, views and vineyards without leaving the city.",
+      "days": [
+        {
+          "title": "Arrive, park and viewpoints",
+          "stops": [
+            {
+              "place": "killesberg",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Park always open. Climb the lookout tower."
+            },
+            {
+              "place": "weissenhof",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Nearby. Outdoor, always open."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Good sunset spot."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Vineyards and tower, then leave",
+          "stops": [
+            {
+              "place": "weinberge",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Daylight hours. Wear good shoes."
+            },
+            {
+              "place": "fernsehturm",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Check hours on the day. Short ride to Degerloch."
+            },
+            {
+              "place": "degerloch",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Forest walk from the tower area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-West"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want the market hall, Swabian plates and a wine walk.",
+      "days": [
+        {
+          "title": "Arrive, market and old town",
+          "stops": [
+            {
+              "place": "marktplatz",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Markthalle closed Sunday. Sat closes 16:00."
+            },
+            {
+              "place": "schlossplatz",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Short walk. Always open."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Early dinner. Check on the day."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening walk and a drink."
+            }
+          ]
+        },
+        {
+          "title": "Vineyard walk, then leave",
+          "stops": [
+            {
+              "place": "weinberge",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Daylight hours. Best late summer and autumn."
+            },
+            {
+              "place": "killesberg",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Park always open. Picnic or snack stop."
+            },
+            {
+              "place": "marktplatz",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Last food stop. Closed Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the car museums plus the compact centre on foot.",
+      "days": [
+        {
+          "title": "Arrive, centre squares and art",
+          "stops": [
+            {
+              "place": "schlossplatz",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start here for orientation. Always open."
+            },
+            {
+              "place": "library",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Check hours on the day."
+            },
+            {
+              "place": "kunstmuseum",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Bad Cannstatt car museums",
+          "stops": [
+            {
+              "place": "mercedes",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is calmest."
+            },
+            {
+              "place": "porsche",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Short S-Bahn or taxi between the two. Closed Monday."
+            },
+            {
+              "place": "bad-cannstatt",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Old town walk and a late lunch."
+            }
+          ]
+        },
+        {
+          "title": "Museums and departure",
+          "stops": [
+            {
+              "place": "stadtmuseum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "marktplatz",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Markthalle closed Sunday. Grab lunch here."
+            },
+            {
+              "place": "city-tour",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually late morning; check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Visitors who want green hills, vineyards and views without leaving the city.",
+      "days": [
+        {
+          "title": "Parks and viewpoints",
+          "stops": [
+            {
+              "place": "killesberg",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Park always open. Good in spring and summer."
+            },
+            {
+              "place": "weissenhof",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Outdoor estate, always open."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Stay for sunset."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Vineyards and tower",
+          "stops": [
+            {
+              "place": "weinberge",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Daylight hours. Best late summer and autumn."
+            },
+            {
+              "place": "fernsehturm",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Roughly 09:00–22:00; check on the day."
+            },
+            {
+              "place": "degerloch",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Forest walk nearby. Daylight hours."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and departure",
+          "stops": [
+            {
+              "place": "wilhelma",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Opens about 08:15. Closing varies by season."
+            },
+            {
+              "place": "mercedes-arena",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Riverside walk, always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-West"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Travellers who plan the day around markets, Swabian plates and wine.",
+      "days": [
+        {
+          "title": "Markets and old quarter",
+          "stops": [
+            {
+              "place": "marktplatz",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Markthalle closed Sunday. Best Saturday morning."
+            },
+            {
+              "place": "schlossplatz",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short walk to the square."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Maultaschen and Spätzle for lunch."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Vineyards and wine",
+          "stops": [
+            {
+              "place": "weinberge",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Daylight hours. Look for a wine tavern stop."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Viewpoint, always open."
+            },
+            {
+              "place": "killesberg",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Park always open."
+            }
+          ]
+        },
+        {
+          "title": "Wasen or old town, then leave",
+          "stops": [
+            {
+              "place": "cannstatter-wasen",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Only during festivals; check dates."
+            },
+            {
+              "place": "bad-cannstatt",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Fallback if no festival: old town walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the car museums, the old centre and a hilltop view without rushing.",
+      "days": [
+        {
+          "title": "Arrive and the old centre",
+          "stops": [
+            {
+              "place": "schlossplatz",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here for orientation. Always open."
+            },
+            {
+              "place": "library",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. The white atrium is the highlight. Check hours on the day."
+            },
+            {
+              "place": "kunstmuseum",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Closed Monday. Glass cube on Schlossplatz."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Car museums in Bad Cannstatt",
+          "stops": [
+            {
+              "place": "mercedes",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Go early on a weekday."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch nearby. Try Maultaschen."
+            },
+            {
+              "place": "porsche",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. A short S-Bahn or bus ride away."
+            },
+            {
+              "place": "bad-cannstatt",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy old town stroll before heading back."
+            }
+          ]
+        },
+        {
+          "title": "Museums, market and a view",
+          "stops": [
+            {
+              "place": "stadtmuseum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "marktplatz",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Grab lunch at the Markthalle."
+            },
+            {
+              "place": "weissenhof",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Outdoor estate, always open. Take the U-Bahn up."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Sunset view over the city bowl."
+            },
+            {
+              "place": "fernsehturm",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Check hours on the day. Best at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want green hills, vineyards and riverbank walks between city stops.",
+      "days": [
+        {
+          "title": "Parks and the tower",
+          "stops": [
+            {
+              "place": "killesberg",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Park always open. Climb the lookout tower."
+            },
+            {
+              "place": "pragsattel",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short walk for a wide view."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop in the centre."
+            },
+            {
+              "place": "fernsehturm",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Check hours on the day. Sunset is best."
+            }
+          ]
+        },
+        {
+          "title": "Vineyards and west hills",
+          "stops": [
+            {
+              "place": "weinberge",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Daylight hours. Wear good shoes."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Rest and a view."
+            },
+            {
+              "place": "schloss-solitude",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Interior hours are limited. Check on the day."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and forest",
+          "stops": [
+            {
+              "place": "wilhelma",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Go on a weekday morning. Closing varies by season."
+            },
+            {
+              "place": "mercedes-arena",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Outdoor walk near the river."
+            },
+            {
+              "place": "degerloch",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Forest walk in daylight. Take the U-Bahn."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-West"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, Swabian plates and wine taverns.",
+      "days": [
+        {
+          "title": "Market day in the centre",
+          "stops": [
+            {
+              "place": "marktplatz",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Saturday morning is best."
+            },
+            {
+              "place": "schlossplatz",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk to the palace square."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Try Spätzle."
+            },
+            {
+              "place": "bohnenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Vineyards and wine taverns",
+          "stops": [
+            {
+              "place": "weinberge",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Daylight hours. Late summer and autumn are best."
+            },
+            {
+              "place": "eugensplatz",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Viewpoint stop."
+            },
+            {
+              "place": "kunstmuseum",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Monday. Indoor break if it rains."
+            },
+            {
+              "place": "cannstatter-volksfest-food",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Cannstatt and the festival ground",
+          "stops": [
+            {
+              "place": "bad-cannstatt",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning walk in daylight."
+            },
+            {
+              "place": "mercedes",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is quiet."
+            },
+            {
+              "place": "cannstatter-wasen",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Open during festivals only. Check dates."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Stuttgart-Mitte"
+    }
+  ]
+}

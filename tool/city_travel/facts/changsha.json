@@ -1,0 +1,171 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Changsha: spicy food, ancient academies and riverside nights.",
+  "intro": "Changsha rewards visitors with fiery Hunan food, a lively riverfront and deep history at Yuelu Academy. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Wuyi Square",
+    "Juzizhou",
+    "Yuelu District",
+    "Changsha South Station"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 10,
+    "per_km": 2,
+    "min_fare": 8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro has 5 lines plus a maglev link to the airport; fares are low, roughly ¥2-8.",
+    "Buses cost ¥1-2; air-conditioned and cross-city routes cost ¥2.",
+    "Taxis start at ¥8 by day and ¥10 at night; meters are standard.",
+    "Ride apps like DiDi work well; have the destination in Chinese.",
+    "Driving is busy and parking is hard; metro is easier for visitors.",
+    "Walking is fine downtown; shared bikes suit short riverside hops."
+  ],
+  "airports": [
+    {
+      "code": "CSX",
+      "name": "Changsha Huanghua International Airport",
+      "primary": true,
+      "note": "Main airport, about 24 km east of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "CAAC Aviation Hotel, Wuyi Dadao",
+          "price": "¥16.5",
+          "time": "45-60 min",
+          "note": "Runs 06:00-22:00; also shuttles to South Railway Station."
+        },
+        {
+          "mode": "Maglev + Metro",
+          "to": "Changsha South Railway Station, then city centre",
+          "price": "¥20-30",
+          "time": "40-55 min",
+          "note": "Fastest rail option; transfer to Metro Line 2."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-120",
+          "time": "35-50 min",
+          "note": "Taxis wait outside arrivals; use the meter."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "35-50 min",
+          "note": "Book in the app; meet at the designated pickup zone."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Yuelu Academy",
+    "Orange Isle",
+    "Hunan Museum",
+    "Changsha IFS Tower T1"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Changsha",
+      "https://en.wikivoyage.org/wiki/Changsha"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    28.19874,
+    112.97087
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 10,
+      "low": 3,
+      "rain_days": 11
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 14
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 17
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 17
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 18
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 18
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 13
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 12
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 16,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 10
+    },
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

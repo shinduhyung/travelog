@@ -1,0 +1,189 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Stuttgart: vineyards, engines and baroque squares in a green valley.",
+  "intro": "Stuttgart rewards visitors with car museums, hilltop vineyards and a compact, walkable centre. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    }
+  ],
+  "areas": [
+    "Stuttgart-Mitte",
+    "Stuttgart-West",
+    "Bad Cannstatt",
+    "Degerloch"
+  ],
+  "taxi": {
+    "flag_day": 4.5,
+    "flag_airport": 5,
+    "per_km": 2.2,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Stadtbahn (U-Bahn): lines U1-U16, underground in the centre, fast and frequent.",
+    "S-Bahn: lines S1-S6 link the centre with suburbs and the airport.",
+    "Buses fill gaps; night buses run from Schlossplatz on weekends.",
+    "Taxis wait at Hauptbahnhof and the airport; ride apps like Uber and Bolt work but are limited.",
+    "Driving is slow at rush hour; the centre is a low-emission zone, so a green sticker is needed.",
+    "The centre is compact and walkable; bikes and e-scooters are common."
+  ],
+  "airports": [
+    {
+      "code": "STR",
+      "name": "Stuttgart Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km south of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S2/S3",
+          "to": "Hauptbahnhof",
+          "price": "€3.70",
+          "time": "25-30 min",
+          "note": "Validate your ticket before boarding."
+        },
+        {
+          "mode": "Stadtbahn U6",
+          "to": "Hauptbahnhof",
+          "price": "€3.70",
+          "time": "30-35 min",
+          "note": "Climbs steep hills; stop is by the Mövenpick hotel."
+        },
+        {
+          "mode": "Bus",
+          "to": "Tübingen and Reutlingen",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Stops at the bus terminal outside the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€30-35",
+          "time": "20-30 min",
+          "note": "Taxis wait outside arrivals."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€25-35",
+          "time": "20-30 min",
+          "note": "Availability can vary; check the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Mercedes-Benz Museum",
+    "Porsche Museum",
+    "Stuttgart City Library"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Stuttgart",
+      "https://en.wikivoyage.org/wiki/Stuttgart"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    48.78232,
+    9.17702
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -1,
+      "rain_days": 14
+    },
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 12
+    },
+    {
+      "high": 15,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 13
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 12
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 12
+    },
+    {
+      "high": 10,
+      "low": 3,
+      "rain_days": 12
+    },
+    {
+      "high": 7,
+      "low": 1,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

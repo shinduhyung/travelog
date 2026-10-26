@@ -1,0 +1,623 @@
+{
+  "city": "Tianjin",
+  "checked": "October 2026",
+  "intro_line": "Tianjin blends colonial riverside charm with fast modern metro life.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Heping (Five Great Avenues)",
+        "Italian Style Town",
+        "Tianjin Railway Station",
+        "Binhai New Area"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Heping (Five Great Avenues)",
+        "Italian Style Town",
+        "Tianjin Railway Station",
+        "Binhai New Area"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Heping (Five Great Avenues)",
+        "Italian Style Town",
+        "Tianjin Railway Station",
+        "Binhai New Area"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Heping (Five Great Avenues)",
+        "Italian Style Town",
+        "Tianjin Railway Station",
+        "Binhai New Area"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Heping (Five Great Avenues)",
+        "Italian Style Town",
+        "Tianjin Railway Station",
+        "Binhai New Area"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 2,
+        "low": -7,
+        "rain_days": 1,
+        "note": "Coldest month: highs near 2°C, lows around -7°C. Bundle up."
+      },
+      {
+        "high": 6,
+        "low": -4,
+        "rain_days": 2,
+        "note": "Still cold, highs near 6°C; short days but few crowds."
+      },
+      {
+        "high": 15,
+        "low": 2,
+        "rain_days": 3,
+        "note": "Warming up: highs near 15°C, lows around 2°C. Good walking weather."
+      },
+      {
+        "high": 21,
+        "low": 9,
+        "rain_days": 4,
+        "note": "Pleasant: highs near 21°C, lows around 9°C. A great month to visit."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 5,
+        "note": "Warm and mostly dry: highs near 27°C, about 5 rain days."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 8,
+        "note": "Hot: highs near 31°C; carry water and plan shade at midday."
+      },
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 13,
+        "note": "Hottest and wettest: highs near 32°C, about 13 rain days. Pack an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 13,
+        "note": "Hot and rainy: highs near 30°C, about 13 rain days."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 5,
+        "note": "Cooling down: highs near 27°C, about 5 rain days. Comfortable."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 4,
+        "note": "Crisp and clear: highs near 19°C, lows around 9°C. Excellent for sightseeing."
+      },
+      {
+        "high": 10,
+        "low": 2,
+        "rain_days": 3,
+        "note": "Chilly: highs near 10°C, lows around 2°C. Bring a warm layer."
+      },
+      {
+        "high": 3,
+        "low": -5,
+        "rain_days": 1,
+        "note": "Cold again: highs near 3°C, lows around -5°C. Few rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.6,
+      0.9,
+      1,
+      0.8,
+      0.55
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.85,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.65,
+      0.9,
+      1,
+      0.8,
+      0.6
+    ],
+    "history": [
+      0.5,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.6,
+      0.9,
+      1,
+      0.8,
+      0.55
+    ],
+    "shopping": [
+      0.6,
+      0.65,
+      0.85,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.65,
+      0.9,
+      1,
+      0.8,
+      0.6
+    ],
+    "family": [
+      0.5,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.6,
+      0.9,
+      1,
+      0.8,
+      0.55
+    ]
+  },
+  "places": {
+    "tianjin-eye": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 5
+    },
+    "five-great-avenues": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 5
+    },
+    "ancient-culture-street": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 5
+    },
+    "binhai-library": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Binhai New Area",
+      "popularity": 5
+    },
+    "ctf-finance-centre": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear afternoon or night",
+      "area": "Binhai New Area",
+      "popularity": 4
+    },
+    "italian-style-town": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Italian Style Town",
+      "popularity": 4
+    },
+    "haihe-river-cruise": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Italian Style Town",
+      "popularity": 4
+    },
+    "goubuli": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 4
+    },
+    "shibajie": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late morning or evening",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 4
+    },
+    "porcelain-house": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 4
+    },
+    "tianjin-museum": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 3
+    },
+    "water-park": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Spring and autumn mornings",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 3
+    },
+    "xikai-church": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 3
+    },
+    "binjiang-dao": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 3
+    },
+    "tianjin-station-walk": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Tianjin Railway Station",
+      "popularity": 3
+    },
+    "binhai-beach": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer daytime",
+      "area": "Binhai New Area",
+      "popularity": 2
+    },
+    "crosstalk-show": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 3
+    },
+    "food-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 3
+    },
+    "dagu-fort": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning in good weather",
+      "area": "Binhai New Area",
+      "popularity": 2
+    },
+    "night-viewpoint": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Italian Style Town",
+      "popularity": 3
+    },
+    "bingjiang-night-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Italian Style Town",
+      "popularity": 3
+    },
+    "tianjin-zoo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in mild weather",
+      "area": "Heping (Five Great Avenues)",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "One night covers the old city, the riverside and the food; add a night for Binhai or a slower wander."
+  },
+  "airports": [
+    {
+      "code": "TSN",
+      "name": "Tianjin Binhai International Airport",
+      "primary": true,
+      "note": "Main hub, about 13-15 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 2",
+          "to": "Tianjin Railway Station",
+          "price": "¥3",
+          "time": "25-35 min",
+          "note": "Cheapest and avoids traffic."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Major hotels and railway station",
+          "price": "¥15",
+          "time": "40-60 min",
+          "note": "Stops about 200 m from the station's north gate."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥50-65",
+          "time": "30-45 min",
+          "note": "Use the official taxi stand only."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥45-70",
+          "time": "30-45 min",
+          "note": "Have the address in Chinese."
+        }
+      ]
+    },
+    {
+      "code": "PKX",
+      "name": "Beijing Daxing International Airport",
+      "primary": false,
+      "note": "Big international hub about 100+ km away; intercity trains reach Tianjin.",
+      "options": [
+        {
+          "mode": "Intercity train",
+          "to": "Tianjin city centre",
+          "price": "¥34-60",
+          "time": "under 75 min",
+          "note": "Station is directly under the airport; check evening schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tianjin city centre",
+          "price": "¥300-450",
+          "time": "1.5-2 hr",
+          "note": "Long and costly; train is better."
+        }
+      ]
+    },
+    {
+      "code": "PEK",
+      "name": "Beijing Capital International Airport",
+      "primary": false,
+      "note": "Good for long-haul flights; about 130+ km from Tianjin.",
+      "options": [
+        {
+          "mode": "Airport Express + subway + bullet train",
+          "to": "Tianjin Railway Station",
+          "price": "¥80-120",
+          "time": "3.5 hr or more",
+          "note": "Transfer via Beijing South Station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tianjin city centre",
+          "price": "¥400-550",
+          "time": "2-2.5 hr",
+          "note": "Only sensible late at night."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Tianjin",
+      "https://en.wikivoyage.org/wiki/Tianjin"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most trips; Didi or taxi for short hops and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "10+ lines, fares ¥2–8, trains about 06:00–22:30. Line 2 links the railway station to Binhai Airport for ¥3."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Old but extensive network, about ¥1.5–2 a ride. Cheap; allow extra time."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis: ¥8 flag for 3 km, then about ¥1.7/km. Avoid touts at stations. Didi works widely; have your destination in Chinese."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for a city visit; metro, taxi and Didi cover the sights."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best in spring and autumn around the Five Great Avenues and the riverfront. Summer heat makes long walks hard."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Metro Line 9 plus the TEDA tram reach the Binhai seaside area."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries run from Binhai to Dalian and Incheon. Check schedules on the day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, dry winters and hot, rainy summers. Spring and autumn are the best times to walk the city.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 19–27°C with low rain. Ideal for the Five Great Avenues and the riverfront."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold and dry",
+        "text": "January highs near 2°C and lows around -7°C, with about 1 rain day. Wear a heavy coat."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and wet",
+        "text": "July and August reach about 32°C with around 13 rain days each. Go out early or late."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in midsummer",
+        "text": "July and August are the wettest months. Keep an umbrella and a backup indoor plan."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Spring can be breezy and dusty",
+        "text": "March to May warms quickly; some days are windy. A light scarf helps."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat and gloves for winter, light breathable clothes and rain gear for summer."
+      }
+    ]
+  }
+}

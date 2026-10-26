@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>고지도 기준점 찍기</title>
+<style>
+  body { margin: 0; font: 14px sans-serif; display: flex; height: 100vh; }
+  #side { width: 300px; overflow-y: auto; border-right: 1px solid #ccc; padding: 8px; box-sizing: border-box; }
+  #view { flex: 1; overflow: hidden; position: relative; background: #222; }
+  canvas { display: block; }
+  .pt { padding: 4px 6px; border-radius: 4px; cursor: pointer; }
+  .pt.cur { background: #ffe58f; font-weight: bold; }
+  .pt.done { color: #389e0d; }
+  .pt.skip { color: #999; text-decoration: line-through; }
+  button { margin: 2px 2px 6px 0; }
+  #msg { font-size: 12px; color: #555; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div id="side">
+  <div id="msg">현재 항목(노란색)에 해당하는 위치를 지도에서 클릭하세요. 휠: 확대/축소, 드래그: 이동. 알아보기 어려우면 건너뛰기.</div>
+  <button id="skip">건너뛰기</button>
+  <button id="undo">되돌리기</button>
+  <button id="save">JSON 저장</button>
+  <div id="count"></div>
+  <div id="list"></div>
+</div>
+<div id="view"><canvas id="c"></canvas></div>
+<script>
+// [이름, 위도, 경도] — 이 지도에서 알아보기 쉬운 지점들
+const REFS = [
+  ['지브롤터 해협', 35.97, -5.6],
+  ['나일강 삼각주 중심', 31.0, 31.0],
+  ['보스포루스 해협', 41.1, 29.05],
+  ['수에즈(홍해 북단)', 29.95, 32.55],
+  ['바브엘만데브(홍해 남단)', 12.6, 43.3],
+  ['호르무즈 해협', 26.5, 56.5],
+  ['페르시아만 안쪽(쿠웨이트)', 29.5, 48.0],
+  ['시칠리아 섬 중심', 37.5, 14.2],
+  ['사르데냐 섬 중심', 40.0, 9.0],
+  ['코르시카 섬 중심', 42.15, 9.1],
+  ['크레타 섬 중심', 35.2, 24.9],
+  ['키프로스 섬 중심', 35.0, 33.0],
+  ['카스피해 중심', 41.5, 50.5],
+  ['흑해 중심', 43.3, 34.5],
+  ['아조프해(흑해 북동 안쪽)', 46.0, 36.5],
+  ['아드리아해 북단(베네치아)', 45.4, 12.4],
+  ['에게해 중심', 38.5, 25.0],
+  ['이탈리아 장화 끝(칼라브리아)', 38.0, 16.0],
+  ['이베리아 반도 서쪽 끝(리스본)', 38.7, -9.4],
+  ['튀니지 북단(본곶)', 37.1, 10.9],
+  ['시나이 반도 남단', 27.8, 34.3],
+  ['아라비아 반도 남동 끝(오만 라스알하드)', 22.5, 59.8],
+  ['아라비아 반도 남서(아덴)', 12.8, 45.0],
+  ['아프리카의 뿔(과르다푸이 곶)', 11.8, 51.3],
+  ['나일강 상류 부근(하르툼)', 15.6, 32.5],
+  ['니제르강 대만곡부(팀북투 근처)', 16.8, -3.0],
+  ['대서양 해안 아프리카 서단(다카르)', 14.7, -17.5],
+  ['인더스강 하구', 24.0, 67.5],
+  ['아랄해 중심', 45.0, 60.0],
+  ['시칠리아~튀니지 사이 몰타', 35.9, 14.4],
+  ['발트해/스칸디나비아 남단', 56.0, 13.0],
+  ['브리튼 섬 중심', 53.0, -1.5],
+  ['아일랜드 중심', 53.3, -8.0],
+  ['이스탄불~다르다넬스', 40.2, 26.4],
+  ['요르단강 하구(사해)', 31.5, 35.5],
+  ['티그리스·유프라테스 합류부', 31.0, 47.4],
+  ['카스피해 남안(엘부르즈 해안)', 37.0, 51.0],
+  ['중앙아시아 이식쿨 호수', 42.4, 77.2],
+  ['인도 남단(코모린 곶)', 8.1, 77.5],
+  ['중국 동해안(상하이 부근)', 31.2, 121.5],
+];
+
+const img = new Image();
+img.src = 'idrisi.webp';
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d');
+const view = document.getElementById('view');
+
+const KEY = 'idrisi_pts_v1';
+let pts = REFS.map(() => null);       // {x,y} | 'skip' | null
+try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.length === REFS.length) pts = s; } catch (e) {}
+let cur = pts.findIndex(p => p === null); if (cur < 0) cur = 0;
+
+let scale = 1, ox = 0, oy = 0, drag = null, moved = false;
+
+function resize() { cv.width = view.clientWidth; cv.height = view.clientHeight; draw(); }
+window.addEventListener('resize', resize);
+img.onload = () => { scale = Math.min(view.clientWidth / img.width, view.clientHeight / img.height); resize(); };
+
+function draw() {
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  if (!img.complete) return;
+  ctx.imageSmoothingEnabled = scale < 2;
+  ctx.drawImage(img, ox, oy, img.width * scale, img.height * scale);
+  pts.forEach((p, i) => {
+    if (!p || p === 'skip') return;
+    const x = ox + p.x * scale, y = oy + p.y * scale;
+    ctx.fillStyle = i === cur ? '#ff4d4f' : '#1677ff';
+    ctx.beginPath(); ctx.arc(x, y, 4, 0, 7); ctx.fill();
+    ctx.strokeStyle = '#fff'; ctx.stroke();
+    ctx.fillStyle = '#000'; ctx.font = '11px sans-serif';
+    ctx.fillText(i + 1, x + 6, y - 6);
+  });
+}
+
+function renderList() {
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+  let done = 0;
+  REFS.forEach((r, i) => {
+    const p = pts[i];
+    if (p && p !== 'skip') done++;
+    const d = document.createElement('div');
+    d.className = 'pt' + (i === cur ? ' cur' : '') + (p === 'skip' ? ' skip' : p ? ' done' : '');
+    d.textContent = (i + 1) + '. ' + r[0];
+    d.onclick = () => { cur = i; renderList(); draw(); };
+    list.appendChild(d);
+  });
+  document.getElementById('count').textContent = '완료 ' + done + ' / ' + REFS.length;
+  try { localStorage.setItem(KEY, JSON.stringify(pts)); } catch (e) {}
+}
+
+function next() {
+  const n = pts.findIndex((p, i) => i > cur && p === null);
+  cur = n >= 0 ? n : Math.min(cur + 1, REFS.length - 1);
+}
+
+cv.addEventListener('mousedown', e => { drag = { x: e.clientX, y: e.clientY, ox, oy }; moved = false; });
+window.addEventListener('mousemove', e => {
+  if (!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+  ox = drag.ox + dx; oy = drag.oy + dy; draw();
+});
+window.addEventListener('mouseup', e => {
+  if (drag && !moved) {
+    const r = cv.getBoundingClientRect();
+    pts[cur] = { x: (e.clientX - r.left - ox) / scale, y: (e.clientY - r.top - oy) / scale };
+    next(); renderList(); draw();
+  }
+  drag = null;
+});
+cv.addEventListener('wheel', e => {
+  e.preventDefault();
+  const r = cv.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  const f = e.deltaY < 0 ? 1.2 : 1 / 1.2;
+  ox = mx - (mx - ox) * f; oy = my - (my - oy) * f; scale *= f; draw();
+}, { passive: false });
+
+document.getElementById('skip').onclick = () => { pts[cur] = 'skip'; next(); renderList(); draw(); };
+document.getElementById('undo').onclick = () => {
+  for (let i = REFS.length - 1; i >= 0; i--) if (pts[i] !== null) { pts[i] = null; cur = i; break; }
+  renderList(); draw();
+};
+document.getElementById('save').onclick = () => {
+  const out = {
+    image: 'idrisi.webp', width: img.width, height: img.height,
+    points: REFS.map((r, i) => pts[i] && pts[i] !== 'skip'
+      ? { name: r[0], lat: r[1], lon: r[2], x: +pts[i].x.toFixed(1), y: +pts[i].y.toFixed(1) } : null).filter(Boolean),
+  };
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' }));
+  a.download = 'control_points.json'; a.click();
+};
+renderList();
+</script>
+</body>
+</html>

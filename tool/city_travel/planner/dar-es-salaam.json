@@ -1,0 +1,548 @@
+{
+  "city": "Dar es Salaam",
+  "checked": "October 2026",
+  "intro_line": "Tanzania's steamy coastal hub of trade, spice and Swahili rhythm.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City Centre (Posta)",
+        "Kivukoni",
+        "Msasani Peninsula",
+        "Oyster Bay"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City Centre (Posta)",
+        "Kivukoni",
+        "Msasani Peninsula",
+        "Oyster Bay"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "City Centre (Posta)",
+        "Kivukoni",
+        "Msasani Peninsula",
+        "Oyster Bay"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City Centre (Posta)",
+        "Kivukoni",
+        "Msasani Peninsula",
+        "Oyster Bay"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "City Centre (Posta)",
+        "Kivukoni",
+        "Msasani Peninsula",
+        "Oyster Bay"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 15,
+        "note": "Jan: hot and humid with about 15 rain days. Pack a light rain jacket."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 12,
+        "note": "Feb: warm with fewer showers, around 12 rain days. Good for the city."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 20,
+        "note": "Mar: rainy spells return, about 20 rain days. Keep plans flexible."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 26,
+        "note": "Apr: the wettest month, around 26 rain days. Expect heavy downpours."
+      },
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 16,
+        "note": "May: rain eases to about 16 days and it is slightly cooler."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 8,
+        "note": "Jun: drier and cooler, about 8 rain days. A comfortable month."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 6,
+        "note": "Jul: the driest, coolest month. Great for walking and beaches."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 9,
+        "note": "Aug: dry with about 9 rain days. Pleasant evenings."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 11,
+        "note": "Sep: warming up, about 11 rain days. Still a good time to visit."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 14,
+        "note": "Oct: hotter with about 14 rain days. Start early to beat the heat."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 20,
+        "note": "Nov: short rains begin, around 20 rain days. Carry an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 21,
+        "note": "Dec: hot and wet, about 21 rain days. Book indoor options too."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.7,
+      0.5,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.7,
+      0.5,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "beach": [
+      0.6,
+      0.65,
+      0.55,
+      0.3,
+      0.55,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.55,
+      0.55
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.7,
+      0.5,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "nature": [
+      0.6,
+      0.65,
+      0.55,
+      0.35,
+      0.6,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.55,
+      0.55
+    ]
+  },
+  "places": {
+    "national_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "City Centre (Posta)",
+      "popularity": 4
+    },
+    "askari_monument": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "City Centre (Posta)",
+      "popularity": 3
+    },
+    "kariakoo_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "City Centre (Posta)",
+      "popularity": 4
+    },
+    "kivukoni_fish_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Kivukoni",
+      "popularity": 3
+    },
+    "village_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "City Centre (Posta)",
+      "popularity": 3
+    },
+    "coco_beach": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and sunset",
+      "area": "Msasani Peninsula",
+      "popularity": 4
+    },
+    "kigamboni_ferry": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Kivukoni",
+      "popularity": 3
+    },
+    "slipway": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Msasani Peninsula",
+      "popularity": 4
+    },
+    "mikadi_beach": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Msasani Peninsula",
+      "popularity": 3
+    },
+    "oyster_bay_walk": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Oyster Bay",
+      "popularity": 3
+    },
+    "city_walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre (Posta)",
+      "popularity": 3
+    },
+    "botanical_garden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre (Posta)",
+      "popularity": 2
+    },
+    "st_joseph": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "City Centre (Posta)",
+      "popularity": 2
+    },
+    "mbezi_sunset": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Msasani Peninsula",
+      "popularity": 2
+    },
+    "boat_trip": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Kivukoni",
+      "popularity": 2
+    },
+    "nyama_choma": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "City Centre (Posta)",
+      "popularity": 3
+    },
+    "mikocheni_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Msasani Peninsula",
+      "popularity": 2
+    },
+    "beach_resort_day": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday",
+      "area": "Msasani Peninsula",
+      "popularity": 3
+    },
+    "art_gallery": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Oyster Bay",
+      "popularity": 2
+    },
+    "seafood_dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Msasani Peninsula",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the markets, the waterfront and a beach or island day without rushing."
+  },
+  "airports": [
+    {
+      "code": "DAR",
+      "name": "Julius Nyerere International Airport",
+      "primary": true,
+      "note": "Tanzania's main gateway, about 10 km from the centre.",
+      "options": [
+        {
+          "mode": "Daladala",
+          "to": "Posta, city centre",
+          "price": "under TSh 1,000",
+          "time": "45-75 min",
+          "note": "Walk out to the main road for the stop; expect detours."
+        },
+        {
+          "mode": "Bajaji",
+          "to": "City centre",
+          "price": "TSh 15,000-20,000",
+          "time": "30-60 min",
+          "note": "About half a taxi fare; fine for light luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "TSh 30,000-50,000",
+          "time": "25-50 min",
+          "note": "Higher at night; allow extra time in rush hour."
+        },
+        {
+          "mode": "Ride app (Bolt/Uber)",
+          "to": "City centre",
+          "price": "TSh 20,000-35,000",
+          "time": "25-50 min",
+          "note": "Meet the driver at the marked pickup point."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Dar es Salaam",
+      "https://en.wikivoyage.org/wiki/Dar%20es%20Salaam"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Ride apps or taxis for most trips; DART buses for cheap cross-city runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. DART is a bus rapid transit system, not rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "DART buses run on dedicated lanes; Phase 1 links Kimara to Kivukoni Ferry via Posta. Daladala minibuses are cheap (under TSh 1,000) but slow and crowded; look for POSTA signs."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are everywhere; agree the fare first, as meters are rare. Bolt and Uber work in Dar and often beat street-taxi prices."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is on the left. Traffic is heavy, especially at evening rush hour."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking suits the compact centre. Cycling is possible but risky on busy roads."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries from Kivukoni cross to Kigamboni in the south."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical coastal climate: hot all year, with a long rainy season around April and short rains late in the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Driest and coolest months, with highs near 28–29°C and few rain days. Ideal for beaches and walking."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Long rains in April",
+        "text": "About 26 rain days, the wettest month. Expect heavy showers and plan indoor sights."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Short rains in November and December",
+        "text": "Around 20–21 rain days. Showers are often short but frequent; carry an umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid all year",
+        "text": "Highs stay around 28–31°C and lows 22–26°C. Drink water and take midday breaks."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea breezes help",
+        "text": "Coastal spots like Oyster Bay and the islands feel cooler than the city centre."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a hat, sunscreen and insect repellent. Add a rain jacket for April and November–December."
+      }
+    ]
+  }
+}

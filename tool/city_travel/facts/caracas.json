@@ -1,0 +1,176 @@
+{
+  "currency": "VES",
+  "usd_rate": 886.2271,
+  "intro_line": "A mountain-ringed capital of salsa, arepas and chaotic energy.",
+  "intro": "Caracas rewards visitors with vibrant neighbourhoods, mountain views and a lively food scene, though safety needs care. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Altamira",
+    "Las Mercedes",
+    "Bellas Artes",
+    "La Castellana"
+  ],
+  "taxi": {
+    "flag_day": 300,
+    "flag_airport": 4000,
+    "per_km": 150,
+    "min_fare": 300
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metro is clean, cheap and fast; buy a single, round trip or 10-journey multi abono.",
+    "Metrobuses link metro stations to areas off the underground, but run roughly every 20 minutes.",
+    "Por puesto minibuses are cheap but slow, crowded and often in poor condition.",
+    "Taxis have no meters; agree the price first and expect quotes near double the fair fare.",
+    "Ride apps like Uber and inDrive work in Caracas but coverage varies; confirm before relying on them.",
+    "Driving is hectic; walking is fine by day in safe districts, but avoid quiet streets after dark."
+  ],
+  "airports": [
+    {
+      "code": "CCS",
+      "name": "Maiquetia Simon Bolivar Internacional Airport",
+      "primary": true,
+      "note": "Main international gateway, about 17 km straight-line and 28 km by road from downtown.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Gato Negro metro or Parque Central",
+          "price": "check locally",
+          "time": "40-70 min",
+          "note": "Cheapest option; Gato Negro street level is unsafe, so continue by metro."
+        },
+        {
+          "mode": "Government bus",
+          "to": "Alba Hotel, Bellas Artes",
+          "price": "check locally",
+          "time": "45-75 min",
+          "note": "You need not be a hotel guest; ask at the tourist offices in the international terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or hotel",
+          "price": "VES 3000-6000",
+          "time": "40-70 min",
+          "note": "Agree the fare first; prefer official black Ford Explorer cabs and avoid shared rides."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre or hotel",
+          "price": "check locally",
+          "time": "40-70 min",
+          "note": "Availability is patchy; book only after landing and confirm the driver."
+        }
+      ],
+      "max_km": 60
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "National Pantheon of Venezuela",
+    "Birthplace of Simon Bolivar",
+    "University City of Caracas",
+    "Los Proceres",
+    "Diverxity",
+    "Pabellón Criollo"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Caracas",
+      "https://en.wikivoyage.org/wiki/Caracas"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    10.4806,
+    -66.9036
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 17
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 18
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 16
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 20
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 24
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 25
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 20
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 22
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 22
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 17
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "CCS taxi VES 3000-6000 vs tariff estimate 7570"
+  ]
+}

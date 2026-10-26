@@ -1,0 +1,180 @@
+{
+ "city": "Detroit",
+ "trips": [
+  {
+   "place": "Dearborn",
+   "label": "",
+   "position": {
+    "id": 410372,
+    "name": "Dearborn, MI",
+    "city": "Dearborn",
+    "lat": 42.32226,
+    "lng": -83.17631
+   },
+   "town": {
+    "name": "Dearborn",
+    "lat": 42.32226,
+    "lng": -83.17631
+   },
+   "road": {
+    "km": 15,
+    "min": 15,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 30.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$1-$2",
+     "time": "21m",
+     "via": "Michigan & First to Michigan & Calhoun",
+     "source": "https://www.rome2rio.com/s/Detroit/Dearborn"
+    }
+   },
+   "route_note": "Take SMART or DDOT bus service from downtown Detroit to Dearborn, roughly 30 to 45 minutes depending on the route.",
+   "see": [
+    "The Henry Ford Museum",
+    "Greenfield Village",
+    "Ford Rouge Factory Tour",
+    "Arab American National Museum"
+   ],
+   "visit": "Full day",
+   "tour_query": "Dearborn Henry Ford day trip from Detroit",
+   "quests": [
+    "The Henry Ford"
+   ],
+   "recommended": "bus",
+   "why": "Bus service from downtown takes about 21 minutes and drops near the sights, cheaper and simpler than a taxi.",
+   "stars": 5,
+   "know": [
+    "The Henry Ford museum complex is the classic first-time draw",
+    "Check museum opening days before you go",
+    "Allow a full day for the museum and village"
+   ]
+  },
+  {
+   "place": "Ann Arbor",
+   "label": "",
+   "position": {
+    "id": 410359,
+    "name": "Ann Arbor, MI",
+    "city": "Ann Arbor",
+    "lat": 42.27756,
+    "lng": -83.74088
+   },
+   "town": {
+    "name": "Ann Arbor",
+    "lat": 42.27756,
+    "lng": -83.74088
+   },
+   "road": {
+    "km": 70,
+    "min": 53,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 110.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$20-$35",
+     "time": "45m",
+     "via": "Detroit to Ann Arbor Amtrak Station",
+     "source": "https://www.rome2rio.com/s/Detroit/Ann%20Arbor"
+    },
+    "bus": {
+     "from": "$6-$12",
+     "time": "1h",
+     "via": "Detroit - Grand Circus Park to Ann Arbor- Blake Transit Ctr., MI",
+     "source": "https://www.rome2rio.com/s/Detroit/Ann%20Arbor"
+    }
+   },
+   "route_note": "Amtrak's Wolverine line runs directly from Detroit (New Center) to Ann Arbor in about 45 minutes with no changes.",
+   "see": [
+    "University of Michigan campus",
+    "Nichols Arboretum",
+    "Kerrytown and Ann Arbor Farmers Market",
+    "Main Street shops and restaurants"
+   ],
+   "visit": "Half day",
+   "tour_query": "Ann Arbor day trip from Detroit",
+   "quests": [
+    "Domino's",
+    "University of Michigan"
+   ],
+   "recommended": "train",
+   "why": "Amtrak's Wolverine line runs direct in about 45 minutes with no changes, faster than driving.",
+   "stars": 4,
+   "know": [
+    "Book Amtrak ahead, especially on weekends",
+    "Best in spring through fall for the campus and downtown",
+    "The station is a short walk from downtown Ann Arbor"
+   ]
+  },
+  {
+   "place": "Royal Oak",
+   "label": "",
+   "position": {
+    "id": 410429,
+    "name": "Royal Oak, MI",
+    "city": "Royal Oak",
+    "lat": 42.48948,
+    "lng": -83.14465
+   },
+   "town": {
+    "name": "Royal Oak",
+    "lat": 42.48948,
+    "lng": -83.14465
+   },
+   "road": {
+    "km": 23,
+    "min": 21,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 40.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$5-$9",
+     "time": "20m",
+     "via": "Detroit to Royal Oak Amtrak",
+     "source": "https://www.rome2rio.com/s/Detroit/Royal%20Oak"
+    },
+    "bus": {
+     "from": "$2",
+     "time": "37m",
+     "via": "Grand Circus Park to Woodward & Washington",
+     "source": "https://www.rome2rio.com/s/Detroit/Royal%20Oak"
+    }
+   },
+   "route_note": "SMART buses connect downtown Detroit to Royal Oak in about 40 minutes; rideshare is also common for this short suburban hop.",
+   "see": [
+    "Detroit Zoo",
+    "Downtown Royal Oak shops and cafes",
+    "Royal Oak Farmers Market",
+    "Woodward Avenue stroll"
+   ],
+   "visit": "Half day",
+   "tour_query": "Royal Oak Detroit day trip",
+   "quests": [
+    "Hungry Howie's"
+   ],
+   "recommended": "train",
+   "why": "The Amtrak train covers it in about 20 minutes, quicker than the bus or a taxi.",
+   "stars": 3,
+   "know": [
+    "Downtown is known for dining and nightlife, best in the evening",
+    "Trains are limited, so check return times",
+    "Weekends are busiest"
+   ]
+  }
+ ],
+ "problems": [
+  "Windsor: not a town in cities15000.json (US), dropped"
+ ]
+}

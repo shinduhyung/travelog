@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Louvre, Notre-Dame and the old streets of Le Marais."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, bakeries and long bistro lunches."
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "blurb": "Seine walks, candlelit dinners and Montmartre at dusk."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Le Marais",
+      "range": [
+        150,
+        320
+      ],
+      "why": "Central and walkable. Close to Notre-Dame, the Pompidou and good cheap food. Lively at night.",
+      "center": [
+        48.859,
+        2.362
+      ]
+    },
+    {
+      "area": "Saint-Germain & Latin Quarter",
+      "range": [
+        180,
+        400
+      ],
+      "why": "Classic Paris feel by the river. Good for cafés, bookshops and the Luxembourg Gardens.",
+      "center": [
+        48.853,
+        2.338
+      ]
+    },
+    {
+      "area": "Louvre & Opéra",
+      "range": [
+        200,
+        450
+      ],
+      "why": "Closest to the Louvre, the Tuileries and big department stores. Best metro links for short trips.",
+      "center": [
+        48.865,
+        2.335
+      ]
+    },
+    {
+      "area": "Montmartre",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Quieter and often cheaper. Village feel around Sacré-Cœur, but longer rides to the centre.",
+      "center": [
+        48.886,
+        2.343
+      ]
+    }
+  ],
+  "food": [
+    "Try a basic bistro lunch: many places do a fixed 'formule' of two or three courses for about €18–28.",
+    "Buy picnic food at a street market or bakery: baguette, cheese and fruit for under €10.",
+    "Order the plat du jour at lunch. It is usually cheaper than the same dish at dinner.",
+    "Tap water is free and safe. Ask for 'une carafe d'eau' instead of bottled water.",
+    "Book popular dinner spots a few days ahead. Many small places are closed one or two weekdays; check on the day."
+  ],
+  "more_time": [
+    "Swap a city day for Versailles: take RER C, then walk the palace and gardens. Allow a full day.",
+    "Travelling with kids? Swap a museum morning for Disneyland on RER A. Book tickets ahead.",
+    "Want a slower day? Ride a Vélib' bike along the Seine and stop at a market for lunch."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "romance": [
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "family": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.6,
+      0.55
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.85,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "romance"
+  ],
+  "recommend": {
+    "why": "Three nights covers the big sights, a market lunch and an evening on the Seine without rushing."
+  },
+  "month_notes": [
+    "January: cold, highs near 7°C and about 13 rain days. Pack a warm coat and waterproof shoes.",
+    "February: still cold, highs near 10°C, about 11 rain days. Quiet museums and shorter queues.",
+    "March: mild at about 12°C but wet, around 13 rain days. Bring an umbrella.",
+    "April: pleasant highs near 16°C, about 10 rain days. Good for parks and long walks.",
+    "May: warm at about 19°C, around 13 rain days. Pack layers and a light rain jacket.",
+    "June: warm and bright, highs near 23°C, about 12 rain days. Long evenings outdoors.",
+    "July: hottest month, highs near 26°C, about 9 rain days. Busy; book sights ahead.",
+    "August: warm at about 25°C, around 10 rain days. Some small shops close for holidays.",
+    "September: lovely at about 22°C, around 9 rain days. A strong month for walking.",
+    "October: cooler at about 17°C, around 12 rain days. Bring a jacket and umbrella.",
+    "November: cool at about 11°C, around 12 rain days. Indoor sights and cafés suit best.",
+    "December: cold, highs near 9°C, about 13 rain days. Dark early; dress warm for evenings out."
+  ],
+  "climate_guide": {
+    "summary": "Mild, changeable weather with rain in every month. Summers are warm, not hot; winters are cold and grey.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best months: May to September",
+        "text": "Highs around 19–26°C. Long daylight and the best odds of dry, pleasant days."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 9–13 rain days every month. Showers are often short; carry a small umbrella."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs of 7–10°C and lows near 2°C. Warm coat, scarf and layers."
+      },
+      {
+        "icon": "☀️",
+        "title": "Warm, not hot, summers",
+        "text": "July peaks near 26°C. Comfortable for walking, but book popular sights ahead in peak season."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack layers",
+        "text": "Mornings and evenings are cooler than midday. A light jacket works most of the year."
+      },
+      {
+        "icon": "👟",
+        "title": "Wear good shoes",
+        "text": "You will walk a lot on cobbles and stone. Waterproof shoes help on wet days."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk in the centre and use the Métro for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The Métro and RER cover the whole city. A single ticket is about €2.50; weekly Navigo passes are good value."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses use the same tickets. Slower than the Métro but scenic."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis with flat fares from the airports. Uber, Bolt and G7 apps work everywhere."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving and parking in Paris are hard. A car is only useful for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Central Paris is compact and very walkable. Vélib' bikes are everywhere."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "RER C goes to Versailles; Disneyland is on RER A."
+      }
+    ]
+  }
+}

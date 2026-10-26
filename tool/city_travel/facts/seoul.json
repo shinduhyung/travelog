@@ -1,0 +1,232 @@
+{
+  "currency": "KRW",
+  "usd_rate": 1324.9538,
+  "intro_line": "A fast, neon-lit capital where palaces sit beside skyscrapers.",
+  "intro": "Seoul rewards visitors with royal palaces, mountain trails, street food and endless nightlife. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Myeongdong",
+    "Jongno",
+    "Gangnam",
+    "Hongdae"
+  ],
+  "taxi": {
+    "flag_day": 4800,
+    "flag_airport": 7000,
+    "per_km": 1000,
+    "min_fare": 4800
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro: 9 numbered lines plus suburban lines; base fare ₩1,550 with card, ₩1,650 single ticket.",
+    "Buses have own lanes and beat traffic; use a T-money card for both bus and metro.",
+    "Taxis are metered and plentiful; Kakao T is the main ride-hailing app, Uber works too.",
+    "Climate Card gives 1-7 day unlimited passes from ₩5,000 to ₩20,000.",
+    "Driving is possible but traffic jams are common; parking is costly.",
+    "Subway stops late at night; night buses run on major routes."
+  ],
+  "airports": [
+    {
+      "code": "ICN",
+      "name": "Incheon International Airport",
+      "primary": true,
+      "note": "Main international gateway, 48 km west on Yeongjong Island.",
+      "options": [
+        {
+          "mode": "AREX all-stop train",
+          "to": "Seoul Station",
+          "price": "₩4,750-5,350",
+          "time": "59-66 min",
+          "note": "Cheapest rail option; also stops at Gimpo Airport."
+        },
+        {
+          "mode": "AREX Express train",
+          "to": "Seoul Station",
+          "price": "₩13,000",
+          "time": "43-51 min",
+          "note": "Non-stop, separate platform and tickets."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Citywide, incl. Gangnam",
+          "price": "₩15,000-18,000",
+          "time": "60-90 min",
+          "note": "Best with heavy luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Seoul",
+          "price": "₩50,000-70,000",
+          "time": "60-80 min",
+          "note": "Regular vs deluxe rates; tolls extra."
+        },
+        {
+          "mode": "Kakao T / Uber",
+          "to": "Central Seoul",
+          "price": "₩50,000-70,000",
+          "time": "60-80 min",
+          "note": "Book in the app; pickup zones are signed."
+        }
+      ]
+    },
+    {
+      "code": "GMP",
+      "name": "Gimpo International Airport",
+      "primary": false,
+      "note": "Closer city airport, 17 km west; domestic flights plus China, Japan and Taiwan routes.",
+      "options": [
+        {
+          "mode": "Subway Line 9 / Line 5",
+          "to": "Central Seoul",
+          "price": "₩1,000-2,100",
+          "time": "30-50 min",
+          "note": "Line 9 express trains are faster."
+        },
+        {
+          "mode": "AREX train",
+          "to": "Seoul Station",
+          "price": "₩1,000-2,100",
+          "time": "20-30 min",
+          "note": "Links to Incheon Airport too."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Seoul",
+          "price": "₩30,000-40,000",
+          "time": "30-50 min",
+          "note": "Cheaper than from Incheon."
+        },
+        {
+          "mode": "Kakao T / Uber",
+          "to": "Central Seoul",
+          "price": "₩30,000-40,000",
+          "time": "30-50 min",
+          "note": "Use app pickup points at the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Gyeongbokgung Palace",
+    "N Seoul Tower",
+    "Bukchon Hanok Village",
+    "Changdeokgung Palace and Huwon",
+    "Dongdaemun Design Plaza",
+    "Gwanghwamun Square",
+    "Myeongdong Cathedral",
+    "Jongmyo Shrine",
+    "Hongdae Street",
+    "Insadong Cultural Street",
+    "Lotte World Tower",
+    "63 Building",
+    "Aqua Planet Ilsan",
+    "Bongeunsa Temple",
+    "Bugaksan",
+    "COEX Aquarium",
+    "Changgyeonggung Palace",
+    "Cheonggyecheon Stream",
+    "Cheongwadae",
+    "Deoksugung Palace",
+    "Ewha Womans University",
+    "Gangnam Style Horse Dance Statue"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Seoul",
+      "https://en.wikivoyage.org/wiki/Seoul"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    37.5665,
+    126.978
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 2,
+      "low": -7,
+      "rain_days": 3
+    },
+    {
+      "high": 5,
+      "low": -5,
+      "rain_days": 4
+    },
+    {
+      "high": 12,
+      "low": 0,
+      "rain_days": 6
+    },
+    {
+      "high": 18,
+      "low": 6,
+      "rain_days": 7
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 8
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 18
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 16
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 7
+    },
+    {
+      "high": 3,
+      "low": -5,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

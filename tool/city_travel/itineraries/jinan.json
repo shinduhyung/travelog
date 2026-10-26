@@ -1,0 +1,1311 @@
+{
+  "city": "Jinan",
+  "checked": "October 2026",
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro": "Jinan rewards visitors with its famous springs, lakes, and lively street food. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 36.6252,
+      "west": 116.9692,
+      "north": 36.6931,
+      "east": 117.1892,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 7.5,
+      "flag_airport": 7.5,
+      "per_km": 1.5,
+      "min_fare": 7.5
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "Metro: 3 lines (1, 2, 3) cover west, east, and north; no line through city centre yet.",
+      "Buses: ¥1 or ¥2 for air-conditioned; use transit card or Apple Pay for discount.",
+      "Taxis: flag fall ¥7.50; drivers rarely speak English, have destination in Chinese.",
+      "Ride apps: Didi works; taxis often use apps, may avoid ranks.",
+      "Driving: not recommended for visitors; traffic and parking difficult.",
+      "Walking/bikes: city centre is walkable; shared bikes available but need app."
+    ],
+    "sources": []
+  },
+  "places": {
+    "baotu_spring": {
+      "name": "Baotu Spring",
+      "landmark": "Baotu Spring",
+      "kind": "park",
+      "lat": 36.6606,
+      "lon": 117.0135,
+      "price": 40,
+      "price_text": "≈ CNY 40 · check on the day",
+      "hours": "Roughly 07:00–18:00; shorter in winter",
+      "tip": "Come early to see the springs bubbling before tour groups arrive. The nearby spring water tea houses are a classic stop.",
+      "source": ""
+    },
+    "daming_lake": {
+      "name": "Daming Lake",
+      "landmark": "Daming Lake",
+      "kind": "park",
+      "lat": 36.6743,
+      "lon": 117.0202,
+      "price": 0,
+      "price_text": "Free to walk the lake; some pavilions and boat rides charge a small fee",
+      "hours": "Park open daily, roughly dawn to dusk",
+      "tip": "Walk the full loop at sunset, then stay for the evening lights on the pavilions.",
+      "source": ""
+    },
+    "thousand_buddha": {
+      "name": "Thousand Buddha Mountain",
+      "landmark": "Thousand Buddha Mountain",
+      "kind": "sight",
+      "lat": 36.6397,
+      "lon": 117.0345,
+      "price": 30,
+      "price_text": "≈ CNY 30 · check on the day",
+      "hours": "Roughly 06:00–18:00",
+      "tip": "Wear good shoes; the climb is steady and takes about an hour up. The city view from the top is the reward.",
+      "source": ""
+    },
+    "shandong_university": {
+      "name": "Shandong University (Central Campus)",
+      "landmark": "Shandong University",
+      "kind": "sight",
+      "lat": 36.6749,
+      "lon": 117.0568,
+      "price": null,
+      "price_text": "Free to walk the campus; some buildings need permission",
+      "hours": "Campus grounds generally open in daytime; check access rules on the day",
+      "tip": "A calm green campus near the old town. Ask at the gate about visitor access before you go in.",
+      "source": ""
+    },
+    "furong_street": {
+      "name": "Furong Street snack street",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.6683,
+      "lon": 117.0233,
+      "price": null,
+      "price_text": "Pay per stall; snacks roughly CNY 5–30 each",
+      "hours": "Busiest from late afternoon to around 22:00",
+      "tip": "Try grilled squid, sweet potato noodles and Shandong pancakes. Bring cash or a phone payment app.",
+      "source": ""
+    },
+    "qushuiting": {
+      "name": "Qushuiting Street old neighbourhood",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.6697,
+      "lon": 117.0211,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; best in daylight",
+      "tip": "A short walk of old lanes, canals and spring-fed pools just east of Baotu Spring. Go slow and look at the doorways.",
+      "source": ""
+    },
+    "black_tiger_spring": {
+      "name": "Black Tiger Spring",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.6647,
+      "lon": 117.0278,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, roughly dawn to dusk",
+      "tip": "Watch locals fill buckets from the spring spouts. It sits on the moat, so pair it with a walk along the water.",
+      "source": ""
+    },
+    "moat_boat": {
+      "name": "Moat and lake boat ride",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 36.6717,
+      "lon": 117.025,
+      "price": 100,
+      "price_text": "≈ CNY 60–120 depending on route; check on the day",
+      "hours": "Daytime departures, roughly 09:00–17:00",
+      "tip": "A boat is the easiest way to see the springs and old city from the water. Confirm the route and price at the dock.",
+      "source": ""
+    },
+    "shandong_museum": {
+      "name": "Shandong Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 36.6614,
+      "lon": 117.1667,
+      "price": 0,
+      "price_text": "Free with ID; some special exhibitions charge",
+      "hours": "Closed Monday · roughly 09:00–17:00",
+      "tip": "Bring your passport for the free ticket. The ancient bronzes and Han dynasty finds are the highlight.",
+      "source": ""
+    },
+    "olympic_centre": {
+      "name": "Jinan Olympic Sports Centre",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.6833,
+      "lon": 117.15,
+      "price": null,
+      "price_text": "Free to walk outside; events ticketed",
+      "hours": "Grounds open daily; stadium access only for events",
+      "tip": "Come at night to see the lit stadium shapes. It is a long way east, so combine it with the museum.",
+      "source": ""
+    },
+    "hero_mountain": {
+      "name": "Hero Mountain viewpoint",
+      "landmark": null,
+      "kind": "park",
+      "lat": 36.6389,
+      "lon": 117.0083,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, roughly dawn to dusk",
+      "tip": "A short climb for a wide view over the city. Good at sunset if the air is clear.",
+      "source": ""
+    },
+    "quancheng_square": {
+      "name": "Quancheng Square",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.6667,
+      "lon": 117.025,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The city's central square and a handy meeting point. Fountains and evening lights draw a crowd.",
+      "source": ""
+    },
+    "wulongtan": {
+      "name": "Wulongtan Park (Five Dragon Pool)",
+      "landmark": null,
+      "kind": "park",
+      "lat": 36.6642,
+      "lon": 117.0106,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, roughly 06:00–18:00",
+      "tip": "Quiet pools and old walls a short walk from Baotu Spring. A good rest stop between sights.",
+      "source": ""
+    },
+    "jinan_food_market": {
+      "name": "Local wet market breakfast",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.6706,
+      "lon": 117.0189,
+      "price": null,
+      "price_text": "Breakfast roughly CNY 10–25",
+      "hours": "Busiest roughly 06:30–09:30",
+      "tip": "Go early for fresh baozi, soy milk and Shandong flatbreads. Prices are low and portions are big.",
+      "source": ""
+    },
+    "baotu_tea": {
+      "name": "Spring-water tea house stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.6617,
+      "lon": 117.0136,
+      "price": 60,
+      "price_text": "≈ CNY 40–100 per pot; check on the day",
+      "hours": "Daytime, roughly 09:00–18:00",
+      "tip": "Tea brewed with local spring water is a Jinan tradition. Sit outside if the weather is good.",
+      "source": ""
+    },
+    "train_station_walk": {
+      "name": "Old city walk from the station",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.6717,
+      "lon": 116.9917,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; daylight is best",
+      "tip": "Walk east from the station toward the springs to get your bearings. It takes about 40 minutes at an easy pace.",
+      "source": ""
+    },
+    "shandong_opera": {
+      "name": "Shandong opera or folk show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 36.6683,
+      "lon": 117.0261,
+      "price": 120,
+      "price_text": "≈ CNY 80–200; check on the day",
+      "hours": "Evening performances, days vary",
+      "tip": "Ask your hotel or a ticket desk what is on. Book ahead for weekend shows.",
+      "source": ""
+    },
+    "qianfo_street": {
+      "name": "Qianfo Mountain street food lane",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.635,
+      "lon": 117.035,
+      "price": null,
+      "price_text": "Snacks roughly CNY 10–30",
+      "hours": "Busiest late afternoon to evening",
+      "tip": "Eat after the mountain climb. Look for grilled skewers and local noodles.",
+      "source": ""
+    },
+    "city_wall_park": {
+      "name": "Jiefang Pavilion and old city wall walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.6667,
+      "lon": 117.0306,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A short walk linking the lake area and the shopping streets. Good for an evening stroll.",
+      "source": ""
+    },
+    "spring_culture_museum": {
+      "name": "Jinan Spring Culture exhibition",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 36.6625,
+      "lon": 117.0142,
+      "price": 0,
+      "price_text": "Free or small fee; check on the day",
+      "hours": "Roughly 09:00–17:00; closed some Mondays",
+      "tip": "Explains why Jinan is called the City of Springs. A good rainy-day stop near Baotu Spring.",
+      "source": ""
+    },
+    "high_tech_park": {
+      "name": "High-tech Zone riverside park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 36.6833,
+      "lon": 117.1333,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A modern green strip near the museum and Olympic Centre. Handy for a quiet walk between sights.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "One day of springs and lake water, all on foot in the old centre.",
+      "days": [
+        {
+          "title": "Springs, lake and a boat",
+          "stops": [
+            {
+              "place": "baotu_spring",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early for fewer crowds and cooler air. Check winter closing time on the day."
+            },
+            {
+              "place": "wulongtan",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Short walk north. Quiet pools and old pavilions."
+            },
+            {
+              "place": "daming_lake",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk the shore, then stop for lunch nearby."
+            },
+            {
+              "place": "moat_boat",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daytime departures only; buy tickets at the dock."
+            },
+            {
+              "place": "black_tiger_spring",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Watch locals fill bottles at the springs."
+            },
+            {
+              "place": "furong_street",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening snacks. Prices vary; carry small cash."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Museum morning, old streets and springs in the afternoon.",
+      "days": [
+        {
+          "title": "Museum, old lanes and the wall",
+          "stops": [
+            {
+              "place": "shandong_museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. It is a taxi or metro ride east from the centre."
+            },
+            {
+              "place": "qushuiting",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Back in the centre. Narrow lanes and old houses; best in daylight."
+            },
+            {
+              "place": "spring_culture_museum",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Good in rain. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late entry is quieter. Confirm closing time."
+            },
+            {
+              "place": "city_wall_park",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening walk on the old wall. Dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market breakfast, spring-side tea and street snacks from afternoon to night.",
+      "days": [
+        {
+          "title": "Breakfast to late-night snacks",
+          "stops": [
+            {
+              "place": "jinan_food_market",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Go early; busiest roughly 06:30–09:30. Try local breakfast staples."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk off breakfast. Check winter hours."
+            },
+            {
+              "place": "baotu_tea",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Tea brewed with spring water. Daytime only."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Snack lane near Thousand Buddha Mountain; busiest late afternoon."
+            },
+            {
+              "place": "furong_street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Main snack street. Busy until around 22:00."
+            },
+            {
+              "place": "shandong_opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening show; days vary, so book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Our pick for first-timers: the famous springs and the lake, all on foot in the old centre.",
+      "days": [
+        {
+          "title": "Arrive, springs and the lake",
+          "stops": [
+            {
+              "place": "baotu_spring",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Start here. Go early in the day if you can; afternoons are busier."
+            },
+            {
+              "place": "wulongtan",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Short walk north. Quiet pools and old pavilions."
+            },
+            {
+              "place": "daming_lake",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Walk the shore as the light softens. Summer brings lotus flowers."
+            },
+            {
+              "place": "furong_street",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Dinner from the snack stalls. Busiest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Mountain views, then go",
+          "stops": [
+            {
+              "place": "black_tiger_spring",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Morning is calmest. Locals fill bottles here."
+            },
+            {
+              "place": "moat_boat",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Boat along the moat and lake. Check departure times on the day."
+            },
+            {
+              "place": "thousand_buddha",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Climb in cooler morning air. Wear good shoes."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Quick lunch at the food lane before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Old streets, springs and a museum morning for visitors who like the story behind the city.",
+      "days": [
+        {
+          "title": "Old city on foot",
+          "stops": [
+            {
+              "place": "qushuiting",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Narrow lanes and canal-side houses. Best in daylight."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "The city's best-known spring. Allow time to wander."
+            },
+            {
+              "place": "spring_culture_museum",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Good indoor stop. Closed some Mondays, so check."
+            },
+            {
+              "place": "city_wall_park",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Walk the old wall to Jiefang Pavilion at dusk."
+            },
+            {
+              "place": "shandong_opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening folk show. Performance days vary; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museum, then go",
+          "stops": [
+            {
+              "place": "shandong_museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Take a taxi east to the High-tech Zone."
+            },
+            {
+              "place": "high_tech_park",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Riverside stroll nearby before heading back."
+            },
+            {
+              "place": "train_station_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Old city walk near the station if your train is later."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through the old centre: market breakfast, street snacks and spring-water tea.",
+      "days": [
+        {
+          "title": "Snacks and spring water",
+          "stops": [
+            {
+              "place": "baotu_tea",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Tea brewed with spring water. A gentle start."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk off the tea in the spring park."
+            },
+            {
+              "place": "furong_street",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Graze the stalls. Try Lu cuisine dishes and local sweets."
+            },
+            {
+              "place": "daming_lake",
+              "at": "18:15",
+              "minutes": 120,
+              "note": "Evening walk by the water to finish."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast, then go",
+          "stops": [
+            {
+              "place": "jinan_food_market",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Go early. Busiest roughly 06:30–09:30."
+            },
+            {
+              "place": "black_tiger_spring",
+              "at": "08:15",
+              "minutes": 45,
+              "note": "Short walk. Watch locals collect spring water."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Late-morning snacks near Thousand Buddha Mountain."
+            },
+            {
+              "place": "quancheng_square",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Central square, easy to reach transport from here."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Springs and lakes at an easy pace, with mornings outdoors and afternoons by the water.",
+      "days": [
+        {
+          "title": "Arrive, springs and the lake",
+          "stops": [
+            {
+              "place": "baotu_spring",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "The city's most famous spring. Go early in the day if you can; afternoons are busier."
+            },
+            {
+              "place": "wulongtan",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "A short walk north. Quiet pools and old pavilions."
+            },
+            {
+              "place": "daming_lake",
+              "at": "16:45",
+              "minutes": 120,
+              "note": "Stay for sunset over the lake. Summer brings lotus flowers."
+            },
+            {
+              "place": "furong_street",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Dinner from the snack stalls. Busiest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Mountain morning, spring walk and a boat",
+          "stops": [
+            {
+              "place": "thousand_buddha",
+              "at": "08:00",
+              "minutes": 150,
+              "note": "Climb in the cooler morning air for clearer views. Wear grippy shoes."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Snack lane at the foot of the hill. Good spot for an early lunch."
+            },
+            {
+              "place": "black_tiger_spring",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Spring water flows straight into the moat. Locals fill bottles here."
+            },
+            {
+              "place": "moat_boat",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Daytime departures only; check the last boat time on the day."
+            },
+            {
+              "place": "hero_mountain",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Short climb for a sunset view over the city."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Old streets, springs and the provincial museum, with one longer trip out to the High-tech Zone.",
+      "days": [
+        {
+          "title": "Old city on foot",
+          "stops": [
+            {
+              "place": "train_station_walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "A daylight walk from the station into the old town. Drop bags at the hotel first if you can."
+            },
+            {
+              "place": "qushuiting",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Narrow lanes and old courtyards. Best in daylight."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Springs with centuries of poems and inscriptions."
+            },
+            {
+              "place": "spring_culture_museum",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Good background on the springs. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "city_wall_park",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Old wall and Jiefang Pavilion. Nice in the evening light."
+            }
+          ]
+        },
+        {
+          "title": "Museum and mountain",
+          "stops": [
+            {
+              "place": "shandong_museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. It is a taxi or metro ride east to the High-tech Zone."
+            },
+            {
+              "place": "high_tech_park",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Riverside walk and a lunch stop nearby."
+            },
+            {
+              "place": "thousand_buddha",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Carved Buddhas on the hillside. Allow time to climb."
+            },
+            {
+              "place": "shandong_opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening show; performance days vary, so book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Market breakfasts, street snacks and spring-water tea, with light sightseeing in between.",
+      "days": [
+        {
+          "title": "Breakfast, springs and snacks",
+          "stops": [
+            {
+              "place": "jinan_food_market",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Go early; the market is busiest roughly 06:30–09:30."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk off breakfast among the springs."
+            },
+            {
+              "place": "baotu_tea",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Tea brewed with spring water. A calm mid-morning stop."
+            },
+            {
+              "place": "daming_lake",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Easy loop around the lake."
+            },
+            {
+              "place": "furong_street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "The main snack street. Come hungry and share plates."
+            }
+          ]
+        },
+        {
+          "title": "Old lanes and a hilltop snack lane",
+          "stops": [
+            {
+              "place": "qushuiting",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet lanes before the crowds."
+            },
+            {
+              "place": "black_tiger_spring",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Watch locals collect spring water."
+            },
+            {
+              "place": "quancheng_square",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Central square; plenty of places to eat nearby."
+            },
+            {
+              "place": "thousand_buddha",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Climb in the afternoon, then eat at the foot of the hill."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Street food lane, busiest late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Springs first: the classic water sights at a relaxed pace, with one hill and one boat ride.",
+      "days": [
+        {
+          "title": "Arrive and the city centre springs",
+          "stops": [
+            {
+              "place": "baotu_spring",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "The famous spring. Go early in the day if you can; it is quieter then."
+            },
+            {
+              "place": "wulongtan",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "A short walk north. Small, green and calm."
+            },
+            {
+              "place": "furong_street",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Snack street. Busiest from late afternoon; eat as you walk."
+            }
+          ]
+        },
+        {
+          "title": "Daming Lake and the moat by boat",
+          "stops": [
+            {
+              "place": "daming_lake",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk the shore and the islands. Summer brings lotus flowers."
+            },
+            {
+              "place": "baotu_tea",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch and spring-water tea nearby."
+            },
+            {
+              "place": "moat_boat",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daytime departures only, roughly 09:00–17:00. Check the last boat on the day."
+            },
+            {
+              "place": "qushuiting",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Old lanes with springs running past the doors."
+            }
+          ]
+        },
+        {
+          "title": "Thousand Buddha Mountain, then sunset",
+          "stops": [
+            {
+              "place": "jinan_food_market",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Breakfast at a local market. Busiest roughly 06:30–09:30."
+            },
+            {
+              "place": "thousand_buddha",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Morning is cooler and the views are clearer. Wear good shoes."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Street food lane at the foot of the hill."
+            },
+            {
+              "place": "hero_mountain",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Short climb for sunset over the city. Open roughly dawn to dusk."
+            }
+          ]
+        },
+        {
+          "title": "Last springs, then leave",
+          "stops": [
+            {
+              "place": "black_tiger_spring",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is best. Locals fill bottles here."
+            },
+            {
+              "place": "city_wall_park",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Walk the old wall and Jiefang Pavilion."
+            },
+            {
+              "place": "quancheng_square",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Always open. A quick look before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Old Jinan and Shandong's story: springs, old streets, the provincial museum and a hill of carvings.",
+      "days": [
+        {
+          "title": "Arrive, old streets and the wall",
+          "stops": [
+            {
+              "place": "train_station_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk into the old city from the station area in daylight."
+            },
+            {
+              "place": "qushuiting",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Old neighbourhood. Best in daylight."
+            },
+            {
+              "place": "spring_culture_museum",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Good background on the springs. Closed some Mondays; check on the day."
+            },
+            {
+              "place": "city_wall_park",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Jiefang Pavilion and the wall walk, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Springs and the lake",
+          "stops": [
+            {
+              "place": "baotu_spring",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early morning is calmest. Hours roughly 07:00–18:00, shorter in winter."
+            },
+            {
+              "place": "wulongtan",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short walk north."
+            },
+            {
+              "place": "daming_lake",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Lunch near the lake, then walk the shore and old buildings."
+            },
+            {
+              "place": "shandong_opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening folk or opera show. Days vary; book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museum day in the High-tech Zone",
+          "stops": [
+            {
+              "place": "shandong_museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Roughly 09:00–17:00. Allow time for the taxi."
+            },
+            {
+              "place": "high_tech_park",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Riverside walk and lunch nearby."
+            },
+            {
+              "place": "olympic_centre",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Grounds open daily; stadium only for events. Good in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Thousand Buddha Mountain, then leave",
+          "stops": [
+            {
+              "place": "thousand_buddha",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Morning for cooler air. Carvings and temples on the hillside."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch at the street food lane."
+            },
+            {
+              "place": "shandong_university",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Central campus. Check access rules on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through Jinan: market breakfasts, street snacks, Lu cuisine and tea by the springs.",
+      "days": [
+        {
+          "title": "Arrive and eat on Furong Street",
+          "stops": [
+            {
+              "place": "quancheng_square",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Easy start; always open."
+            },
+            {
+              "place": "baotu_tea",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Spring-water tea to warm up. Daytime only, roughly 09:00–18:00."
+            },
+            {
+              "place": "furong_street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Busiest late afternoon to about 22:00. Try a few small things rather than one big meal."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast and the lake",
+          "stops": [
+            {
+              "place": "jinan_food_market",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Go early; busiest roughly 06:30–09:30."
+            },
+            {
+              "place": "daming_lake",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk it off around the lake."
+            },
+            {
+              "place": "wulongtan",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Quiet park, then lunch nearby."
+            },
+            {
+              "place": "moat_boat",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Afternoon boat. Daytime departures only; check the last one on the day."
+            },
+            {
+              "place": "qushuiting",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Old lanes; good for photos and small snacks."
+            }
+          ]
+        },
+        {
+          "title": "Hill morning, street food evening",
+          "stops": [
+            {
+              "place": "thousand_buddha",
+              "at": "08:30",
+              "minutes": 150,
+              "note": "Morning is cooler. Build an appetite."
+            },
+            {
+              "place": "qianfo_street",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch at the food lane at the foot of the hill."
+            },
+            {
+              "place": "black_tiger_spring",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Watch locals fill bottles; the water is the local pride."
+            },
+            {
+              "place": "shandong_opera",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening show. Days vary; check and book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Last breakfast, then leave",
+          "stops": [
+            {
+              "place": "jinan_food_market",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "One more market breakfast before you go."
+            },
+            {
+              "place": "baotu_spring",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Quick visit if you skipped it. Early morning is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre (Daming Lake)"
+    }
+  ],
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Springs",
+      "blurb": "Baotu Spring, Daming Lake and the city's famous waters."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Shandong Museum, old streets and the thousand-year springs."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Lu cuisine, street snacks and spring-side teahouses."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "City Centre (Daming Lake)",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Walk to Daming Lake, Baotu Spring and the old streets; best base for first-timers.",
+      "center": [
+        36.671,
+        117.024
+      ]
+    },
+    {
+      "area": "Train Station Area",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Cheapest and easiest for early trains; a short taxi or bus to the lake sights.",
+      "center": [
+        36.672,
+        116.99
+      ]
+    },
+    {
+      "area": "Olympic Centre",
+      "range": [
+        300,
+        800
+      ],
+      "why": "Newer hotels near the stadium and east-side sights; good metro line 3 access.",
+      "center": [
+        36.657,
+        117.13
+      ]
+    },
+    {
+      "area": "High-tech Zone",
+      "range": [
+        200,
+        550
+      ],
+      "why": "Quiet business hotels in the east; only worth it if you have work there.",
+      "center": [
+        36.68,
+        117.2
+      ]
+    }
+  ],
+  "food": [
+    "Try Lu cuisine (Shandong food): braised dishes, sweet-and-sour carp and spring-onion pancakes. Portions are big; share.",
+    "Street snacks: jianbing (savoury crepe), grilled skewers and baozi. A snack meal is often ¥10–30.",
+    "Look for spring-water teahouses near Baotu Spring; tea is usually ¥30–80 per pot.",
+    "Night markets and food streets around the old city and university areas are busiest after 6pm.",
+    "Mid-range restaurant meals run about ¥50–120 per person; check prices on the menu before ordering."
+  ],
+  "more_time": [
+    "Add a day trip to Mount Tai (Taishan) in Tai'an: about 30–60 minutes by high-speed train; check times on the day.",
+    "History fans can swap a city afternoon for the Shandong Museum; entry is usually free but check opening days.",
+    "Slow down at Daming Lake: a boat ride and a walk along the old streets can fill a relaxed half day."
+  ]
+}

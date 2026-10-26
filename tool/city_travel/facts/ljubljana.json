@@ -1,0 +1,241 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Ljubljana: a green, human-scale capital with a castle on a hill.",
+  "intro": "Ljubljana rewards visitors with a compact old town, riverside cafés and easy day trips. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Old Town (Stari trg)",
+    "Center (Prešeren Square)",
+    "Metelkova / Station",
+    "Tivoli / Šiška"
+  ],
+  "taxi": {
+    "flag_day": 2,
+    "flag_airport": 5,
+    "per_km": 1.5,
+    "min_fare": 5
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "No metro or tram; the city runs on buses plus a small electric tourist train.",
+    "City buses use the Urbana card; buy it at kiosks or with the Urbana app.",
+    "Taxis are metered; ride apps like Bolt and Uber operate in Ljubljana.",
+    "Driving is easy outside rush hour; parking in the centre is limited and paid.",
+    "The centre is very walkable and bike-friendly; bike share and rental shops exist.",
+    "No ferry service; boats run on the Ljubljanica river for tours."
+  ],
+  "airports": [
+    {
+      "code": "LJU",
+      "name": "Ljubljana Jože Pučnik Airport",
+      "primary": true,
+      "note": "Main airport, about 19 km north of the centre.",
+      "options": [
+        {
+          "mode": "Arriva bus",
+          "to": "Ljubljana bus/rail station (Stand 28)",
+          "price": "€4.10",
+          "time": "50 min",
+          "note": "Pay the driver in cash; runs every 30 min on weekdays."
+        },
+        {
+          "mode": "LPP bus 64",
+          "to": "Ljubljana bus station (Stand 28)",
+          "price": "€4.10",
+          "time": "50-60 min",
+          "note": "Urbana card or Visa/Mastercard accepted."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "City centre or door-to-door",
+          "price": "€12-20",
+          "time": "30-45 min",
+          "note": "Book ahead with Goopti, Nomago or similar."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-50",
+          "time": "25-35 min",
+          "note": "Metered; agree a price first."
+        },
+        {
+          "mode": "Ride app (Bolt/Uber)",
+          "to": "City centre",
+          "price": "€25-40",
+          "time": "25-35 min",
+          "note": "Check app availability on arrival."
+        }
+      ]
+    },
+    {
+      "code": "TRS",
+      "name": "Trieste Airport",
+      "primary": false,
+      "note": "Italian option, about 100 km southwest; useful for some low-cost flights.",
+      "options": [
+        {
+          "mode": "Train + bus",
+          "to": "Ljubljana station",
+          "price": "€15-25",
+          "time": "2.5-3.5 hr",
+          "note": "Change at Trieste or Villa Opicina."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "Ljubljana centre",
+          "price": "€30-50",
+          "time": "1.5-2 hr",
+          "note": "Book ahead; limited schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Ljubljana centre",
+          "price": "€120-180",
+          "time": "1.5-2 hr",
+          "note": "Long drive; confirm price first."
+        }
+      ]
+    },
+    {
+      "code": "VCE",
+      "name": "Venice Marco Polo Airport",
+      "primary": false,
+      "note": "About 240 km west; good for intercontinental and budget flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Ljubljana bus station",
+          "price": "€25-40",
+          "time": "4 hr",
+          "note": "Direct coaches run daily."
+        },
+        {
+          "mode": "Train",
+          "to": "Ljubljana station",
+          "price": "€25-40",
+          "time": "4-5 hr",
+          "note": "Change at Trieste; regional trains run hourly."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Ljubljana centre",
+          "price": "€250-350",
+          "time": "2.5-3 hr",
+          "note": "Very expensive; bus or train is better."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ljubljana Castle",
+    "Triple Bridge",
+    "Prešeren Square",
+    "St. Nicholas Cathedral",
+    "National Museum of Slovenia",
+    "Dragon Bridge, Ljubljana",
+    "Štruklji"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Ljubljana",
+      "https://en.wikivoyage.org/wiki/Ljubljana"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    46.0569,
+    14.5058
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -3,
+      "rain_days": 8
+    },
+    {
+      "high": 8,
+      "low": -2,
+      "rain_days": 9
+    },
+    {
+      "high": 12,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 4,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 16
+    },
+    {
+      "high": 25,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 10
+    },
+    {
+      "high": 10,
+      "low": 3,
+      "rain_days": 10
+    },
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport VCE is 178 km away"
+  ]
+}

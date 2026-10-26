@@ -1,0 +1,1365 @@
+{
+  "city": "Poznań",
+  "checked": "October 2026",
+  "currency": "PLN",
+  "usd_rate": 3.8993,
+  "intro": "Poznań rewards visitors with a lively Old Town, rich history, and green spaces. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 52.392,
+      "west": 16.8967,
+      "north": 52.4265,
+      "east": 16.9796,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 6,
+      "flag_airport": 10,
+      "per_km": 3,
+      "min_fare": 8
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Trams and buses are run by MPK; tickets are time-based (15 min 4 zł, 45 min 6 zł, 90 min 8 zł).",
+      "24-hour ticket costs 15 zł; 7-day ticket 50 zł.",
+      "Ride apps like Uber and Bolt operate in Poznań.",
+      "Driving is not recommended in the city centre due to traffic and limited parking.",
+      "Walking is pleasant in the compact centre; cycling is okay but bike paths are inconsistent.",
+      "No ferries; the Warta river has bridges only."
+    ],
+    "sources": []
+  },
+  "places": {
+    "old-market-square": {
+      "name": "Old Market Square Poznań",
+      "landmark": "Old Market Square Poznań",
+      "kind": "sight",
+      "lat": 52.4083,
+      "lon": 16.9342,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · cafés and bars roughly 09:00–late",
+      "tip": "Come twice: in the morning for the quiet square and after dark for the lit-up town hall.",
+      "source": ""
+    },
+    "town-hall": {
+      "name": "Poznań Town Hall",
+      "landmark": "Poznań Town Hall",
+      "kind": "sight",
+      "lat": 52.4084,
+      "lon": 16.9342,
+      "price": null,
+      "price_text": "Small entry fee for the museum inside — check on the day",
+      "hours": "Museum hours vary by season — check on the day",
+      "tip": "Stand in front of the clock before noon to watch the billy goats butt heads.",
+      "source": ""
+    },
+    "cathedral": {
+      "name": "Poznań Cathedral",
+      "landmark": "Poznań Cathedral",
+      "kind": "sight",
+      "lat": 52.4111,
+      "lon": 16.9472,
+      "price": 0,
+      "price_text": "Free to enter · small fee for the crypt — check on the day",
+      "hours": "Open daily, closed during services — check on the day",
+      "tip": "Look for the golden chapel and the tombs of the first Polish rulers.",
+      "source": ""
+    },
+    "croissant-museum": {
+      "name": "Rogalowe Muzeum (St. Martin's Croissant Museum)",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 52.4084,
+      "lon": 16.9342,
+      "price": null,
+      "price_text": "Ticketed show — check price on the day",
+      "hours": "Sessions through the day — book ahead",
+      "tip": "A short, funny show where you learn to fold the local croissant. Good with kids.",
+      "source": ""
+    },
+    "stary-rynek-market": {
+      "name": "Market hall under the Old Market Square (Stary Rynek food stalls)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.4083,
+      "lon": 16.933,
+      "price": null,
+      "price_text": "Pay per item — cheap eats",
+      "hours": "Daytime into evening — check on the day",
+      "tip": "Try the local Saint Martin's croissant and a plate of pyry (potato) dishes.",
+      "source": ""
+    },
+    "ostrow-tumski": {
+      "name": "Ostrów Tumski walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.4125,
+      "lon": 16.9495,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Cross the river and walk the quiet island where Poznań began. Best at golden hour.",
+      "source": ""
+    },
+    "jezyce-walk": {
+      "name": "Jeżyce neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.4155,
+      "lon": 16.9085,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Old tenement streets, murals and small bakeries. Wander without a map.",
+      "source": ""
+    },
+    "jezyce-market": {
+      "name": "Jeżyce food market (Targ Jeżycki)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.4148,
+      "lon": 16.9078,
+      "price": null,
+      "price_text": "Pay per item",
+      "hours": "Mornings, mainly weekdays — check on the day",
+      "tip": "Buy fruit, cheese and bread here for a picnic. Bring cash.",
+      "source": ""
+    },
+    "cytadela-park": {
+      "name": "Cytadela Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 52.4195,
+      "lon": 16.9315,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Big green park on an old fort hill. Walk to the war cemetery and the sculpture garden.",
+      "source": ""
+    },
+    "lake-malta": {
+      "name": "Lake Malta and the Maltanka railway",
+      "landmark": null,
+      "kind": "park",
+      "lat": 52.4025,
+      "lon": 16.9685,
+      "price": null,
+      "price_text": "Park free · small fee for the mini railway and ski slope",
+      "hours": "Park always open · attractions seasonal",
+      "tip": "Rent a bike or take the little train around the lake. Good for a half-day with kids.",
+      "source": ""
+    },
+    "wilda-walk": {
+      "name": "Wilda district walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.3995,
+      "lon": 16.9255,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Quiet streets, old factories turned into cafés. Walk south from the station.",
+      "source": ""
+    },
+    "imperial-castle": {
+      "name": "Imperial Castle (Zamek)",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.4065,
+      "lon": 16.9185,
+      "price": null,
+      "price_text": "Free to enter the courtyard · paid exhibitions",
+      "hours": "Daily, hours vary — check on the day",
+      "tip": "A strange, grand 1900s palace. The cultural centre inside runs film and art shows.",
+      "source": ""
+    },
+    "old-town-tour": {
+      "name": "Old Town walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 52.4082,
+      "lon": 16.9335,
+      "price": null,
+      "price_text": "Tip-based or paid — check on the day",
+      "hours": "Usually one or two departures a day",
+      "tip": "A guide explains the goats, the merchants and the 1956 uprising in about two hours.",
+      "source": ""
+    },
+    "croissant-street-food": {
+      "name": "Saint Martin's croissant tasting",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.4085,
+      "lon": 16.9338,
+      "price": null,
+      "price_text": "A few PLN per croissant",
+      "hours": "Bakery hours, roughly 07:00–19:00",
+      "tip": "The local sweet is a flaky croissant filled with poppy seed and nuts. Buy one warm.",
+      "source": ""
+    },
+    "cathedral-viewpoint": {
+      "name": "Riverbank view of the cathedral",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.4105,
+      "lon": 16.9475,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the Warta riverbank for the best photo of the cathedral spires across the water.",
+      "source": ""
+    },
+    "stary-browar": {
+      "name": "Stary Browar shopping and art centre",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.4015,
+      "lon": 16.9265,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Shops roughly 10:00–21:00, Sunday shorter",
+      "tip": "An old brewery turned into shops and a gallery. Good shelter on a wet day.",
+      "source": ""
+    },
+    "citadel-museum": {
+      "name": "Museum of Armaments in Cytadela Park",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 52.419,
+      "lon": 16.932,
+      "price": null,
+      "price_text": "Small entry fee — check on the day",
+      "hours": "Closed Mondays, seasonal — check on the day",
+      "tip": "Small military museum in an old fort. Pair it with a walk in the park.",
+      "source": ""
+    },
+    "nightlife-rynek": {
+      "name": "Old Market Square nightlife",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.4082,
+      "lon": 16.9335,
+      "price": null,
+      "price_text": "Pay per drink",
+      "hours": "Evening into late night, mainly Thursday–Saturday",
+      "tip": "Bars fill the square's cellars and side streets. Expect busy weekends.",
+      "source": ""
+    },
+    "wilda-food-hall": {
+      "name": "Wilda food hall and cafés",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.399,
+      "lon": 16.926,
+      "price": null,
+      "price_text": "Pay per item",
+      "hours": "Lunch into evening — check on the day",
+      "tip": "Casual spots near Stary Browar for a cheap, good lunch away from the tourist square.",
+      "source": ""
+    },
+    "jezyce-cafe": {
+      "name": "Jeżyce café stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.415,
+      "lon": 16.909,
+      "price": null,
+      "price_text": "Pay per item",
+      "hours": "Roughly 08:00–18:00 — check on the day",
+      "tip": "Small local cafés with good coffee and cake. A quiet break mid-walk.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Old Town history, with the cathedral and a riverbank sunset to finish.",
+      "days": [
+        {
+          "title": "Old Town icons and the cathedral island",
+          "stops": [
+            {
+              "place": "old-town-tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning departure is best. Check the day's times at the tourist office."
+            },
+            {
+              "place": "town-hall",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Museum hours vary by season — check on the day. Look up at the clock before you go in."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch at the food stalls under the square."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Short walk east. Closed during services — check on the day."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the island around the cathedral."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Riverbank view back toward the cathedral. Best at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Croissants, market stalls and a food-hall lunch, then an evening on the square.",
+      "days": [
+        {
+          "title": "Croissants, markets and the square at night",
+          "stops": [
+            {
+              "place": "croissant-street-food",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Bakery hours roughly 07:00–19:00. Buy one fresh."
+            },
+            {
+              "place": "croissant-museum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Book a late-morning session ahead."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunchtime stalls under the Old Market Square."
+            },
+            {
+              "place": "jezyce-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short tram ride west. Weekday early afternoon is calm."
+            },
+            {
+              "place": "jezyce-cafe",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Coffee stop. Hours roughly 08:00–18:00 — check on the day."
+            },
+            {
+              "place": "nightlife-rynek",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner and drinks on the square. Busiest Thursday–Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "day-budget",
+      "length": "day",
+      "style": "budget",
+      "nights": 0,
+      "for": "A cheap, walkable day: free squares, parks and market food, with trams between areas.",
+      "days": [
+        {
+          "title": "Free Old Town and the parks",
+          "stops": [
+            {
+              "place": "old-market-square",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Free to wander. Cafés open around 09:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Free entry, small donation welcome. Closed during services."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Free walk on the island."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Cheap lunch at the stalls."
+            },
+            {
+              "place": "cytadela-park",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Tram or a 25-minute walk north. Free park, good in spring and summer."
+            },
+            {
+              "place": "lake-malta",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Tram east. Park is always open; the Maltanka railway is seasonal — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "The classic first visit: Old Town highlights on day one, cathedral island and a museum on day two.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "old-town-tour",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Cafés open around 09:00."
+            },
+            {
+              "place": "town-hall",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Museum hours vary by season — check on the day. Try to catch the clock show at noon."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch at the food stalls under the square."
+            },
+            {
+              "place": "croissant-museum",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Book a session ahead; late-morning slots fill first."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Check departure times; usually one or two a day."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral island and a rainy-day castle",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quieter before tour groups. Closed during services."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Easy walk around the island. Always open."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Riverbank view — best at sunset, but fine at midday too."
+            },
+            {
+              "place": "imperial-castle",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Good indoor backup. Hours vary — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through the Old Town and Jeżyce: croissants, market stalls and a food hall.",
+      "days": [
+        {
+          "title": "Croissants and the Old Town",
+          "stops": [
+            {
+              "place": "croissant-street-food",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Bakery hours roughly 07:00–19:00. Go early for the freshest batch."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Wander the square and side streets."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch from the stalls. Daytime into evening — check on the day."
+            },
+            {
+              "place": "croissant-museum",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Book ahead; sessions run through the day."
+            },
+            {
+              "place": "nightlife-rynek",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner and drinks on the square. Busiest Thursday–Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Jeżyce and Wilda flavours",
+          "stops": [
+            {
+              "place": "jezyce-cafe",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Coffee stop. Roughly 08:00–18:00 — check on the day."
+            },
+            {
+              "place": "jezyce-market",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Mornings, mainly weekdays. Saturday is liveliest."
+            },
+            {
+              "place": "jezyce-walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Neighbourhood streets and old tenements."
+            },
+            {
+              "place": "wilda-food-hall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Lunch into evening — check on the day."
+            },
+            {
+              "place": "stary-browar",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–21:00, shorter on Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "1n-budget",
+      "length": "1n",
+      "style": "budget",
+      "nights": 1,
+      "for": "Cheap and cheerful: free squares and parks, market lunches and a walking tour.",
+      "days": [
+        {
+          "title": "Free Old Town and the riverbank",
+          "stops": [
+            {
+              "place": "old-town-tour",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Free to wander. Cafés open around 09:00."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Budget lunch at the stalls."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Tip-based tours are common — check times on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Free entry; closed during services."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Free riverbank view. Best at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Parks and trams",
+          "stops": [
+            {
+              "place": "cytadela-park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Free park. Take a tram from the centre."
+            },
+            {
+              "place": "citadel-museum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Closed Mondays, seasonal — check on the day."
+            },
+            {
+              "place": "lake-malta",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Park always open; attractions seasonal. Tram or bus out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Old Town icons, the cathedral island and one museum, at an easy pace.",
+      "days": [
+        {
+          "title": "Old Town core",
+          "stops": [
+            {
+              "place": "old-town-tour",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Cafés open around 09:00."
+            },
+            {
+              "place": "town-hall",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Museum hours vary by season — check on the day. Try to catch the clock show around noon."
+            },
+            {
+              "place": "croissant-museum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Book a session ahead; late morning is easiest."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch at the food stalls under the square."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually one or two departures a day — confirm the time when you book."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral island and riverbank",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quieter before tour groups. Closed during services — check on the day."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Walk the island at your own pace."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Riverbank view; come back at sunset if you have time."
+            },
+            {
+              "place": "stary-browar",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch and a look at the art centre. Shops roughly 10:00–21:00, shorter on Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want croissants, market halls and neighbourhood cafés between the sights.",
+      "days": [
+        {
+          "title": "Old Town tastes",
+          "stops": [
+            {
+              "place": "croissant-street-food",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Bakery hours roughly 07:00–19:00. Get one fresh."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Wander the square while it is calm."
+            },
+            {
+              "place": "croissant-museum",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Book a late-morning session ahead."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch among the stalls."
+            },
+            {
+              "place": "nightlife-rynek",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner and drinks on the square. Busiest Thursday–Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Jeżyce and Wilda food",
+          "stops": [
+            {
+              "place": "jezyce-market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Mornings, mainly weekdays — check on the day. Saturday is best."
+            },
+            {
+              "place": "jezyce-walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Neighbourhood streets and old villas."
+            },
+            {
+              "place": "jezyce-cafe",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Coffee stop, roughly 08:00–18:00 — check on the day."
+            },
+            {
+              "place": "wilda-food-hall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Open lunch into evening — check on the day."
+            },
+            {
+              "place": "stary-browar",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–21:00, shorter on Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "2n-budget",
+      "length": "2n",
+      "style": "budget",
+      "nights": 2,
+      "for": "Travellers keeping costs low with free squares, parks and cheap eats.",
+      "days": [
+        {
+          "title": "Free Old Town",
+          "stops": [
+            {
+              "place": "old-town-tour",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Free to wander. Cafés open around 09:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Free entry; closed during services — check on the day."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Always open, no ticket needed."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Cheap lunch at the stalls."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Sunset view, free."
+            }
+          ]
+        },
+        {
+          "title": "Parks and markets",
+          "stops": [
+            {
+              "place": "jezyce-market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Mornings, mainly weekdays — check on the day."
+            },
+            {
+              "place": "cytadela-park",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Always open. Bring a picnic."
+            },
+            {
+              "place": "citadel-museum",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Mondays, seasonal — check on the day. Skip if the ticket is too much."
+            },
+            {
+              "place": "lake-malta",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Park always open; the Maltanka railway runs seasonally."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the Old Town icons, the cathedral island and a museum or two, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and meet the Old Town",
+          "stops": [
+            {
+              "place": "old-market-square",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Cafés and bars stay open late."
+            },
+            {
+              "place": "town-hall",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Museum hours vary by season — check on the day. Look up at the clock before you go in."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Food stalls under the square. Good for an early dinner."
+            },
+            {
+              "place": "nightlife-rynek",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Optional. The square is liveliest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral island and the riverbank",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quieter before tour groups. Closed during services — check on the day."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Easy walk around the island. Always open."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Riverbank view. Come back at sunset if you have time."
+            },
+            {
+              "place": "croissant-street-food",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Saint Martin's croissant for lunch on the go. Bakeries roughly 07:00–19:00."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually one or two departures a day — book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Jeżyce",
+          "stops": [
+            {
+              "place": "croissant-museum",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Book a late-morning session ahead."
+            },
+            {
+              "place": "imperial-castle",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Daily, hours vary — check on the day. Good rainy-day backup."
+            },
+            {
+              "place": "jezyce-cafe",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Mid-morning to lunchtime stop. Roughly 08:00–18:00."
+            },
+            {
+              "place": "jezyce-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Quiet streets and old tenements. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Park and farewell",
+          "stops": [
+            {
+              "place": "cytadela-park",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Big green space, good in spring and summer."
+            },
+            {
+              "place": "citadel-museum",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Closed Mondays, seasonal — check on the day."
+            },
+            {
+              "place": "stary-browar",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–21:00, shorter on Sunday. Lunch here before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around croissants, markets and long lunches, with the sights in between.",
+      "days": [
+        {
+          "title": "Croissants and the square",
+          "stops": [
+            {
+              "place": "croissant-street-food",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Start with a Saint Martin's croissant. Bakeries roughly 07:00–19:00."
+            },
+            {
+              "place": "old-market-square",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk it off around the square."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch at the food stalls under the square."
+            },
+            {
+              "place": "croissant-museum",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Book a session ahead. Hands-on and fun."
+            },
+            {
+              "place": "nightlife-rynek",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars and food on the square. Liveliest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Jeżyce eating day",
+          "stops": [
+            {
+              "place": "jezyce-market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Mornings, mainly weekdays — check on the day. Saturday is best."
+            },
+            {
+              "place": "jezyce-cafe",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Coffee stop. Roughly 08:00–18:00."
+            },
+            {
+              "place": "jezyce-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Work up an appetite through the neighbourhood."
+            },
+            {
+              "place": "imperial-castle",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daily, hours vary — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Wilda and the food hall",
+          "stops": [
+            {
+              "place": "wilda-walk",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Afternoon is best, but mornings are quiet."
+            },
+            {
+              "place": "wilda-food-hall",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch into evening — check on the day."
+            },
+            {
+              "place": "stary-browar",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–21:00, shorter on Sunday."
+            },
+            {
+              "place": "cathedral",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Closed during services — check on the day."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Sunset view over the river."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and farewell",
+          "stops": [
+            {
+              "place": "stary-rynek-market",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Last food stop. Daytime into evening — check on the day."
+            },
+            {
+              "place": "town-hall",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Museum hours vary by season — check on the day."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually one or two departures a day — book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    },
+    {
+      "id": "3n-budget",
+      "length": "3n",
+      "style": "budget",
+      "nights": 3,
+      "for": "Travellers keeping costs low: free squares and parks, cheap eats and one paid museum a day at most.",
+      "days": [
+        {
+          "title": "Free Old Town",
+          "stops": [
+            {
+              "place": "old-market-square",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Free to wander. Always open."
+            },
+            {
+              "place": "stary-rynek-market",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Cheap lunch at the stalls. Check hours on the day."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Free entry, closed during services — check on the day."
+            },
+            {
+              "place": "ostrow-tumski",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Free walk. Always open."
+            },
+            {
+              "place": "cathedral-viewpoint",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Free sunset view."
+            }
+          ]
+        },
+        {
+          "title": "Parks and trams",
+          "stops": [
+            {
+              "place": "cytadela-park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Free park. Always open."
+            },
+            {
+              "place": "citadel-museum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Closed Mondays, seasonal — check on the day. Often cheap entry."
+            },
+            {
+              "place": "lake-malta",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Park is free and always open. The Maltanka railway is seasonal and costs extra."
+            }
+          ]
+        },
+        {
+          "title": "Jeżyce on foot",
+          "stops": [
+            {
+              "place": "jezyce-market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Mornings, mainly weekdays — check on the day."
+            },
+            {
+              "place": "jezyce-walk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Free self-guided walk. Always open."
+            },
+            {
+              "place": "jezyce-cafe",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Cheap coffee stop. Roughly 08:00–18:00."
+            },
+            {
+              "place": "imperial-castle",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daily, hours vary — check on the day. Check for free areas."
+            }
+          ]
+        },
+        {
+          "title": "Wilda and farewell",
+          "stops": [
+            {
+              "place": "wilda-walk",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Free walk. Always open."
+            },
+            {
+              "place": "wilda-food-hall",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Budget lunch. Check hours on the day."
+            },
+            {
+              "place": "stary-browar",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Free to browse. Shops roughly 10:00–21:00, shorter on Sunday."
+            },
+            {
+              "place": "old-town-tour",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Usually one or two departures a day. Tip-based tours are common — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old Town squares, the cathedral and the city's museums."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "St. Martin's croissants, milk bars and craft beer."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Cheap trams, milk-bar lunches and free squares."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town",
+      "range": [
+        220,
+        480
+      ],
+      "why": "Step out onto the main square; most sights and restaurants are walkable. Can be noisy at night.",
+      "center": [
+        52.408,
+        16.934
+      ]
+    },
+    {
+      "area": "Jeżyce",
+      "range": [
+        180,
+        380
+      ],
+      "why": "Leafy streets, cafés and local food spots; a short tram ride to the centre.",
+      "center": [
+        52.418,
+        16.905
+      ]
+    },
+    {
+      "area": "Wilda",
+      "range": [
+        170,
+        360
+      ],
+      "why": "Quiet and good value, close to the station and the south bank of the Warta.",
+      "center": [
+        52.398,
+        16.925
+      ]
+    },
+    {
+      "area": "Grunwald",
+      "range": [
+        160,
+        340
+      ],
+      "why": "Residential and cheapest; near the trade-fair grounds, a longer ride to the Old Town.",
+      "center": [
+        52.395,
+        16.875
+      ]
+    }
+  ],
+  "food": [
+    "Try a St. Martin's croissant (rogal świętomarciński) — a poppy-seed pastry with protected status. Buy one from a bakery, not a souvenir stand.",
+    "Milk bars (bar mleczny) serve cheap Polish home cooking: soup, pierogi or a schnitzel for well under 30 zł.",
+    "Lunch is the main hot meal; many restaurants offer a cheaper 'lunch of the day' (zestaw dnia) on weekdays.",
+    "Jeżyce has the best café and brunch scene; the Old Town is more touristy and pricier.",
+    "Try local craft beer in the taprooms around the centre; a pint is often 15–25 zł."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a half-day trip to Kórnik Castle and its arboretum; check bus times on the day.",
+    "Rent a bike or take a tram to Lake Malta for a walk and a summer swim area; check opening hours on the day.",
+    "History fans can add the Imperial Castle and the Enigma cipher museum, both in the centre."
+  ]
+}

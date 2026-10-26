@@ -1,0 +1,29 @@
+$ deepseek_facts.py Turin
+  tokens in 4300 out 1043
+Turin: 1 problems
+  - airport LIN is 131 km away
+
+$ deepseek_city.py Turin --stage places
+Turin: places
+  tokens in 1170 out 2129
+
+$ deepseek_city.py Turin --stage frame
+Turin: frame
+  tokens in 2452 out 1782
+  repaired JSON
+
+$ deepseek_city.py Turin --stage plans
+Turin: plans
+  plans for day
+  tokens in 1849 out 906
+  plans for 1n
+  tokens in 1850 out 1093
+  plans for 2n
+  tokens in 1855 out 1321
+  plans for 3n
+  tokens in 1850 out 1363
+
+$ merge_city.py Turin
+Turin: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/turin.json and planner/turin.json
+

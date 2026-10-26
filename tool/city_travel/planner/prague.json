@@ -1,0 +1,641 @@
+{
+  "city": "Prague",
+  "checked": "October 2026",
+  "intro_line": "A thousand spires, a river of light, and beer cheaper than water.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Staré Město",
+        "Malá Strana",
+        "Vinohrady",
+        "Nové Město"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Staré Město",
+        "Malá Strana",
+        "Vinohrady",
+        "Nové Město"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Staré Město",
+        "Malá Strana",
+        "Vinohrady",
+        "Nové Město"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Staré Město",
+        "Malá Strana",
+        "Vinohrady",
+        "Nové Město"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Staré Město",
+        "Malá Strana",
+        "Vinohrady",
+        "Nové Město"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 12,
+        "note": "January: cold, highs around 4°C and lows near -2°C. Pack a warm coat; museums and pubs are cozy."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 10,
+        "note": "February: still cold, highs near 7°C. Fewer crowds; some sights keep shorter hours."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 10,
+        "note": "March: cool and changeable, highs around 10°C. Bring layers and a rain jacket."
+      },
+      {
+        "high": 15,
+        "low": 4,
+        "rain_days": 9,
+        "note": "April: mild, highs near 15°C. Good for walking; expect about 9 rain days."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 12,
+        "note": "May: pleasant, highs around 19°C. Busy and lively; book hotels early."
+      },
+      {
+        "high": 25,
+        "low": 14,
+        "rain_days": 12,
+        "note": "June: warm, highs near 25°C. Long evenings; around 12 rain days, so pack a light rain layer."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 11,
+        "note": "July: warmest month, highs around 26°C. Peak crowds; mornings are best for the bridge and castle."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 10,
+        "note": "August: hot and busy, highs near 26°C. Same advice: start early and rest midday."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 8,
+        "note": "September: mild and comfortable, highs around 21°C. Fewer rain days; a strong month to visit."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 11,
+        "note": "October: cooler, highs near 15°C. Golden autumn light; bring a jacket."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 10,
+        "note": "November: chilly, highs around 8°C. Grey skies and about 10 rain days; Christmas markets start late in the month."
+      },
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 10,
+        "note": "December: cold, highs near 5°C. Christmas markets and festive lights; pack warm layers and waterproof shoes."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "budget": [
+      0.65,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "charles_bridge": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or evening",
+      "area": "Staré Město",
+      "popularity": 5
+    },
+    "prague_castle": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning; grounds at sunset",
+      "area": "Malá Strana",
+      "popularity": 5
+    },
+    "old_town_square": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Staré Město",
+      "popularity": 5
+    },
+    "st_vitus": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Malá Strana",
+      "popularity": 5
+    },
+    "astronomical_clock": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "On the hour, any time of day",
+      "area": "Staré Město",
+      "popularity": 5
+    },
+    "petrin_tower": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Clear afternoon or sunset",
+      "area": "Malá Strana",
+      "popularity": 4
+    },
+    "tyn_church": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Staré Město",
+      "popularity": 4
+    },
+    "dancing_house": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime or evening lights",
+      "area": "Nové Město",
+      "popularity": 3
+    },
+    "aquapalace": {
+      "types": [
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Weekday mornings",
+      "area": "Nové Město",
+      "popularity": 3
+    },
+    "clementinum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Staré Město",
+      "popularity": 4
+    },
+    "devils_channel": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Malá Strana",
+      "popularity": 3
+    },
+    "dinopark": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Warm months, morning",
+      "area": "Nové Město",
+      "popularity": 2
+    },
+    "estates_theatre": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Staré Město",
+      "popularity": 3
+    },
+    "jewish_quarter": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Staré Město",
+      "popularity": 4
+    },
+    "karlstejn": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Spring to autumn, morning",
+      "area": "Malá Strana",
+      "popularity": 3
+    },
+    "lesser_town": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Malá Strana",
+      "popularity": 4
+    },
+    "national_theatre": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Nové Město",
+      "popularity": 3
+    },
+    "powder_tower": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Staré Město",
+      "popularity": 3
+    },
+    "lunapark": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Warm months, afternoon",
+      "area": "Nové Město",
+      "popularity": 2
+    },
+    "prague_zoo": {
+      "types": [
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Malá Strana",
+      "popularity": 3
+    },
+    "rudolfinum": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening concert",
+      "area": "Staré Město",
+      "popularity": 3
+    },
+    "strahov_library": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Malá Strana",
+      "popularity": 3
+    },
+    "naplavka_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Nové Město",
+      "popularity": 3
+    },
+    "letna_viewpoint": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Staré Město",
+      "popularity": 3
+    },
+    "beer_tour": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Staré Město",
+      "popularity": 3
+    },
+    "vinohrady_walk": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Vinohrady",
+      "popularity": 2
+    },
+    "river_cruise": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon or sunset",
+      "area": "Staré Město",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the castle, Old Town, the Jewish quarter and a day trip, without rushing."
+  },
+  "airports": [
+    {
+      "code": "PRG",
+      "name": "Václav Havel Airport Prague",
+      "primary": true,
+      "note": "Main international gateway, about 13 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Bus 59 + Metro A",
+          "to": "Nádraží Veleslavín, then centre",
+          "price": "50 CZK",
+          "time": "35-45 min",
+          "note": "Fastest and cheapest; 90-minute ticket covers the whole trip."
+        },
+        {
+          "mode": "Bus 100 + Metro B",
+          "to": "Zličín, then centre",
+          "price": "50 CZK",
+          "time": "40-50 min",
+          "note": "Good for the western side of town."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "Hlavní nádraží (main station)",
+          "price": "200 CZK",
+          "time": "30-40 min",
+          "note": "Direct but pricey; buy from the driver."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "600-800 CZK",
+          "time": "30-40 min",
+          "note": "Use the official rank or app; ignore touts in 'Info' clothes."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "500-750 CZK",
+          "time": "30-40 min",
+          "note": "Order in the app; fixed price shown before you ride."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Prague",
+      "https://en.wikivoyage.org/wiki/Prague"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "budget"
+  ],
+  "transit": {
+    "best": "Walk the centre; use metro and trams for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Three lines (A, B, C) run roughly 05:00–24:00. Fast for crossing the city; not needed inside the old centre."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams cover the centre well. Buy tickets at yellow machines or in apps. A 90-minute ticket costs about 50 CZK; a 24-hour ticket about 150 CZK."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses mostly serve the outskirts and the airport. Use metro and trams for sightseeing."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt work in Prague. Use them to avoid taxi touts."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is slow and parking is restricted. Use P+R lots and take transit in."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable. Charles Bridge and Old Town are best on foot."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold winters, warm summers and mild spring and autumn. Rain is spread through the year.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best time: May, June and September",
+        "text": "Highs around 19–25°C with long days. Comfortable for walking the castle and old town."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 4–7°C and lows near or below freezing. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain all year",
+        "text": "About 8–12 rain days every month. A small umbrella or rain jacket is always useful."
+      },
+      {
+        "icon": "🥾",
+        "title": "Cobblestones need good shoes",
+        "text": "The old centre is paved with uneven stones. Wear comfortable, grippy shoes, especially when wet."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Summer is warm, not extreme",
+        "text": "July and August peak near 26°C. Start sightseeing early and take a midday break."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for changeable days, a waterproof layer, walking shoes and a warm coat for winter."
+      }
+    ]
+  }
+}

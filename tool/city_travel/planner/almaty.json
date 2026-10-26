@@ -1,0 +1,538 @@
+{
+  "city": "Almaty",
+  "checked": "October 2026",
+  "intro_line": "Almaty: apple orchards, snow peaks, and leafy Soviet boulevards.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Golden Quarter",
+        "Panfilov Park area",
+        "Abay Avenue",
+        "Bostandyk"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Golden Quarter",
+        "Panfilov Park area",
+        "Abay Avenue",
+        "Bostandyk"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Golden Quarter",
+        "Panfilov Park area",
+        "Abay Avenue",
+        "Bostandyk"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Golden Quarter",
+        "Panfilov Park area",
+        "Abay Avenue",
+        "Bostandyk"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Golden Quarter",
+        "Panfilov Park area",
+        "Abay Avenue",
+        "Bostandyk"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 0,
+        "low": -9,
+        "rain_days": 6,
+        "note": "Coldest month: highs near 0°C, lows around -9°C. Pack a heavy coat and boots."
+      },
+      {
+        "high": 3,
+        "low": -6,
+        "rain_days": 7,
+        "note": "Still cold, highs near 3°C. Snow and ice on pavements; mountain roads may close."
+      },
+      {
+        "high": 10,
+        "low": 0,
+        "rain_days": 13,
+        "note": "Warming up to about 10°C, but the wettest month with around 13 rain days. Bring a rain jacket."
+      },
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 12,
+        "note": "Mild at 17°C by day. Good for walking; evenings still cool at around 6°C."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 12,
+        "note": "Pleasant spring: 22°C highs, 11°C lows. Great for parks and lower mountain trails."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 8,
+        "note": "Warm and drier: 27°C highs, about 8 rain days. Long daylight for day trips."
+      },
+      {
+        "high": 31,
+        "low": 19,
+        "rain_days": 6,
+        "note": "Hottest month: highs near 31°C. Do mountain trips early; afternoons are hot in the city."
+      },
+      {
+        "high": 29,
+        "low": 17,
+        "rain_days": 5,
+        "note": "Hot but slightly cooler: 29°C highs. Still good for alpine escapes above the city."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 6,
+        "note": "Comfortable 23°C days and 12°C nights. One of the best months to visit."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 8,
+        "note": "Cooler autumn at 15°C. Crisp air and fewer crowds; pack a warm layer."
+      },
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 9,
+        "note": "Cold returns: highs near 6°C, lows around -2°C. Expect grey days and some rain."
+      },
+      {
+        "high": 1,
+        "low": -7,
+        "rain_days": 7,
+        "note": "Winter: highs near 1°C, lows around -7°C. Snow possible; plan indoor sights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.55,
+      0.4
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "kok_tobe": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into sunset",
+      "area": "Bostandyk",
+      "popularity": 5
+    },
+    "ascension_cathedral": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Panfilov Park area",
+      "popularity": 5
+    },
+    "central_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "Abay Avenue",
+      "popularity": 4
+    },
+    "zelionyj_bazar": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Panfilov Park area",
+      "popularity": 4
+    },
+    "golden_warrior": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime or evening lights",
+      "area": "Abay Avenue",
+      "popularity": 3
+    },
+    "panfilov_park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Panfilov Park area",
+      "popularity": 4
+    },
+    "green_bazaar_food": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Mid-morning",
+      "area": "Panfilov Park area",
+      "popularity": 3
+    },
+    "medeu": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Winter for skating; any clear day for views",
+      "area": "Bostandyk",
+      "popularity": 4
+    },
+    "shymbulak": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear mornings, summer or winter",
+      "area": "Bostandyk",
+      "popularity": 5
+    },
+    "big_alamy": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer and early autumn, morning start",
+      "area": "Bostandyk",
+      "popularity": 4
+    },
+    "arbat_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Golden Quarter",
+      "popularity": 3
+    },
+    "green_hill": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Bostandyk",
+      "popularity": 4
+    },
+    "food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "Golden Quarter",
+      "popularity": 3
+    },
+    "opera_house": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Golden Quarter",
+      "popularity": 3
+    },
+    "metro_tour": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time, avoid rush hour",
+      "area": "Abay Avenue",
+      "popularity": 2
+    },
+    "mountain_walk": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, summer to autumn",
+      "area": "Bostandyk",
+      "popularity": 3
+    },
+    "tea_house": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Golden Quarter",
+      "popularity": 2
+    },
+    "city_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Golden Quarter",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the centre, Panfilov Park and one mountain day; add a night if you want both the lake and Shymbulak."
+  },
+  "airports": [
+    {
+      "code": "ALA",
+      "name": "Almaty International Airport",
+      "primary": true,
+      "note": "Main gateway for Central Asia, 15 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Bus 92",
+          "to": "City centre via Almaty-2 station",
+          "price": "200 KZT",
+          "time": "30-50 min",
+          "note": "Stop just outside Arrivals; runs 05:30-23:00."
+        },
+        {
+          "mode": "Bus 79 or 86",
+          "to": "Downtown via Mailin Street stop",
+          "price": "200 KZT",
+          "time": "40-60 min",
+          "note": "About 400 m walk from Arrivals to the Mailin St stop."
+        },
+        {
+          "mode": "Bus 106",
+          "to": "Sayran inter-city bus station",
+          "price": "200 KZT",
+          "time": "about 50 min",
+          "note": "Skips downtown; useful for onward buses."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Anywhere in the centre",
+          "price": "1500-3000 KZT",
+          "time": "25-40 min",
+          "note": "Book at the arrivals booth or via Yandex Go; agree the total price first."
+        },
+        {
+          "mode": "Yandex Go",
+          "to": "Anywhere in the centre",
+          "price": "1500-2500 KZT",
+          "time": "25-40 min",
+          "note": "Fixed app price avoids the per-kilometre scam."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Almaty",
+      "https://en.wikivoyage.org/wiki/Almaty"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for the centre, Yandex Go for airport and mountain trips; walk the core.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "One line, open 06:00–00:00, 120 tenge per trip. Contactless cards accepted at gates."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "About 170 routes plus trolleybuses. Cash fare 200 tenge; Onay card fare 120 tenge."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Yandex Go is the main app. Airport rides around 1500 tenge, but watch for fare scams."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy and parking is hard. Only worth it for out-of-town trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Easy in the centre, with gentle slopes toward the mountains."
+      },
+      {
+        "mode": "Scooter / bike",
+        "has": true,
+        "text": "Rentable by app. Yandex Go scooters run about 50 tenge per minute."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold winters and warm summers. The mountains nearby make weather change fast.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days from 22°C to 31°C. Ideal for mountain trips, parks and long walks."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is properly cold",
+        "text": "December to February: highs near 0°C, lows to -9°C. Bring a heavy coat, hat and boots."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in spring",
+        "text": "March has about 13 rain days. April and May are also showery. A light rain jacket helps."
+      },
+      {
+        "icon": "⛰️",
+        "title": "Mountains are cooler",
+        "text": "Higher trails and the lake sit well above the city. Take a warm layer even in summer."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big day-to-night swing",
+        "text": "Evenings drop sharply, often 10°C or more. Carry a jacket for after sunset."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, comfortable walking shoes, sunscreen and sunglasses; winter boots and gloves from November to March."
+      }
+    ]
+  }
+}

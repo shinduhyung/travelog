@@ -1,0 +1,86 @@
+{
+  "note": "radius_km: landmarks this close to the city center count as the city's unless filed under another app city. attach: day-trip places everyone visits from this city although they are administratively elsewhere (exact `city` values from all_landmarks.json; list every spelling). Never attach separate destinations (Amman -> Petra, Abu Dhabi -> Dubai).",
+  "radius_km": 30,
+  "attach": {
+    "Paris": [
+      "Versailles"
+    ],
+    "Berlin": [
+      "Potsdam",
+      "Potsdam, Brandenburg",
+      "Potsdam-Babelsberg, Brandenburg"
+    ],
+    "Seoul": [
+      "Suwon"
+    ],
+    "Rome": [
+      "Vatican City"
+    ],
+    "London": [
+      "Windsor"
+    ],
+    "New Delhi": [
+      "Delhi"
+    ]
+  },
+  "exclude": {
+    "Abu Dhabi": [
+      "Salvator Mundi"
+    ],
+    "New York City": [
+      "Keansburg Amusement Park"
+    ],
+    "Athens": [
+      "Zaxby's",
+      "Athens Lions Club Kiddie Carnival",
+      "University of Georgia"
+    ],
+    "Ahmedabad": [
+      "Vishwas Swaroopam"
+    ],
+    "Austin": [
+      "Self-Portrait with Thorn Necklace and Hummingbird",
+      "Austin's Park N Pizza",
+      "Tom Foolerys Adventure Park, Texas"
+    ],
+    "Birmingham": [
+      "Peaky Blinders",
+      "University of Warwick"
+    ],
+    "Bristol": [
+      "Lake Compounce"
+    ],
+    "Dublin": [
+      "Wendy's",
+      "Scene75 Entertainment Center (Dublin)"
+    ],
+    "Lagos": [
+      "Praia de Dona Ana"
+    ],
+    "San Jose": [
+      "National Theatre of Costa Rica",
+      "Pre-Columbian Gold Museum",
+      "National Museum of Costa Rica",
+      "Jade Museum",
+      "Metallic Building",
+      "Mercado Central (San Jose)"
+    ],
+    "Santiago": [
+      "Cidade Velha",
+      "Fort Real de Sao Filipe",
+      "Nossa Senhora do Rosario Church",
+      "Parque de diversiones en Santiago"
+    ],
+    "Valencia": [
+      "Mountasia Family Fun Center",
+      "Six Flags Magic Mountain",
+      "DUNAS"
+    ],
+    "Vancouver": [
+      "Papa Murphy's"
+    ],
+    "George Town": [
+      "Cayman Islands National Museum"
+    ]
+  }
+}

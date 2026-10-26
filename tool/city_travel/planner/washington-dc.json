@@ -1,0 +1,737 @@
+{
+  "city": "Washington D.C.",
+  "checked": "October 2026",
+  "intro_line": "Power, monuments and museums on the Potomac.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown / Penn Quarter",
+        "Capitol Hill",
+        "Georgetown",
+        "Dupont Circle"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown / Penn Quarter",
+        "Capitol Hill",
+        "Georgetown",
+        "Dupont Circle"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown / Penn Quarter",
+        "Capitol Hill",
+        "Georgetown",
+        "Dupont Circle"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown / Penn Quarter",
+        "Capitol Hill",
+        "Georgetown",
+        "Dupont Circle"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Downtown / Penn Quarter",
+        "Capitol Hill",
+        "Georgetown",
+        "Dupont Circle"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 9,
+        "note": "Coldest month: highs near 6°C, lows around -2°C. Pack a warm coat and gloves."
+      },
+      {
+        "high": 9,
+        "low": -1,
+        "rain_days": 10,
+        "note": "Still cold, highs near 9°C. Indoor museums are the safe bet."
+      },
+      {
+        "high": 13,
+        "low": 2,
+        "rain_days": 10,
+        "note": "Warming up to about 13°C; cherry blossom timing varies, check on the day."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 11,
+        "note": "Pleasant spring: highs near 19°C, but expect about 11 rain days."
+      },
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 13,
+        "note": "Great walking weather, highs around 24°C; carry a light rain jacket."
+      },
+      {
+        "high": 29,
+        "low": 18,
+        "rain_days": 13,
+        "note": "Warm and humid, highs near 29°C; go early and rest midday."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 14,
+        "note": "Hottest month, highs around 31°C with about 14 rain days. Plan indoor afternoons."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 14,
+        "note": "Hot and sticky, similar to July. Drink water and use shade on the Mall."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 11,
+        "note": "Warm and comfortable again, highs near 26°C; a good month to visit."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 9,
+        "note": "Crisp and clear, highs around 20°C; one of the best months."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 8,
+        "note": "Cooler, highs near 14°C; fewer rain days, about 8."
+      },
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 10,
+        "note": "Cold again, highs around 9°C; pack layers and a warm hat."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "culture": [
+      0.75,
+      0.75,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.75,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.75,
+      0.55
+    ],
+    "budget": [
+      0.6,
+      0.6,
+      0.75,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.8,
+      0.9,
+      0.75,
+      0.6
+    ]
+  },
+  "places": {
+    "lincoln": {
+      "types": [
+        "history",
+        "culture",
+        "budget",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Sunrise or evening",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "mall": {
+      "types": [
+        "history",
+        "culture",
+        "budget",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "whitehouse": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "capitol": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning weekday",
+      "area": "Capitol Hill",
+      "popularity": 5
+    },
+    "washingtonmonument": {
+      "types": [
+        "history",
+        "family",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear morning for views",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "airandspace": {
+      "types": [
+        "history",
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "naturalhistory": {
+      "types": [
+        "history",
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "nga": {
+      "types": [
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; quietest at opening",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 4
+    },
+    "arlington": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning; bring water in summer",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 5
+    },
+    "breezingup": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 3
+    },
+    "georgetown": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Georgetown",
+      "popularity": 3
+    },
+    "jefferson": {
+      "types": [
+        "history",
+        "culture",
+        "budget",
+        "family"
+      ],
+      "minutes": 40,
+      "setting": "mixed",
+      "best": "Sunset or cherry-blossom season",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 4
+    },
+    "kennedy": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon for the view, evening for a show",
+      "area": "Georgetown",
+      "popularity": 3
+    },
+    "loc": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Capitol Hill",
+      "popularity": 4
+    },
+    "luncheon": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 3
+    },
+    "mountvernon": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning, spring or autumn",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 4
+    },
+    "potomac": {
+      "types": [
+        "budget",
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset; spring for blossoms",
+      "area": "Georgetown",
+      "popularity": 4
+    },
+    "cruise": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 4
+    },
+    "georgedragon": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 2
+    },
+    "zoo": {
+      "types": [
+        "family",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Dupont Circle",
+      "popularity": 4
+    },
+    "supreme": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Capitol Hill",
+      "popularity": 3
+    },
+    "avenue": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 2
+    },
+    "easternmarket": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekend morning",
+      "area": "Capitol Hill",
+      "popularity": 4
+    },
+    "georgetownwalk": {
+      "types": [
+        "culture",
+        "budget",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into sunset",
+      "area": "Georgetown",
+      "popularity": 4
+    },
+    "dupontwalk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Dupont Circle",
+      "popularity": 3
+    },
+    "tidalbasin": {
+      "types": [
+        "budget",
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunrise or sunset; spring for blossoms",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 4
+    },
+    "oldpost": {
+      "types": [
+        "budget",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Clear day",
+      "area": "Downtown / Penn Quarter",
+      "popularity": 3
+    },
+    "capitolhillwalk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Capitol Hill",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Mall monuments and the main free museums; add a night for Arlington and a day trip."
+  },
+  "airports": [
+    {
+      "code": "DCA",
+      "name": "Ronald Reagan Washington National Airport",
+      "primary": true,
+      "note": "Closest and most convenient airport, about 6 km south of the centre.",
+      "options": [
+        {
+          "mode": "Metro Blue/Yellow line",
+          "to": "East End / downtown",
+          "price": "$3",
+          "time": "15-20 min",
+          "note": "Cheapest and quickest; runs roughly 5AM to 11PM-1AM."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Washington, D.C.",
+          "price": "$15-25",
+          "time": "10-20 min",
+          "note": "Pickup at the designated app zones."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Washington, D.C.",
+          "price": "$15-25",
+          "time": "10-20 min",
+          "note": "Metered; short ride into town."
+        }
+      ]
+    },
+    {
+      "code": "IAD",
+      "name": "Washington Dulles International Airport",
+      "primary": false,
+      "note": "Main international gateway, about 36 km west of the centre.",
+      "options": [
+        {
+          "mode": "Metro Silver line",
+          "to": "East End / downtown",
+          "price": "$6",
+          "time": "55-65 min",
+          "note": "Cheap but slow; check late-night hours."
+        },
+        {
+          "mode": "Fairfax Connector bus 983",
+          "to": "Udvar-Hazy Air and Space Museum",
+          "price": "$2",
+          "time": "12 min",
+          "note": "Only useful for the museum, not downtown."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Washington, D.C.",
+          "price": "$45-65",
+          "time": "40-60 min",
+          "note": "Pickup up the ramps from baggage claim."
+        },
+        {
+          "mode": "Washington Flyer Taxi",
+          "to": "Washington, D.C.",
+          "price": "$50-70",
+          "time": "40-60 min",
+          "note": "Exclusive taxi provider; stand down the ramp from baggage claim."
+        }
+      ]
+    },
+    {
+      "code": "BWI",
+      "name": "Baltimore/Washington International Thurgood Marshall Airport",
+      "primary": false,
+      "note": "About 44 km northeast; serves Baltimore and the region.",
+      "options": [
+        {
+          "mode": "MARC train (Penn line)",
+          "to": "Union Station",
+          "price": "$8",
+          "time": "30-40 min",
+          "note": "Free shuttle to BWI Rail Station; infrequent on weekends."
+        },
+        {
+          "mode": "Amtrak",
+          "to": "Union Station",
+          "price": "$13-22",
+          "time": "30-40 min",
+          "note": "Cheaper if booked online in advance."
+        },
+        {
+          "mode": "ICC Bus 201",
+          "to": "Shady Grove Metro (Red line)",
+          "price": "$5",
+          "time": "70 min",
+          "note": "Hourly; no change given; then 35 min by Metro."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Washington, D.C.",
+          "price": "$50-80",
+          "time": "45-75 min",
+          "note": "Traffic can be heavy at rush hour."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Washington, D.C.",
+          "price": "$60-90",
+          "time": "45-75 min",
+          "note": "Metered; longer ride than DCA."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Washington D.C.",
+      "https://en.wikivoyage.org/wiki/Washington%20D.C."
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "family"
+  ],
+  "transit": {
+    "best": "Walk the Mall and monuments; use Metrorail for everything further out.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metrorail is fast and clean; fares about $2-6 depending on distance and time."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metrobus covers the city; fares are low and exact change or a card is needed."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Lyft work well; taxis are metered and easy to find downtown."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful: heavy rush-hour traffic, confusing parking rules and toll lanes."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is the best way to see the Mall and monuments; bikeshare docks are everywhere."
+      },
+      {
+        "mode": "Water taxi",
+        "has": true,
+        "text": "No ferry service in the city centre; the Potomac water taxi links some waterfront spots."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold winters, warm humid summers, and the best weather in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April, May, September, October",
+        "text": "Highs of roughly 19–26°C and comfortable walking weather for the Mall and monuments."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid",
+        "text": "July and August reach about 30–31°C with muggy air. Do outdoor sights in the morning."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is genuinely cold",
+        "text": "January highs near 6°C and lows around -2°C. Bring a proper coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "About 8–14 rain days a month, most in summer. A small umbrella is worth packing."
+      },
+      {
+        "icon": "☀️",
+        "title": "Long summer days",
+        "text": "June and July give long daylight for evening monument walks; winter days are short."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, a rain jacket, sunscreen in summer and a warm coat in winter."
+      }
+    ]
+  }
+}

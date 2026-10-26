@@ -1,0 +1,276 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Country music halls, studios and the art museum."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hot chicken, meat-and-three plates and honky-tonk bars."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Civil War sites, the Parthenon and the state capitol."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to Broadway honky-tonks, the Country Music Hall of Fame and the riverfront. Noisier and pricier on weekends.",
+      "center": [
+        36.1627,
+        -86.7816
+      ]
+    },
+    {
+      "area": "The Gulch",
+      "range": [
+        170,
+        380
+      ],
+      "why": "Trendy and walkable, a short ride from downtown. Good restaurants and bars, easy highway access.",
+      "center": [
+        36.1517,
+        -86.7902
+      ]
+    },
+    {
+      "area": "Music Row",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Quieter, near the studios and Vanderbilt. Close to midtown restaurants; a short drive downtown.",
+      "center": [
+        36.1485,
+        -86.7952
+      ]
+    },
+    {
+      "area": "East Nashville",
+      "range": [
+        130,
+        300
+      ],
+      "why": "Best value and the local food and bar scene. Five to ten minutes by car or rideshare to downtown.",
+      "center": [
+        36.1785,
+        -86.7452
+      ]
+    }
+  ],
+  "food": [
+    "Try Nashville hot chicken: crispy fried chicken brushed with cayenne paste. Ask for the mild level first; the hottest is very hot.",
+    "Look for a meat-and-three: pick one meat and three vegetable sides, a Southern lunch staple, often under $15.",
+    "Broadway honky-tonks have live music most afternoons and evenings; many have no cover charge, but tip the band.",
+    "Brunch and biscuits are a local ritual; expect queues at popular spots on weekend mornings.",
+    "Prices vary widely. Budget about $15–25 for lunch and $30–60 for dinner per person, more downtown on weekends."
+  ],
+  "more_time": [
+    "Add a day for the Grand Ole Opry and a backstage tour; check show nights on the day.",
+    "History fans can swap an afternoon for The Hermitage, Andrew Jackson's plantation home, a short drive east of the city.",
+    "Families can add a morning at the Adventure Science Center or a walk in Centennial Park around the full-size Parthenon."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "nightlife": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.6
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.75,
+      0.55
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "nightlife"
+  ],
+  "recommend": {
+    "why": "Two nights covers the music sights, hot chicken and a Broadway night; add a third for the Opry or The Hermitage."
+  },
+  "month_notes": [
+    "January is the coldest month: highs near 9°C, lows around -1°C. Pack a warm coat. About 12 rain days.",
+    "February stays cold, highs near 12°C. Indoor music venues are the safe bet. Around 13 rain days.",
+    "March warms to highs near 16°C with cool nights. Expect about 14 rain days, so bring a rain jacket.",
+    "April is pleasant: highs near 20°C, lows around 9°C. Good for walking. About 12 rain days.",
+    "May is warm and green, highs near 26°C. Comfortable evenings. Around 13 rain days.",
+    "June turns hot: highs near 30°C, lows around 20°C. Plan outdoor time for mornings. About 14 rain days.",
+    "July is the hottest and wettest month: highs near 32°C and about 17 rain days. Carry water and expect afternoon storms.",
+    "August stays hot and humid, highs near 30°C. About 15 rain days. Go easy outdoors at midday.",
+    "September is still warm, highs near 28°C, but rain drops to about 9 days. A good shoulder month.",
+    "October is the best month: highs near 23°C, lows around 12°C, about 9 rain days. Great for walking and patios.",
+    "November cools to highs near 16°C with about 9 rain days. Bring layers for cool evenings.",
+    "December is cold, highs near 12°C and lows around 3°C. About 11 rain days. Festive downtown lights are worth an evening."
+  ],
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, sticky summers with afternoon storms, and mild-to-cold winters. Spring and autumn are the sweet spots.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 20–28°C with comfortable evenings. Ideal for walking downtown and outdoor music."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (June to August)",
+        "text": "Highs near 30–32°C with muggy air. Do outdoor sights in the morning; rest indoors at midday."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Summer storms",
+        "text": "July and August bring the most rain days, around 15–17. Storms are often short but heavy; carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold but short",
+        "text": "January highs near 9°C and lows around -1°C. A warm coat and layers are needed for evening walks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "Most months see 9–17 rain days. Spring has more rain days than autumn, so pack a light rain jacket."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes and sunscreen for summer; a rain jacket; a warm coat and layers for December to February; comfortable shoes for walking downtown."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk downtown; use rideshare or a rental car for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MTA buses cover downtown and the airport. Route 18 links BNA to downtown hourly, about 35 minutes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are common downtown. Uber and Lyft both operate, with dedicated airport pickup areas."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "A private car is the main way around. Highways run 55–70 mph but slow in traffic."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable. Outside it the city sprawls and sidewalks are patchy."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The Music City Star commuter train runs from Riverfront Station to Lebanon. Useful for commuters, not most sights."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service for visitors."
+      },
+      {
+        "mode": "Bike / scooter",
+        "has": true,
+        "text": "Bikes and scooters work for short downtown hops."
+      }
+    ]
+  }
+}

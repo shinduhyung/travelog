@@ -1,0 +1,189 @@
+{
+  "currency": "HUF",
+  "usd_rate": 326.1922,
+  "intro_line": "Danube splits a city of baths, cafés and grand boulevards.",
+  "intro": "Budapest rewards visitors with thermal baths, ruin bars and castle views over the Danube. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Belváros",
+    "Castle District",
+    "Jewish Quarter",
+    "Palace District"
+  ],
+  "taxi": {
+    "flag_day": 1300,
+    "flag_airport": 2100,
+    "per_km": 521,
+    "min_fare": 1300
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro lines 1-4 plus trams and trolleybuses cover the centre; buy tickets or passes at machines.",
+    "Bus 100E runs 24 hours between Deák Ferenc tér and the airport.",
+    "Buses and trams are frequent; validate every ticket or risk a fine.",
+    "Taxis have fixed citywide rates; Főtaxi is the licensed airport operator, and Bolt works well.",
+    "Driving is slow and parking is hard; walking and cycling suit the flat Pest side.",
+    "A river ferry and hop-on boats link stops along the Danube."
+  ],
+  "airports": [
+    {
+      "code": "BUD",
+      "name": "Budapest Ferenc Liszt International Airport",
+      "primary": true,
+      "note": "Main airport, about 18 km south-east of the centre.",
+      "options": [
+        {
+          "mode": "Bus 200E + Metro 3",
+          "to": "Deák Ferenc tér",
+          "price": "1000 Ft",
+          "time": "45-60 min",
+          "note": "Cheapest route; change at Kőbánya-Kispest."
+        },
+        {
+          "mode": "Airport bus 100E",
+          "to": "Deák Ferenc tér",
+          "price": "2500 Ft",
+          "time": "30-40 min",
+          "note": "Runs 24 hours; buy the right ticket, not the 450 Ft one."
+        },
+        {
+          "mode": "Shared shuttle (MiniBud)",
+          "to": "Central hotels",
+          "price": "about 9000 Ft",
+          "time": "40-60 min",
+          "note": "Book online; extra passengers cost more."
+        },
+        {
+          "mode": "Taxi (Főtaxi)",
+          "to": "City centre",
+          "price": "from 13000 Ft",
+          "time": "30-45 min",
+          "note": "Use the taxi stand and get a written quote."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Hungarian Parliament Building",
+    "Buda Castle",
+    "Fisherman's Bastion",
+    "Széchenyi Chain Bridge",
+    "St. Stephen's Basilica",
+    "Heroes' Square",
+    "Széchenyi Thermal Baths",
+    "Andrássy Avenue",
+    "Budapest Zoo & Botanical Garden",
+    "Danube River",
+    "Danube River Sightseeing",
+    "Dohány Street Synagogue",
+    "Gellért Hill",
+    "Goulash",
+    "Great Market Hall",
+    "Gödöllő Palace",
+    "House of Terror",
+    "Hungarian State Opera House",
+    "Matthias Church",
+    "Müpa Budapest",
+    "Puskas Arena",
+    "Shoes on the Danube Bank"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Budapest",
+      "https://en.wikivoyage.org/wiki/Budapest"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    47.4979,
+    19.0402
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": -2,
+      "rain_days": 10
+    },
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 9
+    },
+    {
+      "high": 12,
+      "low": 2,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 9
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 8
+    },
+    {
+      "high": 10,
+      "low": 3,
+      "rain_days": 9
+    },
+    {
+      "high": 5,
+      "low": -1,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

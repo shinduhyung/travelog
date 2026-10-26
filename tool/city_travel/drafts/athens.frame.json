@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Acropolis, the Ancient Agora and the Acropolis Museum."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Tavernas, souvlaki and long dinners in Plaka and Koukaki."
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "Tram to the coast for a swim and a seaside lunch."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Plaka",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Old-town lanes right under the Acropolis; walk to the Ancient Agora and most central sights.",
+      "center": [
+        37.972,
+        23.727
+      ]
+    },
+    {
+      "area": "Syntagma",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Central and well connected: metro to the airport and Piraeus, walk to the National Garden and Plaka.",
+      "center": [
+        37.975,
+        23.735
+      ]
+    },
+    {
+      "area": "Monastiraki",
+      "range": [
+        80,
+        200
+      ],
+      "why": "Flea market, street food and the metro hub; lively at night and close to the Ancient Agora.",
+      "center": [
+        37.976,
+        23.726
+      ]
+    },
+    {
+      "area": "Koukaki",
+      "range": [
+        70,
+        180
+      ],
+      "why": "Quiet residential streets near the Acropolis Museum with good local tavernas; often better value.",
+      "center": [
+        37.963,
+        23.727
+      ]
+    }
+  ],
+  "food": [
+    "Try souvlaki and gyros from a grill house: cheap, fast and everywhere. Expect about €3–5 for a wrap.",
+    "Order meze to share: tzatziki, fava, grilled octopus and small fried fish. Two or three plates per person is plenty.",
+    "Eat dinner late like locals, roughly 21:00–23:00. Many tavernas are quiet before 20:00.",
+    "Look for a taverna with a handwritten menu and local diners rather than a photo menu on the street.",
+    "In summer, eat lunch by the sea on the coast and keep the centre for dinner. Book popular places ahead on weekends."
+  ],
+  "more_time": [
+    "Take a day trip to Cape Sounion for the Temple of Poseidon and a sunset over the sea. Check bus times on the day.",
+    "Ferries from Piraeus reach the islands; a day trip to Aegina is the easiest. Book ahead in summer.",
+    "Add a half-day at the National Archaeological Museum, then wander the Exarchia streets nearby."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "beach": [
+      0.2,
+      0.25,
+      0.35,
+      0.5,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.55,
+      0.3,
+      0.2
+    ],
+    "nightlife": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55
+    ]
+  },
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights cover the Acropolis, the museum and the old town at an easy pace. Add a night for a coast or island day."
+  },
+  "month_notes": [
+    "January: cold and damp, highs near 12°C. Pack a warm layer and expect some rain days.",
+    "February: still cool, around 14°C by day. Quiet sights and low prices.",
+    "March: mild at 16°C with about 7 rain days. Good for walking the ruins without heat.",
+    "April: pleasant at 20°C. One of the best months for sightseeing.",
+    "May: warm at 25°C and mostly dry. Great for both the centre and the coast.",
+    "June: hot at 30°C. Start sightseeing early and rest in the afternoon shade.",
+    "July: very hot, highs near 33°C. Go out early and late; the Acropolis is exposed.",
+    "August: as hot as July and busy. Book ahead and carry water.",
+    "September: warm at 29°C and drier. A strong month for beaches and ruins.",
+    "October: comfortable at 23°C. Good light and fewer crowds.",
+    "November: cooler at 19°C with more rain days. Bring a rain jacket.",
+    "December: cool at 14°C and wetter. Festive centre, short daylight."
+  ],
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, wetter winters. Spring and autumn are the sweet spots.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June and September to October",
+        "text": "Days around 20–29°C with little rain. Ideal for ruins, walking and the coast."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is very hot (July–August)",
+        "text": "Highs near 33°C and few rain days. Sightseeing is hard at midday; go early or late."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in winter",
+        "text": "December to February have about 7–8 rain days a month. Showers are usually short."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "January highs near 12°C and lows around 5°C. Bring a warm coat for evenings."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea season",
+        "text": "Beach weather runs roughly June to September, warmest in July and August."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Sun hat and sunscreen for summer; a light rain jacket and warm layer for winter; comfortable shoes for marble and stone paths."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for the centre and airport; walk in Plaka and Monastiraki.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "3 lines, running about 05:30–00:30, later on Friday and Saturday nights. One OASA ticket costs €1.20 and covers metro, tram and bus with transfers for 90 minutes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and the tram use the same €1.20 OASA ticket. The airport express bus X93/X95 costs €5.50."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are yellow; insist on the meter and expect shared rides at busy times. Uber and Bolt work in Athens and help avoid fare haggling."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is hard: narrow streets, little parking and heavy traffic. Skip it for city days."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best way around Plaka, Monastiraki and Syntagma. Wear shoes with grip for marble and stone paths."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Piraeus port is about 10 km from the centre, with ferries to the islands. Reach it by metro."
+      }
+    ]
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old Town squares, the cathedral and the city's museums."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "St. Martin's croissants, milk bars and craft beer."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Cheap trams, milk-bar lunches and free squares."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town",
+      "range": [
+        220,
+        480
+      ],
+      "why": "Step out onto the main square; most sights and restaurants are walkable. Can be noisy at night.",
+      "center": [
+        52.408,
+        16.934
+      ]
+    },
+    {
+      "area": "Jeżyce",
+      "range": [
+        180,
+        380
+      ],
+      "why": "Leafy streets, cafés and local food spots; a short tram ride to the centre.",
+      "center": [
+        52.418,
+        16.905
+      ]
+    },
+    {
+      "area": "Wilda",
+      "range": [
+        170,
+        360
+      ],
+      "why": "Quiet and good value, close to the station and the south bank of the Warta.",
+      "center": [
+        52.398,
+        16.925
+      ]
+    },
+    {
+      "area": "Grunwald",
+      "range": [
+        160,
+        340
+      ],
+      "why": "Residential and cheapest; near the trade-fair grounds, a longer ride to the Old Town.",
+      "center": [
+        52.395,
+        16.875
+      ]
+    }
+  ],
+  "food": [
+    "Try a St. Martin's croissant (rogal świętomarciński) — a poppy-seed pastry with protected status. Buy one from a bakery, not a souvenir stand.",
+    "Milk bars (bar mleczny) serve cheap Polish home cooking: soup, pierogi or a schnitzel for well under 30 zł.",
+    "Lunch is the main hot meal; many restaurants offer a cheaper 'lunch of the day' (zestaw dnia) on weekdays.",
+    "Jeżyce has the best café and brunch scene; the Old Town is more touristy and pricier.",
+    "Try local craft beer in the taprooms around the centre; a pint is often 15–25 zł."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a half-day trip to Kórnik Castle and its arboretum; check bus times on the day.",
+    "Rent a bike or take a tram to Lake Malta for a walk and a summer swim area; check opening hours on the day.",
+    "History fans can add the Imperial Castle and the Enigma cipher museum, both in the centre."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      0.95,
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "budget"
+  ],
+  "recommend": {
+    "why": "Two nights covers the Old Town, the cathedral island and a food wander; add a night for a day trip."
+  },
+  "month_notes": [
+    "Coldest month: highs near 3°C, lows around -2°C. Pack a warm coat and gloves.",
+    "Still cold, highs near 6°C. Expect some rain and grey days.",
+    "Slowly warmer, highs near 9°C. Rain on about 11 days.",
+    "Spring arrives: highs near 14°C. Good for walking the Old Town.",
+    "Pleasant, highs near 19°C. Rain on about 10 days.",
+    "Warm and bright, highs near 24°C. Long evenings.",
+    "Warmest month, highs near 25°C. Some rain showers.",
+    "Warm, highs near 25°C and the most daylight. Busy and lively.",
+    "Still mild, highs near 21°C. Fewer rain days — a good month.",
+    "Cooler, highs near 14°C. Bring a jacket for evenings.",
+    "Cold and damp, highs near 8°C. Rain on about 9 days.",
+    "Winter, highs near 5°C, lows around 0°C. Short days; festive lights in December."
+  ],
+  "climate_guide": {
+    "summary": "Temperate climate with cold winters and mild, warm summers. Rain falls year-round on roughly 8–14 days a month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 19–25°C and long days. Ideal for walking and outdoor cafés."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold winters (Dec–Feb)",
+        "text": "Highs of 3–6°C and lows near or below freezing. Pack a proper coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect rain on 8–14 days each month. A small umbrella or rain jacket is worth packing any month."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings between seasons",
+        "text": "From around 3°C in January to 25°C in July and August. Layer your clothes."
+      },
+      {
+        "icon": "🍂",
+        "title": "September is a sweet spot",
+        "text": "Highs near 21°C with fewer rain days (about 8). Comfortable for sightseeing."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a rain layer, and a warm jacket outside summer. Sunglasses for the long summer days."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk in the compact centre; use trams for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro in Poznań. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MPK runs buses and trams. Tickets are time-based: 15 min 4 zł, 45 min 6 zł, 90 min 8 zł. A 24-hour ticket is 15 zł and a 7-day ticket is 50 zł."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams are the quickest way around the centre and to Jeżyce and Wilda. Same time-based tickets as buses."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt operate in Poznań. Handy for late nights and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended in the centre: traffic and limited parking. Useful only for day trips out of the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and pleasant on foot. Cycling is okay but bike paths are inconsistent."
+      }
+    ]
+  }
+}

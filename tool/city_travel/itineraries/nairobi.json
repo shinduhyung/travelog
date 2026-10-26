@@ -1,0 +1,1438 @@
+{
+  "city": "Nairobi",
+  "checked": "October 2026",
+  "currency": "KES",
+  "usd_rate": 129.8666,
+  "intro": "Nairobi rewards visitors with a mix of wildlife, culture, and vibrant city life. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -1.425,
+      "west": 36.6016,
+      "north": -1.175,
+      "east": 36.9317,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 200,
+      "flag_airport": 2000,
+      "per_km": 100,
+      "min_fare": 300
+    },
+    "road_factor": 1.4,
+    "city_kmh": 20,
+    "notes": [
+      "No metro or tram; matatus (minibuses) are the main public transport.",
+      "Matatus are cheap but crowded and can be risky; use them with caution.",
+      "Taxis are available but negotiate fare before; cash only.",
+      "Uber and Bolt operate widely; rides from airport to centre cost Ksh 900-1,500.",
+      "Driving is on the left; traffic is heavy, especially at rush hour.",
+      "Walking is possible in some areas but not recommended at night; no bike share."
+    ],
+    "sources": []
+  },
+  "places": {
+    "nairobi-national-park": {
+      "name": "Nairobi National Park",
+      "landmark": "Nairobi National Park",
+      "kind": "park",
+      "lat": -1.3733,
+      "lon": 36.858,
+      "price": 4300,
+      "price_text": "≈ KES 4,300 non-resident adult per day; child rate lower. Check current KWS rates.",
+      "hours": "Daily roughly 06:00–18:00; gates close in the evening",
+      "tip": "Go at opening time for the best game viewing and to beat the heat. Bring your passport for the gate.",
+      "source": "https://www.kws.go.ke/"
+    },
+    "giraffe-centre": {
+      "name": "Giraffe Centre",
+      "landmark": "Giraffe Centre",
+      "kind": "sight",
+      "lat": -1.3768,
+      "lon": 36.7447,
+      "price": 1500,
+      "price_text": "≈ KES 1,500 non-resident adult; child rate lower. Check on the day.",
+      "hours": "Daily roughly 09:00–17:00",
+      "tip": "You can hand-feed the giraffes from a raised platform. Go early before tour buses arrive.",
+      "source": "https://giraffecentre.org/"
+    },
+    "karen-blixen": {
+      "name": "Karen Blixen Museum",
+      "landmark": "Karen Blixen Museum",
+      "kind": "museum",
+      "lat": -1.3533,
+      "lon": 36.7118,
+      "price": 1500,
+      "price_text": "≈ KES 1,500 non-resident adult. Check on the day.",
+      "hours": "Daily roughly 09:30–18:00",
+      "tip": "The house tour takes about an hour. Combine it with the Giraffe Centre nearby.",
+      "source": "https://www.museums.or.ke/"
+    },
+    "national-museum": {
+      "name": "Nairobi National Museum",
+      "landmark": "Nairobi National Museum",
+      "kind": "museum",
+      "lat": -1.274,
+      "lon": 36.8155,
+      "price": 1500,
+      "price_text": "≈ KES 1,500 non-resident adult. Check on the day.",
+      "hours": "Daily roughly 08:30–17:30",
+      "tip": "Start with the human origins gallery. The snake park next door costs extra.",
+      "source": "https://www.museums.or.ke/"
+    },
+    "bomas-of-kenya": {
+      "name": "Bomas of Kenya",
+      "landmark": "Bomas of Kenya",
+      "kind": "show",
+      "lat": -1.3369,
+      "lon": 36.7686,
+      "price": 1500,
+      "price_text": "≈ KES 1,500 non-resident adult for the dance show. Check on the day.",
+      "hours": "Shows usually weekday afternoons; confirm times when booking",
+      "tip": "The traditional dance show is the main draw. Check show times before you travel across town.",
+      "source": "https://www.bomasofkenya.co.ke/"
+    },
+    "kicc": {
+      "name": "Kenyatta International Convention Centre",
+      "landmark": "Kenyatta International Convention Centre",
+      "kind": "sight",
+      "lat": -1.2884,
+      "lon": 36.8233,
+      "price": 500,
+      "price_text": "≈ KES 500 to go up the tower. Check on the day.",
+      "hours": "Daily roughly 08:00–18:00",
+      "tip": "The rooftop helipad gives a 360° view over the city. Go on a clear morning.",
+      "source": ""
+    },
+    "august-7th-memorial": {
+      "name": "August 7th Memorial Park",
+      "landmark": "August 7th Memorial Park",
+      "kind": "sight",
+      "lat": -1.2889,
+      "lon": 36.8275,
+      "price": 300,
+      "price_text": "Small entry fee, around KES 300. Check on the day.",
+      "hours": "Daily roughly 08:00–18:00",
+      "tip": "A quiet memorial to the 1998 US embassy bombing. Allow 30–45 minutes.",
+      "source": ""
+    },
+    "jamia-mosque": {
+      "name": "Jamia Mosque",
+      "landmark": "Jamia Mosque",
+      "kind": "sight",
+      "lat": -1.2856,
+      "lon": 36.8206,
+      "price": 0,
+      "price_text": "Free; donations welcome",
+      "hours": "Outside prayer times; check on the day",
+      "tip": "Dress modestly and ask before entering. Women cover hair.",
+      "source": ""
+    },
+    "luna-park": {
+      "name": "Luna Park (Nairobi)",
+      "landmark": "Luna Park (Nairobi)",
+      "kind": "activity",
+      "lat": -1.2863,
+      "lon": 36.8172,
+      "price": null,
+      "price_text": "Pay per ride; prices vary. Check on the day.",
+      "hours": "Daily, mostly afternoon into evening; confirm",
+      "tip": "A simple family funfair. Check it is open before making a special trip.",
+      "source": ""
+    },
+    "railway-museum": {
+      "name": "Nairobi Railway Museum",
+      "landmark": "Nairobi Railway Museum",
+      "kind": "museum",
+      "lat": -1.2925,
+      "lon": 36.8219,
+      "price": 500,
+      "price_text": "≈ KES 500 non-resident adult. Check on the day.",
+      "hours": "Daily roughly 08:30–17:00",
+      "tip": "Old locomotives and railway history in the yard. Good for an hour.",
+      "source": ""
+    },
+    "nairobi-river": {
+      "name": "Nairobi River",
+      "landmark": "Nairobi River",
+      "kind": "sight",
+      "lat": -1.2,
+      "lon": 36.9,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; walk in daylight only",
+      "tip": "The river runs through the city centre. Walk with a guide and stay in busy areas.",
+      "source": ""
+    },
+    "nyama-choma": {
+      "name": "Nyama Choma",
+      "landmark": "Nyama Choma",
+      "kind": "food",
+      "lat": -1.2921,
+      "lon": 36.8219,
+      "price": 800,
+      "price_text": "≈ KES 500–1,500 per person depending on meat and sides",
+      "hours": "Mostly lunch and evening; varies by restaurant",
+      "tip": "Grilled meat eaten with ugali and kachumbari. Ask for the price per kilo before ordering.",
+      "source": ""
+    },
+    "splash-waterworld": {
+      "name": "Splash Waterworld (Nairobi)",
+      "landmark": "Splash Waterworld (Nairobi)",
+      "kind": "activity",
+      "lat": -1.2863,
+      "lon": 36.8172,
+      "price": null,
+      "price_text": "Entry fee varies; check on the day.",
+      "hours": "Daytime; confirm opening days",
+      "tip": "A water park for families. Bring swimwear and sun protection.",
+      "source": ""
+    },
+    "uhuru-gardens": {
+      "name": "Uhuru Gardens",
+      "landmark": "Uhuru Gardens",
+      "kind": "park",
+      "lat": -1.3283,
+      "lon": 36.8042,
+      "price": 300,
+      "price_text": "Small entry fee, around KES 300. Check on the day.",
+      "hours": "Daily roughly 08:00–18:00",
+      "tip": "A large memorial park with the independence monument. Good for a relaxed walk.",
+      "source": ""
+    },
+    "maasai-market": {
+      "name": "Maasai Market (craft market)",
+      "landmark": null,
+      "kind": "food",
+      "lat": -1.2644,
+      "lon": 36.8033,
+      "price": null,
+      "price_text": "Free to browse; haggling expected",
+      "hours": "Moves between sites by day; check on the day",
+      "tip": "A roving craft market for souvenirs. Bargain politely and start low.",
+      "source": ""
+    },
+    "karura-forest": {
+      "name": "Karura Forest",
+      "landmark": null,
+      "kind": "park",
+      "lat": -1.2417,
+      "lon": 36.8333,
+      "price": 600,
+      "price_text": "≈ KES 600 non-resident adult. Check on the day.",
+      "hours": "Daily roughly 06:00–18:00",
+      "tip": "Walking and cycling trails plus a waterfall. Bring water and go with a friend.",
+      "source": "https://www.karurafriends.org/"
+    },
+    "kibera-tour": {
+      "name": "Kibera community walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -1.3133,
+      "lon": 36.7833,
+      "price": 2000,
+      "price_text": "≈ KES 1,500–3,000 with a local guide; confirm what is included",
+      "hours": "Daytime tours only",
+      "tip": "Go only with a reputable local guide and ask where the fee goes.",
+      "source": ""
+    },
+    "westlands-walk": {
+      "name": "Westlands food and bar walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -1.2667,
+      "lon": 36.8,
+      "price": null,
+      "price_text": "Pay per stop; budget KES 1,000–3,000",
+      "hours": "Evening",
+      "tip": "An easy evening area for restaurants and bars. Use a ride-hailing app after dark.",
+      "source": ""
+    },
+    "ngong-hills-view": {
+      "name": "Ngong Hills viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -1.4,
+      "lon": 36.6333,
+      "price": null,
+      "price_text": "Park fees vary; check on the day",
+      "hours": "Daylight hours",
+      "tip": "A ridge walk with wide views over the Rift Valley. Take a jacket; it can be windy and cool.",
+      "source": ""
+    },
+    "city-centre-walk": {
+      "name": "City Centre heritage walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -1.2864,
+      "lon": 36.8233,
+      "price": null,
+      "price_text": "Free to walk; guided tours cost extra",
+      "hours": "Daylight hours",
+      "tip": "See colonial-era buildings around the CBD. Keep valuables out of sight and walk in daytime.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "A full day of green: forest in the morning, giraffes and park views after lunch.",
+      "days": [
+        {
+          "title": "Forest, giraffes and the park edge",
+          "stops": [
+            {
+              "place": "karura-forest",
+              "at": "07:00",
+              "minutes": 150,
+              "note": "Start early to beat the heat. Bring water and cash for the entry fee. Trails are well marked."
+            },
+            {
+              "place": "giraffe-centre",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "About 30–40 minutes by taxi. Feed the giraffes from the raised platform. Weekdays are quieter."
+            },
+            {
+              "place": "karen-blixen",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "A short taxi ride away. A calm garden setting; good spot for a light lunch nearby."
+            },
+            {
+              "place": "nairobi-national-park",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Afternoon game drive. Gates close in the evening, so confirm the last entry time on the day. A guide with a vehicle is easiest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Karen or Westlands"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and markets in one day, mostly on foot in the City Centre.",
+      "days": [
+        {
+          "title": "City Centre heritage and crafts",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Good rainy-day option. Allow time for the human origins galleries."
+            },
+            {
+              "place": "city-centre-walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk between the old buildings and memorials. Keep valuables close and go in daylight."
+            },
+            {
+              "place": "august-7th-memorial",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "A quiet garden memorial. Good place to pause for lunch nearby."
+            },
+            {
+              "place": "maasai-market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "The market moves between sites by day, so check on the day where it is. Bargain politely."
+            },
+            {
+              "place": "kicc",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Rooftop view over the city on a clear day. Confirm the helipad viewing time at the desk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre or Westlands"
+    },
+    {
+      "id": "day-adventure",
+      "length": "day",
+      "style": "adventure",
+      "nights": 0,
+      "for": "Big views and a mini safari on the edge of the city.",
+      "days": [
+        {
+          "title": "Hills in the morning, safari in the afternoon",
+          "stops": [
+            {
+              "place": "ngong-hills-view",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Clear mornings give the best views. It is cooler up here; bring a layer. Check road and weather conditions on the day."
+            },
+            {
+              "place": "uhuru-gardens",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "On the way back into town. Open lawns and monuments; a good leg-stretch and snack stop."
+            },
+            {
+              "place": "nairobi-national-park",
+              "at": "13:30",
+              "minutes": 210,
+              "note": "Afternoon game drive with a guide and vehicle. Gates close in the evening, so confirm last entry on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Karen or Westlands"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Giraffes and forest on day one, then an early start in the national park before you fly.",
+      "days": [
+        {
+          "title": "Arrive, giraffes and forest",
+          "stops": [
+            {
+              "place": "giraffe-centre",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Karen is about 45–60 minutes by taxi from the centre. Go on a weekday if you can."
+            },
+            {
+              "place": "karura-forest",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "About 30–40 minutes by taxi. Gates close around 18:00, so start walking by 16:00."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in Westlands. Most places serve into the evening."
+            }
+          ]
+        },
+        {
+          "title": "National park, then fly",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "06:30",
+              "minutes": 240,
+              "note": "Enter at opening for the best light and wildlife. Bring your passport and pay at the gate; check fees on the day."
+            },
+            {
+              "place": "uhuru-gardens",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short stop nearby. Daylight only."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Indoor backup if it rains. Closes around 17:30."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands or Karen"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museums and markets in the city, with a Karen history morning before you fly.",
+      "days": [
+        {
+          "title": "Arrive, city centre heritage",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Good first stop to make sense of the city. Closes around 17:30."
+            },
+            {
+              "place": "city-centre-walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk in daylight only. Keep valuables out of sight."
+            },
+            {
+              "place": "jamia-mosque",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Outside prayer times only; check on the day. Dress modestly."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening food and bar walk. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Karen history, then fly",
+          "stops": [
+            {
+              "place": "karen-blixen",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Late morning is quiet. About 45–60 minutes by taxi."
+            },
+            {
+              "place": "bomas-of-kenya",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Shows are usually weekday afternoons; confirm times when booking."
+            },
+            {
+              "place": "maasai-market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "The market moves between sites by day; check on the day. Bargain politely."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre or Westlands"
+    },
+    {
+      "id": "1n-adventure",
+      "length": "1n",
+      "style": "adventure",
+      "nights": 1,
+      "for": "A day safari and big views, plus a splash or a hill walk if time allows.",
+      "days": [
+        {
+          "title": "Arrive, park and city views",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "13:00",
+              "minutes": 240,
+              "note": "Afternoon game drive. Gates close in the evening, so leave by 17:30. Check fees on the day."
+            },
+            {
+              "place": "kicc",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Rooftop view if it is still open; closes around 18:00. Check on the day."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner in Westlands."
+            }
+          ]
+        },
+        {
+          "title": "Hills or water, then fly",
+          "stops": [
+            {
+              "place": "ngong-hills-view",
+              "at": "07:00",
+              "minutes": 240,
+              "note": "Clear mornings are best. About an hour by road. Bring water and sun protection."
+            },
+            {
+              "place": "splash-waterworld",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Confirm opening days before you go. Good for a hot midday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands or Karen"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "First-timers who want wildlife and green space without leaving the city.",
+      "days": [
+        {
+          "title": "Arrive and ease into the green side",
+          "stops": [
+            {
+              "place": "giraffe-centre",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "About 30–45 minutes by taxi from the centre. Weekday afternoons are quieter."
+            },
+            {
+              "place": "karura-forest",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Short taxi hop. Bring water and wear closed shoes. Gates close around 18:00."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner and a gentle evening stroll in Westlands."
+            }
+          ]
+        },
+        {
+          "title": "Safari morning, then views",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "06:30",
+              "minutes": 300,
+              "note": "Enter at opening for the best light and animal activity. Book a guide in advance. Dry season (June–October) is best."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Long lunch after the park. Most places serve from midday."
+            },
+            {
+              "place": "ngong-hills-view",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Clear-afternoon views. Check road and weather on the day; go with a driver."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want museums, markets and local life in a compact two days.",
+      "days": [
+        {
+          "title": "City Centre heritage",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Good rainy-day option. Allow extra time for the snake park next door."
+            },
+            {
+              "place": "city-centre-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Walk in daylight only. Keep valuables out of sight."
+            },
+            {
+              "place": "august-7th-memorial",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Quiet memorial park. A short walk from the centre."
+            },
+            {
+              "place": "kicc",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Rooftop view on a clear day. Check access hours on the day."
+            },
+            {
+              "place": "jamia-mosque",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Visit outside prayer times. Dress modestly; women cover their heads."
+            }
+          ]
+        },
+        {
+          "title": "Karen culture and crafts",
+          "stops": [
+            {
+              "place": "karen-blixen",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Late morning is calm. About 30–45 minutes by taxi from the centre."
+            },
+            {
+              "place": "bomas-of-kenya",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Shows are usually weekday afternoons. Confirm times when booking."
+            },
+            {
+              "place": "maasai-market",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "The market moves between sites by day. Check on the day. Bargain politely."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre"
+    },
+    {
+      "id": "2n-adventure",
+      "length": "2n",
+      "style": "adventure",
+      "nights": 2,
+      "for": "Active first-timers who want a day safari, forest trails and big views.",
+      "days": [
+        {
+          "title": "Forest and water",
+          "stops": [
+            {
+              "place": "karura-forest",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Early start beats the heat. Bring water, sun hat and closed shoes."
+            },
+            {
+              "place": "splash-waterworld",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Warm midday is best. Confirm opening days before you go."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening grill dinner in Westlands."
+            }
+          ]
+        },
+        {
+          "title": "Safari and skyline",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "06:30",
+              "minutes": 300,
+              "note": "Enter at opening. Book a guide and vehicle in advance. Dry season (June–October) is best."
+            },
+            {
+              "place": "luna-park",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Mostly afternoon into evening. Confirm hours on the day."
+            },
+            {
+              "place": "kicc",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Sunset view if the sky is clear. Check access hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "First-timers who want wildlife and green space without leaving the city.",
+      "days": [
+        {
+          "title": "Arrive and ease in",
+          "stops": [
+            {
+              "place": "giraffe-centre",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "About 30–45 minutes by taxi from the centre. Feed the giraffes from the raised platform."
+            },
+            {
+              "place": "karen-blixen",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Short drive from the Giraffe Centre. Last entry is usually well before closing, so go early in your slot."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in Westlands. Grilled meat is shared, so order less than you think."
+            }
+          ]
+        },
+        {
+          "title": "Day safari in the park",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "06:30",
+              "minutes": 300,
+              "note": "Enter at the main gate as early as you can. Bring water, a hat and cash for fees. Dry season is best for game."
+            },
+            {
+              "place": "uhuru-gardens",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch first, then a short walk. Daylight only."
+            },
+            {
+              "place": "national-museum",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Good rainy-day backup. Check the day's closing time at the desk."
+            }
+          ]
+        },
+        {
+          "title": "Forest morning, gentle afternoon",
+          "stops": [
+            {
+              "place": "karura-forest",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Walk or hire a bike. Go with a guide if you are alone. Bring water and wear closed shoes."
+            },
+            {
+              "place": "splash-waterworld",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Warm midday is best. Confirm opening days before you go."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening food and bar walk. Eat before you drink."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "nairobi-river",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "A short daylight walk only. Do not go after dark."
+            },
+            {
+              "place": "maasai-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "The market moves between sites by day, so check on the day. Bargain politely."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands or Karen"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want museums, markets and local life at an easy pace.",
+      "days": [
+        {
+          "title": "City Centre history",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start here for context on Kenya's history and people."
+            },
+            {
+              "place": "city-centre-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Daylight hours. Keep valuables out of sight and walk with purpose."
+            },
+            {
+              "place": "jamia-mosque",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Outside prayer times only; check on the day. Dress modestly."
+            },
+            {
+              "place": "august-7th-memorial",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "A quiet memorial park. Daytime only."
+            }
+          ]
+        },
+        {
+          "title": "Karen culture day",
+          "stops": [
+            {
+              "place": "karen-blixen",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is calm. The house tour is short; the grounds are pleasant."
+            },
+            {
+              "place": "giraffe-centre",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Nearby. Weekday mornings are quieter."
+            },
+            {
+              "place": "bomas-of-kenya",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Shows are usually weekday afternoons; confirm times when booking."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner back in Westlands."
+            }
+          ]
+        },
+        {
+          "title": "Markets and community",
+          "stops": [
+            {
+              "place": "maasai-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is best before crowds. The site changes by day, so check on the day."
+            },
+            {
+              "place": "kibera-tour",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Book a community-run tour in advance. Daytime only. Ask before taking photos."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening food and bar walk to finish."
+            }
+          ]
+        },
+        {
+          "title": "Views and railway, then fly",
+          "stops": [
+            {
+              "place": "kicc",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go on a clear morning for the rooftop view."
+            },
+            {
+              "place": "railway-museum",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Small but charming. Morning is cooler."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre or Westlands"
+    },
+    {
+      "id": "3n-adventure",
+      "length": "3n",
+      "style": "adventure",
+      "nights": 3,
+      "for": "Active first-timers who want a day safari, big views and time outdoors.",
+      "days": [
+        {
+          "title": "Safari close to the skyline",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "06:30",
+              "minutes": 300,
+              "note": "Early entry gives the best game. Bring water, sun hat and cash for park fees."
+            },
+            {
+              "place": "uhuru-gardens",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch first, then stretch your legs. Daylight only."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Big dinner after a long day outdoors."
+            }
+          ]
+        },
+        {
+          "title": "Forest and water",
+          "stops": [
+            {
+              "place": "karura-forest",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Bike hire makes it faster. Go with a guide if you are alone."
+            },
+            {
+              "place": "splash-waterworld",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Warm midday is best. Confirm opening days before you go."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening walk with food stops."
+            }
+          ]
+        },
+        {
+          "title": "Hills and big views",
+          "stops": [
+            {
+              "place": "ngong-hills-view",
+              "at": "07:00",
+              "minutes": 240,
+              "note": "Clear mornings give the best views. Arrange transport in advance and start early."
+            },
+            {
+              "place": "giraffe-centre",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "On the way back into town. Weekdays are quieter."
+            }
+          ]
+        },
+        {
+          "title": "Fun morning, then fly",
+          "stops": [
+            {
+              "place": "luna-park",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Mostly afternoon into evening, so confirm opening before you go. Good for a light last morning."
+            },
+            {
+              "place": "railway-museum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short and central. Morning is cooler."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands or Karen"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "First-timers who want wildlife, forest walks and green space without leaving the city.",
+      "days": [
+        {
+          "title": "Arrive and settle in",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Afternoon game drive. Gates close in the evening, so start early enough. Bring cash for entry."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in Westlands. Most places serve into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Karen nature day",
+          "stops": [
+            {
+              "place": "giraffe-centre",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early on a weekday to avoid crowds. You can feed the giraffes."
+            },
+            {
+              "place": "karen-blixen",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Short drive away. Gardens are lovely in the late morning."
+            },
+            {
+              "place": "uhuru-gardens",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Open green space and monuments. Late afternoon is cooler."
+            }
+          ]
+        },
+        {
+          "title": "Forest morning",
+          "stops": [
+            {
+              "place": "karura-forest",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Early start beats the heat. Bring water and wear closed shoes. Entry fee at the gate."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening food and bar walk to finish the day."
+            }
+          ]
+        },
+        {
+          "title": "Big views",
+          "stops": [
+            {
+              "place": "ngong-hills-view",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Clear mornings give the best views. Check road and weather conditions on the day."
+            },
+            {
+              "place": "nairobi-river",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short daylight walk only. Keep valuables out of sight."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Good indoor backup if it rains. Opens around 08:30."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want museums, markets and local life at an easy pace.",
+      "days": [
+        {
+          "title": "City Centre history",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start when it opens. Good rainy-day option too."
+            },
+            {
+              "place": "city-centre-walk",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Daylight walk only. Keep bags close in busy streets."
+            },
+            {
+              "place": "jamia-mosque",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Outside prayer times only. Dress modestly. Check on the day."
+            },
+            {
+              "place": "august-7th-memorial",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Quiet memorial park. Open daytime."
+            }
+          ]
+        },
+        {
+          "title": "Karen culture",
+          "stops": [
+            {
+              "place": "karen-blixen",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is a good time. Guided tours usually available."
+            },
+            {
+              "place": "bomas-of-kenya",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Shows are usually weekday afternoons. Confirm times when booking."
+            }
+          ]
+        },
+        {
+          "title": "Market and towers",
+          "stops": [
+            {
+              "place": "maasai-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "The market moves between sites by day. Check on the day. Bargain politely."
+            },
+            {
+              "place": "kicc",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Rooftop views on a clear morning. Bring ID for security checks."
+            },
+            {
+              "place": "railway-museum",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Small but interesting. Open roughly 08:30–17:00."
+            }
+          ]
+        },
+        {
+          "title": "Community and food",
+          "stops": [
+            {
+              "place": "kibera-tour",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Daytime tours only. Book through a reputable operator."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening food and bar walk."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "giraffe-centre",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quick morning visit before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre"
+    },
+    {
+      "id": "4n-adventure",
+      "length": "4n",
+      "style": "adventure",
+      "nights": 4,
+      "for": "Active first-timers who want a day safari, forest trails and big views.",
+      "days": [
+        {
+          "title": "Safari day",
+          "stops": [
+            {
+              "place": "nairobi-national-park",
+              "at": "06:30",
+              "minutes": 300,
+              "note": "Early morning is best for animals. Gates close in the evening. Bring cash and water."
+            },
+            {
+              "place": "nyama-choma",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Big dinner after a long day out."
+            }
+          ]
+        },
+        {
+          "title": "Forest and hills",
+          "stops": [
+            {
+              "place": "karura-forest",
+              "at": "07:00",
+              "minutes": 180,
+              "note": "Early start. Wear closed shoes and carry water."
+            },
+            {
+              "place": "ngong-hills-view",
+              "at": "13:00",
+              "minutes": 240,
+              "note": "Clear mornings are best. Check weather and road conditions on the day."
+            }
+          ]
+        },
+        {
+          "title": "Karen and water",
+          "stops": [
+            {
+              "place": "giraffe-centre",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday mornings are quieter."
+            },
+            {
+              "place": "splash-waterworld",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Warm midday is best. Confirm opening days before you go."
+            }
+          ]
+        },
+        {
+          "title": "City and fun",
+          "stops": [
+            {
+              "place": "kicc",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Clear morning for rooftop views. Bring ID."
+            },
+            {
+              "place": "luna-park",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Mostly afternoon into evening. Confirm hours on the day."
+            },
+            {
+              "place": "westlands-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening food and bar walk."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "uhuru-gardens",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Easy walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Westlands"
+    }
+  ],
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Elephants at the orphanage and giraffes at breakfast."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Markets, museums and the city's creative side."
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "blurb": "Day safaris and big views from the edge of the city."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Westlands",
+      "range": [
+        6000,
+        18000
+      ],
+      "why": "Central for restaurants, bars and malls. Easy pickup point for tours and taxis to most sights.",
+      "center": [
+        -1.267,
+        36.807
+      ]
+    },
+    {
+      "area": "Karen",
+      "range": [
+        9000,
+        30000
+      ],
+      "why": "Green and quiet, close to the Giraffe Centre, the elephant orphanage and Karen Blixen Museum.",
+      "center": [
+        -1.335,
+        36.71
+      ]
+    },
+    {
+      "area": "Gigiri",
+      "range": [
+        10000,
+        28000
+      ],
+      "why": "Leafy and calm near the UN and Village Market; good for families and longer stays.",
+      "center": [
+        -1.233,
+        36.813
+      ]
+    },
+    {
+      "area": "City Centre",
+      "range": [
+        4000,
+        14000
+      ],
+      "why": "Cheapest base and walkable to the market and museums by day. Quieter at night; take taxis after dark.",
+      "center": [
+        -1.286,
+        36.822
+      ]
+    }
+  ],
+  "food": [
+    "Try nyama choma (grilled meat) with kachumbari salad and ugali; order by weight and share.",
+    "Eat Kenyan-Indian food: samosas, bhajias and chapati are cheap and everywhere.",
+    "Carnivore near Langata is the famous meat restaurant; book ahead and check current prices.",
+    "Cheap eats: street stalls and small cafeterias serve a plate of rice, beans and greens for a few hundred KES.",
+    "Drink only bottled or filtered water; peel fruit yourself and go easy on raw salads at street stalls."
+  ],
+  "more_time": [
+    "Add a day trip to Nairobi National Park at dawn; go with a guide and check park fees on the day.",
+    "Swap a city afternoon for the David Sheldrick elephant orphanage visit, which runs for about an hour in the morning.",
+    "Take a half-day to Karura Forest for walking and bike trails; go with a friend and in daylight."
+  ]
+}

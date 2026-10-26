@@ -1,0 +1,1437 @@
+{
+  "city": "Chicago",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Chicago rewards visitors with world-class museums, bold food, and a stunning lakefront. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 41.7002,
+      "west": -87.8602,
+      "north": 42.0934,
+      "east": -87.5718,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 3.5,
+      "per_km": 2.5,
+      "min_fare": 15
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "CTA 'L' trains run 24 hours on some lines; fares about $2.50, $5 from O'Hare.",
+      "CTA buses cover the city; pay with Ventra card or contactless.",
+      "Taxis are plentiful but pricey in rush hour; Uber and Lyft both work.",
+      "Driving is slow and parking is costly; skip a car downtown.",
+      "Walking and Divvy bike-share are great along the lakefront.",
+      "No ferries for visitors; the lakefront path is the best route."
+    ],
+    "sources": []
+  },
+  "places": {
+    "cloudgate": {
+      "name": "Cloud Gate (The Bean)",
+      "landmark": "Cloud Gate",
+      "kind": "sight",
+      "lat": 41.8826,
+      "lon": -87.6232,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park open daily 06:00–23:00",
+      "tip": "Come early morning for photos without crowds. The mirrored underside is the best angle.",
+      "source": "https://www.millenniumpark.org"
+    },
+    "artinstitute": {
+      "name": "Art Institute of Chicago",
+      "landmark": "Art Institute of Chicago",
+      "kind": "museum",
+      "lat": 41.8795,
+      "lon": -87.6237,
+      "price": 32,
+      "price_text": "≈ $32 adults · check current price and free days online",
+      "hours": "Daily 11:00–17:00 · Thu until 20:00 · check on the day",
+      "tip": "Buy tickets online and go straight to the Impressionist galleries on the upper floor.",
+      "source": "https://www.artic.edu/visit"
+    },
+    "willistower": {
+      "name": "Willis Tower Skydeck",
+      "landmark": "Willis Tower",
+      "kind": "sight",
+      "lat": 41.8788,
+      "lon": -87.6359,
+      "price": 35,
+      "price_text": "≈ $30–40 adults · book online for a time slot",
+      "hours": "Daily, roughly 09:00–22:00 · check on the day",
+      "tip": "Book a sunset slot. The Ledge glass boxes are busiest right after sunset.",
+      "source": "https://theskydeck.com"
+    },
+    "magmile": {
+      "name": "Magnificent Mile",
+      "landmark": "Magnificent Mile",
+      "kind": "sight",
+      "lat": 41.8944,
+      "lon": -87.6241,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops roughly 10:00–20:00",
+      "tip": "Walk from the river north to Water Tower. It is about one mile of shops and old buildings.",
+      "source": ""
+    },
+    "navypier": {
+      "name": "Navy Pier",
+      "landmark": "Navy Pier",
+      "kind": "sight",
+      "lat": 41.8917,
+      "lon": -87.6078,
+      "price": 0,
+      "price_text": "Free to enter · rides and cruises cost extra",
+      "hours": "Pier open daily · hours vary by season",
+      "tip": "Go for the lake view at the end of the pier. Skip the food court and eat elsewhere.",
+      "source": "https://navypier.org"
+    },
+    "archtour": {
+      "name": "Chicago Architecture Boat Tour",
+      "landmark": "Chicago Architecture Tour",
+      "kind": "tour",
+      "lat": 41.8894,
+      "lon": -87.6254,
+      "price": 55,
+      "price_text": "≈ $45–65 · book ahead in summer",
+      "hours": "Departures daily spring–fall · check on the day",
+      "tip": "Sit on the left side going out and bring a light jacket. The river wind is cold.",
+      "source": "https://www.architecture.org/experience-caf/tours/"
+    },
+    "millennium": {
+      "name": "Millennium Park",
+      "landmark": "Millennium Park",
+      "kind": "park",
+      "lat": 41.8826,
+      "lon": -87.6226,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily 06:00–23:00",
+      "tip": "Combine with Cloud Gate and the Crown Fountain in one walk. Free summer concerts at the Pritzker Pavilion.",
+      "source": "https://www.millenniumpark.org"
+    },
+    "shedd": {
+      "name": "Shedd Aquarium",
+      "landmark": "Shedd Aquarium",
+      "kind": "museum",
+      "lat": 41.8676,
+      "lon": -87.614,
+      "price": 40,
+      "price_text": "≈ $35–45 adults · book online",
+      "hours": "Daily roughly 09:00–17:00 · check on the day",
+      "tip": "Go at opening. The beluga and dolphin pools get crowded by midday.",
+      "source": "https://www.sheddaquarium.org"
+    },
+    "grandejatte": {
+      "name": "A Sunday Afternoon on the Island of La Grande Jatte",
+      "landmark": "A Sunday Afternoon on the Island of La Grande Jatte",
+      "kind": "sight",
+      "lat": 41.8796,
+      "lon": -87.6237,
+      "price": 32,
+      "price_text": "Included with Art Institute admission",
+      "hours": "Same as Art Institute · check on the day",
+      "tip": "Seurat's painting hangs in the Art Institute. Look closely at the dots up close, then step back.",
+      "source": "https://www.artic.edu/artworks/27992"
+    },
+    "americangothic": {
+      "name": "American Gothic",
+      "landmark": "American Gothic",
+      "kind": "sight",
+      "lat": 41.8796,
+      "lon": -87.6237,
+      "price": 32,
+      "price_text": "Included with Art Institute admission",
+      "hours": "Same as Art Institute · check on the day",
+      "tip": "Grant Wood's painting is in the American art galleries. Ask staff for the room number.",
+      "source": "https://www.artic.edu/artworks/6565"
+    },
+    "brookfield": {
+      "name": "Brookfield Zoo",
+      "landmark": "Brookfield Zoo",
+      "kind": "park",
+      "lat": 41.8329,
+      "lon": -87.832,
+      "price": 25,
+      "price_text": "≈ $20–30 adults · parking extra",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "It is a 30–40 minute drive or train ride west of downtown. Plan a half day.",
+      "source": "https://www.czs.org/brookfield-zoo"
+    },
+    "culturalcenter": {
+      "name": "Chicago Cultural Center",
+      "landmark": "Chicago Cultural Center",
+      "kind": "sight",
+      "lat": 41.8837,
+      "lon": -87.6248,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "Go up to the Preston Bradley Hall to see the world's largest Tiffany glass dome. Free entry.",
+      "source": "https://www.chicago.gov/city/en/depts/dca/supp_info/chicago_cultural_center.html"
+    },
+    "chicagoriver": {
+      "name": "Chicago Riverwalk",
+      "landmark": "Chicago River",
+      "kind": "sight",
+      "lat": 41.89,
+      "lon": -87.6,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · bars and boats seasonal",
+      "tip": "Walk the riverwalk between the lake and Wolf Point. Best light is early evening.",
+      "source": "https://www.chicago.gov/city/en/depts/dca/supp_info/riverwalk.html"
+    },
+    "chicagotheatre": {
+      "name": "Chicago Theatre",
+      "landmark": "Chicago Theatre",
+      "kind": "show",
+      "lat": 41.8856,
+      "lon": -87.6273,
+      "price": null,
+      "price_text": "Ticket price varies by show · marquee photo is free",
+      "hours": "Box office and shows · check on the day",
+      "tip": "The red CHICAGO marquee is the classic photo. Check the schedule for a show or tour.",
+      "source": "https://www.msg.com/chicago-theatre"
+    },
+    "fieldmuseum": {
+      "name": "Field Museum of Natural History",
+      "landmark": "Field Museum of Natural History",
+      "kind": "museum",
+      "lat": 41.8663,
+      "lon": -87.617,
+      "price": 30,
+      "price_text": "≈ $25–35 adults · some exhibits extra",
+      "hours": "Daily roughly 09:00–17:00 · check on the day",
+      "tip": "See Sue the T. rex in the main hall. Allow at least two hours.",
+      "source": "https://www.fieldmuseum.org"
+    },
+    "hauntedtrails": {
+      "name": "Haunted Trails (Burbank)",
+      "landmark": "Haunted Trails (Burbank)",
+      "kind": "activity",
+      "lat": 41.7371,
+      "lon": -87.7712,
+      "price": null,
+      "price_text": "Pay per ride or attraction · check on the day",
+      "hours": "Seasonal hours · check on the day",
+      "tip": "It is a family fun park far southwest of downtown. Only worth it if you have a car.",
+      "source": "https://www.hauntedtrails.com"
+    },
+    "homealone": {
+      "name": "Home Alone filming spots",
+      "landmark": "Home Alone",
+      "kind": "sight",
+      "lat": 42.1093,
+      "lon": -87.7337,
+      "price": 0,
+      "price_text": "Free to see from the street",
+      "hours": "Residential street · be quiet and respectful",
+      "tip": "The McCallister house is a private home in Winnetka, a train ride north. View it from the sidewalk only.",
+      "source": ""
+    },
+    "lincolnparkzoo": {
+      "name": "Lincoln Park Zoo",
+      "landmark": "Lincoln Park Zoo",
+      "kind": "park",
+      "lat": 41.9211,
+      "lon": -87.6336,
+      "price": 0,
+      "price_text": "Free entry · parking costs extra",
+      "hours": "Daily roughly 10:00–17:00 · grounds longer in summer",
+      "tip": "Free and close to downtown. Combine with a walk along the lakefront.",
+      "source": "https://www.lpzoo.org"
+    },
+    "mcdonalds": {
+      "name": "Rock 'n' Roll McDonald's (River North)",
+      "landmark": "McDonald's",
+      "kind": "food",
+      "lat": 41.8781,
+      "lon": -87.6298,
+      "price": 10,
+      "price_text": "≈ $8–15 for a meal",
+      "hours": "Daily, often 24 hours · check on the day",
+      "tip": "A big flagship branch with retro decor. Good for a cheap, quick meal near the river.",
+      "source": "https://www.mcdonalds.com"
+    },
+    "nighthawks": {
+      "name": "Nighthawks",
+      "landmark": "Nighthawks",
+      "kind": "sight",
+      "lat": 41.8796,
+      "lon": -87.6237,
+      "price": 32,
+      "price_text": "Included with Art Institute admission",
+      "hours": "Same as Art Institute · check on the day",
+      "tip": "Hopper's diner painting is in the Art Institute. It is smaller than you expect.",
+      "source": "https://www.artic.edu/artworks/111628"
+    },
+    "northwestern": {
+      "name": "Northwestern University (Evanston campus)",
+      "landmark": "Northwestern University",
+      "kind": "sight",
+      "lat": 42.0565,
+      "lon": -87.6753,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily",
+      "tip": "A lakefront campus about 45 minutes north by train. Nice for a quiet walk and lake views.",
+      "source": "https://www.northwestern.edu"
+    },
+    "parisstreet": {
+      "name": "Paris Street; Rainy Day",
+      "landmark": "Paris Street in Rainy Weather",
+      "kind": "sight",
+      "lat": 41.8796,
+      "lon": -87.6237,
+      "price": 32,
+      "price_text": "Included with Art Institute admission",
+      "hours": "Same as Art Institute · check on the day",
+      "tip": "Caillebotte's rainy Paris scene is in the Art Institute's Impressionist galleries.",
+      "source": "https://www.artic.edu/artworks/20684"
+    },
+    "westloopmarket": {
+      "name": "West Loop food walk (Randolph Street & Fulton Market)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.8845,
+      "lon": -87.6535,
+      "price": null,
+      "price_text": "Pay per stop · ≈ $20–50 per person",
+      "hours": "Restaurants vary · busiest evenings and weekends",
+      "tip": "Chicago's best restaurant strip. Book dinner ahead and walk between stops.",
+      "source": ""
+    },
+    "lakefronttrail": {
+      "name": "Lakefront Trail walk or bike",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.8917,
+      "lon": -87.6078,
+      "price": 0,
+      "price_text": "Free · bike rental costs extra",
+      "hours": "Always open",
+      "tip": "An 18-mile path along Lake Michigan. Rent a bike near Navy Pier and ride north to Lincoln Park.",
+      "source": "https://www.chicagoparkdistrict.com/parks-facilities/lakefront-trail"
+    },
+    "riverwalkbar": {
+      "name": "Riverwalk evening drinks",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.888,
+      "lon": -87.627,
+      "price": null,
+      "price_text": "Pay per drink · ≈ $10–18 each",
+      "hours": "Seasonal, roughly May–October · check on the day",
+      "tip": "Outdoor bars sit right on the river. Go before sunset for a seat.",
+      "source": ""
+    },
+    "lincolnparkwalk": {
+      "name": "Lincoln Park neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.9214,
+      "lon": -87.6494,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk from the zoo south along the lake and through leafy side streets. Good for a slow afternoon.",
+      "source": ""
+    },
+    "deepdish": {
+      "name": "Deep-dish pizza dinner",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.8912,
+      "lon": -87.6275,
+      "price": 25,
+      "price_text": "≈ $20–30 per person",
+      "hours": "Most places daily 11:00–23:00",
+      "tip": "Deep dish takes 30–45 minutes to bake. Order as soon as you sit down.",
+      "source": ""
+    },
+    "secondcity": {
+      "name": "The Second City comedy show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 41.9115,
+      "lon": -87.6344,
+      "price": 40,
+      "price_text": "≈ $30–60 · book ahead",
+      "hours": "Shows most evenings · check on the day",
+      "tip": "Chicago's famous comedy club. Book a weekend evening show and arrive early for good seats.",
+      "source": "https://www.secondcity.com"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day: the Loop's icons, the river by boat and a lakefront sunset.",
+      "days": [
+        {
+          "title": "Loop icons and the river",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "08:30",
+              "minutes": 30,
+              "note": "Go early for fewer people and better photos."
+            },
+            {
+              "place": "millennium",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "The Bean sits inside the park. Walk the gardens and fountains."
+            },
+            {
+              "place": "culturalcenter",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Free. Look up at the Tiffany dome. Good rainy-day backup."
+            },
+            {
+              "place": "archtour",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Boats leave from the river near Michigan Avenue. Book ahead in summer."
+            },
+            {
+              "place": "deepdish",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Deep dish takes 30–45 minutes to bake. Order when you sit down."
+            },
+            {
+              "place": "willistower",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Skydeck lines can be long. Book a timed ticket online."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Easy stroll along the water. Bars are seasonal."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasty first day: deep dish, a West Loop food walk and river drinks.",
+      "days": [
+        {
+          "title": "Eat your way through the city",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "A quick photo stop before the eating starts."
+            },
+            {
+              "place": "mcdonalds",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Novelty stop with rock memorabilia. Hours vary, check on the day."
+            },
+            {
+              "place": "deepdish",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Early lunch beats the queues. Expect a 30–45 minute bake."
+            },
+            {
+              "place": "westloopmarket",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Randolph Street and Fulton Market. Busiest in the evening, so go early for space."
+            },
+            {
+              "place": "riverwalkbar",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Drinks by the water. Open roughly May to October only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "River North"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Art first: the Art Institute's highlights, public art and a river walk.",
+      "days": [
+        {
+          "title": "Masterpieces and public art",
+          "stops": [
+            {
+              "place": "artinstitute",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Opens at 11:00. Go straight to the icons on the second floor."
+            },
+            {
+              "place": "nighthawks",
+              "at": "12:30",
+              "minutes": 15,
+              "note": "Inside the Art Institute. Ask staff for the gallery."
+            },
+            {
+              "place": "americangothic",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Also inside the museum. Short stop."
+            },
+            {
+              "place": "grandejatte",
+              "at": "13:20",
+              "minutes": 20,
+              "note": "Same building. Give it time, it rewards a slow look."
+            },
+            {
+              "place": "parisstreet",
+              "at": "13:45",
+              "minutes": 15,
+              "note": "Last museum stop, then lunch nearby."
+            },
+            {
+              "place": "deepdish",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch. Order as you sit, it bakes to order."
+            },
+            {
+              "place": "cloudgate",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Public sculpture in Millennium Park. Free."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Walk the Riverwalk at golden hour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the big views, the river and one museum in a single day.",
+      "days": [
+        {
+          "title": "Arrive, The Loop icons",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "In Millennium Park. Go early or late for fewer crowds."
+            },
+            {
+              "place": "millennium",
+              "at": "13:35",
+              "minutes": 60,
+              "note": "Walk the park and the lakefront edge."
+            },
+            {
+              "place": "culturalcenter",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Free. Good rainy-day backup. Check hours on the day."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Walk the Riverwalk east toward the lake."
+            },
+            {
+              "place": "deepdish",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead; deep dish takes 30–45 minutes to bake."
+            }
+          ]
+        },
+        {
+          "title": "Skydeck and the lakefront",
+          "stops": [
+            {
+              "place": "willistower",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go first thing to beat queues. Check hours on the day."
+            },
+            {
+              "place": "artinstitute",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Closed some mornings; check on the day. See Nighthawks and American Gothic."
+            },
+            {
+              "place": "lakefronttrail",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk or rent a bike north toward Lincoln Park."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want deep dish, a market walk and river drinks in one night.",
+      "days": [
+        {
+          "title": "Arrive, river and West Loop",
+          "stops": [
+            {
+              "place": "chicagoriver",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Easy walk from most Loop hotels."
+            },
+            {
+              "place": "westloopmarket",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Randolph Street and Fulton Market. Busiest Thu–Sat evenings."
+            },
+            {
+              "place": "riverwalkbar",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Seasonal, roughly May–October. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Deep dish and the lake",
+          "stops": [
+            {
+              "place": "mcdonalds",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Quick stop for the retro sign. Often open 24 hours."
+            },
+            {
+              "place": "navypier",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Snack stalls along the pier. Hours vary by season."
+            },
+            {
+              "place": "deepdish",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch version of the classic. Order as you sit down."
+            },
+            {
+              "place": "cloudgate",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short walk into the Loop for a photo."
+            }
+          ]
+        }
+      ],
+      "stay_area": "River North"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers who want the Art Institute highlights plus public art outdoors.",
+      "days": [
+        {
+          "title": "Arrive, Art Institute highlights",
+          "stops": [
+            {
+              "place": "artinstitute",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Thu open until 20:00. Check on the day."
+            },
+            {
+              "place": "nighthawks",
+              "at": "16:10",
+              "minutes": 15,
+              "note": "Inside the Art Institute; ask staff for the gallery."
+            },
+            {
+              "place": "americangothic",
+              "at": "16:30",
+              "minutes": 15,
+              "note": "Also inside the museum."
+            },
+            {
+              "place": "parisstreet",
+              "at": "16:50",
+              "minutes": 15,
+              "note": "Same building. Finish before closing."
+            },
+            {
+              "place": "deepdish",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner nearby in the Loop or River North."
+            }
+          ]
+        },
+        {
+          "title": "Public art and the river",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Quietest before 10:00."
+            },
+            {
+              "place": "millennium",
+              "at": "09:35",
+              "minutes": 60,
+              "note": "More sculpture and gardens in the park."
+            },
+            {
+              "place": "grandejatte",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Back at the Art Institute if you missed it. Check hours."
+            },
+            {
+              "place": "archtour",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Boat tours run spring–fall. Book ahead and check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: the Bean, a river boat tour and the lakefront.",
+      "days": [
+        {
+          "title": "The Loop on foot",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go early to beat the crowds and get a clean photo."
+            },
+            {
+              "place": "millennium",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "The Bean sits inside the park. Walk the gardens and the fountain."
+            },
+            {
+              "place": "culturalcenter",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Free entry. Look up at the glass dome. Good rainy-day backup."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop nearby, then walk the riverwalk."
+            },
+            {
+              "place": "willistower",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Book a sunset slot online. Lines are long at peak times."
+            }
+          ]
+        },
+        {
+          "title": "River tour and lakefront",
+          "stops": [
+            {
+              "place": "archtour",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Book ahead in summer. Boats leave from the river near Michigan Ave."
+            },
+            {
+              "place": "navypier",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch on the pier. Hours vary by season, so check on the day."
+            },
+            {
+              "place": "lakefronttrail",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk or rent a bike south toward the museum campus."
+            },
+            {
+              "place": "deepdish",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Expect a 30–45 minute bake time. Order when you sit down."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop or River North"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want deep dish, a West Loop crawl and a walk between bites.",
+      "days": [
+        {
+          "title": "River North eats and the river",
+          "stops": [
+            {
+              "place": "mcdonalds",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "A quick, quirky stop. Often open 24 hours, but check on the day."
+            },
+            {
+              "place": "magmile",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Walk north and pick a lunch spot off the avenue."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Easy stroll between meals."
+            },
+            {
+              "place": "riverwalkbar",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Seasonal, roughly May to October. Check on the day."
+            },
+            {
+              "place": "deepdish",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "West Loop crawl, then a show",
+          "stops": [
+            {
+              "place": "westloopmarket",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Randolph Street and Fulton Market. Busiest evenings and weekends."
+            },
+            {
+              "place": "cloudgate",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short walk east into the Loop."
+            },
+            {
+              "place": "secondcity",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Shows most evenings. Book tickets in advance. About 20 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "River North or the West Loop"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers: a full Art Institute day, public art and the lakefront.",
+      "days": [
+        {
+          "title": "Art Institute and the Loop",
+          "stops": [
+            {
+              "place": "artinstitute",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Opens at 11:00. Thursday until 20:00. Check on the day."
+            },
+            {
+              "place": "nighthawks",
+              "at": "12:30",
+              "minutes": 15,
+              "note": "Inside the Art Institute. Ask staff for the gallery."
+            },
+            {
+              "place": "americangothic",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Also inside the museum. Same hours."
+            },
+            {
+              "place": "parisstreet",
+              "at": "13:30",
+              "minutes": 15,
+              "note": "Same building. Plan lunch at the museum cafe."
+            },
+            {
+              "place": "cloudgate",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Five-minute walk. Best light late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "More art, then the lake",
+          "stops": [
+            {
+              "place": "grandejatte",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Back at the Art Institute. Same hours, so check on the day."
+            },
+            {
+              "place": "culturalcenter",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Free exhibitions and the Tiffany dome."
+            },
+            {
+              "place": "millennium",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Outdoor sculptures and the fountain."
+            },
+            {
+              "place": "lakefronttrail",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk south for skyline views at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights, the river and the lakefront without rushing.",
+      "days": [
+        {
+          "title": "Arrive, the Loop icons",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "In Millennium Park. Go early or late for fewer crowds."
+            },
+            {
+              "place": "millennium",
+              "at": "14:40",
+              "minutes": 60,
+              "note": "Walk the park and the lakefront edge."
+            },
+            {
+              "place": "culturalcenter",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Free. Good rainy-day backup. Check hours on the day."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Walk the Riverwalk at golden hour."
+            },
+            {
+              "place": "deepdish",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Expect a 30–45 minute bake time. Order when you sit."
+            }
+          ]
+        },
+        {
+          "title": "Museum campus morning, river tour",
+          "stops": [
+            {
+              "place": "fieldmuseum",
+              "at": "09:15",
+              "minutes": 180,
+              "note": "Open roughly 09:00. Check hours on the day."
+            },
+            {
+              "place": "archtour",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Departures from the river, spring to fall. Book ahead."
+            },
+            {
+              "place": "magmile",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk north from the river. Shops roughly 10:00–20:00."
+            },
+            {
+              "place": "westloopmarket",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Randolph Street is busiest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Art, then lakefront and a show",
+          "stops": [
+            {
+              "place": "artinstitute",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Opens 11:00. Thursday until 20:00. Check on the day."
+            },
+            {
+              "place": "nighthawks",
+              "at": "12:30",
+              "minutes": 15,
+              "note": "Inside the Art Institute. Allow time to find the gallery."
+            },
+            {
+              "place": "lakefronttrail",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Rent a bike or walk south toward the museums."
+            },
+            {
+              "place": "secondcity",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Shows most evenings. Book ahead, Thursday to Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Lincoln Park, then fly",
+          "stops": [
+            {
+              "place": "lincolnparkzoo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Free entry. Grounds open longer in summer."
+            },
+            {
+              "place": "lincolnparkwalk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Quiet streets and the conservatory area."
+            },
+            {
+              "place": "homealone",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Residential street. Be quiet and respectful."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want deep dish, the West Loop and a river drink between sights.",
+      "days": [
+        {
+          "title": "Arrive, river and deep dish",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Quick photo stop in Millennium Park."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the Riverwalk to build an appetite."
+            },
+            {
+              "place": "riverwalkbar",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Seasonal, roughly May–October. Check on the day."
+            },
+            {
+              "place": "deepdish",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead on weekends. Expect a long bake time."
+            }
+          ]
+        },
+        {
+          "title": "West Loop food day",
+          "stops": [
+            {
+              "place": "culturalcenter",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Free and central. Check hours on the day."
+            },
+            {
+              "place": "westloopmarket",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "Randolph Street and Fulton Market. Busiest evenings and weekends."
+            },
+            {
+              "place": "mcdonalds",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Novelty stop in River North. Often open 24 hours."
+            },
+            {
+              "place": "magmile",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk off lunch. Lights come on in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Architecture tour and a show",
+          "stops": [
+            {
+              "place": "archtour",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning boats are calmer. Book ahead, spring to fall."
+            },
+            {
+              "place": "navypier",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Grab a snack on the pier. Hours vary by season."
+            },
+            {
+              "place": "chicagotheatre",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "See the marquee at night. Shows vary, check on the day."
+            },
+            {
+              "place": "secondcity",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Comedy and drinks. Book ahead, Thursday to Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Lakefront morning, then fly",
+          "stops": [
+            {
+              "place": "lakefronttrail",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk or bike. Best May to October."
+            },
+            {
+              "place": "lincolnparkzoo",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Free entry. Check hours on the day."
+            },
+            {
+              "place": "lincolnparkwalk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Cafes and quiet streets before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "River North"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Art lovers who want the Art Institute highlights plus public art and the river.",
+      "days": [
+        {
+          "title": "Arrive, public art in the Loop",
+          "stops": [
+            {
+              "place": "cloudgate",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "The Bean. Early morning or after dark is quietest."
+            },
+            {
+              "place": "millennium",
+              "at": "14:40",
+              "minutes": 60,
+              "note": "More public art and the Pritzker Pavilion."
+            },
+            {
+              "place": "culturalcenter",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Free exhibitions and the Tiffany dome. Check hours."
+            },
+            {
+              "place": "chicagoriver",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Riverwalk at golden hour."
+            }
+          ]
+        },
+        {
+          "title": "Art Institute day",
+          "stops": [
+            {
+              "place": "artinstitute",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Opens 11:00. Thursday until 20:00. Check on the day."
+            },
+            {
+              "place": "grandejatte",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Inside the museum. Ask staff for the gallery."
+            },
+            {
+              "place": "americangothic",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Same museum, American galleries."
+            },
+            {
+              "place": "nighthawks",
+              "at": "13:30",
+              "minutes": 15,
+              "note": "Same museum. Allow time to find it."
+            },
+            {
+              "place": "parisstreet",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Same museum, Impressionist galleries."
+            },
+            {
+              "place": "deepdish",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner nearby. Expect a long bake time."
+            }
+          ]
+        },
+        {
+          "title": "Architecture and the lakefront",
+          "stops": [
+            {
+              "place": "archtour",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Architecture by boat. Book ahead, spring to fall."
+            },
+            {
+              "place": "navypier",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Late afternoon to sunset is best. Hours vary by season."
+            },
+            {
+              "place": "lakefronttrail",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk or bike south for skyline views."
+            },
+            {
+              "place": "westloopmarket",
+              "at": "18:30",
+              "minutes": 150,
+              "note": "Dinner on Randolph Street. Busiest weekends."
+            }
+          ]
+        },
+        {
+          "title": "Lincoln Park, then fly",
+          "stops": [
+            {
+              "place": "lincolnparkzoo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Free entry. Check hours on the day."
+            },
+            {
+              "place": "lincolnparkwalk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Neighbourhood walk and a cafe stop."
+            },
+            {
+              "place": "secondcity",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Only if you have a late flight. Shows are mostly evenings."
+            }
+          ]
+        }
+      ],
+      "stay_area": "The Loop"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, lakefront and the river architecture."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Deep dish, hot dogs and neighborhood eats."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "The Art Institute, murals and gallery districts."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "The Loop",
+      "range": [
+        150,
+        380
+      ],
+      "why": "Central for museums, the river walk and transit; easy walk to the lakefront.",
+      "center": [
+        41.882,
+        -87.628
+      ]
+    },
+    {
+      "area": "River North",
+      "range": [
+        170,
+        420
+      ],
+      "why": "Restaurants and galleries close by; short walk to the Magnificent Mile.",
+      "center": [
+        41.892,
+        -87.634
+      ]
+    },
+    {
+      "area": "Magnificent Mile",
+      "range": [
+        180,
+        450
+      ],
+      "why": "Shopping and lakefront access; good for first-time visitors.",
+      "center": [
+        41.895,
+        -87.624
+      ]
+    },
+    {
+      "area": "Lincoln Park",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Quieter, near the zoo and park; cheaper than downtown.",
+      "center": [
+        41.921,
+        -87.649
+      ]
+    }
+  ],
+  "food": [
+    "Try deep-dish pizza once; expect a 30–45 minute bake time, so order when you sit down.",
+    "Chicago-style hot dogs: no ketchup. Cheap lunch at many stands.",
+    "Italian beef sandwiches are a local staple; ask for it 'dipped'.",
+    "Explore neighborhood restaurants in Wicker Park, Logan Square and Pilsen for better value than downtown.",
+    "Book popular dinner spots ahead; weekends fill up fast."
+  ],
+  "more_time": [
+    "Swap a downtown day for the Museum of Science and Industry or a lakefront walk in Hyde Park.",
+    "Take an architecture boat tour on the river if the weather is dry.",
+    "Spend an afternoon in Pilsen for murals and Mexican food."
+  ]
+}

@@ -1,0 +1,1747 @@
+{
+  "city": "Cairo",
+  "checked": "October 2026",
+  "currency": "EGP",
+  "usd_rate": 55.2156,
+  "intro": "Cairo rewards visitors with pyramids, mosques, markets and Nile views. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 29.9591,
+      "west": 31.1096,
+      "north": 30.1031,
+      "east": 31.3549,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 30,
+      "flag_airport": 50,
+      "per_km": 10,
+      "min_fare": 30
+    },
+    "road_factor": 1.4,
+    "city_kmh": 18,
+    "notes": [
+      "Metro: three lines, clean and cheap; tickets EGP8-20 by distance.",
+      "Buses: red-white-blue city buses EGP4-6; air-conditioned EGP7-12; minibuses EGP5-15.",
+      "Taxis: white cabs; meters often unused, agree or pay the fair sum on exit.",
+      "Ride apps: Uber and Careem work well in Cairo; often easier than street taxis.",
+      "Driving: not advised for visitors; traffic is heavy and rules are loose.",
+      "Walking: fine in some districts but crossings and pavements are poor; little cycling."
+    ],
+    "sources": []
+  },
+  "places": {
+    "pyramids": {
+      "name": "Pyramids of Giza",
+      "landmark": "Pyramids of Giza",
+      "kind": "sight",
+      "lat": 29.9792,
+      "lon": 31.1342,
+      "price": 540,
+      "price_text": "≈ EGP 540 general site ticket; Great Pyramid interior extra — check on the day",
+      "hours": "Daily roughly 08:00–17:00 (shorter in winter)",
+      "tip": "Go at opening to beat heat and crowds, and ignore anyone offering unsolicited 'guides' or camel deals.",
+      "source": "https://egymonuments.gov.eg"
+    },
+    "sphinx": {
+      "name": "Great Sphinx of Giza",
+      "landmark": "Great Sphinx of Giza",
+      "kind": "sight",
+      "lat": 29.9753,
+      "lon": 31.1376,
+      "price": 0,
+      "price_text": "Included in the Giza plateau ticket",
+      "hours": "Same as the Giza plateau, roughly 08:00–17:00",
+      "tip": "The classic photo is from the viewing platform south-east of the Sphinx; go early for soft light.",
+      "source": "https://egymonuments.gov.eg"
+    },
+    "egyptian-museum": {
+      "name": "Egyptian Museum",
+      "landmark": "Egyptian Museum",
+      "kind": "museum",
+      "lat": 30.0478,
+      "lon": 31.2336,
+      "price": 450,
+      "price_text": "≈ EGP 450 foreign adult — check on the day",
+      "hours": "Daily roughly 09:00–17:00",
+      "tip": "Many famous pieces have moved to the new Grand Egyptian Museum, so ask at the desk what is still here.",
+      "source": "https://egymonuments.gov.eg"
+    },
+    "citadel": {
+      "name": "Cairo Citadel",
+      "landmark": "Cairo Citadel",
+      "kind": "sight",
+      "lat": 30.0299,
+      "lon": 31.2611,
+      "price": 450,
+      "price_text": "≈ EGP 450 site ticket — check on the day",
+      "hours": "Daily roughly 08:00–17:00",
+      "tip": "The Citadel walls give the best wide view over old Cairo; bring water, shade is limited.",
+      "source": "https://egymonuments.gov.eg"
+    },
+    "muhammad-ali": {
+      "name": "Mosque of Muhammad Ali",
+      "landmark": "Mosque of Muhammad Ali",
+      "kind": "sight",
+      "lat": 30.0287,
+      "lon": 31.2625,
+      "price": 0,
+      "price_text": "Included in the Citadel ticket",
+      "hours": "Daily roughly 08:00–17:00, closed to tourists at prayer times",
+      "tip": "Dress modestly — cover shoulders and knees; shoes come off at the entrance.",
+      "source": "https://egymonuments.gov.eg"
+    },
+    "khan-el-khalili": {
+      "name": "Khan el-Khalili",
+      "landmark": "Khan el-Khalili",
+      "kind": "food",
+      "lat": 30.0478,
+      "lon": 31.2622,
+      "price": 0,
+      "price_text": "Free to wander; pay for what you buy",
+      "hours": "Shops roughly 10:00–late evening; many closed on Friday morning",
+      "tip": "Bargain hard and start around half the asking price; the cafés off the main lane are calmer.",
+      "source": ""
+    },
+    "abdeen-palace": {
+      "name": "Abdeen Palace",
+      "landmark": "Abdeen Palace",
+      "kind": "museum",
+      "lat": 30.0416,
+      "lon": 31.2482,
+      "price": 150,
+      "price_text": "≈ EGP 150 — check on the day",
+      "hours": "Daily roughly 09:00–15:00; confirm before going",
+      "tip": "The palace museums are small and quiet; combine with a Downtown walk nearby.",
+      "source": ""
+    },
+    "al-azhar": {
+      "name": "Al-Azhar Mosque",
+      "landmark": "Al-Azhar Mosque",
+      "kind": "sight",
+      "lat": 30.0458,
+      "lon": 31.2625,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily outside prayer times",
+      "tip": "Women should carry a scarf; the courtyard is peaceful early in the day.",
+      "source": ""
+    },
+    "al-rifai": {
+      "name": "Al-Rifa'i Mosque",
+      "landmark": "Al-Rifa'i Mosque",
+      "kind": "sight",
+      "lat": 30.0327,
+      "lon": 31.2562,
+      "price": 100,
+      "price_text": "≈ EGP 100 — check on the day",
+      "hours": "Daily roughly 09:00–17:00, closed at prayer times",
+      "tip": "Pair it with the Sultan Hassan Mosque across the street for one of Cairo's best architectural views.",
+      "source": ""
+    },
+    "bab-zuweila": {
+      "name": "Bab Zuweila",
+      "landmark": "Bab Zuweila",
+      "kind": "sight",
+      "lat": 30.0414,
+      "lon": 31.2586,
+      "price": 100,
+      "price_text": "≈ EGP 100 to climb the towers — check on the day",
+      "hours": "Daily roughly 09:00–16:00",
+      "tip": "Climb the minaret towers for a rooftop view over old Cairo; the stairs are steep and narrow.",
+      "source": ""
+    },
+    "babylon-fortress": {
+      "name": "Babylon Fortress",
+      "landmark": "Babylon Fortress",
+      "kind": "sight",
+      "lat": 30.0062,
+      "lon": 31.2305,
+      "price": 0,
+      "price_text": "Free to see from outside; Coptic Museum covers the area",
+      "hours": "Always visible; visit in daylight",
+      "tip": "Walk the old Roman walls between the Coptic churches in Coptic Cairo.",
+      "source": ""
+    },
+    "baron-empain": {
+      "name": "Baron Empain Palace",
+      "landmark": "Baron Empain Palace",
+      "kind": "museum",
+      "lat": 30.0869,
+      "lon": 31.3303,
+      "price": 100,
+      "price_text": "≈ EGP 100 — check on the day",
+      "hours": "Daily roughly 09:00–16:00",
+      "tip": "The Hindu-inspired palace is a striking photo stop; the surrounding Heliopolis streets are worth a short walk.",
+      "source": ""
+    },
+    "bent-pyramid": {
+      "name": "Bent Pyramid",
+      "landmark": "Bent Pyramid",
+      "kind": "sight",
+      "lat": 29.7902,
+      "lon": 31.2093,
+      "price": 200,
+      "price_text": "≈ EGP 200 Dahshur site ticket — check on the day",
+      "hours": "Daily roughly 08:00–17:00",
+      "tip": "Far fewer crowds than Giza; you can sometimes enter the pyramid, ask at the gate.",
+      "source": "https://egymonuments.gov.eg"
+    },
+    "stadium": {
+      "name": "Cairo International Stadium",
+      "landmark": "Cairo International Stadium",
+      "kind": "activity",
+      "lat": 30.0691,
+      "lon": 31.3123,
+      "price": null,
+      "price_text": "Ticket prices vary by match — check on the day",
+      "hours": "Only on match days or with a tour",
+      "tip": "Only worth it if a big match is on; buy tickets through official channels, not touts.",
+      "source": ""
+    },
+    "cairo-land": {
+      "name": "Cairo Land",
+      "landmark": "Cairo Land",
+      "kind": "park",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "price": null,
+      "price_text": "Pay per ride or a day pass — check on the day",
+      "hours": "Roughly 10:00–22:00, later in summer",
+      "tip": "A family theme park; check opening days before travelling out.",
+      "source": ""
+    },
+    "opera-house": {
+      "name": "Cairo Opera House",
+      "landmark": "Cairo Opera House",
+      "kind": "show",
+      "lat": 30.0427,
+      "lon": 31.2241,
+      "price": null,
+      "price_text": "Ticket prices vary by performance — check the programme",
+      "hours": "Box office daytime; shows mostly evenings",
+      "tip": "Book ahead online for concerts; the riverside setting on Gezira is lovely at night.",
+      "source": "https://www.cairoopera.org"
+    },
+    "cairo-tower": {
+      "name": "Cairo Tower",
+      "landmark": "Cairo Tower",
+      "kind": "sight",
+      "lat": 30.0459,
+      "lon": 31.2243,
+      "price": 250,
+      "price_text": "≈ EGP 250 — check on the day",
+      "hours": "Daily roughly 09:00–midnight",
+      "tip": "Go near sunset for the best view over the Nile and the city haze.",
+      "source": ""
+    },
+    "cave-church": {
+      "name": "Cave Church",
+      "landmark": "Cave Church",
+      "kind": "sight",
+      "lat": 30.0315,
+      "lon": 31.2773,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, daylight hours; services in the evening",
+      "tip": "Huge amphitheatre carved into the Mokattam hills; go with a local or taxi as it is in a busy area.",
+      "source": ""
+    },
+    "st-sergius": {
+      "name": "Church of St. Sergius and Bacchus",
+      "landmark": "Church of St. Sergius and Bacchus",
+      "kind": "sight",
+      "lat": 30.0061,
+      "lon": 31.2312,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily outside service times",
+      "tip": "One of the oldest churches in Cairo, said to shelter the Holy Family; dress modestly.",
+      "source": ""
+    },
+    "city-of-the-dead": {
+      "name": "City of the Dead",
+      "landmark": "City of the Dead",
+      "kind": "sight",
+      "lat": 30.0441,
+      "lon": 31.2725,
+      "price": 0,
+      "price_text": "Free to walk; go with a guide",
+      "hours": "Daylight only",
+      "tip": "A vast historic cemetery where people also live; visit respectfully with a local guide.",
+      "source": ""
+    },
+    "coptic-museum": {
+      "name": "Coptic Museum",
+      "landmark": "Coptic Museum",
+      "kind": "museum",
+      "lat": 30.0058,
+      "lon": 31.23,
+      "price": 200,
+      "price_text": "≈ EGP 200 — check on the day",
+      "hours": "Daily roughly 09:00–17:00",
+      "tip": "Combine with the nearby churches and Babylon Fortress for a half-day in Coptic Cairo.",
+      "source": ""
+    },
+    "dream-park": {
+      "name": "Dream Park",
+      "landmark": "Dream Park",
+      "kind": "park",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "price": null,
+      "price_text": "Pay per ride or day pass — check on the day",
+      "hours": "Roughly 10:00–22:00; check seasonal days",
+      "tip": "A large family amusement park near 6th of October; confirm it is open before a long taxi ride.",
+      "source": ""
+    },
+    "felucca": {
+      "name": "Nile felucca sail at sunset",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.0405,
+      "lon": 31.2275,
+      "price": 400,
+      "price_text": "≈ EGP 300–600 per boat, agree the price first",
+      "hours": "Best around sunset; boats run into the evening",
+      "tip": "Agree the total price and duration before boarding, and confirm it is per boat not per person.",
+      "source": ""
+    },
+    "khan-food-walk": {
+      "name": "Old Cairo street food walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": 30.0465,
+      "lon": 31.2605,
+      "price": 200,
+      "price_text": "≈ EGP 150–300 for koshari, taameya and juice",
+      "hours": "Late morning to evening",
+      "tip": "Eat where locals queue; koshari and taameya are cheap, filling and vegetarian-friendly.",
+      "source": ""
+    },
+    "zamalek-walk": {
+      "name": "Zamalek neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.0605,
+      "lon": 31.2205,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Any time; cafés and shops daytime to evening",
+      "tip": "Leafy streets, galleries and cafés; a calm break from Downtown traffic.",
+      "source": ""
+    },
+    "muizz-tour": {
+      "name": "Al-Muizz Street guided walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 30.0505,
+      "lon": 31.2611,
+      "price": 600,
+      "price_text": "≈ EGP 400–800 per person with a guide — check on the day",
+      "hours": "Morning or evening tours",
+      "tip": "A guide helps you find the small monuments along the street; agree the price and route first.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day: Giza in the cool morning, then the museum and old Cairo.",
+      "days": [
+        {
+          "title": "Pyramids early, museum and bazaar later",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Go at opening to beat heat and crowds. Bring water and sun cover."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "On the plateau, a short walk or drive from the pyramids."
+            },
+            {
+              "place": "egyptian-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch first nearby, then escape the midday heat indoors. Check on the day for ticket times."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Wander the lanes, then eat dinner in the area. Many shops close Friday morning."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Tahrir Square"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Mosques, a bazaar walk and the Nile at sunset in a single day.",
+      "days": [
+        {
+          "title": "Islamic Cairo, bazaar and Nile sunset",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Start early for cooler air and views over the city."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Inside the Citadel. Dress modestly; it closes to tourists at prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "Guided walk through the old streets. Eat lunch along the way."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Shops and cafés. Many closed Friday morning."
+            },
+            {
+              "place": "felucca",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Taxi to the Zamalek riverfront for a sunset sail. Agree the price first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Zamalek"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasty day: street food, a market wander and a Nile-side evening.",
+      "days": [
+        {
+          "title": "Old Cairo food walk and bazaar",
+          "stops": [
+            {
+              "place": "khan-food-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Try koshari, taameya and grilled snacks. Go easy on tap water; drink bottled."
+            },
+            {
+              "place": "al-azhar",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "A short calm stop nearby. Open outside prayer times."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Browse, then sit in a historic café for tea. Many shops closed Friday morning."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Cross to Zamalek for cafés and dinner. Taxis are easy here."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Khan el-Khalili"
+    },
+    {
+      "id": "day-history-2",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Alternative history day: Dahshur pyramids plus Coptic and Islamic sights.",
+      "days": [
+        {
+          "title": "Dahshur, then old Cairo",
+          "stops": [
+            {
+              "place": "bent-pyramid",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Quieter than Giza. About 40 minutes by car; arrange a driver."
+            },
+            {
+              "place": "coptic-museum",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Back in the city. Indoor break from the heat."
+            },
+            {
+              "place": "babylon-fortress",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Next door. Visit in daylight. Grab lunch nearby."
+            },
+            {
+              "place": "st-sergius",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Short walk. Open outside service times."
+            },
+            {
+              "place": "cairo-tower",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "End with sunset views over the Nile in Zamalek."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-culture-2",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A gentler culture day: Citadel, churches and an evening show or sail.",
+      "days": [
+        {
+          "title": "Citadel, Coptic Cairo and the Nile",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning light and cooler air."
+            },
+            {
+              "place": "cave-church",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "A striking rock-cut church. Daylight hours are best."
+            },
+            {
+              "place": "city-of-the-dead",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Visit only in daylight and with a guide. Lunch nearby."
+            },
+            {
+              "place": "felucca",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset sail from Zamalek. Agree the price before boarding."
+            },
+            {
+              "place": "opera-house",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Check the programme and buy tickets at the box office during the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zamalek"
+    },
+    {
+      "id": "day-food-2",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market snacks, a neighbourhood wander and dinner by the river.",
+      "days": [
+        {
+          "title": "Bazaar bites and Zamalek dinner",
+          "stops": [
+            {
+              "place": "khan-food-walk",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Lunch on the go. Stick to busy stalls and bottled water."
+            },
+            {
+              "place": "bab-zuweila",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Climb the gate for rooftop views, then walk the lanes."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Cafés and small shops. Good for an early evening snack."
+            },
+            {
+              "place": "felucca",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Sunset sail, then dinner near the river. Agree the price first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zamalek"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day: Giza in the morning, the Egyptian Museum and Islamic Cairo after.",
+      "days": [
+        {
+          "title": "Pyramids early, museum midday, old Cairo at dusk",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Go at opening to beat heat and crowds. Bring water and sun cover."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "On the same plateau, a short walk or drive from the pyramids."
+            },
+            {
+              "place": "egyptian-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Indoor break from the heat. About 30-40 minutes by taxi from Giza."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Lunch and street snacks in Old Cairo."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening walk when the street is lit. Check tour times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Tahrir"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Mosques, bazaar and a Nile sunset for first-time visitors.",
+      "days": [
+        {
+          "title": "Citadel, bazaar and the Nile",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start early; the grounds are large and mostly open air."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Inside the Citadel. Closed to tourists at prayer times."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch nearby, then browse the lanes. Many shops shut Friday morning."
+            },
+            {
+              "place": "al-azhar",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short walk from the bazaar. Dress modestly; avoid prayer times."
+            },
+            {
+              "place": "felucca",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset sail from Zamalek. Agree the price before boarding."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Zamalek"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through the old city, with a museum and bazaar in between.",
+      "days": [
+        {
+          "title": "Museum, bazaar snacks, Nile dinner",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning is cooler and quieter."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Try koshari and grilled meats. Ask your guide for safe stalls."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Coffee and sweets in the lanes. Many shops closed Friday morning."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Cafés and dinner. About 20-30 minutes by taxi from the bazaar."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zamalek"
+    },
+    {
+      "id": "1n-history-2",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Alternative history day: Coptic Cairo and the Citadel, with Giza saved for sunrise.",
+      "days": [
+        {
+          "title": "Old Cairo churches, Citadel, Giza at sunset",
+          "stops": [
+            {
+              "place": "babylon-fortress",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Visible any time; go in daylight."
+            },
+            {
+              "place": "st-sergius",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Next to the fortress. Visit outside service times."
+            },
+            {
+              "place": "coptic-museum",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Indoor and cool. Check opening hours on the day."
+            },
+            {
+              "place": "citadel",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch first, then the Citadel. About 20-30 minutes by taxi."
+            },
+            {
+              "place": "pyramids",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon light, but confirm closing time; winter hours are shorter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown near Tahrir"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the Pyramids, the museum and old Islamic Cairo at an easy pace.",
+      "days": [
+        {
+          "title": "Giza plateau in the morning",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Go at opening to beat heat and crowds. Bring water and sun cover."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "On the same plateau, a short walk or drive from the pyramids."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch stop. Ask your guide for a clean, busy spot."
+            },
+            {
+              "place": "egyptian-museum",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Indoor break from the afternoon heat. Check closing time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Islamic Cairo and the Citadel",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Arrive early for cooler air and fewer people."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Inside the Citadel. Step aside during prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Guided walk through the old city. Evening tours are lit up but book ahead."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Shops stay open late. Many close Friday morning."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and a slow walk to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Zamalek"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Travellers who want mosques, bazaars, churches and the Nile at sunset.",
+      "days": [
+        {
+          "title": "Old Cairo and the Nile",
+          "stops": [
+            {
+              "place": "babylon-fortress",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Visible any time; go in daylight."
+            },
+            {
+              "place": "st-sergius",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Quiet in the morning. Dress modestly."
+            },
+            {
+              "place": "coptic-museum",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Indoor and calm. Check the day's closing time."
+            },
+            {
+              "place": "cave-church",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Large and striking. Services run in the evening."
+            },
+            {
+              "place": "felucca",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset sail. Agree the price before boarding."
+            }
+          ]
+        },
+        {
+          "title": "Mosques, bazaar and tower",
+          "stops": [
+            {
+              "place": "al-azhar",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Open outside prayer times. Cover shoulders and knees."
+            },
+            {
+              "place": "al-rifai",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Next door to Al-Azhar. Closed at prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Walk the old street with a guide. Bring cash for tips."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Bargain politely. Many shops shut Friday morning."
+            },
+            {
+              "place": "cairo-tower",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset views over the city and river. Open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or Zamalek"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around koshari, grilled meats and street snacks.",
+      "days": [
+        {
+          "title": "Old city flavours",
+          "stops": [
+            {
+              "place": "khan-food-walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Start with a guided snack walk. Eat where locals queue."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Browse, then stop for tea and sweets in a café."
+            },
+            {
+              "place": "al-azhar",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Quick visit outside prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "17:00",
+              "minutes": 150,
+              "note": "Evening walk when the street is lit. Ask for food stops."
+            }
+          ]
+        },
+        {
+          "title": "Zamalek cafés and the river",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning visit before the heat peaks."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch and café hopping in a walkable neighbourhood."
+            },
+            {
+              "place": "cairo-tower",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Go up before sunset for the best light."
+            },
+            {
+              "place": "felucca",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset sail, then dinner nearby. Agree the price first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zamalek or Downtown"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the big sights: Giza, the Egyptian Museum and the old city, at a calm pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into Downtown",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor and cool. Allow time at the ticket window; check on the day for closing time."
+            },
+            {
+              "place": "cairo-tower",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Short taxi to Zamalek. Go up near sunset for the river view."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and a stroll. Cafés stay open into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Giza plateau, early start",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Go at opening to beat heat and crowds. Bring water and sun cover."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "On the plateau, a short walk or drive from the pyramids."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch back in the city. Ask your guide for a clean, busy spot."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Late afternoon into evening. Many shops close Friday morning."
+            }
+          ]
+        },
+        {
+          "title": "Islamic and Coptic Cairo",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning is cooler and quieter. Wear shoes you can slip off."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Inside the Citadel. Closed to tourists at prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Guided walk through the old streets. Evening tours are lit up."
+            },
+            {
+              "place": "al-azhar",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Open outside prayer times. Dress modestly."
+            },
+            {
+              "place": "bab-zuweila",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Climb the tower for rooftop views if it is open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, near Tahrir Square"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Travellers who want mosques, bazaars, churches and a Nile sunset more than long museum queues.",
+      "days": [
+        {
+          "title": "Old Cairo and the river",
+          "stops": [
+            {
+              "place": "coptic-museum",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start indoors before the heat builds."
+            },
+            {
+              "place": "st-sergius",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "A short walk away. Visit outside service times."
+            },
+            {
+              "place": "babylon-fortress",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Visible from the street; daylight only."
+            },
+            {
+              "place": "felucca",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset sail from Zamalek. Agree the price first."
+            }
+          ]
+        },
+        {
+          "title": "Islamic Cairo on foot",
+          "stops": [
+            {
+              "place": "muizz-tour",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Morning tour is cooler. Book ahead if you want a guide."
+            },
+            {
+              "place": "al-azhar",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Outside prayer times. Modest dress."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch in the bazaar lanes."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Browse, then stay for the evening lights. Avoid Friday morning."
+            }
+          ]
+        },
+        {
+          "title": "Citadel, churches and a show",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Arrive at opening."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "The alabaster mosque inside the Citadel."
+            },
+            {
+              "place": "cave-church",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Big rock-cut church. Daylight hours are best."
+            },
+            {
+              "place": "opera-house",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Check the programme and buy tickets at the box office in the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zamalek, for cafés and the river"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around lunch and dinner, with the big sights slotted in between.",
+      "days": [
+        {
+          "title": "Bazaar lanes and street snacks",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning visit before the midday heat."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch walk: koshari, taameya, grilled meats. Go where locals queue."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Shop and snack. Many shops closed Friday morning."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening walk when the street is lit. Eat light before."
+            }
+          ]
+        },
+        {
+          "title": "Giza then a long dinner",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Early start to beat heat. Carry water."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Same plateau."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late-afternoon stroll, then pick a restaurant on the river."
+            }
+          ]
+        },
+        {
+          "title": "Old Cairo tastes and a sail",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning, before it gets hot."
+            },
+            {
+              "place": "cave-church",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Nearby; daylight hours."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch stop. Ask for the busy stalls."
+            },
+            {
+              "place": "felucca",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset sail to finish. Agree the price first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, walkable to the bazaar"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-timers who want the big monuments plus Islamic and Coptic Cairo at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and get your bearings",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor and cool. Go early in your trip while you are fresh."
+            },
+            {
+              "place": "cairo-tower",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset view over the Nile. About 15 minutes by taxi from Downtown."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner and a slow walk in this calm, leafy district."
+            }
+          ]
+        },
+        {
+          "title": "Pyramids and Sphinx",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Arrive at opening to beat heat and crowds. Bring water and sun cover."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short walk or drive within the plateau."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Late lunch of koshari and grilled meats back in the city."
+            }
+          ]
+        },
+        {
+          "title": "Islamic Cairo",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Start high for city views before it gets hot."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Inside the Citadel. Closed to tourists at prayer times."
+            },
+            {
+              "place": "al-azhar",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Dress modestly. Open outside prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Guided walk down the old street. Evening tours are lit up if you prefer."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Browsing and dinner. Many shops shut Friday morning."
+            }
+          ]
+        },
+        {
+          "title": "Old Cairo churches, then fly",
+          "stops": [
+            {
+              "place": "babylon-fortress",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Roman walls in daylight. Check out of your hotel first."
+            },
+            {
+              "place": "st-sergius",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "A short walk away. Avoid service times."
+            },
+            {
+              "place": "coptic-museum",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Indoor, good for late morning."
+            },
+            {
+              "place": "cave-church",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Big rock-cut church. Then head to the airport, allow plenty of time for traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, near the Egyptian Museum"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Travellers who want mosques, bazaars, churches and a Nile sunset rather than only the big sites.",
+      "days": [
+        {
+          "title": "Arrive, museum and Nile",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Cool indoor start to the trip."
+            },
+            {
+              "place": "felucca",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sail at sunset from Zamalek. Agree the price and time first."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner in the cafés afterwards."
+            }
+          ]
+        },
+        {
+          "title": "Pyramids and Sphinx",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Early start for cooler air and fewer people."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Same plateau, short stop."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch back in the city."
+            }
+          ]
+        },
+        {
+          "title": "Mosques and the bazaar",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning light and city views."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Inside the Citadel. Closed at prayer times."
+            },
+            {
+              "place": "al-rifai",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Pair with Al-Azhar nearby. Modest dress."
+            },
+            {
+              "place": "al-azhar",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Open outside prayer times."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Late afternoon into evening. Many shops closed Friday morning."
+            }
+          ]
+        },
+        {
+          "title": "Old Cairo, then fly",
+          "stops": [
+            {
+              "place": "babylon-fortress",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Check out first and keep bags with you."
+            },
+            {
+              "place": "st-sergius",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Short walk. Avoid service times."
+            },
+            {
+              "place": "cave-church",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Morning or early evening is best."
+            },
+            {
+              "place": "coptic-museum",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Indoor finish, then to the airport. Allow extra time for traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Zamalek or Downtown"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Visitors who plan the day around meals and markets, with the main sights slotted in between.",
+      "days": [
+        {
+          "title": "Arrive, museum and Zamalek",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor and cool after your flight."
+            },
+            {
+              "place": "zamalek-walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Café stop, then dinner in the neighbourhood."
+            },
+            {
+              "place": "felucca",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Optional sunset sail if you still have energy."
+            }
+          ]
+        },
+        {
+          "title": "Pyramids, then a food walk",
+          "stops": [
+            {
+              "place": "pyramids",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Early start. Bring water and snacks."
+            },
+            {
+              "place": "sphinx",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short stop on the same plateau."
+            },
+            {
+              "place": "khan-food-walk",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch of koshari, grilled meats and street snacks."
+            },
+            {
+              "place": "khan-el-khalili",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Market browsing and tea. Many shops closed Friday morning."
+            }
+          ]
+        },
+        {
+          "title": "Islamic Cairo and the bazaar",
+          "stops": [
+            {
+              "place": "citadel",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning visit before the heat."
+            },
+            {
+              "place": "muhammad-ali",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Inside the Citadel. Closed at prayer times."
+            },
+            {
+              "place": "muizz-tour",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Guided walk with food stops. Evening tours are lit up."
+            },
+            {
+              "place": "al-azhar",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Quick visit outside prayer times."
+            }
+          ]
+        },
+        {
+          "title": "Old Cairo, then fly",
+          "stops": [
+            {
+              "place": "babylon-fortress",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Check out first. Daylight visit."
+            },
+            {
+              "place": "st-sergius",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Short walk. Avoid service times."
+            },
+            {
+              "place": "coptic-museum",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Indoor finish before the airport."
+            },
+            {
+              "place": "cave-church",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Then leave plenty of time for traffic to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, near Khan el-Khalili"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Pyramids, the Egyptian Museum and Islamic Cairo."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Mosques, bazaars and the Nile at sunset."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Koshari, grilled meats and street snacks."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        900,
+        3500
+      ],
+      "why": "Central for the Egyptian Museum, metro and cheap eats. Lively and noisy; good value.",
+      "center": [
+        30.045,
+        31.24
+      ]
+    },
+    {
+      "area": "Zamalek",
+      "range": [
+        2000,
+        7000
+      ],
+      "why": "Quiet island district with cafés and embassies. Calmer evenings, easy taxis to most sights.",
+      "center": [
+        30.06,
+        31.22
+      ]
+    },
+    {
+      "area": "Giza",
+      "range": [
+        1200,
+        6000
+      ],
+      "why": "Closest to the Pyramids and the Grand Egyptian Museum. Far from Downtown sights.",
+      "center": [
+        29.99,
+        31.13
+      ]
+    },
+    {
+      "area": "Heliopolis",
+      "range": [
+        1000,
+        4000
+      ],
+      "why": "Near the airport and quiet streets. Best for early flights or a last night.",
+      "center": [
+        30.09,
+        31.33
+      ]
+    }
+  ],
+  "food": [
+    "Try koshari: rice, lentils and pasta with tomato sauce. Cheap and filling, often under EGP 100.",
+    "Street snacks: ta'ameya (herb falafel), ful medames and fresh baladi bread. Look for busy stalls.",
+    "Grilled meats and pigeon are Cairo classics. Ask for the price before ordering at tourist-area restaurants.",
+    "Sweet tooth? Try basbousa and kunafa from a local sweet shop, sold by weight.",
+    "Tap water is not for visitors; drink bottled water and be careful with raw salads at cheap places."
+  ],
+  "more_time": [
+    "Add a day for Islamic Cairo: the Citadel, Sultan Hassan Mosque and Khan el-Khalili bazaar.",
+    "Swap a city day for Saqqara and Dahshur to see older pyramids with fewer crowds.",
+    "Take a short Nile dinner cruise or a felucca ride at sunset instead of an evening indoors."
+  ]
+}

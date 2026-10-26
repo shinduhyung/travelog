@@ -1,0 +1,173 @@
+{
+ "city": "Miami",
+ "trips": [
+  {
+   "place": "Homestead",
+   "label": "",
+   "position": {
+    "id": 409347,
+    "name": "Homestead, FL",
+    "city": "Homestead",
+    "lat": 25.46872,
+    "lng": -80.47756
+   },
+   "town": {
+    "name": "Homestead",
+    "lat": 25.46872,
+    "lng": -80.47756
+   },
+   "road": {
+    "km": 55,
+    "min": 50,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 140.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$6",
+     "time": "1h 28m",
+     "via": "Dadeland South Metrorail Station to Civic Ct Station",
+     "source": "https://www.rome2rio.com/s/Miami/Homestead"
+    }
+   },
+   "route_note": "Take Metrorail to Dadeland South then a Miami-Dade bus toward Homestead, or drive US-1 south; the park entrance is a further drive.",
+   "see": [
+    "Everglades National Park Ernest Coe Visitor Center",
+    "Anhinga Trail",
+    "Royal Palm boardwalk",
+    "Fruit and spice park stands"
+   ],
+   "visit": "Full day",
+   "tour_query": "Everglades National Park day trip from Miami",
+   "quests": [],
+   "recommended": "car",
+   "why": "Transit requires a Metrorail-to-bus transfer and the park entrance is a further drive, so a car is clearly easier.",
+   "stars": 4,
+   "know": [
+    "Gateway to Everglades and Biscayne national parks",
+    "Start early to beat afternoon heat and storms"
+   ]
+  },
+  {
+   "place": "Fort Lauderdale",
+   "label": "",
+   "position": {
+    "id": 314225,
+    "name": "Fort Lauderdale International Airport, FL",
+    "city": "Dania Beach",
+    "lat": 26.0715,
+    "lng": -80.1452
+   },
+   "town": {
+    "name": "Fort Lauderdale",
+    "lat": 26.12231,
+    "lng": -80.14338
+   },
+   "road": {
+    "km": 46,
+    "min": 41,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 120.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$4-$45",
+     "time": "33m",
+     "via": "Miami to Fort Lauderdale",
+     "source": "https://www.rome2rio.com/s/Miami/Fort%20Lauderdale"
+    },
+    "bus": {
+     "from": "$27-$35",
+     "time": "1h",
+     "via": "Miami Airport Station to Ft Lauderdale Broward Park & Ride",
+     "source": "https://www.rome2rio.com/s/Miami/Fort%20Lauderdale"
+    }
+   },
+   "route_note": "Brightline or Tri-Rail runs direct from Miami to downtown Fort Lauderdale in under an hour, no changes needed.",
+   "see": [
+    "Fort Lauderdale Beach and promenade",
+    "Las Olas Boulevard",
+    "Water Taxi canal tour",
+    "Bonnet House Museum & Gardens"
+   ],
+   "visit": "Full day",
+   "tour_query": "Fort Lauderdale day trip from Miami",
+   "quests": [
+    "Jungle Queen Riverboat"
+   ],
+   "recommended": "train",
+   "why": "Brightline or Tri-Rail runs direct in under an hour and drops you downtown near the sights.",
+   "stars": 3,
+   "know": [
+    "Book Brightline seats ahead for weekend travel",
+    "Downtown and the beach are a short walk or local ride apart"
+   ]
+  },
+  {
+   "place": "West Palm Beach",
+   "label": "",
+   "position": {
+    "id": 17349502,
+    "name": "West Palm Beach, FL",
+    "city": "West Palm Beach",
+    "lat": 26.71201,
+    "lng": -80.05546
+   },
+   "town": {
+    "name": "West Palm Beach",
+    "lat": 26.71534,
+    "lng": -80.05337
+   },
+   "road": {
+    "km": 114,
+    "min": 90,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 290.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$5-$70",
+     "time": "1h 16m",
+     "via": "Miami to West Palm Beach",
+     "source": "https://www.rome2rio.com/s/Miami/West%20Palm%20Beach"
+    },
+    "bus": {
+     "from": "$11-$19",
+     "time": "2h",
+     "via": "Miami Airport Station to West Palm Beach Bus Station",
+     "source": "https://www.rome2rio.com/s/Miami/West%20Palm%20Beach"
+    }
+   },
+   "route_note": "Brightline runs direct from MiamiCentral to West Palm Beach in about an hour; Tri-Rail is a slower direct alternative.",
+   "see": [
+    "Clematis Street and the waterfront",
+    "Norton Museum of Art",
+    "Kravis Center area",
+    "Palm Beach island across the bridge"
+   ],
+   "visit": "Full day",
+   "tour_query": "West Palm Beach day trip from Miami",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct Brightline service takes about an hour with no changes, far better than the two-hour bus.",
+   "stars": 3,
+   "know": [
+    "Brightline fares vary widely, so book early for lower prices",
+    "Tri-Rail is a slower but direct alternative"
+   ]
+  }
+ ],
+ "problems": [
+  "Key Largo: not a town in cities15000.json (US), dropped",
+  "Everglades City: no Omio position, dropped"
+ ]
+}

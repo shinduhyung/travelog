@@ -1,0 +1,2159 @@
+{
+  "city": "Moscow",
+  "checked": "October 2026",
+  "currency": "RUB",
+  "usd_rate": 81.5205,
+  "intro": "Moscow rewards visitors with grand history, world-class art, and a fast, cheap metro. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 55.6457,
+      "west": 37.5217,
+      "north": 55.8503,
+      "east": 37.7181,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 250,
+      "flag_airport": 500,
+      "per_km": 40,
+      "min_fare": 300
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Metro is fast, cheap and runs about 05:30-01:00; stations are attractions in themselves.",
+      "Buses, trolleybuses and trams fill the gaps; a Troika card cuts fares.",
+      "Yandex Go is the main ride app; taxis are metered but agree the price first.",
+      "Driving in the centre is slow and parking is costly; use park-and-ride.",
+      "Central streets are walkable; bike lanes are limited and winter is icy.",
+      "No useful ferry service in the city."
+    ],
+    "sources": []
+  },
+  "places": {
+    "red_square": {
+      "name": "Red Square",
+      "landmark": "Red Square",
+      "kind": "sight",
+      "lat": 55.7541,
+      "lon": 37.62,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Open 24 hours; closed to cars. Check for event closures.",
+      "tip": "Come early morning or after dark for fewer crowds and good photos.",
+      "source": ""
+    },
+    "kremlin": {
+      "name": "Moscow Kremlin",
+      "landmark": "Moscow Kremlin",
+      "kind": "sight",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "price": 1000,
+      "price_text": "≈ RUB 1000 for the grounds; cathedrals and Armoury cost extra. Check on the day.",
+      "hours": "Closed Thursday. Usually 10:00–17:00; check on the day.",
+      "tip": "Buy tickets online in advance and bring your passport.",
+      "source": "http://www.kreml.ru/en-Us/"
+    },
+    "st_basil": {
+      "name": "St. Basil's Cathedral",
+      "landmark": "St. Basil's Cathedral",
+      "kind": "sight",
+      "lat": 55.7525,
+      "lon": 37.6231,
+      "price": 1000,
+      "price_text": "≈ RUB 1000 entry; check on the day",
+      "hours": "Usually 10:00–18:00, closed some days in winter; check on the day.",
+      "tip": "The outside is free and the best view is from the square's south end.",
+      "source": ""
+    },
+    "lenin": {
+      "name": "Lenin's Mausoleum",
+      "landmark": "Lenin's Mausoleum",
+      "kind": "sight",
+      "lat": 55.7538,
+      "lon": 37.6215,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Usually Tue–Sat 10:00–13:00; often closed Monday and Sunday. Check on the day.",
+      "tip": "Expect a security queue; no bags, phones or photos inside.",
+      "source": ""
+    },
+    "metro": {
+      "name": "Moscow Metro Stations",
+      "landmark": "Moscow Metro Stations",
+      "kind": "sight",
+      "lat": 55.753,
+      "lon": 37.62,
+      "price": 60,
+      "price_text": "≈ RUB 60 per ride; day passes available",
+      "hours": "About 05:30–01:00 daily",
+      "tip": "Ride the circle line and stop at Komsomolskaya, Novoslobodskaya and Belorusskaya for the best halls.",
+      "source": "https://mosmetro.ru/"
+    },
+    "tretyakov": {
+      "name": "Tretyakov Gallery",
+      "landmark": "Tretyakov Gallery",
+      "kind": "museum",
+      "lat": 55.7414,
+      "lon": 37.6206,
+      "price": 800,
+      "price_text": "≈ RUB 700–900; check on the day",
+      "hours": "Closed Monday. Usually 10:00–18:00, later some days.",
+      "tip": "Focus on the main building for Russian art; the Vrubel hall is a highlight.",
+      "source": "https://www.tretyakovgallery.ru/en/"
+    },
+    "christ_saviour": {
+      "name": "Cathedral of Christ the Saviour",
+      "landmark": "Cathedral of Christ the Saviour",
+      "kind": "sight",
+      "lat": 55.7447,
+      "lon": 37.6056,
+      "price": 0,
+      "price_text": "Free to enter; small fee for the viewing platform",
+      "hours": "Usually 08:00–20:00; check on the day",
+      "tip": "Dress modestly and walk the Patriarch Bridge for the best photo of the cathedral.",
+      "source": ""
+    },
+    "gum": {
+      "name": "GUM",
+      "landmark": "GUM",
+      "kind": "sight",
+      "lat": 55.7545,
+      "lon": 37.62,
+      "price": 0,
+      "price_text": "Free to enter; shops and cafes priced separately",
+      "hours": "Usually 10:00–22:00 daily",
+      "tip": "Go for the glass roof and ice cream; window shopping is fine.",
+      "source": "https://www.gum.ru/"
+    },
+    "bolshoi": {
+      "name": "Bolshoi Theatre",
+      "landmark": "Bolshoi Theatre",
+      "kind": "show",
+      "lat": 55.7602,
+      "lon": 37.6186,
+      "price": 3000,
+      "price_text": "≈ RUB 1500–10000 depending on seat and show",
+      "hours": "Box office usually 11:00–19:00; performances in the evening",
+      "tip": "Book ballet or opera weeks ahead online; the historic stage is the one to see.",
+      "source": "https://www.bolshoi.ru/en/"
+    },
+    "novodevichy": {
+      "name": "Novodevichy Convent",
+      "landmark": "Novodevichy Convent",
+      "kind": "sight",
+      "lat": 55.7245,
+      "lon": 37.5559,
+      "price": 500,
+      "price_text": "≈ RUB 300–500 for museums; grounds may be free. Check on the day.",
+      "hours": "Usually 09:00–17:00; some buildings closed certain days",
+      "tip": "Pair it with the nearby cemetery, where many famous Russians are buried.",
+      "source": ""
+    },
+    "sparrow_hills": {
+      "name": "Sparrow Hills",
+      "landmark": "Sparrow Hills",
+      "kind": "sight",
+      "lat": 55.7093,
+      "lon": 37.5422,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Best city panorama; ride the cable car or walk down to the river.",
+      "source": ""
+    },
+    "hist_museum": {
+      "name": "State Historical Museum",
+      "landmark": "State Historical Museum",
+      "kind": "museum",
+      "lat": 55.7562,
+      "lon": 37.6186,
+      "price": 700,
+      "price_text": "≈ RUB 500–800; check on the day",
+      "hours": "Closed Tuesday. Usually 10:00–18:00.",
+      "tip": "Good rainy-day stop right on Red Square; allow two hours.",
+      "source": "https://www.shm.ru/"
+    },
+    "vdnkh": {
+      "name": "VDNKh",
+      "landmark": "VDNKh",
+      "kind": "park",
+      "lat": 55.8291,
+      "lon": 37.6277,
+      "price": 0,
+      "price_text": "Free to enter; some pavilions and rides cost extra",
+      "hours": "Grounds open 24 hours; pavilions usually 10:00–19:00",
+      "tip": "Huge Soviet-era park; rent a bike or take the free shuttle to cover ground.",
+      "source": "https://vdnh.ru/en/"
+    },
+    "kolomenskoye": {
+      "name": "Kolomenskoye Estate",
+      "landmark": "Kolomenskoye Estate",
+      "kind": "park",
+      "lat": 55.6669,
+      "lon": 37.6656,
+      "price": 0,
+      "price_text": "Free grounds; small fees for some buildings",
+      "hours": "Grounds usually 08:00–21:00; museums shorter hours",
+      "tip": "Walk to the white Church of the Ascension and the wooden palace area.",
+      "source": ""
+    },
+    "attractionmania": {
+      "name": "Attractionmania",
+      "landmark": "Attractionmania",
+      "kind": "activity",
+      "lat": 55.7558,
+      "lon": 37.6176,
+      "price": null,
+      "price_text": "Price varies by attraction; check on the day",
+      "hours": "Check on the day",
+      "tip": "Confirm location and opening hours before you go; details change.",
+      "source": ""
+    },
+    "blue_dancers": {
+      "name": "Blue Dancers",
+      "landmark": "Blue Dancers",
+      "kind": "sight",
+      "lat": 55.7471,
+      "lon": 37.6052,
+      "price": 800,
+      "price_text": "Included in Tretyakov Gallery ticket (≈ RUB 700–900)",
+      "hours": "Closed Monday. Usually 10:00–18:00.",
+      "tip": "This is a painting by Degas in the Tretyakov; ask staff which room.",
+      "source": "https://www.tretyakovgallery.ru/en/"
+    },
+    "borscht": {
+      "name": "Borscht (classic Russian soup)",
+      "landmark": "Borscht",
+      "kind": "food",
+      "lat": 55.7558,
+      "lon": 37.6173,
+      "price": 500,
+      "price_text": "≈ RUB 350–700 a bowl at a sit-down cafe",
+      "hours": "Most cafes 10:00–23:00",
+      "tip": "Order it with sour cream and dark bread; try a well-known canteen for a cheap version.",
+      "source": ""
+    },
+    "dodo_pizza": {
+      "name": "Dodo Pizza",
+      "landmark": "Dodo Pizza",
+      "kind": "food",
+      "lat": 55.7558,
+      "lon": 37.6173,
+      "price": 600,
+      "price_text": "≈ RUB 400–800 for a pizza",
+      "hours": "Usually 10:00–23:00 daily",
+      "tip": "Reliable budget chain with English menus; good for a quick family meal.",
+      "source": "https://dodopizza.com/"
+    },
+    "dream_island": {
+      "name": "Dream Island",
+      "landmark": "Dream Island",
+      "kind": "activity",
+      "lat": 55.6702,
+      "lon": 37.6976,
+      "price": 2500,
+      "price_text": "≈ RUB 2000–3500 day pass; check on the day",
+      "hours": "Usually 10:00–22:00 daily",
+      "tip": "Indoor theme park; buy tickets online and go on a weekday to avoid queues.",
+      "source": "https://dreamisland.ru/"
+    },
+    "gorky_park": {
+      "name": "Gorky Park, Moscow",
+      "landmark": "Gorky Park, Moscow",
+      "kind": "park",
+      "lat": 55.7333,
+      "lon": 37.5833,
+      "price": 0,
+      "price_text": "Free to enter; rentals and cafes extra",
+      "hours": "Open 24 hours",
+      "tip": "Rent a bike or skate and follow the river embankment; lively in summer.",
+      "source": "https://www.park-gorkogo.com/"
+    },
+    "kazansky": {
+      "name": "Kazansky Cathedral",
+      "landmark": "Kazansky Cathedral",
+      "kind": "sight",
+      "lat": 55.7559,
+      "lon": 37.6209,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Usually 08:00–20:00; check on the day",
+      "tip": "Small active church on Red Square; step in briefly and dress modestly.",
+      "source": ""
+    },
+    "luzhniki": {
+      "name": "Luzhniki Stadium",
+      "landmark": "Luzhniki Stadium",
+      "kind": "sight",
+      "lat": 55.7158,
+      "lon": 37.5537,
+      "price": null,
+      "price_text": "Tours and events priced separately; check on the day",
+      "hours": "Check on the day; event days vary",
+      "tip": "Check the fixture list; a match or concert is the best reason to visit.",
+      "source": ""
+    },
+    "danilovsky_market": {
+      "name": "Danilovsky Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 55.7113,
+      "lon": 37.6231,
+      "price": 800,
+      "price_text": "Meals ≈ RUB 500–1200; produce priced per item",
+      "hours": "Usually 08:00–21:00 daily",
+      "tip": "Food hall plus fresh produce; go hungry and try a few stalls.",
+      "source": ""
+    },
+    "arbat_walk": {
+      "name": "Arbat Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 55.7494,
+      "lon": 37.5931,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Pedestrian street with cafes and street art; wander the side lanes for quieter spots.",
+      "source": ""
+    },
+    "river_cruise": {
+      "name": "Moskva River boat cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 55.7446,
+      "lon": 37.6055,
+      "price": 1000,
+      "price_text": "≈ RUB 700–1500 for a 1-hour cruise; check on the day",
+      "hours": "Usually 11:00–22:00 in season",
+      "tip": "Book a sunset departure near the Cathedral of Christ the Saviour for the best views.",
+      "source": ""
+    },
+    "patriarch_ponds": {
+      "name": "Patriarch Ponds walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 55.7642,
+      "lon": 37.5928,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Leafy pond-side stroll with cafes; a relaxed break from the big sights.",
+      "source": ""
+    },
+    "zaryadye": {
+      "name": "Zaryadye Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 55.7512,
+      "lon": 37.6291,
+      "price": 0,
+      "price_text": "Free; some attractions cost extra",
+      "hours": "Open 24 hours",
+      "tip": "Walk the floating bridge over the river for a free view of the Kremlin.",
+      "source": "https://zaryadyepark.ru/en/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day for the big sights: Red Square, the Kremlin and the metro palaces.",
+      "days": [
+        {
+          "title": "Red Square and the Kremlin",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early for space and photos. Check for event closures."
+            },
+            {
+              "place": "st_basil",
+              "at": "09:50",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; closed some days in winter, so check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Coffee or an early lunch inside. Usually 10:00–22:00."
+            },
+            {
+              "place": "kremlin",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day. Buy tickets ahead."
+            },
+            {
+              "place": "metro",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Ride between the central stations. Quieter mid-morning, but fine now."
+            },
+            {
+              "place": "zaryadye",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset view back over the Kremlin. Open 24 hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A history day: Soviet landmarks, the mausoleum and the war memorials.",
+      "days": [
+        {
+          "title": "Red Square, mausoleum and Soviet sights",
+          "stops": [
+            {
+              "place": "lenin",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00; often closed Monday and Sunday. Check on the day."
+            },
+            {
+              "place": "hist_museum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00."
+            },
+            {
+              "place": "borscht",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch nearby. Most cafes 10:00–23:00."
+            },
+            {
+              "place": "novodevichy",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Take the metro. Usually 09:00–17:00; some buildings closed certain days."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "City view over the river. Open 24 hours; best at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "An art day: Russian painting at the Tretyakov, then a walk and the metro.",
+      "days": [
+        {
+          "title": "Tretyakov and the centre",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Usually 10:00–18:00, later some days. Go early."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Same building area. Closed Monday."
+            },
+            {
+              "place": "borscht",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Walk along the river. Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Stroll and a snack. Open 24 hours; best in the evening."
+            },
+            {
+              "place": "metro",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "End with the decorated stations. About 05:30–01:00 daily."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Khamovniki"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the classic sights in one tight day: Red Square, the Kremlin and the metro.",
+      "days": [
+        {
+          "title": "Red Square and the Kremlin",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early for space and photos. Check for event closures."
+            },
+            {
+              "place": "st_basil",
+              "at": "09:50",
+              "minutes": 60,
+              "note": "At the south end of the square. Usually 10:00–18:00; check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Across the square. Good spot for a coffee and a snack."
+            },
+            {
+              "place": "kremlin",
+              "at": "12:15",
+              "minutes": 180,
+              "note": "Closed Thursday. Buy tickets ahead if you can. Grounds and cathedrals take about three hours."
+            },
+            {
+              "place": "zaryadye",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk downhill. Sunset views over the river."
+            }
+          ]
+        },
+        {
+          "title": "Metro palaces and theatre",
+          "stops": [
+            {
+              "place": "metro",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Ride a few central lines and step off at the grand stations. Quieter mid-morning."
+            },
+            {
+              "place": "bolshoi",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "See the square and box office by day. Book an evening performance if you can."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Evening stroll and dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Visitors who want Soviet and imperial history side by side, from the mausoleum to the war memorials.",
+      "days": [
+        {
+          "title": "Red Square and Soviet landmarks",
+          "stops": [
+            {
+              "place": "lenin",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00; often closed Monday and Sunday. Check on the day and arrive early."
+            },
+            {
+              "place": "red_square",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Walk the square and the walls."
+            },
+            {
+              "place": "hist_museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. At the north end of the square."
+            },
+            {
+              "place": "kazansky",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Short stop on the way to lunch."
+            },
+            {
+              "place": "gum",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Lunch inside the arcade."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and the river",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Armoury needs a separate timed ticket."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk down to the river. Usually 08:00–20:00."
+            },
+            {
+              "place": "river_cruise",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "In season only, usually 11:00–22:00. Check sailings on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers with one day: the Tretyakov's Russian masters, then the Kremlin's churches and a gallery walk.",
+      "days": [
+        {
+          "title": "Tretyakov and the south bank",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is calmest. Start with the icons."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "In the same gallery. Closed Monday."
+            },
+            {
+              "place": "gorky_park",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Walk down to the park for lunch and a stroll."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Late afternoon light inside. Usually 08:00–20:00."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin churches and the metro",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. The cathedral interiors are the art highlight."
+            },
+            {
+              "place": "metro",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Palace-like stations; a cheap design tour."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Galleries and dinner along the street."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Khamovniki"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Kremlin, Red Square and the grand metro in two full days.",
+      "days": [
+        {
+          "title": "Red Square and the Kremlin",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early before crowds and tour groups."
+            },
+            {
+              "place": "st_basil",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "At the south end of the square. Check opening days in winter."
+            },
+            {
+              "place": "gum",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Across the square. Good spot for a coffee and a look at the arcades."
+            },
+            {
+              "place": "kremlin",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Buy tickets ahead; security lines can be long."
+            },
+            {
+              "place": "zaryadye",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Short walk south. Stay for sunset over the river."
+            }
+          ]
+        },
+        {
+          "title": "Metro palaces and art",
+          "stops": [
+            {
+              "place": "metro",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Ride a loop through the central stations; quieter mid-morning."
+            },
+            {
+              "place": "tretyakov",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Closed Monday. Take the metro to Tretyakovskaya."
+            },
+            {
+              "place": "borscht",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Lunch near the gallery; most cafes serve all day."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk back toward the river. Modest dress inside."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening stroll; street food and souvenirs."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want Soviet landmarks, cathedrals and the big war story told in order.",
+      "days": [
+        {
+          "title": "The Soviet centre",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start here for orientation."
+            },
+            {
+              "place": "lenin",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00; often closed Monday and Sunday. Queues are short but strict on bags."
+            },
+            {
+              "place": "hist_museum",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Closed Tuesday. At the north end of the square."
+            },
+            {
+              "place": "borscht",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "metro",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "See the Soviet-era station design; mid-afternoon is calmer."
+            }
+          ]
+        },
+        {
+          "title": "Convents, hills and the river",
+          "stops": [
+            {
+              "place": "novodevichy",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is quiet. Some buildings close on certain days."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Metro to Vorobyovy Gory. City view from the lookout."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Late lunch; many food stalls."
+            },
+            {
+              "place": "river_cruise",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Summer only; check the day's departures. Sunset is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Gallery-goers who want the Tretyakov and a slower, walkable two days.",
+      "days": [
+        {
+          "title": "Tretyakov and the river",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is calmest."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "In the same gallery; check the room location at the desk."
+            },
+            {
+              "place": "borscht",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Short walk toward the river."
+            },
+            {
+              "place": "patriarch_ponds",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Metro or taxi; a leafy late-afternoon walk."
+            }
+          ]
+        },
+        {
+          "title": "Centre and the metro",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early light for photos."
+            },
+            {
+              "place": "gum",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Coffee stop inside the arcades."
+            },
+            {
+              "place": "metro",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Treat the stations as public art; quieter mid-morning."
+            },
+            {
+              "place": "bolshoi",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Book a matinee or evening performance ahead; box office usually 11:00–19:00."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tverskoy"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the Kremlin, Red Square and the metro palaces without rushing.",
+      "days": [
+        {
+          "title": "Arrive and Red Square at dusk",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Open 24 hours, but check for event closures. Cobbles are uneven, wear flat shoes."
+            },
+            {
+              "place": "st_basil",
+              "at": "16:50",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; closed some days in winter, so check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00. Stay for dinner inside; it is lit up in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin morning, metro afternoon",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day. Buy tickets ahead."
+            },
+            {
+              "place": "lenin",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00. Often closed Monday and Sunday. No bags inside."
+            },
+            {
+              "place": "borscht",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Lunch nearby in Kitay-Gorod. Most cafes 10:00–23:00."
+            },
+            {
+              "place": "metro",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "About 05:30–01:00 daily. Quieter mid-morning, but afternoon works. Buy a single-ride card."
+            }
+          ]
+        },
+        {
+          "title": "Art and the river",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Usually 10:00–18:00, later some days. Weekday morning is calmest."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day. Late afternoon light is best."
+            },
+            {
+              "place": "river_cruise",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually 11:00–22:00 in season. Sunset trips sell out in summer."
+            },
+            {
+              "place": "zaryadye",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Good sunset spot over the river."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod, walkable to Red Square"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want Soviet landmarks, cathedrals and the big museums in a steady pace.",
+      "days": [
+        {
+          "title": "Red Square and Soviet memory",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Open 24 hours; check for event closures. Early morning is quiet."
+            },
+            {
+              "place": "lenin",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00. Often closed Monday and Sunday. Queues move fast."
+            },
+            {
+              "place": "hist_museum",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00. Good rainy-day backup."
+            },
+            {
+              "place": "borscht",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch in Kitay-Gorod. Most cafes 10:00–23:00."
+            },
+            {
+              "place": "kazansky",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Usually 08:00–20:00; check on the day. Quick stop on the way back."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and the metro palaces",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day. Armoury needs a separate ticket."
+            },
+            {
+              "place": "metro",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "About 05:30–01:00 daily. Ride a few central lines and get off at the grand stations."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Open 24 hours. Evening is liveliest; watch for pickpockets."
+            }
+          ]
+        },
+        {
+          "title": "Convent, hills and stadium",
+          "stops": [
+            {
+              "place": "novodevichy",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually 09:00–17:00; some buildings closed certain days. Morning is best."
+            },
+            {
+              "place": "luzhniki",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Check on the day; event days vary. Walk the outside if no match."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Sunset is best, but afternoon gives the city view."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00 daily. Good lunch or early dinner stop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod, near the main sights"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Gallery lovers: Tretyakov first, then architecture and street art between meals.",
+      "days": [
+        {
+          "title": "Tretyakov and the river",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Usually 10:00–18:00, later some days. Weekday morning is calmest."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Closed Monday. Usually 10:00–18:00. Check it is in the same building before you go."
+            },
+            {
+              "place": "borscht",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Lunch in Khamovniki. Most cafes 10:00–23:00."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day. Late afternoon light is best."
+            },
+            {
+              "place": "zaryadye",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Open 24 hours. Walk the floating bridge for river views."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and metro design",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day. Cathedrals are the highlight."
+            },
+            {
+              "place": "red_square",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Open 24 hours; check for event closures."
+            },
+            {
+              "place": "gum",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00. Lunch here, then look at the arcades."
+            },
+            {
+              "place": "metro",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "About 05:30–01:00 daily. Treat the stations as public art."
+            }
+          ]
+        },
+        {
+          "title": "Parks and markets",
+          "stops": [
+            {
+              "place": "gorky_park",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Open 24 hours. Summer afternoon is best; rent a bike if warm."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00 daily. Lunch among the food stalls."
+            },
+            {
+              "place": "patriarch_ponds",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Late afternoon is pleasant and quiet."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Open 24 hours. Evening is liveliest for galleries and cafes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Khamovniki, near the Tretyakov"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-time visitors who want the Kremlin, Red Square and the metro palaces without rushing.",
+      "days": [
+        {
+          "title": "Arrive and Red Square at dusk",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Check for event closures."
+            },
+            {
+              "place": "st_basil",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00. Lit up in the evening."
+            },
+            {
+              "place": "borscht",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Dinner nearby. Most cafes 10:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin morning, metro afternoon",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "lenin",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00; often closed Monday and Sunday."
+            },
+            {
+              "place": "metro",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "About 05:30–01:00 daily. Quieter mid-morning."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening stroll. Open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "History and river views",
+          "stops": [
+            {
+              "place": "hist_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00."
+            },
+            {
+              "place": "zaryadye",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Good sunset spot."
+            },
+            {
+              "place": "river_cruise",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Usually 11:00–22:00 in season."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Convent and park, then fly",
+          "stops": [
+            {
+              "place": "novodevichy",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Usually 09:00–17:00; some buildings closed certain days."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Open 24 hours. City views."
+            },
+            {
+              "place": "gorky_park",
+              "at": "13:15",
+              "minutes": 120,
+              "note": "Open 24 hours. Lunch kiosks in summer."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00. Last meal before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Travellers who want cathedrals, Soviet landmarks and war memorials in a calm pace.",
+      "days": [
+        {
+          "title": "Arrive and the square",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Check for event closures."
+            },
+            {
+              "place": "kazansky",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00."
+            },
+            {
+              "place": "borscht",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Dinner. Most cafes 10:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and mausoleum",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "lenin",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00; often closed Monday and Sunday."
+            },
+            {
+              "place": "hist_museum",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00."
+            }
+          ]
+        },
+        {
+          "title": "Soviet sights and the metro",
+          "stops": [
+            {
+              "place": "metro",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "About 05:30–01:00 daily. Quieter mid-morning."
+            },
+            {
+              "place": "vdnkh",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "Grounds open 24 hours; pavilions usually 10:00–19:00."
+            },
+            {
+              "place": "luzhniki",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Check on the day; event days vary."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Sunset views."
+            }
+          ]
+        },
+        {
+          "title": "Estates and cathedrals, then fly",
+          "stops": [
+            {
+              "place": "kolomenskoye",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Grounds usually 08:00–21:00; museums shorter hours."
+            },
+            {
+              "place": "novodevichy",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Usually 09:00–17:00; some buildings closed certain days."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00. Last meal before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Gallery lovers: Tretyakov, the metro as public art, and a Bolshoi evening.",
+      "days": [
+        {
+          "title": "Arrive and the square",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Check for event closures."
+            },
+            {
+              "place": "st_basil",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00."
+            },
+            {
+              "place": "borscht",
+              "at": "19:15",
+              "minutes": 45,
+              "note": "Dinner. Most cafes 10:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Tretyakov morning",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Usually 10:00–18:00, later some days."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Closed Monday. Usually 10:00–18:00."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "patriarch_ponds",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Late afternoon walk."
+            }
+          ]
+        },
+        {
+          "title": "Metro art and an evening show",
+          "stops": [
+            {
+              "place": "metro",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "About 05:30–01:00 daily. Quieter mid-morning."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Lunch on the way."
+            },
+            {
+              "place": "bolshoi",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Box office usually 11:00–19:00; performances in the evening. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and modern art, then fly",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "zaryadye",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Good views."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00. Last meal before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Tverskoy"
+    },
+    {
+      "id": "5n-culture",
+      "length": "5n",
+      "style": "culture",
+      "nights": 5,
+      "for": "First-timers who want the Kremlin, Red Square and the metro palaces without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease into Kitay-Gorod",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Check for event closures."
+            },
+            {
+              "place": "st_basil",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; closed some days in winter. Check on the day."
+            },
+            {
+              "place": "gum",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00. Good for a snack and to see the arcade lit up."
+            },
+            {
+              "place": "zaryadye",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Open 24 hours. Sunset views over the river."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin morning, metro afternoon",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "lenin",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00. Often closed Monday and Sunday. Check on the day."
+            },
+            {
+              "place": "borscht",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Lunch nearby in Kitay-Gorod."
+            },
+            {
+              "place": "metro",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "About 05:30–01:00. Ride a few stops and get off at the grand halls."
+            }
+          ]
+        },
+        {
+          "title": "History museum and Arbat",
+          "stops": [
+            {
+              "place": "hist_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00."
+            },
+            {
+              "place": "kazansky",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Best in the evening; cafes along the way."
+            },
+            {
+              "place": "patriarch_ponds",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Open 24 hours. A calm late-afternoon loop."
+            }
+          ]
+        },
+        {
+          "title": "Art and the river",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Usually 10:00–18:00, later some days."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Closed Monday. Usually 10:00–18:00."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "river_cruise",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Usually 11:00–22:00 in season. Sunset is best."
+            }
+          ]
+        },
+        {
+          "title": "Parks and a show",
+          "stops": [
+            {
+              "place": "gorky_park",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Open 24 hours. Best on a summer afternoon."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Open 24 hours. City views."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00. Late lunch."
+            },
+            {
+              "place": "bolshoi",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Box office usually 11:00–19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "5n-history",
+      "length": "5n",
+      "style": "history",
+      "nights": 5,
+      "for": "Travellers who want cathedrals, Soviet landmarks and memorials, with time to look closely.",
+      "days": [
+        {
+          "title": "Red Square and Soviet memory",
+          "stops": [
+            {
+              "place": "red_square",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Open 24 hours. Early is quietest."
+            },
+            {
+              "place": "lenin",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Usually Tue–Sat 10:00–13:00. Often closed Monday and Sunday. Check on the day."
+            },
+            {
+              "place": "hist_museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00."
+            },
+            {
+              "place": "borscht",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Lunch in Kitay-Gorod."
+            },
+            {
+              "place": "kazansky",
+              "at": "15:15",
+              "minutes": 20,
+              "note": "Usually 08:00–20:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and St. Basil's",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "st_basil",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; closed some days in winter. Check on the day."
+            },
+            {
+              "place": "zaryadye",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Walk the river edge."
+            },
+            {
+              "place": "gum",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00. Tea and a look at the arcade."
+            }
+          ]
+        },
+        {
+          "title": "Convents and the metro",
+          "stops": [
+            {
+              "place": "novodevichy",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually 09:00–17:00; some buildings closed certain days."
+            },
+            {
+              "place": "luzhniki",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Check on the day; event days vary."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Views over the city."
+            },
+            {
+              "place": "metro",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "About 05:30–01:00. The stations are a Soviet-era museum in themselves."
+            }
+          ]
+        },
+        {
+          "title": "Estate and cathedral",
+          "stops": [
+            {
+              "place": "kolomenskoye",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Grounds usually 08:00–21:00; museums shorter hours."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00. Lunch."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Evening stroll."
+            }
+          ]
+        },
+        {
+          "title": "VDNKh and a show",
+          "stops": [
+            {
+              "place": "vdnkh",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Grounds open 24 hours; pavilions usually 10:00–19:00."
+            },
+            {
+              "place": "patriarch_ponds",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Coffee stop."
+            },
+            {
+              "place": "bolshoi",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Box office usually 11:00–19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kitay-Gorod"
+    },
+    {
+      "id": "5n-art",
+      "length": "5n",
+      "style": "art",
+      "nights": 5,
+      "for": "Gallery-goers who want the Tretyakov and a slower pace between big sights.",
+      "days": [
+        {
+          "title": "Tretyakov day",
+          "stops": [
+            {
+              "place": "tretyakov",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Usually 10:00–18:00, later some days."
+            },
+            {
+              "place": "blue_dancers",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Closed Monday. Usually 10:00–18:00."
+            },
+            {
+              "place": "borscht",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Lunch nearby in Khamovniki."
+            },
+            {
+              "place": "christ_saviour",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Usually 08:00–20:00; check on the day."
+            },
+            {
+              "place": "gorky_park",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Open 24 hours. Walk to the river."
+            }
+          ]
+        },
+        {
+          "title": "Kremlin and icons",
+          "stops": [
+            {
+              "place": "kremlin",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Thursday. Usually 10:00–17:00; check on the day."
+            },
+            {
+              "place": "st_basil",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Usually 10:00–18:00; closed some days in winter. Check on the day."
+            },
+            {
+              "place": "zaryadye",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Sunset over the river."
+            }
+          ]
+        },
+        {
+          "title": "Metro as art, then the stage",
+          "stops": [
+            {
+              "place": "metro",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "About 05:30–01:00. Quieter mid-morning."
+            },
+            {
+              "place": "arbat_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Lunch and galleries along the street."
+            },
+            {
+              "place": "patriarch_ponds",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Open 24 hours. Late-afternoon loop."
+            },
+            {
+              "place": "bolshoi",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Box office usually 11:00–19:00."
+            }
+          ]
+        },
+        {
+          "title": "History and the river",
+          "stops": [
+            {
+              "place": "hist_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Usually 10:00–18:00."
+            },
+            {
+              "place": "red_square",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Open 24 hours. Check for event closures."
+            },
+            {
+              "place": "gum",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Usually 10:00–22:00. Lunch stop."
+            },
+            {
+              "place": "river_cruise",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Usually 11:00–22:00 in season. Sunset is best."
+            }
+          ]
+        },
+        {
+          "title": "Estate and a slow finish",
+          "stops": [
+            {
+              "place": "kolomenskoye",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Grounds usually 08:00–21:00; museums shorter hours."
+            },
+            {
+              "place": "danilovsky_market",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Usually 08:00–21:00. Lunch."
+            },
+            {
+              "place": "sparrow_hills",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Open 24 hours. City views to close the trip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Khamovniki"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Kremlin, Red Square and the metro palaces."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Cathedrals, Soviet landmarks and war memorials."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Tretyakov, Pushkin and the Garage galleries."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Tverskoy",
+      "range": [
+        6000,
+        18000
+      ],
+      "why": "Central and walkable. Close to Red Square, the Bolshoi and good restaurants. Metro everywhere.",
+      "center": [
+        55.765,
+        37.605
+      ]
+    },
+    {
+      "area": "Kitay-Gorod",
+      "range": [
+        5500,
+        15000
+      ],
+      "why": "Steps from Red Square and the Kremlin. Quiet lanes, easy metro links.",
+      "center": [
+        55.753,
+        37.633
+      ]
+    },
+    {
+      "area": "Arbat",
+      "range": [
+        5000,
+        13000
+      ],
+      "why": "Lively pedestrian street, cafés and shops. Walk to the Kremlin in about 20 minutes.",
+      "center": [
+        55.75,
+        37.59
+      ]
+    },
+    {
+      "area": "Khamovniki",
+      "range": [
+        5500,
+        16000
+      ],
+      "why": "Quieter, greener area near the Cathedral of Christ the Saviour and Gorky Park.",
+      "center": [
+        55.735,
+        37.59
+      ]
+    }
+  ],
+  "food": [
+    "Try Russian classics: borscht, pelmeni dumplings, blini and syrniki pancakes.",
+    "Look for stolovaya canteens for cheap, filling lunches; prices vary, check the day's menu.",
+    "Georgian food is everywhere and good: khachapuri bread and khinkali dumplings.",
+    "Coffee and pastry culture is strong in the centre; many cafés open early.",
+    "Book popular restaurants ahead for weekend evenings. Tipping of about 10% is common."
+  ],
+  "more_time": [
+    "Add a day for a country estate or monastery outside the centre; check opening days and transport first.",
+    "Art lovers can swap a museum for a gallery afternoon in the former factory districts.",
+    "In warm months, spend an evening on a river cruise or a walk in Gorky Park."
+  ]
+}

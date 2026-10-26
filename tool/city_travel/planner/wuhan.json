@@ -1,0 +1,546 @@
+{
+  "city": "Wuhan",
+  "checked": "October 2026",
+  "intro_line": "Three rivers, three towns, one sprawling, noodle-loving hub.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Hankou (Jianghan)",
+        "Wuchang (Zhongnan)",
+        "Hanyang",
+        "Guanggu (Optics Valley)"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Hankou (Jianghan)",
+        "Wuchang (Zhongnan)",
+        "Hanyang",
+        "Guanggu (Optics Valley)"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Hankou (Jianghan)",
+        "Wuchang (Zhongnan)",
+        "Hanyang",
+        "Guanggu (Optics Valley)"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Hankou (Jianghan)",
+        "Wuchang (Zhongnan)",
+        "Hanyang",
+        "Guanggu (Optics Valley)"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Hankou (Jianghan)",
+        "Wuchang (Zhongnan)",
+        "Hanyang",
+        "Guanggu (Optics Valley)"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": 2,
+        "rain_days": 9,
+        "note": "Cold and damp: highs near 9°C, lows around 2°C. Pack a warm coat."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 10,
+        "note": "Still chilly, highs about 12°C; rain on roughly 10 days."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Milder spring, highs near 18°C; good for walking."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 12,
+        "note": "Pleasant: highs around 23°C, lows near 14°C."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 13,
+        "note": "Warm and wetter, highs near 27°C; carry an umbrella."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 15,
+        "note": "Hot and rainy: highs around 30°C, rain on about 15 days."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 13,
+        "note": "Very hot, highs near 32°C; plan indoor sights midday."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 10,
+        "note": "Hottest month, highs around 33°C; go out early or late."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 8,
+        "note": "Still warm at 30°C but drier; a good shoulder month."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 9,
+        "note": "Comfortable autumn, highs near 23°C; great for East Lake."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 9,
+        "note": "Cooler, highs around 17°C; light layers."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 6,
+        "note": "Cold again, highs near 11°C; fewest rain days at about 6."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "nature": [
+      0.5,
+      0.6,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.5,
+      0.5,
+      0.8,
+      0.9,
+      0.75,
+      0.55
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "yellow_crane_tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, or late afternoon for softer light",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 5
+    },
+    "hubei_museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning; closed Monday",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 5
+    },
+    "han_river": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset into evening",
+      "area": "Hanyang",
+      "popularity": 4
+    },
+    "greenland_center": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "After dark when it is lit",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 3
+    },
+    "hubu_alley": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late morning or early evening",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 4
+    },
+    "jiqing_street": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Hankou (Jianghan)",
+      "popularity": 4
+    },
+    "jianghan_walk": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Hankou (Jianghan)",
+      "popularity": 4
+    },
+    "east_lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon; spring for blossoms",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 4
+    },
+    "yangtze_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Hankou (Jianghan)",
+      "popularity": 4
+    },
+    "guqing_street": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Hankou (Jianghan)",
+      "popularity": 3
+    },
+    "optics_valley": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Guanggu (Optics Valley)",
+      "popularity": 3
+    },
+    "guiyuan_temple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Hanyang",
+      "popularity": 3
+    },
+    "wuhan_university": {
+      "types": [
+        "culture",
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring mornings",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 3
+    },
+    "hot_dry_noodles": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Hankou (Jianghan)",
+      "popularity": 4
+    },
+    "yangtze_bridge": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset or early morning",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 4
+    },
+    "hankou_old_concession": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Hankou (Jianghan)",
+      "popularity": 3
+    },
+    "qingchuan_pavilion": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Hanyang",
+      "popularity": 3
+    },
+    "wuchang_riverside": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Wuchang (Zhongnan)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the tower, the museum and a food crawl across the three towns without rushing."
+  },
+  "airports": [
+    {
+      "code": "WUH",
+      "name": "Wuhan Tianhe International Airport",
+      "primary": true,
+      "note": "Main hub, about 23 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 2",
+          "to": "City centre",
+          "price": "¥5-8",
+          "time": "45-60 min",
+          "note": "Cheapest and most reliable; runs roughly 06:00-22:30."
+        },
+        {
+          "mode": "Commuter rail",
+          "to": "Hankou Railway Station",
+          "price": "¥10-15",
+          "time": "20-30 min",
+          "note": "Irregular schedule, roughly every 1-1.5 hours."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Hankou, Wuchang and Fujiapo stations",
+          "price": "¥15-30",
+          "time": "60-90 min",
+          "note": "Service may be reduced since the metro opened."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Wuchang or Hankou centre",
+          "price": "¥70-80 plus ¥10 toll",
+          "time": "40-60 min",
+          "note": "Use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥70-100",
+          "time": "40-60 min",
+          "note": "Book in the app; pickup points are signposted."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Wuhan",
+      "https://en.wikivoyage.org/wiki/Wuhan"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro for most trips; ferries for river views and short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "12 lines and 300+ stations. Line 2 links the airport and Hankou station; Line 4 links Wuhan and Wuchang stations. Fares are distance-based; a Wuhan Tong card costs ¥15 and gives about 10% off."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Flat fare ¥1–2 (¥0.8–1.6 with card). Alipay and WeChat QR codes work on many routes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered and cheap. DiDi works well; Uber does not operate in China."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for a city visit; metro and taxis cover the sights."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good for short hops and riverside walks; shared bikes help between nearby spots."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": true,
+        "text": "Ferries cross the Yangtze between the three towns; a cheap way to see the river."
+      },
+      {
+        "mode": "Streetcar",
+        "has": true,
+        "text": "Two streetcar systems serve Hanyang and the Guanggu area."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, damp winters. Spring and autumn are the best times to visit.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 23–30°C with manageable rain. Ideal for walking and the lake."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs of 30–33°C and lows near 26°C. Muggy nights; plan indoor sights at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June",
+        "text": "About 15 rain days in June. Keep a compact umbrella and a backup indoor plan."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cool, damp winter",
+        "text": "January highs near 9°C and lows around 2°C. Buildings can feel cold; bring warm layers."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain most months",
+        "text": "Expect 6–15 rain days any month. Showers are often short, so carry rain gear rather than cancel plans."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes and sun protection for summer; a warm coat for winter; an umbrella year-round."
+      }
+    ]
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "city": "Boston",
+  "checked": "October 2026",
+  "intro_line": "Boston packs history, harbour views and student energy into a walkable core.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown and Waterfront",
+        "Back Bay",
+        "Beacon Hill",
+        "Seaport"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown and Waterfront",
+        "Back Bay",
+        "Beacon Hill",
+        "Seaport"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown and Waterfront",
+        "Back Bay",
+        "Beacon Hill",
+        "Seaport"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown and Waterfront",
+        "Back Bay",
+        "Beacon Hill",
+        "Seaport"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Downtown and Waterfront",
+        "Back Bay",
+        "Beacon Hill",
+        "Seaport"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 3,
+        "low": -5,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 3°C, lows near -5°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "high": 4,
+        "low": -6,
+        "rain_days": 10,
+        "note": "Still deep winter: highs near 4°C, lows near -6°C. Snow is possible; wear boots with grip."
+      },
+      {
+        "high": 8,
+        "low": -2,
+        "rain_days": 12,
+        "note": "Cool and changeable: highs near 8°C, lows near -2°C, with about 12 wet days."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 12,
+        "note": "Spring arrives: highs near 13°C, lows near 4°C. A light jacket and layers work well."
+      },
+      {
+        "high": 20,
+        "low": 10,
+        "rain_days": 11,
+        "note": "Pleasant: highs near 20°C, lows near 10°C. Good walking weather; keep a rain layer."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 11,
+        "note": "Warm and lively: highs near 25°C, lows near 15°C. Book hotels early."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 12,
+        "note": "Hot and humid: highs near 28°C, lows near 19°C. Plan indoor breaks in the afternoon."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 11,
+        "note": "Similar to July: highs near 28°C, lows near 18°C. Carry water on long walks."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 9,
+        "note": "Warm and comfortable: highs near 23°C, lows near 15°C. A great month for the trail."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 10,
+        "note": "Crisp autumn: highs near 17°C, lows near 9°C. Bring a sweater for evenings."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 8,
+        "note": "Cooler: highs near 11°C, lows near 2°C, with fewer wet days (about 8)."
+      },
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 11,
+        "note": "Cold again: highs near 6°C, lows near -2°C. Expect about 11 wet days; pack warm layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "family": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "faneuil-hall": {
+      "types": [
+        "history",
+        "food",
+        "shopping",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning or early evening",
+      "area": "Downtown and Waterfront",
+      "popularity": 5
+    },
+    "uss-constitution": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning, before the tour buses",
+      "area": "Downtown and Waterfront",
+      "popularity": 4
+    },
+    "baskin-robbins": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon treat",
+      "area": "Downtown and Waterfront",
+      "popularity": 2
+    },
+    "boston-college": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Back Bay",
+      "popularity": 2
+    },
+    "duck-tours": {
+      "types": [
+        "family",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning departure in good weather",
+      "area": "Back Bay",
+      "popularity": 5
+    },
+    "public-library": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Rainy day or midday break",
+      "area": "Back Bay",
+      "popularity": 4
+    },
+    "boston-university": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Back Bay",
+      "popularity": 2
+    },
+    "brandeis": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday",
+      "area": "Back Bay",
+      "popularity": 1
+    },
+    "charles-river": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset or early morning",
+      "area": "Back Bay",
+      "popularity": 4
+    },
+    "dunkin": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Downtown and Waterfront",
+      "popularity": 3
+    },
+    "harvard": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Back Bay",
+      "popularity": 5
+    },
+    "mit": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Back Bay",
+      "popularity": 3
+    },
+    "aquarium": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning, especially on rainy days",
+      "area": "Downtown and Waterfront",
+      "popularity": 5
+    },
+    "northeastern": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Back Bay",
+      "popularity": 2
+    },
+    "old-north-church": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, then lunch in the North End",
+      "area": "Downtown and Waterfront",
+      "popularity": 4
+    },
+    "sam-adams-brewery": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Back Bay",
+      "popularity": 3
+    },
+    "symphony-hall": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening concert",
+      "area": "Back Bay",
+      "popularity": 3
+    },
+    "trinity-church": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Midday",
+      "area": "Back Bay",
+      "popularity": 3
+    },
+    "tufts": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday",
+      "area": "Back Bay",
+      "popularity": 1
+    },
+    "harbor-cruise": {
+      "types": [
+        "family",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon, May to October",
+      "area": "Downtown and Waterfront",
+      "popularity": 4
+    },
+    "watson-shark": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Back Bay",
+      "popularity": 2
+    },
+    "quincy-market-food": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late lunch",
+      "area": "Downtown and Waterfront",
+      "popularity": 4
+    },
+    "skywalk-view": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear afternoon or sunset",
+      "area": "Back Bay",
+      "popularity": 3
+    },
+    "freedom-trail-walk": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning in good weather",
+      "area": "Downtown and Waterfront",
+      "popularity": 5
+    },
+    "beacon-hill-walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "Beacon Hill",
+      "popularity": 4
+    },
+    "seaport-walk": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Seaport",
+      "popularity": 3
+    },
+    "north-end-food-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning or after dinner",
+      "area": "Downtown and Waterfront",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Freedom Trail, the North End and a museum; add a night for Cambridge or a harbour day."
+  },
+  "airports": [
+    {
+      "code": "BOS",
+      "name": "General Edward Lawrence Logan International Airport",
+      "primary": true,
+      "note": "Main gateway, about 5 km from the centre.",
+      "options": [
+        {
+          "mode": "Silver Line bus",
+          "to": "South Station downtown",
+          "price": "Free",
+          "time": "20-30 min",
+          "note": "Free from Logan; transfer free to the Red Line."
+        },
+        {
+          "mode": "MassPort shuttle + Blue Line",
+          "to": "Downtown Boston",
+          "price": "$2-3",
+          "time": "30-40 min",
+          "note": "Shuttle to Airport Station, then the T."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown hotels",
+          "price": "$25-50",
+          "time": "15-30 min",
+          "note": "Price depends on destination and traffic."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$25-45",
+          "time": "15-30 min",
+          "note": "Pickup zone may be in the Central Garage; check on arrival."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Boston",
+      "https://en.wikivoyage.org/wiki/Boston"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk central Boston and use the T for longer hops; the Silver Line is free from the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The T subway has four colour-coded lines; the Blue Line links the airport area to downtown. Use a CharlieCard and tap in."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses use the same CharlieCard. The Silver Line bus runs free from Logan to South Station and connects to the Red Line."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are mostly white and cost $25–50 from Logan to downtown. Uber and Lyft pick up and drop off at Logan; check the current pickup zone."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not needed for central Boston, which is compact and walkable. Consider one only for trips outside the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Central Boston is compact and walkable. Wear comfortable shoes for the Freedom Trail."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries serve the harbour and are a good way to see the waterfront. Check times on the day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, sometimes snowy winters and warm, humid summers. Spring and autumn are the easiest months for walking.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: May, June, September and October",
+        "text": "Highs around 17–25°C and lows around 9–15°C. Comfortable for the Freedom Trail and the waterfront."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs near 3–6°C and lows near -6 to -2°C. Snow and ice are possible; wear warm, waterproof boots."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is warm and humid (July and August)",
+        "text": "Highs near 28°C with lows near 18–19°C. Take indoor breaks and carry water."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "About 8–12 wet days a month. A small umbrella or rain jacket is worth packing year-round."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn cools quickly",
+        "text": "October highs near 17°C drop to about 11°C in November. Bring layers for evenings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers, and a rain layer. Add a warm coat, hat and gloves from December to March."
+      }
+    ]
+  }
+}

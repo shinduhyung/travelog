@@ -1,0 +1,118 @@
+{
+ "city": "Denver",
+ "trips": [
+  {
+   "place": "Boulder",
+   "label": "",
+   "position": {
+    "id": 409134,
+    "name": "Boulder, CO",
+    "city": "Boulder",
+    "lat": 40.01499,
+    "lng": -105.27055
+   },
+   "town": {
+    "name": "Boulder",
+    "lat": 40.01499,
+    "lng": -105.27055
+   },
+   "road": {
+    "km": 45,
+    "min": 40,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 90,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": null,
+     "time": "45m",
+     "via": "Union Station Gate B17 to Broadway & Regent Dr",
+     "source": "https://www.rome2rio.com/s/Denver/Boulder"
+    }
+   },
+   "route_note": "Take the RTD FF1/Flatiron Flyer bus from downtown Denver Union Station or Boulder-bound stops directly to downtown Boulder in about an hour; no rail connection exists.",
+   "see": [
+    "Pearl Street Mall",
+    "Chautauqua Park trailheads",
+    "NCAR mesa views",
+    "University of Colorado campus"
+   ],
+   "visit": "Full day",
+   "tour_query": "Boulder day trip from Denver",
+   "quests": [
+    "University of Colorado Boulder"
+   ],
+   "recommended": "bus",
+   "why": "The Flatiron Flyer bus runs directly from Union Station to downtown Boulder in about 45 minutes, faster than the 40-minute drive once parking is factored in.",
+   "stars": 4,
+   "know": [
+    "Buses run frequently throughout the day from Union Station",
+    "Pearl Street Mall and the Flatirons trails are walkable from downtown",
+    "Mountain weather can change quickly, so bring layers"
+   ]
+  },
+  {
+   "place": "Golden",
+   "label": "",
+   "position": {
+    "id": 409159,
+    "name": "Golden, CO",
+    "city": "Golden",
+    "lat": 39.75554,
+    "lng": -105.2211
+   },
+   "town": {
+    "name": "Golden",
+    "lat": 39.75554,
+    "lng": -105.2211
+   },
+   "road": {
+    "km": 25,
+    "min": 25,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 50,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": null,
+     "time": "54m",
+     "via": "Oak Station Gate D to Washington Ave & 13th St",
+     "source": "https://www.rome2rio.com/s/Denver/Golden"
+    }
+   },
+   "route_note": "RTD W Line light rail runs from downtown Denver to Golden station, with a short walk or local bus to the historic downtown and Clear Creek.",
+   "see": [
+    "Coors Brewery tour",
+    "Clear Creek trail and tubing",
+    "Golden History Museum",
+    "Lookout Mountain views"
+   ],
+   "visit": "Half day",
+   "tour_query": "Golden Colorado day trip from Denver",
+   "quests": [
+    "Coors Brewery",
+    "Colorado School of Mines"
+   ],
+   "recommended": "tour",
+   "why": "The W Line light rail connects downtown Denver to Golden station with a short walk to the historic downtown, avoiding traffic and parking.",
+   "stars": 4,
+   "know": [
+    "Coors Brewery tours require booking ahead",
+    "Clear Creek and the historic downtown are a short walk from the station",
+    "Summer weekends are busiest"
+   ]
+  }
+ ],
+ "problems": [
+  "Idaho Springs: not a town in cities15000.json (US), dropped",
+  "Georgetown: no Omio position, dropped",
+  "Estes Park: not a town in cities15000.json (US), dropped",
+  "Golden: model picked train without data; set to tour"
+ ]
+}

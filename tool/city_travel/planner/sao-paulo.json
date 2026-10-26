@@ -1,0 +1,682 @@
+{
+  "city": "São Paulo",
+  "checked": "October 2026",
+  "intro_line": "São Paulo: endless energy, art, and food in Brazil's giant.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Jardins",
+        "Paulista",
+        "Vila Madalena",
+        "Centro"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Jardins",
+        "Paulista",
+        "Vila Madalena",
+        "Centro"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Jardins",
+        "Paulista",
+        "Vila Madalena",
+        "Centro"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Jardins",
+        "Paulista",
+        "Vila Madalena",
+        "Centro"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Jardins",
+        "Paulista",
+        "Vila Madalena",
+        "Centro"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 24,
+        "note": "Jan: hot and very wet, about 24 rain days. Pack a rain jacket and plan indoor backups."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 19,
+        "note": "Feb: hot and still wet, around 19 rain days. Mornings are often the driest window."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 19,
+        "note": "Mar: warm with about 19 rain days. Short heavy afternoon showers are common."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Apr: milder and drier, about 10 rain days. Good month for walking the city."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 8,
+        "note": "May: cooler days around 23°C and only 8 rain days. Bring a light jacket for evenings."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 6,
+        "note": "Jun: cool and dry, about 6 rain days. Mornings can be chilly at around 13°C."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 3,
+        "note": "Jul: the driest month, about 3 rain days. Cool nights near 12°C; pack a warm layer."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 6,
+        "note": "Aug: dry and mild, about 6 rain days. Comfortable days for parks and long walks."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 8,
+        "note": "Sep: warming up with about 8 rain days. Pleasant before the spring rains."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 15,
+        "note": "Oct: warmer and wetter, about 15 rain days. Carry a small umbrella."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 17,
+        "note": "Nov: warm with about 17 rain days. Showers return; plan flexible afternoons."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 21,
+        "note": "Dec: hot and wet, about 21 rain days. Expect holiday crowds and afternoon storms."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.8
+    ],
+    "art": [
+      0.75,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "nightlife": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8
+    ],
+    "shopping": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "ibirapuera": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Early morning or Sunday",
+      "area": "Jardins",
+      "popularity": 5
+    },
+    "masp": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning; Tuesday for free entry",
+      "area": "Paulista",
+      "popularity": 5
+    },
+    "paulista": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunday daytime",
+      "area": "Paulista",
+      "popularity": 5
+    },
+    "mercado": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Morning, before lunch rush",
+      "area": "Centro",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "theatro": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon tour or evening show",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "liberdade": {
+      "types": [
+        "food",
+        "culture",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon into evening",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "batman": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime, any weekday",
+      "area": "Vila Madalena",
+      "popularity": 4
+    },
+    "allianz": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Event evenings",
+      "area": "Vila Madalena",
+      "popularity": 3
+    },
+    "altino": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "crianca": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Jardins",
+      "popularity": 2
+    },
+    "copan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "morumbi": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match days",
+      "area": "Jardins",
+      "popularity": 2
+    },
+    "bandeiras": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Jardins",
+      "popularity": 2
+    },
+    "octavio": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Jardins",
+      "popularity": 2
+    },
+    "marisa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Vila Madalena",
+      "popularity": 1
+    },
+    "pinacoteca": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning; Saturday for free entry",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "playcenter": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekend",
+      "area": "Vila Madalena",
+      "popularity": 2
+    },
+    "zoo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Jardins",
+      "popularity": 3
+    },
+    "farol": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "vila-madalena-walk": {
+      "types": [
+        "art",
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Vila Madalena",
+      "popularity": 4
+    },
+    "liberdade-food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Centro",
+      "popularity": 4
+    },
+    "centro-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "jardins-food": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Jardins",
+      "popularity": 3
+    },
+    "sunday-avenue": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunday morning",
+      "area": "Paulista",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the main museums, the Centro and a night out, with time for long meals."
+  },
+  "airports": [
+    {
+      "code": "GRU",
+      "name": "Guarulhos International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 21 km from the centre.",
+      "options": [
+        {
+          "mode": "Urban bus 257",
+          "to": "Tatuapé Metro station",
+          "price": "R$6.15",
+          "time": "35-50 min",
+          "note": "Cheapest; board at Terminal 2 at peak times."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Praça da República, Paulista, Tietê and Barra Funda",
+          "price": "R$42",
+          "time": "45-90 min",
+          "note": "Connects to the Metrô except the Congonhas line."
+        },
+        {
+          "mode": "Airport Express train",
+          "to": "Luz station",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Free shuttle bus links terminals to the station."
+        },
+        {
+          "mode": "Taxi (Guarucoop)",
+          "to": "City centre",
+          "price": "R$120-180",
+          "time": "45-120 min",
+          "note": "Pay in advance at the booth if using a card."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "City centre",
+          "price": "R$80-140",
+          "time": "45-120 min",
+          "note": "Pick-up points are outside the terminals."
+        }
+      ]
+    },
+    {
+      "code": "CGH",
+      "name": "Congonhas Airport",
+      "primary": false,
+      "note": "Main domestic airport, about 9 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 609J/10 from São Judas Metro",
+          "to": "Airport",
+          "price": "R$5.40",
+          "time": "10-20 min",
+          "note": "Metrô to São Judas, then the bus."
+        },
+        {
+          "mode": "Aeroporto bus along Avenida Paulista",
+          "to": "Airport",
+          "price": "R$5.40",
+          "time": "40-60 min",
+          "note": "Bilhete Único accepted."
+        },
+        {
+          "mode": "Metrô Line 17 (Gold)",
+          "to": "Airport",
+          "price": "R$5.40",
+          "time": "check locally",
+          "note": "Needs at least two connections to the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R$50-80",
+          "time": "20-50 min",
+          "note": "Check traffic before leaving."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "City centre",
+          "price": "R$35-60",
+          "time": "20-50 min",
+          "note": "Usually cheaper than taxis."
+        }
+      ]
+    },
+    {
+      "code": "VCP",
+      "name": "Viracopos International Airport",
+      "primary": false,
+      "note": "Azul hub in Campinas, about 79 km from the centre.",
+      "options": [
+        {
+          "mode": "Azul free shuttle bus",
+          "to": "São Paulo",
+          "price": "free for Azul passengers",
+          "time": "1.5-2.5 h",
+          "note": "Show your boarding pass."
+        },
+        {
+          "mode": "Intercity bus",
+          "to": "Tietê bus terminal",
+          "price": "R$40-60",
+          "time": "1.5-2.5 h",
+          "note": "Book ahead at peak times."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "R$250-350",
+          "time": "1.5-2.5 h",
+          "note": "Long ride; agree on the fare first."
+        },
+        {
+          "mode": "Uber / 99",
+          "to": "City centre",
+          "price": "R$180-280",
+          "time": "1.5-2.5 h",
+          "note": "Check availability at the airport."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: São Paulo",
+      "https://en.wikivoyage.org/wiki/S%C3%A3o%20Paulo"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Metrô for long hops; Uber or 99 for late nights and hilly areas.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Modern, safe and the fastest way around. Lines 1–5 and 9 suit tourists."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Covers the whole city. Fares are R$5.30; Bilhete Único gives free transfers within 3 hours."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered; Guarucoop has a monopoly at GRU and fares are posted. Uber and 99 are widely used and usually cheaper."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful. Traffic peaks 06:00–09:00 and 16:00–19:00, so avoid renting a car."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in central and Jardins areas. Bikes are popular too, with many cycleways."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "CPTM trains are modern and safe; Line 9 is useful for tourists."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and mild year-round, with a dry, cool winter (Jun–Aug) and a wet, warm summer (Dec–Mar).",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to September",
+        "text": "Milder days around 22–26°C and fewer rain days. July is the driest, with about 3 rain days."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Summer is wet (Dec–Mar)",
+        "text": "About 19–24 rain days a month. Storms are often short and heavy; keep indoor plans ready."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter nights are cool",
+        "text": "June to August lows sit around 12–13°C. Days stay mild near 22°C. Bring a jacket."
+      },
+      {
+        "icon": "🌂",
+        "title": "Carry an umbrella in summer",
+        "text": "Downpours come fast from December to March. A small umbrella beats waiting it out."
+      },
+      {
+        "icon": "🌡️",
+        "title": "No extreme heat",
+        "text": "Highs stay around 22–27°C all year. It is rarely very hot or very cold."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket or umbrella, comfy walking shoes and a warm layer for winter evenings."
+      }
+    ]
+  }
+}

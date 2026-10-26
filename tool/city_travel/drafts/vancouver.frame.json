@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Stanley Park, the seawall and the North Shore mountains."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Granville Island, Asian eats and seafood."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, Gastown and Indigenous art."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        200,
+        450
+      ],
+      "why": "Central for SkyTrain, shops and the seawall; walk to most sights.",
+      "center": [
+        49.2827,
+        -123.1207
+      ]
+    },
+    {
+      "area": "West End",
+      "range": [
+        160,
+        350
+      ],
+      "why": "Quiet streets next to Stanley Park and English Bay beaches.",
+      "center": [
+        49.286,
+        -123.135
+      ]
+    },
+    {
+      "area": "Yaletown",
+      "range": [
+        220,
+        480
+      ],
+      "why": "Lively restaurants and bars by the water; easy Canada Line access.",
+      "center": [
+        49.2755,
+        -123.1215
+      ]
+    },
+    {
+      "area": "Gastown",
+      "range": [
+        180,
+        400
+      ],
+      "why": "Historic brick streets, cafés and nightlife; close to Waterfront station.",
+      "center": [
+        49.2835,
+        -123.108
+      ]
+    }
+  ],
+  "food": [
+    "Try Pacific salmon and spot prawns in season; ask what is local that day.",
+    "Granville Island Public Market: graze cheese, bread and fruit, then sit by the water.",
+    "Richmond has excellent Chinese food; the Canada Line gets you there in about 25 minutes.",
+    "Cheap eats: sushi, ramen and food trucks downtown, roughly CAD 10–20 a meal.",
+    "Book popular dinner spots ahead; weekend brunch queues are long."
+  ],
+  "more_time": [
+    "Swap a city day for Capilano Suspension Bridge or Grouse Mountain; check prices and shuttle options on the day.",
+    "Take the SeaBus to North Vancouver for the Lonsdale Quay market and skyline views.",
+    "Rent a bike (Mobi) and ride more of the seawall toward Kitsilano and the beaches."
+  ],
+  "type_month_fit": {
+    "nature": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.5
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.85
+    ],
+    "beach": [
+      0.2,
+      0.2,
+      0.3,
+      0.45,
+      0.65,
+      0.8,
+      0.95,
+      0.95,
+      0.7,
+      0.45,
+      0.25,
+      0.2
+    ],
+    "adventure": [
+      0.45,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.45
+    ]
+  },
+  "best_for": [
+    "nature",
+    "food",
+    "adventure"
+  ],
+  "recommend": {
+    "why": "Two nights covers Stanley Park, Granville Island and Gastown; add a night for the North Shore mountains."
+  },
+  "month_notes": [
+    "Cold and wet: highs near 6°C, about 18 rain days. Pack a waterproof jacket.",
+    "Coldest month, lows near 1°C, 16 rain days. Snow is rare downtown but possible on the hills.",
+    "Still cool and showery, highs near 9°C. Cherry blossoms start late in the month.",
+    "Milder, highs near 12°C, 15 rain days. Good for walking with a rain layer.",
+    "Warmer and drier: highs near 16°C, 9 rain days. Great for the seawall.",
+    "Mild and pleasant, highs near 19°C, about 10 rain days. Long daylight hours.",
+    "Warmest and driest: highs near 22°C, only 5 rain days. Book hotels early.",
+    "Hot and dry, highs near 23°C. Best beach month; pack sunscreen.",
+    "Still warm at 18°C but rain returns (12 days). Carry a light rain jacket.",
+    "Cooler and wetter: highs near 13°C, 15 rain days. Good museum weather.",
+    "Cool and rainy, highs near 9°C, 19 rain days. Bring waterproof shoes.",
+    "Wettest month: highs near 6°C, about 20 rain days. Expect grey, damp days."
+  ],
+  "climate_guide": {
+    "summary": "Mild coastal climate: wet, cool winters and warm, dry summers. Rain is common from October to March.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm highs of 19–23°C and the fewest rain days. Ideal for parks, beaches and the seawall."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winters",
+        "text": "November to January brings 19–20 rain days a month. Pack a waterproof jacket and shoes."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild, not freezing",
+        "text": "Winter highs stay near 6°C and lows near 1–2°C. Snow is uncommon downtown."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Short beach season",
+        "text": "July and August are the only reliably warm beach months, around 22–23°C."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Spring is showery",
+        "text": "March to May warms from 9°C to 16°C but rain days stay at 9–16. Bring layers."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and comfortable walking shoes year-round; sunscreen and a hat for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "SkyTrain for the airport and downtown; walk or bike the seawall.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "SkyTrain Canada Line links YVR to downtown in about 25 minutes. Expo and Millennium lines plus SeaBus ferries cover the region."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "TransLink buses run frequent local routes; N10 runs overnight from the airport."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis accept credit cards; Uber and Lyft operate in Vancouver."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside rush hour; downtown parking is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking and bike share (Mobi) suit the compact downtown and seawall."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "SeaBus ferries are part of TransLink and cross to North Vancouver."
+      }
+    ]
+  }
+}

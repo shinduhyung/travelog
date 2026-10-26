@@ -1,0 +1,36 @@
+$ deepseek_prep.py George Town
+  tokens in 717 out 712
+George Town: 8 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py George Town
+  tokens in 4077 out 528
+George Town: 0 problems
+
+$ deepseek_city.py George Town --stage places
+George Town: places
+  tokens in 1184 out 3767
+
+$ deepseek_city.py George Town --stage frame
+George Town: frame
+  tokens in 2432 out 1814
+  repaired JSON
+
+$ deepseek_city.py George Town --stage plans
+George Town: plans
+  plans for day
+  tokens in 2469 out 1473
+  plans for 1n
+  tokens in 2470 out 1239
+  plans for 2n
+  tokens in 2475 out 1581
+  plans for 3n
+  tokens in 2470 out 2169
+  plans for 4n
+  tokens in 2470 out 1468
+
+$ merge_city.py George Town
+WARN  cayman_museum: 17261 km from the center (day trip?)
+ERROR plan day-nature: unknown length/style
+ERROR plan day-culture: unknown length/style
+George Town: 25 places, 17 plans, 2 errors, 1 warnings
+

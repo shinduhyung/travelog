@@ -1,0 +1,32 @@
+$ deepseek_prep.py Changchun
+  tokens in 645 out 306
+Changchun: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Changchun
+  tokens in 3742 out 600
+Changchun: 0 problems
+
+$ deepseek_city.py Changchun --stage places
+Changchun: places
+  tokens in 1140 out 3446
+
+$ deepseek_city.py Changchun --stage frame
+Changchun: frame
+  tokens in 2452 out 1730
+  repaired JSON
+
+$ deepseek_city.py Changchun --stage plans
+Changchun: plans
+  plans for day
+  tokens in 2293 out 952
+  plans for 1n
+  tokens in 2294 out 687
+  plans for 2n
+  tokens in 2299 out 1515
+  plans for 3n
+  tokens in 2294 out 1226
+
+$ merge_city.py Changchun
+Changchun: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/changchun.json and planner/changchun.json
+

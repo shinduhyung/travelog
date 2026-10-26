@@ -1,0 +1,589 @@
+{
+  "city": "San José",
+  "checked": "October 2026",
+  "intro_line": "A bustling highland capital ringed by green mountains and coffee farms.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown (Avenida Central)",
+        "Barrio Amón",
+        "Barrio Escalante",
+        "San Pedro"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown (Avenida Central)",
+        "Barrio Amón",
+        "Barrio Escalante",
+        "San Pedro"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown (Avenida Central)",
+        "Barrio Amón",
+        "Barrio Escalante",
+        "San Pedro"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown (Avenida Central)",
+        "Barrio Amón",
+        "Barrio Escalante",
+        "San Pedro"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Downtown (Avenida Central)",
+        "Barrio Amón",
+        "Barrio Escalante",
+        "San Pedro"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 8,
+        "note": "Dry and mild: highs 25°C, about 8 rain days. Great for walking downtown."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 6,
+        "note": "Driest month, about 6 rain days. Book volcano trips early."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 8,
+        "note": "Still fairly dry, 8 rain days; warm days around 27°C."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 17,
+        "note": "Rain builds, about 17 rain days. Carry a rain jacket."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 27,
+        "note": "Wet season: 27 rain days. Mornings are usually clearer; plan indoors for afternoons."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 28,
+        "note": "Very wet, 28 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 24,
+        "note": "Wet but a small break, 24 rain days."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 27,
+        "note": "Wet again, 27 rain days; pack waterproofs."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 29,
+        "note": "Wettest month, 29 rain days. Keep plans flexible."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 29,
+        "note": "Rain eases, 25 rain days; still carry an umbrella."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 25,
+        "note": "Drier, 13 rain days. Good month for day trips."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 13,
+        "note": "Dry season returns, about 8 rain days. Comfortable highs near 24°C."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.95,
+      0.95,
+      1,
+      0.8,
+      0.6,
+      0.55,
+      0.6,
+      0.6,
+      0.55,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "food": [
+      0.95,
+      0.95,
+      1,
+      0.85,
+      0.7,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.95,
+      0.7,
+      0.45,
+      0.4,
+      0.45,
+      0.45,
+      0.4,
+      0.6,
+      0.8,
+      0.9
+    ],
+    "history": [
+      0.95,
+      0.95,
+      1,
+      0.8,
+      0.6,
+      0.55,
+      0.6,
+      0.6,
+      0.55,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "budget": [
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.8,
+      0.85,
+      0.9
+    ]
+  },
+  "places": {
+    "basilica": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning; August 2 is the huge pilgrimage day",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 5
+    },
+    "gallo-pinto": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 4
+    },
+    "parque-diversiones": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "mercado-central": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late morning or lunch",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 4
+    },
+    "teatro-nacional": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 4
+    },
+    "precolumbian": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 4
+    },
+    "jade-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "avenida-central": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "barrio-amon": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early afternoon",
+      "area": "Barrio Amón",
+      "popularity": 3
+    },
+    "barrio-escalante": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Lunch or dinner",
+      "area": "Barrio Escalante",
+      "popularity": 4
+    },
+    "san-pedro": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "San Pedro",
+      "popularity": 2
+    },
+    "la-sabana": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "museo-nacional": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "cafe-oro": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 2
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "mercado-borbon": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 2
+    },
+    "morazan": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Barrio Amón",
+      "popularity": 2
+    },
+    "art-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 2
+    },
+    "insect-museum": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "San Pedro",
+      "popularity": 2
+    },
+    "escalante-night": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Barrio Escalante",
+      "popularity": 3
+    },
+    "spirogyra": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Barrio Escalante",
+      "popularity": 2
+    },
+    "mercado-escalante": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Barrio Escalante",
+      "popularity": 2
+    },
+    "gold-museum-2": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 3
+    },
+    "catedral": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Downtown (Avenida Central)",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers downtown sights, Escalante's food and one volcano or coffee-farm day trip."
+  },
+  "airports": [
+    {
+      "code": "SJO",
+      "name": "Juan Santamaría International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 15 km northwest near Alajuela.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown San José (Braulio Carrillo Colina Park)",
+          "price": "₡650",
+          "time": "30-45 min",
+          "note": "Stop is a short walk past the car park; bring small change."
+        },
+        {
+          "mode": "Taxi Aeropuerto",
+          "to": "City centre",
+          "price": "₡10000-15000 or US$25",
+          "time": "25-40 min",
+          "note": "Use licensed reddish-orange taxis only."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "₡5000-10000",
+          "time": "25-40 min",
+          "note": "Pickup at the airport can be slow and unreliable."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: San José",
+      "https://en.wikivoyage.org/wiki/San%20Jos%C3%A9"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "nature"
+  ],
+  "transit": {
+    "best": "Uber, DiDi or a taxi for most trips; cheap city buses if you're saving money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cost about ₡500 per ride, no transfers or day passes. Use the Moovit app for routes and schedules."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis should use a meter but often don't; agree the price first. Uber and DiDi work well, though Uber is technically illegal."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and confusing. Only worth it for out-of-town trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Fine downtown by day. Bike lanes are limited."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical highland city: mild all year, with a dry season roughly December to March and heavy afternoon rain from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Highs 24–27°C, lows near 16°C and few rain days. Best for walking and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season May to October",
+        "text": "24–29 rain days a month. Rain usually comes in the afternoon; do outdoor plans in the morning."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild temperatures all year",
+        "text": "Highs stay 24–27°C and lows 16–17°C. Bring a light layer for evenings."
+      },
+      {
+        "icon": "☂️",
+        "title": "Pack rain gear",
+        "text": "A compact umbrella and a light waterproof jacket help from May to November."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Cloud and mist on hills",
+        "text": "Volcano and cloud-forest trips can be cloudy or closed; check on the day."
+      },
+      {
+        "icon": "🧴",
+        "title": "Sun at altitude",
+        "text": "The city sits high; sun is strong even on cloudy days. Use sunscreen."
+      }
+    ]
+  }
+}

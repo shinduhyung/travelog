@@ -1,0 +1,274 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Tango, cafés, bookshops and grand avenues."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Steak, empanadas, wine and long late dinners."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Late bars, milongas and clubs that start after 2am."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Recoleta",
+      "range": [
+        70000,
+        180000
+      ],
+      "why": "Quiet, leafy and safe at night. Walk to the cemetery, museums and cafés; good for first-timers.",
+      "center": [
+        -34.588,
+        -58.393
+      ]
+    },
+    {
+      "area": "Palermo",
+      "range": [
+        65000,
+        200000
+      ],
+      "why": "Best for food and nightlife. Soho and Hollywood have bars, restaurants and boutiques on your doorstep.",
+      "center": [
+        -34.583,
+        -58.43
+      ]
+    },
+    {
+      "area": "San Telmo",
+      "range": [
+        50000,
+        130000
+      ],
+      "why": "Old cobbled streets, tango and the Sunday market. Livelier and cheaper; some streets are quiet at night.",
+      "center": [
+        -34.621,
+        -58.373
+      ]
+    },
+    {
+      "area": "Centro / Retiro",
+      "range": [
+        55000,
+        160000
+      ],
+      "why": "Central for the Obelisk, Plaza de Mayo and the train and bus stations. Busy by day, quieter after dark.",
+      "center": [
+        -34.603,
+        -58.381
+      ]
+    }
+  ],
+  "food": [
+    "Order bife de chorizo (sirloin) or ojo de bife at a parrilla. Portions are big; one steak can feed two light eaters.",
+    "Try empanadas, milanesa and provoleta. Lunch is the big meal; many places sell cheap set lunches (menú del día).",
+    "Drink local: Malbec and Torrontés wines, plus mate. Ask for agua sin gas if you want still water.",
+    "Dinner starts late. Locals sit down around 9–10pm; many restaurants are quiet before 8pm.",
+    "Book popular Palermo and Recoleta restaurants a few days ahead. Prices change fast with inflation, so check menus on the day."
+  ],
+  "more_time": [
+    "Day trip to Tigre: train from Retiro, then a boat through the delta canals.",
+    "Ferry to Colonia del Sacramento, Uruguay, from Puerto Madero. Bring your passport; check times and prices on the day.",
+    "Spend a day in La Boca and Puerto Madero, or take a tango class and stay for a milonga."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.75,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95
+    ],
+    "food": [
+      0.95,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      0.95
+    ],
+    "nightlife": [
+      1,
+      1,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.55,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "history": [
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.75,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95
+    ],
+    "art": [
+      0.9,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.75,
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "nightlife"
+  ],
+  "recommend": {
+    "why": "Three nights covers Palermo, Recoleta, San Telmo and a steak dinner, with time left for a tango night."
+  },
+  "month_notes": [
+    "January: hot, highs near 28°C. Many locals are on holiday; some restaurants close. Pack light clothes.",
+    "February: hot and humid, highs near 28°C. Carnival and summer festivals; book ahead.",
+    "March: warm and pleasant, highs near 25°C. A good month for walking and parks.",
+    "April: mild, highs near 22°C. Comfortable days and cool evenings; bring a light jacket.",
+    "May: cooler, highs near 17°C. Fewer rain days; good for museums and cafés.",
+    "June: cold, highs near 15°C and lows near 8°C. Pack a warm coat.",
+    "July: coldest month, highs near 14°C. Winter holidays bring crowds to museums and theatres.",
+    "August: cold but dry-ish, highs near 16°C. Good for indoor sights and tango shows.",
+    "September: warming up, highs near 18°C. Spring starts; pleasant for parks.",
+    "October: mild and green, highs near 21°C. Rain days rise; carry a small umbrella.",
+    "November: warm, highs near 25°C. Jacaranda trees bloom; great for walking.",
+    "December: hot, highs near 27°C. Festive and busy; evenings are best for sightseeing."
+  ],
+  "climate_guide": {
+    "summary": "Humid subtropical climate: hot summers, cool-to-cold winters, and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: March to May and September to November",
+        "text": "Mild highs of 17–25°C. Good for walking, parks and outdoor sights."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (December to February)",
+        "text": "Highs near 27–28°C with muggy nights. Sightsee early or late; rest at midday."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cool (June to August)",
+        "text": "Highs of 14–16°C and lows near 8°C. Pack a warm coat and layers."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 6–9 rain days each month. Showers can be heavy but short; carry a small umbrella."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Windy days",
+        "text": "Breezy spells, especially near the river in Puerto Madero. A light windproof layer helps."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, comfortable walking shoes, a light rain jacket and sunscreen for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Subte for main sights; ride apps or taxis at night.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The Subte is small but reaches most sights. Pay with a SUBE card or contactless credit card."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses are cheap and cover the whole city, but routes are confusing. Use a route app."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Cabify work; taxis are plentiful and metered. Handy at night."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful and parking is hard. Use transit or taxis instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best in Palermo, Recoleta and San Telmo. Ferries to Uruguay leave from Puerto Madero."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries to Uruguay leave from Puerto Madero. Bring your passport and check times on the day."
+      }
+    ]
+  }
+}

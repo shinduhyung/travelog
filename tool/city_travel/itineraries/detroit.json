@@ -1,0 +1,1368 @@
+{
+  "city": "Detroit",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Detroit rewards visitors with world-class museums, a resurgent downtown, and a gritty creative spirit. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 42.303,
+      "west": -83.166,
+      "north": 42.511,
+      "east": -82.9588,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 3.5,
+      "per_km": 1.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "QLine streetcar runs along Woodward Ave from downtown to New Center; fare $1.50 for 3 hours.",
+      "People Mover loops downtown; fare $0.75 per ride.",
+      "SMART and DDOT buses cover the metro; fare $2.",
+      "Ride apps Uber and Lyft are widely used; taxis also available.",
+      "Driving is easiest; freeways are modern but rush hour can be slow.",
+      "Walking is good downtown; biking is growing with rental options."
+    ],
+    "sources": []
+  },
+  "places": {
+    "dia": {
+      "name": "Detroit Institute of Arts",
+      "landmark": "Detroit Institute of Arts",
+      "kind": "museum",
+      "lat": 42.3594,
+      "lon": -83.0645,
+      "price": 20,
+      "price_text": "About $20 adults · check current price and free days online",
+      "hours": "Closed Monday · Tue–Thu and Sat–Sun roughly 09:00–17:00 · Fri to about 21:00 · check on the day",
+      "tip": "The Rivera Court murals alone are worth the trip. Allow at least two hours.",
+      "source": "https://www.dia.org/"
+    },
+    "motown": {
+      "name": "Motown Museum",
+      "landmark": "Motown Museum",
+      "kind": "museum",
+      "lat": 42.3642,
+      "lon": -83.0877,
+      "price": 20,
+      "price_text": "About $15–25 · timed tickets, book ahead",
+      "hours": "Closed Monday and Tuesday · Wed–Sun roughly 10:00–18:00 · check on the day",
+      "tip": "Tours are guided and sell out. Book online before you travel.",
+      "source": "https://www.motownmuseum.org/"
+    },
+    "hungry-howies": {
+      "name": "Hungry Howie's",
+      "landmark": "Hungry Howie's",
+      "kind": "food",
+      "lat": 42.4895,
+      "lon": -83.1446,
+      "price": 12,
+      "price_text": "About $8–15 per pizza · varies by branch",
+      "hours": "Most branches roughly 11:00–23:00 · check your branch",
+      "tip": "Michigan-born chain known for flavored crust. Ask for the butter or garlic crust.",
+      "source": "https://www.hungryhowies.com/"
+    },
+    "little-caesars": {
+      "name": "Little Caesars",
+      "landmark": "Little Caesars",
+      "kind": "food",
+      "lat": 42.3314,
+      "lon": -83.0458,
+      "price": 8,
+      "price_text": "About $6–12 · hot-and-ready deals",
+      "hours": "Most branches roughly 10:30–22:00 · check your branch",
+      "tip": "Detroit-founded chain. Grab a cheap hot-and-ready pizza and eat in the park.",
+      "source": "https://littlecaesars.com/"
+    },
+    "eastern-market": {
+      "name": "Eastern Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.3487,
+      "lon": -83.0405,
+      "price": 0,
+      "price_text": "Free to enter · pay per item",
+      "hours": "Saturday market roughly 06:00–16:00 · other days limited · check on the day",
+      "tip": "Come Saturday morning for the big outdoor market and food stalls.",
+      "source": "https://www.easternmarket.org/"
+    },
+    "riverwalk": {
+      "name": "Detroit RiverWalk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 42.3266,
+      "lon": -83.0332,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, roughly dawn to dusk",
+      "tip": "Walk east toward the bridge for skyline and Canada views at sunset.",
+      "source": "https://www.detroitriverfront.org/"
+    },
+    "belle-isle": {
+      "name": "Belle Isle Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 42.3403,
+      "lon": -82.9802,
+      "price": 0,
+      "price_text": "Free entry · state park vehicle pass may apply",
+      "hours": "Open daily roughly 05:00–22:00",
+      "tip": "Bring a car or bike. The conservatory and aquarium are free and good for families.",
+      "source": "https://www.belleisleconservancy.org/"
+    },
+    "corktown-walk": {
+      "name": "Corktown neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3289,
+      "lon": -83.0736,
+      "price": 0,
+      "price_text": "Free · pay for food and drinks",
+      "hours": "Any time · bars and cafes vary",
+      "tip": "Detroit's oldest neighbourhood. Walk Michigan Avenue for old brick streets and cafes.",
+      "source": ""
+    },
+    "greektown-walk": {
+      "name": "Greektown walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3349,
+      "lon": -83.0421,
+      "price": 0,
+      "price_text": "Free · pay for food",
+      "hours": "Any time · restaurants vary",
+      "tip": "Compact historic block near downtown. Good for a meal and a short evening stroll.",
+      "source": ""
+    },
+    "fisher-building": {
+      "name": "Fisher Building lobby",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 42.3692,
+      "lon": -83.0771,
+      "price": 0,
+      "price_text": "Free to enter the lobby",
+      "hours": "Lobby roughly 07:00–19:00 weekdays · check on the day",
+      "tip": "Look up at the painted vaulted ceiling. Quick, free and photogenic.",
+      "source": ""
+    },
+    "guardian-building": {
+      "name": "Guardian Building lobby",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 42.3298,
+      "lon": -83.0459,
+      "price": 0,
+      "price_text": "Free to enter the lobby",
+      "hours": "Lobby roughly 08:00–18:00 weekdays · check on the day",
+      "tip": "Art Deco tilework inside. Pop in for ten minutes while downtown.",
+      "source": ""
+    },
+    "downtown-tour": {
+      "name": "Downtown walking or bus tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 42.3314,
+      "lon": -83.0458,
+      "price": 30,
+      "price_text": "About $20–40 · varies by operator",
+      "hours": "Tours usually run mornings and afternoons · book ahead",
+      "tip": "A guided intro helps first-timers link downtown sights. Confirm meeting point and price.",
+      "source": ""
+    },
+    "campus-martius": {
+      "name": "Campus Martius Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 42.3314,
+      "lon": -83.0466,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily · ice rink in winter",
+      "tip": "Central downtown square. Good rest stop; ice skating in winter.",
+      "source": ""
+    },
+    "coney-island": {
+      "name": "Coney Island hot dog",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.3325,
+      "lon": -83.0486,
+      "price": 6,
+      "price_text": "About $4–8 per coney",
+      "hours": "Classic spots roughly 07:00–20:00 · check on the day",
+      "tip": "Detroit classic: chili dog with mustard and onions. Try a local diner downtown.",
+      "source": ""
+    },
+    "dime-store": {
+      "name": "Detroit riverfront and skyline viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 42.3245,
+      "lon": -83.0355,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily",
+      "tip": "Best skyline and river views from the RiverWalk near the bridge.",
+      "source": ""
+    },
+    "midtown-walk": {
+      "name": "Midtown cultural walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3615,
+      "lon": -83.0665,
+      "price": 0,
+      "price_text": "Free · pay for museums and food",
+      "hours": "Any time · museums have their own hours",
+      "tip": "Link the DIA and Motown Museum on foot with cafes in between.",
+      "source": ""
+    },
+    "greek-food": {
+      "name": "Greektown dinner",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.3351,
+      "lon": -83.0418,
+      "price": 25,
+      "price_text": "About $15–35 per person",
+      "hours": "Restaurants roughly 11:00–23:00 · check on the day",
+      "tip": "Book ahead on weekends. Try Greek classics and share plates.",
+      "source": ""
+    },
+    "corktown-food": {
+      "name": "Corktown cafe and bar stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.3292,
+      "lon": -83.0728,
+      "price": 15,
+      "price_text": "About $8–25 per person",
+      "hours": "Cafes and bars vary · check on the day",
+      "tip": "Pair a coffee with a short walk along Michigan Avenue.",
+      "source": ""
+    },
+    "riverfront-bike": {
+      "name": "Riverfront bike ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.326,
+      "lon": -83.034,
+      "price": 15,
+      "price_text": "About $10–20 per hour rental · check on the day",
+      "hours": "Rentals roughly 09:00–19:00 in season",
+      "tip": "Rent a bike and ride the RiverWalk path. Bring water in summer.",
+      "source": ""
+    },
+    "eastern-market-food": {
+      "name": "Eastern Market food stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 42.3492,
+      "lon": -83.041,
+      "price": 12,
+      "price_text": "About $5–20 per item",
+      "hours": "Saturday roughly 06:00–16:00 · check on the day",
+      "tip": "Try local produce and prepared food on Saturday morning.",
+      "source": "https://www.easternmarket.org/"
+    },
+    "downtown-park": {
+      "name": "Downtown evening stroll",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 42.3328,
+      "lon": -83.047,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Any time",
+      "tip": "Walk from Campus Martius to the RiverWalk for an easy evening loop.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of art, music history and market food, grouped by neighbourhood.",
+      "days": [
+        {
+          "title": "Midtown museums, then downtown",
+          "stops": [
+            {
+              "place": "dia",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Start at opening for quieter galleries."
+            },
+            {
+              "place": "motown",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a slot ahead."
+            },
+            {
+              "place": "coney-island",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Quick classic lunch. Check hours on the day."
+            },
+            {
+              "place": "guardian-building",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Weekday lobby only, roughly 08:00–18:00."
+            },
+            {
+              "place": "riverwalk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Walk to the sunset viewpoint and stay for dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Motown and downtown architecture for a first-time visitor on a tight schedule.",
+      "days": [
+        {
+          "title": "Music history and downtown landmarks",
+          "stops": [
+            {
+              "place": "motown",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Morning slots are calmest."
+            },
+            {
+              "place": "fisher-building",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Weekday lobby only. Look up at the ceiling."
+            },
+            {
+              "place": "coney-island",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Lunch. Check hours on the day."
+            },
+            {
+              "place": "downtown-tour",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Book ahead. Mornings and afternoons usually run."
+            },
+            {
+              "place": "corktown-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Oldest neighbourhood. Bars and cafes vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "A relaxed family day with parks, river views and easy food stops.",
+      "days": [
+        {
+          "title": "Riverfront and parks",
+          "stops": [
+            {
+              "place": "belle-isle",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Open daily roughly 05:00–22:00. Go early in summer."
+            },
+            {
+              "place": "riverfront-bike",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Rentals roughly 09:00–19:00 in season. Check on the day."
+            },
+            {
+              "place": "little-caesars",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Quick lunch. Check your branch."
+            },
+            {
+              "place": "campus-martius",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Ice rink in winter."
+            },
+            {
+              "place": "dime-store",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Skyline view. Best near sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for first-timers: the DIA and Motown on day one, Eastern Market and downtown architecture on day two.",
+      "days": [
+        {
+          "title": "Midtown museums",
+          "stops": [
+            {
+              "place": "dia",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go early for quieter galleries."
+            },
+            {
+              "place": "fisher-building",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Short walk or a few minutes by car. Lobby is free."
+            },
+            {
+              "place": "coney-island",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Classic Detroit lunch. Check hours on the day."
+            },
+            {
+              "place": "motown",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a slot ahead."
+            },
+            {
+              "place": "midtown-walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Wander the cultural district into early evening."
+            }
+          ]
+        },
+        {
+          "title": "Market and downtown",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Best on Saturday morning. Arrive early for parking."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Grab a snack from the stalls."
+            },
+            {
+              "place": "guardian-building",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Weekday lobby hours only. Check on the day."
+            },
+            {
+              "place": "campus-martius",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Central downtown square. Ice rink in winter."
+            },
+            {
+              "place": "downtown-tour",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Book ahead. Mornings and afternoons usually run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Motown and downtown architecture on day one, then the auto story and riverfront on day two.",
+      "days": [
+        {
+          "title": "Motown and downtown",
+          "stops": [
+            {
+              "place": "motown",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a morning slot."
+            },
+            {
+              "place": "coney-island",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Quick lunch. Check hours on the day."
+            },
+            {
+              "place": "guardian-building",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Weekday lobby hours only. Check on the day."
+            },
+            {
+              "place": "downtown-tour",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Book ahead. Covers downtown history."
+            },
+            {
+              "place": "riverwalk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk the riverfront into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Market and riverfront",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Saturday is the big day. Check other days."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Lunch from the stalls."
+            },
+            {
+              "place": "dime-store",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Skyline viewpoint. Good in clear weather."
+            },
+            {
+              "place": "corktown-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Oldest neighbourhood. Bars and cafes vary."
+            },
+            {
+              "place": "corktown-food",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Cafe or bar stop. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Easy-paced family day: riverfront and parks, with pizza and a museum stop the next morning.",
+      "days": [
+        {
+          "title": "Riverfront and parks",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Flat and stroller-friendly. Dawn to dusk."
+            },
+            {
+              "place": "little-caesars",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Quick pizza lunch. Check your branch."
+            },
+            {
+              "place": "campus-martius",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Open space for kids to run. Ice rink in winter."
+            },
+            {
+              "place": "belle-isle",
+              "at": "13:15",
+              "minutes": 120,
+              "note": "Park open roughly 05:00–22:00. Bring snacks."
+            },
+            {
+              "place": "downtown-park",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Evening stroll downtown."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning",
+          "stops": [
+            {
+              "place": "dia",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Family-friendly galleries."
+            },
+            {
+              "place": "hungry-howies",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Pizza lunch. Check your branch."
+            },
+            {
+              "place": "fisher-building",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Grand lobby, quick look. Weekday hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want art, music history and a Saturday market morning.",
+      "days": [
+        {
+          "title": "Arrive, Midtown museums",
+          "stops": [
+            {
+              "place": "dia",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. Allow at least two hours. Check hours on the day."
+            },
+            {
+              "place": "fisher-building",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Short walk. Lobby is grand; weekdays only, roughly 07:00–19:00."
+            },
+            {
+              "place": "midtown-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Wander past galleries and cafes. Museums close on their own schedule."
+            },
+            {
+              "place": "corktown-food",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Short ride to Corktown for a cafe or bar stop. Hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Motown, riverfront, Greektown",
+          "stops": [
+            {
+              "place": "motown",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a morning slot ahead."
+            },
+            {
+              "place": "guardian-building",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Weekday lobby visit only, roughly 08:00–18:00. Check on the day."
+            },
+            {
+              "place": "coney-island",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Classic lunch. Most spots roughly 07:00–20:00."
+            },
+            {
+              "place": "riverwalk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the water. Open dawn to dusk."
+            },
+            {
+              "place": "greek-food",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Dinner in Greektown. Restaurants roughly 11:00–23:00."
+            }
+          ]
+        },
+        {
+          "title": "Eastern Market, then go",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Best on Saturday morning, roughly 06:00–16:00. Other days limited."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Grab a snack among the stalls."
+            },
+            {
+              "place": "campus-martius",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Short ride downtown. Ice rink in winter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, near Campus Martius"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want Motown, downtown architecture and the city's story on foot.",
+      "days": [
+        {
+          "title": "Arrive, downtown history",
+          "stops": [
+            {
+              "place": "downtown-tour",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Walking or bus tour. Book ahead; tours usually run mornings and afternoons."
+            },
+            {
+              "place": "guardian-building",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Weekday lobby only, roughly 08:00–18:00. Check on the day."
+            },
+            {
+              "place": "campus-martius",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Rest a while in the square."
+            },
+            {
+              "place": "coney-island",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Early dinner. Most spots roughly 07:00–20:00."
+            }
+          ]
+        },
+        {
+          "title": "Motown and Midtown",
+          "stops": [
+            {
+              "place": "motown",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a morning slot ahead."
+            },
+            {
+              "place": "dia",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Closed Monday. Lunch at the museum cafe if you like."
+            },
+            {
+              "place": "fisher-building",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Weekday lobby, roughly 07:00–19:00."
+            },
+            {
+              "place": "corktown-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Afternoon into evening. Bars and cafes vary."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then go",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Saturday market roughly 06:00–16:00. Check on the day."
+            },
+            {
+              "place": "riverwalk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk the river before you leave. Open dawn to dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, near Campus Martius"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids who want parks, the riverfront and easy meals.",
+      "days": [
+        {
+          "title": "Arrive, riverfront and downtown",
+          "stops": [
+            {
+              "place": "riverwalk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Flat and easy with kids. Open dawn to dusk."
+            },
+            {
+              "place": "campus-martius",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Ice rink in winter. Open daily."
+            },
+            {
+              "place": "little-caesars",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Quick pizza lunch or snack. Most branches roughly 10:30–22:00."
+            },
+            {
+              "place": "downtown-park",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening stroll. Any time."
+            }
+          ]
+        },
+        {
+          "title": "Belle Isle and Midtown",
+          "stops": [
+            {
+              "place": "belle-isle",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Open daily roughly 05:00–22:00. Weekday morning is calmest."
+            },
+            {
+              "place": "hungry-howies",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch. Most branches roughly 11:00–23:00."
+            },
+            {
+              "place": "dia",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday. Family-friendly galleries; check hours on the day."
+            },
+            {
+              "place": "midtown-walk",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Short stroll before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then go",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Saturday morning is best, roughly 06:00–16:00. Check on the day."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Snack stop for the kids."
+            },
+            {
+              "place": "riverfront-bike",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Rentals roughly 09:00–19:00 in season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown, near the riverfront"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want art, music history and markets at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and settle Downtown",
+          "stops": [
+            {
+              "place": "guardian-building",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Weekday lobby visit only. Look up at the tiled ceiling."
+            },
+            {
+              "place": "campus-martius",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short walk from the Guardian Building."
+            },
+            {
+              "place": "riverwalk",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Walk the riverfront toward sunset."
+            },
+            {
+              "place": "greek-food",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Dinner in Greektown, a short walk or ride away."
+            }
+          ]
+        },
+        {
+          "title": "Midtown museums",
+          "stops": [
+            {
+              "place": "dia",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is quietest."
+            },
+            {
+              "place": "hungry-howies",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch nearby. Check your branch."
+            },
+            {
+              "place": "motown",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a slot ahead."
+            },
+            {
+              "place": "fisher-building",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Weekday lobby hours only."
+            },
+            {
+              "place": "midtown-walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Wander Midtown into the early evening."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and Corktown",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Best on Saturday morning. Go early."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Grab a snack at the market."
+            },
+            {
+              "place": "corktown-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short ride west. Afternoon into evening."
+            },
+            {
+              "place": "corktown-food",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Cafe or bar stop. Hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Last morning and out",
+          "stops": [
+            {
+              "place": "downtown-tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Book ahead. Morning tours are common."
+            },
+            {
+              "place": "coney-island",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Classic lunch before you go."
+            },
+            {
+              "place": "dime-store",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Final skyline view."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want Motown, architecture and the city's story told straight.",
+      "days": [
+        {
+          "title": "Arrive and Downtown history",
+          "stops": [
+            {
+              "place": "guardian-building",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Weekday lobby only. A 1920s landmark."
+            },
+            {
+              "place": "downtown-tour",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Book ahead. Check tour times on the day."
+            },
+            {
+              "place": "campus-martius",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Rest your feet in the park."
+            },
+            {
+              "place": "greek-food",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Dinner in Greektown."
+            }
+          ]
+        },
+        {
+          "title": "Motown and Midtown",
+          "stops": [
+            {
+              "place": "motown",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Monday and Tuesday. Book a morning slot."
+            },
+            {
+              "place": "hungry-howies",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "dia",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "fisher-building",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Weekday lobby hours only."
+            }
+          ]
+        },
+        {
+          "title": "Market and riverfront",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Saturday morning is the big day."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Eat at the market."
+            },
+            {
+              "place": "corktown-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Old neighbourhood with deep roots."
+            },
+            {
+              "place": "riverwalk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk the water into the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Last look and out",
+          "stops": [
+            {
+              "place": "dime-store",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Skyline view to finish."
+            },
+            {
+              "place": "coney-island",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Quick lunch before departure."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids who want parks, riverfront and easy food stops.",
+      "days": [
+        {
+          "title": "Arrive and the riverfront",
+          "stops": [
+            {
+              "place": "campus-martius",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Open space for the kids to run."
+            },
+            {
+              "place": "riverwalk",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Flat, easy walk by the water."
+            },
+            {
+              "place": "little-caesars",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Quick dinner. Check your branch."
+            },
+            {
+              "place": "downtown-park",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Evening stroll to end the day."
+            }
+          ]
+        },
+        {
+          "title": "Belle Isle day",
+          "stops": [
+            {
+              "place": "belle-isle",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Weekday morning in summer is calmest."
+            },
+            {
+              "place": "hungry-howies",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch after the park."
+            },
+            {
+              "place": "riverfront-bike",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Rentals run roughly 09:00–19:00 in season."
+            }
+          ]
+        },
+        {
+          "title": "Museum and Midtown",
+          "stops": [
+            {
+              "place": "dia",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Family-friendly galleries."
+            },
+            {
+              "place": "little-caesars",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Quick lunch."
+            },
+            {
+              "place": "midtown-walk",
+              "at": "13:45",
+              "minutes": 120,
+              "note": "Easy walk between sights."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and out",
+          "stops": [
+            {
+              "place": "eastern-market",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Saturday morning is best."
+            },
+            {
+              "place": "eastern-market-food",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Snack before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Motown, the Detroit Institute of Arts and Eastern Market."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Motown, the Henry Ford and the story of the auto industry."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Science center, zoo and riverfront parks for kids."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        120,
+        320
+      ],
+      "why": "Walk to the riverfront, stadiums and the People Mover; easiest base without a car.",
+      "center": [
+        42.331,
+        -83.048
+      ]
+    },
+    {
+      "area": "Midtown",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Next to the Detroit Institute of Arts and the Motown Museum; QLine streetcar to downtown.",
+      "center": [
+        42.352,
+        -83.062
+      ]
+    },
+    {
+      "area": "Corktown",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Quiet, historic streets with bars and cafés; short ride to downtown and the riverfront.",
+      "center": [
+        42.328,
+        -83.075
+      ]
+    },
+    {
+      "area": "Greektown",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Restaurants and nightlife on the doorstep; People Mover stop and walk to downtown sights.",
+      "center": [
+        42.335,
+        -83.042
+      ]
+    }
+  ],
+  "food": [
+    "Try a Detroit-style square pizza: thick, crispy edges and cheese to the rim. Many local spots serve it.",
+    "Coney Island hot dogs are a Detroit staple; several long-running diners downtown and nearby.",
+    "Eastern Market on a Saturday morning: produce, food stalls and a lively local crowd.",
+    "Greektown is the place for Greek restaurants and late dinners near downtown.",
+    "Middle Eastern food in Dearborn, a short drive west, is a local favourite; check hours before you go."
+  ],
+  "more_time": [
+    "Add a day for Dearborn: the Henry Ford Museum and Greenfield Village show the auto and American history story.",
+    "Cross the river to Windsor, Canada for a different view of the skyline; bring your passport and check border rules.",
+    "Sports fans can swap a museum afternoon for a Tigers, Lions, Red Wings or Pistons game; check the schedule and prices on the day."
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "currency": "MUR",
+  "usd_rate": 47.2716,
+  "intro_line": "A harbour capital where markets, mountains and colonial streets meet.",
+  "intro": "Port Louis rewards visitors with a lively bazaar, waterfront promenades and easy access to the island's interior. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Waterfront",
+    "City Centre",
+    "Champ de Mars",
+    "Caudan"
+  ],
+  "taxi": {
+    "flag_day": 100,
+    "flag_airport": 1800,
+    "per_km": 30,
+    "min_fare": 100
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro Express light rail links suburbs to the city, daily 6 AM to 10 PM, roughly every 12-15 minutes.",
+    "Two bus stations: Immigration Square for north and east routes, Victoria Square for south and west routes.",
+    "Buses run frequently with few schedules; first around 6 AM, intercity last around 6 PM, city buses until 8 PM.",
+    "Intercity bus tickets cost about MUR 15-30; express and AC buses cost more.",
+    "Taxis within the city cost about MUR 10-50, a bit more at night; avoid rush hours.",
+    "Ride apps are limited; arrange taxis by phone or at ranks. Driving is chaotic, so park at the marina or hotel."
+  ],
+  "airports": [
+    {
+      "code": "MRU",
+      "name": "Sir Seewoosagur Ramgoolam International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 35 km straight-line southeast of the centre.",
+      "options": [
+        {
+          "mode": "Bus route 198",
+          "to": "Port Louis bus stations",
+          "price": "MUR 15-30",
+          "time": "check locally",
+          "note": "Cheapest option; check current timetable as the link may be dated."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "MUR 1800",
+          "time": "45-90 min",
+          "note": "Agree the fare before you ride."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-90 min",
+          "note": "Head northwest and follow signs for Port-Louis."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Aapravasi Ghat",
+    "Port Louis Central Market",
+    "Chateau de Labourdonnais",
+    "Eureka House",
+    "Ganga Talao",
+    "Casela World of Adventures",
+    "Dholl Puri",
+    "Mauritius"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Port Louis",
+      "https://en.wikivoyage.org/wiki/Port%20Louis"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -20.1609,
+    57.5012
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 24
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 17
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 10
+    },
+    {
+      "high": 26,
+      "low": 21,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 20,
+      "rain_days": 8
+    },
+    {
+      "high": 25,
+      "low": 20,
+      "rain_days": 8
+    },
+    {
+      "high": 26,
+      "low": 20,
+      "rain_days": 7
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 10
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 13
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 18
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

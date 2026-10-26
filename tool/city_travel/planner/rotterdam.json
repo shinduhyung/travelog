@@ -1,0 +1,678 @@
+{
+  "city": "Rotterdam",
+  "checked": "October 2026",
+  "intro_line": "A bold harbour city rebuilt with daring architecture.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centrum",
+        "Kop van Zuid",
+        "Oude Haven",
+        "Blijdorp"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centrum",
+        "Kop van Zuid",
+        "Oude Haven",
+        "Blijdorp"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Centrum",
+        "Kop van Zuid",
+        "Oude Haven",
+        "Blijdorp"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centrum",
+        "Kop van Zuid",
+        "Oude Haven",
+        "Blijdorp"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Centrum",
+        "Kop van Zuid",
+        "Oude Haven",
+        "Blijdorp"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 7,
+        "low": 2,
+        "rain_days": 15,
+        "note": "Jan: cold and wet, highs near 7°C. Pack a rain jacket and warm layers."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 12,
+        "note": "Feb: still cold, around 8°C, with fewer rain days than January."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 14,
+        "note": "Mar: cool at 11°C and often wet; bring waterproof shoes."
+      },
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 11,
+        "note": "Apr: milder at 14°C, good for walking and cycling."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 12,
+        "note": "May: pleasant at 18°C; a good month for the harbour and parks."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 11,
+        "note": "Jun: warm at 21°C with about 11 rain days; long daylight."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 14,
+        "note": "Jul: warmest month, highs near 22°C, but expect rain showers."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Aug: warm at 23°C; busy summer season, book hotels early."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 11,
+        "note": "Sep: still mild at 20°C and a little drier; a good shoulder month."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 14,
+        "note": "Oct: cooler at 15°C and wetter; carry an umbrella."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 15,
+        "note": "Nov: cold and wet, around 10°C; plan indoor sights."
+      },
+      {
+        "high": 8,
+        "low": 4,
+        "rain_days": 15,
+        "note": "Dec: cold at 8°C with many rain days; festive lights in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.6,
+      0.55
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "history": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.55
+    ]
+  },
+  "places": {
+    "erasmus_bridge": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Kop van Zuid",
+      "popularity": 5
+    },
+    "cube_houses": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning, before the crowds",
+      "area": "Oude Haven",
+      "popularity": 5
+    },
+    "markthal": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunchtime on a weekday",
+      "area": "Centrum",
+      "popularity": 5
+    },
+    "euromast": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "binnenhof": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "de_kuip": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Kop van Zuid",
+      "popularity": 3
+    },
+    "tudelft": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Centrum",
+      "popularity": 2
+    },
+    "duinrell": {
+      "types": [
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Summer, weekday",
+      "area": "Blijdorp",
+      "popularity": 3
+    },
+    "drievliet": {
+      "types": [
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer",
+      "area": "Centrum",
+      "popularity": 2
+    },
+    "pearl_earring": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Opening time",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "handelingenkamer": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Centrum",
+      "popularity": 2
+    },
+    "kinderdijk": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, spring to autumn",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "leiden_university": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Centrum",
+      "popularity": 2
+    },
+    "madurodam": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Daytime, dry weather",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "mauritshuis": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "new_church": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Centrum",
+      "popularity": 2
+    },
+    "peace_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "rotterdam_zoo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning, weekday",
+      "area": "Blijdorp",
+      "popularity": 4
+    },
+    "scheveningen_pier": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "speelstad": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Check before you go",
+      "area": "Centrum",
+      "popularity": 1
+    },
+    "witte_de_with": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "watertaxi": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Oude Haven",
+      "popularity": 3
+    },
+    "harbour_tour": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Daytime, dry weather",
+      "area": "Oude Haven",
+      "popularity": 3
+    },
+    "kralingse_plas": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Blijdorp",
+      "popularity": 2
+    },
+    "delfshaven": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "centraal_view": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "Centrum",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the centre, the art and a harbour trip; add a night for Kinderdijk or Dordrecht."
+  },
+  "airports": [
+    {
+      "code": "RTM",
+      "name": "Rotterdam The Hague Airport",
+      "primary": true,
+      "note": "Third-largest Dutch airport, about 5-6 km north of the centre.",
+      "options": [
+        {
+          "mode": "Bus 33",
+          "to": "Rotterdam Centraal",
+          "price": "€2-4",
+          "time": "25-35 min",
+          "note": "Cheapest option; tap in and out with a bank card."
+        },
+        {
+          "mode": "Bus + Metro",
+          "to": "Slinge and city centre",
+          "price": "€2-4",
+          "time": "30-40 min",
+          "note": "Bus to a metro station, then metro line D or E."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "15-25 min",
+          "note": "Fixed ranks outside the terminal."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€18-28",
+          "time": "15-25 min",
+          "note": "Check app pickup point at arrivals."
+        }
+      ]
+    },
+    {
+      "code": "AMS",
+      "name": "Amsterdam Schiphol Airport",
+      "primary": false,
+      "note": "Much bigger airport, about 58 km north of Rotterdam.",
+      "options": [
+        {
+          "mode": "Intercity train",
+          "to": "Rotterdam Centraal",
+          "price": "€15-20",
+          "time": "50-60 min",
+          "note": "Cheaper than Intercity Direct but slower."
+        },
+        {
+          "mode": "Intercity Direct",
+          "to": "Rotterdam Centraal",
+          "price": "€20-25",
+          "time": "27 min",
+          "note": "Fast; a supplement of about €1.50-2.60 applies."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€100-140",
+          "time": "50-70 min",
+          "note": "Best for groups or late arrivals."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€90-130",
+          "time": "50-70 min",
+          "note": "Compare with train for one person."
+        }
+      ]
+    },
+    {
+      "code": "EIN",
+      "name": "Eindhoven Airport",
+      "primary": false,
+      "note": "Budget airline hub, about 106 km southeast of Rotterdam.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Eindhoven Centraal, then Rotterdam Centraal",
+          "price": "€25-35",
+          "time": "90-100 min",
+          "note": "Bus takes about 20 min; train about 63 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€150-200",
+          "time": "75-95 min",
+          "note": "Long ride; train is usually better."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Rotterdam",
+      "https://en.wikivoyage.org/wiki/Rotterdam"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "art",
+    "family"
+  ],
+  "transit": {
+    "best": "Metro and trams for most trips; walk or bike in the flat centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines A/B/C run east-west; D/E run north-south via Beurs and Centraal. Services every 10 minutes by day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "RET buses cover the city. Buy tickets in advance; no sales on board."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt work here; taxis wait at Centraal and main squares."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but parking and narrow streets make it a poor choice for a city visit."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is flat and compact. Walk between Markthal, Oude Haven and the river."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "The city is flat and bike-friendly. Rent a bike for longer rides along the river."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "WaterBus ferries reach Kinderdijk and Dordrecht. Check times and fares on the day."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Centraal station links the city to the rest of the Netherlands. Pay with OV-Pay or an OV-chipkaart (about €8.50)."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate maritime climate: mild summers, cool winters and rain in every month. Pack layers and a rain jacket year-round.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 11–15 rain days every month. Showers pass quickly; a light rain jacket beats an umbrella in wind."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summers",
+        "text": "July and August peak near 22–23°C. Rarely hot; evenings stay cool, so bring a layer."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cool winters",
+        "text": "December to February highs sit around 7–8°C with lows near 2°C. Wind off the river feels colder."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Windy city",
+        "text": "It is flat and open, so wind is common. A windproof jacket helps on bridges and boat trips."
+      },
+      {
+        "icon": "🌷",
+        "title": "Best months: May to September",
+        "text": "Warmest and brightest. May, June and September are the sweet spots for walking and cycling."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket, comfortable shoes for cobbles, and sunglasses for bright summer days."
+      }
+    ]
+  }
+}

@@ -1,0 +1,1365 @@
+{
+  "city": "Hamburg",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Hamburg rewards visitors with lively docks, elegant lakes and a famously creative nightlife. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 53.4634,
+      "west": 9.8298,
+      "north": 53.6135,
+      "east": 10.0231,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4.5,
+      "flag_airport": 5.5,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "S-Bahn and U-Bahn cover the city; no trams since the 1970s.",
+      "Buy tickets before boarding buses; no ticket sales on board.",
+      "Single tickets run about €2.10-12.60; day tickets from €8.20.",
+      "Ride apps like Uber and Bolt work; taxis are metered and plentiful.",
+      "Driving is slow with roadworks and costly parking; use park-and-ride.",
+      "The city is flat and good for cycling; ferries cross the Elbe."
+    ],
+    "sources": []
+  },
+  "places": {
+    "miniatur_wunderland": {
+      "name": "Miniatur Wunderland",
+      "landmark": "Miniatur Wunderland",
+      "kind": "museum",
+      "lat": 53.5438,
+      "lon": 9.9916,
+      "price": 25,
+      "price_text": "≈ €25 adults · cheaper for children · book a time slot online",
+      "hours": "Daily, roughly 08:00/09:00–19:00 or later; check on the day",
+      "tip": "Book a timed ticket online well ahead. Weekday mornings are quietest.",
+      "source": "https://www.miniatur-wunderland.com/"
+    },
+    "elbphilharmonie": {
+      "name": "Elbphilharmonie",
+      "landmark": "Elbphilharmonie",
+      "kind": "sight",
+      "lat": 53.5413,
+      "lon": 9.9841,
+      "price": 5,
+      "price_text": "Plaza ticket ≈ €5 · concerts priced separately",
+      "hours": "Plaza daily, roughly 09:00–24:00; check on the day",
+      "tip": "Get a free or low-cost plaza ticket online for the outdoor deck and its harbour view.",
+      "source": "https://www.elbphilharmonie.de/en/"
+    },
+    "speicherstadt": {
+      "name": "Speicherstadt",
+      "landmark": "Speicherstadt",
+      "kind": "sight",
+      "lat": 53.5435,
+      "lon": 9.9962,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk the brick canals at dusk when the warehouses light up. It is a UNESCO area.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "hafencity": {
+      "name": "HafenCity",
+      "landmark": "HafenCity",
+      "kind": "sight",
+      "lat": 53.5418,
+      "lon": 9.9984,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Combine the waterfront walk with the Elbphilharmonie and Speicherstadt in one loop.",
+      "source": "https://www.hafencity.com/"
+    },
+    "reeperbahn": {
+      "name": "Reeperbahn",
+      "landmark": "Reeperbahn",
+      "kind": "sight",
+      "lat": 53.5496,
+      "lon": 9.9626,
+      "price": 0,
+      "price_text": "Free to walk · drinks and shows extra",
+      "hours": "Busiest at night; some venues late",
+      "tip": "Walk it once in daylight to see the street, then again after dark for the atmosphere. Stay on the main street late at night.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "st_michaelis": {
+      "name": "St. Michael's Church, Hamburg",
+      "landmark": "St. Michael's Church, Hamburg",
+      "kind": "sight",
+      "lat": 53.5484,
+      "lon": 9.9788,
+      "price": 8,
+      "price_text": "≈ €8 tower climb; church entry free or small donation",
+      "hours": "Daily, roughly 10:00–18:00; check on the day",
+      "tip": "Climb the tower for the best city view. The lift is handy if stairs are too much.",
+      "source": "https://www.st-michaelis.de/"
+    },
+    "elbe_river": {
+      "name": "Elbe River",
+      "landmark": "Elbe River",
+      "kind": "sight",
+      "lat": 53.5511,
+      "lon": 9.9937,
+      "price": 0,
+      "price_text": "Free to walk the banks",
+      "hours": "Always open",
+      "tip": "Sit on the Elbe beach steps near Övelgönne at sunset and watch the ships pass.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "fish_market": {
+      "name": "Fish Market Hamburg",
+      "landmark": "Fish Market Hamburg",
+      "kind": "food",
+      "lat": 53.5457,
+      "lon": 9.9536,
+      "price": 0,
+      "price_text": "Free entry · food and drink paid separately",
+      "hours": "Sunday mornings only, roughly 05:00–09:30; check on the day",
+      "tip": "Go early on Sunday. The fish rolls and the auction hall atmosphere are the draw.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "tropen_aquarium": {
+      "name": "Hagenbeck Tropen-Aquarium",
+      "landmark": "Hagenbeck Tropen-Aquarium",
+      "kind": "museum",
+      "lat": 53.5968,
+      "lon": 9.9324,
+      "price": 25,
+      "price_text": "≈ €25 adults · combo tickets with the zoo available",
+      "hours": "Daily, roughly 09:00–18:00; check on the day",
+      "tip": "Buy a combined zoo and aquarium ticket online to save time at the gate.",
+      "source": "https://www.hagenbeck.de/"
+    },
+    "rathaus": {
+      "name": "Hamburg City Hall",
+      "landmark": "Hamburg City Hall",
+      "kind": "sight",
+      "lat": 53.5503,
+      "lon": 9.9922,
+      "price": 0,
+      "price_text": "Free to view the square · guided tours small fee",
+      "hours": "Building exterior always visible; tours on set days, check on the day",
+      "tip": "Look at the facade from the Rathausmarkt, then join a short guided tour if one runs.",
+      "source": "https://www.hamburg.de/"
+    },
+    "harbor_boat_tour": {
+      "name": "Hamburg Harbor Boat Tour",
+      "landmark": "Hamburg Harbor Boat Tour",
+      "kind": "tour",
+      "lat": 53.5458,
+      "lon": 9.9663,
+      "price": 20,
+      "price_text": "≈ €15–25 for a 1-hour tour; check on the day",
+      "hours": "Departures through the day, roughly 10:00–18:00",
+      "tip": "Take a one-hour tour from the Landungsbrücken piers. Sit outside for the best views.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "volksparkstadion": {
+      "name": "Volksparkstadion",
+      "landmark": "Volksparkstadion",
+      "kind": "activity",
+      "lat": 53.5869,
+      "lon": 9.8987,
+      "price": null,
+      "price_text": "Match tickets vary widely; check on the day",
+      "hours": "Match days only for most visitors",
+      "tip": "Only worth a trip if you have a match ticket. Check the fixture list before planning.",
+      "source": "https://www.hsv.de/"
+    },
+    "wanderer": {
+      "name": "Wanderer above the Sea of Fog",
+      "landmark": "Wanderer above the Sea of Fog",
+      "kind": "sight",
+      "lat": 53.5543,
+      "lon": 10.0028,
+      "price": 0,
+      "price_text": "Free to view in the Kunsthalle collection; check current display",
+      "hours": "Museum hours vary; check on the day",
+      "tip": "This Caspar David Friedrich painting is in the Hamburger Kunsthalle. Confirm it is on display before you go.",
+      "source": "https://www.hamburger-kunsthalle.de/"
+    },
+    "wildpark": {
+      "name": "Wildpark Schwarze Berge",
+      "landmark": "Wildpark Schwarze Berge",
+      "kind": "park",
+      "lat": 53.4801,
+      "lon": 9.8501,
+      "price": 10,
+      "price_text": "≈ €10 adults · cheaper for children; check on the day",
+      "hours": "Daily, roughly 08:00–18:00; check on the day",
+      "tip": "A half-day trip south of the city for families. Bring sturdy shoes for the woodland paths.",
+      "source": "https://www.wildpark-schwarze-berge.de/"
+    },
+    "landungsbruecken": {
+      "name": "Landungsbrücken piers",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 53.5459,
+      "lon": 9.9667,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "The classic harbour viewpoint. Walk the covered pier and watch the ferries come in.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "schanzenviertel": {
+      "name": "Schanzenviertel walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.5617,
+      "lon": 9.9614,
+      "price": 0,
+      "price_text": "Free to walk · cafés and bars extra",
+      "hours": "Always open; liveliest afternoon and evening",
+      "tip": "Wander the side streets for street art, cafés and small shops. It is a good contrast to the harbour.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "fischmarkt_food": {
+      "name": "Fischmarkt food stalls",
+      "landmark": null,
+      "kind": "food",
+      "lat": 53.5454,
+      "lon": 9.9515,
+      "price": 10,
+      "price_text": "≈ €5–15 for a snack and drink",
+      "hours": "Sunday mornings only; check on the day",
+      "tip": "Try a fish roll and a coffee. Bring cash for the smaller stalls.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "planten_un_blomen": {
+      "name": "Planten un Blomen",
+      "landmark": null,
+      "kind": "park",
+      "lat": 53.5606,
+      "lon": 9.9839,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Daily, roughly 07:00–22:00; check on the day",
+      "tip": "A calm green break near the centre. The water-light shows in summer evenings are free.",
+      "source": "https://www.hamburg.de/planten-un-blomen/"
+    },
+    "oewelgoenne": {
+      "name": "Övelgönne Elbe beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 53.5453,
+      "lon": 9.9086,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A small sandy river beach with a view of passing ships. Good for a relaxed sunset walk.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "dialogue_im_dunkeln": {
+      "name": "Dialog im Dunkeln",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.5436,
+      "lon": 9.9906,
+      "price": 22,
+      "price_text": "≈ €20–25; book ahead",
+      "hours": "Set tour times; check on the day",
+      "tip": "A guided tour in complete darkness led by blind guides. Book a slot in advance.",
+      "source": "https://www.dialog-im-dunkeln.de/"
+    },
+    "grosse_freiheit": {
+      "name": "Große Freiheit and Beatles Platz",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 53.5511,
+      "lon": 9.9586,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; bars late",
+      "tip": "See the Beatles sculptures and the small clubs where the band played early on.",
+      "source": "https://www.hamburg-tourism.de/"
+    },
+    "alter_elbtunnel": {
+      "name": "Alter Elbtunnel",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 53.5459,
+      "lon": 9.9661,
+      "price": 0,
+      "price_text": "Free for pedestrians and cyclists",
+      "hours": "Always open",
+      "tip": "Walk or cycle the old tunnel under the Elbe. It is a quick, free and unusual experience.",
+      "source": "https://www.hamburg.de/"
+    },
+    "karolinenviertel": {
+      "name": "Karolinenviertel walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 53.5567,
+      "lon": 9.9694,
+      "price": 0,
+      "price_text": "Free to walk · food extra",
+      "hours": "Always open; best in the afternoon",
+      "tip": "Small shops, flea markets and food spots near the Messe. A good low-key neighbourhood stroll.",
+      "source": "https://www.hamburg-tourism.de/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Hamburg's big sights, all walkable or a short ride apart.",
+      "days": [
+        {
+          "title": "Harbour culture from HafenCity to the Altstadt",
+          "stops": [
+            {
+              "place": "miniatur_wunderland",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a slot online. Weekday mornings are calmest; rainy days fill up."
+            },
+            {
+              "place": "speicherstadt",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk the brick canals next door. Lunch at a harbour-side cafe."
+            },
+            {
+              "place": "elbphilharmonie",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Free Plaza ticket from the counter. Go up for the view."
+            },
+            {
+              "place": "rathaus",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Short ride or 20-minute walk. Exterior always visible; tours only on set days, check on the day."
+            },
+            {
+              "place": "st_michaelis",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Climb the tower for the view if it is clear. Roughly 10:00–18:00, check on the day."
+            },
+            {
+              "place": "planten_un_blomen",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Evening stroll to finish. Open until about 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "HafenCity or Altstadt"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Harbour history, the old tunnel and St. Pauli in one day.",
+      "days": [
+        {
+          "title": "Piers, tunnel and St. Pauli",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Early morning light on the warehouses. Quiet before the crowds."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Boats leave from the Landungsbrücken piers. Departures roughly 10:00–18:00."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Grab a fish sandwich here for lunch."
+            },
+            {
+              "place": "alter_elbtunnel",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Walk under the Elbe. Free, always open."
+            },
+            {
+              "place": "grosse_freiheit",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Beatles Platz and the old club street. Bars get busy late."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk it by day to see the street clearly; it is busiest at night."
+            }
+          ]
+        }
+      ],
+      "stay_area": "St. Pauli"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting walk through markets, neighbourhoods and harbour snacks.",
+      "days": [
+        {
+          "title": "Markets and neighbourhood food",
+          "stops": [
+            {
+              "place": "fischmarkt_food",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Sunday mornings only, roughly 05:00–09:30. Go early; it is packed by 08:00."
+            },
+            {
+              "place": "fish_market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Same site. Browse the halls and stalls before they close."
+            },
+            {
+              "place": "schanzenviertel",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Ride or walk over. Cafes and street food for lunch; liveliest afternoon and evening."
+            },
+            {
+              "place": "karolinenviertel",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short walk. Small shops and snack spots; best in the afternoon."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Harbour-side finish. Fish sandwiches and a view of the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altona or St. Pauli"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the harbour icons, the Elbphilharmonie and one big indoor sight.",
+      "days": [
+        {
+          "title": "Arrive, HafenCity and the Elbphilharmonie",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Brick warehouses and canals. Always open."
+            },
+            {
+              "place": "miniatur_wunderland",
+              "at": "15:15",
+              "minutes": 180,
+              "note": "Book a slot online. Weekday afternoons are calmer."
+            },
+            {
+              "place": "elbphilharmonie",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Free plaza ticket. Go up for evening lights over the water."
+            },
+            {
+              "place": "hafencity",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Walk the waterfront and eat dinner here."
+            }
+          ]
+        },
+        {
+          "title": "Altstadt, then the harbour",
+          "stops": [
+            {
+              "place": "rathaus",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Look at the facade and courtyard. Tours only on set days."
+            },
+            {
+              "place": "st_michaelis",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Climb the tower on a clear morning for the best view."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Boats leave from Landungsbrücken through the day."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Grab a fish sandwich and watch the ferries."
+            }
+          ]
+        }
+      ],
+      "stay_area": "HafenCity or Altstadt"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Visitors who want harbour history, the old tunnel and St. Pauli's stories.",
+      "days": [
+        {
+          "title": "Speicherstadt and the old tunnel",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start here for the warehouse history. Always open."
+            },
+            {
+              "place": "hafencity",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Old port meets new build. Walk the quays."
+            },
+            {
+              "place": "alter_elbtunnel",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Walk under the Elbe. Free, always open."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Sunset over the harbour, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "St. Pauli and Altstadt",
+          "stops": [
+            {
+              "place": "st_michaelis",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Check opening hours on the day."
+            },
+            {
+              "place": "rathaus",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Exterior and courtyard; tours on set days only."
+            },
+            {
+              "place": "grosse_freiheit",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Beatles history by day, bars later."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Quiet by day. Come back at night if you have energy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "St. Pauli or Altstadt"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eaters who want the Sunday fish market, harbour snacks and neighbourhood food streets.",
+      "days": [
+        {
+          "title": "Arrive, harbour snacks and Schanzenviertel",
+          "stops": [
+            {
+              "place": "landungsbruecken",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Fish sandwiches at the piers."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Work up an appetite on the water."
+            },
+            {
+              "place": "schanzenviertel",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Cafes, bakeries and street food. Liveliest late afternoon."
+            },
+            {
+              "place": "karolinenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Small food spots and bars. Dinner here."
+            }
+          ]
+        },
+        {
+          "title": "Fish market early, then slow morning",
+          "stops": [
+            {
+              "place": "fish_market",
+              "at": "06:00",
+              "minutes": 90,
+              "note": "Sunday mornings only, roughly 05:00–09:30. Check on the day."
+            },
+            {
+              "place": "fischmarkt_food",
+              "at": "07:30",
+              "minutes": 60,
+              "note": "Breakfast from the stalls. Bring cash."
+            },
+            {
+              "place": "oewelgoenne",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Walk the Elbe beach to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altona or St. Pauli"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: harbour, Elbphilharmonie and Miniatur Wunderland.",
+      "days": [
+        {
+          "title": "Arrive, HafenCity and the Elbphilharmonie",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Brick warehouses and canals. Best at dusk, but fine now."
+            },
+            {
+              "place": "elbphilharmonie",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Free plaza with harbour views. Book a slot online to skip the queue."
+            },
+            {
+              "place": "hafencity",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Walk the waterfront between the two sights."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Sunset over the Elbe, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Miniatur Wunderland and Altstadt",
+          "stops": [
+            {
+              "place": "miniatur_wunderland",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a timed ticket ahead. Weekday mornings are calmest."
+            },
+            {
+              "place": "dialogue_im_dunkeln",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short walk in HafenCity. Set tour times, so book ahead."
+            },
+            {
+              "place": "rathaus",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "See the facade and square. Tours only on set days."
+            },
+            {
+              "place": "st_michaelis",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Climb the tower for city views. Check the day's hours."
+            },
+            {
+              "place": "planten_un_blomen",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening stroll in the park before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Harbour morning, then go",
+          "stops": [
+            {
+              "place": "harbor_boat_tour",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Departures through the day. Go on a clear morning."
+            },
+            {
+              "place": "alter_elbtunnel",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Walk under the Elbe from the Landungsbrücken side."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Quiet by day, but good for a quick look before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "HafenCity or Altstadt"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Harbour history, St. Pauli and the old tunnel, at an easy pace.",
+      "days": [
+        {
+          "title": "Speicherstadt, harbour and St. Pauli",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start with the old warehouse district."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "See the port from the water. Afternoon is best on a clear day."
+            },
+            {
+              "place": "alter_elbtunnel",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Historic tunnel under the Elbe. Always open."
+            },
+            {
+              "place": "grosse_freiheit",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Beatles Platz and the old club street. Bars get busy late."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening walk, then dinner in St. Pauli."
+            }
+          ]
+        },
+        {
+          "title": "Altstadt and the Elbphilharmonie",
+          "stops": [
+            {
+              "place": "st_michaelis",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Clear mornings give the best tower views."
+            },
+            {
+              "place": "rathaus",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "City Hall exterior and square. Check tour days."
+            },
+            {
+              "place": "elbphilharmonie",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Plaza visit. Book a free slot online."
+            },
+            {
+              "place": "hafencity",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Walk the new waterfront."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Sunset by the piers."
+            }
+          ]
+        },
+        {
+          "title": "Sunday fish market, then go",
+          "stops": [
+            {
+              "place": "fish_market",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Sunday mornings only, roughly 05:00–09:30. Go early."
+            },
+            {
+              "place": "oewelgoenne",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Elbe beach walk nearby before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "St. Pauli or Altstadt"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Fish sandwiches, market stalls and neighbourhood eating.",
+      "days": [
+        {
+          "title": "Harbour snacks and Schanzenviertel",
+          "stops": [
+            {
+              "place": "landungsbruecken",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Grab a fish sandwich at the piers."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Work up an appetite on the water."
+            },
+            {
+              "place": "schanzenviertel",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Cafes and small shops. Liveliest in the afternoon."
+            },
+            {
+              "place": "karolinenviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Saturday afternoons are best here. Good for dinner."
+            }
+          ]
+        },
+        {
+          "title": "HafenCity and the Elbe",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning walk through the warehouses."
+            },
+            {
+              "place": "miniatur_wunderland",
+              "at": "11:15",
+              "minutes": 180,
+              "note": "Book a timed ticket. Weekday mornings are calmest."
+            },
+            {
+              "place": "elbphilharmonie",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Plaza views, then a coffee below."
+            },
+            {
+              "place": "oewelgoenne",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Elbe beach for sunset in summer."
+            }
+          ]
+        },
+        {
+          "title": "Sunday fish market, then go",
+          "stops": [
+            {
+              "place": "fischmarkt_food",
+              "at": "07:00",
+              "minutes": 60,
+              "note": "Sunday mornings only. Eat your way through the stalls."
+            },
+            {
+              "place": "fish_market",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Same site. Browse the market before it closes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "St. Pauli or Altona"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights: harbour icons, museums and a boat ride, grouped by area.",
+      "days": [
+        {
+          "title": "Arrive and HafenCity icons",
+          "stops": [
+            {
+              "place": "elbphilharmonie",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Free plaza; go up late afternoon for daylight. Book ahead if you want a concert."
+            },
+            {
+              "place": "speicherstadt",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Walk the brick canals at dusk. Ten minutes on foot from the Elbphilharmonie."
+            },
+            {
+              "place": "hafencity",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Waterfront stroll and sunset views."
+            },
+            {
+              "place": "schanzenviertel",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in the neighbourhood; lively in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Miniatur Wunderland and harbour",
+          "stops": [
+            {
+              "place": "miniatur_wunderland",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a timed slot online. Weekday morning is quietest."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Boats leave from the Landungsbrücken piers; afternoon on a clear day is best."
+            },
+            {
+              "place": "alter_elbtunnel",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Walk under the Elbe from the St. Pauli side."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Piers and harbour views; stay for sunset if you like."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Evening walk; busiest at night."
+            }
+          ]
+        },
+        {
+          "title": "Altstadt culture and museums",
+          "stops": [
+            {
+              "place": "rathaus",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Exterior always visible; tours only on set days, check on the day."
+            },
+            {
+              "place": "st_michaelis",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Climb the tower on a clear morning."
+            },
+            {
+              "place": "wanderer",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "See the painting; museum hours vary, check on the day."
+            },
+            {
+              "place": "planten_un_blomen",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Park walk; nice in summer."
+            },
+            {
+              "place": "dialogue_im_dunkeln",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Set tour times; book ahead. Good rainy-day option."
+            }
+          ]
+        }
+      ],
+      "stay_area": "HafenCity or Altstadt"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Harbour history, St. Pauli and the old city, with the fish market on Sunday.",
+      "days": [
+        {
+          "title": "Speicherstadt and harbour history",
+          "stops": [
+            {
+              "place": "speicherstadt",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quiet early morning in the brick warehouses."
+            },
+            {
+              "place": "miniatur_wunderland",
+              "at": "10:15",
+              "minutes": 180,
+              "note": "Book a slot online; weekday morning is best."
+            },
+            {
+              "place": "harbor_boat_tour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "See the port from the water; departures through the afternoon."
+            },
+            {
+              "place": "alter_elbtunnel",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Historic tunnel under the Elbe."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Piers and harbour views at sunset."
+            }
+          ]
+        },
+        {
+          "title": "St. Pauli and the Beatles",
+          "stops": [
+            {
+              "place": "grosse_freiheit",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Beatles Platz and the old club street."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk it by day, then come back at night."
+            },
+            {
+              "place": "karolinenviertel",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Quirky streets and food stops; best in the afternoon."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Evening into night; some venues run late."
+            }
+          ]
+        },
+        {
+          "title": "Old city and Sunday fish market",
+          "stops": [
+            {
+              "place": "fish_market",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Sunday mornings only, roughly 05:00–09:30; check on the day."
+            },
+            {
+              "place": "fischmarkt_food",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Breakfast at the stalls; fish sandwiches are the classic."
+            },
+            {
+              "place": "st_michaelis",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Tower climb; roughly 10:00–18:00, check on the day."
+            },
+            {
+              "place": "rathaus",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Exterior always visible; tours on set days only."
+            },
+            {
+              "place": "wanderer",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Museum hours vary; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "St. Pauli or Altstadt"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way through the city: markets, neighbourhood food streets and harbour-side dinners.",
+      "days": [
+        {
+          "title": "HafenCity and waterfront dinner",
+          "stops": [
+            {
+              "place": "elbphilharmonie",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Plaza visit; late afternoon light is best."
+            },
+            {
+              "place": "speicherstadt",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Canal walk at dusk."
+            },
+            {
+              "place": "hafencity",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset by the water."
+            },
+            {
+              "place": "schanzenviertel",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in the neighbourhood; liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Markets, harbour and St. Pauli",
+          "stops": [
+            {
+              "place": "harbor_boat_tour",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning boat from the Landungsbrücken piers."
+            },
+            {
+              "place": "landungsbruecken",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Grab a fish sandwich nearby."
+            },
+            {
+              "place": "karolinenviertel",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Food stalls and small shops; best in the afternoon."
+            },
+            {
+              "place": "grosse_freiheit",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Beatles Platz and bars."
+            },
+            {
+              "place": "reeperbahn",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Evening food and nightlife."
+            }
+          ]
+        },
+        {
+          "title": "Sunday fish market and Altstadt",
+          "stops": [
+            {
+              "place": "fish_market",
+              "at": "07:00",
+              "minutes": 90,
+              "note": "Sunday mornings only, roughly 05:00–09:30; check on the day."
+            },
+            {
+              "place": "fischmarkt_food",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Breakfast at the stalls; bring cash."
+            },
+            {
+              "place": "st_michaelis",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Tower climb; check hours on the day."
+            },
+            {
+              "place": "rathaus",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Exterior always visible; tours on set days only."
+            },
+            {
+              "place": "planten_un_blomen",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk off lunch; summer evening is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "St. Pauli or Altona"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Elbphilharmonie, Speicherstadt and the big museums."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Harbour history, St. Pauli and the war years."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Fish sandwiches, Franzbrötchen and harbour-side dinners."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Altstadt",
+      "range": [
+        90,
+        200
+      ],
+      "why": "Central for the Rathaus, Kunsthalle and the lake. Walk to the main station and U/S-Bahn.",
+      "center": [
+        53.551,
+        10.0
+      ]
+    },
+    {
+      "area": "HafenCity",
+      "range": [
+        130,
+        280
+      ],
+      "why": "Next to the Elbphilharmonie and Speicherstadt. New hotels, quiet nights, short walk to the water.",
+      "center": [
+        53.542,
+        9.998
+      ]
+    },
+    {
+      "area": "St. Pauli",
+      "range": [
+        80,
+        180
+      ],
+      "why": "Nightlife, the Reeperbahn and the harbour edge. Lively and loud on weekends.",
+      "center": [
+        53.549,
+        9.968
+      ]
+    },
+    {
+      "area": "Altona",
+      "range": [
+        85,
+        190
+      ],
+      "why": "Local feel, good food, river views from the Elbe beach. Quick S-Bahn ride to the centre.",
+      "center": [
+        53.55,
+        9.935
+      ]
+    }
+  ],
+  "food": [
+    "Try a Fischbrötchen (fish sandwich) at the Landungsbrücken or the fish market; prices are roughly €4–8.",
+    "Franzbrötchen is the local cinnamon pastry. Buy one warm from a bakery for about €2–3.",
+    "Labskaus and Grünkohl are classic Hamburg dishes; look for them on traditional restaurant menus.",
+    "The Sunday fish market in Altona (early morning) is a Hamburg ritual; check opening hours on the day.",
+    "Book ahead for dinner on the Reeperbahn or in HafenCity on weekends; walk-ins get harder after 19:00."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a harbour ferry ride on the Elbe; regular ferries run and are cheap with a transit ticket.",
+    "Add a day trip to the Speicherstadt museums or the International Maritime Museum if you like ships.",
+    "Planten un Blomen park and the Wallanlagen are free and good for a slow half-day in dry weather."
+  ]
+}

@@ -1,0 +1,33 @@
+$ deepseek_prep.py Charlotte
+  tokens in 668 out 275
+Charlotte: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Charlotte
+  tokens in 2966 out 579
+Charlotte: 1 problems
+  - CLT taxi $25 flat vs tariff estimate 56
+
+$ deepseek_city.py Charlotte --stage places
+Charlotte: places
+  tokens in 1146 out 3178
+
+$ deepseek_city.py Charlotte --stage frame
+Charlotte: frame
+  tokens in 2435 out 1897
+  repaired JSON
+
+$ deepseek_city.py Charlotte --stage plans
+Charlotte: plans
+  plans for day
+  tokens in 2065 out 934
+  plans for 1n
+  tokens in 2066 out 1053
+  plans for 2n
+  tokens in 2071 out 1172
+  plans for 3n
+  tokens in 2066 out 1946
+
+$ merge_city.py Charlotte
+Charlotte: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/charlotte.json and planner/charlotte.json
+

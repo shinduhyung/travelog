@@ -1,0 +1,176 @@
+{
+ "city": "Hanoi",
+ "trips": [
+  {
+   "place": "Ninh Bình",
+   "label": "",
+   "position": {
+    "id": 412197,
+    "name": "Ninh Bình",
+    "city": "Ninh Bình",
+    "lat": 20.25389,
+    "lng": 105.975
+   },
+   "town": {
+    "name": "Ninh Bình",
+    "lat": 20.25809,
+    "lng": 105.97965
+   },
+   "road": {
+    "km": 94,
+    "min": 76,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1148000,
+    "currency": "VND"
+   },
+   "modes": {
+    "train": {
+     "from": "$4-$400",
+     "time": "2h 6m",
+     "via": "Ha Noi to Ninh Binh",
+     "source": "https://www.rome2rio.com/s/Hanoi/Ninh%20Binh"
+    },
+    "bus": {
+     "from": "$7",
+     "time": "1h 11m",
+     "via": "Rạp Xiếc Trung Ương to Ninh Bình",
+     "source": "https://www.rome2rio.com/s/Hanoi/Ninh%20Binh"
+    }
+   },
+   "route_note": "Take a train or express bus south from Hanoi to Ninh Binh, then a short taxi or bicycle ride to the Tam Coc and Trang An boat docks.",
+   "see": [
+    "Tam Coc boat ride through limestone karsts",
+    "Trang An scenic boat route",
+    "Hang Mua viewpoint climb",
+    "Bai Dinh Pagoda"
+   ],
+   "visit": "Full day",
+   "tour_query": "Ninh Binh day trip from Hanoi",
+   "quests": [
+    "Trang An Boat Tour"
+   ],
+   "recommended": "bus",
+   "why": "The express bus is fastest at 1h 11m and drops you near the Tam Coc and Trang An boat docks.",
+   "stars": 5,
+   "know": [
+    "Book the Trang An or Tam Coc boat ride in advance, especially on weekends",
+    "Best in the dry season from around November to April",
+    "Bring sun protection; boats are open-air"
+   ]
+  },
+  {
+   "place": "Hạ Long",
+   "label": "",
+   "position": {
+    "id": 412188,
+    "name": "Ha Long",
+    "city": "Ha Long",
+    "lat": 20.95111,
+    "lng": 107.08
+   },
+   "town": {
+    "name": "Hạ Long",
+    "lat": 20.95045,
+    "lng": 107.07336
+   },
+   "road": {
+    "km": 157,
+    "min": 111,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1904000,
+    "currency": "VND"
+   },
+   "modes": {
+    "bus": {
+     "from": "$10",
+     "time": "4h 30m",
+     "via": "Hanoi to Hạ Long",
+     "source": "https://www.rome2rio.com/s/Hanoi/Ha%20Long"
+    }
+   },
+   "route_note": "Express limousine buses run directly from Hanoi to Ha Long in about 2.5-3 hours; day cruises depart from the Tuan Chau or Bai Chay piers.",
+   "see": [
+    "Ha Long Bay day cruise",
+    "Sung Sot (Surprise) Cave",
+    "Kayaking among the karsts",
+    "Titop Island viewpoint"
+   ],
+   "visit": "Full day",
+   "tour_query": "Ha Long Bay day cruise from Hanoi",
+   "quests": [
+    "Ha Long Bay"
+   ],
+   "recommended": "tour",
+   "why": "The listed bus takes 4h 30m each way, so a day trip needs an organized cruise tour to work.",
+   "stars": 5,
+   "know": [
+    "Day cruises depart from Tuan Chau or Bai Chay piers",
+    "Book ahead to secure a cruise slot",
+    "Check weather; cruises can be cancelled in storms"
+   ]
+  },
+  {
+   "place": "Hai Phong",
+   "label": "",
+   "position": {
+    "id": 412182,
+    "name": "Hải Phòng",
+    "city": "Hải Phòng",
+    "lat": 20.85611,
+    "lng": 106.68222
+   },
+   "town": {
+    "name": "Hai Phong",
+    "lat": 20.86481,
+    "lng": 106.68345
+   },
+   "road": {
+    "km": 107,
+    "min": 82,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1304000,
+    "currency": "VND"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$19",
+     "time": "2h 33m",
+     "via": "Long Biên Station to Haiphong Station",
+     "source": "https://www.rome2rio.com/s/Hanoi/Hai%20Phong"
+    },
+    "bus": {
+     "from": "$5-$6",
+     "time": "1h 30m",
+     "via": "Ha Noi Nuoc Ngam Bus Station to Hai Phong Niem Nghia Bus Station",
+     "source": "https://www.rome2rio.com/s/Hanoi/Hai%20Phong"
+    }
+   },
+   "route_note": "Frequent trains and express buses connect Hanoi with Hai Phong in roughly 2-2.5 hours; from the city a local bus or taxi reaches Cat Ba ferry piers.",
+   "see": [
+    "French colonial architecture in the city centre",
+    "Cat Ba Island and Lan Ha Bay",
+    "Du Hang Pagoda",
+    "Local seafood market"
+   ],
+   "visit": "Full day",
+   "tour_query": "Hai Phong and Cat Ba day trip from Hanoi",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The express bus is fastest at 1h 30m and frequent, with trains as a backup.",
+   "stars": 3,
+   "know": [
+    "Cat Ba ferry piers are reached by local bus or taxi from the city",
+    "Best in the dry season from around November to April"
+   ]
+  }
+ ],
+ "problems": [
+  "Hoa Lu: not a town in cities15000.json (VN), dropped"
+ ]
+}

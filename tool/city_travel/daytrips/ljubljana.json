@@ -1,0 +1,66 @@
+{
+ "city": "Ljubljana",
+ "trips": [
+  {
+   "place": "Kranj",
+   "label": "",
+   "position": {
+    "id": 406110,
+    "name": "Kranj",
+    "city": "Kranj",
+    "lat": 46.23887,
+    "lng": 14.35561
+   },
+   "town": {
+    "name": "Kranj",
+    "lat": 46.23887,
+    "lng": 14.35561
+   },
+   "road": {
+    "km": 30,
+    "min": 28,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 50.0,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$3",
+     "time": "35m",
+     "via": "Ljubljana to Kranj",
+     "source": "https://www.rome2rio.com/s/Ljubljana/Kranj"
+    },
+    "bus": {
+     "from": "$3-$4",
+     "time": "35m",
+     "via": "Ljubljana Tivoli to Kranj Globus",
+     "source": "https://www.rome2rio.com/s/Ljubljana/Kranj"
+    }
+   },
+   "route_note": "Direct trains or buses from Ljubljana reach Kranj in about 30 minutes, with a short walk to the old town.",
+   "see": [
+    "Kranj old town",
+    "Kieselstein Castle",
+    "Canyon of the Kokra",
+    "Prešeren House"
+   ],
+   "visit": "Half day",
+   "tour_query": "Kranj day trip from Ljubljana",
+   "quests": [],
+   "recommended": "train",
+   "why": "Trains reach Kranj in about 35 minutes and drop you a short walk from the old town.",
+   "stars": 3,
+   "know": [
+    "Kranj's old town and canyon are compact and walkable from the station",
+    "Best visited on a clear day for views from the old town above the Kokra canyon"
+   ]
+  }
+ ],
+ "problems": [
+  "Bled: not a town in cities15000.json (SI), dropped",
+  "Postojna: not a town in cities15000.json (SI), dropped",
+  "Skofja Loka: not a town in cities15000.json (SI), dropped"
+ ]
+}

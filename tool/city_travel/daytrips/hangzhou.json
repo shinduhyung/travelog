@@ -1,0 +1,112 @@
+{
+ "city": "Hangzhou",
+ "trips": [
+  {
+   "place": "Shaoxing",
+   "label": "",
+   "position": {
+    "id": 17401488,
+    "name": "Shaoxing, Shaoxingbei",
+    "city": "Shaoxing",
+    "lat": 30.10686,
+    "lng": 120.53724
+   },
+   "town": {
+    "name": "Shaoxing",
+    "lat": 30.00237,
+    "lng": 120.57864
+   },
+   "road": {
+    "km": 61,
+    "min": 53,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 160.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "bus": {
+     "from": "$3-$13",
+     "time": "1h 19m",
+     "via": "Hangzhou South to Shaoxing Passenger Center",
+     "source": "https://www.rome2rio.com/s/Hangzhou/Shaoxing"
+    }
+   },
+   "route_note": "High-speed trains run directly from Hangzhou East station to Shaoxing North in under an hour, then metro or taxi into the old town.",
+   "see": [
+    "Luxun's Former Residence",
+    "Shen Garden",
+    "East Lake",
+    "Anchang Ancient Town"
+   ],
+   "visit": "Full day",
+   "tour_query": "Shaoxing day trip from Hangzhou",
+   "quests": [],
+   "recommended": "tour",
+   "why": "High-speed trains reach Shaoxing North in under an hour, faster than the bus and with easy onward metro or taxi to the old town.",
+   "stars": 4,
+   "know": [
+    "Book high-speed train tickets ahead for weekend travel",
+    "Shaoxing North is outside the old town; use metro or taxi for the last stretch",
+    "Spring and autumn are the most comfortable seasons to walk the old town"
+   ]
+  },
+  {
+   "place": "Deqing",
+   "label": "",
+   "position": {
+    "id": 17403155,
+    "name": "Deqing",
+    "city": "Deqing",
+    "lat": 30.54704,
+    "lng": 120.05672
+   },
+   "town": {
+    "name": "Deqing",
+    "lat": 30.54485,
+    "lng": 119.9599
+   },
+   "road": {
+    "km": 41,
+    "min": 34,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 110.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$8",
+     "time": "41m",
+     "via": "Hangzhou to Deqing West",
+     "source": "https://www.rome2rio.com/s/Hangzhou/Deqing"
+    }
+   },
+   "route_note": "Take a high-speed train from Hangzhou to Deqing, then a local bus or shuttle up to the Moganshan mountain villages.",
+   "see": [
+    "Bamboo forests",
+    "Historic stone villas",
+    "Mountain hiking trails",
+    "Sword Pond waterfall area"
+   ],
+   "visit": "Full day",
+   "tour_query": "Moganshan day trip from Hangzhou",
+   "quests": [],
+   "recommended": "train",
+   "why": "The train covers the 41 km in about 41 minutes, quicker than driving and a good base for the Moganshan shuttle.",
+   "stars": 3,
+   "know": [
+    "You still need a local bus or shuttle from Deqing up to the Moganshan villages",
+    "Moganshan is busiest and priciest in summer; weekdays are calmer",
+    "Bring cash or a transit card for the local mountain shuttle"
+   ]
+  }
+ ],
+ "problems": [
+  "Wuzhen: no Omio position, dropped",
+  "Xitang: no Omio position, dropped",
+  "Shaoxing: model picked train without data; set to tour"
+ ]
+}

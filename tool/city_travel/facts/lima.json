@@ -1,0 +1,189 @@
+{
+  "currency": "PEN",
+  "usd_rate": 3.4409,
+  "intro_line": "Lima: grey skies, ceviche, and cliffs above the Pacific.",
+  "intro": "Lima rewards visitors with world-class food, colonial history, and a dramatic coastal setting. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Miraflores",
+    "Barranco",
+    "San Isidro",
+    "Centro Histórico"
+  ],
+  "taxi": {
+    "flag_day": 6,
+    "flag_airport": 8,
+    "per_km": 2.5,
+    "min_fare": 8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro Line 1 is elevated and runs north-south east of the centre; it misses most tourist areas.",
+    "Metropolitano is a fast bus rapid transit with dedicated lanes; card costs S/4.5, fare S/2.50.",
+    "City buses and combis are cheap but confusing for visitors; agree the fare first.",
+    "Uber, DiDi, and Cabify work in Lima; verify driver name and plate before getting in.",
+    "Taxis have no meters; agree the price before you ride, and confirm soles not dollars.",
+    "Driving is chaotic; walking is fine in Miraflores and Barranco, and bike lanes are growing."
+  ],
+  "airports": [
+    {
+      "code": "LIM",
+      "name": "Jorge Chávez International Airport",
+      "primary": true,
+      "note": "Main gateway, in Callao about 8 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "AeroDirecto public bus",
+          "to": "City routes, including Miraflores (Sur route)",
+          "price": "S/2-5",
+          "time": "1-3 hr",
+          "note": "Cheapest but slow and the airport area is dodgy at night."
+        },
+        {
+          "mode": "Airport Express bus",
+          "to": "Miraflores (four stops)",
+          "price": "S/20 one way",
+          "time": "45-60 min",
+          "note": "Hourly; last bus leaves at 10 PM."
+        },
+        {
+          "mode": "Taxi (certified desk inside)",
+          "to": "Centro Histórico",
+          "price": "S/50-65",
+          "time": "30-50 min",
+          "note": "Green Taxi and Taxi365 desks are safe; prices are inflated."
+        },
+        {
+          "mode": "Taxi (outside terminal grounds)",
+          "to": "Miraflores",
+          "price": "S/25-35",
+          "time": "30-50 min",
+          "note": "Cheaper but less safe; avoid touts outside the airport."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "Miraflores or centre",
+          "price": "S/25-45",
+          "time": "30-50 min",
+          "note": "Verify driver name and plate; some fake drivers wait outside."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Plaza Mayor de Lima",
+    "Cathedral of Lima",
+    "Monastery of San Francisco",
+    "Huaca Pucllana",
+    "Pachacamac",
+    "Larco Museum",
+    "Government Palace",
+    "Archbishop's Palace of Lima",
+    "Bridge of Sighs, Lima",
+    "Ceviche",
+    "Estadio Monumental U",
+    "Estadio Nacional del Peru",
+    "Huaca Huallamarca",
+    "Lima Art Museum (MALI)",
+    "Torre Tagle Palace"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Lima",
+      "https://en.wikivoyage.org/wiki/Lima"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -12.0464,
+    -77.0428
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 25,
+      "low": 20,
+      "rain_days": 4
+    },
+    {
+      "high": 26,
+      "low": 21,
+      "rain_days": 5
+    },
+    {
+      "high": 25,
+      "low": 21,
+      "rain_days": 7
+    },
+    {
+      "high": 24,
+      "low": 19,
+      "rain_days": 2
+    },
+    {
+      "high": 22,
+      "low": 17,
+      "rain_days": 0
+    },
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 0
+    },
+    {
+      "high": 19,
+      "low": 15,
+      "rain_days": 0
+    },
+    {
+      "high": 19,
+      "low": 14,
+      "rain_days": 0
+    },
+    {
+      "high": 19,
+      "low": 15,
+      "rain_days": 0
+    },
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 1
+    },
+    {
+      "high": 21,
+      "low": 16,
+      "rain_days": 0
+    },
+    {
+      "high": 23,
+      "low": 18,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

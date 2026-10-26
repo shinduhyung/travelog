@@ -1,0 +1,30 @@
+$ deepseek_facts.py San Francisco
+  tokens in 4005 out 753
+San Francisco: 0 problems
+
+$ deepseek_city.py San Francisco --stage places
+San Francisco: places
+  tokens in 1191 out 3319
+
+$ deepseek_city.py San Francisco --stage frame
+San Francisco: frame
+  tokens in 2423 out 1776
+  repaired JSON
+
+$ deepseek_city.py San Francisco --stage plans
+San Francisco: plans
+  plans for day
+  tokens in 2168 out 790
+  plans for 1n
+  tokens in 2169 out 1433
+  plans for 2n
+  tokens in 2169 out 1784
+  plans for 3n
+  tokens in 2174 out 1956
+  plans for 4n
+  tokens in 2169 out 1978
+
+$ merge_city.py San Francisco
+San Francisco: 20 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/san-francisco.json and planner/san-francisco.json
+

@@ -1,0 +1,32 @@
+$ deepseek_facts.py Toronto
+  tokens in 4151 out 1064
+Toronto: 0 problems
+
+$ deepseek_city.py Toronto --stage places
+Toronto: places
+  tokens in 1242 out 4599
+
+$ deepseek_city.py Toronto --stage frame
+Toronto: frame
+  tokens in 2437 out 1864
+  repaired JSON
+
+$ deepseek_city.py Toronto --stage plans
+Toronto: plans
+  plans for day
+  tokens in 2664 out 934
+  plans for 1n
+  tokens in 2665 out 1315
+  plans for 2n
+  tokens in 2670 out 1461
+  plans for 3n
+  tokens in 2665 out 1860
+  plans for 4n
+  tokens in 2665 out 2134
+
+$ merge_city.py Toronto
+ERROR plan 4n-culture: unknown place 'st_lawrence_market'
+ERROR plan 4n-food: unknown place 'st_lawrence_market'
+ERROR plan 4n-family: unknown place 'st_lawrence_market'
+Toronto: 28 places, 15 plans, 3 errors, 0 warnings
+

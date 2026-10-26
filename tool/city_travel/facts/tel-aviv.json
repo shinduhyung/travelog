@@ -1,0 +1,173 @@
+{
+  "currency": "ILS",
+  "usd_rate": 3.1107,
+  "intro_line": "Tel Aviv: Mediterranean beaches, Bauhaus streets, and nonstop energy.",
+  "intro": "Tel Aviv rewards visitors with sun-soaked beaches, a lively food scene, and a UNESCO-listed White City of Bauhaus architecture. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Tel Aviv Center",
+    "Neve Tzedek",
+    "Jaffa",
+    "Port area"
+  ],
+  "taxi": {
+    "flag_day": 12,
+    "flag_airport": 20,
+    "per_km": 5,
+    "min_fare": 15
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Light rail (since 2023) links Jaffa, Neve Tzedek, Rothschild Blvd, Sarona, and Tel Aviv Center.",
+    "Buses are frequent and cheap; use a Rav-Kav smart card (no cash on buses).",
+    "Taxis are metered; ride apps like Gett and Uber work in Tel Aviv.",
+    "Driving is possible but traffic is heavy and parking is hard to find.",
+    "Walking and biking are great along the beach promenade and in the center.",
+    "No ferries to Tel Aviv; private boats can dock at the marina."
+  ],
+  "airports": [
+    {
+      "code": "TLV",
+      "name": "Ben Gurion International Airport",
+      "primary": true,
+      "note": "Main international gateway, 13 km southeast of the city.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Tel Aviv stations (HaHagana, HaShalom, Savidor)",
+          "price": "₪15-20",
+          "time": "15-20 min",
+          "note": "Direct trains; buy ticket or use Rav-Kav."
+        },
+        {
+          "mode": "Bus 445",
+          "to": "Tel Aviv hotels area",
+          "price": "₪10-15",
+          "time": "30-50 min",
+          "note": "Runs hourly, 24/6."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City center",
+          "price": "₪150-200",
+          "time": "15-25 min",
+          "note": "Use meter; shared taxis can be cheaper."
+        },
+        {
+          "mode": "Ride app (Gett/Uber)",
+          "to": "City center",
+          "price": "₪120-180",
+          "time": "15-25 min",
+          "note": "Compare prices before booking."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Old Jaffa",
+    "Tel Aviv Beach",
+    "Carmel Market",
+    "Falafel",
+    "Luna Park, Tel Aviv",
+    "Superland"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tel Aviv",
+      "https://en.wikivoyage.org/wiki/Tel%20Aviv"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    32.08088,
+    34.78057
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 12
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 9
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 3
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 2
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 1
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 0
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 0
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 0
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 4
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 7
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

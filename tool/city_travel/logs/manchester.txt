@@ -1,0 +1,29 @@
+$ deepseek_facts.py Manchester
+  tokens in 3927 out 827
+Manchester: 1 problems
+  - LPL taxi £50-70 vs tariff estimate 121
+
+$ deepseek_city.py Manchester --stage places
+Manchester: places
+  tokens in 1148 out 2563
+
+$ deepseek_city.py Manchester --stage frame
+Manchester: frame
+  tokens in 2432 out 1682
+  repaired JSON
+
+$ deepseek_city.py Manchester --stage plans
+Manchester: plans
+  plans for day
+  tokens in 2094 out 1102
+  plans for 1n
+  tokens in 2095 out 1129
+  plans for 2n
+  tokens in 2100 out 1195
+  plans for 3n
+  tokens in 2095 out 1725
+
+$ merge_city.py Manchester
+ERROR afflecks: kind 'shopping'
+Manchester: 20 places, 12 plans, 1 errors, 0 warnings
+

@@ -1,0 +1,1735 @@
+{
+  "city": "Johannesburg",
+  "checked": "October 2026",
+  "currency": "ZAR",
+  "usd_rate": 16.4953,
+  "intro": "Johannesburg rewards visitors with world-class museums, lively food scenes and easy day trips. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -26.2799,
+      "west": 27.8657,
+      "north": -26.0137,
+      "east": 28.2701,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 30,
+      "flag_airport": 50,
+      "per_km": 12,
+      "min_fare": 40
+    },
+    "road_factor": 1.4,
+    "city_kmh": 25,
+    "notes": [
+      "Gautrain is the fast, safe rail link between OR Tambo, Sandton, Rosebank and Pretoria.",
+      "Metrorail commuter trains are cheap but not advised for tourists.",
+      "City and Putco buses are limited; minibus taxis are cheap but risky for visitors.",
+      "Uber and Bolt work well; use comfort or black options where possible.",
+      "Renting a car gives the most flexibility; traffic peaks 06:30-09:00 and 15:30-18:30.",
+      "Walking is fine in malls and some suburbs; avoid walking between distant areas."
+    ],
+    "sources": []
+  },
+  "places": {
+    "apartheid-museum": {
+      "name": "Apartheid Museum",
+      "landmark": "Apartheid Museum",
+      "kind": "museum",
+      "lat": -26.2378,
+      "lon": 28.0089,
+      "price": 150,
+      "price_text": "≈ ZAR 120–170 adult · check on the day",
+      "hours": "Tue–Sun 09:00–17:00 · closed Monday",
+      "tip": "Allow at least two hours. The walk-through history is heavy, so go early and take it slowly.",
+      "source": "https://www.apartheidmuseum.org/"
+    },
+    "constitution-hill": {
+      "name": "Constitution Hill",
+      "landmark": "Constitution Hill",
+      "kind": "sight",
+      "lat": -26.1889,
+      "lon": 28.0423,
+      "price": 100,
+      "price_text": "≈ ZAR 80–120 guided tour · check on the day",
+      "hours": "Mon–Fri 09:00–17:00 · Sat–Sun 10:00–16:00",
+      "tip": "Join a guided tour. The old prison cells and the Constitutional Court are the highlights.",
+      "source": "https://www.constitutionhill.org.za/"
+    },
+    "mandela-house": {
+      "name": "Mandela House",
+      "landmark": "Mandela House",
+      "kind": "museum",
+      "lat": -26.2377,
+      "lon": 27.9066,
+      "price": 100,
+      "price_text": "≈ ZAR 80–120 adult · check on the day",
+      "hours": "Daily 09:00–17:00",
+      "tip": "Small house, big story. Combine it with the Vilakazi Street walk nearby.",
+      "source": "https://www.mandelahouse.co.za/"
+    },
+    "hector-pieterson": {
+      "name": "Hector Pieterson Memorial",
+      "landmark": "Hector Pieterson Memorial",
+      "kind": "museum",
+      "lat": -26.2346,
+      "lon": 27.9039,
+      "price": 80,
+      "price_text": "≈ ZAR 60–100 · check on the day",
+      "hours": "Daily 09:00–17:00",
+      "tip": "The photo of Hector carried by his brother is the image to remember. A local guide adds a lot.",
+      "source": "https://www.sahistory.org.za/place/hector-pieterson-memorial"
+    },
+    "gold-reef-city": {
+      "name": "Gold Reef City",
+      "landmark": "Gold Reef City",
+      "kind": "activity",
+      "lat": -26.2307,
+      "lon": 28.0051,
+      "price": 350,
+      "price_text": "≈ ZAR 250–450 theme park entry · check on the day",
+      "hours": "Wed–Sun 09:30–17:00 · closed Mon–Tue",
+      "tip": "The underground mine tour is separate from the rides. Book ahead on weekends.",
+      "source": "https://www.goldreefcity.co.za/"
+    },
+    "ponte-city": {
+      "name": "Ponte City",
+      "landmark": "Ponte City",
+      "kind": "sight",
+      "lat": -26.1903,
+      "lon": 28.0561,
+      "price": null,
+      "price_text": "View from the street free · rooftop tours vary",
+      "hours": "Exterior always visible · interior by tour only",
+      "tip": "The cylindrical tower is best seen from the street. Do not wander the building alone.",
+      "source": ""
+    },
+    "sab-world-of-beer": {
+      "name": "SAB World of Beer",
+      "landmark": "SAB World of Beer",
+      "kind": "museum",
+      "lat": -26.2045,
+      "lon": 28.0336,
+      "price": 120,
+      "price_text": "≈ ZAR 100–150 incl. tasting · check on the day",
+      "hours": "Tue–Sat 10:00–18:00 · closed Sunday–Monday",
+      "tip": "Tours run on a schedule. The tasting at the end is the fun part.",
+      "source": "https://www.worldofbeer.co.za/"
+    },
+    "fnb-stadium": {
+      "name": "FNB Stadium",
+      "landmark": "FNB Stadium",
+      "kind": "sight",
+      "lat": -26.2347,
+      "lon": 27.9823,
+      "price": null,
+      "price_text": "Tours vary · match tickets priced per event",
+      "hours": "Event days only for matches · tours by booking",
+      "tip": "Check the fixture list. A match here is the real experience.",
+      "source": "https://www.fnb.co.za/stadium/"
+    },
+    "carnival-city": {
+      "name": "Carnival City",
+      "landmark": "Carnival City",
+      "kind": "activity",
+      "lat": -26.2307,
+      "lon": 28.0051,
+      "price": 0,
+      "price_text": "Entry free · casino and shows priced separately",
+      "hours": "Daily 24 hours",
+      "tip": "It is far east of the city. Only worth the trip if you are staying nearby.",
+      "source": "https://www.tsogosun.com/carnival-city"
+    },
+    "castle-brewery": {
+      "name": "Castle Brewery",
+      "landmark": "Castle Brewery",
+      "kind": "tour",
+      "lat": -26.2041,
+      "lon": 28.0473,
+      "price": null,
+      "price_text": "Tours by booking · price varies",
+      "hours": "Weekday tours by appointment",
+      "tip": "Book ahead. Brewery tours are not always open to the public.",
+      "source": ""
+    },
+    "emperors-palace": {
+      "name": "Emperors Palace",
+      "landmark": "Emperors Palace",
+      "kind": "activity",
+      "lat": -26.134,
+      "lon": 28.2322,
+      "price": 0,
+      "price_text": "Entry free · casino, shows and dining priced separately",
+      "hours": "Daily 24 hours",
+      "tip": "Close to the airport. Handy for a last night before a flight.",
+      "source": "https://www.emperorspalace.com/"
+    },
+    "monte-casino": {
+      "name": "Monte Casino Entertainment Complex",
+      "landmark": "Monte Casino Entertainment Complex",
+      "kind": "activity",
+      "lat": -26.0401,
+      "lon": 28.0471,
+      "price": 0,
+      "price_text": "Entry free · dining and shows priced separately",
+      "hours": "Daily 24 hours",
+      "tip": "The domed complex is a good rainy-day stop in the northern suburbs.",
+      "source": "https://www.tsogosun.com/montecasino"
+    },
+    "nandos": {
+      "name": "Nando's",
+      "landmark": "Nando's",
+      "kind": "food",
+      "lat": -26.2041,
+      "lon": 28.0473,
+      "price": 120,
+      "price_text": "≈ ZAR 90–160 per person",
+      "hours": "Daily 10:00–22:00 · varies by branch",
+      "tip": "Peri-peri chicken is a South African staple. Ask for mild if you are unsure.",
+      "source": "https://www.nandos.co.za/"
+    },
+    "orlando-towers": {
+      "name": "Orlando Towers",
+      "landmark": "Orlando Towers",
+      "kind": "sight",
+      "lat": -26.2536,
+      "lon": 27.925,
+      "price": null,
+      "price_text": "View free · bungee and tours priced separately",
+      "hours": "Exterior always visible · activities by booking",
+      "tip": "The painted cooling towers are a Soweto icon. Bungee jumps need advance booking.",
+      "source": ""
+    },
+    "satyagraha-house": {
+      "name": "Satyagraha House",
+      "landmark": "Satyagraha House",
+      "kind": "museum",
+      "lat": -26.1472,
+      "lon": 28.0772,
+      "price": 150,
+      "price_text": "≈ ZAR 120–180 tour · check on the day",
+      "hours": "Tours by booking · small guesthouse",
+      "tip": "Gandhi lived here. Book a tour in advance as it is a working guesthouse.",
+      "source": "https://www.satyagrahahouse.com/"
+    },
+    "steers": {
+      "name": "Steers",
+      "landmark": "Steers",
+      "kind": "food",
+      "lat": -26.2041,
+      "lon": 28.0473,
+      "price": 90,
+      "price_text": "≈ ZAR 70–120 per person",
+      "hours": "Daily 10:00–22:00 · varies by branch",
+      "tip": "Fast-food burgers and famous chips. Quick and cheap between sights.",
+      "source": "https://www.steers.co.za/"
+    },
+    "wimpy": {
+      "name": "Wimpy",
+      "landmark": "Wimpy",
+      "kind": "food",
+      "lat": -26.2041,
+      "lon": 28.0473,
+      "price": 100,
+      "price_text": "≈ ZAR 80–140 per person",
+      "hours": "Daily 07:00–21:00 · varies by branch",
+      "tip": "Classic South African diner for a big breakfast before a long day out.",
+      "source": "https://www.wimpy.co.za/"
+    },
+    "neighbourgoods-market": {
+      "name": "Neighbourgoods Market (Braamfontein)",
+      "landmark": null,
+      "kind": "food",
+      "lat": -26.1929,
+      "lon": 28.0342,
+      "price": 0,
+      "price_text": "Entry free · food priced per stall",
+      "hours": "Saturday 09:00–15:00 · check on the day",
+      "tip": "Go early for the best food stalls. It gets busy by midday.",
+      "source": "https://www.neighbourgoodsmarket.co.za/"
+    },
+    "maboneng-precinct": {
+      "name": "Maboneng Precinct walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -26.2047,
+      "lon": 28.0567,
+      "price": 0,
+      "price_text": "Free to walk · guided tours priced separately",
+      "hours": "Daytime · some venues close after dark",
+      "tip": "Street art, galleries and cafes. Walk in daylight and keep valuables out of sight.",
+      "source": ""
+    },
+    "soweto-tour": {
+      "name": "Guided Soweto tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -26.2385,
+      "lon": 27.9036,
+      "price": 800,
+      "price_text": "≈ ZAR 600–1000 shared · hotel pickup varies",
+      "hours": "Half-day tours usually morning or afternoon",
+      "tip": "A local guide makes the history clear. Confirm pickup and entry fees are included.",
+      "source": ""
+    },
+    "melville-7th": {
+      "name": "7th Street, Melville",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -26.1758,
+      "lon": 28.0069,
+      "price": 0,
+      "price_text": "Free to walk · food and drinks priced per venue",
+      "hours": "Cafes daytime · bars into the evening",
+      "tip": "A relaxed neighbourhood for lunch and people-watching. Busier on weekends.",
+      "source": ""
+    },
+    "rosebank-art": {
+      "name": "Rosebank art and craft walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -26.1461,
+      "lon": 28.0417,
+      "price": 0,
+      "price_text": "Free to browse · purchases extra",
+      "hours": "Galleries and markets daytime · check on the day",
+      "tip": "Good for African art and crafts. Ask about shipping before you buy large pieces.",
+      "source": ""
+    },
+    "zoo-lake": {
+      "name": "Zoo Lake viewpoint",
+      "landmark": null,
+      "kind": "park",
+      "lat": -26.1667,
+      "lon": 28.0167,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daylight hours",
+      "tip": "A green spot for a walk with city views. Go in daylight and in a group.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Johannesburg street life, markets and art, mostly in Maboneng and Braamfontein.",
+      "days": [
+        {
+          "title": "Maboneng streets, beer and an evening out",
+          "stops": [
+            {
+              "place": "maboneng-precinct",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start early. Walk the main streets and look at the street art. Some venues close after dark, so go daytime."
+            },
+            {
+              "place": "ponte-city",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short taxi or walk from Maboneng. The tower is visible from outside; interior only by tour."
+            },
+            {
+              "place": "nandos",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch. Hours vary by branch, so check on the day."
+            },
+            {
+              "place": "sab-world-of-beer",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Book ahead if you can."
+            },
+            {
+              "place": "melville-7th",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "About 15 to 20 minutes by taxi. Cafes in the day, bars into the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maboneng or Rosebank"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A packed single day for first-time visitors who want the core apartheid and democracy story.",
+      "days": [
+        {
+          "title": "Apartheid Museum, Constitution Hill and Soweto",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Allow at least two and a half hours. Weekday morning is quietest."
+            },
+            {
+              "place": "wimpy",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quick lunch nearby. Hours vary by branch."
+            },
+            {
+              "place": "constitution-hill",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "About 20 to 30 minutes by taxi. Weekday afternoons are calmer."
+            },
+            {
+              "place": "mandela-house",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "In Soweto, roughly 30 to 40 minutes by taxi. Open daily until 17:00, so go straight there."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sandton or Rosebank"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "A gentle outdoor day with a lake, gardens and green space around Rosebank.",
+      "days": [
+        {
+          "title": "Zoo Lake and Rosebank green spaces",
+          "stops": [
+            {
+              "place": "zoo-lake",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go in the morning while it is cool. Daylight hours only."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Short taxi ride. Galleries and markets are daytime only, so check on the day."
+            },
+            {
+              "place": "nandos",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch in Rosebank. Hours vary by branch."
+            },
+            {
+              "place": "melville-7th",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Late afternoon is the best time for cafes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Maboneng street life and markets on day one, Soweto and a beer stop on day two.",
+      "days": [
+        {
+          "title": "Maboneng on foot",
+          "stops": [
+            {
+              "place": "maboneng-precinct",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Walk the main streets in daylight. Some venues close after dark."
+            },
+            {
+              "place": "ponte-city",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Look up from the street. Interior is by tour only."
+            },
+            {
+              "place": "nandos",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch nearby. Hours vary by branch."
+            },
+            {
+              "place": "sab-world-of-beer",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Book ahead if you can."
+            }
+          ]
+        },
+        {
+          "title": "Soweto history, then evening",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Half-day tour, usually morning or afternoon. Confirm pickup time."
+            },
+            {
+              "place": "mandela-house",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Often included in the tour."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Short walk from Mandela House."
+            },
+            {
+              "place": "monte-casino",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner and a wander. Open 24 hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maboneng or Rosebank"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Our pick for first-time visitors: the two big museums, then Soweto the next morning.",
+      "days": [
+        {
+          "title": "Apartheid Museum and Constitution Hill",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Allow at least two hours."
+            },
+            {
+              "place": "wimpy",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "constitution-hill",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Weekday afternoons are quieter. Last entry before 17:00."
+            },
+            {
+              "place": "melville-7th",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Cafes and bars into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Soweto morning, then fly",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:00",
+              "minutes": 240,
+              "note": "Book a morning half-day tour. Check out first and bring your bags."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Usually part of the tour."
+            },
+            {
+              "place": "mandela-house",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Vilakazi Street is a short walk."
+            },
+            {
+              "place": "nandos",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Late lunch before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank or Sandton"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Green space and views with a museum chaser. Best with a car or driver.",
+      "days": [
+        {
+          "title": "Zoo Lake and Rosebank",
+          "stops": [
+            {
+              "place": "zoo-lake",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Daylight hours. Go early for calm water and birds."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Galleries and markets daytime. Check opening days on the day."
+            },
+            {
+              "place": "nandos",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch in Rosebank. Hours vary by branch."
+            },
+            {
+              "place": "satyagraha-house",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Tours by booking only. Book a day ahead."
+            },
+            {
+              "place": "melville-7th",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Late afternoon coffee, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Check out first and leave bags at reception."
+            },
+            {
+              "place": "wimpy",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "12:45",
+              "minutes": 240,
+              "note": "Closed Monday and Tuesday. Skip if your flight is early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Street life, markets and township history for first-time visitors with two nights.",
+      "days": [
+        {
+          "title": "Arrive, Maboneng and beer",
+          "stops": [
+            {
+              "place": "maboneng-precinct",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Walk the streets in daylight. Some venues close after dark."
+            },
+            {
+              "place": "ponte-city",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Exterior view only unless you book a tour."
+            },
+            {
+              "place": "sab-world-of-beer",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Check tour times on the day."
+            },
+            {
+              "place": "nandos",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Soweto history morning",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Half-day tour, usually morning or afternoon. Book ahead."
+            },
+            {
+              "place": "mandela-house",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open daily 09:00–17:00. Often included in the tour."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Open daily 09:00–17:00. Short walk from Mandela House."
+            },
+            {
+              "place": "melville-7th",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late afternoon cafes, bars into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Markets and art, then fly",
+          "stops": [
+            {
+              "place": "neighbourgoods-market",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Saturday only. Check on the day."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Galleries and markets in daytime. Check on the day."
+            },
+            {
+              "place": "wimpy",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Late lunch. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maboneng or Rosebank"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "The core apartheid and freedom story in two focused days.",
+      "days": [
+        {
+          "title": "Apartheid Museum and Gold Reef City",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go early on a weekday."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "12:30",
+              "minutes": 240,
+              "note": "Closed Monday and Tuesday. Next to the museum."
+            },
+            {
+              "place": "nandos",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Soweto and Constitution Hill",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Book ahead. Morning tours are common."
+            },
+            {
+              "place": "mandela-house",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open daily 09:00–17:00."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Open daily 09:00–17:00."
+            },
+            {
+              "place": "constitution-hill",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Weekday closing is 17:00, so keep this short. Skip if you run late."
+            }
+          ]
+        },
+        {
+          "title": "Morning history, then fly",
+          "stops": [
+            {
+              "place": "satyagraha-house",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Tours by booking only. Small guesthouse."
+            },
+            {
+              "place": "wimpy",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Breakfast or early lunch. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sandton or Rosebank"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Green space and open air, with a little history for balance.",
+      "days": [
+        {
+          "title": "Zoo Lake and Rosebank",
+          "stops": [
+            {
+              "place": "zoo-lake",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Daylight hours only. Go early for calm."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Daytime. Check on the day."
+            },
+            {
+              "place": "wimpy",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch. Hours vary by branch."
+            },
+            {
+              "place": "melville-7th",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon stroll and dinner."
+            }
+          ]
+        },
+        {
+          "title": "Soweto outdoors",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Half-day tour. Ask for an outdoor-focused route."
+            },
+            {
+              "place": "orlando-towers",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Exterior always visible. Activities by booking."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Open daily 09:00–17:00."
+            },
+            {
+              "place": "nandos",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Early dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Maboneng walk, then fly",
+          "stops": [
+            {
+              "place": "maboneng-precinct",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Daytime walk. Some venues close after dark."
+            },
+            {
+              "place": "ponte-city",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Exterior view. Interior by tour only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank or Sandton"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want street art, markets and city life, with the big history stops mixed in.",
+      "days": [
+        {
+          "title": "Arrive and walk Maboneng",
+          "stops": [
+            {
+              "place": "maboneng-precinct",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Start at the main square and wander. Some venues close after dark."
+            },
+            {
+              "place": "ponte-city",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "View the tower from the street. Interior by tour only."
+            },
+            {
+              "place": "nandos",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Easy dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Maboneng art and beer",
+          "stops": [
+            {
+              "place": "neighbourgoods-market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Saturday only. Check on the day."
+            },
+            {
+              "place": "sab-world-of-beer",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Sunday and Monday. Book ahead."
+            },
+            {
+              "place": "castle-brewery",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Weekday tours by appointment only."
+            },
+            {
+              "place": "melville-7th",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Cafes by day, bars into the evening."
+            }
+          ]
+        },
+        {
+          "title": "History morning, Rosebank afternoon",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Allow at least two hours."
+            },
+            {
+              "place": "wimpy",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Galleries and markets. Check opening days."
+            },
+            {
+              "place": "satyagraha-house",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Tours by booking. It is a small guesthouse."
+            }
+          ]
+        },
+        {
+          "title": "Soweto, then fly",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Half-day tour, usually morning. Book ahead."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Often included in the tour. Confirm with your guide."
+            },
+            {
+              "place": "mandela-house",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Short walk from the memorial."
+            },
+            {
+              "place": "steers",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Quick bite before the airport. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maboneng or Rosebank"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want the apartheid story told properly, from museum to township.",
+      "days": [
+        {
+          "title": "Arrive, Constitution Hill",
+          "stops": [
+            {
+              "place": "constitution-hill",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Weekday afternoons are quieter. Last entry before closing."
+            },
+            {
+              "place": "nandos",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Early dinner. Hours vary by branch."
+            },
+            {
+              "place": "melville-7th",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening stroll and a drink."
+            }
+          ]
+        },
+        {
+          "title": "Apartheid Museum and Gold Reef City",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Go early, it gets busy."
+            },
+            {
+              "place": "wimpy",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch nearby. Hours vary by branch."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "13:00",
+              "minutes": 240,
+              "note": "Closed Monday and Tuesday. Check ride times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Soweto in depth",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Book a guide who covers the 1976 uprising."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Pair with the nearby Mandela House."
+            },
+            {
+              "place": "mandela-house",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Daily 09:00–17:00. Small rooms, short visit."
+            },
+            {
+              "place": "orlando-towers",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Photo stop. Activities by booking."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, then fly",
+          "stops": [
+            {
+              "place": "satyagraha-house",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Tours by booking. Weekday only."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Check gallery days on the day."
+            },
+            {
+              "place": "steers",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank or Sandton"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Visitors who want green space and wildlife between city stops.",
+      "days": [
+        {
+          "title": "Arrive and Zoo Lake",
+          "stops": [
+            {
+              "place": "zoo-lake",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daylight hours only. Walk the lake path."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Check opening days on the day."
+            },
+            {
+              "place": "nandos",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "History and green space",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Indoor, good for hot or wet days."
+            },
+            {
+              "place": "wimpy",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Hours vary by branch."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "13:00",
+              "minutes": 240,
+              "note": "Closed Monday and Tuesday. Outdoor and indoor areas."
+            }
+          ]
+        },
+        {
+          "title": "Soweto and towers",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Morning half-day tour. Book ahead."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Often included in the tour."
+            },
+            {
+              "place": "orlando-towers",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Outdoor photo stop. Activities by booking."
+            },
+            {
+              "place": "melville-7th",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late afternoon cafes and bars."
+            }
+          ]
+        },
+        {
+          "title": "Constitution Hill, then fly",
+          "stops": [
+            {
+              "place": "constitution-hill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Mixed indoor and outdoor. Weekday mornings are calm."
+            },
+            {
+              "place": "steers",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "maboneng-precinct",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Daytime walk. Some venues close after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank or Sandton"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want street life, markets and township history at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and ease into Maboneng",
+          "stops": [
+            {
+              "place": "maboneng-precinct",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk the streets in daylight. Some venues close after dark."
+            },
+            {
+              "place": "ponte-city",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Exterior view only unless you book a tour."
+            },
+            {
+              "place": "nandos",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Easy dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Soweto history day",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Half-day tour, usually morning. Book ahead."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Often included in the tour. Open daily 09:00–17:00."
+            },
+            {
+              "place": "mandela-house",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "A short walk from the memorial. Open daily."
+            },
+            {
+              "place": "orlando-towers",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Photo stop. Activities need booking."
+            },
+            {
+              "place": "wimpy",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Simple early dinner on the way back."
+            }
+          ]
+        },
+        {
+          "title": "Museums and markets",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Allow plenty of time."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "12:30",
+              "minutes": 240,
+              "note": "Closed Mon–Tue. Check hours on the day."
+            },
+            {
+              "place": "melville-7th",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Cafes and bars into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Art, beer and a Saturday market",
+          "stops": [
+            {
+              "place": "neighbourgoods-market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Saturdays only. Check on the day."
+            },
+            {
+              "place": "sab-world-of-beer",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Sun–Mon. Confirm the Saturday slot."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Galleries and markets. Check on the day."
+            },
+            {
+              "place": "steers",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Quick bite. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "constitution-hill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning is best. Weekend hours are shorter."
+            },
+            {
+              "place": "zoo-lake",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk in daylight before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maboneng or Rosebank"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Visitors who want the full apartheid and freedom story, museum by museum.",
+      "days": [
+        {
+          "title": "Arrive and Constitution Hill",
+          "stops": [
+            {
+              "place": "constitution-hill",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Weekday afternoon works. Weekend closes at 16:00."
+            },
+            {
+              "place": "nandos",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Apartheid Museum and Gold Reef City",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday. Weekday morning is quietest."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "12:30",
+              "minutes": 240,
+              "note": "Closed Mon–Tue. Check on the day."
+            },
+            {
+              "place": "melville-7th",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and a stroll."
+            }
+          ]
+        },
+        {
+          "title": "Soweto in depth",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Book a half-day tour in advance."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open daily 09:00–17:00."
+            },
+            {
+              "place": "mandela-house",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Open daily. Small museum, allow an hour."
+            },
+            {
+              "place": "orlando-towers",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Exterior always visible."
+            },
+            {
+              "place": "wimpy",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Gandhi, art and a market",
+          "stops": [
+            {
+              "place": "satyagraha-house",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Tours by booking. Weekday is best."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Check on the day."
+            },
+            {
+              "place": "neighbourgoods-market",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Saturdays only. Check on the day."
+            },
+            {
+              "place": "maboneng-precinct",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Daytime walk. Some venues close after dark."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "zoo-lake",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Daylight hours only."
+            },
+            {
+              "place": "steers",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Quick bite before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank or Sandton"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Travellers who want green space and wildlife between city sights.",
+      "days": [
+        {
+          "title": "Arrive and Zoo Lake",
+          "stops": [
+            {
+              "place": "zoo-lake",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daylight hours only. Easy walk."
+            },
+            {
+              "place": "rosebank-art",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Check on the day."
+            },
+            {
+              "place": "nandos",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "City history and green break",
+          "stops": [
+            {
+              "place": "apartheid-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "gold-reef-city",
+              "at": "12:30",
+              "minutes": 240,
+              "note": "Closed Mon–Tue. Check on the day."
+            },
+            {
+              "place": "melville-7th",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner outdoors."
+            }
+          ]
+        },
+        {
+          "title": "Soweto and open air",
+          "stops": [
+            {
+              "place": "soweto-tour",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Book ahead. Morning tours are common."
+            },
+            {
+              "place": "hector-pieterson",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Open daily."
+            },
+            {
+              "place": "orlando-towers",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Photo stop."
+            },
+            {
+              "place": "wimpy",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Markets and a walk",
+          "stops": [
+            {
+              "place": "neighbourgoods-market",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Saturdays only. Check on the day."
+            },
+            {
+              "place": "maboneng-precinct",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Daytime walk."
+            },
+            {
+              "place": "ponte-city",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Exterior view in daylight."
+            },
+            {
+              "place": "steers",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Quick bite."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "constitution-hill",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Weekday morning is best."
+            },
+            {
+              "place": "zoo-lake",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Rosebank"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Maboneng street life, markets and township history."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Apartheid Museum, Constitution Hill and Soweto."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Lion Park, botanical gardens and the Cradle caves."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Sandton",
+      "range": [
+        900,
+        2600
+      ],
+      "why": "Safest base for first-timers. Gautrain to the airport, malls and restaurants on foot, easy Ubers to the sights.",
+      "center": [
+        -26.1076,
+        28.0567
+      ]
+    },
+    {
+      "area": "Rosebank",
+      "range": [
+        850,
+        2400
+      ],
+      "why": "Gautrain stop, good hotels and the Sunday rooftop market. A calmer, walkable suburb close to the museums.",
+      "center": [
+        -26.1467,
+        28.0417
+      ]
+    },
+    {
+      "area": "Maboneng",
+      "range": [
+        600,
+        1600
+      ],
+      "why": "Downtown arts district with galleries, cafés and street art. Lively by day; take an Uber after dark.",
+      "center": [
+        -26.2041,
+        28.0585
+      ]
+    },
+    {
+      "area": "Melville",
+      "range": [
+        550,
+        1400
+      ],
+      "why": "Leafy student neighbourhood with bars and cheap eats on 7th Street. Good value, short drive to town.",
+      "center": [
+        -26.1755,
+        28.0085
+      ]
+    }
+  ],
+  "food": [
+    "Try a braai (South African barbecue) and bunny chow, a curry served in a hollowed bread loaf.",
+    "Maboneng and Braamfontein have the best café and street-food scene; go at lunchtime and take an Uber back.",
+    "Soweto tours often include a lunch stop; ask for a local shisa nyama (grill) spot.",
+    "Cheap eats: kota sandwiches, vetkoek and boerewors rolls at markets for around ZAR 40–90.",
+    "Book dinner in Sandton or Rosebank. Many kitchens close early; check hours on the day."
+  ],
+  "more_time": [
+    "Add a day for Soweto: Vilakazi Street, the Hector Pieterson Museum and a shisa nyama lunch.",
+    "History fans can swap a museum for the Cradle of Humankind and Sterkfontein Caves, about an hour's drive.",
+    "Add a half-day at the Apartheid Museum and Constitution Hill if you have a third day."
+  ]
+}

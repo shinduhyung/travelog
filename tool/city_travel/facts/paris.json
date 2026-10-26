@@ -1,0 +1,276 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.86,
+  "intro_line": "Grand boulevards, world-famous museums and café life on every corner.",
+  "intro": "Paris rewards slow days: museums in the morning, a long lunch, a walk along the Seine. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "romance",
+      "label": "Romance"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Le Marais",
+    "Saint-Germain & Latin Quarter",
+    "Louvre & Opéra",
+    "Montmartre"
+  ],
+  "place_landmarks": [
+    "Eiffel Tower",
+    "Louvre Museum",
+    "Musée d'Orsay",
+    "Notre-Dame de Paris",
+    "Sainte-Chapelle",
+    "Arc de Triomphe",
+    "Champs-Élysées",
+    "Sacré-Cœur Basilica",
+    "Montmartre",
+    "Palace of Versailles",
+    "Centre Pompidou",
+    "Le Marais",
+    "Luxembourg Gardens",
+    "Panthéon",
+    "Palais Garnier",
+    "Les Invalides",
+    "Musée de l'Orangerie",
+    "Musée Rodin",
+    "Seine River Cruise",
+    "Catacombs of Paris",
+    "Montparnasse Tower",
+    "Disneyland Park",
+    "Tuileries Garden",
+    "Père Lachaise Cemetery"
+  ],
+  "taxi": {
+    "flag_day": 4.5,
+    "flag_airport": 4.5,
+    "per_km": 1.3,
+    "min_fare": 8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 16,
+  "transit_facts": [
+    "The Métro and RER cover the whole city; a single ticket is about €2.50 and weekly Navigo passes are good value.",
+    "Buses use the same tickets and are slower but scenic.",
+    "Taxis are metered with flat fares from the airports; Uber, Bolt and G7 apps work everywhere.",
+    "Driving and parking in Paris are hard; a car is only useful for day trips.",
+    "Central Paris is compact and very walkable; Vélib' bikes are everywhere.",
+    "RER C goes to Versailles; Disneyland is on RER A."
+  ],
+  "airports": [
+    {
+      "code": "CDG",
+      "name": "Charles de Gaulle Airport",
+      "primary": true,
+      "note": "The main airport, 25 km north-east.",
+      "options": [
+        {
+          "mode": "RER B",
+          "to": "Gare du Nord, Châtelet, Saint-Michel",
+          "price": "€14",
+          "time": "35-45 min",
+          "note": "Airport ticket includes onward Métro/RER for 2 hours."
+        },
+        {
+          "mode": "Taxi (flat fare)",
+          "to": "Right Bank / Left Bank",
+          "price": "€56 / €65",
+          "time": "45-60 min",
+          "note": "Fixed fares from official taxi ranks."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "Central Paris",
+          "price": "€40-60",
+          "time": "45-60 min",
+          "note": "Price changes with demand."
+        },
+        {
+          "mode": "Roissybus",
+          "to": "Opéra",
+          "price": "—",
+          "time": "—",
+          "note": "Reported discontinued in March 2026."
+        }
+      ]
+    },
+    {
+      "code": "ORY",
+      "name": "Orly Airport",
+      "primary": false,
+      "note": "13 km south; many European and French flights.",
+      "options": [
+        {
+          "mode": "Métro line 14",
+          "to": "Châtelet, Gare de Lyon, Saint-Lazare",
+          "price": "€14",
+          "time": "about 25-30 min",
+          "note": "Direct line since 2024."
+        },
+        {
+          "mode": "Orlyval + RER B",
+          "to": "Châtelet, Saint-Michel",
+          "price": "€14",
+          "time": "35-45 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi (flat fare)",
+          "to": "Left Bank / Right Bank",
+          "price": "€36 / €45",
+          "time": "25-40 min",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "airports_sources": [
+    [
+      "Paris airport transfers compared 2026",
+      "https://parisvibes.org/paris-airport-transfers-compared-cdg-orly-and-beauvais-2026/"
+    ],
+    [
+      "CDG to central Paris 2026",
+      "https://travelandtime.com/guides/cdg-airport-to-paris"
+    ],
+    [
+      "Orly to city centre 2026",
+      "https://www.faretus.com/blog/paris-orly-airport-to-city-centre"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    48.8566,
+    2.3522
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 7,
+      "low": 2,
+      "rain_days": 13
+    },
+    {
+      "high": 10,
+      "low": 2,
+      "rain_days": 11
+    },
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 13
+    },
+    {
+      "high": 16,
+      "low": 6,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 13
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 4,
+      "rain_days": 13
+    }
+  ],
+  "tours": [
+    {
+      "title": "Versailles: Palace of Versailles Skip-the-Line Guided Tour",
+      "duration": "1.5-2 hrs",
+      "price": "$79",
+      "covers": [
+        "versailles"
+      ]
+    },
+    {
+      "title": "Eiffel Tower Summit or 2nd Floor Reserved Access",
+      "duration": "1-1.5 hrs",
+      "price": "$66",
+      "covers": [
+        "eiffel"
+      ]
+    },
+    {
+      "title": "Mona Lisa & Louvre Masterpieces Tour with Reserved Access",
+      "duration": "1-3.5 hrs",
+      "price": "$71",
+      "covers": [
+        "louvre"
+      ]
+    },
+    {
+      "title": "Sainte-Chapelle and Conciergerie Combined Tickets",
+      "duration": "1 day",
+      "price": "$28",
+      "covers": [
+        "saintechapelle"
+      ]
+    },
+    {
+      "title": "Seine Cruise departing from the Eiffel Tower",
+      "duration": "1 hour",
+      "price": "$20",
+      "covers": [
+        "seinecruise"
+      ]
+    },
+    {
+      "title": "Disneyland Paris 1-Day Ticket (1 or 2 parks)",
+      "duration": "1 day",
+      "price": "$58",
+      "covers": [
+        "disney"
+      ]
+    }
+  ],
+  "max_km": 45
+}

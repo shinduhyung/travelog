@@ -1,0 +1,588 @@
+{
+  "city": "Pune",
+  "checked": "October 2026",
+  "intro_line": "Pune blends Maratha history with a young, buzzing student energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Koregaon Park",
+        "Deccan Gymkhana",
+        "Camp",
+        "Viman Nagar"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Koregaon Park",
+        "Deccan Gymkhana",
+        "Camp",
+        "Viman Nagar"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Koregaon Park",
+        "Deccan Gymkhana",
+        "Camp",
+        "Viman Nagar"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Koregaon Park",
+        "Deccan Gymkhana",
+        "Camp",
+        "Viman Nagar"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "Koregaon Park",
+        "Deccan Gymkhana",
+        "Camp",
+        "Viman Nagar"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 29,
+        "low": 15,
+        "rain_days": 1,
+        "note": "Cool and dry. Great for sightseeing and forts. Bring a light layer for evenings."
+      },
+      {
+        "high": 32,
+        "low": 17,
+        "rain_days": 0,
+        "note": "Warm and dry. Comfortable days; start outdoor sights early."
+      },
+      {
+        "high": 34,
+        "low": 20,
+        "rain_days": 2,
+        "note": "Hotter and dry. Plan shade and water breaks at midday."
+      },
+      {
+        "high": 37,
+        "low": 22,
+        "rain_days": 2,
+        "note": "Very hot. Do sights in the morning and evening; stay indoors at peak heat."
+      },
+      {
+        "high": 36,
+        "low": 23,
+        "rain_days": 5,
+        "note": "Hot with some rain days. Carry water and a light rain layer."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 23,
+        "note": "Monsoon starts. Many rain days; keep plans flexible and carry rain gear."
+      },
+      {
+        "high": 27,
+        "low": 22,
+        "rain_days": 28,
+        "note": "Wettest month. Expect heavy rain; favour indoor sights and short trips."
+      },
+      {
+        "high": 27,
+        "low": 22,
+        "rain_days": 26,
+        "note": "Still very wet. Check roads before any fort or hill trip."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 23,
+        "note": "Rain eases but still frequent. Green hills; carry rain protection."
+      },
+      {
+        "high": 29,
+        "low": 20,
+        "rain_days": 12,
+        "note": "Rain drops off. Pleasant for sightseeing and day trips."
+      },
+      {
+        "high": 30,
+        "low": 18,
+        "rain_days": 3,
+        "note": "Dry and mild. One of the best months to visit."
+      },
+      {
+        "high": 29,
+        "low": 16,
+        "rain_days": 1,
+        "note": "Cool and dry. Good for walking and outdoor plans; evenings are chilly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.35,
+      0.3,
+      0.3,
+      0.4,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.9,
+      0.85,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.9,
+      1,
+      1
+    ],
+    "nature": [
+      0.9,
+      0.85,
+      0.7,
+      0.5,
+      0.45,
+      0.25,
+      0.2,
+      0.2,
+      0.35,
+      0.75,
+      0.95,
+      0.9
+    ],
+    "culture": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.7,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.85,
+      1,
+      1
+    ],
+    "adventure": [
+      0.85,
+      0.8,
+      0.7,
+      0.5,
+      0.45,
+      0.2,
+      0.15,
+      0.15,
+      0.3,
+      0.7,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "shaniwar_wada": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Early morning or evening show",
+      "area": "Camp",
+      "popularity": 5
+    },
+    "aga_khan_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Viman Nagar",
+      "popularity": 4
+    },
+    "mandai_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Camp",
+      "popularity": 3
+    },
+    "laxmi_road": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Camp",
+      "popularity": 3
+    },
+    "parvati_hill": {
+      "types": [
+        "history",
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Deccan Gymkhana",
+      "popularity": 4
+    },
+    "dashabhuja_ganpati": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Camp",
+      "popularity": 2
+    },
+    "kelkar_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; good for hot afternoons",
+      "area": "Camp",
+      "popularity": 3
+    },
+    "koregaon_park": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Koregaon Park",
+      "popularity": 3
+    },
+    "osho_garden": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Koregaon Park",
+      "popularity": 3
+    },
+    "dagadusheth": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Early morning or late evening",
+      "area": "Camp",
+      "popularity": 4
+    },
+    "saras_baug": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Deccan Gymkhana",
+      "popularity": 3
+    },
+    "fc_road": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Deccan Gymkhana",
+      "popularity": 3
+    },
+    "pataleshwar": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Deccan Gymkhana",
+      "popularity": 2
+    },
+    "empress_garden": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Camp",
+      "popularity": 2
+    },
+    "pune_food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Camp",
+      "popularity": 3
+    },
+    "sinhgad_fort": {
+      "types": [
+        "history",
+        "nature",
+        "adventure"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Early morning, cool months",
+      "area": "Deccan Gymkhana",
+      "popularity": 4
+    },
+    "vetal_hill": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Deccan Gymkhana",
+      "popularity": 2
+    },
+    "phoenix_mall": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon or evening",
+      "area": "Viman Nagar",
+      "popularity": 3
+    },
+    "khadakwasla": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, cool months",
+      "area": "Deccan Gymkhana",
+      "popularity": 2
+    },
+    "pune_heritage_walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning, cool months",
+      "area": "Camp",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old city, the Aga Khan Palace and a fort day trip without rushing."
+  },
+  "airports": [
+    {
+      "code": "PNQ",
+      "name": "Pune Airport",
+      "primary": true,
+      "note": "Main city airport, about 10 km east of the centre.",
+      "options": [
+        {
+          "mode": "Auto-rickshaw",
+          "to": "City centre",
+          "price": "₹150-250",
+          "time": "25-40 min",
+          "note": "Agree on meter or fare before boarding."
+        },
+        {
+          "mode": "PMPML bus",
+          "to": "Shivajinagar / Swargate",
+          "price": "₹20-40",
+          "time": "40-60 min",
+          "note": "Cheapest option, slower with luggage."
+        },
+        {
+          "mode": "Prepaid taxi",
+          "to": "City centre",
+          "price": "₹400-600",
+          "time": "25-40 min",
+          "note": "Book at the prepaid stall in arrivals."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹250-450",
+          "time": "25-40 min",
+          "note": "Pickup zones are marked outside the terminal."
+        }
+      ]
+    },
+    {
+      "code": "BOM",
+      "name": "Mumbai Chhatrapati Shivaji Maharaj International Airport",
+      "primary": false,
+      "note": "Main international gateway, about 150 km northwest by road.",
+      "options": [
+        {
+          "mode": "MSRTC Shivneri bus",
+          "to": "Pune bus stands",
+          "price": "₹320-420",
+          "time": "3-4 hr",
+          "note": "Frequent Volvo service, book online."
+        },
+        {
+          "mode": "Shared taxi",
+          "to": "Pune city",
+          "price": "₹300-1000 per person",
+          "time": "3-4 hr",
+          "note": "Shared cabs run from Dadar and the airport area."
+        },
+        {
+          "mode": "Private taxi",
+          "to": "Pune city",
+          "price": "₹2500-3500",
+          "time": "3-4 hr",
+          "note": "Door-to-door, includes tolls."
+        },
+        {
+          "mode": "Uber Intercity",
+          "to": "Pune city",
+          "price": "₹2000-2500",
+          "time": "3-4 hr",
+          "note": "Book ahead; price varies with demand."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Pune",
+      "https://en.wikivoyage.org/wiki/Pune"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Use Uber, Ola or autos for most trips; the metro and buses are cheap for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Two lines: Purple (PCMC to Swargate) and Aqua (Vanaz to Ramwadi). Useful for crossing the city; check the route on the day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "PMPML buses reach most areas. Fares about ₹5–30; day passes cost ₹40–50. Cheap but can be slow."
+      },
+      {
+        "mode": "Auto-rickshaw",
+        "has": true,
+        "best": true,
+        "text": "Everywhere and handy for short trips. Insist on the meter; roughly ₹18 for the first 1.5 km."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Ola work well across the city. Local radio taxis also operate."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy but manageable. Two-wheelers are the local norm; helmets are compulsory. Scooter rental is about ₹200–300 a day for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the old city and market areas in cooler months. Use rides for longer hops in the heat."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical with a hot, dry spring and a strong monsoon from June to September. October to February is the most comfortable.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Highs around 29–32°C and cool nights near 15–17°C. Ideal for forts, old-city walks and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and dry: March to May",
+        "text": "Highs reach 34–37°C with little rain. Sightsee early morning and evening; avoid midday sun."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon: June to September",
+        "text": "Many rain days, up to 28 in July. Expect heavy showers; keep plans flexible and carry rain gear."
+      },
+      {
+        "icon": "🌿",
+        "title": "Green after the rain",
+        "text": "October still has some rain days but hills and gardens look lush. Good for nature trips."
+      },
+      {
+        "icon": "🧢",
+        "title": "Sun protection",
+        "text": "Even in cooler months the sun is strong at midday. Hat, sunscreen and water help."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, a rain jacket or umbrella in monsoon, and a light layer for cool winter evenings."
+      }
+    ]
+  }
+}

@@ -1,0 +1,502 @@
+{
+  "city": "Zhengzhou",
+  "checked": "October 2026",
+  "intro_line": "Zhengzhou: China's transport hub with surprises beyond the tracks.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Erqi Square",
+        "Zhengzhou East Station",
+        "Jinshui Road",
+        "CBD"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Erqi Square",
+        "Zhengzhou East Station",
+        "Jinshui Road",
+        "CBD"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Erqi Square",
+        "Zhengzhou East Station",
+        "Jinshui Road",
+        "CBD"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Erqi Square",
+        "Zhengzhou East Station",
+        "Jinshui Road",
+        "CBD"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Erqi Square",
+        "Zhengzhou East Station",
+        "Jinshui Road",
+        "CBD"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 7,
+        "low": -3,
+        "rain_days": 3,
+        "note": "Coldest month: highs near 7°C, lows around -3°C. Pack a warm coat."
+      },
+      {
+        "high": 11,
+        "low": 0,
+        "rain_days": 3,
+        "note": "Still cold, highs near 11°C. Few rainy days; good for indoor museums."
+      },
+      {
+        "high": 18,
+        "low": 6,
+        "rain_days": 4,
+        "note": "Mild and pleasant, highs near 18°C. A good month to walk the old town."
+      },
+      {
+        "high": 23,
+        "low": 11,
+        "rain_days": 6,
+        "note": "Warm and comfortable, highs near 23°C. One of the best months to visit."
+      },
+      {
+        "high": 29,
+        "low": 17,
+        "rain_days": 5,
+        "note": "Warm, highs near 29°C. Light clothes; evenings still cool."
+      },
+      {
+        "high": 33,
+        "low": 22,
+        "rain_days": 7,
+        "note": "Hot, highs near 33°C. Sightsee early morning and late afternoon."
+      },
+      {
+        "high": 33,
+        "low": 24,
+        "rain_days": 12,
+        "note": "Hottest and wettest: highs near 33°C, around 12 rain days. Carry an umbrella."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 12,
+        "note": "Hot and rainy, highs near 31°C. Expect humid days and afternoon showers."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 8,
+        "note": "Warm and drier, highs near 28°C. A comfortable month for day trips."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 7,
+        "note": "Mild and clear, highs near 21°C. Excellent for walking and outdoor sights."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 5,
+        "note": "Cooler, highs near 15°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 9,
+        "low": -1,
+        "rain_days": 2,
+        "note": "Cold again, highs near 9°C, lows around -1°C. Few rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.6,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.8,
+      0.55
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "history": [
+      0.5,
+      0.6,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.8,
+      0.55
+    ],
+    "nature": [
+      0.35,
+      0.45,
+      0.75,
+      0.9,
+      0.85,
+      0.6,
+      0.45,
+      0.45,
+      0.7,
+      0.9,
+      0.6,
+      0.35
+    ],
+    "budget": [
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.8,
+      0.6
+    ]
+  },
+  "places": {
+    "mixue": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "Erqi Square",
+      "popularity": 3
+    },
+    "yellow_river": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning to early afternoon, spring or autumn",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "henan_museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Jinshui Road",
+      "popularity": 5
+    },
+    "erqi_tower": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening",
+      "area": "Erqi Square",
+      "popularity": 4
+    },
+    "dehua_street": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Erqi Square",
+      "popularity": 4
+    },
+    "renmin_park": {
+      "types": [
+        "nature",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Jinshui Road",
+      "popularity": 3
+    },
+    "zhengzhou_museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Jinshui Road",
+      "popularity": 3
+    },
+    "cbd_lake": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "songshan": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Full day, spring or autumn",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "huanghe_scenic": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "CBD",
+      "popularity": 3
+    },
+    "guoji_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Erqi Square",
+      "popularity": 3
+    },
+    "shang_city": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Jinshui Road",
+      "popularity": 2
+    },
+    "night_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Erqi Square",
+      "popularity": 3
+    },
+    "greenland": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Erqi Square",
+      "popularity": 2
+    },
+    "east_station": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Zhengzhou East Station",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Henan Museum, the Shang ruins and a Shaolin day trip; add a night if you want the Yellow River too."
+  },
+  "airports": [
+    {
+      "code": "CGO",
+      "name": "Xinzheng Airport",
+      "primary": true,
+      "note": "Main airport, 32 km from centre.",
+      "options": [
+        {
+          "mode": "Metro Line 2 + Chengjiao line",
+          "to": "city centre",
+          "price": "¥2-9",
+          "time": "50-60 min",
+          "note": "Cheapest, but last train 22:00."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Zhengzhou Hotel",
+          "price": "¥15",
+          "time": "45-60 min",
+          "note": "Runs from central location."
+        },
+        {
+          "mode": "Public bus",
+          "to": "Aviation Hotel (Jinshui Road)",
+          "price": "¥25",
+          "time": "50-70 min",
+          "note": "Less frequent."
+        },
+        {
+          "mode": "Taxi",
+          "to": "city centre",
+          "price": "¥120-140",
+          "time": "40-60 min",
+          "note": "Fixed round-trip pricing; bargain rarely helps."
+        },
+        {
+          "mode": "Train",
+          "to": "Zhengzhou East Station",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Runs every 30-60 min."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Zhengzhou",
+      "https://en.wikivoyage.org/wiki/Zhengzhou"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most trips; Didi for late nights and sights off the metro lines.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "7 lines, fares ¥2–9. First trains around 06:00, last around 23:00 (the Chengjiao line ends at 22:00). Cheap and easy for the centre and the station."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "¥1–2 per ride with an extensive network and BRT lines. Cheap but slower than the metro."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis: flagfall ¥8 day, ¥10 night, then ¥1.5/km after 2 km. Meters are used but watch for cheating. Didi works widely; Uber and similar international apps do not."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended for visitors: heavy traffic and complex rules. Use metro, taxis and Didi instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Central areas are walkable and shared bikes are available, but the city is spread out. Use the metro for longer hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, dry winters and hot, humid summers with the most rain in July and August.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April, May and October",
+        "text": "Highs around 21–29°C and fewer rain days. Ideal for the museum, ruins and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs near 31–33°C with the most rain days. Plan indoor sights at midday and carry water."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in July and August",
+        "text": "Around 12 rain days each month. Pack a light umbrella and a rain jacket."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold, dry winter (December to February)",
+        "text": "Highs of 7–11°C and lows near or below freezing. A warm coat and layers are essential."
+      },
+      {
+        "icon": "🍂",
+        "title": "Clear autumn",
+        "text": "September and October turn drier and milder, with highs of 21–28°C. Great for outdoor sights."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, light breathable clothes and rain gear for summer. Comfortable shoes for temple and ruins visits."
+      }
+    ]
+  }
+}

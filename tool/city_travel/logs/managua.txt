@@ -1,0 +1,28 @@
+$ deepseek_facts.py Managua
+  tokens in 3465 out 612
+Managua: 1 problems
+  - MGA taxi C$250-400 vs tariff estimate 520
+
+$ deepseek_city.py Managua --stage places
+Managua: places
+  tokens in 1164 out 3022
+
+$ deepseek_city.py Managua --stage frame
+Managua: frame
+  tokens in 2454 out 1786
+
+$ deepseek_city.py Managua --stage plans
+Managua: plans
+  plans for day
+  tokens in 2157 out 775
+  plans for 1n
+  tokens in 2163 out 1155
+  plans for 2n
+  tokens in 2158 out 1335
+  plans for 3n
+  tokens in 2158 out 1821
+
+$ merge_city.py Managua
+ERROR laguna-de-apoyo: kind 'nature'
+Managua: 20 places, 12 plans, 1 errors, 0 warnings
+

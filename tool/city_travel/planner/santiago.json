@@ -1,0 +1,561 @@
+{
+  "city": "Santiago",
+  "checked": "October 2026",
+  "intro_line": "Andes-framed capital where wine, art and street life meet.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro Histórico",
+        "Bellavista",
+        "Providencia",
+        "Las Condes"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro Histórico",
+        "Bellavista",
+        "Providencia",
+        "Las Condes"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Centro Histórico",
+        "Bellavista",
+        "Providencia",
+        "Las Condes"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro Histórico",
+        "Bellavista",
+        "Providencia",
+        "Las Condes"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Centro Histórico",
+        "Bellavista",
+        "Providencia",
+        "Las Condes"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 16,
+        "rain_days": 0,
+        "note": "January: hot and dry, highs near 30°C. Start sightseeing early; many locals are away on holiday."
+      },
+      {
+        "high": 30,
+        "low": 16,
+        "rain_days": 1,
+        "note": "February: hot and dry, similar to January. Carry water and use sunscreen; afternoons are warm."
+      },
+      {
+        "high": 28,
+        "low": 15,
+        "rain_days": 1,
+        "note": "March: still warm, highs around 28°C. A good month for walking and vineyard visits."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 2,
+        "note": "April: milder, highs near 23°C and cool evenings. Light rain possible; pack a layer."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 4,
+        "note": "May: cooler, highs around 19°C. Rain days increase; keep an indoor plan ready."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 6,
+        "note": "June: cool and wetter, highs near 16°C. Bring a warm jacket and an umbrella."
+      },
+      {
+        "high": 15,
+        "low": 6,
+        "rain_days": 5,
+        "note": "July: the coldest month, highs around 15°C and lows near 6°C. Dress in layers."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 6,
+        "note": "August: cool and often damp, highs near 16°C. Good for museums and cafés."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 6,
+        "note": "September: warming up, highs around 19°C. Rain days still common; check the forecast."
+      },
+      {
+        "high": 22,
+        "low": 10,
+        "rain_days": 5,
+        "note": "October: pleasant, highs near 22°C. A good balance of mild days and fewer rainy days."
+      },
+      {
+        "high": 26,
+        "low": 12,
+        "rain_days": 2,
+        "note": "November: warm and mostly dry, highs around 26°C. Great for outdoor sights and day trips."
+      },
+      {
+        "high": 29,
+        "low": 14,
+        "rain_days": 1,
+        "note": "December: hot and dry, highs near 29°C. Plan shade and water; evenings are comfortable."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95
+    ],
+    "nature": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.5,
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9
+    ]
+  },
+  "places": {
+    "lamoneda": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "plazaarmas": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 5
+    },
+    "cerrosan": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into sunset",
+      "area": "Bellavista",
+      "popularity": 5
+    },
+    "skycostanera": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear day, sunset",
+      "area": "Las Condes",
+      "popularity": 5
+    },
+    "precolombino": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "catedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "santalucia": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "bahai": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Clear afternoon",
+      "area": "Las Condes",
+      "popularity": 3
+    },
+    "estadionacional": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "fantasilandia": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Centro Histórico",
+      "popularity": 2
+    },
+    "gam": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "lachascona": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Bellavista",
+      "popularity": 4
+    },
+    "teatromunicipal": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Centro Histórico",
+      "popularity": 3
+    },
+    "mercadocentral": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "lastarria": {
+      "types": [
+        "culture",
+        "food",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "bellavista": {
+      "types": [
+        "culture",
+        "food",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Bellavista",
+      "popularity": 4
+    },
+    "empanada": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Lunch or snack",
+      "area": "Centro Histórico",
+      "popularity": 4
+    },
+    "cerrosanfunicular": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Bellavista",
+      "popularity": 4
+    },
+    "vinacomparada": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Las Condes",
+      "popularity": 3
+    },
+    "cerrosancristobal": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Bellavista",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the old centre, Cerro San Cristóbal and a market meal, with time for a Valparaíso or vineyard day trip."
+  },
+  "airports": [
+    {
+      "code": "SCL",
+      "name": "Comodoro Arturo Merino Benítez International Airport",
+      "primary": true,
+      "note": "Main gateway, about 12 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Red bus 555 + Metro",
+          "to": "Pajaritos metro station",
+          "price": "CLP 640-800",
+          "time": "40-60 min",
+          "note": "Needs a bip! card; free shuttle links the bus stop to the terminal."
+        },
+        {
+          "mode": "Centropuerto / Turbus airport bus",
+          "to": "City centre",
+          "price": "CLP 2,000-2,500",
+          "time": "30-50 min",
+          "note": "Buy at the bus desk, a 5-minute walk from arrivals."
+        },
+        {
+          "mode": "Shared shuttle (Transvip / WeTransport)",
+          "to": "City hotels",
+          "price": "CLP 7,000-12,000",
+          "time": "30-50 min",
+          "note": "Book ahead for shared rides."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "CLP 18,000-25,000",
+          "time": "25-40 min",
+          "note": "Taxis wait right outside the terminal."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "CLP 15,000-22,000",
+          "time": "25-40 min",
+          "note": "Pickup spots are awkward; official taxis cost about the same."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Santiago",
+      "https://en.wikivoyage.org/wiki/Santiago"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Metro for most trips; use a bip! card and avoid rush hour.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "7 lines and 136 stations, running roughly 06:00–23:00. Pay only with a bip! card; fares about CLP 640–800 by time of day, with free transfers within two hours."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses run around the clock on main lines and use the same bip! card. Red line 555 links Pajaritos metro to the airport."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Official taxis are black and yellow. Uber operates but is not officially licensed; agree on the fare or use the meter."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Useful for Andes or vineyard day trips. In the city, traffic and parking make it less practical."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in the centre, Bellavista and Providencia. Keep valuables close in busy areas."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Bikes are popular on a growing lane network. Check local rules and lock up securely."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate with dry, hot summers and cool, wetter winters. Rain is concentrated from May to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Warm, dry days around 26–30°C. Ideal for Cerro San Cristóbal, markets and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest months: June to September",
+        "text": "Around 5–6 rain days a month. Carry an umbrella and keep a museum or café backup."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "June to August highs sit near 15–16°C with lows around 6–7°C. Bring a warm jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big day-to-night swing",
+        "text": "Even in summer, evenings cool down. A light layer helps after sunset."
+      },
+      {
+        "icon": "🕶️",
+        "title": "Strong summer sun",
+        "text": "January and February are hot and dry. Use sunscreen, a hat and water."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer; layers, a waterproof and sturdy shoes for winter."
+      }
+    ]
+  }
+}

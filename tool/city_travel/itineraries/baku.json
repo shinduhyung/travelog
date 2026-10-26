@@ -1,0 +1,1341 @@
+{
+  "city": "Baku",
+  "checked": "October 2026",
+  "currency": "AZN",
+  "usd_rate": 1.7005,
+  "intro": "Baku rewards visitors with a mix of history, culture, and modern flair. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 40.2843,
+      "west": 49.7965,
+      "north": 40.5262,
+      "east": 50.0324,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4,
+      "flag_airport": 15,
+      "per_km": 0.7,
+      "min_fare": 4
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Metro runs 06:00–24:00; fare 0.60 AZN with a Bakı Metropoliten Kart (3 AZN refundable deposit).",
+      "Buses cost 0.60 AZN; newer red buses require a metro card for payment.",
+      "Taxis: agree on fare beforehand; typical city trip 4–10 AZN. Ride apps like Bolt work.",
+      "Driving: speed cameras are common; fines sent by SMS.",
+      "Walking: pedestrian zones around Fountain Square and the old town; crossings can be risky at night.",
+      "Bikes: city is fairly flat and bike-friendly, but no dedicated lanes."
+    ],
+    "sources": []
+  },
+  "places": {
+    "icherisheher": {
+      "name": "Icherisheher (Old City)",
+      "landmark": "Icherisheher",
+      "kind": "sight",
+      "lat": 40.366,
+      "lon": 49.835,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops roughly 10:00–20:00",
+      "tip": "Enter through the gates and wander without a map; the walls, caravanserais and courtyards are the point.",
+      "source": "https://icherisheher.gov.az/en"
+    },
+    "maiden_tower": {
+      "name": "Maiden Tower of Baku",
+      "landmark": "Maiden Tower of Baku",
+      "kind": "sight",
+      "lat": 40.3663,
+      "lon": 49.8372,
+      "price": 15,
+      "price_text": "≈ AZN 10–20 entry; check on the day",
+      "hours": "Roughly 10:00–18:00 daily; hours vary by season",
+      "tip": "Climb to the top for the best Old City rooftop view; the stairs are narrow and steep.",
+      "source": "https://icherisheher.gov.az/en"
+    },
+    "shirvanshahs": {
+      "name": "Palace of the Shirvanshahs",
+      "landmark": "Palace of the Shirvanshahs",
+      "kind": "museum",
+      "lat": 40.3661,
+      "lon": 49.8336,
+      "price": 15,
+      "price_text": "≈ AZN 10–20 entry; check on the day",
+      "hours": "Roughly 10:00–18:00 daily",
+      "tip": "See the palace, divankhana and mausoleum in one loop; the courtyard is the calmest spot in the Old City.",
+      "source": "https://icherisheher.gov.az/en"
+    },
+    "flame_towers": {
+      "name": "Flame Towers",
+      "landmark": "Flame Towers",
+      "kind": "sight",
+      "lat": 40.3594,
+      "lon": 49.8265,
+      "price": null,
+      "price_text": "Free to view from outside; observation deck price varies",
+      "hours": "Best seen after dark; deck hours check on the day",
+      "tip": "View them from the seafront or Highland Park at night, when the LED facade lights up.",
+      "source": ""
+    },
+    "heydar_aliyev": {
+      "name": "Heydar Aliyev Center",
+      "landmark": "Heydar Aliyev Center",
+      "kind": "museum",
+      "lat": 40.3953,
+      "lon": 49.8678,
+      "price": 15,
+      "price_text": "≈ AZN 10–20 entry; check on the day",
+      "hours": "Roughly 10:00–18:00; closed some Mondays",
+      "tip": "The Zaha Hadid building is the star; allow time for the curved exterior as well as the exhibitions.",
+      "source": "https://heydaraliyevcenter.az/en"
+    },
+    "boulevard": {
+      "name": "Baku Boulevard",
+      "landmark": "Baku Boulevard",
+      "kind": "park",
+      "lat": 40.3667,
+      "lon": 49.85,
+      "price": 0,
+      "price_text": "Free · Baku Eye and boat rides cost extra",
+      "hours": "Always open",
+      "tip": "Walk the full seafront from the Old City to the Carpet Museum; it is long, so pick a stretch.",
+      "source": ""
+    },
+    "carpet_museum": {
+      "name": "Azerbaijan Carpet Museum",
+      "landmark": "Azerbaijan Carpet Museum",
+      "kind": "museum",
+      "lat": 40.3606,
+      "lon": 49.8361,
+      "price": 10,
+      "price_text": "≈ AZN 5–15 entry; check on the day",
+      "hours": "Roughly 10:00–18:00; closed Monday",
+      "tip": "The building is shaped like a rolled carpet. Start on the top floor and work down.",
+      "source": "https://azcarpetmuseum.az/en"
+    },
+    "ateshgah": {
+      "name": "Ateshgah of Baku",
+      "landmark": "Ateshgah of Baku",
+      "kind": "sight",
+      "lat": 40.4155,
+      "lon": 50.0086,
+      "price": 10,
+      "price_text": "≈ AZN 5–15 entry; check on the day",
+      "hours": "Roughly 09:00–18:00 daily",
+      "tip": "It is far out on the Absheron peninsula; pair it with Yanar Dag in one taxi trip.",
+      "source": ""
+    },
+    "yanar_dag": {
+      "name": "Yanar Dag",
+      "landmark": "Yanar Dag",
+      "kind": "sight",
+      "lat": 40.5019,
+      "lon": 49.8913,
+      "price": 10,
+      "price_text": "≈ AZN 5–15 entry; check on the day",
+      "hours": "Roughly 09:00–18:00 daily",
+      "tip": "The natural gas fire is best after dusk; bring a jacket, it is exposed and windy.",
+      "source": ""
+    },
+    "bibi_heybat": {
+      "name": "Bibi-Heybat Mosque",
+      "landmark": "Bibi-Heybat Mosque",
+      "kind": "sight",
+      "lat": 40.3086,
+      "lon": 49.8203,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily; avoid prayer times for visiting",
+      "tip": "Women cover hair and shoulders. The green-tiled facade faces the bay.",
+      "source": ""
+    },
+    "dolma": {
+      "name": "Dolma (restaurant)",
+      "landmark": "Dolma",
+      "kind": "food",
+      "lat": 40.4093,
+      "lon": 49.8671,
+      "price": 40,
+      "price_text": "≈ AZN 30–60 per person",
+      "hours": "Roughly lunch and dinner daily; book ahead",
+      "tip": "Order the dolma and the lamb; it is a good first stop for Azerbaijani home cooking in the Old City.",
+      "source": ""
+    },
+    "nizami_street": {
+      "name": "Nizami Street",
+      "landmark": "Nizami Street",
+      "kind": "sight",
+      "lat": 40.3725,
+      "lon": 49.8394,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops roughly 10:00–21:00",
+      "tip": "The pedestrian stretch near Fountain Square is best in the evening, when the cafes fill up.",
+      "source": ""
+    },
+    "yasil_bazar": {
+      "name": "Yasil Bazar",
+      "landmark": "Yasil Bazar",
+      "kind": "food",
+      "lat": 40.3892,
+      "lon": 49.8583,
+      "price": 0,
+      "price_text": "Free to enter; pay for what you buy",
+      "hours": "Roughly 08:00–19:00 daily",
+      "tip": "Go in the morning for fruit, cheese and herbs; bring small cash and taste before buying.",
+      "source": ""
+    },
+    "fountain_square": {
+      "name": "Fountain Square",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.3722,
+      "lon": 49.8353,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The social heart of the city; sit at a cafe and watch the evening crowd.",
+      "source": ""
+    },
+    "highland_park": {
+      "name": "Highland Park viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.3583,
+      "lon": 49.8283,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Take the funicular up, then walk down past the Martyrs' Alley for the best bay panorama.",
+      "source": ""
+    },
+    "old_city_walk": {
+      "name": "Old City walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 40.3667,
+      "lon": 49.835,
+      "price": 30,
+      "price_text": "≈ AZN 20–50 per person; tip extra",
+      "hours": "Tours usually run morning and afternoon",
+      "tip": "A guide explains the caravanserais and hammams you would otherwise walk past; book a small group.",
+      "source": ""
+    },
+    "carpet_shop": {
+      "name": "Carpet and antique shops in the Old City",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.3661,
+      "lon": 49.8361,
+      "price": null,
+      "price_text": "Free to browse; prices vary",
+      "hours": "Roughly 10:00–19:00",
+      "tip": "Haggle politely and ask about the origin of a carpet before any price talk.",
+      "source": ""
+    },
+    "tea_house": {
+      "name": "Traditional tea house (cay evi)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 40.3689,
+      "lon": 49.8347,
+      "price": 10,
+      "price_text": "≈ AZN 5–15 for tea and sweets",
+      "hours": "Roughly 09:00–22:00",
+      "tip": "Order black tea with jam and a plate of dried fruit; it is the cheapest way to slow down.",
+      "source": ""
+    },
+    "boat_trip": {
+      "name": "Baku Bay boat trip",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.3611,
+      "lon": 49.8361,
+      "price": 20,
+      "price_text": "≈ AZN 10–30 per person; check on the day",
+      "hours": "Weather dependent; usually daytime and evening",
+      "tip": "Short trips leave from the Boulevard; confirm the price and duration before boarding.",
+      "source": ""
+    },
+    "mud_volcanoes": {
+      "name": "Mud volcanoes tour (Gobustan)",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 40.4083,
+      "lon": 49.3,
+      "price": 80,
+      "price_text": "≈ AZN 60–120 shared tour; check inclusions",
+      "hours": "Half-day tours usually depart morning",
+      "tip": "Combine Gobustan rock art with the mud volcanoes; confirm pickup and entry fees are included.",
+      "source": ""
+    },
+    "funicular": {
+      "name": "Baku Funicular",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 40.3611,
+      "lon": 49.83,
+      "price": 1,
+      "price_text": "≈ AZN 1 per ride; check on the day",
+      "hours": "Roughly 09:00–22:00",
+      "tip": "Ride up to Highland Park and walk back down; the queue is shorter in the morning.",
+      "source": ""
+    },
+    "martyrs_alley": {
+      "name": "Martyrs' Alley (Shehidler Khiyabani)",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 40.3572,
+      "lon": 49.8283,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A solemn memorial with a long view over the bay; dress and behave respectfully.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day on foot: walled Old City in the morning, seafront icons after sunset.",
+      "days": [
+        {
+          "title": "Old City walls and palaces",
+          "stops": [
+            {
+              "place": "icherisheher",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Enter through the gates and wander the lanes. Shops open around 10:00."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "A few minutes' walk inside the walls. Go early to beat tour groups."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Short walk uphill. Roughly 10:00–18:00."
+            },
+            {
+              "place": "dolma",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch in the Old City. Book ahead at peak times."
+            }
+          ]
+        },
+        {
+          "title": "Seafront and after dark",
+          "stops": [
+            {
+              "place": "carpet_museum",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Closed Monday. Check the day before."
+            },
+            {
+              "place": "boulevard",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Walk the seafront park toward the towers."
+            },
+            {
+              "place": "flame_towers",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Best after dark. Deck hours check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Fire temples, burning hillside and the Old City's layered past in one day.",
+      "days": [
+        {
+          "title": "Fire and stone outside the centre",
+          "stops": [
+            {
+              "place": "ateshgah",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "On the Absheron peninsula; arrange a taxi or driver for the morning."
+            },
+            {
+              "place": "yanar_dag",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short drive from Ateshgah. Roughly 09:00–18:00."
+            },
+            {
+              "place": "mud_volcanoes",
+              "at": "13:00",
+              "minutes": 300,
+              "note": "Half-day Gobustan tour usually departs morning; book ahead and confirm timing."
+            }
+          ]
+        },
+        {
+          "title": "Old City history on foot",
+          "stops": [
+            {
+              "place": "old_city_walk",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Tours usually run morning and afternoon; confirm the slot."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Check closing time for the season before you go."
+            },
+            {
+              "place": "tea_house",
+              "at": "19:45",
+              "minutes": 45,
+              "note": "Tea with jam near Fountain Square to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market, tea, plov and a slow walk between the Old City and Fountain Square.",
+      "days": [
+        {
+          "title": "Market morning, Old City afternoon",
+          "stops": [
+            {
+              "place": "yasil_bazar",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early for the freshest produce. Roughly 08:00–19:00."
+            },
+            {
+              "place": "nizami_street",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk or taxi. Shops open around 10:00."
+            },
+            {
+              "place": "icherisheher",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Wander the lanes before lunch."
+            },
+            {
+              "place": "dolma",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch. Book ahead at peak times."
+            }
+          ]
+        },
+        {
+          "title": "Tea and evening square",
+          "stops": [
+            {
+              "place": "carpet_shop",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Browse carpets and antiques; agree prices before buying."
+            },
+            {
+              "place": "tea_house",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Tea with jam and sweets near Fountain Square."
+            },
+            {
+              "place": "fountain_square",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Evening stroll; shops open to about 21:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fountain Square"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day: walled Old City in the morning, seafront landmarks and sunset views after.",
+      "days": [
+        {
+          "title": "Old City walls and towers",
+          "stops": [
+            {
+              "place": "icherisheher",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start early before tour groups. Wear shoes for cobblestones."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Short walk inside the Old City. Hours vary by season, check on the day."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Five minutes on foot. Roughly 10:00–18:00."
+            },
+            {
+              "place": "dolma",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch in the Old City. Book ahead at dinner time."
+            }
+          ]
+        },
+        {
+          "title": "Seafront and sunset",
+          "stops": [
+            {
+              "place": "heydar_aliyev",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Taxi from the Old City. Closed some Mondays, check first."
+            },
+            {
+              "place": "carpet_museum",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Closed Monday. Roughly 10:00–18:00."
+            },
+            {
+              "place": "boulevard",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Walk the seafront as the light drops."
+            },
+            {
+              "place": "flame_towers",
+              "at": "20:15",
+              "minutes": 30,
+              "note": "Best after dark. Deck hours check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Fire temples, burning hillsides and the old walled core in a single day.",
+      "days": [
+        {
+          "title": "Old City history",
+          "stops": [
+            {
+              "place": "old_city_walk",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Guided walk sets the scene. Tours usually run morning and afternoon."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Palace and tombs. Roughly 10:00–18:00."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Climb for city views. Hours vary by season."
+            },
+            {
+              "place": "tea_house",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Tea with jam and a light lunch near Fountain Square."
+            }
+          ]
+        },
+        {
+          "title": "Fire and flame",
+          "stops": [
+            {
+              "place": "ateshgah",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Taxi out of the centre. Roughly 09:00–18:00."
+            },
+            {
+              "place": "yanar_dag",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Nearby burning hillside. Best late afternoon into dusk."
+            },
+            {
+              "place": "martyrs_alley",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Memorial walk with bay views. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market browsing, Old City snacks and a proper dinner, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Market morning, Old City afternoon",
+          "stops": [
+            {
+              "place": "yasil_bazar",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Produce, cheese and herbs. Roughly 08:00–19:00."
+            },
+            {
+              "place": "nizami_street",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk. Shops roughly 10:00–21:00."
+            },
+            {
+              "place": "icherisheher",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Wander the lanes between snacks."
+            },
+            {
+              "place": "dolma",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Lunch in the Old City. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Tea, seafront and dinner",
+          "stops": [
+            {
+              "place": "tea_house",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Afternoon tea with jam near Fountain Square."
+            },
+            {
+              "place": "boulevard",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Walk off lunch along the seafront."
+            },
+            {
+              "place": "fountain_square",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Evening buzz, cafes all around."
+            },
+            {
+              "place": "nizami_street",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner nearby. Shops open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fountain Square"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the walled Old City, the landmark buildings and an easy evening on the seafront.",
+      "days": [
+        {
+          "title": "Old City walls and towers",
+          "stops": [
+            {
+              "place": "icherisheher",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start at the gates and wander. Wear shoes for cobblestones."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Climb early before tour groups. Check hours on the day."
+            },
+            {
+              "place": "dolma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch in the Old City. Book ahead at busy times."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "A short walk from the tower. Roughly 10:00–18:00."
+            },
+            {
+              "place": "carpet_shop",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Browse carpets and antiques. Agree prices before buying."
+            }
+          ]
+        },
+        {
+          "title": "Seafront icons and sunset",
+          "stops": [
+            {
+              "place": "heydar_aliyev",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Closed some Mondays, so check."
+            },
+            {
+              "place": "carpet_museum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Closed Monday. Short taxi or walk along the boulevard."
+            },
+            {
+              "place": "boulevard",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Lunch and a slow walk by the water."
+            },
+            {
+              "place": "highland_park",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Take the funicular up if it is running. Stay for sunset."
+            },
+            {
+              "place": "flame_towers",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Best after dark. View from the boulevard or Highland Park."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Seafront Boulevard"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want fire temples, burning hillsides and the layers of Baku's past.",
+      "days": [
+        {
+          "title": "Old City history on foot",
+          "stops": [
+            {
+              "place": "old_city_walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "A guided walk sets the scene. Tours usually run morning and afternoon."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Palace complex inside the walls. Roughly 10:00–18:00."
+            },
+            {
+              "place": "dolma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch break in the Old City."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Check hours on the day; they vary by season."
+            },
+            {
+              "place": "martyrs_alley",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "A sobering memorial with city views. Late afternoon light is good."
+            }
+          ]
+        },
+        {
+          "title": "Fire temples and burning hills",
+          "stops": [
+            {
+              "place": "ateshgah",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Outside the centre; arrange a taxi or tour. Roughly 09:00–18:00."
+            },
+            {
+              "place": "yanar_dag",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "A natural gas fire on the hillside. Often paired with Ateshgah."
+            },
+            {
+              "place": "mud_volcanoes",
+              "at": "13:00",
+              "minutes": 300,
+              "note": "Half-day Gobustan tour if you have the time. Book ahead; morning departures are usual."
+            },
+            {
+              "place": "tea_house",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Tea with jam back in town. Roughly 09:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Fountain Square"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, tea houses and long dinners between the sights.",
+      "days": [
+        {
+          "title": "Market morning and Old City tastes",
+          "stops": [
+            {
+              "place": "yasil_bazar",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early for the freshest produce. Roughly 08:00–19:00."
+            },
+            {
+              "place": "icherisheher",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Walk off breakfast inside the walls."
+            },
+            {
+              "place": "dolma",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Lunch. Book ahead at busy times."
+            },
+            {
+              "place": "carpet_shop",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Browse between meals. Roughly 10:00–19:00."
+            },
+            {
+              "place": "tea_house",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Afternoon tea with jam and sweets."
+            }
+          ]
+        },
+        {
+          "title": "Seafront walk and a long dinner",
+          "stops": [
+            {
+              "place": "heydar_aliyev",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning. Closed some Mondays, so check."
+            },
+            {
+              "place": "boulevard",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Stroll and grab a light lunch by the water."
+            },
+            {
+              "place": "nizami_street",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops and cafes. Shops roughly 10:00–21:00."
+            },
+            {
+              "place": "fountain_square",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Evening buzz. Pick a restaurant and settle in."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fountain Square or Nizami Street"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the walled Old City, the seafront icons and an easy evening rhythm.",
+      "days": [
+        {
+          "title": "Old City walls and towers",
+          "stops": [
+            {
+              "place": "icherisheher",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start early before the heat and tour groups. Wear shoes for uneven stone."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Climb the spiral stairs for bay views. Hours shift by season, so check on the day."
+            },
+            {
+              "place": "dolma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch inside the Old City. Book ahead at weekends."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Palace courtyard and mausoleum. Shade is limited, so bring water."
+            },
+            {
+              "place": "carpet_shop",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Browse, don't rush. Agree prices before you buy."
+            }
+          ]
+        },
+        {
+          "title": "Seafront museums and sunset",
+          "stops": [
+            {
+              "place": "heydar_aliyev",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Weekday morning is calmest. Closed some Mondays, so check first."
+            },
+            {
+              "place": "carpet_museum",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Closed Monday. The building looks like a rolled carpet."
+            },
+            {
+              "place": "boulevard",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the seafront and grab a casual lunch nearby."
+            },
+            {
+              "place": "highland_park",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Best at sunset. Take the funicular up if you are tired."
+            },
+            {
+              "place": "flame_towers",
+              "at": "20:00",
+              "minutes": 30,
+              "note": "Best after dark. Deck hours check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Markets, squares and tea",
+          "stops": [
+            {
+              "place": "yasil_bazar",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early for the freshest produce and fewer crowds."
+            },
+            {
+              "place": "nizami_street",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Pedestrian shopping street. Shops open around 10:00."
+            },
+            {
+              "place": "fountain_square",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Central meeting point. Good spot for lunch."
+            },
+            {
+              "place": "tea_house",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Order cay with jam. A slow, social pause."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Guided walk fills in the history you walked past on day one."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Fountain Square"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want fire temples, mud volcanoes and the layers under the modern city.",
+      "days": [
+        {
+          "title": "Old City history core",
+          "stops": [
+            {
+              "place": "maiden_tower",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Go first, before groups arrive."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "The royal complex of the Shirvanshahs dynasty."
+            },
+            {
+              "place": "icherisheher",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Wander the lanes and caravanserais."
+            },
+            {
+              "place": "dolma",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Lunch stop. Book ahead."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "A guide adds context to the walls and courtyards."
+            }
+          ]
+        },
+        {
+          "title": "Fire and mud day trip",
+          "stops": [
+            {
+              "place": "mud_volcanoes",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Half-day tour to Gobustan. Book ahead and bring sun protection."
+            },
+            {
+              "place": "ateshgah",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Fire temple on the Absheron peninsula. Usually open daily."
+            },
+            {
+              "place": "yanar_dag",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Burning hillside. Best late afternoon into dusk."
+            }
+          ]
+        },
+        {
+          "title": "Memorials and the modern city",
+          "stops": [
+            {
+              "place": "martyrs_alley",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Sobering memorial with bay views. Dress respectfully."
+            },
+            {
+              "place": "bibi_heybat",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Avoid prayer times. Cover shoulders and knees."
+            },
+            {
+              "place": "carpet_museum",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Closed Monday. Weaving history across the centuries."
+            },
+            {
+              "place": "heydar_aliyev",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "boulevard",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Evening walk and dinner by the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Seafront Boulevard"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, long lunches and tea with jam.",
+      "days": [
+        {
+          "title": "Market morning and Old City lunch",
+          "stops": [
+            {
+              "place": "yasil_bazar",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is best. Look for pomegranates, herbs and pickles."
+            },
+            {
+              "place": "icherisheher",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Walk off breakfast through the Old City lanes."
+            },
+            {
+              "place": "dolma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Long lunch. Book ahead at weekends."
+            },
+            {
+              "place": "tea_house",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Cay with jam and sweets. A Baku ritual."
+            },
+            {
+              "place": "carpet_shop",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Browse between meals."
+            }
+          ]
+        },
+        {
+          "title": "Seafront and evening eating",
+          "stops": [
+            {
+              "place": "boulevard",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning walk along the bay."
+            },
+            {
+              "place": "carpet_museum",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Closed Monday. Short visit, then lunch nearby."
+            },
+            {
+              "place": "highland_park",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset viewpoint. Take the funicular up if tired."
+            },
+            {
+              "place": "flame_towers",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "See them lit after dark."
+            },
+            {
+              "place": "nizami_street",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "Evening stroll and dinner. Shops open until about 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Tea, squares and a slow finish",
+          "stops": [
+            {
+              "place": "fountain_square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Central square. Good for a coffee stop."
+            },
+            {
+              "place": "maiden_tower",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Quick climb before lunch."
+            },
+            {
+              "place": "shirvanshahs",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Palace visit, then eat in the Old City."
+            },
+            {
+              "place": "old_city_walk",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Afternoon tour. Tours usually run morning and afternoon."
+            },
+            {
+              "place": "tea_house",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Final tea before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fountain Square or Old City"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old City walls, palaces and the carpet museum."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Fire temples, petroglyphs and Soviet-era layers."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Plov, kebabs, pomegranates and tea with jam."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old City",
+      "range": [
+        90,
+        320
+      ],
+      "why": "Inside the walls, walk to Maiden Tower and the Palace of the Shirvanshahs. Quiet lanes, but narrow streets and few cars.",
+      "center": [
+        40.366,
+        49.837
+      ]
+    },
+    {
+      "area": "Fountain Square",
+      "range": [
+        110,
+        380
+      ],
+      "why": "The pedestrian heart of the city: cafés, shops and easy walks to the Old City and the boulevard.",
+      "center": [
+        40.372,
+        49.837
+      ]
+    },
+    {
+      "area": "Seafront Boulevard",
+      "range": [
+        130,
+        450
+      ],
+      "why": "Water views and a long promenade; good for evening walks. A bit further from the Old City lanes.",
+      "center": [
+        40.36,
+        49.835
+      ]
+    },
+    {
+      "area": "Nizami Street",
+      "range": [
+        100,
+        350
+      ],
+      "why": "Central shopping street with many mid-range hotels and metro access nearby.",
+      "center": [
+        40.377,
+        49.845
+      ]
+    }
+  ],
+  "food": [
+    "Try plov (rice with meat or saffron), dushbara dumplings in broth, and kebab with sumac onions.",
+    "Tea is a ritual: order çay with jam, walnuts and sweets at a çay evi (tea house).",
+    "Qutab is a thin stuffed flatbread, cheap and filling; good for a quick lunch.",
+    "Look for pomegranate dishes and fresh herbs in season; the fruit is a local symbol.",
+    "Prices vary; a simple local meal is often well under 20 AZN. Check the bill and confirm prices in tourist areas."
+  ],
+  "more_time": [
+    "Add a day trip to Gobustan for the petroglyphs and mud volcanoes; check tour prices and road conditions on the day.",
+    "Swap an afternoon for the Fire Temple at Ateshgah and Yanar Dag, the burning hillside; best as a guided trip.",
+    "Spend a slow half-day at the Heydar Aliyev Center for the architecture and exhibitions."
+  ]
+}

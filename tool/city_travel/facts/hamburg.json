@@ -1,0 +1,181 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Hamburg: a harbour city of water, music and grand brick halls.",
+  "intro": "Hamburg rewards visitors with lively docks, elegant lakes and a famously creative nightlife. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Altstadt",
+    "HafenCity",
+    "St. Pauli",
+    "Altona"
+  ],
+  "taxi": {
+    "flag_day": 4.5,
+    "flag_airport": 5.5,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "S-Bahn and U-Bahn cover the city; no trams since the 1970s.",
+    "Buy tickets before boarding buses; no ticket sales on board.",
+    "Single tickets run about €2.10-12.60; day tickets from €8.20.",
+    "Ride apps like Uber and Bolt work; taxis are metered and plentiful.",
+    "Driving is slow with roadworks and costly parking; use park-and-ride.",
+    "The city is flat and good for cycling; ferries cross the Elbe."
+  ],
+  "airports": [
+    {
+      "code": "HAM",
+      "name": "Hamburg Airport Helmut Schmidt",
+      "primary": true,
+      "note": "Main airport, about 9 km north of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S1",
+          "to": "Hauptbahnhof",
+          "price": "€3.81-4.10",
+          "time": "25-30 min",
+          "note": "Runs every 10 min; ride in the front cars from Ohlsdorf."
+        },
+        {
+          "mode": "Night bus 606",
+          "to": "Rathausmarkt",
+          "price": "€3.81-4.10",
+          "time": "35-45 min",
+          "note": "Use when no trains run, roughly 00:30-04:30."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€25-35",
+          "time": "25-35 min",
+          "note": "Fixed-ish fares; traffic can add time."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "25-35 min",
+          "note": "Pick-up points are signposted outside terminals."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Miniatur Wunderland",
+    "Elbphilharmonie",
+    "Speicherstadt",
+    "HafenCity",
+    "Reeperbahn",
+    "St. Michael's Church, Hamburg",
+    "Elbe River",
+    "Fish Market Hamburg",
+    "Hagenbeck Tropen-Aquarium",
+    "Hamburg City Hall",
+    "Hamburg Harbor Boat Tour",
+    "Volksparkstadion",
+    "Wanderer above the Sea of Fog",
+    "Wildpark Schwarze Berge"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Hamburg",
+      "https://en.wikivoyage.org/wiki/Hamburg"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    53.55073,
+    9.99302
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": 0,
+      "rain_days": 14
+    },
+    {
+      "high": 7,
+      "low": 1,
+      "rain_days": 13
+    },
+    {
+      "high": 9,
+      "low": 2,
+      "rain_days": 11
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 10
+    },
+    {
+      "high": 14,
+      "low": 8,
+      "rain_days": 14
+    },
+    {
+      "high": 9,
+      "low": 4,
+      "rain_days": 14
+    },
+    {
+      "high": 6,
+      "low": 2,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

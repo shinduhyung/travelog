@@ -1,0 +1,1352 @@
+{
+  "city": "Port Louis",
+  "checked": "October 2026",
+  "currency": "MUR",
+  "usd_rate": 47.2716,
+  "intro": "Port Louis rewards visitors with a lively bazaar, waterfront promenades and easy access to the island's interior. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -20.3819,
+      "west": 57.3514,
+      "north": -20.0297,
+      "east": 57.6317,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 100,
+      "flag_airport": 1800,
+      "per_km": 30,
+      "min_fare": 100
+    },
+    "road_factor": 1.4,
+    "city_kmh": 20,
+    "notes": [
+      "Metro Express light rail links suburbs to the city, daily 6 AM to 10 PM, roughly every 12-15 minutes.",
+      "Two bus stations: Immigration Square for north and east routes, Victoria Square for south and west routes.",
+      "Buses run frequently with few schedules; first around 6 AM, intercity last around 6 PM, city buses until 8 PM.",
+      "Intercity bus tickets cost about MUR 15-30; express and AC buses cost more.",
+      "Taxis within the city cost about MUR 10-50, a bit more at night; avoid rush hours.",
+      "Ride apps are limited; arrange taxis by phone or at ranks. Driving is chaotic, so park at the marina or hotel."
+    ],
+    "sources": []
+  },
+  "places": {
+    "aapravasi_ghat": {
+      "name": "Aapravasi Ghat",
+      "landmark": "Aapravasi Ghat",
+      "kind": "sight",
+      "lat": -20.1586,
+      "lon": 57.5031,
+      "price": 0,
+      "price_text": "Free entry; donations welcome",
+      "hours": "Mon–Fri 09:00–16:00 · Sat 09:00–12:00 · closed Sunday; check on the day",
+      "tip": "This UNESCO site marks where indentured labourers first arrived. Start with the short film, then walk the stone steps to the water.",
+      "source": "https://whc.unesco.org/en/list/1227/"
+    },
+    "central_market": {
+      "name": "Port Louis Central Market",
+      "landmark": "Port Louis Central Market",
+      "kind": "food",
+      "lat": -20.1606,
+      "lon": 57.5019,
+      "price": 0,
+      "price_text": "Free to enter; food and produce priced per item",
+      "hours": "Mon–Sat roughly 06:00–17:30 · Sunday morning only; check on the day",
+      "tip": "Come hungry for dholl puri and alouda. Bring small notes and expect friendly bargaining.",
+      "source": ""
+    },
+    "labourdonnais": {
+      "name": "Chateau de Labourdonnais",
+      "landmark": "Chateau de Labourdonnais",
+      "kind": "sight",
+      "lat": -20.0632,
+      "lon": 57.6042,
+      "price": null,
+      "price_text": "Entry fee varies by ticket type; check on the day",
+      "hours": "Daily roughly 09:00–17:00; check on the day",
+      "tip": "Pair the colonial house tour with the orchard and rum tasting. Allow extra time for the gardens.",
+      "source": "https://www.chateaulabourdonnais.com/"
+    },
+    "eureka_house": {
+      "name": "Eureka House",
+      "landmark": "Eureka House",
+      "kind": "museum",
+      "lat": -20.2117,
+      "lon": 57.4894,
+      "price": null,
+      "price_text": "Entry fee; check on the day",
+      "hours": "Daily roughly 09:00–17:00; check on the day",
+      "tip": "A creole mansion with period furniture and a garden waterfall. Good for a quiet hour away from the city.",
+      "source": ""
+    },
+    "ganga_talao": {
+      "name": "Ganga Talao (Grand Bassin)",
+      "landmark": "Ganga Talao",
+      "kind": "sight",
+      "lat": -20.4168,
+      "lon": 57.4925,
+      "price": 0,
+      "price_text": "Free entry; small parking fee may apply",
+      "hours": "Open daily daylight hours; temple areas may close for rituals",
+      "tip": "A sacred lake with temples. Dress modestly and remove shoes before entering shrines.",
+      "source": ""
+    },
+    "casela": {
+      "name": "Casela World of Adventures",
+      "landmark": "Casela World of Adventures",
+      "kind": "park",
+      "lat": -20.2621,
+      "lon": 57.3789,
+      "price": null,
+      "price_text": "Entry plus paid activities; check current packages on the day",
+      "hours": "Daily roughly 09:00–17:00; check on the day",
+      "tip": "Book activities online ahead. The park is big, so pick two or three experiences rather than trying everything.",
+      "source": "https://www.caselaparks.com/"
+    },
+    "dholl_puri": {
+      "name": "Dholl Puri",
+      "landmark": "Dholl Puri",
+      "kind": "food",
+      "lat": -20.1609,
+      "lon": 57.5015,
+      "price": null,
+      "price_text": "Cheap street food; a few tens of MUR per portion",
+      "hours": "Best at lunch; stalls vary",
+      "tip": "Mauritius's classic street snack: flatbread with split peas, curry and chilli. Ask for less chilli if unsure.",
+      "source": ""
+    },
+    "mauritius": {
+      "name": "Mauritius",
+      "landmark": "Mauritius",
+      "kind": "sight",
+      "lat": -20.3484,
+      "lon": 57.5522,
+      "price": null,
+      "price_text": "Varies by island and activity",
+      "hours": "Island-wide; plan around day trips",
+      "tip": "Use Port Louis as a base for the north and centre. The south and west coasts need a full day each.",
+      "source": ""
+    },
+    "caudan_waterfront": {
+      "name": "Caudan Waterfront",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -20.1603,
+      "lon": 57.4983,
+      "price": 0,
+      "price_text": "Free to walk; shops and cafes priced separately",
+      "hours": "Shops roughly 09:30–19:00; restaurants later",
+      "tip": "A easy waterfront stroll with harbour views, shops and the blue penny museum nearby.",
+      "source": ""
+    },
+    "citadel_fort": {
+      "name": "Fort Adelaide (La Citadelle)",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -20.1639,
+      "lon": 57.5044,
+      "price": 0,
+      "price_text": "Free entry; small fee may apply for some areas",
+      "hours": "Daily daylight hours; check on the day",
+      "tip": "Climb to the fort for one of the best views over the city and harbour. Go early or near sunset.",
+      "source": ""
+    },
+    "champ_de_mars": {
+      "name": "Champ de Mars Racecourse",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -20.1653,
+      "lon": 57.5061,
+      "price": null,
+      "price_text": "Race-day entry varies; check on the day",
+      "hours": "Race days only; check the calendar",
+      "tip": "One of the oldest racecourses in the southern hemisphere. Check race dates before you go.",
+      "source": ""
+    },
+    "blue_penny": {
+      "name": "Blue Penny Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -20.1607,
+      "lon": 57.4986,
+      "price": null,
+      "price_text": "Entry fee; check on the day",
+      "hours": "Mon–Sat roughly 10:00–17:00; check on the day",
+      "tip": "See the famous Blue Penny and Red Penny stamps. A good indoor stop on a hot or rainy day.",
+      "source": ""
+    },
+    "chinatown_walk": {
+      "name": "Chinatown and city-centre walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -20.1611,
+      "lon": 57.5047,
+      "price": 0,
+      "price_text": "Free self-guided; guided tours priced separately",
+      "hours": "Daylight hours; busiest on weekday mornings",
+      "tip": "Wander the streets around the market for temples, food stalls and old shopfronts. Keep valuables close.",
+      "source": ""
+    },
+    "le_caudan_view": {
+      "name": "Harbour viewpoint at Caudan",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -20.1597,
+      "lon": 57.4972,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Watch the boats and the city skyline. Best light is late afternoon.",
+      "source": ""
+    },
+    "street_food_tour": {
+      "name": "Port Louis street-food tasting",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -20.1622,
+      "lon": 57.5025,
+      "price": null,
+      "price_text": "Guided tours priced per person; check on the day",
+      "tip": "A guided tasting covers dholl puri, gateaux piments and alouda. Confirm meeting point and what is included.",
+      "source": ""
+    },
+    "jummah_mosque": {
+      "name": "Jummah Mosque",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -20.1606,
+      "lon": 57.5042,
+      "price": 0,
+      "price_text": "Free; donations welcome",
+      "hours": "Outside prayer times; check on the day",
+      "tip": "A historic mosque in the city centre. Dress modestly and avoid visiting during prayers.",
+      "source": ""
+    },
+    "natural_history_museum": {
+      "name": "Natural History Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -20.1633,
+      "lon": 57.5019,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Mon–Sat roughly 09:00–16:00; check on the day",
+      "tip": "Home to the dodo skeleton and island natural history. A short, free indoor stop.",
+      "source": ""
+    },
+    "photography_museum": {
+      "name": "Photography Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -20.1614,
+      "lon": 57.5028,
+      "price": null,
+      "price_text": "Entry fee; check on the day",
+      "hours": "Mon–Sat; check on the day",
+      "tip": "Small museum on the history of photography in Mauritius. Good for a quiet half hour.",
+      "source": ""
+    },
+    "alouda_stall": {
+      "name": "Alouda drink stall",
+      "landmark": null,
+      "kind": "food",
+      "lat": -20.1616,
+      "lon": 57.5021,
+      "price": null,
+      "price_text": "Cheap; a few tens of MUR per glass",
+      "hours": "Daytime; stalls vary",
+      "tip": "A sweet milk drink with basil seeds and jelly. Try it cold on a hot day.",
+      "source": ""
+    },
+    "waterfront_dining": {
+      "name": "Waterfront restaurants",
+      "landmark": null,
+      "kind": "food",
+      "lat": -20.1601,
+      "lon": 57.4979,
+      "price": null,
+      "price_text": "Mains vary widely; check menus",
+      "hours": "Lunch and dinner; some open late",
+      "tip": "Good for a relaxed dinner with harbour views. Book ahead on weekends.",
+      "source": ""
+    },
+    "city_market_shopping": {
+      "name": "Craft and textile shopping near the market",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -20.1621,
+      "lon": 57.5022,
+      "price": 0,
+      "price_text": "Free to browse; goods priced per item",
+      "hours": "Mon–Sat daytime",
+      "tip": "Look for textiles, spices and souvenirs. Compare prices before buying.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: the immigration story, the old fort and the waterfront museums.",
+      "days": [
+        {
+          "title": "History on the hill, culture by the water",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early before the heat. Closed Sunday."
+            },
+            {
+              "place": "citadel_fort",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short taxi or uphill walk. City views."
+            },
+            {
+              "place": "central_market",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Fruit, spices and souvenirs. Busy but fun."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Lunch stop. Stalls vary, so follow the queue."
+            },
+            {
+              "place": "blue_penny",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Cool and indoor. Check opening days."
+            },
+            {
+              "place": "caudan_waterfront",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy stroll to finish. Shops and cafes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way through the market and the streets, with a waterfront dinner.",
+      "days": [
+        {
+          "title": "Market, street snacks and the waterfront",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Come hungry. Weekday mornings are best."
+            },
+            {
+              "place": "city_market_shopping",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Textiles and crafts nearby."
+            },
+            {
+              "place": "street_food_tour",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Late-morning tasting walk. Bring cash."
+            },
+            {
+              "place": "alouda_stall",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Sweet cold drink. Stalls vary."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Snack stops along the way."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner by the harbour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Colonial houses, the fort and the immigration story in one day.",
+      "days": [
+        {
+          "title": "Fort, museums and old houses",
+          "stops": [
+            {
+              "place": "citadel_fort",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early light and cooler air."
+            },
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "The indentured-labour story. Closed Sunday."
+            },
+            {
+              "place": "blue_penny",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Stamps and island history. Indoor."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Quick lunch."
+            },
+            {
+              "place": "eureka_house",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Colonial house and gardens. Check hours."
+            },
+            {
+              "place": "labourdonnais",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Estate house and grounds. Check hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: the waterfront museums and market on day one, the Citadel and old streets the next morning.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and city centre",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "UNESCO site on the waterfront. Closed Sunday and weekday afternoons after 16:00."
+            },
+            {
+              "place": "blue_penny",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Five minutes on foot along the waterfront. Good for rainy weather."
+            },
+            {
+              "place": "le_caudan_view",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Harbour view from Caudan. Always open."
+            },
+            {
+              "place": "central_market",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "About 15 minutes on foot. Closes around 17:30, so go straight there."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner back at Caudan. Some places open late."
+            }
+          ]
+        },
+        {
+          "title": "Citadel, Chinatown and depart",
+          "stops": [
+            {
+              "place": "citadel_fort",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Go early for cooler air and city views. Daylight hours only."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "09:45",
+              "minutes": 90,
+              "note": "Walk down into the city centre. Busiest on weekday mornings."
+            },
+            {
+              "place": "jummah_mosque",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Visit outside prayer times. Dress modestly."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Quick lunch at a street stall. Stalls vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront & City Centre"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A tasting-first day: market, street snacks and a waterfront dinner, with a short history stop in between.",
+      "days": [
+        {
+          "title": "Market and street food",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go on a weekday morning for the full market. Sunday is morning only."
+            },
+            {
+              "place": "city_market_shopping",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Crafts and textiles around the market. Mon–Sat daytime."
+            },
+            {
+              "place": "street_food_tour",
+              "at": "11:45",
+              "minutes": 150,
+              "note": "Late-morning tasting walk through the city centre. Come hungry."
+            },
+            {
+              "place": "alouda_stall",
+              "at": "14:30",
+              "minutes": 15,
+              "note": "Cool down with an alouda drink. Stalls vary."
+            },
+            {
+              "place": "aapravasi_ghat",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Short walk to the waterfront. Closed Sunday and after 16:00 on weekdays."
+            }
+          ]
+        },
+        {
+          "title": "Waterfront and dinner",
+          "stops": [
+            {
+              "place": "le_caudan_view",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Harbour viewpoint. Always open."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner at Caudan. Book ahead on weekends."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "20:15",
+              "minutes": 20,
+              "note": "Optional late snack if stalls are still open. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront & City Centre"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "History-focused: the immigration story and colonial houses, then the fort and old city the next morning.",
+      "days": [
+        {
+          "title": "Immigration story and colonial houses",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start here. Closed Sunday; weekday mornings only."
+            },
+            {
+              "place": "blue_penny",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Stamps and island history on the waterfront. Mon–Sat roughly 10:00–17:00."
+            },
+            {
+              "place": "eureka_house",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Colonial house. Take a taxi; roughly 09:00–17:00 daily."
+            },
+            {
+              "place": "labourdonnais",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Plantation estate and gardens. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Fort, museum and depart",
+          "stops": [
+            {
+              "place": "citadel_fort",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early for cooler air and views over the city."
+            },
+            {
+              "place": "natural_history_museum",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Mon–Sat roughly 09:00–16:00. Check on the day."
+            },
+            {
+              "place": "photography_museum",
+              "at": "10:45",
+              "minutes": 40,
+              "note": "Mon–Sat. Check on the day."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Lunch at a street stall before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront & City Centre"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the market, the immigration story and the waterfront in two easy days.",
+      "days": [
+        {
+          "title": "Waterfront history and the old city",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early before the heat. Closed Sunday."
+            },
+            {
+              "place": "blue_penny",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Short walk along the waterfront. Good for rainy weather."
+            },
+            {
+              "place": "le_caudan_view",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Harbour view and photos."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Lunch at Caudan."
+            },
+            {
+              "place": "citadel_fort",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Short taxi up the hill. City views. Check opening on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market, Chinatown and temples",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Weekday morning is calmest. Closed most of Sunday."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "09:45",
+              "minutes": 90,
+              "note": "Walk from the market through the city centre."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Quick lunch at a street stall."
+            },
+            {
+              "place": "jummah_mosque",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Visit outside prayer times. Dress modestly."
+            },
+            {
+              "place": "natural_history_museum",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Indoor break from the sun. Closed Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront or City Centre"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Travellers who plan the day around snacks, market stalls and Creole cooking.",
+      "days": [
+        {
+          "title": "Market morning and street snacks",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Come hungry. Fruit, spices and snacks. Weekday morning."
+            },
+            {
+              "place": "city_market_shopping",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Crafts and textiles next to the market."
+            },
+            {
+              "place": "street_food_tour",
+              "at": "10:45",
+              "minutes": 150,
+              "note": "Late-morning tasting walk. Stalls vary; check on the day."
+            },
+            {
+              "place": "alouda_stall",
+              "at": "13:15",
+              "minutes": 15,
+              "note": "Cool almond drink after lunch."
+            }
+          ]
+        },
+        {
+          "title": "Waterfront eating and the city",
+          "stops": [
+            {
+              "place": "dholl_puri",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Classic lunch stop. Stalls vary."
+            },
+            {
+              "place": "aapravasi_ghat",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short walk. Closed Sunday."
+            },
+            {
+              "place": "le_caudan_view",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Harbour walk."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner at Caudan. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre near the market"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want forts, colonial houses and the island's immigration story.",
+      "days": [
+        {
+          "title": "Immigration story and the fort",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start here. Closed Sunday."
+            },
+            {
+              "place": "blue_penny",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Stamps and island history. Closed Sunday."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch at Caudan."
+            },
+            {
+              "place": "citadel_fort",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Taxi up the hill. Check opening on the day."
+            },
+            {
+              "place": "champ_de_mars",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Race days only. Check the calendar first."
+            }
+          ]
+        },
+        {
+          "title": "Old houses and the city centre",
+          "stops": [
+            {
+              "place": "eureka_house",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Colonial house. Check opening on the day."
+            },
+            {
+              "place": "labourdonnais",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Garden and estate. Morning is cooler."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Lunch on the way back."
+            },
+            {
+              "place": "photography_museum",
+              "at": "14:15",
+              "minutes": 40,
+              "note": "Mon–Sat. Check on the day."
+            },
+            {
+              "place": "jummah_mosque",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Outside prayer times. Dress modestly."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre or Champ de Mars"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want markets, museums and the immigration story at an easy pace.",
+      "days": [
+        {
+          "title": "Waterfront history and harbour views",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early before the heat. Closed Sunday."
+            },
+            {
+              "place": "blue_penny",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short walk along the waterfront. Good for rainy weather."
+            },
+            {
+              "place": "caudan_waterfront",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch at the waterfront restaurants."
+            },
+            {
+              "place": "le_caudan_view",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Harbour viewpoint. Best light late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "City centre markets and streets",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday morning is calmest. Closed most of Sunday."
+            },
+            {
+              "place": "city_market_shopping",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Crafts and textiles near the market."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk through Chinatown and old streets."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Lunch stop. Stalls vary, so look for a busy one."
+            },
+            {
+              "place": "jummah_mosque",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Visit outside prayer times. Dress modestly."
+            }
+          ]
+        },
+        {
+          "title": "Fort, museum and a slow afternoon",
+          "stops": [
+            {
+              "place": "citadel_fort",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early morning is cooler. City views from the top."
+            },
+            {
+              "place": "natural_history_museum",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Indoor break from the heat."
+            },
+            {
+              "place": "photography_museum",
+              "at": "12:00",
+              "minutes": 40,
+              "note": "Small museum. Check opening on the day."
+            },
+            {
+              "place": "alouda_stall",
+              "at": "14:00",
+              "minutes": 15,
+              "note": "Sweet cold drink in the afternoon."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner by the harbour."
+            }
+          ]
+        },
+        {
+          "title": "Departure day",
+          "stops": [
+            {
+              "place": "eureka_house",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Colonial house and gardens. Go late morning."
+            },
+            {
+              "place": "mauritius",
+              "at": "12:00",
+              "minutes": 0,
+              "note": "Allow buffer time for the airport. Check traffic on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront or City Centre"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Travellers who plan the day around snacks, markets and Creole cooking.",
+      "days": [
+        {
+          "title": "Market morning and street snacks",
+          "stops": [
+            {
+              "place": "central_market",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for fresh produce and spice stalls."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Classic snack. Stalls vary, so follow the queue."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Noodles, dumplings and old shophouses."
+            },
+            {
+              "place": "alouda_stall",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Cool down with an alouda drink."
+            },
+            {
+              "place": "caudan_waterfront",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner options along the waterfront."
+            }
+          ]
+        },
+        {
+          "title": "Street-food tasting day",
+          "stops": [
+            {
+              "place": "street_food_tour",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Late morning tasting walk. Confirm meeting point ahead."
+            },
+            {
+              "place": "blue_penny",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Indoor break after eating."
+            },
+            {
+              "place": "le_caudan_view",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short harbour walk."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Relaxed dinner."
+            }
+          ]
+        },
+        {
+          "title": "History with a food stop",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning visit. Closed Sunday."
+            },
+            {
+              "place": "city_market_shopping",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Pick up spices and tea to take home."
+            },
+            {
+              "place": "jummah_mosque",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Outside prayer times only."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Lunch on the go."
+            },
+            {
+              "place": "citadel_fort",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Late afternoon light for photos."
+            }
+          ]
+        },
+        {
+          "title": "Slow last morning",
+          "stops": [
+            {
+              "place": "eureka_house",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Gardens and old kitchen. Check hours on the day."
+            },
+            {
+              "place": "mauritius",
+              "at": "12:00",
+              "minutes": 0,
+              "note": "Leave buffer for the airport. Check traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "City Centre near the market"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want forts, colonial houses and the island's migration story.",
+      "days": [
+        {
+          "title": "Immigration story and waterfront",
+          "stops": [
+            {
+              "place": "aapravasi_ghat",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start here. Closed Sunday."
+            },
+            {
+              "place": "blue_penny",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Stamps and island history. Indoor and cool."
+            },
+            {
+              "place": "caudan_waterfront",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "le_caudan_view",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Harbour view to end the day."
+            }
+          ]
+        },
+        {
+          "title": "Fort and old city streets",
+          "stops": [
+            {
+              "place": "citadel_fort",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Early start for cooler air and views."
+            },
+            {
+              "place": "champ_de_mars",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Race days only. Check the calendar first."
+            },
+            {
+              "place": "jummah_mosque",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Outside prayer times. Dress modestly."
+            },
+            {
+              "place": "chinatown_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Colonial streets and shophouses."
+            }
+          ]
+        },
+        {
+          "title": "Colonial houses and museums",
+          "stops": [
+            {
+              "place": "eureka_house",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Creole mansion. Go late morning."
+            },
+            {
+              "place": "natural_history_museum",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Small and free. Check hours on the day."
+            },
+            {
+              "place": "dholl_puri",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick lunch."
+            },
+            {
+              "place": "photography_museum",
+              "at": "14:30",
+              "minutes": 40,
+              "note": "Old photos of the city."
+            },
+            {
+              "place": "waterfront_dining",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Island context, then depart",
+          "stops": [
+            {
+              "place": "labourdonnais",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Estate and gardens. Morning is best."
+            },
+            {
+              "place": "mauritius",
+              "at": "12:00",
+              "minutes": 0,
+              "note": "Allow buffer for the airport. Check traffic on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Waterfront or Champ de Mars"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Markets, Aapravasi Ghat and the Blue Penny Museum."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Street snacks, Creole curries and the central market."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Fort Adelaide, colonial streets and the immigration story."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night",
+      "recommended": true
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Waterfront",
+      "range": [
+        3500,
+        9000
+      ],
+      "why": "Walk to the market, Aapravasi Ghat and the Blue Penny Museum; safe to stroll in the evening.",
+      "center": [
+        -20.16,
+        57.5
+      ]
+    },
+    {
+      "area": "City Centre",
+      "range": [
+        2000,
+        5000
+      ],
+      "why": "Closest to the bus stations and the market; good for early starts and cheap eats.",
+      "center": [
+        -20.163,
+        57.505
+      ]
+    },
+    {
+      "area": "Champ de Mars",
+      "range": [
+        2200,
+        5500
+      ],
+      "why": "Quiet streets near the racecourse and Fort Adelaide; short taxi to the centre.",
+      "center": [
+        -20.168,
+        57.51
+      ]
+    },
+    {
+      "area": "Caudan",
+      "range": [
+        3000,
+        7500
+      ],
+      "why": "Modern seafront quarter with restaurants and the light rail nearby.",
+      "center": [
+        -20.155,
+        57.5
+      ]
+    }
+  ],
+  "food": [
+    "Try Mauritian street food: dholl puri, gateaux piments and alouda, usually under MUR 100.",
+    "The central market in Port Louis is good for fresh fruit, spices and cheap local snacks; go in the morning.",
+    "Creole and Indo-Mauritian dishes to look for: rougaille, fish vindaye and octopus curry.",
+    "Seafood is best near the waterfront; ask the price per weight before ordering.",
+    "Chinese-Mauritian noodles and dumplings are common and cheap in the city centre; check opening hours on the day."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a trip to Pamplemousses Botanical Garden, north of the city; check bus and taxi options on the day.",
+    "History fans can add Aapravasi Ghat and the Blue Penny Museum in one morning, then Fort Adelaide for the view.",
+    "Beach lovers can take a day trip to the north coast; arrange transport in advance as ride apps are limited."
+  ]
+}

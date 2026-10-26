@@ -1,0 +1,572 @@
+{
+  "city": "New Delhi",
+  "checked": "October 2026",
+  "intro_line": "Delhi: where ancient empires meet modern chaos.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Paharganj",
+        "Connaught Place",
+        "Aerocity",
+        "Karol Bagh"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Paharganj",
+        "Connaught Place",
+        "Aerocity",
+        "Karol Bagh"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Paharganj",
+        "Connaught Place",
+        "Aerocity",
+        "Karol Bagh"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Paharganj",
+        "Connaught Place",
+        "Aerocity",
+        "Karol Bagh"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Paharganj",
+        "Connaught Place",
+        "Aerocity",
+        "Karol Bagh"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 4,
+        "note": "January: cold mornings around 8°C, mild afternoons near 19°C. Pack a jacket and expect fog delays."
+      },
+      {
+        "high": 24,
+        "low": 11,
+        "rain_days": 3,
+        "note": "February: pleasant and warming, highs near 24°C. Great month for walking the sights."
+      },
+      {
+        "high": 29,
+        "low": 16,
+        "rain_days": 4,
+        "note": "March: hot afternoons near 29°C, still comfortable mornings. Start sightseeing early."
+      },
+      {
+        "high": 36,
+        "low": 22,
+        "rain_days": 3,
+        "note": "April: hot at 36°C. Do monuments before 10am and rest indoors at midday."
+      },
+      {
+        "high": 39,
+        "low": 25,
+        "rain_days": 4,
+        "note": "May: very hot, highs near 39°C. Plan air-conditioned sights and evening outings only."
+      },
+      {
+        "high": 38,
+        "low": 28,
+        "rain_days": 9,
+        "note": "June: hot and humid at 38°C with more rain days. Carry water and expect sticky evenings."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 23,
+        "note": "July: monsoon peak, about 23 rain days. Expect heavy showers and flooded lanes; keep plans flexible."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 19,
+        "note": "August: still wet, around 19 rain days. Rain cools the air but streets stay messy."
+      },
+      {
+        "high": 33,
+        "low": 25,
+        "rain_days": 11,
+        "note": "September: rain easing to about 11 days. Humid but improving late in the month."
+      },
+      {
+        "high": 32,
+        "low": 20,
+        "rain_days": 2,
+        "note": "October: drier and cooler at 32°C. A strong month for sightseeing and festivals."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 1,
+        "note": "November: mild and clear, highs near 27°C. One of the best months to visit."
+      },
+      {
+        "high": 21,
+        "low": 9,
+        "rain_days": 1,
+        "note": "December: cool days near 21°C and cold nights around 9°C. Bring warm layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.95,
+      0.9,
+      0.6,
+      0.4,
+      0.3,
+      0.25,
+      0.3,
+      0.5,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.6,
+      0.45,
+      0.35,
+      0.3,
+      0.35,
+      0.55,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.95,
+      0.9,
+      0.6,
+      0.4,
+      0.3,
+      0.25,
+      0.3,
+      0.5,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "shopping": [
+      0.85,
+      0.9,
+      0.85,
+      0.6,
+      0.45,
+      0.35,
+      0.3,
+      0.35,
+      0.55,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "budget": [
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.45,
+      0.35,
+      0.3,
+      0.35,
+      0.55,
+      0.8,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "appu_ghar": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning to avoid queues",
+      "area": "Karol Bagh",
+      "popularity": 3
+    },
+    "butter_chicken": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Connaught Place",
+      "popularity": 5
+    },
+    "kingdom_of_dreams": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening show",
+      "area": "Karol Bagh",
+      "popularity": 3
+    },
+    "worlds_of_wonder": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Karol Bagh",
+      "popularity": 3
+    },
+    "chandni_chowk": {
+      "types": [
+        "food",
+        "shopping",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning, October to March",
+      "area": "Paharganj",
+      "popularity": 5
+    },
+    "paranthe_wali_gali": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late morning or lunch",
+      "area": "Paharganj",
+      "popularity": 4
+    },
+    "jama_masjid": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Paharganj",
+      "popularity": 5
+    },
+    "red_fort": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning, October to March",
+      "area": "Paharganj",
+      "popularity": 5
+    },
+    "humayuns_tomb": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Connaught Place",
+      "popularity": 5
+    },
+    "india_gate": {
+      "types": [
+        "history",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Connaught Place",
+      "popularity": 5
+    },
+    "lodhi_garden": {
+      "types": [
+        "budget",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Connaught Place",
+      "popularity": 4
+    },
+    "cp_walk": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Connaught Place",
+      "popularity": 4
+    },
+    "karol_bagh_market": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Karol Bagh",
+      "popularity": 3
+    },
+    "paharganj_walk": {
+      "types": [
+        "budget",
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Paharganj",
+      "popularity": 3
+    },
+    "aerocity_dining": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; handy before a flight",
+      "area": "Aerocity",
+      "popularity": 3
+    },
+    "old_delhi_food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening, October to March",
+      "area": "Paharganj",
+      "popularity": 4
+    },
+    "cycle_rickshaw": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Paharganj",
+      "popularity": 4
+    },
+    "spice_market": {
+      "types": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Paharganj",
+      "popularity": 4
+    },
+    "raj_ghat": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Connaught Place",
+      "popularity": 3
+    },
+    "delhi_metro": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Mid-morning to afternoon",
+      "area": "Connaught Place",
+      "popularity": 4
+    },
+    "gurgaon_cyberhub": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Aerocity",
+      "popularity": 3
+    },
+    "airport_transfer": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Allow a buffer at peak hours",
+      "area": "Aerocity",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Red Fort, Old Delhi food lanes and a south Delhi monument day. Add a night for an Agra trip."
+  },
+  "airports": [
+    {
+      "code": "DEL",
+      "name": "Indira Gandhi International Airport",
+      "primary": true,
+      "note": "Main gateway, about 12 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport Express (Orange Line)",
+          "to": "New Delhi station",
+          "price": "₹60-110",
+          "time": "20-30 min",
+          "note": "Fastest and cheapest; check hours, it does not run all night."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre / ISBTs",
+          "price": "₹50-100",
+          "time": "40-60 min",
+          "note": "Cheap but slow in traffic."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹400-600",
+          "time": "20-40 min",
+          "note": "Use the official prepaid taxi booth."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹350-550",
+          "time": "20-40 min",
+          "note": "Pick-up points are signposted in the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: New Delhi",
+      "https://en.wikivoyage.org/wiki/New%20Delhi"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Delhi Metro for most trips; ride apps for late nights and the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Cheap, air-conditioned and fast. Fares ₹10–60, more on the Airport Express. Nine lines; Yellow and Orange lines serve New Delhi station."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "DTC and Blue-Line buses are frequent and very cheap, ₹5–25, but crowded."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Ola work well. Use prepaid taxi booths at stations and the airport to avoid haggling."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic. Hiring a car with a driver is common for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Central New Delhi is fairly walkable with footbridges and subways. Use care crossing busy roads."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Delhi has hot summers, a wet monsoon from July to September, and cool, dry winters. October to March is the comfortable window.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to March",
+        "text": "Mild days around 19–32°C and cool evenings. Ideal for forts, bazaars and long walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is brutal (April to June)",
+        "text": "Highs of 36–39°C. Sightsee at sunrise, then stay indoors or in the Metro at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon (July to September)",
+        "text": "Up to 23 rain days in July. Short heavy downpours, humid air and slow traffic. Carry a light rain jacket."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Winter fog",
+        "text": "December and January mornings can be foggy, which delays flights and trains. Build in buffer time."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold nights in winter",
+        "text": "January lows near 8°C. Bring a warm layer for evenings; many hotels have weak heating."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton for summer, a rain jacket for monsoon, warm layers for winter. Modest clothing for temples and mosques, plus comfortable shoes."
+      }
+    ]
+  }
+}

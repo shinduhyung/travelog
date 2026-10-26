@@ -1,0 +1,600 @@
+{
+  "city": "Warsaw",
+  "checked": "October 2026",
+  "intro_line": "Warsaw is a phoenix city that rebuilt itself into a vibrant capital.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Śródmieście",
+        "Old Town",
+        "Wola",
+        "Mokotów"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Śródmieście",
+        "Old Town",
+        "Wola",
+        "Mokotów"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Śródmieście",
+        "Old Town",
+        "Wola",
+        "Mokotów"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Śródmieście",
+        "Old Town",
+        "Wola",
+        "Mokotów"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Śródmieście",
+        "Old Town",
+        "Wola",
+        "Mokotów"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 2,
+        "low": -3,
+        "rain_days": 13,
+        "note": "Coldest month: highs near 2°C, lows around -3°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "high": 5,
+        "low": -2,
+        "rain_days": 11,
+        "note": "Still cold, highs near 5°C. Expect about 11 rain days; wear waterproof shoes."
+      },
+      {
+        "high": 9,
+        "low": 0,
+        "rain_days": 11,
+        "note": "Warming a little to 9°C. Mixed weather, so keep a light rain jacket handy."
+      },
+      {
+        "high": 14,
+        "low": 4,
+        "rain_days": 11,
+        "note": "Spring arrives: highs near 14°C, lows around 4°C. Good for walking the Old Town."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Pleasant at 19°C. One of the best months to be outside; some rain days."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Warm and long days, highs near 24°C. Great for parks and river walks."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Warmest month, highs near 25°C. Also one of the wettest, with about 13 rain days."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 11,
+        "note": "Warm at 25°C with lows near 16°C. Comfortable evenings outdoors."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 10,
+        "note": "Cooling to 20°C. Still good for sightseeing with a light layer."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Autumn colours, highs near 14°C. Bring a jacket and expect about 12 rain days."
+      },
+      {
+        "high": 7,
+        "low": 2,
+        "rain_days": 10,
+        "note": "Cold and grey, highs near 7°C. Short days; plan indoor sights."
+      },
+      {
+        "high": 4,
+        "low": 0,
+        "rain_days": 11,
+        "note": "Winter: highs near 4°C, lows around 0°C. Dark early; dress in layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "old_town": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or early evening; pretty in December lights",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "royal_castle": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning opening slot",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "pkin": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset; clear days",
+      "area": "Śródmieście",
+      "popularity": 5
+    },
+    "lazienki": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Spring and autumn mornings; Sunday Chopin concerts in summer",
+      "area": "Śródmieście",
+      "popularity": 5
+    },
+    "polin": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Wola",
+      "popularity": 5
+    },
+    "uprising_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning; avoid the afternoon school groups",
+      "area": "Wola",
+      "popularity": 5
+    },
+    "vistula": {
+      "types": [
+        "budget",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Śródmieście",
+      "popularity": 4
+    },
+    "pierogi": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch; milk bars get busy at 13:00",
+      "area": "Śródmieście",
+      "popularity": 4
+    },
+    "stadion": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday; avoid match days",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "hala_mirowska": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Wola",
+      "popularity": 3
+    },
+    "viewpoint": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Sunset on a clear day",
+      "area": "Śródmieście",
+      "popularity": 4
+    },
+    "old_town_walk": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "praga": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime, spring to autumn",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "milk_bar": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday lunch",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "vodka_bar": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Friday and Saturday evening",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "boat_trip": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "chopin_benches": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunday afternoon in summer",
+      "area": "Śródmieście",
+      "popularity": 4
+    },
+    "kopiec": {
+      "types": [
+        "budget",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Wola",
+      "popularity": 2
+    },
+    "zabka_snack": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Midday snack",
+      "area": "Śródmieście",
+      "popularity": 3
+    },
+    "mokotow_park": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Mokotów",
+      "popularity": 2
+    },
+    "neon_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekend afternoon",
+      "area": "Śródmieście",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Old Town, the main museums and a food evening; add a night for Praga or Wilanów."
+  },
+  "airports": [
+    {
+      "code": "WAW",
+      "name": "Warsaw Chopin Airport",
+      "primary": true,
+      "note": "Main airport, 8 km south of the centre.",
+      "options": [
+        {
+          "mode": "Train (SKM/S2)",
+          "to": "Warszawa Śródmieście / Centralna",
+          "price": "around 5-10 zł",
+          "time": "20-30 min",
+          "note": "Fastest link to the centre."
+        },
+        {
+          "mode": "Bus (line 175)",
+          "to": "City centre",
+          "price": "around 5 zł",
+          "time": "30-40 min",
+          "note": "Cheap daytime option."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "40-60 zł",
+          "time": "20-30 min",
+          "note": "Use official taxi rank."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "35-55 zł",
+          "time": "20-30 min",
+          "note": "Pick-up at designated zones."
+        }
+      ]
+    },
+    {
+      "code": "WMI",
+      "name": "Warsaw Modlin Airport",
+      "primary": false,
+      "note": "Low-cost airport, 35-40 km north of the centre.",
+      "options": [
+        {
+          "mode": "Shuttle bus + regional train",
+          "to": "Warszawa Centralna",
+          "price": "22.40 zł combined ticket",
+          "time": "up to 90 min",
+          "note": "Bilet Lotniskowy covers Zone 1 for 75 min."
+        },
+        {
+          "mode": "Contibus bus",
+          "to": "City centre",
+          "price": "40 zł",
+          "time": "around 60 min",
+          "note": "Buy at arrivals or on board."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "120-160 zł",
+          "time": "40-55 min",
+          "note": "Long ride; agree price first."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "100-150 zł",
+          "time": "40-55 min",
+          "note": "Check availability at the airport."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Warsaw",
+      "https://en.wikivoyage.org/wiki/Warsaw"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for cross-city hops; trams and buses fill the gaps; ride apps for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Two lines (M1 north-south, M2 east-west) run every 3–10 min until midnight, later on Fri-Sat."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "About 200 bus routes and 30 tram lines share one ZTM ticket system. Validate on board."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Around 30 tram lines across the city, on the same ZTM tickets as buses and metro."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber, Bolt and Free Now work in Warsaw; taxis are metered."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy. Carry licence, insurance and registration documents at all times."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable and bike-friendly; no ferry needed in the city."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate continental climate: cold winters, warm summers, and rain spread through the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days around 19–25°C and long evenings. Ideal for walking and outdoor cafés."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs of 2–5°C and lows near or below freezing. Pack a proper coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 10–13 rain days every month. Carry a small umbrella or rain jacket any season."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings between seasons",
+        "text": "From near 0°C in January to 25°C in July. Check the forecast before you pack."
+      },
+      {
+        "icon": "🌳",
+        "title": "Spring and autumn are mild",
+        "text": "April, May, September and October are comfortable for sightseeing with a light layer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobblestones; warm boots and gloves in winter."
+      }
+    ]
+  }
+}

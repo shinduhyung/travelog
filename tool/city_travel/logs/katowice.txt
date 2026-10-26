@@ -1,0 +1,31 @@
+$ deepseek_prep.py Katowice
+  tokens in 673 out 357
+Katowice: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Katowice
+  tokens in 2505 out 847
+Katowice: 0 problems
+
+$ deepseek_city.py Katowice --stage places
+Katowice: places
+  tokens in 1163 out 2346
+
+$ deepseek_city.py Katowice --stage frame
+Katowice: frame
+  tokens in 2462 out 1946
+
+$ deepseek_city.py Katowice --stage plans
+Katowice: plans
+  plans for day
+  tokens in 1796 out 809
+  plans for 1n
+  tokens in 1797 out 1181
+  plans for 2n
+  tokens in 1802 out 1549
+  plans for 3n
+  tokens in 1797 out 1985
+
+$ merge_city.py Katowice
+Katowice: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/katowice.json and planner/katowice.json
+

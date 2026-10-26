@@ -1,0 +1,215 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Space City sprawls wide, but rewards those who dig in.",
+  "intro": "Houston mixes world-class museums, NASA history and a food scene built on immigration. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Museum District",
+    "Uptown/Galleria",
+    "Montrose"
+  ],
+  "taxi": {
+    "flag_day": 2.5,
+    "flag_airport": 3.5,
+    "per_km": 1.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 25,
+  "transit_facts": [
+    "METRORail light rail covers about 37 km on Red, Green and Purple lines.",
+    "METRO buses fill the gaps; fare is about $1.25 each way.",
+    "Pay with a METRO Q Card or day pass for free transfers within 3 hours.",
+    "Uber and Lyft are widely used; Empower is a local lower-cost option.",
+    "Driving is easiest but rush hour runs roughly 7-9AM and 4-6:30PM.",
+    "Downtown is walkable; elsewhere sidewalks are patchy and heat is fierce."
+  ],
+  "airports": [
+    {
+      "code": "IAH",
+      "name": "George Bush Intercontinental Airport",
+      "primary": true,
+      "note": "Main international hub, about 25 km north of downtown.",
+      "options": [
+        {
+          "mode": "METRO bus 102 Bush IAH Express",
+          "to": "Downtown Transit Center",
+          "price": "$1.25",
+          "time": "70-80 min",
+          "note": "Departs Terminal C; wait indoors in heat or rain."
+        },
+        {
+          "mode": "METRO 500 Downtown Direct",
+          "to": "Downtown and Hobby airport",
+          "price": "$4.50",
+          "time": "45-60 min",
+          "note": "Coach bus from Terminal E with Wi-Fi and luggage space."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown",
+          "price": "$30-45",
+          "time": "30-45 min",
+          "note": "Pickup at designated rideshare zones."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$45-60",
+          "time": "30-45 min",
+          "note": "Metered; expect surcharges at peak."
+        },
+        {
+          "mode": "Rental car",
+          "to": "Citywide",
+          "price": "$40-80 per day",
+          "time": "check locally",
+          "note": "Off-site Rental Car Center reached by shuttle."
+        }
+      ]
+    },
+    {
+      "code": "HOU",
+      "name": "William P Hobby Airport",
+      "primary": false,
+      "note": "Southwest's base, about 15 km south of downtown; handy for Galveston.",
+      "options": [
+        {
+          "mode": "METRO bus 40",
+          "to": "Downtown",
+          "price": "$1.25",
+          "time": "about 60 min",
+          "note": "Runs roughly every 30 minutes."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown",
+          "price": "$20-30",
+          "time": "20-30 min",
+          "note": "Most visitors choose this or a rental car."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Metered; short trip from the south side."
+        },
+        {
+          "mode": "Rental car",
+          "to": "Citywide",
+          "price": "$35-70 per day",
+          "time": "check locally",
+          "note": "On-site rental desks."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Space Center Houston",
+    "Houston Zoo",
+    "Downtown Aquarium",
+    "Rice University",
+    "Funplex"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Houston",
+      "https://en.wikivoyage.org/wiki/Houston"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    29.76328,
+    -95.36327
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 17
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 16
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 16
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 17
+    },
+    {
+      "high": 31,
+      "low": 23,
+      "rain_days": 14
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 10
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

@@ -1,0 +1,249 @@
+{
+  "currency": "HKD",
+  "usd_rate": 7.8372,
+  "intro_line": "Neon harbour, dim sum mornings, and hills that never sleep.",
+  "intro": "Hong Kong rewards visitors who mix street food, harbour views and hill trails in one day. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Tsim Sha Tsui",
+    "Central",
+    "Causeway Bay",
+    "Mong Kok"
+  ],
+  "taxi": {
+    "flag_day": 29,
+    "flag_airport": 120,
+    "per_km": 10,
+    "min_fare": 29
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "MTR metro is fast and covers most sights; use an Octopus card.",
+    "Trams on Hong Kong Island are cheap and scenic.",
+    "Buses and minibuses reach beaches and hills; tap Octopus on boarding.",
+    "Taxis are red for the city; Uber works but supply is limited.",
+    "Driving is stressful; parking is scarce and costly.",
+    "Walking is best in dense districts; the Star Ferry crosses the harbour cheaply."
+  ],
+  "airports": [
+    {
+      "code": "HKG",
+      "name": "Chek Lap Kok International Airport",
+      "primary": true,
+      "note": "Main hub, 26 km west on Lantau Island.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Tsim Sha Tsui and Central",
+          "price": "HK$35-45",
+          "time": "45-70 min",
+          "note": "Cheapest; slower in traffic."
+        },
+        {
+          "mode": "Airport Express train",
+          "to": "Hong Kong Station, Central",
+          "price": "HK$115",
+          "time": "24 min",
+          "note": "Fastest and most comfortable."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "HK$300-400",
+          "time": "30-45 min",
+          "note": "Red urban taxis; add tunnel tolls."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "HK$300-450",
+          "time": "30-45 min",
+          "note": "Limited supply; check app."
+        }
+      ]
+    },
+    {
+      "code": "SZX",
+      "name": "Shenzhen Bao'an International Airport",
+      "primary": false,
+      "note": "Mainland hub across the border; often cheaper flights.",
+      "options": [
+        {
+          "mode": "Metro and high-speed rail",
+          "to": "West Kowloon",
+          "price": "¥7 plus HK$80",
+          "time": "60-90 min",
+          "note": "Cheapest; needs China visa or transit rules."
+        },
+        {
+          "mode": "Direct cross-border bus",
+          "to": "Elements, Kowloon",
+          "price": "HK$100",
+          "time": "100 min",
+          "note": "Runs every 30 min; in-town check-in."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "HK$500-700",
+          "time": "60-90 min",
+          "note": "Border queues can be long."
+        }
+      ]
+    },
+    {
+      "code": "MFM",
+      "name": "Macau International Airport",
+      "primary": false,
+      "note": "Budget airline hub; reachable by ferry.",
+      "options": [
+        {
+          "mode": "Bus to ferry, then ferry",
+          "to": "Hong Kong ferry piers",
+          "price": "MOP4.2 plus HK$170-200",
+          "time": "2-3 hours",
+          "note": "Cheapest; clear Macau immigration."
+        },
+        {
+          "mode": "Express Link ferry",
+          "to": "Hong Kong airport or piers",
+          "price": "HK$50-70 plus ferry",
+          "time": "1.5-2.5 hours",
+          "note": "No Macau immigration; bags checked through."
+        },
+        {
+          "mode": "Taxi and ferry",
+          "to": "City centre",
+          "price": "HK$300-500",
+          "time": "2-3 hours",
+          "note": "Combine taxi to pier with ferry."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Victoria Peak",
+    "Victoria Harbour",
+    "Tian Tan Buddha",
+    "Avenue of Stars",
+    "Star Ferry",
+    "Man Mo Temple",
+    "Wong Tai Sin Temple",
+    "Bank of China Tower",
+    "Mid-Levels Escalators",
+    "Ngong Ping 360",
+    "1881 Heritage",
+    "Aqua Luna Junk Boat",
+    "Chinese University of Hong Kong (CUHK)",
+    "City University of Hong Kong",
+    "Hong Kong Cultural Centre",
+    "Hong Kong Disneyland",
+    "Hong Kong Island",
+    "Hong Kong Ocean Park - Grand Aquarium",
+    "Hong Kong Polytechnic University",
+    "Hong Kong University of Science and Technology (HKUST)",
+    "Hong Kong Wetland Park",
+    "International Commerce Centre"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Hong Kong",
+      "https://en.wikivoyage.org/wiki/Hong%20Kong"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    22.3193,
+    114.1694
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 13,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 22,
+      "low": 17,
+      "rain_days": 13
+    },
+    {
+      "high": 25,
+      "low": 20,
+      "rain_days": 16
+    },
+    {
+      "high": 27,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 29,
+      "low": 26,
+      "rain_days": 27
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 26
+    },
+    {
+      "high": 30,
+      "low": 26,
+      "rain_days": 26
+    },
+    {
+      "high": 29,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 11
+    },
+    {
+      "high": 24,
+      "low": 19,
+      "rain_days": 6
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "MFM taxi HK$300-500 vs tariff estimate 957"
+  ]
+}

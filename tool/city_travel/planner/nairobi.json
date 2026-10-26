@@ -1,0 +1,552 @@
+{
+  "city": "Nairobi",
+  "checked": "October 2026",
+  "intro_line": "Nairobi: Africa's safari capital with urban energy and wild escapes.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Westlands",
+        "Karen",
+        "Gigiri",
+        "City Centre"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Westlands",
+        "Karen",
+        "Gigiri",
+        "City Centre"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Westlands",
+        "Karen",
+        "Gigiri",
+        "City Centre"
+      ]
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure",
+      "areas": [
+        "Westlands",
+        "Karen",
+        "Gigiri",
+        "City Centre"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Westlands",
+        "Karen",
+        "Gigiri",
+        "City Centre"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 9,
+        "note": "Jan: warm and fairly dry, about 9 rain days. Good for parks and walking."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 8,
+        "note": "Feb: one of the driest months, around 8 rain days. Comfortable days, cool nights."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 12,
+        "note": "Mar: still warm but rain picks up to about 12 days. Carry a light rain jacket."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 26,
+        "note": "Apr: the long rains. About 26 rain days and muddy parks; plan indoor sights."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 18,
+        "note": "May: rain eases but still about 18 wet days. Expect grey skies and cool evenings."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 9,
+        "note": "Jun: cooler and drier, around 9 rain days. Pack a warm layer for mornings."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 5,
+        "note": "Jul: the driest, coolest month. About 5 rain days; great for outdoor days."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 7,
+        "note": "Aug: dry and cool with about 7 rain days. Similar to July; busy season for safaris."
+      },
+      {
+        "high": 25,
+        "low": 13,
+        "rain_days": 7,
+        "note": "Sep: mild and fairly dry, about 7 rain days. A good all-round month."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 14,
+        "note": "Oct: rain returns, around 14 days. Plan mornings outside and afternoons indoors."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 23,
+        "note": "Nov: the short rains. About 23 rain days; expect afternoon downpours."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 16,
+        "note": "Dec: rain eases to about 16 days. Warm days and busy holiday season."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "nature": [
+      0.85,
+      0.85,
+      0.8,
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.75,
+      0.6,
+      0.7
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.85,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.65,
+      0.8
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.8
+    ],
+    "adventure": [
+      0.85,
+      0.85,
+      0.8,
+      0.5,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.9,
+      0.75,
+      0.55,
+      0.7
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.85,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.65,
+      0.8
+    ]
+  },
+  "places": {
+    "nairobi-national-park": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Early morning, dry season (June–October)",
+      "area": "Karen",
+      "popularity": 5
+    },
+    "giraffe-centre": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning on weekdays",
+      "area": "Karen",
+      "popularity": 5
+    },
+    "karen-blixen": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "Karen",
+      "popularity": 4
+    },
+    "national-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; good rainy-day option",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "bomas-of-kenya": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Afternoon show",
+      "area": "Karen",
+      "popularity": 3
+    },
+    "kicc": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear morning",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "august-7th-memorial": {
+      "types": [
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "jamia-mosque": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Mid-morning, outside prayer times",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "luna-park": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "railway-museum": {
+      "types": [
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "nairobi-river": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight hours",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "nyama-choma": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Westlands",
+      "popularity": 4
+    },
+    "splash-waterworld": {
+      "types": [
+        "adventure"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Warm midday",
+      "area": "Gigiri",
+      "popularity": 2
+    },
+    "uhuru-gardens": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Karen",
+      "popularity": 3
+    },
+    "maasai-market": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning, before crowds",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "karura-forest": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Gigiri",
+      "popularity": 4
+    },
+    "kibera-tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Westlands",
+      "popularity": 3
+    },
+    "westlands-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Westlands",
+      "popularity": 3
+    },
+    "ngong-hills-view": {
+      "types": [
+        "nature",
+        "adventure"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Karen",
+      "popularity": 3
+    },
+    "city-centre-walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the wildlife sights and the markets; add a night if you want a full day in Nairobi National Park."
+  },
+  "airports": [
+    {
+      "code": "NBO",
+      "name": "Jomo Kenyatta International Airport",
+      "primary": true,
+      "note": "Main international hub, 12 km southeast of centre.",
+      "options": [
+        {
+          "mode": "Airport bus #34",
+          "to": "City centre (Moi Avenue)",
+          "price": "Ksh 100",
+          "time": "60-120 min",
+          "note": "Cheapest but slow; walk to cargo terminal or Ambassador Hotel."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "Ksh 900-1,500",
+          "time": "30-60 min",
+          "note": "Book via app; reliable and cheaper than taxi."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Ksh 2,000-2,500",
+          "time": "30-60 min",
+          "note": "Use official KAA desk for fixed-price voucher."
+        }
+      ]
+    },
+    {
+      "code": "WIL",
+      "name": "Wilson Airport",
+      "primary": false,
+      "note": "Domestic and regional flights, 11 km south of centre.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Ksh 1,500-2,000",
+          "time": "30-50 min",
+          "note": "No official desk; negotiate fare beforehand."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "Ksh 800-1,200",
+          "time": "30-50 min",
+          "note": "App-based; may have limited availability at peak."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Nairobi",
+      "https://en.wikivoyage.org/wiki/Nairobi"
+    ]
+  ],
+  "best_for": [
+    "nature",
+    "culture"
+  ],
+  "transit": {
+    "best": "Uber or Bolt for most trips; taxis where apps are slow.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail in the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Matatus (minibuses) are the main public transport. Cheap but crowded and can be risky; use them with caution."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Bolt operate widely; airport to centre costs about Ksh 900–1,500. Regular taxis take cash only, so agree the fare first."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is on the left. Traffic is heavy, especially at rush hour. Only worth it if you're heading out of the city."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Possible in some areas by day, but not recommended at night. No bike share."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Nairobi sits high, so days are mild year-round and nights are cool. Rain comes in two seasons: long rains in April–May and short rains in November.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: January to March and June to September",
+        "text": "Warm days around 23–27°C with the fewest rain days. Good for parks, markets and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Long rains in April and May",
+        "text": "April has about 26 rain days. Expect heavy afternoon showers, muddy trails and slower traffic."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Short rains in November",
+        "text": "About 23 rain days, usually afternoon downpours. Mornings are often clear."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool nights all year",
+        "text": "Lows sit around 12–16°C. Bring a light jacket or fleece for evenings and early game drives."
+      },
+      {
+        "icon": "🌤️",
+        "title": "July and August are cool and dry",
+        "text": "Highs near 23°C with only 5–7 rain days. Pack layers; mornings can feel chilly."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket, comfortable shoes and sunscreen. Add a warm layer for nights and a hat for the sun."
+      }
+    ]
+  }
+}

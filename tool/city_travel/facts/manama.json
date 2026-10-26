@@ -1,0 +1,177 @@
+{
+  "currency": "BHD",
+  "usd_rate": 0.376,
+  "intro_line": "A Gulf capital where pearl-diving past meets modern souks.",
+  "intro": "Manama rewards visitors with old souks, a lively food scene and easy desert escapes. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Manama Souq",
+    "Seef",
+    "Juffair",
+    "Diplomatic Area"
+  ],
+  "taxi": {
+    "flag_day": 1,
+    "flag_airport": 2,
+    "per_km": 0.5,
+    "min_fare": 2
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "No metro or tram; buses are the main public transport.",
+    "Bahrain Public Transport runs routes across the city; route A1 links the airport and Manama every 20 minutes.",
+    "Bus single fare is 300 fils paper, or 250 fils with a Go Card; daily cap 600 fils.",
+    "Weekly pass BD 3 and 28-day pass BD 12 need a personalised Go Card from a terminal office.",
+    "Taxis are metered but pricey; airport rides add BD 2 and hotel pickups add BD 1.",
+    "Ride apps like Uber and Careem work in Bahrain; renting a car is cheaper than taxis."
+  ],
+  "airports": [
+    {
+      "code": "BAH",
+      "name": "Bahrain International Airport",
+      "primary": true,
+      "note": "Main gateway, in Muharraq about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus A1",
+          "to": "Manama bus terminal",
+          "price": "300 fils",
+          "time": "30-45 min",
+          "note": "Runs every 20 minutes; pay on board or use a Go Card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "BD 5-6",
+          "time": "15-25 min",
+          "note": "Airport surcharge of BD 2 applies; insist on the meter."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "BD 4-7",
+          "time": "15-25 min",
+          "note": "Uber and Careem operate; check the pickup point."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City centre",
+          "price": "BD 10-20 per day",
+          "time": "15-25 min",
+          "note": "Buy a map for BD 0.50-1.00; driving styles vary."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "Bahrain Fort",
+    "Al Fateh Grand Mosque",
+    "Bab Al Bahrain",
+    "Manama Souq",
+    "Beit Al Quran",
+    "Arad Fort",
+    "Adhari Park",
+    "Pearling Path"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Manama",
+      "https://en.wikivoyage.org/wiki/Manama"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    26.2285,
+    50.586
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 20,
+      "low": 15,
+      "rain_days": 2
+    },
+    {
+      "high": 21,
+      "low": 16,
+      "rain_days": 3
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 2
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 1
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 0
+    },
+    {
+      "high": 37,
+      "low": 30,
+      "rain_days": 0
+    },
+    {
+      "high": 39,
+      "low": 31,
+      "rain_days": 0
+    },
+    {
+      "high": 39,
+      "low": 31,
+      "rain_days": 0
+    },
+    {
+      "high": 37,
+      "low": 30,
+      "rain_days": 0
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 0
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 2
+    },
+    {
+      "high": 22,
+      "low": 17,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "BAH Bus A1 300 fils costs more than taxi BD 5-6"
+  ]
+}

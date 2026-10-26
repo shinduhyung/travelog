@@ -1,0 +1,1353 @@
+{
+  "city": "Nashville",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Nashville rewards visitors with live music on every corner, a booming food scene and deep country-music heritage. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 36.1334,
+      "west": -86.8312,
+      "north": 36.2186,
+      "east": -86.6744,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 4,
+      "per_km": 2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "No metro or tram; the Music City Star commuter train runs from Riverfront Station to Lebanon.",
+      "MTA buses cover downtown and the airport; Route 18 links BNA to downtown hourly, about 35 min.",
+      "Taxis are common downtown; Uber and Lyft both operate, with dedicated airport pickup areas.",
+      "A private car is the main way around; highways run 55-70 mph but slow in traffic.",
+      "Downtown is walkable; outside it the city sprawls and sidewalks are patchy.",
+      "No ferry service for visitors; bikes and scooters work for short downtown hops."
+    ],
+    "sources": []
+  },
+  "places": {
+    "grand_ole_opry": {
+      "name": "Grand Ole Opry",
+      "landmark": "Grand Ole Opry",
+      "kind": "show",
+      "lat": 36.2073,
+      "lon": -86.6916,
+      "price": null,
+      "price_text": "Tickets vary by show and seat; check the official site for current prices",
+      "hours": "Show nights vary; box office and backstage tours run most days — check on the day",
+      "tip": "Book tickets well ahead for weekend shows, and arrive early for the pre-show photo walk.",
+      "source": "https://www.opry.com/"
+    },
+    "ryman": {
+      "name": "Ryman Auditorium",
+      "landmark": "Ryman Auditorium",
+      "kind": "sight",
+      "lat": 36.1613,
+      "lon": -86.7785,
+      "price": null,
+      "price_text": "Self-guided tour and show prices vary; check the official site",
+      "hours": "Daily, roughly 09:00–16:00 for tours; evening shows on many nights — check on the day",
+      "tip": "Take the daytime tour to stand on the famous stage, then come back for a show if you can.",
+      "source": "https://www.ryman.com/"
+    },
+    "vanderbilt": {
+      "name": "Vanderbilt University",
+      "landmark": "Vanderbilt University",
+      "kind": "sight",
+      "lat": 36.1447,
+      "lon": -86.8027,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily; buildings have their own hours",
+      "tip": "Walk the main quad and the tree-lined paths; it is a calm break from Broadway.",
+      "source": "https://www.vanderbilt.edu/"
+    },
+    "captain_ds": {
+      "name": "Captain D's",
+      "landmark": "Captain D's",
+      "kind": "food",
+      "lat": 36.1627,
+      "lon": -86.7816,
+      "price": null,
+      "price_text": "Budget fast-food seafood; check local menu prices",
+      "hours": "Varies by branch — check on the day",
+      "tip": "A cheap, quick seafood meal; several branches around town, so pick the one nearest you.",
+      "source": "https://www.captainds.com/"
+    },
+    "carls_jr": {
+      "name": "Carl's Jr. / Hardee's",
+      "landmark": "Carl's Jr. / Hardee's",
+      "kind": "food",
+      "lat": 35.9251,
+      "lon": -86.8689,
+      "price": null,
+      "price_text": "Budget fast food; check local menu prices",
+      "hours": "Varies by branch — check on the day",
+      "tip": "Fast burgers and breakfast; handy when you need a quick stop between sights.",
+      "source": "https://www.hardees.com/"
+    },
+    "hunt_brothers": {
+      "name": "Hunt Brothers Pizza",
+      "landmark": "Hunt Brothers Pizza",
+      "kind": "food",
+      "lat": 36.1627,
+      "lon": -86.7816,
+      "price": null,
+      "price_text": "Budget pizza; check local menu prices",
+      "hours": "Varies by host store — check on the day",
+      "tip": "Often inside convenience stores; good for a cheap slice on the go.",
+      "source": "https://www.huntbrotherspizza.com/"
+    },
+    "broadway": {
+      "name": "Broadway honky-tonk strip",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.1609,
+      "lon": -86.7784,
+      "price": 0,
+      "price_text": "Free to walk; drinks and cover charges vary by bar",
+      "hours": "Bars busiest from afternoon into late night",
+      "tip": "Live music starts early in many bars; walk in, listen, and tip the band.",
+      "source": ""
+    },
+    "country_hall": {
+      "name": "Country Music Hall of Fame and Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 36.1583,
+      "lon": -86.7766,
+      "price": null,
+      "price_text": "Admission varies; check the official site",
+      "hours": "Daily, roughly 09:00–17:00 — check on the day",
+      "tip": "Allow two to three hours; the gold records and stage costumes are the highlights.",
+      "source": "https://www.countrymusichalloffame.org/"
+    },
+    "johnny_cash": {
+      "name": "Johnny Cash Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 36.1613,
+      "lon": -86.7781,
+      "price": null,
+      "price_text": "Admission varies; check the official site",
+      "hours": "Daily — check on the day",
+      "tip": "Compact and busy; go early to avoid the midday crowd.",
+      "source": "https://www.johnnycashmuseum.com/"
+    },
+    "parthenon": {
+      "name": "The Parthenon and Centennial Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 36.1494,
+      "lon": -86.8134,
+      "price": null,
+      "price_text": "Park free; museum admission varies — check the official site",
+      "hours": "Park open daily; museum hours vary — check on the day",
+      "tip": "A full-size Greek temple in a city park; great for a picnic and photos.",
+      "source": "https://www.nashville.gov/departments/parks/parthenon"
+    },
+    "gulch_walk": {
+      "name": "The Gulch neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.152,
+      "lon": -86.79,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; shops and cafes have their own hours",
+      "tip": "See the famous 'What Lifts You' wings mural and stop for coffee between shops.",
+      "source": ""
+    },
+    "east_nashville": {
+      "name": "East Nashville neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.18,
+      "lon": -86.74,
+      "price": 0,
+      "price_text": "Free to walk; food and drinks extra",
+      "hours": "Always open; cafes and bars have their own hours",
+      "tip": "Wander Five Points for coffee, vintage shops and local restaurants away from the crowds.",
+      "source": ""
+    },
+    "food_hall": {
+      "name": "Nashville food hall (check current options)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.156,
+      "lon": -86.782,
+      "price": null,
+      "price_text": "Pay per stall; prices vary",
+      "hours": "Mostly lunch and dinner daily — check on the day",
+      "tip": "Good for groups: everyone picks their own stall, then share a table.",
+      "source": ""
+    },
+    "pedal_tavern": {
+      "name": "Pedal tavern or golf-cart city tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 36.159,
+      "lon": -86.779,
+      "price": null,
+      "price_text": "Prices vary by operator; book ahead",
+      "hours": "Tours run through the day and evening — check on the day",
+      "tip": "A fun way to see the downtown sights; confirm what is included before booking.",
+      "source": ""
+    },
+    "riverfront": {
+      "name": "Cumberland Riverfront and pedestrian bridge",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.163,
+      "lon": -86.774,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the bridge at sunset for skyline views and a quiet break from Broadway.",
+      "source": ""
+    },
+    "biscuit_breakfast": {
+      "name": "Biscuit and Southern breakfast spot",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.155,
+      "lon": -86.785,
+      "price": null,
+      "price_text": "Moderate; prices vary by place",
+      "hours": "Mostly breakfast and lunch — check on the day",
+      "tip": "Go early; popular biscuit places get long lines by mid-morning.",
+      "source": ""
+    },
+    "hot_chicken": {
+      "name": "Hot chicken lunch",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.175,
+      "lon": -86.75,
+      "price": null,
+      "price_text": "Moderate; prices vary by place",
+      "hours": "Lunch and dinner — check on the day",
+      "tip": "Order mild if unsure; Nashville hot chicken is genuinely spicy.",
+      "source": ""
+    },
+    "listening_room": {
+      "name": "Songwriter listening room or small venue",
+      "landmark": null,
+      "kind": "show",
+      "lat": 36.157,
+      "lon": -86.783,
+      "price": null,
+      "price_text": "Cover or ticket prices vary; check the venue",
+      "hours": "Evenings — check on the day",
+      "tip": "Quieter than Broadway bars; a good way to hear original songs up close.",
+      "source": ""
+    },
+    "centennial_park": {
+      "name": "Centennial Park walk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 36.149,
+      "lon": -86.814,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily from morning to evening",
+      "tip": "A lake, lawns and the Parthenon in one stop; good for a slow afternoon.",
+      "source": ""
+    },
+    "music_row_walk": {
+      "name": "Music Row walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.148,
+      "lon": -86.793,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Pass the recording studios and music offices; a short, quiet stroll for music fans.",
+      "source": ""
+    },
+    "gulch_food": {
+      "name": "The Gulch restaurants and bars",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.1515,
+      "lon": -86.7895,
+      "price": null,
+      "price_text": "Moderate to higher; prices vary by place",
+      "hours": "Lunch through late evening — check on the day",
+      "tip": "Book ahead for dinner on weekends; the area fills up fast.",
+      "source": ""
+    },
+    "east_coffee": {
+      "name": "East Nashville coffee and vintage shops",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.1795,
+      "lon": -86.741,
+      "price": null,
+      "price_text": "Moderate; prices vary by place",
+      "hours": "Mostly daytime — check on the day",
+      "tip": "Pair coffee with a browse of the vintage and record shops nearby.",
+      "source": ""
+    },
+    "opry_mills": {
+      "name": "Opry Mills shopping and dining",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.204,
+      "lon": -86.695,
+      "price": 0,
+      "price_text": "Free to enter; pay per shop",
+      "hours": "Daily, roughly 10:00–20:00 — check on the day",
+      "tip": "Handy before or after an Opry show; plenty of food options under one roof.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Nashville music history, all indoors and walkable from Downtown.",
+      "days": [
+        {
+          "title": "Music history morning, honky-tonk evening",
+          "stops": [
+            {
+              "place": "country_hall",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Start when doors open. Allow two to three hours."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Short walk away. Compact museum, about an hour."
+            },
+            {
+              "place": "food_hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Options change, so check on the day."
+            },
+            {
+              "place": "ryman",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Afternoon tour. Evening shows on many nights — check on the day."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Songwriter set. Book ahead and check start times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around Southern breakfast, hot chicken and the Broadway strip.",
+      "days": [
+        {
+          "title": "Biscuits, hot chicken and honky-tonks",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early; queues build later."
+            },
+            {
+              "place": "gulch_walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Short ride from Downtown. Cafes and shops open later in the morning."
+            },
+            {
+              "place": "hot_chicken",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in East Nashville. Pick your heat level carefully."
+            },
+            {
+              "place": "east_coffee",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Coffee and vintage shops nearby. Mostly daytime hours."
+            },
+            {
+              "place": "broadway",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Bars get busy from late afternoon. Bring ID."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Museums and monuments by day, a classic stage show at night.",
+      "days": [
+        {
+          "title": "Cash, the Parthenon and the Opry",
+          "stops": [
+            {
+              "place": "johnny_cash",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning is quieter. Check hours on the day."
+            },
+            {
+              "place": "ryman",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Tour the old Opry house. About 90 minutes."
+            },
+            {
+              "place": "captain_ds",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch. Branch hours vary — check on the day."
+            },
+            {
+              "place": "parthenon",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Park is always open; museum hours vary — check on the day."
+            },
+            {
+              "place": "grand_ole_opry",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening show. Book ahead; show nights vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One music-filled day: the big museums and a show, with a neighbourhood walk in between.",
+      "days": [
+        {
+          "title": "Museums, riverfront and a show",
+          "stops": [
+            {
+              "place": "country_hall",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Start when doors open. Allow two to three hours."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "A short walk away. Check hours on the day."
+            },
+            {
+              "place": "food_hall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Options change — check on the day."
+            },
+            {
+              "place": "ryman",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Afternoon tour. Book ahead if a show is on that night."
+            },
+            {
+              "place": "riverfront",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Walk the pedestrian bridge at sunset."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening songwriter set. Check listings and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Nashville: biscuits, hot chicken, the Gulch and Broadway.",
+      "days": [
+        {
+          "title": "Breakfast, hot chicken and honky-tonks",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early to beat the line. Check hours on the day."
+            },
+            {
+              "place": "east_coffee",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Coffee and vintage shops in East Nashville."
+            },
+            {
+              "place": "hot_chicken",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Order mild if it is your first time."
+            },
+            {
+              "place": "gulch_walk",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk off lunch. Shops have their own hours."
+            },
+            {
+              "place": "gulch_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Book ahead on weekends."
+            },
+            {
+              "place": "broadway",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars get busy late. Live music most nights."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Nashville's past in one day: the Ryman, Music Row and the Parthenon.",
+      "days": [
+        {
+          "title": "Ryman, Music Row and the Parthenon",
+          "stops": [
+            {
+              "place": "ryman",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning tour. Check tour times on the day."
+            },
+            {
+              "place": "music_row_walk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Walk past the studios. Weekday daytime is best."
+            },
+            {
+              "place": "vanderbilt",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short campus walk. Buildings have their own hours."
+            },
+            {
+              "place": "captain_ds",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Quick lunch. Branch hours vary — check on the day."
+            },
+            {
+              "place": "parthenon",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Park is always open; museum hours vary — check on the day."
+            },
+            {
+              "place": "centennial_park",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Easy loop around the lake before dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big music sights plus an easy neighbourhood wander each day.",
+      "days": [
+        {
+          "title": "Arrive, Country Music Hall of Fame and Broadway",
+          "stops": [
+            {
+              "place": "country_hall",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Start here for the story behind the music. Roughly 09:00–17:00 — check on the day."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk away. Daily — check on the day."
+            },
+            {
+              "place": "broadway",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Live music from the afternoon. Bars get busy late."
+            }
+          ]
+        },
+        {
+          "title": "Ryman, Music Row and a listening room",
+          "stops": [
+            {
+              "place": "ryman",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning tour. Tours roughly 09:00–16:00 — check on the day."
+            },
+            {
+              "place": "music_row_walk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short taxi or rideshare from Downtown."
+            },
+            {
+              "place": "vanderbilt",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Campus next to Music Row. Grounds open daily."
+            },
+            {
+              "place": "centennial_park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the park; the Parthenon is here."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Songwriter set. Evenings — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Grand Ole Opry before you go",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early breakfast. Mostly breakfast and lunch — check on the day."
+            },
+            {
+              "place": "gulch_walk",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Photos and shops. Always open."
+            },
+            {
+              "place": "grand_ole_opry",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Backstage tour if no show fits. Show nights vary — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around hot chicken, biscuits and honky-tonk bars.",
+      "days": [
+        {
+          "title": "Arrive, food hall and Broadway",
+          "stops": [
+            {
+              "place": "food_hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Easy first lunch with options for everyone. Mostly lunch and dinner — check on the day."
+            },
+            {
+              "place": "country_hall",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Walk off lunch. Roughly 09:00–17:00 — check on the day."
+            },
+            {
+              "place": "broadway",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Bars and food. Busiest from afternoon into late night."
+            }
+          ]
+        },
+        {
+          "title": "East Nashville brunch and hot chicken",
+          "stops": [
+            {
+              "place": "east_coffee",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Coffee and vintage shops. Mostly daytime — check on the day."
+            },
+            {
+              "place": "east_nashville",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Neighbourhood walk. Cafes and bars keep their own hours."
+            },
+            {
+              "place": "hot_chicken",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Ask for the spice level you can handle."
+            },
+            {
+              "place": "gulch_food",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner. Lunch through late evening — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Biscuits, riverfront and a show",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early breakfast. Mostly breakfast and lunch — check on the day."
+            },
+            {
+              "place": "riverfront",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Walk the pedestrian bridge. Always open."
+            },
+            {
+              "place": "ryman",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Tour. Roughly 09:00–16:00 — check on the day."
+            },
+            {
+              "place": "grand_ole_opry",
+              "at": "17:00",
+              "minutes": 150,
+              "note": "Evening show if one is on. Show nights vary — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Travellers who want the Ryman, the Parthenon and the story of Music Row.",
+      "days": [
+        {
+          "title": "Arrive, Ryman and the riverfront",
+          "stops": [
+            {
+              "place": "ryman",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Afternoon tour. Roughly 09:00–16:00 — check on the day."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk. Daily — check on the day."
+            },
+            {
+              "place": "riverfront",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Bridge and river views. Always open."
+            },
+            {
+              "place": "broadway",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Dinner and live music."
+            }
+          ]
+        },
+        {
+          "title": "Parthenon, Centennial Park and Music Row",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Park open daily; museum hours vary — check on the day."
+            },
+            {
+              "place": "centennial_park",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Walk the park and lake."
+            },
+            {
+              "place": "music_row_walk",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Studios from the street. Always open."
+            },
+            {
+              "place": "vanderbilt",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Campus walk. Grounds open daily."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening set. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Country Music Hall of Fame before you go",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Early breakfast."
+            },
+            {
+              "place": "country_hall",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Allow plenty of time. Roughly 09:00–17:00 — check on the day."
+            },
+            {
+              "place": "gulch_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch and a short walk. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big music sights plus easy neighbourhood walks.",
+      "days": [
+        {
+          "title": "Arrive and downtown music",
+          "stops": [
+            {
+              "place": "country_hall",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Start here for the story behind the music. Closed days vary — check on the day."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short walk away. Small museum, so an hour is enough."
+            },
+            {
+              "place": "broadway",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Bars get busy from late afternoon. Free live music in many places."
+            },
+            {
+              "place": "gulch_food",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Short rideshare for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Ryman, river and a listening room",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early to beat the queue."
+            },
+            {
+              "place": "ryman",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning tour. Check tour times on the day."
+            },
+            {
+              "place": "riverfront",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk the pedestrian bridge for skyline views."
+            },
+            {
+              "place": "food_hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Easy lunch with options for everyone. Check current stalls."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Book ahead. Songwriter rounds are the classic Nashville night out."
+            }
+          ]
+        },
+        {
+          "title": "Music Row, Parthenon and the Opry",
+          "stops": [
+            {
+              "place": "music_row_walk",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday morning is quietest. Studios are private — view from the street."
+            },
+            {
+              "place": "vanderbilt",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Walk the campus grounds."
+            },
+            {
+              "place": "parthenon",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Park is always open; museum hours vary — check on the day."
+            },
+            {
+              "place": "centennial_park",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Loop the lake before heading back."
+            },
+            {
+              "place": "grand_ole_opry",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Show nights vary. Book ahead and arrive early; it is a drive from downtown."
+            }
+          ]
+        },
+        {
+          "title": "East side and out",
+          "stops": [
+            {
+              "place": "east_coffee",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Coffee and vintage shops. Most places are daytime only."
+            },
+            {
+              "place": "east_nashville",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Easy walk between cafes and murals."
+            },
+            {
+              "place": "hot_chicken",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch. Ask for mild if it is your first time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around breakfast, hot chicken and honky-tonks.",
+      "days": [
+        {
+          "title": "Breakfast, Broadway and the Gulch",
+          "stops": [
+            {
+              "place": "biscuit_breakfast",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Arrive early; lines build fast."
+            },
+            {
+              "place": "broadway",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Afternoon is calmer than late night. Live music in most bars."
+            },
+            {
+              "place": "gulch_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk off lunch; golden hour is best for photos."
+            },
+            {
+              "place": "gulch_food",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Book ahead at weekends."
+            }
+          ]
+        },
+        {
+          "title": "Hot chicken and East Nashville",
+          "stops": [
+            {
+              "place": "east_coffee",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start slow with coffee and a pastry."
+            },
+            {
+              "place": "east_nashville",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Shops and murals; most open late morning."
+            },
+            {
+              "place": "hot_chicken",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "The main event. Order mild to medium first time."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Drinks and songs. Check listings and book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a food hall",
+          "stops": [
+            {
+              "place": "country_hall",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Go at opening. Check closed days on the day."
+            },
+            {
+              "place": "food_hall",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch; options change, so check current stalls."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk from the food hall."
+            },
+            {
+              "place": "riverfront",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Sunset walk on the bridge."
+            },
+            {
+              "place": "grand_ole_opry",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Grab dinner near the venue before the show. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and out",
+          "stops": [
+            {
+              "place": "east_coffee",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Last coffee and a snack before you go."
+            },
+            {
+              "place": "pedal_tavern",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Fun group tour of downtown. Book ahead and check weather."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or East Nashville"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want the stories behind the music, the studios and the city's past.",
+      "days": [
+        {
+          "title": "Ryman and the river",
+          "stops": [
+            {
+              "place": "ryman",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning tour. Check times on the day."
+            },
+            {
+              "place": "food_hall",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "riverfront",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Walk the bridge for river and skyline views."
+            },
+            {
+              "place": "broadway",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Historic buildings line the strip; bars get busy later."
+            }
+          ]
+        },
+        {
+          "title": "Music history day",
+          "stops": [
+            {
+              "place": "country_hall",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Open at roughly 09:00. Check closed days."
+            },
+            {
+              "place": "johnny_cash",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short walk; grab lunch between the two."
+            },
+            {
+              "place": "music_row_walk",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Weekday daytime is best. Studios are private."
+            },
+            {
+              "place": "vanderbilt",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Campus walk; buildings have their own hours."
+            },
+            {
+              "place": "listening_room",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening songs. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Parthenon and the Opry",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Park always open; museum hours vary — check on the day."
+            },
+            {
+              "place": "centennial_park",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Walk the lake and see the full-scale Parthenon outside."
+            },
+            {
+              "place": "hot_chicken",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch on the east side."
+            },
+            {
+              "place": "grand_ole_opry",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Show nights vary. Book ahead; it is a drive from downtown."
+            }
+          ]
+        },
+        {
+          "title": "Gulch and out",
+          "stops": [
+            {
+              "place": "gulch_walk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning walk; shops open later."
+            },
+            {
+              "place": "biscuit_breakfast",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Late breakfast before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Country music halls, studios and the art museum."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hot chicken, meat-and-three plates and honky-tonk bars."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Civil War sites, the Parthenon and the state capitol."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to Broadway honky-tonks, the Country Music Hall of Fame and the riverfront. Noisier and pricier on weekends.",
+      "center": [
+        36.1627,
+        -86.7816
+      ]
+    },
+    {
+      "area": "The Gulch",
+      "range": [
+        170,
+        380
+      ],
+      "why": "Trendy and walkable, a short ride from downtown. Good restaurants and bars, easy highway access.",
+      "center": [
+        36.1517,
+        -86.7902
+      ]
+    },
+    {
+      "area": "Music Row",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Quieter, near the studios and Vanderbilt. Close to midtown restaurants; a short drive downtown.",
+      "center": [
+        36.1485,
+        -86.7952
+      ]
+    },
+    {
+      "area": "East Nashville",
+      "range": [
+        130,
+        300
+      ],
+      "why": "Best value and the local food and bar scene. Five to ten minutes by car or rideshare to downtown.",
+      "center": [
+        36.1785,
+        -86.7452
+      ]
+    }
+  ],
+  "food": [
+    "Try Nashville hot chicken: crispy fried chicken brushed with cayenne paste. Ask for the mild level first; the hottest is very hot.",
+    "Look for a meat-and-three: pick one meat and three vegetable sides, a Southern lunch staple, often under $15.",
+    "Broadway honky-tonks have live music most afternoons and evenings; many have no cover charge, but tip the band.",
+    "Brunch and biscuits are a local ritual; expect queues at popular spots on weekend mornings.",
+    "Prices vary widely. Budget about $15–25 for lunch and $30–60 for dinner per person, more downtown on weekends."
+  ],
+  "more_time": [
+    "Add a day for the Grand Ole Opry and a backstage tour; check show nights on the day.",
+    "History fans can swap an afternoon for The Hermitage, Andrew Jackson's plantation home, a short drive east of the city.",
+    "Families can add a morning at the Adventure Science Center or a walk in Centennial Park around the full-size Parthenon."
+  ]
+}

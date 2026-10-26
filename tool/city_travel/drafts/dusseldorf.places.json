@@ -1,0 +1,392 @@
+{
+  "places": {
+    "rheinturm": {
+      "name": "Rheinturm",
+      "landmark": "Rheinturm",
+      "kind": "sight",
+      "lat": 51.2178,
+      "lon": 6.7719,
+      "price": null,
+      "price_text": "Observation deck ticket; check current price on the day",
+      "hours": "Daily, roughly 11:00–24:00; check on the day",
+      "tip": "Go up near sunset for views over the Rhine and MedienHafen. The bar upstairs needs no deck ticket.",
+      "source": "https://www.rheinturm.de/",
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset or evening",
+      "area": "MedienHafen",
+      "popularity": 5
+    },
+    "altstadt": {
+      "name": "Altstadt (Old Town)",
+      "landmark": "Altstadt, Düsseldorf",
+      "kind": "sight",
+      "lat": 51.2277,
+      "lon": 6.7735,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; bars busiest in the evening",
+      "tip": "This is the 'longest bar in the world' — wander the lanes early evening and pick a brewery by eye.",
+      "source": "",
+      "types": [
+        "culture",
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "koenigsallee": {
+      "name": "Königsallee",
+      "landmark": "Königsallee",
+      "kind": "sight",
+      "lat": 51.2233,
+      "lon": 6.7797,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops roughly 10:00–20:00 Mon–Sat; closed Sunday",
+      "tip": "Walk the canal side for the view, then cross to the shops. Most stores close on Sunday.",
+      "source": "",
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Stadtmitte",
+      "popularity": 5
+    },
+    "thefox": {
+      "name": "The Fox",
+      "landmark": "The Fox",
+      "kind": "food",
+      "lat": null,
+      "lon": null,
+      "price": null,
+      "price_text": "Check current menu prices on the day",
+      "hours": "Check on the day; often evening-focused",
+      "tip": "Book ahead for dinner and confirm opening days before you go.",
+      "source": "",
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "carlsplatz_market": {
+      "name": "Carlsplatz food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2247,
+      "lon": 6.7752,
+      "price": 0,
+      "price_text": "Free to enter; pay per stall",
+      "hours": "Mon–Fri roughly 08:00–18:00, Sat until about 16:00; closed Sunday",
+      "tip": "Come hungry at lunch for fresh bread, cheese and local snacks. Bring cash for small stalls.",
+      "source": "",
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday lunch",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "medienhafen_walk": {
+      "name": "MedienHafen architecture walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2155,
+      "lon": 6.7755,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "See the Gehry buildings and the Rhine promenade on foot; combine with the Rheinturm.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon to sunset",
+      "area": "MedienHafen",
+      "popularity": 4
+    },
+    "rhine_promenade": {
+      "name": "Rhine promenade (Rheinuferpromenade)",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2265,
+      "lon": 6.7705,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk between Altstadt and MedienHafen along the water; busy and lively on warm evenings.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset on a warm day",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "oberkassel_walk": {
+      "name": "Oberkassel neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2285,
+      "lon": 6.7565,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Cross the Rhine bridge for quieter streets, cafés and river views back to the skyline.",
+      "source": "",
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Oberkassel",
+      "popularity": 3
+    },
+    "rhine_cruise": {
+      "name": "Rhine sightseeing cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 51.2272,
+      "lon": 6.7712,
+      "price": null,
+      "price_text": "Short cruises roughly EUR 10–20; check on the day",
+      "hours": "Seasonal; departures mostly daytime, check on the day",
+      "tip": "Short harbour cruises leave from near the Altstadt. Confirm departure times and weather before buying.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring to autumn, daytime",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "kunstpalette": {
+      "name": "Kunstpalast museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 51.2333,
+      "lon": 6.7733,
+      "price": null,
+      "price_text": "Admission fee; check current price on the day",
+      "hours": "Closed Monday; check on the day",
+      "tip": "Good rainy-day stop for art and photography; check the current exhibition first.",
+      "source": "",
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or weekday",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "schlossturm": {
+      "name": "Schlossturm (ship museum)",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 51.2272,
+      "lon": 6.7714,
+      "price": null,
+      "price_text": "Small admission fee; check on the day",
+      "hours": "Check on the day; often closed Monday",
+      "tip": "Small maritime museum in a tower by the river — quick visit, good with kids.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Altstadt",
+      "popularity": 2
+    },
+    "hofgarten": {
+      "name": "Hofgarten park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 51.2305,
+      "lon": 6.7835,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Green escape next to Königsallee; good for a picnic or a shaded break.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Stadtmitte",
+      "popularity": 3
+    },
+    "altbier_tasting": {
+      "name": "Altbier brewery tasting",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2282,
+      "lon": 6.7732,
+      "price": null,
+      "price_text": "Pay per glass; check on the day",
+      "hours": "Breweries open daytime into evening; check on the day",
+      "tip": "Try Altbier in a traditional Altstadt brewery. Servers keep refilling until you cover your glass.",
+      "source": "",
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon or evening",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "stadtmitte_shopping": {
+      "name": "Stadtmitte shopping streets",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2255,
+      "lon": 6.7825,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops roughly 10:00–20:00 Mon–Sat; closed Sunday",
+      "tip": "Beyond Königsallee, the side streets have everyday shops and cafés. Most close Sunday.",
+      "source": "",
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Stadtmitte",
+      "popularity": 2
+    },
+    "rheinpark_viewpoint": {
+      "name": "Rhine bank viewpoint near Oberkassel bridge",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 51.2268,
+      "lon": 6.7635,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Best skyline photo spot across the river; go at dusk when lights come on.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Oberkassel",
+      "popularity": 3
+    },
+    "medienhafen_food": {
+      "name": "MedienHafen cafés and riverside bars",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2162,
+      "lon": 6.7748,
+      "price": null,
+      "price_text": "Pay per item; check on the day",
+      "hours": "Daytime into evening; check on the day",
+      "tip": "Grab a coffee or drink after the architecture walk and watch the river traffic.",
+      "source": "",
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon or early evening",
+      "area": "MedienHafen",
+      "popularity": 3
+    },
+    "altstadt_nightlife": {
+      "name": "Altstadt bar streets",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2288,
+      "lon": 6.7728,
+      "price": null,
+      "price_text": "Pay per drink",
+      "hours": "Busiest from evening; late on weekends",
+      "tip": "The lanes fill up after dark. Keep an eye on your belongings in crowds.",
+      "source": "",
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Friday or Saturday evening",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "rhine_ferry": {
+      "name": "Rhine ferry crossing",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2258,
+      "lon": 6.7695,
+      "price": null,
+      "price_text": "Small fare; check on the day",
+      "hours": "Daytime; check on the day",
+      "tip": "A cheap way to cross the river and see the banks from the water.",
+      "source": "",
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime, spring to autumn",
+      "area": "Altstadt",
+      "popularity": 2
+    },
+    "stadtmitte_cafe": {
+      "name": "Stadtmitte café stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2248,
+      "lon": 6.7805,
+      "price": null,
+      "price_text": "Pay per item; check on the day",
+      "hours": "Mostly daytime; check on the day",
+      "tip": "Take a break between Königsallee and the Altstadt. Many places close by early evening.",
+      "source": "",
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Stadtmitte",
+      "popularity": 2
+    }
+  }
+}

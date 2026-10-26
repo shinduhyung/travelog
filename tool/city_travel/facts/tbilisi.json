@@ -1,0 +1,203 @@
+{
+  "currency": "GEL",
+  "usd_rate": 2.5971,
+  "intro_line": "Tbilisi: warm stone, sulphur baths and long café nights.",
+  "intro": "Tbilisi rewards visitors with old balconies, hearty food and easy day trips into the Caucasus. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Old Town (Abanotubani)",
+    "Rustaveli & Freedom Square",
+    "Vera & Chugureti",
+    "Sololaki"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 5,
+    "per_km": 1.5,
+    "min_fare": 5
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro has two lines; buy a Metromoney card at stations.",
+    "Buses and marshrutkas cover most of the city; card or contactless payment.",
+    "Bolt and Yandex Go work well and are usually cheaper than street taxis.",
+    "Street taxis often quote high; agree the price first or use an app.",
+    "Driving is chaotic; most visitors skip renting a car in town.",
+    "The centre is walkable; pavements are uneven, so wear good shoes."
+  ],
+  "airports": [
+    {
+      "code": "TBS",
+      "name": "Tbilisi International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 12-17 km east of the centre.",
+      "options": [
+        {
+          "mode": "Bus 337",
+          "to": "Main railway station via Freedom Square",
+          "price": "₾1-1.50",
+          "time": "50-60 min",
+          "note": "Needs Metromoney card or contactless card; no coins."
+        },
+        {
+          "mode": "Bolt / Yandex Go",
+          "to": "City centre",
+          "price": "₾20-30",
+          "time": "25-40 min",
+          "note": "Usually cheaper than airport taxi touts."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₾30-50",
+          "time": "25-40 min",
+          "note": "Ignore drivers quoting ₾80; agree the price first."
+        }
+      ]
+    },
+    {
+      "code": "KUT",
+      "name": "Kutaisi International Airport",
+      "primary": false,
+      "note": "Low-cost flights from Europe; about 220 km west of Tbilisi.",
+      "options": [
+        {
+          "mode": "Marshrutka",
+          "to": "Tbilisi bus stations",
+          "price": "₾20-25",
+          "time": "4-5 hr",
+          "note": "Cheapest; morning departures are more reliable."
+        },
+        {
+          "mode": "Train",
+          "to": "Tbilisi main station",
+          "price": "₾10-25",
+          "time": "5-6 hr",
+          "note": "Reach Kutaisi station by bus or taxi first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tbilisi city centre",
+          "price": "₾250-400",
+          "time": "3.5-4.5 hr",
+          "note": "Agree a fixed price before you set off."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Narikala Fortress",
+    "Old Tbilisi",
+    "Holy Trinity Cathedral of Tbilisi",
+    "Bridge of Peace",
+    "Chronicles of Georgia",
+    "Dry Bridge Market",
+    "Jvari Monastery",
+    "Khachapuri",
+    "Kura River",
+    "Mtatsminda Park",
+    "Svetitskhoveli Cathedral",
+    "Tbilisi Aerial Tramway"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tbilisi",
+      "https://en.wikivoyage.org/wiki/Tbilisi"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    41.7151,
+    44.8271
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 6
+    },
+    {
+      "high": 8,
+      "low": -1,
+      "rain_days": 6
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 12
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 12
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 14
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 7
+    },
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 6
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 7
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 6
+    },
+    {
+      "high": 7,
+      "low": 0,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport KUT is 201 km away"
+  ]
+}

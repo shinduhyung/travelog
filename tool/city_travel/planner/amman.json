@@ -1,0 +1,552 @@
+{
+  "city": "Amman",
+  "checked": "October 2026",
+  "intro_line": "An ancient hilltop capital where Roman stones meet modern coffee shops.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown (Al-Balad)",
+        "Jabal Amman (1st Circle)",
+        "Abdoun",
+        "Shmeisani"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown (Al-Balad)",
+        "Jabal Amman (1st Circle)",
+        "Abdoun",
+        "Shmeisani"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown (Al-Balad)",
+        "Jabal Amman (1st Circle)",
+        "Abdoun",
+        "Shmeisani"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Downtown (Al-Balad)",
+        "Jabal Amman (1st Circle)",
+        "Abdoun",
+        "Shmeisani"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Downtown (Al-Balad)",
+        "Jabal Amman (1st Circle)",
+        "Abdoun",
+        "Shmeisani"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 9,
+        "note": "Jan: cold and wet, highs near 12°C. Pack a warm layer and a rain jacket."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 9,
+        "note": "Feb: still cool and rainy, around 14°C. Good for indoor sights and museums."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 8,
+        "note": "Mar: milder at 17°C with fewer rainy days. Comfortable for walking downtown."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 4,
+        "note": "Apr: warm and mostly dry, highs near 23°C. One of the best months to visit."
+      },
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 2,
+        "note": "May: hot and dry, around 28°C. Sightsee early and rest in the afternoon."
+      },
+      {
+        "high": 31,
+        "low": 19,
+        "rain_days": 0,
+        "note": "Jun: hot at 31°C with no rain. Carry water and use taxis between sights."
+      },
+      {
+        "high": 33,
+        "low": 21,
+        "rain_days": 0,
+        "note": "Jul: peak heat, 33°C. Plan indoor time midday and go out in the evening."
+      },
+      {
+        "high": 33,
+        "low": 21,
+        "rain_days": 0,
+        "note": "Aug: as hot as July, 33°C. Same advice: early starts and shade."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 1,
+        "note": "Sep: still hot at 31°C but cooling slightly. Evenings get pleasant."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 2,
+        "note": "Oct: warm at 26°C with little rain. Great for walking and day trips."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 5,
+        "note": "Nov: cooler at 20°C with some rain. Bring a light jacket."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 6,
+        "note": "Dec: cold and wet, highs near 15°C. Pack warm clothes and check the forecast."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      1,
+      0.95,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      1,
+      0.9,
+      0.75
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      1,
+      0.95,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      1,
+      0.9,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.95,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.8
+    ],
+    "shopping": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.95,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.8
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      1,
+      0.95,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.75
+    ]
+  },
+  "places": {
+    "citadel": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 5
+    },
+    "roman-theater": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 5
+    },
+    "downtown-souq": {
+      "types": [
+        "food",
+        "shopping",
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning to afternoon",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 5
+    },
+    "madaba-map": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, as part of a day trip",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    },
+    "mansaf": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    },
+    "mount-nebo": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning on a clear day",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    },
+    "rainbow-street": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Jabal Amman (1st Circle)",
+      "popularity": 4
+    },
+    "jabal-amman-view": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Jabal Amman (1st Circle)",
+      "popularity": 3
+    },
+    "hashem-restaurant": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    },
+    "jordan-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Midday, when it is hot outside",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 3
+    },
+    "food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 3
+    },
+    "souk-jara": {
+      "types": [
+        "shopping",
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Friday evening in summer",
+      "area": "Jabal Amman (1st Circle)",
+      "popularity": 3
+    },
+    "abdoun-view": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Abdoun",
+      "popularity": 3
+    },
+    "shmeisani-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Shmeisani",
+      "popularity": 2
+    },
+    "dead-sea-day-trip": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Morning start, avoid midday heat",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    },
+    "jerash-day-trip": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    },
+    "cooking-class": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Jabal Amman (1st Circle)",
+      "popularity": 3
+    },
+    "king-abdullah-mosque": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Shmeisani",
+      "popularity": 3
+    },
+    "downtown-hammam": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 2
+    },
+    "wadi-rum-tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 1440,
+      "setting": "outdoor",
+      "best": "Spring or autumn",
+      "area": "Downtown (Al-Balad)",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Citadel, the Roman Theatre and downtown food, with time for a day trip."
+  },
+  "airports": [
+    {
+      "code": "AMM",
+      "name": "Queen Alia International Airport",
+      "primary": true,
+      "note": "Main gateway for Jordan, about 26 km south of the centre.",
+      "options": [
+        {
+          "mode": "Sariyah Airport Express bus",
+          "to": "7th Circle and Tabarbour North Station",
+          "price": "3.30 JOD",
+          "time": "45-60 min",
+          "note": "Buy the ticket at the kiosk outside arrivals; cash is safest."
+        },
+        {
+          "mode": "BRT",
+          "to": "Jordan Museum area",
+          "price": "0.610 JOD",
+          "time": "60-80 min",
+          "note": "Take the bus to Tabarbour, then transfer to the BRT."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "22.5 JOD",
+          "time": "30-45 min",
+          "note": "Fixed airport fare; pay by card at the taxi booth."
+        },
+        {
+          "mode": "Uber / Careem",
+          "to": "City centre",
+          "price": "15-25 JOD",
+          "time": "30-45 min",
+          "note": "Pick up at the departures level upstairs."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Amman",
+      "https://en.wikivoyage.org/wiki/Amman"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Use Uber, Careem or taxis for most trips; the BRT bus is the cheap backbone.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram in Amman. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "The BRT bus network is the fast backbone, about 0.610 JOD a ride. City buses are cheap but often Arabic-only; pay exact fare or swipe a Visa or MasterCard."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Yellow and grey taxis use meters; most trips in town stay under 2–5 JOD. Uber and Careem work well, with core rides about 1–4 JOD."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common but traffic is heavy. Rental desks are at the airport and in town."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Walking is patchy: steep hills, missing sidewalks and few crossings. Plan some rides."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean-style climate: hot, dry summers and cool, wet winters. Spring and autumn are the best times to visit.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and October",
+        "text": "Warm days around 23–28°C with little rain. Ideal for the Citadel and walking downtown."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, dry summer (June to September)",
+        "text": "Highs of 31–33°C and almost no rain. Sightsee early morning and evening; rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winter (December to February)",
+        "text": "Highs of 12–15°C with 6–9 rainy days a month. Bring a warm layer and a rain jacket."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is seasonal",
+        "text": "Most rain falls from November to March. Summer months are almost completely dry."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Cool nights year-round",
+        "text": "Evenings drop fast, especially in winter. A light jacket helps in spring and autumn."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer; warm layers and a rain jacket for winter. Comfortable shoes for steep, hilly streets."
+      }
+    ]
+  }
+}

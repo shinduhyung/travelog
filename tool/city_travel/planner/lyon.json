@@ -1,0 +1,608 @@
+{
+  "city": "Lyon",
+  "checked": "October 2026",
+  "intro_line": "Lyon blends Roman history, Renaissance lanes and serious food.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Presqu'île",
+        "Vieux Lyon",
+        "Croix-Rousse",
+        "Part-Dieu"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Presqu'île",
+        "Vieux Lyon",
+        "Croix-Rousse",
+        "Part-Dieu"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Presqu'île",
+        "Vieux Lyon",
+        "Croix-Rousse",
+        "Part-Dieu"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Presqu'île",
+        "Vieux Lyon",
+        "Croix-Rousse",
+        "Part-Dieu"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Presqu'île",
+        "Vieux Lyon",
+        "Croix-Rousse",
+        "Part-Dieu"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 7,
+        "low": 1,
+        "rain_days": 13,
+        "note": "January: cold, highs near 7°C, rain on about 13 days. Pack a warm coat and waterproof shoes."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 8,
+        "note": "February: still cold but drier, around 8 rain days. Good for museums and indoor sights."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 11,
+        "note": "March: milder, highs near 13°C, about 11 rain days. Bring layers and an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 10,
+        "note": "April: pleasant at around 17°C. Showers possible; good for walking the old town."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 13,
+        "note": "May: warm, highs near 20°C, but rain on about 13 days. Keep a light rain jacket."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 11,
+        "note": "June: warm and mostly dry, highs near 26°C. Long evenings for riverside walks."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 8,
+        "note": "July: hottest month, highs near 28°C, only about 8 rain days. Book restaurants ahead."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 7,
+        "note": "August: hot like July, about 7 rain days. Some small shops close for holidays; check on the day."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 8,
+        "note": "September: warm and dry, highs near 23°C. One of the best months to visit."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 9,
+        "note": "October: cooler at around 18°C, about 9 rain days. Good light for photos and fewer crowds."
+      },
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 12,
+        "note": "November: chilly, highs near 11°C, rain on about 12 days. Plan indoor backup."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 12,
+        "note": "December: cold, highs near 8°C, about 12 rain days. Christmas markets and warm cafés."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.65
+    ],
+    "shopping": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "fourviere": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Morning or late afternoon; clear days",
+      "area": "Vieux Lyon",
+      "popularity": 5
+    },
+    "vieux-lyon": {
+      "types": [
+        "culture",
+        "history",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning for quiet streets, evening for dinner",
+      "area": "Vieux Lyon",
+      "popularity": 5
+    },
+    "groupama": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Match evenings",
+      "area": "Part-Dieu",
+      "popularity": 3
+    },
+    "saone-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon, spring to autumn",
+      "area": "Vieux Lyon",
+      "popularity": 4
+    },
+    "fourviere-viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset and early evening",
+      "area": "Vieux Lyon",
+      "popularity": 4
+    },
+    "croix-rousse-walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Croix-Rousse",
+      "popularity": 4
+    },
+    "les-halles": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late morning, Tuesday to Saturday",
+      "area": "Part-Dieu",
+      "popularity": 4
+    },
+    "bouchon-dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Vieux Lyon",
+      "popularity": 4
+    },
+    "presqu-ile-walk": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Presqu'île",
+      "popularity": 4
+    },
+    "parc-tete-or": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon, spring to autumn",
+      "area": "Part-Dieu",
+      "popularity": 4
+    },
+    "confluence-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon; closed Monday",
+      "area": "Presqu'île",
+      "popularity": 4
+    },
+    "traboule-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Vieux Lyon",
+      "popularity": 3
+    },
+    "bellecour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Presqu'île",
+      "popularity": 3
+    },
+    "terreaux": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Presqu'île",
+      "popularity": 3
+    },
+    "beaux-arts": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon; closed Tuesday",
+      "area": "Presqu'île",
+      "popularity": 3
+    },
+    "saone-banks": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Vieux Lyon",
+      "popularity": 3
+    },
+    "st-jean-cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Vieux Lyon",
+      "popularity": 4
+    },
+    "resistance-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon; closed Monday",
+      "area": "Presqu'île",
+      "popularity": 3
+    },
+    "guignol-show": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekend afternoon",
+      "area": "Vieux Lyon",
+      "popularity": 2
+    },
+    "confluence-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Presqu'île",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Vieux Lyon, Fourvière and a proper bouchon dinner. Add a night for museums and a day trip."
+  },
+  "airports": [
+    {
+      "code": "LYS",
+      "name": "Lyon Saint-Exupéry Airport",
+      "primary": true,
+      "note": "Main hub, about 20-25 km east of the centre.",
+      "options": [
+        {
+          "mode": "Bus 47 + tram T3",
+          "to": "Meyzieu Z.I then centre",
+          "price": "€2.10",
+          "time": "60-75 min",
+          "note": "Cheapest; bus runs half-hourly 06:30-22:00."
+        },
+        {
+          "mode": "Bus C200",
+          "to": "Metro line A east end",
+          "price": "€2.10",
+          "time": "45-60 min",
+          "note": "Good for eastern metro stops."
+        },
+        {
+          "mode": "Rhônexpress tram",
+          "to": "Part-Dieu station",
+          "price": "€17.10 single",
+          "time": "under 30 min",
+          "note": "Fastest; buy online to save, €4 onboard surcharge."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-50",
+          "time": "30-45 min",
+          "note": "Ask for an eastern metro stop to save money."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€35-50",
+          "time": "30-45 min",
+          "note": "Prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "GNB",
+      "name": "Grenoble Alpes-Isère Airport",
+      "primary": false,
+      "note": "Midway between Lyon and Grenoble; some low-cost flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Lyon centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Check agbus.fr schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Lyon centre",
+          "price": "€80-120",
+          "time": "50-70 min",
+          "note": "Long ride; train via Grenoble may be cheaper."
+        }
+      ]
+    },
+    {
+      "code": "GVA",
+      "name": "Geneva Airport",
+      "primary": false,
+      "note": "Swiss hub about 150 km northeast; good low-cost option.",
+      "options": [
+        {
+          "mode": "BlaBlaCar bus",
+          "to": "Perrache bus station",
+          "price": "check locally",
+          "time": "about 2 hr",
+          "note": "Two daily departures, 12:00 and 19:15."
+        },
+        {
+          "mode": "Train",
+          "to": "Part-Dieu station",
+          "price": "about CHF 37 total",
+          "time": "about 2.5 hr",
+          "note": "Local train to Geneva then TER to Lyon."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Lyon centre",
+          "price": "€200+",
+          "time": "2 hr",
+          "note": "Expensive; bus or train is better."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Lyon",
+      "https://en.wikivoyage.org/wiki/Lyon"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro and walking for the centre; tap a bank card and go.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines A–D plus two funiculars run about 05:00–00:00. Fastest way between the centre, the station and Fourvière."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Five tram lines link the centre, campuses and suburbs."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover the city, but some stop after 21:00. Check the last bus on the day."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis and apps like Uber and Bolt work. Taxis wait at stations and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the centre. Parking is tight; use transit instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable. Vélo'v bikes and the Navigône ferry help on nice days."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The Navigône river ferry crosses the Saône on nice days. Check times on the day."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Semi-continental climate: warm to hot summers, cold winters, and rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days around 20–28°C. July and August are hottest and driest."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–13 rain days every month. May and January are wettest; August is driest."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs near 7–8°C and lows near 1–2°C. Bring a warm coat."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Hot summer afternoons",
+        "text": "July and August reach about 28°C. Sightsee in the morning and rest in the shade at midday."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild spring and autumn",
+        "text": "April, May, September and October are comfortable for walking, with highs of 17–23°C."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobbles. Add a hat and sunscreen for summer."
+      }
+    ]
+  }
+}

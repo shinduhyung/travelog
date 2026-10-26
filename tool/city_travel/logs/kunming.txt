@@ -1,0 +1,33 @@
+$ deepseek_prep.py Kunming
+  tokens in 661 out 340
+Kunming: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Kunming
+  tokens in 3642 out 646
+Kunming: 1 problems
+  - KMG taxi ¥80-120 vs tariff estimate 25
+
+$ deepseek_city.py Kunming --stage places
+Kunming: places
+  tokens in 1151 out 3333
+
+$ deepseek_city.py Kunming --stage frame
+Kunming: frame
+  tokens in 2484 out 1818
+
+$ deepseek_city.py Kunming --stage plans
+Kunming: plans
+  plans for day
+  tokens in 2325 out 810
+  plans for 1n
+  tokens in 2326 out 1192
+  plans for 2n
+  tokens in 2331 out 1413
+  plans for 3n
+  tokens in 2326 out 2121
+
+$ merge_city.py Kunming
+WARN  shilin: 66 km from the center (day trip?)
+Kunming: 21 places, 12 plans, 0 errors, 1 warnings
+wrote itineraries/kunming.json and planner/kunming.json
+

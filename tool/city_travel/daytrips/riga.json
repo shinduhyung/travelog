@@ -1,0 +1,121 @@
+{
+ "city": "Riga",
+ "trips": [
+  {
+   "place": "Tukums",
+   "label": "",
+   "position": {
+    "id": 17422247,
+    "name": "TUKUMS 1",
+    "city": "Tukums",
+    "lat": 56.96594,
+    "lng": 23.16961
+   },
+   "town": {
+    "name": "Tukums",
+    "lat": 56.96764,
+    "lng": 23.15554
+   },
+   "road": {
+    "km": 66,
+    "min": 66,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 70,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$5",
+     "time": "1h 14m",
+     "via": "Riga-Pasazieru to Tukums I",
+     "source": "https://www.rome2rio.com/s/Riga/Tukums"
+    },
+    "bus": {
+     "from": "$4-$5",
+     "time": "1h 30m",
+     "via": "Rīgas SAO to Tukuma AO",
+     "source": "https://www.rome2rio.com/s/Riga/Tukums"
+    }
+   },
+   "route_note": "Direct regional trains from Riga reach Tukums in about an hour; the old town and castle hill are walkable from the station.",
+   "see": [
+    "Tukums old town",
+    "Tukums Castle Hill",
+    "Durbe Manor",
+    "Tukums Museum"
+   ],
+   "visit": "Half day",
+   "tour_query": "Tukums day trip from Riga",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct trains reach Tukums in about an hour and the old town and castle hill are walkable from the station.",
+   "stars": 3,
+   "know": [
+    "Old town and castle hill are walkable from the station",
+    "Allow most of a day to cover the sights"
+   ]
+  },
+  {
+   "place": "Ogre",
+   "label": "",
+   "position": {
+    "id": 390517,
+    "name": "Ogre",
+    "city": "Ogre",
+    "lat": 56.8162,
+    "lng": 24.61401
+   },
+   "town": {
+    "name": "Ogre",
+    "lat": 56.8162,
+    "lng": 24.61401
+   },
+   "road": {
+    "km": 38,
+    "min": 46,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 40,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$4",
+     "time": "30m",
+     "via": "Riga-Pasazieru to Ogre",
+     "source": "https://www.rome2rio.com/s/Riga/Ogre"
+    },
+    "bus": {
+     "from": "$1",
+     "time": "50m",
+     "via": "Rīgas SAO to Ogres AO",
+     "source": "https://www.rome2rio.com/s/Riga/Ogre"
+    }
+   },
+   "route_note": "Frequent suburban trains from Riga reach Ogre in about 40 minutes with no changes; the river promenade is a short walk from the station.",
+   "see": [
+    "Ogre river promenade",
+    "Ogre History and Art Museum",
+    "Pilgrims' trail along the Ogre river"
+   ],
+   "visit": "Half day",
+   "tour_query": "Ogre day trip from Riga",
+   "quests": [],
+   "recommended": "train",
+   "why": "Frequent direct trains take about 30 minutes and the river promenade is a short walk from the station.",
+   "stars": 2,
+   "know": [
+    "A quiet small-town escape rather than a headline sight",
+    "Best in summer for the river promenade"
+   ]
+  }
+ ],
+ "problems": [
+  "Jūrmala: no Omio position, dropped",
+  "Sigulda: not a town in cities15000.json (LV), dropped",
+  "Cēsis: not a town in cities15000.json (LV), dropped"
+ ]
+}

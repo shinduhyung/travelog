@@ -1,0 +1,559 @@
+{
+  "city": "Karachi",
+  "checked": "October 2026",
+  "intro_line": "Karachi: Pakistan's restless megacity by the Arabian Sea.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Saddar",
+        "Clifton",
+        "Defence (DHA)",
+        "Gulshan-e-Iqbal"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Saddar",
+        "Clifton",
+        "Defence (DHA)",
+        "Gulshan-e-Iqbal"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Saddar",
+        "Clifton",
+        "Defence (DHA)",
+        "Gulshan-e-Iqbal"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Saddar",
+        "Clifton",
+        "Defence (DHA)",
+        "Gulshan-e-Iqbal"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Saddar",
+        "Clifton",
+        "Defence (DHA)",
+        "Gulshan-e-Iqbal"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 1,
+        "note": "January: coolest month, highs near 24°C and cool nights. Best all-round weather."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 1,
+        "note": "February: mild and dry, highs around 27°C. Great for walking the old city."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 1,
+        "note": "March: warming to 30°C, still dry. Comfortable mornings and evenings."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 0,
+        "note": "April: hot at 32°C and humid; plan outdoor sights for early morning."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 0,
+        "note": "May: hot and sticky, highs near 34°C. Stick to air-conditioned sights and evening food streets."
+      },
+      {
+        "high": 33,
+        "low": 28,
+        "rain_days": 4,
+        "note": "June: hot and humid with a few rain days; sea breeze helps at the beach after sunset."
+      },
+      {
+        "high": 32,
+        "low": 28,
+        "rain_days": 8,
+        "note": "July: monsoon season, most rain days (about 8) and muggy. Carry an umbrella and expect flooded streets."
+      },
+      {
+        "high": 30,
+        "low": 27,
+        "rain_days": 8,
+        "note": "August: still rainy and humid, highs near 30°C. Indoor plans are safer."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 1,
+        "note": "September: rain eases, still warm and humid at 31°C."
+      },
+      {
+        "high": 33,
+        "low": 24,
+        "rain_days": 1,
+        "note": "October: hot but drying out at 33°C; evenings get more pleasant."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 0,
+        "note": "November: cooling to 30°C and dry. A good shoulder month for sightseeing."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 0,
+        "note": "December: mild days near 26°C and cool nights. Excellent for the beach and old city."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.45,
+      0.4,
+      0.4,
+      0.55,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.55,
+      0.5,
+      0.5,
+      0.65,
+      0.85,
+      1,
+      1
+    ],
+    "beach": [
+      0.8,
+      0.85,
+      0.9,
+      0.75,
+      0.55,
+      0.35,
+      0.3,
+      0.3,
+      0.45,
+      0.75,
+      0.9,
+      0.85
+    ],
+    "history": [
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.45,
+      0.4,
+      0.4,
+      0.55,
+      0.8,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.55,
+      0.5,
+      0.5,
+      0.65,
+      0.85,
+      1,
+      1
+    ]
+  },
+  "places": {
+    "empress-market": {
+      "types": [
+        "culture",
+        "history",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning, cooler months (Nov–Feb)",
+      "area": "Saddar",
+      "popularity": 4
+    },
+    "biryani": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch, any day",
+      "area": "Saddar",
+      "popularity": 5
+    },
+    "go-aish": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Clifton",
+      "popularity": 3
+    },
+    "indus-river": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning in cool months (Nov–Feb)",
+      "area": "Gulshan-e-Iqbal",
+      "popularity": 2
+    },
+    "sindbad": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday evening",
+      "area": "Gulshan-e-Iqbal",
+      "popularity": 3
+    },
+    "clifton-beach": {
+      "types": [
+        "beach",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset, cooler months",
+      "area": "Clifton",
+      "popularity": 5
+    },
+    "do-darya": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, any season",
+      "area": "Clifton",
+      "popularity": 4
+    },
+    "mohatta-palace": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late morning or afternoon",
+      "area": "Clifton",
+      "popularity": 4
+    },
+    "frere-hall": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Saddar",
+      "popularity": 3
+    },
+    "saddar-walk": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to evening",
+      "area": "Saddar",
+      "popularity": 3
+    },
+    "tariq-road": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Defence (DHA)",
+      "popularity": 3
+    },
+    "boat-basin": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Clifton",
+      "popularity": 4
+    },
+    "empress-food": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Saddar",
+      "popularity": 3
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning start",
+      "area": "Saddar",
+      "popularity": 3
+    },
+    "port-grand": {
+      "types": [
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Saddar",
+      "popularity": 2
+    },
+    "seaview-park": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Clifton",
+      "popularity": 3
+    },
+    "dha-phase8": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Defence (DHA)",
+      "popularity": 2
+    },
+    "burns-road": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Saddar",
+      "popularity": 4
+    },
+    "gulshan-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Gulshan-e-Iqbal",
+      "popularity": 2
+    },
+    "national-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Saddar",
+      "popularity": 3
+    },
+    "mazar-e-quaid": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Saddar",
+      "popularity": 4
+    },
+    "clifton-shopping": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Clifton",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old city, the seafront and a proper food crawl; add a night for a day trip to the Chaukhandi Tombs."
+  },
+  "airports": [
+    {
+      "code": "KHI",
+      "name": "Jinnah International Airport",
+      "primary": true,
+      "note": "Pakistan's busiest airport, about 17 km east of the centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Saddar and city centre",
+          "price": "PKR 50-100",
+          "time": "45-70 min",
+          "note": "Cheapest but slow and crowded; check locally for stops."
+        },
+        {
+          "mode": "Ride app (Careem/InDrive)",
+          "to": "Clifton or Saddar",
+          "price": "PKR 800-1,500",
+          "time": "30-50 min",
+          "note": "Book from the app; confirm the car plate."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre hotels",
+          "price": "PKR 1,000-2,000",
+          "time": "30-50 min",
+          "note": "Agree the fare first; airport taxis often quote high."
+        },
+        {
+          "mode": "Hotel transfer",
+          "to": "Your hotel",
+          "price": "PKR 1,500-3,000",
+          "time": "30-50 min",
+          "note": "Safest for late arrivals; book ahead."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Karachi",
+      "https://en.wikivoyage.org/wiki/Karachi"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Ride apps (Careem, InDrive) for most trips; agree fares for taxis and use the BRT where it runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. A bus rapid transit (BRT) line runs on some corridors only."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses and minibuses are cheap but crowded and confusing for newcomers. Use the BRT where it runs."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Careem and InDrive work widely; Uber coverage is limited. Metered taxis are rare, so agree the fare before you ride."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving yourself is stressful. Hiring a car with a driver is common and easier."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Walking is hard outside a few areas. Use a ride for anything beyond a few blocks."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot, humid coastal climate: long warm season, a short monsoon in July–August, and mild, dry winters.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Highs of 24–30°C with cooler nights. Ideal for the old city, bazaars and the seafront."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot season April to June",
+        "text": "Highs of 32–34°C with high humidity. Do outdoor sights early; rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Monsoon in July and August",
+        "text": "About 8 rain days each month, often heavy. Streets can flood; keep plans flexible."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid near the sea",
+        "text": "Sticky evenings for much of the year. Light, breathable clothes help."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea breeze",
+        "text": "The coast is cooler and breezier than inland districts; Clifton is pleasant after sunset."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, a hat and sunscreen; a light layer for winter nights and strong AC; an umbrella for July–August; modest dress for religious sites."
+      }
+    ]
+  }
+}

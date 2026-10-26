@@ -1,0 +1,691 @@
+{
+  "city": "Vienna",
+  "checked": "October 2026",
+  "intro_line": "Imperial palaces, coffee houses, and a city that waltzes.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Innere Stadt",
+        "Leopoldstadt",
+        "Mariahilf",
+        "Neubau"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Innere Stadt",
+        "Leopoldstadt",
+        "Mariahilf",
+        "Neubau"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Innere Stadt",
+        "Leopoldstadt",
+        "Mariahilf",
+        "Neubau"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Innere Stadt",
+        "Leopoldstadt",
+        "Mariahilf",
+        "Neubau"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Innere Stadt",
+        "Leopoldstadt",
+        "Mariahilf",
+        "Neubau"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 4°C, lows around -2°C. Pack a warm coat; museums and cafés are the plan."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 9,
+        "note": "Still cold, highs near 8°C. Fewer tourists and lower prices; expect some rain on about 9 days."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 7,
+        "note": "Warming to 11°C. Good for walking the centre; keep a rain layer for about 7 wet days."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 9,
+        "note": "Spring: highs near 16°C. Parks and gardens start to look good; about 9 rain days."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 13,
+        "note": "Lovely at 20°C but the wettest month, around 13 rain days. Carry an umbrella."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 12,
+        "note": "Warm at 26°C with about 12 rain days. Long evenings; outdoor cafés and the Donauinsel."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Hot peak: highs near 27°C, lows 17°C. Some afternoons are sticky; plan shade and water."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 9,
+        "note": "Similar to July, around 27°C and fewer rain days (about 9). Good for parks and day trips."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 9,
+        "note": "Comfortable at 22°C. A strong month for sightseeing; about 9 rain days."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 10,
+        "note": "Cooler at 16°C. Bring a jacket; good museum weather with about 10 rain days."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 8,
+        "note": "Cold and grey: highs near 9°C, lows 3°C. Christmas markets start late in the month."
+      },
+      {
+        "high": 6,
+        "low": 0,
+        "rain_days": 10,
+        "note": "Coldest with January: highs near 6°C, lows around 0°C. Dress in layers; about 10 rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "art": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.35,
+      0.3
+    ]
+  },
+  "places": {
+    "schonbrunn": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning for the palace, late afternoon for the Gloriette view",
+      "area": "Neubau",
+      "popularity": 5
+    },
+    "hofburg": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "First entry in the morning to avoid crowds",
+      "area": "Innere Stadt",
+      "popularity": 5
+    },
+    "stephansdom": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning before tour groups",
+      "area": "Innere Stadt",
+      "popularity": 5
+    },
+    "belvedere": {
+      "types": [
+        "art",
+        "culture",
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning for the museum, afternoon for the gardens",
+      "area": "Innere Stadt",
+      "popularity": 5
+    },
+    "staatsoper": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening; book ahead for weekends",
+      "area": "Innere Stadt",
+      "popularity": 5
+    },
+    "kunsthistorisches": {
+      "types": [
+        "art",
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Innere Stadt",
+      "popularity": 5
+    },
+    "mq": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Neubau",
+      "popularity": 4
+    },
+    "naschmarkt": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Mariahilf",
+      "popularity": 4
+    },
+    "albertina": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning or a rainy afternoon",
+      "area": "Innere Stadt",
+      "popularity": 4
+    },
+    "nationalbibliothek": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Opening time",
+      "area": "Innere Stadt",
+      "popularity": 4
+    },
+    "burgtheater": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening performance or daytime tour",
+      "area": "Innere Stadt",
+      "popularity": 3
+    },
+    "danube_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon, April to October",
+      "area": "Leopoldstadt",
+      "popularity": 3
+    },
+    "happel": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match day or a scheduled tour",
+      "area": "Leopoldstadt",
+      "popularity": 2
+    },
+    "haus_der_musik": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Innere Stadt",
+      "popularity": 3
+    },
+    "heiligenkreuz": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Half-day trip, spring to autumn",
+      "area": "Leopoldstadt",
+      "popularity": 2
+    },
+    "hundertwasser": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daylight, any time",
+      "area": "Leopoldstadt",
+      "popularity": 3
+    },
+    "kaisergruft": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; quick stop",
+      "area": "Innere Stadt",
+      "popularity": 3
+    },
+    "kapuzinerkirche": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Innere Stadt",
+      "popularity": 2
+    },
+    "leopold": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Neubau",
+      "popularity": 4
+    },
+    "liechtenstein": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Booked tour slot",
+      "area": "Innere Stadt",
+      "popularity": 2
+    },
+    "mariahilfer": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Mariahilf",
+      "popularity": 3
+    },
+    "mozarthaus": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; quick stop",
+      "area": "Innere Stadt",
+      "popularity": 3
+    },
+    "kahlenberg": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Clear afternoon or sunset, spring to autumn",
+      "area": "Neubau",
+      "popularity": 3
+    },
+    "prater": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Dusk, spring to autumn",
+      "area": "Leopoldstadt",
+      "popularity": 4
+    },
+    "cafe_central": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Mid-afternoon to avoid the queue",
+      "area": "Innere Stadt",
+      "popularity": 4
+    },
+    "donauinsel": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Warm afternoon, May to September",
+      "area": "Leopoldstadt",
+      "popularity": 3
+    },
+    "spittelberg": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Neubau",
+      "popularity": 2
+    },
+    "third_man_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Daytime, spring to autumn",
+      "area": "Innere Stadt",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the big palaces, two or three museums and a proper café afternoon without rushing."
+  },
+  "airports": [
+    {
+      "code": "VIE",
+      "name": "Vienna International Airport",
+      "primary": true,
+      "note": "Main gateway, 18 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S7",
+          "to": "Wien-Mitte/Landstraße",
+          "price": "€4.60",
+          "time": "24 min",
+          "note": "Cheapest rail option; a zone 100 pass covers the city part."
+        },
+        {
+          "mode": "Long-distance train",
+          "to": "Wien Hauptbahnhof",
+          "price": "€4.20",
+          "time": "15 min",
+          "note": "Runs every 30 min."
+        },
+        {
+          "mode": "City Airport Train (CAT)",
+          "to": "Wien-Mitte/Landstraße",
+          "price": "from €11",
+          "time": "15 min",
+          "note": "Faster but pricier."
+        },
+        {
+          "mode": "Vienna Airport Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "25-35 min",
+          "note": "Several lines to different stops."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€35-45",
+          "time": "25-40 min",
+          "note": "Fixed-ish fares; agree or use meter."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€30-40",
+          "time": "25-40 min",
+          "note": "Pickup at marked zones."
+        }
+      ]
+    },
+    {
+      "code": "BTS",
+      "name": "Bratislava Milan Rastislav Štefánik Airport",
+      "primary": false,
+      "note": "Budget option across the Slovak border, about 54 km from VIE.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Wien Hauptbahnhof",
+          "price": "€10-15",
+          "time": "1.5-2 hr",
+          "note": "Bus to Bratislava, then train to Vienna."
+        },
+        {
+          "mode": "Shuttle bus",
+          "to": "Vienna centre",
+          "price": "€10-20",
+          "time": "1-1.5 hr",
+          "note": "Book ahead; runs to main stops."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Vienna centre",
+          "price": "€90-120",
+          "time": "1-1.5 hr",
+          "note": "Cross-border; agree price first."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "Vienna centre",
+          "price": "check locally",
+          "time": "1-1.5 hr",
+          "note": "Cross-border rides may be limited."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Vienna",
+      "https://en.wikivoyage.org/wiki/Vienna"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "art",
+    "history"
+  ],
+  "transit": {
+    "best": "Buy a 24/48/72-hour pass and use the U-Bahn and trams; the centre is flat and walkable.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "U-Bahn, trams and buses share one ticket. Buy a 24/48/72-hour pass or single fares around €2.60. Validate before riding; inspectors fine on the spot."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and trams use the same ticket as the U-Bahn. Validate before riding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Bolt both work in Vienna."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is scarce. Skip the rental car in town."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is flat and walkable. Bikes and e-scooters are easy to rent."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries. The Danube is crossed by bridges and the U-Bahn."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm summers, and rain spread through the year. Spring and autumn are the easiest months to walk the city.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best months: April to June and September",
+        "text": "Highs around 16–26°C. Comfortable for walking and palaces without summer heat."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is warm, not extreme",
+        "text": "July and August peak near 27°C with mild nights around 17°C. Some afternoons feel humid."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is properly cold",
+        "text": "December to February highs of 4–6°C and lows near or below freezing. Snow is possible but not guaranteed."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–13 rain days every month, most in May. Showers often pass; a small umbrella is enough."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack layers",
+        "text": "A warm coat and gloves for November to March; light layers and a rain jacket for spring and autumn."
+      },
+      {
+        "icon": "🎄",
+        "title": "December is festive but cold",
+        "text": "Christmas markets are outdoors. Wear boots and thermals, and warm up in coffee houses."
+      }
+    ]
+  }
+}

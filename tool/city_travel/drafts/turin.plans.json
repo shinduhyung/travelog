@@ -1,0 +1,772 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: the cinema museum and Mole in the morning, royal Turin in the afternoon.",
+      "days": [
+        {
+          "title": "Mole, cinema and the royal heart",
+          "stops": [
+            {
+              "place": "cinema-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Go straight up to the Mole lift first if the queue is short."
+            },
+            {
+              "place": "mole",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Same building. The lift to the terrace is the highlight; check on the day for lift queues."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch and a chocolate break nearby in the centre."
+            },
+            {
+              "place": "royal-palace",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. Roughly 09:00–19:00, check on the day."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Easy evening walk; stop for aperitivo when the bars open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: market in the morning, chocolate in the afternoon, aperitivo and dinner at night.",
+      "days": [
+        {
+          "title": "Market, chocolate and aperitivo",
+          "stops": [
+            {
+              "place": "porta-palazzo-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday mornings are calmer; Saturday is the big market and very busy."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Walk the old streets and pick a spot for lunch."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Afternoon chocolate break; shop hours vary, check on the day."
+            },
+            {
+              "place": "po-river-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk off lunch along the Po and through Valentino Park."
+            },
+            {
+              "place": "porta-nuova-area",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "San Salvario is liveliest at night; book dinner if it is a weekend."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Italy's first capital in a day: Savoy palace, the Egyptian collection and the Roman grid.",
+      "days": [
+        {
+          "title": "Savoy Turin and the old streets",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Morning is quietest."
+            },
+            {
+              "place": "egyptian-museum",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book the first available slot; it is a short walk from the palace."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Lunch, then walk the Roman street grid."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Short climb for the city view; the park is always open."
+            },
+            {
+              "place": "porta-palazzo-market",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Stalls wind down by evening; go for the square and the surrounding streets rather than shopping."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day of Turin's best museums and a sunset view, for first-time visitors who like art.",
+      "days": [
+        {
+          "title": "Arrive, cinema and the Mole",
+          "stops": [
+            {
+              "place": "cinema-museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Inside the Mole Antonelliana. Closed Tuesday, so check the day."
+            },
+            {
+              "place": "mole",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Lift to the top for the view. Late afternoon is best on a clear day."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "A short chocolate break nearby in the centre."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Sunset viewpoint over the city. The park is always open."
+            }
+          ]
+        },
+        {
+          "title": "Egyptian Museum, then out",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Take the first slot in the morning. Closed Monday."
+            },
+            {
+              "place": "royal-palace",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "A short walk away. Closed Monday."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Easy walk for a late lunch and a look at the old streets."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A tasty first visit: market mornings, chocolate and an evening of aperitivo.",
+      "days": [
+        {
+          "title": "Market, chocolate and aperitivo",
+          "stops": [
+            {
+              "place": "porta-palazzo-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go on a weekday morning. Saturday is the busiest day."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Try the local gianduiotto chocolate."
+            },
+            {
+              "place": "po-river-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk off lunch in Valentino Park. The park is always open."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Aperitivo time. Bars are busiest in the early evening."
+            }
+          ]
+        },
+        {
+          "title": "San Salvario and a slow morning",
+          "stops": [
+            {
+              "place": "porta-nuova-area",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Cafés and food shops near Porta Nuova. Streets are always open."
+            },
+            {
+              "place": "cinema-museum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Optional culture stop. Closed Tuesday, so check the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Italy's first capital in a day: Savoy palaces, Roman streets and a hilltop basilica.",
+      "days": [
+        {
+          "title": "Royal Turin",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Start early. Closed Monday."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Roman grid streets and a lunch stop."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short climb for the city view. The park is always open."
+            },
+            {
+              "place": "po-river-walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Easy walk along the river."
+            }
+          ]
+        },
+        {
+          "title": "Superga and the museums",
+          "stops": [
+            {
+              "place": "superga",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go on a clear morning. Hours are roughly 09:00–12:00 and 15:00–18:00, so check on the day."
+            },
+            {
+              "place": "egyptian-museum",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book a slot if you can."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums and a royal palace without rushing.",
+      "days": [
+        {
+          "title": "Cinema, Mole and the old centre",
+          "stops": [
+            {
+              "place": "cinema-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start early on a weekday. Closed Tuesday."
+            },
+            {
+              "place": "mole",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Same building. Lift to the top for city views; clear days are best."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch and a wander through the Roman grid streets."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Afternoon chocolate break. Shop hours vary."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset viewpoint over the river and hills. Park always open."
+            }
+          ]
+        },
+        {
+          "title": "Egyptian Museum and Savoy palace",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book the first slot. Closed Monday."
+            },
+            {
+              "place": "royal-palace",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Short walk away. Closed Monday, so do this on another day if needed."
+            },
+            {
+              "place": "porta-palazzo-market",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch from the stalls. Weekday mornings are calmer."
+            },
+            {
+              "place": "po-river-walk",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Easy stroll to Valentino Park. Park always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, aperitivo and chocolate.",
+      "days": [
+        {
+          "title": "Market morning and aperitivo evening",
+          "stops": [
+            {
+              "place": "porta-palazzo-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go on a weekday morning. Saturday is busiest."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Turin's signature chocolate. Check shop hours."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch in the old quarter."
+            },
+            {
+              "place": "mole",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk it off with the lift and views. Closed Tuesday."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Aperitivo time. Bars busiest in the early evening."
+            }
+          ]
+        },
+        {
+          "title": "Museum, river and San Salvario",
+          "stops": [
+            {
+              "place": "cinema-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning on a weekday. Closed Tuesday."
+            },
+            {
+              "place": "po-river-walk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Picnic or riverside lunch. Park always open."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short climb for the view."
+            },
+            {
+              "place": "porta-nuova-area",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "San Salvario for dinner and wine. Liveliest at night."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Travellers tracing Roman Turin and Italy's first capital.",
+      "days": [
+        {
+          "title": "Royal Turin in the centre",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Morning is quieter."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch among the Roman street grid."
+            },
+            {
+              "place": "egyptian-museum",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book ahead."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset over the city. Park always open."
+            }
+          ]
+        },
+        {
+          "title": "Hills and Savoy grandeur",
+          "stops": [
+            {
+              "place": "superga",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Clear morning is best. Check opening times on the day."
+            },
+            {
+              "place": "sacra-san-michele",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Seasonal hours. Check on the day; allow travel time."
+            },
+            {
+              "place": "porta-palazzo-market",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Late snack and a wander. Weekday mornings are calmer."
+            },
+            {
+              "place": "porta-nuova-area",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in San Salvario."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-time visitors who want the big museums and palaces at a calm pace.",
+      "days": [
+        {
+          "title": "Arrive and the Mole",
+          "stops": [
+            {
+              "place": "mole",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Lift to the dome for city views. Closed Tuesday."
+            },
+            {
+              "place": "cinema-museum",
+              "at": "16:45",
+              "minutes": 120,
+              "note": "Inside the Mole. Same building, same ticket desk area."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Evening walk and dinner in the old streets."
+            }
+          ]
+        },
+        {
+          "title": "Egyptian Museum and Royal Palace",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Book the first slot. Closed Monday."
+            },
+            {
+              "place": "royal-palace",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Short walk away. Closed Monday."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Afternoon chocolate break."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset viewpoint over the river."
+            }
+          ]
+        },
+        {
+          "title": "Venaria, then fly",
+          "stops": [
+            {
+              "place": "venaria",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Allow half a day with the gardens. Closed Monday. Check bus or train times."
+            },
+            {
+              "place": "porta-palazzo-market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Weekday mornings are best; Saturday is busiest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, aperitivo and chocolate between a few big sights.",
+      "days": [
+        {
+          "title": "Market morning and Mole",
+          "stops": [
+            {
+              "place": "porta-palazzo-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early on a weekday. Saturday is busiest."
+            },
+            {
+              "place": "gianduiotto-tasting",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Try the local chocolate and gianduja."
+            },
+            {
+              "place": "mole",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Tuesday."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Aperitivo time. Bars busiest early evening."
+            }
+          ]
+        },
+        {
+          "title": "Museums and river",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "First slot. Closed Monday."
+            },
+            {
+              "place": "po-river-walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Park always open. Good in spring and autumn."
+            },
+            {
+              "place": "porta-nuova-area",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in San Salvario. Liveliest at night."
+            }
+          ]
+        },
+        {
+          "title": "Palace and last bites",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "cinema-museum",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Closed Tuesday."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset view before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers following Italy's first capital, from Savoy palaces to Roman streets.",
+      "days": [
+        {
+          "title": "Royal Turin",
+          "stops": [
+            {
+              "place": "royal-palace",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "quadrilatero",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Roman grid streets, lunch and a walk."
+            },
+            {
+              "place": "mole",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Tuesday."
+            },
+            {
+              "place": "cinema-museum",
+              "at": "16:45",
+              "minutes": 120,
+              "note": "Inside the Mole."
+            }
+          ]
+        },
+        {
+          "title": "Egypt and the hills",
+          "stops": [
+            {
+              "place": "egyptian-museum",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "First slot. Closed Monday."
+            },
+            {
+              "place": "superga",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Check tram and bus times. Hours split midday, check on the day."
+            },
+            {
+              "place": "monte-dei-cappuccini",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset over the city."
+            }
+          ]
+        },
+        {
+          "title": "Venaria, then fly",
+          "stops": [
+            {
+              "place": "venaria",
+              "at": "09:30",
+              "minutes": 240,
+              "note": "Savoy hunting palace. Closed Monday. Check transport times."
+            },
+            {
+              "place": "porta-palazzo-market",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Quick look on the way back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro"
+    }
+  ]
+}

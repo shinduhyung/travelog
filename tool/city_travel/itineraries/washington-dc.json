@@ -1,0 +1,1906 @@
+{
+  "city": "Washington D.C.",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Washington rewards visitors with free world-class museums, grand monuments and lively neighbourhoods. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 38.6808,
+      "west": -77.1002,
+      "north": 38.9568,
+      "east": -76.9814,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4,
+      "per_km": 2.5,
+      "min_fare": 15
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metrorail is fast and clean; fares about $2-6 depending on distance and time.",
+      "Metrobus covers the city; fares are low and exact change or a card is needed.",
+      "Uber and Lyft work well; taxis are metered and easy to find downtown.",
+      "Driving is stressful: heavy rush-hour traffic, confusing parking rules and toll lanes.",
+      "Walking is the best way to see the Mall and monuments; bikeshare docks are everywhere.",
+      "No ferry service in the city centre; the Potomac water taxi links some waterfront spots."
+    ],
+    "sources": []
+  },
+  "places": {
+    "lincoln": {
+      "name": "Lincoln Memorial",
+      "landmark": "Lincoln Memorial",
+      "kind": "sight",
+      "lat": 38.8892,
+      "lon": -77.0501,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours · rangers on site daytime",
+      "tip": "Go early morning or after dark. The steps give the best view down the Reflecting Pool.",
+      "source": "https://www.nps.gov/linc/index.htm"
+    },
+    "mall": {
+      "name": "National Mall",
+      "landmark": "National Mall",
+      "kind": "park",
+      "lat": 38.8895,
+      "lon": -77.0353,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "It is about 3 km from the Capitol to the Lincoln Memorial. Wear comfortable shoes and bring water in summer.",
+      "source": "https://www.nps.gov/nama/index.htm"
+    },
+    "whitehouse": {
+      "name": "The White House",
+      "landmark": "The White House",
+      "kind": "sight",
+      "lat": 38.8976,
+      "lon": -77.0365,
+      "price": 0,
+      "price_text": "Free · tours need advance request via your embassy or a Member of Congress",
+      "hours": "Public tours on limited weekday mornings · check on the day",
+      "tip": "Public tours must be requested weeks in advance. Without a booking, view it from Lafayette Square.",
+      "source": "https://www.whitehouse.gov/visit/"
+    },
+    "capitol": {
+      "name": "United States Capitol",
+      "landmark": "United States Capitol",
+      "kind": "sight",
+      "lat": 38.8899,
+      "lon": -77.009,
+      "price": 0,
+      "price_text": "Free · visitor tours book online",
+      "hours": "Mon–Sat, roughly 08:30–16:30 · closed Sunday · check on the day",
+      "tip": "Book the free tour online ahead of time. Bring photo ID and expect airport-style security.",
+      "source": "https://www.visitthecapitol.gov/"
+    },
+    "washingtonmonument": {
+      "name": "Washington Monument",
+      "landmark": "Washington Monument",
+      "kind": "sight",
+      "lat": 38.8894,
+      "lon": -77.0352,
+      "price": 1,
+      "price_text": "Free · timed tickets required (small online booking fee)",
+      "hours": "Daily, roughly 09:00–17:00 · check on the day",
+      "tip": "Reserve a timed ticket online. Same-day tickets are limited and go fast in summer.",
+      "source": "https://www.nps.gov/wamo/index.htm"
+    },
+    "airandspace": {
+      "name": "Smithsonian National Air and Space Museum",
+      "landmark": "Smithsonian National Air and Space Museum",
+      "kind": "museum",
+      "lat": 38.8881,
+      "lon": -77.0198,
+      "price": 0,
+      "price_text": "Free · free timed-entry passes online",
+      "hours": "Daily 10:00–17:30 · check on the day",
+      "tip": "Grab a free timed-entry pass online before you go. It is the most popular Smithsonian for families.",
+      "source": "https://airandspace.si.edu/visit"
+    },
+    "naturalhistory": {
+      "name": "Smithsonian National Museum of Natural History",
+      "landmark": "Smithsonian National Museum of Natural History",
+      "kind": "museum",
+      "lat": 38.8913,
+      "lon": -77.0261,
+      "price": 0,
+      "price_text": "Free · timed-entry passes may be needed at busy times",
+      "hours": "Daily 10:00–17:30 · check on the day",
+      "tip": "See the Hope Diamond and the dinosaur hall first, then slow down. Great rainy-day option.",
+      "source": "https://naturalhistory.si.edu/visit"
+    },
+    "nga": {
+      "name": "National Gallery of Art",
+      "landmark": "National Gallery of Art",
+      "kind": "museum",
+      "lat": 38.8913,
+      "lon": -77.0199,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily 10:00–17:00 · check on the day",
+      "tip": "The West Building holds the classics and the East Building the modern works. The garden courtyard is a quiet break.",
+      "source": "https://www.nga.gov/visit.html"
+    },
+    "arlington": {
+      "name": "Arlington National Cemetery",
+      "landmark": "Arlington National Cemetery",
+      "kind": "sight",
+      "lat": 38.8783,
+      "lon": -77.0687,
+      "price": 0,
+      "price_text": "Free entry · optional tram tour around USD 15–20",
+      "hours": "Daily, roughly 08:00–17:00 (longer in summer) · check on the day",
+      "tip": "Watch the Changing of the Guard at the Tomb of the Unknown Soldier. It runs about every hour in summer.",
+      "source": "https://www.arlingtoncemetery.mil/"
+    },
+    "breezingup": {
+      "name": "Breezing Up (A Fair Wind) by Winslow Homer",
+      "landmark": "Breezing Up",
+      "kind": "museum",
+      "lat": 38.8913,
+      "lon": -77.0199,
+      "price": 0,
+      "price_text": "Free · inside the National Gallery of Art",
+      "hours": "Daily 10:00–17:00 · check on the day",
+      "tip": "Ask a gallery guide for the exact room. It is a small painting, so look for it in the American galleries.",
+      "source": "https://www.nga.gov/"
+    },
+    "georgetown": {
+      "name": "Georgetown University",
+      "landmark": "Georgetown University",
+      "kind": "sight",
+      "lat": 38.9076,
+      "lon": -77.0723,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily · buildings vary",
+      "tip": "See Healy Hall, then walk down to M Street for shops and the waterfront.",
+      "source": "https://www.georgetown.edu/"
+    },
+    "jefferson": {
+      "name": "Jefferson Memorial",
+      "landmark": "Jefferson Memorial",
+      "kind": "sight",
+      "lat": 38.8813,
+      "lon": -77.0364,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours · rangers daytime",
+      "tip": "Best at sunset over the Tidal Basin, and it is a short walk from the Lincoln Memorial.",
+      "source": "https://www.nps.gov/thje/index.htm"
+    },
+    "kennedy": {
+      "name": "Kennedy Center",
+      "landmark": "Kennedy Center",
+      "kind": "show",
+      "lat": 38.8961,
+      "lon": -77.056,
+      "price": null,
+      "price_text": "Free rooftop and free daily show · performances vary by ticket price",
+      "hours": "Building roughly 10:00–late · check the day's schedule",
+      "tip": "The rooftop terrace has a free river view. Free shows are often at 18:00 on the Millennium Stage.",
+      "source": "https://www.kennedy-center.org/"
+    },
+    "loc": {
+      "name": "Library of Congress",
+      "landmark": "Library of Congress",
+      "kind": "sight",
+      "lat": 38.8886,
+      "lon": -77.0047,
+      "price": 0,
+      "price_text": "Free · timed-entry passes online",
+      "hours": "Tue–Sat, roughly 10:00–17:00 · closed Sunday–Monday · check on the day",
+      "tip": "Book a free timed pass. The Main Reading Room overlook is the highlight.",
+      "source": "https://www.loc.gov/visit/"
+    },
+    "luncheon": {
+      "name": "Luncheon of the Boating Party by Pierre-Auguste Renoir",
+      "landmark": "Luncheon of the Boating Party",
+      "kind": "museum",
+      "lat": 38.9116,
+      "lon": -77.0468,
+      "price": 0,
+      "price_text": "Free · inside the National Gallery of Art (West Building)",
+      "hours": "Daily 10:00–17:00 · check on the day",
+      "tip": "It hangs in the French Impressionist galleries. Ask staff for the room to save time.",
+      "source": "https://www.nga.gov/"
+    },
+    "mountvernon": {
+      "name": "Mount Vernon",
+      "landmark": "Mount Vernon",
+      "kind": "sight",
+      "lat": 38.708,
+      "lon": -77.0861,
+      "price": 28,
+      "price_text": "≈ USD 25–30 adult · child and senior rates lower · check online",
+      "hours": "Daily, roughly 09:00–17:00 (shorter in winter) · check on the day",
+      "tip": "It is about 25 km south of the city. Allow half a day and go early to beat tour buses.",
+      "source": "https://www.mountvernon.org/plan-your-visit/"
+    },
+    "potomac": {
+      "name": "Potomac River",
+      "landmark": "Potomac River",
+      "kind": "sight",
+      "lat": 38.8,
+      "lon": -77.0,
+      "price": 0,
+      "price_text": "Free to walk the banks",
+      "hours": "Always open",
+      "tip": "Walk the Tidal Basin and Georgetown waterfront paths. Cherry blossoms peak in late March to early April.",
+      "source": "https://www.nps.gov/nama/index.htm"
+    },
+    "cruise": {
+      "name": "Potomac River Monuments Cruise",
+      "landmark": "Potomac River Monuments Cruise",
+      "kind": "tour",
+      "lat": 38.9029,
+      "lon": -77.0601,
+      "price": 30,
+      "price_text": "≈ USD 25–45 depending on operator and length",
+      "hours": "Departures through the day · check the day's schedule",
+      "tip": "Book a late-afternoon or evening sailing for the best light on the monuments. Arrive 15 minutes early.",
+      "source": ""
+    },
+    "georgedragon": {
+      "name": "Saint George and the Dragon by Raphael",
+      "landmark": "Saint George and the Dragon",
+      "kind": "museum",
+      "lat": 38.8913,
+      "lon": -77.0199,
+      "price": 0,
+      "price_text": "Free · inside the National Gallery of Art",
+      "hours": "Daily 10:00–17:00 · check on the day",
+      "tip": "A small Renaissance panel. Ask staff for its room in the West Building.",
+      "source": "https://www.nga.gov/"
+    },
+    "zoo": {
+      "name": "Smithsonian National Zoological Park",
+      "landmark": "Smithsonian National Zoological Park",
+      "kind": "park",
+      "lat": 38.9296,
+      "lon": -77.0498,
+      "price": 0,
+      "price_text": "Free · timed-entry passes online",
+      "hours": "Daily, roughly 08:00–17:00 (longer in summer) · check on the day",
+      "tip": "Reserve a free entry pass. Go early to see the animals active and to avoid midday heat.",
+      "source": "https://nationalzoo.si.edu/visit"
+    },
+    "supreme": {
+      "name": "Supreme Court of the United States",
+      "landmark": "Supreme Court of the United States",
+      "kind": "sight",
+      "lat": 38.8906,
+      "lon": -77.0044,
+      "price": 0,
+      "price_text": "Free · courtroom lectures when the Court is not sitting",
+      "hours": "Mon–Fri, roughly 09:00–16:30 · closed weekends · check on the day",
+      "tip": "Weekday visits only. You can usually sit in on a short courtroom talk.",
+      "source": "https://www.supremecourt.gov/visiting/visiting.aspx"
+    },
+    "avenue": {
+      "name": "The Avenue in the Rain by Childe Hassam",
+      "landmark": "The Avenue in the Rain",
+      "kind": "museum",
+      "lat": 38.8977,
+      "lon": -77.0365,
+      "price": 0,
+      "price_text": "Free · in the White House art collection; often shown at the National Gallery of Art",
+      "hours": "Check where it is on display before you go",
+      "tip": "It is part of the White House collection, so it is not always on public view. Check the National Gallery first.",
+      "source": "https://www.nga.gov/"
+    },
+    "easternmarket": {
+      "name": "Eastern Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 38.8866,
+      "lon": -76.9963,
+      "price": 0,
+      "price_text": "Free to browse · food priced per item",
+      "hours": "Tue–Sun, roughly 07:00–19:00 · weekend flea market outside · check on the day",
+      "tip": "Come on a weekend morning for the outdoor market and a fresh crab cake or sandwich.",
+      "source": "https://easternmarket-dc.org/"
+    },
+    "georgetownwalk": {
+      "name": "Georgetown M Street and waterfront walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.9039,
+      "lon": -77.0634,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · shops roughly 10:00–19:00",
+      "tip": "Walk M Street, then drop to the C&O Canal towpath and the waterfront for a quieter route.",
+      "source": ""
+    },
+    "dupontwalk": {
+      "name": "Dupont Circle and Embassy Row walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.9096,
+      "lon": -77.0434,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk north up Massachusetts Avenue to see the embassies. Cafes around the circle are good for a break.",
+      "source": ""
+    },
+    "tidalbasin": {
+      "name": "Tidal Basin loop walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.8823,
+      "lon": -77.0391,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A flat loop past the Jefferson Memorial and the Martin Luther King Jr. Memorial. Best at sunrise.",
+      "source": "https://www.nps.gov/nama/index.htm"
+    },
+    "oldpost": {
+      "name": "Old Post Office Tower viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 38.8945,
+      "lon": -77.0276,
+      "price": 0,
+      "price_text": "Free · check current access rules",
+      "hours": "Check on the day; access can change with building use",
+      "tip": "A free high viewpoint over the Mall when open. Confirm access before you go.",
+      "source": ""
+    },
+    "capitolhillwalk": {
+      "name": "Capitol Hill and Barracks Row walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 38.8835,
+      "lon": -76.9955,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · restaurants open into the evening",
+      "tip": "Walk from the Capitol past the Library of Congress to Barracks Row for dinner.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One full day for first-time visitors: the Mall monuments at sunrise, then the Capitol and Library of Congress.",
+      "days": [
+        {
+          "title": "Monuments at sunrise, then Capitol Hill",
+          "stops": [
+            {
+              "place": "lincoln",
+              "at": "07:00",
+              "minutes": 45,
+              "note": "Rangers arrive later in the day. Quiet and cool at this hour."
+            },
+            {
+              "place": "mall",
+              "at": "07:50",
+              "minutes": 60,
+              "note": "Walk east along the Reflecting Pool toward the Washington Monument."
+            },
+            {
+              "place": "washingtonmonument",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Timed tickets are common. Book ahead or check on the day."
+            },
+            {
+              "place": "capitol",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Mon–Sat only, closed Sunday. About 20 minutes on foot or a short taxi."
+            },
+            {
+              "place": "loc",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch nearby first. Closed Sunday and Monday. Free timed entry."
+            },
+            {
+              "place": "supreme",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Weekdays only. A short walk from the Library."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A free-museum day on the Mall, ending with a Georgetown walk and sunset by the river.",
+      "days": [
+        {
+          "title": "Mall museums, then Georgetown",
+          "stops": [
+            {
+              "place": "nga",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Quietest at opening. Free entry."
+            },
+            {
+              "place": "breezingup",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Inside the National Gallery. Ask staff which room it is in."
+            },
+            {
+              "place": "luncheon",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Also in the National Gallery. Check the room on the day."
+            },
+            {
+              "place": "airandspace",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Lunch first. Free timed passes are often needed. Check on the day."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi. Shops close around 19:00."
+            },
+            {
+              "place": "potomac",
+              "at": "18:45",
+              "minutes": 45,
+              "note": "Sunset by the waterfront. Dinner in Georgetown after."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "Big hits for kids: Air and Space in the morning, Natural History after lunch, monuments at sunset.",
+      "days": [
+        {
+          "title": "Air and Space, Natural History, sunset monuments",
+          "stops": [
+            {
+              "place": "airandspace",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free timed passes are often needed. Book ahead or check on the day."
+            },
+            {
+              "place": "naturalhistory",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Lunch first. A short walk along the Mall. Free entry."
+            },
+            {
+              "place": "jefferson",
+              "at": "16:30",
+              "minutes": 40,
+              "note": "About 20 minutes on foot around the Tidal Basin."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Easy flat loop. Bring water in summer."
+            },
+            {
+              "place": "lincoln",
+              "at": "18:15",
+              "minutes": 30,
+              "note": "Steps and columns are a hit with kids. Open 24 hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day of the big monuments and two headline museums, all on the Mall.",
+      "days": [
+        {
+          "title": "Monuments at dawn, museums by day",
+          "stops": [
+            {
+              "place": "lincoln",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Quiet at sunrise. Rangers arrive later in the morning."
+            },
+            {
+              "place": "mall",
+              "at": "08:20",
+              "minutes": 60,
+              "note": "Walk east toward the Capitol past the Reflecting Pool."
+            },
+            {
+              "place": "capitol",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Weekday mornings are best. Closed Sunday. Book ahead if you can."
+            },
+            {
+              "place": "loc",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "Across the street from the Capitol. Closed Sunday and Monday."
+            },
+            {
+              "place": "easternmarket",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop. Weekend mornings have the outdoor flea market."
+            },
+            {
+              "place": "airandspace",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Free. Timed entry may be needed; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Memorials and the White House view",
+          "stops": [
+            {
+              "place": "whitehouse",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "View from Lafayette Square. Public tours are limited weekday mornings; check on the day."
+            },
+            {
+              "place": "washingtonmonument",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Roughly 09:00–17:00. Tickets can go fast; check on the day."
+            },
+            {
+              "place": "jefferson",
+              "at": "11:30",
+              "minutes": 40,
+              "note": "Short walk to the Tidal Basin."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Loop walk. Lovely in cherry-blossom season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Free art and museums on the Mall, then Georgetown and the river at sunset.",
+      "days": [
+        {
+          "title": "Gallery and museums",
+          "stops": [
+            {
+              "place": "nga",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Quietest at opening. Free."
+            },
+            {
+              "place": "breezingup",
+              "at": "12:05",
+              "minutes": 20,
+              "note": "Inside the National Gallery. Ask staff which wing."
+            },
+            {
+              "place": "luncheon",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Also in the National Gallery. Check the room on the day."
+            },
+            {
+              "place": "naturalhistory",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Free. Weekday mornings are calmer; afternoons are busier."
+            },
+            {
+              "place": "georgedragon",
+              "at": "16:15",
+              "minutes": 15,
+              "note": "Short stop if time allows; check where it is on display."
+            }
+          ]
+        },
+        {
+          "title": "Georgetown and the river",
+          "stops": [
+            {
+              "place": "georgetownwalk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "M Street shops and the waterfront. Shops open around 10:00."
+            },
+            {
+              "place": "georgetown",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Campus grounds open daily. Buildings vary."
+            },
+            {
+              "place": "potomac",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk the waterfront. Sunset is best."
+            },
+            {
+              "place": "kennedy",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon for the river view. Check the day's show schedule."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Dinosaurs, planes and the Zoo, with easy outdoor walks in between.",
+      "days": [
+        {
+          "title": "Museums on the Mall",
+          "stops": [
+            {
+              "place": "naturalhistory",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Go early to beat the crowds."
+            },
+            {
+              "place": "mall",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Picnic or snack on the grass between museums."
+            },
+            {
+              "place": "airandspace",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Free. Timed entry may be needed; check on the day."
+            },
+            {
+              "place": "lincoln",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Open 24 hours. Evening light is lovely."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and Dupont",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Free. Roughly 08:00–17:00, longer in summer. Morning is best for animals."
+            },
+            {
+              "place": "dupontwalk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then a walk past Embassy Row."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Flat loop, good for kids. Bring water in summer."
+            },
+            {
+              "place": "jefferson",
+              "at": "15:10",
+              "minutes": 40,
+              "note": "Right on the basin."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the big monuments and the founding-story sights, mostly free.",
+      "days": [
+        {
+          "title": "Arrive, National Mall and Lincoln Memorial",
+          "stops": [
+            {
+              "place": "mall",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Start at the east end near the Capitol and walk west. Always open."
+            },
+            {
+              "place": "lincoln",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Rangers on site in daytime. Open 24 hours."
+            },
+            {
+              "place": "jefferson",
+              "at": "17:15",
+              "minutes": 40,
+              "note": "Short walk around the Tidal Basin. Good at sunset."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Loop walk. Cherry blossoms in spring."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill: Capitol, Library and Supreme Court",
+          "stops": [
+            {
+              "place": "capitol",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Mon–Sat only, closed Sunday. Check tour times on the day."
+            },
+            {
+              "place": "loc",
+              "at": "10:45",
+              "minutes": 75,
+              "note": "Tue–Sat, closed Sunday–Monday. Short walk from the Capitol."
+            },
+            {
+              "place": "supreme",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Weekdays only. Check if court is in session."
+            },
+            {
+              "place": "easternmarket",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch stop. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Barracks Row into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Arlington and departure",
+          "stops": [
+            {
+              "place": "arlington",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning is cooler. Bring water in summer. Check changing of the guard times."
+            },
+            {
+              "place": "whitehouse",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "View from Lafayette Square. Public tours need advance booking; check on the day."
+            },
+            {
+              "place": "washingtonmonument",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Roughly 09:00–17:00. Tickets can go fast; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museum lovers who want free art, a market and an evening at the Kennedy Center.",
+      "days": [
+        {
+          "title": "National Gallery and the Mall",
+          "stops": [
+            {
+              "place": "nga",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Quietest at opening. Free."
+            },
+            {
+              "place": "breezingup",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Inside the National Gallery. Check the room on the day."
+            },
+            {
+              "place": "luncheon",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Also in the National Gallery. Short visit."
+            },
+            {
+              "place": "mall",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Walk west toward the monuments. Always open."
+            },
+            {
+              "place": "jefferson",
+              "at": "16:00",
+              "minutes": 40,
+              "note": "Sunset is best. Open 24 hours."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill and the Library",
+          "stops": [
+            {
+              "place": "loc",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Tue–Sat, closed Sunday–Monday. Free."
+            },
+            {
+              "place": "capitol",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Mon–Sat, closed Sunday. Check tour times."
+            },
+            {
+              "place": "easternmarket",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch. Weekend morning is liveliest."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Late afternoon into evening."
+            },
+            {
+              "place": "kennedy",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "View at late afternoon, show in the evening. Check the day's schedule."
+            }
+          ]
+        },
+        {
+          "title": "Georgetown and departure",
+          "stops": [
+            {
+              "place": "georgetownwalk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "M Street and the waterfront. Shops open around 10:00."
+            },
+            {
+              "place": "georgetown",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Campus grounds open daily."
+            },
+            {
+              "place": "potomac",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Walk by the river. Good at sunset if you have time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids: Air and Space, the Zoo and open-air monuments, mostly free.",
+      "days": [
+        {
+          "title": "Air and Space and the Mall",
+          "stops": [
+            {
+              "place": "airandspace",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Daily 10:00–17:30. Free timed passes may be needed; check on the day."
+            },
+            {
+              "place": "mall",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch nearby, then walk the lawns."
+            },
+            {
+              "place": "lincoln",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Open 24 hours. Steps are fun for kids."
+            },
+            {
+              "place": "washingtonmonument",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Roughly 09:00–17:00. Check tickets on the day."
+            }
+          ]
+        },
+        {
+          "title": "Natural History and the Tidal Basin",
+          "stops": [
+            {
+              "place": "naturalhistory",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Daily 10:00–17:30. Free. Dinosaurs are a hit."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Loop walk after lunch."
+            },
+            {
+              "place": "jefferson",
+              "at": "14:15",
+              "minutes": 40,
+              "note": "Open 24 hours."
+            },
+            {
+              "place": "cruise",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Monuments cruise. Check the day's departure times."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and departure",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Roughly 08:00–17:00, longer in summer. Free. Morning is best for animals."
+            },
+            {
+              "place": "dupontwalk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch and a short walk. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the big monuments and the founding story, mostly on foot and mostly free.",
+      "days": [
+        {
+          "title": "Arrive and walk the Mall at sunset",
+          "stops": [
+            {
+              "place": "mall",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start at the Capitol end and walk west. Everything is open air."
+            },
+            {
+              "place": "lincoln",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Rangers are on site in the daytime. Evening light is best."
+            },
+            {
+              "place": "jefferson",
+              "at": "18:15",
+              "minutes": 40,
+              "note": "Short walk around the Tidal Basin. Open 24 hours."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Loop the basin at sunset, then find dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill: government and books",
+          "stops": [
+            {
+              "place": "supreme",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Weekdays only. Closed weekends."
+            },
+            {
+              "place": "loc",
+              "at": "10:15",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Check on the day."
+            },
+            {
+              "place": "capitol",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Book a tour ahead if you can."
+            },
+            {
+              "place": "easternmarket",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch here. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "15:15",
+              "minutes": 75,
+              "note": "Barracks Row for an early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Museums and memorials",
+          "stops": [
+            {
+              "place": "naturalhistory",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Go at opening to beat the crowds."
+            },
+            {
+              "place": "nga",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Free. See Breezing Up and the Renoir."
+            },
+            {
+              "place": "breezingup",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Inside the National Gallery. Ask staff for the room."
+            },
+            {
+              "place": "luncheon",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Also in the National Gallery."
+            },
+            {
+              "place": "whitehouse",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "View from Lafayette Square. Tours need a request well ahead."
+            }
+          ]
+        },
+        {
+          "title": "Arlington and the river, then fly",
+          "stops": [
+            {
+              "place": "arlington",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning is cooler. Bring water in summer."
+            },
+            {
+              "place": "potomac",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk the Georgetown waterfront for lunch."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "M Street shops and the canal. Shops open around 10:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museum lovers: free Smithsonian galleries, a show at the Kennedy Center and neighbourhood walks.",
+      "days": [
+        {
+          "title": "Arrive, Mall and the National Gallery",
+          "stops": [
+            {
+              "place": "mall",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Easy orientation walk between the museums."
+            },
+            {
+              "place": "nga",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Free. Quietest at opening, so go early if you can swap days."
+            },
+            {
+              "place": "georgedragon",
+              "at": "16:15",
+              "minutes": 15,
+              "note": "In the National Gallery. Ask staff for the location."
+            },
+            {
+              "place": "avenue",
+              "at": "16:45",
+              "minutes": 15,
+              "note": "Check where it is on display before you go."
+            },
+            {
+              "place": "lincoln",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening light. Rangers in the daytime only."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill culture and Eastern Market",
+          "stops": [
+            {
+              "place": "loc",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. The main hall is stunning."
+            },
+            {
+              "place": "capitol",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Closed Sunday. Check tour times on the day."
+            },
+            {
+              "place": "easternmarket",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Late afternoon into evening on Barracks Row."
+            }
+          ]
+        },
+        {
+          "title": "Air and Space, then the Kennedy Center",
+          "stops": [
+            {
+              "place": "airandspace",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Timed passes may be needed; check on the day."
+            },
+            {
+              "place": "dupontwalk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch near Dupont, then walk Embassy Row."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "M Street and the waterfront."
+            },
+            {
+              "place": "kennedy",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Rooftop view late afternoon, then a show if booked."
+            }
+          ]
+        },
+        {
+          "title": "Georgetown and the river, then fly",
+          "stops": [
+            {
+              "place": "georgetown",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Campus grounds are open daily."
+            },
+            {
+              "place": "potomac",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Waterfront walk. Spring brings blossoms."
+            },
+            {
+              "place": "cruise",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Monuments from the water. Check the day's departures."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids: rockets, dinosaurs and animals, with short walks and plenty of free stops.",
+      "days": [
+        {
+          "title": "Arrive, Air and Space and the Mall",
+          "stops": [
+            {
+              "place": "airandspace",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Free. Timed passes may be needed; check on the day."
+            },
+            {
+              "place": "mall",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Let the kids run. Always open."
+            },
+            {
+              "place": "lincoln",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Steps are a hit. Rangers in the daytime."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Sunset loop, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Dinosaurs and the Monument",
+          "stops": [
+            {
+              "place": "naturalhistory",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Dinosaurs and the gem hall. Go at opening."
+            },
+            {
+              "place": "washingtonmonument",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Check on the day for tickets and hours."
+            },
+            {
+              "place": "oldpost",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Free tower view. Access can change; check on the day."
+            },
+            {
+              "place": "jefferson",
+              "at": "15:45",
+              "minutes": 40,
+              "note": "Open 24 hours. Short walk from the Mall."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning, Kennedy Center afternoon",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Free. Animals are liveliest in the morning."
+            },
+            {
+              "place": "dupontwalk",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch near Dupont Circle."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Waterfront walk with ice cream stops."
+            },
+            {
+              "place": "kennedy",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Free building to wander. Check the day's schedule."
+            }
+          ]
+        },
+        {
+          "title": "Cruise and Capitol Hill, then fly",
+          "stops": [
+            {
+              "place": "cruise",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Monuments from the water. Check departures on the day."
+            },
+            {
+              "place": "easternmarket",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "12:45",
+              "minutes": 75,
+              "note": "Easy stroll before you head out."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-time visitors who want the big story: monuments, the Capitol, the Smithsonian and Mount Vernon.",
+      "days": [
+        {
+          "title": "Arrive and walk the Mall at sunset",
+          "stops": [
+            {
+              "place": "mall",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start at the Capitol end and walk west. Everything is free and open air."
+            },
+            {
+              "place": "lincoln",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Rangers are on site in the daytime. Evening light is best."
+            },
+            {
+              "place": "jefferson",
+              "at": "18:15",
+              "minutes": 40,
+              "note": "Short walk around the Tidal Basin. Open 24 hours."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Loop walk at sunset, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill: Capitol, Library, Supreme Court",
+          "stops": [
+            {
+              "place": "capitol",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Book a tour ahead. Check on the day."
+            },
+            {
+              "place": "loc",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. The Main Reading Room view is the highlight."
+            },
+            {
+              "place": "supreme",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Weekdays only. Check on the day for court sittings."
+            },
+            {
+              "place": "easternmarket",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Lunch stop. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Barracks Row for dinner into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the White House",
+          "stops": [
+            {
+              "place": "whitehouse",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Public tours are limited weekday mornings. Request early via your embassy or member of Congress. Check on the day."
+            },
+            {
+              "place": "naturalhistory",
+              "at": "10:30",
+              "minutes": 150,
+              "note": "Free. Weekday morning is quieter."
+            },
+            {
+              "place": "nga",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Free. See Breezing Up and Luncheon of the Boating Party."
+            },
+            {
+              "place": "breezingup",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Inside the National Gallery. Ask staff for the room."
+            },
+            {
+              "place": "luncheon",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Also in the National Gallery. Check where it hangs on the day."
+            }
+          ]
+        },
+        {
+          "title": "Arlington and Mount Vernon",
+          "stops": [
+            {
+              "place": "arlington",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning is cooler. Bring water in summer. Take the Metro to Arlington Cemetery."
+            },
+            {
+              "place": "mountvernon",
+              "at": "11:30",
+              "minutes": 240,
+              "note": "About 30–45 minutes by car or taxi south. Shorter hours in winter. Check on the day."
+            },
+            {
+              "place": "potomac",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Waterfront stroll before heading back."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in Georgetown."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museum lovers and walkers: free galleries, the Kennedy Center and neighbourhood markets.",
+      "days": [
+        {
+          "title": "National Gallery and the Mall",
+          "stops": [
+            {
+              "place": "nga",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Free. Quietest at opening."
+            },
+            {
+              "place": "georgedragon",
+              "at": "11:30",
+              "minutes": 15,
+              "note": "Small Raphael panel in the National Gallery. Ask staff."
+            },
+            {
+              "place": "avenue",
+              "at": "12:00",
+              "minutes": 15,
+              "note": "Check where it is on display before you go."
+            },
+            {
+              "place": "mall",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk between the museums. Free."
+            },
+            {
+              "place": "jefferson",
+              "at": "17:30",
+              "minutes": 40,
+              "note": "Sunset by the water."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill and Eastern Market",
+          "stops": [
+            {
+              "place": "loc",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Free."
+            },
+            {
+              "place": "capitol",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Book ahead. Check on the day."
+            },
+            {
+              "place": "easternmarket",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Lunch. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Late afternoon into evening."
+            }
+          ]
+        },
+        {
+          "title": "Georgetown and the Kennedy Center",
+          "stops": [
+            {
+              "place": "georgetown",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Campus grounds open daily. Buildings vary."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "M Street shops and the waterfront. Lunch here."
+            },
+            {
+              "place": "potomac",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Riverside walk."
+            },
+            {
+              "place": "kennedy",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Free building access. Rooftop view at late afternoon. Check the day's schedule for a show."
+            }
+          ]
+        },
+        {
+          "title": "Dupont, Zoo and a river cruise",
+          "stops": [
+            {
+              "place": "dupontwalk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Embassy Row is a short walk from the Metro."
+            },
+            {
+              "place": "zoo",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Free. Morning is best for animals. Longer hours in summer."
+            },
+            {
+              "place": "cruise",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Departures through the day. Check the day's schedule."
+            },
+            {
+              "place": "oldpost",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Tower viewpoint on a clear day. Access can change. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    },
+    {
+      "id": "4n-family",
+      "length": "4n",
+      "style": "family",
+      "nights": 4,
+      "for": "Families with kids: Air and Space, the Zoo, monuments and plenty of free time outdoors.",
+      "days": [
+        {
+          "title": "Air and Space and the Mall",
+          "stops": [
+            {
+              "place": "airandspace",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Weekday morning is quieter. Timed passes may be needed. Check on the day."
+            },
+            {
+              "place": "mall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Space to run. Bring snacks."
+            },
+            {
+              "place": "washingtonmonument",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Roughly 09:00–17:00. Tickets can go fast. Check on the day."
+            },
+            {
+              "place": "lincoln",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Rangers daytime. Evening light is lovely."
+            }
+          ]
+        },
+        {
+          "title": "Natural History and Tidal Basin",
+          "stops": [
+            {
+              "place": "naturalhistory",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Free. Dinosaurs and the Hope Diamond."
+            },
+            {
+              "place": "tidalbasin",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Loop walk. Spring brings cherry blossoms."
+            },
+            {
+              "place": "jefferson",
+              "at": "14:15",
+              "minutes": 40,
+              "note": "Open 24 hours. Rangers daytime."
+            },
+            {
+              "place": "cruise",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Sit-down break on the water. Check the day's schedule."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and Dupont",
+          "stops": [
+            {
+              "place": "zoo",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Free. Morning is best. Longer hours in summer."
+            },
+            {
+              "place": "dupontwalk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch near the circle."
+            },
+            {
+              "place": "georgetownwalk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Shops and waterfront. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "potomac",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Sunset by the river."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill and Eastern Market",
+          "stops": [
+            {
+              "place": "capitol",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Closed Sunday. Book ahead. Check on the day."
+            },
+            {
+              "place": "loc",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Closed Sunday and Monday. Free."
+            },
+            {
+              "place": "easternmarket",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Weekend flea market outside."
+            },
+            {
+              "place": "capitolhillwalk",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Easy walk to finish the trip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown / Penn Quarter"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Mall monuments, the Smithsonian museums and Ford's Theatre."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Free museums, the Kennedy Center and neighbourhood markets."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Air and Space, the Zoo and the National Archives, mostly free."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown / Penn Quarter",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to the Mall, the White House and the big museums. Most central base for a first visit.",
+      "center": [
+        38.895,
+        -77.025
+      ]
+    },
+    {
+      "area": "Capitol Hill",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Quiet streets, the Capitol and Library of Congress on your doorstep; good Metro links.",
+      "center": [
+        38.888,
+        -77.003
+      ]
+    },
+    {
+      "area": "Georgetown",
+      "range": [
+        200,
+        500
+      ],
+      "why": "Pretty historic streets, shops and waterfront dining. No Metro station, so plan on buses or walking.",
+      "center": [
+        38.906,
+        -77.063
+      ]
+    },
+    {
+      "area": "Dupont Circle",
+      "range": [
+        160,
+        380
+      ],
+      "why": "Lively, central and good value; embassy mansions, cafés and a Metro stop.",
+      "center": [
+        38.909,
+        -77.043
+      ]
+    }
+  ],
+  "food": [
+    "Try a half-smoke sausage, the local speciality; chili-topped is the classic order.",
+    "Eastern Market on Capitol Hill is good for a cheap lunch and a weekend market browse.",
+    "Ethiopian food along 9th Street NW and in Adams Morgan is a local favourite; sharing platters feed two.",
+    "The Wharf and Georgetown waterfront have sit-down seafood; book ahead on weekends.",
+    "Food trucks near the Mall and office districts give filling lunches for around $10–15."
+  ],
+  "more_time": [
+    "Swap a museum morning for Arlington National Cemetery and the Changing of the Guard, across the river by Metro.",
+    "Take a day trip to Old Town Alexandria: shops, the waterfront and historic streets, about 30–40 minutes by Metro or train.",
+    "Add a Potomac water taxi ride between Georgetown and the Wharf for a different view of the city."
+  ]
+}

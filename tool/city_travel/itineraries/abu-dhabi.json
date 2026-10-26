@@ -1,0 +1,941 @@
+{
+  "city": "Abu Dhabi",
+  "checked": "October 2026",
+  "currency": "AED",
+  "maps": {
+    "city": {
+      "south": 24.395,
+      "west": 54.29,
+      "north": 24.555,
+      "east": 54.665,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 5.0,
+      "flag_airport": 20.0,
+      "per_km": 1.82,
+      "min_fare": 12.0
+    },
+    "road_factor": 1.25,
+    "city_kmh": 45,
+    "notes": [
+      "Silver taxis are metered: AED 5 flag fall (5.50 at night), AED 1.82 per km, AED 12 minimum. From the airport the flag fall is AED 20.",
+      "Uber and Careem work across Abu Dhabi and usually cost about the same as a metered taxi.",
+      "Airport Express buses run 24/7 for AED 4: A1 to the Central Bus Station, A2 to Yas Island. City buses use a Hafilat card (AED 2 + 5 fils per km).",
+      "On Yas Island, the free Yas Express shuttle links the parks, Yas Mall and hotels.",
+      "Walking between sights is pleasant only from November to March. In summer, take a taxi even for short hops."
+    ],
+    "sources": [
+      [
+        "Taxi fares (Abu Dhabi Mobility)",
+        "https://admobility.gov.ae/en/taxi-fares"
+      ],
+      [
+        "Airport buses A1/A2",
+        "https://airconnect.live/en/airports/abu-dhabi-airport-bus-guide"
+      ],
+      [
+        "Taxis (Visit Abu Dhabi)",
+        "https://visitabudhabi.ae/en/plan-your-trip/around-the-emirate/taxis"
+      ]
+    ]
+  },
+  "stays": [
+    {
+      "area": "Downtown & Corniche",
+      "range": [
+        180,
+        550
+      ],
+      "why": "Closest to the Mosque, Qasr Al Watan and the Corniche; cheapest taxi rides to most sights.",
+      "center": [
+        24.48,
+        54.365
+      ]
+    },
+    {
+      "area": "Yas Island",
+      "range": [
+        540,
+        850
+      ],
+      "why": "Walk or shuttle to the theme parks; 15–20 minutes from the airport.",
+      "center": [
+        24.488,
+        54.605
+      ]
+    },
+    {
+      "area": "Saadiyat Island",
+      "range": [
+        475,
+        1600
+      ],
+      "why": "Beach resorts next to the Louvre and teamLab.",
+      "center": [
+        24.545,
+        54.43
+      ]
+    }
+  ],
+  "places": {
+    "auh": {
+      "name": "Zayed International Airport (AUH)",
+      "kind": "airport",
+      "lat": 24.433,
+      "lon": 54.6511
+    },
+    "mosque": {
+      "name": "Sheikh Zayed Grand Mosque",
+      "landmark": "Sheikh Zayed Grand Mosque",
+      "kind": "sight",
+      "lat": 24.4128,
+      "lon": 54.475,
+      "price": 10,
+      "price_text": "AED 10 visitor fee",
+      "hours": "Sat–Thu 09:00–20:30 · Fri 09:00–11:30 and 14:30–20:30",
+      "tip": "Book a free slot online. Women cover hair, arms and legs; men wear long trousers. Abayas are no longer lent at the door.",
+      "source": "https://www.thenationalnews.com/news/uae/2026/09/17/sheikh-zayed-grand-mosque-abu-dhabi-visitor-entry-fee"
+    },
+    "aquarium": {
+      "name": "The National Aquarium",
+      "landmark": "The National Aquarium Abu Dhabi",
+      "kind": "sight",
+      "lat": 24.4068,
+      "lon": 54.493,
+      "price": 105,
+      "price_estimate": true,
+      "price_text": "≈ AED 100–105",
+      "hours": "Daily 10:00–22:00",
+      "tip": "Five minutes from the Mosque at Al Qana, which has waterfront restaurants for dinner.",
+      "source": "https://feverup.com/m/118696"
+    },
+    "watan": {
+      "name": "Qasr Al Watan",
+      "landmark": "Qasr Al Watan",
+      "kind": "sight",
+      "lat": 24.4617,
+      "lon": 54.3051,
+      "price": 65,
+      "price_text": "AED 65 palace & gardens",
+      "hours": "About 10:00–18:00 (check on the day)",
+      "tip": "A working presidential palace, so it can close at short notice. The Great Hall dome is the highlight.",
+      "source": "https://www.khaleejtimes.com/uae/qasr-al-watan-among-worlds-top-100-travel-experiences-2026"
+    },
+    "watan_show": {
+      "name": "Palace in Motion light show",
+      "kind": "show",
+      "lat": 24.4617,
+      "lon": 54.3051,
+      "price": 25,
+      "price_estimate": true,
+      "price_text": "≈ AED 25 add-on",
+      "hours": "Evenings, around 19:15–19:45",
+      "tip": "Projected onto the palace facade after dark. Show times vary, so check when you buy the palace ticket."
+    },
+    "palace": {
+      "name": "Emirates Palace",
+      "kind": "food",
+      "lat": 24.4615,
+      "lon": 54.3172,
+      "price": null,
+      "price_text": "Free to enter for café guests · gold cappuccino ≈ AED 70–80",
+      "tip": "Book Le Café a day ahead for lunch or the famous gold-flake cappuccino.",
+      "source": "https://pickyourtrail.com/blog/emirates-palace-abu-dhabi-restaurants",
+      "landmark": "Emirates Palace"
+    },
+    "corniche": {
+      "name": "Abu Dhabi Corniche",
+      "landmark": "Abu Dhabi Corniche",
+      "kind": "sight",
+      "lat": 24.4794,
+      "lon": 54.3411,
+      "price": 0,
+      "price_text": "Free · main beach AED 10 (Al Sahil gate free)",
+      "hours": "Promenade always open · swimming 06:00–22:00",
+      "tip": "8 km of waterfront. Walk west at sunset for the view of the Etihad Towers.",
+      "source": "https://visitabudhabi.ae/en/where-to-go/beaches/corniche-beach"
+    },
+    "heritage": {
+      "name": "Heritage Village",
+      "kind": "sight",
+      "lat": 24.4776,
+      "lon": 54.3226,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "09:00–16:00 · Fri 07:30–12:00 and 15:00–21:00",
+      "tip": "A recreated oasis village on the Breakwater with the best skyline view across the water.",
+      "source": "https://abudhabiculture.ae/en/cultural-sites/culture-centers/heritage-village",
+      "landmark": "Heritage Village"
+    },
+    "hosn": {
+      "name": "Qasr Al Hosn",
+      "kind": "sight",
+      "lat": 24.4823,
+      "lon": 54.3549,
+      "price": 30,
+      "price_estimate": true,
+      "price_text": "≈ AED 30",
+      "hours": "Sat–Thu 09:00–20:00 · Fri 14:00–20:00",
+      "tip": "The city's oldest stone building, an 18th-century watchtower turned fort.",
+      "source": "https://abu-dhabi.platinumlist.net/event-tickets/qasr-al-hosn",
+      "landmark": "Qasr Al Hosn"
+    },
+    "mangroves": {
+      "name": "Eastern Mangroves kayak",
+      "kind": "activity",
+      "lat": 24.4545,
+      "lon": 54.403,
+      "price": 170,
+      "price_estimate": true,
+      "price_text": "≈ AED 150–220 for a 2-hour guided tour",
+      "tip": "Go early or at sunset and book a guided tour; times follow the tide.",
+      "source": "https://www.connectwithnature.ae",
+      "at_sunset": true,
+      "landmark": "Mangrove National Park"
+    },
+    "louvre": {
+      "name": "Louvre Abu Dhabi",
+      "landmark": "Louvre Abu Dhabi",
+      "kind": "sight",
+      "lat": 24.5337,
+      "lon": 54.3983,
+      "price": 65,
+      "price_text": "AED 65 · under 18 free",
+      "hours": "Closed Monday · Tue–Thu 10:00–18:30 · Fri–Sun 10:00–20:30",
+      "tip": "Stand under the dome around midday for the 'rain of light'.",
+      "source": "https://www.louvreabudhabi.ae/visit-us"
+    },
+    "teamlab": {
+      "name": "teamLab Phenomena",
+      "kind": "sight",
+      "lat": 24.5375,
+      "lon": 54.401,
+      "price": 155,
+      "price_text": "From AED 155",
+      "hours": "10:00–22:00 · last entry 20:00",
+      "tip": "Timed tickets. The electric AR2 bus links it with the Louvre every 30 minutes.",
+      "source": "https://visitabudhabi.ae",
+      "landmark": "teamLab Phenomena Abu Dhabi"
+    },
+    "jubail": {
+      "name": "Jubail Mangrove Park",
+      "kind": "sight",
+      "lat": 24.5465,
+      "lon": 54.4855,
+      "price": 15,
+      "price_text": "AED 15 boardwalk",
+      "hours": "About 07:00–21:00",
+      "tip": "A 2 km boardwalk through the mangroves. Herons and crabs at low tide.",
+      "source": "https://www.propertyfinder.ae/blog/"
+    },
+    "safari": {
+      "name": "Desert safari with BBQ dinner",
+      "kind": "tour",
+      "price": 300,
+      "price_estimate": true,
+      "price_text": "≈ AED 240–360 shared, hotel pickup included",
+      "tip": "Dune drive, camel ride and dinner at a desert camp. Check that pickup and VAT are in the price.",
+      "source": "https://www.thebettervacation.com/desert-safari-abu-dhabi",
+      "landmark": "Al Khatim Desert"
+    },
+    "ferrari": {
+      "name": "Ferrari World",
+      "landmark": "Ferrari World Abu Dhabi",
+      "kind": "park",
+      "lat": 24.4838,
+      "lon": 54.6073,
+      "price": 345,
+      "price_text": "AED 345 · 2 parks AED 475",
+      "tip": "Ride Formula Rossa first, before the queue builds. The whole park is indoors and air-conditioned."
+    },
+    "wbworld": {
+      "name": "Warner Bros. World",
+      "landmark": "Warner Bros. World Abu Dhabi",
+      "kind": "park",
+      "lat": 24.4905,
+      "lon": 54.5995,
+      "price": 130,
+      "price_text": "AED 345 alone · AED 130 extra on a 2-park pass",
+      "tip": "Next door to Ferrari World. Gotham City and Metropolis are the two lands not to miss."
+    },
+    "yasbay": {
+      "name": "Yas Bay Waterfront",
+      "kind": "food",
+      "lat": 24.461,
+      "lon": 54.608,
+      "price": 0,
+      "price_text": "Free promenade",
+      "tip": "Restaurants on the water and 10 minutes from the airport."
+    },
+    "alain_bus": {
+      "name": "Al Ain bus station",
+      "kind": "transit",
+      "map": "alain",
+      "lat": 24.2215,
+      "lon": 55.764,
+      "price": 0,
+      "price_text": "Arrive on bus X90"
+    },
+    "alain_oasis": {
+      "name": "Al Ain Oasis",
+      "kind": "sight",
+      "map": "alain",
+      "lat": 24.2163,
+      "lon": 55.7623,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily 09:00–19:00",
+      "tip": "A UNESCO-listed date-palm oasis with shaded paths and the old falaj water channels.",
+      "source": "https://visitalain.ae"
+    },
+    "alain_jahili": {
+      "name": "Al Jahili Fort",
+      "kind": "sight",
+      "map": "alain",
+      "lat": 24.2167,
+      "lon": 55.7525,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "About 09:00–17:00 (may close Monday)",
+      "tip": "A restored 1890s mud-brick fort with a small exhibition on explorer Wilfred Thesiger."
+    },
+    "alain_hafeet": {
+      "name": "Jebel Hafeet summit",
+      "kind": "sight",
+      "map": "alain",
+      "lat": 24.0587,
+      "lon": 55.7766,
+      "price": 0,
+      "price_text": "Free road to the top",
+      "tip": "An 11.7 km mountain road to 1,240 m. Go up for sunset over the desert.",
+      "source": "https://www.uaeinform.com/abu-dhabi/jebel-hafeet"
+    },
+    "etihad": {
+      "name": "Etihad Towers",
+      "kind": "sight",
+      "lat": 24.4583,
+      "lon": 54.321,
+      "price": null,
+      "price_text": "Photo stop on the tour · Observation Deck at 300 extra",
+      "tip": "Five towers at the west end of the Corniche; the deck on the 74th floor looks over Emirates Palace.",
+      "landmark": "Etihad Towers"
+    },
+    "corniche_beach": {
+      "name": "Corniche Beach",
+      "kind": "beach",
+      "lat": 24.477,
+      "lon": 54.337,
+      "price": 10,
+      "price_text": "AED 10 main beach · Al Sahil gate free",
+      "hours": "Swimming 06:00–22:00 (to midnight Fri–Sun)",
+      "tip": "Blue Flag beach with lifeguards, sunbeds and calm water, right in the city.",
+      "source": "https://visitabudhabi.ae/en/where-to-go/beaches/corniche-beach"
+    },
+    "saadiyat_beach": {
+      "name": "Saadiyat Beach",
+      "kind": "beach",
+      "lat": 24.54,
+      "lon": 54.424,
+      "price": 85,
+      "price_estimate": true,
+      "price_text": "≈ AED 75–95 day pass (run by Saadiyat Beach Club)",
+      "tip": "Long white-sand beach on Saadiyat; turtles nest here from April to July.",
+      "source": "https://visitabudhabi.ae/en/plan-your-trip/article-hub/article-best-beaches",
+      "landmark": "Saadiyat Beach"
+    },
+    "waterworld": {
+      "name": "Yas Waterworld",
+      "landmark": "Yas Waterworld Abu Dhabi",
+      "kind": "park",
+      "lat": 24.4875,
+      "lon": 54.599,
+      "price": 295,
+      "price_text": "AED 295 online",
+      "tip": "43 rides and slides. Best on a cooler day, from October to April."
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The three icons on the morning tour, then the Louvre and a Corniche sunset.",
+      "days": [
+        {
+          "title": "Icons, then the Louvre",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Hotel pickup in an air-conditioned vehicle; the guide handles the order and timing."
+            },
+            {
+              "place": "louvre",
+              "at": "15:30",
+              "minutes": 150,
+              "note": "Closed Monday. On a Monday, go to teamLab Phenomena instead."
+            },
+            {
+              "place": "corniche",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Sunset walk and dinner on the waterfront."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-parks",
+      "length": "day",
+      "style": "parks",
+      "nights": 0,
+      "for": "The morning tour, then an evening at Ferrari World, which stays open into the evening.",
+      "days": [
+        {
+          "title": "Icons, then Ferrari World",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Ask for drop-off on Yas Island, or take a taxi from your drop-off point."
+            },
+            {
+              "place": "ferrari",
+              "at": "15:30",
+              "minutes": 240,
+              "note": "Ride Formula Rossa first; the park is fully indoors."
+            },
+            {
+              "place": "yasbay",
+              "at": "19:45",
+              "minutes": 75,
+              "note": "Dinner on the water before heading back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "The morning tour, a swim at Corniche Beach and sunset by the water.",
+      "days": [
+        {
+          "title": "Icons, then the beach",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Hotel pickup in an air-conditioned vehicle; the guide handles the order and timing."
+            },
+            {
+              "place": "corniche_beach",
+              "at": "15:30",
+              "minutes": 150,
+              "note": "Swim and cool off; sunbeds and showers on site."
+            },
+            {
+              "place": "corniche",
+              "at": "18:15",
+              "minutes": 90,
+              "note": "Walk west for sunset over the Etihad Towers.",
+              "by": "walk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: Saadiyat's museums on arrival, the icons tour the next morning.",
+      "days": [
+        {
+          "title": "Arrive, Louvre and teamLab",
+          "stops": [
+            {
+              "place": "auh",
+              "at": "13:00",
+              "minutes": 0,
+              "note": "Saadiyat is about 30 minutes by taxi."
+            },
+            {
+              "place": "louvre",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "teamlab",
+              "at": "16:45",
+              "minutes": 105,
+              "note": "Four minutes on foot, or the AR2 bus.",
+              "by": "walk"
+            },
+            {
+              "place": "corniche",
+              "at": "19:15",
+              "minutes": 90,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Icons tour, then fly",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Hotel pickup. Check out first and bring your bags, or leave them with Bounce."
+            },
+            {
+              "place": "heritage",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Skyline view across the water. Fridays it reopens at 15:00."
+            },
+            {
+              "place": "auh",
+              "at": "17:00",
+              "minutes": 0,
+              "note": "About 35 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown & Corniche"
+    },
+    {
+      "id": "1n-parks",
+      "length": "1n",
+      "style": "parks",
+      "nights": 1,
+      "for": "Stay on Yas Island: Ferrari World on arrival, the icons tour next morning, and the airport is 10 minutes away.",
+      "days": [
+        {
+          "title": "Arrive, Ferrari World",
+          "stops": [
+            {
+              "place": "auh",
+              "at": "12:00",
+              "minutes": 0,
+              "note": "Yas Island is 15 minutes away; the A2 bus costs AED 4."
+            },
+            {
+              "place": "ferrari",
+              "at": "13:00",
+              "minutes": 300,
+              "note": "Ride Formula Rossa first, before the queue builds."
+            },
+            {
+              "place": "yasbay",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner on the water."
+            }
+          ]
+        },
+        {
+          "title": "Icons tour, then fly",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Check the tour offers pickup from Yas Island hotels when you book."
+            },
+            {
+              "place": "auh",
+              "at": "16:00",
+              "minutes": 0,
+              "note": "About 30 minutes by taxi from the city."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yas Island"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "A sunset paddle through the mangroves on arrival, the icons tour, then the beach.",
+      "days": [
+        {
+          "title": "Arrive, mangroves at sunset",
+          "stops": [
+            {
+              "place": "auh",
+              "at": "13:00",
+              "minutes": 0
+            },
+            {
+              "place": "jubail",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Boardwalk through the mangroves; herons and crabs at low tide."
+            },
+            {
+              "place": "mangroves",
+              "at": "16:45",
+              "minutes": 120,
+              "note": "Guided sunset kayak; times follow the tide."
+            },
+            {
+              "place": "corniche",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Icons tour, beach, fly",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Hotel pickup. Bring swimwear for the afternoon."
+            },
+            {
+              "place": "corniche_beach",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Swim before the airport. Showers on site."
+            },
+            {
+              "place": "auh",
+              "at": "18:00",
+              "minutes": 0,
+              "note": "About 35 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown & Corniche"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Everything in 1 night plus the old fort and a slower last morning.",
+      "days": [
+        {
+          "title": "Arrive, Louvre and teamLab",
+          "stops": [
+            {
+              "place": "auh",
+              "at": "13:00",
+              "minutes": 0
+            },
+            {
+              "place": "louvre",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "teamlab",
+              "at": "16:45",
+              "minutes": 105,
+              "by": "walk"
+            },
+            {
+              "place": "corniche",
+              "at": "19:15",
+              "minutes": 90
+            }
+          ]
+        },
+        {
+          "title": "Icons tour and the Breakwater",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Hotel pickup in an air-conditioned vehicle; the guide handles the order and timing."
+            },
+            {
+              "place": "heritage",
+              "at": "16:00",
+              "minutes": 60
+            },
+            {
+              "place": "corniche",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset on the Corniche, then dinner.",
+              "by": "walk"
+            }
+          ]
+        },
+        {
+          "title": "Old Abu Dhabi, then fly",
+          "stops": [
+            {
+              "place": "hosn",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "The city's oldest stone building."
+            },
+            {
+              "place": "auh",
+              "at": "13:00",
+              "minutes": 0
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown & Corniche"
+    },
+    {
+      "id": "2n-parks",
+      "length": "2n",
+      "style": "parks",
+      "nights": 2,
+      "for": "Two Yas parks on a 2-park pass plus the icons tour. Stay on Yas Island.",
+      "days": [
+        {
+          "title": "Arrive, Ferrari World",
+          "stops": [
+            {
+              "place": "auh",
+              "at": "12:00",
+              "minutes": 0
+            },
+            {
+              "place": "ferrari",
+              "at": "13:00",
+              "minutes": 300,
+              "note": "Buy the 2-park pass (AED 475) and use it again tomorrow."
+            },
+            {
+              "place": "yasbay",
+              "at": "18:30",
+              "minutes": 120
+            }
+          ]
+        },
+        {
+          "title": "Icons tour",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Check the tour offers pickup from Yas Island hotels."
+            },
+            {
+              "place": "corniche",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Sunset on the Corniche before heading back to Yas."
+            }
+          ]
+        },
+        {
+          "title": "Warner Bros. World, then fly",
+          "stops": [
+            {
+              "place": "wbworld",
+              "at": "11:00",
+              "minutes": 300,
+              "note": "Second park on the same pass."
+            },
+            {
+              "place": "auh",
+              "at": "17:00",
+              "minutes": 0,
+              "note": "Only 10 minutes away."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Yas Island"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Mangroves, two beaches and the icons tour, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, mangroves at sunset",
+          "stops": [
+            {
+              "place": "auh",
+              "at": "13:00",
+              "minutes": 0
+            },
+            {
+              "place": "jubail",
+              "at": "15:00",
+              "minutes": 75
+            },
+            {
+              "place": "mangroves",
+              "at": "16:45",
+              "minutes": 120
+            },
+            {
+              "place": "corniche",
+              "at": "19:30",
+              "minutes": 90
+            }
+          ]
+        },
+        {
+          "title": "Icons tour and Corniche Beach",
+          "stops": [
+            {
+              "tour": 0,
+              "covers": [
+                "mosque",
+                "watan",
+                "etihad"
+              ],
+              "at": "08:30",
+              "minutes": 390,
+              "note": "Hotel pickup in an air-conditioned vehicle; the guide handles the order and timing."
+            },
+            {
+              "place": "corniche_beach",
+              "at": "15:15",
+              "minutes": 150
+            },
+            {
+              "place": "corniche",
+              "at": "18:00",
+              "minutes": 90,
+              "by": "walk"
+            }
+          ]
+        },
+        {
+          "title": "Saadiyat Beach, then fly",
+          "stops": [
+            {
+              "place": "saadiyat_beach",
+              "at": "09:30",
+              "minutes": 210,
+              "note": "White sand and clear water; book the day pass ahead."
+            },
+            {
+              "place": "auh",
+              "at": "14:30",
+              "minutes": 0,
+              "note": "About 30 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown & Corniche"
+    }
+  ],
+  "usd_to_aed": 3.67,
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Louvre, teamLab and the old city."
+    },
+    {
+      "id": "parks",
+      "label": "Thrills",
+      "blurb": "Ferrari World and the Yas Island parks."
+    },
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Swims, mangroves and sunsets on the water."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night",
+      "recommended": true
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    }
+  ],
+  "more_time": [
+    "Rather see the oasis city? Swap a day for Al Ain: bus X90 (≈ AED 25, 2 hours each way) to the UNESCO oasis, Al Jahili Fort and the Jebel Hafeet road.",
+    "Theme-park fans can swap Warner Bros. World for SeaWorld (AED 375) or Yas Waterworld (AED 295).",
+    "Travelling with kids? The National Aquarium at Al Qana (≈ AED 100) fits next to the Grand Mosque."
+  ],
+  "food": [
+    "Try Emirati dishes: machboos (spiced rice with meat or fish), harees, and luqaimat dumplings with date syrup.",
+    "Al Mina fish market at Mina Zayed: pick fresh fish and have it cooked at the stalls next door.",
+    "Waterfront dinners: Yas Bay Waterfront, Al Qana next to the National Aquarium, and the Corniche cafés.",
+    "Cheap eats: shawarma and Indian or Pakistani cafeterias downtown, about AED 10–25 a meal.",
+    "Alcohol is served only in licensed hotel restaurants and bars. Weekend hotel brunches are popular; book ahead."
+  ],
+  "intro": "Abu Dhabi's highlights fit in a day or two. Pick how long you have and what you enjoy most; every plan includes the guided tour of the Grand Mosque, Qasr Al Watan and the Etihad Towers.",
+  "tour_note": "Check the tour page for which entry tickets are included; the Mosque's AED 10 visitor fee may be extra.",
+  "usd_rate": 3.67
+}

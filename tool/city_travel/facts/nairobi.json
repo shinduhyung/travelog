@@ -1,0 +1,196 @@
+{
+  "currency": "KES",
+  "usd_rate": 129.8666,
+  "intro_line": "Nairobi: Africa's safari capital with urban energy and wild escapes.",
+  "intro": "Nairobi rewards visitors with a mix of wildlife, culture, and vibrant city life. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Westlands",
+    "Karen",
+    "Gigiri",
+    "City Centre"
+  ],
+  "taxi": {
+    "flag_day": 200,
+    "flag_airport": 2000,
+    "per_km": 100,
+    "min_fare": 300
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram; matatus (minibuses) are the main public transport.",
+    "Matatus are cheap but crowded and can be risky; use them with caution.",
+    "Taxis are available but negotiate fare before; cash only.",
+    "Uber and Bolt operate widely; rides from airport to centre cost Ksh 900-1,500.",
+    "Driving is on the left; traffic is heavy, especially at rush hour.",
+    "Walking is possible in some areas but not recommended at night; no bike share."
+  ],
+  "airports": [
+    {
+      "code": "NBO",
+      "name": "Jomo Kenyatta International Airport",
+      "primary": true,
+      "note": "Main international hub, 12 km southeast of centre.",
+      "options": [
+        {
+          "mode": "Airport bus #34",
+          "to": "City centre (Moi Avenue)",
+          "price": "Ksh 100",
+          "time": "60-120 min",
+          "note": "Cheapest but slow; walk to cargo terminal or Ambassador Hotel."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "Ksh 900-1,500",
+          "time": "30-60 min",
+          "note": "Book via app; reliable and cheaper than taxi."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Ksh 2,000-2,500",
+          "time": "30-60 min",
+          "note": "Use official KAA desk for fixed-price voucher."
+        }
+      ]
+    },
+    {
+      "code": "WIL",
+      "name": "Wilson Airport",
+      "primary": false,
+      "note": "Domestic and regional flights, 11 km south of centre.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Ksh 1,500-2,000",
+          "time": "30-50 min",
+          "note": "No official desk; negotiate fare beforehand."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "Ksh 800-1,200",
+          "time": "30-50 min",
+          "note": "App-based; may have limited availability at peak."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Nairobi National Park",
+    "Giraffe Centre",
+    "Karen Blixen Museum",
+    "Nairobi National Museum",
+    "Bomas of Kenya",
+    "Kenyatta International Convention Centre",
+    "August 7th Memorial Park",
+    "Jamia Mosque",
+    "Luna Park (Nairobi)",
+    "Nairobi Railway Museum",
+    "Nairobi River",
+    "Nyama Choma",
+    "Splash Waterworld (Nairobi)",
+    "Uhuru Gardens"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Nairobi",
+      "https://en.wikivoyage.org/wiki/Nairobi"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -1.2921,
+    36.8219
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 8
+    },
+    {
+      "high": 27,
+      "low": 15,
+      "rain_days": 12
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 26
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 18
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 13,
+      "rain_days": 7
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 14
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 23
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 16
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

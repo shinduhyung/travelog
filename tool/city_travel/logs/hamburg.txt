@@ -1,0 +1,32 @@
+$ deepseek_prep.py Hamburg
+  tokens in 826 out 471
+Hamburg: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Hamburg
+  tokens in 4192 out 598
+Hamburg: 0 problems
+
+$ deepseek_city.py Hamburg --stage places
+Hamburg: places
+  tokens in 1215 out 3856
+
+$ deepseek_city.py Hamburg --stage frame
+Hamburg: frame
+  tokens in 2428 out 1797
+  repaired JSON
+
+$ deepseek_city.py Hamburg --stage plans
+Hamburg: plans
+  plans for day
+  tokens in 2338 out 1022
+  plans for 1n
+  tokens in 2339 out 1237
+  plans for 2n
+  tokens in 2344 out 1734
+  plans for 3n
+  tokens in 2339 out 2047
+
+$ merge_city.py Hamburg
+Hamburg: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/hamburg.json and planner/hamburg.json
+

@@ -1,0 +1,31 @@
+$ deepseek_prep.py Brisbane
+  tokens in 644 out 316
+Brisbane: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Brisbane
+  tokens in 3922 out 571
+Brisbane: 0 problems
+
+$ deepseek_city.py Brisbane --stage places
+Brisbane: places
+  tokens in 1129 out 3577
+
+$ deepseek_city.py Brisbane --stage frame
+Brisbane: frame
+  tokens in 2429 out 1877
+
+$ deepseek_city.py Brisbane --stage plans
+Brisbane: plans
+  plans for day
+  tokens in 2314 out 713
+  plans for 1n
+  tokens in 2315 out 1519
+  plans for 2n
+  tokens in 2320 out 1306
+  plans for 3n
+  tokens in 2315 out 2113
+
+$ merge_city.py Brisbane
+Brisbane: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/brisbane.json and planner/brisbane.json
+

@@ -1,0 +1,1897 @@
+{
+  "city": "Singapore",
+  "checked": "October 2026",
+  "currency": "SGD",
+  "usd_rate": 1.2773,
+  "intro": "Singapore packs cultures, food and greenery into a compact, easy-to-navigate island. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 1.2357,
+      "west": 103.7667,
+      "north": 1.4393,
+      "east": 104.0146,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4.6,
+      "flag_airport": 8,
+      "per_km": 1.1,
+      "min_fare": 6
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "MRT trains are fast and cheap; tap a contactless credit card or buy an EZ-link card.",
+      "Buses cover gaps the MRT misses; fares are distance-based and low.",
+      "Taxis meter fares; Grab and Gojek ride apps are widely used.",
+      "Driving is possible but costly: ERP tolls, high parking and a car-ownership tax regime.",
+      "Walking is pleasant in the core; covered walkways help in rain and heat.",
+      "Ferries run from HarbourFront and Tanah Merah to the Riau Islands and Johor."
+    ],
+    "sources": []
+  },
+  "places": {
+    "marina-bay-sands": {
+      "name": "Marina Bay Sands",
+      "landmark": "Marina Bay Sands",
+      "kind": "sight",
+      "lat": 1.2834,
+      "lon": 103.8607,
+      "price": 32,
+      "price_text": "SkyPark observation deck ≈ SGD 32 (check current price online)",
+      "hours": "Deck usually 10:00–22:00 · check on the day",
+      "tip": "Book the SkyPark deck online for a fixed slot and go near sunset for day and night views.",
+      "source": "https://www.marinabaysands.com/"
+    },
+    "gardens-bay": {
+      "name": "Gardens by the Bay",
+      "landmark": "Gardens by the Bay",
+      "kind": "park",
+      "lat": 1.2816,
+      "lon": 103.8636,
+      "price": 32,
+      "price_text": "Outdoor gardens free · conservatories ≈ SGD 32 combined (check on the day)",
+      "hours": "Outdoor 05:00–02:00 · conservatories about 09:00–21:00",
+      "tip": "See the free Supertree light show in the evening, then pay for the cooled conservatories earlier in the day.",
+      "source": "https://www.gardensbythebay.com.sg/"
+    },
+    "merlion-park": {
+      "name": "Merlion Park",
+      "landmark": "Merlion Park",
+      "kind": "sight",
+      "lat": 1.2868,
+      "lon": 103.8545,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Come early morning for fewer crowds and a clear view across the bay to Marina Bay Sands.",
+      "source": ""
+    },
+    "jewel-changi": {
+      "name": "Jewel Changi Airport",
+      "landmark": "Jewel Changi Airport",
+      "kind": "sight",
+      "lat": 1.3601,
+      "lon": 103.9898,
+      "price": 0,
+      "price_text": "Mall and Rain Vortex free · attractions ticketed",
+      "hours": "About 10:00–22:00 · check on the day",
+      "tip": "The Rain Vortex is free to see. Allow extra time if you are heading to a flight.",
+      "source": "https://www.jewelchangiairport.com/"
+    },
+    "chinatown-heritage": {
+      "name": "Chinatown Heritage District",
+      "landmark": "Chinatown Heritage District",
+      "kind": "sight",
+      "lat": 1.2823,
+      "lon": 103.844,
+      "price": 0,
+      "price_text": "Free to walk · temples and museums ticketed separately",
+      "hours": "Streets always open · shops about 10:00–20:00",
+      "tip": "Walk the side lanes off Pagoda Street for shophouses and food stalls away from the main crowd.",
+      "source": ""
+    },
+    "buddha-tooth": {
+      "name": "Buddha Tooth Relic Temple",
+      "landmark": "Buddha Tooth Relic Temple",
+      "kind": "museum",
+      "lat": 1.2815,
+      "lon": 103.8443,
+      "price": 0,
+      "price_text": "Free entry · donations welcome",
+      "hours": "Usually 07:00–17:00 · check on the day",
+      "tip": "Dress modestly: cover shoulders and knees. The rooftop garden is quiet and often missed.",
+      "source": "https://www.btrts.org.sg/"
+    },
+    "kampong-glam": {
+      "name": "Kampong Glam & Haji Lane",
+      "landmark": "Kampong Glam & Haji Lane",
+      "kind": "sight",
+      "lat": 1.3013,
+      "lon": 103.8577,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Streets always open · shops about 11:00–20:00",
+      "tip": "See the Sultan Mosque, then browse Haji Lane's small shops and cafés in the afternoon.",
+      "source": ""
+    },
+    "little-india": {
+      "name": "Little India",
+      "landmark": "Little India",
+      "kind": "sight",
+      "lat": 1.3067,
+      "lon": 103.8503,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Streets always open · shops about 09:00–21:00",
+      "tip": "Go hungry: the Tekka area and nearby lanes have cheap, excellent Indian food.",
+      "source": ""
+    },
+    "raffles-hotel": {
+      "name": "Raffles Hotel",
+      "landmark": "Raffles Hotel",
+      "kind": "sight",
+      "lat": 1.2949,
+      "lon": 103.8545,
+      "price": 0,
+      "price_text": "Lobby free · afternoon tea and drinks priced separately",
+      "hours": "Public areas about 10:00–22:00 · check on the day",
+      "tip": "Walk the colonial courtyard for free. Book the Long Bar or afternoon tea ahead if you want them.",
+      "source": "https://www.raffles.com/singapore/"
+    },
+    "universal-studios": {
+      "name": "Universal Studios Singapore",
+      "landmark": "Universal Studios Singapore",
+      "kind": "activity",
+      "lat": 1.2598,
+      "lon": 103.8211,
+      "price": 88,
+      "price_text": "One-day ticket ≈ SGD 83–90 (check on the day)",
+      "hours": "Usually 10:00–19:00 · hours vary, check on the day",
+      "tip": "Buy tickets online and arrive at opening. Weekdays are much quieter than weekends.",
+      "source": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore"
+    },
+    "marina-bay": {
+      "name": "Marina Bay",
+      "landmark": "Marina Bay",
+      "kind": "sight",
+      "lat": 1.2868,
+      "lon": 103.8545,
+      "price": 0,
+      "price_text": "Free to walk the waterfront",
+      "hours": "Always open",
+      "tip": "Walk the full loop at dusk: Merlion Park, Helix Bridge and the Esplanade all connect.",
+      "source": ""
+    },
+    "bird-paradise": {
+      "name": "Bird Paradise",
+      "landmark": "Bird Paradise",
+      "kind": "park",
+      "lat": 1.4182,
+      "lon": 103.7915,
+      "price": 49,
+      "price_text": "Adult ≈ SGD 49 (check on the day)",
+      "hours": "About 09:00–18:00 · check on the day",
+      "tip": "It is far from the centre in Mandai. Plan a half day and check the shuttle or bus route first.",
+      "source": "https://www.mandai.com/en/bird-paradise.html"
+    },
+    "breadtalk": {
+      "name": "BreadTalk",
+      "landmark": "BreadTalk",
+      "kind": "food",
+      "lat": 1.2902,
+      "lon": 103.8519,
+      "price": 2,
+      "price_text": "Buns from about SGD 1.50–3",
+      "hours": "Most outlets about 08:00–21:00",
+      "tip": "A cheap, quick breakfast: grab a pork floss bun and a coffee at any mall outlet.",
+      "source": ""
+    },
+    "chilli-crab": {
+      "name": "Chilli Crab",
+      "landmark": "Chilli Crab",
+      "kind": "food",
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "price": 80,
+      "price_text": "≈ SGD 60–120 per crab depending on size and restaurant",
+      "hours": "Most seafood restaurants about 11:30–22:00",
+      "tip": "Order fried mantou buns to soak up the sauce. Ask the price per kilo before you order.",
+      "source": ""
+    },
+    "chinatown-market": {
+      "name": "Chinatown Street Market",
+      "landmark": "Chinatown Street Market",
+      "kind": "food",
+      "lat": 1.2829,
+      "lon": 103.8443,
+      "price": 0,
+      "price_text": "Free to browse · food from about SGD 3–8",
+      "hours": "Stalls about 10:00–20:00 · busiest evenings",
+      "tip": "Haggle gently on souvenirs and eat at the nearby hawker centre for better value.",
+      "source": ""
+    },
+    "clarke-quay": {
+      "name": "Clarke Quay",
+      "landmark": "Clarke Quay",
+      "kind": "sight",
+      "lat": 1.2905,
+      "lon": 103.8465,
+      "price": 0,
+      "price_text": "Free to walk · drinks and boat rides extra",
+      "hours": "Always open · bars busiest after 19:00",
+      "tip": "Walk the river here at night for the lights. Riverside drinks are pricey; happy hour helps.",
+      "source": ""
+    },
+    "esplanade": {
+      "name": "Esplanade - Theatres on the Bay",
+      "landmark": "Esplanade - Theatres on the Bay",
+      "kind": "show",
+      "lat": 1.2897,
+      "lon": 103.8558,
+      "price": 0,
+      "price_text": "Free outdoor concerts · shows ticketed",
+      "hours": "Building about 10:00–22:00 · check the programme",
+      "tip": "Check the free outdoor waterfront concerts, often in the evening.",
+      "source": "https://www.esplanade.com/"
+    },
+    "fort-siloso": {
+      "name": "Fort Siloso",
+      "landmark": "Fort Siloso",
+      "kind": "museum",
+      "lat": 1.2568,
+      "lon": 103.8093,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "About 09:00–18:00 · check on the day",
+      "tip": "On Sentosa, so combine it with the beach. It is a short walk or shuttle from the main resort area.",
+      "source": ""
+    },
+    "haw-par-villa": {
+      "name": "Haw Par Villa",
+      "landmark": "Haw Par Villa",
+      "kind": "park",
+      "lat": 1.2819,
+      "lon": 103.8638,
+      "price": 0,
+      "price_text": "Grounds free · some exhibits ticketed",
+      "hours": "About 09:00–18:00 · check on the day",
+      "tip": "Odd and memorable: the Ten Courts of Hell dioramas are not for young children.",
+      "source": ""
+    },
+    "helix-bridge": {
+      "name": "Helix Bridge",
+      "landmark": "Helix Bridge",
+      "kind": "sight",
+      "lat": 1.2876,
+      "lon": 103.8608,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk it at night for the best skyline photos of Marina Bay Sands.",
+      "source": ""
+    },
+    "kidzania": {
+      "name": "KidZania Singapore",
+      "landmark": "KidZania Singapore",
+      "kind": "activity",
+      "lat": 1.2598,
+      "lon": 103.8211,
+      "price": 40,
+      "price_text": "Child ≈ SGD 40 · adults cheaper (check on the day)",
+      "hours": "Usually 10:00–18:00 · check on the day",
+      "tip": "Best for children roughly 4–12. Book online and go on a weekday if you can.",
+      "source": ""
+    },
+    "lau-pa-sat": {
+      "name": "Lau Pa Sat",
+      "landmark": "Lau Pa Sat",
+      "kind": "food",
+      "lat": 1.2807,
+      "lon": 103.8504,
+      "price": 8,
+      "price_text": "Meals about SGD 5–12",
+      "hours": "About 24 hours · satay street in the evening",
+      "tip": "Come after 19:00 when the outdoor satay street opens. Bring cash for some stalls.",
+      "source": ""
+    },
+    "hawker-dinner": {
+      "name": "Hawker centre dinner",
+      "landmark": null,
+      "kind": "food",
+      "lat": 1.2806,
+      "lon": 103.8503,
+      "price": 8,
+      "price_text": "Meals about SGD 4–10",
+      "hours": "Most stalls about 10:00–21:00 · some close early",
+      "tip": "Bring small notes and tissues. Return your tray when you finish.",
+      "source": ""
+    },
+    "river-cruise": {
+      "name": "Singapore River cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 1.2875,
+      "lon": 103.8495,
+      "price": 28,
+      "price_text": "≈ SGD 25–30 for about 40 minutes (check on the day)",
+      "hours": "Boats usually from about 09:00 to late evening",
+      "tip": "Take it after dark from Clarke Quay to Marina Bay for the lit-up skyline.",
+      "source": ""
+    },
+    "southern-ridges": {
+      "name": "Southern Ridges walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 1.2789,
+      "lon": 103.8036,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Trails open daylight hours",
+      "tip": "Start early to avoid heat. The Henderson Waves bridge is the highlight.",
+      "source": ""
+    },
+    "tiong-bahru": {
+      "name": "Tiong Bahru neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 1.2862,
+      "lon": 103.8271,
+      "price": 0,
+      "price_text": "Free to walk · food and coffee extra",
+      "hours": "Streets always open · cafés about 08:00–18:00",
+      "tip": "Old art-deco flats, a good market and small cafés. Go in the morning before the heat.",
+      "source": ""
+    },
+    "supertree-show": {
+      "name": "Supertree Grove light show",
+      "landmark": null,
+      "kind": "show",
+      "lat": 1.2816,
+      "lon": 103.8636,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Usually two shows each evening · check times on the day",
+      "tip": "Lie on the ground under the trees for the best view. Arrive a little early.",
+      "source": "https://www.gardensbythebay.com.sg/"
+    },
+    "orchard-road": {
+      "name": "Orchard Road shopping walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 1.3048,
+      "lon": 103.8318,
+      "price": 0,
+      "price_text": "Free to walk · shopping extra",
+      "hours": "Malls about 10:00–22:00",
+      "tip": "Air-conditioned malls connect underground. Good on a hot or rainy afternoon.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "One full day of eating: hawker breakfast, Chinatown snacks, satay dinner by the river.",
+      "days": [
+        {
+          "title": "Hawker breakfast to satay street",
+          "stops": [
+            {
+              "place": "breadtalk",
+              "at": "08:30",
+              "minutes": 15,
+              "note": "Quick bun and coffee to start. Most outlets open about 08:00."
+            },
+            {
+              "place": "chinatown-heritage",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk the streets before the heat. Shops open about 10:00."
+            },
+            {
+              "place": "buddha-tooth",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Usually open 07:00–17:00. Dress modestly, shoulders and knees covered."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at a Chinatown hawker centre. Look for the longest queue."
+            },
+            {
+              "place": "tiong-bahru",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Short taxi ride. Cafés close around 18:00, so go early afternoon."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Riverside walk. Bars get busy after 19:00."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Satay street is the evening draw. Bring cash for small stalls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chinatown or Clarke Quay"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A compact culture day: three heritage districts plus the bay at sunset.",
+      "days": [
+        {
+          "title": "Chinatown, Kampong Glam, Marina Bay",
+          "stops": [
+            {
+              "place": "buddha-tooth",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Go early, it is calmer. Usually 07:00–17:00."
+            },
+            {
+              "place": "chinatown-heritage",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Temple and shophouses are close together. Walk, don't rush."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby before moving on."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Short taxi or MRT ride. Sultan Mosque and Haji Lane shops."
+            },
+            {
+              "place": "raffles-hotel",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Public areas about 10:00–22:00. A drink at the Long Bar needs booking."
+            },
+            {
+              "place": "merlion-park",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Walk over from Raffles. Best light is early morning or after dark."
+            },
+            {
+              "place": "marina-bay",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset walk around the bay. Stay for the skyline lights."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chinatown or Bugis"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "Big-kid day out: gardens, the light show and a bay walk. Book tickets ahead.",
+      "days": [
+        {
+          "title": "Gardens, bay and light show",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Conservatories open about 09:00. Book timed tickets online."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Most stalls open 10:00–21:00, some close early."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "SkyPark deck usually 10:00–22:00. Check weather before going up."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Short walk with good photos. Always open."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day and arrive early for a spot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Repeat marker: one day of hawker food and street snacks.",
+      "days": [
+        {
+          "title": "Hawker breakfast to satay street",
+          "stops": [
+            {
+              "place": "breadtalk",
+              "at": "08:30",
+              "minutes": 15,
+              "note": "Quick start."
+            },
+            {
+              "place": "chinatown-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Stalls about 10:00–20:00. Busiest in the evening."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at a hawker centre."
+            },
+            {
+              "place": "little-india",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Short MRT ride. Shops about 09:00–21:00."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Satay street in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chinatown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of hawker classics and river views, easy on foot around the bay.",
+      "days": [
+        {
+          "title": "Arrive, bay walk and satay dinner",
+          "stops": [
+            {
+              "place": "breadtalk",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Quick snack while you settle in. Most outlets open about 08:00–21:00."
+            },
+            {
+              "place": "marina-bay",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Walk the waterfront as the light softens. Always open."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Satay street fires up in the evening. Bring cash for stalls."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown breakfast, market and crab",
+          "stops": [
+            {
+              "place": "tiong-bahru",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Cafés and old flats. Most cafés open about 08:00–18:00."
+            },
+            {
+              "place": "chinatown-market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Stalls about 10:00–20:00. Busiest in the evening."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at a hawker centre. Some stalls close early."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Book ahead for dinner. Most seafood places open about 11:30–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most first-timers: the bay icons, then Chinatown and Kampong Glam.",
+      "days": [
+        {
+          "title": "Bay icons and evening light show",
+          "stops": [
+            {
+              "place": "merlion-park",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Always open. Best light late afternoon."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Short walk from the Merlion. Looks best after dark."
+            },
+            {
+              "place": "gardens-bay",
+              "at": "17:30",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Outdoor areas open late."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown and Kampong Glam",
+          "stops": [
+            {
+              "place": "buddha-tooth",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Usually 07:00–17:00. Dress modestly."
+            },
+            {
+              "place": "chinatown-heritage",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Streets always open. Shops about 10:00–20:00."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch nearby. Some stalls close early."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Haji Lane shops about 11:00–20:00. Short taxi or MRT ride."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "A gentle first day with the kids, then gardens and the light show.",
+      "days": [
+        {
+          "title": "Arrive and explore the bay",
+          "stops": [
+            {
+              "place": "jewel-changi",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Good on a rainy day. About 10:00–22:00, check on the day."
+            },
+            {
+              "place": "marina-bay",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Easy flat walk. Always open."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Casual dinner. Satay street in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Gardens and light show",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Book ahead on weekends."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Some stalls close early."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "A first-timer food plan: hawker classics, Chinatown snacks and a satay street night.",
+      "days": [
+        {
+          "title": "Arrive, Chinatown snacks and river dinner",
+          "stops": [
+            {
+              "place": "chinatown-heritage",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the streets and lanes. Shops open about 10:00–20:00."
+            },
+            {
+              "place": "buddha-tooth",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Usually 07:00–17:00, so go before it closes. Check on the day."
+            },
+            {
+              "place": "chinatown-market",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Snack as you go. Busiest in the evening."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Early dinner. Some stalls close early, so don't leave it too late."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Short walk to the river. Bars get busy after 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Marina Bay, satay and light show",
+          "stops": [
+            {
+              "place": "breadtalk",
+              "at": "09:00",
+              "minutes": 15,
+              "note": "Quick breakfast bun. Most outlets open about 08:00."
+            },
+            {
+              "place": "gardens-bay",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Book ahead if you can."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch under the clock tower. Satay street is evening only."
+            },
+            {
+              "place": "merlion-park",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Photo stop. Always open."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Most seafood places about 11:30–22:00. Prices vary, so ask first."
+            },
+            {
+              "place": "supertree-show",
+              "at": "20:00",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Kampong Glam and Little India flavours",
+          "stops": [
+            {
+              "place": "kampong-glam",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Cafés and Haji Lane. Shops about 11:00–20:00."
+            },
+            {
+              "place": "raffles-hotel",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Look around the public areas. About 10:00–22:00, check on the day."
+            },
+            {
+              "place": "little-india",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Short ride by taxi or MRT. Great for an afternoon snack."
+            },
+            {
+              "place": "tiong-bahru",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Old estate cafés. Most close around 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chinatown or Marina Bay"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Heritage first: temples, shophouse districts and the bay after dark.",
+      "days": [
+        {
+          "title": "Chinatown and the river",
+          "stops": [
+            {
+              "place": "buddha-tooth",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is calmest. Usually 07:00–17:00, check on the day."
+            },
+            {
+              "place": "chinatown-heritage",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Streets always open. Shops about 10:00–20:00."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at a hawker centre. Most stalls about 10:00–21:00."
+            },
+            {
+              "place": "tiong-bahru",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Art deco estate walk. Cafés about 08:00–18:00."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner by the river. Busiest after 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Marina Bay icons",
+          "stops": [
+            {
+              "place": "merlion-park",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Early morning is cooler and quieter."
+            },
+            {
+              "place": "esplanade",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Building about 10:00–22:00. Check the free programme."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Walk across to the Gardens. Always open."
+            },
+            {
+              "place": "gardens-bay",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Eat lunch inside."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Deck usually 10:00–22:00. Late afternoon into sunset is best."
+            },
+            {
+              "place": "supertree-show",
+              "at": "20:00",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Kampong Glam, Little India and Raffles",
+          "stops": [
+            {
+              "place": "raffles-hotel",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Public areas about 10:00–22:00, check on the day."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Mosque, murals and Haji Lane. Shops about 11:00–20:00."
+            },
+            {
+              "place": "little-india",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Temples and markets. Shops about 09:00–21:00."
+            },
+            {
+              "place": "river-cruise",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Boats usually run from about 09:00 to late evening. Evening is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chinatown or Bugis"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Easy-paced family plan: gardens, birds and a theme park day.",
+      "days": [
+        {
+          "title": "Gardens and the bay",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Bring water."
+            },
+            {
+              "place": "breadtalk",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "Quick snack for the kids."
+            },
+            {
+              "place": "merlion-park",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Photo stop. Always open."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Deck usually 10:00–22:00. Check on the day."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Theme park day",
+          "stops": [
+            {
+              "place": "universal-studios",
+              "at": "10:00",
+              "minutes": 360,
+              "note": "Usually 10:00–19:00, hours vary. Go on a weekday and arrive early."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Most seafood places about 11:30–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Birds, then fly",
+          "stops": [
+            {
+              "place": "bird-paradise",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "About 09:00–18:00. Morning is best for the birds. Check on the day."
+            },
+            {
+              "place": "jewel-changi",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "About 10:00–22:00. Good for lunch and a rainy day. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "First-timers who plan the day around hawker meals, with short walks between bites.",
+      "days": [
+        {
+          "title": "Arrive, Marina Bay and satay street",
+          "stops": [
+            {
+              "place": "marina-bay",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy loop on foot to get your bearings. Bring water."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Short walk from the bay. Best after dark."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Satay street starts in the evening. Order at a few stalls and share."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown food and heritage",
+          "stops": [
+            {
+              "place": "chinatown-heritage",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk the streets early before the heat and crowds."
+            },
+            {
+              "place": "buddha-tooth",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Usually open mornings. Dress modestly."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at a hawker centre. Look for the longest queues."
+            },
+            {
+              "place": "chinatown-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Busiest in the evening, calmer now."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner by the river. Bars get busy after 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Bugis, Kampong Glam and Little India",
+          "stops": [
+            {
+              "place": "raffles-hotel",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Public areas only. Check the day's access rules."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Haji Lane shops open around 11:00. Good lunch spots nearby."
+            },
+            {
+              "place": "little-india",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Short MRT ride away. Try a sweet shop and a teh tarik."
+            },
+            {
+              "place": "tiong-bahru",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Cafés close around 18:00, so come before then."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast, gardens and fly",
+          "stops": [
+            {
+              "place": "breadtalk",
+              "at": "08:30",
+              "minutes": 15,
+              "note": "Quick bakery breakfast. Most outlets open about 08:00."
+            },
+            {
+              "place": "gardens-bay",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Conservatories open about 09:00. Book online."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch. Most seafood places open about 11:30. Prices vary a lot, so ask first."
+            },
+            {
+              "place": "jewel-changi",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Good stop before a flight. Check your terminal and leave buffer time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay or Chinatown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for most first-timers: the historic districts plus the Marina Bay icons.",
+      "days": [
+        {
+          "title": "Arrive, Marina Bay and light show",
+          "stops": [
+            {
+              "place": "merlion-park",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Open all day. Early morning or after dark is cooler."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Walk over for skyline views."
+            },
+            {
+              "place": "marina-bay",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset loop around the water."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown and the river",
+          "stops": [
+            {
+              "place": "buddha-tooth",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Usually opens about 07:00. Quiet in the morning."
+            },
+            {
+              "place": "chinatown-heritage",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops open about 10:00. Walk the side streets."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch at a hawker centre. Some stalls close early."
+            },
+            {
+              "place": "tiong-bahru",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Art deco streets and cafés. Cafés close around 18:00."
+            },
+            {
+              "place": "river-cruise",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Boats run into the evening. Buy tickets at the jetty."
+            }
+          ]
+        },
+        {
+          "title": "Bugis, Kampong Glam and Little India",
+          "stops": [
+            {
+              "place": "raffles-hotel",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Public areas about 10:00–22:00. Check on the day."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Mosque, murals and Haji Lane. Shops open about 11:00."
+            },
+            {
+              "place": "little-india",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Short MRT ride. Late morning or evening is liveliest."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner by the river. Bars busiest after 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Gardens, deck and fly",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Conservatories open about 09:00. Book online."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Deck usually 10:00–22:00. Check on the day."
+            },
+            {
+              "place": "esplanade",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Free shows sometimes. Check the programme."
+            },
+            {
+              "place": "jewel-changi",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Good before a flight. Check your terminal."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay or Chinatown"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids: gardens, animals and one big theme-park day.",
+      "days": [
+        {
+          "title": "Arrive, gardens and light show",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Conservatories are cool and shaded. Book online."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "Late dinner. Satay street is fun for kids."
+            }
+          ]
+        },
+        {
+          "title": "Theme park day",
+          "stops": [
+            {
+              "place": "universal-studios",
+              "at": "10:00",
+              "minutes": 360,
+              "note": "Weekday mornings are quieter. Hours vary, check on the day."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner. Most seafood places open about 11:30. Ask about prices."
+            }
+          ]
+        },
+        {
+          "title": "Birds and the bay",
+          "stops": [
+            {
+              "place": "bird-paradise",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Opens about 09:00. Go early before the heat."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Some stalls close early."
+            },
+            {
+              "place": "merlion-park",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Quick photo stop. Always open."
+            },
+            {
+              "place": "river-cruise",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Boats run into the evening. Kids enjoy the ride."
+            }
+          ]
+        },
+        {
+          "title": "Rainy-day option and fly",
+          "stops": [
+            {
+              "place": "jewel-changi",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Indoor and good on a rainy day. About 10:00–22:00."
+            },
+            {
+              "place": "kidzania",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Usually 10:00–18:00. Book ahead and check on the day."
+            },
+            {
+              "place": "breadtalk",
+              "at": "16:00",
+              "minutes": 15,
+              "note": "Snack before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay or Sentosa"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Four days of hawker classics, satay streets and kopitiam breakfasts, with the bay at night.",
+      "days": [
+        {
+          "title": "Arrive, bay views and satay street",
+          "stops": [
+            {
+              "place": "marina-bay",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Easy walk from most Marina Bay hotels. Sunset is around 19:00."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "18:15",
+              "minutes": 20,
+              "note": "Short walk from the bay. Best after dark when it lights up."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Satay street runs in the evening. Order from a few stalls and share."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown food and river evening",
+          "stops": [
+            {
+              "place": "chinatown-market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Stalls open about 10:00. Busiest in the evening."
+            },
+            {
+              "place": "buddha-tooth",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Usually open 07:00–17:00. Dress modestly, shoulders covered."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at a Chinatown hawker centre. Some stalls close early."
+            },
+            {
+              "place": "tiong-bahru",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Short taxi ride. Cafés close around 18:00."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner by the river. Bars get busy after 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Little India and Kampong Glam",
+          "stops": [
+            {
+              "place": "little-india",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Go hungry: banana leaf meals and sweets. Shops from about 09:00."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Short taxi or MRT ride. Haji Lane shops open about 11:00."
+            },
+            {
+              "place": "raffles-hotel",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk the public areas. A drink at the Long Bar is a splurge."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead. Prices vary a lot by restaurant and crab weight."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast, gardens and light show",
+          "stops": [
+            {
+              "place": "breadtalk",
+              "at": "08:30",
+              "minutes": 15,
+              "note": "Quick bakery breakfast. Most outlets open about 08:00."
+            },
+            {
+              "place": "gardens-bay",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Book timed tickets online."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "SkyPark deck usually 10:00–22:00. Check on the day."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Usually two shows each evening. Check times on the day."
+            },
+            {
+              "place": "river-cruise",
+              "at": "20:30",
+              "minutes": 45,
+              "note": "Boats run into the late evening. Buy tickets at the jetty."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay or Chinatown"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Heritage districts, temples and the bay skyline, paced for first-time visitors.",
+      "days": [
+        {
+          "title": "Arrive and see the bay",
+          "stops": [
+            {
+              "place": "merlion-park",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Always open. Early morning or after dark is coolest."
+            },
+            {
+              "place": "marina-bay",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Walk the waterfront promenade at sunset."
+            },
+            {
+              "place": "esplanade",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Building about 10:00–22:00. Free outdoor shows some evenings."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "20:15",
+              "minutes": 60,
+              "note": "Dinner under the old market roof."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown heritage day",
+          "stops": [
+            {
+              "place": "buddha-tooth",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Morning is quietest. Usually 07:00–17:00."
+            },
+            {
+              "place": "chinatown-heritage",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Streets always open. Shops from about 10:00."
+            },
+            {
+              "place": "hawker-dinner",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at a nearby hawker centre."
+            },
+            {
+              "place": "chinatown-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Souvenirs and snacks. Busiest in the evening."
+            },
+            {
+              "place": "clarke-quay",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Riverside dinner. Bars busiest after 19:00."
+            }
+          ]
+        },
+        {
+          "title": "Little India, Kampong Glam and Raffles",
+          "stops": [
+            {
+              "place": "little-india",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Temples and markets. Streets always open."
+            },
+            {
+              "place": "kampong-glam",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and the Sultan Mosque area. Shops from about 11:00."
+            },
+            {
+              "place": "raffles-hotel",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Late afternoon is calm. Public areas about 10:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Gardens, deck and light show",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Book ahead."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "SkyPark deck usually 10:00–22:00. Check on the day."
+            },
+            {
+              "place": "helix-bridge",
+              "at": "18:30",
+              "minutes": 20,
+              "note": "Walk over at dusk."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Check show times on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Chinatown or Bugis"
+    },
+    {
+      "id": "4n-family",
+      "length": "4n",
+      "style": "family",
+      "nights": 4,
+      "for": "Big-ticket family days with quieter afternoons, built around kids' energy levels.",
+      "days": [
+        {
+          "title": "Arrive, bay and light show",
+          "stops": [
+            {
+              "place": "marina-bay",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Flat promenade, easy with a stroller."
+            },
+            {
+              "place": "merlion-park",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Photo stop. Always open."
+            },
+            {
+              "place": "lau-pa-sat",
+              "at": "18:45",
+              "minutes": 60,
+              "note": "Early dinner. Satay street in the evening."
+            },
+            {
+              "place": "supertree-show",
+              "at": "19:45",
+              "minutes": 30,
+              "note": "Free. Check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Gardens and the bay deck",
+          "stops": [
+            {
+              "place": "gardens-bay",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Conservatories about 09:00–21:00. Book timed tickets."
+            },
+            {
+              "place": "breadtalk",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "Quick snack for the kids."
+            },
+            {
+              "place": "marina-bay-sands",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "SkyPark deck usually 10:00–22:00. Check on the day."
+            },
+            {
+              "place": "river-cruise",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Boats run into the late evening. Sit outside."
+            }
+          ]
+        },
+        {
+          "title": "Theme park day",
+          "stops": [
+            {
+              "place": "universal-studios",
+              "at": "10:00",
+              "minutes": 360,
+              "note": "Usually 10:00–19:00, hours vary. Weekday mornings are quieter."
+            },
+            {
+              "place": "chilli-crab",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Book ahead. Ask for a non-spicy dish for kids."
+            }
+          ]
+        },
+        {
+          "title": "Birds, then fly",
+          "stops": [
+            {
+              "place": "bird-paradise",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "About 09:00–18:00. Morning is cooler and livelier."
+            },
+            {
+              "place": "jewel-changi",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "About 10:00–22:00. Good rainy-day backup and close to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Marina Bay"
+    }
+  ],
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hawker centres, kopitiam breakfasts and late-night satay."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Chinatown, Little India, Kampong Glam and the museums."
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "blurb": "Gardens, the zoo and Sentosa with the kids."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Marina Bay",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Walk to Gardens by the Bay, the Merlion and the bay lights. Best for first-timers who want the skyline at night.",
+      "center": [
+        1.283,
+        103.86
+      ]
+    },
+    {
+      "area": "Orchard Road",
+      "range": [
+        200,
+        550
+      ],
+      "why": "Malls on your doorstep and a central MRT line. Good for shoppers and easy taxi rides anywhere.",
+      "center": [
+        1.304,
+        103.832
+      ]
+    },
+    {
+      "area": "Chinatown",
+      "range": [
+        120,
+        350
+      ],
+      "why": "Hawker food, temples and shophouse hotels. Cheaper than the bay and close to the river.",
+      "center": [
+        1.283,
+        103.844
+      ]
+    },
+    {
+      "area": "Bugis",
+      "range": [
+        130,
+        380
+      ],
+      "why": "Lively street market, good MRT links and short walks to Kampong Glam and Little India.",
+      "center": [
+        1.301,
+        103.856
+      ]
+    }
+  ],
+  "food": [
+    "Eat at hawker centres: Maxwell, Lau Pa Sat and Old Airport Road. A meal is often SGD 4–8.",
+    "Start the day with kaya toast, soft-boiled eggs and kopi at a kopitiam.",
+    "Try chilli crab, laksa, chicken rice and char kway teow. Prices vary widely by stall.",
+    "Many stalls are cash-only or use local payment apps. Carry small notes.",
+    "Book popular restaurants ahead. Hawker queues are shortest before noon and after 2pm."
+  ],
+  "more_time": [
+    "Swap a mall afternoon for a walk in the Botanic Gardens, free and open early.",
+    "Take a short ferry to Pulau Ubin or the Southern Islands for a slower day; check timings on the day.",
+    "Add a half-day in Kampong Glam and Little India for temples, murals and cheap eats."
+  ]
+}

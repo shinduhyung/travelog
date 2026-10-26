@@ -1,0 +1,31 @@
+$ deepseek_facts.py Munich
+  tokens in 4414 out 917
+Munich: 3 problems
+  - FMM taxi €200-250 vs tariff estimate 447
+  - FRA taxi €500+ vs tariff estimate 1132
+  - airport FRA is 304 km away
+
+$ deepseek_city.py Munich --stage places
+Munich: places
+  tokens in 1246 out 4351
+
+$ deepseek_city.py Munich --stage frame
+Munich: frame
+  tokens in 2444 out 1855
+  repaired JSON
+
+$ deepseek_city.py Munich --stage plans
+Munich: plans
+  plans for day
+  tokens in 2607 out 822
+  plans for 1n
+  tokens in 2608 out 926
+  plans for 2n
+  tokens in 2613 out 1372
+  plans for 3n
+  tokens in 2608 out 1308
+
+$ merge_city.py Munich
+Munich: 25 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/munich.json and planner/munich.json
+

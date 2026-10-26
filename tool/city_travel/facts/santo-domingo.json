@@ -1,0 +1,208 @@
+{
+  "currency": "DOP",
+  "usd_rate": 61.4189,
+  "intro_line": "Santo Domingo: the oldest colonial city in the Americas.",
+  "intro": "Santo Domingo rewards visitors with a mix of history, culture, and Caribbean energy. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Zona Colonial",
+    "Piantini",
+    "Gazcue",
+    "Bella Vista"
+  ],
+  "taxi": {
+    "flag_day": 150,
+    "flag_airport": 300,
+    "per_km": 50,
+    "min_fare": 200
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro: two lines, RD$20 per ride with smartcard (RD$60 card + RD$20 minimum).",
+    "Buses: cheap but confusing; fares around RD$20-40.",
+    "Taxis: no meters; agree fare before; apps Uber and InDrive work.",
+    "Driving: chaotic; not recommended for short visits.",
+    "Walking: best in Zona Colonial and Malecón; sidewalks uneven.",
+    "Ferry: to Puerto Rico (Mayagüez/San Juan) about US$200 roundtrip, 12 hours."
+  ],
+  "airports": [
+    {
+      "code": "SDQ",
+      "name": "Las Américas International Airport",
+      "primary": true,
+      "note": "Main international gateway, 28 km east of centre.",
+      "options": [
+        {
+          "mode": "Minivan",
+          "to": "Zona Colonial",
+          "price": "RD$70",
+          "time": "30-40 min",
+          "note": "From Arrivals second floor; cheap but slow."
+        },
+        {
+          "mode": "Bus",
+          "to": "Boca Chica",
+          "price": "RD$40",
+          "time": "60 min",
+          "note": "Then walk 2 km to airport; avoid at night."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "US$25-40",
+          "time": "30-45 min",
+          "note": "Official airport taxis; fixed rate."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "May not be allowed for pickups; check app."
+        }
+      ]
+    },
+    {
+      "code": "JBQ",
+      "name": "La Isabela International Airport",
+      "primary": false,
+      "note": "Secondary airport for domestic and regional flights, 11 km north.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "RD$20-40",
+          "time": "40-60 min",
+          "note": "Local buses; ask for route."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RD$500-800",
+          "time": "20-30 min",
+          "note": "Negotiate fare."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Availability varies."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ciudad Colonial",
+    "Alcazar de Colon",
+    "Catedral Primada de América",
+    "Ozama Fortress",
+    "Faro a Colon",
+    "La Bandera",
+    "Malecon de Santo Domingo",
+    "National Palace, Dominican Republic"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Santo Domingo",
+      "https://en.wikivoyage.org/wiki/Santo%20Domingo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    18.4861,
+    -69.9312
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 18
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 22
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 23
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 22
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 20
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 19
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "SDQ taxi US$25-40 vs tariff estimate 2120",
+    "SDQ Bus RD$40 costs more than taxi US$25-40",
+    "JBQ taxi RD$500-800 vs tariff estimate 1015"
+  ]
+}

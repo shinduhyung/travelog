@@ -1,0 +1,31 @@
+$ deepseek_prep.py Bologna
+  tokens in 663 out 342
+Bologna: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bologna
+  tokens in 2509 out 595
+Bologna: 0 problems
+
+$ deepseek_city.py Bologna --stage places
+Bologna: places
+  tokens in 1140 out 3102
+
+$ deepseek_city.py Bologna --stage frame
+Bologna: frame
+  tokens in 2434 out 1688
+
+$ deepseek_city.py Bologna --stage plans
+Bologna: plans
+  plans for day
+  tokens in 2106 out 845
+  plans for 1n
+  tokens in 2107 out 900
+  plans for 2n
+  tokens in 2112 out 1443
+  plans for 3n
+  tokens in 2107 out 1637
+
+$ merge_city.py Bologna
+Bologna: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/bologna.json and planner/bologna.json
+

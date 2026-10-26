@@ -1,0 +1,1395 @@
+{
+  "city": "Antwerp",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Antwerp rewards visitors with a stunning station, a lively old town, and a strong fashion and art scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 51.0264,
+      "west": 4.274,
+      "north": 51.2526,
+      "east": 4.4469,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 5,
+      "flag_airport": 8,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "De Lijn runs trams, buses, and pre-metro trams; a 10-fare card costs about €21.",
+      "Single fares last one hour; pay contactless on board, cash is not accepted.",
+      "Ride apps like Uber and Bolt work in Antwerp; taxis wait at the station and main squares.",
+      "The centre is compact and walkable; many streets are narrow and slow for cars.",
+      "Bikes are popular; cycle superhighways F1, F4, and F14 reach the city.",
+      "The city centre is a low-emission zone; register foreign cars before entering."
+    ],
+    "sources": []
+  },
+  "places": {
+    "central_station": {
+      "name": "Antwerp Central Station",
+      "landmark": "Antwerp Central Station",
+      "kind": "sight",
+      "lat": 51.2172,
+      "lon": 4.4214,
+      "price": 0,
+      "price_text": "Free to enter the concourse",
+      "hours": "Station hall roughly 05:00–01:00 · check on the day",
+      "tip": "Walk up to the middle level and look back down the escalators for the best view of the marble hall.",
+      "source": "https://www.belgiantrain.be/en"
+    },
+    "cathedral": {
+      "name": "Cathedral of Our Lady",
+      "landmark": "Cathedral of Our Lady, Antwerp",
+      "kind": "sight",
+      "lat": 51.2203,
+      "lon": 4.4015,
+      "price": 12,
+      "price_text": "About €12 adults · under 18 often free · check on the day",
+      "hours": "Roughly Mon–Fri 10:00–17:00 · Sat 10:00–15:00 · Sun 13:00–17:00 · check on the day",
+      "tip": "Climb the tower only if you are fit; the stairs are steep and narrow.",
+      "source": "https://www.dekathedraal.be/en"
+    },
+    "grote_markt": {
+      "name": "Grote Markt",
+      "landmark": "Grote Markt",
+      "kind": "sight",
+      "lat": 51.2213,
+      "lon": 4.3998,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Sit on the steps by the Brabo fountain and look up at the guild houses at golden hour.",
+      "source": ""
+    },
+    "mas": {
+      "name": "Museum aan de Stroom (MAS)",
+      "landmark": "Museum aan de Stroom",
+      "kind": "museum",
+      "lat": 51.2289,
+      "lon": 4.4047,
+      "price": 12,
+      "price_text": "About €12 for exhibitions · rooftop free · check on the day",
+      "hours": "Tue–Fri 10:00–17:00 · Sat–Sun 10:00–18:00 · closed Mon · check on the day",
+      "tip": "The free rooftop walkway gives the best harbour view in the city.",
+      "source": "https://mas.be/en"
+    },
+    "duvel": {
+      "name": "Duvel Moortgat Brewery",
+      "landmark": "Duvel Moortgat",
+      "kind": "tour",
+      "lat": 51.0494,
+      "lon": 4.2926,
+      "price": 20,
+      "price_text": "About €15–25 for a guided tour · booking required · check on the day",
+      "hours": "Tours by reservation only · check on the day",
+      "tip": "It is outside Antwerp in Puurs; book ahead and check train plus shuttle options.",
+      "source": "https://www.duvel.com/en"
+    },
+    "plopsa": {
+      "name": "Plopsa Station Antwerp",
+      "landmark": "Plopsa Station",
+      "kind": "activity",
+      "lat": 51.2198,
+      "lon": 4.4022,
+      "price": 20,
+      "price_text": "About €15–25 per person · check on the day",
+      "hours": "Roughly daily 10:00–18:00 · check on the day",
+      "tip": "Indoor family park inside the station building; good for a rainy half-day with kids.",
+      "source": "https://www.plopsastation.be/en"
+    },
+    "tomorrowland": {
+      "name": "Tomorrowland",
+      "landmark": "Tomorrowland",
+      "kind": "show",
+      "lat": 51.0914,
+      "lon": 4.3714,
+      "price": null,
+      "price_text": "Ticket prices vary by year · check on the day",
+      "hours": "Festival weekends in summer only · check on the day",
+      "tip": "It is in Boom, not central Antwerp; plan transport and accommodation months ahead.",
+      "source": "https://www.tomorrowland.com"
+    },
+    "meir": {
+      "name": "Meir shopping street",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2186,
+      "lon": 4.4076,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops roughly 10:00–18:00 · closed some Sundays",
+      "tip": "Walk from the station to the Old Town and stop at the Stadsfeestzaal arcade.",
+      "source": ""
+    },
+    "het_steen": {
+      "name": "Het Steen castle",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 51.2226,
+      "lon": 4.3963,
+      "price": 0,
+      "price_text": "Free to view outside · visitor centre free",
+      "hours": "Outside always open · visitor centre roughly 10:00–18:00 · check on the day",
+      "tip": "Short riverside stop near the Old Town; good photo of the Scheldt.",
+      "source": ""
+    },
+    "scheldt_walk": {
+      "name": "Scheldt river walk and Sint-Anna beach",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2255,
+      "lon": 4.3935,
+      "price": 0,
+      "price_text": "Free · ferry to left bank small fee",
+      "hours": "Always open · ferry roughly daytime · check on the day",
+      "tip": "Take the ferry across for a skyline view back at the city.",
+      "source": ""
+    },
+    "zurenborg": {
+      "name": "Zurenborg neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2044,
+      "lon": 4.4283,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Look for the Art Nouveau houses around Cogels-Osylei; quiet residential streets.",
+      "source": ""
+    },
+    "theaterplein_market": {
+      "name": "Theaterplein food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2192,
+      "lon": 4.4045,
+      "price": 0,
+      "price_text": "Free to browse · food paid per item",
+      "hours": "Market mornings · check on the day",
+      "tip": "Come hungry and try local cheese and street snacks.",
+      "source": ""
+    },
+    "plantin_moretus": {
+      "name": "Plantin-Moretus Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 51.2183,
+      "lon": 4.3983,
+      "price": 12,
+      "price_text": "About €12 · check on the day",
+      "hours": "Tue–Sun roughly 10:00–17:00 · closed Mon · check on the day",
+      "tip": "A UNESCO printing house; quiet and worth an hour for book lovers.",
+      "source": "https://www.museumplantinmoretus.be/en"
+    },
+    "rubenshuis": {
+      "name": "Rubenshuis",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 51.2192,
+      "lon": 4.4064,
+      "price": 12,
+      "price_text": "About €12 · check on the day",
+      "hours": "Tue–Sun roughly 10:00–17:00 · closed Mon · check on the day",
+      "tip": "Check opening status before you go; the house may be under works.",
+      "source": "https://www.rubenshuis.be/en"
+    },
+    "muhka": {
+      "name": "M HKA contemporary art museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 51.2103,
+      "lon": 4.3893,
+      "price": 10,
+      "price_text": "About €10 · check on the day",
+      "hours": "Tue–Sun roughly 11:00–18:00 · closed Mon · check on the day",
+      "tip": "Modern art in Het Zuid; pair it with a walk along the docks.",
+      "source": "https://www.muhka.be/en"
+    },
+    "het_zuid_food": {
+      "name": "Het Zuid food and bar streets",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2095,
+      "lon": 4.3945,
+      "price": 0,
+      "price_text": "Free to walk · meals paid per venue",
+      "hours": "Bars and restaurants roughly 12:00–late",
+      "tip": "Good area for an evening meal and Belgian beer away from the busiest tourist streets.",
+      "source": ""
+    },
+    "eilandje_walk": {
+      "name": "Eilandje docklands walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 51.2296,
+      "lon": 4.4022,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the old docks between MAS and the red-light district edge; watch for cyclists.",
+      "source": ""
+    },
+    "beer_tour": {
+      "name": "Belgian beer tasting in the Old Town",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 51.2208,
+      "lon": 4.4011,
+      "price": 30,
+      "price_text": "About €25–40 per tasting · check on the day",
+      "hours": "Evenings · booking advised",
+      "tip": "Ask for local Antwerp brews and small pours; eat first.",
+      "source": ""
+    },
+    "vlaeykensgang": {
+      "name": "Vlaeykensgang alley",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 51.2206,
+      "lon": 4.3992,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daytime only · respect residents",
+      "tip": "A hidden medieval alley near the cathedral; keep quiet and do not enter private doors.",
+      "source": ""
+    },
+    "sint_paulus": {
+      "name": "Sint-Pauluskerk",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 51.2233,
+      "lon": 4.4011,
+      "price": 0,
+      "price_text": "Free · donations welcome",
+      "hours": "Roughly daytime · check on the day",
+      "tip": "Quiet church with a famous Calvary garden; a calm break from the Grote Markt.",
+      "source": ""
+    },
+    "station_district_food": {
+      "name": "Station District quick eats",
+      "landmark": null,
+      "kind": "food",
+      "lat": 51.2169,
+      "lon": 4.4203,
+      "price": 0,
+      "price_text": "Free to browse · meals paid per venue",
+      "hours": "Roughly 08:00–22:00",
+      "tip": "Handy for a fast meal before or after your train; the station area is busy at rush hour.",
+      "source": ""
+    },
+    "kmska": {
+      "name": "KMSKA fine arts museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 51.2087,
+      "lon": 4.3966,
+      "price": 12,
+      "price_text": "About €12 · check on the day",
+      "hours": "Tue–Sun roughly 10:00–17:00 · closed Mon · check on the day",
+      "tip": "Big Old Masters collection in Het Zuid; allow at least two hours.",
+      "source": "https://www.kmska.be/en"
+    },
+    "city_guide_walk": {
+      "name": "Old Town guided walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 51.2211,
+      "lon": 4.3999,
+      "price": 15,
+      "price_text": "About €10–20 · tip-based tours also exist · check on the day",
+      "hours": "Usually morning and afternoon departures",
+      "tip": "Book a small-group tour early in your trip to get your bearings.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "One art-filled day: Rubens' house, the cathedral's paintings and a modern collection.",
+      "days": [
+        {
+          "title": "Old Town masters in the morning",
+          "stops": [
+            {
+              "place": "rubenshuis",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Go early for quiet rooms."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "See the Rubens altarpieces. Short walk from Rubenshuis."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch from the market stalls. Check market days on the day."
+            },
+            {
+              "place": "plantin_moretus",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Closed Monday. Old printing house with art and books."
+            }
+          ]
+        },
+        {
+          "title": "Modern art and the river",
+          "stops": [
+            {
+              "place": "muhka",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Closed Monday. Tram or 20-minute walk to Het Zuid."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner in the bar streets nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "The classic Antwerp day: cathedral, market square, castle and the old docks.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Opens around 10:00 on weekdays. Check times on the day."
+            },
+            {
+              "place": "grote_markt",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Right outside the cathedral."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "11:20",
+              "minutes": 15,
+              "note": "Hidden alley near the square. Daytime only, keep quiet for residents."
+            },
+            {
+              "place": "het_steen",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short walk to the river. Outside always open."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch stop. Check market mornings on the day."
+            }
+          ]
+        },
+        {
+          "title": "Docks and sunset",
+          "stops": [
+            {
+              "place": "mas",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Walk or tram to Eilandje."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Docklands walk, good light late in the day."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Or stay in Eilandje for food."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: market breakfast, brewery tour and Belgian beer in the evening.",
+      "days": [
+        {
+          "title": "Market, docks and beer",
+          "stops": [
+            {
+              "place": "theaterplein_market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Breakfast at the food market. Check market mornings on the day."
+            },
+            {
+              "place": "grote_markt",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Short walk, then on to the docks."
+            },
+            {
+              "place": "duvel",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Tours by reservation only. Book ahead and check times."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Walk off lunch around the docks."
+            },
+            {
+              "place": "mas",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Closed Monday. Rooftop is free and has a view."
+            }
+          ]
+        },
+        {
+          "title": "Old Town evening",
+          "stops": [
+            {
+              "place": "beer_tour",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Belgian beer tasting. Booking advised."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Late bite in Het Zuid, or eat in the Old Town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers with one night: Rubens and the Old Town masters, then modern art on the south side.",
+      "days": [
+        {
+          "title": "Old Town masters and the cathedral",
+          "stops": [
+            {
+              "place": "central_station",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start here to see the grand station hall. Walk to the Old Town in about 20 minutes."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Rubens altarpieces inside. Closed to tourists during services."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "11:30",
+              "minutes": 15,
+              "note": "Tiny medieval alley a few steps away. Keep quiet for residents."
+            },
+            {
+              "place": "grote_markt",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Guild houses and the Brabo fountain. Good spot for lunch nearby."
+            },
+            {
+              "place": "rubenshuis",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Rubens' own house and studio. Closed Monday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "South side museums, then home",
+          "stops": [
+            {
+              "place": "kmska",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Fine arts from old masters to modern. Closed Monday."
+            },
+            {
+              "place": "muhka",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Contemporary art, a short walk away. Closed Monday."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Late lunch or early dinner in the bar streets."
+            },
+            {
+              "place": "central_station",
+              "at": "16:15",
+              "minutes": 0,
+              "note": "Tram or taxi back, about 15 minutes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "First-time visitors who want the classic Antwerp story: cathedral, market square and the old port.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "central_station",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "The station itself is a landmark. Walk down to the centre."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Check opening times on the day; Sunday opens later."
+            },
+            {
+              "place": "grote_markt",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "The main square. Lunch options all around."
+            },
+            {
+              "place": "het_steen",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Oldest building in the city, by the river. Visitor centre inside."
+            },
+            {
+              "place": "scheldt_walk",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "River walk and the ferry to Sint-Anna beach. Check ferry times."
+            }
+          ]
+        },
+        {
+          "title": "Docks and museums",
+          "stops": [
+            {
+              "place": "eilandje_walk",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Old docklands, now redeveloped. Flat and easy walking."
+            },
+            {
+              "place": "mas",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "City history museum. Rooftop is free and open to all. Closed Monday."
+            },
+            {
+              "place": "station_district_food",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Quick lunch before your train."
+            },
+            {
+              "place": "central_station",
+              "at": "14:45",
+              "minutes": 0,
+              "note": "Trains leave from here."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of eating and drinking: markets and beer in the Old Town, docks and breweries the next day.",
+      "days": [
+        {
+          "title": "Markets, squares and beer",
+          "stops": [
+            {
+              "place": "theaterplein_market",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Market mornings only. Check which day on the day."
+            },
+            {
+              "place": "grote_markt",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Walk through the square on the way to lunch."
+            },
+            {
+              "place": "meir",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Main shopping street. Snack stands and cafes along the way."
+            },
+            {
+              "place": "beer_tour",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Belgian beer tasting. Book ahead."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner in the Het Zuid bar streets."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and docks",
+          "stops": [
+            {
+              "place": "duvel",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Tours by reservation only. Book before you travel."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Walk off lunch around the docks."
+            },
+            {
+              "place": "mas",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Museum and rooftop views. Closed Monday."
+            },
+            {
+              "place": "station_district_food",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Quick bite near the station before leaving."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers: Rubens and old masters first, modern and contemporary art on day two.",
+      "days": [
+        {
+          "title": "Old Town art and the cathedral",
+          "stops": [
+            {
+              "place": "central_station",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start under the famous station dome. Trains and trams leave from here."
+            },
+            {
+              "place": "cathedral",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "See the Rubens paintings. Check Sunday hours before you go."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "11:00",
+              "minutes": 15,
+              "note": "A tiny medieval alley near the cathedral. Keep quiet for residents."
+            },
+            {
+              "place": "rubenshuis",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Rubens' house and studio. Closed Monday."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch from the food stalls. Market mornings only, so check the day."
+            },
+            {
+              "place": "plantin_moretus",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "A printer's house with old books and art. Closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Het Zuid museums and the docks",
+          "stops": [
+            {
+              "place": "kmska",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Fine arts from old masters to modern. Closed Monday."
+            },
+            {
+              "place": "muhka",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Contemporary art, a short walk away. Closed Monday."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Late lunch in the bar streets."
+            },
+            {
+              "place": "mas",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Take the tram to Eilandje. The rooftop is free and open late."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Walk the old docks at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-time visitors who want the old city, the castle and the port story.",
+      "days": [
+        {
+          "title": "Old Town on foot",
+          "stops": [
+            {
+              "place": "city_guide_walk",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "A guided walk gives you the layout fast. Book ahead."
+            },
+            {
+              "place": "grote_markt",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "The main square with the town hall and guild houses."
+            },
+            {
+              "place": "cathedral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Right next to the square. Check weekend hours."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Lunch at the market if it is a market day."
+            },
+            {
+              "place": "het_steen",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "The old castle by the river. Visitor centre hours vary."
+            },
+            {
+              "place": "scheldt_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk the river and take the ferry to Sint-Anna beach in good weather."
+            }
+          ]
+        },
+        {
+          "title": "Docks, station and Zurenborg",
+          "stops": [
+            {
+              "place": "mas",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "The museum tells the port and city story. Closed Monday."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk the docklands around the museum."
+            },
+            {
+              "place": "station_district_food",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Quick lunch near the station."
+            },
+            {
+              "place": "central_station",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Look up in the main hall."
+            },
+            {
+              "place": "zurenborg",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Art nouveau streets, best on a weekend morning but fine any dry day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat and drink your way through markets, beer and Flemish cooking.",
+      "days": [
+        {
+          "title": "Markets, beer and the Old Town",
+          "stops": [
+            {
+              "place": "theaterplein_market",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Go early on a market morning. Check the day first."
+            },
+            {
+              "place": "grote_markt",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Walk off breakfast on the main square."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "A short detour through the old alley."
+            },
+            {
+              "place": "beer_tour",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Book a tasting in the afternoon or evening. Booking advised."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in the Het Zuid bar streets."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and docks",
+          "stops": [
+            {
+              "place": "mas",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Short museum visit, then the free rooftop. Closed Monday."
+            },
+            {
+              "place": "duvel",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Brewery tour by reservation only. Book well ahead."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Walk the docks between stops."
+            },
+            {
+              "place": "station_district_food",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "A snack before your train or a rest at the hotel."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Art lovers who want Rubens, old masters and modern work, with time to slow down.",
+      "days": [
+        {
+          "title": "Arrive, Old Town art",
+          "stops": [
+            {
+              "place": "central_station",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Start in the grand station hall. Lockers for bags if needed."
+            },
+            {
+              "place": "cathedral",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Rubens paintings inside. Check Sunday hours."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "15:15",
+              "minutes": 15,
+              "note": "Tiny medieval alley near the cathedral. Quiet, respect residents."
+            },
+            {
+              "place": "grote_markt",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Guild houses and the Brabo fountain."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner in Het Zuid. Tram from the Old Town."
+            }
+          ]
+        },
+        {
+          "title": "Rubens and printing",
+          "stops": [
+            {
+              "place": "rubenshuis",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Book ahead in peak season."
+            },
+            {
+              "place": "plantin_moretus",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed Monday. Old printing presses and books."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Lunch from market stalls. Market mornings only, check the day."
+            },
+            {
+              "place": "sint_paulus",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Quiet church with art. Daytime hours only."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening tasting. Booking advised."
+            }
+          ]
+        },
+        {
+          "title": "Modern art and the docks",
+          "stops": [
+            {
+              "place": "kmska",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Fine arts in Het Zuid."
+            },
+            {
+              "place": "muhka",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Monday. Contemporary art nearby."
+            },
+            {
+              "place": "mas",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. Rooftop is free, go up for the view."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Docklands walk at sunset."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Last dinner in Het Zuid."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the old city, the port story and the river.",
+      "days": [
+        {
+          "title": "Arrive, station and Old Town",
+          "stops": [
+            {
+              "place": "central_station",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "One of Europe's grandest stations. Drop bags at the hotel first if close."
+            },
+            {
+              "place": "zurenborg",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short tram ride. Belle-époque streets, best on a weekend morning but fine anytime."
+            },
+            {
+              "place": "grote_markt",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Heart of the old city."
+            },
+            {
+              "place": "het_steen",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Oldest building in the city, by the river."
+            },
+            {
+              "place": "station_district_food",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Easy dinner near your hotel or the station."
+            }
+          ]
+        },
+        {
+          "title": "Cathedral and guided walk",
+          "stops": [
+            {
+              "place": "city_guide_walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning departure. Book ahead."
+            },
+            {
+              "place": "cathedral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Check hours, Saturday closes early."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "13:45",
+              "minutes": 15,
+              "note": "Daytime only. A hidden alley."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Late lunch. Market mornings only, check the day."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening beer tasting in the Old Town."
+            }
+          ]
+        },
+        {
+          "title": "Port story and river",
+          "stops": [
+            {
+              "place": "mas",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. City and port history."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Docks and old warehouses."
+            },
+            {
+              "place": "scheldt_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "River walk and the free ferry to Sint-Anna beach. Sunny afternoon is best."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner in Het Zuid."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Travellers who plan the day around markets, beer and long dinners.",
+      "days": [
+        {
+          "title": "Arrive, markets and beer",
+          "stops": [
+            {
+              "place": "central_station",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Arrive and orient yourself."
+            },
+            {
+              "place": "grote_markt",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Walk the square before eating."
+            },
+            {
+              "place": "theaterplein_market",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Snack from stalls. Market mornings only, check the day."
+            },
+            {
+              "place": "meir",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Shopping street, good for waffles and coffee. Some shops close Sundays."
+            },
+            {
+              "place": "beer_tour",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Belgian beer tasting. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Brewery and docks",
+          "stops": [
+            {
+              "place": "duvel",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Tours by reservation only. Book well ahead."
+            },
+            {
+              "place": "eilandje_walk",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk off lunch around the docks."
+            },
+            {
+              "place": "mas",
+              "at": "16:45",
+              "minutes": 120,
+              "note": "Closed Monday. Rooftop at sunset is free."
+            },
+            {
+              "place": "het_zuid_food",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner in Het Zuid. Tram back to centre."
+            }
+          ]
+        },
+        {
+          "title": "Old Town tastes",
+          "stops": [
+            {
+              "place": "cathedral",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Check hours, Sunday opens at 13:00."
+            },
+            {
+              "place": "vlaeykensgang",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Daytime only."
+            },
+            {
+              "place": "station_district_food",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Quick lunch before a train or a last walk."
+            },
+            {
+              "place": "zurenborg",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Weekend mornings are best, but any dry day works."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town (Centrum)"
+    }
+  ],
+  "styles": [
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Rubens, Van Eyck and the MAS museum."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Cathedral, Grote Markt and the old port."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Belgian beer, waffles and Flemish cooking."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town (Centrum)",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Walk to the cathedral, Grote Markt and museums. Best for first-timers.",
+      "center": [
+        51.221,
+        4.399
+      ]
+    },
+    {
+      "area": "Het Zuid",
+      "range": [
+        85,
+        200
+      ],
+      "why": "Quiet streets with galleries, bars and the Museum of Fine Arts nearby.",
+      "center": [
+        51.209,
+        4.394
+      ]
+    },
+    {
+      "area": "Station District",
+      "range": [
+        70,
+        170
+      ],
+      "why": "Next to the grand Antwerp Central station; easy train links and good value.",
+      "center": [
+        51.217,
+        4.421
+      ]
+    },
+    {
+      "area": "Eilandje",
+      "range": [
+        95,
+        230
+      ],
+      "why": "Old docks, the MAS museum and modern waterfront hotels.",
+      "center": [
+        51.229,
+        4.404
+      ]
+    }
+  ],
+  "food": [
+    "Try Flemish classics: stoofvlees (beer-braised beef), vol-au-vent and waterzooi.",
+    "Belgian beer is the local drink. Ask for a small tasting glass and try a few.",
+    "Waffles and chocolate shops are everywhere in the centre; prices rise near the cathedral.",
+    "Look for lunch deals (dagschotel) at cafés away from the Grote Markt for better value.",
+    "Book dinner on weekends; popular places in Het Zuid fill up."
+  ],
+  "more_time": [
+    "Swap a city afternoon for a short train ride to Mechelen or Ghent; check times on the day.",
+    "Add a half-day at the Plantin-Moretus Museum, a UNESCO-listed printing house.",
+    "Take a walk or bike ride along the Scheldt river and the old docks in Eilandje."
+  ]
+}

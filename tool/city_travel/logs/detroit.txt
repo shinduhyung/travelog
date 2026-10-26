@@ -1,0 +1,31 @@
+$ deepseek_prep.py Detroit
+  tokens in 657 out 269
+Detroit: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Detroit
+  tokens in 4017 out 798
+Detroit: 0 problems
+
+$ deepseek_city.py Detroit --stage places
+Detroit: places
+  tokens in 1138 out 3257
+
+$ deepseek_city.py Detroit --stage frame
+Detroit: frame
+  tokens in 2417 out 1841
+
+$ deepseek_city.py Detroit --stage plans
+Detroit: plans
+  plans for day
+  tokens in 2251 out 805
+  plans for 1n
+  tokens in 2252 out 1338
+  plans for 2n
+  tokens in 2257 out 1712
+  plans for 3n
+  tokens in 2252 out 1859
+
+$ merge_city.py Detroit
+Detroit: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/detroit.json and planner/detroit.json
+

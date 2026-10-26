@@ -1,0 +1,177 @@
+{
+ "city": "Oslo",
+ "trips": [
+  {
+   "place": "Fredrikstad",
+   "label": "",
+   "position": {
+    "id": 450780,
+    "name": "Fredrikstad",
+    "city": "Fredrikstad",
+    "lat": 59.2181,
+    "lng": 10.9298
+   },
+   "town": {
+    "name": "Fredrikstad",
+    "lat": 59.2181,
+    "lng": 10.9298
+   },
+   "road": {
+    "km": 94,
+    "min": 78,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1980,
+    "currency": "NOK"
+   },
+   "modes": {
+    "train": {
+     "from": "$8",
+     "time": "59m",
+     "via": "Oslo S to Fredrikstad stasjon",
+     "source": "https://www.rome2rio.com/s/Oslo/Fredrikstad"
+    },
+    "bus": {
+     "from": "$22-$45",
+     "time": "1h 14m",
+     "via": "Oslo bussterminal to N.T.P.",
+     "source": "https://www.rome2rio.com/s/Oslo/Fredrikstad"
+    }
+   },
+   "route_note": "Regional trains from Oslo S reach Fredrikstad in roughly 1.5 hours; the old town is a short local bus or walk from the station.",
+   "see": [
+    "Gamlebyen fortified old town",
+    "Fredrikstad fortress and moat",
+    "Gamlebyen drawbridge and gates",
+    "Riverside cafes in the old town"
+   ],
+   "visit": "Full day",
+   "tour_query": "Fredrikstad old town day trip from Oslo",
+   "quests": [],
+   "recommended": "train",
+   "why": "The train reaches Fredrikstad in about 59 minutes, far quicker than the bus, with the old town a short local hop from the station.",
+   "stars": 4,
+   "know": [
+    "The old town (Gamlebyen) is the main draw, a short local bus or walk from the station",
+    "Allow extra time for the last-mile connection from the station"
+   ]
+  },
+  {
+   "place": "Moss",
+   "label": "",
+   "position": {
+    "id": 450747,
+    "name": "Moss",
+    "city": "Moss",
+    "lat": 59.43403,
+    "lng": 10.65771
+   },
+   "town": {
+    "name": "Moss",
+    "lat": 59.43403,
+    "lng": 10.65771
+   },
+   "road": {
+    "km": 62,
+    "min": 52,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1340,
+    "currency": "NOK"
+   },
+   "modes": {
+    "train": {
+     "from": "$5",
+     "time": "40m",
+     "via": "Oslo S to Moss stasjon",
+     "source": "https://www.rome2rio.com/s/Oslo/Moss"
+    },
+    "bus": {
+     "from": "$9-$31",
+     "time": "1h 18m",
+     "via": "Mosseporten senter to Moss bussterminal",
+     "source": "https://www.rome2rio.com/s/Oslo/Moss"
+    }
+   },
+   "route_note": "Regional trains from Oslo S run direct to Moss in about 50 minutes, with the town centre a short walk from the station.",
+   "see": [
+    "Moss town centre and harbour",
+    "Galleri F15 at Jeløya",
+    "Jeløya island coastal paths",
+    "Moss Kunstgalleri"
+   ],
+   "visit": "Half day",
+   "tour_query": "Moss day trip from Oslo",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct regional trains take about 40 minutes and the town centre is a short walk from the station.",
+   "stars": 3,
+   "know": [
+    "Frequent departures make it an easy spontaneous day trip",
+    "Town centre sights are walkable from Moss stasjon"
+   ]
+  },
+  {
+   "place": "Drammen",
+   "label": "",
+   "position": {
+    "id": 393536,
+    "name": "Drammen",
+    "city": "Drammen",
+    "lat": 59.74389,
+    "lng": 10.20449
+   },
+   "town": {
+    "name": "Drammen",
+    "lat": 59.74389,
+    "lng": 10.20449
+   },
+   "road": {
+    "km": 43,
+    "min": 43,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 960,
+    "currency": "NOK"
+   },
+   "modes": {
+    "train": {
+     "from": "$22-$24",
+     "time": "35m",
+     "via": "Oslo S to Drammen stasjon",
+     "source": "https://www.rome2rio.com/s/Oslo/Drammen"
+    },
+    "bus": {
+     "from": "$10-$21",
+     "time": "44m",
+     "via": "Oslo bussterminal to Torget Vest",
+     "source": "https://www.rome2rio.com/s/Oslo/Drammen"
+    }
+   },
+   "route_note": "Regional trains from Oslo S run direct to Drammen in about 30-40 minutes, with frequent departures throughout the day.",
+   "see": [
+    "Drammen Spiralen tunnel and viewpoint",
+    "Bragernes square and old town",
+    "Drammenselva riverside walk",
+    "Gulskogen Manor"
+   ],
+   "visit": "Half day",
+   "tour_query": "Drammen day trip from Oslo",
+   "quests": [],
+   "recommended": "train",
+   "why": "Regional trains from Oslo S run direct in about 35 minutes, faster than driving and dropping you near the centre.",
+   "stars": 2,
+   "know": [
+    "Frequent departures throughout the day, so no need to book ahead",
+    "Best as a short half-day outing rather than a full day"
+   ]
+  }
+ ],
+ "problems": [
+  "Hønefoss: not a town in cities15000.json (NO), dropped",
+  "Drøbak: not a town in cities15000.json (NO), dropped"
+ ]
+}

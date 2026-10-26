@@ -1,0 +1,70 @@
+{
+ "city": "Sofia",
+ "trips": [
+  {
+   "place": "Plovdiv",
+   "label": "",
+   "position": {
+    "id": 369831,
+    "name": "Plovdiv",
+    "city": "Plovdiv",
+    "lat": 42.15,
+    "lng": 24.75
+   },
+   "town": {
+    "name": "Plovdiv",
+    "lat": 42.15,
+    "lng": 24.75
+   },
+   "road": {
+    "km": 144,
+    "min": 92,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 110.0,
+    "currency": "BGN"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$5",
+     "time": "2h 29m",
+     "via": "Poduyane to Plovdiv",
+     "source": "https://www.rome2rio.com/s/Sofia/Plovdiv"
+    },
+    "bus": {
+     "from": "$6-$12",
+     "time": "2h 20m",
+     "via": "Sofia Central Bus Station to Plovdiv Central Train Station Bus Stop",
+     "source": "https://www.rome2rio.com/s/Sofia/Plovdiv"
+    }
+   },
+   "route_note": "Frequent direct trains and buses run from Sofia to Plovdiv in roughly 2 to 2.5 hours; the train station is a short walk from the old town.",
+   "see": [
+    "Roman Theatre of Philippopolis",
+    "Old Town cobbled streets and Revival houses",
+    "Kapana creative district",
+    "Ancient stadium and forum"
+   ],
+   "visit": "Full day",
+   "tour_query": "Plovdiv day trip from Sofia",
+   "quests": [
+    "Plovdiv Old Town",
+    "Ancient Theatre of Philippopolis"
+   ],
+   "recommended": "train",
+   "why": "Frequent direct trains take about 2h 29m and the station is a short walk from the old town.",
+   "stars": 5,
+   "know": [
+    "Book ahead in peak summer season",
+    "The old town is best explored on foot from the station",
+    "Allow a full day to see the Roman theatre and old town"
+   ]
+  }
+ ],
+ "problems": [
+  "Rila: no Omio position, dropped",
+  "Koprivshtitsa: not a town in cities15000.json (BG), dropped",
+  "Vitosha: no Omio position, dropped"
+ ]
+}

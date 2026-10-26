@@ -1,0 +1,28 @@
+$ deepseek_facts.py Minneapolis
+  tokens in 3857 out 587
+Minneapolis: 0 problems
+
+$ deepseek_city.py Minneapolis --stage places
+Minneapolis: places
+  tokens in 1177 out 2959
+
+$ deepseek_city.py Minneapolis --stage frame
+Minneapolis: frame
+  tokens in 2457 out 1794
+  repaired JSON
+
+$ deepseek_city.py Minneapolis --stage plans
+Minneapolis: plans
+  plans for day
+  tokens in 1964 out 791
+  plans for 1n
+  tokens in 1965 out 1302
+  plans for 2n
+  tokens in 1970 out 1308
+  plans for 3n
+  tokens in 1965 out 1677
+
+$ merge_city.py Minneapolis
+Minneapolis: 18 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/minneapolis.json and planner/minneapolis.json
+

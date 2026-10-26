@@ -1,0 +1,174 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "Chennai blends colonial heritage, temple bells and long Marina sands.",
+  "intro": "Chennai rewards visitors with grand temples, colonial architecture, fiery South Indian food and a lively beachfront. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Mylapore",
+    "Egmore",
+    "T. Nagar",
+    "Anna Salai"
+  ],
+  "taxi": {
+    "flag_day": 40,
+    "flag_airport": 60,
+    "per_km": 18,
+    "min_fare": 50
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Chennai Metro Blue and Green lines link the airport, Alandur and MGR Chennai Central; fares run ₹10-60.",
+    "A one-day Tourist Travel Card costs ₹100, with ₹50 refunded on return.",
+    "MTC city buses are very cheap, roughly ₹4-30; deluxe and AC buses cost more.",
+    "Daily and weekly bus passes cost about ₹50 and ₹300 on normal and deluxe routes.",
+    "Suburban trains are fast and cheap, from ₹5; buy first class at peak times.",
+    "Ola and Uber work well and are usually cheaper than prepaid taxis; autos use meters or negotiate."
+  ],
+  "airports": [
+    {
+      "code": "MAA",
+      "name": "Chennai International Airport",
+      "primary": true,
+      "note": "Main gateway, about 15-19 km south-west of the centre.",
+      "options": [
+        {
+          "mode": "Suburban train",
+          "to": "Chennai Park / Egmore / Central",
+          "price": "₹5-70",
+          "time": "25-40 min",
+          "note": "Cheapest option; Tirusulam station is across the road from Terminal 2."
+        },
+        {
+          "mode": "Metro Blue Line",
+          "to": "MGR Chennai Central",
+          "price": "₹10-60",
+          "time": "30-45 min",
+          "note": "Fast and air-conditioned; baggage is screened."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹300-500",
+          "time": "30-50 min",
+          "note": "Usually cheaper than prepaid taxis; book by app."
+        },
+        {
+          "mode": "Prepaid taxi",
+          "to": "Central business district",
+          "price": "₹500-700",
+          "time": "30-50 min",
+          "note": "Fast Track has the best reputation; avoid old yellow-top cabs."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Kapaleeshwarar Temple",
+    "Dash n Splash (closed)",
+    "Kishkinta",
+    "MGM Dizzee World",
+    "Queen's Land",
+    "Snow Kingdom (Chennai)",
+    "VGP Universal Kingdom"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Chennai",
+      "https://en.wikivoyage.org/wiki/Chennai"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    13.0827,
+    80.2707
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 6
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 1
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 2
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 3
+    },
+    {
+      "high": 35,
+      "low": 28,
+      "rain_days": 6
+    },
+    {
+      "high": 35,
+      "low": 28,
+      "rain_days": 12
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 17
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 19
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 20
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 20
+    },
+    {
+      "high": 29,
+      "low": 24,
+      "rain_days": 21
+    },
+    {
+      "high": 28,
+      "low": 23,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

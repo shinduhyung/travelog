@@ -1,0 +1,39 @@
+$ deepseek_facts.py Madrid
+  tokens in 4417 out 648
+Madrid: 0 problems
+
+$ deepseek_city.py Madrid --stage places
+Madrid: places
+  tokens in 1259 out 4129
+
+$ deepseek_city.py Madrid --stage frame
+Madrid: frame
+  tokens in 2469 out 1964
+  repaired JSON
+
+$ deepseek_city.py Madrid --stage plans
+Madrid: plans
+  plans for day
+  tokens in 2661 out 881
+  plans for 1n
+  tokens in 2662 out 1331
+  plans for 2n
+  tokens in 2662 out 1252
+  repaired JSON
+  plans for 3n
+  tokens in 2667 out 1823
+  plans for 4n
+  tokens in 2662 out 2288
+  plans for 5n
+  tokens in 2662 out 2418
+
+$ merge_city.py Madrid
+Traceback (most recent call last):
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\merge_city.py", line 158, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ahnlee123\Desktop\jidoapp\tool\city_travel\merge_city.py", line 106, in main
+    for st in d["stops"]:
+              ~^^^^^^^^^
+KeyError: 'stops'
+

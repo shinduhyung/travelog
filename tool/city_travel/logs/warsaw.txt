@@ -1,0 +1,28 @@
+$ deepseek_facts.py Warsaw
+  tokens in 4517 out 701
+Warsaw: 0 problems
+
+$ deepseek_city.py Warsaw --stage places
+Warsaw: places
+  tokens in 1195 out 3644
+
+$ deepseek_city.py Warsaw --stage frame
+Warsaw: frame
+  tokens in 2461 out 1794
+
+$ deepseek_city.py Warsaw --stage plans
+Warsaw: plans
+  plans for day
+  tokens in 2366 out 897
+  plans for 1n
+  tokens in 2367 out 1406
+  repaired JSON
+  plans for 2n
+  tokens in 2372 out 1582
+  plans for 3n
+  tokens in 2367 out 1918
+
+$ merge_city.py Warsaw
+Warsaw: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/warsaw.json and planner/warsaw.json
+

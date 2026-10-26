@@ -1,0 +1,592 @@
+{
+  "city": "Jakarta",
+  "checked": "October 2026",
+  "intro_line": "Jakarta is a sprawling, steamy capital where chaos and charm collide.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Central Jakarta (Thamrin)",
+        "South Jakarta (Kemang)",
+        "West Jakarta (Kota)",
+        "North Jakarta (Ancol)"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Central Jakarta (Thamrin)",
+        "South Jakarta (Kemang)",
+        "West Jakarta (Kota)",
+        "North Jakarta (Ancol)"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Central Jakarta (Thamrin)",
+        "South Jakarta (Kemang)",
+        "West Jakarta (Kota)",
+        "North Jakarta (Ancol)"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Central Jakarta (Thamrin)",
+        "South Jakarta (Kemang)",
+        "West Jakarta (Kota)",
+        "North Jakarta (Ancol)"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Central Jakarta (Thamrin)",
+        "South Jakarta (Kemang)",
+        "West Jakarta (Kota)",
+        "North Jakarta (Ancol)"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 28,
+        "note": "Jan: very wet, about 28 rain days. Carry an umbrella and plan indoor sights."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 27,
+        "note": "Feb: still very wet, about 27 rain days. Short heavy afternoon showers are common."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 29,
+        "note": "Mar: one of the wettest months, about 29 rain days. Keep plans flexible."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 28,
+        "note": "Apr: wet, about 28 rain days. Mornings are often the driest window."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 22,
+        "note": "May: rain eases to about 22 days. Good balance of heat and showers."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 20,
+        "note": "Jun: drier, about 20 rain days. A comfortable month for walking tours."
+      },
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 12,
+        "note": "Jul: one of the driest months, about 12 rain days. Hot but good for sightseeing."
+      },
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 11,
+        "note": "Aug: dry and hot, about 11 rain days. The best month for outdoor plans."
+      },
+      {
+        "high": 33,
+        "low": 24,
+        "rain_days": 14,
+        "note": "Sep: driest feel, about 14 rain days, highs near 33°C. Start early to beat the heat."
+      },
+      {
+        "high": 33,
+        "low": 24,
+        "rain_days": 21,
+        "note": "Oct: rain returns, about 21 days. Pack a light rain jacket."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 26,
+        "note": "Nov: wet again, about 26 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 26,
+        "note": "Dec: wet, about 26 rain days. Busy holiday season, so book hotels early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "shopping": [
+      0.75,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "nightlife": [
+      0.75,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75
+    ]
+  },
+  "places": {
+    "monas": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Early morning or late afternoon",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 5
+    },
+    "istiqlal": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, avoiding Friday prayers",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 4
+    },
+    "kota-tua": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning on a weekend",
+      "area": "West Jakarta (Kota)",
+      "popularity": 4
+    },
+    "ancol": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "North Jakarta (Ancol)",
+      "popularity": 4
+    },
+    "dufan": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday, arrive at opening",
+      "area": "North Jakarta (Ancol)",
+      "popularity": 4
+    },
+    "gbk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning for exercise",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 3
+    },
+    "kidzania": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "South Jakarta (Kemang)",
+      "popularity": 3
+    },
+    "moi": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Afternoon or evening",
+      "area": "North Jakarta (Ancol)",
+      "popularity": 3
+    },
+    "nasi-goreng": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 5
+    },
+    "national-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning; closed Monday",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 4
+    },
+    "mekarsari": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "South Jakarta (Kemang)",
+      "popularity": 2
+    },
+    "tmii": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning on a weekday",
+      "area": "South Jakarta (Kemang)",
+      "popularity": 3
+    },
+    "trans-studio": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "South Jakarta (Kemang)",
+      "popularity": 2
+    },
+    "snow-world": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; book ahead",
+      "area": "South Jakarta (Kemang)",
+      "popularity": 2
+    },
+    "world-of-wanders": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "North Jakarta (Ancol)",
+      "popularity": 2
+    },
+    "glodok-market": {
+      "types": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "West Jakarta (Kota)",
+      "popularity": 3
+    },
+    "sunda-kelapa-walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "West Jakarta (Kota)",
+      "popularity": 3
+    },
+    "kemang-walk": {
+      "types": [
+        "food",
+        "shopping",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "South Jakarta (Kemang)",
+      "popularity": 3
+    },
+    "night-market-food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 3
+    },
+    "ancol-beach": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "North Jakarta (Ancol)",
+      "popularity": 3
+    },
+    "thamrin-viewpoint": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset into evening",
+      "area": "Central Jakarta (Thamrin)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Old Batavia, a museum and a food crawl; add a night if you want a Bogor day trip."
+  },
+  "airports": [
+    {
+      "code": "CGK",
+      "name": "Soekarno-Hatta International Airport",
+      "primary": true,
+      "note": "Main gateway, 23 km northwest in Tangerang.",
+      "options": [
+        {
+          "mode": "Airport Commuter Line",
+          "to": "Downtown Jakarta",
+          "price": "Rp70,000",
+          "time": "45-90 min",
+          "note": "Cheapest rail option; check schedule."
+        },
+        {
+          "mode": "JAConnexion bus",
+          "to": "Hotels and malls",
+          "price": "up to Rp50,000",
+          "time": "60-120 min",
+          "note": "Serves many hotels and malls."
+        },
+        {
+          "mode": "DAMRI bus",
+          "to": "Major transport hubs",
+          "price": "check locally",
+          "time": "60-120 min",
+          "note": "Runs to train and bus terminals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rp150,000-300,000",
+          "time": "45-90 min",
+          "note": "Avoid rush hour; tolls extra."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "Rp150,000-300,000",
+          "time": "45-90 min",
+          "note": "Book at designated pickup points."
+        }
+      ]
+    },
+    {
+      "code": "HLP",
+      "name": "Halim Perdanakusuma International Airport",
+      "primary": false,
+      "note": "Smaller domestic airport, 8 km east of centre.",
+      "options": [
+        {
+          "mode": "DAMRI bus",
+          "to": "Gambir, Pulogebang, Bekasi, Depok, Bogor",
+          "price": "check locally",
+          "time": "30-90 min",
+          "note": "Cheap but slow in traffic."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Rp50,000-150,000",
+          "time": "20-45 min",
+          "note": "Avoid touts inside the airport area."
+        },
+        {
+          "mode": "Grab / Gojek",
+          "to": "City centre",
+          "price": "Rp50,000-150,000",
+          "time": "20-45 min",
+          "note": "Use the app pickup zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Jakarta",
+      "https://en.wikivoyage.org/wiki/Jakarta"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Use the MRT and TransJakarta for main routes; Grab or Gojek for the rest.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Jakarta MRT runs Lebak Bulus to Bundaran HI, every 5–10 min, 05:00–midnight."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "TransJakarta BRT has 14 mainlines on dedicated lanes; fares Rp2,000–20,000 with one card."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "KAI Commuter trains link suburbs and run 04:30–midnight; Jabodebek and Jakarta LRT cover more areas."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Grab and Gojek are the main ride apps; metered taxis exist but agree on price or use the meter."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and congested; odd-even plate rules apply on some toll roads on weekdays."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Walking long distances is impractical; use apps or transit between areas."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, around 30–33°C by day and 23–24°C at night. Rain is common, heaviest from November to April.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Wet season: November to April",
+        "text": "Expect 26–29 rain days a month. Showers are often heavy but short; carry an umbrella."
+      },
+      {
+        "icon": "☀️",
+        "title": "Driest months: July to September",
+        "text": "About 11–14 rain days. Best window for outdoor sights, though it stays hot."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid all year",
+        "text": "Highs of 30–33°C with high humidity. Plan outdoor time for early morning."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack for rain",
+        "text": "A compact umbrella or rain jacket and quick-dry shoes help in the wet months."
+      },
+      {
+        "icon": "💧",
+        "title": "Stay hydrated",
+        "text": "Drink bottled water often; tap water is not safe to drink."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, sunscreen and a light layer for air-conditioned malls and trains."
+      }
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Baltimore is a gritty, charming harbor city with real character.",
+  "intro": "Baltimore rewards visitors with a walkable harbor, world-class museums, and a proud local food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Inner Harbor",
+    "Fells Point",
+    "Mount Vernon",
+    "Federal Hill"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 3,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Light rail runs from BWI Airport to the Inner Harbor in about 30 minutes for $2.",
+    "MTA buses, light rail and subway cost $2 per ride; a day pass is $4.60.",
+    "The Charm City Circulator bus is free and links the harbor, Fells Point and Mount Vernon.",
+    "MARC and Amtrak trains connect Penn Station to Washington, D.C. in about an hour.",
+    "Uber and Lyft both operate widely; taxis are metered but less common.",
+    "Driving is optional; parking downtown runs about $5 per hour near the harbor."
+  ],
+  "airports": [
+    {
+      "code": "BWI",
+      "name": "Baltimore/Washington International Thurgood Marshall Airport",
+      "primary": true,
+      "note": "Main airport, about 14 km south of the centre.",
+      "options": [
+        {
+          "mode": "Light rail",
+          "to": "Inner Harbor",
+          "price": "$2",
+          "time": "30-40 min",
+          "note": "Departs directly from the terminal."
+        },
+        {
+          "mode": "Free shuttle + MARC train",
+          "to": "Penn Station",
+          "price": "$6",
+          "time": "15 min train plus shuttle",
+          "note": "Weekday commuter service; check times."
+        },
+        {
+          "mode": "Free shuttle + Amtrak",
+          "to": "Penn Station",
+          "price": "$7-35",
+          "time": "15 min train plus shuttle",
+          "note": "More frequent than MARC."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Flat-rate zone fares are common."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Pickup at designated rideshare zones."
+        }
+      ]
+    },
+    {
+      "code": "DCA",
+      "name": "Ronald Reagan Washington National Airport",
+      "primary": false,
+      "note": "Alternative airport near Washington, D.C., about 60 km southwest.",
+      "options": [
+        {
+          "mode": "Metro + MARC/Amtrak train",
+          "to": "Penn Station",
+          "price": "$10-30",
+          "time": "1.5-2 hr",
+          "note": "Transfer at Washington Union Station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$80-110",
+          "time": "50-75 min",
+          "note": "Traffic can be heavy at peak times."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$70-100",
+          "time": "50-75 min",
+          "note": "Often cheaper than a taxi."
+        }
+      ]
+    },
+    {
+      "code": "IAD",
+      "name": "Washington Dulles International Airport",
+      "primary": false,
+      "note": "Alternative airport in Virginia, about 80 km southwest.",
+      "options": [
+        {
+          "mode": "Metro + MARC/Amtrak train",
+          "to": "Penn Station",
+          "price": "$12-35",
+          "time": "2-2.5 hr",
+          "note": "Silver Line to Washington Union Station first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "$100-130",
+          "time": "60-90 min",
+          "note": "Long ride; agree on price first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "City centre",
+          "price": "$90-120",
+          "time": "60-90 min",
+          "note": "Book ahead for early flights."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "National Aquarium",
+    "George Peabody Library",
+    "Johns Hopkins University"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Baltimore",
+      "https://en.wikivoyage.org/wiki/Baltimore"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    39.29038,
+    -76.61219
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": -2,
+      "rain_days": 10
+    },
+    {
+      "high": 8,
+      "low": -1,
+      "rain_days": 11
+    },
+    {
+      "high": 12,
+      "low": 2,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 18,
+      "rain_days": 13
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 15
+    },
+    {
+      "high": 29,
+      "low": 20,
+      "rain_days": 15
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 8
+    },
+    {
+      "high": 9,
+      "low": 1,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "DCA taxi $80-110 vs tariff estimate 162",
+    "IAD taxi $100-130 vs tariff estimate 216"
+  ]
+}

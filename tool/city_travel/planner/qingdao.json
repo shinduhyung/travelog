@@ -1,0 +1,544 @@
+{
+  "city": "Qingdao",
+  "checked": "October 2026",
+  "intro_line": "Where red roofs meet the Yellow Sea and Tsingtao flows.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Old Town (Shinan)",
+        "May Fourth Square",
+        "Badaguan",
+        "Laoshan"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town (Shinan)",
+        "May Fourth Square",
+        "Badaguan",
+        "Laoshan"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town (Shinan)",
+        "May Fourth Square",
+        "Badaguan",
+        "Laoshan"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Old Town (Shinan)",
+        "May Fourth Square",
+        "Badaguan",
+        "Laoshan"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Town (Shinan)",
+        "May Fourth Square",
+        "Badaguan",
+        "Laoshan"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 2,
+        "note": "January: cold, highs near 4°C. Pack a warm coat; few rainy days."
+      },
+      {
+        "high": 6,
+        "low": -1,
+        "rain_days": 3,
+        "note": "February: still cold, around 6°C. Quiet sights and low prices."
+      },
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 3,
+        "note": "March: cool at 11°C; a light jacket is enough for walking."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 5,
+        "note": "April: mild at 16°C; good for the old streets and coast walks."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 6,
+        "note": "May: pleasant 20°C; beaches start to feel inviting."
+      },
+      {
+        "high": 24,
+        "low": 19,
+        "rain_days": 7,
+        "note": "June: warm at 24°C with more rain days; bring a light rain layer."
+      },
+      {
+        "high": 27,
+        "low": 23,
+        "rain_days": 12,
+        "note": "July: hot and humid, 27°C, wettest month. Book indoor plans too."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 13,
+        "note": "August: hottest at 29°C with frequent rain; go out early or late."
+      },
+      {
+        "high": 26,
+        "low": 20,
+        "rain_days": 6,
+        "note": "September: warm 26°C and drier; a strong month for the beach."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 4,
+        "note": "October: mild 20°C; comfortable for walking and sightseeing."
+      },
+      {
+        "high": 13,
+        "low": 7,
+        "rain_days": 5,
+        "note": "November: cooler at 13°C; pack layers and expect some rain."
+      },
+      {
+        "high": 6,
+        "low": 0,
+        "rain_days": 2,
+        "note": "December: cold near 6°C; festive city lights and few rainy days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.1,
+      0.15,
+      0.25,
+      0.45,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.8,
+      0.5,
+      0.25,
+      0.1
+    ],
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.85,
+      0.6,
+      0.4
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.6
+    ]
+  },
+  "places": {
+    "brewery": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Old Town (Shinan)",
+      "popularity": 4
+    },
+    "zhanqiao": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunrise or early morning",
+      "area": "Old Town (Shinan)",
+      "popularity": 5
+    },
+    "cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning light on the facade",
+      "area": "Old Town (Shinan)",
+      "popularity": 4
+    },
+    "mayfourth": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "May Fourth Square",
+      "popularity": 5
+    },
+    "bathing1": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Badaguan",
+      "popularity": 4
+    },
+    "badaguan": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon in spring and autumn",
+      "area": "Badaguan",
+      "popularity": 4
+    },
+    "taipingcape": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Badaguan",
+      "popularity": 3
+    },
+    "xiaoyushan": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "pichaiyuan": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Lunch or early evening",
+      "area": "Old Town (Shinan)",
+      "popularity": 4
+    },
+    "oldtownwalk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "beerstreet": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "seafoodmarket": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "laoshan": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Clear day, morning start",
+      "area": "Laoshan",
+      "popularity": 4
+    },
+    "polar": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "May Fourth Square",
+      "popularity": 3
+    },
+    "olympic": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "May Fourth Square",
+      "popularity": 3
+    },
+    "sailing": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "May Fourth Square",
+      "popularity": 3
+    },
+    "signalhill": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "naval": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "zhongshanroad": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon to evening",
+      "area": "Old Town (Shinan)",
+      "popularity": 3
+    },
+    "seafooddinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "May Fourth Square",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Old Town, the coast and a seafood-and-beer evening; add a night for Laoshan."
+  },
+  "airports": [
+    {
+      "code": "TAO",
+      "name": "Qingdao Jiaodong International Airport",
+      "primary": true,
+      "note": "Main hub, about 42 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 8",
+          "to": "Qingdao North Railway Station (transfer to Line 1/3)",
+          "price": "¥2-8",
+          "time": "40-60 min",
+          "note": "Cheapest option; transfer for downtown."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Major hotels and districts",
+          "price": "¥25-30",
+          "time": "60-90 min",
+          "note": "Check route for your hotel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "May Fourth Square",
+          "price": "¥120-250",
+          "time": "50-90 min",
+          "note": "Price varies; add ¥10 on the Qingyin expressway."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥120-200",
+          "time": "50-90 min",
+          "note": "Pickup at the Ground Transportation Center."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Qingdao",
+      "https://en.wikivoyage.org/wiki/Qingdao"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most trips; ride-hailing apps for the airport and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fares ¥2–8; trains run about 06:00–22:30. Line 8 links the airport to Qingdao North Railway Station."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost ¥1, or ¥2 with air conditioning; up to ¥6 for far suburbs."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Didi and other apps work well; pick up at the Ground Transportation Center. Taxis are plentiful but hard to flag in peak summer — use an app."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but city traffic and parking are a hassle. Check licence rules on the day."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in the Old Town and along the coast. Cycling is hilly and risky; shared bikes are scarce."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold dry winters, mild springs and autumns, and a hot, humid, rainy summer.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to June and September to October",
+        "text": "Mild days around 20–26°C, good for beaches, old streets and coastal walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (July–August)",
+        "text": "Highs of 27–29°C with 12–13 rain days a month. Plan indoor stops and early outings."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in midsummer",
+        "text": "July and August are the wettest; carry a compact umbrella and check forecasts on the day."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold winters (December–February)",
+        "text": "Highs of 4–6°C and lows near or below freezing. Bring a warm coat and layers."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea breezes",
+        "text": "The coast stays breezy; a light windproof layer helps even in summer evenings."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and sunscreen for summer, a rain layer in July–August, and warm layers for winter."
+      }
+    ]
+  }
+}

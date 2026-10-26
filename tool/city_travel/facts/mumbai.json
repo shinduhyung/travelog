@@ -1,0 +1,222 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "Mumbai: where dreams, chaos and the Arabian Sea collide.",
+  "intro": "Mumbai rewards visitors with colonial landmarks, street food, Bollywood energy and a coastline that never sleeps. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    }
+  ],
+  "areas": [
+    "Colaba",
+    "Fort",
+    "Bandra",
+    "Juhu"
+  ],
+  "taxi": {
+    "flag_day": 30,
+    "flag_airport": 150,
+    "per_km": 18,
+    "min_fare": 30
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Mumbai Metro is modern and fast; Aqua Line links the airport to BKC and Colaba.",
+    "Suburban 'local' trains are the city's artery; buy a ₹275 Tourist Ticket for first class all day.",
+    "Buses are cheap and everywhere; use the m-Indicator app to plan routes.",
+    "Metered black-and-yellow taxis and blue cabs are common; agree the fare or insist on the meter.",
+    "Uber and Ola ride apps work well across the city.",
+    "Ferries from Ferry Wharf reach Elephanta Island and nearby beaches."
+  ],
+  "airports": [
+    {
+      "code": "BOM",
+      "name": "Chhatrapati Shivaji Maharaj International Airport",
+      "primary": true,
+      "note": "Main gateway, about 2 km from the centre.",
+      "options": [
+        {
+          "mode": "Metro Aqua Line",
+          "to": "BKC and Colaba",
+          "price": "₹10-70",
+          "time": "30-50 min",
+          "note": "Cheapest and most comfortable option."
+        },
+        {
+          "mode": "Suburban train",
+          "to": "Andheri and Western Line",
+          "price": "₹5-50",
+          "time": "15-25 min",
+          "note": "Vile Parle and Andheri stations are close to the airport."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city points",
+          "price": "₹50-150",
+          "time": "40-70 min",
+          "note": "Check locally for routes."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹400-700",
+          "time": "30-60 min",
+          "note": "Use the prepaid counter inside the terminal."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹350-650",
+          "time": "30-60 min",
+          "note": "Pick-up zones are signposted."
+        }
+      ]
+    },
+    {
+      "code": "NMI",
+      "name": "Navi Mumbai International Airport",
+      "primary": false,
+      "note": "New airport opened 2025, mainly domestic; far from central Mumbai.",
+      "options": [
+        {
+          "mode": "Suburban train",
+          "to": "Navi Mumbai and Central Line",
+          "price": "₹10-60",
+          "time": "check locally",
+          "note": "Nearest stations serve the Central and Harbour lines."
+        },
+        {
+          "mode": "Bus",
+          "to": "Navi Mumbai and Mumbai",
+          "price": "₹50-150",
+          "time": "check locally",
+          "note": "Check locally for routes."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Mumbai",
+          "price": "₹800-1200",
+          "time": "60-90 min",
+          "note": "Long ride; agree the fare first."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "Central Mumbai",
+          "price": "₹700-1100",
+          "time": "60-90 min",
+          "note": "Check app availability on arrival."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Gateway of India",
+    "Chhatrapati Shivaji Maharaj Terminus",
+    "Elephanta Caves",
+    "Taj Mahal Palace Hotel",
+    "Marine Drive",
+    "Dhobi Ghat",
+    "Chor Bazaar",
+    "Mahatma Jyotiba Phule Mandai",
+    "Slumdog Millionaire",
+    "Snow Kingdom (Mumbai)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Mumbai",
+      "https://en.wikivoyage.org/wiki/Mumbai"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    19.076,
+    72.8777
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 0
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 0
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 0
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 0
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 3
+    },
+    {
+      "high": 30,
+      "low": 27,
+      "rain_days": 26
+    },
+    {
+      "high": 28,
+      "low": 26,
+      "rain_days": 31
+    },
+    {
+      "high": 28,
+      "low": 25,
+      "rain_days": 30
+    },
+    {
+      "high": 28,
+      "low": 25,
+      "rain_days": 27
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 11
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport NMI unknown code"
+  ]
+}

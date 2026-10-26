@@ -1,0 +1,1696 @@
+{
+  "city": "Tunis",
+  "checked": "October 2026",
+  "currency": "TND",
+  "usd_rate": 2.9987,
+  "intro": "Tunis rewards visitors with a UNESCO medina, Roman ruins nearby, and easy beach escapes by train. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 36.5733,
+      "west": 10.1086,
+      "north": 36.9106,
+      "east": 10.3677,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 0.9,
+      "flag_airport": 5,
+      "per_km": 1.0,
+      "min_fare": 0.9
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Light metro: five Transtu lines, 0.500-0.650 DT per ride; hubs at Place de la République and Place de Barcelone.",
+      "TGM suburban train from Tunis Marine to La Goulette, Carthage, Sidi Bou Saïd and La Marsa, about 0.800 DT each way.",
+      "RFR suburban rail lines A, D and E serve outer suburbs; roughly 1 DT, line D reaches the Bardo Museum.",
+      "Buses are cheap, from about 0.320 DT; airport bus 104 to Tunis Marine costs 1 DT.",
+      "Taxis are plentiful and metered; insist on the meter, avoid hotel queues, and use the inDrive app (Bolt no longer works).",
+      "Driving is for confident drivers only; traffic is heavy and night driving is riskier."
+    ],
+    "sources": []
+  },
+  "places": {
+    "medina": {
+      "name": "Medina of Tunis",
+      "landmark": "Medina of Tunis",
+      "kind": "sight",
+      "lat": 36.7984,
+      "lon": 10.1706,
+      "price": 0,
+      "price_text": "Free to enter · small fees for individual monuments",
+      "hours": "Streets open all day · shops roughly 09:00–19:00, closed Sunday morning",
+      "tip": "Enter through Bab el Bhar and walk to the Zitouna Mosque early; the souks get crowded by midday.",
+      "source": "https://whc.unesco.org/en/list/36/"
+    },
+    "sidibousaid": {
+      "name": "Sidi Bou Said",
+      "landmark": "Sidi Bou Said",
+      "kind": "sight",
+      "lat": 36.8703,
+      "lon": 10.3414,
+      "price": 0,
+      "price_text": "Free to walk · cafés charge for drinks",
+      "hours": "Village always open · cafés roughly 08:00–23:00",
+      "tip": "Come late afternoon for the light on the blue doors, then stay for sunset over the bay.",
+      "source": ""
+    },
+    "bardo": {
+      "name": "Bardo National Museum",
+      "landmark": "Bardo National Museum",
+      "kind": "museum",
+      "lat": 36.8094,
+      "lon": 10.1344,
+      "price": null,
+      "price_text": "Small entry fee; check current price on the day",
+      "hours": "Closed Monday · roughly 09:00–17:00, check on the day",
+      "tip": "The Roman mosaics are the highlight; allow at least two hours and go in the morning.",
+      "source": "https://www.bardomuseum.tn/"
+    },
+    "carthage": {
+      "name": "Archaeological Site of Carthage",
+      "landmark": "Archaeological Site of Carthage",
+      "kind": "sight",
+      "lat": 36.8529,
+      "lon": 10.3236,
+      "price": null,
+      "price_text": "Combined ticket for several sites; check on the day",
+      "hours": "Roughly 08:30–17:00, shorter in winter; check on the day",
+      "tip": "The ruins are spread out; take the TGM train and plan to walk between the Baths of Antoninus and the hilltop.",
+      "source": "https://whc.unesco.org/en/list/37/"
+    },
+    "brik": {
+      "name": "Brik",
+      "landmark": "Brik",
+      "kind": "food",
+      "lat": 36.8065,
+      "lon": 10.1815,
+      "price": null,
+      "price_text": "Cheap street snack; a few TND per piece",
+      "hours": "Most cafés and snack stalls serve it through the day",
+      "tip": "A thin pastry parcel with egg and tuna; eat it fresh and hot, and ask for it without harissa if you dislike heat.",
+      "source": ""
+    },
+    "rades": {
+      "name": "Stade Olympique de Rades",
+      "landmark": "Stade Olympique de Rades",
+      "kind": "activity",
+      "lat": 36.7451,
+      "lon": 10.2721,
+      "price": null,
+      "price_text": "Match tickets vary; check on the day",
+      "hours": "Open on match days only",
+      "tip": "Only worth a trip if a football match is on; check the fixture list and buy tickets in advance.",
+      "source": ""
+    },
+    "uthina": {
+      "name": "Uthina",
+      "landmark": "Uthina",
+      "kind": "sight",
+      "lat": 36.6056,
+      "lon": 10.1706,
+      "price": null,
+      "price_text": "Small entry fee; check on the day",
+      "hours": "Daylight hours; check on the day",
+      "tip": "A quiet Roman site with an amphitheatre and mosaics; arrange transport in advance as it is off the usual tourist route.",
+      "source": ""
+    },
+    "zitouna": {
+      "name": "Zitouna Mosque",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.7972,
+      "lon": 10.1711,
+      "price": 0,
+      "price_text": "Free for the courtyard · non-Muslims may not enter the prayer hall",
+      "hours": "Outside prayer times; check on the day",
+      "tip": "Dress modestly and look at the courtyard from the doorway; the best view of the minaret is from the surrounding souks.",
+      "source": ""
+    },
+    "souks": {
+      "name": "Souks of the Medina",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.7983,
+      "lon": 10.1706,
+      "price": 0,
+      "price_text": "Free to browse · bargain for anything you buy",
+      "hours": "Roughly 09:00–19:00, closed Sunday morning",
+      "tip": "Walk the covered lanes for carpets, copper and perfume; agree a price before you commit and expect to haggle.",
+      "source": ""
+    },
+    "centralmarket": {
+      "name": "Central Market (Marché Central)",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.7989,
+      "lon": 10.1772,
+      "price": 0,
+      "price_text": "Free to enter · pay for what you buy",
+      "hours": "Roughly 07:00–14:00, closed Sunday",
+      "tip": "Go early for fish, spices and olives; the small stalls upstairs serve cheap fresh lunches.",
+      "source": ""
+    },
+    "habibbourguiba": {
+      "name": "Avenue Habib Bourguiba walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.8008,
+      "lon": 10.1817,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · cafés through the day",
+      "tip": "Stroll the wide avenue from the clock tower to the cathedral and stop for a coffee at a pavement café.",
+      "source": ""
+    },
+    "byrsa": {
+      "name": "Byrsa Hill viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.8522,
+      "lon": 10.3236,
+      "price": 0,
+      "price_text": "Free · museum on the hill may charge",
+      "hours": "Daylight hours",
+      "tip": "Climb to the cathedral terrace for a wide view over the Gulf of Tunis and the ruins below.",
+      "source": ""
+    },
+    "tgm": {
+      "name": "TGM train ride to Sidi Bou Said",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 36.8008,
+      "lon": 10.1817,
+      "price": null,
+      "price_text": "Cheap single ticket; buy at the station",
+      "hours": "Frequent service through the day; check times on the day",
+      "tip": "A simple, cheap way to reach Carthage and Sidi Bou Said; keep your ticket for the exit gates.",
+      "source": ""
+    },
+    "marsa": {
+      "name": "La Marsa corniche",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 36.8783,
+      "lon": 10.3247,
+      "price": 0,
+      "price_text": "Free · cafés charge for drinks",
+      "hours": "Always open",
+      "tip": "Walk the seafront promenade in the evening and pick a café for mint tea and a view of the sea.",
+      "source": ""
+    },
+    "darbenabdallah": {
+      "name": "Dar Ben Abdallah museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 36.7964,
+      "lon": 10.1697,
+      "price": null,
+      "price_text": "Small entry fee; check on the day",
+      "hours": "Closed Monday · roughly 09:00–16:00, check on the day",
+      "tip": "A small palace museum showing traditional Tunisian home life; a calm break from the souks.",
+      "source": ""
+    },
+    "cafedesnattes": {
+      "name": "Café des Nattes",
+      "landmark": null,
+      "kind": "food",
+      "lat": 36.8706,
+      "lon": 10.3419,
+      "price": null,
+      "price_text": "Pay per drink; check the price before ordering",
+      "hours": "Roughly 08:00–22:00",
+      "tip": "Sit on the mats inside for mint tea and a view over the village; it is a classic Sidi Bou Said stop.",
+      "source": ""
+    },
+    "carthagebaths": {
+      "name": "Baths of Antoninus",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 36.8542,
+      "lon": 10.3347,
+      "price": null,
+      "price_text": "Covered by the Carthage combined ticket; check on the day",
+      "hours": "Roughly 08:30–17:00; check on the day",
+      "tip": "The huge columns by the sea are the most photographed spot in Carthage; go early for shade and space.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day: medina lanes and mosaics in the morning, Sidi Bou Saïd for sunset.",
+      "days": [
+        {
+          "title": "Medina morning, Sidi Bou Saïd sunset",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Enter on foot. Streets are quiet early and shops are opening."
+            },
+            {
+              "place": "zitouna",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Outside prayer times. Dress modestly; check access on the day."
+            },
+            {
+              "place": "souks",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Weekday late morning is calmest. Agree prices before you buy."
+            },
+            {
+              "place": "brik",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch stop in the medina. Most cafés serve brik all day."
+            },
+            {
+              "place": "tgm",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "TGM train from Tunis Marine to Sidi Bou Saïd. Check times on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Wander the blue-and-white lanes, then stay for sunset."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Mint tea on the mats. Roughly open until 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Roman and Punic ruins in the morning, the Bardo mosaics in the afternoon.",
+      "days": [
+        {
+          "title": "Carthage ruins, then Bardo mosaics",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Outdoor and exposed. Bring water, a hat and sun protection."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Baths of Antoninus, near the main site. Check hours on the day."
+            },
+            {
+              "place": "byrsa",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Hilltop view over the ruins and the sea. Daylight hours."
+            },
+            {
+              "place": "bardo",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday. Roughly 09:00–17:00; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market breakfast, medina snacks and a seaside dinner at La Marsa.",
+      "days": [
+        {
+          "title": "Market, medina snacks, corniche dinner",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Go early; it shuts around 14:00."
+            },
+            {
+              "place": "medina",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Walk the lanes between snacks. Shops open around 09:00."
+            },
+            {
+              "place": "brik",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Mid-morning brik from a snack stall. Eat it hot."
+            },
+            {
+              "place": "souks",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Spice and sweet stalls. Closed Sunday morning."
+            },
+            {
+              "place": "habibbourguiba",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Café stop on the main avenue. Always open."
+            },
+            {
+              "place": "marsa",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Corniche walk, then fish dinner by the water. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Nouvelle"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Medina lanes and mosaics first, then blue-and-white Sidi Bou Saïd.",
+      "days": [
+        {
+          "title": "Medina morning, Bardo afternoon",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Enter on foot and wander the lanes early, before the heat."
+            },
+            {
+              "place": "zitouna",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Visit outside prayer times; dress modestly. Check on the day."
+            },
+            {
+              "place": "brik",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch at a medina café. Most serve brik through the day."
+            },
+            {
+              "place": "bardo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. A short taxi ride from the medina. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd and the coast",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Take the TGM train from downtown. Check times on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Walk the blue-and-white streets before the crowds build."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Mint tea and a light lunch. Roughly 08:00–22:00."
+            },
+            {
+              "place": "marsa",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short taxi to the corniche for a sea walk before you head back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Roman Carthage and the old medina, with the Bardo mosaics in between.",
+      "days": [
+        {
+          "title": "Carthage ruins in the morning",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Start early, before the midday sun. Bring water. Check hours on the day."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Baths of Antoninus, part of the Carthage area. Check hours on the day."
+            },
+            {
+              "place": "byrsa",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Hilltop view over the ruins and the sea."
+            },
+            {
+              "place": "marsa",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch by the corniche in La Marsa."
+            }
+          ]
+        },
+        {
+          "title": "Medina and Bardo",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Old city lanes and gates in the cool of the morning."
+            },
+            {
+              "place": "bardo",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Monday. The Roman mosaic collection is the highlight. Check hours on the day."
+            },
+            {
+              "place": "centralmarket",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Roughly 07:00–14:00, so go before it shuts."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Closed Monday. A cool indoor stop. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market mornings, medina snacks and a slow café in Sidi Bou Saïd.",
+      "days": [
+        {
+          "title": "Market and medina tastes",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Go early; it shuts around 14:00."
+            },
+            {
+              "place": "medina",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Wander the lanes and food stalls before the heat."
+            },
+            {
+              "place": "brik",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "A classic medina snack: egg in a crisp pastry. Most stalls serve it all day."
+            },
+            {
+              "place": "souks",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Spice and produce stalls. Closed Sunday morning."
+            },
+            {
+              "place": "habibbourguiba",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Evening walk on the main avenue; cafés through the day."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd by train",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Train ride north along the coast. Check times on the day."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Mint tea in a famous old café. Roughly 08:00–22:00."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Stroll the village and stop for lunch."
+            },
+            {
+              "place": "marsa",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Corniche walk and a seafood lunch by the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the medina, the Bardo and the blue-and-white village without rushing.",
+      "days": [
+        {
+          "title": "Medina lanes and mosaics",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Enter on foot. Streets are quietest early. Dress modestly."
+            },
+            {
+              "place": "zitouna",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Outside prayer times. Non-Muslims view the courtyard only; check on the day."
+            },
+            {
+              "place": "souks",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Weekday late morning is calmest. Agree prices before you buy."
+            },
+            {
+              "place": "brik",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch: a brik and a mint tea at a medina café."
+            },
+            {
+              "place": "bardo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. A short taxi ride from the medina; check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd and the coast",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "TGM train from Tunis Marine station. Check times on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Wander the blue-and-white lanes. Watch your step on the cobbles."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Mint tea on the mats. Cash is easiest."
+            },
+            {
+              "place": "marsa",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short taxi to the corniche for a walk and a late lunch by the sea."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Travellers who want Roman Carthage and the old medina, with the Bardo as the centrepiece.",
+      "days": [
+        {
+          "title": "Carthage ruins",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Sites are spread out; bring water, a hat and comfy shoes. Check hours on the day."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Baths of Antoninus, near the sea. Little shade at midday."
+            },
+            {
+              "place": "byrsa",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Hilltop view over the ruins and the bay. Late afternoon is cooler."
+            },
+            {
+              "place": "marsa",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch on the corniche, then the TGM back to town."
+            }
+          ]
+        },
+        {
+          "title": "Medina and Bardo",
+          "stops": [
+            {
+              "place": "bardo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Go early; the mosaics are the highlight."
+            },
+            {
+              "place": "medina",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Taxi back to the medina. Walk the main lanes."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Closed Monday. A cool indoor stop at the hottest hour; check hours on the day."
+            },
+            {
+              "place": "brik",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Lunch stop in the medina."
+            },
+            {
+              "place": "uthina",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Roman site outside town; only if you have a car or taxi arranged. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want the market, medina snacks and a seaside dinner, with the sights in between.",
+      "days": [
+        {
+          "title": "Market morning and medina tastes",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Go early; it shuts around 14:00. Try the cheese and olives."
+            },
+            {
+              "place": "medina",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Walk off breakfast through the lanes."
+            },
+            {
+              "place": "souks",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Spices, sweets and tea. Weekday late morning is calmest."
+            },
+            {
+              "place": "brik",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Lunch: brik and a sandwich. Most stalls serve through the day."
+            },
+            {
+              "place": "habibbourguiba",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Stroll the main avenue and stop for a coffee at a terrace café."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd and the corniche",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Train from Tunis Marine. Check times on the day."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Mint tea and pastries. Cash is easiest."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Lanes and viewpoints. Stay for the late-afternoon light if you can."
+            },
+            {
+              "place": "marsa",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Sunset dinner on the corniche: fish and a walk by the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the medina, the Bardo mosaics and the blue-and-white village at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the new town",
+          "stops": [
+            {
+              "place": "habibbourguiba",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. The avenue is always open."
+            },
+            {
+              "place": "centralmarket",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Closes around 14:00, so you may only see it from outside. Come back another morning."
+            },
+            {
+              "place": "brik",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the medina. Most places serve brik all day."
+            }
+          ]
+        },
+        {
+          "title": "Medina morning, museum midday",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Go early, before the heat and crowds. Shops open around 09:00."
+            },
+            {
+              "place": "zitouna",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Visit outside prayer times. Dress modestly. Check on the day."
+            },
+            {
+              "place": "souks",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Late morning on a weekday is calmest. Closed Sunday morning."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Closed Monday. Roughly 09:00–16:00, check on the day."
+            },
+            {
+              "place": "bardo",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Monday. Roughly 09:00–17:00, check on the day. A short taxi from the medina."
+            }
+          ]
+        },
+        {
+          "title": "Carthage ruins and Sidi Bou Saïd",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go in the morning before the midday sun. Roughly 08:30–17:00, shorter in winter."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Nearby. Check hours on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Late afternoon to sunset is best. The village is always open."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Mint tea before sunset. Roughly 08:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "A short train ride along the coast. Check times on the day."
+            },
+            {
+              "place": "byrsa",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Daylight hours only. Bring water."
+            },
+            {
+              "place": "brik",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Quick lunch before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Travellers who want Roman Carthage, Punic layers and the old medina in depth.",
+      "days": [
+        {
+          "title": "Arrive and the old medina",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "An easy first walk. Streets open all day."
+            },
+            {
+              "place": "zitouna",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Outside prayer times. Check on the day."
+            },
+            {
+              "place": "brik",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the medina."
+            }
+          ]
+        },
+        {
+          "title": "Bardo and the medina museums",
+          "stops": [
+            {
+              "place": "bardo",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Roughly 09:00–17:00, check on the day. The mosaics are the highlight."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Closed Monday. Midday is a good time to be indoors."
+            },
+            {
+              "place": "souks",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Sunday morning. Roughly 09:00–19:00."
+            },
+            {
+              "place": "centralmarket",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Closes around 14:00, so check on the day before you go."
+            }
+          ]
+        },
+        {
+          "title": "Carthage in full",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Morning, before the midday sun. Roughly 08:30–17:00, shorter in winter."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "byrsa",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Daylight hours. Good views over the site."
+            },
+            {
+              "place": "marsa",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset walk on the corniche. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Uthina, then go",
+          "stops": [
+            {
+              "place": "uthina",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Daylight hours, check on the day. Bring water and sun protection."
+            },
+            {
+              "place": "brik",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want the market, the souks and long café afternoons.",
+      "days": [
+        {
+          "title": "Arrive and the central market",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Roughly 07:00–14:00, closed Sunday. Go early, it closes for the day."
+            },
+            {
+              "place": "habibbourguiba",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Cafés through the day. Always open."
+            },
+            {
+              "place": "brik",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch or an afternoon snack."
+            },
+            {
+              "place": "medina",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Wander the lanes as the heat drops."
+            }
+          ]
+        },
+        {
+          "title": "Souks and the medina table",
+          "stops": [
+            {
+              "place": "souks",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning on a weekday. Closed Sunday morning."
+            },
+            {
+              "place": "zitouna",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Outside prayer times. Check on the day."
+            },
+            {
+              "place": "brik",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the medina."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Closed Monday. Roughly 09:00–16:00, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Coast day: Carthage and Sidi Bou Saïd",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Train along the coast. Check times on the day."
+            },
+            {
+              "place": "carthage",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Morning, before the sun. Check hours on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Late afternoon to sunset is best."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Mint tea. Roughly 08:00–22:00."
+            },
+            {
+              "place": "marsa",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset and dinner on the corniche."
+            }
+          ]
+        },
+        {
+          "title": "Last bite, then go",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "One last market morning. Closed Sunday."
+            },
+            {
+              "place": "brik",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Early lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Medina lanes, the Bardo mosaics and Sidi Bou Saïd at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the new town",
+          "stops": [
+            {
+              "place": "habibbourguiba",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy first walk from most central hotels. Cafés line the avenue."
+            },
+            {
+              "place": "centralmarket",
+              "at": "18:00",
+              "minutes": 0,
+              "note": "Usually closed by mid-afternoon, so just pass by today. Come back in the morning."
+            },
+            {
+              "place": "brik",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in the medina or new town. Ask for brik and a mint tea."
+            }
+          ]
+        },
+        {
+          "title": "Medina morning, museum midday",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Enter early, before the heat. Streets open all day, shops open around 09:00."
+            },
+            {
+              "place": "zitouna",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Outside prayer times. Dress modestly; check access on the day."
+            },
+            {
+              "place": "souks",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Weekday late morning is calmest. Bargain politely."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Closed Monday. Cool and quiet when the streets are hottest."
+            },
+            {
+              "place": "bardo",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Monday. Roughly 09:00–17:00; check on the day. Short taxi from the medina."
+            }
+          ]
+        },
+        {
+          "title": "Carthage ruins and Byrsa Hill",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Start early; little shade. Hours shorten in winter, so check on the day."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Baths of Antoninus, a short ride from the main site."
+            },
+            {
+              "place": "brik",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch near the site or in La Marsa."
+            },
+            {
+              "place": "byrsa",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Viewpoint over the Gulf. Daylight hours only."
+            },
+            {
+              "place": "marsa",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Corniche walk, then dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd by train",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "TGM from Tunis Marine station. Check times on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Blue-and-white lanes. Village always open."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Mint tea on the mats. Roughly 08:00–22:00."
+            },
+            {
+              "place": "brik",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Late lunch in the village before heading back."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Roughly 07:00–14:00, so go early."
+            },
+            {
+              "place": "medina",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Final shopping in the souks. Shops closed Sunday morning."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina edge or Ville Nouvelle"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Roman Carthage, Punic ruins and the old medina, in rough time order.",
+      "days": [
+        {
+          "title": "Arrive and Avenue Habib Bourguiba",
+          "stops": [
+            {
+              "place": "habibbourguiba",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Orientation walk in the new town. Always open."
+            },
+            {
+              "place": "brik",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner near the avenue."
+            }
+          ]
+        },
+        {
+          "title": "Carthage in a day",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Roman and Punic remains. Start early for shade; check hours on the day."
+            },
+            {
+              "place": "carthagebaths",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Baths of Antoninus. Roughly 08:30–17:00; check on the day."
+            },
+            {
+              "place": "brik",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch in La Marsa."
+            },
+            {
+              "place": "byrsa",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Hill over the old city. Daylight hours."
+            },
+            {
+              "place": "marsa",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Corniche at sunset, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "Medina history",
+          "stops": [
+            {
+              "place": "medina",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Walk the lanes early. Shops open around 09:00, closed Sunday morning."
+            },
+            {
+              "place": "zitouna",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Outside prayer times; check on the day."
+            },
+            {
+              "place": "darbenabdallah",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Closed Monday. Roughly 09:00–16:00."
+            },
+            {
+              "place": "brik",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch in the medina."
+            },
+            {
+              "place": "bardo",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Closed Monday. Mosaics and Punic finds. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Uthina day trip",
+          "stops": [
+            {
+              "place": "uthina",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Roman site outside the city. Bring water and sun protection. Check on the day."
+            },
+            {
+              "place": "brik",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch back in town."
+            },
+            {
+              "place": "souks",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Afternoon in the souks. Closed Sunday morning."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd, then go",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Train out. Check times on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Village always open."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Tea before the trip back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Ville Nouvelle, near the TGM"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Couscous, brik, fish and mint tea, with the medina as your table.",
+      "days": [
+        {
+          "title": "Arrive and eat on the avenue",
+          "stops": [
+            {
+              "place": "habibbourguiba",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Evening stroll. Cafés open through the day."
+            },
+            {
+              "place": "brik",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "First dinner. Try brik and a grilled fish."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and medina food",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Roughly 07:00–14:00, so go early for produce and fish."
+            },
+            {
+              "place": "medina",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Wander the lanes before the heat."
+            },
+            {
+              "place": "brik",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Snack lunch at a medina stall."
+            },
+            {
+              "place": "souks",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Spice and sweet stalls. Closed Sunday morning."
+            },
+            {
+              "place": "zitouna",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Quiet visit outside prayer times."
+            }
+          ]
+        },
+        {
+          "title": "Sidi Bou Saïd tea and La Marsa fish",
+          "stops": [
+            {
+              "place": "tgm",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Train out. Check times on the day."
+            },
+            {
+              "place": "sidibousaid",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Village always open."
+            },
+            {
+              "place": "cafedesnattes",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Mint tea and pastries. Roughly 08:00–22:00."
+            },
+            {
+              "place": "marsa",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Corniche walk, then fish dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Carthage and a long lunch",
+          "stops": [
+            {
+              "place": "carthage",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Early start for shade. Check hours on the day."
+            },
+            {
+              "place": "brik",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Slow lunch in La Marsa."
+            },
+            {
+              "place": "byrsa",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Viewpoint. Daylight hours."
+            }
+          ]
+        },
+        {
+          "title": "Last market run, then go",
+          "stops": [
+            {
+              "place": "centralmarket",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Closed Sunday. Buy olives, harissa and sweets to take home."
+            },
+            {
+              "place": "brik",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Quick coffee and a snack before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Medina or Ville Nouvelle"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Medina lanes, the Bardo mosaics and Sidi Bou Saïd."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Roman Carthage, Punic ruins and the old medina."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Couscous, brik, fish and mint tea in the medina."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Medina",
+      "range": [
+        120,
+        400
+      ],
+      "why": "Sleep inside the old city walls: souks, mosques and cafés on your doorstep. Quiet at night, but lanes are confusing after dark.",
+      "center": [
+        36.799,
+        10.171
+      ]
+    },
+    {
+      "area": "Ville Nouvelle",
+      "range": [
+        150,
+        450
+      ],
+      "why": "Central and easy: the TGM train, metro hubs and the main avenue. Best base for first-timers without a car.",
+      "center": [
+        36.806,
+        10.181
+      ]
+    },
+    {
+      "area": "La Marsa",
+      "range": [
+        180,
+        500
+      ],
+      "why": "Seaside suburb with cafés and a beach; TGM train to the centre in about 30 minutes.",
+      "center": [
+        36.878,
+        10.325
+      ]
+    },
+    {
+      "area": "Sidi Bou Saïd",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Blue-and-white village on the cliff. Romantic and pricey; good for one or two nights, not for every day.",
+      "center": [
+        36.87,
+        10.347
+      ]
+    }
+  ],
+  "food": [
+    "Try Tunisian staples: couscous on Friday, brik (fried pastry with egg), lablabi soup and harissa with everything.",
+    "In the medina, look for small family restaurants near the souks; a full lunch often costs 10–25 TND.",
+    "Seafood is best near La Goulette and La Marsa; grilled fish is sold by weight, so ask the price first.",
+    "Street snacks: fricassé sandwiches, makroudh pastries and mint tea in a café. Cheap and filling.",
+    "Alcohol is limited outside hotels and a few licensed restaurants. Don't count on wine with dinner everywhere."
+  ],
+  "more_time": [
+    "Add a half-day at Carthage and the Bardo Museum; both need more time than most day plans allow.",
+    "Take the TGM to Sidi Bou Saïd for a slow afternoon of cafés and views over the bay.",
+    "With a spare day, head to Dougga or Kairouan by organised tour; check departure times the day before."
+  ]
+}

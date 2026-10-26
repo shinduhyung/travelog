@@ -1,0 +1,663 @@
+{
+  "city": "Sydney",
+  "checked": "October 2026",
+  "intro_line": "Harbour city where ferries, beaches and bush meet.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "The Rocks",
+        "Circular Quay",
+        "Darling Harbour",
+        "Bondi"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "The Rocks",
+        "Circular Quay",
+        "Darling Harbour",
+        "Bondi"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "The Rocks",
+        "Circular Quay",
+        "Darling Harbour",
+        "Bondi"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "The Rocks",
+        "Circular Quay",
+        "Darling Harbour",
+        "Bondi"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "The Rocks",
+        "Circular Quay",
+        "Darling Harbour",
+        "Bondi"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 13,
+        "note": "January: hottest month, highs near 27°C and 13 rain days. Book beaches early and carry water."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 13,
+        "note": "February: warm and similar to January, around 26°C with 13 rain days."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 15,
+        "note": "March: still warm at 25°C but rainier, about 15 rain days. Keep a light rain jacket."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 10,
+        "note": "April: mild and drier, highs near 22°C with 10 rain days. Good for walking and coastal paths."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 8,
+        "note": "May: cooler at 19°C and only 8 rain days. Bring a layer for evenings."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 10,
+        "note": "June: winter starts, highs near 17°C and 10 rain days. Pack a warm jacket."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 7,
+        "note": "July: coldest month, highs near 17°C and lows around 8°C. Driest stretch with 7 rain days."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 6,
+        "note": "August: similar to July, 18°C highs and only 6 rain days. Crisp, clear days for walks."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 8,
+        "note": "September: warming to 21°C with 8 rain days. A pleasant shoulder month."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 11,
+        "note": "October: mild at 22°C but rain picks up to 11 days. Carry an umbrella."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 11,
+        "note": "November: warm at 24°C with 11 rain days. Good for beaches and ferries."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 10,
+        "note": "December: warm and busy, 26°C highs and 10 rain days. Book accommodation well ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.95,
+      0.95,
+      0.85,
+      0.6,
+      0.4,
+      0.3,
+      0.3,
+      0.35,
+      0.5,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "family": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ]
+  },
+  "places": {
+    "opera_house": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning for photos, evening for the harbour lights",
+      "area": "Circular Quay",
+      "popularity": 5
+    },
+    "harbour_bridge": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "The Rocks",
+      "popularity": 5
+    },
+    "bondi": {
+      "types": [
+        "beach",
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning on weekdays; summer for swimming",
+      "area": "Bondi",
+      "popularity": 5
+    },
+    "the_rocks": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "The Rocks",
+      "popularity": 4
+    },
+    "darling_harbour": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Darling Harbour",
+      "popularity": 4
+    },
+    "botanic_garden": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Circular Quay",
+      "popularity": 4
+    },
+    "taronga_zoo": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning, before it gets hot",
+      "area": "Circular Quay",
+      "popularity": 4
+    },
+    "fox_studios": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Not a visitor stop",
+      "area": "Bondi",
+      "popularity": 1
+    },
+    "kaos_arcade": {
+      "types": [
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Rainy day",
+      "area": "Darling Harbour",
+      "popularity": 1
+    },
+    "luna_park": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "The Rocks",
+      "popularity": 3
+    },
+    "manly_beach": {
+      "types": [
+        "beach",
+        "nature",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning ferry, beach in the afternoon",
+      "area": "Circular Quay",
+      "popularity": 4
+    },
+    "manly_waterworks": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer",
+      "area": "Circular Quay",
+      "popularity": 2
+    },
+    "meat_pie": {
+      "types": [
+        "food"
+      ],
+      "minutes": 15,
+      "setting": "mixed",
+      "best": "Lunch or afternoon snack",
+      "area": "The Rocks",
+      "popularity": 2
+    },
+    "qvb": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; good in rain",
+      "area": "Darling Harbour",
+      "popularity": 3
+    },
+    "easter_show": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Easter season",
+      "area": "Darling Harbour",
+      "popularity": 3
+    },
+    "sea_life": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Darling Harbour",
+      "popularity": 4
+    },
+    "st_marys": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Midday break",
+      "area": "Circular Quay",
+      "popularity": 3
+    },
+    "fish_market": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "Darling Harbour",
+      "popularity": 4
+    },
+    "mardi_gras": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "February–March",
+      "area": "Darling Harbour",
+      "popularity": 3
+    },
+    "harbour": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Circular Quay",
+      "popularity": 5
+    },
+    "ferry": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Daytime or sunset",
+      "area": "Circular Quay",
+      "popularity": 5
+    },
+    "tower_eye": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Darling Harbour",
+      "popularity": 3
+    },
+    "bondi_coogee_walk": {
+      "types": [
+        "nature",
+        "beach",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning, not midday in summer",
+      "area": "Bondi",
+      "popularity": 4
+    },
+    "barangaroo": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Darling Harbour",
+      "popularity": 3
+    },
+    "newtown_walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Darling Harbour",
+      "popularity": 2
+    },
+    "blue_mountains": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 600,
+      "setting": "outdoor",
+      "best": "Clear day, start early",
+      "area": "Circular Quay",
+      "popularity": 3
+    },
+    "paddington_markets": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Bondi",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the harbour icons, a beach day and a coastal walk without rushing; add a night for the Blue Mountains."
+  },
+  "airports": [
+    {
+      "code": "SYD",
+      "name": "Sydney Kingsford Smith International Airport",
+      "primary": true,
+      "note": "Main gateway, 9 km south of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Central Station and City",
+          "price": "$17-20",
+          "time": "15-25 min",
+          "note": "Airport line has a station access fee; tap on with Opal or contactless."
+        },
+        {
+          "mode": "Public bus 400",
+          "to": "Bondi Junction and Mascot",
+          "price": "$3-5",
+          "time": "30-45 min",
+          "note": "Cheapest option but slower and needs a change for the CBD."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre and The Rocks",
+          "price": "$40-55",
+          "time": "20-35 min",
+          "note": "Use the official rank outside arrivals."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "$35-50",
+          "time": "20-35 min",
+          "note": "Pick-up zones are signposted in the car parks."
+        }
+      ]
+    },
+    {
+      "code": "WSI",
+      "name": "Western Sydney International Airport",
+      "primary": false,
+      "note": "Opens October 2026, about 44 km west of the CBD.",
+      "options": [
+        {
+          "mode": "WSI Link bus + T1 train",
+          "to": "St Marys then Central",
+          "price": "under $10",
+          "time": "1.5 hr",
+          "note": "Free shuttle every 30 min from 4:30am; budget choice."
+        },
+        {
+          "mode": "Super Shuttle bus",
+          "to": "Sydney Central Station",
+          "price": "$55",
+          "time": "45-60 min",
+          "note": "Direct and simple with luggage."
+        },
+        {
+          "mode": "Super Shuttle bus",
+          "to": "Parramatta",
+          "price": "$25",
+          "time": "30-45 min",
+          "note": "Good for western suburbs stays."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "45-70 min",
+          "note": "Long trip; agree on tolls and route."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Sydney",
+      "https://en.wikivoyage.org/wiki/Sydney"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Opal card or contactless tap for trains, ferries and buses; ferries are the scenic way to cross the harbour.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Trains, metro and light rail run on one Opal card or contactless tap. Fast way in and out of the CBD."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": true,
+        "text": "Ferries from Circular Quay are the scenic way to reach Manly, Taronga Zoo and Watsons Bay."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps in the inner suburbs. Google Maps and TripView show live times."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis and Uber, DiDi and Ola all operate. Taxis are easiest at ranks and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy and tolled on most motorways. Parking in the centre is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The CBD is walkable. Bikes and e-scooters suit the harbour foreshore paths."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Warm temperate climate: mild winters, warm summers and rain spread through the year. Rarely very cold or very hot.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warmest months, highs 25–27°C. Best for beaches and harbour days, but also the busiest and priciest."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Rain days run from 6 to 15 a month. March is wettest; August is driest. Showers often pass quickly."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild winters (June to August)",
+        "text": "Highs around 17–18°C and lows near 8–9°C. Bring a warm layer; beach swims are for the brave."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea and sun",
+        "text": "Summer sun is strong; use sunscreen and shade. Check flags and surf conditions at patrolled beaches."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack for changeable days",
+        "text": "A light rain jacket and layers work in every month. Evenings cool down near the water."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "T-shirts and shorts for summer, a jumper and jacket for winter, comfortable walking shoes and a hat."
+      }
+    ]
+  }
+}

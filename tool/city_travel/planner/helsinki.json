@@ -1,0 +1,573 @@
+{
+  "city": "Helsinki",
+  "checked": "October 2026",
+  "intro_line": "Baltic capital of design, islands and cool northern light.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Kluuvi",
+        "Kruununhaka",
+        "Kallio",
+        "Kamppi"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Kluuvi",
+        "Kruununhaka",
+        "Kallio",
+        "Kamppi"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Kluuvi",
+        "Kruununhaka",
+        "Kallio",
+        "Kamppi"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Kluuvi",
+        "Kruununhaka",
+        "Kallio",
+        "Kamppi"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Kluuvi",
+        "Kruununhaka",
+        "Kallio",
+        "Kamppi"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -1,
+        "low": -6,
+        "rain_days": 14,
+        "note": "Coldest month: highs near -1°C, lows -6°C, snow possible. Pack warm layers."
+      },
+      {
+        "high": 0,
+        "low": -5,
+        "rain_days": 12,
+        "note": "Still deep winter, around 0°C high and -5°C low. Short days; museums are a good bet."
+      },
+      {
+        "high": 2,
+        "low": -4,
+        "rain_days": 11,
+        "note": "Slowly warming to 2°C high, but nights stay below freezing. Watch for icy pavements."
+      },
+      {
+        "high": 7,
+        "low": 0,
+        "rain_days": 10,
+        "note": "Spring arrives: highs near 7°C, lows around 0°C. Mixed sun and showers."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 9,
+        "note": "Milder at 14°C high; parks green up. Still bring a jacket for evenings."
+      },
+      {
+        "high": 19,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Bright and pleasant: 19°C high, 12°C low. Long daylight hours."
+      },
+      {
+        "high": 21,
+        "low": 14,
+        "rain_days": 13,
+        "note": "Warmest month, 21°C high and 14°C low. Some rain days; pack a light rain layer."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 13,
+        "note": "Similar to July, around 20°C high. Good for ferries and island walks."
+      },
+      {
+        "high": 15,
+        "low": 10,
+        "rain_days": 11,
+        "note": "Cooling to 15°C high; autumn colours start. Bring a warm layer."
+      },
+      {
+        "high": 9,
+        "low": 5,
+        "rain_days": 13,
+        "note": "Chilly at 9°C high and 5°C low, with more rain days. Waterproof shoes help."
+      },
+      {
+        "high": 5,
+        "low": 1,
+        "rain_days": 14,
+        "note": "Dark and damp: 5°C high, 1°C low, frequent rain days. Plan indoor sights."
+      },
+      {
+        "high": 1,
+        "low": -3,
+        "rain_days": 14,
+        "note": "Winter returns: around 1°C high and -3°C low. Snow and ice possible; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.4,
+      0.6,
+      0.85,
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.4,
+      0.3
+    ],
+    "history": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ],
+    "family": [
+      0.4,
+      0.4,
+      0.5,
+      0.65,
+      0.85,
+      1,
+      1,
+      1,
+      0.85,
+      0.65,
+      0.5,
+      0.4
+    ]
+  },
+  "places": {
+    "helsinki_cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning before tour groups arrive",
+      "area": "Kruununhaka",
+      "popularity": 5
+    },
+    "suomenlinna": {
+      "types": [
+        "history",
+        "nature",
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Late morning on a dry day; summer",
+      "area": "Kruununhaka",
+      "popularity": 5
+    },
+    "temppeliaukio": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Early afternoon on a weekday",
+      "area": "Kamppi",
+      "popularity": 4
+    },
+    "uspenski": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning, paired with Market Square",
+      "area": "Kruununhaka",
+      "popularity": 4
+    },
+    "canal_route": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Kruununhaka",
+      "popularity": 3
+    },
+    "opera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening performance; book ahead",
+      "area": "Kallio",
+      "popularity": 3
+    },
+    "karjalanpaisti": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch on a cold day",
+      "area": "Kluuvi",
+      "popularity": 2
+    },
+    "linnanmaki": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Kallio",
+      "popularity": 4
+    },
+    "national_museum": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Kamppi",
+      "popularity": 3
+    },
+    "oodi": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; good in rain",
+      "area": "Kluuvi",
+      "popularity": 4
+    },
+    "planet_funfun": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day with kids",
+      "area": "Kallio",
+      "popularity": 2
+    },
+    "sibelius": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight; summer",
+      "area": "Kamppi",
+      "popularity": 3
+    },
+    "market_square": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning; summer",
+      "area": "Kruununhaka",
+      "popularity": 4
+    },
+    "old_market_hall": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Kruununhaka",
+      "popularity": 3
+    },
+    "esplanadi": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Kluuvi",
+      "popularity": 3
+    },
+    "kallio_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Kallio",
+      "popularity": 3
+    },
+    "tram_tour": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Kluuvi",
+      "popularity": 2
+    },
+    "seurasaari": {
+      "types": [
+        "history",
+        "nature",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Summer day",
+      "area": "Kamppi",
+      "popularity": 3
+    },
+    "cafe_regatta": {
+      "types": [
+        "food",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Kamppi",
+      "popularity": 2
+    },
+    "loyly": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon or evening",
+      "area": "Kamppi",
+      "popularity": 4
+    },
+    "hakaniemi_hall": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunchtime",
+      "area": "Kallio",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the cathedral, design district and a Suomenlinna ferry trip; add a night for island or Porvoo time."
+  },
+  "airports": [
+    {
+      "code": "HEL",
+      "name": "Helsinki Vantaa Airport",
+      "primary": true,
+      "note": "Main hub, about 16 km north of the centre in Vantaa.",
+      "options": [
+        {
+          "mode": "Commuter train (I or P)",
+          "to": "Central Railway Station",
+          "price": "€4.80",
+          "time": "30-35 min",
+          "note": "Runs every 10-30 min from about 04:30 to 01:15."
+        },
+        {
+          "mode": "Bus",
+          "to": "Central Helsinki",
+          "price": "€4.80",
+          "time": "35-45 min",
+          "note": "Slower but useful at night."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€35-50",
+          "time": "25-35 min",
+          "note": "Use official ranks outside the terminal."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€25-40",
+          "time": "25-35 min",
+          "note": "Pick-up points are signposted."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Helsinki",
+      "https://en.wikivoyage.org/wiki/Helsinki"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Trams and walking in the centre; one HSL ticket covers metro, buses, trains and the Suomenlinna ferry.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Runs on the HSL ticket system; useful for east-west trips and to the main station."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams cover the centre well on the same HSL ticket. Buy by contactless card, HSL app or R kiosk; cash is not accepted on board."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses run on the HSL ticket system and reach areas trams don't. Same ticket rules apply."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Local trains are part of HSL. Airport trains need an ABC ticket; city centre travel needs AB."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The Suomenlinna ferry is included in the HSL ticket system."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis wait at ranks and the airport; Bolt and Uber operate in Helsinki."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy but parking is costly. Walking and trams cover the centre well, so a car is rarely needed."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is compact and walkable. Bikes are popular in summer, with city bike stations widespread."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Northern city with cold winters and mild, bright summers. Rain falls year-round, so pack layers.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to August",
+        "text": "Highs around 19–21°C with long daylight. Ideal for ferries, islands and walking."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (Dec–Feb)",
+        "text": "Highs near -1 to 1°C and lows down to -6°C. Snow and ice are possible; wear warm, grippy shoes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect roughly 9–14 rain days a month. A light waterproof layer is worth packing all year."
+      },
+      {
+        "icon": "🌱",
+        "title": "Spring is slow",
+        "text": "March stays near freezing; April warms to about 7°C. Bring a jacket even on sunny days."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn cools fast",
+        "text": "September around 15°C, October about 9°C. Layers and waterproof shoes help."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket and comfortable walking shoes. Add a warm hat and gloves from November to March."
+      }
+    ]
+  }
+}

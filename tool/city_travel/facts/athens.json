@@ -1,0 +1,199 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Ancient stones, bright light, and long evenings by the sea.",
+  "intro": "Athens rewards visitors who mix ruins with neighbourhood life, markets and the coast. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Plaka",
+    "Syntagma",
+    "Monastiraki",
+    "Koukaki"
+  ],
+  "taxi": {
+    "flag_day": 1.19,
+    "flag_airport": 3.2,
+    "per_km": 0.34,
+    "min_fare": 3.2
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro has 3 lines; trains run about 05:30-00:30, later on Friday and Saturday nights.",
+    "One OASA ticket costs €1.20 and covers metro, tram and bus with transfers for 90 minutes.",
+    "Airport metro or bus costs about €9 each way; express bus X93/X95 costs €5.50.",
+    "Taxis are yellow; insist on the meter and expect shared rides at busy times.",
+    "Ride apps such as Uber and Bolt work in Athens; use them to avoid fare haggling.",
+    "Driving in the centre is hard: narrow streets, little parking and heavy traffic.",
+    "Piraeus port is about 10 km from the centre, with ferries to the islands."
+  ],
+  "airports": [
+    {
+      "code": "ATH",
+      "name": "Eleftherios Venizelos International Airport",
+      "primary": true,
+      "note": "Main gateway, about 20-27 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro line 3",
+          "to": "Syntagma",
+          "price": "€9",
+          "time": "40-50 min",
+          "note": "Runs about every 30 min; ticket covers the whole journey."
+        },
+        {
+          "mode": "Express bus X95",
+          "to": "Syntagma",
+          "price": "€5.50",
+          "time": "45-70 min",
+          "note": "Cheaper but slower in traffic; runs 24 hours."
+        },
+        {
+          "mode": "Suburban railway",
+          "to": "Piraeus or Larissa station",
+          "price": "€9",
+          "time": "40-60 min",
+          "note": "Useful for the port or the main rail station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-55",
+          "time": "30-50 min",
+          "note": "Fixed-ish airport fare plus tolls; agree before you ride."
+        },
+        {
+          "mode": "Uber or Bolt",
+          "to": "City centre",
+          "price": "€30-50",
+          "time": "30-50 min",
+          "note": "App price shown upfront; pickup points are signed."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Parthenon",
+    "Acropolis Museum",
+    "Plaka",
+    "Ancient Agora of Athens",
+    "Temple of Olympian Zeus",
+    "Syntagma Square",
+    "Panathenaic Stadium",
+    "Allou Fun Park",
+    "Athens Lions Club Kiddie Carnival",
+    "Erechtheion",
+    "Hadrian's Arch",
+    "Karaiskakis Stadium",
+    "Lycabettus Hill",
+    "Monastiraki Square",
+    "Moussaka",
+    "National Archaeological Museum",
+    "Odeon of Herodes Atticus",
+    "Roman Agora of Athens",
+    "Theatre of Dionysus",
+    "University of Athens Trilogy",
+    "University of Georgia",
+    "Zaxby's"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Athens",
+      "https://en.wikivoyage.org/wiki/Athens"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    37.9838,
+    23.7275
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 12,
+      "low": 5,
+      "rain_days": 8
+    },
+    {
+      "high": 14,
+      "low": 6,
+      "rain_days": 7
+    },
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 7
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 5
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 5
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 6
+    },
+    {
+      "high": 33,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 33,
+      "low": 23,
+      "rain_days": 2
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 3
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 3
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 7
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ATH taxi €40-55 vs tariff estimate 12"
+  ]
+}

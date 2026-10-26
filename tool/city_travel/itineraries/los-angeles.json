@@ -1,0 +1,2261 @@
+{
+  "city": "Los Angeles",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Los Angeles rewards visitors who pick a few neighbourhoods and slow down between them. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 33.7951,
+      "west": -118.5476,
+      "north": 34.1991,
+      "east": -118.0091,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4.5,
+      "per_km": 2.8,
+      "min_fare": 15
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Metro Rail subway and light rail link Downtown, Hollywood, Santa Monica and Long Beach; fares about $1.75 per ride.",
+      "Metro buses cover the whole sprawl; a TAP card or contactless tap works on rail and bus.",
+      "Taxis are metered and costlier than apps; Uber and Lyft operate widely and are the usual choice.",
+      "Driving is fastest off-peak but freeways jam from roughly 7-10am and 3-7pm.",
+      "Walking is pleasant in beach towns and Hollywood; bikes and e-scooters are common near the coast.",
+      "No ferries serve the city centre; harbour boats run from San Pedro to Catalina Island."
+    ],
+    "sources": []
+  },
+  "places": {
+    "universal": {
+      "name": "Universal Studios Hollywood",
+      "landmark": "Universal Studios Hollywood",
+      "kind": "activity",
+      "lat": 34.1378,
+      "lon": -118.3533,
+      "price": 109,
+      "price_text": "≈ $109–149 one-day ticket; check date pricing online",
+      "hours": "Usually 09:00–20:00, varies by season · check on the day",
+      "tip": "Buy tickets online in advance and arrive at opening. The Studio Tour is the classic ride.",
+      "source": "https://www.universalstudioshollywood.com"
+    },
+    "hollywood-sign": {
+      "name": "Hollywood Sign",
+      "landmark": "Hollywood Sign",
+      "kind": "sight",
+      "lat": 34.1341,
+      "lon": -118.3215,
+      "price": 0,
+      "price_text": "Free to view",
+      "hours": "Viewpoints open daylight hours",
+      "tip": "Best free view is from Lake Hollywood Park or the Griffith Observatory terrace. Do not hike to the letters.",
+      "source": ""
+    },
+    "griffith": {
+      "name": "Griffith Observatory",
+      "landmark": "Griffith Observatory",
+      "kind": "museum",
+      "lat": 34.1184,
+      "lon": -118.3003,
+      "price": 0,
+      "price_text": "Free entry · planetarium show ≈ $10–15",
+      "hours": "Tue–Sun roughly 10:00–22:00 · closed Monday · check on the day",
+      "tip": "Go at sunset for the city view, then stay for the free exhibits. Parking fills fast.",
+      "source": "https://griffithobservatory.org"
+    },
+    "santa-monica-pier": {
+      "name": "Santa Monica Pier",
+      "landmark": "Santa Monica Pier",
+      "kind": "sight",
+      "lat": 34.0086,
+      "lon": -118.4986,
+      "price": 0,
+      "price_text": "Free to walk · rides cost extra",
+      "hours": "Pier open 24h · businesses vary",
+      "tip": "Walk to the end for the ocean view and watch the fishermen. Bring a jacket, it is breezy.",
+      "source": "https://santamonicapier.org"
+    },
+    "walk-of-fame": {
+      "name": "Hollywood Walk of Fame",
+      "landmark": "Hollywood Walk of Fame",
+      "kind": "sight",
+      "lat": 34.1016,
+      "lon": -118.3266,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the stretch near the Chinese Theatre. Expect crowds and costumed characters asking for tips.",
+      "source": "https://walkoffame.com"
+    },
+    "chinese-theatre": {
+      "name": "TCL Chinese Theatre",
+      "landmark": "TCL Chinese Theatre",
+      "kind": "sight",
+      "lat": 34.102,
+      "lon": -118.341,
+      "price": 0,
+      "price_text": "Free to see forecourt · tours ≈ $20–30",
+      "hours": "Forecourt open daily · tour times vary",
+      "tip": "Look for the hand and footprints in the forecourt. Skip the tour unless you love film history.",
+      "source": "https://www.tclchinesetheatres.com"
+    },
+    "getty": {
+      "name": "The Getty Center",
+      "landmark": "The Getty Center",
+      "kind": "museum",
+      "lat": 34.078,
+      "lon": -118.474,
+      "price": 0,
+      "price_text": "Free entry · parking ≈ $20–25",
+      "hours": "Tue–Sun 10:00–17:30 · closed Monday · check on the day",
+      "tip": "Parking is the only cost. The garden and city views are as good as the art.",
+      "source": "https://www.getty.edu/visit/center"
+    },
+    "venice-beach": {
+      "name": "Venice Beach",
+      "landmark": "Venice Beach",
+      "kind": "beach",
+      "lat": 33.985,
+      "lon": -118.4695,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · boardwalk busiest midday",
+      "tip": "Walk the Ocean Front Boardwalk to see the skate park and street performers. Keep valuables close.",
+      "source": ""
+    },
+    "caltech": {
+      "name": "California Institute of Technology (Caltech)",
+      "landmark": "California Institute of Technology (Caltech)",
+      "kind": "sight",
+      "lat": 34.1377,
+      "lon": -118.1253,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daytime",
+      "tip": "A quiet, leafy campus in Pasadena. Combine with Old Town Pasadena for lunch.",
+      "source": "https://www.caltech.edu"
+    },
+    "dolby": {
+      "name": "Dolby Theatre",
+      "landmark": "Dolby Theatre",
+      "kind": "sight",
+      "lat": 34.1027,
+      "lon": -118.3404,
+      "price": 0,
+      "price_text": "Free to see exterior · tours ≈ $20–30",
+      "hours": "Tours daily, times vary · check on the day",
+      "tip": "It hosts the Oscars. The exterior and mall are free; the tour is optional.",
+      "source": "https://www.dolbytheatre.com"
+    },
+    "golf-n-stuff": {
+      "name": "Golf N' Stuff (Norwalk)",
+      "landmark": "Golf N' Stuff (Norwalk)",
+      "kind": "activity",
+      "lat": 33.9056,
+      "lon": -118.0818,
+      "price": 12,
+      "price_text": "≈ $10–15 per mini-golf round; check on the day",
+      "hours": "Usually 10:00–22:00 · check on the day",
+      "tip": "Classic family mini-golf with two courses. Good stop if you are driving through Norwalk.",
+      "source": "https://www.golfnstuff.com"
+    },
+    "grand-central-market": {
+      "name": "Grand Central Market",
+      "landmark": "Grand Central Market",
+      "kind": "food",
+      "lat": 34.0507,
+      "lon": -118.2487,
+      "price": 0,
+      "price_text": "Free entry · food ≈ $10–20 per dish",
+      "hours": "Daily roughly 08:00–21:00 · check on the day",
+      "tip": "Come hungry and try several stalls. Busy at lunch on weekdays.",
+      "source": "https://grandcentralmarket.com"
+    },
+    "hollywood-bowl": {
+      "name": "Hollywood Bowl",
+      "landmark": "Hollywood Bowl",
+      "kind": "show",
+      "lat": 34.1122,
+      "lon": -118.3391,
+      "price": 30,
+      "price_text": "≈ $20–100+ depending on show and seat",
+      "hours": "Show nights, usually summer season",
+      "tip": "Bring a picnic and a jacket. Book tickets early for popular nights.",
+      "source": "https://www.hollywoodbowl.com"
+    },
+    "irises": {
+      "name": "Irises",
+      "landmark": "Irises",
+      "kind": "sight",
+      "lat": 34.078,
+      "lon": -118.4741,
+      "price": 0,
+      "price_text": "Free with Getty Center entry",
+      "hours": "Same as Getty Center · closed Monday",
+      "tip": "Van Gogh's painting hangs at the Getty Center. Check the room on arrival.",
+      "source": "https://www.getty.edu/art/collection"
+    },
+    "johns-pizza": {
+      "name": "John's Incredible Pizza Company (Carson)",
+      "landmark": "John's Incredible Pizza Company (Carson)",
+      "kind": "food",
+      "lat": 33.8329,
+      "lon": -118.2711,
+      "price": 20,
+      "price_text": "≈ $15–25 buffet plus games; check on the day",
+      "hours": "Usually 11:00–21:00 · check on the day",
+      "tip": "Buffet plus arcade rides — a good rainy-day family stop near Carson.",
+      "source": "https://www.johnspizza.com"
+    },
+    "la-la-land": {
+      "name": "La La Land filming spots",
+      "landmark": "La La Land",
+      "kind": "tour",
+      "lat": 33.8613,
+      "lon": -118.4013,
+      "price": 0,
+      "price_text": "Free self-guided · guided tours cost extra",
+      "hours": "Outdoor spots open daylight hours",
+      "tip": "The Griffith Observatory and Angels Flight appear in the film. Do a self-guided walk.",
+      "source": ""
+    },
+    "la-zoo": {
+      "name": "Los Angeles Zoo",
+      "landmark": "Los Angeles Zoo",
+      "kind": "park",
+      "lat": 34.1531,
+      "lon": -118.2917,
+      "price": 22,
+      "price_text": "≈ $20–25 adult; check on the day",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "Big and hilly — wear comfortable shoes and start early before the heat.",
+      "source": "https://www.lazoo.org"
+    },
+    "pacific-park": {
+      "name": "Pacific Park",
+      "landmark": "Pacific Park",
+      "kind": "activity",
+      "lat": 34.0084,
+      "lon": -118.4975,
+      "price": 0,
+      "price_text": "Free to enter · ride wristband ≈ $40–50; check on the day",
+      "hours": "Rides usually 11:00–21:00 · check on the day",
+      "tip": "The solar-powered Ferris wheel is the icon. Buy a wristband only if you ride a lot.",
+      "source": "https://pacpark.com"
+    },
+    "panda-express": {
+      "name": "Panda Express",
+      "landmark": "Panda Express",
+      "kind": "food",
+      "lat": 34.0754,
+      "lon": -118.0581,
+      "price": 12,
+      "price_text": "≈ $10–15 per combo",
+      "hours": "Varies by branch · many open 10:00–22:00",
+      "tip": "Fast, cheap Chinese-American chain — handy near Hollywood Boulevard.",
+      "source": "https://www.pandaexpress.com"
+    },
+    "pretty-woman": {
+      "name": "Pretty Woman filming spots",
+      "landmark": "Pretty Woman",
+      "kind": "tour",
+      "lat": 34.0673,
+      "lon": -118.4005,
+      "price": 0,
+      "price_text": "Free self-guided",
+      "hours": "Outdoor spots daylight hours",
+      "tip": "The Beverly Wilshire hotel and Rodeo Drive feature in the film. Walk Rodeo Drive nearby.",
+      "source": ""
+    },
+    "rose-bowl": {
+      "name": "Rose Bowl",
+      "landmark": "Rose Bowl",
+      "kind": "sight",
+      "lat": 34.1613,
+      "lon": -118.1676,
+      "price": 0,
+      "price_text": "Free to walk outside · event tickets vary",
+      "hours": "Stadium on event days · grounds open daytime",
+      "tip": "Famous for the New Year's Day game and the flea market. Check the event calendar.",
+      "source": "https://www.rosebowlstadium.com"
+    },
+    "santa-monica-beach": {
+      "name": "Santa Monica Beach",
+      "landmark": "Santa Monica Beach",
+      "kind": "beach",
+      "lat": 34.0094,
+      "lon": -118.4975,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Wide sand with a paved path for walking or biking to Venice. Water is cool year-round.",
+      "source": ""
+    },
+    "rodeo-drive": {
+      "name": "Rodeo Drive walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.0674,
+      "lon": -118.4031,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Shops usually 10:00–19:00",
+      "tip": "Window-shop the luxury boutiques and people-watch. Best on a weekday.",
+      "source": ""
+    },
+    "venice-canals": {
+      "name": "Venice Canals walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 33.9833,
+      "lon": -118.4667,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Quiet canals and bridges a short walk from the beach crowds. Go in the morning.",
+      "source": ""
+    },
+    "runyon-canyon": {
+      "name": "Runyon Canyon hike",
+      "landmark": null,
+      "kind": "park",
+      "lat": 34.1097,
+      "lon": -118.3497,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Dawn to dusk",
+      "tip": "Popular easy-to-moderate hike with city views. Bring water and sun protection.",
+      "source": ""
+    },
+    "angels-flight": {
+      "name": "Angels Flight Railway",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.0508,
+      "lon": -118.2503,
+      "price": 1,
+      "price_text": "≈ $1 one way; check on the day",
+      "hours": "Usually 06:30–22:00 · check on the day",
+      "tip": "Short historic funicular ride in Downtown. Combine with Grand Central Market.",
+      "source": "https://www.angelsflight.org"
+    },
+    "last-bookstore": {
+      "name": "The Last Bookstore",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 34.0476,
+      "lon": -118.2497,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily roughly 10:00–20:00 · check on the day",
+      "tip": "Big used-book store with a famous book tunnel upstairs. Good Downtown stop.",
+      "source": "https://lastbookstorela.com"
+    },
+    "melrose-trading": {
+      "name": "Melrose Avenue walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 34.0837,
+      "lon": -118.3603,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Shops usually 11:00–19:00",
+      "tip": "Street art, vintage shops and cafes. Walk the stretch near Fairfax.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of movie-star Hollywood and a museum hilltop, all doable without a car if you plan taxis.",
+      "days": [
+        {
+          "title": "Hollywood icons in the morning",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early, the pavement gets crowded by midday."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Look at the handprints in the forecourt. Tours cost extra."
+            },
+            {
+              "place": "dolby",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Across the street. Tour times vary, check on the day."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Best views from the Griffith Park or Lake Hollywood viewpoints. Take a taxi."
+            },
+            {
+              "place": "panda-express",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Quick lunch. Branch hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Griffith and the Getty",
+          "stops": [
+            {
+              "place": "griffith",
+              "at": "13:15",
+              "minutes": 120,
+              "note": "Closed Monday. Planetarium shows cost extra."
+            },
+            {
+              "place": "getty",
+              "at": "16:00",
+              "minutes": 180,
+              "note": "Closed Monday. Parking is paid. Sunset views are good."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A full coast day from Santa Monica to Venice, ending with sunset on the pier.",
+      "days": [
+        {
+          "title": "Santa Monica morning",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Wide sand, easy walking. Bring layers, mornings are cool."
+            },
+            {
+              "place": "pacific-park",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Rides usually open from 11:00. Ride tickets cost extra."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Family-friendly lunch. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Venice and pier sunset",
+          "stops": [
+            {
+              "place": "venice-canals",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Quiet walk, best in daylight."
+            },
+            {
+              "place": "venice-beach",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Boardwalk is busiest midday. Watch your belongings."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Stay for sunset. Businesses vary, the pier itself is always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market eats downtown, then a relaxed evening of food and a movie spot in Hollywood.",
+      "days": [
+        {
+          "title": "Downtown tastes",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Many stalls, cash and card. Busy at lunch."
+            },
+            {
+              "place": "angels-flight",
+              "at": "11:45",
+              "minutes": 15,
+              "note": "Short funicular ride. Small fare, check on the day."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Good coffee nearby. Opens around 10:00."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood evening",
+          "stops": [
+            {
+              "place": "melrose-trading",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Shops and snack stops. Most open 11:00–19:00."
+            },
+            {
+              "place": "la-la-land",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Outdoor filming spots, daylight hours. Plan your own route."
+            },
+            {
+              "place": "hollywood-bowl",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Summer show nights only. Bring a picnic and a jacket."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Best first trip: Hollywood icons on day one, the Getty and a sunset observatory on day two.",
+      "days": [
+        {
+          "title": "Hollywood on foot",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early, the sidewalk gets crowded by midday."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Two minutes on foot. Look at the handprints in the forecourt."
+            },
+            {
+              "place": "dolby",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Next door. Tours run at set times, check on the day."
+            },
+            {
+              "place": "panda-express",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Quick lunch nearby. Hours vary by branch."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Drive or walk to a viewpoint. Morning light is clearest."
+            }
+          ]
+        },
+        {
+          "title": "Getty, then Griffith at sunset",
+          "stops": [
+            {
+              "place": "getty",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Parking costs extra, check on the day."
+            },
+            {
+              "place": "irises",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Inside the Getty. Same hours as the museum."
+            },
+            {
+              "place": "griffith",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Closed Monday. Arrive before sunset for parking."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Coast lovers: Santa Monica and Venice on day one, a Hollywood morning before you fly.",
+      "days": [
+        {
+          "title": "Santa Monica to Venice",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Wide sand, lifeguard towers. Bring layers, mornings are cool."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Walk out over the water. Businesses vary, check on the day."
+            },
+            {
+              "place": "pacific-park",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "On the pier. Rides usually 11:00–21:00, check on the day."
+            },
+            {
+              "place": "venice-beach",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Boardwalk is about 30 minutes' walk south. Busiest midday."
+            },
+            {
+              "place": "venice-canals",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Quiet walk, best in daylight. Finish before dark."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood morning, then fly",
+          "stops": [
+            {
+              "place": "runyon-canyon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early hike for city views. Dawn to dusk."
+            },
+            {
+              "place": "walk-of-fame",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Short walk before checkout."
+            },
+            {
+              "place": "grand-central-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch downtown. Roughly 08:00–21:00, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Downtown and the coast, with a Hollywood snack stop in between.",
+      "days": [
+        {
+          "title": "Downtown markets and bookshops",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Grazing lunch. Many stalls, cash helps."
+            },
+            {
+              "place": "angels-flight",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "Short funicular ride. Usually 06:30–22:00, check on the day."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Browse, then coffee nearby. Roughly 10:00–20:00."
+            },
+            {
+              "place": "panda-express",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Cheap snack on the way west. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Beach food and pier sunset",
+          "stops": [
+            {
+              "place": "venice-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Boardwalk snacks and people-watching."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the pier, grab something fried."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Family dinner. Usually 11:00–21:00, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Repeat culture pick with a studio day: Universal first, Hollywood walk second.",
+      "days": [
+        {
+          "title": "Universal Studios",
+          "stops": [
+            {
+              "place": "universal",
+              "at": "09:00",
+              "minutes": 480,
+              "note": "Full day. Buy tickets ahead, arrive at opening. Usually 09:00–20:00, check on the day."
+            },
+            {
+              "place": "panda-express",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Quick dinner after the park. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood and the Bowl",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is quietest."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Forecourt is free to walk."
+            },
+            {
+              "place": "la-la-land",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Self-guided filming spots. Daylight hours only."
+            },
+            {
+              "place": "hollywood-bowl",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Summer show nights only. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "Repeat coast pick with a zoo morning: family-friendly and relaxed.",
+      "days": [
+        {
+          "title": "Zoo and Hollywood",
+          "stops": [
+            {
+              "place": "la-zoo",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Morning is cooler for the animals. Roughly 10:00–17:00, check on the day."
+            },
+            {
+              "place": "griffith",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Short drive from the zoo."
+            },
+            {
+              "place": "panda-express",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Early dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Pier and beach sunset",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Afternoon on the sand."
+            },
+            {
+              "place": "pacific-park",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Rides on the pier. Check hours on the day."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Stay for sunset. Pier open 24h."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Repeat food pick with a family pizza night and a market lunch.",
+      "days": [
+        {
+          "title": "Market lunch and Downtown",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Pick a stall each. Busy at noon."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Short walk. Roughly 10:00–20:00, check on the day."
+            },
+            {
+              "place": "angels-flight",
+              "at": "14:15",
+              "minutes": 15,
+              "note": "Quick ride up the hill."
+            }
+          ]
+        },
+        {
+          "title": "Beach snacks and pizza",
+          "stops": [
+            {
+              "place": "venice-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Boardwalk food stalls."
+            },
+            {
+              "place": "venice-canals",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Quiet walk after eating."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Family dinner. Usually 11:00–21:00, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want studios, the Walk of Fame and the Getty in three easy days.",
+      "days": [
+        {
+          "title": "Hollywood on foot",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early, the sidewalk gets crowded by midday."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Two minutes on foot. Look at the handprints in the forecourt."
+            },
+            {
+              "place": "dolby",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Across the street. Tour times vary, check on the day."
+            },
+            {
+              "place": "panda-express",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch nearby. Many branches open 10:00–22:00."
+            },
+            {
+              "place": "griffith",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Closed Monday. Stay for sunset over the city."
+            }
+          ]
+        },
+        {
+          "title": "Studio day",
+          "stops": [
+            {
+              "place": "universal",
+              "at": "09:00",
+              "minutes": 480,
+              "note": "Go on a weekday. Buy tickets online and arrive at opening."
+            }
+          ]
+        },
+        {
+          "title": "West side culture, then fly",
+          "stops": [
+            {
+              "place": "getty",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Parking is paid; the museum is free."
+            },
+            {
+              "place": "irises",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Same hours as the Getty. A short walk on the grounds."
+            },
+            {
+              "place": "rodeo-drive",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "About 20 minutes by car. Shops usually 10:00–19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Visitors who want the pier, the boardwalk and a slow sunset by the water.",
+      "days": [
+        {
+          "title": "Santa Monica arrival",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Wide sand, easy walking. Bring a layer, it cools fast."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walk out to the end for the view."
+            },
+            {
+              "place": "pacific-park",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Rides usually 11:00–21:00. Sunset is the best time."
+            }
+          ]
+        },
+        {
+          "title": "Venice boardwalk and canals",
+          "stops": [
+            {
+              "place": "venice-canals",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quiet in the morning. Walk the bridges."
+            },
+            {
+              "place": "venice-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Boardwalk is busiest midday. Watch the street performers."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Family-friendly lunch. Usually 11:00–21:00, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood sign and fly",
+          "stops": [
+            {
+              "place": "runyon-canyon",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Dawn to dusk. Early morning is cooler and quieter."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Viewpoints open daylight hours. Morning light is clearest."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, food halls and a Hollywood walk between meals.",
+      "days": [
+        {
+          "title": "Downtown tastes",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Roughly 08:00–21:00. Go before the lunch rush."
+            },
+            {
+              "place": "angels-flight",
+              "at": "12:15",
+              "minutes": 15,
+              "note": "A short ride up the hill. Usually 06:30–22:00."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Roughly 10:00–20:00. Good coffee break inside."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood and Melrose",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning before crowds."
+            },
+            {
+              "place": "panda-express",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Early lunch. Hours vary by branch."
+            },
+            {
+              "place": "melrose-trading",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Shops usually 11:00–19:00. Cafes and food stops along the way."
+            },
+            {
+              "place": "la-la-land",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Outdoor spots open daylight hours. Late afternoon light is best."
+            }
+          ]
+        },
+        {
+          "title": "Getty and a last meal",
+          "stops": [
+            {
+              "place": "getty",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. The garden cafe is a good lunch stop."
+            },
+            {
+              "place": "irises",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Same hours as the Getty."
+            },
+            {
+              "place": "rodeo-drive",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Shops usually 10:00–19:00. Walk and grab a snack."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want studios, museums and movie history, grouped by area to cut driving.",
+      "days": [
+        {
+          "title": "Hollywood icons on foot",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Come early, the pavement gets crowded by midday."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Two minutes along the boulevard. Look at the handprints in the forecourt."
+            },
+            {
+              "place": "dolby",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Next door. Tour times vary, so check on the day."
+            },
+            {
+              "place": "panda-express",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch. Branches and hours vary."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Best views from Griffith Park viewpoints. Morning or late afternoon light is clearest."
+            }
+          ]
+        },
+        {
+          "title": "Griffith and the Bowl",
+          "stops": [
+            {
+              "place": "runyon-canyon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early start beats the heat. Bring water."
+            },
+            {
+              "place": "griffith",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Monday. Planetarium shows cost extra."
+            },
+            {
+              "place": "la-zoo",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Next to Griffith Park. Usually closes around 17:00, check on the day."
+            },
+            {
+              "place": "hollywood-bowl",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Summer season only. Book tickets ahead and bring a jacket."
+            }
+          ]
+        },
+        {
+          "title": "Studios, then Westside art",
+          "stops": [
+            {
+              "place": "universal",
+              "at": "09:00",
+              "minutes": 480,
+              "note": "Full day. Go on a weekday and avoid summer weekends. Buy tickets online."
+            },
+            {
+              "place": "getty",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Closed Monday. Free entry, parking costs. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sunset chasers: Santa Monica and Venice first, with one Hollywood day for the classics.",
+      "days": [
+        {
+          "title": "Santa Monica Pier and beach",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Wide sand, gentle waves. Bring layers, it cools fast."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Businesses vary. Grab lunch on or near the pier."
+            },
+            {
+              "place": "pacific-park",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Rides on the pier. Usually open into the evening, check on the day."
+            },
+            {
+              "place": "venice-canals",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Quiet walk before sunset. About 10 minutes by car."
+            }
+          ]
+        },
+        {
+          "title": "Venice boardwalk to sunset",
+          "stops": [
+            {
+              "place": "venice-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Boardwalk is busiest midday. Watch your belongings."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Family lunch with games. Hours vary, check on the day."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Come back for sunset over the water."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood highlights",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is calmest."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Short walk along the boulevard."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Viewpoints open daylight hours."
+            },
+            {
+              "place": "griffith",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Great city views."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, food halls and beach snacks between the big sights.",
+      "days": [
+        {
+          "title": "Downtown markets and movie spots",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Late morning is best. Many stalls, cash helps."
+            },
+            {
+              "place": "angels-flight",
+              "at": "11:45",
+              "minutes": 15,
+              "note": "Short ride up the hill. Usually runs all day, check on the day."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Browse, then lunch nearby."
+            },
+            {
+              "place": "pretty-woman",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Outdoor filming spots in West Hollywood. Daylight hours only."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood walk and eats",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Before the crowds."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Forecourt is free."
+            },
+            {
+              "place": "panda-express",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Fast lunch. Hours vary by branch."
+            },
+            {
+              "place": "la-la-land",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Filming spots by car. Late afternoon light is best."
+            },
+            {
+              "place": "griffith",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Closed Monday. Stay for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Beach food and pier",
+          "stops": [
+            {
+              "place": "venice-beach",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Boardwalk snacks and people-watching."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Businesses vary. Try the pier food stands."
+            },
+            {
+              "place": "pacific-park",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Rides usually run into the evening, check on the day."
+            },
+            {
+              "place": "santa-monica-beach",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset on the sand."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want studios, museums and the movie-star sights without rushing.",
+      "days": [
+        {
+          "title": "Arrive and Hollywood core",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Always open. Go early in the day if you can; afternoons are busy."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "15:50",
+              "minutes": 30,
+              "note": "Forecourt is free to walk. Tour times vary, check on the day."
+            },
+            {
+              "place": "dolby",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Tours run daily but times vary. Book ahead if you want inside."
+            },
+            {
+              "place": "panda-express",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Quick, cheap dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Griffith and the sign",
+          "stops": [
+            {
+              "place": "hollywood-sign",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Viewpoints are open daylight hours. Morning light is clearest."
+            },
+            {
+              "place": "runyon-canyon",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Dawn to dusk. Bring water and sun cream."
+            },
+            {
+              "place": "griffith",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check the day's hours before you go."
+            },
+            {
+              "place": "la-la-land",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Outdoor filming spots, daylight hours. Late afternoon light is best."
+            }
+          ]
+        },
+        {
+          "title": "Getty and West Hollywood",
+          "stops": [
+            {
+              "place": "getty",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is calmest. Parking is paid."
+            },
+            {
+              "place": "irises",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Same hours as the Getty. A quick photo stop."
+            },
+            {
+              "place": "rodeo-drive",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops usually 10:00–19:00. Window shopping is free."
+            },
+            {
+              "place": "pretty-woman",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Outdoor spots, daylight hours. A self-guided wander."
+            },
+            {
+              "place": "melrose-trading",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Shops usually 11:00–19:00. Good for dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Downtown, then fly",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Daily roughly 08:00–21:00. Breakfast here."
+            },
+            {
+              "place": "angels-flight",
+              "at": "10:45",
+              "minutes": 15,
+              "note": "Usually 06:30–22:00. Short ride, small fare."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Daily roughly 10:00–20:00. Check on the day."
+            },
+            {
+              "place": "caltech",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Campus grounds open daytime. Allow travel time from Downtown."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Visitors who want sand, sunsets and the pier, with one Hollywood day.",
+      "days": [
+        {
+          "title": "Arrive and Santa Monica",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Always open. Afternoon is warmest."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Pier open 24h, businesses vary. Stay for sunset."
+            },
+            {
+              "place": "pacific-park",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Rides usually 11:00–21:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Venice day",
+          "stops": [
+            {
+              "place": "venice-canals",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Always open. Quiet in the morning."
+            },
+            {
+              "place": "venice-beach",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Boardwalk busiest midday. Watch your belongings."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually 11:00–21:00. Family-friendly lunch stop."
+            },
+            {
+              "place": "santa-monica-beach",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Back on the sand for the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood highlights",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning before crowds."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:55",
+              "minutes": 30,
+              "note": "Forecourt open daily."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Viewpoints open daylight hours."
+            },
+            {
+              "place": "griffith",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "panda-express",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Quick bite before heading back west."
+            }
+          ]
+        },
+        {
+          "title": "Pier morning, then fly",
+          "stops": [
+            {
+              "place": "santa-monica-pier",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Quiet early. Businesses vary."
+            },
+            {
+              "place": "venice-beach",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short walk south along the sand."
+            },
+            {
+              "place": "santa-monica-beach",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Last beach hour before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want markets, food stops and a studio day in between.",
+      "days": [
+        {
+          "title": "Arrive and Downtown eats",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daily roughly 08:00–21:00. Many stalls, cash and card."
+            },
+            {
+              "place": "angels-flight",
+              "at": "15:15",
+              "minutes": 15,
+              "note": "Usually 06:30–22:00. Short ride up the hill."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Daily roughly 10:00–20:00."
+            },
+            {
+              "place": "panda-express",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Easy first-night dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood and studio day",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Morning before crowds."
+            },
+            {
+              "place": "universal",
+              "at": "10:00",
+              "minutes": 480,
+              "note": "Usually 09:00–20:00, varies by season. Weekday is quieter. Food inside is pricey."
+            },
+            {
+              "place": "hollywood-bowl",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Show nights, usually summer. Book ahead and bring a jacket."
+            }
+          ]
+        },
+        {
+          "title": "West side food and beach",
+          "stops": [
+            {
+              "place": "melrose-trading",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Shops usually 11:00–19:00. Cafes along the way."
+            },
+            {
+              "place": "rodeo-drive",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Shops usually 10:00–19:00. Lunch nearby."
+            },
+            {
+              "place": "venice-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Boardwalk food stalls are busiest midday."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Snack stands on the pier. Stay for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Market breakfast, then fly",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Breakfast before the airport. Check stall hours on the day."
+            },
+            {
+              "place": "caltech",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Campus grounds open daytime. A calm last stop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "5n-culture",
+      "length": "5n",
+      "style": "culture",
+      "nights": 5,
+      "for": "First-timers who want studios, museums and movie landmarks without rushing.",
+      "days": [
+        {
+          "title": "Arrive and Hollywood core",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Go early in the day if you can; afternoons get crowded."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "15:50",
+              "minutes": 30,
+              "note": "Forecourt is free to walk. Tour times vary; check on the day."
+            },
+            {
+              "place": "dolby",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Tours daily, times vary. Check on the day."
+            },
+            {
+              "place": "panda-express",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Quick dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Griffith and the sign",
+          "stops": [
+            {
+              "place": "hollywood-sign",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Best light in the morning. Viewpoints are open daylight hours."
+            },
+            {
+              "place": "runyon-canyon",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Bring water and a hat. Dawn to dusk."
+            },
+            {
+              "place": "griffith",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday. Sunset is the classic time, but mornings are calmer."
+            },
+            {
+              "place": "la-zoo",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Roughly 10:00–17:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Studio day",
+          "stops": [
+            {
+              "place": "universal",
+              "at": "09:00",
+              "minutes": 480,
+              "note": "Full day. Weekday morning is best; avoid summer weekends. Usually 09:00–20:00, varies by season."
+            }
+          ]
+        },
+        {
+          "title": "Getty and West Hollywood",
+          "stops": [
+            {
+              "place": "getty",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is quietest."
+            },
+            {
+              "place": "irises",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Same hours as the Getty. Closed Monday."
+            },
+            {
+              "place": "rodeo-drive",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Shops usually 10:00–19:00. A walk is free."
+            },
+            {
+              "place": "melrose-trading",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Shops usually 11:00–19:00. Good for a snack stop."
+            }
+          ]
+        },
+        {
+          "title": "Downtown, then fly",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Late morning is best. Roughly 08:00–21:00."
+            },
+            {
+              "place": "angels-flight",
+              "at": "10:45",
+              "minutes": 15,
+              "note": "Short ride. Usually 06:30–22:00; check on the day."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Roughly 10:00–20:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hollywood"
+    },
+    {
+      "id": "5n-beach",
+      "length": "5n",
+      "style": "beach",
+      "nights": 5,
+      "for": "Slow days on the sand with a Hollywood day in the middle.",
+      "days": [
+        {
+          "title": "Arrive, Santa Monica sunset",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Always open. Late afternoon is best."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Pier open 24h; businesses vary. Sunset is the classic time."
+            },
+            {
+              "place": "pacific-park",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Rides usually 11:00–21:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Venice day",
+          "stops": [
+            {
+              "place": "venice-canals",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Morning is quiet. Always open."
+            },
+            {
+              "place": "venice-beach",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Boardwalk busiest midday. Watch your belongings."
+            },
+            {
+              "place": "johns-pizza",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Family lunch. Usually 11:00–21:00; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood highlights",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning before crowds."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:55",
+              "minutes": 30,
+              "note": "Forecourt open daily."
+            },
+            {
+              "place": "hollywood-sign",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Clear morning light."
+            },
+            {
+              "place": "griffith",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Studio day",
+          "stops": [
+            {
+              "place": "universal",
+              "at": "09:00",
+              "minutes": 480,
+              "note": "Weekday morning is best. Hours vary by season; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Beach morning, then fly",
+          "stops": [
+            {
+              "place": "santa-monica-beach",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning walk on the sand. Always open."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Quieter than sunset. Businesses vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Santa Monica"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Eat your way from Downtown markets to beach snacks, with the big sights in between.",
+      "days": [
+        {
+          "title": "Arrive and Downtown eats",
+          "stops": [
+            {
+              "place": "grand-central-market",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch from many stalls. Roughly 08:00–21:00."
+            },
+            {
+              "place": "angels-flight",
+              "at": "13:45",
+              "minutes": 15,
+              "note": "Short ride. Usually 06:30–22:00; check on the day."
+            },
+            {
+              "place": "last-bookstore",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Roughly 10:00–20:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Hollywood and a show",
+          "stops": [
+            {
+              "place": "walk-of-fame",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning before crowds."
+            },
+            {
+              "place": "chinese-theatre",
+              "at": "09:55",
+              "minutes": 30,
+              "note": "Forecourt open daily."
+            },
+            {
+              "place": "panda-express",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Quick lunch. Many branches 10:00–22:00."
+            },
+            {
+              "place": "hollywood-bowl",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Summer show nights only. Book ahead and check the season."
+            }
+          ]
+        },
+        {
+          "title": "Studio day",
+          "stops": [
+            {
+              "place": "universal",
+              "at": "09:00",
+              "minutes": 480,
+              "note": "Eat inside the park. Weekday morning is best; hours vary by season."
+            }
+          ]
+        },
+        {
+          "title": "West side tastes",
+          "stops": [
+            {
+              "place": "melrose-trading",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shops usually 11:00–19:00. Good lunch spots."
+            },
+            {
+              "place": "rodeo-drive",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Shops usually 10:00–19:00."
+            },
+            {
+              "place": "getty",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Closed Monday. Cafe on site; check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Beach snacks, then fly",
+          "stops": [
+            {
+              "place": "venice-beach",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Boardwalk food stalls. Busiest midday."
+            },
+            {
+              "place": "santa-monica-pier",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Snack on the pier. Businesses vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, studios and the movie-star walk of fame."
+    },
+    {
+      "id": "beach",
+      "label": "Coast",
+      "blurb": "Santa Monica, Venice and Malibu sunsets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Tacos, food trucks and Koreatown nights."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Central for Metro rail, museums and food halls; good value on weekends.",
+      "center": [
+        34.05,
+        -118.24
+      ]
+    },
+    {
+      "area": "Hollywood",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Walk to the Walk of Fame and the studios; easy subway rides downtown.",
+      "center": [
+        34.101,
+        -118.33
+      ]
+    },
+    {
+      "area": "Santa Monica",
+      "range": [
+        220,
+        550
+      ],
+      "why": "Beach and pier on the doorstep; light rail to downtown LA.",
+      "center": [
+        34.015,
+        -118.49
+      ]
+    },
+    {
+      "area": "West Hollywood",
+      "range": [
+        200,
+        480
+      ],
+      "why": "Nightlife, restaurants and walkable streets between Hollywood and the beaches.",
+      "center": [
+        34.09,
+        -118.36
+      ]
+    }
+  ],
+  "food": [
+    "Try tacos and burritos at taquerias and food trucks; a meal often costs $10–15.",
+    "Koreatown is great for late-night Korean BBQ and noodles; expect $25–40 a person.",
+    "Grand Central Market downtown has many stalls under one roof; budget $10–20.",
+    "Book popular dinner spots ahead, especially on weekends in West Hollywood.",
+    "Beach towns have casual seafood and burger shacks; check hours, some close early."
+  ],
+  "more_time": [
+    "Add a day for the Getty Center or the Getty Villa; both are free or low cost, check parking fees.",
+    "Swap a beach afternoon for a studio tour in Burbank or Hollywood; book ahead.",
+    "Take a harbour boat from San Pedro to Catalina Island if you have a full extra day."
+  ]
+}

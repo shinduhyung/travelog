@@ -1,0 +1,567 @@
+{
+  "city": "Zurich",
+  "checked": "October 2026",
+  "intro_line": "Zurich blends a lakeside old town with Swiss efficiency and alpine views.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Altstadt",
+        "Bahnhofstrasse",
+        "Niederdorf",
+        "Enge"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Altstadt",
+        "Bahnhofstrasse",
+        "Niederdorf",
+        "Enge"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Altstadt",
+        "Bahnhofstrasse",
+        "Niederdorf",
+        "Enge"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Altstadt",
+        "Bahnhofstrasse",
+        "Niederdorf",
+        "Enge"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Altstadt",
+        "Bahnhofstrasse",
+        "Niederdorf",
+        "Enge"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 14,
+        "note": "Coldest month: highs near 4°C, lows around -2°C. Pack a warm coat and expect about 14 rain days."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 12,
+        "note": "Still cold, highs near 7°C. Fewer rain days than January, so outdoor walks are possible."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 13,
+        "note": "Mild and changeable: highs near 11°C, lows near 1°C, with about 13 rain days."
+      },
+      {
+        "high": 15,
+        "low": 4,
+        "rain_days": 13,
+        "note": "Spring warms up: highs near 15°C. Bring a light jacket and an umbrella."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 18,
+        "note": "Pleasant but the wettest month: highs near 18°C and about 18 rain days. Keep plans flexible."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 16,
+        "note": "Warm start to summer: highs near 23°C, lows near 13°C. Good for lake walks and boat trips."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 15,
+        "note": "Warmest month: highs near 25°C. Pack light clothes and sunscreen."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 12,
+        "note": "Warm like July, highs near 25°C, with fewer rain days. Great for the lake and hills."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 12,
+        "note": "Still mild: highs near 20°C. A good month for walking and day trips."
+      },
+      {
+        "high": 15,
+        "low": 7,
+        "rain_days": 12,
+        "note": "Cooler and often clear: highs near 15°C. Bring layers for evenings."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 13,
+        "note": "Chilly: highs near 9°C, lows near 3°C, with about 13 rain days. A warm jacket is needed."
+      },
+      {
+        "high": 6,
+        "low": 0,
+        "rain_days": 14,
+        "note": "Cold again: highs near 6°C, lows near 0°C. Expect about 14 rain days; pack rain gear."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.85
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.4
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "shopping": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "grossmunster": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, before tour groups",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "fraumunster": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning or late afternoon",
+      "area": "Altstadt",
+      "popularity": 5
+    },
+    "lindenhof": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset or a sunny lunchtime",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "chagall_museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "eth": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "fifa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Enge",
+      "popularity": 3
+    },
+    "kunsthaus": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "limmat_cruise": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon, May to September",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "uzh": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Altstadt",
+      "popularity": 2
+    },
+    "zoo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning, any season",
+      "area": "Enge",
+      "popularity": 4
+    },
+    "markthalle": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday lunch",
+      "area": "Enge",
+      "popularity": 4
+    },
+    "polyterrasse": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Altstadt",
+      "popularity": 4
+    },
+    "niederdorf_walk": {
+      "types": [
+        "shopping",
+        "food",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Niederdorf",
+      "popularity": 4
+    },
+    "bahnhofstrasse": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Bahnhofstrasse",
+      "popularity": 3
+    },
+    "lake_promenade": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Summer afternoon or sunset",
+      "area": "Enge",
+      "popularity": 4
+    },
+    "fondue": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening, October to March",
+      "area": "Niederdorf",
+      "popularity": 4
+    },
+    "tram_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Any time",
+      "area": "Bahnhofstrasse",
+      "popularity": 2
+    },
+    "chocolatier": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Bahnhofstrasse",
+      "popularity": 3
+    },
+    "swimming": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "July and August, afternoon",
+      "area": "Enge",
+      "popularity": 3
+    },
+    "landesmuseum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day",
+      "area": "Altstadt",
+      "popularity": 3
+    },
+    "old_town_food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Altstadt",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the old town, the museums and a lake or hill outing; add a night for a mountain day trip."
+  },
+  "airports": [
+    {
+      "code": "ZRH",
+      "name": "Zurich Airport",
+      "primary": true,
+      "note": "Switzerland's main hub, about 11 km north of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Zürich HB",
+          "price": "CHF 6.80",
+          "time": "10-15 min",
+          "note": "Trains run every 10-15 min; fastest option."
+        },
+        {
+          "mode": "Tram 10",
+          "to": "City centre",
+          "price": "CHF 4-5",
+          "time": "30-40 min",
+          "note": "Slower but may be door to door."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Most hotels",
+          "price": "check locally",
+          "time": "20-30 min",
+          "note": "Stops right of Terminal 1 arrivals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "CHF 50-70",
+          "time": "20-30 min",
+          "note": "Fixed-ish fares; traffic can add time."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "CHF 45-65",
+          "time": "20-30 min",
+          "note": "Pickup zones at the airport."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Zurich",
+      "https://en.wikivoyage.org/wiki/Zurich"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Trams and S-Bahn trains for almost everything; walking in the centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Use trams and S-Bahn trains instead."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Trams and buses cover the centre. Buy and validate tickets before boarding. Single zone 110 tickets cost about CHF 4-5; 24-hour cards about CHF 9-10."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "S-Bahn suburban trains link the centre with suburbs and the airport. Fast and frequent."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt operate; local taxi apps also work. Useful late at night."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is congested and parking is expensive. Public transport is usually faster."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is easy in the centre. Lake boats run from Bürkliplatz in summer."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Lake boats from Bürkliplatz run in summer; a pleasant way to see the lake."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate climate with four clear seasons. Summers are warm, winters are cold, and rain is possible in any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs around 20–25°C and lows around 11–15°C. Best for the lake, boats and hill walks."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs around 4–7°C and lows near -2 to 0°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "About 12–18 rain days a month. May is the wettest. Always carry a small umbrella."
+      },
+      {
+        "icon": "🌂",
+        "title": "Plan indoor backups",
+        "text": "Museums and cafés are good rainy-day options. Check the forecast each morning."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings between seasons",
+        "text": "From about 4°C in January to 25°C in July. Layers work best in spring and autumn."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a waterproof layer and a warm jacket for winter. Light clothes for summer."
+      }
+    ]
+  }
+}

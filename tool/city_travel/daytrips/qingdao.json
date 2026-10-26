@@ -1,0 +1,120 @@
+{
+ "city": "Qingdao",
+ "trips": [
+  {
+   "place": "Yantai",
+   "label": "",
+   "position": {
+    "id": 17403684,
+    "name": "Yantai, Taocunbei",
+    "city": "Yantai Shi",
+    "lat": 37.21096,
+    "lng": 121.14128
+   },
+   "town": {
+    "name": "Yantai",
+    "lat": 37.47649,
+    "lng": 121.44081
+   },
+   "road": {
+    "km": 217,
+    "min": 154,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 440,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$30-$42",
+     "time": "4h 49m",
+     "via": "Gaomi Station to Yantai South",
+     "source": "https://www.rome2rio.com/s/Qingdao/Yantai"
+    },
+    "bus": {
+     "from": "$21-$26",
+     "time": "6h 45m",
+     "via": "Yantai Airport to Jiashike Bus Station",
+     "source": "https://www.rome2rio.com/s/Qingdao/Yantai"
+    }
+   },
+   "route_note": "Frequent high-speed trains link Qingdao and Yantai in roughly 1.5 to 2 hours, with the station a short taxi ride from the seaside sights.",
+   "see": [
+    "Yantai Mountain",
+    "Changyu Wine Museum",
+    "First Bathing Beach",
+    "Penglaige (Penglai Pavilion)",
+    "Coastal promenade"
+   ],
+   "visit": "Full day",
+   "tour_query": "Yantai day trip from Qingdao",
+   "quests": [],
+   "recommended": "train",
+   "why": "High-speed trains are fast and frequent and the station sits a short taxi ride from the seaside sights.",
+   "stars": 3,
+   "know": [
+    "Book train tickets ahead for weekend and holiday travel",
+    "Summer and early autumn are the best seasons for the coast",
+    "Coastal sights are spread along the shore, so plan local transport"
+   ]
+  },
+  {
+   "place": "Weihai",
+   "label": "",
+   "position": {
+    "id": 17404866,
+    "name": "Weihai, Wendengdong",
+    "city": "Weihai",
+    "lat": 37.24043,
+    "lng": 122.25342
+   },
+   "town": {
+    "name": "Weihai",
+    "lat": 37.50914,
+    "lng": 122.11356
+   },
+   "road": {
+    "km": 258,
+    "min": 186,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 530,
+    "currency": "CNY"
+   },
+   "modes": {
+    "bus": {
+     "from": "$14-$20",
+     "time": "3h 10m",
+     "via": "Qingdao to Weihai",
+     "source": "https://www.rome2rio.com/s/Qingdao/Weihai"
+    }
+   },
+   "route_note": "High-speed trains from Qingdao reach Weihai in about 2 to 2.5 hours; the station is close to the harbour and coastal parks.",
+   "see": [
+    "Liugong Island",
+    "Weihai Coastal Park",
+    "Huaxia City",
+    "Bathing beaches",
+    "Harbour area"
+   ],
+   "visit": "Full day",
+   "tour_query": "Weihai day trip from Qingdao",
+   "quests": [],
+   "recommended": "tour",
+   "why": "High-speed trains reach Weihai in about 2 to 2.5 hours and the station is close to the harbour and coastal parks.",
+   "stars": 3,
+   "know": [
+    "Book ahead during summer peak season",
+    "Summer is the best time for the coastal parks and harbour",
+    "The station is near the main waterfront sights"
+   ]
+  }
+ ],
+ "problems": [
+  "Qufu: no Omio position, dropped",
+  "Weihai: model picked train without data; set to tour",
+  "Yantai: train over 3h20"
+ ]
+}

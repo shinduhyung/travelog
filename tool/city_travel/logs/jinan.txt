@@ -1,0 +1,32 @@
+$ deepseek_prep.py Jinan
+  tokens in 658 out 293
+Jinan: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Jinan
+  tokens in 1645 out 603
+Jinan: 1 problems
+  - TNA taxi ¥150 vs tariff estimate 64
+
+$ deepseek_city.py Jinan --stage places
+Jinan: places
+  tokens in 1141 out 3348
+
+$ deepseek_city.py Jinan --stage frame
+Jinan: frame
+  tokens in 2447 out 1816
+
+$ deepseek_city.py Jinan --stage plans
+Jinan: plans
+  plans for day
+  tokens in 2287 out 938
+  plans for 1n
+  tokens in 2288 out 1281
+  plans for 2n
+  tokens in 2293 out 1476
+  plans for 3n
+  tokens in 2288 out 2161
+
+$ merge_city.py Jinan
+Jinan: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/jinan.json and planner/jinan.json
+

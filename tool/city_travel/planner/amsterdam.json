@@ -1,0 +1,706 @@
+{
+  "city": "Amsterdam",
+  "checked": "October 2026",
+  "intro_line": "Canals, bikes and golden-age charm in a compact, flat city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centrum",
+        "Jordaan",
+        "De Pijp",
+        "Oud-West"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Centrum",
+        "Jordaan",
+        "De Pijp",
+        "Oud-West"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centrum",
+        "Jordaan",
+        "De Pijp",
+        "Oud-West"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Centrum",
+        "Jordaan",
+        "De Pijp",
+        "Oud-West"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Centrum",
+        "Jordaan",
+        "De Pijp",
+        "Oud-West"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 7,
+        "low": 2,
+        "rain_days": 15,
+        "note": "January: cold and wet, highs near 7°C. Pack a warm waterproof coat and plan museum days."
+      },
+      {
+        "high": 8,
+        "low": 2,
+        "rain_days": 13,
+        "note": "February: still cold, around 8°C, with about 13 rain days. Indoor sights are the safe bet."
+      },
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 13,
+        "note": "March: slowly warming to about 10°C. Expect showers; bring layers."
+      },
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 12,
+        "note": "April: milder at around 13°C, but rain is still common. Good for walking between showers."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 12,
+        "note": "May: pleasant at about 17°C. A good month for canals and parks."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 12,
+        "note": "June: mild and bright, highs near 21°C. Busy season starts; book museums ahead."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 15,
+        "note": "July: warmest month, about 22°C, but about 15 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 14,
+        "note": "August: similar to July, around 22°C with frequent showers. Peak crowds."
+      },
+      {
+        "high": 19,
+        "low": 12,
+        "rain_days": 13,
+        "note": "September: still mild at about 19°C. Fewer crowds than summer."
+      },
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 15,
+        "note": "October: cooling to about 15°C with around 15 rain days. Bring a waterproof."
+      },
+      {
+        "high": 10,
+        "low": 5,
+        "rain_days": 15,
+        "note": "November: cool and wet, highs near 10°C. Short days; plan indoor sights."
+      },
+      {
+        "high": 8,
+        "low": 4,
+        "rain_days": 15,
+        "note": "December: cold at about 8°C with about 15 rain days. Dark early; dress warm and waterproof."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "art": [
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ]
+  },
+  "places": {
+    "annefrank": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Early morning; book ahead",
+      "area": "Centrum",
+      "popularity": 5
+    },
+    "vangogh": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Opening time or late afternoon",
+      "area": "Oud-West",
+      "popularity": 5
+    },
+    "rijksmuseum": {
+      "types": [
+        "art",
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Oud-West",
+      "popularity": 5
+    },
+    "canalring": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to dusk",
+      "area": "Centrum",
+      "popularity": 5
+    },
+    "damsquare": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "redlight": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening, but go early",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "almondblossom": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "With your museum visit",
+      "area": "Oud-West",
+      "popularity": 3
+    },
+    "amstel": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "canalcruise": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Sunset or evening",
+      "area": "Centrum",
+      "popularity": 5
+    },
+    "dungeon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Rainy afternoon",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "artis": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning on a dry day",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "dehaar": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Half-day trip, spring to autumn",
+      "area": "Oud-West",
+      "popularity": 3
+    },
+    "heineken": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late morning",
+      "area": "De Pijp",
+      "popularity": 4
+    },
+    "cruijff": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Non-match weekday",
+      "area": "De Pijp",
+      "popularity": 3
+    },
+    "keukenhof": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "April weekday morning",
+      "area": "Oud-West",
+      "popularity": 4
+    },
+    "muiderslot": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Dry day, spring to autumn",
+      "area": "Oud-West",
+      "popularity": 2
+    },
+    "nemo": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Rainy day or with children",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "oudvalkeveen": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer day with kids",
+      "area": "Oud-West",
+      "popularity": 2
+    },
+    "oudekerk": {
+      "types": [
+        "history",
+        "art",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "rijkslib": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "With your museum visit",
+      "area": "Oud-West",
+      "popularity": 3
+    },
+    "concertgebouw": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening concert or Wednesday lunch",
+      "area": "Oud-West",
+      "popularity": 3
+    },
+    "royalpalace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centrum",
+      "popularity": 3
+    },
+    "albertcuyp": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "De Pijp",
+      "popularity": 4
+    },
+    "adamlookout": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset",
+      "area": "Centrum",
+      "popularity": 4
+    },
+    "jordaanwalk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Jordaan",
+      "popularity": 4
+    },
+    "foodhallen": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Lunch or early dinner",
+      "area": "Oud-West",
+      "popularity": 4
+    },
+    "vondelpark": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Oud-West",
+      "popularity": 4
+    },
+    "biketour": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning, dry weather",
+      "area": "Centrum",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Rijksmuseum, Van Gogh and the Anne Frank House; add a night for the Jordaan and a bike ride."
+  },
+  "airports": [
+    {
+      "code": "AMS",
+      "name": "Amsterdam Airport Schiphol",
+      "primary": true,
+      "note": "Main hub, about 12 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Amsterdam Centraal",
+          "price": "€5-7",
+          "time": "15-20 min",
+          "note": "Frequent NS trains; tap in and out with a bank card."
+        },
+        {
+          "mode": "Bus",
+          "to": "Amsterdam Zuid or Sloterdijk",
+          "price": "€3-6",
+          "time": "25-40 min",
+          "note": "Slower than the train; check the route first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-60",
+          "time": "20-30 min",
+          "note": "Use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "€35-55",
+          "time": "20-30 min",
+          "note": "Pick-up point is signposted in the app."
+        }
+      ]
+    },
+    {
+      "code": "RTM",
+      "name": "Rotterdam The Hague Airport",
+      "primary": false,
+      "note": "Small airport about 70 km south; some budget flights.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Amsterdam Centraal",
+          "price": "€22-25",
+          "time": "1 hr 45 min",
+          "note": "Bus 33 to Rotterdam Centraal, then a train."
+        },
+        {
+          "mode": "Train",
+          "to": "Amsterdam Centraal",
+          "price": "€20-21",
+          "time": "1 hr",
+          "note": "From Rotterdam Centraal, trains run every 10-20 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€120-150",
+          "time": "1 hr",
+          "note": "Not advisable; the train is far cheaper."
+        }
+      ]
+    },
+    {
+      "code": "EIN",
+      "name": "Eindhoven Airport",
+      "primary": false,
+      "note": "Budget airline base about 120 km southeast.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "Amsterdam Centraal",
+          "price": "€28-30",
+          "time": "1 hr 45 min",
+          "note": "Bus 400 or 401 to Eindhoven Centraal, then a train."
+        },
+        {
+          "mode": "Train",
+          "to": "Amsterdam Centraal",
+          "price": "€25-26",
+          "time": "1 hr 15 min",
+          "note": "From Eindhoven Centraal, four trains per hour."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€200-250",
+          "time": "1 hr 30 min",
+          "note": "Very expensive; avoid unless necessary."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Amsterdam",
+      "https://en.wikivoyage.org/wiki/Amsterdam"
+    ]
+  ],
+  "best_for": [
+    "art",
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Walk or bike in the centre; use trams for longer hops.",
+    "modes": [
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "The main way around, run by GVB. Most routes run about 06:00 to midnight. Tap a contactless bank card (OVpay) or use an OV-chipkaart."
+      },
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Fills the gaps where trams don't go. Same GVB tickets and OVpay tap-in."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Covers areas beyond the tram lines. A few night buses run after midnight."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt work in Amsterdam. Taxis are metered and pricey; use them for late nights or heavy bags."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not worth it in the compact centre. Parking is limited and costly; stick to trams, bikes and walking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is flat and compact, so walking is often fastest. Watch for bike lanes."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Locals' favourite. Rent for a half day and follow the rules: use bike lanes and park only in marked spots."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Free ferries cross the IJ behind Centraal station. A cheap way to see Amsterdam Noord."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and changeable: mild summers, cool winters, and rain in every month. Always carry a light waterproof.",
+    "items": [
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect 12–15 rain days every month. Showers pass quickly, so a light rain jacket beats an umbrella in wind."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild summers",
+        "text": "July and August peak around 22°C with lows near 14–15°C. Rarely hot; evenings stay cool."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "December to February highs sit near 7–8°C and lows near 2–4°C. A warm coat, hat and gloves help."
+      },
+      {
+        "icon": "🌸",
+        "title": "Best months: May to September",
+        "text": "Warmest and brightest, around 17–22°C. Also the busiest, so book museums and stays early."
+      },
+      {
+        "icon": "💨",
+        "title": "Wind and changeable skies",
+        "text": "Weather shifts within a day. Check the forecast each morning and keep plans flexible."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket, comfortable walking shoes and a small day bag. Add a warm layer for winter."
+      }
+    ]
+  }
+}

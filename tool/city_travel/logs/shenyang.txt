@@ -1,0 +1,28 @@
+$ deepseek_facts.py Shenyang
+  tokens in 2378 out 598
+Shenyang: 0 problems
+
+$ deepseek_city.py Shenyang --stage places
+Shenyang: places
+  tokens in 1127 out 3063
+
+$ deepseek_city.py Shenyang --stage frame
+Shenyang: frame
+  tokens in 2466 out 1809
+  repaired JSON
+
+$ deepseek_city.py Shenyang --stage plans
+Shenyang: plans
+  plans for day
+  tokens in 2173 out 888
+  plans for 1n
+  tokens in 2174 out 1206
+  plans for 2n
+  tokens in 2179 out 1522
+  plans for 3n
+  tokens in 2174 out 1760
+
+$ merge_city.py Shenyang
+Shenyang: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/shenyang.json and planner/shenyang.json
+

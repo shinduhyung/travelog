@@ -1,0 +1,201 @@
+{
+  "currency": "HNL",
+  "usd_rate": 26.8589,
+  "intro_line": "Honduras' highland capital, where colonial streets meet chaotic energy.",
+  "intro": "Tegucigalpa rewards visitors who look past the noise to find markets, hills and history. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Centro",
+    "Comayagüela",
+    "Boulevard Morazán",
+    "Lomas del Guijarro"
+  ],
+  "taxi": {
+    "flag_day": 50,
+    "flag_airport": 100,
+    "per_km": 20,
+    "min_fare": 50
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "No metro or tram; getting around relies on buses, taxis and ride apps.",
+    "City buses run fixed routes but stops are unlabeled; look for crowds on the sidewalk.",
+    "Colectivos follow set routes and often form long lines of waiting passengers.",
+    "Taxis are everywhere; agree the price before you get in and walk away from high offers.",
+    "Uber works and is often safer and about half the taxi price; drivers may ignore the app map.",
+    "Walking is fine in the centre by day; avoid strolling Comayagüela after dark."
+  ],
+  "airports": [
+    {
+      "code": "TGU",
+      "name": "Toncontín International Airport",
+      "primary": true,
+      "note": "In-town airport, 3 km from the centre, for domestic and some regional flights.",
+      "options": [
+        {
+          "mode": "City bus",
+          "to": "Centro",
+          "price": "L 10-20",
+          "time": "20-30 min",
+          "note": "Cheapest but routes are unlabeled; ask locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Centro or hotel areas",
+          "price": "L 100-200",
+          "time": "10-20 min",
+          "note": "Agree the fare before getting in."
+        },
+        {
+          "mode": "Uber",
+          "to": "Centro or hotel areas",
+          "price": "L 60-120",
+          "time": "10-20 min",
+          "note": "Often cheaper than taxis; help the driver find you."
+        }
+      ]
+    },
+    {
+      "code": "XPL",
+      "name": "Tegucigalpa Palmerola International Airport",
+      "primary": true,
+      "note": "Main international gateway, 58 km northwest near Comayagua.",
+      "options": [
+        {
+          "mode": "Shared shuttle",
+          "to": "Tegucigalpa city",
+          "price": "L 200-400",
+          "time": "1-1.5 hr",
+          "note": "Book ahead; cheaper than a private transfer."
+        },
+        {
+          "mode": "Bus to Comayagua then onward bus",
+          "to": "Tegucigalpa",
+          "price": "L 100-250",
+          "time": "2-3 hr",
+          "note": "Cheapest but slower; check schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tegucigalpa city",
+          "price": "L 800-1500",
+          "time": "1-1.5 hr",
+          "note": "Agree the fare before departure."
+        },
+        {
+          "mode": "Uber",
+          "to": "Tegucigalpa city",
+          "price": "L 600-1200",
+          "time": "1-1.5 hr",
+          "note": "Availability varies; confirm before relying on it."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Christ of El Picacho",
+    "Baleada",
+    "Museum of National Identity (MIN)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tegucigalpa",
+      "https://en.wikivoyage.org/wiki/Tegucigalpa"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    14.0723,
+    -87.1921
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 9
+    },
+    {
+      "high": 28,
+      "low": 16,
+      "rain_days": 5
+    },
+    {
+      "high": 30,
+      "low": 17,
+      "rain_days": 6
+    },
+    {
+      "high": 31,
+      "low": 18,
+      "rain_days": 11
+    },
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 19
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 25
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 20
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 23
+    },
+    {
+      "high": 28,
+      "low": 19,
+      "rain_days": 26
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 26
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 18
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "XPL taxi L 800-1500 vs tariff estimate 1724"
+  ]
+}

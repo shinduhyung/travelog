@@ -1,0 +1,220 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Chicago: big shoulders, deep pizza, and a lake like an ocean.",
+  "intro": "Chicago rewards visitors with world-class museums, bold food, and a stunning lakefront. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "The Loop",
+    "River North",
+    "Magnificent Mile",
+    "Lincoln Park"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 3.5,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "CTA 'L' trains run 24 hours on some lines; fares about $2.50, $5 from O'Hare.",
+    "CTA buses cover the city; pay with Ventra card or contactless.",
+    "Taxis are plentiful but pricey in rush hour; Uber and Lyft both work.",
+    "Driving is slow and parking is costly; skip a car downtown.",
+    "Walking and Divvy bike-share are great along the lakefront.",
+    "No ferries for visitors; the lakefront path is the best route."
+  ],
+  "airports": [
+    {
+      "code": "ORD",
+      "name": "Chicago O'Hare International Airport",
+      "primary": true,
+      "note": "Main international hub, 25 km northwest.",
+      "options": [
+        {
+          "mode": "CTA Blue Line",
+          "to": "The Loop",
+          "price": "$5",
+          "time": "50-60 min",
+          "note": "Runs 24 hours; station is under the airport."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Downtown hotels",
+          "price": "$15-25",
+          "time": "40-60 min",
+          "note": "Book ahead with your hotel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$40-55",
+          "time": "30-60 min",
+          "note": "Slow in rush hour."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown",
+          "price": "$35-55",
+          "time": "30-60 min",
+          "note": "Pickup at designated zones."
+        }
+      ]
+    },
+    {
+      "code": "MDW",
+      "name": "Chicago Midway International Airport",
+      "primary": false,
+      "note": "Compact Southwest hub, 14 km southwest.",
+      "options": [
+        {
+          "mode": "CTA Orange Line",
+          "to": "The Loop",
+          "price": "$2.50",
+          "time": "25-30 min",
+          "note": "Short walk through enclosed tunnel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$30-40",
+          "time": "20-40 min",
+          "note": "Cheaper than O'Hare."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-40 min",
+          "note": "Usually quick."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Cloud Gate",
+    "Art Institute of Chicago",
+    "Willis Tower",
+    "Magnificent Mile",
+    "Navy Pier",
+    "Chicago Architecture Tour",
+    "Millennium Park",
+    "Shedd Aquarium",
+    "A Sunday Afternoon on the Island of La Grande Jatte",
+    "American Gothic",
+    "Brookfield Zoo",
+    "Chicago Cultural Center",
+    "Chicago River",
+    "Chicago Theatre",
+    "Field Museum of Natural History",
+    "Haunted Trails (Burbank)",
+    "Home Alone",
+    "Lincoln Park Zoo",
+    "McDonald's",
+    "Nighthawks",
+    "Northwestern University",
+    "Paris Street in Rainy Weather"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Chicago",
+      "https://en.wikivoyage.org/wiki/Chicago"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    41.8781,
+    -87.6298
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 0,
+      "low": -7,
+      "rain_days": 10
+    },
+    {
+      "high": 2,
+      "low": -7,
+      "rain_days": 9
+    },
+    {
+      "high": 7,
+      "low": -1,
+      "rain_days": 12
+    },
+    {
+      "high": 12,
+      "low": 4,
+      "rain_days": 14
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 13
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 12
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 2,
+      "rain_days": 8
+    },
+    {
+      "high": 4,
+      "low": -3,
+      "rain_days": 9
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ORD taxi $40-55 vs tariff estimate 85"
+  ]
+}

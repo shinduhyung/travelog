@@ -1,0 +1,169 @@
+{
+  "currency": "TND",
+  "usd_rate": 2.9987,
+  "intro_line": "Medina lanes, café terraces, and Mediterranean light on the edge of Africa.",
+  "intro": "Tunis rewards visitors with a UNESCO medina, Roman ruins nearby, and easy beach escapes by train. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Medina",
+    "Ville Nouvelle",
+    "La Marsa",
+    "Sidi Bou Saïd"
+  ],
+  "taxi": {
+    "flag_day": 0.9,
+    "flag_airport": 5,
+    "per_km": 1.0,
+    "min_fare": 0.9
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Light metro: five Transtu lines, 0.500-0.650 DT per ride; hubs at Place de la République and Place de Barcelone.",
+    "TGM suburban train from Tunis Marine to La Goulette, Carthage, Sidi Bou Saïd and La Marsa, about 0.800 DT each way.",
+    "RFR suburban rail lines A, D and E serve outer suburbs; roughly 1 DT, line D reaches the Bardo Museum.",
+    "Buses are cheap, from about 0.320 DT; airport bus 104 to Tunis Marine costs 1 DT.",
+    "Taxis are plentiful and metered; insist on the meter, avoid hotel queues, and use the inDrive app (Bolt no longer works).",
+    "Driving is for confident drivers only; traffic is heavy and night driving is riskier."
+  ],
+  "airports": [
+    {
+      "code": "TUN",
+      "name": "Tunis Carthage International Airport",
+      "primary": true,
+      "note": "Main gateway, about 6 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 104",
+          "to": "Tunis Marine",
+          "price": "1 DT",
+          "time": "30-45 min",
+          "note": "Buy from the conductor; don't confuse it with city bus 104."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "5-10 DT day, up to 15 DT night",
+          "time": "15-25 min",
+          "note": "Insist on the meter; ignore drivers grabbing your bags."
+        },
+        {
+          "mode": "inDrive",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "15-25 min",
+          "note": "Ride app that works in Tunisia; Bolt does not."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Medina of Tunis",
+    "Sidi Bou Said",
+    "Bardo National Museum",
+    "Archaeological Site of Carthage",
+    "Brik",
+    "Stade Olympique de Rades",
+    "Uthina"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Tunis",
+      "https://en.wikivoyage.org/wiki/Tunis"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    36.8065,
+    10.1815
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 6
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 7
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 6
+    },
+    {
+      "high": 32,
+      "low": 19,
+      "rain_days": 3
+    },
+    {
+      "high": 35,
+      "low": 22,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 23,
+      "rain_days": 3
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 5
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 7
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "TUN taxi 5-10 DT day, up to 15 DT night vs tariff estimate 13"
+  ]
+}

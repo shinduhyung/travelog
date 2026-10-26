@@ -1,0 +1,1721 @@
+{
+  "city": "Hanoi",
+  "checked": "October 2026",
+  "currency": "VND",
+  "usd_rate": 25831.1533,
+  "intro": "Hanoi rewards visitors with layered history, buzzing streets and remarkable food. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 21.0085,
+      "west": 105.7496,
+      "north": 21.0638,
+      "east": 105.8732,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 20000,
+      "flag_airport": 300000,
+      "per_km": 12000,
+      "min_fare": 20000
+    },
+    "road_factor": 1.3,
+    "city_kmh": 18,
+    "notes": [
+      "Metro Line 2A runs Cat Linh to Yen Nghia; Line 3 runs Cau Giay to Nhon.",
+      "Metro fares are distance-based, about 8,000-15,000 VND; tap contactless cards at gates.",
+      "City buses are cheap and air-conditioned, about 7,000-12,000 VND per ride.",
+      "Grab works well for cars and motorbike taxis; fares are fixed in the app.",
+      "Metered taxis: Mai Linh and Taxi Group are reliable; flag-fall about 20,000 VND.",
+      "Traffic is chaotic; walking is fine in the Old Quarter but crossing takes nerve."
+    ],
+    "sources": []
+  },
+  "places": {
+    "mausoleum": {
+      "name": "Ho Chi Minh Mausoleum",
+      "landmark": "Ho Chi Minh Mausoleum",
+      "kind": "sight",
+      "lat": 21.0368,
+      "lon": 105.8347,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Tue–Thu and Sat–Sun, morning only; closed Mon and Fri. Check exact times on the day.",
+      "tip": "Dress modestly, keep quiet and leave bags and cameras outside. Queues are long, so arrive early.",
+      "source": "https://bqllang.gov.vn/"
+    },
+    "oldquarter": {
+      "name": "Hanoi Old Quarter",
+      "landmark": "Hanoi Old Quarter",
+      "kind": "activity",
+      "lat": 21.0343,
+      "lon": 105.8523,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open; liveliest in the evening",
+      "tip": "Walk the '36 streets' slowly and look up at the old tube houses. Cross roads at a steady pace.",
+      "source": ""
+    },
+    "templeliterature": {
+      "name": "Temple of Literature",
+      "landmark": "Temple of Literature",
+      "kind": "sight",
+      "lat": 21.0293,
+      "lon": 105.836,
+      "price": 70000,
+      "price_text": "≈ VND 70,000 adult; check on the day",
+      "hours": "Daily roughly 08:00–17:00",
+      "tip": "Vietnam's first university. Go early to avoid tour groups and heat.",
+      "source": "https://vanmieu.gov.vn/"
+    },
+    "citadel": {
+      "name": "Imperial Citadel of Thang Long",
+      "landmark": "Imperial Citadel of Thang Long",
+      "kind": "museum",
+      "lat": 21.0333,
+      "lon": 105.8397,
+      "price": 30000,
+      "price_text": "≈ VND 30,000; check on the day",
+      "hours": "Daily roughly 08:00–17:00",
+      "tip": "Large site with few crowds. Allow time for the underground bunkers and the flag tower.",
+      "source": "https://hoangthanhthanglong.vn/"
+    },
+    "onepillar": {
+      "name": "One Pillar Pagoda",
+      "landmark": "One Pillar Pagoda",
+      "kind": "sight",
+      "lat": 21.0358,
+      "lon": 105.8336,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, daylight hours",
+      "tip": "Small and quick. Combine it with the mausoleum and museum in one morning.",
+      "source": ""
+    },
+    "cathedral": {
+      "name": "St. Joseph's Cathedral",
+      "landmark": "St. Joseph's Cathedral",
+      "kind": "sight",
+      "lat": 21.0287,
+      "lon": 105.8492,
+      "price": 0,
+      "price_text": "Free to view outside",
+      "hours": "Exterior always visible; interior only around mass times",
+      "tip": "Best seen from the café terraces opposite. Check mass times before going inside.",
+      "source": ""
+    },
+    "hoankiem": {
+      "name": "Hoan Kiem Lake",
+      "landmark": "Hoan Kiem Lake",
+      "kind": "park",
+      "lat": 21.0285,
+      "lon": 105.8523,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the loop at dawn to see locals exercising, or on weekend evenings when cars are banned.",
+      "source": ""
+    },
+    "dongxuan": {
+      "name": "Dong Xuan Market",
+      "landmark": "Dong Xuan Market",
+      "kind": "food",
+      "lat": 21.0366,
+      "lon": 105.8494,
+      "price": 0,
+      "price_text": "Free to enter; pay per item",
+      "hours": "Daily roughly 06:00–18:00; night market Fri–Sun evening",
+      "tip": "Go for the wholesale halls and the weekend night market. Bargain politely.",
+      "source": ""
+    },
+    "opera": {
+      "name": "Hanoi Opera House",
+      "landmark": "Hanoi Opera House",
+      "kind": "show",
+      "lat": 21.0245,
+      "lon": 105.8576,
+      "price": null,
+      "price_text": "Ticket price varies by performance; check on the day",
+      "hours": "Performances mostly evening; exterior viewable daily",
+      "tip": "Book tickets ahead if you want a show. Otherwise see the French colonial facade at night.",
+      "source": "https://hanoioperahouse.org.vn/"
+    },
+    "trainstreet": {
+      "name": "Hanoi Train Street",
+      "landmark": "Hanoi Train Street",
+      "kind": "sight",
+      "lat": 21.031,
+      "lon": 105.8427,
+      "price": null,
+      "price_text": "Free; cafés charge for drinks",
+      "hours": "Access is often restricted; check on the day",
+      "tip": "Rules change often and parts are closed to visitors. Never stand on the tracks.",
+      "source": ""
+    },
+    "mydinh": {
+      "name": "My Dinh National Stadium",
+      "landmark": "My Dinh National Stadium",
+      "kind": "sight",
+      "lat": 21.0173,
+      "lon": 105.7641,
+      "price": null,
+      "price_text": "Match tickets vary; check on the day",
+      "hours": "Open on event days; check schedule",
+      "tip": "Only worth the trip for a football match or concert. It is far from the centre.",
+      "source": ""
+    },
+    "ngocson": {
+      "name": "Ngoc Son Temple",
+      "landmark": "Ngoc Son Temple",
+      "kind": "sight",
+      "lat": 21.0307,
+      "lon": 105.8523,
+      "price": 30000,
+      "price_text": "≈ VND 30,000; check on the day",
+      "hours": "Daily roughly 08:00–18:00",
+      "tip": "Cross the red Huc Bridge for lake views and the temple on its island.",
+      "source": ""
+    },
+    "pho": {
+      "name": "Pho (Hanoi noodle soup)",
+      "landmark": "Pho",
+      "kind": "food",
+      "lat": 21.0285,
+      "lon": 105.8542,
+      "price": 60000,
+      "price_text": "≈ VND 40,000–90,000 a bowl",
+      "hours": "Most pho shops open early morning and close by early afternoon",
+      "tip": "Hanoi pho is clear broth with beef. Try a busy local stall early in the morning.",
+      "source": ""
+    },
+    "redriver": {
+      "name": "Red River",
+      "landmark": "Red River",
+      "kind": "sight",
+      "lat": 21.0285,
+      "lon": 105.8542,
+      "price": 0,
+      "price_text": "Free to view",
+      "hours": "Always open",
+      "tip": "See the river from Long Bien Bridge at sunrise. Walk carefully on the old bridge.",
+      "source": ""
+    },
+    "longbien": {
+      "name": "Long Bien Bridge walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 21.0437,
+      "lon": 105.8587,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; go in daylight",
+      "tip": "Historic bridge over the Red River. Stay on the pedestrian side and watch for motorbikes.",
+      "source": ""
+    },
+    "streetfoodtour": {
+      "name": "Old Quarter street food tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 21.034,
+      "lon": 105.85,
+      "price": 700000,
+      "price_text": "≈ VND 500,000–900,000 per person; check on the day",
+      "hours": "Tours usually run late afternoon and evening",
+      "tip": "A guided walk is the easiest way to try bun cha, banh cuon and egg coffee. Confirm what is included.",
+      "source": ""
+    },
+    "waterpuppet": {
+      "name": "Thang Long Water Puppet Theatre",
+      "landmark": null,
+      "kind": "show",
+      "lat": 21.0307,
+      "lon": 105.8528,
+      "price": 150000,
+      "price_text": "≈ VND 100,000–200,000 by seat; check on the day",
+      "hours": "Several shows daily, mostly afternoon and evening",
+      "tip": "A short, family-friendly show near Hoan Kiem Lake. Book ahead for front seats.",
+      "source": "https://thanglongwaterpuppet.org/"
+    },
+    "westlake": {
+      "name": "West Lake (Tay Ho) walk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 21.055,
+      "lon": 105.823,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Quieter lakeside loop with cafés and temples. Good for a sunset walk away from the crowds.",
+      "source": ""
+    },
+    "dongxuanfood": {
+      "name": "Dong Xuan night food stalls",
+      "landmark": null,
+      "kind": "food",
+      "lat": 21.0383,
+      "lon": 105.8499,
+      "price": 50000,
+      "price_text": "≈ VND 30,000–80,000 per dish",
+      "hours": "Weekend evenings, roughly 18:00–23:00",
+      "tip": "Cheap local snacks in the weekend night market. Bring small notes.",
+      "source": ""
+    },
+    "frenchquarter": {
+      "name": "French Quarter walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 21.024,
+      "lon": 105.856,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Wide boulevards and colonial buildings around the Opera House. Best in the cooler morning.",
+      "source": ""
+    },
+    "eggcoffee": {
+      "name": "Egg coffee café stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 21.0315,
+      "lon": 105.85,
+      "price": 45000,
+      "price_text": "≈ VND 30,000–60,000 a cup",
+      "hours": "Most cafés roughly 08:00–22:00",
+      "tip": "Hanoi's sweet egg coffee is a must-try. Many cafés hide up narrow staircases.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of temples, Old Quarter lanes and a water puppet show, all on foot or short rides.",
+      "days": [
+        {
+          "title": "Temple of Literature, then the Old Quarter",
+          "stops": [
+            {
+              "place": "templeliterature",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for cooler air. About 08:00–17:00 daily."
+            },
+            {
+              "place": "onepillar",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Small pagoda near the mausoleum area. Short taxi ride from the temple."
+            },
+            {
+              "place": "pho",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch. Many pho shops close by early afternoon, so eat now."
+            },
+            {
+              "place": "hoankiem",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Walk the lake shore and cross to the temple."
+            },
+            {
+              "place": "ngocson",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "On a small island in the lake. Roughly 08:00–18:00."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Book a show time ahead. Mostly afternoon and evening shows."
+            }
+          ]
+        },
+        {
+          "title": "Old Quarter evening",
+          "stops": [
+            {
+              "place": "oldquarter",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Wander the lanes as they get busy. Watch traffic when crossing."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "20:15",
+              "minutes": 45,
+              "note": "Most cafés open until about 22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem / Old Quarter"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around pho, market snacks and a street food tour in the evening.",
+      "days": [
+        {
+          "title": "Pho breakfast and market browsing",
+          "stops": [
+            {
+              "place": "pho",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Breakfast. Go early; many shops close by early afternoon."
+            },
+            {
+              "place": "dongxuan",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is best for the market itself. Roughly 06:00–18:00."
+            },
+            {
+              "place": "hoankiem",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Walk off breakfast around the lake."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon coffee stop. Most cafés roughly 08:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Street food tour and night stalls",
+          "stops": [
+            {
+              "place": "streetfoodtour",
+              "at": "17:30",
+              "minutes": 180,
+              "note": "Tours usually run late afternoon and evening. Book ahead."
+            },
+            {
+              "place": "dongxuanfood",
+              "at": "21:00",
+              "minutes": 60,
+              "note": "Weekend evenings only, roughly 18:00–23:00. Check the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Ho Chi Minh's mausoleum, the citadel and the old streets in one day. Plan around the mausoleum's closed days.",
+      "days": [
+        {
+          "title": "Mausoleum and citadel",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only. Closed Mon and Fri. Check exact times on the day and dress modestly."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short walk from the mausoleum area."
+            },
+            {
+              "place": "pho",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch before the shops close for the afternoon."
+            },
+            {
+              "place": "citadel",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Roughly 08:00–17:00 daily. Go before the heat peaks."
+            }
+          ]
+        },
+        {
+          "title": "Old Quarter and lake at dusk",
+          "stops": [
+            {
+              "place": "oldquarter",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Liveliest late afternoon into evening."
+            },
+            {
+              "place": "ngocson",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Roughly 08:00–18:00, so go just before closing."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem / Old Quarter"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day: Old Quarter lanes, the Temple of Literature and a water puppet show.",
+      "days": [
+        {
+          "title": "Old Quarter and Hoan Kiem on foot",
+          "stops": [
+            {
+              "place": "pho",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Start with breakfast pho; most shops close by early afternoon."
+            },
+            {
+              "place": "hoankiem",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Walk the lake loop early, before the heat."
+            },
+            {
+              "place": "ngocson",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Temple on the lake's small island. Check opening on the day."
+            },
+            {
+              "place": "oldquarter",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Wander the lanes; keep an eye on traffic when crossing."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch and a famous egg coffee nearby."
+            }
+          ]
+        },
+        {
+          "title": "Temple, puppets and evening market",
+          "stops": [
+            {
+              "place": "templeliterature",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "About 15 minutes by taxi from the Old Quarter."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Book a show time ahead; shows run afternoon and evening."
+            },
+            {
+              "place": "dongxuanfood",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Weekend evenings only; otherwise eat in the Old Quarter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through the Old Quarter, from breakfast pho to a weekend night market.",
+      "days": [
+        {
+          "title": "Markets, coffee and street food",
+          "stops": [
+            {
+              "place": "pho",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Breakfast first; pho shops are morning places."
+            },
+            {
+              "place": "dongxuan",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is best for the indoor market."
+            },
+            {
+              "place": "oldquarter",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Snack as you walk; pick busy stalls."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Afternoon coffee stop in a café."
+            },
+            {
+              "place": "streetfoodtour",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Evening tour; book ahead and say if you have allergies."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "History-first day: the mausoleum area in the morning, the citadel and Old Quarter later.",
+      "days": [
+        {
+          "title": "Mausoleum and citadel",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only; closed Mon and Fri. Check exact times on the day and dress modestly."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short walk from the mausoleum."
+            },
+            {
+              "place": "citadel",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "About 10 minutes by taxi. Roughly 08:00–17:00 daily."
+            },
+            {
+              "place": "pho",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch nearby before the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Lake, cathedral and evening",
+          "stops": [
+            {
+              "place": "hoankiem",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Easy walk after lunch."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Exterior always visible; interior only around mass times."
+            },
+            {
+              "place": "oldquarter",
+              "at": "15:45",
+              "minutes": 120,
+              "note": "Evening is the liveliest time."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Optional evening show; book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want temples, the Old Quarter lanes and a water puppet show.",
+      "days": [
+        {
+          "title": "Old Quarter lanes and the lake",
+          "stops": [
+            {
+              "place": "hoankiem",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start early to watch locals exercise. Always open."
+            },
+            {
+              "place": "ngocson",
+              "at": "09:50",
+              "minutes": 30,
+              "note": "Temple on the lake's island. Roughly 08:00–18:00."
+            },
+            {
+              "place": "pho",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Lunch. Most pho shops close by early afternoon."
+            },
+            {
+              "place": "oldquarter",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Wander the lanes. Liveliest late afternoon into evening."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Book a show in advance. Mostly afternoon and evening shows."
+            }
+          ]
+        },
+        {
+          "title": "History in the morning, cathedral at dusk",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only. Closed Mon and Fri. Check exact times on the day."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short walk from the mausoleum. Daylight hours."
+            },
+            {
+              "place": "templeliterature",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Daily roughly 08:00–17:00. Best in the morning."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon café stop. Most cafés roughly 08:00–22:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Exterior always visible; interior only around mass times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem / Old Quarter"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want pho for breakfast, street food tours and market snacks.",
+      "days": [
+        {
+          "title": "Pho, markets and a food tour",
+          "stops": [
+            {
+              "place": "pho",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Breakfast. Shops open early and close by early afternoon."
+            },
+            {
+              "place": "dongxuan",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning is best for the market. Roughly 06:00–18:00."
+            },
+            {
+              "place": "hoankiem",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk it off around the lake. Always open."
+            },
+            {
+              "place": "streetfoodtour",
+              "at": "17:30",
+              "minutes": 180,
+              "note": "Evening tour. Book ahead; tours usually run late afternoon and evening."
+            }
+          ]
+        },
+        {
+          "title": "Old Quarter tastes and night stalls",
+          "stops": [
+            {
+              "place": "eggcoffee",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Late breakfast coffee. Most cafés roughly 08:00–22:00."
+            },
+            {
+              "place": "oldquarter",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Snack your way through the lanes."
+            },
+            {
+              "place": "cathedral",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Exterior always visible. Cafés nearby."
+            },
+            {
+              "place": "dongxuanfood",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Weekend evenings only, roughly 18:00–23:00. Check the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors focused on Ho Chi Minh, the citadel and old Hanoi.",
+      "days": [
+        {
+          "title": "Mausoleum and the citadel",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only. Closed Mon and Fri. Check exact times on the day."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short walk away. Daylight hours."
+            },
+            {
+              "place": "citadel",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Daily roughly 08:00–17:00. Morning or late afternoon."
+            },
+            {
+              "place": "pho",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Most shops close by early afternoon."
+            },
+            {
+              "place": "templeliterature",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daily roughly 08:00–17:00."
+            }
+          ]
+        },
+        {
+          "title": "Old Quarter and French Quarter",
+          "stops": [
+            {
+              "place": "frenchquarter",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning walk. Always open."
+            },
+            {
+              "place": "opera",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Exterior viewable daily; performances mostly evening."
+            },
+            {
+              "place": "oldquarter",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lanes and old shophouses. Liveliest later in the day."
+            },
+            {
+              "place": "ngocson",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Daily roughly 08:00–18:00. Good near sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem / French Quarter"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want temples, the Old Quarter lanes and a water puppet show at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, lake and Old Quarter lanes",
+          "stops": [
+            {
+              "place": "hoankiem",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. The lake is always open."
+            },
+            {
+              "place": "ngocson",
+              "at": "15:50",
+              "minutes": 30,
+              "note": "Temple on the lake's island. Roughly 08:00–18:00, so go before it closes."
+            },
+            {
+              "place": "cathedral",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Exterior only unless a mass is on. Nice in late light."
+            },
+            {
+              "place": "oldquarter",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Wander the lanes as they get lively. Dinner at a street stall."
+            }
+          ]
+        },
+        {
+          "title": "Ho Chi Minh sights and history",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only. Closed Mon and Fri. Check exact times on the day and dress modestly."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short walk from the mausoleum. Daylight hours only."
+            },
+            {
+              "place": "templeliterature",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "About 15 minutes by taxi. Roughly 08:00–17:00."
+            },
+            {
+              "place": "pho",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Many pho shops close by early afternoon."
+            },
+            {
+              "place": "citadel",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Roughly 08:00–17:00. Shady in the afternoon."
+            }
+          ]
+        },
+        {
+          "title": "West Lake and an evening show",
+          "stops": [
+            {
+              "place": "westlake",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Walk the shore toward sunset. About 15 minutes by taxi from the Old Quarter."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Café stop back in the Old Quarter. Most cafés run to about 22:00."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Book a show in advance. Mostly afternoon and evening shows."
+            },
+            {
+              "place": "dongxuanfood",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Weekend evenings only, roughly 18:00–23:00. If it's a weekday, eat at a nearby stall instead."
+            }
+          ]
+        },
+        {
+          "title": "French Quarter, then fly",
+          "stops": [
+            {
+              "place": "frenchquarter",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Wide streets and colonial buildings. Best in the morning."
+            },
+            {
+              "place": "opera",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Exterior viewable daily; performances are mostly evening."
+            },
+            {
+              "place": "longbien",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Walk in daylight only. About 15 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem / Old Quarter"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want pho at dawn, a street food tour and the weekend night market.",
+      "days": [
+        {
+          "title": "Arrive, lake and first bites",
+          "stops": [
+            {
+              "place": "hoankiem",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Easy loop to shake off the trip."
+            },
+            {
+              "place": "oldquarter",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Graze as you walk. Liveliest in the evening."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Classic Hanoi café stop. Most cafés roughly 08:00–22:00."
+            },
+            {
+              "place": "dongxuanfood",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Weekend evenings only. On weekdays pick a stall near the market."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and a food tour",
+          "stops": [
+            {
+              "place": "pho",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Breakfast. Go early; many shops close by early afternoon."
+            },
+            {
+              "place": "dongxuan",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning is best for the market itself. Roughly 06:00–18:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Exterior always visible. Good photo stop."
+            },
+            {
+              "place": "streetfoodtour",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Tours usually run late afternoon and evening. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Culture break and West Lake",
+          "stops": [
+            {
+              "place": "templeliterature",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quiet in the morning. Roughly 08:00–17:00."
+            },
+            {
+              "place": "citadel",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Roughly 08:00–17:00. About 10 minutes by taxi."
+            },
+            {
+              "place": "pho",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch near the Old Quarter."
+            },
+            {
+              "place": "westlake",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Sunset walk, then dinner at a lakeside spot."
+            }
+          ]
+        },
+        {
+          "title": "Long Bien sunrise, then fly",
+          "stops": [
+            {
+              "place": "longbien",
+              "at": "06:30",
+              "minutes": 45,
+              "note": "Go at sunrise in daylight. About 15 minutes by taxi."
+            },
+            {
+              "place": "redriver",
+              "at": "07:30",
+              "minutes": 45,
+              "note": "Walk the bank near the bridge."
+            },
+            {
+              "place": "pho",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Last bowl before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the mausoleum, the citadel and the old streets in depth.",
+      "days": [
+        {
+          "title": "Arrive and the old lake quarter",
+          "stops": [
+            {
+              "place": "hoankiem",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Always open. Good orientation walk."
+            },
+            {
+              "place": "ngocson",
+              "at": "15:50",
+              "minutes": 30,
+              "note": "Roughly 08:00–18:00, so go before it closes."
+            },
+            {
+              "place": "oldquarter",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Old merchant lanes. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Ho Chi Minh and the citadel",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only. Closed Mon and Fri. Check exact times on the day and dress modestly."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short walk away. Daylight hours."
+            },
+            {
+              "place": "templeliterature",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "About 15 minutes by taxi. Roughly 08:00–17:00."
+            },
+            {
+              "place": "pho",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Many shops close by early afternoon."
+            },
+            {
+              "place": "citadel",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Roughly 08:00–17:00. The oldest layers of the city."
+            }
+          ]
+        },
+        {
+          "title": "French Quarter and a show",
+          "stops": [
+            {
+              "place": "frenchquarter",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Colonial streets. Best in the morning."
+            },
+            {
+              "place": "opera",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Exterior viewable daily. Check for evening performances."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Book ahead. Mostly afternoon and evening shows."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "18:15",
+              "minutes": 45,
+              "note": "Café stop before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Bridge and river, then fly",
+          "stops": [
+            {
+              "place": "longbien",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Walk in daylight. About 15 minutes by taxi."
+            },
+            {
+              "place": "redriver",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Riverbank views of the bridge."
+            },
+            {
+              "place": "dongxuan",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Morning market. Roughly 06:00–18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem / Old Quarter"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want temples, the Old Quarter and a water puppet show at an easy pace.",
+      "days": [
+        {
+          "title": "Old Quarter lanes and the lake",
+          "stops": [
+            {
+              "place": "hoankiem",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start here to get your bearings. Walk the shore and cross the red bridge."
+            },
+            {
+              "place": "ngocson",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Small temple on the lake. Small entry fee, pay at the gate."
+            },
+            {
+              "place": "oldquarter",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Wander the lanes. Watch for motorbikes when crossing."
+            },
+            {
+              "place": "pho",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Many pho shops close by early afternoon, so eat now."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Book a show a day ahead in busy season. Check show times on the day."
+            }
+          ]
+        },
+        {
+          "title": "History in Hoan Kiem",
+          "stops": [
+            {
+              "place": "templeliterature",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early for cooler air and fewer people."
+            },
+            {
+              "place": "citadel",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Roughly 15 minutes by taxi from the temple. Closed some lunchtimes, check on the day."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon break. Cafés mostly open 08:00–22:00."
+            },
+            {
+              "place": "cathedral",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Exterior is always visible. Interior only around mass times."
+            }
+          ]
+        },
+        {
+          "title": "Mausoleum morning, French Quarter evening",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only, and closed Mon and Fri. Dress modestly and expect queues. Check exact times on the day."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "A short walk from the mausoleum."
+            },
+            {
+              "place": "frenchquarter",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Shaded streets and old buildings. Good in the afternoon heat."
+            },
+            {
+              "place": "opera",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Performances are mostly evening. Check the schedule and book ahead."
+            }
+          ]
+        },
+        {
+          "title": "West Lake and a last wander",
+          "stops": [
+            {
+              "place": "westlake",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi. Walk part of the shore, not the whole loop."
+            },
+            {
+              "place": "dongxuan",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Indoor market, roughly 06:00–18:00. Good for souvenirs."
+            },
+            {
+              "place": "streetfoodtour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening food tour. Tell them about allergies when you book."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem or the Old Quarter"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who plan the day around pho breakfasts, market snacks and egg coffee.",
+      "days": [
+        {
+          "title": "Pho, market and street food",
+          "stops": [
+            {
+              "place": "pho",
+              "at": "08:00",
+              "minutes": 45,
+              "note": "Breakfast is the classic time. Shops fill up early."
+            },
+            {
+              "place": "dongxuan",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning is best for the market itself."
+            },
+            {
+              "place": "hoankiem",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk off lunch around the lake."
+            },
+            {
+              "place": "streetfoodtour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening tour. Come hungry and pace yourself."
+            }
+          ]
+        },
+        {
+          "title": "Old Quarter grazing day",
+          "stops": [
+            {
+              "place": "oldquarter",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Snack as you go. Sit-down stalls are cheap and quick."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon coffee stop. Egg coffee is rich, share one if unsure."
+            },
+            {
+              "place": "cathedral",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Nearby cafés look over the square."
+            },
+            {
+              "place": "dongxuanfood",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Weekend evenings only, roughly 18:00–23:00. Check the day."
+            }
+          ]
+        },
+        {
+          "title": "Culture break between meals",
+          "stops": [
+            {
+              "place": "templeliterature",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Morning visit before it gets hot."
+            },
+            {
+              "place": "citadel",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Short taxi ride away. Check opening hours on the day."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Afternoon shows are common. Check times on the day."
+            },
+            {
+              "place": "frenchquarter",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Mausoleum and a slow last day",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only, closed Mon and Fri. Dress modestly."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "Short stop next door."
+            },
+            {
+              "place": "westlake",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Sunset by the water, about 20 minutes by taxi."
+            },
+            {
+              "place": "pho",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Some pho shops reopen in the evening, but many close early. Have a backup noodle spot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Quarter"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Visitors who want the mausoleum, the citadel and the old streets in context.",
+      "days": [
+        {
+          "title": "Mausoleum and the citadel",
+          "stops": [
+            {
+              "place": "mausoleum",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Morning only, closed Mon and Fri. Dress modestly and expect queues. Check exact times on the day."
+            },
+            {
+              "place": "onepillar",
+              "at": "09:15",
+              "minutes": 20,
+              "note": "A short walk away."
+            },
+            {
+              "place": "citadel",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Check hours on the day."
+            },
+            {
+              "place": "pho",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Most pho shops close by early afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Temple, lake and puppets",
+          "stops": [
+            {
+              "place": "templeliterature",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Vietnam's first university. Go early."
+            },
+            {
+              "place": "ngocson",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Temple on Hoan Kiem Lake. Small entry fee."
+            },
+            {
+              "place": "hoankiem",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch nearby, then walk the shore."
+            },
+            {
+              "place": "waterpuppet",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "A good intro to local storytelling. Book ahead in busy season."
+            }
+          ]
+        },
+        {
+          "title": "Old Quarter and the river",
+          "stops": [
+            {
+              "place": "oldquarter",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Old trade streets, each named for a craft."
+            },
+            {
+              "place": "dongxuan",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Market roughly 06:00–18:00. Busy and hot inside."
+            },
+            {
+              "place": "longbien",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk part of the bridge in daylight. Watch for traffic."
+            },
+            {
+              "place": "eggcoffee",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Café stop before dinner."
+            }
+          ]
+        },
+        {
+          "title": "French Quarter and last look",
+          "stops": [
+            {
+              "place": "frenchquarter",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Colonial-era streets. Best in the morning."
+            },
+            {
+              "place": "cathedral",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Exterior always visible. Interior only around mass times."
+            },
+            {
+              "place": "trainstreet",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Access is often restricted. Check on the day and never stand on the tracks."
+            },
+            {
+              "place": "streetfoodtour",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening food tour to finish the trip."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Hoan Kiem, near the lake"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Temples, the Old Quarter lanes and water puppets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Pho, bun cha and street-side coffee crawls."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Ho Chi Minh's mausoleum, Hoa Lo and museums."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Quarter",
+      "range": [
+        350000,
+        1500000
+      ],
+      "why": "Walk to Hoan Kiem Lake, street food and markets. Lively and loud; ask for a quiet room.",
+      "center": [
+        21.034,
+        105.85
+      ]
+    },
+    {
+      "area": "French Quarter",
+      "range": [
+        900000,
+        3500000
+      ],
+      "why": "Wide tree-lined streets, the Opera House and quieter nights, a short walk from the lake.",
+      "center": [
+        21.024,
+        105.857
+      ]
+    },
+    {
+      "area": "Hoan Kiem",
+      "range": [
+        600000,
+        2500000
+      ],
+      "why": "Central and handy for the lake, the Old Quarter edge and evening walks.",
+      "center": [
+        21.028,
+        105.852
+      ]
+    },
+    {
+      "area": "Tay Ho",
+      "range": [
+        700000,
+        3000000
+      ],
+      "why": "Lakeside expat area with cafés and quieter streets; 15–25 minutes by taxi to the centre.",
+      "center": [
+        21.068,
+        105.822
+      ]
+    }
+  ],
+  "food": [
+    "Start with pho for breakfast, bun cha at lunch and a bia hoi (fresh beer) corner in the evening.",
+    "Eat where locals sit: small stalls and family restaurants in the Old Quarter are often the best value.",
+    "Try egg coffee (ca phe trung) and strong drip coffee at a café near Hoan Kiem Lake.",
+    "Street food is cheap: expect roughly 30,000–80,000 VND for a bowl or plate; check on the day.",
+    "Drink bottled water and eat busy, freshly cooked stalls. Carry small notes for street vendors."
+  ],
+  "more_time": [
+    "Swap a city day for Ha Long Bay or Lan Ha Bay: a long day trip or an overnight on a boat.",
+    "Take a half-day to the Temple of Literature and the Imperial Citadel if you like history.",
+    "Spend an afternoon in Tay Ho for lakeside cafés and a quieter side of Hanoi."
+  ]
+}

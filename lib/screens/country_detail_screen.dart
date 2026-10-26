@@ -120,7 +120,12 @@ class _CountryDetailScreenState extends State<CountryDetailScreen> {
     if (snake.isEmpty) return [];
 
     const base = 'https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/new_countrydex%2F';
-    const suffix = '.webp?alt=media';
+    // Replaced painting files must bypass older letterboxed images in the cache.
+    final suffix = landmark.attributes.any(
+      (attribute) => attribute == 'Painting' || attribute == 'Artwork',
+    )
+        ? '.webp?alt=media&v=painting-square-20261023'
+        : '.webp?alt=media';
 
     final List<String> fileNames = [];
     if (landmark.countriesIsoA3.isNotEmpty) {

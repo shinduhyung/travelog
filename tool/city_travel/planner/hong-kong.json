@@ -1,0 +1,683 @@
+{
+  "city": "Hong Kong",
+  "checked": "October 2026",
+  "intro_line": "Neon harbour, dim sum mornings, and hills that never sleep.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Tsim Sha Tsui",
+        "Central",
+        "Causeway Bay",
+        "Mong Kok"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Tsim Sha Tsui",
+        "Central",
+        "Causeway Bay",
+        "Mong Kok"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Tsim Sha Tsui",
+        "Central",
+        "Causeway Bay",
+        "Mong Kok"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Tsim Sha Tsui",
+        "Central",
+        "Causeway Bay",
+        "Mong Kok"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Tsim Sha Tsui",
+        "Central",
+        "Causeway Bay",
+        "Mong Kok"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 13,
+        "rain_days": 6,
+        "note": "January: cool and dry, highs near 19°C. Best month for walking and hiking."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 7,
+        "note": "February: still cool and mostly dry, around 20°C. Bring a light jacket for evenings."
+      },
+      {
+        "high": 22,
+        "low": 17,
+        "rain_days": 13,
+        "note": "March: warmer and wetter, about 13 rain days. Keep an umbrella handy."
+      },
+      {
+        "high": 25,
+        "low": 20,
+        "rain_days": 16,
+        "note": "April: mild but humid, with around 16 rain days. Plan indoor backups."
+      },
+      {
+        "high": 27,
+        "low": 24,
+        "rain_days": 22,
+        "note": "May: hot and humid, 22 rain days. Do outdoor sights in the morning."
+      },
+      {
+        "high": 29,
+        "low": 26,
+        "rain_days": 27,
+        "note": "June: hot, very wet and sticky, 27 rain days. Expect heavy showers."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 26,
+        "note": "July: peak heat and rain, highs near 30°C. Typhoon season; check forecasts."
+      },
+      {
+        "high": 30,
+        "low": 26,
+        "rain_days": 26,
+        "note": "August: same heat and rain as July. Indoor malls and museums are good bets."
+      },
+      {
+        "high": 29,
+        "low": 25,
+        "rain_days": 21,
+        "note": "September: still hot with about 21 rain days. Storms can still come."
+      },
+      {
+        "high": 27,
+        "low": 22,
+        "rain_days": 11,
+        "note": "October: cooling to around 27°C and drier. A great month to visit."
+      },
+      {
+        "high": 24,
+        "low": 19,
+        "rain_days": 6,
+        "note": "November: pleasant, around 24°C and only 6 rain days. Ideal for outdoors."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 4,
+        "note": "December: cool and dry, highs near 20°C. Busy holiday season; book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      1,
+      1,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "culture": [
+      1,
+      1,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "nature": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.6,
+      0.35,
+      0.3,
+      0.3,
+      0.45,
+      0.8,
+      0.95,
+      0.9
+    ],
+    "shopping": [
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1
+    ],
+    "nightlife": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9
+    ]
+  },
+  "places": {
+    "victoria-peak": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Early morning or after sunset",
+      "area": "Central",
+      "popularity": 5
+    },
+    "victoria-harbour": {
+      "types": [
+        "nature",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset into evening",
+      "area": "Tsim Sha Tsui",
+      "popularity": 5
+    },
+    "tian-tan-buddha": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning on a clear day",
+      "area": "Tsim Sha Tsui",
+      "popularity": 5
+    },
+    "avenue-of-stars": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Tsim Sha Tsui",
+      "popularity": 4
+    },
+    "star-ferry": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime or sunset",
+      "area": "Tsim Sha Tsui",
+      "popularity": 5
+    },
+    "man-mo-temple": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Central",
+      "popularity": 4
+    },
+    "wong-tai-sin": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Mong Kok",
+      "popularity": 4
+    },
+    "bank-of-china-tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime or night",
+      "area": "Central",
+      "popularity": 3
+    },
+    "mid-levels-escalators": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Central",
+      "popularity": 3
+    },
+    "ngong-ping-360": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning on a clear day",
+      "area": "Tsim Sha Tsui",
+      "popularity": 4
+    },
+    "aqua-luna": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Tsim Sha Tsui",
+      "popularity": 3
+    },
+    "cuhk": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Mong Kok",
+      "popularity": 2
+    },
+    "cityu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Mong Kok",
+      "popularity": 1
+    },
+    "cultural-centre": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Evening for a show",
+      "area": "Tsim Sha Tsui",
+      "popularity": 3
+    },
+    "disneyland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday, arrive at opening",
+      "area": "Tsim Sha Tsui",
+      "popularity": 5
+    },
+    "hong-kong-island": {
+      "types": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Any time; evening for lights",
+      "area": "Central",
+      "popularity": 4
+    },
+    "ocean-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Causeway Bay",
+      "popularity": 4
+    },
+    "polyu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "Tsim Sha Tsui",
+      "popularity": 1
+    },
+    "hkust": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Clear day",
+      "area": "Mong Kok",
+      "popularity": 1
+    },
+    "wetland-park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Cooler months, morning",
+      "area": "Mong Kok",
+      "popularity": 2
+    },
+    "icc": {
+      "types": [
+        "nature",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Tsim Sha Tsui",
+      "popularity": 3
+    },
+    "temple-street-market": {
+      "types": [
+        "food",
+        "shopping",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Mong Kok",
+      "popularity": 4
+    },
+    "mong-kok-walk": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Mong Kok",
+      "popularity": 4
+    },
+    "dim-sum-lunch": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late morning, weekday",
+      "area": "Central",
+      "popularity": 4
+    },
+    "ding-ding-tram": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Causeway Bay",
+      "popularity": 3
+    },
+    "soho-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Central",
+      "popularity": 3
+    },
+    "p1881-heritage": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Tsim Sha Tsui",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the harbour, a market and food district, plus one hill or island day; add nights for beaches and outlying islands."
+  },
+  "airports": [
+    {
+      "code": "HKG",
+      "name": "Chek Lap Kok International Airport",
+      "primary": true,
+      "note": "Main hub, 26 km west on Lantau Island.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Tsim Sha Tsui and Central",
+          "price": "HK$35-45",
+          "time": "45-70 min",
+          "note": "Cheapest; slower in traffic."
+        },
+        {
+          "mode": "Airport Express train",
+          "to": "Hong Kong Station, Central",
+          "price": "HK$115",
+          "time": "24 min",
+          "note": "Fastest and most comfortable."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "HK$300-400",
+          "time": "30-45 min",
+          "note": "Red urban taxis; add tunnel tolls."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "HK$300-450",
+          "time": "30-45 min",
+          "note": "Limited supply; check app."
+        }
+      ]
+    },
+    {
+      "code": "SZX",
+      "name": "Shenzhen Bao'an International Airport",
+      "primary": false,
+      "note": "Mainland hub across the border; often cheaper flights.",
+      "options": [
+        {
+          "mode": "Metro and high-speed rail",
+          "to": "West Kowloon",
+          "price": "¥7 plus HK$80",
+          "time": "60-90 min",
+          "note": "Cheapest; needs China visa or transit rules."
+        },
+        {
+          "mode": "Direct cross-border bus",
+          "to": "Elements, Kowloon",
+          "price": "HK$100",
+          "time": "100 min",
+          "note": "Runs every 30 min; in-town check-in."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "HK$500-700",
+          "time": "60-90 min",
+          "note": "Border queues can be long."
+        }
+      ]
+    },
+    {
+      "code": "MFM",
+      "name": "Macau International Airport",
+      "primary": false,
+      "note": "Budget airline hub; reachable by ferry.",
+      "options": [
+        {
+          "mode": "Bus to ferry, then ferry",
+          "to": "Hong Kong ferry piers",
+          "price": "MOP4.2 plus HK$170-200",
+          "time": "2-3 hours",
+          "note": "Cheapest; clear Macau immigration."
+        },
+        {
+          "mode": "Express Link ferry",
+          "to": "Hong Kong airport or piers",
+          "price": "HK$50-70 plus ferry",
+          "time": "1.5-2.5 hours",
+          "note": "No Macau immigration; bags checked through."
+        },
+        {
+          "mode": "Taxi and ferry",
+          "to": "City centre",
+          "price": "HK$300-500",
+          "time": "2-3 hours",
+          "note": "Combine taxi to pier with ferry."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Hong Kong",
+      "https://en.wikivoyage.org/wiki/Hong%20Kong"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "shopping",
+    "culture"
+  ],
+  "transit": {
+    "best": "MTR metro with an Octopus card for most trips; trams and the Star Ferry for the views.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "MTR is fast and covers most sights. Use an Octopus card to tap in and out."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and minibuses reach beaches and hills. Tap Octopus on boarding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are red for the city. Uber works but supply is limited."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful; parking is scarce and costly. Skip it."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking is best in dense districts. The Star Ferry crosses the harbour cheaply."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams on Hong Kong Island are cheap and scenic."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The Star Ferry crosses the harbour cheaply; other ferries reach the outlying islands."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical: mild, dry winters and hot, very wet, humid summers with a typhoon season.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: October to March",
+        "text": "Highs around 19–27°C with fewer rain days. Best for walking, hiking and the harbour."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to September)",
+        "text": "Highs near 30°C and muggy. Move slowly, use the MTR and malls to cool down."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Very wet late spring and summer",
+        "text": "May to September brings 21–27 rain days a month. Pack a compact umbrella and a rain jacket."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Storms are most likely from June to September. Watch official warnings; ferries and flights can stop."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity is high",
+        "text": "Sticky from May to September. Light, quick-dry clothes help."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket and comfortable walking shoes; a warmer layer for cool winter evenings and strong indoor AC."
+      }
+    ]
+  }
+}

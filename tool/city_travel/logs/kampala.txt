@@ -1,0 +1,34 @@
+$ deepseek_prep.py Kampala
+  tokens in 707 out 458
+Kampala: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Kampala
+  tokens in 2550 out 728
+Kampala: 2 problems
+  - EBB taxi UGX 75,000-150,000 vs tariff estimate 230400
+  - EBB Pineapple Express shuttle UGX 80,000 per person costs more than taxi UGX 75,000-150,000
+
+$ deepseek_city.py Kampala --stage places
+Kampala: places
+  tokens in 1168 out 2115
+
+$ deepseek_city.py Kampala --stage frame
+Kampala: frame
+  tokens in 2486 out 1835
+  repaired JSON
+
+$ deepseek_city.py Kampala --stage plans
+Kampala: plans
+  plans for day
+  tokens in 1835 out 1002
+  plans for 1n
+  tokens in 1836 out 1012
+  plans for 2n
+  tokens in 1841 out 1180
+  plans for 3n
+  tokens in 1836 out 1678
+
+$ merge_city.py Kampala
+Kampala: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/kampala.json and planner/kampala.json
+

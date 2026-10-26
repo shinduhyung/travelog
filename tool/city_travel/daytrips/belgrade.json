@@ -1,0 +1,119 @@
+{
+ "city": "Belgrade",
+ "trips": [
+  {
+   "place": "Novi Sad",
+   "label": "",
+   "position": {
+    "id": 401825,
+    "name": "Novi Sad",
+    "city": "Novi Sad",
+    "lat": 45.25167,
+    "lng": 19.83694
+   },
+   "town": {
+    "name": "Novi Sad",
+    "lat": 45.25167,
+    "lng": 19.83694
+   },
+   "road": {
+    "km": 95,
+    "min": 69,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 10720,
+    "currency": "RSD"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$5",
+     "time": "51m",
+     "via": "Beograd Centar to Petrovaradin",
+     "source": "https://www.rome2rio.com/s/Belgrade/Novi%20Sad"
+    },
+    "bus": {
+     "from": "$7-$45",
+     "time": "1h 23m",
+     "via": "Beograd, Autobuska stanica to Novi Sad, Autobuska Stanica",
+     "source": "https://www.rome2rio.com/s/Belgrade/Novi%20Sad"
+    }
+   },
+   "route_note": "Frequent direct buses run from Belgrade Bus Station in about 1 hour, and trains from Belgrade Centar take a similar time, so either works as a return trip.",
+   "see": [
+    "Petrovaradin Fortress",
+    "Dunavska Street promenade",
+    "Novi Sad Synagogue",
+    "Liberty Square and City Hall",
+    "Danube riverbank and Štrand beach"
+   ],
+   "visit": "Full day",
+   "tour_query": "Novi Sad day trip from Belgrade",
+   "quests": [
+    "Petrovaradin Fortress"
+   ],
+   "recommended": "train",
+   "why": "The train is the quickest option at about 51 minutes and reaches Petrovaradin, next to the fortress.",
+   "stars": 4,
+   "know": [
+    "Trains depart from Belgrade Centar and arrive at Petrovaradin.",
+    "Direct buses from Belgrade Bus Station take about 1 hour, a similar time to the train, so either works for a return trip.",
+    "Buses take longer, about 1h 23m, on the route listed here."
+   ]
+  },
+  {
+   "place": "Smederevo",
+   "label": "",
+   "position": {
+    "id": 401874,
+    "name": "Smederevo",
+    "city": "Smederevo",
+    "lat": 44.66278,
+    "lng": 20.93
+   },
+   "town": {
+    "name": "Smederevo",
+    "lat": 44.66436,
+    "lng": 20.92763
+   },
+   "road": {
+    "km": 62,
+    "min": 53,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 7090,
+    "currency": "RSD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$3-$4",
+     "time": "1h 8m",
+     "via": "Beograd - Autokomanda to Lasta Smederevo, Bus station",
+     "source": "https://www.rome2rio.com/s/Belgrade/Smederevo"
+    }
+   },
+   "route_note": "Direct buses from Belgrade Bus Station take about 1 hour to Smederevo, where the fortress is a short walk from the bus station along the Danube.",
+   "see": [
+    "Smederevo Fortress",
+    "Danube riverside walk",
+    "Smederevo town centre"
+   ],
+   "visit": "Half day",
+   "tour_query": "Smederevo fortress day trip from Belgrade",
+   "quests": [],
+   "recommended": "bus",
+   "why": "Direct buses from Belgrade Bus Station take about 1h 8m, and the fortress is a short walk from the bus station along the Danube.",
+   "stars": 2,
+   "know": [
+    "Direct buses leave from Belgrade Bus Station (Autokomanda).",
+    "The fortress is a short walk from the Smederevo bus station along the Danube.",
+    "No train option is listed for this trip."
+   ]
+  }
+ ],
+ "problems": [
+  "Sremski Karlovci: not a town in cities15000.json (RS), dropped",
+  "Topola: not a town in cities15000.json (RS), dropped"
+ ]
+}

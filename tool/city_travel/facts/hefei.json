@@ -1,0 +1,171 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Hefei blends ancient Bao Zheng lore with fast modern metro lines.",
+  "intro": "Hefei rewards visitors with leafy parks, lakeside temples and a booming food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "City Centre",
+    "Swan Lake",
+    "Hefei South Station",
+    "Hefei Station"
+  ],
+  "taxi": {
+    "flag_day": 8,
+    "flag_airport": 9,
+    "per_km": 2,
+    "min_fare": 8
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro lines 1, 2, 3, 4 and 5 cover the city; Line 1 links both main train stations.",
+    "Buses cost ¥1 non-air-conditioned or ¥2 air-conditioned; routes are in Chinese only.",
+    "Green, blue and orange taxis start at ¥8; black taxis start at ¥9.",
+    "Ride apps like Didi work well; have a Chinese number or Alipay set up.",
+    "Bike-share (Mobike, Hellobike) is cheap at ¥1-2 per ride; needs WeChat or Alipay.",
+    "Driving yourself is not advised for short visits; traffic and parking are stressful."
+  ],
+  "airports": [
+    {
+      "code": "HFE",
+      "name": "Hefei Xinqiao International Airport",
+      "primary": true,
+      "note": "Main airport, about 33 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "City centre",
+          "price": "¥15-25",
+          "time": "50-70 min",
+          "note": "Cheapest option; check the desk for the next departure."
+        },
+        {
+          "mode": "Metro",
+          "to": "City centre",
+          "price": "¥5-8",
+          "time": "60-80 min",
+          "note": "Check locally for the current airport line connection."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-120",
+          "time": "40-55 min",
+          "note": "Use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "40-55 min",
+          "note": "Pick a marked pickup point in the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Lord Bao Park",
+    "Home Original Chicken",
+    "Tianlala",
+    "Xiaoyaojin Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Hefei",
+      "https://en.wikivoyage.org/wiki/Hefei"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    31.86389,
+    117.28083
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 8
+    },
+    {
+      "high": 11,
+      "low": 1,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 11
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 16
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 12
+    },
+    {
+      "high": 29,
+      "low": 20,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 9
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 8
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

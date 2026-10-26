@@ -1,0 +1,174 @@
+{
+ "city": "Zagreb",
+ "trips": [
+  {
+   "place": "Varaždin",
+   "label": "",
+   "position": {
+    "id": 16926086,
+    "name": "Varaždin Breg",
+    "city": "Varaždin Breg",
+    "lat": 46.2319,
+    "lng": 16.38504
+   },
+   "town": {
+    "name": "Varaždin",
+    "lat": 46.30444,
+    "lng": 16.33778
+   },
+   "road": {
+    "km": 87,
+    "min": 72,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 90,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$10",
+     "time": "2h 30m",
+     "via": "Zagreb Glavni Kol. to Varazdin",
+     "source": "https://www.rome2rio.com/s/Zagreb/Varazdin"
+    },
+    "bus": {
+     "from": "$8-$12",
+     "time": "1h 30m",
+     "via": "Zagreb to Varaždin bus station",
+     "source": "https://www.rome2rio.com/s/Zagreb/Varazdin"
+    }
+   },
+   "route_note": "Direct trains run from Zagreb Glavni kolodvor to Varaždin in roughly two hours; the station is a short walk from the baroque centre.",
+   "see": [
+    "Baroque old town and Stari Grad castle",
+    "Varaždin Cathedral",
+    "Insect World museum",
+    "City cemetery and promenade"
+   ],
+   "visit": "Full day",
+   "tour_query": "Varaždin day trip from Zagreb",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The bus is faster at 1h 30m than the 2h 30m train and drops you at the bus station near the baroque centre.",
+   "stars": 4,
+   "know": [
+    "Baroque old town is a short walk from the bus station",
+    "Check return times, as evening services thin out",
+    "Summer is liveliest with festivals"
+   ]
+  },
+  {
+   "place": "Samobor",
+   "label": "",
+   "position": {
+    "id": 442815,
+    "name": "Samobor",
+    "city": "Samobor",
+    "lat": 45.80306,
+    "lng": 15.71806
+   },
+   "town": {
+    "name": "Samobor",
+    "lat": 45.80306,
+    "lng": 15.71806
+   },
+   "road": {
+    "km": 25,
+    "min": 32,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 30,
+    "currency": "EUR"
+   },
+   "modes": {
+    "bus": {
+     "from": "$1-$4",
+     "time": "27m",
+     "via": "Zagreb - Lisinski to Sambor - Juzno naselje",
+     "source": "https://www.rome2rio.com/s/Zagreb/Samobor"
+    }
+   },
+   "route_note": "Take a local bus from Zagreb's Črnomerec terminal directly to Samobor in about 45 minutes; no train needed.",
+   "see": [
+    "Main square and Stari Grad",
+    "Samobor Cremeschnitte at a local bakery",
+    "Bermet wine tasting",
+    "Riverside walk along the Gradna"
+   ],
+   "visit": "Half day",
+   "tour_query": "Samobor day trip from Zagreb",
+   "quests": [],
+   "recommended": "bus",
+   "why": "A direct bus from Črnomerec reaches Samobor in about 45 minutes with no train needed.",
+   "stars": 3,
+   "know": [
+    "Best on a clear day for the surrounding hills and old town",
+    "Weekends are busiest for the cream-cake cafés",
+    "Buses run from the Črnomerec terminal"
+   ]
+  },
+  {
+   "place": "Karlovac",
+   "label": "",
+   "position": {
+    "id": 16841657,
+    "name": "Željeznički kolodvor Karlovac",
+    "city": "Karlovac",
+    "lat": 45.50012,
+    "lng": 15.54518
+   },
+   "town": {
+    "name": "Karlovac",
+    "lat": 45.49167,
+    "lng": 15.55
+   },
+   "road": {
+    "km": 55,
+    "min": 47,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 60,
+    "currency": "EUR"
+   },
+   "modes": {
+    "train": {
+     "from": "$5",
+     "time": "1h 17m",
+     "via": "Zagreb Glavni Kol. to Karlovac Centar",
+     "source": "https://www.rome2rio.com/s/Zagreb/Karlovac"
+    },
+    "bus": {
+     "from": "$1-$15",
+     "time": "55m",
+     "via": "Zagreb, Autobusni Kolodvor to Karlovac, Autobusni Kolodvor",
+     "source": "https://www.rome2rio.com/s/Zagreb/Karlovac"
+    }
+   },
+   "route_note": "Frequent direct trains from Zagreb Glavni kolodvor reach Karlovac in under an hour, with the centre a short walk from the station.",
+   "see": [
+    "Zvijezda star-shaped old town",
+    "Karlovac City Museum",
+    "Riverside walk at the four rivers confluence",
+    "Aquatika freshwater aquarium"
+   ],
+   "visit": "Half day",
+   "tour_query": "Karlovac day trip from Zagreb",
+   "quests": [],
+   "recommended": "train",
+   "why": "Frequent direct trains reach Karlovac in under an hour with the centre a short walk from the station.",
+   "stars": 2,
+   "know": [
+    "Trains run from Zagreb Glavni kolodvor",
+    "Rivers and parks are the main draw",
+    "Best in warm weather for riverside walks"
+   ]
+  }
+ ],
+ "problems": [
+  "Trakošćan: no Omio position, dropped",
+  "Krapina: not a town in cities15000.json (HR), dropped"
+ ]
+}

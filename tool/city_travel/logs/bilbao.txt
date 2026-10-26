@@ -1,0 +1,33 @@
+$ deepseek_prep.py Bilbao
+  tokens in 673 out 230
+Bilbao: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bilbao
+  tokens in 3998 out 572
+Bilbao: 1 problems
+  - BIO taxi €25-30 vs tariff estimate 11
+
+$ deepseek_city.py Bilbao --stage places
+Bilbao: places
+  tokens in 1146 out 3140
+
+$ deepseek_city.py Bilbao --stage frame
+Bilbao: frame
+  tokens in 2453 out 1783
+  repaired JSON
+
+$ deepseek_city.py Bilbao --stage plans
+Bilbao: plans
+  plans for day
+  tokens in 2120 out 909
+  plans for 1n
+  tokens in 2121 out 842
+  plans for 2n
+  tokens in 2126 out 1471
+  plans for 3n
+  tokens in 2121 out 1714
+
+$ merge_city.py Bilbao
+Bilbao: 19 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/bilbao.json and planner/bilbao.json
+

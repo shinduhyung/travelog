@@ -1,0 +1,66 @@
+{
+ "city": "Brisbane",
+ "trips": [
+  {
+   "place": "Surfers Paradise",
+   "label": "",
+   "position": {
+    "id": 455195,
+    "name": "Surfers Paradise",
+    "city": "Surfers Paradise",
+    "lat": -28.00274,
+    "lng": 153.42999
+   },
+   "town": {
+    "name": "Surfers Paradise",
+    "lat": -28.00274,
+    "lng": 153.42999
+   },
+   "road": {
+    "km": 78,
+    "min": 65,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 200.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$17-$35",
+     "time": "1h 20m",
+     "via": "Brisbane to Surfers Paradise",
+     "source": "https://www.rome2rio.com/s/Brisbane/Surfers%20Paradise"
+    }
+   },
+   "route_note": "Take a Gold Coast line train from Brisbane Roma Street or Central, direct or with one change at Helensvale, for about 1 hour 20 minutes.",
+   "see": [
+    "Surfers Paradise Beach",
+    "Cavill Avenue and the Surfers Paradise Skypoint",
+    "SkyPoint Observation Deck",
+    "Broadbeach and Pacific Fair shopping",
+    "Burleigh Heads National Park walk"
+   ],
+   "visit": "Full day",
+   "tour_query": "Gold Coast day trip from Brisbane",
+   "quests": [
+    "Q1 Tower",
+    "Sea World",
+    "Surfers Paradise"
+   ],
+   "recommended": "tour",
+   "why": "The train takes about 1 hour 20 minutes, direct or with one change at Helensvale, and the route matches the bus time, so the train is the simpler option.",
+   "stars": 4,
+   "know": [
+    "Trains leave from Brisbane Roma Street or Central.",
+    "Expect one change at Helensvale if the service is not direct.",
+    "Journey time is about 1 hour 20 minutes each way."
+   ]
+  }
+ ],
+ "problems": [
+  "Dunwich: not a town in cities15000.json (AU), dropped",
+  "Noosa Heads: no Omio position, dropped",
+  "Surfers Paradise: model picked train without data; set to tour"
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "city": "Stockholm",
+ "trips": [
+  {
+   "place": "Uppsala",
+   "label": "",
+   "position": {
+    "id": 328515,
+    "name": "Uppsala Central Station",
+    "city": "Uppsala",
+    "lat": 59.8581,
+    "lng": 17.64675
+   },
+   "town": {
+    "name": "Uppsala",
+    "lat": 59.85882,
+    "lng": 17.63889
+   },
+   "road": {
+    "km": 69,
+    "min": 64,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1080,
+    "currency": "SEK"
+   },
+   "modes": {
+    "train": {
+     "from": "€7",
+     "from_usd": 8.0,
+     "avg": "€10",
+     "time": "30m",
+     "per_day": 87,
+     "source": "https://www.omio.com/trains/stockholm/uppsala"
+    },
+    "bus": {
+     "from": "$7-$12",
+     "time": "1h 15m",
+     "via": "Stockholm, Cityterminalen to Uppsala",
+     "source": "https://www.rome2rio.com/s/Stockholm/Uppsala"
+    }
+   },
+   "route_note": "Frequent direct SJ or commuter trains run from Stockholm Central to Uppsala Central in well under an hour, with the sights a short walk from the station.",
+   "see": [
+    "Uppsala Cathedral",
+    "Gustavianum museum",
+    "Uppsala University main building",
+    "Botanical Garden",
+    "Uppsala Castle"
+   ],
+   "visit": "Full day",
+   "tour_query": "Uppsala day trip from Stockholm",
+   "quests": [
+    "Uppsala Cathedral",
+    "Uppsala University"
+   ],
+   "recommended": "train",
+   "why": "Direct trains take only 30 minutes and run 87 times a day, dropping you a short walk from the sights.",
+   "stars": 4,
+   "know": [
+    "Book ahead for the fastest SJ departures",
+    "Uppsala Cathedral and the university area are walkable from the station",
+    "Spring and summer are best for wandering the old town"
+   ]
+  }
+ ],
+ "problems": [
+  "Sigtuna: not a town in cities15000.json (SE), dropped",
+  "Vaxholm: not a town in cities15000.json (SE), dropped",
+  "Mariefred: not a town in cities15000.json (SE), dropped",
+  "Drottningholm: not a town in cities15000.json (SE), dropped"
+ ]
+}

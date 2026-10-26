@@ -1,0 +1,28 @@
+$ deepseek_facts.py Monterrey
+  tokens in 3511 out 618
+Monterrey: 0 problems
+
+$ deepseek_city.py Monterrey --stage places
+Monterrey: places
+  tokens in 1154 out 3198
+
+$ deepseek_city.py Monterrey --stage frame
+Monterrey: frame
+  tokens in 2465 out 1796
+  repaired JSON
+
+$ deepseek_city.py Monterrey --stage plans
+Monterrey: plans
+  plans for day
+  tokens in 2203 out 1231
+  plans for 1n
+  tokens in 2204 out 1177
+  plans for 2n
+  tokens in 2209 out 1622
+  plans for 3n
+  tokens in 2204 out 2039
+
+$ merge_city.py Monterrey
+Monterrey: 21 places, 13 plans, 0 errors, 0 warnings
+wrote itineraries/monterrey.json and planner/monterrey.json
+

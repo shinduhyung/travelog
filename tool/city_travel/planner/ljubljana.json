@@ -1,0 +1,631 @@
+{
+  "city": "Ljubljana",
+  "checked": "October 2026",
+  "intro_line": "Ljubljana: a green, human-scale capital with a castle on a hill.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town (Stari trg)",
+        "Center (Prešeren Square)",
+        "Metelkova / Station",
+        "Tivoli / Šiška"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town (Stari trg)",
+        "Center (Prešeren Square)",
+        "Metelkova / Station",
+        "Tivoli / Šiška"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Old Town (Stari trg)",
+        "Center (Prešeren Square)",
+        "Metelkova / Station",
+        "Tivoli / Šiška"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Town (Stari trg)",
+        "Center (Prešeren Square)",
+        "Metelkova / Station",
+        "Tivoli / Šiška"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Old Town (Stari trg)",
+        "Center (Prešeren Square)",
+        "Metelkova / Station",
+        "Tivoli / Šiška"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -3,
+        "rain_days": 8,
+        "note": "January: cold, highs near 5°C and lows around -3°C. Pack a warm coat; cafés and museums are the draw."
+      },
+      {
+        "high": 8,
+        "low": -2,
+        "rain_days": 9,
+        "note": "February: still cold, highs near 8°C. Fewer crowds and lower prices."
+      },
+      {
+        "high": 12,
+        "low": 1,
+        "rain_days": 10,
+        "note": "March: milder, highs near 12°C, but about 10 rain days. Bring a rain jacket."
+      },
+      {
+        "high": 16,
+        "low": 4,
+        "rain_days": 9,
+        "note": "April: pleasant at 16°C highs; showers are common. Good for walking the old streets."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 16,
+        "note": "May: warm at 19°C but the wettest month, about 16 rain days. Keep plans flexible."
+      },
+      {
+        "high": 25,
+        "low": 14,
+        "rain_days": 12,
+        "note": "June: warm and sunny, highs near 25°C. Long evenings on the river."
+      },
+      {
+        "high": 28,
+        "low": 16,
+        "rain_days": 11,
+        "note": "July: hottest month, highs near 28°C. Go sightseeing early; afternoons are hot."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 9,
+        "note": "August: hot like July, highs near 27°C. Busy with festivals and visitors."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 12,
+        "note": "September: lovely, highs near 22°C. A strong month for walking and day trips."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 10,
+        "note": "October: cooler at 17°C with about 10 rain days. Autumn colours in Tivoli Park."
+      },
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 10,
+        "note": "November: chilly at 10°C highs and damp. Indoor sights and food tours suit."
+      },
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 8,
+        "note": "December: cold, highs near 6°C. Festive lights and markets; dress warmly."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.65,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.85,
+      0.75,
+      0.5,
+      0.4
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "ljubljana_castle": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon for city views",
+      "area": "Old Town (Stari trg)",
+      "popularity": 5
+    },
+    "triple_bridge": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning before crowds",
+      "area": "Center (Prešeren Square)",
+      "popularity": 5
+    },
+    "preseren_square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Center (Prešeren Square)",
+      "popularity": 5
+    },
+    "st_nicholas_cathedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old Town (Stari trg)",
+      "popularity": 4
+    },
+    "national_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Center (Prešeren Square)",
+      "popularity": 3
+    },
+    "dragon_bridge": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "Center (Prešeren Square)",
+      "popularity": 4
+    },
+    "struklji": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Old Town (Stari trg)",
+      "popularity": 4
+    },
+    "central_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning, Friday for food stalls",
+      "area": "Center (Prešeren Square)",
+      "popularity": 4
+    },
+    "funicular_viewpoint": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Clear afternoon or sunset",
+      "area": "Old Town (Stari trg)",
+      "popularity": 4
+    },
+    "boat_tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring to autumn, daytime",
+      "area": "Center (Prešeren Square)",
+      "popularity": 3
+    },
+    "metelkova": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime for art, night for bars",
+      "area": "Metelkova / Station",
+      "popularity": 3
+    },
+    "tivoli_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Tivoli / Šiška",
+      "popularity": 3
+    },
+    "old_town_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening when cafés fill up",
+      "area": "Old Town (Stari trg)",
+      "popularity": 4
+    },
+    "free_walking_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "First morning after arrival",
+      "area": "Center (Prešeren Square)",
+      "popularity": 3
+    },
+    "plecnik_house": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Book ahead for a set time",
+      "area": "Center (Prešeren Square)",
+      "popularity": 2
+    },
+    "kranj_sausage": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Old Town (Stari trg)",
+      "popularity": 3
+    },
+    "potica": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon coffee",
+      "area": "Center (Prešeren Square)",
+      "popularity": 3
+    },
+    "town_hall": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Old Town (Stari trg)",
+      "popularity": 2
+    },
+    "robotic_bar": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening in spring and summer",
+      "area": "Old Town (Stari trg)",
+      "popularity": 4
+    },
+    "national_gallery": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day",
+      "area": "Tivoli / Šiška",
+      "popularity": 2
+    },
+    "lunch_market_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Friday lunchtime, spring to autumn",
+      "area": "Center (Prešeren Square)",
+      "popularity": 3
+    },
+    "castle_funicular": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "mixed",
+      "best": "Any time; short ride",
+      "area": "Center (Prešeren Square)",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Old Town, the castle and the riverside at an easy pace; add a night for a day trip to Bled or the caves."
+  },
+  "airports": [
+    {
+      "code": "LJU",
+      "name": "Ljubljana Jože Pučnik Airport",
+      "primary": true,
+      "note": "Main airport, about 19 km north of the centre.",
+      "options": [
+        {
+          "mode": "Arriva bus",
+          "to": "Ljubljana bus/rail station (Stand 28)",
+          "price": "€4.10",
+          "time": "50 min",
+          "note": "Pay the driver in cash; runs every 30 min on weekdays."
+        },
+        {
+          "mode": "LPP bus 64",
+          "to": "Ljubljana bus station (Stand 28)",
+          "price": "€4.10",
+          "time": "50-60 min",
+          "note": "Urbana card or Visa/Mastercard accepted."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "City centre or door-to-door",
+          "price": "€12-20",
+          "time": "30-45 min",
+          "note": "Book ahead with Goopti, Nomago or similar."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-50",
+          "time": "25-35 min",
+          "note": "Metered; agree a price first."
+        },
+        {
+          "mode": "Ride app (Bolt/Uber)",
+          "to": "City centre",
+          "price": "€25-40",
+          "time": "25-35 min",
+          "note": "Check app availability on arrival."
+        }
+      ]
+    },
+    {
+      "code": "TRS",
+      "name": "Trieste Airport",
+      "primary": false,
+      "note": "Italian option, about 100 km southwest; useful for some low-cost flights.",
+      "options": [
+        {
+          "mode": "Train + bus",
+          "to": "Ljubljana station",
+          "price": "€15-25",
+          "time": "2.5-3.5 hr",
+          "note": "Change at Trieste or Villa Opicina."
+        },
+        {
+          "mode": "Shuttle",
+          "to": "Ljubljana centre",
+          "price": "€30-50",
+          "time": "1.5-2 hr",
+          "note": "Book ahead; limited schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Ljubljana centre",
+          "price": "€120-180",
+          "time": "1.5-2 hr",
+          "note": "Long drive; confirm price first."
+        }
+      ]
+    },
+    {
+      "code": "VCE",
+      "name": "Venice Marco Polo Airport",
+      "primary": false,
+      "note": "About 240 km west; good for intercontinental and budget flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Ljubljana bus station",
+          "price": "€25-40",
+          "time": "4 hr",
+          "note": "Direct coaches run daily."
+        },
+        {
+          "mode": "Train",
+          "to": "Ljubljana station",
+          "price": "€25-40",
+          "time": "4-5 hr",
+          "note": "Change at Trieste; regional trains run hourly."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Ljubljana centre",
+          "price": "€250-350",
+          "time": "2.5-3 hr",
+          "note": "Very expensive; bus or train is better."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Ljubljana",
+      "https://en.wikivoyage.org/wiki/Ljubljana"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk the centre; use city buses for longer hops and ride apps for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "City buses use the Urbana card; buy it at kiosks or with the Urbana app."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; ride apps like Bolt and Uber operate in Ljubljana."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside rush hour; parking in the centre is limited and paid."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is very walkable and bike-friendly; bike share and rental shops exist."
+      },
+      {
+        "mode": "Boat",
+        "has": true,
+        "text": "No ferry service; boats run on the Ljubljanica river for tours."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold winters and warm summers. Rain is spread across the year, heaviest in May.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm highs of 22–28°C and long days. Ideal for the river, parks and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "May is the wettest month",
+        "text": "About 16 rain days. Carry a rain jacket and keep outdoor plans flexible."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "January highs near 5°C and lows around -3°C. Pack layers, a warm coat and gloves."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Rain all year",
+        "text": "Expect roughly 8–12 rain days most months. A compact umbrella helps any season."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer afternoons",
+        "text": "July and August reach about 27–28°C. Sightsee in the morning and rest in the shade midday."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a rain layer and a warm jacket for winter. Summer needs light clothes and sun protection."
+      }
+    ]
+  }
+}

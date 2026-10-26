@@ -1,0 +1,29 @@
+$ deepseek_facts.py Osaka
+  tokens in 4232 out 883
+Osaka: 0 problems
+
+$ deepseek_city.py Osaka --stage places
+Osaka: places
+  tokens in 1250 out 4217
+
+$ deepseek_city.py Osaka --stage frame
+Osaka: frame
+  tokens in 2409 out 1665
+  repaired JSON
+
+$ deepseek_city.py Osaka --stage plans
+Osaka: plans
+  plans for day
+  tokens in 2563 out 946
+  plans for 1n
+  tokens in 2564 out 1331
+  plans for 2n
+  tokens in 2569 out 1589
+  plans for 3n
+  tokens in 2564 out 1777
+  repaired JSON
+
+$ merge_city.py Osaka
+ERROR plan day-nightlife: unknown place 'shinsekaku_walk'
+Osaka: 25 places, 12 plans, 1 errors, 0 warnings
+

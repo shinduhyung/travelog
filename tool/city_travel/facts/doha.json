@@ -1,0 +1,176 @@
+{
+  "currency": "QAR",
+  "usd_rate": 3.64,
+  "intro_line": "Doha blends futuristic skyline with old souqs and desert calm.",
+  "intro": "Doha rewards visitors with world-class museums, a buzzing souq and easy desert escapes. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "West Bay",
+    "Souq Waqif",
+    "Msheireb",
+    "The Pearl"
+  ],
+  "taxi": {
+    "flag_day": 25,
+    "flag_airport": 25,
+    "per_km": 2,
+    "min_fare": 25
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Doha Metro has three lines (Red, Gold, Green); Msheireb is the main transfer station.",
+    "Metro fares are about QR 2 per trip and QR 6 for a day pass; VIP cars cost more.",
+    "Free metrolink feeder buses connect stations to nearby areas.",
+    "Karwa and Al Million are main taxis; Uber works well in Doha.",
+    "Buses are cheap but infrequent and often late; route maps are hard to read.",
+    "Driving is on the right; traffic jams and roadworks are common. A free tram runs in Lusail and Msheireb Downtown."
+  ],
+  "airports": [
+    {
+      "code": "DOH",
+      "name": "Hamad International Airport",
+      "primary": true,
+      "note": "Main gateway and Qatar Airways hub, about 9 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro Red Line",
+          "to": "Msheireb and central Doha",
+          "price": "QR 2",
+          "time": "15-25 min",
+          "note": "Cheapest option; airport station is on the Red Line."
+        },
+        {
+          "mode": "Karwa bus",
+          "to": "City bus station and centre",
+          "price": "QR 5-10",
+          "time": "40-60 min",
+          "note": "Cheap but slow and infrequent."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Anywhere in central Doha",
+          "price": "QR 25-60",
+          "time": "20-35 min",
+          "note": "Airport taxis start at QR 25; insist on the meter."
+        },
+        {
+          "mode": "Uber",
+          "to": "Anywhere in central Doha",
+          "price": "QR 30-70",
+          "time": "20-35 min",
+          "note": "Pick-up points are signposted outside arrivals."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Souq Waqif",
+    "Museum of Islamic Art, Doha",
+    "The Pearl-Qatar",
+    "National Museum of Qatar",
+    "Katara Cultural Village",
+    "Doha Corniche",
+    "KidZania (Doha)",
+    "Lusail Stadium",
+    "Machboos"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Doha",
+      "https://en.wikivoyage.org/wiki/Doha"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    25.2854,
+    51.531
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 2
+    },
+    {
+      "high": 24,
+      "low": 15,
+      "rain_days": 2
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 2
+    },
+    {
+      "high": 32,
+      "low": 22,
+      "rain_days": 1
+    },
+    {
+      "high": 38,
+      "low": 26,
+      "rain_days": 0
+    },
+    {
+      "high": 41,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 41,
+      "low": 31,
+      "rain_days": 0
+    },
+    {
+      "high": 41,
+      "low": 31,
+      "rain_days": 0
+    },
+    {
+      "high": 39,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 26,
+      "rain_days": 1
+    },
+    {
+      "high": 30,
+      "low": 22,
+      "rain_days": 2
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

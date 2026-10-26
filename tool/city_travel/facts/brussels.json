@@ -1,0 +1,218 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Brussels: grand squares, comic-strip walls and world-class chocolate.",
+  "intro": "Brussels rewards visitors with medieval squares, Art Nouveau gems and a lively food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Grand-Place",
+    "Sablon",
+    "Ixelles",
+    "European Quarter"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 5,
+    "per_km": 2.2,
+    "min_fare": 8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro, tram and bus run by STIB/MIVB; tickets cost about €2.10-2.60 per ride.",
+    "Buy a MOBIB card (about €6) or tap a contactless bank card for cheaper fares.",
+    "De Lijn buses serve the airport and Flanders; their tickets are not valid on STIB.",
+    "Uber, Bolt and local taxi apps work; taxis from the airport cost around €60.",
+    "Driving is slow and parking is costly; the low-emission zone covers the centre.",
+    "The centre is compact and walkable; shared bikes and scooters are common."
+  ],
+  "airports": [
+    {
+      "code": "BRU",
+      "name": "Brussels Airport",
+      "primary": true,
+      "note": "Main airport in Zaventem, 11 km north-east of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Brussel-Centraal",
+          "price": "€10-12",
+          "time": "15-20 min",
+          "note": "Runs every 10-20 min from Level -1; airport supplement usually included."
+        },
+        {
+          "mode": "Bus 12",
+          "to": "European district / Trône",
+          "price": "€8-8.50",
+          "time": "30 min",
+          "note": "Go2City ticket needed from the airport; departs Level 0."
+        },
+        {
+          "mode": "De Lijn bus R26",
+          "to": "Brussel-Noord",
+          "price": "€3",
+          "time": "30-40 min",
+          "note": "Cheap but not valid on other Brussels transport."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€50-60",
+          "time": "20-30 min",
+          "note": "Confirm the fare first; some drivers overcharge."
+        }
+      ]
+    },
+    {
+      "code": "CRL",
+      "name": "Brussels South Charleroi Airport",
+      "primary": false,
+      "note": "Budget airport 44 km south; mostly Ryanair and Wizzair.",
+      "options": [
+        {
+          "mode": "TEC bus A + train",
+          "to": "Brussel-Zuid/Midi",
+          "price": "€15-16",
+          "time": "80-90 min",
+          "note": "Combined ticket from the TEC machine at the airport."
+        },
+        {
+          "mode": "Flibco shuttle bus",
+          "to": "Brussel-Zuid/Midi",
+          "price": "€10-20",
+          "time": "60-75 min",
+          "note": "Book online for a lower price; queues can be long."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€90-120",
+          "time": "50-70 min",
+          "note": "Fixed fares; Brussels taxis charge more."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Grand Place",
+    "Atomium",
+    "Manneken Pis",
+    "Royal Palace of Brussels",
+    "St Michael and St Gudula Cathedral",
+    "Parc du Cinquantenaire",
+    "Brasserie Cantillon",
+    "Cook & Book",
+    "Duvel Moortgat",
+    "Groot Begijnhof",
+    "KU Leuven",
+    "La Monnaie",
+    "Lion's Mound",
+    "Magritte Museum",
+    "Moules-frites",
+    "Océade (closed in 2018)",
+    "Stella Artois Brewery",
+    "The Fall of Icarus",
+    "The Son of Man",
+    "Tomorrowland",
+    "Walibi Belgium",
+    "ZoetWaterPark"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Brussels",
+      "https://en.wikivoyage.org/wiki/Brussels"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    50.8503,
+    4.3517
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": 2,
+      "rain_days": 14
+    },
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 12
+    },
+    {
+      "high": 11,
+      "low": 3,
+      "rain_days": 14
+    },
+    {
+      "high": 14,
+      "low": 5,
+      "rain_days": 11
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 13,
+      "rain_days": 10
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 11
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 13
+    },
+    {
+      "high": 10,
+      "low": 5,
+      "rain_days": 14
+    },
+    {
+      "high": 8,
+      "low": 3,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

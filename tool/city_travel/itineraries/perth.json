@@ -1,0 +1,1501 @@
+{
+  "city": "Perth",
+  "checked": "October 2026",
+  "currency": "AUD",
+  "usd_rate": 1.4253,
+  "intro": "Perth rewards visitors with beaches, river foreshore, and easy day trips to Rottnest and the Swan Valley. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -32.1748,
+      "west": 115.7032,
+      "north": -31.793,
+      "east": 116.0705,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 5,
+      "flag_airport": 8,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Transperth trains run eight lines, every 5-10 min at peak and about 15 min off-peak.",
+      "Buses cover the CBD and suburbs; CAT buses are free on five colour-coded routes.",
+      "Pay with contactless card, a SmartRider card ($10), or a cash ticket.",
+      "A Go Anywhere fare is about $3.50 for three hours including transfers.",
+      "Uber and DiDi operate; taxis are Swan Taxis and Black and White.",
+      "A ferry links Elizabeth Quay to South Perth; bikes are barred on peak trains into the CBD."
+    ],
+    "sources": []
+  },
+  "places": {
+    "fremantle-prison": {
+      "name": "Fremantle Prison",
+      "landmark": "Fremantle Prison",
+      "kind": "museum",
+      "lat": -32.0557,
+      "lon": 115.7533,
+      "price": 25,
+      "price_text": "≈ AUD 22–30 for a day tour; night tours cost more",
+      "hours": "Daily, roughly 09:00–17:00 · check tour times on the day",
+      "tip": "Book the day tour online and arrive early; the tunnels tour needs closed shoes and sells out.",
+      "source": "https://www.fremantleprison.com.au/"
+    },
+    "elizabeth-quay": {
+      "name": "Elizabeth Quay",
+      "landmark": "Elizabeth Quay",
+      "kind": "sight",
+      "lat": -31.9569,
+      "lon": 115.8569,
+      "price": 0,
+      "price_text": "Free to walk; ferry and boat rides cost extra",
+      "hours": "Open 24 hours · cafes and bars have their own hours",
+      "tip": "Walk the loop past the bell tower and the bridge at sunset, then stay for dinner.",
+      "source": "https://www.elizabethquay.com.au/"
+    },
+    "cottesloe-beach": {
+      "name": "Cottesloe Beach",
+      "landmark": "Cottesloe Beach",
+      "kind": "beach",
+      "lat": -31.9953,
+      "lon": 115.7512,
+      "price": 0,
+      "price_text": "Free · parking may be paid",
+      "hours": "Always open · patrolled by surf lifesavers in season",
+      "tip": "Swim between the flags. The grass terraces above the sand are the best sunset spot.",
+      "source": "https://www.cottesloe.wa.gov.au/"
+    },
+    "aqwa": {
+      "name": "AQWA (The Aquarium of Western Australia)",
+      "landmark": "AQWA (The Aquarium of Western Australia)",
+      "kind": "museum",
+      "lat": -31.829,
+      "lon": 115.738,
+      "price": 35,
+      "price_text": "≈ AUD 30–40 adult; cheaper for children; check online",
+      "hours": "Daily, roughly 10:00–17:00 · last entry about an hour before close",
+      "tip": "The underwater tunnel is the highlight. Go early to beat school groups.",
+      "source": "https://www.aqwa.com.au/"
+    },
+    "adventure-world": {
+      "name": "Adventure World",
+      "landmark": "Adventure World",
+      "kind": "park",
+      "lat": -32.1388,
+      "lon": 115.845,
+      "price": 65,
+      "price_text": "≈ AUD 55–75 per person; book online for less",
+      "hours": "Seasonal · usually closed in winter; check calendar on the day",
+      "tip": "It is a full day out. Bring swimwear, sunscreen and a refillable bottle.",
+      "source": "https://www.adventureworld.com.au/"
+    },
+    "fishing-boat-harbour": {
+      "name": "Fremantle Fishing Boat Harbour",
+      "landmark": "Fremantle Fishing Boat Harbour",
+      "kind": "food",
+      "lat": -32.0596,
+      "lon": 115.7444,
+      "price": 0,
+      "price_text": "Free to walk; fish and chips ≈ AUD 15–30",
+      "hours": "Always open · restaurants open lunch and dinner",
+      "tip": "Get fish and chips and eat outside by the boats. Seagulls are bold, so guard your food.",
+      "source": "https://www.visitfremantle.com.au/"
+    },
+    "kalamunda-water-park": {
+      "name": "Kalamunda Water Park",
+      "landmark": "Kalamunda Water Park",
+      "kind": "park",
+      "lat": -31.9808,
+      "lon": 116.0357,
+      "price": 10,
+      "price_text": "≈ AUD 8–15 entry; check current prices",
+      "hours": "Seasonal summer opening · check days on the day",
+      "tip": "It is small and family-focused. Check it is open before driving up the hills.",
+      "source": "https://www.kalamunda.wa.gov.au/"
+    },
+    "royal-showgrounds": {
+      "name": "Perth Royal Showgrounds",
+      "landmark": "Perth Royal Showgrounds",
+      "kind": "show",
+      "lat": -31.9333,
+      "lon": 115.835,
+      "price": 30,
+      "price_text": "≈ AUD 25–40 entry; the Royal Show runs about a week each year",
+      "hours": "Event days only · check the show dates",
+      "tip": "The Royal Show is once a year in spring. Check dates before planning around it.",
+      "source": "https://www.perthroyalshow.com.au/"
+    },
+    "swan-river": {
+      "name": "Swan River",
+      "landmark": "Swan River",
+      "kind": "sight",
+      "lat": -31.95,
+      "lon": 115.86,
+      "price": 0,
+      "price_text": "Free to walk; cruises ≈ AUD 30–60",
+      "hours": "Always open · cruises run daytime and evening",
+      "tip": "Walk the South Perth foreshore for the best skyline view, or take a ferry across.",
+      "source": "https://www.swanriver.com.au/"
+    },
+    "great-escape": {
+      "name": "The Great Escape Amusement Park",
+      "landmark": "The Great Escape Amusement Park",
+      "kind": "park",
+      "lat": -31.8322,
+      "lon": 115.7533,
+      "price": 40,
+      "price_text": "≈ AUD 30–50; check current prices and opening days",
+      "hours": "Check opening days on the day · often weekends and holidays",
+      "tip": "Smaller than Adventure World. Confirm it is open before you go.",
+      "source": ""
+    },
+    "uwa": {
+      "name": "University of Western Australia",
+      "landmark": "University of Western Australia",
+      "kind": "sight",
+      "lat": -31.9801,
+      "lon": 115.8179,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds generally open daily · buildings have their own hours",
+      "tip": "Walk down to the Sunken Garden and the river edge. It is a calm, green break from the city.",
+      "source": "https://www.uwa.edu.au/"
+    },
+    "kings-park": {
+      "name": "Kings Park and Botanic Garden",
+      "landmark": null,
+      "kind": "park",
+      "lat": -31.96,
+      "lon": 115.833,
+      "price": 0,
+      "price_text": "Free · paid parking",
+      "hours": "Always open · visitor centre has daytime hours",
+      "tip": "Walk the Lotterywest Federation Walkway and stay for the skyline view at sunset.",
+      "source": "https://www.bgpa.wa.gov.au/kings-park"
+    },
+    "fremantle-markets": {
+      "name": "Fremantle Markets",
+      "landmark": null,
+      "kind": "food",
+      "lat": -32.056,
+      "lon": 115.749,
+      "price": 0,
+      "price_text": "Free entry · food and goods cost extra",
+      "hours": "Fri–Sun mainly · check hours on the day",
+      "tip": "Come hungry for the food stalls. Go early on Saturday before it gets packed.",
+      "source": "https://www.fremantlemarkets.com.au/"
+    },
+    "scarborough-beach": {
+      "name": "Scarborough Beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": -31.894,
+      "lon": 115.757,
+      "price": 0,
+      "price_text": "Free · paid parking nearby",
+      "hours": "Always open · patrolled in season",
+      "tip": "The esplanade has pools and cafes. Sunset here is a local ritual.",
+      "source": "https://www.stirling.wa.gov.au/"
+    },
+    "rottnest-day-trip": {
+      "name": "Rottnest Island day trip",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -32.006,
+      "lon": 115.502,
+      "price": 120,
+      "price_text": "≈ AUD 90–150 return ferry; bike hire extra",
+      "hours": "Ferries run morning and afternoon · book ahead",
+      "tip": "Hire a bike and go early. Book the ferry online and take water and sunscreen.",
+      "source": "https://www.rottnestisland.com/"
+    },
+    "swan-valley-tour": {
+      "name": "Swan Valley wine and food tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -31.85,
+      "lon": 116.0,
+      "price": 150,
+      "price_text": "≈ AUD 100–200 with transport and tastings",
+      "hours": "Tours usually run daytime · book ahead",
+      "tip": "Book a tour with transport so nobody has to drive. Check tastings are included.",
+      "source": "https://www.swanvalley.com.au/"
+    },
+    "northbridge-walk": {
+      "name": "Northbridge food and bar walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": -31.948,
+      "lon": 115.857,
+      "price": 0,
+      "price_text": "Free to walk · meals ≈ AUD 15–40",
+      "hours": "Best from evening · many venues open late",
+      "tip": "Start on William Street for Asian food, then wander to the small bars.",
+      "source": "https://www.visitperth.com.au/"
+    },
+    "perth-mint": {
+      "name": "The Perth Mint",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -31.957,
+      "lon": 115.869,
+      "price": 25,
+      "price_text": "≈ AUD 20–30; check current prices",
+      "hours": "Daily, roughly 09:00–17:00 · check tour times",
+      "tip": "The gold pour is the fun part. Book a tour slot rather than just walking in.",
+      "source": "https://www.perthmint.com/"
+    },
+    "south-perth-foreshore": {
+      "name": "South Perth foreshore viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -31.973,
+      "lon": 115.853,
+      "price": 0,
+      "price_text": "Free · ferry across ≈ AUD 5",
+      "hours": "Always open",
+      "tip": "Take the ferry from the city and walk the path for the classic skyline photo.",
+      "source": "https://www.visitperth.com.au/"
+    },
+    "cbd-art-walk": {
+      "name": "Perth CBD street art and laneway walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -31.952,
+      "lon": 115.86,
+      "price": 0,
+      "price_text": "Free to walk; guided tours ≈ AUD 30–50",
+      "hours": "Always open · shops open daytime",
+      "tip": "Wander the small laneways off Murray and Hay Streets. Look up for murals.",
+      "source": "https://www.visitperth.com.au/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A full beach day: morning at Cottesloe, lunch at the harbour, sunset at Scarborough.",
+      "days": [
+        {
+          "title": "Coast day, Fremantle to Scarborough",
+          "stops": [
+            {
+              "place": "cottesloe-beach",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Swim early before the sun gets strong. Lifesavers patrol in season."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Fish and chips by the boats. About 15 minutes by car from Cottesloe."
+            },
+            {
+              "place": "fremantle-markets",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Friday to Sunday mainly. Check hours on the day."
+            },
+            {
+              "place": "scarborough-beach",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "About 30 minutes by car. Stay for sunset and an early dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fremantle or Scarborough"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Kings Park in the morning, the river and a sunset viewpoint to finish.",
+      "days": [
+        {
+          "title": "Parks and river",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Free. Walk the botanic garden and the city views. Spring brings wildflowers."
+            },
+            {
+              "place": "perth-mint",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Short drive or bus into the CBD. Check tour times on the day."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch by the water."
+            },
+            {
+              "place": "swan-river",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Walk the foreshore or take a short cruise. Check cruise times."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Cross by ferry or bridge for the skyline at sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Markets and harbour seafood by day, Northbridge bars after dark.",
+      "days": [
+        {
+          "title": "Eat your way from Fremantle to Northbridge",
+          "stops": [
+            {
+              "place": "fremantle-markets",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Friday to Sunday mainly. Go early for the food stalls."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Seafood lunch by the boats."
+            },
+            {
+              "place": "swan-valley-tour",
+              "at": "14:00",
+              "minutes": 300,
+              "note": "Book ahead. Most tours run daytime only, so check start times fit your morning."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening is best. Many venues open late, Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northbridge"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One night of sand and sunsets: Cottesloe and Scarborough, with a Fremantle morning.",
+      "days": [
+        {
+          "title": "Fremantle morning, Cottesloe sunset",
+          "stops": [
+            {
+              "place": "fremantle-markets",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Mainly Fri–Sun. Check hours on the day. Good for breakfast."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Fish and chips by the boats. Lunch spots fill up around noon."
+            },
+            {
+              "place": "cottesloe-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Swim between the flags. Patrolled in season."
+            },
+            {
+              "place": "swan-river",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset by the water, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Scarborough morning, then fly",
+          "stops": [
+            {
+              "place": "scarborough-beach",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Early swim and a coffee. Patrolled in season."
+            },
+            {
+              "place": "kings-park",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Short city stop with river views before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fremantle or Cottesloe"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Kings Park, the Swan River and a full Rottnest day if the weather is calm.",
+      "days": [
+        {
+          "title": "City nature and river sunset",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Botanic Garden walks. Spring brings wildflowers."
+            },
+            {
+              "place": "perth-mint",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Indoor break from the heat. Check tour times."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the waterfront. Cafes have their own hours."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Best skyline view at sunset. Take the ferry across."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island day trip",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Book the ferry ahead. Bring water and sun cover. Goes ahead only in calm weather."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Perth CBD"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Fremantle markets and seafood, then Northbridge bars after dark.",
+      "days": [
+        {
+          "title": "Fremantle eats",
+          "stops": [
+            {
+              "place": "fremantle-markets",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Mainly Fri–Sun. Check hours on the day. Graze the stalls."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Book a tour ahead in summer. Check tour times."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late seafood lunch by the boats."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Evening eats and bars. Busiest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Swan Valley tastes, then fly",
+          "stops": [
+            {
+              "place": "swan-valley-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Book ahead. Weekday is quieter. Check out first and bring your bags."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northbridge or Perth CBD"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "Two relaxed beach days: Cottesloe and Scarborough sunsets, plus a full Rottnest day if the weather is calm.",
+      "days": [
+        {
+          "title": "Arrive, Cottesloe and sunset",
+          "stops": [
+            {
+              "place": "cottesloe-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Train to Cottesloe, then a short walk to the sand. Swim between the flags."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Fish and chips by the boats in Fremantle. About 15 minutes by taxi or bus."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Optional: city skyline at sunset across the river."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island day trip",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Ferry from Fremantle or Barrack Street. Book ahead and check sea conditions. Bring water, sunscreen and a hat."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner and a drink in Northbridge after the ferry back."
+            }
+          ]
+        },
+        {
+          "title": "Scarborough morning, then fly",
+          "stops": [
+            {
+              "place": "scarborough-beach",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning swim and a coffee on the esplanade. Patrolled in season."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Last look at the river before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fremantle or CBD near the river"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Kings Park, the Swan River and a full Rottnest day, with a Swan Valley food stop if you have a car or tour.",
+      "days": [
+        {
+          "title": "Arrive, Kings Park and the river",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Free buses from the CBD. Walk the botanic garden and the skyline lookout."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Downhill to the river. Ferries and cafes here."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset over the city. Ferry across or walk the bridge."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island day trip",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Book the ferry ahead. Calm weather is best. Take water and sun cover."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening meal in Northbridge."
+            }
+          ]
+        },
+        {
+          "title": "Swan Valley or Cottesloe, then fly",
+          "stops": [
+            {
+              "place": "swan-valley-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Book ahead. Weekday is quieter. Skip if you have no car or tour booked."
+            },
+            {
+              "place": "cottesloe-beach",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Alternative: a last swim before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Markets, seafood and laneway bars: Fremantle on a market day, Northbridge at night, and a Swan Valley tasting day.",
+      "days": [
+        {
+          "title": "Arrive, Elizabeth Quay and Northbridge",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee or a drink by the water."
+            },
+            {
+              "place": "cbd-art-walk",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Laneways and street art on foot. Shops close in the evening."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner and bars. Busiest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Fremantle markets and harbour",
+          "stops": [
+            {
+              "place": "fremantle-markets",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Friday to Sunday mainly. Check hours on the day. Go early to beat crowds."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Book a tour ahead in summer. Check tour times on the day."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late lunch of fresh seafood by the boats."
+            },
+            {
+              "place": "cottesloe-beach",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Sunset swim to finish the day."
+            }
+          ]
+        },
+        {
+          "title": "Swan Valley, then fly",
+          "stops": [
+            {
+              "place": "swan-valley-tour",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Book ahead. Weekday is quieter. Eat a proper lunch on the tour."
+            },
+            {
+              "place": "perth-mint",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Indoor stop near the CBD. Check tour times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD or Northbridge"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "First-timers who want sand, sunsets and one big island day, with easy evenings in the city.",
+      "days": [
+        {
+          "title": "Arrive, settle in, sunset at the river",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy first stop in the CBD. Grab a coffee and walk the waterfront."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Short ferry or bridge walk across. Best skyline view at sunset."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Dinner and a wander. Many places open late Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Cottesloe and Fremantle",
+          "stops": [
+            {
+              "place": "cottesloe-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Swim between the flags. Lifesavers patrol in season."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Fish and chips by the boats. Lunch or early dinner."
+            },
+            {
+              "place": "fremantle-markets",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Mainly Friday to Sunday. Check hours on the day."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Book a tour ahead in summer. Check tour times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island full day",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Ferry from Fremantle or the CBD. Book ahead and go on a calm day."
+            },
+            {
+              "place": "scarborough-beach",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Sunset swim and dinner on the way back. Patrolled in season."
+            }
+          ]
+        },
+        {
+          "title": "Kings Park, then fly",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "City and river views. Spring is best for wildflowers."
+            },
+            {
+              "place": "perth-mint",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Indoor backup if it rains. Check tour times."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Last coffee by the water before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD or Fremantle"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Visitors who want parks, river views and a full Rottnest day, with a wine-and-food day in the valley.",
+      "days": [
+        {
+          "title": "Arrive, river and sunset",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Start on the waterfront in the CBD."
+            },
+            {
+              "place": "swan-river",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walk the foreshore or take a short cruise. Check cruise times."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Sunset skyline view. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Kings Park and the Swan Valley",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Botanic garden walk. Visitor centre has daytime hours."
+            },
+            {
+              "place": "swan-valley-tour",
+              "at": "11:30",
+              "minutes": 300,
+              "note": "Wine and food tour. Book ahead; weekday is quieter."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening food and bars. Many venues open late."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island full day",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Book the ferry ahead. Go on a calm day for the beaches and wildlife."
+            },
+            {
+              "place": "cottesloe-beach",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset on the way back. Patrolled in season."
+            }
+          ]
+        },
+        {
+          "title": "Fremantle and the coast, then fly",
+          "stops": [
+            {
+              "place": "uwa",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Quiet campus grounds near the river. Buildings have their own hours."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Book ahead in summer. Check tour times on the day."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch by the boats before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters and coffee lovers: markets, harbour seafood, a wine valley day and Northbridge nights.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and Northbridge",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee and a walk by the water in the CBD."
+            },
+            {
+              "place": "cbd-art-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Laneway walk on the way north. Shops open daytime."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner and bars. Best Thursday to Saturday evening."
+            }
+          ]
+        },
+        {
+          "title": "Fremantle markets and harbour",
+          "stops": [
+            {
+              "place": "fremantle-markets",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Mainly Friday to Sunday. Check hours on the day."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Seafood lunch by the boats."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Book ahead in summer. Check tour times on the day."
+            },
+            {
+              "place": "cottesloe-beach",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Sunset drink near the sand. Patrolled in season."
+            }
+          ]
+        },
+        {
+          "title": "Swan Valley wine and food day",
+          "stops": [
+            {
+              "place": "swan-valley-tour",
+              "at": "10:00",
+              "minutes": 300,
+              "note": "Book ahead. Weekday is quieter."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view to end the day. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Kings Park and a last lunch, then fly",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning walk with city views."
+            },
+            {
+              "place": "perth-mint",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Indoor stop. Check tour times."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Final lunch by the water before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northbridge or CBD"
+    },
+    {
+      "id": "4n-beach",
+      "length": "4n",
+      "style": "beach",
+      "nights": 4,
+      "for": "Beach-first Perth: city sunsets, two coast beaches and a full Rottnest day.",
+      "days": [
+        {
+          "title": "Arrive and ease into the river",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Flat walk by the water. Cafes and bars have their own hours."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Short ferry or a rideshare across the river. Stay for sunset."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner and a wander. Many venues open late Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Cottesloe and Fremantle",
+          "stops": [
+            {
+              "place": "cottesloe-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Swim between the flags. Surf lifesavers patrol in season."
+            },
+            {
+              "place": "fremantle-markets",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Mainly Fri–Sun. Check hours on the day. Good lunch stalls."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Book a tour ahead in summer. Check tour times on the day."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Early seafood dinner by the boats."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island full day",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Ferry from Fremantle or the CBD. Book ahead and go on a calm day. Bring water, sunscreen and a hat."
+            }
+          ]
+        },
+        {
+          "title": "Scarborough and Kings Park",
+          "stops": [
+            {
+              "place": "scarborough-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Patrolled in season. Promenade cafes for lunch."
+            },
+            {
+              "place": "kings-park",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Always open. Late afternoon light over the skyline."
+            },
+            {
+              "place": "swan-river",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Sunset walk or a short cruise. Check cruise times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Last swim, then fly",
+          "stops": [
+            {
+              "place": "cottesloe-beach",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning swim if the weather is kind. Check out first."
+            },
+            {
+              "place": "elizabeth-quay",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD or Fremantle"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Parks, river and island wildlife, with a Swan Valley day for wine and food.",
+      "days": [
+        {
+          "title": "Arrive, river and sunset",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Easy start by the water."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Best at sunset. Cross by ferry or rideshare."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner in Northbridge."
+            }
+          ]
+        },
+        {
+          "title": "Kings Park and the Swan River",
+          "stops": [
+            {
+              "place": "kings-park",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Always open. Spring is best for wildflowers."
+            },
+            {
+              "place": "perth-mint",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Roughly 09:00–17:00 daily. Check tour times."
+            },
+            {
+              "place": "swan-river",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Afternoon cruise or a riverside walk."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest Island full day",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Book the ferry ahead. Calm weather makes the crossing easier. Take water and sun cover."
+            }
+          ]
+        },
+        {
+          "title": "Swan Valley tour",
+          "stops": [
+            {
+              "place": "swan-valley-tour",
+              "at": "10:00",
+              "minutes": 300,
+              "note": "Book ahead. Weekday is quieter. Eat a proper breakfast first."
+            }
+          ]
+        },
+        {
+          "title": "Fremantle and fly",
+          "stops": [
+            {
+              "place": "uwa",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet campus grounds and river views. Buildings have their own hours."
+            },
+            {
+              "place": "fremantle-markets",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Mainly Fri–Sun. Check hours on the day."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch, then the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eat your way through Northbridge, Fremantle and the Swan Valley, with beaches between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat in Northbridge",
+          "stops": [
+            {
+              "place": "elizabeth-quay",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk off the flight by the water."
+            },
+            {
+              "place": "cbd-art-walk",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Laneways and street art. Shops open daytime."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Dinner and bars. Best Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Fremantle markets and seafood",
+          "stops": [
+            {
+              "place": "fremantle-markets",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Mainly Fri–Sun. Check hours on the day. Graze as you go."
+            },
+            {
+              "place": "fremantle-prison",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Book ahead in summer. Check tour times."
+            },
+            {
+              "place": "fishing-boat-harbour",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Fish and chips by the boats."
+            },
+            {
+              "place": "cottesloe-beach",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Swim, then stay for sunset."
+            }
+          ]
+        },
+        {
+          "title": "Swan Valley tour",
+          "stops": [
+            {
+              "place": "swan-valley-tour",
+              "at": "10:00",
+              "minutes": 300,
+              "note": "Book ahead. Weekday is quieter. Pace yourself on the tastings."
+            }
+          ]
+        },
+        {
+          "title": "Beach and city food",
+          "stops": [
+            {
+              "place": "scarborough-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Patrolled in season. Promenade cafes for lunch."
+            },
+            {
+              "place": "kings-park",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Always open. Late afternoon is best."
+            },
+            {
+              "place": "south-perth-foreshore",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset view across to the city."
+            },
+            {
+              "place": "northbridge-walk",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Last dinner in Northbridge."
+            }
+          ]
+        },
+        {
+          "title": "Rottnest or a slow last day",
+          "stops": [
+            {
+              "place": "rottnest-day-trip",
+              "at": "08:30",
+              "minutes": 420,
+              "note": "Only if you have a late flight. Book ahead and check ferry times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Northbridge or CBD"
+    }
+  ],
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Cottesloe sunsets, Scarborough surf and Rottnest swims."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Kings Park, Swan Valley and day trips to Rottnest."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Northbridge eats, Fremantle seafood and coffee."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "CBD",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to Elizabeth Quay, Kings Park and the free CAT buses. Best base if you have no car.",
+      "center": [
+        -31.953,
+        115.857
+      ]
+    },
+    {
+      "area": "Northbridge",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Next to the CBD and the heart of late-night food and bars. Good value and lively.",
+      "center": [
+        -31.949,
+        115.857
+      ]
+    },
+    {
+      "area": "Fremantle",
+      "range": [
+        170,
+        400
+      ],
+      "why": "Historic port with markets, seafood and the ferry to Rottnest. A relaxed base 30 min by train from the CBD.",
+      "center": [
+        -32.056,
+        115.748
+      ]
+    },
+    {
+      "area": "Scarborough",
+      "range": [
+        160,
+        380
+      ],
+      "why": "Beachfront stays with surf, pools and sunset bars. About 20–30 min by bus or car to the CBD.",
+      "center": [
+        -31.894,
+        115.757
+      ]
+    }
+  ],
+  "food": [
+    "Try local seafood: fish and chips at Fremantle or Hillarys, and WA rock lobster when in season.",
+    "Coffee is a local obsession. Small roasters and cafés are everywhere in Northbridge and Fremantle.",
+    "Northbridge and the CBD have cheap Asian eats — noodles, dumplings and Vietnamese — often AUD 15–25 a meal.",
+    "Book ahead for popular weekend brunches and seafood dinners, especially in summer.",
+    "Perth is spread out and kitchens close early by big-city standards. Eat before 9pm on weeknights."
+  ],
+  "more_time": [
+    "Take the ferry or a fast boat to Rottnest Island for a full day of beaches and quokkas; book tickets ahead.",
+    "Swap a city day for the Swan Valley: vineyards and breweries about 30–40 min by car or train plus bus.",
+    "Add a day trip to the Pinnacles Desert in Nambung National Park; it is a long drive, so a tour is easier."
+  ]
+}

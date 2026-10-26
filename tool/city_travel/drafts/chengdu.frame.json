@@ -1,0 +1,261 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hotpot, mapo tofu and teahouse snacks all day."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Teahouses, Sichuan opera and old lanes."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Pandas, bamboo parks and green hills nearby."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Tianfu Square",
+      "range": [
+        250,
+        700
+      ],
+      "why": "Dead centre, on two metro lines; easy walk to museums and the river.",
+      "center": [
+        30.657,
+        104.066
+      ]
+    },
+    {
+      "area": "Chunxi Road",
+      "range": [
+        300,
+        900
+      ],
+      "why": "Shopping and food street on the doorstep; good metro links and many hotels.",
+      "center": [
+        30.657,
+        104.081
+      ]
+    },
+    {
+      "area": "Kuanzhai Alley",
+      "range": [
+        280,
+        800
+      ],
+      "why": "Old lanes, teahouses and snacks; quieter evenings, central but relaxed.",
+      "center": [
+        30.669,
+        104.055
+      ]
+    },
+    {
+      "area": "Wuhou Temple",
+      "range": [
+        200,
+        600
+      ],
+      "why": "Near the temple, Jinli Street and the panda-base bus routes; cheaper rooms.",
+      "center": [
+        30.645,
+        104.048
+      ]
+    }
+  ],
+  "food": [
+    "Hotpot is the must-do: a divided pot of mild and numbing-spicy broth, dipped in oil and garlic. Expect ¥80–150 per person with drinks.",
+    "Try mapo tofu, dan dan noodles and kung pao chicken at small local restaurants; a filling meal is often ¥20–50.",
+    "Snack streets: Jinli and Kuanzhai Alley for tourists, or local lanes for cheaper bites. Prices are higher at the famous streets.",
+    "Teahouses are part of the day: order jasmine tea, sit for an hour, and watch the city go by. Around ¥20–60 a pot.",
+    "Street stalls are fine but busy ones turn over food faster. Drink bottled or boiled water if your stomach is sensitive."
+  ],
+  "more_time": [
+    "Add a day for the Leshan Giant Buddha by high-speed train, about 1 hour each way; check times on the day.",
+    "Spend a morning at the Chengdu Research Base of Giant Panda Breeding; go early, pandas are active before the heat.",
+    "Swap a city day for Qingcheng Mountain and Dujiangyan, an easy day trip by train from the city."
+  ],
+  "type_month_fit": {
+    "food": [
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.55,
+      0.6,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      0.9,
+      0.75,
+      0.55
+    ],
+    "history": [
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "family": [
+      0.6,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      0.9,
+      0.75,
+      0.6
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two nights covers pandas, hotpot and the old lanes at an easy pace; add a night for a day trip to Leshan or the mountains."
+  },
+  "month_notes": [
+    "Coldest month: highs near 11°C, lows near 4°C. Pack a warm coat; few rainy days.",
+    "Still chilly, highs around 13°C. Good for indoor sights and hotpot.",
+    "Warming up to 19°C; rain days rise to about 11. Bring a light rain jacket.",
+    "Pleasant at 24°C highs; about 13 rain days, so keep an umbrella handy.",
+    "Warm and green, highs near 27°C; frequent showers.",
+    "Warm start to summer, highs around 30°C; humid with about 14 rain days.",
+    "Hottest and wettest: highs near 31°C and about 20 rain days. Plan indoor afternoons.",
+    "Similar to July: hot, humid and rainy. Go out early.",
+    "Cooling to 26°C highs; still about 16 rain days.",
+    "Comfortable at 21°C highs; good month for walking and day trips.",
+    "Mild at 17°C highs with only about 5 rain days; a strong month to visit.",
+    "Cool again: highs near 11°C, lows near 5°C. Few rainy days; pack layers."
+  ],
+  "climate_guide": {
+    "summary": "Humid subtropical: mild winters, warm summers and rain in every month, heaviest in July and August.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: March to May and October to November",
+        "text": "Highs of 19–27°C and manageable rain. Ideal for walking, pandas and day trips."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain all year",
+        "text": "Even the driest months see about 5 rain days. July and August are wettest with about 20. Always carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs near 30–31°C with muggy air. Do outdoor sights early morning; rest indoors in the afternoon."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool, damp winter (December to February)",
+        "text": "Highs of 11–13°C and lows of 4–5°C. Homes and some rooms are lightly heated, so bring warm layers."
+      },
+      {
+        "icon": "🌫️",
+        "title": "Cloudy skies are common",
+        "text": "Chengdu is often overcast and hazy. Don't count on blue skies for photos."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket or umbrella, comfortable walking shoes, and mosquito repellent for summer evenings."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metro for most trips; DiDi or taxis for evenings and airport runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Many lines with English ticket machines. WeChat/Alipay and most international cards accepted. Line 10 links Shuangliu Airport to the centre in about 30–40 min. Line 18 links Tianfu Airport to South Railway Station in about 50 min; ticket to Tianfu Square around ¥11."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "¥2 air-conditioned, ¥1 older buses. Exact change or a transit card. Signs in Chinese only, so use a map app."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Metered taxis are cheap; add about ¥10 for the airport expressway toll when leaving town. DiDi works well."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the city; traffic and parking are a hassle. Use trains for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The flat centre is good on foot, and shared bikes are handy for short hops."
+      }
+    ]
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Senso-ji, Meiji Jingu and the old low-city lanes."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Sushi counters, ramen shops and izakaya alleys."
+    },
+    {
+      "id": "anime",
+      "label": "Anime",
+      "blurb": "Akihabara, Nakano Broadway and themed cafés."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Shinjuku",
+      "range": [
+        9000,
+        30000
+      ],
+      "why": "Biggest train hub, endless food and nightlife, easy day trips west. Busy and bright at night.",
+      "center": [
+        35.6938,
+        139.7034
+      ]
+    },
+    {
+      "area": "Shibuya",
+      "range": [
+        10000,
+        35000
+      ],
+      "why": "Central for youth culture, shopping and nightlife. Good links to Shinjuku and the west side.",
+      "center": [
+        35.658,
+        139.7016
+      ]
+    },
+    {
+      "area": "Ginza & Tokyo Station",
+      "range": [
+        14000,
+        45000
+      ],
+      "why": "Quiet, polished and walkable; best for Shinkansen day trips and first-time comfort.",
+      "center": [
+        35.6812,
+        139.7671
+      ]
+    },
+    {
+      "area": "Asakusa & Ueno",
+      "range": [
+        7000,
+        22000
+      ],
+      "why": "Cheapest rooms, old-town feel, Senso-ji on the doorstep and good airport links.",
+      "center": [
+        35.7148,
+        139.7967
+      ]
+    }
+  ],
+  "food": [
+    "Try sushi at a conveyor-belt shop for a cheap first taste; sit-down counters cost much more. Check prices before you sit.",
+    "Ramen and standing soba shops are the cheap lunch: expect roughly ¥800–1,300 a bowl.",
+    "Izakaya alleys (Omoide Yokocho in Shinjuku, Harmonica Yokocho in Kichijoji) are best for small plates and a beer.",
+    "Convenience stores (7-Eleven, Lawson, FamilyMart) are good, cheap breakfasts and picnic food.",
+    "Many small restaurants are cash-only and some are ticket-machine only. Carry some yen and have a translation app ready."
+  ],
+  "more_time": [
+    "Add a day trip to Nikko or Kamakura by train; both are easy returns from central stations. Check times on the day.",
+    "Swap one city day for teamLab or a sumo morning session (tickets sell out; check the schedule).",
+    "Anime fans can swap a shopping afternoon for Nakano Broadway and a themed café; book popular cafés ahead."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.7,
+      0.9,
+      0.95,
+      0.8
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "anime": [
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.8,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "family": [
+      0.6,
+      0.6,
+      0.8,
+      0.95,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.65,
+      0.9,
+      0.9,
+      0.7
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "best_for": [
+    "culture",
+    "food",
+    "anime"
+  ],
+  "recommend": {
+    "why": "Three nights covers the big sights, a food neighbourhood and one day trip without rushing."
+  },
+  "month_notes": [
+    "Cold and dry: highs near 9°C, lows around 0°C. Pack a warm coat.",
+    "Still cold, highs near 10°C. A few rainy days; keep indoor plans ready.",
+    "Warming up to 14°C. Cherry blossom timing varies; check forecasts on the day.",
+    "Mild and pleasant at 19°C. Busy blossom season; book hotels early.",
+    "Warm at 23°C and green. Good walking weather before the rains.",
+    "Rainy season: about 15 rain days and 26°C. Carry an umbrella.",
+    "Hot and humid, highs near 30°C with 16 rain days. Plan indoor breaks.",
+    "Hottest month, highs near 31°C. Go out early and late; stay cool midday.",
+    "Still warm at 27°C with 15 rain days. Typhoon season; check forecasts.",
+    "Comfortable at 22°C. Great month for walking and day trips.",
+    "Cool and clear at 17°C. Autumn colours; popular, so book ahead.",
+    "Cold again at 11°C. Dry with about 7 rain days; pack layers."
+  ],
+  "climate_guide": {
+    "summary": "Four clear seasons: cold dry winters, a humid rainy season in June, and hot, sticky summers.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: March to May and October to November",
+        "text": "Mild days around 17–23°C. Ideal for walking neighbourhoods and day trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (July to September)",
+        "text": "Highs near 30–31°C with muggy nights. Plan indoor sights midday and go out early or late."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy season in June",
+        "text": "About 15 rain days and 26°C. Carry an umbrella and keep a museum or shopping backup."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold, dry winters",
+        "text": "January highs near 9°C and lows around 0°C. A warm coat and layers matter; rain is light."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Late summer and September can bring storms. Check forecasts and train status on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers for cool evenings, an umbrella in June and September, and light breathable clothes in summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Trains and subways with an IC card; taxis only for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "JR, Tokyo Metro and Toei reach everywhere. Tap a Suica or Pasmo IC card, about ¥180–330 a ride."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Same network as the metro for visitors; use it between neighbourhoods. Trains stop around midnight."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses exist but trains are almost always faster for visitors."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Clean and metered, ¥500 start. Apps like GO and Uber work. Best after the trains stop."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in central Tokyo is slow and parking expensive; not recommended."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Each neighbourhood is walkable, but you will take trains between them."
+      }
+    ]
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "city": "Nashville",
+  "checked": "October 2026",
+  "intro_line": "Music City hums with honky-tonks, hot chicken and history.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "The Gulch",
+        "Music Row",
+        "East Nashville"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "The Gulch",
+        "Music Row",
+        "East Nashville"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown",
+        "The Gulch",
+        "Music Row",
+        "East Nashville"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "The Gulch",
+        "Music Row",
+        "East Nashville"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "The Gulch",
+        "Music Row",
+        "East Nashville"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": -1,
+        "rain_days": 12,
+        "note": "January is the coldest month: highs near 9°C, lows around -1°C. Pack a warm coat. About 12 rain days."
+      },
+      {
+        "high": 12,
+        "low": 2,
+        "rain_days": 13,
+        "note": "February stays cold, highs near 12°C. Indoor music venues are the safe bet. Around 13 rain days."
+      },
+      {
+        "high": 16,
+        "low": 5,
+        "rain_days": 14,
+        "note": "March warms to highs near 16°C with cool nights. Expect about 14 rain days, so bring a rain jacket."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 12,
+        "note": "April is pleasant: highs near 20°C, lows around 9°C. Good for walking. About 12 rain days."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 13,
+        "note": "May is warm and green, highs near 26°C. Comfortable evenings. Around 13 rain days."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 14,
+        "note": "June turns hot: highs near 30°C, lows around 20°C. Plan outdoor time for mornings. About 14 rain days."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 17,
+        "note": "July is the hottest and wettest month: highs near 32°C and about 17 rain days. Carry water and expect afternoon storms."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 15,
+        "note": "August stays hot and humid, highs near 30°C. About 15 rain days. Go easy outdoors at midday."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 9,
+        "note": "September is still warm, highs near 28°C, but rain drops to about 9 days. A good shoulder month."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 9,
+        "note": "October is the best month: highs near 23°C, lows around 12°C, about 9 rain days. Great for walking and patios."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 9,
+        "note": "November cools to highs near 16°C with about 9 rain days. Bring layers for cool evenings."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 11,
+        "note": "December is cold, highs near 12°C and lows around 3°C. About 11 rain days. Festive downtown lights are worth an evening."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "nightlife": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.6
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.75,
+      0.55
+    ]
+  },
+  "places": {
+    "grand_ole_opry": {
+      "types": [
+        "culture",
+        "nightlife",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Evening show; any season",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "ryman": {
+      "types": [
+        "culture",
+        "history",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning tour; evening show",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "vanderbilt": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Music Row",
+      "popularity": 3
+    },
+    "captain_ds": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "carls_jr": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Breakfast or late lunch",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "hunt_brothers": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Anytime snack",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "broadway": {
+      "types": [
+        "nightlife",
+        "culture",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "country_hall": {
+      "types": [
+        "culture",
+        "history",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Morning or rainy day",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "johnny_cash": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "parthenon": {
+      "types": [
+        "culture",
+        "family",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon; spring and autumn",
+      "area": "Music Row",
+      "popularity": 4
+    },
+    "gulch_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime; golden hour for photos",
+      "area": "The Gulch",
+      "popularity": 4
+    },
+    "east_nashville": {
+      "types": [
+        "food",
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Brunch or early evening",
+      "area": "East Nashville",
+      "popularity": 4
+    },
+    "food_hall": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "pedal_tavern": {
+      "types": [
+        "family",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon or early evening",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "riverfront": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "biscuit_breakfast": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "hot_chicken": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "East Nashville",
+      "popularity": 5
+    },
+    "listening_room": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "centennial_park": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon; spring and autumn",
+      "area": "Music Row",
+      "popularity": 4
+    },
+    "music_row_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Music Row",
+      "popularity": 2
+    },
+    "gulch_food": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Dinner",
+      "area": "The Gulch",
+      "popularity": 4
+    },
+    "east_coffee": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "East Nashville",
+      "popularity": 3
+    },
+    "opry_mills": {
+      "types": [
+        "family",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon before a show",
+      "area": "Downtown",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the music sights, hot chicken and a Broadway night; add a third for the Opry or The Hermitage."
+  },
+  "airports": [
+    {
+      "code": "BNA",
+      "name": "Nashville International Airport",
+      "primary": true,
+      "note": "Main hub, about 11 km from downtown.",
+      "options": [
+        {
+          "mode": "MTA Route 18 bus",
+          "to": "Downtown",
+          "price": "$2-3",
+          "time": "35-45 min",
+          "note": "Hourly, roughly 7AM-10PM; schedules at the baggage-claim Welcome Center."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$15-25",
+          "time": "15-25 min",
+          "note": "Wait on Level 1 outside the main terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$25-35",
+          "time": "15-25 min",
+          "note": "Metered; confirm the fare before you ride."
+        },
+        {
+          "mode": "Rental car",
+          "to": "Citywide",
+          "price": "$40-80 per day",
+          "time": "15-25 min",
+          "note": "All major agencies are at the airport."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Nashville",
+      "https://en.wikivoyage.org/wiki/Nashville"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Walk downtown; use rideshare or a rental car for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MTA buses cover downtown and the airport. Route 18 links BNA to downtown hourly, about 35 minutes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are common downtown. Uber and Lyft both operate, with dedicated airport pickup areas."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "A private car is the main way around. Highways run 55–70 mph but slow in traffic."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable. Outside it the city sprawls and sidewalks are patchy."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The Music City Star commuter train runs from Riverfront Station to Lebanon. Useful for commuters, not most sights."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service for visitors."
+      },
+      {
+        "mode": "Bike / scooter",
+        "has": true,
+        "text": "Bikes and scooters work for short downtown hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, sticky summers with afternoon storms, and mild-to-cold winters. Spring and autumn are the sweet spots.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: April to May and September to October",
+        "text": "Highs around 20–28°C with comfortable evenings. Ideal for walking downtown and outdoor music."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (June to August)",
+        "text": "Highs near 30–32°C with muggy air. Do outdoor sights in the morning; rest indoors at midday."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Summer storms",
+        "text": "July and August bring the most rain days, around 15–17. Storms are often short but heavy; carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold but short",
+        "text": "January highs near 9°C and lows around -1°C. A warm coat and layers are needed for evening walks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is spread through the year",
+        "text": "Most months see 9–17 rain days. Spring has more rain days than autumn, so pack a light rain jacket."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes and sunscreen for summer; a rain jacket; a warm coat and layers for December to February; comfortable shoes for walking downtown."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+$ deepseek_prep.py Chengdu
+  tokens in 736 out 349
+Chengdu: 0 sig, 0 tours, 3 problems
+
+$ deepseek_facts.py Chengdu
+  tokens in 4693 out 771
+Chengdu: 0 problems
+
+$ deepseek_city.py Chengdu --stage places
+Chengdu: places
+  tokens in 1177 out 3722
+
+$ deepseek_city.py Chengdu --stage frame
+Chengdu: frame
+  tokens in 2465 out 1866
+  repaired JSON
+
+$ deepseek_city.py Chengdu --stage plans
+Chengdu: plans
+  plans for day
+  tokens in 2464 out 847
+  plans for 1n
+  tokens in 2465 out 1069
+  plans for 2n
+  tokens in 2470 out 1323
+  plans for 3n
+  tokens in 2465 out 1915
+
+$ merge_city.py Chengdu
+Chengdu: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/chengdu.json and planner/chengdu.json
+

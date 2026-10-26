@@ -1,0 +1,166 @@
+{
+ "city": "Guangzhou",
+ "trips": [
+  {
+   "place": "Zhuhai",
+   "label": "",
+   "position": {
+    "id": 17402172,
+    "name": "Zhuhai, Zhuhaibei",
+    "city": "Zhuhai",
+    "lat": 22.40374,
+    "lng": 113.54678
+   },
+   "town": {
+    "name": "Zhuhai",
+    "lat": 22.27694,
+    "lng": 113.56778
+   },
+   "road": {
+    "km": 127,
+    "min": 96,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 340.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$8-$17",
+     "time": "2h 6m",
+     "via": "Guangzhou South station to Zhuhai",
+     "source": "https://www.rome2rio.com/s/Guangzhou/Zhuhai"
+    },
+    "bus": {
+     "from": "$7-$16",
+     "time": "3h 10m",
+     "via": "Zhuhai Gongbei to Wanzaisha Plaza",
+     "source": "https://www.rome2rio.com/s/Guangzhou/Zhuhai"
+    }
+   },
+   "route_note": "Intercity trains from Guangzhou South run directly to Zhuhai Station near the waterfront, with no changes required.",
+   "see": [
+    "Lovers' Road waterfront",
+    "Fisher Girl statue",
+    "New Yuan Ming Palace",
+    "Chimelong Ocean Kingdom"
+   ],
+   "visit": "Full day",
+   "tour_query": "Zhuhai day trip from Guangzhou",
+   "quests": [
+    "Jiuzhouyang"
+   ],
+   "recommended": "train",
+   "why": "Intercity trains run directly from Guangzhou South to Zhuhai Station near the waterfront, far quicker than the bus.",
+   "stars": 4,
+   "know": [
+    "The waterfront promenade and Fisher Girl statue are near Zhuhai Station",
+    "Gongbei border area is lively for a stroll"
+   ]
+  },
+  {
+   "place": "Foshan",
+   "label": "",
+   "position": {
+    "id": 17400275,
+    "name": "Foshan",
+    "city": "Foshan",
+    "lat": 23.0215,
+    "lng": 113.1214
+   },
+   "town": {
+    "name": "Foshan",
+    "lat": 23.02677,
+    "lng": 113.13148
+   },
+   "road": {
+    "km": 25,
+    "min": 24,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 80.0,
+    "currency": "CNY"
+   },
+   "modes": {},
+   "route_note": "Take a high-speed or intercity train from Guangzhou South Station to Foshan West or Foshan Station, a short ride with no changes needed.",
+   "see": [
+    "Ancestral Temple (Zu Miao)",
+    "Lingnan Tiandi district",
+    "Nanfeng Ancient Kiln",
+    "Shiwan ceramic workshops"
+   ],
+   "visit": "Full day",
+   "tour_query": "Foshan day trip from Guangzhou",
+   "quests": [],
+   "recommended": "tour",
+   "why": "A short high-speed or intercity train from Guangzhou South reaches Foshan directly with no changes.",
+   "stars": 3,
+   "know": [
+    "Foshan's Ancestral Temple and Lingnan Tiandi are the main draws",
+    "Weekends are busier at the Ancestral Temple"
+   ]
+  },
+  {
+   "place": "Zhaoqing",
+   "label": "",
+   "position": {
+    "id": 17401809,
+    "name": "Zhaoqing, Zhaoqingdong",
+    "city": "Zhaoqing",
+    "lat": 23.21739,
+    "lng": 112.65811
+   },
+   "town": {
+    "name": "Zhaoqing",
+    "lat": 23.04893,
+    "lng": 112.46091
+   },
+   "road": {
+    "km": 98,
+    "min": 80,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 270.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$11",
+     "time": "1h 48m",
+     "via": "Guangzhou Train Station to Zhaoqing",
+     "source": "https://www.rome2rio.com/s/Guangzhou/Zhaoqing"
+    },
+    "bus": {
+     "from": "$9-$18",
+     "time": "1h 20m",
+     "via": "Guangzhou Fangcun to Zhaoqing",
+     "source": "https://www.rome2rio.com/s/Guangzhou/Zhaoqing"
+    }
+   },
+   "route_note": "Frequent high-speed trains run from Guangzhou South to Zhaoqing East, then a local bus or taxi reaches the Seven Star Crags scenic area.",
+   "see": [
+    "Seven Star Crags (Qixing Yan)",
+    "Dinghu Mountain",
+    "Ancient city wall",
+    "Star Lake boat ride"
+   ],
+   "visit": "Full day",
+   "tour_query": "Zhaoqing day trip from Guangzhou",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The bus is faster than the train option given and still reaches Zhaoqing for the Seven Star Crags.",
+   "stars": 3,
+   "know": [
+    "Seven Star Crags is the classic scenic area",
+    "Allow extra time for the last-mile bus or taxi to the crags"
+   ]
+  }
+ ],
+ "problems": [
+  "Kaiping: not a town in cities15000.json (CN), dropped",
+  "Foshan: model picked train without data; set to tour"
+ ]
+}

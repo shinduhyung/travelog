@@ -1,0 +1,292 @@
+{
+  "currency": "GBP",
+  "usd_rate": 0.75,
+  "intro_line": "Royal palaces, free world-class museums and a river city that rewards walking.",
+  "intro": "London's big sights cluster along the Thames and in the West End. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "West End & Soho",
+    "South Kensington",
+    "South Bank & Southwark",
+    "King's Cross & Bloomsbury"
+  ],
+  "place_landmarks": [
+    "Tower of London",
+    "Westminster Abbey",
+    "Palace of Westminster",
+    "Big Ben",
+    "Buckingham Palace",
+    "British Museum",
+    "National Gallery",
+    "Tate Modern",
+    "Natural History Museum",
+    "Victoria and Albert Museum",
+    "Science Museum",
+    "St Paul's Cathedral",
+    "Tower Bridge",
+    "London Eye",
+    "The Shard",
+    "Borough Market",
+    "Covent Garden",
+    "Camden Market",
+    "Hyde Park",
+    "Churchill War Rooms",
+    "Royal Observatory Greenwich",
+    "Royal Botanic Gardens, Kew",
+    "Windsor Castle",
+    "Shakespeare's Globe",
+    "Notting Hill",
+    "Warner Bros. Studio Tour London - The Making of Harry Potter"
+  ],
+  "taxi": {
+    "flag_day": 3.8,
+    "flag_airport": 3.8,
+    "per_km": 2.6,
+    "min_fare": 3.8
+  },
+  "road_factor": 1.35,
+  "city_kmh": 17,
+  "transit_facts": [
+    "The Underground (Tube), Elizabeth line, Overground and buses all take contactless cards and Oyster; fares are capped per day.",
+    "Buses cost a flat £1.75 and a second bus within an hour is free (Hopper fare).",
+    "Black cabs are metered and can be hailed; Uber, Bolt and FREENOW are widely used.",
+    "Driving in the centre means the Congestion Charge and ULEZ fees; visitors rarely need a car.",
+    "Central London is very walkable; many sights are 15-30 minutes apart on foot.",
+    "Thames Clippers river boats link Westminster, the South Bank, the Tower and Greenwich."
+  ],
+  "airports": [
+    {
+      "code": "LHR",
+      "name": "Heathrow Airport",
+      "primary": true,
+      "note": "London's main airport, 24 km west of the centre.",
+      "options": [
+        {
+          "mode": "Elizabeth line",
+          "to": "Paddington, Bond Street, Tottenham Court Road",
+          "price": "£15.50",
+          "time": "30-45 min",
+          "note": "Contactless or Oyster; runs about every 5-10 minutes."
+        },
+        {
+          "mode": "Heathrow Express",
+          "to": "Paddington",
+          "price": "£10-26",
+          "time": "15 min",
+          "note": "Cheapest when booked 30+ days ahead."
+        },
+        {
+          "mode": "Piccadilly line (Tube)",
+          "to": "Central London",
+          "price": "£5.60-6.30",
+          "time": "50-60 min",
+          "note": "Slow but cheap; good for Kensington and Piccadilly."
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Central London",
+          "price": "£35-100",
+          "time": "45-75 min",
+          "note": "Uber from about £35; black cabs about £55-90 depending on traffic."
+        }
+      ]
+    },
+    {
+      "code": "LGW",
+      "name": "Gatwick Airport",
+      "primary": false,
+      "note": "45 km south of London.",
+      "options": [
+        {
+          "mode": "Train (Gatwick Express / Southern / Thameslink)",
+          "to": "Victoria, London Bridge",
+          "price": "£12-25",
+          "time": "30-45 min",
+          "note": "Thameslink and Southern are cheaper than the Gatwick Express."
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Central London",
+          "price": "£50-150",
+          "time": "70-100 min",
+          "note": "Uber about £50-90; black cab much more."
+        }
+      ]
+    },
+    {
+      "code": "STN",
+      "name": "Stansted Airport",
+      "primary": false,
+      "note": "55 km north-east; budget airlines.",
+      "options": [
+        {
+          "mode": "Stansted Express",
+          "to": "Liverpool Street",
+          "price": "£10-25",
+          "time": "about 46 min",
+          "note": "Every 15 minutes; cheaper booked ahead."
+        },
+        {
+          "mode": "Coach (National Express)",
+          "to": "Liverpool Street, Victoria",
+          "price": "£5-15",
+          "time": "60-100 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi / Uber",
+          "to": "Central London",
+          "price": "£55-145",
+          "time": "60-90 min",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "airports_sources": [
+    [
+      "Heathrow to central London 2026",
+      "https://travelandtime.com/guides/heathrow-to-central-london"
+    ],
+    [
+      "Elizabeth line vs Heathrow Express",
+      "https://tripbuffer.com/compare/elizabeth-line-vs-heathrow-express/"
+    ],
+    [
+      "London airport transfer costs 2026",
+      "https://www.premiumtransfers.co.uk/blog/airport-transfer-costs-london"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    51.5074,
+    -0.1278
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 11
+    },
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 13
+    },
+    {
+      "high": 14,
+      "low": 5,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 11
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 11
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 12
+    },
+    {
+      "high": 9,
+      "low": 4,
+      "rain_days": 12
+    }
+  ],
+  "tours": [
+    {
+      "title": "Tower of London and Crown Jewels Exhibition Ticket",
+      "duration": "1 day",
+      "price": "$51",
+      "covers": [
+        "tower-of-london"
+      ]
+    },
+    {
+      "title": "Westminster Abbey Entrance Ticket",
+      "duration": "2 hours",
+      "price": "$43",
+      "covers": [
+        "westminster-abbey"
+      ]
+    },
+    {
+      "title": "The London Eye Entry Ticket",
+      "duration": "30 minutes",
+      "price": "$39",
+      "covers": [
+        "london-eye"
+      ]
+    },
+    {
+      "title": "Windsor Castle Admission Ticket",
+      "duration": "1 day",
+      "price": "$43",
+      "covers": [
+        "windsor-castle"
+      ]
+    },
+    {
+      "title": "Harry Potter Warner Bros. Studio Tour with Transfers",
+      "duration": "7 hours",
+      "price": "$120",
+      "covers": [
+        "harry-potter-studio"
+      ]
+    }
+  ],
+  "max_km": 45
+}

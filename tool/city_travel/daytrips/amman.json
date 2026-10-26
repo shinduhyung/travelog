@@ -1,0 +1,58 @@
+{
+ "city": "Amman",
+ "trips": [
+  {
+   "place": "Mādabā",
+   "label": "",
+   "position": {
+    "id": 388824,
+    "name": "Madaba",
+    "city": "Madaba",
+    "lat": 31.71667,
+    "lng": 35.8
+   },
+   "town": {
+    "name": "Mādabā",
+    "lat": 31.71599,
+    "lng": 35.79392
+   },
+   "road": {
+    "km": 34,
+    "min": 33,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 20.0,
+    "currency": "JOD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$1-$22",
+     "time": "1h 8m",
+     "via": "Amman to Madaba",
+     "source": "https://www.rome2rio.com/s/Amman/Madaba"
+    }
+   },
+   "route_note": "Take a minibus or service taxi from Amman's Abdali bus station to Madaba (about 45 minutes to an hour), with taxis available for the trip on to Mount Nebo.",
+   "see": [
+    "Madaba Mosaic Map in St George's Church",
+    "Mount Nebo viewpoint",
+    "Archaeological Park",
+    "Old town streets"
+   ],
+   "visit": "Half day",
+   "tour_query": "Madaba and Mount Nebo day trip from Amman",
+   "quests": [
+    "Madaba Map"
+   ],
+   "recommended": "tour",
+   "why": "",
+   "stars": 3,
+   "know": []
+  }
+ ],
+ "problems": [
+  "Jerash: not a town in cities15000.json (JO), dropped",
+  "Sweimeh: no Omio position, dropped"
+ ]
+}

@@ -1,0 +1,619 @@
+{
+  "city": "Suzhou",
+  "checked": "October 2026",
+  "intro_line": "Canals, gardens and silk in an ancient water city.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Guanqian Street",
+        "Pingjiang Road",
+        "Suzhou Industrial Park",
+        "Near Suzhou Station"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Guanqian Street",
+        "Pingjiang Road",
+        "Suzhou Industrial Park",
+        "Near Suzhou Station"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Guanqian Street",
+        "Pingjiang Road",
+        "Suzhou Industrial Park",
+        "Near Suzhou Station"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Guanqian Street",
+        "Pingjiang Road",
+        "Suzhou Industrial Park",
+        "Near Suzhou Station"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Guanqian Street",
+        "Pingjiang Road",
+        "Suzhou Industrial Park",
+        "Near Suzhou Station"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": 1,
+        "rain_days": 9,
+        "note": "Coldest month: highs near 9°C, lows near 1°C. Pack a warm coat; gardens are quiet."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 9,
+        "note": "Still chilly, highs around 11°C. Few crowds and low hotel prices."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 11,
+        "note": "Warming up to 16°C with about 11 rain days. Bring an umbrella."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 11,
+        "note": "One of the best months: 21°C highs, gardens green and blooming."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 12,
+        "note": "Warm and pleasant at 26°C. Good for walking the canals."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 16,
+        "note": "Hot and wet: 28°C highs, 16 rain days. Plan indoor sights midday."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 16,
+        "note": "Hottest month, highs near 32°C and humid. Go out early or late."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 14,
+        "note": "Hot and humid again, around 32°C. Carry water."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 12,
+        "note": "Cooling to 28°C. Comfortable again, with about 12 rain days."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 9,
+        "note": "Excellent month: 23°C highs, dry-ish and clear. Crab season starts."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 10,
+        "note": "Mild at 18°C. Good light for gardens and photos."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 7,
+        "note": "Cold again at 11°C highs, but only about 7 rain days. Quiet streets."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.8,
+      1,
+      0.9,
+      0.75
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.8,
+      1,
+      0.9,
+      0.75
+    ],
+    "nature": [
+      0.4,
+      0.5,
+      0.85,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.45,
+      0.75,
+      0.9,
+      0.7,
+      0.45
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.8
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.8,
+      0.95,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "humble_administrator": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning, spring or autumn",
+      "area": "Guanqian Street",
+      "popularity": 5
+    },
+    "suzhou_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Guanqian Street",
+      "popularity": 5
+    },
+    "tiger_hill": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Near Suzhou Station",
+      "popularity": 4
+    },
+    "tongli": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Weekday, early morning to late afternoon",
+      "area": "Suzhou Industrial Park",
+      "popularity": 4
+    },
+    "grand_canal_boat": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Pingjiang Road",
+      "popularity": 4
+    },
+    "pingjiang_walk": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or evening",
+      "area": "Pingjiang Road",
+      "popularity": 5
+    },
+    "shantang_street": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Near Suzhou Station",
+      "popularity": 4
+    },
+    "suzhou_noodles": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Pingjiang Road",
+      "popularity": 4
+    },
+    "guanqian_food": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Guanqian Street",
+      "popularity": 4
+    },
+    "jinji_lake": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Suzhou Industrial Park",
+      "popularity": 3
+    },
+    "silk_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Guanqian Street",
+      "popularity": 3
+    },
+    "master_of_nets": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Pingjiang Road",
+      "popularity": 4
+    },
+    "panmen_gate": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Pingjiang Road",
+      "popularity": 3
+    },
+    "suzhou_opera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Pingjiang Road",
+      "popularity": 3
+    },
+    "bike_city": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Guanqian Street",
+      "popularity": 3
+    },
+    "tea_house": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Pingjiang Road",
+      "popularity": 3
+    },
+    "suzhou_station_area": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Near Suzhou Station",
+      "popularity": 2
+    },
+    "lion_grove": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Guanqian Street",
+      "popularity": 3
+    },
+    "suzhou_embroidery": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Guanqian Street",
+      "popularity": 2
+    },
+    "huqiu_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Near Suzhou Station",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights let you see the main gardens, the old canals and the museum without rushing, and still fit a water-town side trip."
+  },
+  "airports": [
+    {
+      "code": "WUX",
+      "name": "Sunan Shuofang International Airport",
+      "primary": true,
+      "note": "Closest airport, 26 km; mostly domestic with some international flights.",
+      "options": [
+        {
+          "mode": "Train + bus",
+          "to": "Wuxi station, then Suzhou",
+          "price": "¥20-40",
+          "time": "60-90 min",
+          "note": "Bus to Wuxi centre every 30 min, then high-speed train."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Suzhou city centre",
+          "price": "¥20-30",
+          "time": "50-70 min",
+          "note": "Check times at the airport; services are limited."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Suzhou city centre",
+          "price": "¥80-120",
+          "time": "40-60 min",
+          "note": "Fastest door-to-door option."
+        },
+        {
+          "mode": "Didi",
+          "to": "Suzhou city centre",
+          "price": "¥70-110",
+          "time": "40-60 min",
+          "note": "Book in the app; show the driver your Chinese address."
+        }
+      ]
+    },
+    {
+      "code": "SHA",
+      "name": "Shanghai Hongqiao International Airport",
+      "primary": false,
+      "note": "About 86 km; mostly domestic plus some nearby international flights.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Suzhou Station or Suzhou North",
+          "price": "¥30-60",
+          "time": "30-45 min",
+          "note": "Bullet trains go to Hongqiao Railway Station, one metro stop from the airport."
+        },
+        {
+          "mode": "Shuttle bus",
+          "to": "Suzhou city centre",
+          "price": "¥30-50",
+          "time": "60-80 min",
+          "note": "Runs from the airport; check the last departure."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Suzhou city centre",
+          "price": "¥250-350",
+          "time": "70-90 min",
+          "note": "Pricey; the train is usually better."
+        },
+        {
+          "mode": "Didi",
+          "to": "Suzhou city centre",
+          "price": "¥230-330",
+          "time": "70-90 min",
+          "note": "Long trip; agree on the route in the app."
+        }
+      ]
+    },
+    {
+      "code": "PVG",
+      "name": "Shanghai Pudong International Airport",
+      "primary": false,
+      "note": "About 120 km; the main gateway for international flights.",
+      "options": [
+        {
+          "mode": "Shuttle bus",
+          "to": "Suzhou city centre",
+          "price": "¥50-80",
+          "time": "100-120 min",
+          "note": "Direct and simple; book ahead in busy periods."
+        },
+        {
+          "mode": "Metro + train",
+          "to": "Suzhou Station",
+          "price": "¥40-70",
+          "time": "2-2.5 hr",
+          "note": "Metro line 2 to Hongqiao, then a bullet train. Slow but cheap."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Suzhou city centre",
+          "price": "¥350-450",
+          "time": "100-130 min",
+          "note": "Best for late arrivals with luggage."
+        },
+        {
+          "mode": "Didi",
+          "to": "Suzhou city centre",
+          "price": "¥330-430",
+          "time": "100-130 min",
+          "note": "Works well; confirm the pickup point in the app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Suzhou",
+      "https://en.wikivoyage.org/wiki/Suzhou"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Metro for most trips; Didi or taxi for gardens and evenings.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "9 lines; lines 1 and 4 cross downtown. Fares ¥2–6. Fast and cheap for the old town and the station."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses run 05:00–21:00 every 10–20 min. Most fares ¥1–2; exact change needed. Tourist buses Y1–Y5 link the railway station and main sights."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis flag ¥10 for 3 km, then about ¥3.2/km. Use the queue, not touts. Didi works well; few drivers speak English, so show Chinese addresses."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not worth it for a short visit. Traffic and parking in the old town are hard; use metro and taxis instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine downtown and along the canals. Bikes rent for about ¥30/day; keep bikes locked."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, fairly dry winters. Spring and autumn are the best times to visit.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and October to November",
+        "text": "Highs of 21–26°C and 23°C in October. Comfortable for gardens and canal walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (June to August)",
+        "text": "Highs of 28–32°C with 14–16 rain days. Sightsee early morning; rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June and July",
+        "text": "About 16 rain days each month. Pack a light raincoat and shoes that dry fast."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cool, not freezing",
+        "text": "January highs near 9°C and lows near 1°C. Rarely snows, but damp cold feels sharp; bring a warm layer."
+      },
+      {
+        "icon": "☂️",
+        "title": "Spring rain",
+        "text": "March and April each have about 11 rain days. An umbrella is worth carrying."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for December to February, and rain gear for summer. Comfortable shoes for garden paths."
+      }
+    ]
+  }
+}

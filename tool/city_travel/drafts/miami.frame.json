@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "South Beach sand, Ocean Drive and warm water swims."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Cuban counters, stone crab and Little Havana cafés."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Wynwood murals, Pérez Art Museum and Design District galleries."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "South Beach",
+      "range": [
+        180,
+        550
+      ],
+      "why": "Walk to the beach, Ocean Drive and Lincoln Road. Best for first-timers who want sand and nightlife on foot.",
+      "center": [
+        25.7826,
+        -80.1341
+      ]
+    },
+    {
+      "area": "Downtown/Brickell",
+      "range": [
+        150,
+        450
+      ],
+      "why": "Free Metromover, good restaurants and bars, and quick links to the airport. Cheaper than the beach.",
+      "center": [
+        25.7617,
+        -80.1918
+      ]
+    },
+    {
+      "area": "Coconut Grove",
+      "range": [
+        160,
+        400
+      ],
+      "why": "Leafy, relaxed streets with cafés and marinas. Quieter base, a short drive from the beach.",
+      "center": [
+        25.7282,
+        -80.2417
+      ]
+    },
+    {
+      "area": "Coral Gables",
+      "range": [
+        170,
+        480
+      ],
+      "why": "Pretty Mediterranean-style streets, good dining and the Biltmore. Calm and walkable in the centre.",
+      "center": [
+        25.7215,
+        -80.2684
+      ]
+    }
+  ],
+  "food": [
+    "Try Cuban food: a cubano sandwich, ropa vieja and strong cafecito. Little Havana on SW 8th Street (Calle Ocho) is the classic stop.",
+    "Stone crab claws are a Miami specialty, in season roughly October to May. Prices are high; check the day's market price.",
+    "Eat at a ventanita (walk-up window) for cheap coffee and snacks, often under $10.",
+    "Seafood and Latin dishes along the Miami River and in Brickell; book ahead on weekends.",
+    "Food halls and markets are good for groups with mixed tastes. Check opening hours on the day."
+  ],
+  "more_time": [
+    "Swap a beach afternoon for the Everglades: an airboat tour from the Tamiami Trail side, about an hour's drive each way.",
+    "Art lovers can add a day in Wynwood and the Design District for murals and galleries.",
+    "Take a day trip to the Florida Keys or Key Biscayne beaches if you want quieter sand."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.75,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.85,
+      0.9,
+      0.85
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.9
+    ]
+  },
+  "best_for": [
+    "beach",
+    "food",
+    "art"
+  ],
+  "recommend": {
+    "why": "Two nights covers the beach, Wynwood and Little Havana; add a night for the Everglades or the Keys."
+  },
+  "month_notes": [
+    "Jan: mild and dry, highs near 24°C. Good for walking and the beach on sunny days.",
+    "Feb: similar to Jan, around 25°C. Comfortable, with about 11 rain days.",
+    "Mar: warming to 26°C. Pleasant spring weather for sightseeing.",
+    "Apr: warm at 28°C. Beach days get better; rain days rise slightly.",
+    "May: hot and humid, 29°C, with more rain (about 16 days). Plan indoor breaks.",
+    "Jun: hot and wet, 30°C and about 22 rain days. Afternoon storms are common.",
+    "Jul: hottest stretch, 31°C highs and muggy. Carry water and seek shade.",
+    "Aug: hot and the wettest month, about 25 rain days. Watch for storms.",
+    "Sep: still hot and wet, 30°C, about 24 rain days. Hurricane season is active; check forecasts.",
+    "Oct: easing to 29°C, rain days drop to about 19. Still warm and humid.",
+    "Nov: nicer at 27°C with about 13 rain days. Good all-round month.",
+    "Dec: mild at 25°C and drier. Busy holiday season; book hotels early."
+  ],
+  "climate_guide": {
+    "summary": "Subtropical Miami: warm most of the year, with a wet, humid summer and a drier, milder winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to April",
+        "text": "Highs around 24–28°C with fewer rain days. Ideal for the beach, walking and outdoor sights."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: June to September",
+        "text": "About 22–25 rain days a month. Expect short, heavy afternoon storms; mornings are often clearer."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid summer",
+        "text": "Highs near 30–31°C and lows around 25–26°C. Muggy nights; plan indoor breaks midday."
+      },
+      {
+        "icon": "🌀",
+        "title": "Hurricane season",
+        "text": "Runs roughly June to November, peaking late summer and autumn. Check forecasts and travel insurance."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach days",
+        "text": "Comfortable from spring to autumn, but summer sun is strong. Use shade and sunscreen."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain jacket or umbrella for summer, sunscreen and a hat; a light layer for cooler winter evenings."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk in dense areas; use Uber or Lyft for longer trips and the beach.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Metrorail runs elevated trains to downtown, the airport and Dadeland; fare about $2.25. Metromover is free and links downtown and Brickell."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metrobus covers the county; route S runs downtown to Miami Beach."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are metered and pricey; Uber and Lyft work well."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common but traffic and parking are hard; walking is best in dense areas."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best in dense areas like South Beach, Brickell and Coconut Grove."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Tri-Rail commuter trains link Miami, Fort Lauderdale and West Palm Beach."
+      }
+    ]
+  }
+}

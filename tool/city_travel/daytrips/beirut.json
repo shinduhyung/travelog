@@ -1,0 +1,158 @@
+{
+ "city": "Beirut",
+ "trips": [
+  {
+   "place": "Baalbek",
+   "label": "",
+   "position": {
+    "id": 457897,
+    "name": "Baalbek",
+    "city": "Baalbek",
+    "lat": 34.00583,
+    "lng": 36.21806
+   },
+   "town": {
+    "name": "Baalbek",
+    "lat": 34.00583,
+    "lng": 36.21806
+   },
+   "road": {
+    "km": 87,
+    "min": 74,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 10000,
+    "currency": "LBP"
+   },
+   "modes": {},
+   "route_note": "Take a service taxi or minibus from Beirut's Cola or Dora bus area to Baalbek town, then walk or taxi about 10 minutes to the Roman temple complex; allow around two hours each way.",
+   "see": [
+    "Temple of Jupiter",
+    "Temple of Bacchus",
+    "Roman Great Court",
+    "Baalbek old town and souk"
+   ],
+   "visit": "Full day",
+   "tour_query": "Baalbek day trip from Beirut",
+   "quests": [
+    "Baalbek"
+   ],
+   "recommended": "tour",
+   "why": "A service taxi or minibus gets you to Baalbek town in about two hours each way, and a short taxi ride covers the last stretch to the temples.",
+   "stars": 5,
+   "know": [
+    "The Roman temple complex at Baalbek is a UNESCO World Heritage site and one of the most important Roman sites in the Levant.",
+    "Allow about two hours each way, so this works best as a full day."
+   ]
+  },
+  {
+   "place": "Tyre",
+   "label": "",
+   "position": {
+    "id": 463603,
+    "name": "Tyre",
+    "city": "Tyre",
+    "lat": 33.27333,
+    "lng": 35.19389
+   },
+   "town": {
+    "name": "Tyre",
+    "lat": 33.27333,
+    "lng": 35.19389
+   },
+   "road": {
+    "km": 82,
+    "min": 65,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 10000,
+    "currency": "LBP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$3",
+     "time": "2h 17m",
+     "via": "Cola Station to Tyre Roundabout",
+     "source": "https://www.rome2rio.com/s/Beirut/Tyre"
+    }
+   },
+   "route_note": "Take a service taxi or minibus from Beirut's Cola or Dora bus area to Tyre (Sour), then take a local taxi from the town centre to the ancient hippodrome and necropolis.",
+   "see": [
+    "Roman hippodrome",
+    "Al-Bass necropolis",
+    "Tyre old town and souks",
+    "Crusader-era port area"
+   ],
+   "visit": "Full day",
+   "tour_query": "Tyre day trip from Beirut",
+   "quests": [
+    "Tyre Hippodrome"
+   ],
+   "recommended": "bus",
+   "why": "The 2h 17m bus from Cola Station is workable, but you will need a local taxi from the centre to reach the hippodrome and necropolis.",
+   "stars": 4,
+   "know": [
+    "The Tyre hippodrome and necropolis are UNESCO World Heritage sites.",
+    "Plan on a local taxi for the last leg from the town centre to the ruins."
+   ]
+  },
+  {
+   "place": "Sidon",
+   "label": "",
+   "position": {
+    "id": 457893,
+    "name": "Sidon",
+    "city": "Sidon",
+    "lat": 33.56306,
+    "lng": 35.36889
+   },
+   "town": {
+    "name": "Sidon",
+    "lat": 33.55751,
+    "lng": 35.37148
+   },
+   "road": {
+    "km": 45,
+    "min": 35,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 10000,
+    "currency": "LBP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$1-$2",
+     "time": "1h 10m",
+     "via": "Cola Station to Sidon   Nejmeh Square",
+     "source": "https://www.rome2rio.com/s/Beirut/Sidon"
+    }
+   },
+   "route_note": "Take a shared minibus or service taxi from the Cola or Dora bus area in Beirut to Sidon's central bus station, then walk or taxi about 10 minutes to the sea castle and old souks.",
+   "see": [
+    "Sea Castle (Qal'at al-Bahr)",
+    "Khan al-Franj caravanserai",
+    "Old souk",
+    "Sidon Soap Museum"
+   ],
+   "visit": "Half day",
+   "tour_query": "Sidon and Tyre day trip from Beirut",
+   "quests": [
+    "Sidon Sea Castle"
+   ],
+   "recommended": "bus",
+   "why": "The 1h 10m bus from Cola Station is the fastest option, and a short walk or taxi reaches the sea castle and souks.",
+   "stars": 3,
+   "know": [
+    "The sea castle and old souks are close together in the town centre, so a half-day visit is enough.",
+    "Shared minibuses and service taxis run frequently from Cola or Dora."
+   ]
+  }
+ ],
+ "problems": [
+  "Byblos: no Omio position, dropped",
+  "Baalbek: model picked bus without data; set to tour"
+ ]
+}

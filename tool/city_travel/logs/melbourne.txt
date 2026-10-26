@@ -1,0 +1,29 @@
+$ deepseek_facts.py Melbourne
+  tokens in 4026 out 878
+Melbourne: 0 problems
+
+$ deepseek_city.py Melbourne --stage places
+Melbourne: places
+  tokens in 1225 out 4092
+
+$ deepseek_city.py Melbourne --stage frame
+Melbourne: frame
+  tokens in 2461 out 1847
+
+$ deepseek_city.py Melbourne --stage plans
+Melbourne: plans
+  plans for day
+  tokens in 2428 out 934
+  plans for 1n
+  tokens in 2429 out 1182
+  plans for 2n
+  tokens in 2429 out 1605
+  plans for 3n
+  tokens in 2434 out 2349
+  plans for 4n
+  tokens in 2429 out 1750
+
+$ merge_city.py Melbourne
+Melbourne: 25 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/melbourne.json and planner/melbourne.json
+

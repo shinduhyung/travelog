@@ -1,0 +1,249 @@
+{
+  "currency": "ARS",
+  "usd_rate": 1527.8511,
+  "intro_line": "Grand cafés, tango and late nights in South America's most European capital.",
+  "intro": "Buenos Aires rewards visitors with big-city culture, steakhouse dinners and all-night tango. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    }
+  ],
+  "areas": [
+    "Recoleta",
+    "Palermo",
+    "San Telmo",
+    "Centro / Retiro"
+  ],
+  "taxi": {
+    "flag_day": 1500,
+    "flag_airport": 2500,
+    "per_km": 1200,
+    "min_fare": 1500
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Subte (metro) is small but reaches most sights; pay with a SUBE card or contactless credit card.",
+    "Buses are cheap and cover the whole city, but routes are confusing; use a route app.",
+    "Buy a SUBE card at kioscos or Subte stations; one card can be shared by a group.",
+    "Ride apps such as Uber and Cabify work; taxis are plentiful and metered.",
+    "Driving is stressful; parking is hard, so use transit or taxis instead.",
+    "Walking is best in Palermo, Recoleta and San Telmo; ferries to Uruguay leave from Puerto Madero."
+  ],
+  "airports": [
+    {
+      "code": "EZE",
+      "name": "Ministro Pistarini International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 28 km south of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Retiro and city centre",
+          "price": "ARS 3000-6000",
+          "time": "60-90 min",
+          "note": "Cheapest option; allow extra time in traffic."
+        },
+        {
+          "mode": "Private coach / shuttle",
+          "to": "Downtown hotels",
+          "price": "ARS 8000-15000",
+          "time": "45-75 min",
+          "note": "Book ahead; door-to-door service."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "ARS 25000-40000",
+          "time": "40-70 min",
+          "note": "Use the official taxi desk inside arrivals."
+        },
+        {
+          "mode": "Uber / Cabify",
+          "to": "City centre",
+          "price": "ARS 20000-35000",
+          "time": "40-70 min",
+          "note": "Pickup point is outside the terminal; check the app."
+        }
+      ]
+    },
+    {
+      "code": "AEP",
+      "name": "Jorge Newbery Airpark",
+      "primary": false,
+      "note": "Domestic and regional airport, only about 6 km from the centre.",
+      "options": [
+        {
+          "mode": "Bus 33 or 8",
+          "to": "Retiro, Plaza de Mayo, San Telmo",
+          "price": "under ARS 2000",
+          "time": "30-50 min",
+          "note": "Needs a SUBE card or contactless credit card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "ARS 8000-15000",
+          "time": "15-30 min",
+          "note": "Short ride; insist on the meter."
+        },
+        {
+          "mode": "Uber / Cabify",
+          "to": "City centre",
+          "price": "ARS 7000-13000",
+          "time": "15-30 min",
+          "note": "Often cheaper than street taxis here."
+        }
+      ]
+    },
+    {
+      "code": "EPA",
+      "name": "El Palomar Airport",
+      "primary": false,
+      "note": "Small airport about 18 km west; limited domestic flights.",
+      "options": [
+        {
+          "mode": "Bus + train",
+          "to": "City centre",
+          "price": "under ARS 2000",
+          "time": "60-90 min",
+          "note": "Cheapest but slow; needs a SUBE card."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "ARS 15000-25000",
+          "time": "40-60 min",
+          "note": "Check the fare before you get in."
+        },
+        {
+          "mode": "Uber / Cabify",
+          "to": "City centre",
+          "price": "ARS 12000-22000",
+          "time": "40-60 min",
+          "note": "Availability can be patchy at this airport."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Teatro Colon",
+    "Casa Rosada",
+    "Recoleta Cemetery",
+    "Obelisco de Buenos Aires",
+    "Plaza de Mayo",
+    "Caminito",
+    "El Ateneo Grand Splendid",
+    "MALBA",
+    "Puente de la Mujer",
+    "La Bombonera",
+    "Asado",
+    "Biblioteca Nacional Mariano Moreno",
+    "Cabildo of Buenos Aires",
+    "Estadio Libertadores de America",
+    "Estadio Monumental",
+    "Estadio Presidente Peron",
+    "Floralis Generica",
+    "Kavanagh Building",
+    "La Boca",
+    "La Plata River",
+    "National Congress of Argentina",
+    "National Museum of Fine Arts"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Buenos Aires",
+      "https://en.wikivoyage.org/wiki/Buenos%20Aires"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    -34.6037,
+    -58.3816
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 9
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 7
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 8
+    },
+    {
+      "high": 22,
+      "low": 15,
+      "rain_days": 8
+    },
+    {
+      "high": 17,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 15,
+      "low": 8,
+      "rain_days": 7
+    },
+    {
+      "high": 14,
+      "low": 8,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 18,
+      "low": 11,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 8
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 8
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "EPA taxi ARS 15000-25000 vs tariff estimate 36520"
+  ]
+}

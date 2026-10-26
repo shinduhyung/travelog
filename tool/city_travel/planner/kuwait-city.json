@@ -1,0 +1,551 @@
+{
+  "city": "Kuwait City",
+  "checked": "October 2026",
+  "intro_line": "Gulf pearl where desert heat meets cool blue water",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Mirqab",
+        "Salmiya",
+        "Sharq",
+        "Bneid Al Gar"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Mirqab",
+        "Salmiya",
+        "Sharq",
+        "Bneid Al Gar"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Mirqab",
+        "Salmiya",
+        "Sharq",
+        "Bneid Al Gar"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Mirqab",
+        "Salmiya",
+        "Sharq",
+        "Bneid Al Gar"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Mirqab",
+        "Salmiya",
+        "Sharq",
+        "Bneid Al Gar"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 3,
+        "note": "January: cool and mild, highs near 19°C. Best month for walking the old town."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 4,
+        "note": "February: still mild, around 21°C, with a few rain days. Pack a light layer."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 4,
+        "note": "March: warming to 25°C. Pleasant for souks and the corniche."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 1,
+        "note": "April: hot at 31°C by day. Do outdoor sights in the morning."
+      },
+      {
+        "high": 38,
+        "low": 26,
+        "rain_days": 0,
+        "note": "May: 38°C and dry. Move between air-conditioned malls and museums."
+      },
+      {
+        "high": 43,
+        "low": 31,
+        "rain_days": 0,
+        "note": "June: very hot, 43°C. Keep outdoor time to early morning or after dark."
+      },
+      {
+        "high": 45,
+        "low": 33,
+        "rain_days": 0,
+        "note": "July: the hottest month, 45°C. Plan indoor days and short taxi rides."
+      },
+      {
+        "high": 44,
+        "low": 32,
+        "rain_days": 0,
+        "note": "August: still extreme at 44°C. Stay near the hotel pool or malls."
+      },
+      {
+        "high": 41,
+        "low": 29,
+        "rain_days": 0,
+        "note": "September: 41°C, slowly easing. Evenings are still hot."
+      },
+      {
+        "high": 35,
+        "low": 24,
+        "rain_days": 1,
+        "note": "October: down to 35°C. Better for the corniche after sunset."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 4,
+        "note": "November: comfortable at 26°C. Good month for markets and walks."
+      },
+      {
+        "high": 20,
+        "low": 13,
+        "rain_days": 4,
+        "note": "December: mild at 20°C with a few rain days. Bring a jacket for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.6,
+      0.85,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.9,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "family": [
+      0.95,
+      0.95,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      0.95,
+      0.95
+    ]
+  },
+  "places": {
+    "kuwait_towers": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "Sharq",
+      "popularity": 5
+    },
+    "liberation_tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Evening when lit",
+      "area": "Sharq",
+      "popularity": 3
+    },
+    "mubarakiya": {
+      "types": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Mirqab",
+      "popularity": 5
+    },
+    "al_hamra": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Dusk",
+      "area": "Sharq",
+      "popularity": 3
+    },
+    "seif_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Sharq",
+      "popularity": 3
+    },
+    "tareq_rajab": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or afternoon",
+      "area": "Salmiya",
+      "popularity": 3
+    },
+    "avenues": {
+      "types": [
+        "shopping",
+        "food",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon or evening",
+      "area": "Bneid Al Gar",
+      "popularity": 4
+    },
+    "qurain_martyrs": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Bneid Al Gar",
+      "popularity": 2
+    },
+    "failaka": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Cooler months, morning start",
+      "area": "Sharq",
+      "popularity": 2
+    },
+    "jaber_stadium": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Match evening",
+      "area": "Bneid Al Gar",
+      "popularity": 2
+    },
+    "kidzania": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Bneid Al Gar",
+      "popularity": 3
+    },
+    "entertainment_city": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Cooler months, evening",
+      "area": "Bneid Al Gar",
+      "popularity": 2
+    },
+    "qasr_al_ahmar": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Mirqab",
+      "popularity": 1
+    },
+    "fish_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Sharq",
+      "popularity": 3
+    },
+    "marina_view": {
+      "types": [
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Salmiya",
+      "popularity": 3
+    },
+    "salmiya_walk": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Salmiya",
+      "popularity": 3
+    },
+    "dhow_cruise": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Sharq",
+      "popularity": 3
+    },
+    "grand_mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Mirqab",
+      "popularity": 3
+    },
+    "shaheed_park": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Sharq",
+      "popularity": 4
+    },
+    "messilah_beach": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in cooler months",
+      "area": "Salmiya",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Grand Mosque, the souks and the corniche at a comfortable pace; add a night for museums and a beach day."
+  },
+  "airports": [
+    {
+      "code": "KWI",
+      "name": "Kuwait International Airport",
+      "primary": true,
+      "note": "Main gateway, about 17 km south of the centre.",
+      "options": [
+        {
+          "mode": "Bus 13",
+          "to": "Mirqab city centre",
+          "price": "KD 0.35",
+          "time": "50-70 min",
+          "note": "Cheapest option, but schedules are erratic."
+        },
+        {
+          "mode": "Express bus X3",
+          "to": "City centre",
+          "price": "KD 1",
+          "time": "30-45 min",
+          "note": "Runs hourly including nights; buy on board."
+        },
+        {
+          "mode": "Call taxi",
+          "to": "City centre",
+          "price": "KD 5",
+          "time": "20-35 min",
+          "note": "Order by phone or at the hotel."
+        },
+        {
+          "mode": "Airport taxi",
+          "to": "City centre",
+          "price": "KD 5-7",
+          "time": "20-35 min",
+          "note": "Fixed printed fares, but drivers may push for more."
+        },
+        {
+          "mode": "Ride app (Careem/Uber)",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-35 min",
+          "note": "Confirm pickup point at the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Kuwait City",
+      "https://en.wikivoyage.org/wiki/Kuwait%20City"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Taxis or ride apps for most trips; buses if you are saving money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "KPTC and CityBus share routes: about 300 fils in town, 350 fils longer. Bus 13 links the airport to Mirqab in about 1 hour."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis ignore meters, so agree the fare first; orange taxis start near KD 1. Careem and Uber operate; check coverage locally."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is common but traffic is heavy. Check licence rules before booking."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Fine only in cooler months, and the city is spread out. Use taxis in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: long, very hot summers, mild winters and almost no rain.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Highs of 19–26°C and cool evenings. Ideal for souks, the corniche and walking."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to September)",
+        "text": "Highs of 41–45°C. Plan indoor sights by day and go out only early or late."
+      },
+      {
+        "icon": "🌂",
+        "title": "Very little rain",
+        "text": "A few rain days between November and March. No umbrella needed most of the year."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Dusty winds possible",
+        "text": "Dust can haze the sky in spring and summer. Check conditions before desert trips."
+      },
+      {
+        "icon": "🧴",
+        "title": "Strong sun",
+        "text": "Sun is intense even in winter. Use sunscreen, a hat and water."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, a light layer for winter nights and cool indoor AC, and modest dress for mosques."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+$ deepseek_prep.py San Jose
+  tokens in 735 out 602
+San Jose: 8 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py San Jose
+  tokens in 618 out 539
+San Jose: 1 problems
+  - no Wikivoyage text: airport facts are from the model alone
+
+$ deepseek_city.py San Jose --stage places
+San Jose: places
+  tokens in 1196 out 3259
+
+$ deepseek_city.py San Jose --stage frame
+San Jose: frame
+  tokens in 2401 out 1770
+
+$ deepseek_city.py San Jose --stage plans
+San Jose: plans
+  plans for day
+  tokens in 2112 out 809
+  plans for 1n
+  tokens in 2113 out 815
+  plans for 2n
+  tokens in 2118 out 1261
+  plans for 3n
+  tokens in 2113 out 2212
+
+$ merge_city.py San Jose
+San Jose: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/san-jose.json and planner/san-jose.json
+

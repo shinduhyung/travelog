@@ -1,0 +1,137 @@
+{
+ "city": "New York City",
+ "trips": [
+  {
+   "place": "Philadelphia",
+   "label": "",
+   "position": {
+    "id": 16894798,
+    "name": "North Philadelphia, PA",
+    "city": "Philadelphia",
+    "lat": 39.99719,
+    "lng": -75.15525
+   },
+   "town": {
+    "name": "Philadelphia",
+    "lat": 39.95238,
+    "lng": -75.16362
+   },
+   "road": {
+    "km": 152,
+    "min": 126,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 340.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$20-$600",
+     "time": "1h 21m",
+     "via": "Ny Moynihan Train Hall At Penn Station to 30th Street Station",
+     "source": "https://www.rome2rio.com/s/New%20York/Philadelphia"
+    },
+    "bus": {
+     "from": "$22-$110",
+     "time": "2h",
+     "via": "New York Midtown to Philadelphia Bus Station",
+     "source": "https://www.rome2rio.com/s/New%20York/Philadelphia"
+    }
+   },
+   "route_note": "Amtrak or NJ Transit/SEPTA combo runs directly from New York Penn Station to Philadelphia's 30th Street Station in about 1.5 hours.",
+   "see": [
+    "Independence Hall",
+    "Liberty Bell",
+    "Philadelphia Museum of Art steps",
+    "Reading Terminal Market",
+    "Old City"
+   ],
+   "visit": "Full day",
+   "tour_query": "Philadelphia day trip from New York",
+   "quests": [
+    "Philadelphia City Hall",
+    "Elfreth's Alley",
+    "Barnes Foundation",
+    "Betsy Ross House",
+    "National Constitution Center",
+    "Independence Hall",
+    "Liberty Bell",
+    "Philadelphia Museum of Art"
+   ],
+   "recommended": "train",
+   "why": "Train is faster than bus or car and arrives at 30th Street Station, close to the sights.",
+   "stars": 5,
+   "know": [
+    "Independence Hall tours often require booking ahead",
+    "The Liberty Bell and Independence Hall are best early in the day",
+    "Amtrak is faster but pricier than the NJ Transit/SEPTA combo"
+   ]
+  },
+  {
+   "place": "Princeton",
+   "label": "",
+   "position": {
+    "id": 16894632,
+    "name": "Princeton Junction Station at West Windsor, NJ",
+    "city": "West Windsor Township",
+    "lat": 40.31582,
+    "lng": -74.62406
+   },
+   "town": {
+    "name": "Princeton",
+    "lat": 40.34872,
+    "lng": -74.65905
+   },
+   "road": {
+    "km": 83,
+    "min": 79,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 190.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$6-$33",
+     "time": "1h 34m",
+     "via": "New York Penn Station to Princeton Jct.",
+     "source": "https://www.rome2rio.com/s/New%20York/Princeton"
+    },
+    "bus": {
+     "from": "$17-$40",
+     "time": "1h 30m",
+     "via": "Port Authority Bus Terminal to Nassau St & Witherspoon St - Palmer Square",
+     "source": "https://www.rome2rio.com/s/New%20York/Princeton"
+    }
+   },
+   "route_note": "Take NJ Transit from New York Penn Station to Princeton Junction, then transfer to the short Princeton Branch shuttle train (the 'Dinky') into town.",
+   "see": [
+    "Princeton University campus",
+    "Nassau Hall",
+    "Princeton University Art Museum",
+    "Nassau Street shops",
+    "Morven Museum & Garden"
+   ],
+   "visit": "Full day",
+   "tour_query": "Princeton day trip from New York",
+   "quests": [
+    "Princeton University"
+   ],
+   "recommended": "train",
+   "why": "NJ Transit train plus the Dinky shuttle drops you right in town in about the same time as driving.",
+   "stars": 3,
+   "know": [
+    "The Dinky shuttle from Princeton Junction is a short ride into town",
+    "Best visited in spring or fall for the campus grounds",
+    "Buses arrive near Palmer Square, close to campus"
+   ]
+  }
+ ],
+ "problems": [
+  "Beacon: not a town in cities15000.json (US), dropped",
+  "Cold Spring: not a town in cities15000.json (US), dropped",
+  "Sleepy Hollow: not a town in cities15000.json (US), dropped"
+ ]
+}

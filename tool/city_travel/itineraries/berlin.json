@@ -1,0 +1,1609 @@
+{
+  "city": "Berlin",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Berlin rewards visitors with world-class museums, vibrant street life, and a relentless sense of reinvention. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 52.4409,
+      "west": 13.2154,
+      "north": 52.5541,
+      "east": 13.4646,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4.3,
+      "flag_airport": 4.3,
+      "per_km": 2.2,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "U-Bahn and S-Bahn cover most of the city; buy tickets from machines before boarding.",
+      "Buses and trams fill the gaps; night buses run when trains stop.",
+      "Taxis are metered; apps like Uber and Bolt operate, but local apps like Free Now are common.",
+      "Driving is stressful: heavy traffic, low-emission zone, and limited parking.",
+      "Walking and cycling are great; watch for bike lanes.",
+      "No ferries in the city centre, but river cruises run on the Spree."
+    ],
+    "sources": []
+  },
+  "places": {
+    "brandenburg_gate": {
+      "name": "Brandenburg Gate",
+      "landmark": "Brandenburg Gate",
+      "kind": "sight",
+      "lat": 52.5163,
+      "lon": 13.3777,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours · best lit after dark",
+      "tip": "Come early morning for photos without crowds. The gate is the natural start of a walk down Unter den Linden.",
+      "source": ""
+    },
+    "reichstag": {
+      "name": "Reichstag Building",
+      "landmark": "Reichstag Building",
+      "kind": "sight",
+      "lat": 52.5186,
+      "lon": 13.3761,
+      "price": 0,
+      "price_text": "Free · register online in advance",
+      "hours": "Daily roughly 08:00–24:00 · last entry around 22:00, check on the day",
+      "tip": "Book the free dome visit online weeks ahead and bring your passport. The rooftop terrace has the best free view in Berlin.",
+      "source": "https://www.bundestag.de/en/visitthebundestag"
+    },
+    "wall_memorial": {
+      "name": "Berlin Wall Memorial",
+      "landmark": "Berlin Wall Memorial",
+      "kind": "sight",
+      "lat": 52.5351,
+      "lon": 13.3904,
+      "price": 0,
+      "price_text": "Free · outdoor site and documentation centre",
+      "hours": "Outdoor site open 24 hours · visitor centre Tue–Sun, check on the day",
+      "tip": "Walk the viewing platform on Bernauer Strasse to see the preserved death strip. The documentation centre explains how the Wall worked.",
+      "source": "https://www.stiftung-berliner-mauer.de/en"
+    },
+    "checkpoint_charlie": {
+      "name": "Checkpoint Charlie",
+      "landmark": "Checkpoint Charlie",
+      "kind": "sight",
+      "lat": 52.5074,
+      "lon": 13.3904,
+      "price": 0,
+      "price_text": "Free to see · nearby museums charge entry",
+      "hours": "Street site open 24 hours",
+      "tip": "It is a small photo stop, not a full sight. Pair it with the free open-air Wall panels along the street.",
+      "source": ""
+    },
+    "pergamon": {
+      "name": "Pergamon Museum",
+      "landmark": "Pergamon Museum",
+      "kind": "museum",
+      "lat": 52.5212,
+      "lon": 13.3969,
+      "price": 19,
+      "price_text": "≈ EUR 12–19 · check current price and closures",
+      "hours": "Tue–Sun, closed Monday · check on the day for partial closures",
+      "tip": "Parts of the museum may be closed for renovation. Book a timed ticket online and check what is open before you go.",
+      "source": "https://www.smb.museum/en/museums-institutions/pergamonmuseum"
+    },
+    "berlin_cathedral": {
+      "name": "Berlin Cathedral",
+      "landmark": "Berlin Cathedral",
+      "kind": "sight",
+      "lat": 52.519,
+      "lon": 13.4011,
+      "price": 10,
+      "price_text": "≈ EUR 10 · dome climb included",
+      "hours": "Mon–Sat roughly 09:00–19:00 · Sun from 12:00, check on the day",
+      "tip": "Climb the dome for a close view over Museum Island. Dress modestly as it is a working church.",
+      "source": "https://www.berlinerdom.de/en"
+    },
+    "east_side_gallery": {
+      "name": "East Side Gallery",
+      "landmark": "East Side Gallery",
+      "kind": "sight",
+      "lat": 52.505,
+      "lon": 13.4397,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Walk the full 1.3 km along the river. Go early to avoid tour groups and get clean photos of the murals.",
+      "source": ""
+    },
+    "jewish_museum": {
+      "name": "Jewish Museum Berlin",
+      "landmark": "Jewish Museum Berlin",
+      "kind": "museum",
+      "lat": 52.502,
+      "lon": 13.3953,
+      "price": 10,
+      "price_text": "≈ EUR 8–10 · check current price",
+      "hours": "Daily roughly 10:00–18:00 · closed some holidays, check on the day",
+      "tip": "Allow time for the empty-void spaces by Libeskind as well as the exhibitions. Book online to skip the queue.",
+      "source": "https://www.jmberlin.de/en"
+    },
+    "holocaust_memorial": {
+      "name": "Memorial to the Murdered Jews of Europe",
+      "landmark": "Memorial to the Murdered Jews of Europe",
+      "kind": "sight",
+      "lat": 52.5139,
+      "lon": 13.3787,
+      "price": 0,
+      "price_text": "Free · underground information centre free",
+      "hours": "Field open 24 hours · info centre Tue–Sun, check on the day",
+      "tip": "Walk slowly between the concrete blocks and visit the free underground exhibition. Keep voices low.",
+      "source": "https://www.stiftung-denkmal.de/en"
+    },
+    "sanssouci": {
+      "name": "Sanssouci Palace",
+      "landmark": "Sanssouci Palace",
+      "kind": "sight",
+      "lat": 52.4042,
+      "lon": 13.0385,
+      "price": 14,
+      "price_text": "≈ EUR 12–14 for the palace · park free",
+      "hours": "Tue–Sun, closed Monday · timed entry, check on the day",
+      "tip": "It is in Potsdam, about 40 minutes by train from central Berlin. The terraced park is free and worth the walk.",
+      "source": "https://www.spsg.de/en"
+    },
+    "abenteuerpark_potsdam": {
+      "name": "AbenteuerPark Potsdam",
+      "landmark": "AbendteuerPark Potsdam",
+      "kind": "activity",
+      "lat": 52.4001,
+      "lon": 13.0642,
+      "price": 25,
+      "price_text": "≈ EUR 20–30 depending on course · check on the day",
+      "hours": "Seasonal, roughly spring to autumn · check on the day",
+      "tip": "A high-ropes and climbing park, good for families and older kids. Wear trainers and check opening days before you travel out.",
+      "source": ""
+    },
+    "alexanderplatz": {
+      "name": "Alexanderplatz",
+      "landmark": "Alexanderplatz",
+      "kind": "sight",
+      "lat": 52.5219,
+      "lon": 13.4132,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "A busy transport hub and meeting point rather than a beauty spot. Use it as a base for the TV Tower and Museum Island.",
+      "source": ""
+    },
+    "sealife": {
+      "name": "AquaDom & SEA LIFE Berlin",
+      "landmark": "AquaDom & SEA LIFE Berlin",
+      "kind": "activity",
+      "lat": 52.5204,
+      "lon": 13.4027,
+      "price": 20,
+      "price_text": "≈ EUR 15–22 · book online for lower price",
+      "hours": "Daily roughly 10:00–18:00 · check on the day",
+      "tip": "Good rainy-day option for families. Book online in advance to save money and avoid queues.",
+      "source": "https://www.visitsealife.com/berlin/en"
+    },
+    "berlinale": {
+      "name": "Berlin International Film Festival",
+      "landmark": "Berlin International Film Festival",
+      "kind": "show",
+      "lat": 52.5096,
+      "lon": 13.3765,
+      "price": 15,
+      "price_text": "≈ EUR 10–15 per screening · tickets sell fast",
+      "hours": "Annual, usually February · dates change each year",
+      "tip": "The Berlinale runs for about ten days in February. Buy tickets online the moment they go on sale and expect queues.",
+      "source": "https://www.berlinale.de/en"
+    },
+    "philharmonie": {
+      "name": "Berlin Philharmonie",
+      "landmark": "Berlin Philharmonie",
+      "kind": "show",
+      "lat": 52.5098,
+      "lon": 13.3702,
+      "price": 40,
+      "price_text": "≈ EUR 20–80 depending on seat · check on the day",
+      "hours": "Concert evenings · box office daytime",
+      "tip": "Book tickets well ahead for the Berlin Philharmonic. The golden concert hall itself is worth seeing.",
+      "source": "https://www.berliner-philharmoniker.de/en"
+    },
+    "tv_tower": {
+      "name": "Berlin TV Tower",
+      "landmark": "Berlin TV Tower",
+      "kind": "sight",
+      "lat": 52.5208,
+      "lon": 13.4094,
+      "price": 25,
+      "price_text": "≈ EUR 22–27 · book a timed slot online",
+      "hours": "Daily roughly 09:00–24:00 · check on the day",
+      "tip": "Book a timed ticket and go near sunset for the best light. The viewing deck is the highest in Germany.",
+      "source": "https://tv-turm.de/en"
+    },
+    "cecilienhof": {
+      "name": "Cecilienhof",
+      "landmark": "Cecilienhof",
+      "kind": "sight",
+      "lat": 52.4193,
+      "lon": 13.0708,
+      "price": 12,
+      "price_text": "≈ EUR 10–12 · park free",
+      "hours": "Tue–Sun, closed Monday · check on the day",
+      "tip": "The Potsdam palace where the 1945 Potsdam Conference was held. Combine it with a walk in the surrounding park.",
+      "source": "https://www.spsg.de/en"
+    },
+    "charlottenburg": {
+      "name": "Charlottenburg Palace",
+      "landmark": "Charlottenburg Palace",
+      "kind": "sight",
+      "lat": 52.5208,
+      "lon": 13.2956,
+      "price": 12,
+      "price_text": "≈ EUR 10–12 for the palace · gardens free",
+      "hours": "Tue–Sun, closed Monday · check on the day",
+      "tip": "The formal gardens are free and quiet. Go in summer for the best walk.",
+      "source": "https://www.spsg.de/en"
+    },
+    "dark": {
+      "name": "Dark",
+      "landmark": "Dark",
+      "kind": "activity",
+      "lat": 52.412,
+      "lon": 13.019,
+      "price": null,
+      "price_text": "Check on the day",
+      "hours": "Check on the day",
+      "tip": "Details for this listing are unclear, so confirm opening times and tickets before you plan around it.",
+      "source": ""
+    },
+    "filmpark_babelsberg": {
+      "name": "Filmpark Babelsberg",
+      "landmark": "Filmpark Babelsberg",
+      "kind": "activity",
+      "lat": 52.4001,
+      "lon": 13.0642,
+      "price": 25,
+      "price_text": "≈ EUR 20–30 · check on the day",
+      "hours": "Seasonal, roughly spring to autumn · check on the day",
+      "tip": "A film-studio theme park in Potsdam, good for families. Check the season and show times before you go.",
+      "source": "https://www.filmpark-babelsberg.de/en"
+    },
+    "free_university": {
+      "name": "Free University of Berlin",
+      "landmark": "Free University of Berlin",
+      "kind": "sight",
+      "lat": 52.4545,
+      "lon": 13.2925,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus generally open daytime",
+      "tip": "A working university, not a tourist sight. Visit only if you have a specific interest in the campus architecture.",
+      "source": ""
+    },
+    "gendarmenmarkt": {
+      "name": "Gendarmenmarkt",
+      "landmark": "Gendarmenmarkt",
+      "kind": "sight",
+      "lat": 52.5136,
+      "lon": 13.3927,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Square open 24 hours",
+      "tip": "One of Berlin's finest squares, with the concert hall between two churches. Visit in the evening when it is lit.",
+      "source": ""
+    },
+    "markthalle_neun": {
+      "name": "Markthalle Neun food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.5021,
+      "lon": 13.4319,
+      "price": 0,
+      "price_text": "Free entry · pay per stall",
+      "hours": "Market days vary · Street Food Thursday in the evening, check on the day",
+      "tip": "Come hungry on a Street Food Thursday. Bring cash as some stalls do not take cards.",
+      "source": "https://markthalleneun.de"
+    },
+    "teufelsberg": {
+      "name": "Teufelsberg viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.4975,
+      "lon": 13.2403,
+      "price": 0,
+      "price_text": "Free to climb the hill · former listening station charges entry",
+      "hours": "Hill open 24 hours · station hours vary",
+      "tip": "A man-made hill with city views and old Cold War listening towers. Wear good shoes for the climb.",
+      "source": ""
+    },
+    "spree_walk": {
+      "name": "Spree river walk at Museum Island",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.521,
+      "lon": 13.399,
+      "price": 0,
+      "price_text": "Free · boat tours cost extra",
+      "hours": "Open 24 hours",
+      "tip": "Walk the riverbank between the museums at sunset. Optional boat tours leave from nearby piers.",
+      "source": ""
+    },
+    "prenzlauer_walk": {
+      "name": "Prenzlauer Berg neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.5405,
+      "lon": 13.4244,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Wander the leafy streets around Kollwitzplatz and stop at a cafe. Good for a relaxed half-day.",
+      "source": ""
+    },
+    "tiergarten": {
+      "name": "Tiergarten park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 52.5145,
+      "lon": 13.3501,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Berlin's big central park, good for a walk or bike ride. Rent a bike near the Brandenburg Gate.",
+      "source": ""
+    },
+    "kreuzberg_food": {
+      "name": "Kreuzberg street food and nightlife walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.499,
+      "lon": 13.4185,
+      "price": 15,
+      "price_text": "≈ EUR 10–20 for food · pay per stop",
+      "hours": "Evening onwards",
+      "tip": "Graze your way along Oranienstrasse and Bergmannkiez. Bring cash and go on a weekday for fewer crowds.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day in the old centre: the big sights on Museum Island and Mitte, all walkable.",
+      "days": [
+        {
+          "title": "Museum Island and Mitte on foot",
+          "stops": [
+            {
+              "place": "brandenburg_gate",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Come early before the tour groups. Open 24 hours."
+            },
+            {
+              "place": "reichstag",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Book the free dome visit online in advance. Bring ID."
+            },
+            {
+              "place": "holocaust_memorial",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "A short walk south of the gate. The field is always open."
+            },
+            {
+              "place": "pergamon",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed ticket. Check on the day for partial closures."
+            },
+            {
+              "place": "berlin_cathedral",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Climb the dome for the view. Sundays it opens at 12:00."
+            },
+            {
+              "place": "spree_walk",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Easy riverside loop past the museums. Best near sunset."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "The Wall and Cold War in one day, from the memorial site to Checkpoint Charlie.",
+      "days": [
+        {
+          "title": "Wall, Cold War and the centre",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start at the visitor centre on Bernauer Strasse. Outdoor site always open."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Short U-Bahn ride south. Open 24 hours."
+            },
+            {
+              "place": "reichstag",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Free dome visit. Book online ahead and bring ID."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Quick photo stop. The street site is always open."
+            },
+            {
+              "place": "east_side_gallery",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "The long painted Wall stretch. Open 24 hours."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "End the day with street food and a wander in Kreuzberg."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "A light day of sights, then food and bars in Kreuzberg after dark.",
+      "days": [
+        {
+          "title": "Sights by day, Kreuzberg by night",
+          "stops": [
+            {
+              "place": "alexanderplatz",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Easy start near the TV Tower. Open 24 hours."
+            },
+            {
+              "place": "tv_tower",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Book a slot online. Roughly 09:00–24:00, check on the day."
+            },
+            {
+              "place": "gendarmenmarkt",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Handsome square, good coffee nearby."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Street Food Thursday is the big night. Check market days."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Bars and late food. Nightlife runs well past midnight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kreuzberg"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museum Island and the Reichstag in one tight day, all in Mitte.",
+      "days": [
+        {
+          "title": "Museum Island and the old centre",
+          "stops": [
+            {
+              "place": "pergamon",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed slot and check for partial closures."
+            },
+            {
+              "place": "berlin_cathedral",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "A short walk across Museum Island. Sunday opens at 12:00."
+            },
+            {
+              "place": "spree_walk",
+              "at": "13:20",
+              "minutes": 45,
+              "note": "Lunch nearby, then walk the river bank."
+            },
+            {
+              "place": "reichstag",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Register online in advance for the dome. Last entry around 22:00."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Five minutes on foot. Best lit after dark."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Wall sites and Cold War memorials, mostly on foot or by short tram ride.",
+      "days": [
+        {
+          "title": "The Wall from north to south",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start at the visitor centre on Bernauer Straße. Closed Monday."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Quick photo stop. The street site is always open."
+            },
+            {
+              "place": "holocaust_memorial",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch nearby, then the field and info centre."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "A short walk north."
+            },
+            {
+              "place": "east_side_gallery",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Take the S-Bahn east. Open 24 hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "Street food first, then bars and clubs in Kreuzberg.",
+      "days": [
+        {
+          "title": "Evening in Kreuzberg",
+          "stops": [
+            {
+              "place": "markthalle_neun",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Street Food Thursday is the big night. Check the market days."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "20:00",
+              "minutes": 150,
+              "note": "Walk the streets for bars and late food. Clubs fill up after midnight."
+            },
+            {
+              "place": "east_side_gallery",
+              "at": "23:00",
+              "minutes": 45,
+              "note": "Open 24 hours. A lit walk along the river before the clubs."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kreuzberg"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums, the Reichstag dome and Museum Island at sunset.",
+      "days": [
+        {
+          "title": "Museum Island and the old centre",
+          "stops": [
+            {
+              "place": "pergamon",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed slot online; parts of the building may be closed, check on the day."
+            },
+            {
+              "place": "berlin_cathedral",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Five minutes on foot. Climb the dome for the view."
+            },
+            {
+              "place": "spree_walk",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch near the river, then walk the bank."
+            },
+            {
+              "place": "reichstag",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Free dome visit, register online in advance with your passport details. Last entry around 22:00, check on the day."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Best lit after dark."
+            }
+          ]
+        },
+        {
+          "title": "Wall history, then Gendarmenmarkt",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Visitor centre Tue–Sun, check on the day. Start at the documentation centre."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Short U-Bahn ride. A quick photo stop; the street site is always open."
+            },
+            {
+              "place": "jewish_museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "About 15 minutes on foot. Closed some holidays, check on the day."
+            },
+            {
+              "place": "gendarmenmarkt",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "U-Bahn back to Mitte. Good in the evening light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want the Wall, the Cold War and the memorials done properly.",
+      "days": [
+        {
+          "title": "Wall and Cold War core",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Visitor centre Tue–Sun, check on the day. The outdoor site is always open."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Short U-Bahn ride. Quick stop; street site open 24 hours."
+            },
+            {
+              "place": "east_side_gallery",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "About 20 minutes by U-Bahn and walk. Walk the painted stretch along the river."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Lunch. Market days vary; Street Food Thursday is evening only, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Memorials and the Reichstag",
+          "stops": [
+            {
+              "place": "holocaust_memorial",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Info centre Tue–Sun, check on the day. The field is always open."
+            },
+            {
+              "place": "reichstag",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Free dome visit; register online in advance."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Two minutes on foot."
+            },
+            {
+              "place": "teufelsberg",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "About 40 minutes by S-Bahn and bus. Hill always open; station hours vary, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "Late risers who want street food, bars and Berlin after dark.",
+      "days": [
+        {
+          "title": "Easy start, big night in Kreuzberg",
+          "stops": [
+            {
+              "place": "tiergarten",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Slow morning, then a walk in the park."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Short walk east from the park edge."
+            },
+            {
+              "place": "spree_walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset by Museum Island."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "20:00",
+              "minutes": 150,
+              "note": "Street food, then bars. Clubs fill up after midnight; expect queues and a cover charge."
+            }
+          ]
+        },
+        {
+          "title": "Market lunch, Prenzlauer evening",
+          "stops": [
+            {
+              "place": "alexanderplatz",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Central meeting point; easy transport links."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch. Market days vary; Street Food Thursday is evening only, check on the day."
+            },
+            {
+              "place": "prenzlauer_walk",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Cafes, bars and a relaxed neighbourhood feel. Good on a weekend."
+            },
+            {
+              "place": "philharmonie",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Optional concert if tickets are available; box office open daytime."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kreuzberg"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big museums, the Reichstag dome and Museum Island at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Mitte icons",
+          "stops": [
+            {
+              "place": "brandenburg_gate",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start here to get your bearings. Open 24 hours."
+            },
+            {
+              "place": "reichstag",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Book the dome online in advance. Bring ID. Last entry around 22:00, check on the day."
+            },
+            {
+              "place": "holocaust_memorial",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Five minutes on foot from the gate. Field open 24 hours."
+            },
+            {
+              "place": "gendarmenmarkt",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Evening stroll, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum Island",
+          "stops": [
+            {
+              "place": "pergamon",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed slot. Some halls may be closed, check on the day."
+            },
+            {
+              "place": "berlin_cathedral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Climb the dome for views. Sunday opens at 12:00."
+            },
+            {
+              "place": "spree_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Easy riverside loop, good light late in the day."
+            },
+            {
+              "place": "tv_tower",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Book ahead. Sunset slots fill fast."
+            }
+          ]
+        },
+        {
+          "title": "Wall history and Kreuzberg",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Outdoor site open 24 hours. Visitor centre Tue–Sun, check on the day."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Quick photo stop. Street site open 24 hours."
+            },
+            {
+              "place": "jewish_museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed some holidays, check on the day."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Snack stop. Market days vary; Street Food Thursday is in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want the Wall, the Cold War and the memorials done properly.",
+      "days": [
+        {
+          "title": "Wall and the old border",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start at the visitor centre if it is open, then walk the preserved strip."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Short stop. Skip the paid museum if time is tight."
+            },
+            {
+              "place": "east_side_gallery",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Open 24 hours. Best light in the morning, but fine now."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Evening food and bar walk."
+            }
+          ]
+        },
+        {
+          "title": "Mitte memorials",
+          "stops": [
+            {
+              "place": "brandenburg_gate",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Quiet early. Open 24 hours."
+            },
+            {
+              "place": "reichstag",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Book the dome online. Bring ID."
+            },
+            {
+              "place": "holocaust_memorial",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Info centre Tue–Sun, check on the day."
+            },
+            {
+              "place": "jewish_museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed some holidays, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Potsdam day trip",
+          "stops": [
+            {
+              "place": "cecilienhof",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Take the S-Bahn to Potsdam, then a bus or taxi."
+            },
+            {
+              "place": "sanssouci",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "Closed Monday. Timed entry, book ahead. Gardens are free."
+            },
+            {
+              "place": "teufelsberg",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Optional on the way back. Hill open 24 hours; station hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Late risers who want street food, bars and clubs, with light sightseeing in the afternoons.",
+      "days": [
+        {
+          "title": "Land, eat, go out",
+          "stops": [
+            {
+              "place": "alexanderplatz",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Easy start near most hotels. Open 24 hours."
+            },
+            {
+              "place": "tv_tower",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Book ahead for a sunset slot."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Street Food Thursday is the big night; other days vary, check on the day."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "21:00",
+              "minutes": 150,
+              "note": "Bars first, clubs later. Many clubs are cash-only and have long queues."
+            }
+          ]
+        },
+        {
+          "title": "Wall by day, clubs by night",
+          "stops": [
+            {
+              "place": "east_side_gallery",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Morning is quieter."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick stop."
+            },
+            {
+              "place": "tiergarten",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Recovery walk in the park."
+            },
+            {
+              "place": "philharmonie",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Optional concert. Book ahead; check the programme."
+            }
+          ]
+        },
+        {
+          "title": "Prenzlauer Berg and farewell",
+          "stops": [
+            {
+              "place": "prenzlauer_walk",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Cafes and small shops. Weekend mornings are liveliest."
+            },
+            {
+              "place": "dark",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Check opening on the day."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "20:00",
+              "minutes": 150,
+              "note": "Last night out. Go easy if you have an early flight."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kreuzberg or Mitte"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Museum Island, the Reichstag and the old centre at an easy pace, with one day out to Potsdam.",
+      "days": [
+        {
+          "title": "Arrive and Museum Island",
+          "stops": [
+            {
+              "place": "spree_walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Easy first walk along the Spree to get your bearings."
+            },
+            {
+              "place": "berlin_cathedral",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Closes around 19:00 Mon–Sat. Climb the dome if the weather is clear."
+            },
+            {
+              "place": "alexanderplatz",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Good spot for a first dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museum Island and the Reichstag",
+          "stops": [
+            {
+              "place": "pergamon",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Parts of the museum may be closed for works, check on the day."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch. Market days vary, so check before you go."
+            },
+            {
+              "place": "holocaust_memorial",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Field is always open. Info centre Tue–Sun."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Two minutes from the memorial."
+            },
+            {
+              "place": "reichstag",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Book the free dome visit online in advance. Last entry around 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Potsdam day trip",
+          "stops": [
+            {
+              "place": "sanssouci",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Timed entry, book ahead. About an hour by train from central Berlin."
+            },
+            {
+              "place": "cecilienhof",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Lunch in Potsdam old town first."
+            },
+            {
+              "place": "charlottenburg",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "On the way back into the city. Closed Monday, check closing time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Kreuzberg and the Philharmonie",
+          "stops": [
+            {
+              "place": "east_side_gallery",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Open 24 hours. Morning light is best for photos."
+            },
+            {
+              "place": "jewish_museum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Roughly 10:00–18:00, closed some holidays."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Quick photo stop. Street site, always open."
+            },
+            {
+              "place": "gendarmenmarkt",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short U-Bahn ride away. Nice in the evening light."
+            },
+            {
+              "place": "philharmonie",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Book concert tickets well ahead. Box office open in the daytime."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "The Wall, Cold War sites and memorials, with Potsdam's conference palace and a spy hill.",
+      "days": [
+        {
+          "title": "Wall sites in Mitte",
+          "stops": [
+            {
+              "place": "wall_memorial",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Outdoor site always open. Visitor centre Tue–Sun, check on the day."
+            },
+            {
+              "place": "brandenburg_gate",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "About 20 minutes on foot."
+            },
+            {
+              "place": "holocaust_memorial",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Five minutes from the gate. Info centre Tue–Sun."
+            },
+            {
+              "place": "reichstag",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Free dome visit, book online in advance."
+            },
+            {
+              "place": "gendarmenmarkt",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Dinner nearby in Mitte."
+            }
+          ]
+        },
+        {
+          "title": "Checkpoint Charlie and Kreuzberg",
+          "stops": [
+            {
+              "place": "checkpoint_charlie",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Street site, always open. Go early to avoid crowds."
+            },
+            {
+              "place": "jewish_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Roughly 10:00–18:00, closed some holidays."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch. Check market days on the day."
+            },
+            {
+              "place": "east_side_gallery",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Walk the full stretch along the river."
+            }
+          ]
+        },
+        {
+          "title": "Potsdam and the Cold War",
+          "stops": [
+            {
+              "place": "cecilienhof",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Site of the 1945 Potsdam Conference. About an hour by train."
+            },
+            {
+              "place": "sanssouci",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Closed Monday. Timed entry, book ahead."
+            },
+            {
+              "place": "teufelsberg",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Former listening station on a hill. Station hours vary, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum Island and the TV Tower",
+          "stops": [
+            {
+              "place": "pergamon",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Closed Monday. Some rooms may be closed, check on the day."
+            },
+            {
+              "place": "berlin_cathedral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Mon–Sat roughly 09:00–19:00, Sun from 12:00."
+            },
+            {
+              "place": "spree_walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch by the river first."
+            },
+            {
+              "place": "tv_tower",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Book a slot online. Sunset is the best time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mitte"
+    },
+    {
+      "id": "4n-nightlife",
+      "length": "4n",
+      "style": "nightlife",
+      "nights": 4,
+      "for": "Late nights in Kreuzberg and Prenzlauer Berg, with light daytime sightseeing to match.",
+      "days": [
+        {
+          "title": "Arrive, Prenzlauer Berg evening",
+          "stops": [
+            {
+              "place": "prenzlauer_walk",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Weekend mornings are best, but any afternoon works for a first look."
+            },
+            {
+              "place": "alexanderplatz",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Short ride away. Dinner nearby."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "21:00",
+              "minutes": 150,
+              "note": "Street food then bars. Things get going late."
+            }
+          ]
+        },
+        {
+          "title": "Wall and market, then clubs",
+          "stops": [
+            {
+              "place": "east_side_gallery",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Open 24 hours. Go before the crowds."
+            },
+            {
+              "place": "markthalle_neun",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch. Street Food Thursday runs in the evening, check on the day."
+            },
+            {
+              "place": "checkpoint_charlie",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Quick stop on the way back."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "22:00",
+              "minutes": 150,
+              "note": "Late dinner and bars. Clubs in the area often have long queues, so arrive early."
+            }
+          ]
+        },
+        {
+          "title": "Recovery day and Philharmonie",
+          "stops": [
+            {
+              "place": "tiergarten",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Slow start. Walk or rent a bike."
+            },
+            {
+              "place": "gendarmenmarkt",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Coffee stop nearby."
+            },
+            {
+              "place": "philharmonie",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Book tickets ahead. A calmer evening after two late nights."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "22:30",
+              "minutes": 150,
+              "note": "Optional nightcap. Skip it if you need an early night."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a last night out",
+          "stops": [
+            {
+              "place": "pergamon",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book a timed slot."
+            },
+            {
+              "place": "spree_walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch by the river."
+            },
+            {
+              "place": "tv_tower",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Book online. Good views before dark."
+            },
+            {
+              "place": "kreuzberg_food",
+              "at": "21:00",
+              "minutes": 150,
+              "note": "Last night out. Check club door policies and dress codes on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Kreuzberg"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Reichstag and the old centre."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Wall, Cold War sites and memorials."
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "blurb": "Late clubs, bars and street food after dark."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Mitte",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Walk to Museum Island, the Reichstag and Unter den Linden. Best first-time base; central transport.",
+      "center": [
+        52.52,
+        13.405
+      ]
+    },
+    {
+      "area": "Kreuzberg",
+      "range": [
+        80,
+        190
+      ],
+      "why": "Cheaper, lively and full of food. Close to the East Side Gallery and nightlife; grittier streets.",
+      "center": [
+        52.498,
+        13.42
+      ]
+    },
+    {
+      "area": "Prenzlauer Berg",
+      "range": [
+        90,
+        210
+      ],
+      "why": "Quiet, leafy and family-friendly. Cafés and parks; a short tram or U-Bahn ride to the centre.",
+      "center": [
+        52.54,
+        13.424
+      ]
+    },
+    {
+      "area": "Charlottenburg",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Classic west Berlin near the palace, Kurfürstendamm shopping and the zoo. Calmer evenings.",
+      "center": [
+        52.505,
+        13.305
+      ]
+    }
+  ],
+  "food": [
+    "Try Berlin classics: currywurst, döner kebab and a hearty lunch at a traditional Kneipe.",
+    "Street food markets are a cheap, fun dinner. Check days and locations online before you go.",
+    "Book popular restaurants ahead, especially at weekends. Many kitchens close by about 22:00.",
+    "Vegetarian and vegan options are widespread and good value.",
+    "Tap water is safe to drink. A sit-down lunch is often cheaper than dinner."
+  ],
+  "more_time": [
+    "Swap a museum afternoon for Potsdam: take the S-Bahn out and walk the parks and palaces.",
+    "Add a Spree river cruise for a different view of the centre.",
+    "Spend a half day at a former airport park or a lake beach in summer; check transport on the day."
+  ]
+}

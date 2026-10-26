@@ -1,0 +1,24 @@
+$ deepseek_city.py Istanbul --stage frame
+Istanbul: frame
+  tokens in 2453 out 1848
+  repaired JSON
+
+$ deepseek_city.py Istanbul --stage plans
+Istanbul: plans
+  plans for day
+  tokens in 2645 out 879
+  plans for 1n
+  tokens in 2646 out 1248
+  plans for 2n
+  tokens in 2646 out 1910
+  plans for 3n
+  tokens in 2651 out 1780
+  plans for 4n
+  tokens in 2646 out 2147
+  plans for 5n
+  tokens in 2646 out 2375
+
+$ merge_city.py Istanbul
+Istanbul: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/istanbul.json and planner/istanbul.json
+

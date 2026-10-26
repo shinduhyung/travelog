@@ -1,0 +1,232 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Ancient emperors' capital, now a vast modern metropolis.",
+  "intro": "Beijing rewards visitors with imperial palaces, hutongs and world-class food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Dongcheng (Forbidden City)",
+    "Chaoyang (Sanlitun)",
+    "Xicheng (Houhai)",
+    "Wangfujing"
+  ],
+  "taxi": {
+    "flag_day": 13,
+    "flag_airport": 20,
+    "per_km": 2.5,
+    "min_fare": 13
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro is extensive, cheap (¥3-10) and reaches most sights; buy a Yikatong card or use Alipay/WeChat.",
+    "Buses are frequent but hard to navigate without Chinese; fares around ¥2.",
+    "Taxis are metered but drivers rarely speak English; show place names in Chinese characters.",
+    "DiDi works and can be paid via Alipay or WeChat; Alipay also books taxis in English.",
+    "Renting a car needs a Chinese licence and a Beijing entry permit (进京证); most visitors skip driving.",
+    "Dockless shared bikes are great for last-mile trips; use Baidu or Amap maps, not Google."
+  ],
+  "airports": [
+    {
+      "code": "PEK",
+      "name": "Beijing Capital International Airport",
+      "primary": true,
+      "note": "Main older hub, 25 km northeast of centre.",
+      "options": [
+        {
+          "mode": "Capital Airport Express",
+          "to": "Dongzhimen / Sanyuanqiao",
+          "price": "¥25",
+          "time": "25 min",
+          "note": "Trains every 10-15 min, 06:30-23:00; buy a separate subway ticket after."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city points",
+          "price": "¥25-40",
+          "time": "60-90 min",
+          "note": "Slower but useful with heavy bags."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥100-150",
+          "time": "40-60 min",
+          "note": "Use the official taxi rank; expect queues."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥100-150",
+          "time": "40-60 min",
+          "note": "Needs Alipay or WeChat Pay set up."
+        }
+      ]
+    },
+    {
+      "code": "PKX",
+      "name": "Beijing Daxing International Airport",
+      "primary": false,
+      "note": "Newer southern hub, 44 km from centre.",
+      "options": [
+        {
+          "mode": "Daxing Airport Express",
+          "to": "Caoqiao (Line 10)",
+          "price": "¥35",
+          "time": "22 min",
+          "note": "Runs every ~10 min; ticket machines may reject foreign passports, so use a cashier."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Various city points",
+          "price": "¥25-40",
+          "time": "~90 min",
+          "note": "Good if your hotel is off the express line."
+        },
+        {
+          "mode": "Beijing-Xiong'an high-speed rail",
+          "to": "Beijing West Railway Station",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Connects to the national high-speed network."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "~¥200 incl. toll",
+          "time": "60-90 min",
+          "note": "Metered; toll added."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "~¥200",
+          "time": "60-90 min",
+          "note": "Works with Alipay or WeChat Pay."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Forbidden City",
+    "Great Wall of China",
+    "Summer Palace",
+    "Temple of Heaven",
+    "Tiananmen Square",
+    "Bird's Nest",
+    "Ming Tombs",
+    "798 Art Zone",
+    "Beihai Park",
+    "Beijing Blue Zoo",
+    "Beijing Shijingshan Amusement Park",
+    "Beijing Zoo",
+    "CCTV Headquarters",
+    "Champion Pizza",
+    "China Zun",
+    "Cotti Coffee",
+    "Drum and Bell Towers",
+    "Happy Valley (Beijing)",
+    "Jingshan Park",
+    "Lama Temple",
+    "Mi Bibimbap",
+    "Mutianyu Great Wall Cable Car"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Beijing",
+      "https://en.wikivoyage.org/wiki/Beijing"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    39.9042,
+    116.4074
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 3,
+      "low": -7,
+      "rain_days": 0
+    },
+    {
+      "high": 6,
+      "low": -5,
+      "rain_days": 2
+    },
+    {
+      "high": 15,
+      "low": 1,
+      "rain_days": 3
+    },
+    {
+      "high": 22,
+      "low": 8,
+      "rain_days": 3
+    },
+    {
+      "high": 28,
+      "low": 14,
+      "rain_days": 5
+    },
+    {
+      "high": 33,
+      "low": 20,
+      "rain_days": 6
+    },
+    {
+      "high": 32,
+      "low": 23,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 12
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 6
+    },
+    {
+      "high": 19,
+      "low": 8,
+      "rain_days": 4
+    },
+    {
+      "high": 10,
+      "low": 0,
+      "rain_days": 3
+    },
+    {
+      "high": 3,
+      "low": -6,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

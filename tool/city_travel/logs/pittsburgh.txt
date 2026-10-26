@@ -1,0 +1,29 @@
+$ deepseek_facts.py Pittsburgh
+  tokens in 3924 out 699
+Pittsburgh: 1 problems
+  - PIT taxi $35-50 vs tariff estimate 94
+
+$ deepseek_city.py Pittsburgh --stage places
+Pittsburgh: places
+  tokens in 1153 out 3152
+
+$ deepseek_city.py Pittsburgh --stage frame
+Pittsburgh: frame
+  tokens in 2427 out 1904
+  repaired JSON
+
+$ deepseek_city.py Pittsburgh --stage plans
+Pittsburgh: plans
+  plans for day
+  tokens in 2084 out 839
+  plans for 1n
+  tokens in 2085 out 1125
+  plans for 2n
+  tokens in 2090 out 1810
+  plans for 3n
+  tokens in 2085 out 2171
+
+$ merge_city.py Pittsburgh
+Pittsburgh: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/pittsburgh.json and planner/pittsburgh.json
+

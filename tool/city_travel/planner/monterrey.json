@@ -1,0 +1,551 @@
+{
+  "city": "Monterrey",
+  "checked": "October 2026",
+  "intro_line": "Monterrey: steel, mountains, and the best carne asada in Mexico.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Macroplaza",
+        "Barrio Antiguo",
+        "San Pedro Garza García",
+        "Parque Fundidora"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Macroplaza",
+        "Barrio Antiguo",
+        "San Pedro Garza García",
+        "Parque Fundidora"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Macroplaza",
+        "Barrio Antiguo",
+        "San Pedro Garza García",
+        "Parque Fundidora"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Macroplaza",
+        "Barrio Antiguo",
+        "San Pedro Garza García",
+        "Parque Fundidora"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Macroplaza",
+        "Barrio Antiguo",
+        "San Pedro Garza García",
+        "Parque Fundidora"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 6,
+        "note": "January: cool mornings and evenings (9–19°C). Bring a jacket."
+      },
+      {
+        "high": 23,
+        "low": 11,
+        "rain_days": 4,
+        "note": "February: mild and dry, one of the most comfortable months."
+      },
+      {
+        "high": 26,
+        "low": 14,
+        "rain_days": 7,
+        "note": "March: warming up (14–26°C); a few more rainy days."
+      },
+      {
+        "high": 29,
+        "low": 17,
+        "rain_days": 9,
+        "note": "April: hot afternoons (up to 29°C); plan outdoor time in the morning."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 11,
+        "note": "May: hot and rainier (11 rain days). Carry a light rain layer."
+      },
+      {
+        "high": 33,
+        "low": 22,
+        "rain_days": 8,
+        "note": "June: hot (33°C highs) and humid; stay hydrated."
+      },
+      {
+        "high": 34,
+        "low": 22,
+        "rain_days": 6,
+        "note": "July: the hottest month (34°C). Do outdoor sights early or late."
+      },
+      {
+        "high": 34,
+        "low": 23,
+        "rain_days": 5,
+        "note": "August: hot and humid, similar to July. Indoor museums are a good bet."
+      },
+      {
+        "high": 30,
+        "low": 21,
+        "rain_days": 11,
+        "note": "September: still hot with the most rain days (11). Watch afternoon storms."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 8,
+        "note": "October: cooling down (18–27°C); pleasant for walking."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 7,
+        "note": "November: mild and drier; good for parks and day trips."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 5,
+        "note": "December: cool (11–21°C) with a few rainy days. Pack a warm layer."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.65,
+      0.5,
+      0.45,
+      0.45,
+      0.6,
+      0.85,
+      0.9,
+      0.8
+    ],
+    "nightlife": [
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "macroplaza": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon or early evening",
+      "area": "Macroplaza",
+      "popularity": 5
+    },
+    "bosque_magico": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend mornings",
+      "area": "San Pedro Garza García",
+      "popularity": 3
+    },
+    "estadio_bbva": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match day or a scheduled tour",
+      "area": "San Pedro Garza García",
+      "popularity": 4
+    },
+    "plaza_sesamo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekday mornings to avoid crowds",
+      "area": "Macroplaza",
+      "popularity": 3
+    },
+    "barrio_antiguo_walk": {
+      "types": [
+        "culture",
+        "history",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Barrio Antiguo",
+      "popularity": 4
+    },
+    "mercado_juarez": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or lunchtime",
+      "area": "Barrio Antiguo",
+      "popularity": 3
+    },
+    "parque_fundidora": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Parque Fundidora",
+      "popularity": 4
+    },
+    "paseo_santa_lucia": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Macroplaza",
+      "popularity": 4
+    },
+    "mirador_cerro_silla": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Clear mornings",
+      "area": "Parque Fundidora",
+      "popularity": 3
+    },
+    "museo_historia_mexicano": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; avoid the closed day",
+      "area": "Parque Fundidora",
+      "popularity": 3
+    },
+    "carne_asada_dinner": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "San Pedro Garza García",
+      "popularity": 4
+    },
+    "city_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning start",
+      "area": "Macroplaza",
+      "popularity": 3
+    },
+    "calle_morelos": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Barrio Antiguo",
+      "popularity": 2
+    },
+    "fundidora_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Parque Fundidora",
+      "popularity": 3
+    },
+    "san_pedro_calzada": {
+      "types": [
+        "nature",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "San Pedro Garza García",
+      "popularity": 2
+    },
+    "catedral": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Macroplaza",
+      "popularity": 3
+    },
+    "palacio_gobierno": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Macroplaza",
+      "popularity": 2
+    },
+    "faro_comercio": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "Macroplaza",
+      "popularity": 3
+    },
+    "parque_ecologico_chipinque": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "San Pedro Garza García",
+      "popularity": 4
+    },
+    "grutas_garcia": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Morning departure",
+      "area": "San Pedro Garza García",
+      "popularity": 3
+    },
+    "noche_barrio": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Thursday to Saturday night",
+      "area": "Barrio Antiguo",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Macroplaza museums, Barrio Antiguo and a proper cabrito dinner; add a night for a mountain day trip."
+  },
+  "airports": [
+    {
+      "code": "MTY",
+      "name": "General Mariano Escobedo International Airport",
+      "primary": true,
+      "note": "Main airport for all commercial flights, about 24 km east of the centre in Apodaca.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown / Central de Autobuses",
+          "price": "M$30-60",
+          "time": "45-60 min",
+          "note": "Cheapest option; check schedules locally."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "M$250-400",
+          "time": "30-45 min",
+          "note": "Pick-up zones are marked outside the terminals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "M$350-500",
+          "time": "30-45 min",
+          "note": "Use authorized airport taxis; agree the fare first."
+        },
+        {
+          "mode": "Car rental",
+          "to": "City and beyond",
+          "price": "M$600-1200 per day",
+          "time": "check locally",
+          "note": "Book ahead; parking downtown can be hard."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Monterrey",
+      "https://en.wikivoyage.org/wiki/Monterrey"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metrorrey for downtown hops; Uber or DiDi for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metrorrey is clean and cheap: about M$8.70 per ride. A rechargeable card costs about M$20."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cost about M$15. Pay with a 'Me Muevo' card or the Urbani app; cash is being phased out. Ecovia BRT runs fast buses on Av. Ruiz Cortines, with free transfers to Metrorrey."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and DiDi both work well. Taxis are green-and-white or yellow-and-white; insist the driver uses the meter."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible but traffic and parking are tricky. Downtown hotels often offer free parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good around the Macroplaza and Barrio Antiguo. Use rides for longer hops, especially in summer heat."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Semi-arid climate with hot summers and mild winters. Rain is modest but peaks in May and September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Mild days around 19–26°C and cool evenings. Good for walking the Macroplaza and parks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot (June to August)",
+        "text": "Highs around 33–34°C. Do outdoor sights early morning; use air-conditioned museums midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in May and September",
+        "text": "About 11 rain days in each. Showers are often short; carry a light rain jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big day–night swing in winter",
+        "text": "January lows near 9°C and highs near 19°C. Layer up."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity in summer",
+        "text": "June to September feel muggy. Drink water and take breaks."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes for summer, a warm layer for winter nights, sunscreen, and a light rain layer for May and September."
+      }
+    ]
+  }
+}

@@ -8,6 +8,7 @@ import 'dart:convert'; // jsonEncode 사용을 위해
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class VisaProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -41,7 +42,7 @@ class VisaProvider with ChangeNotifier {
     // 1-2. 서버 데이터 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('user_visas')) {
           final List<dynamic> serverList = doc.data()!['user_visas'];
           final List<String> stringList = serverList.cast<String>();
@@ -115,7 +116,7 @@ class VisaProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('user_visas')) {
           final List<dynamic> serverList = doc.data()!['user_visas'];
           final List<String> stringList = serverList.cast<String>();

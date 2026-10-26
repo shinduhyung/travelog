@@ -1,0 +1,174 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Central America's capital, ringed by volcanoes and full of energy.",
+  "intro": "San Salvador rewards visitors who look past the headlines for markets, museums and volcano views. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Zona Rosa",
+    "Colonia Escalón",
+    "Colonia San Benito",
+    "Centro Histórico"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 8,
+    "per_km": 1.5,
+    "min_fare": 5
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram; the city relies on buses.",
+    "City buses are cheap but crowded; keep valuables close.",
+    "Taxis are common; agree the fare before you get in.",
+    "Uber and InDrive work in the city and to the airport.",
+    "Driving is possible but traffic and aggressive driving make it stressful.",
+    "Walking suits Zona Rosa and San Benito; other areas are spread out."
+  ],
+  "airports": [
+    {
+      "code": "SAL",
+      "name": "El Salvador International Airport",
+      "primary": true,
+      "note": "Main gateway, about 33 km south of the centre.",
+      "options": [
+        {
+          "mode": "Public bus #138",
+          "to": "Terminal Sur bus station",
+          "price": "US$0.50-1",
+          "time": "60-90 min",
+          "note": "Stop is across the parking lot at the mall; crowded, not for big bags."
+        },
+        {
+          "mode": "Shared shuttle",
+          "to": "Major hotels in San Salvador",
+          "price": "US$10-20",
+          "time": "45-60 min",
+          "note": "Book ahead; limited departure times."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or hotel zones",
+          "price": "US$25-40",
+          "time": "45-60 min",
+          "note": "Agree the fare before you get in."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre or hotel zones",
+          "price": "US$20-35",
+          "time": "45-60 min",
+          "note": "Pickup point may be outside the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "San Salvador Cathedral",
+    "Monument to the Divine Savior of the World",
+    "Iglesia El Rosario",
+    "Joya de Ceren",
+    "Pupusa"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: San Salvador",
+      "https://en.wikivoyage.org/wiki/San%20Salvador"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    13.6929,
+    -89.2182
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 30,
+      "low": 19,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 19,
+      "rain_days": 1
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 6
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 16
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 26
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 27
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 24
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 26
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 29
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 26
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "SAL taxi US$25-40 vs tariff estimate 75"
+  ]
+}

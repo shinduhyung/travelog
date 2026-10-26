@@ -1,0 +1,63 @@
+{
+ "city": "Quito",
+ "trips": [
+  {
+   "place": "Otavalo",
+   "label": "",
+   "position": {
+    "id": 377943,
+    "name": "Otavalo",
+    "city": "Otavalo",
+    "lat": 0.23333,
+    "lng": -78.26667
+   },
+   "town": {
+    "name": "Otavalo",
+    "lat": 0.23457,
+    "lng": -78.26248
+   },
+   "road": {
+    "km": 91,
+    "min": 97,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 50.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$55",
+     "time": "1h 22m",
+     "via": "Quito Terminal Carcelén to Otavalo",
+     "source": "https://www.rome2rio.com/s/Quito/Otavalo"
+    }
+   },
+   "route_note": "Direct buses leave Quito's Terminal Carcelén north along the Panamericana to Otavalo in roughly 2 hours.",
+   "see": [
+    "Plaza de Ponchos market",
+    "Otavalo animal market",
+    "Peguche waterfall",
+    "Condor Park"
+   ],
+   "visit": "Full day",
+   "tour_query": "Otavalo market day trip from Quito",
+   "quests": [
+    "Otavalo Market"
+   ],
+   "recommended": "bus",
+   "why": "Direct buses from Terminal Carcelén reach Otavalo in about 1h 22m, fast and frequent, dropping you in town near the market.",
+   "stars": 4,
+   "know": [
+    "The famous handicraft market is biggest on Saturdays, with animal market early morning",
+    "Buses leave from Quito's Terminal Carcelén, north of the city",
+    "Market bargaining is expected; go early for the best selection"
+   ]
+  }
+ ],
+ "problems": [
+  "Latacunga: not a town in cities15000.json (EC), dropped",
+  "Mindo: no Omio position, dropped",
+  "Banos: not a town in cities15000.json (EC), dropped"
+ ]
+}

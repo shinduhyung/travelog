@@ -1,0 +1,805 @@
+{
+  "plans": [
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "One art-filled day: the Guggenheim in the morning, the Fine Arts Museum and riverside sculptures after.",
+      "days": [
+        {
+          "title": "Guggenheim and the river",
+          "stops": [
+            {
+              "place": "guggenheim",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book online to skip the queue. Start with the galleries, then walk the outside curves."
+            },
+            {
+              "place": "zubizuri",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Ten minutes on foot along the river. The white footbridge is a photo stop."
+            },
+            {
+              "place": "gran-via",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Walk up to Plaza Moyúa for a coffee and a snack. Full lunch comes later."
+            },
+            {
+              "place": "fine-arts",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Monday. Five minutes from Plaza Moyúa. Basque and Spanish masters inside."
+            },
+            {
+              "place": "doa-casilda",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Next door. A flat, easy park to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Abando"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of eating: market hall in the morning, pintxos bars at night.",
+      "days": [
+        {
+          "title": "Market, old town and pintxos",
+          "stops": [
+            {
+              "place": "ribera-market",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Weekday morning is best. Closed Sunday in most weeks. Check on the day."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Wander the seven streets. Keep room for lunch."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Ten minutes by metro or tram. Bars serve lunch until mid-afternoon."
+            },
+            {
+              "place": "azkuna",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "A short walk away. Good coffee stop and a striking building."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Back in Casco Viejo. Thursday to Saturday is liveliest. Bars are busiest 19:00–22:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Casco Viejo"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The classic first day: old town in the morning, Guggenheim and the river after.",
+      "days": [
+        {
+          "title": "Old town, then the Guggenheim",
+          "stops": [
+            {
+              "place": "catedral-santiago",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Limited hours. Check on the day."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Walk the streets and stop for a mid-morning coffee."
+            },
+            {
+              "place": "ribera-market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Weekday mornings to early afternoon. Check on the day."
+            },
+            {
+              "place": "guggenheim",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Closed Monday. Twenty minutes on foot along the river, or take the tram."
+            },
+            {
+              "place": "artxanda",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Funicular from near the Guggenheim. Sunset is the best light."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Casco Viejo"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art first: the Guggenheim and Fine Arts Museum in one compact Abando day, with river views at sunset.",
+      "days": [
+        {
+          "title": "Guggenheim, river and old-town art",
+          "stops": [
+            {
+              "place": "guggenheim",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Book online. Closed Monday. Start with the big galleries before the crowds."
+            },
+            {
+              "place": "doa-casilda",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Ten minutes on foot. A calm green break next to the museum."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "13:45",
+              "minutes": 90,
+              "note": "Lunch at the food bars. Many close mid-afternoon, so eat early."
+            },
+            {
+              "place": "zubizuri",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk the river to the white footbridge. Best light late afternoon."
+            },
+            {
+              "place": "bilbao-la-vieja",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Street art on the old-town side. Go by day."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Evening pintxos crawl in Casco Viejo. Busiest Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Abando"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Bilbao: market hall, pintxos bars and a riverside walk between meals.",
+      "days": [
+        {
+          "title": "Market, old town and pintxos",
+          "stops": [
+            {
+              "place": "ribera-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go on a weekday morning. Check opening days on the day."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Wander the seven streets. Bars fill up late."
+            },
+            {
+              "place": "catedral-santiago",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick look inside. Limited hours, check on the day."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Lunch at the food bars. Take the metro or a short taxi."
+            },
+            {
+              "place": "zubizuri",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Walk off lunch along the river."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "The main event: a pintxos crawl with txakoli wine."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Casco Viejo"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most first-timers: the old town, the river and Basque traditions in one full day.",
+      "days": [
+        {
+          "title": "Old town, river and viewpoints",
+          "stops": [
+            {
+              "place": "casco-viejo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Start with the streets around the cathedral. Flat shoes help on the cobbles."
+            },
+            {
+              "place": "catedral-santiago",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Morning visit. Hours are limited, check on the day."
+            },
+            {
+              "place": "ribera-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Weekday mornings to early afternoon. Check on the day."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Lunch, then a short metro ride to Abando."
+            },
+            {
+              "place": "guggenheim",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Closed Monday. The building is free to admire from outside."
+            },
+            {
+              "place": "artxanda",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Funicular up for sunset over the city. Check the last ride down."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Casco Viejo"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Two days of art: the Guggenheim, the Fine Arts Museum and riverside walks between them.",
+      "days": [
+        {
+          "title": "Arrive, Guggenheim and the river",
+          "stops": [
+            {
+              "place": "guggenheim",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book online to skip the queue. The building itself is worth a slow walk around outside."
+            },
+            {
+              "place": "zubizuri",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Short walk along the river from the museum. Good light late in the day."
+            },
+            {
+              "place": "gran-via",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Stroll up to Plaza Moyúa and back. Always open."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Dinner at the food bars. Many close on Sunday evening, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Fine Arts, Azkuna Zentroa and street art",
+          "stops": [
+            {
+              "place": "fine-arts",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. A short walk from the Guggenheim."
+            },
+            {
+              "place": "doa-casilda",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Next door to the museum. A calm green break."
+            },
+            {
+              "place": "azkuna",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "The columns inside are the draw. Handy if it rains."
+            },
+            {
+              "place": "bilbao-la-vieja",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Street art on the old town side of the river. Go by day."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "End with pintxos in the old town. Bars get busy after 20:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Abando"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Pintxos, market halls and txakoli: eat your way through the old town and Indautxu.",
+      "days": [
+        {
+          "title": "Arrive, market and first pintxos",
+          "stops": [
+            {
+              "place": "ribera-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Go in the morning to early afternoon. Closed Sunday, so check on the day."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch pintxos around the plaza. Order a few at a time and keep the napkin."
+            },
+            {
+              "place": "catedral-santiago",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Quick look inside. Limited hours, so check on the day."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening crawl. Best Thursday to Saturday. Go early to get a spot at the bar."
+            }
+          ]
+        },
+        {
+          "title": "Indautxu food bars and the river",
+          "stops": [
+            {
+              "place": "mercado-indautxu",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch at the food bars. Many close on Sunday evening, so check on the day."
+            },
+            {
+              "place": "azkuna",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Walk off lunch under the columns."
+            },
+            {
+              "place": "deusto-riverside",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Flat riverside path. Good in the late afternoon."
+            },
+            {
+              "place": "gran-via",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Window shopping on the way back to the centre."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Last pintxos round. Try txakoli, the local white wine."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Casco Viejo"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most first-timers: the old town, the Guggenheim and the river, plus a viewpoint.",
+      "days": [
+        {
+          "title": "Arrive, old town and the river",
+          "stops": [
+            {
+              "place": "casco-viejo",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Seven streets, the cathedral and the plaza. Easy to wander."
+            },
+            {
+              "place": "ribera-market",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch upstairs. Closed Sunday, so check on the day."
+            },
+            {
+              "place": "bilbao-la-vieja",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Street art across the river. Go by day."
+            },
+            {
+              "place": "zubizuri",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Cross the footbridge at sunset."
+            },
+            {
+              "place": "gran-via",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening stroll to Plaza Moyúa."
+            }
+          ]
+        },
+        {
+          "title": "Guggenheim, Artxanda and pintxos",
+          "stops": [
+            {
+              "place": "guggenheim",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book online. Morning is quieter inside."
+            },
+            {
+              "place": "fine-arts",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short walk away. Closed Monday."
+            },
+            {
+              "place": "artxanda",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Funicular up for the city view. Long hours, but check on the day."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Evening crawl in the old town. Best Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Abando"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Three days of galleries, river walks and street art, with the Guggenheim as the centrepiece.",
+      "days": [
+        {
+          "title": "Arrive, riverside and the Guggenheim",
+          "stops": [
+            {
+              "place": "guggenheim",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Closed Monday. Book online to skip the queue."
+            },
+            {
+              "place": "zubizuri",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Five minutes on foot along the river. Good at sunset."
+            },
+            {
+              "place": "gran-via",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Walk up to Plaza Moyúa and back to your hotel."
+            }
+          ]
+        },
+        {
+          "title": "Fine arts and the old town",
+          "stops": [
+            {
+              "place": "fine-arts",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Next to Doña Casilda park."
+            },
+            {
+              "place": "doa-casilda",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Short loop through the park."
+            },
+            {
+              "place": "ribera-market",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Weekday mornings to early afternoon. Lunch at the stalls."
+            },
+            {
+              "place": "catedral-santiago",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Limited hours, check on the day."
+            },
+            {
+              "place": "bilbao-la-vieja",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Street art walk. Go by day."
+            }
+          ]
+        },
+        {
+          "title": "Funicular, Azkuna and pintxos",
+          "stops": [
+            {
+              "place": "artxanda",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Funicular up, walk down if the weather is good."
+            },
+            {
+              "place": "azkuna",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Rainy-day backup. Columns by Philippe Starck."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "13:45",
+              "minutes": 90,
+              "note": "Lunch in the food bars."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Self-guided crawl in Casco Viejo. Busiest Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Abando"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Markets, pintxos bars and txakoli, with short art and river breaks between meals.",
+      "days": [
+        {
+          "title": "Market morning and old town evening",
+          "stops": [
+            {
+              "place": "ribera-market",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Weekday morning is calmest. Closed Sunday."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Wander the seven streets before lunch."
+            },
+            {
+              "place": "catedral-santiago",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick look, limited hours."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:00",
+              "minutes": 150,
+              "note": "Two or three bars, one pintxo each. Pay as you go."
+            }
+          ]
+        },
+        {
+          "title": "Indautxu lunch and the Guggenheim",
+          "stops": [
+            {
+              "place": "guggenheim",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Closed Monday. Morning is quieter."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch at the food bars."
+            },
+            {
+              "place": "azkuna",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Coffee stop indoors."
+            },
+            {
+              "place": "gran-via",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Late-afternoon stroll."
+            }
+          ]
+        },
+        {
+          "title": "River, bridge and a last meal",
+          "stops": [
+            {
+              "place": "deusto-riverside",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Flat walk along the water."
+            },
+            {
+              "place": "puente-colgante",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Check on the day for crossing times."
+            },
+            {
+              "place": "bizkaia-bridge-tour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal boat tour, daytime departures. Book ahead."
+            },
+            {
+              "place": "casco-viejo",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Final pintxos dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Casco Viejo"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "The old town, the river and Basque traditions, with the Guggenheim and a day trip.",
+      "days": [
+        {
+          "title": "Old town and river",
+          "stops": [
+            {
+              "place": "casco-viejo",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Start at the cathedral square."
+            },
+            {
+              "place": "catedral-santiago",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Limited hours, check on the day."
+            },
+            {
+              "place": "ribera-market",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at the market. Closed Sunday."
+            },
+            {
+              "place": "zubizuri",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Walk the river to the footbridge."
+            },
+            {
+              "place": "guggenheim",
+              "at": "16:00",
+              "minutes": 150,
+              "note": "Closed Monday. Sunset outside is free."
+            }
+          ]
+        },
+        {
+          "title": "Bridge, stadium and pintxos",
+          "stops": [
+            {
+              "place": "puente-colgante",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning is cooler. Check on the day."
+            },
+            {
+              "place": "san-mames",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Tours and matches only, book ahead."
+            },
+            {
+              "place": "mercado-indautxu",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch."
+            },
+            {
+              "place": "arriaga",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening show if something is on. Check the box office."
+            }
+          ]
+        },
+        {
+          "title": "Day trip and viewpoint",
+          "stops": [
+            {
+              "place": "gaztelugatxe",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Bus or car from Deusto. Book the walkway slot online."
+            },
+            {
+              "place": "artxanda",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Funicular up for the city view."
+            },
+            {
+              "place": "pintxos-tour",
+              "at": "19:30",
+              "minutes": 150,
+              "note": "Last-night crawl in Casco Viejo."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Abando"
+    }
+  ]
+}

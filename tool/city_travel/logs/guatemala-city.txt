@@ -1,0 +1,33 @@
+$ deepseek_prep.py Guatemala City
+  tokens in 786 out 427
+Guatemala City: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Guatemala City
+  tokens in 2859 out 616
+Guatemala City: 1 problems
+  - GUA taxi Q90-100 vs tariff estimate 184
+
+$ deepseek_city.py Guatemala City --stage places
+Guatemala City: places
+  tokens in 1243 out 3200
+
+$ deepseek_city.py Guatemala City --stage frame
+Guatemala City: frame
+  tokens in 2430 out 1882
+  repaired JSON
+
+$ deepseek_city.py Guatemala City --stage plans
+Guatemala City: plans
+  plans for day
+  tokens in 2165 out 839
+  plans for 1n
+  tokens in 2166 out 856
+  plans for 2n
+  tokens in 2171 out 1140
+  plans for 3n
+  tokens in 2166 out 1476
+
+$ merge_city.py Guatemala City
+Guatemala City: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/guatemala-city.json and planner/guatemala-city.json
+

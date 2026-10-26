@@ -1,0 +1,569 @@
+{
+  "city": "Tel Aviv",
+  "checked": "October 2026",
+  "intro_line": "Tel Aviv: Mediterranean beaches, Bauhaus streets, and nonstop energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Tel Aviv Center",
+        "Neve Tzedek",
+        "Jaffa",
+        "Port area"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Tel Aviv Center",
+        "Neve Tzedek",
+        "Jaffa",
+        "Port area"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Tel Aviv Center",
+        "Neve Tzedek",
+        "Jaffa",
+        "Port area"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Tel Aviv Center",
+        "Neve Tzedek",
+        "Jaffa",
+        "Port area"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Tel Aviv Center",
+        "Neve Tzedek",
+        "Jaffa",
+        "Port area"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 12,
+        "note": "January: cool and rainy, highs near 17°C. Pack a jacket and an umbrella."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 9,
+        "note": "February: still cool and wet, around 18°C. Good for museums and food."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 8,
+        "note": "March: warming to 20°C, fewer rainy days. Pleasant for walking."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 3,
+        "note": "April: mild and mostly dry, highs near 23°C. Great beach-walk weather."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 2,
+        "note": "May: warm at 27°C and almost no rain. Beach season starts."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 1,
+        "note": "June: hot and dry, around 29°C. Swim early or late."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 0,
+        "note": "July: hot at 31°C with warm nights. Plan shade at midday."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 0,
+        "note": "August: hottest month, 32°C. Drink water and use sunscreen."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 0,
+        "note": "September: still hot at 31°C but the sea stays warm. Few crowds."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 4,
+        "note": "October: cooling to 28°C with a few showers. Very comfortable."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 7,
+        "note": "November: mild at 24°C, more rain days. Bring a light rain layer."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 10,
+        "note": "December: cool and wet, around 20°C. Quiet season, lower prices."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "beach": [
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.5,
+      0.35
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "old-jaffa": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Jaffa",
+      "popularity": 5
+    },
+    "tel-aviv-beach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning swim or late afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 5
+    },
+    "carmel-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Friday morning",
+      "area": "Tel Aviv Center",
+      "popularity": 5
+    },
+    "falafel": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Lunch",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "luna-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 3
+    },
+    "superland": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday in summer",
+      "area": "Tel Aviv Center",
+      "popularity": 2
+    },
+    "neve-tzedek-walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Neve Tzedek",
+      "popularity": 4
+    },
+    "sarona-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or hot afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "hatachana": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Neve Tzedek",
+      "popularity": 3
+    },
+    "jaffa-port": {
+      "types": [
+        "history",
+        "beach"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Jaffa",
+      "popularity": 4
+    },
+    "tel-aviv-port": {
+      "types": [
+        "food",
+        "beach",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Port area",
+      "popularity": 4
+    },
+    "rothschild-blvd": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "independence-hall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Tel Aviv Center",
+      "popularity": 3
+    },
+    "tel-aviv-museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Hot afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "bike-rental": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "jaffa-flea-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Friday morning",
+      "area": "Jaffa",
+      "popularity": 4
+    },
+    "gordon-beach": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "habima-square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Tel Aviv Center",
+      "popularity": 3
+    },
+    "carmel-food-tour": {
+      "types": [
+        "food"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Tel Aviv Center",
+      "popularity": 3
+    },
+    "jaffa-old-port-tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Jaffa",
+      "popularity": 3
+    },
+    "beach-sunset": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Tel Aviv Center",
+      "popularity": 4
+    },
+    "dizengoff-square": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Tel Aviv Center",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights lets you swim, eat well and still see Jaffa and the old port without rushing."
+  },
+  "airports": [
+    {
+      "code": "TLV",
+      "name": "Ben Gurion International Airport",
+      "primary": true,
+      "note": "Main international gateway, 13 km southeast of the city.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Tel Aviv stations (HaHagana, HaShalom, Savidor)",
+          "price": "₪15-20",
+          "time": "15-20 min",
+          "note": "Direct trains; buy ticket or use Rav-Kav."
+        },
+        {
+          "mode": "Bus 445",
+          "to": "Tel Aviv hotels area",
+          "price": "₪10-15",
+          "time": "30-50 min",
+          "note": "Runs hourly, 24/6."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City center",
+          "price": "₪150-200",
+          "time": "15-25 min",
+          "note": "Use meter; shared taxis can be cheaper."
+        },
+        {
+          "mode": "Ride app (Gett/Uber)",
+          "to": "City center",
+          "price": "₪120-180",
+          "time": "15-25 min",
+          "note": "Compare prices before booking."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Tel Aviv",
+      "https://en.wikivoyage.org/wiki/Tel%20Aviv"
+    ]
+  ],
+  "best_for": [
+    "beach",
+    "food",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Walk and bike the center and promenade; use the light rail and buses for longer trips.",
+    "modes": [
+      {
+        "mode": "Light rail",
+        "has": true,
+        "best": true,
+        "text": "Since 2023 it links Jaffa, Neve Tzedek, Rothschild Blvd, Sarona and Tel Aviv Center. Handy for the main sights."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent and cheap. Use a Rav-Kav smart card; no cash on buses."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis; Gett and Uber work in Tel Aviv. Good for late nights and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but traffic is heavy and parking is hard to find. Skip it for city days."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Great along the beach promenade and in the center. The best way to see the city."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Biking is great along the promenade and in the center. Rent by the hour or day."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries to Tel Aviv. Private boats can dock at the marina."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, rainy winters. The beach season runs roughly May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June and October",
+        "text": "Warm days around 23–29°C with little rain. Ideal for the beach and walking the city."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (July to September)",
+        "text": "Highs of 31–32°C and warm nights. Swim early, rest in the shade at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winter (December to February)",
+        "text": "Around 10–12 rain days a month and highs of 17–20°C. Pack a jacket and umbrella."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is seasonal",
+        "text": "Almost none from June to September. Most rain falls between November and March."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea and beach",
+        "text": "The sea is warmest in late summer. Check flags and lifeguard hours on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, hat and sunscreen for summer; a light jacket and rain layer for winter."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+$ deepseek_prep.py Belgrade
+  tokens in 708 out 546
+Belgrade: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Belgrade
+  tokens in 4233 out 702
+Belgrade: 0 problems
+
+$ deepseek_city.py Belgrade --stage places
+Belgrade: places
+  tokens in 1177 out 3510
+
+$ deepseek_city.py Belgrade --stage frame
+Belgrade: frame
+  tokens in 2449 out 1927
+  repaired JSON
+
+$ deepseek_city.py Belgrade --stage plans
+Belgrade: plans
+  plans for day
+  tokens in 2351 out 809
+  plans for 1n
+  tokens in 2352 out 1027
+  plans for 2n
+  tokens in 2357 out 1545
+  plans for 3n
+  tokens in 2352 out 1839
+
+$ merge_city.py Belgrade
+Belgrade: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/belgrade.json and planner/belgrade.json
+

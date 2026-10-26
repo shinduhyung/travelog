@@ -1,0 +1,29 @@
+$ deepseek_facts.py Perth
+  tokens in 3932 out 604
+Perth: 0 problems
+
+$ deepseek_city.py Perth --stage places
+Perth: places
+  tokens in 1191 out 3378
+
+$ deepseek_city.py Perth --stage frame
+Perth: frame
+  tokens in 2440 out 1807
+
+$ deepseek_city.py Perth --stage plans
+Perth: plans
+  plans for day
+  tokens in 2185 out 662
+  plans for 1n
+  tokens in 2186 out 983
+  plans for 2n
+  tokens in 2186 out 1148
+  plans for 3n
+  tokens in 2191 out 1865
+  plans for 4n
+  tokens in 2186 out 1976
+
+$ merge_city.py Perth
+Perth: 20 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/perth.json and planner/perth.json
+

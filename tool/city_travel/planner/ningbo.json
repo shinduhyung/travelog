@@ -1,0 +1,601 @@
+{
+  "city": "Ningbo",
+  "checked": "October 2026",
+  "intro_line": "A historic port city where old canals meet modern skylines.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Tianyi Square",
+        "Old Bund",
+        "Yinzhou",
+        "Haishu"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Tianyi Square",
+        "Old Bund",
+        "Yinzhou",
+        "Haishu"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Tianyi Square",
+        "Old Bund",
+        "Yinzhou",
+        "Haishu"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Tianyi Square",
+        "Old Bund",
+        "Yinzhou",
+        "Haishu"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Tianyi Square",
+        "Old Bund",
+        "Yinzhou",
+        "Haishu"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 11°C, lows near 3°C. Pack a warm coat."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 10,
+        "note": "Still cold, highs around 12°C. Few crowds."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 14,
+        "note": "Milder at 17°C but wet: about 14 rain days."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 12,
+        "note": "Pleasant spring: 21°C highs, 12 rain days. Good walking weather."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 14,
+        "note": "Warm and green at 25°C; carry an umbrella (14 rain days)."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 19,
+        "note": "Warm and wet: 28°C highs, 19 rain days, the wettest month."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 17,
+        "note": "Hot and humid: 33°C highs, 26°C lows. Plan indoor sights at midday."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 15,
+        "note": "As hot as July, 33°C highs. Stay hydrated."
+      },
+      {
+        "high": 28,
+        "low": 22,
+        "rain_days": 15,
+        "note": "Still warm at 28°C but rain eases to 15 days."
+      },
+      {
+        "high": 23,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Best month: 23°C highs, only 10 rain days. Ideal for walking."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 12,
+        "note": "Mild at 19°C with 12 rain days. Light layers."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 8,
+        "note": "Cool at 12°C highs, 8 rain days. Quiet and cheap."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.95,
+      0.7,
+      0.5,
+      0.5,
+      0.8,
+      1,
+      0.95,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.6,
+      0.85,
+      1,
+      0.95,
+      0.9
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.8,
+      1,
+      0.95,
+      0.7,
+      0.4,
+      0.4,
+      0.75,
+      1,
+      0.85,
+      0.55
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.95,
+      0.75,
+      0.55,
+      0.55,
+      0.8,
+      1,
+      0.95,
+      0.85
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.8,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "tianyi_pavilion": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, Tue–Sun",
+      "area": "Haishu",
+      "popularity": 5
+    },
+    "old_bund": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Old Bund",
+      "popularity": 5
+    },
+    "romon_upark": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday afternoon",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "ningbo_museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Yinzhou",
+      "popularity": 4
+    },
+    "yuehu_park": {
+      "types": [
+        "nature",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Haishu",
+      "popularity": 4
+    },
+    "nantang_old_street": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Haishu",
+      "popularity": 4
+    },
+    "tianyi_square": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Tianyi Square",
+      "popularity": 3
+    },
+    "laowaitan_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Dinner",
+      "area": "Old Bund",
+      "popularity": 4
+    },
+    "sanjiangkou_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Old Bund",
+      "popularity": 4
+    },
+    "baoguo_temple": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning, spring or autumn",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "asoka_temple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "tiantong_temple": {
+      "types": [
+        "culture",
+        "nature",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning, autumn",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "dongqian_lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Spring and autumn mornings",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "xikou_day_trip": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Spring or autumn, start early",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "qiantong_old_town": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "ningbo_seafood": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Haishu",
+      "popularity": 4
+    },
+    "tangyuan_snack": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Haishu",
+      "popularity": 3
+    },
+    "zhaobao_mountain": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Yinzhou",
+      "popularity": 3
+    },
+    "laowaitan_walk": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Old Bund",
+      "popularity": 4
+    },
+    "gulou_neighbourhood": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Haishu",
+      "popularity": 3
+    },
+    "yongjiang_walk": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old Bund",
+      "popularity": 3
+    },
+    "tianfeng_pagoda": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any daylight hour",
+      "area": "Tianyi Square",
+      "popularity": 2
+    },
+    "ningbo_tea_house": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Haishu",
+      "popularity": 2
+    },
+    "laowaitan_night": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Night",
+      "area": "Old Bund",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old library, the Bund and a good seafood meal; add a night for a trip out of town."
+  },
+  "airports": [
+    {
+      "code": "NGB",
+      "name": "Ningbo Lishe International Airport",
+      "primary": true,
+      "note": "Main airport, about 10 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Metro",
+          "to": "Downtown Ningbo",
+          "price": "¥2-6",
+          "time": "25-35 min",
+          "note": "Free shuttle links the terminal to the metro station every 8 min."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "Ningbo Railway Station",
+          "price": "¥10",
+          "time": "30-40 min",
+          "note": "Runs hourly until 18:20."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Ningbo",
+          "price": "¥45-60",
+          "time": "20-30 min",
+          "note": "About 11 km by road."
+        },
+        {
+          "mode": "Didi",
+          "to": "Downtown Ningbo",
+          "price": "¥40-55",
+          "time": "20-30 min",
+          "note": "Use the app's designated pickup zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Ningbo",
+      "https://en.wikivoyage.org/wiki/Ningbo"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro for most trips; Didi or Amap for short hops and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1–5 cover the city. Fares are low and stations are signed in English."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost ¥1, or ¥2 with air conditioning. Cheap but slower than the metro."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥10 for the first 3 km plus ¥2 fuel tax. Didi and Amap work well; Uber does not operate in China."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not advised for short visits; traffic is dense downtown. Use metro and taxis instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good around Tianyi Square, the Old Bund and old streets. Use metro or a taxi for longer hops."
+      },
+      {
+        "mode": "Bike rental",
+        "has": true,
+        "text": "Bikes can be rented outside downtown; motorbikes are banned in the centre."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, drier winters. Spring and autumn are the best times to visit.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April, May and October",
+        "text": "Highs of 21–25°C with manageable rain. Good for walking the old streets and the Bund."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (July–August)",
+        "text": "Highs near 33°C and lows near 26°C. Do outdoor sights early or late; rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in June",
+        "text": "About 19 rain days in June and 14 in May. Bring a compact umbrella and waterproof shoes."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters (December–February)",
+        "text": "Highs of 11–12°C and lows of 3–4°C. A warm coat and layers are needed, especially by the river."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid most of the year",
+        "text": "Summers feel sticky. Light, breathable clothes help; indoor air-conditioning can feel cold."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a rain jacket, sunscreen and a hat for summer, and a warm coat for winter."
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+ "city": "Cairo",
+ "trips": [
+  {
+   "place": "Alexandria",
+   "label": "",
+   "position": {
+    "id": 378348,
+    "name": "Alexandria",
+    "city": "Alexandria",
+    "lat": 31.21564,
+    "lng": 29.95527
+   },
+   "town": {
+    "name": "Alexandria",
+    "lat": 31.20176,
+    "lng": 29.91582
+   },
+   "road": {
+    "km": 220,
+    "min": 144,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 2230,
+    "currency": "EGP"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$35",
+     "time": "3h 50m",
+     "via": "Cairo to Alexandria",
+     "source": "https://www.rome2rio.com/s/Cairo/Alexandria"
+    },
+    "bus": {
+     "from": "$4-$7",
+     "time": "3h",
+     "via": "Tahrir to Alexandria Moharam Bek",
+     "source": "https://www.rome2rio.com/s/Cairo/Alexandria"
+    }
+   },
+   "route_note": "Take a direct train from Cairo Ramses station to Alexandria (Misr) station, about 2 to 2.5 hours, then use a taxi or the tram to reach the sights.",
+   "see": [
+    "Qaitbay Citadel",
+    "Bibliotheca Alexandrina",
+    "Corniche waterfront",
+    "Kom El Shoqafa catacombs",
+    "Montaza Palace gardens"
+   ],
+   "visit": "Full day",
+   "tour_query": "Alexandria day trip from Cairo",
+   "quests": [
+    "Bibliotheca Alexandrina",
+    "Citadel of Qaitbay",
+    "Pompey's Pillar",
+    "Catacombs of Kom El Shoqafa",
+    "St. Mark's Coptic Orthodox Cathedral",
+    "Serapeum of Alexandria",
+    "Fantazy Land"
+   ],
+   "recommended": "bus",
+   "why": "The bus takes about 3 hours and drops you at Moharam Bek in the city centre, which is faster than the 3h 50m train.",
+   "stars": 4,
+   "know": [
+    "Alexandria is a seaside city on the Mediterranean, so plan time for the waterfront and the Qaitbay Citadel.",
+    "Once in the city, a taxi or the tram can take you between the main sights."
+   ]
+  }
+ ],
+ "problems": [
+  "Fayoum: no Omio position, dropped",
+  "Wadi El Natrun: no Omio position, dropped"
+ ]
+}

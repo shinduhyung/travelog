@@ -1,0 +1,174 @@
+{
+  "currency": "PKR",
+  "usd_rate": 276.9862,
+  "intro_line": "Karachi: Pakistan's restless megacity by the Arabian Sea.",
+  "intro": "Karachi rewards visitors with Mughal-era sites, seafood, beaches and bazaars. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Saddar",
+    "Clifton",
+    "Defence (DHA)",
+    "Gulshan-e-Iqbal"
+  ],
+  "taxi": {
+    "flag_day": 300,
+    "flag_airport": 500,
+    "per_km": 100,
+    "min_fare": 300
+  },
+  "road_factor": 1.4,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro or tram; a bus rapid transit (BRT) line runs on some corridors.",
+    "City buses and minibuses are cheap but crowded and confusing for newcomers.",
+    "Ride apps Careem and InDrive work widely; Uber coverage is limited.",
+    "Metered taxis are rare; agree the fare before you ride.",
+    "Driving yourself is stressful; hiring a car with driver is common.",
+    "Walking is hard outside a few areas; no ferry service for visitors."
+  ],
+  "airports": [
+    {
+      "code": "KHI",
+      "name": "Jinnah International Airport",
+      "primary": true,
+      "note": "Pakistan's busiest airport, about 17 km east of the centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Saddar and city centre",
+          "price": "PKR 50-100",
+          "time": "45-70 min",
+          "note": "Cheapest but slow and crowded; check locally for stops."
+        },
+        {
+          "mode": "Ride app (Careem/InDrive)",
+          "to": "Clifton or Saddar",
+          "price": "PKR 800-1,500",
+          "time": "30-50 min",
+          "note": "Book from the app; confirm the car plate."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre hotels",
+          "price": "PKR 1,000-2,000",
+          "time": "30-50 min",
+          "note": "Agree the fare first; airport taxis often quote high."
+        },
+        {
+          "mode": "Hotel transfer",
+          "to": "Your hotel",
+          "price": "PKR 1,500-3,000",
+          "time": "30-50 min",
+          "note": "Safest for late arrivals; book ahead."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Empress Market",
+    "Biryani",
+    "Go Aish",
+    "Indus River",
+    "Sindbad Amusement Parks"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Karachi",
+      "https://en.wikivoyage.org/wiki/Karachi"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    24.8607,
+    67.0011
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 1
+    },
+    {
+      "high": 27,
+      "low": 17,
+      "rain_days": 1
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 1
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 0
+    },
+    {
+      "high": 34,
+      "low": 27,
+      "rain_days": 0
+    },
+    {
+      "high": 33,
+      "low": 28,
+      "rain_days": 4
+    },
+    {
+      "high": 32,
+      "low": 28,
+      "rain_days": 8
+    },
+    {
+      "high": 30,
+      "low": 27,
+      "rain_days": 8
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 1
+    },
+    {
+      "high": 33,
+      "low": 24,
+      "rain_days": 1
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 0
+    },
+    {
+      "high": 26,
+      "low": 16,
+      "rain_days": 0
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "KHI taxi PKR 1,000-2,000 vs tariff estimate 2880"
+  ]
+}

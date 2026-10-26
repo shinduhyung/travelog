@@ -1,0 +1,1242 @@
+{
+  "city": "Wellington",
+  "checked": "October 2026",
+  "currency": "NZD",
+  "usd_rate": 1.7596,
+  "intro": "Wellington packs museums, cafes and a dramatic waterfront into a walkable core. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -41.3766,
+      "west": 174.5983,
+      "north": -41.2009,
+      "east": 174.8159,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 4,
+      "per_km": 3,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Buses and suburban trains run under Metlink; pay with Snapper card or contactless card.",
+      "Cash single bus fares are about $3-6 by zone; Snapper and contactless cost less.",
+      "Day passes cost about $13-30 depending on zones; after 9AM weekdays and all day weekends.",
+      "Uber and DiDi work in Wellington; taxis include Combined, Corporate, Green and Kiwi.",
+      "The central city is compact and best on foot; the Golden Mile links the station to Courtenay Place.",
+      "The Kelburn cable car climbs from Lambton Quay to the Botanic Gardens; ferries cross to Picton."
+    ],
+    "sources": []
+  },
+  "places": {
+    "te_papa": {
+      "name": "Te Papa Tongarewa",
+      "landmark": "Te Papa Tongarewa",
+      "kind": "museum",
+      "lat": -41.2905,
+      "lon": 174.7819,
+      "price": 0,
+      "price_text": "Free entry · some short-term exhibitions charge",
+      "hours": "Daily 10:00–18:00 · check on the day for late nights",
+      "tip": "Start on level 2 with the Gallipoli exhibition, then work down. Allow at least half a day.",
+      "source": "https://www.tepapa.govt.nz/visit"
+    },
+    "botanic_garden": {
+      "name": "Wellington Botanic Garden",
+      "landmark": "Wellington Botanic Garden",
+      "kind": "park",
+      "lat": -41.2829,
+      "lon": 174.7679,
+      "price": 0,
+      "price_text": "Free · cable car fare extra",
+      "hours": "Garden open daily daylight hours · visitor centre shorter hours",
+      "tip": "Ride the cable car up from Lambton Quay and walk back down through the garden.",
+      "source": "https://wellington.govt.nz/recreation/parks-and-reserves/botanic-garden"
+    },
+    "beehive": {
+      "name": "The Beehive",
+      "landmark": "The Beehive",
+      "kind": "sight",
+      "lat": -41.2784,
+      "lon": 174.7767,
+      "price": 0,
+      "price_text": "Free to view outside · free guided tours when Parliament sits, book ahead",
+      "hours": "Exterior always visible · tours on sitting days, check on the day",
+      "tip": "Walk around the Parliament grounds for the best photo, and book a free tour if you want to go inside.",
+      "source": "https://www.parliament.nz/en/visit-and-learn/visit/"
+    },
+    "waterfront": {
+      "name": "Wellington Waterfront",
+      "landmark": "Wellington Waterfront",
+      "kind": "sight",
+      "lat": -41.2889,
+      "lon": 174.7772,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Follow the promenade from Queens Wharf to Oriental Bay for a flat, easy walk with harbour views.",
+      "source": "https://www.wellingtonwaterfront.co.nz/"
+    },
+    "pavlova": {
+      "name": "Pavlova",
+      "landmark": "Pavlova",
+      "kind": "food",
+      "lat": -41.2865,
+      "lon": 174.7762,
+      "price": null,
+      "price_text": "Cafe slice roughly NZD 8–15 · check on the day",
+      "hours": "Varies by cafe",
+      "tip": "Order a slice at a local cafe and decide for yourself in the Australia–New Zealand dessert debate.",
+      "source": ""
+    },
+    "cable_car": {
+      "name": "Wellington Cable Car",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -41.2854,
+      "lon": 174.7679,
+      "price": null,
+      "price_text": "Return fare roughly NZD 10–12 · check on the day",
+      "hours": "Roughly 07:30–22:00, longer in summer · check on the day",
+      "tip": "Sit on the right going up for harbour views, then walk down through the Botanic Garden.",
+      "source": "https://www.wellingtoncablecar.co.nz/"
+    },
+    "cuba_street": {
+      "name": "Cuba Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -41.2924,
+      "lon": 174.7762,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Shops roughly 10:00–18:00 · bars later",
+      "tip": "Walk the whole street from the Bucket Fountain northwards and stop for coffee and secondhand shops.",
+      "source": ""
+    },
+    "harbourside_market": {
+      "name": "Harbourside Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": -41.2847,
+      "lon": 174.7799,
+      "price": 0,
+      "price_text": "Free entry · bring cash for stalls",
+      "hours": "Sunday mornings only · check on the day",
+      "tip": "Go early on Sunday for fresh produce and breakfast, before the crowds build.",
+      "source": ""
+    },
+    "mt_victoria": {
+      "name": "Mount Victoria lookout",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -41.2961,
+      "lon": 174.7936,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk up from Oriental Bay for a full harbour and city view; the loop takes about an hour.",
+      "source": ""
+    },
+    "oriental_bay": {
+      "name": "Oriental Bay Beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": -41.2917,
+      "lon": 174.7936,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The city's closest swim spot; the water is cold, so most people walk the promenade instead.",
+      "source": ""
+    },
+    "zealandia": {
+      "name": "Zealandia Te Māra a Tāne",
+      "landmark": null,
+      "kind": "park",
+      "lat": -41.2903,
+      "lon": 174.7522,
+      "price": null,
+      "price_text": "Entry roughly NZD 20–25 adult · check on the day",
+      "hours": "Daily roughly 09:00–17:00, later in summer · check on the day",
+      "tip": "A predator-fenced valley of native birds. Go early for the best birdlife and quieter paths.",
+      "source": "https://www.visitzealandia.com/"
+    },
+    "weta_workshop": {
+      "name": "Wētā Workshop Experience",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -41.3019,
+      "lon": 174.7794,
+      "price": null,
+      "price_text": "Guided tour roughly NZD 30–50 · check on the day",
+      "hours": "Daily, tour times vary · book ahead",
+      "tip": "Book a timed tour if you like film props and effects; it is a short ride from the centre.",
+      "source": "https://www.wetaworkshop.com/"
+    },
+    "city_gallery": {
+      "name": "Wellington Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -41.2852,
+      "lon": 174.7787,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "Small and free, with good harbour history. A handy stop on a waterfront walk.",
+      "source": "https://www.museumswellington.org.nz/"
+    },
+    "parliament_tour": {
+      "name": "Parliament guided tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -41.2784,
+      "lon": 174.7768,
+      "price": 0,
+      "price_text": "Free · book ahead",
+      "hours": "Sitting days only · check on the day",
+      "tip": "Free tours run when Parliament sits. Bring photo ID and arrive early for security.",
+      "source": "https://www.parliament.nz/en/visit-and-learn/visit/"
+    },
+    "courtenay_place": {
+      "name": "Courtenay Place evening walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -41.2933,
+      "lon": 174.7787,
+      "price": 0,
+      "price_text": "Free to walk · food and drinks extra",
+      "hours": "Bars and restaurants busiest from evening",
+      "tip": "The main nightlife strip. Pick a restaurant early on weekends, as places fill up.",
+      "source": ""
+    },
+    "cable_car_museum": {
+      "name": "Cable Car Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -41.2852,
+      "lon": 174.7676,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Daily roughly 10:00–17:00 · check on the day",
+      "tip": "At the top cable car station. Small, free and good with kids before the garden walk.",
+      "source": ""
+    },
+    "hannahs_laneway": {
+      "name": "Hannahs Laneway food stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": -41.2913,
+      "lon": 174.7776,
+      "price": null,
+      "price_text": "Lunch roughly NZD 12–20 · check on the day",
+      "hours": "Weekday lunch hours mostly · check on the day",
+      "tip": "A cluster of small food spots off Cuba Street. Good for a quick weekday lunch.",
+      "source": ""
+    },
+    "red_rocks": {
+      "name": "Red Rocks walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -41.3578,
+      "lon": 174.7275,
+      "price": 0,
+      "price_text": "Free · check bus or car access",
+      "hours": "Always open · best at low tide",
+      "tip": "A wild south coast walk to red rocks and seals. Check the tide and weather first.",
+      "source": ""
+    },
+    "wellington_zoo": {
+      "name": "Wellington Zoo",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -41.3192,
+      "lon": 174.7831,
+      "price": null,
+      "price_text": "Entry roughly NZD 25–30 adult · check on the day",
+      "hours": "Daily roughly 09:30–17:00 · check on the day",
+      "tip": "Good for families. Book online and go in the morning when animals are more active.",
+      "source": "https://wellingtonzoo.com/"
+    },
+    "makara_beach": {
+      "name": "Makara Beach walk",
+      "landmark": null,
+      "kind": "beach",
+      "lat": -41.2197,
+      "lon": 174.6206,
+      "price": 0,
+      "price_text": "Free · you need a car or taxi",
+      "hours": "Always open",
+      "tip": "A rugged west coast beach with a short walk to a gun emplacement. Bring a windproof layer.",
+      "source": ""
+    },
+    "nairn_street": {
+      "name": "Nairn Street Cottage",
+      "landmark": null,
+      "kind": "museum",
+      "lat": -41.2989,
+      "lon": 174.7697,
+      "price": null,
+      "price_text": "Entry roughly NZD 10–15 · check on the day",
+      "hours": "Limited opening hours · check on the day",
+      "tip": "One of the city's oldest houses. Check opening days before you go, as hours are limited.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A one-day culture hit: national museum, cable car views and the old Cuba Street quarter.",
+      "days": [
+        {
+          "title": "Museum, cable car and Cuba Street",
+          "stops": [
+            {
+              "place": "te_papa",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Start at opening. Free entry, some exhibitions cost extra."
+            },
+            {
+              "place": "city_gallery",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Short walk along the waterfront. Good rainy-day backup."
+            },
+            {
+              "place": "cable_car",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Ride up from Lambton Quay. Check times on the day."
+            },
+            {
+              "place": "cable_car_museum",
+              "at": "15:20",
+              "minutes": 30,
+              "note": "At the top of the cable car, same trip."
+            },
+            {
+              "place": "cuba_street",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walk down through the Botanic Garden or take the cable car back. Shops close around 18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Harbour views, native bush and the wild south coast in one day.",
+      "days": [
+        {
+          "title": "Gardens, cable car and the coast",
+          "stops": [
+            {
+              "place": "botanic_garden",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Enter from the top of the cable car or walk up from Tinakori Road."
+            },
+            {
+              "place": "cable_car",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Ride down to Lambton Quay. Check times on the day."
+            },
+            {
+              "place": "waterfront",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch stop nearby, then walk the harbour edge."
+            },
+            {
+              "place": "mt_victoria",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Bus or taxi to the lookout. Clear days give the best views."
+            },
+            {
+              "place": "oriental_bay",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk down to the beach. Swim only in summer and when patrolled."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Coffee, market food and an evening on Courtenay Place.",
+      "days": [
+        {
+          "title": "Market, laneway lunch and bars",
+          "stops": [
+            {
+              "place": "harbourside_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Sunday mornings only. Check on the day."
+            },
+            {
+              "place": "waterfront",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk off breakfast along the harbour."
+            },
+            {
+              "place": "hannahs_laneway",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Weekday lunch hours mostly. Check on the day."
+            },
+            {
+              "place": "cuba_street",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Coffee and browsing. Shops close around 18:00."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and a drink. Busiest Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Te Aro and Cuba Street"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the museum, the cable car and the old streets in one easy day.",
+      "days": [
+        {
+          "title": "Waterfront museums and the cable car",
+          "stops": [
+            {
+              "place": "te_papa",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Start early. Entry is free, donations welcome. Check on the day for late nights."
+            },
+            {
+              "place": "city_gallery",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Short walk along the waterfront. Good rainy-day backup."
+            },
+            {
+              "place": "cable_car",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Ride up from Lambton Quay. Roughly 07:30–22:00, longer in summer. Check on the day."
+            },
+            {
+              "place": "cable_car_museum",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "At the top of the cable car. Roughly 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "pavlova",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Afternoon tea on the way back down. Cafe hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Government quarter and Cuba Street",
+          "stops": [
+            {
+              "place": "beehive",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Exterior always visible. Tours run on sitting days only. Check on the day."
+            },
+            {
+              "place": "parliament_tour",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Book ahead. Sitting days only. Check on the day."
+            },
+            {
+              "place": "cuba_street",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and a wander. Shops roughly 10:00–18:00."
+            },
+            {
+              "place": "weta_workshop",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book ahead. Tour times vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "A green day: gardens, a hilltop view and the wild south coast.",
+      "days": [
+        {
+          "title": "Gardens, cable car and the hill",
+          "stops": [
+            {
+              "place": "cable_car",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Ride up on a clear morning. Check on the day for hours."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Walk down through the garden. Open daylight hours. Spring is best for flowers."
+            },
+            {
+              "place": "pavlova",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Lunch or afternoon tea in the city. Cafe hours vary."
+            },
+            {
+              "place": "mt_victoria",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Bus or short taxi from the centre. Best on a clear day."
+            },
+            {
+              "place": "oriental_bay",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk down to the beach. Best on a sunny afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Sanctuary and waterfront",
+          "stops": [
+            {
+              "place": "zealandia",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Go early for birds. Roughly 09:00–17:00, later in summer. Check on the day."
+            },
+            {
+              "place": "waterfront",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and a harbour walk. Always open."
+            },
+            {
+              "place": "red_rocks",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Best at low tide on a calm day. Check the tide table."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Coffee, market food and an evening on Courtenay Place.",
+      "days": [
+        {
+          "title": "Market morning and Cuba Street",
+          "stops": [
+            {
+              "place": "harbourside_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Sunday mornings only. Check on the day. Go early for the best stalls."
+            },
+            {
+              "place": "waterfront",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk off breakfast along the harbour. Always open."
+            },
+            {
+              "place": "hannahs_laneway",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Weekday lunch hours mostly. Check on the day."
+            },
+            {
+              "place": "cuba_street",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Coffee and browsing. Shops roughly 10:00–18:00."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and a drink. Busiest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Museum, then a slow lunch",
+          "stops": [
+            {
+              "place": "te_papa",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Free entry. Check on the day for late nights."
+            },
+            {
+              "place": "pavlova",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Afternoon tea. Cafe hours vary."
+            },
+            {
+              "place": "weta_workshop",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Book ahead. Tour times vary."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Te Aro and Cuba Street"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the museum, the cable car and the old streets without rushing.",
+      "days": [
+        {
+          "title": "Waterfront museums and the cable car",
+          "stops": [
+            {
+              "place": "te_papa",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Free entry. Start here on a weekday morning to beat the crowds."
+            },
+            {
+              "place": "city_gallery",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short walk along the waterfront. Good rainy-day backup."
+            },
+            {
+              "place": "cable_car",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Ride up from Lambton Quay. Check times on the day."
+            },
+            {
+              "place": "cable_car_museum",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "At the top of the cable car, same trip."
+            },
+            {
+              "place": "cuba_street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Walk down through the old quarter. Shops close around 18:00, bars stay open."
+            }
+          ]
+        },
+        {
+          "title": "Parliament, laneway lunch and Wētā",
+          "stops": [
+            {
+              "place": "beehive",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Look at the exterior any time. Tours only on sitting days, check on the day."
+            },
+            {
+              "place": "parliament_tour",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Weekdays only. Book ahead if you can."
+            },
+            {
+              "place": "hannahs_laneway",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Weekday lunch spot. Check on the day."
+            },
+            {
+              "place": "weta_workshop",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Book ahead, tour times vary."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk for dinner and a drink."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Visitors who want gardens, harbour views and the wild south coast.",
+      "days": [
+        {
+          "title": "Botanic Garden and the cable car",
+          "stops": [
+            {
+              "place": "cable_car",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Ride up on a clear morning. Check times on the day."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Garden open daylight hours. Walk down through it afterwards."
+            },
+            {
+              "place": "waterfront",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch then a harbour stroll."
+            },
+            {
+              "place": "mt_victoria",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Clear-day lookout. Best late afternoon."
+            },
+            {
+              "place": "oriental_bay",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Beach at the foot of the hill. Sunny afternoons in summer."
+            }
+          ]
+        },
+        {
+          "title": "Sanctuary and the south coast",
+          "stops": [
+            {
+              "place": "zealandia",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Morning is best for birds. Check hours on the day."
+            },
+            {
+              "place": "red_rocks",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Go at low tide on a calm day. Check the tide table first."
+            },
+            {
+              "place": "makara_beach",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Wild coast walk. Only on a dry, calm day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters and coffee drinkers who want markets, laneways and an evening out.",
+      "days": [
+        {
+          "title": "Cuba Street and the laneways",
+          "stops": [
+            {
+              "place": "cuba_street",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Coffee first, then browse. Shops roughly 10:00–18:00."
+            },
+            {
+              "place": "hannahs_laneway",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Weekday lunch stop. Check on the day."
+            },
+            {
+              "place": "pavlova",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Afternoon tea. Cafes vary, check on the day."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and bars. Busiest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and waterfront",
+          "stops": [
+            {
+              "place": "harbourside_market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Sunday mornings only. Check on the day."
+            },
+            {
+              "place": "waterfront",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk off breakfast along the harbour."
+            },
+            {
+              "place": "te_papa",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Free entry. Good rainy-day plan."
+            },
+            {
+              "place": "pavlova",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "One last sweet stop before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Te Aro and Cuba Street"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the museums, the cable car and the old Cuba Street quarter at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, waterfront and Te Papa",
+          "stops": [
+            {
+              "place": "te_papa",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Free entry. Start on the upper floors for harbour views. Check on the day for late nights."
+            },
+            {
+              "place": "waterfront",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Short flat walk outside the museum. Good at sunset."
+            },
+            {
+              "place": "city_gallery",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Wellington Museum, a few minutes along the waterfront. Roughly 10:00–17:00, so go before it closes or swap to tomorrow."
+            },
+            {
+              "place": "pavlova",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Afternoon tea or dessert nearby. Cafe hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Cable car, gardens and parliament",
+          "stops": [
+            {
+              "place": "cable_car",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Ride up from Lambton Quay. Roughly 07:30–22:00, longer in summer."
+            },
+            {
+              "place": "cable_car_museum",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "At the top station. Roughly 10:00–17:00."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk down through the garden. Daylight hours only."
+            },
+            {
+              "place": "parliament_tour",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Book ahead. Tours run on sitting days only, so check on the day."
+            },
+            {
+              "place": "beehive",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "The round building next door. Exterior always visible."
+            }
+          ]
+        },
+        {
+          "title": "Cuba Street and Wētā Workshop",
+          "stops": [
+            {
+              "place": "cuba_street",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Shops roughly 10:00–18:00. Coffee stop on the way."
+            },
+            {
+              "place": "hannahs_laneway",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Weekday lunch spot. Hours vary, check on the day."
+            },
+            {
+              "place": "weta_workshop",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book ahead. Tour times vary."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner. Busiest Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile or Waterfront"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want gardens, harbour views and the wild south coast, with indoor backups for rain.",
+      "days": [
+        {
+          "title": "Botanic Garden and cable car",
+          "stops": [
+            {
+              "place": "cable_car",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Ride up, then walk down through the garden. Clear day is best."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Garden open daylight hours. Spring for flowers."
+            },
+            {
+              "place": "beehive",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Short look at the government quarter on the way back."
+            },
+            {
+              "place": "waterfront",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Flat harbour walk. Sunny afternoon or sunset."
+            }
+          ]
+        },
+        {
+          "title": "Mount Victoria and Oriental Bay",
+          "stops": [
+            {
+              "place": "mt_victoria",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Lookout over the city and harbour. Clear morning is best."
+            },
+            {
+              "place": "oriental_bay",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Beach walk back toward town. Best on a sunny summer day."
+            },
+            {
+              "place": "te_papa",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Indoor backup if the weather turns. Free entry."
+            }
+          ]
+        },
+        {
+          "title": "Zealandia or the south coast",
+          "stops": [
+            {
+              "place": "zealandia",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Valley sanctuary, mostly outdoor. Roughly 09:00–17:00, later in summer."
+            },
+            {
+              "place": "red_rocks",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "South coast walk. Best at low tide on a calm day, so check tide times."
+            },
+            {
+              "place": "cuba_street",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner in Te Aro."
+            }
+          ]
+        }
+      ],
+      "stay_area": "CBD Golden Mile or Oriental Bay"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters and coffee drinkers: markets, laneways and Cuba Street, with easy walks between meals.",
+      "days": [
+        {
+          "title": "Waterfront and Te Papa",
+          "stops": [
+            {
+              "place": "waterfront",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk the harbour to work up an appetite."
+            },
+            {
+              "place": "te_papa",
+              "at": "11:15",
+              "minutes": 180,
+              "note": "Free entry. Cafe inside for lunch."
+            },
+            {
+              "place": "pavlova",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Afternoon tea. Cafe hours vary."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and bars. Busiest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Cuba Street and laneways",
+          "stops": [
+            {
+              "place": "cuba_street",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Coffee and shops. Shops roughly 10:00–18:00."
+            },
+            {
+              "place": "hannahs_laneway",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Weekday lunch. Hours vary, check on the day."
+            },
+            {
+              "place": "weta_workshop",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book ahead. Good rainy-day option."
+            },
+            {
+              "place": "courtenay_place",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Second evening out in Te Aro."
+            }
+          ]
+        },
+        {
+          "title": "Sunday market and gardens",
+          "stops": [
+            {
+              "place": "harbourside_market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Sunday mornings only. Check on the day."
+            },
+            {
+              "place": "cable_car",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Ride up from Lambton Quay."
+            },
+            {
+              "place": "botanic_garden",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Walk down through the garden. Daylight hours."
+            },
+            {
+              "place": "pavlova",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Last sweet stop before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Te Aro and Cuba Street"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Te Papa, the cable car and the old Cuba Street quarter."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Botanic Gardens, the wild south coast and harbour views."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Coffee, craft beer and Cuba Street eating."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "CBD Golden Mile",
+      "range": [
+        180,
+        380
+      ],
+      "why": "Steps from the station, shops and the cable car base; easiest base without a car.",
+      "center": [
+        -41.2865,
+        174.7762
+      ]
+    },
+    {
+      "area": "Te Aro and Cuba Street",
+      "range": [
+        160,
+        340
+      ],
+      "why": "Cafés, bars and galleries on the doorstep; walk to Courtenay Place at night.",
+      "center": [
+        -41.2935,
+        174.7745
+      ]
+    },
+    {
+      "area": "Waterfront",
+      "range": [
+        220,
+        480
+      ],
+      "why": "Te Papa, the harbour and the ferry terminal nearby; flat walks along the quay.",
+      "center": [
+        -41.2895,
+        174.7825
+      ]
+    },
+    {
+      "area": "Oriental Bay",
+      "range": [
+        240,
+        520
+      ],
+      "why": "Beach and promenade views, 20–25 minutes on foot from the centre; quieter nights.",
+      "center": [
+        -41.2915,
+        174.7955
+      ]
+    }
+  ],
+  "food": [
+    "Order a flat white: Wellington is the self-styled coffee capital, and most cafés roast their own beans.",
+    "Eat on Cuba Street: cheap noodles, bakeries and small restaurants, roughly NZD 15–30 a main.",
+    "Try a craft beer at a Courtenay Place or Te Aro taproom; ask for a tasting paddle to sample several.",
+    "Seafood is local and good: green-lipped mussels, kaimoana and fish and chips near the waterfront.",
+    "Book dinner ahead on Friday and Saturday nights; popular small places fill up. Check opening days on the day."
+  ],
+  "more_time": [
+    "Ride the ferry across the harbour to Days Bay or Eastbourne for a half-day walk and a swim in summer.",
+    "Take a bus or drive over to the Wairarapa for a day of vineyards and small towns; check timetables first.",
+    "Add a night for Zealandia wildlife sanctuary at dusk, when the native birds are most active."
+  ]
+}

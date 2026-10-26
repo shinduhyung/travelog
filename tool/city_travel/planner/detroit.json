@@ -1,0 +1,597 @@
+{
+  "city": "Detroit",
+  "checked": "October 2026",
+  "intro_line": "Detroit: where Motor City muscle meets a riverfront revival.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Corktown",
+        "Greektown"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Corktown",
+        "Greektown"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Corktown",
+        "Greektown"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Corktown",
+        "Greektown"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown",
+        "Midtown",
+        "Corktown",
+        "Greektown"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 1,
+        "low": -6,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 1°C, lows around -6°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "high": 2,
+        "low": -7,
+        "rain_days": 9,
+        "note": "Still deep winter: highs near 2°C and lows around -7°C. Indoor sights are the plan."
+      },
+      {
+        "high": 7,
+        "low": -2,
+        "rain_days": 10,
+        "note": "Slowly warming: highs near 7°C, lows around -2°C. Still bring a winter layer."
+      },
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 14,
+        "note": "Mild and showery: highs near 13°C with about 14 rain days, the wettest month. Carry an umbrella."
+      },
+      {
+        "high": 20,
+        "low": 10,
+        "rain_days": 12,
+        "note": "Pleasant spring: highs near 20°C, lows around 10°C. Good for walking and the riverfront."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 12,
+        "note": "Warm start to summer: highs near 26°C, lows around 16°C. Comfortable for most outdoor plans."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 12,
+        "note": "Hottest month: highs near 28°C, lows around 19°C. Plan outdoor time for mornings."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 11,
+        "note": "Warm and similar to July: highs near 27°C. Stay hydrated on long walks."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 10,
+        "note": "Comfortable early autumn: highs near 24°C, lows around 15°C. Great for parks and markets."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Crisp autumn: highs near 17°C, lows around 9°C. Bring a jacket for evenings."
+      },
+      {
+        "high": 9,
+        "low": 2,
+        "rain_days": 9,
+        "note": "Cool and damp: highs near 9°C, lows around 2°C. Layer up and expect some rain."
+      },
+      {
+        "high": 4,
+        "low": -2,
+        "rain_days": 10,
+        "note": "Cold again: highs near 4°C, lows around -2°C. Winter gear needed."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.4,
+      0.45,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.45
+    ],
+    "food": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.55
+    ],
+    "history": [
+      0.45,
+      0.5,
+      0.65,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.5
+    ],
+    "art": [
+      0.45,
+      0.5,
+      0.65,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.5
+    ],
+    "family": [
+      0.35,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.55,
+      0.4
+    ]
+  },
+  "places": {
+    "dia": {
+      "types": [
+        "art",
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning; Friday evening for fewer crowds",
+      "area": "Midtown",
+      "popularity": 5
+    },
+    "motown": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Book a morning slot on a weekday",
+      "area": "Midtown",
+      "popularity": 5
+    },
+    "hungry-howies": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or late evening",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "little-caesars": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Quick lunch",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "eastern-market": {
+      "types": [
+        "food",
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "riverwalk": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "belle-isle": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday morning in summer",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "corktown-walk": {
+      "types": [
+        "culture",
+        "food",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Corktown",
+      "popularity": 3
+    },
+    "greektown-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Greektown",
+      "popularity": 3
+    },
+    "fisher-building": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Midtown",
+      "popularity": 3
+    },
+    "guardian-building": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "downtown-tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "campus-martius": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Lunchtime or winter evening",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "coney-island": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "dime-store": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "midtown-walk": {
+      "types": [
+        "culture",
+        "art",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Midtown",
+      "popularity": 3
+    },
+    "greek-food": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Greektown",
+      "popularity": 3
+    },
+    "corktown-food": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Corktown",
+      "popularity": 2
+    },
+    "riverfront-bike": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning in summer",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "eastern-market-food": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Saturday morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "downtown-park": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Downtown",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the art, Motown and history sights plus a good meal or two; add a night for Dearborn."
+  },
+  "airports": [
+    {
+      "code": "DTW",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "primary": true,
+      "note": "Major Delta hub, 29 km west of downtown.",
+      "options": [
+        {
+          "mode": "SMART bus #125",
+          "to": "Downtown Detroit",
+          "price": "$2",
+          "time": "75 min",
+          "note": "Weekday peak only; check schedule."
+        },
+        {
+          "mode": "Detroit Air Xpress bus",
+          "to": "Downtown Detroit",
+          "price": "$6-8",
+          "time": "30-60 min",
+          "note": "Book online for $6 or pay $8 at door."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Detroit",
+          "price": "$45-50",
+          "time": "20-30 min",
+          "note": "Standard fare; airport fee may apply."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Detroit",
+          "price": "$30-50",
+          "time": "20-30 min",
+          "note": "Popular; prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "YQG",
+      "name": "Windsor International Airport",
+      "primary": false,
+      "note": "Canadian alternative across the border, 10 km from downtown Detroit.",
+      "options": [
+        {
+          "mode": "Taxi",
+          "to": "Downtown Detroit",
+          "price": "$40-60",
+          "time": "20-30 min",
+          "note": "Requires border crossing; have passport ready."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown Detroit",
+          "price": "$30-50",
+          "time": "20-30 min",
+          "note": "Check if cross-border rides are available."
+        },
+        {
+          "mode": "Bus + Tunnel Bus",
+          "to": "Downtown Detroit",
+          "price": "$5-10",
+          "time": "60-90 min",
+          "note": "Take local bus to Windsor tunnel, then Tunnel Bus."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Detroit",
+      "https://en.wikivoyage.org/wiki/Detroit"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Drive or use ride apps for most trips; the QLine and People Mover help downtown and Midtown.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro rail. Don't plan around a subway."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "The QLine streetcar runs along Woodward Ave from downtown to New Center; fare $1.50 for 3 hours. The People Mover loops downtown; fare $0.75 per ride."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "SMART and DDOT buses cover the metro; fare $2. Useful but slow for cross-town trips."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft are widely used; taxis also available. Handy for airport runs and late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "Driving is easiest; freeways are modern but rush hour can be slow. Check parking at your hotel."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is good downtown; biking is growing with rental options."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, snowy winters, mild springs, warm humid summers and crisp autumns. Rain falls year-round.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (Dec–Feb)",
+        "text": "Highs around 1–4°C and lows near -6°C. Snow is likely. Bring a heavy coat, hat and gloves."
+      },
+      {
+        "icon": "🌸",
+        "title": "Spring is mild and wet",
+        "text": "Highs climb from 7°C in March to 20°C in May. April is the wettest month with about 14 rain days."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is warm and humid",
+        "text": "Highs around 26–28°C from June to August. Not extreme, but muggy at times; mornings are best outdoors."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is crisp",
+        "text": "Highs fall from 24°C in September to 9°C in November. A light jacket helps in the evenings."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain any month",
+        "text": "Expect roughly 9–14 rain days each month. Keep a compact umbrella handy."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm winter coat for Dec–Feb, and light clothes for summer. Comfortable shoes for walking."
+      }
+    ]
+  }
+}

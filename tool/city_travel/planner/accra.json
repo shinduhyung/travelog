@@ -1,0 +1,539 @@
+{
+  "city": "Accra",
+  "checked": "October 2026",
+  "intro_line": "Accra: Atlantic rhythms, warm streets, and a heartbeat of gold",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Osu",
+        "Airport Residential",
+        "Labone",
+        "Cantonments"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Osu",
+        "Airport Residential",
+        "Labone",
+        "Cantonments"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Osu",
+        "Airport Residential",
+        "Labone",
+        "Cantonments"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Osu",
+        "Airport Residential",
+        "Labone",
+        "Cantonments"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Osu",
+        "Airport Residential",
+        "Labone",
+        "Cantonments"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 4,
+        "note": "Jan: Dry and warm, highs near 31°C. One of the best months to visit."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 8,
+        "note": "Feb: Still dry and warm, a few more showers. Good for sightseeing."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 13,
+        "note": "Mar: Warmer and wetter, about 13 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 14,
+        "note": "Apr: Similar to March, around 14 rain days. Plan indoor sights for the afternoon."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 21,
+        "note": "May: The main rains arrive, about 21 rain days. Expect heavy downpours and traffic delays."
+      },
+      {
+        "high": 28,
+        "low": 24,
+        "rain_days": 24,
+        "note": "Jun: Wettest month, about 24 rain days. Pack rain gear and keep plans flexible."
+      },
+      {
+        "high": 27,
+        "low": 23,
+        "rain_days": 17,
+        "note": "Jul: Cooler at 27°C high but still wet, about 17 rain days. Short breaks of sun between showers."
+      },
+      {
+        "high": 27,
+        "low": 23,
+        "rain_days": 15,
+        "note": "Aug: Cool and damp, about 15 rain days. A small dry spell is possible; check on the day."
+      },
+      {
+        "high": 28,
+        "low": 23,
+        "rain_days": 20,
+        "note": "Sep: Rain returns, about 20 rain days. Allow extra time for flooded roads."
+      },
+      {
+        "high": 29,
+        "low": 24,
+        "rain_days": 21,
+        "note": "Oct: Wet, about 21 rain days. Good month for museums and food tours."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 14,
+        "note": "Nov: Rains ease to about 14 days. Comfortable and a good shoulder month."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 8,
+        "note": "Dec: Dry and warm, about 8 rain days. Busy and festive; book hotels early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.55,
+      0.45,
+      0.5,
+      0.55,
+      0.55,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "food": [
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.65,
+      0.55,
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95
+    ],
+    "beach": [
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.5,
+      0.4,
+      0.45,
+      0.45,
+      0.5,
+      0.6,
+      0.8,
+      0.85
+    ],
+    "nightlife": [
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.6,
+      0.5,
+      0.55,
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.9
+    ],
+    "history": [
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.55,
+      0.45,
+      0.5,
+      0.55,
+      0.55,
+      0.65,
+      0.85,
+      0.95
+    ]
+  },
+  "places": {
+    "nkrumah": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Osu",
+      "popularity": 5
+    },
+    "independence": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Osu",
+      "popularity": 4
+    },
+    "osu-castle": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Osu",
+      "popularity": 3
+    },
+    "makola": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning on a weekday",
+      "area": "Osu",
+      "popularity": 4
+    },
+    "jamestown": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Osu",
+      "popularity": 4
+    },
+    "jollof": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Osu",
+      "popularity": 5
+    },
+    "labadi-beach": {
+      "types": [
+        "beach",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Labone",
+      "popularity": 4
+    },
+    "artists-alliance": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Labone",
+      "popularity": 3
+    },
+    "osu-walk": {
+      "types": [
+        "food",
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Osu",
+      "popularity": 4
+    },
+    "accra-tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Osu",
+      "popularity": 4
+    },
+    "duke": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Osu",
+      "popularity": 3
+    },
+    "kempinski-view": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Airport Residential",
+      "popularity": 3
+    },
+    "accra-mall": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Airport Residential",
+      "popularity": 3
+    },
+    "wli-note": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning start",
+      "area": "Airport Residential",
+      "popularity": 3
+    },
+    "labone-cafe": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Labone",
+      "popularity": 3
+    },
+    "cantonments-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Cantonments",
+      "popularity": 2
+    },
+    "national-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Osu",
+      "popularity": 3
+    },
+    "kejetia-note": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Osu",
+      "popularity": 3
+    },
+    "black-star-square-note": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Osu",
+      "popularity": 3
+    },
+    "airport-cafe": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Airport Residential",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Jamestown, Makola Market, the museums and a beach afternoon, with time left for Ghanaian food."
+  },
+  "airports": [
+    {
+      "code": "ACC",
+      "name": "Kotoka International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 2 km from the centre.",
+      "options": [
+        {
+          "mode": "TroTro / shared taxi",
+          "to": "City centre",
+          "price": "GHS 5-15",
+          "time": "20-40 min",
+          "note": "Cheapest; walk out to the main road."
+        },
+        {
+          "mode": "Ride app (Uber/Bolt/Yango)",
+          "to": "City centre",
+          "price": "GHS 40-80",
+          "time": "15-30 min",
+          "note": "Fixed app price, no haggling."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "GHS 80-150",
+          "time": "15-30 min",
+          "note": "Use the official stand for a regulated fare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Accra Mall / East Legon",
+          "price": "GHS 100-180",
+          "time": "20-35 min",
+          "note": "Agree price first; drivers use landmarks."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Accra",
+      "https://en.wikivoyage.org/wiki/Accra"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Use Uber, Bolt or a taxi with the fare agreed first; TroTros are the cheap local option.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or tram in Accra. Don't plan around rail."
+      },
+      {
+        "mode": "TroTro",
+        "has": true,
+        "text": "Minibuses are the main public transport. They run fixed routes and a 'mate' calls out destinations. Cheap but crowded."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis rarely use meters, so agree the fare before you ride. Uber, Bolt, Yango and InDrive all work and are easy to book."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Hiring a car with a driver is common for sightseeing. Self-driving is possible but traffic is heavy."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine by day in areas like Osu. Watch for open drains and fast traffic; avoid unlit streets at night."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, around 27–31°C by day. A long rainy season runs roughly May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to February",
+        "text": "Warm days near 31°C and the fewest rain days, about 4–8 a month. Ideal for walking and the beaches."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy season May to October",
+        "text": "Rain days peak at about 24 in June. Showers are often heavy but short; carry a rain jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Hot and humid year-round",
+        "text": "Lows stay around 23–25°C, so nights are warm. Light, breathable clothes work best."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack an umbrella",
+        "text": "From May to October, expect wet afternoons. A compact umbrella and dry bag help."
+      },
+      {
+        "icon": "🚗",
+        "title": "Rain slows traffic",
+        "text": "Heavy rain floods roads and jams traffic. Build extra time into taxi rides in the wet months."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light cotton clothes, sunscreen, a hat, mosquito repellent for evenings, and a light layer for air-conditioned rooms."
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "currency": "SAR",
+  "usd_rate": 3.75,
+  "intro_line": "Jeddah: Red Sea gateway where old coral alleys meet modern malls.",
+  "intro": "Jeddah rewards visitors with historic Al-Balad lanes, a breezy Corniche and superb Red Sea diving. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Al-Balad",
+    "Corniche",
+    "Al-Hamra",
+    "Obhur"
+  ],
+  "taxi": {
+    "flag_day": 15,
+    "flag_airport": 20,
+    "per_km": 2,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 25,
+  "transit_facts": [
+    "No metro yet; a high-speed rail line links Jeddah with Mecca and Medina.",
+    "SAPTCO buses cover long-distance routes; city buses are common and timetabled on Google Maps.",
+    "Green taxis and ride apps are plentiful; Uber and Careem both work.",
+    "Agree the taxi fare before you set off, especially from the airport.",
+    "Renting a car is easy; fuel is among the cheapest in the world.",
+    "Walking is best in Al-Balad; the Corniche is long, so plan on a taxi.",
+    "Boats from Obhur marina are for views, not transport; about SR200 for an hour."
+  ],
+  "airports": [
+    {
+      "code": "JED",
+      "name": "King Abdulaziz International Airport",
+      "primary": true,
+      "note": "Main international hub, about 21 km north of the centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Cheapest option; confirm route and stop locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "SR50-70",
+          "time": "25-40 min",
+          "note": "Agree the fare before you set off."
+        },
+        {
+          "mode": "Uber / Careem",
+          "to": "City centre",
+          "price": "SR50-80",
+          "time": "25-40 min",
+          "note": "App pickup points are signposted outside arrivals."
+        },
+        {
+          "mode": "Train",
+          "to": "Al-Sulimaniyah station",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Airport has its own station; not all trains call at both stations."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Al-Balad",
+    "King Fahd's Fountain",
+    "Al-Rahma Mosque",
+    "Al-Shallal Theme Park",
+    "Jeddah Corniche",
+    "King Abdullah Sports City",
+    "Moon Toon",
+    "Souq Al Alawi"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Jeddah",
+      "https://en.wikivoyage.org/wiki/Jeddah"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    21.49012,
+    39.18624
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 3
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 2
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 0
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 1
+    },
+    {
+      "high": 34,
+      "low": 26,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 27,
+      "rain_days": 0
+    },
+    {
+      "high": 36,
+      "low": 28,
+      "rain_days": 0
+    },
+    {
+      "high": 36,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 28,
+      "rain_days": 0
+    },
+    {
+      "high": 34,
+      "low": 26,
+      "rain_days": 1
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 3
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

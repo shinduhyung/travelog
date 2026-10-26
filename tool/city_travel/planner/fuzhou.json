@@ -1,0 +1,558 @@
+{
+  "city": "Fuzhou",
+  "checked": "October 2026",
+  "intro_line": "Fuzhou, where ancient lanes meet river mist and tea houses.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Dongjiekou",
+        "Sanfang Qixiang",
+        "Taijiang",
+        "Gulou"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Dongjiekou",
+        "Sanfang Qixiang",
+        "Taijiang",
+        "Gulou"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Dongjiekou",
+        "Sanfang Qixiang",
+        "Taijiang",
+        "Gulou"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Dongjiekou",
+        "Sanfang Qixiang",
+        "Taijiang",
+        "Gulou"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Dongjiekou",
+        "Sanfang Qixiang",
+        "Taijiang",
+        "Gulou"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 7,
+        "note": "January: cool and fairly dry, highs around 16°C. Bring a warm layer for evenings."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 10,
+        "note": "February: similar to January but wetter, about 10 rain days. Keep an umbrella handy."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 13,
+        "note": "March: mild and warming, but rain picks up to around 13 days."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 14,
+        "note": "April: pleasant highs near 24°C. Rain is common, so plan indoor backups."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 16,
+        "note": "May: warm and humid, around 16 rain days. Light rain jacket helps."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 20,
+        "note": "June: hot and very wet, about 20 rain days. Expect heavy showers."
+      },
+      {
+        "high": 34,
+        "low": 26,
+        "rain_days": 15,
+        "note": "July: hottest month, highs near 34°C. Go out early or after sunset."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 20,
+        "note": "August: hot and wet again, around 20 rain days. Sticky and humid."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 15,
+        "note": "September: still hot but rain eases to about 15 days."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 10,
+        "note": "October: comfortable highs near 26°C and fewer rainy days. A good month."
+      },
+      {
+        "high": 22,
+        "low": 15,
+        "rain_days": 10,
+        "note": "November: mild and fairly dry, highs around 22°C. Great for walking."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 7,
+        "note": "December: cool and dry, highs near 17°C. Pack a jacket for the evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.5,
+      0.55,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.65,
+      0.8,
+      0.95,
+      0.95,
+      0.85
+    ],
+    "nature": [
+      0.6,
+      0.6,
+      0.75,
+      0.85,
+      0.8,
+      0.55,
+      0.4,
+      0.45,
+      0.7,
+      0.9,
+      0.85,
+      0.6
+    ],
+    "history": [
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.6,
+      0.5,
+      0.55,
+      0.75,
+      0.9,
+      0.9,
+      0.8
+    ],
+    "budget": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.75,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.85,
+      0.8
+    ]
+  },
+  "places": {
+    "sanfang_qixiang": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Early morning or evening",
+      "area": "Sanfang Qixiang",
+      "popularity": 5
+    },
+    "west_lake": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Gulou",
+      "popularity": 4
+    },
+    "tastien": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch or quick dinner",
+      "area": "Sanfang Qixiang",
+      "popularity": 2
+    },
+    "wallace": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Anytime",
+      "area": "Dongjiekou",
+      "popularity": 2
+    },
+    "nanhou_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Sanfang Qixiang",
+      "popularity": 4
+    },
+    "yushan": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Taijiang",
+      "popularity": 3
+    },
+    "minjiang_walk": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Taijiang",
+      "popularity": 3
+    },
+    "linzexu": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Midday or rainy hours",
+      "area": "Sanfang Qixiang",
+      "popularity": 3
+    },
+    "dongjiekou_walk": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Dongjiekou",
+      "popularity": 3
+    },
+    "fuzhou_tea": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Sanfang Qixiang",
+      "popularity": 3
+    },
+    "gulou_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Gulou",
+      "popularity": 2
+    },
+    "fuzhou_museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Hot midday hours",
+      "area": "Gulou",
+      "popularity": 3
+    },
+    "fishball_shop": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Breakfast or lunch",
+      "area": "Sanfang Qixiang",
+      "popularity": 3
+    },
+    "night_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Dongjiekou",
+      "popularity": 3
+    },
+    "temple": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Taijiang",
+      "popularity": 2
+    },
+    "city_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Sanfang Qixiang",
+      "popularity": 3
+    },
+    "lacquer_workshop": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Sanfang Qixiang",
+      "popularity": 2
+    },
+    "park_evening": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Taijiang",
+      "popularity": 2
+    },
+    "breakfast_stall": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Gulou",
+      "popularity": 2
+    },
+    "bookshop": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Sanfang Qixiang",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the old lanes, temples and food streets at a relaxed pace; add a night for hot springs or a hill day."
+  },
+  "airports": [
+    {
+      "code": "FOC",
+      "name": "Fuzhou Changle International Airport",
+      "primary": true,
+      "note": "Main airport, about 38 km southeast in Changle District.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Apollo Hotel, city centre",
+          "price": "¥20",
+          "time": "about 1 hour",
+          "note": "Cheapest public option; buses also leave from the airport."
+        },
+        {
+          "mode": "Metro Binhai Express Line",
+          "to": "Fuzhou Railway Station",
+          "price": "check locally",
+          "time": "44 min",
+          "note": "Fast and reliable; connects to the city metro network."
+        },
+        {
+          "mode": "Official airport express",
+          "to": "Various city stops",
+          "price": "¥50",
+          "time": "about 1 hour",
+          "note": "Book online or on WeChat; departures 05:30-21:30."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥120-250",
+          "time": "about 1 hour",
+          "note": "Private taxi from at least ¥120; shared taxis around ¥25 per person."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "up to ¥250",
+          "time": "about 1 hour",
+          "note": "Didi Express excludes highway tolls; consider Didi Luxe."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Fuzhou",
+      "https://en.wikivoyage.org/wiki/Fuzhou"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for main trips; taxis are cheap for short hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines 1, 2, 4, 5, 6 and the Binhai Express Line serve the city. Buy single tickets from machines (¥1 coins, ¥5/10/20 notes)."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses run often for ¥1, most air conditioned, but service stops around 22:00."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are cheap: ¥10 flagfall, about ¥1.4/km, under ¥30 for most trips in town. Didi works; foreigners can sign up with a Chinese phone number and a foreign credit card."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving is not advised for visitors; traffic jams are common due to metro construction."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is good in the old lanes and riverside areas; bikes and shared bikes suit short hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and humid: mild winters, hot sticky summers, and rain in most months.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best time: October to December",
+        "text": "Mild highs of 17–26°C and fewer rain days. Good for walking the old lanes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain is common",
+        "text": "Expect 7–20 rain days a month. June and August are the wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "July peaks near 34°C with lows around 26°C. Plan indoor sights at midday."
+      },
+      {
+        "icon": "🧥",
+        "title": "Mild but cool winters",
+        "text": "January and February highs around 16°C, lows near 8°C. A jacket is enough."
+      },
+      {
+        "icon": "💦",
+        "title": "Humidity all year",
+        "text": "Sticky from May to September. Light, breathable clothes work best."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket or umbrella, and comfortable shoes for wet lanes and hills."
+      }
+    ]
+  }
+}

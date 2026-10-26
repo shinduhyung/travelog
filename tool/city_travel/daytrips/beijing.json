@@ -1,0 +1,125 @@
+{
+ "city": "Beijing",
+ "trips": [
+  {
+   "place": "Chengde",
+   "label": "",
+   "position": {
+    "id": 17404499,
+    "name": "Chengde, Dongmiaohe",
+    "city": "Chengde",
+    "lat": 40.5714,
+    "lng": 117.69452
+   },
+   "town": {
+    "name": "Chengde",
+    "lat": 40.9519,
+    "lng": 117.95883
+   },
+   "road": {
+    "km": 215,
+    "min": 147,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 550.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$17-$22",
+     "time": "2h 8m",
+     "via": "Beijing Chaoyang to Chengde South",
+     "source": "https://www.rome2rio.com/s/Beijing/Chengde"
+    },
+    "bus": {
+     "from": "$13-$19",
+     "time": "4h",
+     "via": "Beijing to Chengde",
+     "source": "https://www.rome2rio.com/s/Beijing/Chengde"
+    }
+   },
+   "route_note": "Take a train or long-distance bus from Beijing to Chengde, about 2.5 to 3 hours, then a taxi or local bus to the Mountain Resort.",
+   "see": [
+    "Chengde Mountain Resort",
+    "Eight Outer Temples",
+    "Lakeside palaces",
+    "Imperial summer retreat grounds"
+   ],
+   "visit": "Full day",
+   "tour_query": "Chengde Mountain Resort day trip from Beijing",
+   "quests": [
+    "Chengde Mountain Resort",
+    "Putuo Zongcheng Temple"
+   ],
+   "recommended": "train",
+   "why": "The train takes about 2h 8m to Chengde South, which is faster and more direct than the roughly 4-hour bus, and a taxi or local bus covers the last stretch to the sights.",
+   "stars": 4,
+   "know": [
+    "The Mountain Resort is a UNESCO World Heritage Site and is the main reason to visit.",
+    "Plan for a full day because the round trip is long and the resort is large."
+   ]
+  },
+  {
+   "place": "Tianjin",
+   "label": "",
+   "position": {
+    "id": 17403069,
+    "name": "Tianjin, Tianjinxi",
+    "city": "Tianjin",
+    "lat": 39.15511,
+    "lng": 117.15583
+   },
+   "town": {
+    "name": "Tianjin",
+    "lat": 39.14222,
+    "lng": 117.17667
+   },
+   "road": {
+    "km": 123,
+    "min": 88,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 320.0,
+    "currency": "CNY"
+   },
+   "modes": {
+    "train": {
+     "from": "$6-$150",
+     "time": "30m",
+     "via": "Beijing South to Tianjin Station",
+     "source": "https://www.rome2rio.com/s/Beijing/Tianjin"
+    }
+   },
+   "route_note": "Take a high-speed train from Beijing South or Beijing station to Tianjin station, about 30 minutes; the Tianjin Metro or a taxi reaches the historic district.",
+   "see": [
+    "Ancient Culture Street",
+    "Five Avenues historic area",
+    "Tianjin Eye",
+    "Italian Concession"
+   ],
+   "visit": "Full day",
+   "tour_query": "Tianjin day trip from Beijing",
+   "quests": [
+    "Tianjin Museum",
+    "Porcelain House",
+    "Italian Style Town",
+    "Tianjin Eye",
+    "Five Great Avenues",
+    "Ancient Culture Street"
+   ],
+   "recommended": "train",
+   "why": "The high-speed train from Beijing South to Tianjin Station takes about 30 minutes, so it is much faster than driving or a taxi.",
+   "stars": 3,
+   "know": [
+    "Trains run from Beijing South or Beijing station to Tianjin Station.",
+    "A taxi or the Tianjin Metro is needed to reach the historic district from the station."
+   ]
+  }
+ ],
+ "problems": [
+  "Yanqing: not a town in cities15000.json (CN), dropped",
+  "Huairou: not a town in cities15000.json (CN), dropped"
+ ]
+}

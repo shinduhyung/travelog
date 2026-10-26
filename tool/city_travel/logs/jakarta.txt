@@ -1,0 +1,33 @@
+$ deepseek_prep.py Jakarta
+  tokens in 785 out 324
+Jakarta: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Jakarta
+  tokens in 4013 out 878
+Jakarta: 0 problems
+
+$ deepseek_city.py Jakarta --stage places
+Jakarta: places
+  tokens in 1235 out 2871
+
+$ deepseek_city.py Jakarta --stage frame
+Jakarta: frame
+  tokens in 2481 out 1808
+
+$ deepseek_city.py Jakarta --stage plans
+Jakarta: plans
+  plans for day
+  tokens in 2281 out 777
+  plans for 1n
+  tokens in 2282 out 835
+  plans for 2n
+  tokens in 2287 out 1724
+  plans for 3n
+  tokens in 2282 out 1727
+  plans for 4n
+  tokens in 2282 out 1497
+
+$ merge_city.py Jakarta
+Jakarta: 21 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/jakarta.json and planner/jakarta.json
+

@@ -1,0 +1,30 @@
+$ deepseek_facts.py Montevideo
+  tokens in 4063 out 650
+Montevideo: 2 problems
+  - MVD taxi US$60 vs tariff estimate 878
+  - MVD Public bus UYU 107 costs more than taxi US$60
+
+$ deepseek_city.py Montevideo --stage places
+Montevideo: places
+  tokens in 1191 out 2866
+
+$ deepseek_city.py Montevideo --stage frame
+Montevideo: frame
+  tokens in 2465 out 1919
+  repaired JSON
+
+$ deepseek_city.py Montevideo --stage plans
+Montevideo: plans
+  plans for day
+  tokens in 2003 out 722
+  plans for 1n
+  tokens in 2004 out 784
+  plans for 2n
+  tokens in 2009 out 1438
+  plans for 3n
+  tokens in 2004 out 2084
+
+$ merge_city.py Montevideo
+Montevideo: 18 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/montevideo.json and planner/montevideo.json
+

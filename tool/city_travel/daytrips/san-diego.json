@@ -1,0 +1,175 @@
+{
+ "city": "San Diego",
+ "trips": [
+  {
+   "place": "Coronado",
+   "label": "",
+   "position": {
+    "id": 408774,
+    "name": "Coronado, CA",
+    "city": "Coronado",
+    "lat": 32.68589,
+    "lng": -117.18309
+   },
+   "town": {
+    "name": "Coronado",
+    "lat": 32.68589,
+    "lng": -117.18309
+   },
+   "road": {
+    "km": 9,
+    "min": 11,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 30.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$5",
+     "time": "21m",
+     "via": "12th & Imperial Transit Center to Orange Av & Park Pl",
+     "source": "https://www.rome2rio.com/s/San%20Diego/Coronado"
+    }
+   },
+   "route_note": "Take the ferry from downtown San Diego across the bay to Coronado, or a short bus ride over the bridge; the ferry is the classic route.",
+   "see": [
+    "Hotel del Coronado",
+    "Coronado Beach",
+    "Ferry Landing",
+    "Orange Avenue shops"
+   ],
+   "visit": "Half day",
+   "tour_query": "Coronado day trip from San Diego",
+   "quests": [
+    "USS Midway Museum",
+    "Cabrillo National Monument",
+    "San Diego Comic-Con",
+    "San Diego Harbor Cruise",
+    "Jack in the Box",
+    "Qdoba",
+    "Coronado Beach"
+   ],
+   "recommended": "bus",
+   "why": "A short 21-minute bus ride over the bridge drops you near the sights, and the ferry is a classic alternative.",
+   "stars": 4,
+   "know": [
+    "The ferry from downtown is the scenic classic route",
+    "The beach by the Hotel del Coronado is the main sight",
+    "Weekday mornings are quieter than weekends"
+   ]
+  },
+  {
+   "place": "Oceanside",
+   "label": "",
+   "position": {
+    "id": 16894607,
+    "name": "Oceanside Transportation Center, CA",
+    "city": "Oceanside",
+    "lat": 33.19293,
+    "lng": -117.37933
+   },
+   "town": {
+    "name": "Oceanside",
+    "lat": 33.19587,
+    "lng": -117.37948
+   },
+   "road": {
+    "km": 61,
+    "min": 47,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 160.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$2-$7",
+     "time": "54m",
+     "via": "San Diego to Oceanside",
+     "source": "https://www.rome2rio.com/s/San%20Diego/Oceanside"
+    },
+    "bus": {
+     "from": "$6-$9",
+     "time": "55m",
+     "via": "San Diego to Oceanside",
+     "source": "https://www.rome2rio.com/s/San%20Diego/Oceanside"
+    }
+   },
+   "route_note": "The Coaster commuter rail runs directly from downtown San Diego to Oceanside in about an hour, with frequent departures.",
+   "see": [
+    "Oceanside Pier",
+    "California Surf Museum",
+    "Harbor and beaches",
+    "Mission San Luis Rey"
+   ],
+   "visit": "Half day",
+   "tour_query": "Oceanside day trip from San Diego",
+   "quests": [],
+   "recommended": "train",
+   "why": "The Coaster commuter rail runs directly downtown in 54 minutes with frequent departures.",
+   "stars": 3,
+   "know": [
+    "The Coaster runs mainly on weekdays, so check the schedule",
+    "The pier and harbor are a short walk from the transit station",
+    "Summer weekends are busiest"
+   ]
+  },
+  {
+   "place": "Temecula",
+   "label": "",
+   "position": {
+    "id": 409085,
+    "name": "Temecula, CA",
+    "city": "Temecula",
+    "lat": 33.49364,
+    "lng": -117.14836
+   },
+   "town": {
+    "name": "Temecula",
+    "lat": 33.49364,
+    "lng": -117.14836
+   },
+   "road": {
+    "km": 94,
+    "min": 69,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 240.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$10-$28",
+     "time": "2h 36m",
+     "via": "San Diego to Temecula Bus Stop",
+     "source": "https://www.rome2rio.com/s/San%20Diego/Temecula"
+    }
+   },
+   "route_note": "Take the Coaster or a bus to Oceanside, then a Riverside Transit Agency bus or the 395 line inland to Temecula; the trip is about 1.5 to 2 hours each way with a change in Oceanside.",
+   "see": [
+    "Old Town Temecula",
+    "Wine country tasting rooms",
+    "Pechanga Casino",
+    "Temecula Valley Museum"
+   ],
+   "visit": "Full day",
+   "tour_query": "Temecula wine country day trip from San Diego",
+   "quests": [],
+   "recommended": "car",
+   "why": "Public transport takes 2h36m with a change in Oceanside, while driving is only 69 minutes on a direct road.",
+   "stars": 2,
+   "know": [
+    "Wine tasting is the main draw, so go on a weekday to avoid crowds",
+    "Many wineries require advance reservations for tastings",
+    "Summer afternoons are hot; mornings are more comfortable"
+   ]
+  }
+ ],
+ "problems": [
+  "Julian: no Omio position, dropped"
+ ]
+}

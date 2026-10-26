@@ -1,0 +1,667 @@
+{
+  "city": "Kyoto",
+  "checked": "October 2026",
+  "intro_line": "Kyoto: a thousand temples, quiet gardens, and timeless streets.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Kyoto Station",
+        "Downtown (Shijo-Kawaramachi)",
+        "Gion",
+        "Arashiyama"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Kyoto Station",
+        "Downtown (Shijo-Kawaramachi)",
+        "Gion",
+        "Arashiyama"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Kyoto Station",
+        "Downtown (Shijo-Kawaramachi)",
+        "Gion",
+        "Arashiyama"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Kyoto Station",
+        "Downtown (Shijo-Kawaramachi)",
+        "Gion",
+        "Arashiyama"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Kyoto Station",
+        "Downtown (Shijo-Kawaramachi)",
+        "Gion",
+        "Arashiyama"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 8,
+        "low": -1,
+        "rain_days": 8,
+        "note": "Coldest month: highs near 8°C, lows around -1°C. Dress in layers; some sights are outdoor-only."
+      },
+      {
+        "high": 9,
+        "low": 0,
+        "rain_days": 8,
+        "note": "Still cold, highs near 9°C. Fewer crowds; plum blossoms start late in the month."
+      },
+      {
+        "high": 14,
+        "low": 3,
+        "rain_days": 11,
+        "note": "Mild and warming, highs near 14°C. Cherry blossom season nears; expect busy weekends."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 11,
+        "note": "Peak blossom month, highs near 19°C. Book hotels early; parks and temples are packed."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 11,
+        "note": "Green and pleasant, highs near 23°C. Good balance of weather and crowds."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 15,
+        "note": "Rainy season begins: about 15 rain days. Pack a compact umbrella and waterproof shoes."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 18,
+        "note": "Hot and humid, highs near 30°C with 18 rain days. Start sightseeing early; rest midday."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 13,
+        "note": "Hottest month, highs near 32°C and muggy nights. Carry water; use buses and taxis."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 15,
+        "note": "Still warm at 28°C with 15 rain days. Typhoon season: check forecasts before day trips."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 11,
+        "note": "Comfortable autumn, highs near 22°C. Leaves start turning late in the month."
+      },
+      {
+        "high": 16,
+        "low": 7,
+        "rain_days": 7,
+        "note": "Best month for foliage, highs near 16°C, only 7 rain days. Very busy at popular temples."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 7,
+        "note": "Cool and crisp, highs near 11°C. Quieter streets; pack a warm coat for evenings."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.9,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.9,
+      1,
+      0.85
+    ],
+    "history": [
+      0.75,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.7,
+      0.9,
+      1,
+      0.85
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.7,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.7,
+      0.9,
+      1,
+      0.6
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.8
+    ]
+  },
+  "places": {
+    "fushimi_inari": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Early morning or evening; any season",
+      "area": "Kyoto Station",
+      "popularity": 5
+    },
+    "kinkakuji": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning; autumn foliage in November",
+      "area": "Arashiyama",
+      "popularity": 5
+    },
+    "kiyomizudera": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning; cherry blossom and autumn evenings",
+      "area": "Gion",
+      "popularity": 5
+    },
+    "arashiyama_bamboo": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning; any season",
+      "area": "Arashiyama",
+      "popularity": 5
+    },
+    "gion": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Gion",
+      "popularity": 5
+    },
+    "nijo_castle": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; cherry blossom in spring",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 4
+    },
+    "ginkakuji": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning; autumn foliage",
+      "area": "Gion",
+      "popularity": 4
+    },
+    "ryoanji": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning; any season",
+      "area": "Arashiyama",
+      "popularity": 4
+    },
+    "sanjusangendo": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; rainy-day option",
+      "area": "Kyoto Station",
+      "popularity": 3
+    },
+    "tenryuji": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning; cherry blossom and autumn",
+      "area": "Arashiyama",
+      "popularity": 4
+    },
+    "yasaka": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening; festival time in July",
+      "area": "Gion",
+      "popularity": 4
+    },
+    "byodoin": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning; autumn foliage",
+      "area": "Kyoto Station",
+      "popularity": 3
+    },
+    "daitokuji": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning; quiet any season",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 3
+    },
+    "eikando": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late November; morning or evening",
+      "area": "Gion",
+      "popularity": 3
+    },
+    "gion_matsuri": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Mid-July, early morning for parades",
+      "area": "Gion",
+      "popularity": 4
+    },
+    "heian_jingu": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Spring; morning",
+      "area": "Gion",
+      "popularity": 3
+    },
+    "hozugawa": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Spring and autumn; morning departures",
+      "area": "Arashiyama",
+      "popularity": 3
+    },
+    "inception": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Check on the day",
+      "area": "Kyoto Station",
+      "popularity": 2
+    },
+    "kamo_river": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset and evening; spring and autumn",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 4
+    },
+    "kyoto_aquarium": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy days; weekday mornings",
+      "area": "Kyoto Station",
+      "popularity": 3
+    },
+    "imperial_palace": {
+      "types": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning; cherry blossom in spring",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 3
+    },
+    "kyoto_university": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Gion",
+      "popularity": 2
+    },
+    "nishiki_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning; any season",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 4
+    },
+    "philosophers_path": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early April; morning",
+      "area": "Gion",
+      "popularity": 4
+    },
+    "tea_ceremony": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; rainy-day option",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 3
+    },
+    "pontocho": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Downtown (Shijo-Kawaramachi)",
+      "popularity": 4
+    },
+    "kyoto_tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Kyoto Station",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights lets you see the eastern temples, Arashiyama and a day trip without rushing."
+  },
+  "airports": [
+    {
+      "code": "KIX",
+      "name": "Kansai International Airport",
+      "primary": true,
+      "note": "Main international gateway, 81 km southwest.",
+      "options": [
+        {
+          "mode": "Train (Nankai + Hankyu)",
+          "to": "Central Kyoto",
+          "price": "¥1250",
+          "time": "1 hr 45 min",
+          "note": "Kyoto Access Ticket; upgrade to Rapi:t for speed."
+        },
+        {
+          "mode": "Train (Haruka limited express)",
+          "to": "Kyoto Station",
+          "price": "¥2900-3430",
+          "time": "75-80 min",
+          "note": "Kansai Area Pass ¥2400 saves ¥500."
+        },
+        {
+          "mode": "Airport limousine bus",
+          "to": "Kyoto Station",
+          "price": "¥2600",
+          "time": "90-135 min",
+          "note": "Runs twice hourly; traffic can delay."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Kyoto city centre",
+          "price": "¥15000-20000",
+          "time": "90-120 min",
+          "note": "Fixed fares available; book ahead."
+        }
+      ]
+    },
+    {
+      "code": "ITM",
+      "name": "Osaka International Airport (Itami)",
+      "primary": false,
+      "note": "Domestic airport, 39 km southwest; closest to Kyoto.",
+      "options": [
+        {
+          "mode": "Train (monorail + Hankyu)",
+          "to": "Central Kyoto",
+          "price": "¥670-760",
+          "time": "1 hr",
+          "note": "One or two changes; cheaper than bus."
+        },
+        {
+          "mode": "Airport limousine bus",
+          "to": "Kyoto Station",
+          "price": "¥1340",
+          "time": "50 min",
+          "note": "Runs every 20 min; easy with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Kyoto city centre",
+          "price": "¥8000-12000",
+          "time": "60-80 min",
+          "note": "Shared taxis may be cheaper."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Kyoto",
+      "https://en.wikivoyage.org/wiki/Kyoto"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "nature"
+  ],
+  "transit": {
+    "best": "Buses and the two subway lines cover most sights; walk or cycle the temple districts.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Two lines, Karasuma and Tozai, cover central Kyoto. Fares ¥220–330."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "City buses reach most sights. Flat fare ¥230; a day pass costs ¥700 and pays off after three rides."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis; GO and Uber apps operate. Handy for late nights and heavy rain."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended. Parking is scarce and expensive; public transport is easier."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Ideal for temples and backstreets. Bike rentals from ¥1000 a day."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferry service in Kyoto."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold, dry winters, a hot humid summer and a rainy spell in June–July. Spring and autumn are the best times to walk.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: spring and autumn",
+        "text": "April and November bring mild days around 16–22°C and the famous blossoms and leaves. Book early."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer",
+        "text": "July and August reach 30–32°C with many rain days. Sightsee at sunrise and rest in the afternoon."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy season in June–July",
+        "text": "Around 15–18 rain days. Showers are often short; a small umbrella is enough."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold, dry winter",
+        "text": "January lows near -1°C. Days are clear and quiet; temples are far less crowded."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is the busiest",
+        "text": "November has only about 7 rain days but huge crowds at maple spots. Go early morning."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, a light rain jacket, and layers for cool mornings. Add a warm coat for December–February."
+      }
+    ]
+  }
+}

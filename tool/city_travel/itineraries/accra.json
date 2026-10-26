@@ -1,0 +1,1485 @@
+{
+  "city": "Accra",
+  "checked": "October 2026",
+  "currency": "GHS",
+  "usd_rate": 11.6593,
+  "intro": "Accra rewards visitors with lively markets, Atlantic beaches, and a deep cultural pulse. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 5.5042,
+      "west": -0.2234,
+      "north": 5.8181,
+      "east": -0.1327,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 40,
+      "flag_airport": 120,
+      "per_km": 4,
+      "min_fare": 20
+    },
+    "road_factor": 1.35,
+    "city_kmh": 18,
+    "notes": [
+      "No metro or tram; TroTros (minibuses) are the main public transport.",
+      "TroTros run fixed routes; a 'mate' calls out destinations.",
+      "Taxis rarely use meters; agree the fare before you ride.",
+      "Ride apps that work: Uber, Bolt, Yango, InDrive.",
+      "Hiring a car with driver is common for sightseeing.",
+      "Walking is fine by day; watch for open drains and traffic."
+    ],
+    "sources": []
+  },
+  "places": {
+    "nkrumah": {
+      "name": "Kwame Nkrumah Memorial Park",
+      "landmark": "Kwame Nkrumah Memorial Park",
+      "kind": "museum",
+      "lat": 5.5428,
+      "lon": -0.2056,
+      "price": 30,
+      "price_text": "≈ GHS 20–40 for non-Ghanaians; check on the day",
+      "hours": "Daily roughly 09:00–17:00",
+      "tip": "The mausoleum and small museum tell Ghana's independence story; go early to beat the heat.",
+      "source": ""
+    },
+    "independence": {
+      "name": "Independence Square",
+      "landmark": "Independence Square, Accra",
+      "kind": "sight",
+      "lat": 5.5478,
+      "lon": -0.1925,
+      "price": 0,
+      "price_text": "Free to walk the square",
+      "hours": "Open daily; best in daylight",
+      "tip": "The Black Star Gate and arches face the sea; bring water, there is little shade.",
+      "source": ""
+    },
+    "osu-castle": {
+      "name": "Osu Castle",
+      "landmark": "Osu Castle",
+      "kind": "sight",
+      "lat": 5.5447,
+      "lon": -0.1836,
+      "price": null,
+      "price_text": "Exterior free; interior access is restricted — check on the day",
+      "hours": "Not reliably open to the public",
+      "tip": "It is a government building, so view it from outside and ask locally before planning a visit.",
+      "source": ""
+    },
+    "makola": {
+      "name": "Makola Market",
+      "landmark": "Makola Market",
+      "kind": "food",
+      "lat": 5.5483,
+      "lon": -0.2072,
+      "price": 0,
+      "price_text": "Free to enter; bring small cash for purchases",
+      "hours": "Mon–Sat roughly 06:00–18:00 · quieter Sundays",
+      "tip": "Go with a local guide, keep bags in front and expect to bargain.",
+      "source": ""
+    },
+    "jamestown": {
+      "name": "Jamestown Lighthouse",
+      "landmark": "Jamestown Lighthouse",
+      "kind": "sight",
+      "lat": 5.5345,
+      "lon": -0.2117,
+      "price": 10,
+      "price_text": "Small entry fee, roughly GHS 5–20 — check on the day",
+      "hours": "Daylight hours only",
+      "tip": "Walk the old harbour lanes below the lighthouse for the best photos.",
+      "source": ""
+    },
+    "jollof": {
+      "name": "Jollof Rice (Ghana)",
+      "landmark": "Jollof Rice (Ghana)",
+      "kind": "food",
+      "lat": 5.6037,
+      "lon": -0.187,
+      "price": 50,
+      "price_text": "≈ GHS 30–80 a plate at a sit-down spot",
+      "hours": "Mostly lunch and dinner",
+      "tip": "Try it with grilled chicken or fried fish; ask for shito on the side.",
+      "source": ""
+    },
+    "labadi-beach": {
+      "name": "Labadi Beach",
+      "landmark": null,
+      "kind": "beach",
+      "lat": 5.5586,
+      "lon": -0.1444,
+      "price": 20,
+      "price_text": "≈ GHS 10–30 entry — check on the day",
+      "hours": "Daytime; busiest weekends",
+      "tip": "Weekends bring music and food stalls; keep valuables close and swim with care.",
+      "source": ""
+    },
+    "artists-alliance": {
+      "name": "Artists Alliance Gallery",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 5.5603,
+      "lon": -0.1503,
+      "price": 0,
+      "price_text": "Free to browse",
+      "hours": "Roughly Mon–Sat 09:00–18:00 — check on the day",
+      "tip": "Three floors of Ghanaian art near the beach; good for gifts.",
+      "source": ""
+    },
+    "osu-walk": {
+      "name": "Osu Oxford Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.5589,
+      "lon": -0.1789,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Day and evening",
+      "tip": "The main strip for shops, cafes and nightlife; walk it in the evening when it cools.",
+      "source": ""
+    },
+    "accra-tour": {
+      "name": "Accra city walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 5.545,
+      "lon": -0.205,
+      "price": 250,
+      "price_text": "≈ GHS 150–400 per person — confirm inclusions",
+      "hours": "Usually morning departures",
+      "tip": "A guide helps with markets and history; agree the price and stops before you start.",
+      "source": ""
+    },
+    "duke": {
+      "name": "Duke of York restaurant",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.5586,
+      "lon": -0.1797,
+      "price": 120,
+      "price_text": "≈ GHS 80–180 a main",
+      "hours": "Lunch and dinner",
+      "tip": "Reliable spot for Ghanaian and international dishes in Osu.",
+      "source": ""
+    },
+    "kempinski-view": {
+      "name": "Kempinski Gold Coast rooftop view",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.5567,
+      "lon": -0.1747,
+      "price": 80,
+      "price_text": "Drinks ≈ GHS 50–120",
+      "hours": "Evening",
+      "tip": "Go up for a drink at sunset for city and sea views.",
+      "source": ""
+    },
+    "accra-mall": {
+      "name": "Accra Mall",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.6219,
+      "lon": -0.1731,
+      "price": 0,
+      "price_text": "Free to enter",
+      "hours": "Daily roughly 09:00–21:00",
+      "tip": "Air-conditioned shops and food court; handy on a hot or rainy afternoon.",
+      "source": ""
+    },
+    "wli-note": {
+      "name": "Day trip to Aburi Botanical Gardens",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 5.7878,
+      "lon": -0.1739,
+      "price": 300,
+      "price_text": "≈ GHS 200–450 with transport — confirm",
+      "hours": "Day trip; leave early",
+      "tip": "Cooler hills north of Accra; arrange a car and driver for the day.",
+      "source": ""
+    },
+    "labone-cafe": {
+      "name": "Labone coffee and brunch strip",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.5617,
+      "lon": -0.1667,
+      "price": 90,
+      "price_text": "≈ GHS 60–140 for coffee and a plate",
+      "hours": "Mostly daytime",
+      "tip": "Quiet leafy streets with cafes; good for a slow morning.",
+      "source": ""
+    },
+    "cantonments-walk": {
+      "name": "Cantonments embassy district walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.5711,
+      "lon": -0.1811,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daytime",
+      "tip": "Green, calm streets; combine with a nearby cafe stop.",
+      "source": ""
+    },
+    "national-museum": {
+      "name": "National Museum of Ghana",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 5.5566,
+      "lon": -0.2061,
+      "price": 20,
+      "price_text": "≈ GHS 10–30 — check on the day",
+      "hours": "Roughly Tue–Sun daytime — verify before going",
+      "tip": "Collections on Ghanaian history and culture; call ahead as hours can change.",
+      "source": ""
+    },
+    "kejetia-note": {
+      "name": "Osu Night Market food stalls",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.5575,
+      "lon": -0.1772,
+      "price": 40,
+      "price_text": "≈ GHS 20–60 per dish",
+      "hours": "Evening into late night",
+      "tip": "Street food like kelewele and grilled fish; eat where locals queue.",
+      "source": ""
+    },
+    "black-star-square-note": {
+      "name": "Black Star Square sunset walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 5.5475,
+      "lon": -0.1915,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daylight and early evening",
+      "tip": "Pair with Independence Square for sea breezes at dusk.",
+      "source": ""
+    },
+    "airport-cafe": {
+      "name": "Airport Residential cafe and shop stop",
+      "landmark": null,
+      "kind": "food",
+      "lat": 5.6044,
+      "lon": -0.1731,
+      "price": 80,
+      "price_text": "≈ GHS 50–120",
+      "hours": "Daytime",
+      "tip": "Modern cafes near the airport; useful before a flight.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One focused day on Accra's history and markets, all in and around Osu.",
+      "days": [
+        {
+          "title": "History, market and Jamestown",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Start early to beat the heat. Check hours on the day."
+            },
+            {
+              "place": "independence",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short walk or quick taxi from the park. Open-air, so bring water."
+            },
+            {
+              "place": "makola",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Weekday mornings are calmer. Keep bags close and ask before photos."
+            },
+            {
+              "place": "jollof",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch. Ask your driver for a busy local spot nearby."
+            },
+            {
+              "place": "jamestown",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Daylight only. Late afternoon light is best for photos."
+            },
+            {
+              "place": "osu-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening stroll for food and people-watching."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A eat-your-way-through day: market snacks, jollof, brunch and street food.",
+      "days": [
+        {
+          "title": "Markets, jollof and street food",
+          "stops": [
+            {
+              "place": "labone-cafe",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Slow brunch start. Mostly daytime places."
+            },
+            {
+              "place": "makola",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go on a weekday morning. Try local snacks and produce."
+            },
+            {
+              "place": "jollof",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Ghanaian jollof is the point of the trip."
+            },
+            {
+              "place": "accra-mall",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Air-conditioned break, coffee and supplies. Open daily."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening food stalls. Go with someone who knows the area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "Sand, sea and a relaxed coastal day with an evening view.",
+      "days": [
+        {
+          "title": "Labadi and the coast",
+          "stops": [
+            {
+              "place": "labadi-beach",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Busiest at weekends. Watch your belongings and agree prices first."
+            },
+            {
+              "place": "jollof",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch near the beach or back in Osu."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Cool indoor break. Hours vary, so check on the day."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset drinks with a skyline view. Smart-casual is safer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Labone"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "History first: Nkrumah, Independence Square and Jamestown in one tight loop.",
+      "days": [
+        {
+          "title": "Arrive and walk Osu",
+          "stops": [
+            {
+              "place": "osu-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy start on Oxford Street. Keep valuables close in crowds."
+            },
+            {
+              "place": "jollof",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner nearby. Ask for the local jollof, not the party version."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Evening food stalls. Bring small cash."
+            }
+          ]
+        },
+        {
+          "title": "Monuments and old town",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Go early for cooler air. Check the day's hours at the gate."
+            },
+            {
+              "place": "independence",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short walk from the park. Open air, so bring water and a hat."
+            },
+            {
+              "place": "black-star-square-note",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Next to Independence Square. Daylight only."
+            },
+            {
+              "place": "makola",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Weekday morning is calmer. Watch your footing and your bag."
+            },
+            {
+              "place": "jamestown",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Short taxi ride. Daylight hours only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Osu and Labone, with a market stop for the real thing.",
+      "days": [
+        {
+          "title": "Market, lunch, night market",
+          "stops": [
+            {
+              "place": "makola",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early on a weekday. Bring small notes for produce."
+            },
+            {
+              "place": "jollof",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch. Portions are big; share if you are not very hungry."
+            },
+            {
+              "place": "osu-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee and snacks along the way."
+            },
+            {
+              "place": "duke",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Book ahead at weekends. Dinner is the main meal here."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and beach food",
+          "stops": [
+            {
+              "place": "labone-cafe",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Mostly daytime places. Some close early afternoon."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Nearby gallery. Check hours on the day."
+            },
+            {
+              "place": "labadi-beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Weekends are busiest. Eat at the beach shacks and pay in cash."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Back in Osu for evening stalls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One beach day plus the city's best sunset spots.",
+      "days": [
+        {
+          "title": "City icons, then the coast",
+          "stops": [
+            {
+              "place": "independence",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early morning is cooler and quieter."
+            },
+            {
+              "place": "jamestown",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short taxi. Daylight only."
+            },
+            {
+              "place": "jollof",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch before the beach."
+            },
+            {
+              "place": "labadi-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Busiest at weekends. Keep an eye on your things."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drinks. Dress smart casual."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning and departure",
+          "stops": [
+            {
+              "place": "labone-cafe",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Brunch near the beach area."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Good for gifts. Check hours on the day."
+            },
+            {
+              "place": "accra-mall",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Air-conditioned stop before the airport. About 20 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Labone"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "History first: Nkrumah, Independence Square and Jamestown in one tight loop.",
+      "days": [
+        {
+          "title": "Arrive and walk Osu",
+          "stops": [
+            {
+              "place": "osu-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy start on Oxford Street. Keep valuables close in crowds."
+            },
+            {
+              "place": "jollof",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner nearby. Ask for the local jollof, not the party version."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Evening food stalls. Bring small cash."
+            }
+          ]
+        },
+        {
+          "title": "Monuments and old town",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Go early for cooler air. Check the day's hours at the gate."
+            },
+            {
+              "place": "independence",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short walk from the park. Open air, so bring water and a hat."
+            },
+            {
+              "place": "black-star-square-note",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Next to Independence Square. Daylight only."
+            },
+            {
+              "place": "makola",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Weekday morning is calmer. Watch your footing and your bag."
+            },
+            {
+              "place": "jamestown",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Short taxi ride. Daylight hours only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Osu and Labone, with a market stop for the real thing.",
+      "days": [
+        {
+          "title": "Market, lunch, night market",
+          "stops": [
+            {
+              "place": "makola",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early on a weekday. Bring small notes for produce."
+            },
+            {
+              "place": "jollof",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch. Portions are big; share if you are not very hungry."
+            },
+            {
+              "place": "osu-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee and snacks along the way."
+            },
+            {
+              "place": "duke",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Book ahead at weekends. Dinner is the main meal here."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and beach food",
+          "stops": [
+            {
+              "place": "labone-cafe",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Mostly daytime places. Some close early afternoon."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Nearby gallery. Check hours on the day."
+            },
+            {
+              "place": "labadi-beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Weekends are busiest. Eat at the beach shacks and pay in cash."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Back in Osu for evening stalls."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "One beach day plus the city's best sunset spots.",
+      "days": [
+        {
+          "title": "City icons, then the coast",
+          "stops": [
+            {
+              "place": "independence",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early morning is cooler and quieter."
+            },
+            {
+              "place": "jamestown",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Short taxi. Daylight only."
+            },
+            {
+              "place": "jollof",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch before the beach."
+            },
+            {
+              "place": "labadi-beach",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Busiest at weekends. Keep an eye on your things."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drinks. Dress smart casual."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning and departure",
+          "stops": [
+            {
+              "place": "labone-cafe",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Brunch near the beach area."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Good for gifts. Check hours on the day."
+            },
+            {
+              "place": "accra-mall",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Air-conditioned stop before the airport. About 20 minutes by taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Labone"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the history core: Nkrumah, Jamestown and Makola, with evenings in Osu.",
+      "days": [
+        {
+          "title": "Arrive, Nkrumah Park and the coast",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Start early; it gets hot by midday. Entry fee is modest — check on the day."
+            },
+            {
+              "place": "independence",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Short walk or quick taxi from the park. Bring water and a hat."
+            },
+            {
+              "place": "black-star-square-note",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Next to Independence Square; best light is later, but midday works for photos."
+            },
+            {
+              "place": "jollof",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch. Ask your driver for a well-known local spot in Osu."
+            },
+            {
+              "place": "osu-walk",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening stroll on Oxford Street; keep bags close and expect friendly sellers."
+            }
+          ]
+        },
+        {
+          "title": "Old Accra and markets",
+          "stops": [
+            {
+              "place": "accra-tour",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Morning walking tour; book ahead and confirm the meeting point."
+            },
+            {
+              "place": "makola",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekday morning is calmer, but midday still works. Go with a guide and don't photograph people without asking."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Verify it is open before you go — hours vary."
+            },
+            {
+              "place": "jamestown",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light. Daylight only; arrange a taxi back before dark."
+            },
+            {
+              "place": "duke",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Dinner in Osu. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want jollof, market snacks and street food, with culture in between meals.",
+      "days": [
+        {
+          "title": "Market morning and Osu evening",
+          "stops": [
+            {
+              "place": "labone-cafe",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Coffee and brunch to start. Mostly daytime places."
+            },
+            {
+              "place": "makola",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Weekday morning is best. Try local snacks; prices are low, carry small notes."
+            },
+            {
+              "place": "jollof",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch — this is the classic Ghanaian jollof stop."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Gallery in Labone; roughly Mon–Sat, check on the day."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Evening food stalls in Osu. Go with someone who knows the area; eat where it's busy."
+            }
+          ]
+        },
+        {
+          "title": "History, then a long dinner",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Morning is cooler. Entry fee is modest — check on the day."
+            },
+            {
+              "place": "independence",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Short taxi ride. Open daily, best in daylight."
+            },
+            {
+              "place": "accra-mall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Air-conditioned lunch stop; about 20–30 minutes by taxi from central Accra."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset drinks with a skyline view. Smart-casual; prices are hotel-level."
+            },
+            {
+              "place": "duke",
+              "at": "19:30",
+              "minutes": 75,
+              "note": "Dinner in Osu. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "A slower trip: one full beach day at Labadi plus the city highlights in the mornings.",
+      "days": [
+        {
+          "title": "City morning, beach afternoon",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Go early before the heat. Entry fee is modest — check on the day."
+            },
+            {
+              "place": "independence",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Nearby; open daily, best in daylight."
+            },
+            {
+              "place": "labadi-beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "About 20–30 minutes by taxi. Busiest at weekends; small entry fee — check on the day."
+            },
+            {
+              "place": "osu-walk",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening walk and dinner on Oxford Street."
+            }
+          ]
+        },
+        {
+          "title": "Market, gallery, sunset",
+          "stops": [
+            {
+              "place": "makola",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday morning is calmest. Go with a guide."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Labone gallery; roughly Mon–Sat, check on the day."
+            },
+            {
+              "place": "labone-cafe",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Brunch-style lunch on the Labone strip."
+            },
+            {
+              "place": "jamestown",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Late afternoon light. Daylight only; arrange a taxi back."
+            },
+            {
+              "place": "duke",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Dinner in Osu to finish."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Labone"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want Accra's history and markets at an easy pace, with evenings left free.",
+      "days": [
+        {
+          "title": "Arrive and settle into Osu",
+          "stops": [
+            {
+              "place": "osu-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Easy first walk near most hotels. Stay aware of traffic and keep bags close."
+            },
+            {
+              "place": "jollof",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner. Ghanaian jollof is smoky and tomato-rich; ask for it mild if you prefer."
+            }
+          ]
+        },
+        {
+          "title": "Independence Square and the Nkrumah story",
+          "stops": [
+            {
+              "place": "independence",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Open-air square; go early before the heat. Bring water and a hat."
+            },
+            {
+              "place": "black-star-square-note",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Short walk around the arches and the sea wall."
+            },
+            {
+              "place": "nkrumah",
+              "at": "10:15",
+              "minutes": 75,
+              "note": "Memorial and mausoleum. Roughly 09:00–17:00 daily; confirm on the day."
+            },
+            {
+              "place": "makola",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Busy weekday market. Go with a guide or keep valuables out of sight. Quieter Sundays."
+            },
+            {
+              "place": "duke",
+              "at": "13:45",
+              "minutes": 75,
+              "note": "Sit-down lunch in Osu to recover after the market."
+            }
+          ]
+        },
+        {
+          "title": "Jamestown, museum and the coast",
+          "stops": [
+            {
+              "place": "jamestown",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Lighthouse area; daylight only. Ask locally before climbing."
+            },
+            {
+              "place": "national-museum",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Roughly Tue–Sun daytime. Verify opening before you go."
+            },
+            {
+              "place": "osu-castle",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "View from outside only. It is not reliably open to the public."
+            },
+            {
+              "place": "labone-cafe",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Brunch or lunch in Labone, a short taxi away."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Local art and crafts. Roughly Mon–Sat 09:00–18:00 — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Walking tour, then a rooftop sunset",
+          "stops": [
+            {
+              "place": "accra-tour",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Usually morning departures. Book ahead and wear comfortable shoes."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening street food in Osu. Pick busy stalls and eat food that is cooked hot."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "Rooftop drink for the view. Dress smart-casual; check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, street stalls and a proper sit-down dinner, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "Arrive and eat on Oxford Street",
+          "stops": [
+            {
+              "place": "osu-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening stroll past shops and food spots in Osu."
+            },
+            {
+              "place": "jollof",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "First dinner: jollof rice. Portions are large; share if you are not very hungry."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and a long lunch",
+          "stops": [
+            {
+              "place": "makola",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Go early on a weekday for the freshest produce and fewer crowds."
+            },
+            {
+              "place": "labone-cafe",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Coffee and brunch in Labone. Mostly daytime places."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Browse between meals. Check hours on the day."
+            },
+            {
+              "place": "duke",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Relaxed lunch. Book ahead for dinner slots later in the trip."
+            }
+          ]
+        },
+        {
+          "title": "History, then street food",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Roughly 09:00–17:00 daily; confirm on the day."
+            },
+            {
+              "place": "independence",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk nearby. Best in daylight."
+            },
+            {
+              "place": "accra-mall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Air-conditioned food court and shops; a good break from the heat."
+            },
+            {
+              "place": "kejetia-note",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Osu night food stalls. Choose busy stalls and hot, freshly cooked food."
+            }
+          ]
+        },
+        {
+          "title": "Beach food and a rooftop finish",
+          "stops": [
+            {
+              "place": "labadi-beach",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Weekend afternoons are busiest. Eat grilled food at the beach spots; agree prices first."
+            },
+            {
+              "place": "airport-cafe",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Cafe and shop stop near the airport area."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drink and a light bite. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Osu"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "Sun-seekers who want Labadi plus a slower coastal day, with short city stops in between.",
+      "days": [
+        {
+          "title": "Arrive and walk Osu",
+          "stops": [
+            {
+              "place": "osu-walk",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening walk near the hotels. Keep valuables out of sight."
+            },
+            {
+              "place": "jollof",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Osu. Ask for mild if you are not used to heat."
+            }
+          ]
+        },
+        {
+          "title": "Labadi Beach day",
+          "stops": [
+            {
+              "place": "labadi-beach",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Daytime; busiest at weekends. Bring cash for entry and food, and agree prices first."
+            },
+            {
+              "place": "labone-cafe",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch or brunch in Labone on the way back."
+            },
+            {
+              "place": "artists-alliance",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Shaded gallery stop. Roughly Mon–Sat 09:00–18:00 — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "History and a sunset square",
+          "stops": [
+            {
+              "place": "nkrumah",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Roughly 09:00–17:00 daily; confirm on the day."
+            },
+            {
+              "place": "independence",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Open daily; best in daylight."
+            },
+            {
+              "place": "makola",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Weekday mornings are calmer. Go with a guide if you can."
+            },
+            {
+              "place": "black-star-square-note",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Sunset walk by the water. Daylight and early evening only."
+            }
+          ]
+        },
+        {
+          "title": "Coastal drive and a slow finish",
+          "stops": [
+            {
+              "place": "accra-tour",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Morning walking tour to see the city before you leave. Book ahead."
+            },
+            {
+              "place": "accra-mall",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Food court lunch and last shopping in air conditioning."
+            },
+            {
+              "place": "kempinski-view",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drink to close the trip. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Labone"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Jamestown, Makola Market and live highlife."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Jollof, waakye and chop bars across the city."
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "Labadi and Bojo Beach plus a coastal drive."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Osu",
+      "range": [
+        350,
+        900
+      ],
+      "why": "Walk to restaurants, bars and Oxford Street shops. Central for nightlife and easy taxi rides to the old town.",
+      "center": [
+        5.557,
+        -0.177
+      ]
+    },
+    {
+      "area": "Airport Residential",
+      "range": [
+        600,
+        1400
+      ],
+      "why": "Closest to the airport and big hotels. Quiet streets, good for early flights and business trips.",
+      "center": [
+        5.605,
+        -0.172
+      ]
+    },
+    {
+      "area": "Labone",
+      "range": [
+        450,
+        1100
+      ],
+      "why": "Leafy and calm, with cafés and embassies nearby. A short ride from Osu and the beaches.",
+      "center": [
+        5.565,
+        -0.17
+      ]
+    },
+    {
+      "area": "Cantonments",
+      "range": [
+        700,
+        1600
+      ],
+      "why": "Quiet, upscale and central. Good for longer stays and travellers who want space and security.",
+      "center": [
+        5.575,
+        -0.178
+      ]
+    }
+  ],
+  "food": [
+    "Try Ghanaian staples: jollof rice, waakye (rice and beans), banku with tilapia, and fufu with light soup.",
+    "Chop bars are cheap local canteens. Expect a filling plate for roughly GHS 30–60; check the price first.",
+    "For red-red (beans, plantain and palm oil) and grilled tilapia, look around Osu and Labadi.",
+    "Street snacks: kelewele (spiced fried plantain), kebab skewers and roasted corn. Eat where it is busy and freshly cooked.",
+    "Book ahead for popular weekend spots. Many kitchens close early on Sundays; check on the day."
+  ],
+  "more_time": [
+    "Add a day for Cape Coast and Elmina castles, about 2–3 hours west by road. Go early and hire a driver.",
+    "Swap one city day for Aburi Botanical Gardens and the hills, roughly an hour north of Accra.",
+    "Beach lovers can trade a city afternoon for Bojo Beach or a boat trip on the Volta near Ada."
+  ]
+}

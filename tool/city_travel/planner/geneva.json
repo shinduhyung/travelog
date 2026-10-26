@@ -1,0 +1,562 @@
+{
+  "city": "Geneva",
+  "checked": "October 2026",
+  "intro_line": "A lakeside city of diplomacy, watches and Alpine views.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town",
+        "Pâquis",
+        "Eaux-Vives",
+        "Plainpalais"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town",
+        "Pâquis",
+        "Eaux-Vives",
+        "Plainpalais"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Old Town",
+        "Pâquis",
+        "Eaux-Vives",
+        "Plainpalais"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Town",
+        "Pâquis",
+        "Eaux-Vives",
+        "Plainpalais"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Old Town",
+        "Pâquis",
+        "Eaux-Vives",
+        "Plainpalais"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": 0,
+        "rain_days": 13,
+        "note": "Cold and grey, highs near 5°C; pack a warm coat and expect some rain."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 10,
+        "note": "Still cold, highs around 8°C; a quiet month for museums."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 12,
+        "note": "Milder, highs near 11°C; rain is common, bring an umbrella."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 11,
+        "note": "Spring arrives, highs around 15°C; good for walking the lake shore."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 14,
+        "note": "Pleasant, highs near 18°C; one of the wetter months, keep a rain layer."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 13,
+        "note": "Warm and bright, highs around 24°C; long evenings by the lake."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Hottest month, highs near 27°C; book lake swims and shade."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 9,
+        "note": "Warm, highs around 26°C; a great month for the lake and parks."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 10,
+        "note": "Mild and pleasant, highs near 21°C; fewer rain days than spring."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 11,
+        "note": "Cooler, highs around 16°C; autumn colours and quieter streets."
+      },
+      {
+        "high": 10,
+        "low": 4,
+        "rain_days": 14,
+        "note": "Chilly, highs near 10°C; rain is frequent, dress in layers."
+      },
+      {
+        "high": 7,
+        "low": 1,
+        "rain_days": 13,
+        "note": "Cold, highs around 7°C; festive season, short daylight."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.4
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "budget": [
+      0.6,
+      0.6,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.7,
+      0.65,
+      0.6
+    ]
+  },
+  "places": {
+    "jetdeau": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Eaux-Vives",
+      "popularity": 5
+    },
+    "unog": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Pâquis",
+      "popularity": 4
+    },
+    "stpierre": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "lakegenevatour": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Eaux-Vives",
+      "popularity": 4
+    },
+    "telepherique": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Eaux-Vives",
+      "popularity": 3
+    },
+    "unige": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Plainpalais",
+      "popularity": 2
+    },
+    "plainpalais_market": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Saturday morning",
+      "area": "Plainpalais",
+      "popularity": 3
+    },
+    "carouge_walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Plainpalais",
+      "popularity": 3
+    },
+    "oldtown_walk": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "bastions": {
+      "types": [
+        "nature",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Plainpalais",
+      "popularity": 3
+    },
+    "bains_des_paquis": {
+      "types": [
+        "nature",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Warm afternoon in summer",
+      "area": "Pâquis",
+      "popularity": 4
+    },
+    "broken_chair": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Pâquis",
+      "popularity": 3
+    },
+    "english_garden": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Eaux-Vives",
+      "popularity": 3
+    },
+    "patek": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "Plainpalais",
+      "popularity": 3
+    },
+    "red_cross": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Pâquis",
+      "popularity": 3
+    },
+    "rues_basses": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Pâquis",
+      "popularity": 2
+    },
+    "mont_saleve_view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Clear afternoon",
+      "area": "Eaux-Vives",
+      "popularity": 3
+    },
+    "plaine_de_plainpalais": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Plainpalais",
+      "popularity": 2
+    },
+    "mamco": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Plainpalais",
+      "popularity": 2
+    },
+    "eauxvives_promenade": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Eaux-Vives",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Old Town, museums and a lake cruise; add a night for an Alpine day trip."
+  },
+  "airports": [
+    {
+      "code": "GVA",
+      "name": "Geneva Cointrin International Airport",
+      "primary": true,
+      "note": "Main hub, about 5 km from the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Gare Cornavin",
+          "price": "CHF 3",
+          "time": "5-10 min",
+          "note": "Every train stops at the main station; same ticket as buses."
+        },
+        {
+          "mode": "Bus 10",
+          "to": "Gare Cornavin area (22-Cantons stop)",
+          "price": "CHF 3",
+          "time": "20-30 min",
+          "note": "Runs every 15 min from 06:00 to 23:00."
+        },
+        {
+          "mode": "Bus 5",
+          "to": "Rue de Lausanne / UN area",
+          "price": "CHF 3",
+          "time": "25-35 min",
+          "note": "Different route past the UN building."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "CHF 30-40",
+          "time": "15-25 min",
+          "note": "Fastest door-to-door option."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "CHF 25-40",
+          "time": "15-25 min",
+          "note": "Check app for current fares."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Geneva",
+      "https://en.wikivoyage.org/wiki/Geneva"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Trams and buses with a TPG ticket, or a free transport card from your hotel.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "TPG trams and buses cover most of the city. Buy a ticket at the stop machine before boarding: about CHF 3 for one hour, CHF 8 for a day pass."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are pricey; Uber and similar apps operate in Geneva."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but parking is costly and the centre is compact. Use transit instead for city trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The city is fairly flat and good for walking and bikes. Genèveroule lends bikes free in summer."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Yellow 'mouette' boats cross the lake and are covered by TPG tickets."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate lakeside climate: cold, grey winters and warm, sunny summers, with rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs of 24–27°C and the most sun. Ideal for the lake, parks and boat trips."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 5–8°C and lows near 0°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 9–14 rain days most months. Bring a light waterproof and an umbrella."
+      },
+      {
+        "icon": "🌸",
+        "title": "Spring warms up slowly",
+        "text": "March to May climbs from 11°C to 18°C. Pleasant but changeable; layer up."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild autumn",
+        "text": "September and October stay around 16–21°C; good for walking before the cold sets in."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobbled lanes; sunglasses and sunscreen for summer."
+      }
+    ]
+  }
+}

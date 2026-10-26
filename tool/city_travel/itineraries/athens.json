@@ -1,0 +1,1350 @@
+{
+  "city": "Athens",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Athens rewards visitors who mix ruins with neighbourhood life, markets and the coast. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 37.9371,
+      "west": 23.6517,
+      "north": 37.999,
+      "east": 23.7558,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 1.19,
+      "flag_airport": 3.2,
+      "per_km": 0.34,
+      "min_fare": 3.2
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro has 3 lines; trains run about 05:30-00:30, later on Friday and Saturday nights.",
+      "One OASA ticket costs €1.20 and covers metro, tram and bus with transfers for 90 minutes.",
+      "Airport metro or bus costs about €9 each way; express bus X93/X95 costs €5.50.",
+      "Taxis are yellow; insist on the meter and expect shared rides at busy times.",
+      "Ride apps such as Uber and Bolt work in Athens; use them to avoid fare haggling.",
+      "Driving in the centre is hard: narrow streets, little parking and heavy traffic.",
+      "Piraeus port is about 10 km from the centre, with ferries to the islands."
+    ],
+    "sources": []
+  },
+  "places": {
+    "parthenon": {
+      "name": "Parthenon",
+      "landmark": "Parthenon",
+      "kind": "sight",
+      "lat": 37.9716,
+      "lon": 23.7266,
+      "price": 20,
+      "price_text": "€20 summer Acropolis ticket (≈€10 low season) · includes slopes",
+      "hours": "Daily, roughly 08:00–20:00 in summer · shorter in winter, check on the day",
+      "tip": "Go at opening time to beat heat and crowds. Bring water and wear shoes with grip on the marble.",
+      "source": "https://www.culture.gov.gr"
+    },
+    "acropolis-museum": {
+      "name": "Acropolis Museum",
+      "landmark": "Acropolis Museum",
+      "kind": "museum",
+      "lat": 37.9682,
+      "lon": 23.7289,
+      "price": 15,
+      "price_text": "€15 summer · €10 low season · under 18 free",
+      "hours": "Mon–Thu and Sat–Sun roughly 09:00–17:00, Fri until 22:00 in summer · check on the day",
+      "tip": "Do the museum before the hill. The top floor has the Parthenon frieze with a view up to the temple.",
+      "source": "https://www.theacropolismuseum.gr"
+    },
+    "plaka": {
+      "name": "Plaka",
+      "landmark": "Plaka",
+      "kind": "sight",
+      "lat": 37.9754,
+      "lon": 23.7291,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · shops and tavernas run late",
+      "tip": "Wander the small lanes uphill from Adrianou street. Eat one street back from the main tourist strip.",
+      "source": ""
+    },
+    "ancient-agora": {
+      "name": "Ancient Agora of Athens",
+      "landmark": "Ancient Agora of Athens",
+      "kind": "sight",
+      "lat": 37.9758,
+      "lon": 23.7226,
+      "price": 10,
+      "price_text": "€10 summer · €5 low season",
+      "hours": "Daily, roughly 08:00–20:00 summer · shorter in winter, check on the day",
+      "tip": "The rebuilt Stoa of Attalos holds a small museum and shade. Combine with the Acropolis ticket if it is offered.",
+      "source": "https://www.culture.gov.gr"
+    },
+    "temple-olympian-zeus": {
+      "name": "Temple of Olympian Zeus",
+      "landmark": "Temple of Olympian Zeus",
+      "kind": "sight",
+      "lat": 37.9691,
+      "lon": 23.7337,
+      "price": 8,
+      "price_text": "€8 summer · €4 low season",
+      "hours": "Daily, roughly 08:00–20:00 summer · shorter in winter, check on the day",
+      "tip": "The surviving columns are huge. Best seen in soft light; there is little shade.",
+      "source": "https://www.culture.gov.gr"
+    },
+    "syntagma-square": {
+      "name": "Syntagma Square",
+      "landmark": "Syntagma Square",
+      "kind": "sight",
+      "lat": 37.9754,
+      "lon": 23.7346,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · changing of the guard on the hour",
+      "tip": "Watch the Evzones guard change at the Tomb of the Unknown Soldier, then walk down to Plaka.",
+      "source": ""
+    },
+    "panathenaic-stadium": {
+      "name": "Panathenaic Stadium",
+      "landmark": "Panathenaic Stadium",
+      "kind": "sight",
+      "lat": 37.9669,
+      "lon": 23.7408,
+      "price": 10,
+      "price_text": "≈€10 entry · audio guide included",
+      "hours": "Daily, roughly 08:00–19:00 · check on the day",
+      "tip": "Climb to the top row for the view. The marble seats get very hot at midday.",
+      "source": "https://www.panathenaicstadium.gr"
+    },
+    "allou-fun-park": {
+      "name": "Allou Fun Park",
+      "landmark": "Allou Fun Park",
+      "kind": "park",
+      "lat": 37.9833,
+      "lon": 23.7333,
+      "price": null,
+      "price_text": "Pay per ride or buy a pass · check prices on the day",
+      "hours": "Mostly afternoons and evenings · seasonal, check on the day",
+      "tip": "A big family amusement park west of the centre. Allow half a day and check opening days before you go.",
+      "source": "https://www.allou.gr"
+    },
+    "athens-lions-kiddie-carnival": {
+      "name": "Athens Lions Club Kiddie Carnival",
+      "landmark": "Athens Lions Club Kiddie Carnival",
+      "kind": "activity",
+      "lat": 34.8015,
+      "lon": -86.974,
+      "price": null,
+      "price_text": "Check locally · event-based",
+      "hours": "Seasonal event · check dates on the day",
+      "tip": "This is a seasonal children's carnival, not a year-round attraction. Confirm dates and location before planning around it.",
+      "source": ""
+    },
+    "erechtheion": {
+      "name": "Erechtheion",
+      "landmark": "Erechtheion",
+      "kind": "sight",
+      "lat": 37.9723,
+      "lon": 23.7268,
+      "price": 0,
+      "price_text": "Included in the Acropolis ticket",
+      "hours": "Same as the Acropolis · check on the day",
+      "tip": "Look for the Caryatid porch on the north side. The originals are in the Acropolis Museum.",
+      "source": "https://www.culture.gov.gr"
+    },
+    "hadrians-arch": {
+      "name": "Hadrian's Arch",
+      "landmark": "Hadrian's Arch",
+      "kind": "sight",
+      "lat": 37.9698,
+      "lon": 23.7334,
+      "price": 0,
+      "price_text": "Free · seen from the street",
+      "hours": "Always visible",
+      "tip": "A quick photo stop on the walk between Plaka and the Temple of Olympian Zeus.",
+      "source": ""
+    },
+    "karaiskakis-stadium": {
+      "name": "Karaiskakis Stadium",
+      "landmark": "Karaiskakis Stadium",
+      "kind": "show",
+      "lat": 37.9464,
+      "lon": 23.6645,
+      "price": null,
+      "price_text": "Match tickets vary · check the club site",
+      "hours": "Match days only",
+      "tip": "Home of Olympiacos. Football nights here are loud and intense; buy tickets in advance.",
+      "source": "https://www.olympiacos.org"
+    },
+    "lycabettus-hill": {
+      "name": "Lycabettus Hill",
+      "landmark": "Lycabettus Hill",
+      "kind": "sight",
+      "lat": 37.9786,
+      "lon": 23.743,
+      "price": 0,
+      "price_text": "Free to walk · funicular costs extra",
+      "hours": "Hill always open · funicular runs daytime into evening, check on the day",
+      "tip": "Best sunset view over the city and the Acropolis. Walk up or take the funicular.",
+      "source": ""
+    },
+    "monastiraki-square": {
+      "name": "Monastiraki Square",
+      "landmark": "Monastiraki Square",
+      "kind": "sight",
+      "lat": 37.976,
+      "lon": 23.7243,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · flea market busiest on Sundays",
+      "tip": "Come on a Sunday morning for the flea market. Watch your bag in the crowds.",
+      "source": ""
+    },
+    "moussaka": {
+      "name": "Moussaka in a taverna",
+      "landmark": "Moussaka",
+      "kind": "food",
+      "lat": 37.9838,
+      "lon": 23.7275,
+      "price": 12,
+      "price_text": "≈€10–16 a portion in a Plaka taverna",
+      "hours": "Lunch and dinner, typically from 12:00 to late",
+      "tip": "Order it hot from the oven, not reheated. Pair with a simple village salad.",
+      "source": ""
+    },
+    "national-archaeological-museum": {
+      "name": "National Archaeological Museum",
+      "landmark": "National Archaeological Museum",
+      "kind": "museum",
+      "lat": 37.9897,
+      "lon": 23.7328,
+      "price": 12,
+      "price_text": "≈€12 summer · reduced in low season",
+      "hours": "Roughly 08:00–20:00, hours vary by day and season · check on the day",
+      "tip": "The best collection of Greek antiquities in the world. Give it at least two hours and go early.",
+      "source": "https://www.namuseum.gr"
+    },
+    "odeon-herodes-atticus": {
+      "name": "Odeon of Herodes Atticus",
+      "landmark": "Odeon of Herodes Atticus",
+      "kind": "show",
+      "lat": 37.9708,
+      "lon": 23.726,
+      "price": null,
+      "price_text": "Concert tickets vary · check the Athens Festival programme",
+      "hours": "Performances in summer evenings",
+      "tip": "See a concert under the stars if you can. Otherwise view it from above on the Acropolis path.",
+      "source": "https://aefestival.gr"
+    },
+    "roman-agora": {
+      "name": "Roman Agora of Athens",
+      "landmark": "Roman Agora of Athens",
+      "kind": "sight",
+      "lat": 37.9749,
+      "lon": 23.726,
+      "price": 8,
+      "price_text": "≈€8 summer · €4 low season",
+      "hours": "Daily, roughly 08:00–20:00 summer · check on the day",
+      "tip": "Small and quick. The Tower of the Winds is the highlight.",
+      "source": "https://www.culture.gov.gr"
+    },
+    "theatre-dionysus": {
+      "name": "Theatre of Dionysus",
+      "landmark": "Theatre of Dionysus",
+      "kind": "sight",
+      "lat": 37.9712,
+      "lon": 23.728,
+      "price": 0,
+      "price_text": "Included in the Acropolis ticket",
+      "hours": "Same as the Acropolis · check on the day",
+      "tip": "The birthplace of theatre. See it on the way up or down the Acropolis slope.",
+      "source": "https://www.culture.gov.gr"
+    },
+    "university-trilogy": {
+      "name": "University of Athens Trilogy",
+      "landmark": "University of Athens Trilogy",
+      "kind": "sight",
+      "lat": 37.9818,
+      "lon": 23.7314,
+      "price": 0,
+      "price_text": "Free to view from outside",
+      "hours": "Exterior always visible",
+      "tip": "Three grand neoclassical buildings on Panepistimiou street. A short photo stop on the walk to Omonia.",
+      "source": ""
+    },
+    "university-georgia": {
+      "name": "University of Georgia (Athens, USA)",
+      "landmark": "University of Georgia",
+      "kind": "sight",
+      "lat": 33.948,
+      "lon": -83.3773,
+      "price": null,
+      "price_text": "Not in Athens, Greece · check locally",
+      "hours": "Not applicable",
+      "tip": "This is a university in Georgia, USA, not a place in Athens, Greece. Skip it for this trip.",
+      "source": ""
+    },
+    "zaxbys": {
+      "name": "Zaxby's",
+      "landmark": "Zaxby's",
+      "kind": "food",
+      "lat": 33.9519,
+      "lon": -83.3576,
+      "price": null,
+      "price_text": "US fast-food chain · not in Athens, Greece",
+      "hours": "Not applicable",
+      "tip": "A US chicken chain with no Athens, Greece branch. Ignore it and eat at a local taverna instead.",
+      "source": ""
+    },
+    "central-market": {
+      "name": "Varvakios Central Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 37.9797,
+      "lon": 23.7276,
+      "price": 0,
+      "price_text": "Free to enter · pay for what you eat",
+      "hours": "Mon–Sat mornings to early afternoon · closed Sunday",
+      "tip": "Come before noon for the fish and meat halls. Grab a cheap lunch at the tavernas inside.",
+      "source": ""
+    },
+    "philopappou-viewpoint": {
+      "name": "Philopappou Hill viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 37.967,
+      "lon": 23.72,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · avoid after dark alone",
+      "tip": "The best free view of the Acropolis. Walk up from Koukaki in the late afternoon.",
+      "source": ""
+    },
+    "food-tour": {
+      "name": "Athens street food walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 37.977,
+      "lon": 23.727,
+      "price": 55,
+      "price_text": "≈€45–70 per person · food included",
+      "tip": "Book a small-group tour to taste souvlaki, pies and sweets. Check that tastings are included in the price.",
+      "source": ""
+    },
+    "anafiotika-walk": {
+      "name": "Anafiotika neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 37.973,
+      "lon": 23.7285,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · quiet residential lanes",
+      "tip": "Whitewashed island-style houses under the Acropolis. Keep quiet, people live here.",
+      "source": ""
+    },
+    "souvlaki-stop": {
+      "name": "Souvlaki at a Monastiraki grill",
+      "landmark": null,
+      "kind": "food",
+      "lat": 37.976,
+      "lon": 23.726,
+      "price": 4,
+      "price_text": "≈€3–5 a wrap",
+      "tip": "Cheapest good meal in the centre. Order pork or chicken with tzatziki and eat it standing.",
+      "source": ""
+    },
+    "koukaki-evening-walk": {
+      "name": "Koukaki evening walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 37.964,
+      "lon": 23.727,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · bars busy late",
+      "tip": "A local neighbourhood with good bars and tavernas away from the tourist strip. Walk it after dinner.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day on the Acropolis hill and the ancient sites around it.",
+      "days": [
+        {
+          "title": "Acropolis early, then the ancient city",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go at opening to beat heat and crowds. Buy tickets online if you can."
+            },
+            {
+              "place": "erechtheion",
+              "at": "09:35",
+              "minutes": 20,
+              "note": "On the same hill, a short walk from the Parthenon."
+            },
+            {
+              "place": "theatre-dionysus",
+              "at": "10:05",
+              "minutes": 20,
+              "note": "On the south slope as you walk down."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Air-conditioned break. Check opening hours on the day."
+            },
+            {
+              "place": "moussaka",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Plaka, a short walk away."
+            },
+            {
+              "place": "ancient-agora",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Shady and quieter in the afternoon. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Plaka or Koukaki, walking distance to the Acropolis"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A full day of market stalls, souvlaki and a long taverna dinner.",
+      "days": [
+        {
+          "title": "Market morning, Plaka evening",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go on a weekday morning. Closed Sunday."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Flea market is busiest on Sundays."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch at a grill near the square."
+            },
+            {
+              "place": "anafiotika-walk",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Quiet lanes above Plaka. Go early if the heat is strong."
+            },
+            {
+              "place": "plaka",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Wander, then pick a taverna."
+            },
+            {
+              "place": "moussaka",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Dinner. Tavernas run late, so book if it is high season."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monastiraki or Plaka, close to the food streets"
+    },
+    {
+      "id": "day-beach",
+      "length": "day",
+      "style": "beach",
+      "nights": 0,
+      "for": "A morning of sights, then the tram to the coast for a swim and seafood.",
+      "days": [
+        {
+          "title": "Quick city hit, then the coast",
+          "stops": [
+            {
+              "place": "syntagma-square",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Catch the changing of the guard on the hour."
+            },
+            {
+              "place": "temple-olympian-zeus",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Short walk from the square. Check hours on the day."
+            },
+            {
+              "place": "hadrians-arch",
+              "at": "10:20",
+              "minutes": 10,
+              "note": "Right next to the temple."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Early lunch before the tram south."
+            },
+            {
+              "place": "plaka",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Take the tram to the coast for a swim and a seaside lunch. Beaches vary, so check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Syntagma, easy for the tram to the coast"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One tight day on the ancient sites, all within walking distance of Plaka.",
+      "days": [
+        {
+          "title": "Acropolis early, museum and Plaka after",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go at opening to beat heat and crowds. Buy tickets online if you can. Wear grippy shoes, the rock is slippery."
+            },
+            {
+              "place": "erechtheion",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "On the same hill, a short walk from the Parthenon."
+            },
+            {
+              "place": "theatre-dionysus",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "On the south slope as you walk down."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Ten minutes downhill. Air-conditioned, good midday break."
+            },
+            {
+              "place": "moussaka",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in a Plaka taverna, a short walk north."
+            },
+            {
+              "place": "ancient-agora",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Walk down through Plaka. Shaded paths, go slow in the heat."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "End the day here. Metro back to your hotel."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Plaka or Koukaki, walkable to everything"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A eating-first day: market, street food, souvlaki and a long taverna dinner.",
+      "days": [
+        {
+          "title": "Market morning, Plaka evening",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go on a weekday morning. Closed Sunday. Grab a coffee nearby."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Five minutes on foot. Flea market is busiest Sunday."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch at a grill around Monastiraki."
+            },
+            {
+              "place": "plaka",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Wander the lanes, stop for ice cream or a drink."
+            },
+            {
+              "place": "anafiotika-walk",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Quiet lanes above Plaka. Keep voices low, people live here."
+            },
+            {
+              "place": "moussaka",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Long dinner in a Plaka taverna. Book ahead in summer."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Plaka or Monastiraki, close to the food"
+    },
+    {
+      "id": "1n-beach",
+      "length": "1n",
+      "style": "beach",
+      "nights": 1,
+      "for": "A coast day by tram, with a quick taste of the centre in the evening.",
+      "days": [
+        {
+          "title": "Tram to the coast, then Plaka at night",
+          "stops": [
+            {
+              "place": "syntagma-square",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Start here. Catch the tram toward the coast from nearby. Check the line and times on the day."
+            },
+            {
+              "place": "plaka",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Back in the centre. Shops and tavernas run late."
+            },
+            {
+              "place": "moussaka",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in a Plaka taverna."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Syntagma, near the tram and metro"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the Acropolis, the Agora and the big museums without rushing.",
+      "days": [
+        {
+          "title": "Acropolis hill and its museum",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go at opening. Buy the combined ticket if you plan to see the Agora too. Bring water and a hat."
+            },
+            {
+              "place": "erechtheion",
+              "at": "09:35",
+              "minutes": 20,
+              "note": "On the same hill, a short walk from the Parthenon."
+            },
+            {
+              "place": "theatre-dionysus",
+              "at": "10:05",
+              "minutes": 20,
+              "note": "On the south slope as you walk down."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Ten minutes on foot from the south entrance. Cool and indoor, good for midday."
+            },
+            {
+              "place": "moussaka",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch in a Plaka taverna, a short walk north."
+            }
+          ]
+        },
+        {
+          "title": "Agora, Plaka and the centre",
+          "stops": [
+            {
+              "place": "ancient-agora",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Quiet in the morning. The Temple of Hephaestus is the highlight."
+            },
+            {
+              "place": "roman-agora",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Five minutes on foot towards Monastiraki."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Flea market lanes. Busiest on Sundays."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick lunch at a grill."
+            },
+            {
+              "place": "national-archaeological-museum",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Indoor and cool for the afternoon. Check the day's hours before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Plaka or Koukaki, walking distance to the Acropolis"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want markets, grills and long taverna dinners between the sights.",
+      "days": [
+        {
+          "title": "Market morning and Plaka evening",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go on a weekday morning. Closed Sunday. Look for the meat and fish halls."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Five minutes on foot. Good for a coffee and a wander."
+            },
+            {
+              "place": "ancient-agora",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "Walk it off before lunch."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Lunch at a Monastiraki grill."
+            },
+            {
+              "place": "plaka",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Evening stroll, then dinner at a taverna. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Food tour and Koukaki",
+          "stops": [
+            {
+              "place": "food-tour",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Late morning start. Come hungry and wear comfortable shoes."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor break after eating. Friday it stays open late in summer."
+            },
+            {
+              "place": "koukaki-evening-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bars and small kitchens. Busy late."
+            },
+            {
+              "place": "moussaka",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "Dinner in a neighbourhood taverna."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monastiraki or Plaka, close to the market and tavernas"
+    },
+    {
+      "id": "2n-beach",
+      "length": "2n",
+      "style": "beach",
+      "nights": 2,
+      "for": "A mix of the must-see sights and a lazy day on the coast by tram.",
+      "days": [
+        {
+          "title": "Acropolis early, coast in the afternoon",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "First hour after opening is coolest and quietest."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "09:45",
+              "minutes": 120,
+              "note": "Short walk downhill. Indoor and air-conditioned."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Quick lunch before heading south."
+            },
+            {
+              "place": "plaka",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening walk and dinner after the beach. Tram back to the centre takes a while, so leave time."
+            }
+          ]
+        },
+        {
+          "title": "Temple, stadium and a last swim",
+          "stops": [
+            {
+              "place": "temple-olympian-zeus",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Open-air and quick. Go before the heat."
+            },
+            {
+              "place": "hadrians-arch",
+              "at": "09:35",
+              "minutes": 10,
+              "note": "Right next to the temple."
+            },
+            {
+              "place": "panathenaic-stadium",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Check the day's hours."
+            },
+            {
+              "place": "syntagma-square",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Time it for the changing of the guard on the hour."
+            }
+          ],
+          "note": "For the beach itself, take the tram towards the coast and pick a organised beach; check opening and sunbed prices on the day."
+        }
+      ],
+      "stay_area": "Syntagma or Plaka, near the tram and metro"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the big ancient sites at an easy pace, mornings outdoors and afternoons indoors.",
+      "days": [
+        {
+          "title": "Arrive, Plaka and the old lanes",
+          "stops": [
+            {
+              "place": "syntagma-square",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Start here for orientation. Changing of the guard on the hour."
+            },
+            {
+              "place": "hadrians-arch",
+              "at": "16:40",
+              "minutes": 10,
+              "note": "Short walk down Amalias Avenue. Always visible."
+            },
+            {
+              "place": "temple-olympian-zeus",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Next to the arch. Last entry is earlier than closing, so go soon after arriving."
+            },
+            {
+              "place": "plaka",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Wander the lanes as the heat drops."
+            },
+            {
+              "place": "moussaka",
+              "at": "19:45",
+              "minutes": 60,
+              "note": "Dinner in a Plaka taverna. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Acropolis early, museum late",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go in the first hour after opening. Buy tickets online. Bring water and a hat."
+            },
+            {
+              "place": "erechtheion",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "On the same hill, a few minutes' walk."
+            },
+            {
+              "place": "theatre-dionysus",
+              "at": "09:55",
+              "minutes": 20,
+              "note": "On the south slope on your way down."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Air-conditioned break. Check the day's hours; Friday is often the late night."
+            },
+            {
+              "place": "koukaki-evening-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner and a slow walk in Koukaki."
+            }
+          ]
+        },
+        {
+          "title": "Agora, market and the National Museum",
+          "stops": [
+            {
+              "place": "ancient-agora",
+              "at": "08:30",
+              "minutes": 75,
+              "note": "Morning shade is best. The temple of Hephaestus is the highlight."
+            },
+            {
+              "place": "roman-agora",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Short walk towards Monastiraki."
+            },
+            {
+              "place": "central-market",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Weekday mornings only, closed Sunday. Grab a snack at the grill counters."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Flea market is busiest on Sundays."
+            },
+            {
+              "place": "national-archaeological-museum",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Big collection. Hours vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Views, stadium and departure",
+          "stops": [
+            {
+              "place": "panathenaic-stadium",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning light. Check hours on the day."
+            },
+            {
+              "place": "university-trilogy",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Exteriors only, a short taxi or walk away."
+            },
+            {
+              "place": "lycabettus-hill",
+              "at": "11:15",
+              "minutes": 75,
+              "note": "Funicular runs daytime into evening. Check times on the day."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Plaka or Koukaki"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, grills and long taverna dinners, with the main sights slotted in between meals.",
+      "days": [
+        {
+          "title": "Arrive, Monastiraki and a first souvlaki",
+          "stops": [
+            {
+              "place": "monastiraki-square",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Good first stop. The flea market is busiest on Sundays."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "A grill on the square. Order at the counter."
+            },
+            {
+              "place": "plaka",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Walk it off through the lanes."
+            },
+            {
+              "place": "moussaka",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Proper sit-down dinner. Tavernas run late."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, Acropolis afternoon",
+          "stops": [
+            {
+              "place": "central-market",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday mornings to early afternoon, closed Sunday. Go early for the full stalls."
+            },
+            {
+              "place": "food-tour",
+              "at": "11:00",
+              "minutes": 180,
+              "note": "Late-morning walking tour around Monastiraki. Book ahead and say if you don't eat something."
+            },
+            {
+              "place": "ancient-agora",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Quieter in late afternoon. Check closing time on the day."
+            },
+            {
+              "place": "koukaki-evening-walk",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Bars and tavernas busy late."
+            }
+          ]
+        },
+        {
+          "title": "Acropolis early, long lunch, easy evening",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "First hour after opening is coolest and quietest. Book online."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cafe on site for a mid-morning break. Check hours on the day."
+            },
+            {
+              "place": "anafiotika-walk",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quiet residential lanes below the hill. Keep voices down."
+            },
+            {
+              "place": "moussaka",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late taverna lunch, then rest."
+            },
+            {
+              "place": "lycabettus-hill",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Sunset view. Funicular times vary, so check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Stadium, market snacks and departure",
+          "stops": [
+            {
+              "place": "panathenaic-stadium",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning is cooler. Check hours on the day."
+            },
+            {
+              "place": "syntagma-square",
+              "at": "10:15",
+              "minutes": 20,
+              "note": "Catch the guard change on the hour."
+            },
+            {
+              "place": "souvlaki-stop",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Last souvlaki before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monastiraki or Plaka"
+    },
+    {
+      "id": "3n-beach",
+      "length": "3n",
+      "style": "beach",
+      "nights": 3,
+      "for": "A mix of coast time and the must-see sights, with afternoons free for the tram to the sea.",
+      "days": [
+        {
+          "title": "Arrive, Plaka and an easy evening",
+          "stops": [
+            {
+              "place": "syntagma-square",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Orientation stop. Guard change on the hour."
+            },
+            {
+              "place": "plaka",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Shops and tavernas run late."
+            },
+            {
+              "place": "moussaka",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Dinner in Plaka. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Acropolis early, then the coast",
+          "stops": [
+            {
+              "place": "parthenon",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "First hour after opening. Buy tickets online and bring water."
+            },
+            {
+              "place": "acropolis-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cool indoor break. Check hours on the day."
+            },
+            {
+              "place": "koukaki-evening-walk",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in Koukaki after the beach. Take the tram from the coast back into town; check times on the day."
+            }
+          ]
+        },
+        {
+          "title": "Beach day",
+          "stops": [
+            {
+              "place": "souvlaki-stop",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Early lunch before the tram south. Check tram times on the day."
+            },
+            {
+              "place": "philopappou-viewpoint",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset over the city after you're back. Avoid after dark alone."
+            }
+          ]
+        },
+        {
+          "title": "Agora and departure",
+          "stops": [
+            {
+              "place": "ancient-agora",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Morning shade. Check closing time on the day."
+            },
+            {
+              "place": "monastiraki-square",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Last wander and a snack."
+            },
+            {
+              "place": "temple-olympian-zeus",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Quick stop on the way back. Last entry is earlier than closing."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Koukaki or Plaka"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "The Acropolis, the Ancient Agora and the Acropolis Museum."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Tavernas, souvlaki and long dinners in Plaka and Koukaki."
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "Tram to the coast for a swim and a seaside lunch."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Plaka",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Old-town lanes right under the Acropolis; walk to the Ancient Agora and most central sights.",
+      "center": [
+        37.972,
+        23.727
+      ]
+    },
+    {
+      "area": "Syntagma",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Central and well connected: metro to the airport and Piraeus, walk to the National Garden and Plaka.",
+      "center": [
+        37.975,
+        23.735
+      ]
+    },
+    {
+      "area": "Monastiraki",
+      "range": [
+        80,
+        200
+      ],
+      "why": "Flea market, street food and the metro hub; lively at night and close to the Ancient Agora.",
+      "center": [
+        37.976,
+        23.726
+      ]
+    },
+    {
+      "area": "Koukaki",
+      "range": [
+        70,
+        180
+      ],
+      "why": "Quiet residential streets near the Acropolis Museum with good local tavernas; often better value.",
+      "center": [
+        37.963,
+        23.727
+      ]
+    }
+  ],
+  "food": [
+    "Try souvlaki and gyros from a grill house: cheap, fast and everywhere. Expect about €3–5 for a wrap.",
+    "Order meze to share: tzatziki, fava, grilled octopus and small fried fish. Two or three plates per person is plenty.",
+    "Eat dinner late like locals, roughly 21:00–23:00. Many tavernas are quiet before 20:00.",
+    "Look for a taverna with a handwritten menu and local diners rather than a photo menu on the street.",
+    "In summer, eat lunch by the sea on the coast and keep the centre for dinner. Book popular places ahead on weekends."
+  ],
+  "more_time": [
+    "Take a day trip to Cape Sounion for the Temple of Poseidon and a sunset over the sea. Check bus times on the day.",
+    "Ferries from Piraeus reach the islands; a day trip to Aegina is the easiest. Book ahead in summer.",
+    "Add a half-day at the National Archaeological Museum, then wander the Exarchia streets nearby."
+  ]
+}

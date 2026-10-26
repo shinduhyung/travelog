@@ -1,0 +1,36 @@
+$ deepseek_prep.py Kuala Lumpur
+  tokens in 893 out 671
+Kuala Lumpur: 9 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Kuala Lumpur
+  tokens in 4109 out 815
+Kuala Lumpur: 0 problems
+
+$ deepseek_city.py Kuala Lumpur --stage places
+Kuala Lumpur: places
+  tokens in 1261 out 4247
+
+$ deepseek_city.py Kuala Lumpur --stage frame
+Kuala Lumpur: frame
+  tokens in 2476 out 1882
+
+$ deepseek_city.py Kuala Lumpur --stage plans
+Kuala Lumpur: plans
+  plans for day
+  tokens in 2550 out 1035
+  plans for 1n
+  tokens in 2551 out 983
+  plans for 2n
+  tokens in 2551 out 1806
+  plans for 3n
+  tokens in 2556 out 2572
+  plans for 4n
+  tokens in 2551 out 2261
+
+$ merge_city.py Kuala Lumpur
+WARN  bukit_jalil: area 'Bukit Jalil' not one of the hotel areas
+WARN  putra_mosque: area 'Putrajaya' not one of the hotel areas
+WARN  sunway_lagoon: area 'Sunway' not one of the hotel areas
+Kuala Lumpur: 27 places, 15 plans, 0 errors, 3 warnings
+wrote itineraries/kuala-lumpur.json and planner/kuala-lumpur.json
+

@@ -1,0 +1,1191 @@
+{
+  "city": "Munich",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Munich rewards visitors with grand palaces, world-class museums, leafy parks and a lively beer culture. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 48.043,
+      "west": 11.4399,
+      "north": 48.2955,
+      "east": 11.7242,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 5,
+      "flag_airport": 106,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "S-Bahn suburban trains link the airport and main stations; U-Bahn covers north-south routes.",
+      "Trams circle the inner city and reach Nymphenburg Palace; buses fill outer gaps.",
+      "One ticket works across S-Bahn, U-Bahn, tram and bus; validate before travel or risk a €60 fine.",
+      "Taxis are metered; ride apps like Uber and Bolt operate in Munich.",
+      "Driving is fine on the fringes but ring roads are often congested; use Park & Ride for day trips.",
+      "The centre is walkable and bike-friendly, with many cycle paths."
+    ],
+    "sources": []
+  },
+  "places": {
+    "marienplatz": {
+      "name": "Marienplatz",
+      "landmark": "Marienplatz",
+      "kind": "sight",
+      "lat": 48.1372,
+      "lon": 11.5755,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Square always open · Glockenspiel plays daily around 11:00 and 12:00, also 17:00 in summer",
+      "tip": "Arrive a few minutes early and stand on the north side for the best view of the Glockenspiel.",
+      "source": "https://www.muenchen.de/en/places/marienplatz"
+    },
+    "nymphenburg": {
+      "name": "Nymphenburg Palace",
+      "landmark": "Nymphenburg Palace",
+      "kind": "sight",
+      "lat": 48.1582,
+      "lon": 11.5036,
+      "price": 12,
+      "price_text": "≈ EUR 10–15 for the palace; park free; check combined tickets on the day",
+      "hours": "Palace roughly 09:00–18:00 in summer, shorter in winter · closed some Mondays, check on the day",
+      "tip": "The park is free and huge. Allow extra time to walk to the small pavilions.",
+      "source": "https://www.schloss-nymphenburg.de/englisch/palace/index.htm"
+    },
+    "english-garden": {
+      "name": "English Garden",
+      "landmark": "English Garden",
+      "kind": "park",
+      "lat": 48.1539,
+      "lon": 11.5928,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · beer gardens have their own hours",
+      "tip": "Walk from the Chinese Tower to the Eisbach surfers for a free half-day loop.",
+      "source": "https://www.muenchen.de/en/places/english-garden"
+    },
+    "residenz": {
+      "name": "Munich Residenz",
+      "landmark": "Munich Residenz",
+      "kind": "museum",
+      "lat": 48.1411,
+      "lon": 11.578,
+      "price": 10,
+      "price_text": "≈ EUR 9–12 for the museum; treasury separate; check on the day",
+      "hours": "Roughly 09:00–18:00, closed some public holidays · check on the day",
+      "tip": "The treasury is the highlight for many visitors. Buy the combined ticket if you have time.",
+      "source": "https://www.residenz-muenchen.de/englisch/index.htm"
+    },
+    "neues-rathaus": {
+      "name": "Neues Rathaus",
+      "landmark": "Neues Rathaus",
+      "kind": "sight",
+      "lat": 48.1374,
+      "lon": 11.5755,
+      "price": 0,
+      "price_text": "Free to view from outside; tower lift small fee, check on the day",
+      "hours": "Exterior always visible · tower has limited hours, check on the day",
+      "tip": "The tower lift gives a good rooftop view over the old town.",
+      "source": "https://www.muenchen.de/rathaus/Stadtverwaltung/Direktorium/rathaus-info"
+    },
+    "allianz-arena": {
+      "name": "Allianz Arena",
+      "landmark": "Allianz Arena",
+      "kind": "sight",
+      "lat": 48.2188,
+      "lon": 11.6247,
+      "price": 15,
+      "price_text": "≈ EUR 12–20 for a stadium tour; match tickets vary widely",
+      "hours": "Tour times vary by match schedule · check on the day",
+      "tip": "Book a tour online. On match days the area is very busy and tours may stop.",
+      "source": "https://allianz-arena.com/en"
+    },
+    "oktoberfest": {
+      "name": "Oktoberfest",
+      "landmark": "Oktoberfest",
+      "kind": "activity",
+      "lat": 48.1351,
+      "lon": 11.582,
+      "price": 0,
+      "price_text": "Free to enter the grounds; beer and food paid separately",
+      "hours": "Late September to early October · tents open from morning to late evening",
+      "tip": "Go on a weekday morning for easier tent entry. Weekends are packed.",
+      "source": "https://www.oktoberfest.de/en"
+    },
+    "bmw-welt": {
+      "name": "BMW Welt & Museum",
+      "landmark": "BMW Welt & Museum",
+      "kind": "museum",
+      "lat": 48.1768,
+      "lon": 11.5591,
+      "price": 10,
+      "price_text": "≈ EUR 10 for the museum; BMW Welt free; check on the day",
+      "hours": "Museum roughly 10:00–18:00, closed Mondays · check on the day",
+      "tip": "BMW Welt is free and good for a quick look even if you skip the museum.",
+      "source": "https://www.bmw-welt.com/en"
+    },
+    "bavaria-filmstadt": {
+      "name": "Bavaria Filmstadt",
+      "landmark": "Bavaria Filmstadt",
+      "kind": "tour",
+      "lat": 48.0682,
+      "lon": 11.5307,
+      "price": 15,
+      "price_text": "≈ EUR 12–18 for the guided tour; check on the day",
+      "hours": "Roughly 09:00–18:00 in summer, shorter in winter · check on the day",
+      "tip": "It is outside the centre. Allow half a day including travel.",
+      "source": "https://www.filmstadt.de/en"
+    },
+    "cuvillies": {
+      "name": "Cuvilliés Theatre",
+      "landmark": "Cuvilliés Theatre",
+      "kind": "sight",
+      "lat": 48.1405,
+      "lon": 11.5794,
+      "price": 5,
+      "price_text": "≈ EUR 4–7; check on the day",
+      "hours": "Limited hours, often tied to the Residenz · check on the day",
+      "tip": "Small and quick. Combine it with the Residenz next door.",
+      "source": "https://www.residenz-muenchen.de/englisch/cuvillies/index.htm"
+    },
+    "dachau": {
+      "name": "Dachau Concentration Camp Memorial Site",
+      "landmark": "Dachau Concentration Camp Memorial Site",
+      "kind": "sight",
+      "lat": 48.2703,
+      "lon": 11.4678,
+      "price": 0,
+      "price_text": "Free entry; guided tours and audio guides cost extra",
+      "hours": "Roughly 09:00–17:00, closed some Mondays · check on the day",
+      "tip": "Take the S-Bahn to Dachau and then the bus. Allow at least half a day and keep it quiet and respectful.",
+      "source": "https://www.kz-gedenkstaette-dachau.de/en/"
+    },
+    "deutsches-museum": {
+      "name": "Deutsches Museum",
+      "landmark": "Deutsches Museum",
+      "kind": "museum",
+      "lat": 48.1299,
+      "lon": 11.5834,
+      "price": 15,
+      "price_text": "≈ EUR 12–18; check on the day",
+      "hours": "Roughly 09:00–17:00 · check on the day",
+      "tip": "It is huge. Pick two or three sections before you go in.",
+      "source": "https://www.deutsches-museum.de/en"
+    },
+    "erdinger": {
+      "name": "Erdinger Weissbräu",
+      "landmark": "Erdinger Weissbrau",
+      "kind": "food",
+      "lat": 48.3072,
+      "lon": 11.8906,
+      "price": 0,
+      "price_text": "Brewery tours and tastings vary; check on the day",
+      "hours": "Tour times vary · book ahead",
+      "tip": "It is in Erding, well outside Munich. Only go if you really want the brewery tour.",
+      "source": "https://www.erdinger.de/en"
+    },
+    "herkulessaal": {
+      "name": "Herkulessaal",
+      "landmark": "Herkulessaal",
+      "kind": "show",
+      "lat": 48.1415,
+      "lon": 11.5786,
+      "price": 30,
+      "price_text": "≈ EUR 20–60 depending on the concert; check on the day",
+      "hours": "Concert evenings only",
+      "tip": "It is inside the Residenz. Book tickets online and arrive early for the hall itself.",
+      "source": "https://www.br-so.de/en"
+    },
+    "hofbrauhaus": {
+      "name": "Hofbräuhaus München",
+      "landmark": "Hofbrau Munchen",
+      "kind": "food",
+      "lat": 48.1365,
+      "lon": 11.6963,
+      "price": 15,
+      "price_text": "≈ EUR 12–20 for a main dish and a beer",
+      "hours": "Roughly 09:00–24:00 daily · check on the day",
+      "tip": "Very touristy but worth one visit. Share a long table and expect noise.",
+      "source": "https://www.hofbraeuhaus.de/en"
+    },
+    "lmu": {
+      "name": "Ludwig Maximilian University of Munich",
+      "landmark": "Ludwig Maximilian University of Munich",
+      "kind": "sight",
+      "lat": 48.1508,
+      "lon": 11.5802,
+      "price": 0,
+      "price_text": "Free to walk the area",
+      "hours": "Outdoor campus area open; buildings have their own hours",
+      "tip": "Walk past the main building and the nearby White Rose memorial plaque.",
+      "source": "https://www.lmu.de/en/"
+    },
+    "paulaner": {
+      "name": "Paulaner Brewery",
+      "landmark": "Paulaner Brewery",
+      "kind": "tour",
+      "lat": 48.1219,
+      "lon": 11.583,
+      "price": 15,
+      "price_text": "≈ EUR 12–20 for a tour; check on the day",
+      "hours": "Tour times vary · book ahead",
+      "tip": "Book ahead. The brewery is south of the centre, not in the old town.",
+      "source": "https://www.paulaner.com/en"
+    },
+    "sense8": {
+      "name": "Sense8",
+      "landmark": "Sense8",
+      "kind": "show",
+      "lat": 48.1374,
+      "lon": 11.5755,
+      "price": null,
+      "price_text": "Prices vary; check on the day",
+      "hours": "Show times vary; check on the day",
+      "tip": "Details are unclear. Confirm the venue and dates before you plan around it.",
+      "source": ""
+    },
+    "tum": {
+      "name": "Technical University of Munich (TUM)",
+      "landmark": "Technical University of Munich (TUM)",
+      "kind": "sight",
+      "lat": 48.1482,
+      "lon": 11.5682,
+      "price": 0,
+      "price_text": "Free to walk the area",
+      "hours": "Outdoor campus area open",
+      "tip": "Not a main sight. Skip unless you have a reason to visit.",
+      "source": "https://www.tum.de/en/"
+    },
+    "viktualienmarkt": {
+      "name": "Viktualienmarkt",
+      "landmark": null,
+      "kind": "food",
+      "lat": 48.1353,
+      "lon": 11.5764,
+      "price": 0,
+      "price_text": "Free to enter; food paid separately",
+      "hours": "Roughly Mon–Sat daytime, closed Sundays · check on the day",
+      "tip": "Go hungry. Grab a snack and eat at the beer garden in the middle.",
+      "source": "https://www.viktualienmarkt-muenchen.de/en"
+    },
+    "frauenkirche-tower": {
+      "name": "Frauenkirche towers",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 48.1386,
+      "lon": 11.5736,
+      "price": 5,
+      "price_text": "≈ EUR 3–5 for the tower lift; check on the day",
+      "hours": "Roughly 10:00–17:00 · check on the day",
+      "tip": "The lift is quick and the view over Marienplatz is good. No lift on some days.",
+      "source": "https://www.frauenkirche.de/en"
+    },
+    "olympiapark": {
+      "name": "Olympiapark and Olympiaturm",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 48.1733,
+      "lon": 11.5467,
+      "price": 10,
+      "price_text": "Park free; tower ≈ EUR 8–12; check on the day",
+      "hours": "Park always open · tower roughly 09:00–24:00 in summer, check on the day",
+      "tip": "The tower gives the best wide view of the city and the Alps on clear days.",
+      "source": "https://www.olympiapark.de/en"
+    },
+    "eisbach-surfers": {
+      "name": "Eisbach surfers",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 48.1436,
+      "lon": 11.5867,
+      "price": 0,
+      "price_text": "Free to watch",
+      "hours": "Daylight hours",
+      "tip": "Watch from the bank. Do not stand in the water; the current is strong.",
+      "source": ""
+    },
+    "glockenbachviertel": {
+      "name": "Glockenbachviertel walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 48.1303,
+      "lon": 11.5717,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; cafés and bars have their own hours",
+      "tip": "Wander the side streets for cafés and small shops. Good in the evening.",
+      "source": ""
+    },
+    "third-wave-coffee-tour": {
+      "name": "Old town walking tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 48.1374,
+      "lon": 11.5755,
+      "price": 15,
+      "price_text": "≈ EUR 10–20 for a paid tour; free tours tip-based",
+      "hours": "Tours usually start morning and early afternoon",
+      "tip": "Book a small-group tour for your first day to get your bearings.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Munich's old-town icons and big museums, all walkable.",
+      "days": [
+        {
+          "title": "Old town icons and the Residenz",
+          "stops": [
+            {
+              "place": "third-wave-coffee-tour",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start with a walking tour to get your bearings. Book ahead."
+            },
+            {
+              "place": "marienplatz",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Glockenspiel plays around 12:00. Arrive a few minutes early for a spot."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Closed Sundays."
+            },
+            {
+              "place": "residenz",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Big palace complex. Check hours on the day."
+            },
+            {
+              "place": "cuvillies",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Tiny jewel-box theatre, often tied to the Residenz ticket. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market, a beer hall and a brewery tour: Munich's classics in one day.",
+      "days": [
+        {
+          "title": "Market, beer hall and brewery",
+          "stops": [
+            {
+              "place": "viktualienmarkt",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Graze the stalls early. Closed Sundays."
+            },
+            {
+              "place": "marienplatz",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Quick look and the Glockenspiel around 12:00."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch before the dinner rush. Roughly open 09:00–24:00."
+            },
+            {
+              "place": "paulaner",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Brewery tour. Book ahead; times vary."
+            },
+            {
+              "place": "glockenbachviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner in the cafés and bars."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green Munich: the English Garden, the surfers and a park view at sunset.",
+      "days": [
+        {
+          "title": "English Garden to Olympiapark",
+          "stops": [
+            {
+              "place": "english-garden",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Walk the paths and find a beer garden. Always open."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "At the south edge of the garden. Busy on sunny weekends."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch near the old town. Closed Sundays."
+            },
+            {
+              "place": "olympiapark",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Park always open. Tower hours vary; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maxvorstadt"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day of Munich's old-town icons and royal rooms, all walkable.",
+      "days": [
+        {
+          "title": "Old town icons and the Residenz",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Start under the Glockenspiel. It plays around 11:00 and 12:00, so linger or come back."
+            },
+            {
+              "place": "neues-rathaus",
+              "at": "10:20",
+              "minutes": 30,
+              "note": "Tower has limited hours; check on the day and go up if it is clear."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Closed Sundays, so check the day."
+            },
+            {
+              "place": "residenz",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Roughly 09:00–18:00, closed some public holidays. Check on the day."
+            },
+            {
+              "place": "cuvillies",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Often tied to the Residenz ticket. Check hours on the day."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Early beer-hall stop before the dinner rush."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market stalls, a brewery tour and a classic beer hall in one day.",
+      "days": [
+        {
+          "title": "Market, brewery and beer hall",
+          "stops": [
+            {
+              "place": "viktualienmarkt",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Graze the stalls for a late breakfast. Closed Sundays."
+            },
+            {
+              "place": "marienplatz",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Quick look at the square and Glockenspiel on the way."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch. Roughly 09:00–24:00 daily; check on the day."
+            },
+            {
+              "place": "paulaner",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Brewery tour. Times vary and you should book ahead."
+            },
+            {
+              "place": "glockenbachviertel",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Evening walk; cafés and bars have their own hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Green Munich: the English Garden, the surfers and a park view at sunset.",
+      "days": [
+        {
+          "title": "English Garden and Olympiapark",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Quick orientation stop before heading north."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Daylight hours. Busy on sunny weekends."
+            },
+            {
+              "place": "english-garden",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Walk the park; beer gardens have their own hours."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch. Closed Sundays."
+            },
+            {
+              "place": "olympiapark",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Park always open. Tower roughly 09:00–24:00 in summer; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maxvorstadt"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old town icons, the Residenz and one big museum, all on foot or a short ride.",
+      "days": [
+        {
+          "title": "Arrive, old town core",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start under the Glockenspiel. The 17:00 show runs in summer only."
+            },
+            {
+              "place": "neues-rathaus",
+              "at": "14:50",
+              "minutes": 30,
+              "note": "Tower has limited hours; check on the day. Clear days are best."
+            },
+            {
+              "place": "frauenkirche-tower",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Roughly 10:00–17:00, so go before closing. Short lift ride up."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Closed Sundays. Good spot for an early snack or beer."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Go before peak dinner hours to find a table."
+            }
+          ]
+        },
+        {
+          "title": "Residenz and the big museum",
+          "stops": [
+            {
+              "place": "residenz",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Roughly 09:00–18:00, closed some public holidays. Check on the day."
+            },
+            {
+              "place": "cuvillies",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Often tied to the Residenz ticket. Limited hours, check on the day."
+            },
+            {
+              "place": "deutsches-museum",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Lunch nearby first. Go early afternoon; roughly 09:00–17:00."
+            },
+            {
+              "place": "glockenbachviertel",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Evening walk and dinner in the cafés and bars."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, beer halls and a brewery tour.",
+      "days": [
+        {
+          "title": "Market lunch and beer hall evening",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Catch the Glockenspiel, then walk to the market."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekday lunch from the stalls. Closed Sundays."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Late afternoon is calmer than dinner rush. Roughly 09:00–24:00."
+            },
+            {
+              "place": "glockenbachviertel",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner and drinks as the area fills up."
+            }
+          ]
+        },
+        {
+          "title": "Brewery tour and garden",
+          "stops": [
+            {
+              "place": "paulaner",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book ahead; tour times vary."
+            },
+            {
+              "place": "english-garden",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Lunch at a beer garden inside the park. Always open; gardens keep own hours."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Watch the surfers on the way out. Daylight hours only."
+            },
+            {
+              "place": "erdinger",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Second brewery tour if you booked ahead. Otherwise swap for a beer hall dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want parks, river views and the city's green side with a little culture.",
+      "days": [
+        {
+          "title": "English Garden and the Isar",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Quick orientation stop before the park."
+            },
+            {
+              "place": "english-garden",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Always open. Beer gardens have their own hours."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Busy on sunny weekends. Daylight hours."
+            },
+            {
+              "place": "olympiapark",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Park always open. Tower roughly 09:00–24:00 in summer, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palace park and old town",
+          "stops": [
+            {
+              "place": "nymphenburg",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Morning on a weekday. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch back in the centre. Closed Sundays."
+            },
+            {
+              "place": "residenz",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Indoor backup if it rains. Roughly 09:00–18:00, check on the day."
+            },
+            {
+              "place": "glockenbachviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big sights at an easy pace, with one rainy-day backup built in.",
+      "days": [
+        {
+          "title": "Old town icons on foot",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Arrive before 11:00 to catch the Glockenspiel from the square."
+            },
+            {
+              "place": "neues-rathaus",
+              "at": "10:50",
+              "minutes": 30,
+              "note": "Tower has limited hours; check on the day."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Closed Sundays."
+            },
+            {
+              "place": "residenz",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Indoor, good in any weather. Check hours on the day."
+            },
+            {
+              "place": "cuvillies",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Often tied to the Residenz ticket; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palace and park",
+          "stops": [
+            {
+              "place": "nymphenburg",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Weekday morning is calmest. Some Mondays closed, check on the day."
+            },
+            {
+              "place": "olympiapark",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch nearby, then the park. Tower hours vary, check on the day."
+            },
+            {
+              "place": "bmw-welt",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Museum closed Mondays. Short ride from the park."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the river",
+          "stops": [
+            {
+              "place": "deutsches-museum",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go early; it is big. Check hours on the day."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Lunch first, then watch the surfers."
+            },
+            {
+              "place": "english-garden",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Walk north through the park; beer gardens have their own hours."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner. Avoid peak dinner hours if you want a table."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, beer halls and a brewery tour.",
+      "days": [
+        {
+          "title": "Market and beer hall basics",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Start here for orientation."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Graze the stalls for lunch. Closed Sundays."
+            },
+            {
+              "place": "hofbrauhaus",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Quieter than dinner time. Check hours on the day."
+            },
+            {
+              "place": "glockenbachviertel",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening walk; cafés and bars have their own hours."
+            }
+          ]
+        },
+        {
+          "title": "Brewery day",
+          "stops": [
+            {
+              "place": "erdinger",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Book ahead; tour times vary."
+            },
+            {
+              "place": "english-garden",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk it off; beer gardens have their own hours."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Short stop on the way through the park."
+            }
+          ]
+        },
+        {
+          "title": "Old town and a proper dinner",
+          "stops": [
+            {
+              "place": "third-wave-coffee-tour",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning walking tour; tours usually start morning and early afternoon."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Closed Sundays."
+            },
+            {
+              "place": "residenz",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor backup if it rains. Check hours on the day."
+            },
+            {
+              "place": "paulaner",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Booked weekday tour, or dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Altstadt"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want parks, river air and one sobering history morning.",
+      "days": [
+        {
+          "title": "English Garden and the Isar",
+          "stops": [
+            {
+              "place": "marienplatz",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Quick look, then head north."
+            },
+            {
+              "place": "eisbach-surfers",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Daytime; busy on sunny weekends."
+            },
+            {
+              "place": "english-garden",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Walk and stop for lunch at a beer garden."
+            },
+            {
+              "place": "olympiapark",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Clear late afternoon is best for the tower."
+            }
+          ]
+        },
+        {
+          "title": "Palace park and museums",
+          "stops": [
+            {
+              "place": "nymphenburg",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Gardens are the highlight. Some Mondays closed, check on the day."
+            },
+            {
+              "place": "bmw-welt",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch first. Museum closed Mondays."
+            },
+            {
+              "place": "lmu",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Short daytime walk through the campus area."
+            }
+          ]
+        },
+        {
+          "title": "History morning, easy afternoon",
+          "stops": [
+            {
+              "place": "dachau",
+              "at": "09:00",
+              "minutes": 210,
+              "note": "Morning visit. Not for young children. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "viktualienmarkt",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Late lunch. Closed Sundays."
+            },
+            {
+              "place": "frauenkirche-tower",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Clear afternoon for the view. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Maxvorstadt"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Marienplatz, the Residenz and the big museums."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Beer halls, market stalls and hearty Bavarian plates."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "The English Garden, the Isar and day trips to the Alps."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Altstadt",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to Marienplatz, the Residenz and the Viktualienmarkt. Best for a first visit with little time.",
+      "center": [
+        48.137,
+        11.575
+      ]
+    },
+    {
+      "area": "Maxvorstadt",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Museum quarter on the doorstep: Alte and Neue Pinakothek, Pinakothek der Moderne. Quiet streets, 10–15 minutes' walk to the centre.",
+      "center": [
+        48.148,
+        11.568
+      ]
+    },
+    {
+      "area": "Ludwigsvorstadt",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Around the main station: easy airport S-Bahn, cheap hotels, short walk to the Altstadt and Theresienwiese.",
+      "center": [
+        48.135,
+        11.555
+      ]
+    },
+    {
+      "area": "Haidhausen",
+      "range": [
+        110,
+        250
+      ],
+      "why": "Local feel east of the Isar: cafés, the Gasteig area and a short tram or walk to the centre. Good value.",
+      "center": [
+        48.13,
+        11.6
+      ]
+    }
+  ],
+  "food": [
+    "Try Bavarian classics: Weisswurst with sweet mustard before noon, roast pork with dumplings, and pretzels.",
+    "Beer gardens: sit outside with a Mass (1 litre) of beer and bring your own picnic if you like. Check opening months; many close in winter.",
+    "Viktualienmarkt in the Altstadt: stalls for cheese, bread, olives and snacks. Cheaper than restaurant lunches.",
+    "Lunch menus (Mittagsmenü) are good value, often EUR 10–16 for a main. Dinner mains run higher.",
+    "Book beer halls and popular restaurants on weekends. Tipping: round up or add about 5–10%."
+  ],
+  "more_time": [
+    "Day trip to Neuschwanstein or the Alps: trains run from the main station; check times and buy tickets on the day or in advance.",
+    "Add a half-day at Nymphenburg Palace and its park; tram reaches it from the centre.",
+    "On a hot day, swap a museum for the Isar river banks or a swim at the English Garden's streams."
+  ]
+}

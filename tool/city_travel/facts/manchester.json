@@ -1,0 +1,218 @@
+{
+  "currency": "GBP",
+  "usd_rate": 0.7467,
+  "intro_line": "Manchester: industrial grit turned into music, football and nightlife.",
+  "intro": "Manchester rewards visitors with world-class museums, a legendary music scene and a buzzing food and bar culture. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Piccadilly",
+    "Northern Quarter",
+    "Deansgate",
+    "Ancoats"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4.5,
+    "per_km": 2.0,
+    "min_fare": 4.0
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metrolink tram is quick and covers the centre and suburbs; Zone 1 is free with some train tickets.",
+    "Bee Network buses are yellow and franchised; single fares are around £2.",
+    "Taxis are metered; Uber, Bolt and local apps all work in the city.",
+    "Driving in the centre is slow and parking is costly; use park and ride instead.",
+    "The centre is compact and walkable; Starling Bikes offers bike share with e-bikes.",
+    "No ferry in the city; the nearest cruise terminal is Liverpool."
+  ],
+  "airports": [
+    {
+      "code": "MAN",
+      "name": "Manchester Airport",
+      "primary": true,
+      "note": "Main hub, 14 km south of the centre.",
+      "options": [
+        {
+          "mode": "Bus 43",
+          "to": "Piccadilly via Oxford Road",
+          "price": "£2",
+          "time": "50 min",
+          "note": "Runs all night; cheapest option."
+        },
+        {
+          "mode": "Train",
+          "to": "Piccadilly and Oxford Road",
+          "price": "£6.20",
+          "time": "20 min",
+          "note": "Quickest; frequent but sparse after midnight."
+        },
+        {
+          "mode": "Metrolink tram",
+          "to": "City centre and southern suburbs",
+          "price": "£3-5",
+          "time": "30-45 min",
+          "note": "Useful for the southern suburbs."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£25-35",
+          "time": "20-30 min",
+          "note": "Fixed-ish fares; agree before you ride."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "£20-30",
+          "time": "20-30 min",
+          "note": "Pickup points are signposted."
+        }
+      ]
+    },
+    {
+      "code": "LPL",
+      "name": "Liverpool John Lennon Airport",
+      "primary": false,
+      "note": "Budget flights across Europe, about 50 km west.",
+      "options": [
+        {
+          "mode": "Coach",
+          "to": "Manchester central coach station",
+          "price": "£8-12",
+          "time": "45 min",
+          "note": "Check times in advance."
+        },
+        {
+          "mode": "Train",
+          "to": "Oxford Road via Liverpool South Parkway",
+          "price": "£10-15",
+          "time": "1 hr 15 min",
+          "note": "Several trains hourly."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£50-70",
+          "time": "45-60 min",
+          "note": "Long ride; train is usually cheaper."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "£45-65",
+          "time": "45-60 min",
+          "note": "Availability varies; check the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Old Trafford",
+    "Science and Industry Museum",
+    "Manchester Art Gallery",
+    "Chetham's Library",
+    "Etihad Stadium",
+    "University of Manchester"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Manchester",
+      "https://en.wikivoyage.org/wiki/Manchester"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    53.4808,
+    -2.2426
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 7,
+      "low": 2,
+      "rain_days": 17
+    },
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 16
+    },
+    {
+      "high": 10,
+      "low": 3,
+      "rain_days": 16
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 12
+    },
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 14
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 15
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 19
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 17
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 15
+    },
+    {
+      "high": 14,
+      "low": 8,
+      "rain_days": 16
+    },
+    {
+      "high": 10,
+      "low": 5,
+      "rain_days": 17
+    },
+    {
+      "high": 8,
+      "low": 4,
+      "rain_days": 18
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "LPL taxi £50-70 vs tariff estimate 121"
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old Town lanes, the cathedral and world-class museums."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Lake cruises, lakeside promenades and Alpine day trips."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Fondue, lake fish and chocolate shops."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town",
+      "range": [
+        120,
+        350
+      ],
+      "why": "Steps from the cathedral, museums and the lake; quiet at night but hilly cobbled lanes.",
+      "center": [
+        46.201,
+        6.148
+      ]
+    },
+    {
+      "area": "Pâquis",
+      "range": [
+        100,
+        280
+      ],
+      "why": "Central and lively, close to the station and the lake; many budget hotels and cheap eats.",
+      "center": [
+        46.211,
+        6.146
+      ]
+    },
+    {
+      "area": "Eaux-Vives",
+      "range": [
+        140,
+        400
+      ],
+      "why": "Leafy and local, near the lake beaches and parks; good for families and longer stays.",
+      "center": [
+        46.203,
+        6.16
+      ]
+    },
+    {
+      "area": "Plainpalais",
+      "range": [
+        110,
+        300
+      ],
+      "why": "Student and arts quarter with a flea market; tram links to both banks, good value.",
+      "center": [
+        46.197,
+        6.142
+      ]
+    }
+  ],
+  "food": [
+    "Try fondue or raclette in the Old Town; portions are big, so share one between two.",
+    "Lake fish (perch fillets, 'filets de perche') is a local favourite; ask for the day's catch.",
+    "Cheap eats: Pâquis has kebab shops, falafel and Asian cafeterias, roughly CHF 10–20 a meal.",
+    "Pick up bread, cheese and fruit at a market or supermarket for a picnic by the lake; it saves a lot.",
+    "Restaurant prices are high. Lunch menus ('menu du jour') cost less than dinner; book popular places ahead."
+  ],
+  "more_time": [
+    "Take a boat trip on Lake Geneva (Les Mouettes or CGN cruises) to see the city and the Alps from the water.",
+    "Swap a city afternoon for a day trip to Montreux or Lausanne by train; check times and prices on the day.",
+    "Cross into France for a cheaper lunch in Annemasse or a walk along the lake shore; bring your passport."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nature": [
+      0.4,
+      0.45,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.4
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "budget": [
+      0.6,
+      0.6,
+      0.65,
+      0.7,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.7,
+      0.65,
+      0.6
+    ]
+  },
+  "best_for": [
+    "culture",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two nights cover the Old Town, museums and a lake cruise; add a night for an Alpine day trip."
+  },
+  "month_notes": [
+    "Cold and grey, highs near 5°C; pack a warm coat and expect some rain.",
+    "Still cold, highs around 8°C; a quiet month for museums.",
+    "Milder, highs near 11°C; rain is common, bring an umbrella.",
+    "Spring arrives, highs around 15°C; good for walking the lake shore.",
+    "Pleasant, highs near 18°C; one of the wetter months, keep a rain layer.",
+    "Warm and bright, highs around 24°C; long evenings by the lake.",
+    "Hottest month, highs near 27°C; book lake swims and shade.",
+    "Warm, highs around 26°C; a great month for the lake and parks.",
+    "Mild and pleasant, highs near 21°C; fewer rain days than spring.",
+    "Cooler, highs around 16°C; autumn colours and quieter streets.",
+    "Chilly, highs near 10°C; rain is frequent, dress in layers.",
+    "Cold, highs around 7°C; festive season, short daylight."
+  ],
+  "climate_guide": {
+    "summary": "Temperate lakeside climate: cold, grey winters and warm, sunny summers, with rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Highs of 24–27°C and the most sun. Ideal for the lake, parks and boat trips."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 5–8°C and lows near 0°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 9–14 rain days most months. Bring a light waterproof and an umbrella."
+      },
+      {
+        "icon": "🌸",
+        "title": "Spring warms up slowly",
+        "text": "March to May climbs from 11°C to 18°C. Pleasant but changeable; layer up."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild autumn",
+        "text": "September and October stay around 16–21°C; good for walking before the cold sets in."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for cobbled lanes; sunglasses and sunscreen for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Trams and buses with a TPG ticket, or a free transport card from your hotel.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "TPG trams and buses cover most of the city. Buy a ticket at the stop machine before boarding: about CHF 3 for one hour, CHF 8 for a day pass."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis are pricey; Uber and similar apps operate in Geneva."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but parking is costly and the centre is compact. Use transit instead for city trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The city is fairly flat and good for walking and bikes. Genèveroule lends bikes free in summer."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Yellow 'mouette' boats cross the lake and are covered by TPG tickets."
+      }
+    ]
+  }
+}

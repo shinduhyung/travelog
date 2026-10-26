@@ -1,0 +1,121 @@
+{
+ "city": "Taipei",
+ "trips": [
+  {
+   "place": "Keelung",
+   "label": "",
+   "position": {
+    "id": 407367,
+    "name": "Keelung",
+    "city": "Keelung",
+    "lat": 25.12825,
+    "lng": 121.7419
+   },
+   "town": {
+    "name": "Keelung",
+    "lat": 25.13089,
+    "lng": 121.74094
+   },
+   "road": {
+    "km": 23,
+    "min": 23,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 660,
+    "currency": "TWD"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$2",
+     "time": "40m",
+     "via": "臺北 to 三坑",
+     "source": "https://www.rome2rio.com/s/Taipei/Keelung"
+    },
+    "bus": {
+     "from": "$1-$4",
+     "time": "41m",
+     "via": "Huaisheng Junior High School to City Hall",
+     "source": "https://www.rome2rio.com/s/Taipei/Keelung"
+    }
+   },
+   "route_note": "Frequent trains run directly from Taipei Main Station to Keelung in under an hour.",
+   "see": [
+    "Keelung Miaokou Night Market",
+    "Keelung Harbor",
+    "Zhongzheng Park",
+    "Heping Island Park"
+   ],
+   "visit": "Half day",
+   "tour_query": "Keelung day trip from Taipei",
+   "quests": [],
+   "recommended": "train",
+   "why": "Frequent direct trains from Taipei Main Station reach Keelung in under an hour and drop you near the sights.",
+   "stars": 3,
+   "know": [
+    "Best on a clear day for harbour and night market visits",
+    "Keelung's Miaokou Night Market is liveliest in the evening"
+   ]
+  },
+  {
+   "place": "Yilan",
+   "label": "",
+   "position": {
+    "id": 460462,
+    "name": "Yilan",
+    "city": "Yilan",
+    "lat": 24.757,
+    "lng": 121.753
+   },
+   "town": {
+    "name": "Yilan",
+    "lat": 24.757,
+    "lng": 121.753
+   },
+   "road": {
+    "km": 50,
+    "min": 51,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 1340,
+    "currency": "TWD"
+   },
+   "modes": {
+    "train": {
+     "from": "$4-$7",
+     "time": "2h 19m",
+     "via": "臺北 to 宜蘭",
+     "source": "https://www.rome2rio.com/s/Taipei/Yilan"
+    },
+    "bus": {
+     "from": "$2-$6",
+     "time": "1h 15m",
+     "via": "Taipei City Hall Station to Yilan Station",
+     "source": "https://www.rome2rio.com/s/Taipei/Yilan"
+    }
+   },
+   "route_note": "Take a direct train from Taipei to Yilan station, then local buses or taxis for nearby sights.",
+   "see": [
+    "Yilan city center",
+    "Dongshan River Park",
+    "Traditional arts center",
+    "Local seafood cuisine"
+   ],
+   "visit": "Full day",
+   "tour_query": "Yilan day trip from Taipei",
+   "quests": [],
+   "recommended": "bus",
+   "why": "The bus is faster than the train here and runs directly from Taipei City Hall Station to Yilan Station.",
+   "stars": 3,
+   "know": [
+    "Allow extra time for local buses or taxis to reach scattered sights",
+    "Book accommodation ahead on weekends and holidays"
+   ]
+  }
+ ],
+ "problems": [
+  "Jiufen: no Omio position, dropped",
+  "Wulai: no Omio position, dropped"
+ ]
+}

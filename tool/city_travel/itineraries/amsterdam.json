@@ -1,0 +1,1732 @@
+{
+  "city": "Amsterdam",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Amsterdam rewards visitors who wander its canals, museums and brown cafés at an easy pace. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 52.2954,
+      "west": 4.8354,
+      "north": 52.3967,
+      "east": 5.1833,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4,
+      "flag_airport": 8,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.3,
+    "city_kmh": 20,
+    "notes": [
+      "Trams are the main way around; metro and buses fill the gaps, run by GVB.",
+      "Most routes run about 06:00 to midnight, with a few night buses.",
+      "Pay by tapping a contactless bank card (OVpay) or an OV-chipkaart.",
+      "Uber and Bolt work in Amsterdam; taxis are metered and pricey.",
+      "The centre is flat and compact, so walking and bikes are often fastest.",
+      "Free ferries cross the IJ behind Centraal station."
+    ],
+    "sources": []
+  },
+  "places": {
+    "annefrank": {
+      "name": "Anne Frank House",
+      "landmark": "Anne Frank House",
+      "kind": "museum",
+      "lat": 52.3752,
+      "lon": 4.884,
+      "price": 16,
+      "price_text": "≈ €16 adults · children 0–9 free · check current price",
+      "hours": "Daily, roughly 09:00–22:00 in summer · shorter in winter · check on the day",
+      "tip": "Tickets sell out online weeks ahead and are timed. Book the first morning slot to avoid crowds.",
+      "source": "https://www.annefrank.org/en/"
+    },
+    "vangogh": {
+      "name": "Van Gogh Museum",
+      "landmark": "Van Gogh Museum",
+      "kind": "museum",
+      "lat": 52.3584,
+      "lon": 4.8811,
+      "price": 24,
+      "price_text": "≈ €24 adults · under 18 free · check current price",
+      "hours": "Daily, roughly 09:00–18:00 · later on some Fridays · check on the day",
+      "tip": "Only timed online tickets are sold. Go at opening or after 15:00 for quieter rooms.",
+      "source": "https://www.vangoghmuseum.nl/en"
+    },
+    "rijksmuseum": {
+      "name": "Rijksmuseum",
+      "landmark": "Rijksmuseum",
+      "kind": "museum",
+      "lat": 52.36,
+      "lon": 4.8852,
+      "price": 25,
+      "price_text": "≈ €25 adults · under 18 free · check current price",
+      "hours": "Daily, roughly 09:00–17:00",
+      "tip": "Head straight to the Gallery of Honour for the Night Watch, then work backwards.",
+      "source": "https://www.rijksmuseum.nl/en"
+    },
+    "canalring": {
+      "name": "Canal Ring",
+      "landmark": "Canal Ring",
+      "kind": "sight",
+      "lat": 52.3662,
+      "lon": 4.8885,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open",
+      "tip": "Walk the Herengracht and Keizersgracht at dusk when bridges light up. Watch for bikes on the narrow paths.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "damsquare": {
+      "name": "Dam Square",
+      "landmark": "Dam Square",
+      "kind": "sight",
+      "lat": 52.3728,
+      "lon": 4.8936,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A quick stop between sights. Use it as a meeting point, not a destination.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "redlight": {
+      "name": "Red Light District",
+      "landmark": "Red Light District",
+      "kind": "sight",
+      "lat": 52.3728,
+      "lon": 4.898,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · busiest at night",
+      "tip": "No photos of windows. Walk in a small group and stay on the main lanes.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "almondblossom": {
+      "name": "Almond Blossom",
+      "landmark": "Almond Blossom",
+      "kind": "sight",
+      "lat": 52.3584,
+      "lon": 4.8811,
+      "price": 24,
+      "price_text": "Included with Van Gogh Museum ticket",
+      "hours": "Same as Van Gogh Museum",
+      "tip": "This Van Gogh painting hangs in the museum. Ask staff which floor it is on that week.",
+      "source": "https://www.vangoghmuseum.nl/en"
+    },
+    "amstel": {
+      "name": "Amstel River",
+      "landmark": "Amstel River",
+      "kind": "sight",
+      "lat": 52.3676,
+      "lon": 4.9041,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk the east bank near the Magere Brug for the classic river view.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "canalcruise": {
+      "name": "Amsterdam Canal Cruise",
+      "landmark": "Amsterdam Canal Cruise",
+      "kind": "tour",
+      "lat": 52.3776,
+      "lon": 4.8988,
+      "price": 20,
+      "price_text": "≈ €18–25 for 60–75 minutes · check operator",
+      "hours": "Departures roughly 09:00–22:00",
+      "tip": "Choose a small open boat over a big glass-topped one. Book a sunset slot.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "dungeon": {
+      "name": "Amsterdam Dungeon",
+      "landmark": "Amsterdam Dungeon",
+      "kind": "show",
+      "lat": 52.3702,
+      "lon": 4.8951,
+      "price": 27,
+      "price_text": "≈ €27 adults · cheaper online · check current price",
+      "hours": "Daily, roughly 10:00–18:00",
+      "tip": "Actors jump out and it is dark. Skip it with small children or anyone who dislikes scares.",
+      "source": "https://www.thedungeons.com/amsterdam/en/"
+    },
+    "artis": {
+      "name": "Artis Royal Zoo",
+      "landmark": "Artis Royal Zoo",
+      "kind": "park",
+      "lat": 52.3662,
+      "lon": 4.9166,
+      "price": 28,
+      "price_text": "≈ €28 adults · children cheaper · check current price",
+      "hours": "Daily, roughly 09:00–17:00 · longer in summer",
+      "tip": "Buy tickets online to skip the queue. The aquarium and planetarium are included.",
+      "source": "https://www.artis.nl/en/"
+    },
+    "dehaar": {
+      "name": "Castle De Haar",
+      "landmark": "Castle De Haar",
+      "kind": "sight",
+      "lat": 52.1217,
+      "lon": 4.9863,
+      "price": 20,
+      "price_text": "≈ €20 adults · park only cheaper · check current price",
+      "hours": "Roughly Tue–Sun 10:00–17:00 · closed some winter weeks · check on the day",
+      "tip": "It is outside the city, about an hour by train and bus. Book a castle entry slot online.",
+      "source": "https://www.kasteeldehaar.nl/en/"
+    },
+    "heineken": {
+      "name": "Heineken Experience",
+      "landmark": "Heineken Experience",
+      "kind": "activity",
+      "lat": 52.358,
+      "lon": 4.8918,
+      "price": 25,
+      "price_text": "≈ €25 adults · includes two drinks · check current price",
+      "hours": "Daily, roughly 10:30–19:00",
+      "tip": "Book online for a time slot. Go before 13:00 to avoid the biggest groups.",
+      "source": "https://www.heinekenexperience.com/en/"
+    },
+    "cruijff": {
+      "name": "Johan Cruijff Arena",
+      "landmark": "Johan Cruijff Arena",
+      "kind": "sight",
+      "lat": 52.3144,
+      "lon": 4.9419,
+      "price": 20,
+      "price_text": "≈ €20 stadium tour · match tickets vary · check current price",
+      "hours": "Tour times vary by match schedule · check on the day",
+      "tip": "Check the fixture list first. On match days tours stop and trains get very busy.",
+      "source": "https://www.johancruijffarena.nl/en/"
+    },
+    "keukenhof": {
+      "name": "Keukenhof",
+      "landmark": "Keukenhof",
+      "kind": "park",
+      "lat": 52.2697,
+      "lon": 4.5465,
+      "price": 20,
+      "price_text": "≈ €20 entry · transport extra · check current price",
+      "hours": "Open roughly mid-March to mid-May only · daily 08:00–19:00",
+      "tip": "It is a seasonal garden, not year-round. Go on a weekday morning in April.",
+      "source": "https://keukenhof.nl/en/"
+    },
+    "muiderslot": {
+      "name": "Muiderslot",
+      "landmark": "Muiderslot",
+      "kind": "sight",
+      "lat": 52.3338,
+      "lon": 5.0715,
+      "price": 18,
+      "price_text": "≈ €18 adults · check current price",
+      "hours": "Roughly daily 10:00–17:00 · shorter in winter · check on the day",
+      "tip": "A real moated castle about 45 minutes away by bus. Combine it with a walk in Muiden.",
+      "source": "https://www.muiderslot.nl/en/"
+    },
+    "nemo": {
+      "name": "NEMO Science Museum",
+      "landmark": "NEMO Science Museum",
+      "kind": "museum",
+      "lat": 52.3742,
+      "lon": 4.9123,
+      "price": 18,
+      "price_text": "≈ €18 · under 4 free · check current price",
+      "hours": "Daily, roughly 10:00–17:30",
+      "tip": "The rooftop terrace is free and has a good city view. Great for kids on a rainy day.",
+      "source": "https://www.nemosciencemuseum.nl/en/"
+    },
+    "oudvalkeveen": {
+      "name": "Oud Valkeveen",
+      "landmark": "Oud Valkeveen",
+      "kind": "park",
+      "lat": 52.308,
+      "lon": 5.1501,
+      "price": 12,
+      "price_text": "≈ €12 per person · check current price",
+      "hours": "Seasonal, roughly April–October · check on the day",
+      "tip": "A small family play park outside the city. Only worth it if you travel with young children.",
+      "source": "https://www.oudvalkeveen.nl/"
+    },
+    "oudekerk": {
+      "name": "Oude Kerk",
+      "landmark": "Oude Kerk",
+      "kind": "sight",
+      "lat": 52.3744,
+      "lon": 4.8981,
+      "price": 12,
+      "price_text": "≈ €12 · check current price",
+      "hours": "Roughly daily 10:00–18:00 · check on the day",
+      "tip": "Amsterdam's oldest building, now an art space. Check what exhibition is on before you go.",
+      "source": "https://www.oudekerk.nl/en/"
+    },
+    "rijkslib": {
+      "name": "Rijksmuseum Library",
+      "landmark": "Rijksmuseum Library",
+      "kind": "sight",
+      "lat": 52.36,
+      "lon": 4.8852,
+      "price": 25,
+      "price_text": "Included with Rijksmuseum ticket",
+      "hours": "Same as Rijksmuseum",
+      "tip": "The Cuypers Library is inside the museum. It is a quiet photo stop most visitors miss.",
+      "source": "https://www.rijksmuseum.nl/en"
+    },
+    "concertgebouw": {
+      "name": "Royal Concertgebouw",
+      "landmark": "Royal Concertgebouw",
+      "kind": "show",
+      "lat": 52.3563,
+      "lon": 4.8791,
+      "price": 25,
+      "price_text": "≈ €25 and up · free lunch concerts exist · check programme",
+      "hours": "Box office and concerts vary · check on the day",
+      "tip": "The free Wednesday lunchtime concerts are a cheap way in. Arrive early, seats go fast.",
+      "source": "https://www.concertgebouw.nl/en/"
+    },
+    "royalpalace": {
+      "name": "Royal Palace Amsterdam",
+      "landmark": "Royal Palace Amsterdam",
+      "kind": "sight",
+      "lat": 52.3732,
+      "lon": 4.8914,
+      "price": 13,
+      "price_text": "≈ €13 adults · under 18 free · check current price",
+      "hours": "Roughly daily 10:00–17:00 · closed during royal events · check on the day",
+      "tip": "It closes when the royal family uses it. Check the calendar before you plan around it.",
+      "source": "https://www.paleisamsterdam.nl/en/"
+    },
+    "albertcuyp": {
+      "name": "Albert Cuyp Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.3557,
+      "lon": 4.8956,
+      "price": 0,
+      "price_text": "Free to browse · snacks €3–10",
+      "hours": "Roughly Mon–Sat 09:00–17:00 · closed Sunday",
+      "tip": "Try a fresh stroopwafel made in front of you. Bring cash for small stalls.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "adamlookout": {
+      "name": "A'DAM Lookout",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.3841,
+      "lon": 4.9024,
+      "price": 16,
+      "price_text": "≈ €16 observation deck · swing extra · check current price",
+      "hours": "Daily, roughly 10:00–22:00",
+      "tip": "Take the free ferry from behind Central Station. Go near sunset for the best light.",
+      "source": "https://www.adamlookout.com/"
+    },
+    "jordaanwalk": {
+      "name": "Jordaan neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.3752,
+      "lon": 4.8815,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Wander the side streets and courtyards (hofjes) between Prinsengracht and Elandsgracht.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "foodhallen": {
+      "name": "Foodhallen",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.3664,
+      "lon": 4.8712,
+      "price": 0,
+      "price_text": "Free entry · dishes roughly €5–15",
+      "hours": "Daily, roughly 11:00–23:00",
+      "tip": "An indoor food market with many small stalls. Good for groups who want different food.",
+      "source": "https://www.foodhallen.nl/"
+    },
+    "vondelpark": {
+      "name": "Vondelpark",
+      "landmark": null,
+      "kind": "park",
+      "lat": 52.3579,
+      "lon": 4.8686,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Rent a bike or just walk the loop. The terraces near the pond are busy on sunny days.",
+      "source": "https://www.iamsterdam.com/en"
+    },
+    "biketour": {
+      "name": "Guided bike tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 52.3765,
+      "lon": 4.8965,
+      "price": 30,
+      "price_text": "≈ €25–35 for 2–3 hours · check operator",
+      "hours": "Departures through the day · book ahead",
+      "tip": "Cycling here is fast and rule-bound. A guided tour is safer than renting on your own first.",
+      "source": "https://www.iamsterdam.com/en"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "A single art-filled day: the two big museums, a small masterpiece and a canal-side walk.",
+      "days": [
+        {
+          "title": "Museumplein morning, canals at dusk",
+          "stops": [
+            {
+              "place": "rijksmuseum",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Start at opening. Book a timed ticket online. Bags go in the free lockers."
+            },
+            {
+              "place": "rijkslib",
+              "at": "12:05",
+              "minutes": 20,
+              "note": "Inside the Rijksmuseum. Look up from the main hall. Free with your ticket."
+            },
+            {
+              "place": "foodhallen",
+              "at": "12:45",
+              "minutes": 75,
+              "note": "Lunch. About 15 minutes on foot or a short tram ride. Many small stalls, pay by card."
+            },
+            {
+              "place": "vangogh",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Timed entry only, book ahead. Closed days vary, check on the day."
+            },
+            {
+              "place": "almondblossom",
+              "at": "16:20",
+              "minutes": 15,
+              "note": "Inside the Van Gogh Museum. Ask staff for the room."
+            },
+            {
+              "place": "canalring",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Walk back through the centre. Best light late afternoon to dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oud-West (Museumplein)"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "The old centre on foot: Anne Frank House first, then churches, squares and the canal ring.",
+      "days": [
+        {
+          "title": "Jordaan to Dam Square",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Tickets are sold online only and sell out. Book weeks ahead. No large bags."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Wander the small streets and canals nearby. Stop for coffee on the way."
+            },
+            {
+              "place": "oudekerk",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "The oldest church in the city, in the Red Light District. Check opening on the day."
+            },
+            {
+              "place": "redlight",
+              "at": "13:20",
+              "minutes": 45,
+              "note": "Walk through in daylight. No photos of people in windows. Quiet and respectful."
+            },
+            {
+              "place": "damsquare",
+              "at": "14:15",
+              "minutes": 20,
+              "note": "Short look at the square and the palace facade. Grab lunch nearby."
+            },
+            {
+              "place": "royalpalace",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Closed during royal events, check on the day."
+            },
+            {
+              "place": "canalring",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Finish with a slow loop along the canals toward dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum (Jordaan side)"
+    },
+    {
+      "id": "day-budget",
+      "length": "day",
+      "style": "budget",
+      "nights": 0,
+      "for": "Cheap and mostly free: markets, parks, canals and a picnic instead of restaurants.",
+      "days": [
+        {
+          "title": "Market, park and canals",
+          "stops": [
+            {
+              "place": "albertcuyp",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Buy fruit, cheese and bread for a picnic. Cash helps at some stalls."
+            },
+            {
+              "place": "heineken",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Optional paid stop. Skip it to keep the day free. Book online for a lower price."
+            },
+            {
+              "place": "vondelpark",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Picnic lunch on the grass. Always open and free."
+            },
+            {
+              "place": "canalcruise",
+              "at": "15:00",
+              "minutes": 75,
+              "note": "Paid, but a good value way to see a lot. Compare operators at the dock."
+            },
+            {
+              "place": "canalring",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Free walk along the canals. Best light toward dusk."
+            },
+            {
+              "place": "foodhallen",
+              "at": "18:15",
+              "minutes": 75,
+              "note": "Cheap dinner from the stalls. Busy at peak times."
+            }
+          ]
+        }
+      ],
+      "stay_area": "De Pijp or Oud-West (budget hotels and hostels)"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "One night of art: Van Gogh and the Rijksmuseum, with a canal walk between them.",
+      "days": [
+        {
+          "title": "Museum quarter in the afternoon",
+          "stops": [
+            {
+              "place": "vangogh",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Book a timed ticket online. Bags go in the cloakroom."
+            },
+            {
+              "place": "almondblossom",
+              "at": "15:05",
+              "minutes": 15,
+              "note": "Inside the Van Gogh Museum, so no extra ticket."
+            },
+            {
+              "place": "foodhallen",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Indoor food market, good for an early dinner. About 15 minutes on foot."
+            },
+            {
+              "place": "canalring",
+              "at": "17:45",
+              "minutes": 90,
+              "note": "Walk the canals to dusk. Free and always open."
+            }
+          ]
+        },
+        {
+          "title": "Rijksmuseum morning, then go",
+          "stops": [
+            {
+              "place": "rijksmuseum",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Go at opening to beat the crowds. Book ahead."
+            },
+            {
+              "place": "rijkslib",
+              "at": "12:05",
+              "minutes": 20,
+              "note": "Inside the Rijksmuseum. Look up at the painted ceiling."
+            },
+            {
+              "place": "vondelpark",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Next door. Grab a snack and sit by the water before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oud-West, near Museumplein"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "The old centre on foot: Anne Frank House, the canal ring and Dam Square.",
+      "days": [
+        {
+          "title": "Old centre and canals",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Tickets sell out online weeks ahead. Book a morning slot."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "10:45",
+              "minutes": 90,
+              "note": "Wander the narrow streets nearby. Free."
+            },
+            {
+              "place": "foodhallen",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch. About 20 minutes on foot or a short tram ride."
+            },
+            {
+              "place": "canalring",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk the ring back toward the centre."
+            },
+            {
+              "place": "damsquare",
+              "at": "15:45",
+              "minutes": 20,
+              "note": "Quick look at the square and the palace outside."
+            }
+          ]
+        },
+        {
+          "title": "Palace and church, then go",
+          "stops": [
+            {
+              "place": "royalpalace",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed during royal events. Check on the day."
+            },
+            {
+              "place": "oudekerk",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Short walk into the old centre. Check hours on the day."
+            },
+            {
+              "place": "amstel",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Walk the river bank before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, near Dam Square"
+    },
+    {
+      "id": "1n-budget",
+      "length": "1n",
+      "style": "budget",
+      "nights": 1,
+      "for": "Cheap and cheerful: markets, parks and free walking, with one canal cruise.",
+      "days": [
+        {
+          "title": "Market, park and canals",
+          "stops": [
+            {
+              "place": "albertcuyp",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Go early for the best food stalls."
+            },
+            {
+              "place": "heineken",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Optional. Skip it to save money and walk the area instead."
+            },
+            {
+              "place": "vondelpark",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Free. Bring a picnic from the market."
+            },
+            {
+              "place": "canalcruise",
+              "at": "17:00",
+              "minutes": 75,
+              "note": "Book online for cheaper seats. Sunset departures are popular."
+            }
+          ]
+        },
+        {
+          "title": "Free sights, then go",
+          "stops": [
+            {
+              "place": "jordaanwalk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Free self-guided walk. Weekend afternoons are liveliest."
+            },
+            {
+              "place": "damsquare",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Free. Quick photo stop."
+            },
+            {
+              "place": "amstel",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Free river walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum or De Pijp, near transport"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Museum-heavy two days: Rijksmuseum and Van Gogh first, then canals and the Jordaan at an easy pace.",
+      "days": [
+        {
+          "title": "Museumplein: Rijksmuseum and Van Gogh",
+          "stops": [
+            {
+              "place": "rijksmuseum",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Start at opening on a weekday. Book a timed ticket online."
+            },
+            {
+              "place": "rijkslib",
+              "at": "12:05",
+              "minutes": 20,
+              "note": "Inside the Rijksmuseum. Look up from the main hall."
+            },
+            {
+              "place": "foodhallen",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch. About 15 minutes on foot or a short tram ride."
+            },
+            {
+              "place": "vangogh",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Timed slots only. Book ahead for a late-afternoon entry."
+            },
+            {
+              "place": "almondblossom",
+              "at": "17:05",
+              "minutes": 15,
+              "note": "In the Van Gogh Museum itself. Easy to miss, so ask staff."
+            }
+          ]
+        },
+        {
+          "title": "Canals, Jordaan and an evening cruise",
+          "stops": [
+            {
+              "place": "canalring",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Walk the ring slowly. The prettiest stretches are in the west."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Narrow streets, small galleries and cafés. Stop for lunch here."
+            },
+            {
+              "place": "annefrank",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Tickets are online only and sell out. Book weeks ahead."
+            },
+            {
+              "place": "canalcruise",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Sunset departure. Book ahead and arrive 15 minutes early."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Oud-West (Museumplein) or Centrum"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "The old centre on foot: Anne Frank House, the canal ring and Dam Square, with one half-day castle trip.",
+      "days": [
+        {
+          "title": "Centrum history walk",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Book online well ahead. Entry is by timed slot only."
+            },
+            {
+              "place": "canalring",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk east along the canals toward the centre."
+            },
+            {
+              "place": "damsquare",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Quick look at the palace square. Grab lunch nearby."
+            },
+            {
+              "place": "royalpalace",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Closed during royal events. Check on the day."
+            },
+            {
+              "place": "oudekerk",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "The oldest church in the city, in the Red Light District."
+            }
+          ]
+        },
+        {
+          "title": "Castle half-day, then the Amstel",
+          "stops": [
+            {
+              "place": "dehaar",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Bus or train plus a local bus. Check opening days before you go."
+            },
+            {
+              "place": "amstel",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Back in town. Walk the banks toward sunset."
+            },
+            {
+              "place": "redlight",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Go early evening. No photos of the windows."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum"
+    },
+    {
+      "id": "2n-budget",
+      "length": "2n",
+      "style": "budget",
+      "nights": 2,
+      "for": "Cheap and mostly outdoors: markets, parks, free walks and one paid museum or cruise.",
+      "days": [
+        {
+          "title": "Market, park and canals",
+          "stops": [
+            {
+              "place": "albertcuyp",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Cheap street food for breakfast."
+            },
+            {
+              "place": "heineken",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Optional paid stop. Book online for a lower price."
+            },
+            {
+              "place": "vondelpark",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Free. Bring snacks and sit by the water."
+            },
+            {
+              "place": "canalring",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Free walk. Late afternoon light is best."
+            },
+            {
+              "place": "foodhallen",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Early dinner. Portions are small, so compare prices."
+            }
+          ]
+        },
+        {
+          "title": "Free sights and a bike tour",
+          "stops": [
+            {
+              "place": "biketour",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Book ahead. Cheaper on weekdays; bring rain gear."
+            },
+            {
+              "place": "damsquare",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Free. Good spot for a packed lunch."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Free wander. Weekend afternoons are liveliest."
+            },
+            {
+              "place": "amstel",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Free. Walk to sunset, then take a tram back."
+            }
+          ]
+        }
+      ],
+      "stay_area": "De Pijp or Oud-West (cheaper beds, short tram ride)"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Three days of Dutch masters and modern art, with canal views between museums.",
+      "days": [
+        {
+          "title": "Arrive and ease into the canal ring",
+          "stops": [
+            {
+              "place": "canalring",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the main canals to get your bearings. Free."
+            },
+            {
+              "place": "damsquare",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Short look at the square and palace facade."
+            },
+            {
+              "place": "amstel",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset by the river, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Rijksmuseum day",
+          "stops": [
+            {
+              "place": "rijksmuseum",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a timed ticket online. Go straight to the Gallery of Honour."
+            },
+            {
+              "place": "rijkslib",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Inside the museum; the reading room is a highlight."
+            },
+            {
+              "place": "foodhallen",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch. About 15 minutes on foot or a short tram ride."
+            },
+            {
+              "place": "vangogh",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Book ahead. Later slots are often quieter."
+            },
+            {
+              "place": "almondblossom",
+              "at": "17:00",
+              "minutes": 15,
+              "note": "In the Van Gogh Museum; don't miss it."
+            }
+          ]
+        },
+        {
+          "title": "Old centre art and history",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Tickets sell out online only, released on a set schedule. Book well ahead."
+            },
+            {
+              "place": "oudekerk",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Oldest church in the city, now an art space. Check opening on the day."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and wander the small streets and galleries."
+            },
+            {
+              "place": "canalcruise",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "See the city from the water. Book a late-afternoon slot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum or Oud-West, near the museums"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "The old centre, the Anne Frank story and a castle day out.",
+      "days": [
+        {
+          "title": "Arrive in the old centre",
+          "stops": [
+            {
+              "place": "damsquare",
+              "at": "14:30",
+              "minutes": 20,
+              "note": "Start at the heart of the city."
+            },
+            {
+              "place": "royalpalace",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Closed during royal events; check on the day."
+            },
+            {
+              "place": "redlight",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Walk through in daylight. No photos of people."
+            },
+            {
+              "place": "oudekerk",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Check closing time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Anne Frank and the Jordaan",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Online tickets only. Book as early as you can."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Lunch and quiet streets nearby."
+            },
+            {
+              "place": "canalring",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Follow the ring west to east."
+            },
+            {
+              "place": "canalcruise",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "History from the water. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Castle day trip",
+          "stops": [
+            {
+              "place": "dehaar",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Half-day trip by train and bus. Check it is open before you go."
+            },
+            {
+              "place": "foodhallen",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Late lunch back in the city."
+            },
+            {
+              "place": "vangogh",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Optional evening art stop; book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, walking distance to Dam Square"
+    },
+    {
+      "id": "3n-budget",
+      "length": "3n",
+      "style": "budget",
+      "nights": 3,
+      "for": "Free sights, market food and bikes, with one paid museum if you want it.",
+      "days": [
+        {
+          "title": "Free centre and canals",
+          "stops": [
+            {
+              "place": "damsquare",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Free. Good starting point."
+            },
+            {
+              "place": "canalring",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk it yourself instead of a paid cruise."
+            },
+            {
+              "place": "amstel",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Free riverside walk."
+            },
+            {
+              "place": "albertcuyp",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Cheap street food for dinner."
+            }
+          ]
+        },
+        {
+          "title": "Bike day and park",
+          "stops": [
+            {
+              "place": "biketour",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Book ahead. Cheaper than many attractions and covers a lot."
+            },
+            {
+              "place": "vondelpark",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Free. Bring a picnic lunch."
+            },
+            {
+              "place": "foodhallen",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Budget-friendly dinner with many small stalls."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Free evening wander."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and one museum",
+          "stops": [
+            {
+              "place": "albertcuyp",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekday morning is calmest. Closed Sunday."
+            },
+            {
+              "place": "heineken",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Book online for a lower price."
+            },
+            {
+              "place": "nemo",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Good value, especially with kids or rain."
+            },
+            {
+              "place": "canalcruise",
+              "at": "17:30",
+              "minutes": 75,
+              "note": "Optional paid extra; compare operators for price."
+            }
+          ]
+        }
+      ],
+      "stay_area": "De Pijp or Oud-West for cheaper stays near markets"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Museum-heavy days with canal views, a market lunch and one evening concert.",
+      "days": [
+        {
+          "title": "Arrive and ease into the canal ring",
+          "stops": [
+            {
+              "place": "canalring",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start near Centraal and wander south. Watch for bikes."
+            },
+            {
+              "place": "damsquare",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Short look at the palace square on the way."
+            },
+            {
+              "place": "canalcruise",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Sunset departures fill up. Book ahead."
+            },
+            {
+              "place": "foodhallen",
+              "at": "19:45",
+              "minutes": 75,
+              "note": "Tram to Oud-West for a casual dinner."
+            }
+          ]
+        },
+        {
+          "title": "Rijksmuseum and Van Gogh",
+          "stops": [
+            {
+              "place": "rijksmuseum",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a timed ticket. Weekday mornings are calmest."
+            },
+            {
+              "place": "rijkslib",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Inside the museum. Don't miss the reading room."
+            },
+            {
+              "place": "foodhallen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "vangogh",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Timed tickets only. Book well ahead."
+            },
+            {
+              "place": "almondblossom",
+              "at": "16:20",
+              "minutes": 15,
+              "note": "In the same building. Included with your ticket."
+            }
+          ]
+        },
+        {
+          "title": "Old centre art and history",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Tickets sell out online. Book weeks ahead."
+            },
+            {
+              "place": "oudekerk",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Short walk through the old streets."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Lunch stops along the way."
+            },
+            {
+              "place": "royalpalace",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Check for closures during royal events."
+            },
+            {
+              "place": "redlight",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Walk through early. No photos of windows."
+            }
+          ]
+        },
+        {
+          "title": "Concert and last look",
+          "stops": [
+            {
+              "place": "vondelpark",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning stroll in Oud-West."
+            },
+            {
+              "place": "albertcuyp",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Grab market snacks for lunch."
+            },
+            {
+              "place": "concertgebouw",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Check for a free lunch concert or book an evening show."
+            },
+            {
+              "place": "amstel",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Sunset walk along the river."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum or Oud-West, near a tram line"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "The old centre, the Anne Frank story and two easy castle half-days.",
+      "days": [
+        {
+          "title": "Arrive and the old centre",
+          "stops": [
+            {
+              "place": "damsquare",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Central meeting point."
+            },
+            {
+              "place": "royalpalace",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Check closures during royal events."
+            },
+            {
+              "place": "oudekerk",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Amsterdam's oldest building."
+            },
+            {
+              "place": "redlight",
+              "at": "17:45",
+              "minutes": 45,
+              "note": "Walk it early evening. Respect the rules."
+            },
+            {
+              "place": "canalring",
+              "at": "18:45",
+              "minutes": 90,
+              "note": "Dinner near the water."
+            }
+          ]
+        },
+        {
+          "title": "Anne Frank and Jordaan",
+          "stops": [
+            {
+              "place": "annefrank",
+              "at": "09:15",
+              "minutes": 90,
+              "note": "Book online weeks ahead. No large bags."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Quiet streets and canal views."
+            },
+            {
+              "place": "canalcruise",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "See the ring from the water."
+            },
+            {
+              "place": "amstel",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sunset walk."
+            }
+          ]
+        },
+        {
+          "title": "Rijksmuseum and Vondelpark",
+          "stops": [
+            {
+              "place": "rijksmuseum",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book a timed ticket."
+            },
+            {
+              "place": "rijkslib",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Inside the museum."
+            },
+            {
+              "place": "foodhallen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch."
+            },
+            {
+              "place": "vangogh",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Optional if you have energy. Book ahead."
+            },
+            {
+              "place": "vondelpark",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Easy end to the day."
+            }
+          ]
+        },
+        {
+          "title": "Castle day trip",
+          "stops": [
+            {
+              "place": "dehaar",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Bus and train from the city. Check winter closures."
+            },
+            {
+              "place": "muiderslot",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Only if you have a car or long day. Otherwise return to town."
+            },
+            {
+              "place": "canalring",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Evening stroll and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum, walking distance to Dam Square"
+    },
+    {
+      "id": "4n-budget",
+      "length": "4n",
+      "style": "budget",
+      "nights": 4,
+      "for": "Free sights, market food, bikes and one splurge museum.",
+      "days": [
+        {
+          "title": "Free centre walk",
+          "stops": [
+            {
+              "place": "damsquare",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Free start."
+            },
+            {
+              "place": "canalring",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk, don't cruise, to save money."
+            },
+            {
+              "place": "redlight",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Go early and keep it brief."
+            },
+            {
+              "place": "amstel",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Sunset by the water."
+            },
+            {
+              "place": "foodhallen",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Share dishes to keep costs down."
+            }
+          ]
+        },
+        {
+          "title": "Bike day and market",
+          "stops": [
+            {
+              "place": "biketour",
+              "at": "09:30",
+              "minutes": 150,
+              "note": "Book ahead. Cheaper than many attractions."
+            },
+            {
+              "place": "albertcuyp",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Cheap lunch from stalls."
+            },
+            {
+              "place": "heineken",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Optional splurge. Book online for a lower price."
+            },
+            {
+              "place": "vondelpark",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Free afternoon in the park."
+            }
+          ]
+        },
+        {
+          "title": "One big museum",
+          "stops": [
+            {
+              "place": "vangogh",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Book online. Opening slot is quietest."
+            },
+            {
+              "place": "almondblossom",
+              "at": "11:10",
+              "minutes": 15,
+              "note": "Included with your ticket."
+            },
+            {
+              "place": "foodhallen",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch."
+            },
+            {
+              "place": "jordaanwalk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Free wander."
+            },
+            {
+              "place": "canalcruise",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Optional. Compare prices at the docks."
+            }
+          ]
+        },
+        {
+          "title": "Cheap half-day out",
+          "stops": [
+            {
+              "place": "nemo",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Good rainy option. Check ticket prices online."
+            },
+            {
+              "place": "oudvalkeveen",
+              "at": "14:00",
+              "minutes": 240,
+              "note": "Seasonal April–October. Best with kids. Check transport costs first."
+            },
+            {
+              "place": "amstel",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Free evening walk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centrum or De Pijp, near a tram stop"
+    }
+  ],
+  "styles": [
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Rijksmuseum, Van Gogh and the canal-side galleries."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Anne Frank House, canal ring and the old centre."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Free ferries, market food and cheap bike days."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Centrum",
+      "range": [
+        120,
+        320
+      ],
+      "why": "Walk to Dam Square, the Anne Frank House and Centraal station. Busiest and priciest, but you save on transit.",
+      "center": [
+        52.373,
+        4.892
+      ]
+    },
+    {
+      "area": "Jordaan",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Quiet canals, small galleries and cafés. Ten minutes on foot to the centre and the Anne Frank House.",
+      "center": [
+        52.376,
+        4.881
+      ]
+    },
+    {
+      "area": "De Pijp",
+      "range": [
+        90,
+        240
+      ],
+      "why": "Local feel, Albert Cuyp market and lots of food. Near the Museumplein for the big art museums.",
+      "center": [
+        52.354,
+        4.893
+      ]
+    },
+    {
+      "area": "Oud-West",
+      "range": [
+        80,
+        210
+      ],
+      "why": "Good value and a short tram ride to the centre. Popular with locals and repeat visitors.",
+      "center": [
+        52.366,
+        4.868
+      ]
+    }
+  ],
+  "food": [
+    "Try Dutch snacks: bitterballen, raw herring from a stall, and stroopwafels fresh off the iron.",
+    "Albert Cuyp market in De Pijp is good for cheap eats; check opening hours on the day.",
+    "Indonesian rijsttafel is a Dutch classic; book ahead for dinner.",
+    "Cheap lunch: broodjes (sandwiches) and soup in cafés, roughly EUR 8–15.",
+    "Tap water is safe to drink. Carry a bottle and refill it."
+  ],
+  "more_time": [
+    "Swap a city day for Haarlem: a short train ride, with a pretty centre and the Frans Hals museum. Check times and fares on the day.",
+    "Take the free ferry behind Centraal station to Amsterdam Noord for a different, quieter side of the city.",
+    "Rent a bike for a half day and ride the canals and the Vondelpark. Follow local rules and park only in marked spots."
+  ]
+}

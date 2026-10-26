@@ -1,0 +1,136 @@
+{
+ "city": "Tel Aviv",
+ "trips": [
+  {
+   "place": "Jerusalem",
+   "label": "",
+   "position": {
+    "id": 384472,
+    "name": "Jerusalem",
+    "city": "Jerusalem",
+    "lat": 31.76904,
+    "lng": 35.21633
+   },
+   "town": {
+    "name": "Jerusalem",
+    "lat": 31.76904,
+    "lng": 35.21633
+   },
+   "road": {
+    "km": 65,
+    "min": 57,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 340,
+    "currency": "ILS"
+   },
+   "modes": {
+    "train": {
+     "from": "$7-$10",
+     "time": "47m",
+     "via": "Tel Aviv Center to Yerushalayim/Yits'hak Navon",
+     "source": "https://www.rome2rio.com/s/Tel%20Aviv/Jerusalem"
+    },
+    "bus": {
+     "from": "$3-$5",
+     "time": "44m",
+     "via": "Tel Aviv-Savidor Train Stations/Platforms B to Jerusalem Central Bus Station/Alight",
+     "source": "https://www.rome2rio.com/s/Tel%20Aviv/Jerusalem"
+    }
+   },
+   "route_note": "Frequent Israel Railways trains run from Tel Aviv stations (Hashalom, Savidor) to Jerusalem Yitzhak Navon station in about 40 minutes, then take the light rail or a short bus ride into the Old City.",
+   "see": [
+    "Old City walls and Cardo",
+    "Western Wall",
+    "Church of the Holy Sepulchre",
+    "Mahane Yehuda Market",
+    "Mount of Olives viewpoint"
+   ],
+   "visit": "Full day",
+   "tour_query": "Jerusalem day trip from Tel Aviv",
+   "quests": [
+    "Dome of the Rock",
+    "Western Wall",
+    "Al-Aqsa Mosque",
+    "Church of the Holy Sepulchre",
+    "Via Dolorosa",
+    "City of David",
+    "Mount of Olives",
+    "Mount Zion"
+   ],
+   "recommended": "train",
+   "why": "Frequent trains take about 47 minutes and drop you at Navon station with light rail into the Old City.",
+   "stars": 5,
+   "know": [
+    "Many sights close on Saturdays and Jewish holidays, so check opening hours",
+    "Book popular sites like the Old City tunnels ahead in peak season",
+    "Spring and autumn are the most comfortable seasons to walk the Old City"
+   ]
+  },
+  {
+   "place": "Haifa",
+   "label": "",
+   "position": {
+    "id": 384466,
+    "name": "Haifa",
+    "city": "Haifa",
+    "lat": 32.81841,
+    "lng": 34.9885
+   },
+   "town": {
+    "name": "Haifa",
+    "lat": 32.81303,
+    "lng": 34.99928
+   },
+   "road": {
+    "km": 94,
+    "min": 79,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 480,
+    "currency": "ILS"
+   },
+   "modes": {
+    "train": {
+     "from": "$10-$13",
+     "time": "1h 9m",
+     "via": "Tel Aviv Center to Haifa Center",
+     "source": "https://www.rome2rio.com/s/Tel%20Aviv/Haifa"
+    },
+    "bus": {
+     "from": "$4-$7",
+     "time": "1h 15m",
+     "via": "Tel Aviv Train Station Savidor/Namir Road to Hof HaKarmel Central Station/Alight",
+     "source": "https://www.rome2rio.com/s/Tel%20Aviv/Haifa"
+    }
+   },
+   "route_note": "Direct Israel Railways trains from Tel Aviv Savidor or Hashalom reach Haifa's Merkaz/Hashmona stations in under an hour; the Carmelit funicular or local buses connect to the Bahai Gardens and German Colony.",
+   "see": [
+    "Bahai Gardens terraces",
+    "German Colony",
+    "Stella Maris Monastery",
+    "Wadi Nisnas market quarter"
+   ],
+   "visit": "Full day",
+   "tour_query": "Haifa and Bahai Gardens day trip from Tel Aviv",
+   "quests": [
+    "Bahá'í Gardens"
+   ],
+   "recommended": "train",
+   "why": "Direct trains reach Haifa in about 1h 9m, faster and more frequent than the bus.",
+   "stars": 3,
+   "know": [
+    "Bahai Gardens terraces have limited visiting hours and some sections need a guided tour",
+    "The Carmelit funicular is useful for the steep climb to the gardens",
+    "Clear spring and autumn days give the best views over the bay"
+   ]
+  }
+ ],
+ "problems": [
+  "Caesarea: no Omio position, dropped",
+  "Acre: no Omio position, dropped",
+  "Beit Shemesh: no Omio position, dropped"
+ ]
+}

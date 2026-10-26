@@ -1,0 +1,171 @@
+{
+  "currency": "MXN",
+  "usd_rate": 18.734,
+  "intro_line": "Monterrey: steel, mountains, and the best carne asada in Mexico.",
+  "intro": "Monterrey rewards visitors with dramatic mountain views, a lively old town, and world-class food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    }
+  ],
+  "areas": [
+    "Macroplaza",
+    "Barrio Antiguo",
+    "San Pedro Garza García",
+    "Parque Fundidora"
+  ],
+  "taxi": {
+    "flag_day": 40,
+    "flag_airport": 60,
+    "per_km": 12,
+    "min_fare": 40
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metrorrey subway is clean and cheap: about M$8.70 per ride; a rechargeable card costs about M$20.",
+    "City buses cost about M$15; pay with a 'Me Muevo' card or the Urbani app, cash is being phased out.",
+    "Ecovia BRT runs fast articulated buses on Av. Ruiz Cortines; transfers to Metrorrey are free.",
+    "Uber and DiDi both work well in the city.",
+    "Taxis are green-and-white or yellow-and-white; insist the driver uses the meter.",
+    "Driving is possible but traffic and parking are tricky; downtown hotels often offer free parking."
+  ],
+  "airports": [
+    {
+      "code": "MTY",
+      "name": "General Mariano Escobedo International Airport",
+      "primary": true,
+      "note": "Main airport for all commercial flights, about 24 km east of the centre in Apodaca.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown / Central de Autobuses",
+          "price": "M$30-60",
+          "time": "45-60 min",
+          "note": "Cheapest option; check schedules locally."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "M$250-400",
+          "time": "30-45 min",
+          "note": "Pick-up zones are marked outside the terminals."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "M$350-500",
+          "time": "30-45 min",
+          "note": "Use authorized airport taxis; agree the fare first."
+        },
+        {
+          "mode": "Car rental",
+          "to": "City and beyond",
+          "price": "M$600-1200 per day",
+          "time": "check locally",
+          "note": "Book ahead; parking downtown can be hard."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Macroplaza",
+    "Bosque Mágico",
+    "Estadio BBVA",
+    "Parque Plaza Sésamo"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Monterrey",
+      "https://en.wikivoyage.org/wiki/Monterrey"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    25.68435,
+    -100.31721
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 23,
+      "low": 11,
+      "rain_days": 4
+    },
+    {
+      "high": 26,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 29,
+      "low": 17,
+      "rain_days": 9
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 11
+    },
+    {
+      "high": 33,
+      "low": 22,
+      "rain_days": 8
+    },
+    {
+      "high": 34,
+      "low": 22,
+      "rain_days": 6
+    },
+    {
+      "high": 34,
+      "low": 23,
+      "rain_days": 5
+    },
+    {
+      "high": 30,
+      "low": 21,
+      "rain_days": 11
+    },
+    {
+      "high": 27,
+      "low": 18,
+      "rain_days": 8
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 7
+    },
+    {
+      "high": 21,
+      "low": 11,
+      "rain_days": 5
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

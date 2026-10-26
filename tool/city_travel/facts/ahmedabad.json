@@ -1,0 +1,176 @@
+{
+  "currency": "INR",
+  "usd_rate": 94.9013,
+  "intro_line": "Ahmedabad: a walled city of gates, mosques and textile grit.",
+  "intro": "Ahmedabad rewards visitors with a UNESCO-listed old town, superb street food and calm riverfronts. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Old City (Kalupur)",
+    "Ellisbridge",
+    "Navrangpura",
+    "Satellite"
+  ],
+  "taxi": {
+    "flag_day": 100,
+    "flag_airport": 150,
+    "per_km": 15,
+    "min_fare": 100
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "No metro yet; AMTS city buses and BRTS (Janmarg) buses run roughly 6AM-11PM.",
+    "AMTS fares run about ₹3-25; a ₹45 day pass exists but is rarely worth it.",
+    "BRTS bus 1000 links the airport and Karnavati Club, max fare ₹50, every 30 min.",
+    "Auto rickshaws are cheap; agree the fare first or use the prepaid booth at the airport.",
+    "Ride apps Ola and Uber work in Ahmedabad; local taxi apps too.",
+    "Driving is hectic; walking the Old City is best, and cycle rickshaws suit short hops."
+  ],
+  "airports": [
+    {
+      "code": "AMD",
+      "name": "Sardar Vallabhbhai Patel International Airport",
+      "primary": true,
+      "note": "Main gateway, about 7 km straight-line NE of the centre (Wikivoyage says 15 km by road).",
+      "options": [
+        {
+          "mode": "BRTS bus 1000",
+          "to": "Karnavati Club via 29 stops",
+          "price": "₹50",
+          "time": "45-60 min",
+          "note": "Air-conditioned, every 30 minutes."
+        },
+        {
+          "mode": "AMTS bus",
+          "to": "Various city stops",
+          "price": "₹10-25",
+          "time": "40-60 min",
+          "note": "Cheapest; routes are in Gujarati."
+        },
+        {
+          "mode": "Auto rickshaw",
+          "to": "City centre",
+          "price": "₹200-300",
+          "time": "25-40 min",
+          "note": "Use the prepaid booth to avoid haggling."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹300-500",
+          "time": "25-40 min",
+          "note": "Hotel pickup is the smoothest option."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹250-400",
+          "time": "25-40 min",
+          "note": "Check app pickup point at the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Sarkhej Roza",
+    "Vishwas Swaroopam"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Ahmedabad",
+      "https://en.wikivoyage.org/wiki/Ahmedabad"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    23.02579,
+    72.58727
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 27,
+      "low": 14,
+      "rain_days": 0
+    },
+    {
+      "high": 31,
+      "low": 16,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 21,
+      "rain_days": 1
+    },
+    {
+      "high": 39,
+      "low": 25,
+      "rain_days": 0
+    },
+    {
+      "high": 41,
+      "low": 28,
+      "rain_days": 1
+    },
+    {
+      "high": 38,
+      "low": 28,
+      "rain_days": 8
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 23
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 19
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 14
+    },
+    {
+      "high": 34,
+      "low": 23,
+      "rain_days": 3
+    },
+    {
+      "high": 32,
+      "low": 19,
+      "rain_days": 0
+    },
+    {
+      "high": 28,
+      "low": 16,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

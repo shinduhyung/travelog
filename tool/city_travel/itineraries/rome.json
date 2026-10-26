@@ -1,0 +1,2119 @@
+{
+  "city": "Rome",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Rome rewards visitors with ancient ruins, world-class art and honest food around every corner. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 41.7114,
+      "west": 12.4162,
+      "north": 41.9693,
+      "east": 12.8125,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 5,
+      "per_km": 1.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "Metro has two main lines (A and B) plus a short branch; useful but limited coverage.",
+      "Trams and city buses fill the gaps; buy tickets before boarding.",
+      "Taxis use fixed airport fares and meters in town; Uber works in Rome.",
+      "Driving in the centre is chaotic and ZTL cameras fine you; don't do it.",
+      "Walking is the best way to see the centre; bikes and scooters are common.",
+      "No ferry needed in the city; cruise ships dock at Civitavecchia."
+    ],
+    "sources": []
+  },
+  "places": {
+    "colosseum": {
+      "name": "Colosseum",
+      "landmark": "Colosseum",
+      "kind": "sight",
+      "lat": 41.8902,
+      "lon": 12.4922,
+      "price": 18,
+      "price_text": "€18 combined ticket with Roman Forum and Palatine Hill · EU 18–25 reduced · under 18 free",
+      "hours": "Daily roughly 08:30–19:00; closing time varies by season — check on the day",
+      "tip": "Book a timed entry online and go at opening; the combined ticket also covers the Forum and Palatine.",
+      "source": "https://colosseo.it"
+    },
+    "st-peters": {
+      "name": "St. Peter's Basilica",
+      "landmark": "St. Peter's Basilica",
+      "kind": "sight",
+      "lat": 41.9022,
+      "lon": 12.4539,
+      "price": 0,
+      "price_text": "Free entry · dome climb costs extra (check on the day)",
+      "hours": "Basilica roughly 07:00–19:00; dress code enforced — check on the day",
+      "tip": "Cover shoulders and knees, and arrive before 09:00 to avoid the long security queue.",
+      "source": "https://www.vatican.va"
+    },
+    "pantheon": {
+      "name": "Pantheon",
+      "landmark": "Pantheon",
+      "kind": "sight",
+      "lat": 41.8986,
+      "lon": 12.4769,
+      "price": 5,
+      "price_text": "≈ €5 entry — check current price on the day",
+      "hours": "Daily roughly 09:00–19:00; shorter hours on Sundays and holidays",
+      "tip": "Look up at the open oculus and go on a sunny day for the light beam.",
+      "source": ""
+    },
+    "trevi": {
+      "name": "Trevi Fountain",
+      "landmark": "Trevi Fountain",
+      "kind": "sight",
+      "lat": 41.9009,
+      "lon": 12.4833,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Come before 08:00 or after 22:00 — midday is packed shoulder to shoulder.",
+      "source": ""
+    },
+    "forum": {
+      "name": "Roman Forum",
+      "landmark": "Roman Forum",
+      "kind": "sight",
+      "lat": 41.8925,
+      "lon": 12.4853,
+      "price": 18,
+      "price_text": "€18 combined ticket with Colosseum and Palatine Hill",
+      "hours": "Daily roughly 08:30–19:00; varies by season",
+      "tip": "Enter from the Via della Salara Vecchia gate to skip the Colosseum queue.",
+      "source": "https://colosseo.it"
+    },
+    "vatican-museums": {
+      "name": "Vatican Museums",
+      "landmark": "Vatican Museums",
+      "kind": "museum",
+      "lat": 41.9065,
+      "lon": 12.4536,
+      "price": 20,
+      "price_text": "≈ €20 base ticket; online booking adds a fee — check on the day",
+      "hours": "Mon–Sat roughly 09:00–18:00; closed most Sundays — check on the day",
+      "tip": "Book the first slot online and head straight for the Sistine Chapel before the crowds build.",
+      "source": "https://www.museivaticani.va"
+    },
+    "spanish-steps": {
+      "name": "Spanish Steps",
+      "landmark": "Spanish Steps",
+      "kind": "sight",
+      "lat": 41.906,
+      "lon": 12.4828,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Sitting on the steps is banned and fined — admire from the square below.",
+      "source": ""
+    },
+    "navona": {
+      "name": "Piazza Navona",
+      "landmark": "Piazza Navona",
+      "kind": "sight",
+      "lat": 41.8992,
+      "lon": 12.4731,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Sit at the edge of Bernini's Fountain of the Four Rivers in the evening for the best light.",
+      "source": ""
+    },
+    "castel-sant-angelo": {
+      "name": "Castel Sant'Angelo",
+      "landmark": "Castel Sant'Angelo",
+      "kind": "sight",
+      "lat": 41.9031,
+      "lon": 12.4663,
+      "price": 13,
+      "price_text": "≈ €13 entry — check on the day",
+      "hours": "Tue–Sun roughly 09:00–19:30; closed some Mondays",
+      "tip": "Climb to the terrace for one of the best views over St. Peter's dome.",
+      "source": ""
+    },
+    "altare-patria": {
+      "name": "Altare della Patria",
+      "landmark": "Altare della Patria",
+      "kind": "sight",
+      "lat": 41.8946,
+      "lon": 12.4823,
+      "price": 0,
+      "price_text": "Free to the terrace level · panoramic lift costs extra",
+      "hours": "Daily roughly 09:00–18:30; lift hours vary",
+      "tip": "Take the free stairs for a sweeping view over the Forum and rooftops.",
+      "source": ""
+    },
+    "santa-maria-maggiore": {
+      "name": "Basilica di Santa Maria Maggiore",
+      "landmark": "Basilica di Santa Maria Maggiore",
+      "kind": "sight",
+      "lat": 41.8976,
+      "lon": 12.4985,
+      "price": 0,
+      "price_text": "Free entry · some chapels and museum charge",
+      "hours": "Daily roughly 07:00–18:30 — check on the day",
+      "tip": "Look up at the golden ceiling and the 5th-century mosaics in the nave.",
+      "source": ""
+    },
+    "caracalla": {
+      "name": "Baths of Caracalla",
+      "landmark": "Baths of Caracalla",
+      "kind": "sight",
+      "lat": 41.8795,
+      "lon": 12.4925,
+      "price": 8,
+      "price_text": "≈ €8 entry — check on the day",
+      "hours": "Tue–Sun roughly 09:00–18:00; closes earlier in winter",
+      "tip": "Huge and quiet — bring water and shade; summer evenings sometimes host opera.",
+      "source": ""
+    },
+    "apollo-daphne": {
+      "name": "Apollo and Daphne",
+      "landmark": "Apollo and Daphne",
+      "kind": "museum",
+      "lat": 41.9142,
+      "lon": 12.4921,
+      "price": 13,
+      "price_text": "Included in Galleria Borghese ticket ≈ €13 — book ahead",
+      "hours": "Tue–Sun timed slots roughly 09:00–19:00; closed Monday",
+      "tip": "Book a timed slot online; entry is limited and sells out days ahead.",
+      "source": "https://galleriaborghese.beniculturali.it"
+    },
+    "bibliotheca-hertziana": {
+      "name": "Bibliotheca Hertziana",
+      "landmark": "Bibliotheca Hertziana",
+      "kind": "museum",
+      "lat": 41.9044,
+      "lon": 12.4839,
+      "price": null,
+      "price_text": "Research institute — not generally open to tourists; check on the day",
+      "hours": "Weekday research hours only — check on the day",
+      "tip": "This is a research library, not a sight — skip it unless you have a study appointment.",
+      "source": "https://www.biblhertz.it"
+    },
+    "bioparco": {
+      "name": "Bioparco Zoo",
+      "landmark": "Bioparco Zoo",
+      "kind": "park",
+      "lat": 41.9198,
+      "lon": 12.4862,
+      "price": 16,
+      "price_text": "≈ €16 adult · reduced for children — check on the day",
+      "hours": "Daily roughly 09:30–18:00; last entry earlier",
+      "tip": "Good for families with small kids; go in the morning when animals are active.",
+      "source": "https://www.bioparco.it"
+    },
+    "cinecitta-world": {
+      "name": "Cinecittà World",
+      "landmark": "Cinecittà World",
+      "kind": "show",
+      "lat": 41.7371,
+      "lon": 12.4851,
+      "price": 30,
+      "price_text": "≈ €30 day ticket — check on the day",
+      "hours": "Seasonal; often weekends and holidays only — check on the day",
+      "tip": "A film-themed theme park far outside the centre — allow a half day plus travel.",
+      "source": "https://www.cinecittaworld.it"
+    },
+    "discobolus": {
+      "name": "Discobolus",
+      "landmark": "Discobolus",
+      "kind": "museum",
+      "lat": 41.9015,
+      "lon": 12.4984,
+      "price": 13,
+      "price_text": "Included in Palazzo Massimo ticket ≈ €13 — check on the day",
+      "hours": "Tue–Sun roughly 09:00–19:45; closed Monday",
+      "tip": "See the Roman marble copy in Palazzo Massimo alle Terme, near Termini.",
+      "source": ""
+    },
+    "ecstasy-teresa": {
+      "name": "Ecstasy of Saint Teresa",
+      "landmark": "Ecstasy of Saint Teresa",
+      "kind": "sight",
+      "lat": 41.9047,
+      "lon": 12.4942,
+      "price": 0,
+      "price_text": "Free entry to the church",
+      "hours": "Church roughly 07:00–12:00 and 16:00–19:00 — check on the day",
+      "tip": "Bernini's sculpture sits in the Cornaro Chapel of Santa Maria della Vittoria; drop a coin for the lights.",
+      "source": ""
+    },
+    "fettuccine-papalina": {
+      "name": "Fettuccine alla Papalina",
+      "landmark": "Fettuccine alla Papalina",
+      "kind": "food",
+      "lat": 41.9029,
+      "lon": 12.4534,
+      "price": 15,
+      "price_text": "≈ €12–18 a plate in a trattoria",
+      "hours": "Lunch and dinner at most trattorias — check on the day",
+      "tip": "A creamy ham-and-peas pasta said to be named for a pope — try it in a Prati trattoria.",
+      "source": ""
+    },
+    "hadrians-villa": {
+      "name": "Hadrian's Villa",
+      "landmark": "Hadrian's Villa",
+      "kind": "sight",
+      "lat": 41.9436,
+      "lon": 12.7753,
+      "price": 10,
+      "price_text": "≈ €10 entry — check on the day",
+      "hours": "Daily roughly 09:00–18:30; closes earlier in winter",
+      "tip": "In Tivoli, about an hour from Rome — pair it with Villa d'Este and wear walking shoes.",
+      "source": ""
+    },
+    "laocoon": {
+      "name": "Laocoön and His Sons",
+      "landmark": "Laocoön and His Sons",
+      "kind": "museum",
+      "lat": 41.9067,
+      "lon": 12.4534,
+      "price": 20,
+      "price_text": "Included in Vatican Museums ticket ≈ €20",
+      "hours": "Same as Vatican Museums — check on the day",
+      "tip": "In the Octagonal Court near the entrance — see it first before the one-way route sweeps you on.",
+      "source": "https://www.museivaticani.va"
+    },
+    "luneur": {
+      "name": "Luneur",
+      "landmark": "Luneur",
+      "kind": "park",
+      "lat": 41.8322,
+      "lon": 12.4542,
+      "price": 20,
+      "price_text": "≈ €20 ride pass — check on the day",
+      "hours": "Seasonal; often afternoons and weekends — check on the day",
+      "tip": "A small family amusement park in EUR, south of the centre — good with young children.",
+      "source": ""
+    },
+    "campo-de-fiori": {
+      "name": "Campo de' Fiori market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 41.8956,
+      "lon": 12.4722,
+      "price": 0,
+      "price_text": "Free to browse; food priced per item",
+      "hours": "Morning market Mon–Sat roughly 07:00–14:00; closed Sunday",
+      "tip": "Come before noon for produce and flowers; the square turns into bars at night.",
+      "source": ""
+    },
+    "gianicolo": {
+      "name": "Gianicolo viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.8917,
+      "lon": 12.4611,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Walk up from Trastevere for the classic panorama over the domes at sunset.",
+      "source": ""
+    },
+    "trastevere-walk": {
+      "name": "Trastevere evening walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.8892,
+      "lon": 12.4694,
+      "price": 0,
+      "price_text": "Free · dinner extra",
+      "hours": "Best after 19:00",
+      "tip": "Wander the cobbled lanes off the main squares, then eat where the menu is short and in Italian.",
+      "source": ""
+    },
+    "golf-cart-tour": {
+      "name": "Golf-cart highlights tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 41.8986,
+      "lon": 12.4769,
+      "price": 90,
+      "price_text": "≈ €70–110 per person, 2–3 hours — check on the day",
+      "tip": "Good for a first day or hot afternoons; confirm what is included before booking.",
+      "source": ""
+    },
+    "monti-walk": {
+      "name": "Monti neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 41.8956,
+      "lon": 12.49,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Shops roughly 10:00–20:00; lanes always open",
+      "tip": "Vintage shops and small churches between the Colosseum and Termini — go on a weekday afternoon.",
+      "source": ""
+    },
+    "pincio-terrace": {
+      "name": "Pincio Terrace",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 41.9114,
+      "lon": 12.4794,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park roughly 07:00–sunset — check on the day",
+      "tip": "Above the Spanish Steps in Villa Borghese — the best free sunset view over Piazza del Popolo.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day of ancient Rome, grouped around Monti and the Centro Storico.",
+      "days": [
+        {
+          "title": "Colosseum, Forum and the old centre",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket online. Go first thing to beat the heat and queues."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Five minutes on foot. Wear sturdy shoes; the paths are uneven."
+            },
+            {
+              "place": "pantheon",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "About 20 minutes on foot. Free entry is limited; check on the day."
+            },
+            {
+              "place": "campo-de-fiori",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch near the market. The market itself closes around 14:00 and is shut on Sunday."
+            },
+            {
+              "place": "navona",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. A good spot to end the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monti"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "A single art-focused day: the Vatican in the morning, Caravaggio and Bernini after lunch.",
+      "days": [
+        {
+          "title": "Vatican Museums, then the centre",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book the first entry slot. Closed most Sundays — check on the day."
+            },
+            {
+              "place": "laocoon",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Inside the museums; see it on the way to the Sistine Chapel."
+            },
+            {
+              "place": "st-peters",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot. Dress code enforced: cover shoulders and knees."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch nearby in Prati."
+            },
+            {
+              "place": "ecstasy-teresa",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Santa Maria della Vittoria, about 20 minutes by taxi. Check church hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Prati / Vatican"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: morning market, a long lunch, then Trastevere in the evening.",
+      "days": [
+        {
+          "title": "Market, lunch and Trastevere",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning market, Monday to Saturday only. Closed Sunday."
+            },
+            {
+              "place": "navona",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Good for a coffee stop."
+            },
+            {
+              "place": "pantheon",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Midday light through the dome is best."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Long lunch in Prati, about 20 minutes by taxi."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening walk and dinner. Best after 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Ancient Rome in one day: Colosseum and Forum in the morning, the Pantheon and fountains in the evening.",
+      "days": [
+        {
+          "title": "Ancient core: Colosseum, Forum, Pantheon",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Go at opening. Book a timed ticket online ahead. Bring ID."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Five minutes on foot. Same ticket usually covers both. Wear sturdy shoes; paths are uneven."
+            },
+            {
+              "place": "monti-walk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch in Monti on the way back. Most trattorias serve lunch until about 15:00."
+            },
+            {
+              "place": "pantheon",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Short taxi or bus from Monti. Midday light through the dome is best; check Sunday hours."
+            },
+            {
+              "place": "trevi",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Five minutes on foot. Very crowded by day; come back after dinner if you want space."
+            },
+            {
+              "place": "navona",
+              "at": "19:00",
+              "minutes": 30,
+              "note": "Evening stroll and dinner nearby. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monti or Centro Storico"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art-first trip: Vatican Museums at opening, then churches and sculptures across the centre.",
+      "days": [
+        {
+          "title": "Vatican art, then Baroque Rome",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book the first entry slot online. Closed most Sundays — check on the day. No large bags."
+            },
+            {
+              "place": "laocoon",
+              "at": "10:00",
+              "minutes": 20,
+              "note": "Inside the museums, in the sculpture courtyard. Same ticket."
+            },
+            {
+              "place": "st-peters",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Short walk from the museums exit. Shoulders and knees covered. Security queue can be long."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch in Prati. Many kitchens close around 15:00 — check on the day."
+            },
+            {
+              "place": "ecstasy-teresa",
+              "at": "16:30",
+              "minutes": 20,
+              "note": "Santa Maria della Vittoria, short taxi ride. Church closes midday and reopens late afternoon — check on the day."
+            },
+            {
+              "place": "apollo-daphne",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Borghese Gallery, timed slot only. Book ahead. Closed Monday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Prati / Vatican"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Rome: market breakfast, a long lunch, and Trastevere after dark.",
+      "days": [
+        {
+          "title": "Market, trattoria lunch, Trastevere evening",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning market, Monday to Saturday. Closed Sunday. Good for fruit and snacks."
+            },
+            {
+              "place": "navona",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Coffee on the square before the crowds build."
+            },
+            {
+              "place": "pantheon",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk. Quick look inside, then find lunch nearby."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "A Roman pasta classic. Book or arrive early; lunch spots fill up."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Cross the river for dinner. Best after 19:00; many places are cash-friendly but cards are common."
+            },
+            {
+              "place": "gianicolo",
+              "at": "21:00",
+              "minutes": 45,
+              "note": "Short uphill walk for the night view. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico or Trastevere"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Ancient Rome at an easy pace: the big sites early, the centre on foot in the evening.",
+      "days": [
+        {
+          "title": "Colosseum, Forum and Monti",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket online. Go at opening to beat the heat and queues."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Same ticket as the Colosseum. Wear sturdy shoes; paths are uneven."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Short walk uphill. Cover shoulders and knees."
+            },
+            {
+              "place": "monti-walk",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch and lanes in Monti. Many kitchens close mid-afternoon."
+            },
+            {
+              "place": "pantheon",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Walk down into the centre. Shorter hours on Sundays and holidays."
+            }
+          ]
+        },
+        {
+          "title": "Vatican side and the river",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Arrive early; security lines grow fast. Dress code enforced."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "10:15",
+              "minutes": 75,
+              "note": "About 15 minutes on foot along the river. Closed some Mondays."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch in Prati. Check opening days on the day."
+            },
+            {
+              "place": "navona",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Cross into the centre on foot, about 20 minutes."
+            },
+            {
+              "place": "altare-patria",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Rooftop lift for sunset views. Lift hours vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monti or Centro Storico"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Masterpieces first: Vatican art at opening, then churches and sculpture on foot.",
+      "days": [
+        {
+          "title": "Vatican Museums and Prati",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book the first slot online. Closed most Sundays."
+            },
+            {
+              "place": "laocoon",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Inside the museums; ask staff for the courtyard location."
+            },
+            {
+              "place": "st-peters",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Separate entrance and security line. Dress code enforced."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Late lunch in Prati. Many places close between services."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Walk along the river. Closed some Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Baroque centre and Borghese",
+          "stops": [
+            {
+              "place": "apollo-daphne",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Borghese Gallery needs a timed booking; closed Monday."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Short walk from the gallery. Park closes around sunset."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Walk down into the centre."
+            },
+            {
+              "place": "trevi",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Crowded by midday; come back late evening if you want space."
+            },
+            {
+              "place": "ecstasy-teresa",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Church reopens mid-afternoon. Check hours on the day."
+            },
+            {
+              "place": "navona",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Evening stroll and dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through the centre and Trastevere, with the main sights between meals.",
+      "days": [
+        {
+          "title": "Market morning and the old centre",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Morning market, Monday to Saturday. Closed Sunday."
+            },
+            {
+              "place": "navona",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "pantheon",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Shorter hours on Sundays and holidays."
+            },
+            {
+              "place": "trevi",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Busy by now; quick photo stop."
+            },
+            {
+              "place": "monti-walk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in Monti. Book popular trattorias or go early."
+            }
+          ]
+        },
+        {
+          "title": "Vatican morning, Trastevere evening",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early start; dress code enforced."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Early lunch in Prati before the crowds."
+            },
+            {
+              "place": "gianicolo",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Cross the river and climb for the view. Always open."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and lanes after dark. Book ahead at weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico or Trastevere"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Ancient Rome at an easy pace: the big three sites plus the quieter ruins, grouped by neighbourhood.",
+      "days": [
+        {
+          "title": "Arrive, Pantheon and the fountains",
+          "stops": [
+            {
+              "place": "pantheon",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Go inside for the dome and the oculus. Shorter hours on Sundays."
+            },
+            {
+              "place": "trevi",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Five minutes on foot. Busy all day; come back late evening if you want space."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Ten minutes on foot. Sit on the steps and watch the square."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Climb from the Spanish Steps for sunset over Piazza del Popolo."
+            },
+            {
+              "place": "navona",
+              "at": "19:30",
+              "minutes": 30,
+              "note": "Dinner nearby in the lanes. The square is best after dark."
+            }
+          ]
+        },
+        {
+          "title": "Colosseum, Forum and Monti",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket ahead. First entry is coolest and quietest."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Same ticket as the Colosseum. Wear sturdy shoes; paths are uneven."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Lunch in Monti first, then the mosaics here."
+            },
+            {
+              "place": "monti-walk",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Wander the lanes; shops open roughly 10:00–20:00."
+            },
+            {
+              "place": "ecstasy-teresa",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "In Santa Maria della Vittoria. Church reopens around 16:00 — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Vatican morning, castle at sunset",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Cover shoulders and knees. Security queues build fast — arrive early."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Fifteen minutes on foot along the river. Closed some Mondays."
+            },
+            {
+              "place": "altare-patria",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Lift to the terrace for the view over the Forum."
+            },
+            {
+              "place": "caracalla",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Short taxi or bus south. Closes earlier in winter — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monti or Centro Storico"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Masterpieces indoors: the Vatican, Bernini and Caravaggio, with timed slots booked ahead.",
+      "days": [
+        {
+          "title": "Vatican Museums and St. Peter's",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book the first entry slot. Closed most Sundays — check on the day."
+            },
+            {
+              "place": "laocoon",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "In the Vatican Museums courtyard, on your way through."
+            },
+            {
+              "place": "st-peters",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Exit into the basilica. Dress code enforced."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Lunch in Prati. Ask for the dish by name at a trattoria."
+            }
+          ]
+        },
+        {
+          "title": "Borghese morning and the centre",
+          "stops": [
+            {
+              "place": "apollo-daphne",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Borghese Gallery, timed slot only. Closed Monday — book ahead."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Walk down through the park from the gallery."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Ten minutes on foot."
+            },
+            {
+              "place": "trevi",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Five minutes on foot. Toss a coin and move on."
+            },
+            {
+              "place": "pantheon",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch first, then the dome. Shorter hours on Sundays."
+            }
+          ]
+        },
+        {
+          "title": "Churches and Caravaggio",
+          "stops": [
+            {
+              "place": "santa-maria-maggiore",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Mosaics in the nave. Morning light is best."
+            },
+            {
+              "place": "ecstasy-teresa",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Santa Maria della Vittoria, near the Termini side. Check church hours on the day."
+            },
+            {
+              "place": "discobolus",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Palazzo Massimo, near Termini. Closed Monday."
+            },
+            {
+              "place": "navona",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Sant'Agnese in Agone on the square. Evening is the best time."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Cross the river for dinner and a wander after 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eat your way across the city: markets in the morning, long lunches, Trastevere at night.",
+      "days": [
+        {
+          "title": "Market morning and the centre",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "08:30",
+              "minutes": 45,
+              "note": "Morning market Mon–Sat, closed Sunday. Go early for produce and snacks."
+            },
+            {
+              "place": "navona",
+              "at": "09:45",
+              "minutes": 30,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "pantheon",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Shorter hours on Sundays."
+            },
+            {
+              "place": "trevi",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Long lunch. Most trattorias serve it at lunch and dinner — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Ancient sights and Monti food",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book ahead. Morning is cooler and quieter."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Same ticket. Sturdy shoes."
+            },
+            {
+              "place": "monti-walk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in the lanes; shops roughly 10:00–20:00."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Ten minutes on foot from Monti."
+            },
+            {
+              "place": "gianicolo",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Taxi across the river for sunset, then walk down to Trastevere."
+            }
+          ]
+        },
+        {
+          "title": "Vatican and Trastevere evening",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early is best. Dress code enforced."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Fifteen minutes on foot along the river. Closed some Mondays."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and a wander. Best after 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico or Trastevere"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Ancient Rome at an easy pace: the big sites early, afternoons for churches and views.",
+      "days": [
+        {
+          "title": "Arrive and the centre on foot",
+          "stops": [
+            {
+              "place": "pantheon",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Midday light is best but afternoon is calmer. Shorter hours on Sundays."
+            },
+            {
+              "place": "trevi",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Five minutes on foot. Crowded — go early morning if you can."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "17:15",
+              "minutes": 20,
+              "note": "Ten minutes on foot. Sit on the steps is not allowed — keep moving."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "18:00",
+              "minutes": 30,
+              "note": "Short climb from the steps. Sunset over the domes."
+            }
+          ]
+        },
+        {
+          "title": "Colosseum and Forum",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket ahead. First entry beats the heat and queues."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Same ticket usually covers both. Wear sturdy shoes; paths are uneven."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Short metro ride. Cover shoulders and knees."
+            },
+            {
+              "place": "monti-walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Lanes and small shops. Good spot for an early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Vatican side",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early; security lines grow fast. Dress code enforced."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Fifteen minutes on foot. Closed some Mondays — check on the day."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Prati. Ask for the local pasta."
+            },
+            {
+              "place": "navona",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk back through the centre. Livelier in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Baths, then fly",
+          "stops": [
+            {
+              "place": "caracalla",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Open Tue–Sun. Closes earlier in winter."
+            },
+            {
+              "place": "altare-patria",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Lift hours vary — check on the day."
+            },
+            {
+              "place": "campo-de-fiori",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Market runs mornings Mon–Sat, closed Sunday. Grab picnic food."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monti"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Museums and masterpieces: book Vatican and Borghese slots first, then build the days around them.",
+      "days": [
+        {
+          "title": "Arrive and Caravaggio country",
+          "stops": [
+            {
+              "place": "pantheon",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Quick look at the dome and oculus."
+            },
+            {
+              "place": "navona",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Five minutes on foot. Churches nearby hold Caravaggios — step in if open."
+            },
+            {
+              "place": "trevi",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Ten minutes on foot. Late afternoon is busy but fine."
+            }
+          ]
+        },
+        {
+          "title": "Vatican Museums",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book first entry online. Closed most Sundays — check on the day."
+            },
+            {
+              "place": "laocoon",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Inside the museums — plan the route so you pass it."
+            },
+            {
+              "place": "st-peters",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Dress code enforced. Lines shorter after lunch."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "16:30",
+              "minutes": 75,
+              "note": "Fifteen minutes on foot. Late afternoon light on the river."
+            }
+          ]
+        },
+        {
+          "title": "Borghese and the north centre",
+          "stops": [
+            {
+              "place": "apollo-daphne",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Borghese Gallery needs a timed slot booked ahead. Closed Monday."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Walk down through the park."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Five minutes on foot. Lunch nearby."
+            },
+            {
+              "place": "bibliotheca-hertziana",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Research hours only — go only with an appointment."
+            }
+          ]
+        },
+        {
+          "title": "Churches and sculpture, then fly",
+          "stops": [
+            {
+              "place": "ecstasy-teresa",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Church closes around midday — go in the morning slot."
+            },
+            {
+              "place": "discobolus",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Closed Monday. Weekday mornings are quiet."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Five minutes on foot. Mosaics worth the stop."
+            },
+            {
+              "place": "campo-de-fiori",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Market mornings Mon–Sat. Last lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eat your way across the centre: markets in the morning, long lunches, Trastevere at night.",
+      "days": [
+        {
+          "title": "Arrive, market and the centre",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Morning market Mon–Sat, closed Sunday. Buy fruit and cheese."
+            },
+            {
+              "place": "navona",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Five minutes on foot. Coffee on the square costs more — stand at the bar."
+            },
+            {
+              "place": "pantheon",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Short visit before lunch."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Most trattorias serve lunch and dinner — check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Monti and ancient sights",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book ahead. Morning is cooler."
+            },
+            {
+              "place": "monti-walk",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–20:00. Good for a snack."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Ten minutes on foot."
+            },
+            {
+              "place": "forum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Afternoon works if you avoid peak heat. Sturdy shoes."
+            }
+          ]
+        },
+        {
+          "title": "Trastevere evening",
+          "stops": [
+            {
+              "place": "gianicolo",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view over the rooftops. Walk down into Trastevere."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Best after 19:00. Book dinner or join a queue — both work."
+            }
+          ]
+        },
+        {
+          "title": "Vatican side, then fly",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Early beats the lines. Dress code enforced."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "10:30",
+              "minutes": 75,
+              "note": "Fifteen minutes on foot. Closed some Mondays."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Last lunch in Prati before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Trastevere"
+    },
+    {
+      "id": "5n-history",
+      "length": "5n",
+      "style": "history",
+      "nights": 5,
+      "for": "Ancient Rome at an easy pace: the big sites early, afternoons for churches and neighbourhoods.",
+      "days": [
+        {
+          "title": "Arrive and the Centro Storico icons",
+          "stops": [
+            {
+              "place": "pantheon",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Go inside for the dome and the oculus. Shorter hours on Sundays."
+            },
+            {
+              "place": "trevi",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Five minutes on foot. Busy all day; come back late evening if you want space."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Ten minutes on foot. Sit on the lower steps and watch the square."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "17:45",
+              "minutes": 30,
+              "note": "Short climb above the Spanish Steps. Good sunset view over the centre."
+            }
+          ]
+        },
+        {
+          "title": "Colosseum and Forum",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket ahead. First entry is calmest."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Same ticket area, next door. Wear sturdy shoes; paths are uneven."
+            },
+            {
+              "place": "monti-walk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch and lanes uphill from the Forum. Shops open around 10:00."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Cover shoulders and knees."
+            }
+          ]
+        },
+        {
+          "title": "Vatican day",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book the first slot. Closed most Sundays — check on the day."
+            },
+            {
+              "place": "laocoon",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Inside the museums, in the sculpture courtyard. No extra ticket."
+            },
+            {
+              "place": "st-peters",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch first, then the basilica. Dress code enforced; queues move faster early."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Fifteen minutes on foot along the river. Closed some Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Baths and the south edge",
+          "stops": [
+            {
+              "place": "caracalla",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Tue–Sun; closes earlier in winter. Open ground, bring water."
+            },
+            {
+              "place": "discobolus",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Check which museum holds it on your dates; closed Monday."
+            },
+            {
+              "place": "altare-patria",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Lift to the roof for the view. Hours vary — check on the day."
+            },
+            {
+              "place": "navona",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Fountains and coffee; liveliest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Trastevere and out",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Morning market Mon–Sat; closed Sunday. Good for picnic supplies."
+            },
+            {
+              "place": "gianicolo",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Uphill walk or short taxi. Wide view over the rooftops."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner and lanes after dark. Book a table for Friday or Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Monti or Centro Storico"
+    },
+    {
+      "id": "5n-art",
+      "length": "5n",
+      "style": "art",
+      "nights": 5,
+      "for": "Museums and masterpieces: book the big galleries first, then fill days with churches and squares.",
+      "days": [
+        {
+          "title": "Vatican art",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "First entry slot. Closed most Sundays — check on the day."
+            },
+            {
+              "place": "laocoon",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "In the sculpture courtyard inside the museums."
+            },
+            {
+              "place": "st-peters",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch, then the basilica. Cover shoulders and knees."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Riverside walk from the basilica. Late afternoon light is best."
+            }
+          ]
+        },
+        {
+          "title": "Borghese and the north centre",
+          "stops": [
+            {
+              "place": "apollo-daphne",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Borghese Gallery, timed slot only — book ahead. Closed Monday."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Walk down through the park from the gallery."
+            },
+            {
+              "place": "spanish-steps",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Five minutes downhill."
+            },
+            {
+              "place": "trevi",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Ten minutes on foot. Throw the coin and move on; it is packed midday."
+            }
+          ]
+        },
+        {
+          "title": "Caravaggio and the centre",
+          "stops": [
+            {
+              "place": "pantheon",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Midday light through the oculus is the draw, but mornings are quieter."
+            },
+            {
+              "place": "navona",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "ecstasy-teresa",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Church closes over lunch — check on the day. Cover shoulders."
+            },
+            {
+              "place": "bibliotheca-hertziana",
+              "at": "17:00",
+              "minutes": 15,
+              "note": "Weekday research hours only; go only with an appointment."
+            }
+          ]
+        },
+        {
+          "title": "Ancient art and Monti",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Timed ticket. Morning is coolest."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Next door, same ticket area. Sturdy shoes."
+            },
+            {
+              "place": "discobolus",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Check the museum and weekday opening; closed Monday."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Mosaics are the highlight."
+            },
+            {
+              "place": "monti-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Shops roughly 10:00–20:00. Good for a slow evening."
+            }
+          ]
+        },
+        {
+          "title": "Last morning",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Market Mon–Sat mornings; closed Sunday."
+            },
+            {
+              "place": "altare-patria",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Roof lift for a last panorama. Hours vary — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico near Piazza del Popolo"
+    },
+    {
+      "id": "5n-food",
+      "length": "5n",
+      "style": "food",
+      "nights": 5,
+      "for": "Eat your way across the centre: markets in the morning, long lunches, Trastevere at night.",
+      "days": [
+        {
+          "title": "Market morning and the centre",
+          "stops": [
+            {
+              "place": "campo-de-fiori",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Mon–Sat mornings; closed Sunday. Buy cheese and fruit for later."
+            },
+            {
+              "place": "navona",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Five minutes on foot. Coffee on the square costs more — stand at the bar."
+            },
+            {
+              "place": "pantheon",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Ten minutes on foot. Shorter hours Sundays and holidays."
+            },
+            {
+              "place": "trevi",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Five minutes on foot, then lunch nearby off the main lanes."
+            }
+          ]
+        },
+        {
+          "title": "Vatican and Prati lunch",
+          "stops": [
+            {
+              "place": "st-peters",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early beats the queue. Dress code enforced."
+            },
+            {
+              "place": "fettuccine-papalina",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in Prati. Ask for the house version; most trattorias serve it."
+            },
+            {
+              "place": "castel-sant-angelo",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Walk it off along the river. Closed some Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Ancient Rome and Monti",
+          "stops": [
+            {
+              "place": "colosseum",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Book a timed ticket the day before."
+            },
+            {
+              "place": "forum",
+              "at": "10:15",
+              "minutes": 90,
+              "note": "Same ticket area. Bring water and a hat."
+            },
+            {
+              "place": "monti-walk",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in the lanes, then browse the shops."
+            },
+            {
+              "place": "santa-maria-maggiore",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Ten minutes on foot."
+            }
+          ]
+        },
+        {
+          "title": "Vatican art and a slow evening",
+          "stops": [
+            {
+              "place": "vatican-museums",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "First slot; closed most Sundays — check on the day."
+            },
+            {
+              "place": "laocoon",
+              "at": "10:30",
+              "minutes": 20,
+              "note": "Inside the museums."
+            },
+            {
+              "place": "gianicolo",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Taxi up, walk down into Trastevere."
+            },
+            {
+              "place": "trastevere-walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in the lanes. Book ahead for weekends."
+            }
+          ]
+        },
+        {
+          "title": "Last bites",
+          "stops": [
+            {
+              "place": "spanish-steps",
+              "at": "09:30",
+              "minutes": 20,
+              "note": "Early is quiet."
+            },
+            {
+              "place": "pincio-terrace",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Short climb for the view."
+            },
+            {
+              "place": "altare-patria",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Roof lift; hours vary — check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Storico or Trastevere"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "Ancient",
+      "blurb": "Colosseum, Forum and Pantheon in the open-air museum of the centre."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Vatican Museums, Borghese Gallery and churches full of Caravaggio."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Cacio e pepe, supplì and long lunches in Trastevere."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    },
+    {
+      "id": "5n",
+      "label": "5 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Centro Storico",
+      "range": [
+        150,
+        450
+      ],
+      "why": "Walk to the Pantheon, Piazza Navona and the Trevi Fountain. Best for a first visit with little time.",
+      "center": [
+        41.899,
+        12.475
+      ]
+    },
+    {
+      "area": "Trastevere",
+      "range": [
+        110,
+        320
+      ],
+      "why": "Cobbled lanes and dinner spots across the river. Lively at night, quieter by day.",
+      "center": [
+        41.889,
+        12.469
+      ]
+    },
+    {
+      "area": "Monti",
+      "range": [
+        120,
+        350
+      ],
+      "why": "Small streets next to the Colosseum and Forum. Good mix of cafés, bars and local feel.",
+      "center": [
+        41.895,
+        12.492
+      ]
+    },
+    {
+      "area": "Prati / Vatican",
+      "range": [
+        130,
+        400
+      ],
+      "why": "Close to St Peter's and the Vatican Museums. Calmer streets and good metro links.",
+      "center": [
+        41.907,
+        12.462
+      ]
+    }
+  ],
+  "food": [
+    "Order Roman classics: cacio e pepe, carbonara, amatriciana and saltimbocca. Portions are big; a primo is often enough.",
+    "Pizza al taglio is sold by weight at counters. Point at what you want; pay about €3–6 for a good slice.",
+    "Coffee standing at the bar costs far less than sitting at a table. Cappuccino is a morning drink for locals.",
+    "Book dinner in Trastevere or Testaccio for a lively night. Many kitchens close mid-afternoon; eat lunch around 13:00.",
+    "Try a supplì (fried rice ball) and a scoop of gelato from a shop that keeps it covered, not piled high."
+  ],
+  "more_time": [
+    "Swap a half-day for Ostia Antica: train from Piramide, about 30 minutes, to Roman ruins without the crowds.",
+    "Add a day trip to Tivoli for Villa d'Este gardens and Hadrian's Villa; trains and buses run from the city.",
+    "Art lovers can swap a museum morning for the Borghese Gallery; timed tickets sell out, so book ahead."
+  ]
+}

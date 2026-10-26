@@ -1,0 +1,242 @@
+{
+  "currency": "CAD",
+  "usd_rate": 1.4014,
+  "intro_line": "Where mountains meet the sea and every neighbourhood has its own flavour.",
+  "intro": "Vancouver rewards visitors with mountains, beaches, and world-class food all within easy reach. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "adventure",
+      "label": "Adventure"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "West End",
+    "Yaletown",
+    "Gastown"
+  ],
+  "taxi": {
+    "flag_day": 4,
+    "flag_airport": 5,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "SkyTrain Canada Line links YVR to downtown in about 25 minutes.",
+    "SkyTrain Expo and Millennium lines plus SeaBus ferries cover the region.",
+    "TransLink buses run frequent local routes; N10 runs overnight from the airport.",
+    "Taxis accept credit cards; Uber and Lyft operate in Vancouver.",
+    "Driving is easy outside rush hour; downtown parking is costly.",
+    "Walking and bike share (Mobi) suit the compact downtown and seawall."
+  ],
+  "airports": [
+    {
+      "code": "YVR",
+      "name": "Vancouver International Airport",
+      "primary": true,
+      "note": "Main hub, 11 km south of centre on Sea Island.",
+      "options": [
+        {
+          "mode": "SkyTrain Canada Line",
+          "to": "Downtown (Waterfront)",
+          "price": "CAD 9-10",
+          "time": "25 min",
+          "note": "Includes YVR AddFare on airport departures only."
+        },
+        {
+          "mode": "Bus N10",
+          "to": "Downtown",
+          "price": "CAD 3-4",
+          "time": "40-50 min",
+          "note": "Overnight service when SkyTrain is closed."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "CAD 40-45",
+          "time": "20-30 min",
+          "note": "Fixed zone fare from airport; cards accepted."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "CAD 35-50",
+          "time": "20-30 min",
+          "note": "Pickup at designated rideshare zone."
+        }
+      ]
+    },
+    {
+      "code": "YXX",
+      "name": "Abbotsford International Airport",
+      "primary": false,
+      "note": "Alternate low-cost airport about 60 km east.",
+      "options": [
+        {
+          "mode": "Intercity bus",
+          "to": "Pacific Central Station",
+          "price": "CAD 20-35",
+          "time": "60-90 min",
+          "note": "No local transit link; book ahead."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "CAD 100-140",
+          "time": "60-90 min",
+          "note": "Drive via Highway 1; traffic varies."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "60-90 min",
+          "note": "Availability varies; check the app."
+        }
+      ]
+    },
+    {
+      "code": "BLI",
+      "name": "Bellingham International Airport",
+      "primary": false,
+      "note": "US budget airport about 85 km south, plus border time.",
+      "options": [
+        {
+          "mode": "Shuttle bus",
+          "to": "Downtown",
+          "price": "CAD 50-60",
+          "time": "2-3 h",
+          "note": "Runs to Vancouver; allow for border waits."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "1.5-2.5 h",
+          "note": "Cross-border trip; confirm fare first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "check locally",
+          "time": "1.5-2.5 h",
+          "note": "Cross-border rides are limited; check the app."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Stanley Park",
+    "Granville Island",
+    "Canada Place",
+    "Capilano Suspension Bridge",
+    "Gastown Steam Clock",
+    "Vancouver Aquarium",
+    "Museum of Anthropology at UBC",
+    "Cypress Mountain",
+    "False Creek Ferry",
+    "Fraser River",
+    "Papa Murphy's",
+    "Playland, Vancouver",
+    "Science World",
+    "University of British Columbia (UBC)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Vancouver",
+      "https://en.wikivoyage.org/wiki/Vancouver"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    49.2827,
+    -123.1207
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": 2,
+      "rain_days": 18
+    },
+    {
+      "high": 6,
+      "low": 1,
+      "rain_days": 16
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 16
+    },
+    {
+      "high": 12,
+      "low": 5,
+      "rain_days": 15
+    },
+    {
+      "high": 16,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 19,
+      "low": 12,
+      "rain_days": 10
+    },
+    {
+      "high": 22,
+      "low": 15,
+      "rain_days": 5
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 6
+    },
+    {
+      "high": 18,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 13,
+      "low": 8,
+      "rain_days": 15
+    },
+    {
+      "high": 9,
+      "low": 4,
+      "rain_days": 19
+    },
+    {
+      "high": 6,
+      "low": 1,
+      "rain_days": 20
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "ABB taxi CAD 100-140 vs tariff estimate 39561",
+    "airport ABB is 12171 km away"
+  ]
+}

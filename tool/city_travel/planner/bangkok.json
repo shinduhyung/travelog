@@ -1,0 +1,654 @@
+{
+  "city": "Bangkok",
+  "checked": "October 2026",
+  "intro_line": "Golden temples, street food at every corner and a river that never sleeps.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "temples",
+      "label": "Temples",
+      "areas": [
+        "Sukhumvit",
+        "Siam",
+        "Riverside",
+        "Old Town"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Sukhumvit",
+        "Siam",
+        "Riverside",
+        "Old Town"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Sukhumvit",
+        "Siam",
+        "Riverside",
+        "Old Town"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Sukhumvit",
+        "Siam",
+        "Riverside",
+        "Old Town"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Sukhumvit",
+        "Siam",
+        "Riverside",
+        "Old Town"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 31,
+        "low": 22,
+        "rain_days": 4,
+        "note": "Jan: coolest and driest month, highs near 31°C. Great for walking the temples."
+      },
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 5,
+        "note": "Feb: warm and dry, about 5 rain days. Comfortable for sightseeing."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 8,
+        "note": "Mar: hotter at 33°C and more rain days. Start early and rest at midday."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 11,
+        "note": "Apr: hottest month, 34°C highs. Plan indoor breaks and drink lots of water."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 20,
+        "note": "May: wet season starts, around 20 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 23,
+        "note": "Jun: rainy, about 23 rain days. Short heavy showers; keep plans flexible."
+      },
+      {
+        "high": 32,
+        "low": 26,
+        "rain_days": 24,
+        "note": "Jul: wet and warm, 24 rain days. Malls and food courts are good backups."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 26,
+        "note": "Aug: one of the wettest months, 26 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 26,
+        "note": "Sep: still very wet, 26 rain days. Watch for flooded streets after storms."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 22,
+        "note": "Oct: rain eases a little, 22 rain days. Late month is usually better."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 11,
+        "note": "Nov: drier and cooler, about 11 rain days. A good shoulder month."
+      },
+      {
+        "high": 31,
+        "low": 22,
+        "rain_days": 4,
+        "note": "Dec: cool and dry, around 4 rain days. One of the best months to visit."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "temples": [
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.55,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.7,
+      0.9,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "nightlife": [
+      1,
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.95,
+      1,
+      1
+    ],
+    "budget": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.95
+    ]
+  },
+  "places": {
+    "grand-palace": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Right at 08:30 opening",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "wat-phra-kaew": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning with the Grand Palace",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "wat-pho": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Late afternoon, cooler and quieter",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "wat-arun": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into sunset",
+      "area": "Riverside",
+      "popularity": 5
+    },
+    "wat-traimit": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "wat-saket": {
+      "types": [
+        "temples",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon for the view",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "chinatown": {
+      "types": [
+        "food",
+        "budget",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening, after 18:00",
+      "area": "Old Town",
+      "popularity": 5
+    },
+    "chatuchak": {
+      "types": [
+        "shopping",
+        "food",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Saturday or Sunday morning",
+      "area": "Siam",
+      "popularity": 5
+    },
+    "jim-thompson": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Midday for shade and air-conditioning",
+      "area": "Siam",
+      "popularity": 4
+    },
+    "lumpini": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Siam",
+      "popularity": 4
+    },
+    "iconsiam": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon, then the riverfront at dusk",
+      "area": "Riverside",
+      "popularity": 4
+    },
+    "asiatique": {
+      "types": [
+        "shopping",
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Riverside",
+      "popularity": 4
+    },
+    "khao-san": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late evening",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "mahanakhon": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Siam",
+      "popularity": 4
+    },
+    "erawan-shrine": {
+      "types": [
+        "temples",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time; evening is atmospheric",
+      "area": "Siam",
+      "popularity": 4
+    },
+    "national-museum": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon, closed Monday and Tuesday",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "chao-phraya-boat": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Riverside",
+      "popularity": 5
+    },
+    "thonburi-klong": {
+      "types": [
+        "temples",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Riverside",
+      "popularity": 3
+    },
+    "giant-swing": {
+      "types": [
+        "temples",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "wat-benchamabophit": {
+      "types": [
+        "temples"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old Town",
+      "popularity": 3
+    },
+    "safari-world": {
+      "types": [],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning, to catch the shows",
+      "area": "Sukhumvit",
+      "popularity": 3
+    },
+    "talad-rot-fai": {
+      "types": [
+        "food",
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Sukhumvit",
+      "popularity": 4
+    },
+    "baiyoke-viewpoint": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Siam",
+      "popularity": 3
+    },
+    "thai-cooking-class": {
+      "types": [
+        "food"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Morning session",
+      "area": "Siam",
+      "popularity": 4
+    },
+    "bang-krachao-walk": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Riverside",
+      "popularity": 3
+    },
+    "yaowarat-food-walk": {
+      "types": [
+        "food",
+        "budget",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Old Town",
+      "popularity": 4
+    },
+    "siam-walk": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Siam",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the river temples, Chinatown food and a mall or market day without rushing in the heat."
+  },
+  "airports": [
+    {
+      "code": "BKK",
+      "name": "Suvarnabhumi Airport",
+      "primary": true,
+      "note": "The main international airport, 30 km east.",
+      "options": [
+        {
+          "mode": "Airport Rail Link",
+          "to": "Phaya Thai (BTS)",
+          "price": "฿45",
+          "time": "26-27 min",
+          "note": "05:30-midnight; change to BTS or MRT."
+        },
+        {
+          "mode": "Metered taxi",
+          "to": "Central Bangkok",
+          "price": "฿400-600",
+          "time": "45-75 min",
+          "note": "Includes ฿50 airport surcharge and tolls."
+        },
+        {
+          "mode": "Grab / Bolt",
+          "to": "Central Bangkok",
+          "price": "฿400-700",
+          "time": "45-75 min",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "code": "DMK",
+      "name": "Don Mueang Airport",
+      "primary": false,
+      "note": "North of the city; budget airlines.",
+      "options": [
+        {
+          "mode": "SRT Red Line",
+          "to": "Krung Thep Aphiwat (MRT)",
+          "price": "฿33",
+          "time": "about 15 min",
+          "note": ""
+        },
+        {
+          "mode": "Bus A1",
+          "to": "Mo Chit (BTS)",
+          "price": "฿30",
+          "time": "30-45 min",
+          "note": "Pay on board."
+        },
+        {
+          "mode": "Metered taxi",
+          "to": "Central Bangkok",
+          "price": "฿250-400",
+          "time": "40-70 min",
+          "note": "Plus tolls and ฿50 surcharge."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Bangkok airport to the city 2026",
+      "https://www.visitthailandtoday.com/guides/bangkok-airport-to-city"
+    ],
+    [
+      "Bangkok airport train vs taxi 2026",
+      "https://thailandawaits.com/train-from-bangkok-airport/"
+    ],
+    [
+      "Don Mueang Airport transportation",
+      "https://www.donmueangairport.com/transportation/"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "temples",
+    "shopping"
+  ],
+  "transit": {
+    "best": "BTS Skytrain and MRT for the centre, river boats for temples, and Grab or Bolt for the rest.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "BTS Skytrain and MRT subway cover the centre; fares about ฿16–65, contactless cards accepted on most lines."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses are very cheap but hard to use for visitors."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Metered taxis start at ฿35; insist on the meter. Grab and Bolt apps are often easier."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not recommended for visitors: heavy traffic and hard parking. Use trains, boats and apps instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is hot and pavements are uneven; combine short walks with the Skytrain."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Chao Phraya Express boats link the riverside temples, Chinatown and ICONSIAM."
+      },
+      {
+        "mode": "Tuk-tuk",
+        "has": true,
+        "text": "Tuk-tuks are fun for short rides; agree the price first."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical city: hot all year, with a dry, cooler season from November to February and a long wet season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Highs around 31–32°C, lows 22–23°C and only 4–5 rain days. Best for temples and walking."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot season: March to May",
+        "text": "Highs of 33–34°C. Sightsee early morning and late afternoon; rest in air-conditioning at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "20–26 rain days a month, often short heavy afternoon showers. Carry a light rain jacket or umbrella."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid all year",
+        "text": "Expect sticky air most days. Light, breathable clothes help; so does a spare shirt."
+      },
+      {
+        "icon": "🌂",
+        "title": "Plan around the rain",
+        "text": "Keep indoor backups like malls, food courts and museums. Storms usually pass within an hour or two."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, sandals, sunscreen and a hat. Cover shoulders and knees for temples. A rain jacket for May–October."
+      }
+    ]
+  }
+}

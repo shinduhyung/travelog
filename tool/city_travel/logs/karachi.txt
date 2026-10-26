@@ -1,0 +1,33 @@
+$ deepseek_prep.py Karachi
+  tokens in 658 out 241
+Karachi: 1 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Karachi
+  tokens in 3880 out 592
+Karachi: 1 problems
+  - KHI taxi PKR 1,000-2,000 vs tariff estimate 2880
+
+$ deepseek_city.py Karachi --stage places
+Karachi: places
+  tokens in 1152 out 3457
+
+$ deepseek_city.py Karachi --stage frame
+Karachi: frame
+  tokens in 2425 out 1791
+  repaired JSON
+
+$ deepseek_city.py Karachi --stage plans
+Karachi: plans
+  plans for day
+  tokens in 2265 out 854
+  plans for 1n
+  tokens in 2266 out 1049
+  plans for 2n
+  tokens in 2271 out 1255
+  plans for 3n
+  tokens in 2266 out 1488
+
+$ merge_city.py Karachi
+Karachi: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/karachi.json and planner/karachi.json
+

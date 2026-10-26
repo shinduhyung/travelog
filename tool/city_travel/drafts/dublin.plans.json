@@ -1,0 +1,1336 @@
+{
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "A full history day on foot: Trinity, the Castle, both cathedrals and Kilmainham Gaol. Book the gaol first.",
+      "days": [
+        {
+          "title": "Trinity, Castle and cathedrals, then Kilmainham",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Take the first slot of the day; queues build fast."
+            },
+            {
+              "place": "trinity-college",
+              "at": "11:05",
+              "minutes": 45,
+              "note": "Walk the campus squares after the library."
+            },
+            {
+              "place": "dublin-castle",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "About 10 minutes on foot. Last entry is roughly an hour before closing."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:20",
+              "minutes": 60,
+              "note": "Lunch in a Temple Bar pub."
+            },
+            {
+              "place": "christ-church",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Short walk uphill. Check times on the day."
+            },
+            {
+              "place": "st-patricks",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "About 10 minutes on foot. Sunday visiting hours are limited."
+            },
+            {
+              "place": "kilmainham",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Book the last tour ahead; tours sell out. About 25 minutes by bus or taxi."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums, markets and Georgian streets, with a music session to finish.",
+      "days": [
+        {
+          "title": "Museum, market and Georgian doors, then music",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday; Sunday opens at 14:00."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Five minutes on foot. Good for a quick lunch."
+            },
+            {
+              "place": "grafton",
+              "at": "12:40",
+              "minutes": 45,
+              "note": "Street performers most afternoons."
+            },
+            {
+              "place": "stephens-green",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Enter at the top of Grafton Street."
+            },
+            {
+              "place": "coffee-neighbourhood",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk west into the Georgian squares and doorways."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Sessions often start around 21:00. Go early for a seat."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    },
+    {
+      "id": "day-nightlife",
+      "length": "day",
+      "style": "nightlife",
+      "nights": 0,
+      "for": "Daytime sights, then Temple Bar pints and live music into the night.",
+      "days": [
+        {
+          "title": "Sights by day, Temple Bar by night",
+          "stops": [
+            {
+              "place": "molly-malone",
+              "at": "11:00",
+              "minutes": 15,
+              "note": "Quick photo stop; always open."
+            },
+            {
+              "place": "gpo",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "About 15 minutes on foot up O'Connell Street. Exterior always visible."
+            },
+            {
+              "place": "oconnell",
+              "at": "12:05",
+              "minutes": 30,
+              "note": "Walk the street and the monuments."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch back across the river."
+            },
+            {
+              "place": "temple-bar",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Quieter in daytime for photos; pubs fill from evening."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Arrive early for a good spot near the musicians."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day of Dublin's big history sights, booked ahead and grouped by area.",
+      "days": [
+        {
+          "title": "Trinity, Castle and the medieval quarter",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Take the first slot of the day; Book of Kells queues build fast."
+            },
+            {
+              "place": "trinity-college",
+              "at": "11:05",
+              "minutes": 45,
+              "note": "Walk the campus squares after the library."
+            },
+            {
+              "place": "dublin-castle",
+              "at": "12:15",
+              "minutes": 75,
+              "note": "Late morning is quieter. Last entry about an hour before closing."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch in a Temple Bar pub; stew is a cold-day classic."
+            },
+            {
+              "place": "christ-church",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk from the Castle. Check times on the day."
+            },
+            {
+              "place": "national-museum",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Closed Monday. Free entry; good rainy backup."
+            }
+          ]
+        },
+        {
+          "title": "Kilmainham and the Georgian Quarter",
+          "stops": [
+            {
+              "place": "kilmainham",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Tours sell out; book the first tour online in advance."
+            },
+            {
+              "place": "st-patricks",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short taxi or bus ride back. Sunday visiting hours are limited."
+            },
+            {
+              "place": "coffee-neighbourhood",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk the Georgian doors and squares; grab coffee on the way."
+            },
+            {
+              "place": "gpo",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Cross the river for the GPO facade and its history."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar or near Trinity"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museums, markets and Georgian streets at an easy pace, with a pub session at night.",
+      "days": [
+        {
+          "title": "Trinity, market hall and old town",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot of the day is calmest."
+            },
+            {
+              "place": "grafton",
+              "at": "11:10",
+              "minutes": 45,
+              "note": "Browse the street and its side lanes."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunchtime is best; Sunday hours are shorter."
+            },
+            {
+              "place": "molly-malone",
+              "at": "13:00",
+              "minutes": 15,
+              "note": "Quick photo stop."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Closed Monday. Free entry."
+            },
+            {
+              "place": "stephens-green",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Sit and rest if the weather is dry."
+            }
+          ]
+        },
+        {
+          "title": "Georgian walk and a music session",
+          "stops": [
+            {
+              "place": "coffee-neighbourhood",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning walk past the doors and squares."
+            },
+            {
+              "place": "st-patricks",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Weekday mornings are quietest."
+            },
+            {
+              "place": "dublin-castle",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Late morning to early afternoon works well."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Sessions often start around 21:00; arrive early for a seat."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    },
+    {
+      "id": "1n-nightlife",
+      "length": "1n",
+      "style": "nightlife",
+      "nights": 1,
+      "for": "A light daytime loop, then Temple Bar pints and live music into the night.",
+      "days": [
+        {
+          "title": "Easy daytime, big night out",
+          "stops": [
+            {
+              "place": "trinity-college",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Weekday morning is calmest."
+            },
+            {
+              "place": "grafton",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Shops roughly 09:00–19:00."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch to line the stomach."
+            },
+            {
+              "place": "stephens-green",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Rest in the park before the evening."
+            }
+          ]
+        },
+        {
+          "title": "Temple Bar evening",
+          "stops": [
+            {
+              "place": "temple-bar",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Pubs get busy from evening; go early for a table."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Traditional session; often starts around 21:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the big story: Vikings, the Book of Kells, the Castle and Kilmainham Gaol.",
+      "days": [
+        {
+          "title": "Trinity, Castle and the old city",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Book the first slot of the day. The Long Room is the highlight."
+            },
+            {
+              "place": "trinity-college",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Walk the campus squares after the library."
+            },
+            {
+              "place": "dublin-castle",
+              "at": "12:15",
+              "minutes": 75,
+              "note": "Late morning suits the state rooms. Last entry about an hour before close."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:45",
+              "minutes": 60,
+              "note": "Lunch in a nearby pub. Stew is the classic cold-day dish."
+            },
+            {
+              "place": "christ-church",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk west. Check times on the day."
+            },
+            {
+              "place": "vikings",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Walking tour of the medieval core. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Kilmainham, cathedrals and the GPO",
+          "stops": [
+            {
+              "place": "kilmainham",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Tours sell out. Book the first tour of the day online."
+            },
+            {
+              "place": "st-patricks",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Weekday mornings are quietest. Sunday has limited visiting hours."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch near the cathedral quarter."
+            },
+            {
+              "place": "gpo",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "See the 1916 facade and lobby during post office hours."
+            },
+            {
+              "place": "oconnell",
+              "at": "15:15",
+              "minutes": 30,
+              "note": "Walk the street and the monuments."
+            },
+            {
+              "place": "national-museum",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Closed Monday. Rainy-afternoon backup."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar & city centre"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museums, Georgian streets, markets and a trad session — a slower, richer Dublin.",
+      "days": [
+        {
+          "title": "Book of Kells, museum and a session",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "First slot of the day is calmest."
+            },
+            {
+              "place": "molly-malone",
+              "at": "11:15",
+              "minutes": 15,
+              "note": "Quick photo stop on the way south."
+            },
+            {
+              "place": "grafton",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "Street performers in the afternoon."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch from the food stalls. Sunday hours are shorter."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Bog bodies and gold."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Trad session, often from about 21:00. Go early for a seat."
+            }
+          ]
+        },
+        {
+          "title": "Georgian doors, park and cathedral",
+          "stops": [
+            {
+              "place": "coffee-neighbourhood",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Self-guided walk past the famous doors and squares."
+            },
+            {
+              "place": "st-patricks",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Weekday morning is best."
+            },
+            {
+              "place": "irish-stew",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Pub lunch nearby."
+            },
+            {
+              "place": "stephens-green",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Open until dusk. Good on a sunny afternoon."
+            },
+            {
+              "place": "temple-bar",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Daytime for photos, evening for music."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar & city centre"
+    },
+    {
+      "id": "2n-nightlife",
+      "length": "2n",
+      "style": "nightlife",
+      "nights": 2,
+      "for": "Pints, live music and late bars, with easy daytime sightseeing in between.",
+      "days": [
+        {
+          "title": "Easy afternoon, big Temple Bar night",
+          "stops": [
+            {
+              "place": "grafton",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Shops roughly 09:00–19:00."
+            },
+            {
+              "place": "stephens-green",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Sit and recover before the night out."
+            },
+            {
+              "place": "irish-stew",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Line the stomach with a pub dinner."
+            },
+            {
+              "place": "temple-bar",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Pubs get busy from evening. Expect crowds and higher prices."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:15",
+              "minutes": 120,
+              "note": "Trad session, often from about 21:00. Weeknights are calmer."
+            }
+          ]
+        },
+        {
+          "title": "Guinness, then a late one",
+          "stops": [
+            {
+              "place": "guinness",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Morning is quieter. Gravity Bar for the view."
+            },
+            {
+              "place": "st-patricks",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short walk away. Sunday hours are limited."
+            },
+            {
+              "place": "irish-stew",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late lunch in the cathedral quarter."
+            },
+            {
+              "place": "temple-bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Second night out. Try side streets for cheaper pints."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar & city centre"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-time visitors who want the big stories: the Book of Kells, the Castle, both cathedrals and Kilmainham Gaol.",
+      "days": [
+        {
+          "title": "Arrive, Trinity and the Book of Kells",
+          "stops": [
+            {
+              "place": "trinity-college",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Walk the campus first. Check opening times on the day."
+            },
+            {
+              "place": "trinity-library",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Book the first slot you can get. The Long Room is the highlight."
+            },
+            {
+              "place": "molly-malone",
+              "at": "15:45",
+              "minutes": 15,
+              "note": "Short photo stop on the way into Temple Bar."
+            },
+            {
+              "place": "temple-bar",
+              "at": "16:15",
+              "minutes": 90,
+              "note": "Daytime is quieter for photos. Pubs get busy after dark."
+            },
+            {
+              "place": "irish-stew",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in a Temple Bar pub. Stew is a good cold-day choice."
+            }
+          ]
+        },
+        {
+          "title": "Castle, cathedrals and the museum",
+          "stops": [
+            {
+              "place": "dublin-castle",
+              "at": "09:45",
+              "minutes": 75,
+              "note": "Late morning is calm. Last entry is about an hour before closing."
+            },
+            {
+              "place": "christ-church",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short walk uphill. Check times on the day."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch stop in the market hall. Sunday hours are shorter."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:45",
+              "minutes": 90,
+              "note": "Closed Monday. Good rainy-afternoon backup."
+            },
+            {
+              "place": "st-patricks",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "About 10 minutes on foot. Sunday visiting hours are limited."
+            }
+          ]
+        },
+        {
+          "title": "Kilmainham Gaol, then fly",
+          "stops": [
+            {
+              "place": "kilmainham",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Book the first tour ahead. Tours sell out."
+            },
+            {
+              "place": "phoenix-park",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Short taxi ride. Walk to the Papal Cross viewpoint."
+            },
+            {
+              "place": "gpo",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Back into town. The lobby is open during post office hours."
+            },
+            {
+              "place": "oconnell",
+              "at": "14:45",
+              "minutes": 30,
+              "note": "Walk the street and see the GPO facade."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar & city centre"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Our pick for most visitors: museums, Georgian streets, a Viking walk and a trad music session.",
+      "days": [
+        {
+          "title": "Arrive, Trinity and Georgian doors",
+          "stops": [
+            {
+              "place": "trinity-college",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Weekday mornings are quietest, but afternoon works for a first look."
+            },
+            {
+              "place": "trinity-library",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Pre-book a slot. Times vary by season."
+            },
+            {
+              "place": "stephens-green",
+              "at": "15:45",
+              "minutes": 45,
+              "note": "Short walk south. Park closes around dusk."
+            },
+            {
+              "place": "coffee-neighbourhood",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Georgian door and square walk. Best in daylight."
+            },
+            {
+              "place": "irish-stew",
+              "at": "18:15",
+              "minutes": 60,
+              "note": "Dinner in a city-centre pub."
+            }
+          ]
+        },
+        {
+          "title": "Vikings, castle and the museum",
+          "stops": [
+            {
+              "place": "vikings",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Book ahead. Outdoor, so bring a rain layer."
+            },
+            {
+              "place": "dublin-castle",
+              "at": "11:45",
+              "minutes": 75,
+              "note": "Late morning slot. Last entry about an hour before closing."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch in the market hall."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Closed Monday. Sunday opens at 14:00."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Trad session, often from about 21:00. Weeknights are calmer."
+            }
+          ]
+        },
+        {
+          "title": "Grafton, GPO and fly",
+          "stops": [
+            {
+              "place": "grafton",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Shops open around 09:00. Street always open."
+            },
+            {
+              "place": "molly-malone",
+              "at": "11:00",
+              "minutes": 15,
+              "note": "Quick photo stop."
+            },
+            {
+              "place": "gpo",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Lobby during post office hours. Exterior always visible."
+            },
+            {
+              "place": "oconnell",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Walk north up the street."
+            },
+            {
+              "place": "liffey-cruise",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Seasonal and weather dependent. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar & city centre"
+    },
+    {
+      "id": "3n-nightlife",
+      "length": "3n",
+      "style": "nightlife",
+      "nights": 3,
+      "for": "Late starts and live music: Temple Bar pints, a trad session and easy daytime sightseeing.",
+      "days": [
+        {
+          "title": "Arrive, easy sights, Temple Bar evening",
+          "stops": [
+            {
+              "place": "trinity-college",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Gentle first walk. Check campus access on the day."
+            },
+            {
+              "place": "molly-malone",
+              "at": "15:00",
+              "minutes": 15,
+              "note": "Photo stop."
+            },
+            {
+              "place": "temple-bar",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Daytime for photos, then pick a pub for the evening."
+            },
+            {
+              "place": "irish-stew",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Early dinner before the pubs fill up."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "20:30",
+              "minutes": 120,
+              "note": "Trad session, often from about 21:00."
+            }
+          ]
+        },
+        {
+          "title": "Castle, museum, late bars",
+          "stops": [
+            {
+              "place": "dublin-castle",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Late morning is quiet. Last entry about an hour before closing."
+            },
+            {
+              "place": "christ-church",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk. Check times on the day."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. A good rainy-day plan."
+            },
+            {
+              "place": "temple-bar",
+              "at": "20:00",
+              "minutes": 150,
+              "note": "Pubs busiest from evening. Live music in many bars."
+            }
+          ]
+        },
+        {
+          "title": "Guinness, then fly",
+          "stops": [
+            {
+              "place": "guinness",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning is quieter. Last entry is earlier than closing."
+            },
+            {
+              "place": "st-patricks",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Short walk. Sunday visiting hours are limited."
+            },
+            {
+              "place": "grafton",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Afternoon shopping and buskers."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "First-time visitors who want the big story: Vikings, the Book of Kells, the Castle and Kilmainham.",
+      "days": [
+        {
+          "title": "Arrive and the medieval core",
+          "stops": [
+            {
+              "place": "dublin-castle",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Start here after checking in. Last entry about an hour before closing."
+            },
+            {
+              "place": "christ-church",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Check times on the day."
+            },
+            {
+              "place": "irish-stew",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Lunch or early dinner in a Temple Bar pub."
+            },
+            {
+              "place": "temple-bar",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Evening stroll. Pubs get busy later."
+            }
+          ]
+        },
+        {
+          "title": "Trinity and the museums",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Book the first slot. Queues build fast."
+            },
+            {
+              "place": "trinity-college",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Walk the campus squares."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch stop in the market hall."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Good for a rainy afternoon."
+            },
+            {
+              "place": "molly-malone",
+              "at": "16:00",
+              "minutes": 15,
+              "note": "Quick photo stop."
+            }
+          ]
+        },
+        {
+          "title": "Kilmainham and the Georgian Quarter",
+          "stops": [
+            {
+              "place": "kilmainham",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Book the first tour. Tours sell out."
+            },
+            {
+              "place": "st-patricks",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Weekday visiting is easiest. Sunday hours are limited."
+            },
+            {
+              "place": "coffee-neighbourhood",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Georgian doors and squares on foot. Daylight needed."
+            },
+            {
+              "place": "phoenix-park",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Walk or take a short bus ride. Gates for cars close at night."
+            }
+          ]
+        },
+        {
+          "title": "Vikings, GPO and farewell",
+          "stops": [
+            {
+              "place": "vikings",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Book ahead. Dry day is best."
+            },
+            {
+              "place": "gpo",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Lobby during post office hours. Exterior always visible."
+            },
+            {
+              "place": "oconnell",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Walk the street and see the monuments."
+            },
+            {
+              "place": "liffey-cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal and weather dependent. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar or near O'Connell Street"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "Our pick for most visitors: Book of Kells, museums, Georgian streets and a trad session.",
+      "days": [
+        {
+          "title": "Arrive, Trinity and the arcade",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Book a timed slot ahead. First slot of the day is quietest."
+            },
+            {
+              "place": "trinity-college",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Campus is generally open daytime."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Snack or early dinner. Sunday hours are shorter."
+            },
+            {
+              "place": "grafton",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Shops close around 19:00. Street stays open."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the Castle",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Sunday opens at 14:00."
+            },
+            {
+              "place": "dublin-castle",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Late morning suits. Last entry about an hour before closing."
+            },
+            {
+              "place": "irish-stew",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch in a nearby pub."
+            },
+            {
+              "place": "christ-church",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Check times on the day."
+            },
+            {
+              "place": "temple-bar",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Daytime is best for photos."
+            }
+          ]
+        },
+        {
+          "title": "Georgian Dublin and a trad session",
+          "stops": [
+            {
+              "place": "coffee-neighbourhood",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Morning walk. Daylight hours only."
+            },
+            {
+              "place": "st-patricks",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Weekday morning is calmest."
+            },
+            {
+              "place": "stephens-green",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Picnic lunch if sunny. Park closes at dusk."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Sessions often start around 21:00. Weeknights are easier."
+            }
+          ]
+        },
+        {
+          "title": "Howth or the Liffey, then fly",
+          "stops": [
+            {
+              "place": "howth-cliff",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Clear day only. Morning start. Check weather."
+            },
+            {
+              "place": "liffey-cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal. Check on the day."
+            },
+            {
+              "place": "oconnell",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Last look before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar or Grafton Street area"
+    },
+    {
+      "id": "4n-nightlife",
+      "length": "4n",
+      "style": "nightlife",
+      "nights": 4,
+      "for": "Pints, live music and late nights, with easy daytime sightseeing to recover.",
+      "days": [
+        {
+          "title": "Arrive, easy afternoon, Temple Bar night",
+          "stops": [
+            {
+              "place": "grafton",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Gentle start. Shops close around 19:00."
+            },
+            {
+              "place": "stephens-green",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Sit and rest before the night out."
+            },
+            {
+              "place": "irish-stew",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Line the stomach with a pub dinner."
+            },
+            {
+              "place": "temple-bar",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Pubs busiest from evening. Live music in many bars."
+            }
+          ]
+        },
+        {
+          "title": "Trinity, then a trad session",
+          "stops": [
+            {
+              "place": "trinity-library",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Book ahead. Morning slot is quietest."
+            },
+            {
+              "place": "molly-malone",
+              "at": "12:00",
+              "minutes": 15,
+              "note": "Quick photo stop."
+            },
+            {
+              "place": "george-st-arcade",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch. Sunday hours are shorter."
+            },
+            {
+              "place": "literary-pub-tour",
+              "at": "21:00",
+              "minutes": 120,
+              "note": "Traditional session. Weeknights are best."
+            }
+          ]
+        },
+        {
+          "title": "Castle, museum and late bars",
+          "stops": [
+            {
+              "place": "dublin-castle",
+              "at": "11:00",
+              "minutes": 75,
+              "note": "Late morning suits. Check last entry."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Monday. Sunday opens at 14:00."
+            },
+            {
+              "place": "christ-church",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Check times on the day."
+            },
+            {
+              "place": "temple-bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Second night out. Try side streets for quieter pubs."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "oconnell",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Short walk. Daytime only."
+            },
+            {
+              "place": "liffey-cruise",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Seasonal and weather dependent. Check on the day."
+            },
+            {
+              "place": "gpo",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Lobby during post office hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Temple Bar"
+    }
+  ]
+}

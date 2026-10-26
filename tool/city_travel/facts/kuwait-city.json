@@ -1,0 +1,189 @@
+{
+  "currency": "KWD",
+  "usd_rate": 0.3101,
+  "intro_line": "Gulf pearl where desert heat meets cool blue water",
+  "intro": "Kuwait City rewards visitors with grand mosques, lively souqs and a breezy corniche. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Mirqab",
+    "Salmiya",
+    "Sharq",
+    "Bneid Al Gar"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 5,
+    "per_km": 0.5,
+    "min_fare": 1
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "No metro or tram; buses and taxis do the work.",
+    "KPTC and CityBus share routes: about 300 fils in town, 350 fils longer.",
+    "Bus 13 links the airport to Mirqab in about 1 hour.",
+    "Taxis ignore meters, so agree the fare first; orange taxis start near KD 1.",
+    "Ride apps like Careem and Uber operate; check locally for coverage.",
+    "Driving is common but traffic is heavy; walking is fine only in cooler months."
+  ],
+  "airports": [
+    {
+      "code": "KWI",
+      "name": "Kuwait International Airport",
+      "primary": true,
+      "note": "Main gateway, about 17 km south of the centre.",
+      "options": [
+        {
+          "mode": "Bus 13",
+          "to": "Mirqab city centre",
+          "price": "KD 0.35",
+          "time": "50-70 min",
+          "note": "Cheapest option, but schedules are erratic."
+        },
+        {
+          "mode": "Express bus X3",
+          "to": "City centre",
+          "price": "KD 1",
+          "time": "30-45 min",
+          "note": "Runs hourly including nights; buy on board."
+        },
+        {
+          "mode": "Call taxi",
+          "to": "City centre",
+          "price": "KD 5",
+          "time": "20-35 min",
+          "note": "Order by phone or at the hotel."
+        },
+        {
+          "mode": "Airport taxi",
+          "to": "City centre",
+          "price": "KD 5-7",
+          "time": "20-35 min",
+          "note": "Fixed printed fares, but drivers may push for more."
+        },
+        {
+          "mode": "Ride app (Careem/Uber)",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "20-35 min",
+          "note": "Confirm pickup point at the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 50,
+  "place_landmarks": [
+    "Kuwait Towers & Corniche",
+    "Liberation Tower",
+    "Souk Al-Mubarakiya",
+    "Al Hamra Tower",
+    "Seif Palace",
+    "Tareq Rajab Museum",
+    "The Avenues",
+    "Al-Qurain Martyrs Museum",
+    "Failaka Archaeological Site",
+    "Jaber Al-Ahmad International Stadium",
+    "KidZania",
+    "Kuwait Entertainment City",
+    "Qasr Al-Ahmar"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Kuwait City",
+      "https://en.wikivoyage.org/wiki/Kuwait%20City"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    29.3759,
+    47.9774
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 3
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 4
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 1
+    },
+    {
+      "high": 38,
+      "low": 26,
+      "rain_days": 0
+    },
+    {
+      "high": 43,
+      "low": 31,
+      "rain_days": 0
+    },
+    {
+      "high": 45,
+      "low": 33,
+      "rain_days": 0
+    },
+    {
+      "high": 44,
+      "low": 32,
+      "rain_days": 0
+    },
+    {
+      "high": 41,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 24,
+      "rain_days": 1
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 4
+    },
+    {
+      "high": 20,
+      "low": 13,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "KWI taxi KD 5 vs tariff estimate 16"
+  ]
+}

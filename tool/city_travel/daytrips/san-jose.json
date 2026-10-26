@@ -1,0 +1,178 @@
+{
+ "city": "San Jose",
+ "trips": [
+  {
+   "place": "San Francisco",
+   "label": "",
+   "position": {
+    "id": 316321,
+    "name": "San Francisco International Airport, CA",
+    "city": "Millbrae",
+    "lat": 37.61522,
+    "lng": -122.39
+   },
+   "town": {
+    "name": "San Francisco",
+    "lat": 37.77493,
+    "lng": -122.41942
+   },
+   "road": {
+    "km": 77,
+    "min": 59,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 200.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$9-$12",
+     "time": "1h 18m",
+     "via": "San Jose Diridon Caltrain Northbound to San Francisco Caltrain Northbound",
+     "source": "https://www.rome2rio.com/s/San%20Jose/San%20Francisco"
+    },
+    "bus": {
+     "from": "$8-$14",
+     "time": "1h 25m",
+     "via": "San Jose Diridon Station to San Francisco Bus Station",
+     "source": "https://www.rome2rio.com/s/San%20Jose/San%20Francisco"
+    }
+   },
+   "route_note": "Caltrain runs directly from San Jose to San Francisco in about an hour and a half; no changes needed.",
+   "see": [
+    "Fisherman's Wharf and Pier 39",
+    "Golden Gate Bridge viewpoint",
+    "Ferry Building",
+    "Union Square"
+   ],
+   "visit": "Full day",
+   "tour_query": "San Francisco day trip from San Jose",
+   "quests": [
+    "Lombard Street",
+    "Cable Cars",
+    "Coit Tower",
+    "Fisherman's Wharf",
+    "Painted Ladies",
+    "Palace of Fine Arts",
+    "The Flower Carrier",
+    "City Lights Booksellers"
+   ],
+   "recommended": "train",
+   "why": "Caltrain runs directly from San Jose to San Francisco in about 1h18m with no changes.",
+   "stars": 5,
+   "know": [
+    "Caltrain drops you near the ballpark and a short walk or transit ride from downtown sights",
+    "Book Alcatraz well ahead if you plan to visit"
+   ]
+  },
+  {
+   "place": "Santa Cruz",
+   "label": "",
+   "position": {
+    "id": 409048,
+    "name": "Santa Cruz, CA",
+    "city": "Santa Cruz",
+    "lat": 36.97412,
+    "lng": -122.0308
+   },
+   "town": {
+    "name": "Santa Cruz",
+    "lat": 36.97412,
+    "lng": -122.0308
+   },
+   "road": {
+    "km": 52,
+    "min": 45,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 130.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$7",
+     "time": "45m",
+     "via": "Diridon Station to Ocean & Water",
+     "source": "https://www.rome2rio.com/s/San%20Jose/Santa%20Cruz%2C%20CA"
+    }
+   },
+   "route_note": "Take a Highway 17 express bus (or drive) over the hill; the bus runs directly from downtown San Jose to Santa Cruz in about an hour with no changes.",
+   "see": [
+    "Santa Cruz Beach Boardwalk",
+    "Main Beach and wharf",
+    "West Cliff Drive walk",
+    "Downtown Pacific Avenue"
+   ],
+   "visit": "Full day",
+   "tour_query": "Santa Cruz day trip from San Jose",
+   "quests": [
+    "Santa Cruz Beach Boardwalk"
+   ],
+   "recommended": "bus",
+   "why": "The Highway 17 express bus runs directly from downtown San Jose to Santa Cruz in about an hour with no changes.",
+   "stars": 4,
+   "know": [
+    "Book or arrive early on summer weekends, when beach traffic over Highway 17 is heaviest",
+    "The beach and boardwalk area is walkable once you arrive"
+   ]
+  },
+  {
+   "place": "Monterey",
+   "label": "",
+   "position": {
+    "id": 408930,
+    "name": "Monterey, CA",
+    "city": "Monterey",
+    "lat": 36.60024,
+    "lng": -121.89468
+   },
+   "town": {
+    "name": "Monterey",
+    "lat": 36.60024,
+    "lng": -121.89468
+   },
+   "road": {
+    "km": 117,
+    "min": 87,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 300.0,
+    "currency": "USD"
+   },
+   "modes": {
+    "bus": {
+     "from": null,
+     "time": "2h 16m",
+     "via": "Salinas Transit Center / Gate 7 to Tyler / Franklin",
+     "source": "https://www.rome2rio.com/s/San%20Jose/Monterey"
+    }
+   },
+   "route_note": "No direct train; take a bus or drive south via Highway 101 and Highway 156, roughly 1.5 hours each way.",
+   "see": [
+    "Cannery Row",
+    "Monterey Bay Aquarium",
+    "Old Fisherman's Wharf",
+    "Pacific Grove shoreline"
+   ],
+   "visit": "Full day",
+   "tour_query": "Monterey and Carmel day trip from San Jose",
+   "quests": [
+    "Aubergine",
+    "Monterey Bay Aquarium"
+   ],
+   "recommended": "car",
+   "why": "No direct train and a 2h16m bus with a transfer make driving the 87-minute run via 101 and 156 clearly better.",
+   "stars": 4,
+   "know": [
+    "The Monterey Bay Aquarium is best visited on a weekday and tickets should be booked ahead",
+    "Summer and fall bring the clearest coastal weather"
+   ]
+  }
+ ],
+ "problems": [
+  "Half Moon Bay: not a town in cities15000.json (US), dropped"
+ ]
+}

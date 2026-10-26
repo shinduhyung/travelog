@@ -1,0 +1,637 @@
+{
+  "city": "Lisbon",
+  "checked": "October 2026",
+  "intro_line": "Seven hills, golden light, and the smell of grilled sardines.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Baixa",
+        "Alfama",
+        "Chiado",
+        "Bairro Alto"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Baixa",
+        "Alfama",
+        "Chiado",
+        "Bairro Alto"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Baixa",
+        "Alfama",
+        "Chiado",
+        "Bairro Alto"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Baixa",
+        "Alfama",
+        "Chiado",
+        "Bairro Alto"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Baixa",
+        "Alfama",
+        "Chiado",
+        "Bairro Alto"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 15,
+        "low": 9,
+        "rain_days": 7,
+        "note": "Jan: cool and wet, highs near 15°C. Pack a rain jacket and warm layers."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 7,
+        "note": "Feb: still cool, about 16°C, with some rain. Fewer crowds at the sights."
+      },
+      {
+        "high": 17,
+        "low": 10,
+        "rain_days": 9,
+        "note": "Mar: mild at 17°C but one of the wetter months; bring an umbrella."
+      },
+      {
+        "high": 19,
+        "low": 12,
+        "rain_days": 9,
+        "note": "Apr: warming to 19°C, rain still possible. Good for walking the hills."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 4,
+        "note": "May: pleasant at 23°C and drier. A great month for sightseeing."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 4,
+        "note": "Jun: warm and mostly dry, around 25°C. Long evenings and festival season starts."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 1,
+        "note": "Jul: hot and very dry, highs near 28°C. Go early or late; shade is scarce."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 1,
+        "note": "Aug: hottest and driest, about 28°C. Crowded; book restaurants and fado ahead."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 4,
+        "note": "Sep: still warm at 26°C with a little rain returning. Quieter than August."
+      },
+      {
+        "high": 23,
+        "low": 16,
+        "rain_days": 9,
+        "note": "Oct: mild at 23°C but rain days rise. Carry a light rain layer."
+      },
+      {
+        "high": 18,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Nov: cooler at 18°C and wetter; good for museums and food."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 8,
+        "note": "Dec: cool at 16°C with rain; festive lights in Baixa and Chiado."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "history": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "nightlife": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.75
+    ],
+    "budget": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ]
+  },
+  "places": {
+    "belem_tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning or late afternoon",
+      "area": "Baixa",
+      "popularity": 5
+    },
+    "jeronimos": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "First slot in the morning",
+      "area": "Baixa",
+      "popularity": 5
+    },
+    "sao_jorge": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon for soft light",
+      "area": "Alfama",
+      "popularity": 5
+    },
+    "praca_comercio": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Baixa",
+      "popularity": 5
+    },
+    "padrao": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "santa_justa": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Early morning to avoid queues",
+      "area": "Chiado",
+      "popularity": 4
+    },
+    "alfama": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Alfama",
+      "popularity": 5
+    },
+    "bacalhau": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "bairro_alto": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late evening, Thursday to Saturday",
+      "area": "Bairro Alto",
+      "popularity": 4
+    },
+    "pasteis_belem": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning, warm from the oven",
+      "area": "Baixa",
+      "popularity": 5
+    },
+    "cascais": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer mornings; water is cold",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "moors_castle": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning before the crowds",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "chiado": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Chiado",
+      "popularity": 4
+    },
+    "alvalade": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday mornings",
+      "area": "Baixa",
+      "popularity": 3
+    },
+    "luz": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday mornings",
+      "area": "Baixa",
+      "popularity": 3
+    },
+    "ler_devagar": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekend afternoon",
+      "area": "Baixa",
+      "popularity": 3
+    },
+    "zoo": {
+      "types": [
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, cooler hours",
+      "area": "Baixa",
+      "popularity": 3
+    },
+    "mafra": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Baixa",
+      "popularity": 2
+    },
+    "azulejo": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day or hot afternoon",
+      "area": "Alfama",
+      "popularity": 3
+    },
+    "coach_museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Midday, when it is hot outside",
+      "area": "Baixa",
+      "popularity": 3
+    },
+    "oceanario": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "First slot or late afternoon",
+      "area": "Baixa",
+      "popularity": 4
+    },
+    "pena": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Early morning, clear days",
+      "area": "Baixa",
+      "popularity": 5
+    },
+    "time_out_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Late lunch or early dinner",
+      "area": "Chiado",
+      "popularity": 4
+    },
+    "senhora_monte": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Alfama",
+      "popularity": 3
+    },
+    "tram28": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Alfama",
+      "popularity": 4
+    },
+    "fado_show": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Alfama",
+      "popularity": 4
+    },
+    "lx_factory": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekend afternoon",
+      "area": "Baixa",
+      "popularity": 3
+    },
+    "miradouro_santa_luzia": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Alfama",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers Baixa, Alfama, Belém and a fado night without rushing; add a day for Sintra."
+  },
+  "airports": [
+    {
+      "code": "LIS",
+      "name": "Lisbon Portela Airport",
+      "primary": true,
+      "note": "Main airport, about 7 km from the centre.",
+      "options": [
+        {
+          "mode": "Metro red line",
+          "to": "Saldanha / Baixa-Chiado",
+          "price": "€1.75-2",
+          "time": "16-25 min",
+          "note": "Cheapest and fastest; station sits under Terminal 1."
+        },
+        {
+          "mode": "Bus 44 / 745",
+          "to": "Oriente station and centre",
+          "price": "€2",
+          "time": "10-40 min",
+          "note": "No large luggage allowed on city buses."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€16-20",
+          "time": "15-30 min",
+          "note": "Meter plus about €1.20 per bag; check the meter first."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€13-18",
+          "time": "15-30 min",
+          "note": "Use the marked pre-reserved pickup area."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Lisbon",
+      "https://en.wikivoyage.org/wiki/Lisbon"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro and walking for the centre; trams for the scenic hills.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast and cheap. The red line links the airport to the centre with one change."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Carris buses cover the city. Buy a rechargeable Navegante card for about €0.50."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "text": "Trams 15 and 28 are scenic but crowded; watch for pickpockets."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis use meters; insist on the meter and keep a receipt. Uber, Bolt and FreeNow work; look for the TVDE sign."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is slow and parking is hard. Skip it for city days."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Walking works well on the flat Baixa; expect steep hills in Alfama and Bairro Alto."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild Atlantic climate: warm dry summers, cool wet winters, and rain mostly from October to March.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm and mostly dry, highs 23–28°C. Ideal for walking, trams and the riverfront."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest: October to March",
+        "text": "Around 8–10 rain days a month. Showers pass; pack a compact umbrella."
+      },
+      {
+        "icon": "🥵",
+        "title": "July and August are hot",
+        "text": "Highs near 28°C and very dry. Sightsee early morning and rest in the afternoon."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Atlantic breeze",
+        "text": "The river and ocean keep evenings cooler; a light layer helps after sunset."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is rarely all day",
+        "text": "Winter rain comes in spells. Plan indoor sights like museums as backup."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable shoes for cobbled hills, sunscreen and a hat in summer, a rain jacket in winter."
+      }
+    ]
+  }
+}

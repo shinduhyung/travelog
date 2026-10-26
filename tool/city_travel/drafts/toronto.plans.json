@@ -1,0 +1,1261 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One focused day of Toronto's big museums and historic lanes, all reachable by subway and streetcar.",
+      "days": [
+        {
+          "title": "Museum morning, old town afternoon",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Start at opening on a weekday. Closed some holidays."
+            },
+            {
+              "place": "uoft",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Short walk south. Wander the leafy campus."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "13:45",
+              "minutes": 30,
+              "note": "Quick slice near campus. Hours vary by branch."
+            },
+            {
+              "place": "ago",
+              "at": "14:45",
+              "minutes": 120,
+              "note": "Closed Monday. The Massacre of the Innocents is inside."
+            },
+            {
+              "place": "distillery",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Short streetcar ride east. Shops close around 19:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market-and-street-food day. Go on a Saturday so the St. Lawrence Market is fully open.",
+      "days": [
+        {
+          "title": "Market, Kensington, Distillery",
+          "stops": [
+            {
+              "place": "st_lawrence",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Saturday is best. Closed Sunday and Monday."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Short walk. Look at the hall from outside."
+            },
+            {
+              "place": "kensington",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Streetcar or 25-minute walk. Graze as you go."
+            },
+            {
+              "place": "graffiti_alley",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Walk south in daylight. Free."
+            },
+            {
+              "place": "distillery",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Streetcar east. Late lunch and shops."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "day-family",
+      "length": "day",
+      "style": "family",
+      "nights": 0,
+      "for": "A big-ticket family day: tower views, the aquarium and the harbour, all in one compact area.",
+      "days": [
+        {
+          "title": "Tower, aquarium, waterfront",
+          "stops": [
+            {
+              "place": "ripleys",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Take the first slot to beat crowds. Check hours on the day."
+            },
+            {
+              "place": "cn_tower",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Next door. Book a timed ticket online."
+            },
+            {
+              "place": "tim_hortons",
+              "at": "13:45",
+              "minutes": 20,
+              "note": "Quick coffee and snack nearby."
+            },
+            {
+              "place": "harbourfront",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk down to the water. Always open."
+            },
+            {
+              "place": "island_ferry",
+              "at": "15:45",
+              "minutes": 180,
+              "note": "Ferry over and back. Check the last sailing on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museum and gallery time on day one, then the old town and the tower on day two.",
+      "days": [
+        {
+          "title": "ROM and Yorkville",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is quietest. Closed some holidays."
+            },
+            {
+              "place": "uoft",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk the campus grounds nearby. Free."
+            },
+            {
+              "place": "casa_loma",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "About 15 minutes by taxi or a longer walk. Gardens are best in summer."
+            },
+            {
+              "place": "ago",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Closed Monday. Check last entry on the day."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "18:45",
+              "minutes": 30,
+              "note": "Quick dinner. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Old town, market and tower",
+          "stops": [
+            {
+              "place": "st_lawrence",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Saturday morning is busiest."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short walk around the neighbourhood."
+            },
+            {
+              "place": "distillery",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Lanes always open; shops roughly 10:00–19:00."
+            },
+            {
+              "place": "cn_tower",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Book a timed slot. Late afternoon light is best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market breakfast, Kensington grazing and the Distillery District in one full day.",
+      "days": [
+        {
+          "title": "Markets and old town",
+          "stops": [
+            {
+              "place": "tim_hortons",
+              "at": "08:30",
+              "minutes": 20,
+              "note": "Quick coffee to start. Hours vary by branch."
+            },
+            {
+              "place": "st_lawrence",
+              "at": "09:15",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Go early on Saturday."
+            },
+            {
+              "place": "kensington",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "About 20 minutes on foot. Shops usually 10:00–19:00; Pedestrian Sundays in summer."
+            },
+            {
+              "place": "graffiti_alley",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Short walk south. Go in daylight."
+            },
+            {
+              "place": "distillery",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi. Good for an afternoon snack and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "1n-family",
+      "length": "1n",
+      "style": "family",
+      "nights": 1,
+      "for": "Aquarium and tower on arrival day, then the islands ferry before you leave.",
+      "days": [
+        {
+          "title": "Tower and aquarium",
+          "stops": [
+            {
+              "place": "ripleys",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Take the first slot. Check hours on the day."
+            },
+            {
+              "place": "cn_tower",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Next door. Book a timed slot."
+            },
+            {
+              "place": "harbourfront",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk to the water. Always open."
+            },
+            {
+              "place": "nathan_phillips",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "About 15 minutes on foot. Ice rink in winter."
+            }
+          ]
+        },
+        {
+          "title": "Islands ferry, then go",
+          "stops": [
+            {
+              "place": "island_ferry",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Summer morning is calmest. Check the seasonal timetable on the day."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch near Union. Hours vary by branch."
+            },
+            {
+              "place": "hockey_hall",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Usually 10:00–17:00. Good rainy-day backup."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big museums, the old Distillery lanes and a castle, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, downtown icons and the tower",
+          "stops": [
+            {
+              "place": "nathan_phillips",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Good first stop to get your bearings. City Hall is right there."
+            },
+            {
+              "place": "ago",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "About 10 minutes on foot. Closed Monday."
+            },
+            {
+              "place": "massacre",
+              "at": "17:00",
+              "minutes": 20,
+              "note": "Inside the AGO, so see it with your gallery ticket."
+            },
+            {
+              "place": "cn_tower",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Short walk south. Late afternoon into sunset is the best light. Book a time slot online."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "20:15",
+              "minutes": 30,
+              "note": "Easy late dinner nearby. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Yorkville museums and a castle",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is quietest. Closed some holidays."
+            },
+            {
+              "place": "uoft",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Walk the campus, then grab lunch in the area."
+            },
+            {
+              "place": "queens_park",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short walk from campus. Building tours are weekday daytime only."
+            },
+            {
+              "place": "casa_loma",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "About 15 minutes on foot or a short taxi. Gardens are best in summer."
+            }
+          ]
+        },
+        {
+          "title": "Old town, market and the Distillery",
+          "stops": [
+            {
+              "place": "st_lawrence_hall",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Saturday morning is busiest and best."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Walk the neighbourhood around the hall."
+            },
+            {
+              "place": "distillery",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "About 15 minutes on foot. Lanes are always open; shops roughly 10:00–19:00. Lunch here."
+            },
+            {
+              "place": "hockey_hall",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Short taxi or walk back west. Usually 10:00–17:00 daily."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, snacks and neighbourhood wandering.",
+      "days": [
+        {
+          "title": "Market morning and Kensington afternoon",
+          "stops": [
+            {
+              "place": "tim_hortons",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Quick coffee to start. Hours vary by branch."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "09:45",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Go Saturday morning for the full market."
+            },
+            {
+              "place": "kensington",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi or streetcar. Graze as you walk. Pedestrian Sundays in summer."
+            },
+            {
+              "place": "graffiti_alley",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Short walk south. Go in daylight."
+            },
+            {
+              "place": "distillery",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "About 20 minutes on foot. Late lunch and a wander."
+            }
+          ]
+        },
+        {
+          "title": "Waterfront, islands and a big dinner",
+          "stops": [
+            {
+              "place": "harbourfront",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk Queens Quay. Always open."
+            },
+            {
+              "place": "island_ferry",
+              "at": "11:15",
+              "minutes": 180,
+              "note": "Ferries run early morning to late evening, seasonal. Summer morning is calmest. Bring a picnic."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Back on the mainland. Check the day: closed Sunday and Monday."
+            },
+            {
+              "place": "roy_thomson",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert if something is on. Check the box office."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "2n-family",
+      "length": "2n",
+      "style": "family",
+      "nights": 2,
+      "for": "Families with kids who want the tower, the aquarium and a ferry ride without rushing.",
+      "days": [
+        {
+          "title": "Tower and aquarium",
+          "stops": [
+            {
+              "place": "ripleys",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Take the first slot in the morning. Check hours on the day."
+            },
+            {
+              "place": "cn_tower",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Next door. Book a time slot online. Roughly 09:00–22:00, seasonal."
+            },
+            {
+              "place": "harbourfront",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Short walk south for a snack by the water."
+            },
+            {
+              "place": "nathan_phillips",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Ice rink in winter; open square any time."
+            }
+          ]
+        },
+        {
+          "title": "Islands ferry and old town",
+          "stops": [
+            {
+              "place": "island_ferry",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Summer morning is best. Ferries run early to late, seasonal. Pack snacks."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Lunch after the ferry. Closed Sunday and Monday."
+            },
+            {
+              "place": "casa_loma",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Short taxi north. Usually 09:30–17:00 daily."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big museums, the old city and a castle, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and downtown icons",
+          "stops": [
+            {
+              "place": "nathan_phillips",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Good first stop to get your bearings. City Hall is right here."
+            },
+            {
+              "place": "cn_tower",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Book a timed slot online. Late afternoon gives you daylight and sunset."
+            },
+            {
+              "place": "harbourfront",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Walk down to Queens Quay for the water and sunset."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "19:15",
+              "minutes": 30,
+              "note": "Quick and easy dinner. Branches are all over downtown."
+            }
+          ]
+        },
+        {
+          "title": "Museums in Yorkville",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is calmest. Check holiday closures."
+            },
+            {
+              "place": "uoft",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch nearby, then a campus wander. Grounds are always open."
+            },
+            {
+              "place": "queens_park",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Short walk south from campus. Building tours are weekday daytime only."
+            },
+            {
+              "place": "casa_loma",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "About 15 minutes by taxi or subway plus walk. Gardens are best in summer."
+            }
+          ]
+        },
+        {
+          "title": "Old town and the Distillery",
+          "stops": [
+            {
+              "place": "st_lawrence",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Saturday morning is busiest but most fun."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short walk. Look at the hall from outside."
+            },
+            {
+              "place": "distillery",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Shops close around 19:00."
+            },
+            {
+              "place": "kensington",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Taxi back west. Streets stay open; shops usually close by 19:00. Eat here."
+            }
+          ]
+        },
+        {
+          "title": "Art, then depart",
+          "stops": [
+            {
+              "place": "ago",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Weekday afternoon is quieter, but morning works if you leave today."
+            },
+            {
+              "place": "massacre",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Inside the AGO. Same hours."
+            },
+            {
+              "place": "graffiti_alley",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Short walk south. Go in daylight."
+            },
+            {
+              "place": "tim_hortons",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Coffee before you head out. Hours vary by branch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, neighbourhood snacks and long brunches between the sights.",
+      "days": [
+        {
+          "title": "Market morning and the old town",
+          "stops": [
+            {
+              "place": "st_lawrence",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Come hungry: peameal bacon sandwiches are the classic."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Step outside for a look at the hall and the neighbourhood."
+            },
+            {
+              "place": "distillery",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Good lunch spots and coffee in the old brick lanes."
+            },
+            {
+              "place": "cn_tower",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Book a timed slot. Late afternoon into sunset is best."
+            },
+            {
+              "place": "harbourfront",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Walk the waterfront before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Kensington and Chinatown grazing",
+          "stops": [
+            {
+              "place": "kensington",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Shops usually open 10:00–19:00. Snack as you go. Pedestrian Sundays in summer."
+            },
+            {
+              "place": "ago",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Short walk south. Closed Monday."
+            },
+            {
+              "place": "graffiti_alley",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Walk east in daylight."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "22:00",
+              "minutes": 30,
+              "note": "Late slice. Many branches open late; hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Yorkville and a big evening",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is calmest. Lunch in Yorkville after."
+            },
+            {
+              "place": "casa_loma",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "About 15 minutes by taxi. Gardens in summer."
+            },
+            {
+              "place": "uoft",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Campus stroll on the way back south."
+            },
+            {
+              "place": "roy_thomson",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening concert. Check the box office for what is on."
+            }
+          ]
+        },
+        {
+          "title": "Brunch and depart",
+          "stops": [
+            {
+              "place": "tim_hortons",
+              "at": "09:00",
+              "minutes": 20,
+              "note": "Early coffee. Hours vary by branch."
+            },
+            {
+              "place": "hockey_hall",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually 10:00–17:00 daily. A good rainy-day or last-morning stop."
+            },
+            {
+              "place": "nathan_phillips",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Always open. Last photos before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "3n-family",
+      "length": "3n",
+      "style": "family",
+      "nights": 3,
+      "for": "Families with kids who want the tower, the aquarium, the islands and one big park day.",
+      "days": [
+        {
+          "title": "Tower and aquarium",
+          "stops": [
+            {
+              "place": "ripleys",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Take the first slot; it gets busy later. Check hours on the day."
+            },
+            {
+              "place": "cn_tower",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Next door. Book a timed slot online."
+            },
+            {
+              "place": "harbourfront",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk down to the water. Always open."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "17:00",
+              "minutes": 30,
+              "note": "Easy dinner for kids. Branches vary."
+            }
+          ]
+        },
+        {
+          "title": "Islands day",
+          "stops": [
+            {
+              "place": "island_ferry",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Go in the morning; ferries run early to late, seasonal. Bring snacks and sun cream."
+            },
+            {
+              "place": "centreville",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "On the islands. Seasonal, roughly May–Sep. Check it is open before you go."
+            },
+            {
+              "place": "nathan_phillips",
+              "at": "17:30",
+              "minutes": 30,
+              "note": "Back downtown. Ice rink in winter."
+            }
+          ]
+        },
+        {
+          "title": "Castle and museum",
+          "stops": [
+            {
+              "place": "casa_loma",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning is quietest. Gardens in summer."
+            },
+            {
+              "place": "rom",
+              "at": "12:30",
+              "minutes": 150,
+              "note": "About 15 minutes by taxi. Kids like the dinosaur galleries."
+            },
+            {
+              "place": "queens_park",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Short walk south. Room to run."
+            },
+            {
+              "place": "tim_hortons",
+              "at": "16:15",
+              "minutes": 20,
+              "note": "Snack break. Hours vary."
+            }
+          ]
+        },
+        {
+          "title": "Big park or big rides, then depart",
+          "stops": [
+            {
+              "place": "high_park",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Always open. Playgrounds and space to roam. Swap in Canada's Wonderland if your kids want rides; it needs a full day and is seasonal."
+            },
+            {
+              "place": "st_lawrence",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Lunch from the stalls."
+            },
+            {
+              "place": "fort_york",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Usually Tue–Sun 10:00–17:00; closed Monday. Open grounds for running."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the big museums, the old town and a castle, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and downtown icons",
+          "stops": [
+            {
+              "place": "nathan_phillips",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Easy first stop by City Hall. Ice rink in winter."
+            },
+            {
+              "place": "cn_tower",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Book a late-afternoon slot and stay for sunset. Check hours on the day."
+            },
+            {
+              "place": "harbourfront",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Walk the waterfront, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Yorkville",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is quietest. Closed some holidays."
+            },
+            {
+              "place": "uoft",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk the campus; lunch on Bloor Street."
+            },
+            {
+              "place": "casa_loma",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "About 15 minutes on foot from the ROM area. Gardens in summer."
+            },
+            {
+              "place": "queens_park",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Short walk south. Building tours are weekday daytime only."
+            }
+          ]
+        },
+        {
+          "title": "Old town and the Distillery",
+          "stops": [
+            {
+              "place": "st_lawrence_hall",
+              "at": "09:30",
+              "minutes": 75,
+              "note": "Closed Sunday and Monday. Saturday is busiest."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Short neighbourhood walk outside."
+            },
+            {
+              "place": "distillery",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "About 15 minutes by taxi. Shops roughly 10:00–19:00."
+            },
+            {
+              "place": "kensington",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Taxi back north. Afternoon is best; dinner here."
+            }
+          ]
+        },
+        {
+          "title": "Art, then fly",
+          "stops": [
+            {
+              "place": "ago",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Check out first and leave bags at the hotel."
+            },
+            {
+              "place": "massacre",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Inside the AGO; same hours."
+            },
+            {
+              "place": "fisher_library",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Weekdays only, daytime. Check on the day."
+            },
+            {
+              "place": "tim_hortons",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Coffee before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who plan the day around markets, snacks and long dinners.",
+      "days": [
+        {
+          "title": "Arrive and graze downtown",
+          "stops": [
+            {
+              "place": "nathan_phillips",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Stretch your legs after the train or flight."
+            },
+            {
+              "place": "harbourfront",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Waterfront walk; plenty of casual dinner spots on Queens Quay."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "21:30",
+              "minutes": 30,
+              "note": "Late-night slice. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and Kensington",
+          "stops": [
+            {
+              "place": "st_lawrence_hall",
+              "at": "09:00",
+              "minutes": 75,
+              "note": "Saturday morning is the classic. Closed Sunday and Monday."
+            },
+            {
+              "place": "st_lawrence_hall",
+              "at": "10:30",
+              "minutes": 30,
+              "note": "Walk it off around the old streets."
+            },
+            {
+              "place": "distillery",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch and shops. Lanes always open."
+            },
+            {
+              "place": "kensington",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Snack crawl. Pedestrian Sundays in summer."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Bloor Street",
+          "stops": [
+            {
+              "place": "rom",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning. Lunch nearby after."
+            },
+            {
+              "place": "uoft",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Campus walk; coffee stops on Bloor."
+            },
+            {
+              "place": "casa_loma",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "ago",
+              "at": "17:00",
+              "minutes": 120,
+              "note": "Closed Monday. Weekday afternoon is calm."
+            }
+          ]
+        },
+        {
+          "title": "Tower views, then fly",
+          "stops": [
+            {
+              "place": "cn_tower",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning slot is quieter. Check hours on the day."
+            },
+            {
+              "place": "ripleys",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Next door. Check on the day."
+            },
+            {
+              "place": "tim_hortons",
+              "at": "14:45",
+              "minutes": 20,
+              "note": "Coffee and a snack before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    },
+    {
+      "id": "4n-family",
+      "length": "4n",
+      "style": "family",
+      "nights": 4,
+      "for": "Families with kids: big hits first, with short walks and early dinners.",
+      "days": [
+        {
+          "title": "Arrive and the tower",
+          "stops": [
+            {
+              "place": "nathan_phillips",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Open space to run around. Ice rink in winter."
+            },
+            {
+              "place": "cn_tower",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Late afternoon into sunset. Check hours on the day."
+            },
+            {
+              "place": "pizza_pizza",
+              "at": "18:30",
+              "minutes": 30,
+              "note": "Easy dinner kids will eat. Hours vary by branch."
+            }
+          ]
+        },
+        {
+          "title": "Aquarium and waterfront",
+          "stops": [
+            {
+              "place": "ripleys",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "First slot in the morning is calmest. Check on the day."
+            },
+            {
+              "place": "harbourfront",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Short walk; lunch on Queens Quay."
+            },
+            {
+              "place": "island_ferry",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Summer morning is best; return at sunset. Check seasonal times."
+            }
+          ]
+        },
+        {
+          "title": "Castle and campus",
+          "stops": [
+            {
+              "place": "casa_loma",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning is quietest. Gardens in summer."
+            },
+            {
+              "place": "uoft",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch and a campus wander."
+            },
+            {
+              "place": "rom",
+              "at": "13:30",
+              "minutes": 150,
+              "note": "Good for rainy afternoons. Closed some holidays."
+            },
+            {
+              "place": "queens_park",
+              "at": "16:30",
+              "minutes": 30,
+              "note": "Short walk south to finish."
+            }
+          ]
+        },
+        {
+          "title": "Animals or rides, then fly",
+          "stops": [
+            {
+              "place": "toronto_zoo",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Weekday morning in summer. It is a long ride out; check hours."
+            },
+            {
+              "place": "tim_hortons",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Snack before the trip to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown/Union"
+    }
+  ]
+}

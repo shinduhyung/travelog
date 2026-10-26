@@ -1,0 +1,1471 @@
+{
+  "city": "Jakarta",
+  "checked": "October 2026",
+  "currency": "IDR",
+  "usd_rate": 18082.4775,
+  "intro": "Jakarta rewards visitors who embrace its energy, from street food to colonial relics. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -6.4358,
+      "west": 106.7786,
+      "north": -6.0846,
+      "east": 107.0072,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 10000,
+      "flag_airport": 20000,
+      "per_km": 7000,
+      "min_fare": 25000
+    },
+    "road_factor": 1.4,
+    "city_kmh": 18,
+    "notes": [
+      "Jakarta MRT runs Lebak Bulus to Bundaran HI, every 5-10 min, 05:00-midnight.",
+      "TransJakarta BRT has 14 mainlines on dedicated lanes; fares Rp2,000-20,000 with one card.",
+      "KAI Commuter trains link suburbs and run 04:30-midnight; Jabodebek and Jakarta LRT cover more areas.",
+      "Grab and Gojek are the main ride apps; metered taxis exist but agree on price or use the meter.",
+      "Driving is slow and congested; odd-even plate rules apply on some toll roads on weekdays.",
+      "Walking long distances is impractical; use apps or transit between areas."
+    ],
+    "sources": []
+  },
+  "places": {
+    "monas": {
+      "name": "Monas (National Monument)",
+      "landmark": "Monas",
+      "kind": "sight",
+      "lat": -6.1754,
+      "lon": 106.8272,
+      "price": 20000,
+      "price_text": "Around IDR 20,000 for the top; grounds free. Check on the day.",
+      "hours": "Grounds roughly 08:00–22:00; monument tower hours vary, often closed Monday",
+      "tip": "Go early morning to beat heat and queues, and ride the lift to the top for a city view.",
+      "source": ""
+    },
+    "istiqlal": {
+      "name": "Istiqlal Mosque",
+      "landmark": "Istiqlal Mosque",
+      "kind": "sight",
+      "lat": -6.1702,
+      "lon": 106.8314,
+      "price": 0,
+      "price_text": "Free; donations welcome",
+      "hours": "Open outside prayer times; non-Muslim visitors usually guided. Check on the day.",
+      "tip": "Dress modestly and ask a guide at the entrance; the mosque faces Monas across the street.",
+      "source": ""
+    },
+    "kota-tua": {
+      "name": "Kota Tua Jakarta (Old Town)",
+      "landmark": "Kota Tua Jakarta",
+      "kind": "sight",
+      "lat": -6.1352,
+      "lon": 106.8133,
+      "price": 0,
+      "price_text": "Square free; some museums charge small fees",
+      "hours": "Square always open; museums roughly 09:00–15:00, closed Monday",
+      "tip": "Rent a colourful vintage bike in the square and visit the old Dutch buildings in the morning.",
+      "source": ""
+    },
+    "ancol": {
+      "name": "Ancol Dreamland",
+      "landmark": "Ancol Dreamland",
+      "kind": "park",
+      "lat": -6.1264,
+      "lon": 106.8833,
+      "price": null,
+      "price_text": "Park entry fee plus per-attraction tickets; check on the day",
+      "hours": "Roughly 06:00–22:00 daily",
+      "tip": "It is a big seaside park with beaches and rides; buy tickets per attraction and go on a weekday.",
+      "source": ""
+    },
+    "dufan": {
+      "name": "Dunia Fantasy (Dufan)",
+      "landmark": "Dunia Fantasy (Dufan)",
+      "kind": "activity",
+      "lat": -6.1264,
+      "lon": 106.8833,
+      "price": null,
+      "price_text": "One-day pass; price varies by day. Check on the day.",
+      "hours": "Roughly 10:00–18:00; check on the day",
+      "tip": "Inside Ancol. Arrive at opening and ride the big coasters before queues build.",
+      "source": ""
+    },
+    "gbk": {
+      "name": "Gelora Bung Karno Stadium",
+      "landmark": "Gelora Bung Karno Stadium",
+      "kind": "sight",
+      "lat": -6.2186,
+      "lon": 106.8018,
+      "price": null,
+      "price_text": "Free to walk the park; event tickets vary",
+      "hours": "Park open daily; stadium only for events or tours",
+      "tip": "The surrounding sports park is great for a morning jog or bike ride even without a match.",
+      "source": ""
+    },
+    "kidzania": {
+      "name": "Kidzania Jakarta",
+      "landmark": "Kidzania Jakarta",
+      "kind": "activity",
+      "lat": -6.2238,
+      "lon": 106.818,
+      "price": null,
+      "price_text": "Timed tickets; check on the day",
+      "hours": "Roughly 09:00–18:00, hours vary by day",
+      "tip": "Book online for a morning slot; it is best for kids roughly 4–12.",
+      "source": ""
+    },
+    "moi": {
+      "name": "Mall of Indonesia",
+      "landmark": "Mall of Indonesia",
+      "kind": "activity",
+      "lat": -6.1264,
+      "lon": 106.8833,
+      "price": 0,
+      "price_text": "Free to enter; pay per shop",
+      "hours": "Roughly 10:00–22:00 daily",
+      "tip": "A huge mall in North Jakarta; good for air-conditioned shopping and food on a hot afternoon.",
+      "source": ""
+    },
+    "nasi-goreng": {
+      "name": "Nasi Goreng (fried rice)",
+      "landmark": "Nasi Goreng",
+      "kind": "food",
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "price": 25000,
+      "price_text": "Street stalls around IDR 15,000–35,000; restaurants more",
+      "hours": "Street stalls often evening to late night",
+      "tip": "Try a street warung or night market stall; ask for it 'pedas' if you like spicy.",
+      "source": ""
+    },
+    "national-museum": {
+      "name": "National Museum of Indonesia",
+      "landmark": "National Museum of Indonesia",
+      "kind": "museum",
+      "lat": -6.1764,
+      "lon": 106.8216,
+      "price": null,
+      "price_text": "Small entry fee; check on the day",
+      "hours": "Roughly 08:00–16:00, closed Monday",
+      "tip": "See the old stone statues and the treasure room; go in the morning when it is cool.",
+      "source": ""
+    },
+    "mekarsari": {
+      "name": "Taman Buah Mekarsari",
+      "landmark": "Taman Buah Mekarsari",
+      "kind": "park",
+      "lat": -6.4024,
+      "lon": 106.9452,
+      "price": null,
+      "price_text": "Entry plus activity tickets; check on the day",
+      "hours": "Roughly 08:00–16:00 daily",
+      "tip": "A fruit orchard park outside the city centre; plan a half day and bring sun protection.",
+      "source": ""
+    },
+    "tmii": {
+      "name": "Taman Mini Indonesia Indah",
+      "landmark": "Taman Mini Indonesia Indah",
+      "kind": "park",
+      "lat": -6.3023,
+      "lon": 106.8953,
+      "price": null,
+      "price_text": "Park entry plus per-pavilion tickets; check on the day",
+      "hours": "Roughly 08:00–17:00 daily",
+      "tip": "A big cultural park with houses from across Indonesia; use the shuttle or rent a bike.",
+      "source": ""
+    },
+    "trans-studio": {
+      "name": "Trans Studio Cibubur",
+      "landmark": "Trans Studio Cibubur",
+      "kind": "activity",
+      "lat": -6.375,
+      "lon": 106.94,
+      "price": null,
+      "price_text": "Day pass; check on the day",
+      "hours": "Roughly 10:00–18:00; check on the day",
+      "tip": "An indoor theme park on the city edge; good for a rainy day with kids.",
+      "source": ""
+    },
+    "snow-world": {
+      "name": "Transpark Snow World",
+      "landmark": "Transpark Snow World",
+      "kind": "activity",
+      "lat": -6.2307,
+      "lon": 106.984,
+      "price": null,
+      "price_text": "Timed tickets; check on the day",
+      "hours": "Roughly 10:00–21:00 daily",
+      "tip": "An indoor snow play area; wear the warm clothes they provide and book a slot.",
+      "source": ""
+    },
+    "world-of-wanders": {
+      "name": "World of Wanders Theme Park",
+      "landmark": "World of Wanders Theme Park",
+      "kind": "activity",
+      "lat": -6.2115,
+      "lon": 106.845,
+      "price": null,
+      "price_text": "Ticket prices vary; check on the day",
+      "hours": "Check on the day",
+      "tip": "Confirm opening hours and tickets before you go, as new parks change schedules.",
+      "source": ""
+    },
+    "glodok-market": {
+      "name": "Glodok Market (Chinatown)",
+      "landmark": null,
+      "kind": "food",
+      "lat": -6.1445,
+      "lon": 106.8133,
+      "price": 0,
+      "price_text": "Free to walk; pay per stall",
+      "hours": "Roughly 08:00–17:00; some stalls close Sunday",
+      "tip": "Wander the narrow lanes near Kota Tua for snacks and old shops; go in the morning.",
+      "source": ""
+    },
+    "sunda-kelapa-walk": {
+      "name": "Sunda Kelapa old harbour walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -6.128,
+      "lon": 106.8083,
+      "price": 0,
+      "price_text": "Free to walk; boat trips cost extra",
+      "hours": "Daylight hours",
+      "tip": "See the wooden pinisi sailing ships; a short walk from Kota Tua, best in the morning.",
+      "source": ""
+    },
+    "kemang-walk": {
+      "name": "Kemang neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -6.2606,
+      "lon": 106.8139,
+      "price": 0,
+      "price_text": "Free to walk; pay per cafe",
+      "hours": "Cafes and shops roughly 08:00–23:00",
+      "tip": "A leafy area of cafes, bars and small shops; good for an evening stroll and dinner.",
+      "source": ""
+    },
+    "night-market-food-tour": {
+      "name": "Evening street-food tour",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -6.19,
+      "lon": 106.82,
+      "price": null,
+      "price_text": "Guided tours vary; check on the day",
+      "hours": "Evening, roughly 17:00–22:00",
+      "tip": "Join a small-group tour to try satay, nasi goreng and sweets safely; confirm pickup and price.",
+      "source": ""
+    },
+    "ancol-beach": {
+      "name": "Ancol beach and waterfront",
+      "landmark": null,
+      "kind": "beach",
+      "lat": -6.118,
+      "lon": 106.835,
+      "price": null,
+      "price_text": "Park entry fee; check on the day",
+      "hours": "Roughly 06:00–22:00",
+      "tip": "A city beach for sunset views and seafood; water quality varies, so check before swimming.",
+      "source": ""
+    },
+    "thamrin-viewpoint": {
+      "name": "Thamrin skyline viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": -6.195,
+      "lon": 106.823,
+      "price": null,
+      "price_text": "Free on the street; rooftop bars charge for drinks",
+      "hours": "Best around sunset; bars open into the night",
+      "tip": "Walk the Thamrin area at dusk or take a rooftop bar seat for the skyline and Monas view.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Jakarta's history, from Dutch Old Town to the National Monument.",
+      "days": [
+        {
+          "title": "Old Batavia in the morning, monuments after lunch",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Start early before the heat. Museums close Monday, so pick another day for those."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short taxi ride north. Watch the wooden schooners; go in daylight only."
+            },
+            {
+              "place": "glodok-market",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch from the stalls here. Some stalls close Sunday."
+            },
+            {
+              "place": "istiqlal",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "About 20 minutes by taxi. Non-Muslim visitors usually join a guide; check on the day and avoid Friday prayers."
+            },
+            {
+              "place": "monas",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Five minutes on foot. Grounds stay open late; the tower is often closed Monday."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Evening street stalls near Thamrin for dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day built around eating: market snacks, Chinatown lunch and a night food tour.",
+      "days": [
+        {
+          "title": "Market bites, Chinatown and a night food tour",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is liveliest. Graze as you walk; carry small cash."
+            },
+            {
+              "place": "kota-tua",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Short walk or taxi. Good spot for a coffee break in the square."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Simple lunch at a warung or stall nearby."
+            },
+            {
+              "place": "kemang-walk",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Taxi south. Cafes and bakeries for an afternoon rest; open into the evening."
+            },
+            {
+              "place": "night-market-food-tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Head back to Central Jakarta. Book ahead and confirm the meeting point."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "day-shopping",
+      "length": "day",
+      "style": "shopping",
+      "nights": 0,
+      "for": "Craft and market browsing in the morning, big air-conditioned malls later.",
+      "days": [
+        {
+          "title": "Chinatown market, then malls",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning for snacks and small goods. Some stalls close Sunday."
+            },
+            {
+              "place": "kota-tua",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Nearby for a short walk and photos."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quick lunch before heading north."
+            },
+            {
+              "place": "moi",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "Big mall in Ancol; roughly 10:00–22:00. Air-conditioned break from the heat."
+            },
+            {
+              "place": "ancol-beach",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Short ride away. Late afternoon to sunset by the water."
+            }
+          ]
+        }
+      ],
+      "stay_area": "North Jakarta (Ancol)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want old Batavia and the national icons in one tight day.",
+      "days": [
+        {
+          "title": "Old Town in the morning, monuments after",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Start early before the heat. Museums close Monday, so check the day."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short taxi ride north. Watch the old wooden boats."
+            },
+            {
+              "place": "glodok-market",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch at a noodle stall here. Some stalls close Sunday."
+            },
+            {
+              "place": "monas",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "About 20 minutes by taxi. Tower hours vary and it often closes Monday."
+            },
+            {
+              "place": "istiqlal",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Short walk from Monas. Visit outside prayer times; avoid Friday midday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around eating, from Chinatown stalls to night markets.",
+      "days": [
+        {
+          "title": "Chinatown bites, then a night food tour",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is best. Try snacks and look for old shops."
+            },
+            {
+              "place": "kota-tua",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Walk the square, then eat nearby. Museums close Monday."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Late lunch at a warung. Street stalls often open evening to late night."
+            },
+            {
+              "place": "night-market-food-tour",
+              "at": "17:30",
+              "minutes": 180,
+              "note": "Evening street-food tour. Come hungry and carry cash."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "1n-shopping",
+      "length": "1n",
+      "style": "shopping",
+      "nights": 1,
+      "for": "Shoppers who want craft markets and big malls without long drives.",
+      "days": [
+        {
+          "title": "Chinatown market, then the malls",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning is best. Some stalls close Sunday."
+            },
+            {
+              "place": "kota-tua",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Browse the square and nearby shops. Museums close Monday."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Quick lunch before heading north."
+            },
+            {
+              "place": "moi",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Big mall with food and shops. About 30 minutes by taxi."
+            },
+            {
+              "place": "ancol-beach",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Sunset by the water, then dinner at the mall area."
+            }
+          ]
+        }
+      ],
+      "stay_area": "North Jakarta (Ancol)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want old Batavia, the national icons and a taste of the city's many faces.",
+      "days": [
+        {
+          "title": "Arrive, national icons in Central Jakarta",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Start at the grounds; the tower is often closed Monday. Check on the day."
+            },
+            {
+              "place": "istiqlal",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "About 10 minutes on foot from Monas. Non-Muslim visitors usually join a guided visit; avoid Friday prayers."
+            },
+            {
+              "place": "national-museum",
+              "at": "17:15",
+              "minutes": 0,
+              "note": "Usually closes around 16:00 and is closed Monday, so save it for another morning."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Street stalls pick up in the evening. Pick a busy one."
+            }
+          ]
+        },
+        {
+          "title": "Old Town and harbour",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Museums roughly 09:00–15:00 and closed Monday. Go early on a weekend to beat the heat and crowds."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi ride north. Daylight hours only."
+            },
+            {
+              "place": "glodok-market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch from the stalls here. Some stalls close Sunday."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset skyline back in Central Jakarta. Bars open into the night."
+            }
+          ]
+        },
+        {
+          "title": "Museums or Mini Indonesia, then fly",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Go at opening."
+            },
+            {
+              "place": "tmii",
+              "at": "12:00",
+              "minutes": 240,
+              "note": "About 40–60 minutes by taxi. Big outdoor park; bring water. Check on the day for closures."
+            },
+            {
+              "place": "monas",
+              "at": "17:00",
+              "minutes": 0,
+              "note": "Allow 45–60 minutes back to the airport in traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want warungs, night markets and Chinatown, with the big sights in between.",
+      "days": [
+        {
+          "title": "Arrive, Chinatown and an evening food tour",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Snack as you walk. Some stalls close Sunday."
+            },
+            {
+              "place": "kota-tua",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "The square is always open even when museums close. Good for photos in low light."
+            },
+            {
+              "place": "night-market-food-tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening street-food tour, roughly 17:00–22:00. Come hungry."
+            }
+          ]
+        },
+        {
+          "title": "Central sights and street food",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early is cooler. Tower often closed Monday; check on the day."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Early lunch at a busy stall."
+            },
+            {
+              "place": "istiqlal",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Avoid Friday prayers. Guided visits for non-Muslims are usual."
+            },
+            {
+              "place": "national-museum",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closes around 16:00 and is closed Monday."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset drinks, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Kemang cafes, then fly",
+          "stops": [
+            {
+              "place": "kemang-walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cafes and shops roughly 08:00–23:00. Brunch here."
+            },
+            {
+              "place": "mekarsari",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Fruit park, roughly 08:00–16:00. Check on the day."
+            },
+            {
+              "place": "moi",
+              "at": "17:00",
+              "minutes": 0,
+              "note": "Allow 45–60 minutes to the airport in traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "2n-shopping",
+      "length": "2n",
+      "style": "shopping",
+      "nights": 2,
+      "for": "Shoppers mixing big malls, batik and craft stalls with a few classic sights.",
+      "days": [
+        {
+          "title": "Arrive, Old Town and Chinatown stalls",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Museums roughly 09:00–15:00, closed Monday. The square is always open."
+            },
+            {
+              "place": "glodok-market",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Bargain politely. Some stalls close Sunday."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Evening street food near your hotel."
+            }
+          ]
+        },
+        {
+          "title": "Central icons and malls",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Early is cooler. Tower often closed Monday; check on the day."
+            },
+            {
+              "place": "national-museum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Monday; closes around 16:00."
+            },
+            {
+              "place": "istiqlal",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Avoid Friday prayers."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset, then dinner and mall browsing on Thamrin."
+            }
+          ]
+        },
+        {
+          "title": "Ancol mall and beach, then fly",
+          "stops": [
+            {
+              "place": "moi",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Roughly 10:00–22:00. Good for last-minute gifts."
+            },
+            {
+              "place": "ancol-beach",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Late afternoon to sunset is best, but this fits a departure day. Check on the day."
+            },
+            {
+              "place": "ancol",
+              "at": "15:30",
+              "minutes": 0,
+              "note": "Allow 45–60 minutes to the airport in traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "North Jakarta (Ancol)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want old Batavia, the national story and a skyline sunset in three full days.",
+      "days": [
+        {
+          "title": "Arrive and Central Jakarta icons",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Grounds are open late. Tower hours vary and it is often closed Monday, so check on the day."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset over the skyline, then dinner nearby."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Street stalls pick up in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Old Town and Chinatown",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Museums close around 15:00 and are shut Monday. Go early."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi from the square. Daylight only."
+            },
+            {
+              "place": "glodok-market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch from the stalls. Some stalls close Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Museums and mosque",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Morning is cooler and quieter."
+            },
+            {
+              "place": "istiqlal",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Open outside prayer times. Avoid Friday prayers. Check on the day."
+            },
+            {
+              "place": "gbk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk the park. Stadium only for events or tours."
+            },
+            {
+              "place": "night-market-food-tour",
+              "at": "17:30",
+              "minutes": 180,
+              "note": "Evening street-food tour to finish."
+            }
+          ]
+        },
+        {
+          "title": "South Jakarta, then fly",
+          "stops": [
+            {
+              "place": "tmii",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Big outdoor park. Morning on a weekday is best. Allow extra time for traffic."
+            },
+            {
+              "place": "kemang-walk",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Late lunch and cafes before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want warungs, night markets and Chinatown, with the big sights in between.",
+      "days": [
+        {
+          "title": "Arrive, old town snacks and night market",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Square is always open. Museums close around 15:00, so go for the square and cafes."
+            },
+            {
+              "place": "glodok-market",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Chinatown snacking. Some stalls close Sunday."
+            },
+            {
+              "place": "night-market-food-tour",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Evening tour, roughly 17:00–22:00."
+            }
+          ]
+        },
+        {
+          "title": "Central sights and street food",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Early morning is cooler. Tower often closed Monday."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch at a warung near Thamrin."
+            },
+            {
+              "place": "national-museum",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Closed Monday. Closes around 16:00."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset drinks, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "North Jakarta day",
+          "stops": [
+            {
+              "place": "ancol-beach",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Late afternoon to sunset by the water."
+            },
+            {
+              "place": "moi",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Mall food halls and restaurants for dinner. Open to about 22:00."
+            }
+          ]
+        },
+        {
+          "title": "Kemang and fly",
+          "stops": [
+            {
+              "place": "kemang-walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cafes and bakeries. Shops open around 08:00."
+            },
+            {
+              "place": "mekarsari",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Fruit garden, closes around 16:00. Check travel time in traffic."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "3n-shopping",
+      "length": "3n",
+      "style": "shopping",
+      "nights": 3,
+      "for": "Shoppers mixing big malls with batik, Chinatown markets and a sunset view.",
+      "days": [
+        {
+          "title": "Arrive and mall evening",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Quick look at the grounds. Tower often closed Monday."
+            },
+            {
+              "place": "moi",
+              "at": "17:00",
+              "minutes": 150,
+              "note": "Mall open to about 22:00. Dinner here."
+            }
+          ]
+        },
+        {
+          "title": "Old Town and markets",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Museums close around 15:00, shut Monday."
+            },
+            {
+              "place": "glodok-market",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Bargain-friendly stalls. Some close Sunday."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Harbour walk in daylight."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Cheap evening meal."
+            }
+          ]
+        },
+        {
+          "title": "Central malls and skyline",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Closed Monday. Good rainy-day stop."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset, then shopping or dinner below."
+            }
+          ]
+        },
+        {
+          "title": "Kemang boutiques and fly",
+          "stops": [
+            {
+              "place": "kemang-walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Independent shops and cafes. Open from around 08:00."
+            },
+            {
+              "place": "kidzania",
+              "at": "13:00",
+              "minutes": 240,
+              "note": "Only if travelling with kids. Hours vary by day, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want old Batavia, the national story and a taste of modern Jakarta.",
+      "days": [
+        {
+          "title": "Arrive and ease into Central Jakarta",
+          "stops": [
+            {
+              "place": "monas",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Start at the grounds; tower hours vary and it often closes Monday. Check on the day."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Street stalls pick up in the evening. Pick a busy one."
+            }
+          ]
+        },
+        {
+          "title": "Old Town and Chinatown",
+          "stops": [
+            {
+              "place": "kota-tua",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Square is always open; museums roughly 09:00–15:00 and closed Monday. Go early to beat heat."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short taxi from Kota Tua. Daylight hours only."
+            },
+            {
+              "place": "glodok-market",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch nearby. Some stalls close Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the mosque",
+          "stops": [
+            {
+              "place": "national-museum",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Closed Monday. Go at opening."
+            },
+            {
+              "place": "istiqlal",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Non-Muslim visitors usually guided; avoid Friday prayers. Check on the day."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Sunset into evening for the skyline."
+            }
+          ]
+        },
+        {
+          "title": "Taman Mini, then fly",
+          "stops": [
+            {
+              "place": "tmii",
+              "at": "08:30",
+              "minutes": 240,
+              "note": "Big outdoor park; weekday morning is calmer. Bring water."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quick lunch before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want warungs, night markets and Chinatown flavours without rushing.",
+      "days": [
+        {
+          "title": "Arrive and eat street-side",
+          "stops": [
+            {
+              "place": "nasi-goreng",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening stalls are the classic first meal."
+            },
+            {
+              "place": "thamrin-viewpoint",
+              "at": "20:30",
+              "minutes": 60,
+              "note": "Nightcap with a skyline view."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown and Old Town",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning is best; some stalls close Sunday. Snack as you go."
+            },
+            {
+              "place": "kota-tua",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Museums roughly 09:00–15:00, closed Monday."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daylight hours. Seafood stalls nearby."
+            }
+          ]
+        },
+        {
+          "title": "Night market tour and Kemang",
+          "stops": [
+            {
+              "place": "night-market-food-tour",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Roughly 17:00–22:00. Come hungry."
+            }
+          ]
+        },
+        {
+          "title": "Kemang cafes, then fly",
+          "stops": [
+            {
+              "place": "kemang-walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Cafes and shops roughly 08:00–23:00. Good brunch stop."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Last bite before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    },
+    {
+      "id": "4n-shopping",
+      "length": "4n",
+      "style": "shopping",
+      "nights": 4,
+      "for": "Mall-hoppers and craft hunters who want batik, markets and air-conditioned breaks.",
+      "days": [
+        {
+          "title": "Arrive and mall time",
+          "stops": [
+            {
+              "place": "moi",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Roughly 10:00–22:00 daily. Good for dinner too."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "20:00",
+              "minutes": 45,
+              "note": "Evening street food near the hotel."
+            }
+          ]
+        },
+        {
+          "title": "Chinatown and Old Town",
+          "stops": [
+            {
+              "place": "glodok-market",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning; some stalls close Sunday. Bring cash."
+            },
+            {
+              "place": "kota-tua",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Museums roughly 09:00–15:00, closed Monday."
+            },
+            {
+              "place": "sunda-kelapa-walk",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Daylight hours."
+            }
+          ]
+        },
+        {
+          "title": "Ancol and the big mall",
+          "stops": [
+            {
+              "place": "ancol-beach",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Late afternoon to sunset is best."
+            },
+            {
+              "place": "moi",
+              "at": "18:00",
+              "minutes": 150,
+              "note": "Dinner and shopping in one stop."
+            }
+          ]
+        },
+        {
+          "title": "Kemang and fly",
+          "stops": [
+            {
+              "place": "kemang-walk",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Boutiques and cafes roughly 08:00–23:00."
+            },
+            {
+              "place": "nasi-goreng",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quick lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Central Jakarta (Thamrin)"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Old Batavia, museums and the city's many faces."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Street warungs, night markets and regional dishes."
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "blurb": "Big malls, batik and craft markets."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Central Jakarta (Thamrin)",
+      "range": [
+        400000,
+        1500000
+      ],
+      "why": "Central for the MRT, big malls and the National Monument; easy to reach most sights.",
+      "center": [
+        -6.195,
+        106.823
+      ]
+    },
+    {
+      "area": "South Jakarta (Kemang)",
+      "range": [
+        350000,
+        1200000
+      ],
+      "why": "Cafés, restaurants and nightlife; quieter streets than the centre.",
+      "center": [
+        -6.26,
+        106.813
+      ]
+    },
+    {
+      "area": "West Jakarta (Kota)",
+      "range": [
+        250000,
+        900000
+      ],
+      "why": "Next to Old Batavia (Kota Tua) and its museums; good for history-focused days.",
+      "center": [
+        -6.135,
+        106.813
+      ]
+    },
+    {
+      "area": "North Jakarta (Ancol)",
+      "range": [
+        450000,
+        1600000
+      ],
+      "why": "Waterfront parks and family attractions; cooler breeze but far from the centre.",
+      "center": [
+        -6.122,
+        106.83
+      ]
+    }
+  ],
+  "food": [
+    "Try Jakarta staples: nasi goreng, sate ayam, gado-gado and kerak telor, an egg-and-rice street snack.",
+    "Eat at night markets and street warungs for cheap, fresh food; look for busy stalls with local queues.",
+    "Padang restaurants serve ready-made spicy dishes piled high; you pay for what you eat.",
+    "In malls, food courts are clean and cheap; sit-down restaurants cost more but are reliable.",
+    "Tap water is not safe to drink. Drink bottled or filtered water, and be careful with ice from street stalls."
+  ],
+  "more_time": [
+    "Add a day trip to Bogor for the botanical gardens and cooler hills; check train times on the day.",
+    "History fans can spend a half day in Kota Tua: the old town square, museum and harbour area.",
+    "Families can swap a mall day for Ancol's waterfront parks and attractions."
+  ]
+}

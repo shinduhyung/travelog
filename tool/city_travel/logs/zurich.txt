@@ -1,0 +1,28 @@
+$ deepseek_facts.py Zurich
+  tokens in 3945 out 620
+Zurich: 0 problems
+
+$ deepseek_city.py Zurich --stage places
+Zurich: places
+  tokens in 1177 out 3351
+
+$ deepseek_city.py Zurich --stage frame
+Zurich: frame
+  tokens in 2426 out 1846
+  repaired JSON
+
+$ deepseek_city.py Zurich --stage plans
+Zurich: plans
+  plans for day
+  tokens in 2199 out 860
+  plans for 1n
+  tokens in 2200 out 879
+  plans for 2n
+  tokens in 2205 out 1243
+  plans for 3n
+  tokens in 2200 out 1806
+
+$ merge_city.py Zurich
+Zurich: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/zurich.json and planner/zurich.json
+

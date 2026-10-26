@@ -1,0 +1,488 @@
+{
+  "city": "Cali",
+  "checked": "October 2026",
+  "intro_line": "Salsa capital where green mountains meet warm Pacific spirit.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Granada",
+        "El Peñón",
+        "San Antonio",
+        "Centro"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Granada",
+        "El Peñón",
+        "San Antonio",
+        "Centro"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Granada",
+        "El Peñón",
+        "San Antonio",
+        "Centro"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Granada",
+        "El Peñón",
+        "San Antonio",
+        "Centro"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Granada",
+        "El Peñón",
+        "San Antonio",
+        "Centro"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 24,
+        "note": "January: warm days around 25°C and cool nights near 18°C. Expect rain on many days; carry a light rain jacket."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 22,
+        "note": "February: similar to January, slightly warmer nights. Rain is common, so keep indoor plans ready."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 27,
+        "note": "March: one of the wettest months, with rain on most days. Plan outdoor trips for the morning."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 26,
+        "note": "April: still very wet. Short heavy showers are likely; waterproof shoes help."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 25,
+        "note": "May: rain on many days but often in bursts. Good month for salsa and food indoors."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 23,
+        "note": "June: slightly drier than May. Mild days around 25°C; evenings comfortable."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 22,
+        "note": "July: one of the drier months, with rain on fewer days. Good for outdoor plans."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 22,
+        "note": "August: like July, relatively dry and mild. A solid month for nature day trips."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 24,
+        "note": "September: the warmest highs, around 27°C. Rain is still common; start early."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 28,
+        "note": "October: one of the wettest months. Expect rain most days; keep plans flexible."
+      },
+      {
+        "high": 25,
+        "low": 19,
+        "rain_days": 28,
+        "note": "November: very wet again. Indoor culture and food plans work best."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 26,
+        "note": "December: wet but festive. Mild days around 25°C; pack a rain layer."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.8
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.8
+    ],
+    "nature": [
+      0.7,
+      0.7,
+      0.65,
+      0.65,
+      0.65,
+      0.7,
+      0.8,
+      0.8,
+      0.75,
+      0.6,
+      0.6,
+      0.65
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.8
+    ],
+    "history": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.75,
+      0.8
+    ]
+  },
+  "places": {
+    "cristo_rey": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon",
+      "area": "Centro",
+      "popularity": 5
+    },
+    "san_antonio_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "San Antonio",
+      "popularity": 4
+    },
+    "san_antonio_viewpoint": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "San Antonio",
+      "popularity": 4
+    },
+    "galeria_almagro": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or lunchtime",
+      "area": "Granada",
+      "popularity": 3
+    },
+    "mercado_alianza": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Granada",
+      "popularity": 3
+    },
+    "granada_walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Granada",
+      "popularity": 3
+    },
+    "el_penon": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "El Peñón",
+      "popularity": 3
+    },
+    "centro_walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "salsa_night": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Late evening, Thursday to Saturday",
+      "area": "Granada",
+      "popularity": 4
+    },
+    "salsa_class": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Granada",
+      "popularity": 3
+    },
+    "city_tour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "river_walk": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Centro",
+      "popularity": 3
+    },
+    "local_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Lunchtime or evening",
+      "area": "Granada",
+      "popularity": 3
+    },
+    "park_walk": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Granada",
+      "popularity": 2
+    },
+    "church_visit": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Centro",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights lets you see the sights, take a salsa class and fit in one nature day trip without rushing."
+  },
+  "airports": [
+    {
+      "code": "CLO",
+      "name": "Alfonso Bonilla Aragon International Airport",
+      "primary": true,
+      "note": "Main gateway, about 20 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Mini-van",
+          "to": "Terminal de Transportes",
+          "price": "COP$4,000",
+          "time": "20-30 min",
+          "note": "Cheapest option; then take a local bus or taxi onward."
+        },
+        {
+          "mode": "MIO bus",
+          "to": "City centre",
+          "price": "COP$3,500-6,000",
+          "time": "45-60 min",
+          "note": "Needs a smart card; check routes locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "COP$45,000-60,000",
+          "time": "25-40 min",
+          "note": "Agree fare or use the meter before leaving."
+        },
+        {
+          "mode": "Uber / DiDi",
+          "to": "City centre",
+          "price": "COP$35,000-55,000",
+          "time": "25-40 min",
+          "note": "Pickup points may be outside the terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Cali",
+      "https://en.wikivoyage.org/wiki/Cali"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "nightlife"
+  ],
+  "transit": {
+    "best": "Taxis and ride apps for most trips; MIO buses if you're saving money.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or train in the city. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "MIO buses run in exclusive lanes with air-conditioned cars and smart-card payment. The MIO card costs about COP$6,000; a single ride is about COP$3,500. About 23 other urban bus companies also cover the city, about COP$3,500 a trip."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis are fast and affordable; call one and check the meter is running. Uber and DiDi operate in Cali; use official taxis at night."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but city traffic and parking are a hassle. Better for out-of-town day trips; check licence rules."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking works in Granada and San Antonio. Use taxis after dark."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Cali is mild all year, around 25°C by day and 18–19°C at night. Rain is common in every month, so plan around showers.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Mild all year",
+        "text": "Highs stay near 25–27°C and lows near 18–19°C. No extreme heat or cold; light layers work."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect rain on 22–28 days a month. Showers are often short; carry a compact rain jacket."
+      },
+      {
+        "icon": "☔",
+        "title": "Wettest months: March, October, November",
+        "text": "Rain on about 27–28 days. Keep indoor options and a taxi budget ready."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Drier months: February, July, August",
+        "text": "Rain on about 22 days. Still pack rain gear, but outdoor plans are easier."
+      },
+      {
+        "icon": "🌅",
+        "title": "Plan mornings outdoors",
+        "text": "Rain often builds later in the day. Do nature trips and walking early, then move indoors."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain jacket or umbrella, and comfortable shoes for hilly, wet streets. A light layer for cool evenings."
+      }
+    ]
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "city": "Casablanca",
+  "checked": "October 2026",
+  "intro_line": "White city where Atlantic waves meet Moorish gates.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centre Ville",
+        "Anfa",
+        "Corniche",
+        "Habous"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centre Ville",
+        "Anfa",
+        "Corniche",
+        "Habous"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Centre Ville",
+        "Anfa",
+        "Corniche",
+        "Habous"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centre Ville",
+        "Anfa",
+        "Corniche",
+        "Habous"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Centre Ville",
+        "Anfa",
+        "Corniche",
+        "Habous"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 6,
+        "note": "January: cool and damp, highs near 18°C and about 6 rain days. Pack a jacket."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 7,
+        "note": "February: similar to January, around 18°C with about 7 rain days."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 9,
+        "note": "March: mild at about 19°C but the wettest month, around 9 rain days. Keep a rain layer."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 6,
+        "note": "April: warming to about 21°C with fewer showers, about 6 rain days. Good walking weather."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 4,
+        "note": "May: pleasant and mostly dry, highs near 24°C and about 4 rain days."
+      },
+      {
+        "high": 25,
+        "low": 18,
+        "rain_days": 2,
+        "note": "June: warm and dry, highs around 25°C with only about 2 rain days."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 0,
+        "note": "July: hot and dry, highs near 27°C and no rain expected. Use sunscreen and shade."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 0,
+        "note": "August: the hottest month, highs around 28°C, dry. Plan indoor sights at midday."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 1,
+        "note": "September: still warm at about 27°C with about 1 rain day. Sea is at its warmest."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 5,
+        "note": "October: comfortable at about 25°C, but rain returns with about 5 rain days."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 6,
+        "note": "November: cooler at about 21°C with around 6 rain days. Bring a light jacket."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 6,
+        "note": "December: cool and showery, highs near 19°C and about 6 rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.3,
+      0.3,
+      0.4,
+      0.55,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.45,
+      0.3
+    ],
+    "history": [
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "shopping": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "hassan2": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning tour, or outside at sunset",
+      "area": "Corniche",
+      "popularity": 5
+    },
+    "crazy_park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon, cooler hours",
+      "area": "Anfa",
+      "popularity": 3
+    },
+    "loupi_park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Anfa",
+      "popularity": 2
+    },
+    "magic_forest": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Anfa",
+      "popularity": 2
+    },
+    "parc_sindibad": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Corniche",
+      "popularity": 3
+    },
+    "stade_mohammed_v": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening match",
+      "area": "Anfa",
+      "popularity": 3
+    },
+    "central_market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "Centre Ville",
+      "popularity": 4
+    },
+    "habous_walk": {
+      "types": [
+        "culture",
+        "history",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Habous",
+      "popularity": 4
+    },
+    "corniche_walk": {
+      "types": [
+        "beach",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Corniche",
+      "popularity": 4
+    },
+    "old_medina": {
+      "types": [
+        "culture",
+        "history",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centre Ville",
+      "popularity": 3
+    },
+    "food_tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Centre Ville",
+      "popularity": 3
+    },
+    "anfa_view": {
+      "types": [
+        "beach",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Anfa",
+      "popularity": 3
+    },
+    "beach_day": {
+      "types": [
+        "beach"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer morning",
+      "area": "Corniche",
+      "popularity": 4
+    },
+    "ville_walk": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Centre Ville",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the mosque, the medina and the Habous quarter at an easy pace, with time for a long lunch."
+  },
+  "airports": [
+    {
+      "code": "CMN",
+      "name": "Mohammed V International Airport",
+      "primary": true,
+      "note": "Main gateway, 23 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Casa Voyageurs / Casa Port",
+          "price": "50-70 MAD",
+          "time": "45 min",
+          "note": "Hourly, leaves at 50 past the hour; slow security check after the train."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "250-300 MAD",
+          "time": "30-45 min",
+          "note": "Agree the fare first; around 280 MAD as of late 2022."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Availability varies; compare with taxi."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Casablanca",
+      "https://en.wikivoyage.org/wiki/Casablanca"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Tram for main streets, red petits taxis or ride apps for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro. The tram is the main rail option in the city."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Runs 05:30–22:30. One ride is about 6–8 MAD with a rechargeable card. Good for the centre."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Al Bidaoui train links the airport and some city stops, but stops are far apart. Check times on the day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Cheap at about 5 MAD, but routes are unclear and pickpockets are a risk. Keep bags close."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Red petits taxis use meters, minimum 7 MAD, and drivers may pick up others. White grand taxis run fixed routes and leave when full. Careem and inDrive work."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed for the centre. Traffic and parking are a hassle; use taxis instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in the centre and the medina. Wear comfortable shoes for uneven streets."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild coastal climate: warm dry summers and cool, sometimes wet winters. Rain is light but most likely from November to March.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm and almost rain-free, highs of 24–28°C. Ideal for the Corniche and long walks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest months: November to March",
+        "text": "About 6–9 rain days a month. Showers are usually short; carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Mild winters",
+        "text": "January and February sit around 18°C by day and 9–10°C at night. A jacket helps in the evening."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea breeze",
+        "text": "The Atlantic keeps the city cooler than inland Morocco, but evenings by the Corniche can feel chilly."
+      },
+      {
+        "icon": "🕶️",
+        "title": "Strong summer sun",
+        "text": "July and August are dry and bright. Use sunscreen and avoid midday sun on the beach."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers for summer, a warm layer and rain jacket for winter, plus modest clothing for the mosque."
+      }
+    ]
+  }
+}

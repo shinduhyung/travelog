@@ -1,0 +1,225 @@
+{
+  "currency": "TWD",
+  "usd_rate": 32.5918,
+  "intro_line": "Taipei blends night markets, mountain trails and hot springs.",
+  "intro": "Taipei rewards visitors with cheap, clean transit, superb food and green hills on its doorstep. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Ximending",
+    "Zhongshan",
+    "Da'an",
+    "Taipei Main Station"
+  ],
+  "taxi": {
+    "flag_day": 85,
+    "flag_airport": 85,
+    "per_km": 25,
+    "min_fare": 85
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "MRT is clean, safe and cheap: NT$20-65 per ride, trains about 06:00-00:00.",
+    "EasyCard gives 20% off MRT rides and NT$7 bus transfers within an hour.",
+    "City buses are frequent; pay with EasyCard on boarding.",
+    "Taxis are metered and plentiful; Uber operates in Taipei.",
+    "Driving is not advised for visitors; parking is hard and scooters dominate.",
+    "YouBike share bikes are widely available; sidewalks are good for walking."
+  ],
+  "airports": [
+    {
+      "code": "TPE",
+      "name": "Taiwan Taoyuan International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 34 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport MRT Express",
+          "to": "Taipei Main Station",
+          "price": "NT$150-160",
+          "time": "35-40 min",
+          "note": "Fastest option; EasyCard fare is cheaper."
+        },
+        {
+          "mode": "Express airport bus",
+          "to": "Taipei Main Station or East district hotels",
+          "price": "NT$120-150",
+          "time": "50-70 min",
+          "note": "Cheapest; traffic can slow it down."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "NT$900-1,200",
+          "time": "40-60 min",
+          "note": "Fixed-ish fares; use the official queue."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "NT$900-1,300",
+          "time": "40-60 min",
+          "note": "Pickup zones are signposted at both terminals."
+        }
+      ]
+    },
+    {
+      "code": "TSA",
+      "name": "Taipei Songshan Airport",
+      "primary": false,
+      "note": "Downtown airport, 4 km north of centre, for regional and domestic flights.",
+      "options": [
+        {
+          "mode": "MRT Wenhu Line",
+          "to": "Taipei Main Station area",
+          "price": "NT$20-30",
+          "time": "15-20 min",
+          "note": "Station is right at the terminal."
+        },
+        {
+          "mode": "City bus",
+          "to": "Various city districts",
+          "price": "NT$15-30",
+          "time": "20-40 min",
+          "note": "Cheap but slower with traffic."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "NT$150-250",
+          "time": "10-20 min",
+          "note": "Short and cheap ride downtown."
+        },
+        {
+          "mode": "Uber",
+          "to": "City centre",
+          "price": "NT$150-250",
+          "time": "10-20 min",
+          "note": "Handy with luggage."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Taipei 101",
+    "National Palace Museum",
+    "Chiang Kai-shek Memorial Hall",
+    "Shilin Night Market",
+    "Longshan Temple",
+    "Ximending",
+    "Dihua Street",
+    "Yehliu Geopark",
+    "Jiufen Old Street",
+    "228 Peace Memorial Park",
+    "Beef Noodle Soup",
+    "Elephant Mountain",
+    "Eslite Spectrum Songyan",
+    "Fort San Domingo",
+    "Liberty Square Arch",
+    "Lin Family Mansion and Garden",
+    "Maokong Gondola",
+    "National Chengchi University",
+    "National Taiwan University",
+    "National Theater",
+    "Ningxia Night Market",
+    "Pingxi Lantern Festival"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Taipei",
+      "https://en.wikivoyage.org/wiki/Taipei"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    25.033,
+    121.5654
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 19,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 15,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 19
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 18
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 20
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 16
+    },
+    {
+      "high": 27,
+      "low": 22,
+      "rain_days": 15
+    },
+    {
+      "high": 25,
+      "low": 20,
+      "rain_days": 13
+    },
+    {
+      "high": 20,
+      "low": 16,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

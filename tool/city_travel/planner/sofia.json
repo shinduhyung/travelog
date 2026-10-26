@@ -1,0 +1,557 @@
+{
+  "city": "Sofia",
+  "checked": "October 2026",
+  "intro_line": "Sofia: ancient ruins beneath a young, green capital.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "City Centre",
+        "Vitosha Blvd",
+        "Lozenets",
+        "Studentski Grad"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "City Centre",
+        "Vitosha Blvd",
+        "Lozenets",
+        "Studentski Grad"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "City Centre",
+        "Vitosha Blvd",
+        "Lozenets",
+        "Studentski Grad"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "City Centre",
+        "Vitosha Blvd",
+        "Lozenets",
+        "Studentski Grad"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "City Centre",
+        "Vitosha Blvd",
+        "Lozenets",
+        "Studentski Grad"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -4,
+        "rain_days": 9,
+        "note": "Coldest month: highs near 5°C, lows around -4°C. Pack a warm coat and boots."
+      },
+      {
+        "high": 9,
+        "low": -1,
+        "rain_days": 8,
+        "note": "Still cold, highs near 9°C. Fewer tourists and lower prices."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 12,
+        "note": "Mild but wet: about 12 rain days. Bring an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 5,
+        "rain_days": 10,
+        "note": "Spring warms up to 17°C. Good for walking and Vitosha hikes."
+      },
+      {
+        "high": 21,
+        "low": 10,
+        "rain_days": 14,
+        "note": "Pleasant at 21°C but the wettest month, around 14 rain days."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 12,
+        "note": "Warm and green at 25°C. Long evenings and outdoor cafés."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 6,
+        "note": "Hot and dry: highs near 28°C, only about 6 rain days."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 6,
+        "note": "Similar to July: hot and mostly dry. Good for mountain escapes."
+      },
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 5,
+        "note": "Warm and dry at 24°C. One of the best months to visit."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 7,
+        "note": "Cooler at 18°C with autumn colour. Still good for sightseeing."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 9,
+        "note": "Chilly at 12°C and wetter. Bring layers."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 10,
+        "note": "Cold again: highs near 7°C, lows around -1°C. Festive city lights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.9,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.9,
+      0.9,
+      1,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.3,
+      0.4,
+      0.6,
+      0.85,
+      1,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.5,
+      0.3
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "nevsky": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning or late afternoon",
+      "area": "City Centre",
+      "popularity": 5
+    },
+    "boyana": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning; combine with a Vitosha walk",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "stgeorge": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time; quick stop",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "vitosha-blvd": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Vitosha Blvd",
+      "popularity": 5
+    },
+    "shopska": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "synagogue": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "central-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning or lunchtime",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "women-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "free-tour": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "vitoshka-view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear morning; summer and autumn",
+      "area": "City Centre",
+      "popularity": 4
+    },
+    "borisova": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "roman-ruins": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Any time",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "ndk-view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "banitsa-breakfast": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "vitoshka-cafes": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon into evening",
+      "area": "Vitosha Blvd",
+      "popularity": 3
+    },
+    "national-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "sveta-nedelya": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "rakia-bar": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "City Centre",
+      "popularity": 3
+    },
+    "tram-ride": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "City Centre",
+      "popularity": 2
+    },
+    "book-market": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Afternoon",
+      "area": "Vitosha Blvd",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the cathedral, Roman ruins and old centre at an easy pace. Add a night for a Vitosha or Rila day trip."
+  },
+  "airports": [
+    {
+      "code": "SOF",
+      "name": "Sofia Airport",
+      "primary": true,
+      "note": "Main gateway, about 7 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro Line 4",
+          "to": "City centre",
+          "price": "1.60 лв",
+          "time": "40 min",
+          "note": "Stop is just outside Terminal 2."
+        },
+        {
+          "mode": "Bus 84",
+          "to": "City centre / Orlov Most",
+          "price": "1.60 лв",
+          "time": "30-40 min",
+          "note": "Serves both terminals; pay contactless aboard."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "25-30 лв",
+          "time": "20-30 min",
+          "note": "Use the official OK Supertrans rank only."
+        },
+        {
+          "mode": "Ridenow app",
+          "to": "City centre",
+          "price": "20-30 лв",
+          "time": "20-30 min",
+          "note": "Book in the app to avoid touts."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Sofia",
+      "https://en.wikivoyage.org/wiki/Sofia"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "budget"
+  ],
+  "transit": {
+    "best": "Walk the centre; use the metro for the airport and longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Line 4 links the airport to the centre in about 40 minutes. Cheap and fast."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses, trams and trolleybuses run 05:00–23:00, plus four night lines. A single ticket is about 1.60 лв; a day card about 4 лв."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are yellow. Use OK Supertrans or the Ridenow app to avoid overcharging."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the city; parking is hard. Rent only for trips outside Sofia."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable, but pavements are uneven and potholed. Watch your step."
+      },
+      {
+        "mode": "Contactless payment",
+        "has": true,
+        "text": "Bank cards and Apple/Google Pay work on metro gates and ticket readers."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with four clear seasons: cold winters, warm dry summers and a wet spring.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days from 21°C to 28°C. Ideal for walking the city and hiking Vitosha."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs of 5–9°C and lows below freezing. Snow is possible. Pack a warm coat, hat and boots."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in spring",
+        "text": "May has about 14 rain days. Showers pass quickly; carry a small umbrella."
+      },
+      {
+        "icon": "🌞",
+        "title": "Driest in late summer",
+        "text": "July, August and September have only 5–6 rain days. Reliable sunshine."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild, pleasant autumn",
+        "text": "September and October stay at 18–24°C. Good light and fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable shoes for uneven pavements, layers for cool evenings, and a rain jacket in spring and autumn."
+      }
+    ]
+  }
+}

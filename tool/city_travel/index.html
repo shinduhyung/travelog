@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City Travel Editor</title>
+<!--
+  tool/city_travel/index.html
+
+  Standalone editor/previewer for the "trip prep" content in lib/widgets/city_travel_modal.dart
+  (curated tour affiliate cards), outside the Flutter app.
+
+  - Click "Open assets folder" and pick the project's assets/ folder (Chrome/Edge).
+    Reads:  city_tour_links.json (edited), top_city_hub_airport.json, all_landmarks.json, cities.json,
+            bounce_city_pages.json, city_info.json (tips for the preview)
+    Writes: city_tour_links.json, and bounce_city_pages.json when a Bounce slug changed
+            (folder mode only; the download fallback saves city_tour_links.json alone).
+  - Affiliate IDs (AFFILIATE_PARAMS) are added to matching tour links on save and on paste.
+    Other browsers: pick those files with the file picker; saving downloads city_tour_links.json.
+  - Output keeps the file's style: 2-space indent, short string arrays on one line,
+    original line endings.
+  - The preview mirrors city_travel_modal.dart's section order:
+    Flights -> Stays -> Tours -> SIMs -> Luggage Storage -> More -> Travel Tips -> disclosure.
+  - Checks match how the app reads the data: the city must equal City.name exactly,
+    and tour landmarks must equal a `name` in all_landmarks.json or the app silently drops them.
+-->
+<style>
+  :root {
+    --bg: #f3f4f6; --panel: #fff; --line: #e5e7eb; --text: #111827; --muted: #6b7280;
+    --accent: #1ABFBC; --accent-soft: rgba(26,191,188,.08); --accent-mid: rgba(26,191,188,.15);
+    --err: #b91c1c; --err-bg: #fee2e2; --warn: #92400e; --warn-bg: #fef3c7; --ok: #0f6e56;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { background: var(--bg); color: var(--text); font: 14px/1.45 -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; display: flex; flex-direction: column; }
+  button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 6px 12px; color: var(--text); }
+  button:hover { border-color: #9ca3af; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  button.danger { color: var(--err); }
+  button.sm { padding: 3px 8px; font-size: 12px; }
+  button:disabled { opacity: .45; cursor: default; }
+  input, textarea, select { font: inherit; color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 7px 9px; width: 100%; background: #fff; }
+  textarea { resize: vertical; min-height: 70px; line-height: 1.5; }
+  input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+  header.bar { display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  header.bar h1 { font-size: 15px; margin: 0 12px 0 0; }
+  #fileName { color: var(--muted); font-size: 13px; }
+  #dirty { color: var(--warn); font-size: 13px; font-weight: 600; }
+  .spacer { flex: 1; }
+  #banner { display: none; padding: 8px 16px; background: var(--warn-bg); color: var(--warn); font-size: 13px; border-bottom: 1px solid #fde68a; }
+
+  main { flex: 1; display: grid; grid-template-columns: 250px minmax(380px, 1fr) 420px; min-height: 0; }
+  aside, section.editor, section.preview { overflow: auto; min-height: 0; }
+  aside { background: var(--panel); border-right: 1px solid var(--line); }
+  .side-top { padding: 10px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; position: sticky; top: 0; background: var(--panel); z-index: 1; }
+  #counts { font-size: 12px; color: var(--muted); }
+  #cityList { list-style: none; margin: 0; padding: 4px 0; }
+  #cityList li { padding: 6px 12px; display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; }
+  #cityList li:hover { background: #f9fafb; }
+  #cityList li.active { background: var(--accent-soft); font-weight: 600; }
+  #cityList li.none { color: #9ca3af; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: #e5e7eb; }
+  .dot.ok { background: #34d399; } .dot.warn { background: #f59e0b; } .dot.err { background: #ef4444; }
+  .cnt { margin-left: auto; font-size: 11px; color: var(--muted); }
+  .mod { color: var(--warn); font-size: 11px; }
+
+  section.editor { padding: 16px 20px 40px; }
+  .empty { color: var(--muted); padding: 60px 20px; text-align: center; line-height: 1.8; }
+  .ed-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+  .ed-head h2 { margin: 0; font-size: 18px; flex: 1; }
+  .ed-sub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .tour { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: 12px; margin-top: 12px; }
+  .tour-head { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+  .tour-head b { flex: 1; font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px 10px; }
+  .span2 { grid-column: span 2; } .span4 { grid-column: 1 / -1; }
+  label.f { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); font-weight: 600; min-width: 0; }
+  .hint { font-size: 11px; color: var(--muted); font-weight: 400; }
+  .lm-status { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .lm-status span { font-size: 11px; padding: 2px 7px; border-radius: 10px; }
+  .lm-status .y { background: #d1fae5; color: var(--ok); }
+  .lm-status .n { background: var(--err-bg); color: var(--err); }
+  .suggest { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .suggest button { font-size: 11px; padding: 1px 7px; margin: 2px 3px 0 0; border-radius: 10px; }
+  .issues { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+  .issue { font-size: 12px; padding: 5px 9px; border-radius: 6px; }
+  .issue.err { background: var(--err-bg); color: var(--err); }
+  .issue.warn { background: var(--warn-bg); color: var(--warn); }
+  .issue.ok { color: var(--ok); }
+
+  /* ── preview: mirrors city_travel_modal.dart ── */
+  section.preview { background: #e5e7eb; padding: 16px; border-left: 1px solid var(--line); }
+  .pv-note { font-size: 11px; color: var(--muted); text-align: center; margin-bottom: 8px; }
+  .phone { width: 100%; max-width: 390px; margin: 0 auto; background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+  .hero { height: 220px; position: relative; background: #f3f4f6; }
+  .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.55)); }
+  .hero .x { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 50%; background: rgba(0,0,0,.38); color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1; font-size: 16px; }
+  .hero .ttl { position: absolute; left: 20px; right: 20px; bottom: 18px; z-index: 1; display: flex; align-items: center; gap: 8px; color: #fff; }
+  .hero .ttl .flag { font-size: 22px; }
+  .hero .ttl .n { font-size: 24px; font-weight: 800; line-height: 1.15; }
+  .hero .ttl .c { font-size: 13px; font-weight: 500; opacity: .85; }
+  .pv { padding: 20px 20px 32px; }
+  .st { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 800; margin: 28px 0 12px; }
+  .st:first-child { margin-top: 0; }
+  .st i { font-style: normal; color: var(--accent); font-size: 16px; width: 18px; text-align: center; }
+  .card { border: 1px solid #eee; border-radius: 16px; padding: 14px; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,.03); }
+  .flight { display: flex; align-items: center; gap: 12px; padding: 16px; }
+  .flight .r { flex: 1; } .flight .r b { font-size: 14px; font-weight: 800; } .flight .r div { font-size: 12px; color: #9ca3af; }
+  .chev { color: #d1d5db; }
+  .hscroll { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 2px; }
+  .stay { flex: none; width: 108px; height: 92px; padding: 14px; border-radius: 16px; background: var(--accent-soft); border: 1px solid var(--accent-mid); display: flex; flex-direction: column; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; }
+  .stay i { font-style: normal; font-size: 20px; }
+  .tour-card { margin-bottom: 12px; display: block; color: inherit; text-decoration: none; }
+  .lm-lead { display: flex; gap: 6px; align-items: flex-start; font-size: 12.5px; font-weight: 800; line-height: 1.3; }
+  .lm-lead i { font-style: normal; color: var(--accent); }
+  .lm-row { display: flex; gap: 10px; overflow-x: auto; margin: 10px 0 12px; }
+  .lm { flex: none; width: 84px; text-align: center; }
+  .lm .img { width: 84px; height: 64px; border-radius: 12px; overflow: hidden; background: var(--accent-mid); }
+  .lm .img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lm div:last-child { font-size: 9.5px; font-weight: 600; color: #374151; line-height: 1.15; margin-top: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .hl { background: #fafafa; border-radius: 12px; padding: 10px; margin-bottom: 10px; }
+  .hl div { display: flex; gap: 6px; font-size: 11.5px; color: #374151; line-height: 1.35; margin-bottom: 4px; }
+  .hl div::before { content: "✔"; color: var(--accent); font-size: 11px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .badges span { font-size: 10px; font-weight: 600; color: var(--accent); background: rgba(26,191,188,.08); padding: 4px 8px; border-radius: 20px; }
+  .t-title { display: flex; gap: 6px; font-size: 12.5px; font-weight: 700; }
+  .t-title span { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .t-meta { font-size: 11px; color: #9ca3af; margin-top: 3px; }
+  .t-meta b { color: #4b5563; font-weight: 600; } .t-meta .star { color: #d97706; }
+  .t-foot { display: flex; align-items: baseline; gap: 4px; margin-top: 10px; }
+  .t-foot s { font-size: 10px; color: #9ca3af; }
+  .t-foot b { font-size: 13px; font-weight: 800; }
+  .t-foot span { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--accent); }
+  .prov { display: flex; gap: 12px; }
+  .prov a { flex: 1; padding: 14px; border-radius: 16px; background: var(--accent-soft); border: 1px solid var(--accent-mid); color: inherit; text-decoration: none; }
+  .prov b { display: block; font-size: 13px; margin-top: 10px; } .prov span { font-size: 11px; color: #9ca3af; }
+  .esim { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 16px; color: #fff; text-decoration: none; background: linear-gradient(90deg, var(--accent), rgba(26,191,188,.75)); }
+  .esim .ic { padding: 10px; border-radius: 12px; background: rgba(255,255,255,.18); }
+  .esim b { display: block; font-size: 14px; } .esim span { font-size: 12px; opacity: .85; }
+  .more { flex: none; width: 104px; height: 88px; padding: 12px; border-radius: 16px; background: #fafafa; border: 1px solid #eee; opacity: .5; display: flex; flex-direction: column; justify-content: space-between; }
+  .more b { font-size: 11px; color: #374151; } .more span { font-size: 9px; color: #9ca3af; }
+  .tip { display: flex; gap: 12px; padding: 14px; border-radius: 14px; background: #fafafa; margin-bottom: 10px; }
+  .tip i { font-style: normal; color: var(--accent); }
+  .tip b { font-size: 13px; display: block; } .tip span { font-size: 12px; color: #6b7280; line-height: 1.4; }
+  .disc { font-size: 11px; color: #9ca3af; font-style: italic; margin-top: 20px; }
+  .tag-generic { font-size: 10px; color: var(--warn); background: var(--warn-bg); padding: 1px 6px; border-radius: 8px; font-weight: 600; margin-left: 4px; }
+
+  dialog { border: none; border-radius: 14px; padding: 0; width: min(680px, calc(100vw - 32px)); box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+  dialog::backdrop { background: rgba(0,0,0,.35); }
+  .dlg { padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .dlg h3 { margin: 0; font-size: 16px; }
+  .dlg textarea { min-height: 260px; font-family: Consolas, monospace; font-size: 12px; }
+  .dlg .actions { display: flex; justify-content: flex-end; gap: 8px; }
+  #pasteMsg { font-size: 12px; white-space: pre-wrap; color: var(--err); }
+
+  @media (max-width: 1150px) {
+    main { grid-template-columns: 210px 1fr; }
+    section.preview { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<header class="bar">
+  <h1>City Travel Editor</h1>
+  <button id="btnOpen" class="primary">Open assets folder</button>
+  <input id="fileInput" type="file" accept=".json" multiple hidden>
+  <button id="btnSave" disabled>Save (Ctrl+S)</button>
+  <span id="fileName">No file open</span>
+  <span id="dirty"></span>
+  <span class="spacer"></span>
+  <button id="btnPaste" disabled>Paste JSON</button>
+</header>
+<div id="banner"></div>
+
+<main>
+  <aside>
+    <div class="side-top">
+      <input id="search" placeholder="Search cities" disabled>
+      <select id="filter" disabled>
+        <option value="all">All cities</option>
+        <option value="has">With tours</option>
+        <option value="none">Without tours</option>
+        <option value="issue">Errors & warnings</option>
+      </select>
+      <div id="counts"></div>
+    </div>
+    <ul id="cityList"></ul>
+  </aside>
+
+  <section class="editor" id="editor">
+    <div class="empty">
+      Open the project's <b>assets</b> folder.<br>
+      <span class="hint">Edits city_tour_links.json and bounce_city_pages.json. The other files are read only.</span>
+    </div>
+  </section>
+
+  <section class="preview" id="preview"></section>
+</main>
+
+<datalist id="providerList">
+  <option value="GetYourGuide"><option value="Klook"><option value="Viator"><option value="Tiqets">
+</datalist>
+
+<dialog id="pasteDlg">
+  <div class="dlg">
+    <h3>Paste JSON</h3>
+    <div class="hint">
+      Accepted: <code>[{"city": "Dubai", "tours": [...]}, ...]</code> · <code>{"city": ..., "tours": [...]}</code>
+      · one tour <code>{"title": ..., "url": ...}</code> or an array of tours (added to the selected city).
+      A city entry replaces that city's whole tour list.
+    </div>
+    <textarea id="pasteText" spellcheck="false"></textarea>
+    <div id="pasteMsg"></div>
+    <div class="actions">
+      <button id="pasteCancel">Cancel</button>
+      <button id="pasteApply" class="primary">Apply</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+"use strict";
+
+const TOUR_FIELDS = ["title", "provider", "url", "rating", "reviewCount", "price", "originalPrice",
+  "duration", "badges", "highlights", "landmarks"];
+// Generic copy from city_travel_modal.dart _travelTips (same for every city today).
+const GENERIC_TIPS = [
+  ["☀", "Best time to visit", "Check seasonal weather before booking — shoulder seasons often mean better prices and fewer crowds."],
+  ["🚌", "Getting around", "Look into local transit passes; they're usually cheaper than single tickets for multi-day trips."],
+  ["💳", "Currency & tipping", "Notify your bank before traveling and check local tipping norms — they vary widely by country."],
+  ["🛡", "Safety basics", "Keep digital copies of important documents and know your embassy's local contact info."],
+];
+// Affiliate query params added to every tour link of that provider (on save and on paste).
+// Existing params are kept; these keys are set to the values below.
+const AFFILIATE_PARAMS = [
+  { host: /(^|\.)getyourguide\./, params: { partner_id: "EMZVISH", utm_medium: "online_publisher" } },
+];
+
+function withAffiliate(url) {
+  let u;
+  try { u = new URL(String(url).trim()); } catch (_) { return url; }
+  const rule = AFFILIATE_PARAMS.find((r) => r.host.test(u.hostname));
+  if (!rule) return url;
+  for (const [k, v] of Object.entries(rule.params)) u.searchParams.set(k, v);
+  return u.toString();
+}
+
+// Same as _bounceRef / _openBounce in city_travel_modal.dart.
+const BOUNCE_REF = "TRAVELOG999083578969";
+const bounceUrl = (city) => state.bouncePages.has(city)
+  ? `https://bounce.com/luggage-storage/${state.bouncePages.get(city)}?ref=${BOUNCE_REF}&utm_source=affiliates&utm_medium=link`
+  : `https://go.bounce.com/${BOUNCE_REF}`;
+
+// Same as _airaloTrackingUrl in city_travel_modal.dart.
+const AIRALO_TRACKING_URL = "https://airalo.pxf.io/c/7592796/1268485/15608";
+
+// Same as _stayTypes / _expediaGroupAffiliateUrl in city_travel_modal.dart (Expedia Group via Partnerize).
+const STAYS = [["🏨", "Hotels", "Hotels.com"], ["🏢", "Apartments", "Vrbo"]];
+const expediaGroupUrl = (host, landing, camref, creativeref) =>
+  `https://${host}/affiliate?landingPage=${encodeURIComponent(landing)}&camref=${camref}&creativeref=${creativeref}`;
+const stayUrl = (provider, city) => provider === "Vrbo"
+  ? expediaGroupUrl("vrbo.com", `https://www.vrbo.com/search?destination=${encodeURIComponent(city)}`, "1011l6uqXe", "1101l63118")
+  : expediaGroupUrl("www.hotels.com", `https://www.hotels.com/Hotel-Search?destination=${encodeURIComponent(city)}`, "1011l6uqXc", "1011l66481");
+
+const state = {
+  tours: new Map(),      // city -> [tour], file order
+  original: new Map(),   // city -> JSON string at load/save, for "modified" markers
+  hubIata: new Map(),    // city -> first IATA (top_city_hub_airport.json)
+  cityMeta: new Map(),   // city -> {country, iso}
+  landmarks: new Set(),  // all landmark names
+  landmarksByCity: new Map(),
+  bouncePages: new Map(), // city -> bounce.com/luggage-storage slug (bounce_city_pages.json)
+  cityTips: new Map(),    // lowercase city -> tips (city_info.json), as CityInfoProvider looks them up
+  current: null,
+  dir: null,             // FileSystemDirectoryHandle
+  eol: "\n",
+  trailingNewline: false,
+  dirty: false,
+};
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+// ── Load ───────────────────────────────────────────────────────────────────
+
+$("btnOpen").onclick = async () => {
+  if (state.dirty && !confirm("You have unsaved changes. Open again anyway?")) return;
+  if (!window.showDirectoryPicker) { $("fileInput").click(); return; }
+  try {
+    const dir = await showDirectoryPicker({ id: "jidoapp-assets", mode: "readwrite" });
+    const read = async (name, required) => {
+      try { return await (await (await dir.getFileHandle(name)).getFile()).text(); }
+      catch (e) { if (required) throw new Error(`${name} is not in this folder. Pick the project's assets folder.`); return null; }
+    };
+    const files = {
+      "city_tour_links.json": await read("city_tour_links.json", true),
+      "top_city_hub_airport.json": await read("top_city_hub_airport.json"),
+      "all_landmarks.json": await read("all_landmarks.json"),
+      "cities.json": await read("cities.json"),
+      "bounce_city_pages.json": await read("bounce_city_pages.json"),
+      "city_info.json": await read("city_info.json"),
+    };
+    state.dir = dir;
+    load(files, `${dir.name}/city_tour_links.json`);
+  } catch (e) {
+    if (e.name !== "AbortError") alert(e.message);
+  }
+};
+
+$("fileInput").onchange = async (e) => {
+  const files = {};
+  for (const f of e.target.files) files[f.name] = await f.text();
+  e.target.value = "";
+  if (!files["city_tour_links.json"]) { alert("Include city_tour_links.json in the selection."); return; }
+  state.dir = null;
+  load(files, "city_tour_links.json (Save downloads a copy)");
+};
+
+function load(files, label) {
+  let list;
+  try {
+    list = JSON.parse(files["city_tour_links.json"]);
+    if (!Array.isArray(list)) throw new Error("The top level is not an array.");
+  } catch (e) {
+    alert("Couldn't read city_tour_links.json: " + e.message);
+    return;
+  }
+  const text = files["city_tour_links.json"];
+  state.eol = text.includes("\r\n") ? "\r\n" : "\n";
+  state.trailingNewline = /\r?\n$/.test(text);
+
+  state.tours = new Map();
+  const dupCities = [];
+  for (const entry of list) {
+    if (state.tours.has(entry.city)) dupCities.push(entry.city);
+    state.tours.set(entry.city, (entry.tours || []).map(normalizeTour));   // app: later entry wins
+  }
+  snapshot();
+
+  state.hubIata = new Map();
+  try {
+    for (const it of JSON.parse(files["top_city_hub_airport.json"] || "[]")) if (it.iata?.length) state.hubIata.set(it.name, it.iata[0]);
+  } catch (_) {}
+
+  state.cityMeta = new Map();
+  try {
+    const recs = JSON.parse(files["cities.json"] || "{}").tables?.[0]?.records || [];
+    for (const r of recs) state.cityMeta.set(r.dimensions.name, { country: r.dimensions.country, iso: r.dimensions.country_iso });
+  } catch (_) {}
+
+  try { state.bouncePages = new Map(Object.entries(JSON.parse(files["bounce_city_pages.json"] || "{}"))); }
+  catch (_) { state.bouncePages = new Map(); }
+  state.bounceOriginal = bounceText();
+  state.cityTips = new Map();
+  try { for (const [k, v] of Object.entries(JSON.parse(files["city_info.json"] || "{}"))) state.cityTips.set(k, v.tips || []); }
+  catch (_) {}
+
+  state.landmarks = new Set();
+  state.landmarksByCity = new Map();
+  try {
+    for (const l of JSON.parse(files["all_landmarks.json"] || "[]")) {
+      state.landmarks.add(l.name);
+      if (!state.landmarksByCity.has(l.city)) state.landmarksByCity.set(l.city, []);
+      state.landmarksByCity.get(l.city).push({ name: l.name, rank: Number(l.global_rank) || 1e9 });
+    }
+    for (const arr of state.landmarksByCity.values()) arr.sort((a, b) => a.rank - b.rank);
+  } catch (_) {}
+
+  const missing = ["top_city_hub_airport.json", "all_landmarks.json", "cities.json"].filter((f) => !files[f]);
+  showBanner([
+    dupCities.length ? `These cities appear twice: ${dupCities.join(", ")}. The app uses the later entry; saving merges them.` : "",
+    missing.length ? `Opened without ${missing.join(", ")}. The city list, landmark checks and flight preview are limited.` : "",
+  ].filter(Boolean).join(" "));
+
+  state.current = [...state.tours.keys()][0] || allCities()[0] || null;
+  for (const id of ["btnSave", "btnPaste", "search", "filter"]) $(id).disabled = false;
+  $("fileName").textContent = label;
+  setDirty(false);
+  renderAll();
+}
+
+function normalizeTour(t) {
+  const out = {};
+  for (const k of TOUR_FIELDS) if (t && t[k] !== undefined && t[k] !== null && t[k] !== "" && !(Array.isArray(t[k]) && !t[k].length)) out[k] = t[k];
+  for (const k of Object.keys(t || {})) if (!(k in out) && !TOUR_FIELDS.includes(k)) out[k] = t[k];
+  return out;
+}
+
+function snapshot() {
+  state.original = new Map([...state.tours].map(([c, t]) => [c, JSON.stringify(t)]));
+}
+
+// All destination cities the travel modal can show, plus any cities already in the tour file.
+function allCities() {
+  const set = new Set([...state.hubIata.keys(), ...state.tours.keys()]);
+  return [...set].sort((a, b) => a.localeCompare(b));
+}
+
+// ── Save ───────────────────────────────────────────────────────────────────
+
+// Same style as the hand-written file: 2-space indent, short primitive arrays inline.
+function format(value, indent = "") {
+  const pad = indent + "  ";
+  if (Array.isArray(value)) {
+    if (!value.length) return "[]";
+    if (value.every((v) => v === null || typeof v !== "object")) {
+      const inline = "[" + value.map((v) => JSON.stringify(v)).join(", ") + "]";
+      if (inline.length + indent.length <= 100) return inline;
+    }
+    return "[\n" + value.map((v) => pad + format(v, pad)).join(",\n") + "\n" + indent + "]";
+  }
+  if (value && typeof value === "object") {
+    const keys = Object.keys(value);
+    if (!keys.length) return "{}";
+    return "{\n" + keys.map((k) => pad + JSON.stringify(k) + ": " + format(value[k], pad)).join(",\n") + "\n" + indent + "}";
+  }
+  return JSON.stringify(value);
+}
+
+function applyAffiliate() {
+  for (const tours of state.tours.values()) for (const t of tours) if (t.url) t.url = withAffiliate(t.url);
+}
+
+function serialize() {
+  const list = [...state.tours].filter(([, t]) => t.length).map(([city, tours]) => ({ city, tours: tours.map(normalizeTour) }));
+  let s = format(list);
+  if (state.eol === "\r\n") s = s.replace(/\n/g, "\r\n");
+  if (state.trailingNewline) s += state.eol;
+  return s;
+}
+
+async function save() {
+  const errCities = [...state.tours.keys()].filter((c) => level(cityIssues(c)) === "err");
+  if (errCities.length && !confirm(`These cities have errors: ${errCities.join(", ")}\nSave anyway?`)) return;
+  applyAffiliate();
+  const text = serialize();
+  try {
+    if (state.dir) {
+      const h = await state.dir.getFileHandle("city_tour_links.json");
+      const w = await h.createWritable();
+      await w.write(text);
+      await w.close();
+      if (bounceText() !== state.bounceOriginal) {
+        const bh = await state.dir.getFileHandle("bounce_city_pages.json", { create: true });
+        const bw = await bh.createWritable();
+        await bw.write(bounceText());
+        await bw.close();
+      }
+    } else {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([text], { type: "application/json" }));
+      a.download = "city_tour_links.json";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }
+    for (const [c, t] of [...state.tours]) if (!t.length) state.tours.delete(c);
+    snapshot();
+    state.bounceOriginal = bounceText();
+    setDirty(false);
+    showBanner("");
+    renderList();
+  } catch (e) {
+    alert("Save failed: " + e.message);
+  }
+}
+
+$("btnSave").onclick = save;
+document.addEventListener("keydown", (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s" && !$("btnSave").disabled) { e.preventDefault(); save(); }
+});
+window.addEventListener("beforeunload", (e) => { if (state.dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+function setDirty(v) { state.dirty = v; $("dirty").textContent = v ? "● Unsaved changes" : ""; }
+function showBanner(msg) { $("banner").textContent = msg; $("banner").style.display = msg ? "block" : "none"; }
+
+const isModified = (c) => (state.original.get(c) ?? "[]") !== JSON.stringify(state.tours.get(c) || []);
+function refreshDirty() {
+  const cities = new Set([...state.tours.keys(), ...state.original.keys()]);
+  setDirty([...cities].some(isModified) || bounceText() !== state.bounceOriginal);
+}
+
+// bounce_city_pages.json: { "City Name": "bounce-slug" }, sorted by city, 2-space indent.
+function bounceText() {
+  const obj = Object.fromEntries([...state.bouncePages].filter(([, v]) => v).sort(([a], [b]) => a.localeCompare(b)));
+  return JSON.stringify(obj, null, 2) + "\n";
+}
+
+// ── Validation ─────────────────────────────────────────────────────────────
+
+function tourIssues(city, t) {
+  const out = [];
+  const err = (m) => out.push(["err", m]);
+  const warn = (m) => out.push(["warn", m]);
+  if (!t.title?.trim()) err("Title is empty");
+  if (!t.provider?.trim()) err("Provider is empty");
+  if (!t.url?.trim()) err("URL is empty");
+  else {
+    let u = null;
+    try { u = new URL(t.url); } catch (_) { err("URL is not valid"); }
+    if (u) {
+      if (u.protocol !== "https:") warn("URL is not https");
+      const host = u.hostname;
+      if (/klook\./.test(host) && !u.searchParams.has("aid")) warn("Klook affiliate ID (aid) is missing from the URL, so no commission is tracked");
+      if (/viator\./.test(host) && !u.searchParams.has("pid")) warn("Viator affiliate ID (pid) is missing from the URL, so no commission is tracked");
+    }
+  }
+  if (t.rating !== undefined && !(typeof t.rating === "number" && t.rating >= 0 && t.rating <= 5)) err("Rating must be a number from 0 to 5");
+  if (t.reviewCount !== undefined && !Number.isInteger(t.reviewCount)) err("Review count must be a whole number");
+  if (t.originalPrice && !t.price) warn("Original price only shows when a price is set");
+  const hl = t.highlights || [];
+  if (!hl.length) warn("No highlights, so the card has no 'why this tour' box");
+  else if (hl.length > 4) warn(`Use 2–4 highlights (now ${hl.length})`);
+  const lms = t.landmarks || [];
+  if (!lms.length) warn("No landmarks, so the card has no landmark quest row");
+  if (state.landmarks.size) {
+    const bad = lms.filter((n) => !state.landmarks.has(n));
+    if (bad.length) err(`Not in all_landmarks.json, so the app hides them: ${bad.join(", ")}`);
+  }
+  return out;
+}
+
+function cityIssues(city) {
+  const tours = state.tours.get(city) || [];
+  const out = [];
+  if (tours.length && state.hubIata.size && !state.hubIata.has(city) && !state.cityMeta.has(city))
+    out.push(["err", `"${city}" doesn't match a city name in the app, so these tours won't show (case and accents must match)`]);
+  tours.forEach((t, i) => tourIssues(city, t).forEach(([lv, m]) => out.push([lv, `Tour ${i + 1}: ${m}`])));
+  return out;
+}
+
+const level = (issues) => issues.some((i) => i[0] === "err") ? "err" : issues.length ? "warn" : "ok";
+
+// ── City list ──────────────────────────────────────────────────────────────
+
+function renderAll() { renderList(); renderEditor(); renderPreview(); }
+
+function renderList() {
+  const q = $("search").value.trim().toLowerCase();
+  const filter = $("filter").value;
+  const cities = allCities();
+  let withTours = 0, nIssue = 0;
+  const html = [];
+  for (const c of cities) {
+    const n = (state.tours.get(c) || []).length;
+    const lv = n ? level(cityIssues(c)) : "";
+    if (n) withTours++;
+    if (lv === "err" || lv === "warn") nIssue++;
+    if (q && !c.toLowerCase().includes(q)) continue;
+    if (filter === "has" && !n) continue;
+    if (filter === "none" && n) continue;
+    if (filter === "issue" && !(lv === "err" || lv === "warn")) continue;
+    html.push(`<li data-c="${esc(c)}" class="${c === state.current ? "active" : ""} ${n ? "" : "none"}">
+      <span class="dot ${lv}"></span>${esc(c)}
+      <span class="cnt">${isModified(c) ? '<span class="mod">edited · </span>' : ""}${n ? `${n} tour${n > 1 ? "s" : ""}` : ""}</span></li>`);
+  }
+  $("cityList").innerHTML = html.join("");
+  $("counts").textContent = `${cities.length} cities · ${withTours} with tours · ${nIssue} need attention`;
+}
+
+$("cityList").onclick = (e) => {
+  const li = e.target.closest("li");
+  if (!li) return;
+  state.current = li.dataset.c;
+  renderAll();
+};
+$("search").oninput = renderList;
+$("filter").onchange = renderList;
+
+// ── Editor ─────────────────────────────────────────────────────────────────
+
+function renderEditor() {
+  const c = state.current;
+  if (!c) { $("editor").innerHTML = `<div class="empty">Pick a city on the left.</div>`; return; }
+  const tours = state.tours.get(c) || [];
+  const meta = state.cityMeta.get(c);
+  const iata = state.hubIata.get(c);
+  $("editor").innerHTML = `
+    <div class="ed-head">
+      <h2>${esc(c)}</h2>
+      <button id="btnAddTour" class="primary">+ Add tour</button>
+      <button id="btnRevert" ${isModified(c) ? "" : "disabled"}>Revert</button>
+    </div>
+    <div class="ed-sub">${esc(meta ? meta.country : "Unknown country")} · Arrival airport ${esc(iata || "none (the flight card falls back to a search link)")}
+      · Cities without tours show GetYourGuide and Klook search cards</div>
+    <label class="f" style="max-width:460px;margin-bottom:4px">Bounce city page <span class="hint">· bounce.com/luggage-storage/<b>slug</b> · leave empty for the general link (go.bounce.com)</span>
+      <input id="bounceSlug" value="${esc(state.bouncePages.get(c) || "")}" placeholder="${esc(snake(c).replace(/_/g, "-"))}">
+    </label>
+    <div class="hint" style="margin-bottom:8px">Only enter a slug after checking that <a href="https://bounce.com/luggage-storage/${esc(state.bouncePages.get(c) || snake(c).replace(/_/g, "-"))}" target="_blank" rel="noopener">the page opens</a> in a browser.</div>
+    ${tours.map((t, i) => tourForm(c, t, i, tours.length)).join("") || `<div class="empty" style="padding:30px">No curated tours yet.</div>`}
+    <div class="issues" id="cityIssues"></div>`;
+  renderIssues();
+
+  $("bounceSlug").oninput = (e) => {
+    const v = e.target.value.trim().toLowerCase();
+    if (v) state.bouncePages.set(c, v); else state.bouncePages.delete(c);
+    refreshDirty();
+    renderPreview();
+  };
+
+  $("btnAddTour").onclick = () => {
+    if (!state.tours.has(c)) state.tours.set(c, []);
+    state.tours.get(c).push({ title: "", provider: "GetYourGuide", url: "" });
+    afterEdit(true);
+  };
+  $("btnRevert").onclick = () => {
+    const orig = state.original.get(c);
+    if (orig) state.tours.set(c, JSON.parse(orig)); else state.tours.delete(c);
+    afterEdit(true);
+  };
+}
+
+function tourForm(city, t, i, n) {
+  const v = (k) => esc(t[k] ?? "");
+  const lines = (k) => esc((t[k] || []).join("\n"));
+  const cityLms = (state.landmarksByCity.get(city) || []).map((l) => l.name).filter((x) => !(t.landmarks || []).includes(x)).slice(0, 12);
+  return `
+  <div class="tour" data-i="${i}">
+    <div class="tour-head">
+      <b>Tour ${i + 1}</b>
+      <button class="sm" data-act="up" ${i === 0 ? "disabled" : ""}>↑</button>
+      <button class="sm" data-act="down" ${i === n - 1 ? "disabled" : ""}>↓</button>
+      <button class="sm danger" data-act="del">Delete</button>
+    </div>
+    <div class="grid">
+      <label class="f span4">Title<input data-k="title" value="${v("title")}"></label>
+      <label class="f">Provider<input data-k="provider" list="providerList" value="${v("provider")}"></label>
+      <label class="f span2">URL <span class="hint">· the GetYourGuide affiliate ID is added on save</span><input data-k="url" value="${v("url")}" placeholder="https://..."></label>
+      <label class="f">Duration<input data-k="duration" value="${v("duration")}" placeholder="6-7 hrs"></label>
+      <label class="f">Rating<input data-k="rating" data-type="num" value="${v("rating")}" placeholder="4.9"></label>
+      <label class="f">Reviews<input data-k="reviewCount" data-type="int" value="${v("reviewCount")}" placeholder="6340"></label>
+      <label class="f">Price<input data-k="price" value="${v("price")}" placeholder="$72"></label>
+      <label class="f">Original price<input data-k="originalPrice" value="${v("originalPrice")}" placeholder="$97"></label>
+      <label class="f span4">Badges <span class="hint">· one per line, short pill labels</span>
+        <textarea data-k="badges" data-type="list" rows="2">${lines("badges")}</textarea></label>
+      <label class="f span4">Highlights <span class="hint">· one per line, 2–4 reasons to book</span>
+        <textarea data-k="highlights" data-type="list" rows="4">${lines("highlights")}</textarea></label>
+      <label class="f span4">Landmarks <span class="hint">· one per line, must match a name in all_landmarks.json exactly</span>
+        <textarea data-k="landmarks" data-type="list" rows="3">${lines("landmarks")}</textarea>
+        <div class="lm-status">${(t.landmarks || []).map((x) => state.landmarks.size
+          ? `<span class="${state.landmarks.has(x) ? "y" : "n"}">${state.landmarks.has(x) ? "✓" : "✗"} ${esc(x)}</span>` : "").join("")}</div>
+        ${cityLms.length ? `<div class="suggest">${esc(city)} landmarks: ${cityLms.map((x) => `<button type="button" data-act="addlm" data-name="${esc(x)}">+ ${esc(x)}</button>`).join("")}</div>` : ""}
+      </label>
+    </div>
+  </div>`;
+}
+
+$("editor").addEventListener("input", (e) => {
+  const el = e.target;
+  const box = el.closest(".tour");
+  if (!box || !el.dataset.k) return;
+  const t = state.tours.get(state.current)[Number(box.dataset.i)];
+  const k = el.dataset.k, raw = el.value;
+  if (el.dataset.type === "list") t[k] = raw.split("\n").map((x) => x.trim()).filter(Boolean);
+  else if (el.dataset.type === "num") t[k] = raw.trim() === "" ? undefined : (isFinite(Number(raw)) ? Number(raw) : raw);
+  else if (el.dataset.type === "int") t[k] = raw.trim() === "" ? undefined : (/^\d+$/.test(raw.replace(/,/g, "").trim()) ? Number(raw.replace(/,/g, "").trim()) : raw);
+  else t[k] = raw;
+  if (t[k] === undefined || t[k] === "" || (Array.isArray(t[k]) && !t[k].length)) delete t[k];
+  afterEdit(false);
+  if (k === "landmarks") {
+    // refresh only the match chips so the textarea keeps focus
+    box.querySelector(".lm-status").innerHTML = (t.landmarks || []).map((x) => state.landmarks.size
+      ? `<span class="${state.landmarks.has(x) ? "y" : "n"}">${state.landmarks.has(x) ? "✓" : "✗"} ${esc(x)}</span>` : "").join("");
+  }
+});
+
+$("editor").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-act]");
+  if (!b) return;
+  const tours = state.tours.get(state.current);
+  const i = Number(b.closest(".tour").dataset.i);
+  const act = b.dataset.act;
+  if (act === "up" || act === "down") {
+    const j = act === "up" ? i - 1 : i + 1;
+    [tours[i], tours[j]] = [tours[j], tours[i]];
+  } else if (act === "del") {
+    if (!confirm(`Delete tour ${i + 1}?`)) return;
+    tours.splice(i, 1);
+  } else if (act === "addlm") {
+    tours[i].landmarks = [...(tours[i].landmarks || []), b.dataset.name];
+  }
+  afterEdit(true);
+});
+
+function afterEdit(rerenderEditor) {
+  refreshDirty();
+  renderList();
+  if (rerenderEditor) renderEditor(); else renderIssues();
+  renderPreview();
+}
+
+function renderIssues() {
+  const box = $("cityIssues");
+  if (!box) return;
+  $("btnRevert").disabled = !isModified(state.current);
+  const tours = state.tours.get(state.current) || [];
+  if (!tours.length) { box.innerHTML = ""; return; }
+  const issues = cityIssues(state.current);
+  box.innerHTML = issues.length
+    ? issues.map(([lv, m]) => `<div class="issue ${lv}">${lv === "err" ? "Error" : "Warning"} · ${esc(m)}</div>`).join("")
+    : `<div class="issue ok">All checks pass</div>`;
+}
+
+// ── Preview (city_travel_modal.dart) ───────────────────────────────────────
+
+const snake = (s) => s.toLowerCase().replace(/['`’]/g, "").replace(/[^a-z0-9\s]/g, "").trim().replace(/\s+/g, "_");
+const heroUrl = (name) => `https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/ranked_cities%2F${name === "San José" ? "san_jose_cr" : snake(name)}.jpg.jpg?alt=media`;
+const lmUrl = (name) => `https://firebasestorage.googleapis.com/v0/b/proboscis-2025.firebasestorage.app/o/countrydex%2F${snake(name)}.jpg?alt=media`;
+const flag = (iso) => iso && iso.length === 2 ? String.fromCodePoint(...[...iso.toUpperCase()].map((ch) => 0x1F1E6 + ch.charCodeAt(0) - 65)) : "";
+const enc = encodeURIComponent;
+
+function renderPreview() {
+  const c = state.current;
+  if (!c) { $("preview").innerHTML = ""; return; }
+  const meta = state.cityMeta.get(c) || {};
+  const country = meta.country || "";
+  const iata = state.hubIata.get(c);
+  const tours = state.tours.get(c) || [];
+
+  const tourHtml = tours.length ? tours.map((t) => {
+    const lms = (t.landmarks || []).filter((n) => !state.landmarks.size || state.landmarks.has(n));
+    return `<a class="card tour-card" href="${esc(withAffiliate(t.url || ""))}" target="_blank" rel="noopener">
+      ${lms.length ? `<div class="lm-lead"><i>⚑</i><span>Take this tour to unlock ${lms.length} new landmark quest${lms.length > 1 ? "s" : ""}</span></div>
+        <div class="lm-row">${lms.map((n) => `<div class="lm"><div class="img"><img alt="" loading="lazy" src="${esc(lmUrl(n))}" onerror="this.remove()"></div><div>${esc(n)}</div></div>`).join("")}</div>` : ""}
+      ${(t.highlights || []).length ? `<div class="hl">${t.highlights.map((h) => `<div>${esc(h)}</div>`).join("")}</div>` : ""}
+      ${(t.badges || []).length ? `<div class="badges">${t.badges.map((b) => `<span>${esc(b)}</span>`).join("")}</div>` : ""}
+      <div class="t-title"><span>${esc(t.title || "(untitled)")}</span><span style="flex:none;color:#9ca3af">›</span></div>
+      <div class="t-meta">${esc(t.provider)}${t.rating != null ? ` · <span class="star">★</span> <b>${esc(t.rating)}${t.reviewCount != null ? ` (${esc(t.reviewCount)})` : ""}</b>` : ""}${t.duration ? ` · ${esc(t.duration)}` : ""}</div>
+      <div class="t-foot">${t.price ? `${t.originalPrice ? `<s>${esc(t.originalPrice)}</s>` : ""}<b>${esc(t.price)}</b>` : ""}<span>View tour →</span></div>
+    </a>`;
+  }).join("") : `<div class="prov">
+      <a href="https://www.getyourguide.com/s/?q=${enc(c)}" target="_blank" rel="noopener">🎟<b>GetYourGuide</b><span>Tours &amp; activities</span></a>
+      <a href="https://www.klook.com/search/result/?query=${enc(c)}" target="_blank" rel="noopener">🎫<b>Klook</b><span>Tours &amp; activities</span></a>
+    </div>`;
+
+  $("preview").innerHTML = `
+    <div class="pv-note">App preview · departure is the user's home airport; ICN is assumed here</div>
+    <div class="phone">
+      <div class="hero">
+        <img alt="" src="${esc(heroUrl(c))}" onerror="this.remove()">
+        <div class="x">✕</div>
+        <div class="ttl"><span class="flag">${flag(meta.iso)}</span><div><div class="n">${esc(c)}</div><div class="c">${esc(country)}</div></div></div>
+      </div>
+      <div class="pv">
+        <div class="st"><i>✈</i>Flights &amp; Transportation</div>
+        <div class="card flight"><div class="r"><b>ICN → ${esc(iata || c)}</b><div>${iata ? "The app shows the live lowest fare" : "Search flights"}</div></div><span class="chev">›</span></div>
+
+        <div class="st"><i>🛏</i>Stays</div>
+        <div class="hscroll">${STAYS.map(([ic, label, provider]) => `<a class="stay" href="${esc(stayUrl(provider, c))}" target="_blank" rel="noopener"><i>${ic}</i><div>${label}<br><span style="font-size:10px;color:#9ca3af;font-weight:400">${provider}</span></div></a>`).join("")}</div>
+
+        <div class="st"><i>🎟</i>Tours &amp; Activities</div>
+        ${tourHtml}
+
+        <div class="st"><i>📶</i>SIMs</div>
+        <a class="esim" href="${esc(AIRALO_TRACKING_URL + "?u=" + enc(`https://www.airalo.com/${snake(country).replace(/_/g, "-")}-esim`))}" target="_blank" rel="noopener">
+          <span class="ic">📶</span><div style="flex:1"><b>Get an eSIM for ${esc(c)}</b><span>Stay connected in ${esc(country || "—")} from day one</span></div><span>›</span>
+        </a>
+
+        <div class="st"><i>🧳</i>Luggage Storage</div>
+        <a class="card flight" style="color:inherit;text-decoration:none" href="${esc(bounceUrl(c))}" target="_blank" rel="noopener">
+          <span style="padding:10px;border-radius:12px;background:var(--accent-mid);font-size:18px">🧳</span>
+          <div class="r"><b>Store your bags in ${esc(c)}</b><div>Drop luggage at nearby shops and hotels with Bounce${state.bouncePages.has(c) ? "" : " · general link"}</div></div><span class="chev">›</span>
+        </a>
+
+        <div class="st"><i>▦</i>More</div>
+        <div class="hscroll">
+          ${["Rental Car", "Travel Insurance", "Ground Transport"].map((x) => `<div class="more"><span style="font-size:18px">•</span><div><b>${x}</b><br><span>Coming soon</span></div></div>`).join("")}
+        </div>
+
+        ${(() => {
+          const tips = state.cityTips.get(c.toLowerCase().trim()) || [];
+          return tips.length
+            ? `<div class="st"><i>💡</i>Travel Tips</div>` + tips.map((t) => `<div class="tip"><i>💡</i><div><span>${esc(t)}</span></div></div>`).join("")
+            : `<div class="st"><i>💡</i>Travel Tips <span class="tag-generic">generic (no tips in city_info.json)</span></div>`
+              + GENERIC_TIPS.map(([ic, title, body]) => `<div class="tip"><i>${ic}</i><div><b>${title}</b><span>${body}</span></div></div>`).join("");
+        })()}
+
+        <div class="disc">We may earn a commission from bookings made through links in this app, at no extra cost to you.</div>
+      </div>
+    </div>`;
+}
+
+// ── Paste JSON ─────────────────────────────────────────────────────────────
+
+$("btnPaste").onclick = () => { $("pasteMsg").textContent = ""; $("pasteDlg").showModal(); $("pasteText").focus(); };
+$("pasteCancel").onclick = () => $("pasteDlg").close();
+$("pasteApply").onclick = () => {
+  let obj;
+  try {
+    obj = JSON.parse($("pasteText").value.trim().replace(/^```(?:json)?\s*|\s*```$/g, ""));
+  } catch (e) {
+    $("pasteMsg").textContent = "Couldn't parse JSON: " + e.message;
+    return;
+  }
+  const arr = Array.isArray(obj) ? obj : [obj];
+  const isCityEntry = (x) => x && typeof x === "object" && typeof x.city === "string" && Array.isArray(x.tours);
+  const isTour = (x) => x && typeof x === "object" && ("title" in x || "url" in x);
+  const changed = [];
+  if (arr.length && arr.every(isCityEntry)) {
+    for (const e of arr) { state.tours.set(e.city, e.tours.map(normalizeTour)); changed.push(e.city); }
+    state.current = arr[arr.length - 1].city;
+  } else if (arr.length && arr.every(isTour)) {
+    if (!state.current) { $("pasteMsg").textContent = "Pick a city first."; return; }
+    if (!state.tours.has(state.current)) state.tours.set(state.current, []);
+    state.tours.get(state.current).push(...arr.map(normalizeTour));
+    changed.push(state.current);
+  } else {
+    $("pasteMsg").textContent = "Unrecognized format. Paste one of the formats listed above.";
+    return;
+  }
+  applyAffiliate();
+  $("pasteDlg").close();
+  $("pasteText").value = "";
+  afterEdit(true);
+  const bad = changed.filter((c) => level(cityIssues(c)) === "err");
+  showBanner(`Pasted · ${changed.join(", ")}` + (bad.length ? ` · errors in: ${bad.join(", ")}` : "") + " · not saved yet.");
+};
+</script>
+</body>
+</html>

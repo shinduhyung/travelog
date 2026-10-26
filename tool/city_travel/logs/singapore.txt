@@ -1,0 +1,33 @@
+$ deepseek_prep.py Singapore
+  tokens in 1182 out 680
+Singapore: 10 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Singapore
+  tokens in 3868 out 785
+Singapore: 0 problems
+
+$ deepseek_city.py Singapore --stage places
+Singapore: places
+  tokens in 1254 out 4569
+
+$ deepseek_city.py Singapore --stage frame
+Singapore: frame
+  tokens in 2432 out 1742
+
+$ deepseek_city.py Singapore --stage plans
+Singapore: plans
+  plans for day
+  tokens in 2749 out 1116
+  plans for 1n
+  tokens in 2750 out 1203
+  plans for 2n
+  tokens in 2750 out 1709
+  plans for 3n
+  tokens in 2755 out 2273
+  plans for 4n
+  tokens in 2750 out 2306
+
+$ merge_city.py Singapore
+Singapore: 28 places, 16 plans, 0 errors, 0 warnings
+wrote itineraries/singapore.json and planner/singapore.json
+

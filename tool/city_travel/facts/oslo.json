@@ -1,0 +1,216 @@
+{
+  "currency": "NOK",
+  "usd_rate": 9.344,
+  "intro_line": "Oslo rewards with fjord views, Viking history, and modern design.",
+  "intro": "Oslo rewards visitors with a mix of culture, nature, and Scandinavian cool. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    }
+  ],
+  "areas": [
+    "Sentrum",
+    "Aker Brygge",
+    "Grünerløkka",
+    "Majorstuen"
+  ],
+  "taxi": {
+    "flag_day": 100,
+    "flag_airport": 200,
+    "per_km": 20,
+    "min_fare": 150
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "Metro (T-bane), trams, and buses cover the city; use the Ruter app or buy tickets at kiosks.",
+    "Ride apps Uber and Bolt operate in Oslo.",
+    "Taxis are expensive; Oslo Taxi and NorgesTaxi are reliable.",
+    "Driving is not recommended due to tolls and limited parking.",
+    "Walking and biking are easy in the compact centre; bike-sharing available.",
+    "Ferries connect to Bygdøy museums and islands in the fjord."
+  ],
+  "airports": [
+    {
+      "code": "OSL",
+      "name": "Oslo Gardermoen Airport",
+      "primary": true,
+      "note": "Main international gateway, 37 km north of city.",
+      "options": [
+        {
+          "mode": "Train (Vy)",
+          "to": "Oslo Central Station",
+          "price": "134 kr",
+          "time": "23 min",
+          "note": "Cheapest public option; includes local transit for 2 hours."
+        },
+        {
+          "mode": "Airport Express Train (Flytoget)",
+          "to": "Oslo Central Station",
+          "price": "268 kr",
+          "time": "19-22 min",
+          "note": "Faster but pricier; departs every 10-20 min."
+        },
+        {
+          "mode": "Bus (Flybussen)",
+          "to": "Oslo city centre",
+          "price": "279-319 kr",
+          "time": "45-60 min",
+          "note": "Cheaper online; multiple routes."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Oslo city centre",
+          "price": "700-1000 kr",
+          "time": "40-50 min",
+          "note": "Book ahead; fixed prices available."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "Oslo city centre",
+          "price": "600-900 kr",
+          "time": "40-50 min",
+          "note": "Pick-up in designated area."
+        }
+      ]
+    },
+    {
+      "code": "TRF",
+      "name": "Sandefjord Airport, Torp",
+      "primary": false,
+      "note": "Secondary airport, 86 km south; used by low-cost carriers.",
+      "options": [
+        {
+          "mode": "Train (Vy)",
+          "to": "Oslo Central Station",
+          "price": "249-289 kr",
+          "time": "1h 45min",
+          "note": "Free shuttle to Torp station; student discounts."
+        },
+        {
+          "mode": "Bus (Torpekspressen)",
+          "to": "Oslo city centre",
+          "price": "279 kr",
+          "time": "1h 45min",
+          "note": "Scheduled around flights; book online for less."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Oslo city centre",
+          "price": "2000 kr",
+          "time": "1h 30min",
+          "note": "Very expensive; not recommended."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Vigeland Park",
+    "Akershus Fortress",
+    "Oslo Opera House",
+    "Viking Ship Museum, Oslo",
+    "Munch Museum",
+    "The Royal Palace",
+    "Fram Museum",
+    "Fårikål",
+    "Holmenkollen Ski Museum",
+    "Kon-Tiki Museum",
+    "The Scream",
+    "TusenFryd",
+    "Ullevaal Stadion"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Oslo",
+      "https://en.wikivoyage.org/wiki/Oslo"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    59.9139,
+    10.7522
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": -1,
+      "low": -6,
+      "rain_days": 12
+    },
+    {
+      "high": 1,
+      "low": -5,
+      "rain_days": 10
+    },
+    {
+      "high": 5,
+      "low": -3,
+      "rain_days": 9
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 8
+    },
+    {
+      "high": 16,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 13
+    },
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 13
+    },
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 11
+    },
+    {
+      "high": 10,
+      "low": 5,
+      "rain_days": 12
+    },
+    {
+      "high": 4,
+      "low": 0,
+      "rain_days": 12
+    },
+    {
+      "high": 1,
+      "low": -4,
+      "rain_days": 13
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

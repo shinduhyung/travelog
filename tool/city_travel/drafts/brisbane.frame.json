@@ -1,0 +1,270 @@
+{
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, galleries and the river's history."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Koalas, river cruises and green escapes."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, laneway cafés and riverside dining."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "CBD",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to the river, Queen Street Mall and the CityCat ferries. Best base for first-timers.",
+      "center": [
+        -27.4698,
+        153.0251
+      ]
+    },
+    {
+      "area": "Fortitude Valley",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Nightlife, live music and cheap eats. A short walk or one train stop from the CBD.",
+      "center": [
+        -27.4571,
+        153.0343
+      ]
+    },
+    {
+      "area": "South Bank",
+      "range": [
+        200,
+        480
+      ],
+      "why": "Riverside parklands, the lagoon beach and museums. Family-friendly and walkable.",
+      "center": [
+        -27.481,
+        153.023
+      ]
+    },
+    {
+      "area": "West End",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Relaxed cafés and markets, close to South Bank. Good value for longer stays.",
+      "center": [
+        -27.483,
+        153.008
+      ]
+    }
+  ],
+  "food": [
+    "Try a classic café breakfast: eggs, sourdough and good coffee. Brisbane takes coffee seriously.",
+    "Eat at the markets: weekend farmers' markets and the West End markets have cheap, fresh food.",
+    "Seafood by the river: fish and chips at South Bank or along the waterfront.",
+    "Fortitude Valley and West End have the widest range of Asian and Middle Eastern cheap eats.",
+    "Book ahead for riverside dinners on Friday and Saturday nights. Check opening hours on the day."
+  ],
+  "more_time": [
+    "Swap a city day for a day trip to the koala sanctuary at Lone Pine. Check transport and entry prices on the day.",
+    "Take a CityCat ferry up the river for a cheap scenic ride instead of a paid cruise.",
+    "Add a day at Moreton Island or Stradbroke Island if you have a spare day. Book ferries ahead."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.7,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "family": [
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7
+    ],
+    "adventure": [
+      0.7,
+      0.7,
+      0.7,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.7
+    ]
+  },
+  "best_for": [
+    "nature",
+    "food"
+  ],
+  "recommend": {
+    "why": "Two nights covers the river, South Bank and the museums, with time for a koala sanctuary or a day trip."
+  },
+  "month_notes": [
+    "January: hot and wet. Highs near 29°C, about 16 rain days. Plan indoor sights and carry a rain jacket.",
+    "February: hot and wet, similar to January. Around 13 rain days. Mornings are best for walking.",
+    "March: still warm and wet, about 16 rain days. Highs near 28°C. Keep plans flexible.",
+    "April: cooler and drier. Highs near 26°C, about 8 rain days. Great month for outdoor days.",
+    "May: mild and dry. Highs near 23°C, about 7 rain days. Comfortable for walking and ferries.",
+    "June: cool and dry. Highs near 21°C, lows near 11°C. Bring a jacket for evenings.",
+    "July: the coolest month. Highs near 21°C, lows near 10°C, about 6 rain days. Pack warm layers.",
+    "August: cool and dry, highs near 23°C. About 5 rain days. Good for outdoor plans.",
+    "September: warming up, highs near 25°C, about 7 rain days. Pleasant and mostly dry.",
+    "October: warm, highs near 26°C, about 10 rain days. Showers return; carry a light rain jacket.",
+    "November: hot and wetter, highs near 28°C, about 11 rain days. Start early to beat the heat.",
+    "December: hot and wet, highs near 29°C, about 12 rain days. Book indoor backup plans."
+  ],
+  "climate_guide": {
+    "summary": "Subtropical: warm to hot most of the year, with a wet summer and a mild, dry winter.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to September",
+        "text": "Mild highs of 21–26°C and few rain days. Ideal for walking, ferries and day trips."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet summer (December to March)",
+        "text": "About 12–16 rain days a month. Showers can be heavy but often short. Carry a rain jacket."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid in summer",
+        "text": "Highs near 28–29°C with muggy air. Plan outdoor sights for early morning."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winter nights",
+        "text": "June to August lows drop to 10–11°C. Bring a jacket for evenings by the river."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is uneven",
+        "text": "August is the driest month with about 5 rain days. January and March are the wettest."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket, sunscreen and a hat. Add a warm layer for winter evenings."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the CBD and South Bank, then use the 50c Translink fares and CityCat ferries for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Brisbane Metro M1 and M2 buses run every 5–15 minutes along the busway. Fast and frequent."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Translink buses cover the city. A 50c flat fare covers most trips with up to 3 transfers."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "Translink trains link the CBD with the suburbs and airport line. Same 50c flat fare on most trips."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "best": true,
+        "text": "CityCat ferries are a scenic and practical way to cross the river. A cheap sightseeing ride too."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and DiDi operate; taxis are plentiful and take cards."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy outside peak hours, but parking in the CBD is costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The CBD is walkable, with riverside paths good for walking and cycling."
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+$ deepseek_prep.py Hong Kong
+  tokens in 1141 out 765
+Hong Kong: 10 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Hong Kong
+  tokens in 4062 out 939
+Hong Kong: 1 problems
+  - MFM taxi HK$300-500 vs tariff estimate 957
+
+$ deepseek_city.py Hong Kong --stage places
+Hong Kong: places
+  tokens in 1265 out 4440
+
+$ deepseek_city.py Hong Kong --stage frame
+Hong Kong: frame
+  tokens in 2415 out 1811
+  repaired JSON
+
+$ deepseek_city.py Hong Kong --stage plans
+Hong Kong: plans
+  plans for day
+  tokens in 2669 out 926
+  plans for 1n
+  tokens in 2670 out 914
+  plans for 2n
+  tokens in 2670 out 1283
+  plans for 3n
+  tokens in 2675 out 1746
+  plans for 4n
+  tokens in 2670 out 1875
+  plans for 5n
+  tokens in 2670 out 2607
+
+$ merge_city.py Hong Kong
+Hong Kong: 27 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/hong-kong.json and planner/hong-kong.json
+

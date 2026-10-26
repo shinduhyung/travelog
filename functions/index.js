@@ -8,14 +8,19 @@ admin.initializeApp();
 
 // Flight price + booking link Cloud Functions (RapidAPI Sky-scrapper proxy) —
 // see functions/flight_functions.js for the implementation.
-// 변경 후 (주석 처리)
-// const flightFunctions = require('./flight_functions');
-// exports.getFlightPrice = flightFunctions.getFlightPrice;
-// exports.getFlightBookingLink = flightFunctions.getFlightBookingLink;
+// 서버에 배포된 상태(2026-08-12, flight_functions.js 동일)와 맞춰 둔다. 이 줄이 주석이면
+// 다음 배포 때 CLI가 두 함수를 삭제할지 묻는다 — 앱이 실제로 호출하므로 지우면 안 됨.
+const flightFunctions = require('./flight_functions');
+exports.getFlightPrice = flightFunctions.getFlightPrice;
+exports.getFlightBookingLink = flightFunctions.getFlightBookingLink;
+exports.getFlightInsight = flightFunctions.getFlightInsight;
 
 // iOS 구독 갱신 누락 감지 (App Store Server API 폴링) — see functions/subscription_renewal_check.js
-const subscriptionRenewalCheck = require('./subscription_renewal_check');
-exports.checkIosSubscriptionRenewals = subscriptionRenewalCheck.checkIosSubscriptionRenewals;
+// 아직 배포한 적 없음. functions/SubscriptionKey_4A33FUJNJ9.p8 키 파일이 없어서 지금 올리면
+// 매일 실행 오류만 난다. 키를 넣고 켜면 첫 실행 때 놓친 갱신이 orders에 한꺼번에 들어가
+// notifyNewSubscription 알림이 여러 개 오고 매출 통계가 바뀔 수 있다.
+// const subscriptionRenewalCheck = require('./subscription_renewal_check');
+// exports.checkIosSubscriptionRenewals = subscriptionRenewalCheck.checkIosSubscriptionRenewals;
 
 // 통화 코드 -> 국가 코드 (Play 주문에서 국가를 못 가져왔을 때 폴백)
 const CURRENCY_TO_COUNTRY = {

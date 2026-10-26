@@ -1,0 +1,28 @@
+$ deepseek_facts.py Manama
+  tokens in 1264 out 615
+Manama: 1 problems
+  - BAH Bus A1 300 fils costs more than taxi BD 5-6
+
+$ deepseek_city.py Manama --stage places
+Manama: places
+  tokens in 1165 out 1913
+
+$ deepseek_city.py Manama --stage frame
+Manama: frame
+  tokens in 2456 out 1779
+
+$ deepseek_city.py Manama --stage plans
+Manama: plans
+  plans for day
+  tokens in 1851 out 952
+  plans for 1n
+  tokens in 1852 out 974
+  plans for 2n
+  tokens in 1857 out 1285
+  plans for 3n
+  tokens in 1852 out 1979
+
+$ merge_city.py Manama
+Manama: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/manama.json and planner/manama.json
+

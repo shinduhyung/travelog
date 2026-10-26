@@ -1,0 +1,231 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Lyon blends Roman history, Renaissance lanes and serious food.",
+  "intro": "Lyon rewards visitors who wander its two rivers, old town and bouchons. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Presqu'île",
+    "Vieux Lyon",
+    "Croix-Rousse",
+    "Part-Dieu"
+  ],
+  "taxi": {
+    "flag_day": 3,
+    "flag_airport": 5,
+    "per_km": 2,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro lines A-D plus two funiculars run about 05:00-00:00.",
+    "Five tram lines link the centre, campuses and suburbs.",
+    "Tap any contactless bank card: about €2.10 per 1-hr journey, capped near €6.30/day.",
+    "Buses cover the city; some stop after 21:00.",
+    "Taxis and ride apps like Uber and Bolt work; taxis wait at stations and the airport.",
+    "The centre is walkable; Vélo'v bikes and the Navigône ferry help on nice days."
+  ],
+  "airports": [
+    {
+      "code": "LYS",
+      "name": "Lyon Saint-Exupéry Airport",
+      "primary": true,
+      "note": "Main hub, about 20-25 km east of the centre.",
+      "options": [
+        {
+          "mode": "Bus 47 + tram T3",
+          "to": "Meyzieu Z.I then centre",
+          "price": "€2.10",
+          "time": "60-75 min",
+          "note": "Cheapest; bus runs half-hourly 06:30-22:00."
+        },
+        {
+          "mode": "Bus C200",
+          "to": "Metro line A east end",
+          "price": "€2.10",
+          "time": "45-60 min",
+          "note": "Good for eastern metro stops."
+        },
+        {
+          "mode": "Rhônexpress tram",
+          "to": "Part-Dieu station",
+          "price": "€17.10 single",
+          "time": "under 30 min",
+          "note": "Fastest; buy online to save, €4 onboard surcharge."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-50",
+          "time": "30-45 min",
+          "note": "Ask for an eastern metro stop to save money."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€35-50",
+          "time": "30-45 min",
+          "note": "Prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "GNB",
+      "name": "Grenoble Alpes-Isère Airport",
+      "primary": false,
+      "note": "Midway between Lyon and Grenoble; some low-cost flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Lyon centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Check agbus.fr schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Lyon centre",
+          "price": "€80-120",
+          "time": "50-70 min",
+          "note": "Long ride; train via Grenoble may be cheaper."
+        }
+      ]
+    },
+    {
+      "code": "GVA",
+      "name": "Geneva Airport",
+      "primary": false,
+      "note": "Swiss hub about 150 km northeast; good low-cost option.",
+      "options": [
+        {
+          "mode": "BlaBlaCar bus",
+          "to": "Perrache bus station",
+          "price": "check locally",
+          "time": "about 2 hr",
+          "note": "Two daily departures, 12:00 and 19:15."
+        },
+        {
+          "mode": "Train",
+          "to": "Part-Dieu station",
+          "price": "about CHF 37 total",
+          "time": "about 2.5 hr",
+          "note": "Local train to Geneva then TER to Lyon."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Lyon centre",
+          "price": "€200+",
+          "time": "2 hr",
+          "note": "Expensive; bus or train is better."
+        }
+      ]
+    }
+  ],
+  "max_km": 80,
+  "place_landmarks": [
+    "Basilica of Notre-Dame de Fourvière",
+    "Vieux Lyon",
+    "Groupama Stadium",
+    "Saône River Cruise"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Lyon",
+      "https://en.wikivoyage.org/wiki/Lyon"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    45.764,
+    4.8357
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 7,
+      "low": 1,
+      "rain_days": 13
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 8
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 17,
+      "low": 6,
+      "rain_days": 10
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 11
+    },
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 8
+    },
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 7
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 8
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 11,
+      "low": 5,
+      "rain_days": 12
+    },
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 12
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "GNB taxi €80-120 vs tariff estimate 164"
+  ]
+}

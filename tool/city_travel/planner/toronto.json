@@ -1,0 +1,703 @@
+{
+  "city": "Toronto",
+  "checked": "October 2026",
+  "intro_line": "Toronto: Canada's biggest, most diverse city on the lake.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown/Union",
+        "Yorkville",
+        "Entertainment District",
+        "Distillery District"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown/Union",
+        "Yorkville",
+        "Entertainment District",
+        "Distillery District"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown/Union",
+        "Yorkville",
+        "Entertainment District",
+        "Distillery District"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown/Union",
+        "Yorkville",
+        "Entertainment District",
+        "Distillery District"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Downtown/Union",
+        "Yorkville",
+        "Entertainment District",
+        "Distillery District"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 0,
+        "low": -7,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 0°C, lows around -7°C. Pack a warm coat, hat and gloves."
+      },
+      {
+        "high": 1,
+        "low": -8,
+        "rain_days": 9,
+        "note": "Similar to January, lows near -8°C. Indoor sights and the PATH walkways help."
+      },
+      {
+        "high": 5,
+        "low": -3,
+        "rain_days": 10,
+        "note": "Still cold: highs around 5°C, lows near -3°C. Expect some rain or wet snow."
+      },
+      {
+        "high": 10,
+        "low": 2,
+        "rain_days": 13,
+        "note": "Warming up: highs near 10°C, lows around 2°C. Rain on about 13 days, so bring a jacket."
+      },
+      {
+        "high": 18,
+        "low": 8,
+        "rain_days": 10,
+        "note": "Pleasant: highs near 18°C, lows around 8°C. Good month for walking and the islands."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 10,
+        "note": "Warm and green: highs near 23°C, lows around 14°C. Patio season begins."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 11,
+        "note": "Hot: highs near 26°C, lows around 18°C. Busy tourist month; book ahead."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Similar to July: highs near 26°C, lows around 17°C. Warm evenings suit the waterfront."
+      },
+      {
+        "high": 22,
+        "low": 14,
+        "rain_days": 9,
+        "note": "Mild and comfortable: highs near 22°C, lows around 14°C. A strong month to visit."
+      },
+      {
+        "high": 15,
+        "low": 8,
+        "rain_days": 12,
+        "note": "Cooler: highs near 15°C, lows around 8°C. Fall colours and more rain days."
+      },
+      {
+        "high": 8,
+        "low": 1,
+        "rain_days": 10,
+        "note": "Chilly: highs near 8°C, lows around 1°C. Layer up; some rain."
+      },
+      {
+        "high": 3,
+        "low": -3,
+        "rain_days": 12,
+        "note": "Cold again: highs near 3°C, lows around -3°C. Expect rain or snow on about 12 days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.4,
+      0.6,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.85,
+      0.65,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "family": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ]
+  },
+  "places": {
+    "cn_tower": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon into sunset",
+      "area": "Downtown/Union",
+      "popularity": 5
+    },
+    "rom": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning to avoid crowds",
+      "area": "Yorkville",
+      "popularity": 5
+    },
+    "distillery": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening; winter lights",
+      "area": "Distillery District",
+      "popularity": 4
+    },
+    "ripleys": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "First slot in the morning",
+      "area": "Downtown/Union",
+      "popularity": 5
+    },
+    "st_lawrence": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Saturday morning",
+      "area": "Downtown/Union",
+      "popularity": 4
+    },
+    "ago": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Downtown/Union",
+      "popularity": 4
+    },
+    "bmo_field": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Summer match day",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "wonderland": {
+      "types": [
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday in summer",
+      "area": "Downtown/Union",
+      "popularity": 4
+    },
+    "casa_loma": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; gardens in summer",
+      "area": "Yorkville",
+      "popularity": 4
+    },
+    "centreville": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "fort_york": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "kensington": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon; Pedestrian Sundays in summer",
+      "area": "Downtown/Union",
+      "popularity": 4
+    },
+    "massacre": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "With a gallery visit",
+      "area": "Downtown/Union",
+      "popularity": 2
+    },
+    "nathan_phillips": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening; winter for skating",
+      "area": "Downtown/Union",
+      "popularity": 4
+    },
+    "pizza_pizza": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Late night",
+      "area": "Downtown/Union",
+      "popularity": 2
+    },
+    "roy_thomson": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening concert",
+      "area": "Entertainment District",
+      "popularity": 3
+    },
+    "fisher_library": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday daytime",
+      "area": "Downtown/Union",
+      "popularity": 2
+    },
+    "tim_hortons": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Morning coffee",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "tiff": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "September",
+      "area": "Entertainment District",
+      "popularity": 4
+    },
+    "island_ferry": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer morning; sunset return",
+      "area": "Downtown/Union",
+      "popularity": 4
+    },
+    "toronto_zoo": {
+      "types": [
+        "family",
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday morning in summer",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "uoft": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Yorkville",
+      "popularity": 3
+    },
+    "harbourfront": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "queens_park": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Spring and summer",
+      "area": "Yorkville",
+      "popularity": 2
+    },
+    "graffiti_alley": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daylight",
+      "area": "Entertainment District",
+      "popularity": 3
+    },
+    "st_lawrence_hall": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown/Union",
+      "popularity": 2
+    },
+    "high_park": {
+      "types": [
+        "nature",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Spring and summer",
+      "area": "Downtown/Union",
+      "popularity": 3
+    },
+    "hockey_hall": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "Downtown/Union",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the CN Tower, a museum and the Distillery District; add a night for the islands or a Niagara day trip."
+  },
+  "airports": [
+    {
+      "code": "YTZ",
+      "name": "Billy Bishop Toronto City Centre Airport",
+      "primary": false,
+      "note": "Short-haul airport 3 km from centre; fastest into downtown.",
+      "options": [
+        {
+          "mode": "Free shuttle bus",
+          "to": "Union Station / Fairmont Royal York",
+          "price": "CAD 0",
+          "time": "10-15 min",
+          "note": "Ferry or tunnel to mainland first, then shuttle."
+        },
+        {
+          "mode": "TTC streetcar 509",
+          "to": "Union Station",
+          "price": "CAD 3.30",
+          "time": "15-20 min",
+          "note": "Walk 4 min from ferry dock to Queens Quay & Bathurst."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown core",
+          "price": "CAD 15-25",
+          "time": "10-15 min",
+          "note": "Short hop; traffic light outside rush hour."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown core",
+          "price": "CAD 12-22",
+          "time": "10-15 min",
+          "note": "Pickup at mainland terminal."
+        }
+      ]
+    },
+    {
+      "code": "YYZ",
+      "name": "Lester B. Pearson International Airport",
+      "primary": true,
+      "note": "Main international hub, 20 km from centre.",
+      "options": [
+        {
+          "mode": "UP Express train",
+          "to": "Union Station",
+          "price": "CAD 12-13",
+          "time": "25 min",
+          "note": "Fastest rail link; runs every 15 min."
+        },
+        {
+          "mode": "TTC bus + subway",
+          "to": "Downtown",
+          "price": "CAD 3.30",
+          "time": "60-75 min",
+          "note": "Cheapest; route 900 or 52 then Line 1."
+        },
+        {
+          "mode": "GO bus",
+          "to": "Union Station area",
+          "price": "CAD 6-10",
+          "time": "40-55 min",
+          "note": "Check route and schedule."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown core",
+          "price": "CAD 55-70",
+          "time": "30-50 min",
+          "note": "Flat-ish fare; traffic can double the time."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown core",
+          "price": "CAD 45-70",
+          "time": "30-50 min",
+          "note": "Pickup at designated zones."
+        }
+      ]
+    },
+    {
+      "code": "YHM",
+      "name": "John C. Munro Hamilton International Airport",
+      "primary": false,
+      "note": "Secondary airport about 80 km away; limited carriers.",
+      "options": [
+        {
+          "mode": "GO Transit bus + train",
+          "to": "Union Station",
+          "price": "CAD 12-18",
+          "time": "90-120 min",
+          "note": "Connect via Hamilton GO Centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Toronto",
+          "price": "CAD 110-150",
+          "time": "60-80 min",
+          "note": "Long drive; check flat rate."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Toronto",
+          "price": "CAD 90-140",
+          "time": "60-80 min",
+          "note": "Availability varies; check app."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Toronto",
+      "https://en.wikivoyage.org/wiki/Toronto"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "family"
+  ],
+  "transit": {
+    "best": "Walk downtown and use the TTC subway and streetcars; tap a PRESTO or contactless card.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "TTC subway Lines 1 and 2 cover downtown well. Tap a PRESTO card or contactless card to ride."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and streetcars run frequently. The King Street streetcar is transit-only through the core."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Lyft both operate widely."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is grid-easy, but downtown parking is costly and rush hour is heavy."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best way to see downtown. Bike Share Toronto is handy along the waterfront."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A short free ferry and pedestrian tunnel link Billy Bishop Airport to the mainland."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold winters and warm, humid summers. Rain falls year-round, spread over many days.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs from 18°C to 26°C and mild evenings. Best for walking, the islands and patios."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs near 0°C to 3°C and lows down to -8°C. Bring a heavy coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "About 9–13 rain days a month. April and October are the wettest; pack a light rain jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Summer can be humid",
+        "text": "July and August highs near 26°C with muggy spells. Carry water and plan indoor breaks."
+      },
+      {
+        "icon": "🍂",
+        "title": "Spring and fall are mild",
+        "text": "May and September are comfortable, around 18–22°C. Good shoulder-season months."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for cool evenings, a waterproof jacket, and warm boots in winter. Comfortable shoes for walking."
+      }
+    ]
+  }
+}

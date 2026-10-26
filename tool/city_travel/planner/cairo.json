@@ -1,0 +1,616 @@
+{
+  "city": "Cairo",
+  "checked": "October 2026",
+  "intro_line": "Cairo: where ancient wonders meet chaotic, vibrant streets.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Zamalek",
+        "Giza",
+        "Heliopolis"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Zamalek",
+        "Giza",
+        "Heliopolis"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Zamalek",
+        "Giza",
+        "Heliopolis"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Downtown",
+        "Zamalek",
+        "Giza",
+        "Heliopolis"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Downtown",
+        "Zamalek",
+        "Giza",
+        "Heliopolis"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 1,
+        "note": "January: cool days around 19°C and cold nights near 9°C. Bring a jacket."
+      },
+      {
+        "high": 21,
+        "low": 9,
+        "rain_days": 2,
+        "note": "February: mild and dry, highs near 21°C. Great for walking the old city."
+      },
+      {
+        "high": 25,
+        "low": 12,
+        "rain_days": 1,
+        "note": "March: warming to 25°C. Pleasant, with a little dust possible."
+      },
+      {
+        "high": 30,
+        "low": 15,
+        "rain_days": 1,
+        "note": "April: hot afternoons near 30°C. Start sightseeing early."
+      },
+      {
+        "high": 34,
+        "low": 19,
+        "rain_days": 0,
+        "note": "May: hot at 34°C. Plan indoor sights at midday."
+      },
+      {
+        "high": 37,
+        "low": 22,
+        "rain_days": 0,
+        "note": "June: very hot, highs near 37°C. Drink plenty of water."
+      },
+      {
+        "high": 38,
+        "low": 23,
+        "rain_days": 0,
+        "note": "July: peak heat at 38°C. Go out at sunrise or after sunset."
+      },
+      {
+        "high": 38,
+        "low": 24,
+        "rain_days": 0,
+        "note": "August: hottest and muggiest, highs near 38°C. Keep plans light."
+      },
+      {
+        "high": 36,
+        "low": 22,
+        "rain_days": 0,
+        "note": "September: still hot at 36°C but slowly easing."
+      },
+      {
+        "high": 32,
+        "low": 19,
+        "rain_days": 0,
+        "note": "October: comfortable again around 32°C. Good month to visit."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 1,
+        "note": "November: mild at 27°C. Excellent for the Pyramids and bazaars."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 1,
+        "note": "December: cool days near 22°C and chilly nights. Pack layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      1,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.5,
+      0.4,
+      0.4,
+      0.6,
+      0.9,
+      1,
+      1
+    ],
+    "culture": [
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.55,
+      0.45,
+      0.45,
+      0.65,
+      0.9,
+      1,
+      1
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.55,
+      0.7,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "shopping": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.55,
+      0.7,
+      0.9,
+      0.95,
+      0.9
+    ],
+    "budget": [
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.5,
+      0.5,
+      0.65,
+      0.85,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "pyramids": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning, October to April",
+      "area": "Giza",
+      "popularity": 5
+    },
+    "sphinx": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Giza",
+      "popularity": 5
+    },
+    "egyptian-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning; indoor escape from midday heat",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "citadel": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "muhammad-ali": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "khan-el-khalili": {
+      "types": [
+        "shopping",
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Downtown",
+      "popularity": 5
+    },
+    "abdeen-palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "al-azhar": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "al-rifai": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "bab-zuweila": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "babylon-fortress": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "baron-empain": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Heliopolis",
+      "popularity": 2
+    },
+    "bent-pyramid": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, October to April",
+      "area": "Giza",
+      "popularity": 3
+    },
+    "stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening match",
+      "area": "Heliopolis",
+      "popularity": 1
+    },
+    "cairo-land": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Heliopolis",
+      "popularity": 1
+    },
+    "opera-house": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Zamalek",
+      "popularity": 2
+    },
+    "cairo-tower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Zamalek",
+      "popularity": 3
+    },
+    "cave-church": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning or early evening",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "st-sergius": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "city-of-the-dead": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 1
+    },
+    "coptic-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "dream-park": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late afternoon or evening",
+      "area": "Giza",
+      "popularity": 1
+    },
+    "felucca": {
+      "types": [
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Zamalek",
+      "popularity": 4
+    },
+    "khan-food-walk": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Lunch or early evening",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "zamalek-walk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Zamalek",
+      "popularity": 3
+    },
+    "muizz-tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Evening when lit up",
+      "area": "Downtown",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Pyramids, the Egyptian Museum and a full day in Islamic Cairo without rushing in the heat."
+  },
+  "airports": [
+    {
+      "code": "CAI",
+      "name": "Cairo International Airport",
+      "primary": true,
+      "note": "Main hub, about 18 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "Public bus",
+          "to": "Downtown / Midan Tahrir",
+          "price": "EGP10-20",
+          "time": "60-90 min",
+          "note": "Cheapest but slow and crowded; check the route with the driver."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Various hotels and squares",
+          "price": "EGP50-100",
+          "time": "45-75 min",
+          "note": "Runs to main areas; confirm the stop before boarding."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "EGP200-350",
+          "time": "30-60 min",
+          "note": "Agree the price first or insist on the meter."
+        },
+        {
+          "mode": "Uber / Careem",
+          "to": "City centre",
+          "price": "EGP150-250",
+          "time": "30-60 min",
+          "note": "Pick-up point is signed in the arrivals area."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Cairo",
+      "https://en.wikivoyage.org/wiki/Cairo"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for cheap cross-city trips; Uber or Careem for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Three lines, clean and cheap; tickets EGP 8–20 by distance."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Red-white-blue city buses EGP 4–6; air-conditioned EGP 7–12; minibuses EGP 5–15."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "White cabs often skip the meter, so agree the fare or pay the fair sum on exit. Uber and Careem work well and are often easier."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not advised for visitors; traffic is heavy and rules are loose."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine in some districts, but crossings and pavements are poor; little cycling."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: sunny most days, almost no rain, and a very hot summer from June to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Days around 19–27°C and cool nights. Ideal for the Pyramids and long walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (June to September)",
+        "text": "Highs of 36–38°C. Do outdoor sights at sunrise; stay indoors at midday."
+      },
+      {
+        "icon": "🌂",
+        "title": "Almost no rain",
+        "text": "Only about 1–2 rain days a month in winter. No umbrella needed most of the year."
+      },
+      {
+        "icon": "🌪️",
+        "title": "Dust and haze",
+        "text": "Spring can bring dusty winds that blur the skyline. Check the air before desert trips."
+      },
+      {
+        "icon": "🌙",
+        "title": "Cool evenings in winter",
+        "text": "Nights drop near 9–11°C from December to February. A jacket helps after dark."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a hat and sunscreen; a warm layer for winter nights; modest dress for mosques."
+      }
+    ]
+  }
+}

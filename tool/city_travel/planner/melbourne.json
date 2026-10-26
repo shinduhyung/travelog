@@ -1,0 +1,630 @@
+{
+  "city": "Melbourne",
+  "checked": "October 2026",
+  "intro_line": "Laneways, trams and coffee: Melbourne rewards the curious.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "CBD",
+        "Southbank",
+        "St Kilda",
+        "Fitzroy"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "CBD",
+        "Southbank",
+        "St Kilda",
+        "Fitzroy"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "CBD",
+        "Southbank",
+        "St Kilda",
+        "Fitzroy"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "CBD",
+        "Southbank",
+        "St Kilda",
+        "Fitzroy"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "CBD",
+        "Southbank",
+        "St Kilda",
+        "Fitzroy"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 8,
+        "note": "January: warm and mostly dry, highs near 26°C. Book accommodation early; it's peak holiday season."
+      },
+      {
+        "high": 26,
+        "low": 14,
+        "rain_days": 6,
+        "note": "February: similar to January, highs near 26°C, few rain days. Good for the beach and outdoor dining."
+      },
+      {
+        "high": 24,
+        "low": 14,
+        "rain_days": 7,
+        "note": "March: still warm at 24°C, a little more rain. Comfortable for walking the city."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 9,
+        "note": "April: cooler at 20°C with about 9 rain days. Pack a light jacket."
+      },
+      {
+        "high": 16,
+        "low": 9,
+        "rain_days": 11,
+        "note": "May: cool and wetter, highs near 16°C and 11 rain days. Plan indoor sights and cafés."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 10,
+        "note": "June: cold, highs near 14°C, about 10 rain days. Bring warm layers."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 13,
+        "note": "July: the coldest month, highs near 13°C and the most rain (13 days). Expect grey, damp days."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 12,
+        "note": "August: cold like July, highs near 14°C, 12 rain days. Rug up for the beach and gardens."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 12,
+        "note": "September: warming to 17°C but still wet, 12 rain days. Carry an umbrella."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 12,
+        "note": "October: mild at 20°C, 12 rain days. Good for markets and day trips between showers."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 11,
+        "note": "November: pleasant at 22°C, 11 rain days. A strong month for the city and coast."
+      },
+      {
+        "high": 25,
+        "low": 13,
+        "rain_days": 9,
+        "note": "December: warm at 25°C, 9 rain days. Festive and busy; book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "shopping": [
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.85
+    ],
+    "nature": [
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.5,
+      0.45,
+      0.5,
+      0.6,
+      0.8,
+      0.95,
+      1
+    ]
+  },
+  "places": {
+    "royal-exhibition": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning; spring for the Carlton Gardens",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "flinders": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Dusk, when the facade lights up",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "shrine": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late morning or just before closing",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "fed-square": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime; check for free events",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "ngv": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; quieter on weekday mornings",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "mcg": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Weekday morning tour",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "eureka": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Southbank",
+      "popularity": 4
+    },
+    "st-kilda-beach": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset; summer for swimming",
+      "area": "St Kilda",
+      "popularity": 5
+    },
+    "state-library": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning, before the reading room fills",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "sea-life": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning; rainy days",
+      "area": "CBD",
+      "popularity": 4
+    },
+    "arts-centre": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening for a show",
+      "area": "Southbank",
+      "popularity": 4
+    },
+    "boost-juice": {
+      "types": [
+        "food"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "CBD",
+      "popularity": 2
+    },
+    "cub": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Fitzroy",
+      "popularity": 2
+    },
+    "luna-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "St Kilda",
+      "popularity": 4
+    },
+    "showgrounds": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Only during a scheduled event",
+      "area": "CBD",
+      "popularity": 2
+    },
+    "monash": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday",
+      "area": "CBD",
+      "popularity": 1
+    },
+    "unimelb": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "CBD",
+      "popularity": 2
+    },
+    "wonderland-junior": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekend, check first",
+      "area": "St Kilda",
+      "popularity": 1
+    },
+    "yarra-cruise": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon on a clear day",
+      "area": "Southbank",
+      "popularity": 4
+    },
+    "queen-vic": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Weekday or Saturday morning",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "hosier-lane": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning for photos without crowds",
+      "area": "CBD",
+      "popularity": 5
+    },
+    "lygon-st": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Dinner",
+      "area": "Fitzroy",
+      "popularity": 3
+    },
+    "fitzroy-walk": {
+      "types": [
+        "shopping",
+        "food",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Fitzroy",
+      "popularity": 3
+    },
+    "southbank-prom": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Southbank",
+      "popularity": 4
+    },
+    "st-kilda-pier": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "St Kilda",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the laneways, markets and galleries, with a day left for the beach or a wine trip."
+  },
+  "airports": [
+    {
+      "code": "MEL",
+      "name": "Melbourne International Airport",
+      "primary": true,
+      "note": "Main gateway, about 19-22 km north-west of the CBD.",
+      "options": [
+        {
+          "mode": "Public bus 901 + train",
+          "to": "Broadmeadows station, then CBD",
+          "price": "A$5.70-11.40",
+          "time": "50-70 min",
+          "note": "Cheapest; needs a myki card."
+        },
+        {
+          "mode": "SkyBus",
+          "to": "Southern Cross Station, CBD",
+          "price": "A$24 one way, A$40 return",
+          "time": "25-35 min",
+          "note": "Book online for the lower fare."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "CBD",
+          "price": "A$50-70",
+          "time": "25-40 min",
+          "note": "Pickup ranks outside Terminals 2 and 4."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "A$75-100",
+          "time": "25-40 min",
+          "note": "Metered; expect surcharges at night."
+        }
+      ]
+    },
+    {
+      "code": "AVV",
+      "name": "Avalon Airport",
+      "primary": false,
+      "note": "Domestic Jetstar base about 50-55 km south-west, near Geelong.",
+      "options": [
+        {
+          "mode": "Bus 18 + train",
+          "to": "Lara station, then Southern Cross",
+          "price": "A$5.70-11.40",
+          "time": "60-90 min",
+          "note": "Cheapest; bus runs to Lara, 8 km away."
+        },
+        {
+          "mode": "SkyBus Avalon City Express",
+          "to": "Southern Cross Station, CBD",
+          "price": "A$22 adult, A$10 child",
+          "time": "45-60 min",
+          "note": "Meets every flight via Werribee."
+        },
+        {
+          "mode": "Uber / ride app",
+          "to": "CBD",
+          "price": "A$80-110",
+          "time": "45-60 min",
+          "note": "Check app pickup point at the terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "CBD",
+          "price": "A$100+",
+          "time": "45-60 min",
+          "note": "Long trip; fares climb in traffic."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Melbourne",
+      "https://en.wikivoyage.org/wiki/Melbourne"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "art"
+  ],
+  "transit": {
+    "best": "Trams in the CBD and trains for longer hops; walk the grid for short trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Trains run every 10–20 minutes and reach the suburbs. A Night Network runs after midnight on Fri–Sat."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams are free inside the CBD Free Tram Zone. Touch on with myki only if you travel beyond it."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses fill the gaps where trains and trams don't go. Pay with myki."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered; Uber, DiDi and Ola operate and often cost less. Handy for late nights."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Easy on freeways but CBD parking is costly. Skip the car in town; rent only for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The CBD grid is walkable. Shared bikes and scooters cover short hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Temperate and changeable: warm dry summers, cool wet winters, and rain possible in any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warm days around 24–26°C and fewer rain days. Ideal for the beach, gardens and outdoor dining."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cool and damp (June to August)",
+        "text": "Highs only 13–14°C with 10–13 rain days a month. Bring a warm coat and plan indoor sights."
+      },
+      {
+        "icon": "🌦️",
+        "title": "Rain in every month",
+        "text": "Expect 6–13 rain days whatever the season. Carry a small umbrella and a light layer."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Weather changes fast",
+        "text": "A warm morning can turn cool and showery by afternoon. Dress in layers you can add or shed."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Beach days are summer-only",
+        "text": "St Kilda and the bay are best December to March. Water stays cool even then."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for walking. Add a hat and sunscreen for summer."
+      }
+    ]
+  }
+}

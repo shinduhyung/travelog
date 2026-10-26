@@ -1,0 +1,510 @@
+{
+  "city": "Taiyuan",
+  "checked": "October 2026",
+  "intro_line": "Ancient coal capital where 2,500 years of history meet modern China.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Yingze Dajie",
+        "Train Station area",
+        "Jinci Road",
+        "Wuyi Square"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Yingze Dajie",
+        "Train Station area",
+        "Jinci Road",
+        "Wuyi Square"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Yingze Dajie",
+        "Train Station area",
+        "Jinci Road",
+        "Wuyi Square"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Yingze Dajie",
+        "Train Station area",
+        "Jinci Road",
+        "Wuyi Square"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Yingze Dajie",
+        "Train Station area",
+        "Jinci Road",
+        "Wuyi Square"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 3,
+        "low": -7,
+        "rain_days": 1,
+        "note": "Cold and dry: highs near 3°C, lows around -7°C. Pack a warm coat."
+      },
+      {
+        "high": 7,
+        "low": -5,
+        "rain_days": 2,
+        "note": "Still cold: highs near 7°C, lows around -5°C. Few rainy days."
+      },
+      {
+        "high": 14,
+        "low": 0,
+        "rain_days": 2,
+        "note": "Warming up: highs near 14°C, lows near 0°C. Light layers work."
+      },
+      {
+        "high": 20,
+        "low": 6,
+        "rain_days": 6,
+        "note": "Pleasant spring: highs near 20°C, lows near 6°C. Some rain, about 6 days."
+      },
+      {
+        "high": 26,
+        "low": 12,
+        "rain_days": 4,
+        "note": "Great month: highs near 26°C, lows near 12°C. Comfortable for walking."
+      },
+      {
+        "high": 30,
+        "low": 17,
+        "rain_days": 5,
+        "note": "Warm and mostly dry: highs near 30°C, lows near 17°C. Carry water."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 12,
+        "note": "Hot and wet: highs near 30°C, lows near 20°C, about 12 rain days."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 12,
+        "note": "Hot with rain: highs near 28°C, lows near 18°C, about 12 rain days."
+      },
+      {
+        "high": 24,
+        "low": 13,
+        "rain_days": 6,
+        "note": "Cooling down: highs near 24°C, lows near 13°C. Good for sightseeing."
+      },
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 6,
+        "note": "Crisp autumn: highs near 17°C, lows near 6°C. Bring a jacket."
+      },
+      {
+        "high": 10,
+        "low": 0,
+        "rain_days": 3,
+        "note": "Chilly: highs near 10°C, lows near 0°C. Few rainy days."
+      },
+      {
+        "high": 3,
+        "low": -6,
+        "rain_days": 1,
+        "note": "Cold again: highs near 3°C, lows near -6°C. Winter gear needed."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.85,
+      0.6,
+      0.6,
+      0.9,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.75,
+      0.9,
+      0.95,
+      0.85,
+      0.7
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.55,
+      0.8,
+      0.9,
+      0.85,
+      0.6,
+      0.6,
+      0.85,
+      0.85,
+      0.5,
+      0.3
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.85,
+      0.6,
+      0.6,
+      0.9,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "budget": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.75,
+      0.6
+    ]
+  },
+  "places": {
+    "jinci-temple": {
+      "types": [
+        "history",
+        "culture",
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning, spring to autumn",
+      "area": "Jinci Road",
+      "popularity": 5
+    },
+    "twin-pagoda-temple": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Yingze Dajie",
+      "popularity": 4
+    },
+    "shanxi-museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Wuyi Square",
+      "popularity": 5
+    },
+    "food-street": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Yingze Dajie",
+      "popularity": 4
+    },
+    "old-street-walk": {
+      "types": [
+        "culture",
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Yingze Dajie",
+      "popularity": 3
+    },
+    "fen-river-park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Yingze Dajie",
+      "popularity": 3
+    },
+    "coal-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "Wuyi Square",
+      "popularity": 2
+    },
+    "noodle-class": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Lunchtime session",
+      "area": "Yingze Dajie",
+      "popularity": 3
+    },
+    "jinci-bus-tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 480,
+      "setting": "mixed",
+      "best": "Spring or autumn",
+      "area": "Jinci Road",
+      "popularity": 3
+    },
+    "shuangta-view": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Yingze Dajie",
+      "popularity": 2
+    },
+    "vinegar-shop": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Yingze Dajie",
+      "popularity": 2
+    },
+    "taiyuan-museum": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Yingze Dajie",
+      "popularity": 2
+    },
+    "chunyang-palace": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Wuyi Square",
+      "popularity": 2
+    },
+    "night-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Wuyi Square",
+      "popularity": 3
+    },
+    "taiyuan-station-walk": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Train Station area",
+      "popularity": 1
+    },
+    "temple-fair": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Festival dates in spring",
+      "area": "Jinci Road",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "One night covers the old city and Jinci; add a night for a Pingyao day trip."
+  },
+  "airports": [
+    {
+      "code": "TYN",
+      "name": "Taiyuan Wusu International Airport",
+      "primary": true,
+      "note": "Main airport, about 15 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "City centre / train station",
+          "price": "¥10-20",
+          "time": "30-45 min",
+          "note": "Cheapest option; check the desk for the next departure."
+        },
+        {
+          "mode": "Metro",
+          "to": "City centre",
+          "price": "¥2-6",
+          "time": "35-50 min",
+          "note": "Check locally for the current airport link and transfer."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥40-60",
+          "time": "25-40 min",
+          "note": "Use the official taxi rank outside arrivals."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥35-55",
+          "time": "25-40 min",
+          "note": "Pick a marked pickup point; app works in English."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Taiyuan",
+      "https://en.wikivoyage.org/wiki/Taiyuan"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro and buses for the centre; taxis or Didi for longer trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Lines run across the city; fares are up to ¥6 depending on distance."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Local buses cost ¥1 per ride; bus 1 runs along Yingze Dajie."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis start at ¥8 flagfall; expect around ¥15–25 for cross-town trips. Didi is the main ride-hailing app; Uber does not operate in China."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy and parking is tight; walking and buses are easier in the centre."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking works well in the flat centre; bikes and shared bikes also work well on flat central streets."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold, dry winters and warm summers; most rain falls in July and August.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild highs of 17–26°C and fewer rain days. Good for temples and walking."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is cold and dry",
+        "text": "December to February highs are only 3–7°C with lows below freezing. Pack a heavy coat."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in July and August",
+        "text": "About 12 rain days each month. Carry an umbrella and plan indoor sights."
+      },
+      {
+        "icon": "☀️",
+        "title": "Summer is warm",
+        "text": "June to August highs reach 28–30°C. Go out early or late and drink water."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is crisp",
+        "text": "October highs near 17°C and November near 10°C. Bring a warm layer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a heavy coat for winter, and rain gear for July and August."
+      }
+    ]
+  }
+}

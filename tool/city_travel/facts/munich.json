@@ -1,0 +1,241 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Munich blends royal grandeur with beer-hall warmth and Alpine air.",
+  "intro": "Munich rewards visitors with grand palaces, world-class museums, leafy parks and a lively beer culture. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    }
+  ],
+  "areas": [
+    "Altstadt",
+    "Maxvorstadt",
+    "Ludwigsvorstadt",
+    "Haidhausen"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 106,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "S-Bahn suburban trains link the airport and main stations; U-Bahn covers north-south routes.",
+    "Trams circle the inner city and reach Nymphenburg Palace; buses fill outer gaps.",
+    "One ticket works across S-Bahn, U-Bahn, tram and bus; validate before travel or risk a €60 fine.",
+    "Taxis are metered; ride apps like Uber and Bolt operate in Munich.",
+    "Driving is fine on the fringes but ring roads are often congested; use Park & Ride for day trips.",
+    "The centre is walkable and bike-friendly, with many cycle paths."
+  ],
+  "airports": [
+    {
+      "code": "MUC",
+      "name": "Munich International Airport",
+      "primary": true,
+      "note": "Main hub, about 28 km northeast of the centre.",
+      "options": [
+        {
+          "mode": "S-Bahn S1 or S8",
+          "to": "Hauptbahnhof / city centre",
+          "price": "€14.30",
+          "time": "40-50 min",
+          "note": "Needs a 5-zone ticket; runs every 15 min and through the night."
+        },
+        {
+          "mode": "Group day ticket",
+          "to": "City centre",
+          "price": "€30.50",
+          "time": "40-50 min",
+          "note": "Good value for 2-5 adults."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Hauptbahnhof",
+          "price": "€106",
+          "time": "35-50 min",
+          "note": "Fixed fare; traffic can be heavy."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€70-110",
+          "time": "35-50 min",
+          "note": "Prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "FMM",
+      "name": "Memmingen Airport",
+      "primary": false,
+      "note": "Ryanair's 'Munich West', about 110 km west.",
+      "options": [
+        {
+          "mode": "Shuttle bus + train",
+          "to": "Munich Hauptbahnhof",
+          "price": "€20-30",
+          "time": "2-2.5 hr",
+          "note": "Bus to Memmingen station, then hourly train."
+        },
+        {
+          "mode": "Ryanair direct bus",
+          "to": "Munich",
+          "price": "check locally",
+          "time": "2 hr",
+          "note": "Runs only with some flights."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Munich centre",
+          "price": "€200-250",
+          "time": "1.5-2 hr",
+          "note": "Expensive; train is better."
+        }
+      ]
+    },
+    {
+      "code": "FRA",
+      "name": "Frankfurt Airport",
+      "primary": false,
+      "note": "Intercontinental gateway, about 300 km northwest.",
+      "options": [
+        {
+          "mode": "Direct train",
+          "to": "Munich Hauptbahnhof",
+          "price": "€60-120",
+          "time": "3 hr 30 min",
+          "note": "Book ahead for cheaper fares."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Munich centre",
+          "price": "€500+",
+          "time": "3.5-4 hr",
+          "note": "Not practical; take the train."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Marienplatz",
+    "Nymphenburg Palace",
+    "English Garden",
+    "Munich Residenz",
+    "Neues Rathaus",
+    "Allianz Arena",
+    "Oktoberfest",
+    "BMW Welt & Museum",
+    "Bavaria Filmstadt",
+    "Cuvilliés Theatre",
+    "Dachau Concentration Camp Memorial Site",
+    "Deutsches Museum",
+    "Erdinger Weissbrau",
+    "Herkulessaal",
+    "Hofbrau Munchen",
+    "Ludwig Maximilian University of Munich",
+    "Paulaner Brewery",
+    "Sense8",
+    "Technical University of Munich (TUM)"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Munich",
+      "https://en.wikivoyage.org/wiki/Munich"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    48.1422,
+    11.5756
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 4,
+      "low": -3,
+      "rain_days": 14
+    },
+    {
+      "high": 7,
+      "low": -1,
+      "rain_days": 12
+    },
+    {
+      "high": 10,
+      "low": 0,
+      "rain_days": 12
+    },
+    {
+      "high": 14,
+      "low": 4,
+      "rain_days": 13
+    },
+    {
+      "high": 18,
+      "low": 8,
+      "rain_days": 16
+    },
+    {
+      "high": 23,
+      "low": 13,
+      "rain_days": 15
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 14
+    },
+    {
+      "high": 19,
+      "low": 10,
+      "rain_days": 12
+    },
+    {
+      "high": 15,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 9,
+      "low": 1,
+      "rain_days": 12
+    },
+    {
+      "high": 6,
+      "low": -1,
+      "rain_days": 13
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "FMM taxi €200-250 vs tariff estimate 447",
+    "FRA taxi €500+ vs tariff estimate 1132",
+    "airport FRA is 304 km away"
+  ]
+}

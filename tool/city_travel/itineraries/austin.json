@@ -1,0 +1,1537 @@
+{
+  "city": "Austin",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Austin rewards visitors with music, food, and outdoorsy fun. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 30.094,
+      "west": -97.7919,
+      "north": 30.4999,
+      "east": -97.6242,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3,
+      "flag_airport": 4,
+      "per_km": 2,
+      "min_fare": 15
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "No metro or tram; a single commuter rail line (Red Line) runs north-south.",
+      "Capital Metro buses cover downtown, the Capitol, and South Congress; fares are about $1.25 one way.",
+      "Ride apps Uber and Lyft work well; taxis are available but less common.",
+      "Driving is common but traffic is heavy at rush hour; I-35 is often jammed.",
+      "Downtown and UT are walkable; summers are very hot.",
+      "Bikes are popular; bike lanes exist on most major streets."
+    ],
+    "sources": []
+  },
+  "places": {
+    "ut_austin": {
+      "name": "University of Texas at Austin",
+      "landmark": "University of Texas at Austin",
+      "kind": "sight",
+      "lat": 30.2849,
+      "lon": -97.7341,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus grounds open daily; buildings vary — check on the day",
+      "tip": "Walk the South Mall to the Main Building tower. The Blanton Museum and LBJ Library sit at the edges of campus.",
+      "source": "https://www.utexas.edu"
+    },
+    "sxsw": {
+      "name": "SXSW (South by Southwest)",
+      "landmark": "SXSW (South by Southwest)",
+      "kind": "show",
+      "lat": 30.2672,
+      "lon": -97.7431,
+      "price": null,
+      "price_text": "Badges and wristbands only; prices vary by year — check on the day",
+      "hours": "Runs about a week in March; venues set their own hours",
+      "tip": "Book badges and hotels months ahead. Many free and side events run alongside the official programme.",
+      "source": "https://www.sxsw.com"
+    },
+    "cotaland": {
+      "name": "COTALAND",
+      "landmark": "COTALAND",
+      "kind": "park",
+      "lat": 30.132,
+      "lon": -97.6423,
+      "price": null,
+      "price_text": "Ticketed; check current prices on the day",
+      "hours": "Seasonal hours — check on the day",
+      "tip": "It sits next to Circuit of the Americas, far from downtown. Plan a car or rideshare and check race-weekend crowds.",
+      "source": "https://www.cotaland.com"
+    },
+    "parks_n_pizza": {
+      "name": "Austin's Park N Pizza",
+      "landmark": "Austin's Park N Pizza",
+      "kind": "activity",
+      "lat": 30.4619,
+      "lon": -97.6698,
+      "price": null,
+      "price_text": "All-day wristbands and single rides; check on the day",
+      "hours": "Usually open daily, longer on weekends — check on the day",
+      "tip": "Good for families with kids. Go early on weekends to beat the lines.",
+      "source": "https://www.austinspark.com"
+    },
+    "tom_foolerys": {
+      "name": "Tom Foolerys Adventure Park, Texas",
+      "landmark": "Tom Foolerys Adventure Park, Texas",
+      "kind": "activity",
+      "lat": 30.5126,
+      "lon": -97.6698,
+      "price": null,
+      "price_text": "Pay per attraction or by wristband; check on the day",
+      "hours": "Indoor park hours vary — check on the day",
+      "tip": "An indoor option for rainy or very hot days. Confirm hours before you drive out.",
+      "source": ""
+    },
+    "frida_portrait": {
+      "name": "Self-Portrait with Thorn Necklace and Hummingbird",
+      "landmark": "Self-Portrait with Thorn Necklace and Hummingbird",
+      "kind": "museum",
+      "lat": 30.2839,
+      "lon": -97.7408,
+      "price": null,
+      "price_text": "Included with museum admission; check on the day",
+      "hours": "Tue–Sun, closed Monday — check on the day",
+      "tip": "The Frida Kahlo painting hangs at the Harry Ransom Center on the UT campus. Check it is on display before you go.",
+      "source": "https://www.hrc.utexas.edu"
+    },
+    "franklin_bbq": {
+      "name": "Franklin Barbecue",
+      "landmark": null,
+      "kind": "food",
+      "lat": 30.2701,
+      "lon": -97.7313,
+      "price": null,
+      "price_text": "≈ USD 15–30 per person; sold by weight",
+      "hours": "Tue–Sun until sold out; closed Monday",
+      "tip": "Arrive before opening and expect a long line. It often sells out by early afternoon.",
+      "source": "https://franklinbarbecue.com"
+    },
+    "south_congress": {
+      "name": "South Congress Avenue walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.2501,
+      "lon": -97.7499,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Shops and cafes set their own hours",
+      "tip": "Walk north toward the Capitol for the classic view. Best in the late afternoon when the shops are open.",
+      "source": ""
+    },
+    "congress_bridge": {
+      "name": "Congress Avenue Bridge bats",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 30.2615,
+      "lon": -97.7451,
+      "price": 0,
+      "price_text": "Free to watch",
+      "hours": "Best at sunset, roughly March–October",
+      "tip": "Stand on the bridge or the grassy bank below. Bats fly out around dusk in warm months.",
+      "source": "https://www.batcon.org"
+    },
+    "state_capitol": {
+      "name": "Texas State Capitol",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 30.2747,
+      "lon": -97.7404,
+      "price": 0,
+      "price_text": "Free entry",
+      "hours": "Weekdays and weekends; check on the day",
+      "tip": "The grounds and rotunda are free. Go early to avoid the heat and tour groups.",
+      "source": "https://tspb.texas.gov"
+    },
+    "zilker_park": {
+      "name": "Zilker Park and Barton Springs",
+      "landmark": null,
+      "kind": "park",
+      "lat": 30.2669,
+      "lon": -97.7729,
+      "price": null,
+      "price_text": "Park free; Barton Springs Pool has an entry fee — check on the day",
+      "hours": "Park open daily; pool hours vary by season",
+      "tip": "The spring-fed pool is cool year-round. Bring a towel and check pool hours before you go.",
+      "source": "https://www.austintexas.gov/department/barton-springs-pool"
+    },
+    "rainey_street": {
+      "name": "Rainey Street bars",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.2579,
+      "lon": -97.7395,
+      "price": null,
+      "price_text": "Pay per drink; ≈ USD 8–15 each",
+      "hours": "Bars open afternoon into late night",
+      "tip": "Old houses turned into bars. Busiest on weekend evenings; go earlier for a calmer drink.",
+      "source": ""
+    },
+    "sixth_street": {
+      "name": "Sixth Street entertainment district",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.2672,
+      "lon": -97.7386,
+      "price": null,
+      "price_text": "Free to walk; pay per venue",
+      "hours": "Livelier at night; some venues close late",
+      "tip": "Loud and busy on weekend nights. Keep an eye on your belongings and plan a rideshare home.",
+      "source": ""
+    },
+    "east_austin_food": {
+      "name": "East Austin food and coffee walk",
+      "landmark": null,
+      "kind": "food",
+      "lat": 30.2625,
+      "lon": -97.7199,
+      "price": null,
+      "price_text": "≈ USD 10–25 per stop",
+      "hours": "Cafes and restaurants set their own hours",
+      "tip": "Wander between small cafes, taco spots and bakeries. Many places close early in the week.",
+      "source": ""
+    },
+    "lady_bird_lake": {
+      "name": "Lady Bird Lake hike-and-bike trail",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.2565,
+      "lon": -97.7385,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, dawn to dusk",
+      "tip": "A flat loop along the water. Rent a kayak or walk a short stretch at sunset.",
+      "source": "https://www.austintexas.gov/department/ann-and-roy-butler-hike-and-bike-trail"
+    },
+    "blanton": {
+      "name": "Blanton Museum of Art",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 30.2807,
+      "lon": -97.7376,
+      "price": null,
+      "price_text": "Ticketed; free on some days — check on the day",
+      "hours": "Closed Monday; open other days",
+      "tip": "Strong collection of American and Latin American art. Check for free-admission days before you go.",
+      "source": "https://blantonmuseum.org"
+    },
+    "torchys": {
+      "name": "Torchy's Tacos",
+      "landmark": null,
+      "kind": "food",
+      "lat": 30.2507,
+      "lon": -97.7508,
+      "price": null,
+      "price_text": "≈ USD 5–12 per taco or plate",
+      "hours": "Open daily, usually late — check on the day",
+      "tip": "A local taco chain with several branches. Good budget stop on South Congress.",
+      "source": "https://torchystacos.com"
+    },
+    "mount_bonnell": {
+      "name": "Mount Bonnell viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 30.3213,
+      "lon": -97.7738,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, dawn to dusk",
+      "tip": "Short stair climb to a view over the lake and hills. Go at sunset but bring water in summer.",
+      "source": ""
+    },
+    "bat_cruise": {
+      "name": "Lady Bird Lake boat cruise",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 30.2595,
+      "lon": -97.7405,
+      "price": null,
+      "price_text": "≈ USD 20–40 per person; check on the day",
+      "hours": "Departures vary by season",
+      "tip": "A relaxed way to see the skyline and the bat bridge from the water. Book ahead on weekends.",
+      "source": ""
+    },
+    "bullock_museum": {
+      "name": "Bullock Texas State History Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 30.2803,
+      "lon": -97.7391,
+      "price": null,
+      "price_text": "Ticketed; check on the day",
+      "hours": "Open daily; check on the day",
+      "tip": "Good for Texas history and a big-screen film. A solid indoor break from the heat.",
+      "source": "https://www.thestoryoftexas.com"
+    },
+    "rainbow_cattle": {
+      "name": "Rainbow Cattle Company",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 30.2503,
+      "lon": -97.7497,
+      "price": null,
+      "price_text": "Pay per drink",
+      "hours": "Open afternoon into late night",
+      "tip": "A long-running South Congress bar. Casual stop after a walk down the avenue.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day of Austin history and art, from the Capitol to the bats at sunset.",
+      "days": [
+        {
+          "title": "Capitol, campus museums and the bats",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early. Free to walk in; check the day's hours."
+            },
+            {
+              "place": "blanton",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Short drive or rideshare to campus. Closed Monday."
+            },
+            {
+              "place": "frida_portrait",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Same campus area. Closed Monday. Lunch nearby on Guadalupe."
+            },
+            {
+              "place": "south_congress",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk the avenue and grab a coffee."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bats fly at sunset, roughly March to October. Arrive early for a spot."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "BBQ, tacos and a food walk — eat your way across East Austin and South Congress.",
+      "days": [
+        {
+          "title": "BBQ, food walk and tacos",
+          "stops": [
+            {
+              "place": "franklin_bbq",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Join the line late morning. Closed Monday. Sells out — go early."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Walk off lunch with coffee and snacks. Cafes set their own hours."
+            },
+            {
+              "place": "south_congress",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Cross the river and stroll the shops."
+            },
+            {
+              "place": "torchys",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Tacos for dinner. Usually open late — check on the day."
+            },
+            {
+              "place": "rainbow_cattle",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "End with a drink on South Congress."
+            }
+          ]
+        }
+      ],
+      "stay_area": "East Austin"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Springs, lake trails and a sunset viewpoint — Austin outdoors in a day.",
+      "days": [
+        {
+          "title": "Barton Springs, the lake trail and Mount Bonnell",
+          "stops": [
+            {
+              "place": "zilker_park",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Swim early before the heat. Pool hours vary by season."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk or rent a bike on the trail. Open dawn to dusk."
+            },
+            {
+              "place": "bat_cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Boat departures vary by season — book ahead."
+            },
+            {
+              "place": "mount_bonnell",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset view over the river. Open dawn to dusk."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the Capitol, campus art and a sunset bat show in one tight day.",
+      "days": [
+        {
+          "title": "Capitol, campus art, bats at dusk",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early; the grounds are free to walk. Check tour times on the day."
+            },
+            {
+              "place": "blanton",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Short rideshare from the Capitol. Closed Monday."
+            },
+            {
+              "place": "frida_portrait",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Same campus area; check which building it is in on the day."
+            },
+            {
+              "place": "torchys",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Lunch. Tacos are cheap and quick."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Arrive before sunset, roughly March to October. Free."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around BBQ, tacos and a coffee walk.",
+      "days": [
+        {
+          "title": "BBQ line, East Austin eats, South Congress",
+          "stops": [
+            {
+              "place": "franklin_bbq",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go early; it sells out. Closed Monday. Expect a line."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Walk off lunch with coffee and snacks. Cafes set their own hours."
+            },
+            {
+              "place": "south_congress",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Shops and food trucks along the avenue."
+            },
+            {
+              "place": "torchys",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Cheap dinner stop on South Congress."
+            },
+            {
+              "place": "rainbow_cattle",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Evening drink. Open late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or South Congress"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Outdoorsy first-timers: lake trail, a swim and a hilltop sunset.",
+      "days": [
+        {
+          "title": "Lake trail, Barton Springs, sunset views",
+          "stops": [
+            {
+              "place": "lady_bird_lake",
+              "at": "08:00",
+              "minutes": 90,
+              "note": "Go early to beat the heat. Trail is open dawn to dusk."
+            },
+            {
+              "place": "zilker_park",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Pool hours vary by season — check on the day."
+            },
+            {
+              "place": "torchys",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch nearby."
+            },
+            {
+              "place": "mount_bonnell",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset spot. Short climb; bring water."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Bats fly at dusk, roughly March to October. Free."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown or South Congress"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the Capitol, the UT museums and a sunset bat show.",
+      "days": [
+        {
+          "title": "Downtown history and the bats",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Go early. Grounds are free to walk."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short flat walk near the water."
+            },
+            {
+              "place": "torchys",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch. Tacos are cheap and quick."
+            },
+            {
+              "place": "south_congress",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Shops and cafes set their own hours."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Bats fly at sunset, roughly March to October. Arrive early for a spot."
+            }
+          ]
+        },
+        {
+          "title": "UT campus museums",
+          "stops": [
+            {
+              "place": "blanton",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "frida_portrait",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Tue–Sun only. Closed Monday."
+            },
+            {
+              "place": "ut_austin",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk the grounds. Buildings vary, so check on the day."
+            },
+            {
+              "place": "bullock_museum",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Open daily. Good in hot or rainy weather."
+            },
+            {
+              "place": "rainey_street",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening bars. Livelier Thu–Sat."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around BBQ, tacos and coffee.",
+      "days": [
+        {
+          "title": "BBQ and East Austin eats",
+          "stops": [
+            {
+              "place": "franklin_bbq",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Tue–Sun until sold out. Closed Monday. Expect a line."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Coffee and snacks. Cafes set their own hours."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk off lunch by the water."
+            },
+            {
+              "place": "sixth_street",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Night out. Some venues close late."
+            }
+          ]
+        },
+        {
+          "title": "South Congress and tacos",
+          "stops": [
+            {
+              "place": "south_congress",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Late-morning stroll. Shops open at their own pace."
+            },
+            {
+              "place": "torchys",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Lunch. Open daily, usually late."
+            },
+            {
+              "place": "zilker_park",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Pool hours vary by season. Check on the day."
+            },
+            {
+              "place": "rainbow_cattle",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Evening drinks. Open afternoon into late night."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Congress"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Outdoor lovers who want the lake trail, Barton Springs and a sunset viewpoint.",
+      "days": [
+        {
+          "title": "Lake trail and bats",
+          "stops": [
+            {
+              "place": "lady_bird_lake",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Early is cooler and quieter. Open dawn to dusk."
+            },
+            {
+              "place": "bat_cruise",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Departures vary by season. Book ahead."
+            },
+            {
+              "place": "torchys",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch near South Congress."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Sunset bat flight, roughly March to October."
+            }
+          ]
+        },
+        {
+          "title": "Springs and viewpoints",
+          "stops": [
+            {
+              "place": "zilker_park",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Morning swim in summer. Pool hours vary by season."
+            },
+            {
+              "place": "mount_bonnell",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Short climb. Bring water."
+            },
+            {
+              "place": "cotaland",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Seasonal hours. Check on the day. Avoid the hottest afternoons."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the Capitol, the UT museums and a dose of live-music history.",
+      "days": [
+        {
+          "title": "Downtown icons",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early to beat the heat and the tour groups. Check visitor hours on the day."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk a flat stretch of the trail. Bring water."
+            },
+            {
+              "place": "torchys",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Quick taco lunch."
+            },
+            {
+              "place": "sixth_street",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Walk the district and look for live-music posters. Livelier later."
+            }
+          ]
+        },
+        {
+          "title": "UT campus museums",
+          "stops": [
+            {
+              "place": "blanton",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "frida_portrait",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "The Kahlo painting hangs in the UT area. Tue–Sun, closed Monday — check on the day."
+            },
+            {
+              "place": "ut_austin",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk the grounds. Buildings vary — check on the day."
+            },
+            {
+              "place": "bullock_museum",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Good hot-afternoon stop. Open daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "South Congress and sunset",
+          "stops": [
+            {
+              "place": "south_congress",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Shops and cafes set their own hours."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bats at sunset, roughly March–October. Arrive early for a spot."
+            },
+            {
+              "place": "rainey_street",
+              "at": "20:15",
+              "minutes": 120,
+              "note": "Evening bars. Thu–Sat is busiest."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then go",
+          "stops": [
+            {
+              "place": "mount_bonnell",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Short climb, big view. Open dawn to dusk."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Coffee and a bite before you leave. Hours vary by shop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around BBQ, tacos and coffee, with light sightseeing between meals.",
+      "days": [
+        {
+          "title": "BBQ day in East Austin",
+          "stops": [
+            {
+              "place": "franklin_bbq",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Tue–Sun until sold out; closed Monday. Go early and expect a line."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Walk off lunch with coffee stops. Shops set their own hours."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Easy trail walk before dinner."
+            },
+            {
+              "place": "rainey_street",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Drinks and snacks. Busiest Thu–Sat."
+            }
+          ]
+        },
+        {
+          "title": "South Congress eating",
+          "stops": [
+            {
+              "place": "torchys",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch. Open daily, usually late — check on the day."
+            },
+            {
+              "place": "south_congress",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Shops and cafes set their own hours."
+            },
+            {
+              "place": "zilker_park",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Park open daily; pool hours vary by season."
+            },
+            {
+              "place": "rainbow_cattle",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Evening bar stop."
+            }
+          ]
+        },
+        {
+          "title": "Downtown and campus",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning visit. Check hours on the day."
+            },
+            {
+              "place": "ut_austin",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk the grounds; look for campus food spots."
+            },
+            {
+              "place": "blanton",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bats at sunset, roughly March–October."
+            }
+          ]
+        },
+        {
+          "title": "Last bites",
+          "stops": [
+            {
+              "place": "east_austin_food",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Weekend brunch is the local habit. Hours vary."
+            },
+            {
+              "place": "mount_bonnell",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Quick viewpoint before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "East Austin"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Outdoor-first visitors: springs, trails and sunset viewpoints, with indoor backup for hot afternoons.",
+      "days": [
+        {
+          "title": "Springs and lake trail",
+          "stops": [
+            {
+              "place": "zilker_park",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Morning is coolest in summer. Pool hours vary by season."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Flat trail, open dawn to dusk."
+            },
+            {
+              "place": "torchys",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bats at sunset, roughly March–October."
+            }
+          ]
+        },
+        {
+          "title": "Viewpoints and water",
+          "stops": [
+            {
+              "place": "mount_bonnell",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Open dawn to dusk. Short climb."
+            },
+            {
+              "place": "bat_cruise",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Departures vary by season — book ahead."
+            },
+            {
+              "place": "south_congress",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Late-afternoon walk and dinner."
+            }
+          ]
+        },
+        {
+          "title": "East side outdoors",
+          "stops": [
+            {
+              "place": "cotaland",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Seasonal hours — check on the day. Avoid the hottest afternoons."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch and coffee. Hours vary by shop."
+            },
+            {
+              "place": "rainey_street",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening bars."
+            }
+          ]
+        },
+        {
+          "title": "Hot-afternoon backup, then go",
+          "stops": [
+            {
+              "place": "bullock_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Indoor plan if it is too hot or wet. Open daily; check on the day."
+            },
+            {
+              "place": "state_capitol",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Quick look. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "South Congress"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the Capitol, campus museums and a live-music night, paced with easy afternoons.",
+      "days": [
+        {
+          "title": "Arrive, downtown icons",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start here for orientation. Free to walk in; check tour times on the day."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Flat paved trail. Walk a short stretch and turn back."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Bats fly at sunset, roughly March to October. Arrive early for a spot on the bridge or the bank."
+            }
+          ]
+        },
+        {
+          "title": "Capitol of culture: campus museums",
+          "stops": [
+            {
+              "place": "blanton",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "frida_portrait",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "In the same campus area. Closed Monday."
+            },
+            {
+              "place": "ut_austin",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk the main mall and tower area. Buildings vary; check on the day."
+            },
+            {
+              "place": "bullock_museum",
+              "at": "15:30",
+              "minutes": 120,
+              "note": "Good for a hot afternoon. Open daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "South Congress and a show",
+          "stops": [
+            {
+              "place": "south_congress",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Shops and cafes set their own hours. Good late-afternoon light."
+            },
+            {
+              "place": "torchys",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Quick tacos before the evening."
+            },
+            {
+              "place": "sixth_street",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Livelier at night. Some venues close late; check lineups on the day."
+            }
+          ]
+        },
+        {
+          "title": "Music history and Rainey Street",
+          "stops": [
+            {
+              "place": "east_austin_food",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Coffee and a late breakfast. Hours vary by spot."
+            },
+            {
+              "place": "rainey_street",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Bars in converted houses. Evening is best, Thu to Sat."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "mount_bonnell",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Short stair climb for a skyline view. Open dawn to dusk."
+            },
+            {
+              "place": "state_capitol",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Optional second look or a photo stop."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who plan the day around BBQ, tacos and coffee, with light sightseeing in between.",
+      "days": [
+        {
+          "title": "Arrive, tacos and bats",
+          "stops": [
+            {
+              "place": "torchys",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Easy first meal. Open daily, usually late."
+            },
+            {
+              "place": "south_congress",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk off lunch. Shops set their own hours."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset bats, roughly March to October."
+            }
+          ]
+        },
+        {
+          "title": "BBQ day",
+          "stops": [
+            {
+              "place": "franklin_bbq",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Sells out; go late morning Tue to Fri and expect a line."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Coffee and a wander. Hours vary by spot."
+            },
+            {
+              "place": "rainey_street",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Evening bars, Thu to Sat are busiest."
+            }
+          ]
+        },
+        {
+          "title": "Campus and a long lunch",
+          "stops": [
+            {
+              "place": "ut_austin",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk the mall. Buildings vary; check on the day."
+            },
+            {
+              "place": "blanton",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check hours on the day."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Dinner on the east side. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Lake, park and a food stop",
+          "stops": [
+            {
+              "place": "zilker_park",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Morning is cooler. Pool hours vary by season."
+            },
+            {
+              "place": "lady_bird_lake",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Flat trail along the water. Open dawn to dusk."
+            },
+            {
+              "place": "torchys",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Late lunch or early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Last coffee, then fly",
+          "stops": [
+            {
+              "place": "east_austin_food",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Final coffee and pastry. Check hours on the day."
+            },
+            {
+              "place": "state_capitol",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Quick look before you go. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "East Austin"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Outdoors-first visitors: lake trail, springs, a viewpoint and the bats, with hot afternoons indoors.",
+      "days": [
+        {
+          "title": "Arrive, lake trail and bats",
+          "stops": [
+            {
+              "place": "lady_bird_lake",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Early evening is cooler. Open dawn to dusk."
+            },
+            {
+              "place": "congress_bridge",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Sunset bats, roughly March to October. Bring a light layer."
+            }
+          ]
+        },
+        {
+          "title": "Springs and park",
+          "stops": [
+            {
+              "place": "zilker_park",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Go early in summer. Pool hours vary by season."
+            },
+            {
+              "place": "south_congress",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch and a walk. Shops set their own hours."
+            },
+            {
+              "place": "bullock_museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Indoor break for the hottest hours. Open daily; check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Viewpoint and water",
+          "stops": [
+            {
+              "place": "mount_bonnell",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Short climb, open dawn to dusk. Morning is cooler."
+            },
+            {
+              "place": "bat_cruise",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Departures vary by season. Book ahead."
+            },
+            {
+              "place": "rainey_street",
+              "at": "19:00",
+              "minutes": 120,
+              "note": "Dinner and a drink nearby."
+            }
+          ]
+        },
+        {
+          "title": "East side outdoors",
+          "stops": [
+            {
+              "place": "cotaland",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Seasonal hours; check on the day. Avoid the hottest afternoons."
+            },
+            {
+              "place": "east_austin_food",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch and coffee. Hours vary by spot."
+            }
+          ]
+        },
+        {
+          "title": "Last walk, then fly",
+          "stops": [
+            {
+              "place": "lady_bird_lake",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Short morning loop before checkout."
+            },
+            {
+              "place": "state_capitol",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Quick indoor stop. Check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "The Capitol, museums and live music history."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "BBQ, tacos and food trucks, all day."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Barton Springs, the Greenbelt and lake trails."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Walk to the Capitol, Congress Avenue and Rainey Street. Best base for a first visit and nightlife.",
+      "center": [
+        30.2672,
+        -97.7431
+      ]
+    },
+    {
+      "area": "South Congress",
+      "range": [
+        140,
+        350
+      ],
+      "why": "Shops, cafés and food trucks on SoCo; a short ride or walk over the bridge to downtown.",
+      "center": [
+        30.2503,
+        -97.7501
+      ]
+    },
+    {
+      "area": "University of Texas",
+      "range": [
+        110,
+        280
+      ],
+      "why": "Cheaper rooms near campus and the Blanton Museum; walkable and bus-friendly.",
+      "center": [
+        30.2849,
+        -97.7341
+      ]
+    },
+    {
+      "area": "East Austin",
+      "range": [
+        130,
+        330
+      ],
+      "why": "Galleries, bars and some of the city's best food; close to downtown but quieter.",
+      "center": [
+        30.2626,
+        -97.7215
+      ]
+    }
+  ],
+  "food": [
+    "Try Texas BBQ brisket and ribs. Popular spots have long lines; go early or expect a wait.",
+    "Breakfast tacos are a local staple. Cheap, filling and sold at many taquerias and trucks.",
+    "Food trucks cluster on South Congress and in East Austin. Cash is handy at some.",
+    "Book ahead for dinner on weekends, especially downtown and East Austin.",
+    "Tap water is safe to drink. Many places refill bottles; summers are hot, so carry water."
+  ],
+  "more_time": [
+    "Add a day trip to the Hill Country: small towns and swimming holes west of the city. A car helps.",
+    "Swap an afternoon for a lake day on Lake Austin or Lady Bird Lake: kayak or paddleboard rentals.",
+    "Music fans can add a night of live shows on Sixth Street or Red River; check listings on the day."
+  ]
+}

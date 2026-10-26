@@ -9,6 +9,7 @@ import 'package:jidoapp/models/admin_region.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class SubregionProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -61,7 +62,7 @@ class SubregionProvider with ChangeNotifier {
       final bool localIsOtherAccount =
           localOwner != null && localOwner != user.uid;
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('visited_subregions')) {
           // CityProvider와 동일한 안전장치: 서버가 로컬보다 최신이거나 이 기기에
           // 동기화 기록이 없을 때만 서버 값으로 덮어쓴다. (서버 저장이 실패했던
@@ -234,7 +235,7 @@ class SubregionProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data()!.containsKey('visited_subregions')) {
           final String serverJson = doc.data()!['visited_subregions'];
           await prefs.setString('visited_subregions', serverJson);

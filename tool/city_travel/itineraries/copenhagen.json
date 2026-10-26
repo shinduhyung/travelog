@@ -1,0 +1,1543 @@
+{
+  "city": "Copenhagen",
+  "checked": "October 2026",
+  "currency": "DKK",
+  "usd_rate": 6.6678,
+  "intro": "Copenhagen rewards visitors with canals, design, and cozy hygge at every turn. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 55.5943,
+      "west": 12.4763,
+      "north": 55.7971,
+      "east": 12.9686,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 40,
+      "flag_airport": 50,
+      "per_km": 15,
+      "min_fare": 60
+    },
+    "road_factor": 1.3,
+    "city_kmh": 22,
+    "notes": [
+      "Metro runs 24/7; M1/M2 link the airport to the centre in about 14 min.",
+      "S-trains and buses cover the city; a 3-zone ticket costs about DKK30.",
+      "Taxis are metered and pricey; apps like Uber and Bolt operate in the city.",
+      "Driving in the centre is slow and parking is costly; park outside and take transit.",
+      "The city is flat and bike-friendly; rental bikes are everywhere.",
+      "Harbour buses and small ferries cross the canals cheaply."
+    ],
+    "sources": []
+  },
+  "places": {
+    "nyhavn": {
+      "name": "Nyhavn",
+      "landmark": "Nyhavn",
+      "kind": "sight",
+      "lat": 55.6795,
+      "lon": 12.591,
+      "price": 0,
+      "price_text": "Free to walk · canal boat tours from about DKK 100",
+      "hours": "Always open · restaurants and bars from late morning to late night",
+      "tip": "Come before 09:00 for photos without crowds, then return at sunset for the coloured houses lit up.",
+      "source": ""
+    },
+    "tivoli": {
+      "name": "Tivoli Gardens",
+      "landmark": "Tivoli Gardens",
+      "kind": "park",
+      "lat": 55.6732,
+      "lon": 12.5647,
+      "price": 155,
+      "price_text": "Entry about DKK 140–160 · rides extra (multi-ride wristband about DKK 300)",
+      "hours": "Seasonal · usually mid-April to late September, plus Christmas season · check on the day",
+      "tip": "Buy the entry ticket and ride wristband online to skip the queue, and stay after dark for the lights.",
+      "source": "https://www.tivoli.dk/en"
+    },
+    "little-mermaid": {
+      "name": "The Little Mermaid",
+      "landmark": "The Little Mermaid",
+      "kind": "sight",
+      "lat": 55.6929,
+      "lon": 12.5993,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "The statue is small and busy. Combine it with a walk along the Langelinie promenade rather than making a special trip.",
+      "source": ""
+    },
+    "amalienborg": {
+      "name": "Amalienborg",
+      "landmark": "Amalienborg",
+      "kind": "sight",
+      "lat": 55.6841,
+      "lon": 12.593,
+      "price": 0,
+      "price_text": "Free to see the square · palace museum about DKK 100–120",
+      "hours": "Square always open · changing of the guard daily around 11:30–12:00 · museum hours check on the day",
+      "tip": "Stand in the middle of the square to see the guard march past, and check the flag to see if the Queen is home.",
+      "source": "https://www.kongernessamling.dk/en/amalienborg/"
+    },
+    "rosenborg": {
+      "name": "Rosenborg Castle",
+      "landmark": "Rosenborg Castle",
+      "kind": "museum",
+      "lat": 55.6858,
+      "lon": 12.5774,
+      "price": 140,
+      "price_text": "About DKK 125–150 · garden free",
+      "hours": "Usually 10:00–16:00 · check on the day, closed some Mondays",
+      "tip": "See the Crown Jewels in the basement, then relax in the King's Garden next door for free.",
+      "source": "https://www.kongernessamling.dk/en/rosenborg/"
+    },
+    "christiansborg": {
+      "name": "Christiansborg Palace",
+      "landmark": "Christiansborg Palace",
+      "kind": "museum",
+      "lat": 55.6762,
+      "lon": 12.5805,
+      "price": 160,
+      "price_text": "About DKK 150–170 for the main palace · tower free",
+      "hours": "Usually 10:00–17:00 · check on the day",
+      "tip": "The palace tower is free and gives one of the best views in the city. Go up before the palace tour.",
+      "source": "https://www.christiansborg.dk/en/"
+    },
+    "round-tower": {
+      "name": "The Round Tower",
+      "landmark": "The Round Tower",
+      "kind": "sight",
+      "lat": 55.6813,
+      "lon": 12.5757,
+      "price": 40,
+      "price_text": "About DKK 40",
+      "hours": "Usually 10:00–20:00 in summer · shorter in winter, check on the day",
+      "tip": "Walk the spiral ramp to the top for a 360° view of the old town. No lift, but the slope is easy.",
+      "source": "https://www.rundetaarn.dk/en/"
+    },
+    "canal-tour": {
+      "name": "Canal Tours Copenhagen",
+      "landmark": "Canal Tours Copenhagen",
+      "kind": "tour",
+      "lat": 55.6797,
+      "lon": 12.5912,
+      "price": 110,
+      "price_text": "About DKK 100–120 · about 1 hour",
+      "hours": "Departures roughly 09:30–17:00, more often in summer · check on the day",
+      "tip": "Boats leave from Nyhavn. Sit on the open back deck for the best views and photos.",
+      "source": "https://www.canaltours.dk/"
+    },
+    "carlsberg": {
+      "name": "Carlsberg Brewhouse",
+      "landmark": "Carlsberg Brewhouse",
+      "kind": "museum",
+      "lat": 55.6663,
+      "lon": 12.5323,
+      "price": 130,
+      "price_text": "About DKK 120–150 · includes two tastings",
+      "hours": "Usually 10:00–18:00 · check on the day",
+      "tip": "The ticket includes beer samples. Go by train to Carlsberg station, it is a short walk from there.",
+      "source": "https://www.visitcarlsberg.dk/en/"
+    },
+    "opera-house": {
+      "name": "Copenhagen Opera House",
+      "landmark": "Copenhagen Opera House",
+      "kind": "show",
+      "lat": 55.6817,
+      "lon": 12.6001,
+      "price": null,
+      "price_text": "Tickets vary by performance · check the programme",
+      "hours": "Performance times vary · foyer open before shows",
+      "tip": "Even without a ticket, take the harbour bus or walk over for the building and waterfront view.",
+      "source": "https://www.kglteater.dk/en"
+    },
+    "zoo": {
+      "name": "Copenhagen Zoo",
+      "landmark": "Copenhagen Zoo",
+      "kind": "park",
+      "lat": 55.672,
+      "lon": 12.5215,
+      "price": 220,
+      "price_text": "About DKK 200–240 · children cheaper",
+      "hours": "Usually 10:00–17:00, longer in summer · check on the day",
+      "tip": "Big and hilly. Wear good shoes and plan at least half a day, especially with children.",
+      "source": "https://www.zoo.dk/en"
+    },
+    "bakken": {
+      "name": "Dyrehavsbakken",
+      "landmark": "Dyrehavsbakken",
+      "kind": "park",
+      "lat": 55.776,
+      "lon": 12.5689,
+      "price": 0,
+      "price_text": "Free entry · rides paid per ride or wristband",
+      "hours": "Seasonal, roughly April to August · check on the day",
+      "tip": "The world's oldest amusement park. Combine it with a walk in the deer park next door.",
+      "source": "https://www.bakken.dk/en"
+    },
+    "christiania": {
+      "name": "Freetown Christiania",
+      "landmark": "Freetown Christiania",
+      "kind": "sight",
+      "lat": 55.6738,
+      "lon": 12.5975,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Daytime is best · avoid Pusher Street area",
+      "tip": "Photography is not allowed in parts of Christiania. Respect the signs and keep to the main paths.",
+      "source": ""
+    },
+    "parken": {
+      "name": "Parken Stadium",
+      "landmark": "Parken Stadium",
+      "kind": "activity",
+      "lat": 55.7027,
+      "lon": 12.5724,
+      "price": null,
+      "price_text": "Match tickets vary · tours when available",
+      "hours": "Only on match days or tours · check the fixture list",
+      "tip": "Check if FC Copenhagen or Denmark are playing at home. Book tickets early for big games.",
+      "source": "https://www.parken.dk/"
+    },
+    "royal-theatre": {
+      "name": "Royal Danish Theatre",
+      "landmark": "Royal Danish Theatre",
+      "kind": "show",
+      "lat": 55.6795,
+      "lon": 12.586,
+      "price": null,
+      "price_text": "Tickets vary by performance · check the programme",
+      "hours": "Performance times vary",
+      "tip": "The old stage on Kongens Nytorv is worth a look even without a ticket. Check for cheaper last-minute seats.",
+      "source": "https://www.kglteater.dk/en"
+    },
+    "black-diamond": {
+      "name": "Royal Library of Copenhagen (Black Diamond)",
+      "landmark": "Royal Library of Copenhagen (Black Diamond)",
+      "kind": "sight",
+      "lat": 55.6734,
+      "lon": 12.5826,
+      "price": 0,
+      "price_text": "Free to enter the building and exhibitions",
+      "hours": "Usually 08:00–20:00 weekdays, shorter at weekends · check on the day",
+      "tip": "Walk up to the top floor for the view over the harbour, then sit in the glass atrium cafe.",
+      "source": "https://www.kb.dk/en"
+    },
+    "smorrebrod": {
+      "name": "Smørrebrød lunch",
+      "landmark": "Smørrebrød",
+      "kind": "food",
+      "lat": 55.6761,
+      "lon": 12.5683,
+      "price": 150,
+      "price_text": "About DKK 80–120 per piece · lunch with drinks about DKK 200–350",
+      "hours": "Lunchtime, roughly 11:30–15:00 · book ahead at classic places",
+      "tip": "Order two or three pieces, not one. Try pickled herring first, then roast beef with remoulade.",
+      "source": ""
+    },
+    "stortorget": {
+      "name": "Stortorget, Malmö",
+      "landmark": "Stortorget, Malmö",
+      "kind": "sight",
+      "lat": 55.6062,
+      "lon": 13.0016,
+      "price": 0,
+      "price_text": "Free · train from Copenhagen about SEK 100–150 each way",
+      "hours": "Always open",
+      "tip": "A day trip over the Øresund bridge. The train takes about 35 minutes from Copenhagen Central.",
+      "source": ""
+    },
+    "blue-planet": {
+      "name": "The Blue Planet (Den Bla Planet)",
+      "landmark": "The Blue Planet (Den Bla Planet)",
+      "kind": "museum",
+      "lat": 55.6385,
+      "lon": 12.6558,
+      "price": 210,
+      "price_text": "About DKK 190–220 · children cheaper",
+      "hours": "Usually 10:00–17:00, longer in summer · check on the day",
+      "tip": "It is near the airport, not the centre. Take the metro to Kastrup and walk, or go on the way to the airport.",
+      "source": "https://denblaaplanet.dk/en/"
+    },
+    "turning-torso": {
+      "name": "Turning Torso",
+      "landmark": "Turning Torso",
+      "kind": "sight",
+      "lat": 55.6154,
+      "lon": 12.9234,
+      "price": 0,
+      "price_text": "Free to see from outside · not open to the public inside",
+      "hours": "Always visible · viewing from outside only",
+      "tip": "See it from the Malmö waterfront or the beach at Ribersborg. You cannot go inside.",
+      "source": ""
+    },
+    "torvehallerne": {
+      "name": "Torvehallerne food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 55.6832,
+      "lon": 12.5697,
+      "price": 0,
+      "price_text": "Free to enter · food about DKK 50–120 per item",
+      "hours": "Usually 10:00–19:00 weekdays, longer Saturday · check on the day",
+      "tip": "Two glass halls of stalls. Go hungry and try a Danish pastry, coffee and a smørrebrød.",
+      "source": "https://torvehallernekbh.dk/"
+    },
+    "rundetaarn-view": {
+      "name": "Christiansborg Tower viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 55.6761,
+      "lon": 12.5796,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Usually 11:00–18:00 · check on the day",
+      "tip": "Free lift to the top of the tower. Best on a clear day for views over the roofs and harbour.",
+      "source": "https://www.christiansborg.dk/en/"
+    },
+    "harbour-bus": {
+      "name": "Harbour bus (Havnebussen)",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 55.6799,
+      "lon": 12.5908,
+      "price": 30,
+      "price_text": "Normal city transport ticket, about DKK 24–36",
+      "hours": "Roughly 07:00–19:00 · check on the day",
+      "tip": "A cheap boat ride through the harbour using a normal metro ticket. Sit outside at the back.",
+      "source": "https://www.dsb.dk/en/"
+    },
+    "norrebro-walk": {
+      "name": "Nørrebro and Jægersborggade walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 55.6905,
+      "lon": 12.5519,
+      "price": 0,
+      "price_text": "Free · coffee and snacks extra",
+      "hours": "Shops roughly 10:00–18:00 · streets always open",
+      "tip": "Walk Jægersborggade for small shops and coffee, then cross to Assistens Cemetery park for a quiet break.",
+      "source": ""
+    },
+    "vesterbro-meatpacking": {
+      "name": "Vesterbro and Kødbyen walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 55.6696,
+      "lon": 12.5597,
+      "price": 0,
+      "price_text": "Free · food and drinks extra",
+      "hours": "Streets always open · bars and restaurants from afternoon to late",
+      "tip": "The old meatpacking district is now bars and galleries. Good for an evening walk and dinner.",
+      "source": ""
+    },
+    "kongens-have": {
+      "name": "King's Garden (Kongens Have)",
+      "landmark": null,
+      "kind": "park",
+      "lat": 55.6856,
+      "lon": 12.5772,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Usually 07:00–22:00 in summer · shorter in winter",
+      "tip": "The city's oldest park. Bring a coffee and sit on the grass next to Rosenborg Castle.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day on foot through the old centre, from harbour to palace to Tivoli.",
+      "days": [
+        {
+          "title": "Harbour, palaces and Tivoli",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quietest before the crowds. Walk the canal side."
+            },
+            {
+              "place": "amalienborg",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "About 20 minutes on foot. Guard change around 11:30–12:00."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch nearby. Book ahead at classic places."
+            },
+            {
+              "place": "rosenborg",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Check on the day, closed some Mondays."
+            },
+            {
+              "place": "tivoli",
+              "at": "16:30",
+              "minutes": 180,
+              "note": "Seasonal, usually mid-April to late September. Stay into the evening lights."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A tasting day: market halls, smørrebrød and the Nørrebro food streets.",
+      "days": [
+        {
+          "title": "Markets, lunch and Nørrebro",
+          "stops": [
+            {
+              "place": "torvehallerne",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Coffee and pastries first. Usually 10:00–19:00 weekdays."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Lunchtime is roughly 11:30–15:00. Book ahead."
+            },
+            {
+              "place": "round-tower",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk off lunch. Usually 10:00–20:00 in summer."
+            },
+            {
+              "place": "norrebro-walk",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Jægersborggade shops roughly 10:00–18:00."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Dinner and bars in Kødbyen. Busy late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "Castles and the old harbour in one day, with a tower view to finish.",
+      "days": [
+        {
+          "title": "Castles and the old harbour",
+          "stops": [
+            {
+              "place": "christiansborg",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "rundetaarn-view",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Tower viewpoint, usually 11:00–18:00. Free."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch in the centre."
+            },
+            {
+              "place": "nyhavn",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Old harbour history. Boats and warehouses."
+            },
+            {
+              "place": "canal-tour",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Departures roughly 09:30–17:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "The classic Copenhagen day: harbour, palaces and Tivoli, all in the old centre.",
+      "days": [
+        {
+          "title": "Arrive, harbour and the old centre",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start at the colourful harbour front. Restaurants here are pricey, so just walk and look."
+            },
+            {
+              "place": "canal-tour",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Boats leave from Nyhavn. Sit outside if it is dry. Check the day's departure times."
+            },
+            {
+              "place": "amalienborg",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "About 15 minutes on foot along the water. The guard change is around 11:30–12:00, so you will likely miss it today."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "17:00",
+              "minutes": 75,
+              "note": "Early smørrebrød dinner. Book ahead at the classic places."
+            },
+            {
+              "place": "tivoli",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Late afternoon into evening is the best time. Seasonal, so check it is open on your date."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "A tasting day: market halls, smørrebrød and the Nørrebro food streets.",
+      "days": [
+        {
+          "title": "Markets, smørrebrød and Nørrebro",
+          "stops": [
+            {
+              "place": "torvehallerne",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Two market halls near Nørreport station. Good for coffee and a snack first."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Proper sit-down lunch. Classic places fill up, so book ahead."
+            },
+            {
+              "place": "round-tower",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Walk off lunch up the spiral ramp. Usually open to 20:00 in summer."
+            },
+            {
+              "place": "norrebro-walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Short bus or metro ride north. Jægersborggade has coffee, bakeries and small shops."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Evening in Kødbyen. Bars and restaurants get busy late; book if you want a table."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre) or Nørrebro"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Castles and the old harbour in one tight day, mostly on foot.",
+      "days": [
+        {
+          "title": "Palaces and the harbour",
+          "stops": [
+            {
+              "place": "rosenborg",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Start early. Usually 10:00–16:00 and closed some Mondays, so check the day."
+            },
+            {
+              "place": "kongens-have",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "The castle garden next door. A short loop is enough."
+            },
+            {
+              "place": "amalienborg",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk down through the centre. The guard change is around 11:30–12:00, so you may catch the tail end."
+            },
+            {
+              "place": "nyhavn",
+              "at": "14:15",
+              "minutes": 45,
+              "note": "Old harbour front. Ten minutes on foot from Amalienborg."
+            },
+            {
+              "place": "christiansborg",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Last entry is earlier, so go straight there."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Dinner in Kødbyen, a short walk or bus away."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the classic Copenhagen sights at an easy pace, all in and around the old centre.",
+      "days": [
+        {
+          "title": "Arrive, harbour and the old town",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start at the colourful harbour front. Busiest in the afternoon, so keep it short and come back at sunset if you like."
+            },
+            {
+              "place": "canal-tour",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Boats leave from near Nyhavn. Departures are roughly 09:30–17:00, more often in summer. Check on the day."
+            },
+            {
+              "place": "amalienborg",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Walk along the water. The square is always open. The guard change is in the late morning, so you will miss it today."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Early dinner. Classic places fill up, so book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Palaces, tower and Tivoli",
+          "stops": [
+            {
+              "place": "rosenborg",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Go early. Usually 10:00–16:00 and closed some Mondays. Check on the day."
+            },
+            {
+              "place": "round-tower",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Five minutes on foot. Usually open to 20:00 in summer, shorter in winter."
+            },
+            {
+              "place": "torvehallerne",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the food market. Usually 10:00–19:00 on weekdays."
+            },
+            {
+              "place": "tivoli",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Seasonal, usually mid-April to late September plus Christmas. Check on the day. Stay into the evening for the lights."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Travellers who plan the day around lunch and dinner, with a few sights in between.",
+      "days": [
+        {
+          "title": "Market lunch and the harbour",
+          "stops": [
+            {
+              "place": "torvehallerne",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch among the stalls. Usually 10:00–19:00 weekdays, longer on Saturday."
+            },
+            {
+              "place": "round-tower",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Walk it off. Usually 10:00–20:00 in summer, shorter in winter."
+            },
+            {
+              "place": "nyhavn",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Harbour walk. Bars open from late morning to late night."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Evening in Kødbyen. Bars and restaurants run from afternoon to late."
+            }
+          ]
+        },
+        {
+          "title": "Nørrebro flavours and a beer stop",
+          "stops": [
+            {
+              "place": "norrebro-walk",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Jægersborggade shops are roughly 10:00–18:00. Streets are always open."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch. Book ahead at classic places."
+            },
+            {
+              "place": "carlsberg",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually 10:00–18:00. Check on the day."
+            },
+            {
+              "place": "tivoli",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Seasonal. Check on the day. Food stalls inside make an easy dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "Visitors who want castles, the old harbour and a look at the city's working past.",
+      "days": [
+        {
+          "title": "Castles and the old centre",
+          "stops": [
+            {
+              "place": "rosenborg",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually 10:00–16:00, closed some Mondays. Check on the day."
+            },
+            {
+              "place": "kongens-have",
+              "at": "11:45",
+              "minutes": 45,
+              "note": "The garden next door. Usually 07:00–22:00 in summer, shorter in winter."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "12:45",
+              "minutes": 75,
+              "note": "Lunch nearby. Book ahead."
+            },
+            {
+              "place": "christiansborg",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "rundetaarn-view",
+              "at": "16:45",
+              "minutes": 30,
+              "note": "Tower viewpoint. Usually 11:00–18:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Harbour, guard change and a day trip",
+          "stops": [
+            {
+              "place": "amalienborg",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Guard change is daily around 11:30–12:00. Arrive a little early."
+            },
+            {
+              "place": "nyhavn",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Walk the harbour. Lunch at one of the quayside places."
+            },
+            {
+              "place": "harbour-bus",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Cheap way to see the waterfront. Roughly 07:00–19:00. Check on the day."
+            },
+            {
+              "place": "stortorget",
+              "at": "15:30",
+              "minutes": 240,
+              "note": "Optional Malmö day trip by train across the Øresund. Check timetables on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the classic Copenhagen: harbour, palaces, Tivoli and a canal view.",
+      "days": [
+        {
+          "title": "Arrive, harbour front and Tivoli",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start at the colourful harbour houses. Busy in the afternoon, so keep it short and come back early one morning."
+            },
+            {
+              "place": "canal-tour",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Boats leave from near Nyhavn. Departures are roughly 09:30–17:00, more often in summer. Check on the day."
+            },
+            {
+              "place": "tivoli",
+              "at": "17:30",
+              "minutes": 180,
+              "note": "Late afternoon into evening is best. Seasonal: usually mid-April to late September, plus Christmas. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palaces and the old centre",
+          "stops": [
+            {
+              "place": "amalienborg",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Changing of the guard is daily around 11:30–12:00. Museum hours: check on the day."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Classic lunch, roughly 11:30–15:00. Book ahead at the well-known places."
+            },
+            {
+              "place": "rosenborg",
+              "at": "14:15",
+              "minutes": 90,
+              "note": "Usually 10:00–16:00. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "round-tower",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Usually open to 20:00 in summer, shorter in winter. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Christiansborg, harbour bus and Nørrebro",
+          "stops": [
+            {
+              "place": "christiansborg",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "rundetaarn-view",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Tower viewpoint, usually 11:00–18:00. Go on a clear day."
+            },
+            {
+              "place": "torvehallerne",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch at the food market. Usually 10:00–19:00 weekdays, longer on Saturday."
+            },
+            {
+              "place": "harbour-bus",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Cheap boat ride along the harbour. Roughly 07:00–19:00. Check on the day."
+            },
+            {
+              "place": "norrebro-walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Jægersborggade shops close around 18:00. Streets stay open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want smørrebrød, markets and the neighbourhood food streets, with the big sights in between.",
+      "days": [
+        {
+          "title": "Market lunch and the harbour",
+          "stops": [
+            {
+              "place": "torvehallerne",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch among the stalls. Usually 10:00–19:00 weekdays, longer on Saturday."
+            },
+            {
+              "place": "nyhavn",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Walk the harbour front. Bars fill up later in the day."
+            },
+            {
+              "place": "canal-tour",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Departures roughly 09:30–17:00. Check on the day."
+            },
+            {
+              "place": "tivoli",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Dinner inside the gardens. Seasonal, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Smørrebrød and Nørrebro",
+          "stops": [
+            {
+              "place": "smorrebrod",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "The classic lunch. Book ahead."
+            },
+            {
+              "place": "round-tower",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Walk off lunch. Usually 10:00–20:00 in summer. Check on the day."
+            },
+            {
+              "place": "norrebro-walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Jægersborggade has coffee, bakeries and small shops. Most close around 18:00."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Kødbyen for dinner and bars. Busy from afternoon to late."
+            }
+          ]
+        },
+        {
+          "title": "Carlsberg and the centre",
+          "stops": [
+            {
+              "place": "carlsberg",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Brewhouse in Vesterbro, usually 10:00–18:00. Check on the day."
+            },
+            {
+              "place": "christiansborg",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "rundetaarn-view",
+              "at": "16:15",
+              "minutes": 30,
+              "note": "Tower viewpoint, usually 11:00–18:00."
+            },
+            {
+              "place": "nyhavn",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset by the water, then dinner nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre) or Vesterbro"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "Visitors who want castles, the old harbour and a day trip across the water to Malmö.",
+      "days": [
+        {
+          "title": "Old harbour and the canal",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Early morning is quiet and best for photos."
+            },
+            {
+              "place": "canal-tour",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Departures roughly 09:30–17:00. Check on the day."
+            },
+            {
+              "place": "amalienborg",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Guard change is daily around 11:30–12:00. Museum hours: check on the day."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch, roughly 11:30–15:00. Book ahead."
+            },
+            {
+              "place": "little-mermaid",
+              "at": "15:00",
+              "minutes": 20,
+              "note": "Short walk along the water in Østerbro. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Castles and Christianshavn",
+          "stops": [
+            {
+              "place": "rosenborg",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually 10:00–16:00. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "christiansborg",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day."
+            },
+            {
+              "place": "rundetaarn-view",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Tower viewpoint, usually 11:00–18:00."
+            },
+            {
+              "place": "christiania",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Go in daytime. Avoid the Pusher Street area."
+            }
+          ]
+        },
+        {
+          "title": "Day trip to Malmö",
+          "stops": [
+            {
+              "place": "stortorget",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Train over the Øresund bridge, then the old square and lunch. Always open."
+            },
+            {
+              "place": "turning-torso",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "View from outside only. Best near sunset."
+            },
+            {
+              "place": "tivoli",
+              "at": "18:30",
+              "minutes": 180,
+              "note": "Back in Copenhagen for the evening. Seasonal, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the old centre, the palaces and Tivoli without rushing.",
+      "days": [
+        {
+          "title": "Arrive and ease into the harbour",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Walk the canal from end to end. Boats and bars are busiest late afternoon."
+            },
+            {
+              "place": "canal-tour",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Boats leave from Nyhavn. Last departures are late afternoon, so check on the day."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Book ahead at classic places in the centre."
+            }
+          ]
+        },
+        {
+          "title": "Palaces and the old town",
+          "stops": [
+            {
+              "place": "amalienborg",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Guard change is daily around 11:30–12:00. Arrive early for a spot."
+            },
+            {
+              "place": "rosenborg",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Usually 10:00–16:00. Closed some Mondays, so check on the day."
+            },
+            {
+              "place": "kongens-have",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Right next to Rosenborg. A good sit-down after the castle."
+            },
+            {
+              "place": "round-tower",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Usually open to 20:00 in summer. The spiral ramp is the fun part."
+            }
+          ]
+        },
+        {
+          "title": "Christianshavn and the water",
+          "stops": [
+            {
+              "place": "christiansborg",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day for room closures."
+            },
+            {
+              "place": "rundetaarn-view",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Tower viewpoint, usually 11:00–18:00. Clear days are best."
+            },
+            {
+              "place": "torvehallerne",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch at the food market. Busy at midday."
+            },
+            {
+              "place": "christiania",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Daytime is best. Stay away from the Pusher Street area."
+            }
+          ]
+        },
+        {
+          "title": "Tivoli and a show",
+          "stops": [
+            {
+              "place": "black-diamond",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Usually open weekdays 08:00–20:00, shorter at weekends."
+            },
+            {
+              "place": "tivoli",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Seasonal, usually mid-April to late September. Check on the day. Stay into the evening for the lights."
+            },
+            {
+              "place": "royal-theatre",
+              "at": "20:00",
+              "minutes": 150,
+              "note": "Performance times vary. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want smørrebrød, markets and the Nørrebro and Vesterbro food streets.",
+      "days": [
+        {
+          "title": "Arrive, harbour and lunch",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Walk the canal before eating."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Classic lunch, roughly 11:30–15:00. Book ahead."
+            },
+            {
+              "place": "harbour-bus",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Cheap way to see the harbour. Roughly 07:00–19:00, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Market and Nørrebro",
+          "stops": [
+            {
+              "place": "torvehallerne",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Graze the stalls for lunch. Usually 10:00–19:00 weekdays."
+            },
+            {
+              "place": "norrebro-walk",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Jægersborggade shops and coffee. Shops roughly 10:00–18:00."
+            },
+            {
+              "place": "round-tower",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Short climb to work up an appetite."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "19:00",
+              "minutes": 75,
+              "note": "Kødbyen bars and restaurants run late. Book dinner ahead."
+            }
+          ]
+        },
+        {
+          "title": "Beer and the centre",
+          "stops": [
+            {
+              "place": "carlsberg",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually 10:00–18:00. Check on the day."
+            },
+            {
+              "place": "vesterbro-meatpacking",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Walk back through Vesterbro. Coffee and a snack stop."
+            },
+            {
+              "place": "tivoli",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Seasonal. Food stalls inside make an easy dinner. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "kongens-have",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Usually 07:00–22:00 in summer. A calm start."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "One last lunch before the airport. Book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    },
+    {
+      "id": "4n-history",
+      "length": "4n",
+      "style": "history",
+      "nights": 4,
+      "for": "Visitors who want castles, the old harbour and a Malmö day trip.",
+      "days": [
+        {
+          "title": "Arrive and the old harbour",
+          "stops": [
+            {
+              "place": "nyhavn",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "The old harbour. Read the house numbers for dates."
+            },
+            {
+              "place": "canal-tour",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Boats from Nyhavn. Last departures late afternoon, check on the day."
+            },
+            {
+              "place": "smorrebrod",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Dinner in the centre. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Castles morning",
+          "stops": [
+            {
+              "place": "rosenborg",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Usually 10:00–16:00. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "amalienborg",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Guard change is around 11:30–12:00. Museum hours check on the day."
+            },
+            {
+              "place": "little-mermaid",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Short walk along the water from Amalienborg."
+            },
+            {
+              "place": "christiansborg",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Usually 10:00–17:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Malmö day trip",
+          "stops": [
+            {
+              "place": "stortorget",
+              "at": "10:30",
+              "minutes": 240,
+              "note": "Train over the Øresund bridge, about 35 minutes. Bring your passport."
+            },
+            {
+              "place": "turning-torso",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "View from outside only. Best near sunset."
+            }
+          ]
+        },
+        {
+          "title": "Beer history, then fly",
+          "stops": [
+            {
+              "place": "carlsberg",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–18:00. Check on the day."
+            },
+            {
+              "place": "torvehallerne",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch at the market before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Indre By (centre)"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Nyhavn, the palaces and Tivoli in the old centre."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Smørrebrød, bakeries and the Nørrebro food scene."
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Castles, Viking ships and the old harbour."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Indre By (centre)",
+      "range": [
+        900,
+        1800
+      ],
+      "why": "Walk to Nyhavn, Tivoli, the palaces and the Round Tower. Best for a first short visit.",
+      "center": [
+        55.679,
+        12.57
+      ]
+    },
+    {
+      "area": "Vesterbro",
+      "range": [
+        700,
+        1400
+      ],
+      "why": "Next to the central station and Tivoli; lively food and bar streets. Easy airport trains.",
+      "center": [
+        55.671,
+        12.552
+      ]
+    },
+    {
+      "area": "Nørrebro",
+      "range": [
+        600,
+        1200
+      ],
+      "why": "Cheaper, young and multicultural. Good cafés and street food; 10–15 min by bike or metro to the centre.",
+      "center": [
+        55.694,
+        12.552
+      ]
+    },
+    {
+      "area": "Østerbro",
+      "range": [
+        750,
+        1500
+      ],
+      "why": "Quiet, leafy and close to the Little Mermaid, the lakes and the park. Good for families.",
+      "center": [
+        55.706,
+        12.578
+      ]
+    }
+  ],
+  "food": [
+    "Start with smørrebrød: rye bread with herring, egg and shrimp. Lunch portions are bigger than they look.",
+    "Try a bakery 'kanelsnegl' (cinnamon roll) and Danish pastries; they are cheapest to take away.",
+    "Rejsekort or the app for cheap eats: hot dogs from a pølsevogn stand cost about DKK 30–45.",
+    "Nørrebro and Vesterbro have the best value: falafel, shawarma and street food halls, about DKK 60–100 a meal.",
+    "Book dinner ahead on weekends. A sit-down dinner with drinks often runs DKK 250–450 per person."
+  ],
+  "more_time": [
+    "Swap a city day for Roskilde: the Viking Ship Museum and the cathedral, about 25 min by S-train.",
+    "Take the train to Louisiana Museum of Modern Art north of the city; check opening days on the day.",
+    "Cross to Malmö, Sweden, by train over the Øresund bridge for a half-day change of scene."
+  ]
+}

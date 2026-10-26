@@ -1,0 +1,27 @@
+$ deepseek_facts.py Suzhou
+  tokens in 3896 out 1128
+Suzhou: 0 problems
+
+$ deepseek_city.py Suzhou --stage places
+Suzhou: places
+  tokens in 1156 out 2650
+
+$ deepseek_city.py Suzhou --stage frame
+Suzhou: frame
+  tokens in 2461 out 1847
+
+$ deepseek_city.py Suzhou --stage plans
+Suzhou: plans
+  plans for day
+  tokens in 2179 out 958
+  plans for 1n
+  tokens in 2180 out 1003
+  plans for 2n
+  tokens in 2185 out 1681
+  plans for 3n
+  tokens in 2180 out 1454
+
+$ merge_city.py Suzhou
+Suzhou: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/suzhou.json and planner/suzhou.json
+

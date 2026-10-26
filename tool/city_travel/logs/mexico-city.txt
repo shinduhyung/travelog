@@ -1,0 +1,35 @@
+$ deepseek_prep.py Mexico City
+  tokens in 1003 out 729
+Mexico City: 10 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Mexico City
+  tokens in 4120 out 1224
+Mexico City: 0 problems
+
+$ deepseek_city.py Mexico City --stage places
+Mexico City: places
+  tokens in 1285 out 4755
+
+$ deepseek_city.py Mexico City --stage frame
+Mexico City: frame
+  tokens in 2476 out 1802
+
+$ deepseek_city.py Mexico City --stage plans
+Mexico City: plans
+  plans for day
+  tokens in 2870 out 794
+  plans for 1n
+  tokens in 2871 out 1026
+  plans for 2n
+  tokens in 2871 out 1518
+  plans for 3n
+  tokens in 2876 out 1862
+  plans for 4n
+  tokens in 2871 out 2106
+  plans for 5n
+  tokens in 2871 out 2534
+
+$ merge_city.py Mexico City
+Mexico City: 28 places, 18 plans, 0 errors, 0 warnings
+wrote itineraries/mexico-city.json and planner/mexico-city.json
+

@@ -1,0 +1,658 @@
+{
+  "city": "Philadelphia",
+  "checked": "October 2026",
+  "intro_line": "America's birthplace, where history meets cheesesteaks and murals.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Center City",
+        "Old City",
+        "Rittenhouse Square",
+        "University City"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Center City",
+        "Old City",
+        "Rittenhouse Square",
+        "University City"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Center City",
+        "Old City",
+        "Rittenhouse Square",
+        "University City"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Center City",
+        "Old City",
+        "Rittenhouse Square",
+        "University City"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Center City",
+        "Old City",
+        "Rittenhouse Square",
+        "University City"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -3,
+        "rain_days": 10,
+        "note": "Cold: highs near 5°C, lows below freezing. Pack a warm coat and gloves."
+      },
+      {
+        "high": 8,
+        "low": -2,
+        "rain_days": 10,
+        "note": "Still cold, highs around 8°C. Indoor sights are the safe bet."
+      },
+      {
+        "high": 12,
+        "low": 1,
+        "rain_days": 10,
+        "note": "Mild and changeable, highs near 12°C. Bring a rain jacket."
+      },
+      {
+        "high": 17,
+        "low": 7,
+        "rain_days": 11,
+        "note": "Spring warms up to about 17°C. Good walking weather; expect some rain."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 12,
+        "note": "Pleasant, highs around 23°C. One of the best months to be outside."
+      },
+      {
+        "high": 28,
+        "low": 17,
+        "rain_days": 12,
+        "note": "Warm at about 28°C. Comfortable mornings; watch for afternoon showers."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 14,
+        "note": "Hottest month, highs near 31°C and humid. Plan indoor breaks midday."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 12,
+        "note": "Hot and humid, similar to July. Carry water and go slow."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 10,
+        "note": "Warm and pleasant again at about 26°C. Great for parks and walking."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 9,
+        "note": "Crisp fall days around 20°C. Good for sightseeing; fewer rain days."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 8,
+        "note": "Cooler at about 13°C. Layer up; rain is less likely."
+      },
+      {
+        "high": 8,
+        "low": 0,
+        "rain_days": 10,
+        "note": "Cold again, highs near 8°C. Holiday lights make evenings cheerful."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.55,
+      0.6,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      0.95,
+      0.8,
+      0.6
+    ],
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "family": [
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.85,
+      0.7,
+      0.55
+    ]
+  },
+  "places": {
+    "independence-hall": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning, before tour slots fill",
+      "area": "Old City",
+      "popularity": 5
+    },
+    "liberty-bell": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Early morning or late afternoon",
+      "area": "Old City",
+      "popularity": 5
+    },
+    "philadelphia-museum-of-art": {
+      "types": [
+        "art",
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning; steps at sunrise",
+      "area": "Center City",
+      "popularity": 5
+    },
+    "adventure-aquarium": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Center City",
+      "popularity": 4
+    },
+    "clementon-park": {
+      "types": [
+        "family"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "diggerland": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Spring or fall weekday",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "eastern-state-penitentiary": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning; Halloween season for special events",
+      "area": "Center City",
+      "popularity": 4
+    },
+    "funplex": {
+      "types": [
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Rainy day or evening",
+      "area": "Center City",
+      "popularity": 2
+    },
+    "kimmel-center": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "nude-descending": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "philadelphia-zoo": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning, spring or fall",
+      "area": "University City",
+      "popularity": 4
+    },
+    "reading-terminal-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late morning on a weekday",
+      "area": "Center City",
+      "popularity": 5
+    },
+    "ritas-italian-ice": {
+      "types": [
+        "food",
+        "family"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Afternoon on a hot day",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "silver-linings-playbook": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime walk",
+      "area": "Center City",
+      "popularity": 2
+    },
+    "the-gross-clinic": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Center City",
+      "popularity": 2
+    },
+    "university-of-pennsylvania": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "University City",
+      "popularity": 3
+    },
+    "city-hall-tower": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Clear weekday morning",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "south-street": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "rittenhouse-square": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Rittenhouse Square",
+      "popularity": 4
+    },
+    "schuylkill-river-trail": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Center City",
+      "popularity": 3
+    },
+    "el-freight": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "cheesesteak-tour": {
+      "types": [
+        "food",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Late morning",
+      "area": "Old City",
+      "popularity": 3
+    },
+    "penn-museum": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "University City",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Independence Hall, the museums and a proper food crawl; add a night for Fairmount and the river."
+  },
+  "airports": [
+    {
+      "code": "PHL",
+      "name": "Philadelphia International Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "SEPTA Regional Rail Airport Line",
+          "to": "30th Street Station / Center City",
+          "price": "$6.75-8",
+          "time": "25-35 min",
+          "note": "Cheapest and fastest in traffic."
+        },
+        {
+          "mode": "Bus 37/108 + subway",
+          "to": "Center City",
+          "price": "$2-2.50",
+          "time": "45-60 min",
+          "note": "Cheap but slower; needs transfers."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Center City",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Flat-ish fare; tip extra."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Center City",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "EWR",
+      "name": "Newark Liberty International Airport",
+      "primary": false,
+      "note": "Alternative gateway in New Jersey, about 130 km northeast.",
+      "options": [
+        {
+          "mode": "Amtrak train",
+          "to": "30th Street Station",
+          "price": "$30-70",
+          "time": "1 hr",
+          "note": "Book ahead for lower fares."
+        },
+        {
+          "mode": "NJ Transit + SEPTA",
+          "to": "30th Street Station",
+          "price": "$20-30",
+          "time": "1.5-2 hr",
+          "note": "Cheaper but slower with a transfer at Trenton."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Center City",
+          "price": "$150-200",
+          "time": "1.5-2 hr",
+          "note": "Long ride; agree on price first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Center City",
+          "price": "$120-180",
+          "time": "1.5-2 hr",
+          "note": "Check the app for fixed quotes."
+        }
+      ]
+    },
+    {
+      "code": "BWI",
+      "name": "Baltimore-Washington International Airport",
+      "primary": false,
+      "note": "Alternative gateway south, about 145 km away.",
+      "options": [
+        {
+          "mode": "Amtrak train",
+          "to": "30th Street Station",
+          "price": "$40-80",
+          "time": "80 min",
+          "note": "Frequent trains; book early."
+        },
+        {
+          "mode": "MARC + SEPTA",
+          "to": "30th Street Station",
+          "price": "$20-30",
+          "time": "2-2.5 hr",
+          "note": "Cheap but slower with transfers."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Center City",
+          "price": "$180-250",
+          "time": "2 hr",
+          "note": "Expensive; train is better."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Center City",
+          "price": "$150-220",
+          "time": "2 hr",
+          "note": "Check app prices before booking."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Philadelphia",
+      "https://en.wikivoyage.org/wiki/Philadelphia"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "Walk in Center City and use SEPTA for longer hops; ride apps for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "SEPTA runs the subway and trolleys; fares are about $2–2.50 per ride. Pay with a SEPTA Key card or contactless."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cover the whole city. SEPTA Key card or contactless payment works."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are metered. Uber and Lyft both operate widely."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible but parking is costly and traffic is heavy in Center City."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Easy in Center City; most sights are within 30 minutes on foot."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Bikes are popular; the Schuylkill River Trail is a favorite."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "The RiverLink ferry runs to Camden in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold winters, warm humid summers, and the best weather in spring and fall.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Highs around 17–26°C with moderate rain. Ideal for walking Old City and the parks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (July–August)",
+        "text": "Highs near 30–31°C. Plan indoor sights at midday and carry water."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold (December–February)",
+        "text": "Highs around 5–8°C and lows near or below freezing. Bring a warm coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 8–14 rain days a month, most in July. A small umbrella is worth packing any month."
+      },
+      {
+        "icon": "🍂",
+        "title": "Fall is crisp and clear",
+        "text": "October and November are cooler with fewer rain days — good for long walks."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers and comfortable walking shoes. Add a rain jacket, and a heavy coat for winter visits."
+      }
+    ]
+  }
+}

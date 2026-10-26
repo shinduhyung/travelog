@@ -1,0 +1,553 @@
+{
+  "city": "Nanchang",
+  "checked": "October 2026",
+  "intro_line": "Nanchang: a river city of lakes, towers and spicy Jiangxi flavours.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Donghu",
+        "Xihu",
+        "Honggutan",
+        "Qingshanhu"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Donghu",
+        "Xihu",
+        "Honggutan",
+        "Qingshanhu"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Donghu",
+        "Xihu",
+        "Honggutan",
+        "Qingshanhu"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Donghu",
+        "Xihu",
+        "Honggutan",
+        "Qingshanhu"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Donghu",
+        "Xihu",
+        "Honggutan",
+        "Qingshanhu"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 10,
+        "note": "Coldest month: highs near 11°C, lows near 4°C. Pack a warm coat."
+      },
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 13,
+        "note": "Still chilly, highs near 13°C. Rain on about 13 days, so bring an umbrella."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 16,
+        "note": "Milder at 18°C highs but wet: about 16 rain days."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 15,
+        "note": "Pleasant spring: highs near 23°C, lows near 15°C. Good walking weather."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 17,
+        "note": "Warm and humid, highs near 27°C; frequent rain (about 17 days)."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 20,
+        "note": "Hot and wet: highs near 30°C, about 20 rain days. Plan indoor breaks."
+      },
+      {
+        "high": 33,
+        "low": 27,
+        "rain_days": 14,
+        "note": "Hot: highs near 33°C, lows near 27°C. Go out early or after sunset."
+      },
+      {
+        "high": 34,
+        "low": 27,
+        "rain_days": 11,
+        "note": "Hottest month, highs near 34°C. Carry water and seek shade."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 8,
+        "note": "Cooling to highs near 30°C; rain drops to about 8 days."
+      },
+      {
+        "high": 24,
+        "low": 17,
+        "rain_days": 7,
+        "note": "Best month: highs near 24°C, lows near 17°C, only about 7 rain days."
+      },
+      {
+        "high": 19,
+        "low": 12,
+        "rain_days": 10,
+        "note": "Mild at 19°C highs; about 10 rain days. A light jacket helps."
+      },
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 7,
+        "note": "Cold again: highs near 12°C, lows near 5°C, but drier with about 7 rain days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.85,
+      0.95,
+      0.9,
+      0.8
+    ],
+    "history": [
+      0.7,
+      0.7,
+      0.85,
+      0.95,
+      0.85,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.75
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.8,
+      0.95,
+      0.9,
+      0.75,
+      0.5,
+      0.5,
+      0.8,
+      0.95,
+      0.85,
+      0.55
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.65,
+      0.85,
+      0.9,
+      0.85,
+      0.75
+    ]
+  },
+  "places": {
+    "tengwang_pavilion": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Donghu",
+      "popularity": 5
+    },
+    "bayi_square": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Donghu",
+      "popularity": 4
+    },
+    "bayi_night_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Donghu",
+      "popularity": 4
+    },
+    "jiangxi_museum": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy days or midday heat",
+      "area": "Donghu",
+      "popularity": 3
+    },
+    "wanshou_palace": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Xihu",
+      "popularity": 3
+    },
+    "ganjiang_river_walk": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Xihu",
+      "popularity": 3
+    },
+    "qingshanhu_park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Qingshanhu",
+      "popularity": 2
+    },
+    "honggutan_riverside": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Honggutan",
+      "popularity": 3
+    },
+    "youmin_temple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Donghu",
+      "popularity": 2
+    },
+    "banfen_lunch": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Donghu",
+      "popularity": 3
+    },
+    "city_walk_old_town": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Xihu",
+      "popularity": 2
+    },
+    "meiling": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Clear spring or autumn day",
+      "area": "Xihu",
+      "popularity": 3
+    },
+    "tengwang_show": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Donghu",
+      "popularity": 4
+    },
+    "babaoshan": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Qingshanhu",
+      "popularity": 1
+    },
+    "metro_day": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Donghu",
+      "popularity": 3
+    },
+    "porcelain_shop": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Xihu",
+      "popularity": 2
+    },
+    "riverside_breakfast": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 40,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Donghu",
+      "popularity": 2
+    },
+    "night_river_cruise": {
+      "types": [
+        "culture",
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "After dark in mild weather",
+      "area": "Xihu",
+      "popularity": 3
+    },
+    "temple_market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Donghu",
+      "popularity": 2
+    },
+    "honggutan_park": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Honggutan",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "One night covers Tengwang Pavilion, Bayi Square and the old lanes; add a second night for museums and a slower riverside evening."
+  },
+  "airports": [
+    {
+      "code": "KHN",
+      "name": "Nanchang Changbei International Airport",
+      "primary": true,
+      "note": "Main airport, about 21 km north of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Downtown",
+          "price": "¥15-20",
+          "time": "40-60 min",
+          "note": "Cheapest public option; check the line for your stop."
+        },
+        {
+          "mode": "Metro + bus",
+          "to": "City centre",
+          "price": "¥5-10",
+          "time": "60-80 min",
+          "note": "Check locally for the current airport link."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown / Nanchang Station",
+          "price": "¥80-120",
+          "time": "30-50 min",
+          "note": "Ask for the meter; tolls may add to the fare."
+        },
+        {
+          "mode": "Didi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "30-50 min",
+          "note": "Ride apps work; meet at the designated pickup point."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Nanchang",
+      "https://en.wikivoyage.org/wiki/Nanchang"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for cross-city trips; Didi or a metered taxi for short hops and late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "4 lines cross the city and a 5th is under construction. Cheap and avoids traffic; check the map for your stop."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "About ¥2 flat, more for double-deckers. Good coverage but slower in traffic."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥6–8 and charge about ¥1.9/km, with a 20% night surcharge 23:00–05:00. Didi works well; tell drivers 'da biao' (use the meter)."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy in the centre. Only worth it for out-of-town trips; check licence rules first."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Easy in the centre and around Bayi Square and the old lanes. Use metro or taxi for longer hops."
+      },
+      {
+        "mode": "Shared bike",
+        "has": true,
+        "text": "Shared bikes and e-bikes are common. Park in marked zones and wear a helmet."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, fairly dry winters. Spring and autumn are the best times to walk the city.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April and October",
+        "text": "Highs around 23–24°C with comfortable nights. Ideal for pavilions, squares and riverside walks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (June to August)",
+        "text": "Highs of 30–34°C and muggy nights near 27°C. Do sights early morning; rest indoors at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in spring and early summer",
+        "text": "March to June brings 15–20 rain days a month. Keep a compact umbrella and a backup indoor plan."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters (December to February)",
+        "text": "Highs of 11–13°C and lows of 4–5°C. Bring a warm coat; buildings can feel cold."
+      },
+      {
+        "icon": "☂️",
+        "title": "Drier autumn",
+        "text": "September and October see rain on only about 7–8 days. Good odds of clear days."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers and rain gear for spring and summer; a warm coat for winter; comfortable shoes for walking and metro trips."
+      }
+    ]
+  }
+}

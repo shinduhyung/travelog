@@ -1,0 +1,181 @@
+{
+  "currency": "BDT",
+  "usd_rate": 123.7099,
+  "intro_line": "Dhaka pulses with rickshaws, rivers and relentless energy.",
+  "intro": "Dhaka rewards visitors who embrace its chaos, from Mughal lanes to buzzing river ports. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Gulshan",
+    "Banani",
+    "Motijheel",
+    "Old Dhaka"
+  ],
+  "taxi": {
+    "flag_day": 20,
+    "flag_airport": 50,
+    "per_km": 40,
+    "min_fare": 60
+  },
+  "road_factor": 1.4,
+  "city_kmh": 15,
+  "transit_facts": [
+    "MRT Line 6 metro runs Uttara to Motijheel; cheap and fast.",
+    "City buses are crowded, noisy and signed only in Bengali.",
+    "Cycle rickshaws are quick for short hops; agree the fare first.",
+    "CNG auto-rickshaws are cheapest for longer rides; meters rarely used.",
+    "Uber and Pathao ride apps work in Dhaka.",
+    "Driving yourself is not recommended; traffic is chaotic.",
+    "Walking is often fastest; watch pollution and traffic.",
+    "Ferries and rocket steamers leave from Sadarghat river port."
+  ],
+  "airports": [
+    {
+      "code": "DAC",
+      "name": "Hazrat Shahjalal International Airport",
+      "primary": true,
+      "note": "Main gateway, about 4 km north of the centre.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "City centre",
+          "price": "Tk 30-50",
+          "time": "40-60 min",
+          "note": "Cheapest but crowded; check locally for routes."
+        },
+        {
+          "mode": "CNG auto-rickshaw",
+          "to": "Gulshan or Banani",
+          "price": "Tk 200-300",
+          "time": "20-40 min",
+          "note": "Agree fare before boarding."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "Tk 400-700",
+          "time": "30-60 min",
+          "note": "Traffic can double the time."
+        },
+        {
+          "mode": "Uber / Pathao",
+          "to": "City centre",
+          "price": "Tk 350-600",
+          "time": "30-60 min",
+          "note": "App fare avoids haggling."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Jatiyo Sangsad Bhaban",
+    "Lalbagh Fort",
+    "Ahsan Manzil",
+    "Shaheed Minar",
+    "Dhakeshwari Temple",
+    "Armenian Church",
+    "Dhaka New Market",
+    "Fantasy Kingdom",
+    "Ilish Macher Paturi",
+    "National Martyrs' Memorial",
+    "Panam City",
+    "Shishu Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Dhaka",
+      "https://en.wikivoyage.org/wiki/Dhaka"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    23.8103,
+    90.4125
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 24,
+      "low": 13,
+      "rain_days": 1
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 2
+    },
+    {
+      "high": 31,
+      "low": 20,
+      "rain_days": 7
+    },
+    {
+      "high": 33,
+      "low": 24,
+      "rain_days": 13
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 26
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 28
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 28
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 16
+    },
+    {
+      "high": 29,
+      "low": 19,
+      "rain_days": 2
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

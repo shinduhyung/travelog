@@ -1,0 +1,259 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "America's birthplace, where history meets cheesesteaks and murals.",
+  "intro": "Philadelphia rewards visitors with walkable colonial streets, world-class museums, and a lively food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Center City",
+    "Old City",
+    "Rittenhouse Square",
+    "University City"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 3.5,
+    "per_km": 2.5,
+    "min_fare": 10
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "SEPTA runs the subway, trolleys, and Regional Rail; fares are about $2-2.50 per ride.",
+    "Buses cover the whole city; SEPTA Key card or contactless payment works.",
+    "Taxis are metered; Uber and Lyft both operate widely.",
+    "Driving is possible but parking is costly and traffic is heavy in Center City.",
+    "Walking is easy in Center City; most sights are within 30 minutes on foot.",
+    "Bikes are popular; the Schuylkill River Trail is a favorite. RiverLink ferry runs to Camden in summer."
+  ],
+  "airports": [
+    {
+      "code": "PHL",
+      "name": "Philadelphia International Airport",
+      "primary": true,
+      "note": "Main airport, about 11 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "SEPTA Regional Rail Airport Line",
+          "to": "30th Street Station / Center City",
+          "price": "$6.75-8",
+          "time": "25-35 min",
+          "note": "Cheapest and fastest in traffic."
+        },
+        {
+          "mode": "Bus 37/108 + subway",
+          "to": "Center City",
+          "price": "$2-2.50",
+          "time": "45-60 min",
+          "note": "Cheap but slower; needs transfers."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Center City",
+          "price": "$30-40",
+          "time": "20-30 min",
+          "note": "Flat-ish fare; tip extra."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Center City",
+          "price": "$25-40",
+          "time": "20-30 min",
+          "note": "Prices vary with demand."
+        }
+      ]
+    },
+    {
+      "code": "EWR",
+      "name": "Newark Liberty International Airport",
+      "primary": false,
+      "note": "Alternative gateway in New Jersey, about 130 km northeast.",
+      "options": [
+        {
+          "mode": "Amtrak train",
+          "to": "30th Street Station",
+          "price": "$30-70",
+          "time": "1 hr",
+          "note": "Book ahead for lower fares."
+        },
+        {
+          "mode": "NJ Transit + SEPTA",
+          "to": "30th Street Station",
+          "price": "$20-30",
+          "time": "1.5-2 hr",
+          "note": "Cheaper but slower with a transfer at Trenton."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Center City",
+          "price": "$150-200",
+          "time": "1.5-2 hr",
+          "note": "Long ride; agree on price first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Center City",
+          "price": "$120-180",
+          "time": "1.5-2 hr",
+          "note": "Check the app for fixed quotes."
+        }
+      ]
+    },
+    {
+      "code": "BWI",
+      "name": "Baltimore-Washington International Airport",
+      "primary": false,
+      "note": "Alternative gateway south, about 145 km away.",
+      "options": [
+        {
+          "mode": "Amtrak train",
+          "to": "30th Street Station",
+          "price": "$40-80",
+          "time": "80 min",
+          "note": "Frequent trains; book early."
+        },
+        {
+          "mode": "MARC + SEPTA",
+          "to": "30th Street Station",
+          "price": "$20-30",
+          "time": "2-2.5 hr",
+          "note": "Cheap but slower with transfers."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Center City",
+          "price": "$180-250",
+          "time": "2 hr",
+          "note": "Expensive; train is better."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Center City",
+          "price": "$150-220",
+          "time": "2 hr",
+          "note": "Check app prices before booking."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Independence Hall",
+    "Liberty Bell",
+    "Philadelphia Museum of Art",
+    "Adventure Aquarium",
+    "Clementon Park and Splash World",
+    "Diggerland USA",
+    "Eastern State Penitentiary",
+    "Funplex (Mount Laurel)",
+    "Kimmel Center",
+    "Nude Descending a Staircase",
+    "Philadelphia Zoo",
+    "Reading Terminal Market",
+    "Rita's Italian Ice",
+    "Silver Linings Playbook",
+    "The Gross Clinic",
+    "University of Pennsylvania"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Philadelphia",
+      "https://en.wikivoyage.org/wiki/Philadelphia"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    39.95238,
+    -75.16362
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 5,
+      "low": -3,
+      "rain_days": 10
+    },
+    {
+      "high": 8,
+      "low": -2,
+      "rain_days": 10
+    },
+    {
+      "high": 12,
+      "low": 1,
+      "rain_days": 10
+    },
+    {
+      "high": 17,
+      "low": 7,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 12,
+      "rain_days": 12
+    },
+    {
+      "high": 28,
+      "low": 17,
+      "rain_days": 12
+    },
+    {
+      "high": 31,
+      "low": 21,
+      "rain_days": 14
+    },
+    {
+      "high": 30,
+      "low": 20,
+      "rain_days": 12
+    },
+    {
+      "high": 26,
+      "low": 17,
+      "rain_days": 10
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 13,
+      "low": 4,
+      "rain_days": 8
+    },
+    {
+      "high": 8,
+      "low": 0,
+      "rain_days": 10
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "EWR taxi $150-200 vs tariff estimate 402",
+    "BWI taxi $180-250 vs tariff estimate 527",
+    "airport BWI is 155 km away"
+  ]
+}

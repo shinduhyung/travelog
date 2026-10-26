@@ -1,0 +1,31 @@
+$ deepseek_prep.py Hangzhou
+  tokens in 690 out 316
+Hangzhou: 3 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Hangzhou
+  tokens in 3967 out 622
+Hangzhou: 0 problems
+
+$ deepseek_city.py Hangzhou --stage places
+Hangzhou: places
+  tokens in 1162 out 3150
+
+$ deepseek_city.py Hangzhou --stage frame
+Hangzhou: frame
+  tokens in 2458 out 1734
+
+$ deepseek_city.py Hangzhou --stage plans
+Hangzhou: plans
+  plans for day
+  tokens in 2187 out 696
+  plans for 1n
+  tokens in 2188 out 849
+  plans for 2n
+  tokens in 2193 out 1435
+  plans for 3n
+  tokens in 2188 out 1600
+
+$ merge_city.py Hangzhou
+Hangzhou: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/hangzhou.json and planner/hangzhou.json
+

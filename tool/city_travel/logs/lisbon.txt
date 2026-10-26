@@ -1,0 +1,21 @@
+$ deepseek_city.py Lisbon --stage frame
+Lisbon: frame
+  tokens in 2444 out 1799
+
+$ deepseek_city.py Lisbon --stage plans
+Lisbon: plans
+  plans for day
+  tokens in 2722 out 958
+  plans for 1n
+  tokens in 2723 out 844
+  plans for 2n
+  tokens in 2723 out 1787
+  plans for 3n
+  tokens in 2728 out 2038
+  plans for 4n
+  tokens in 2723 out 2242
+
+$ merge_city.py Lisbon
+Lisbon: 28 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/lisbon.json and planner/lisbon.json
+

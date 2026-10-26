@@ -1,0 +1,166 @@
+{
+  "currency": "MAD",
+  "usd_rate": 9.8106,
+  "intro_line": "White city where Atlantic waves meet Moorish gates.",
+  "intro": "Casablanca rewards visitors who look past the business suits to the old medina, the great mosque and the ocean corniche. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Centre Ville",
+    "Anfa",
+    "Corniche",
+    "Habous"
+  ],
+  "taxi": {
+    "flag_day": 7,
+    "flag_airport": 280,
+    "per_km": 5,
+    "min_fare": 7
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Tram line runs 05:30-22:30; one ride about 6-8 MAD with a rechargeable card.",
+    "Al Bidaoui train links the airport and some city stops, but stops are far apart.",
+    "Buses are cheap at about 5 MAD but routes are unclear and pickpockets are a risk.",
+    "Red petits taxis use meters; minimum fare 7 MAD, and drivers may pick up others.",
+    "White grand taxis run fixed routes and leave only when full; cheaper for long trips.",
+    "Ride apps like Careem and inDrive work; walking is fine in the centre and medina."
+  ],
+  "airports": [
+    {
+      "code": "CMN",
+      "name": "Mohammed V International Airport",
+      "primary": true,
+      "note": "Main gateway, 23 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Casa Voyageurs / Casa Port",
+          "price": "50-70 MAD",
+          "time": "45 min",
+          "note": "Hourly, leaves at 50 past the hour; slow security check after the train."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "250-300 MAD",
+          "time": "30-45 min",
+          "note": "Agree the fare first; around 280 MAD as of late 2022."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "30-45 min",
+          "note": "Availability varies; compare with taxi."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Hassan II Mosque",
+    "Crazy Park",
+    "Loupi Park Land",
+    "Magic Forest",
+    "Parc Sindibad",
+    "Stade Mohammed V"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Casablanca",
+      "https://en.wikivoyage.org/wiki/Casablanca"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    33.5731,
+    -7.5898
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 6
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 7
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 6
+    },
+    {
+      "high": 24,
+      "low": 16,
+      "rain_days": 4
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 2
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 0
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 0
+    },
+    {
+      "high": 27,
+      "low": 19,
+      "rain_days": 1
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 5
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 6
+    },
+    {
+      "high": 19,
+      "low": 11,
+      "rain_days": 6
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

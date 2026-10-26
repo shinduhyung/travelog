@@ -1,0 +1,169 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Changchun: wide Japanese-planned avenues, deep winter cold, and a rich rail history.",
+  "intro": "Changchun rewards visitors with compact squares, hearty northeastern food, and easy rail links across the region. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "People's Square",
+    "Chongqing Road",
+    "Guilin Road",
+    "Hongqi Street"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 80,
+    "per_km": 1.3,
+    "min_fare": 6
+  },
+  "road_factor": 1.3,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro and light rail: 6 lines (1, 2, 3, 4, 6, 8) cover many central areas; T-Union card works.",
+    "Trams 54 and 55 run in the west; fare ¥2, route 55 ends at West station.",
+    "Buses are extensive and cost about ¥2; Chinese reading helps a lot.",
+    "Taxis are cheap and easy; flag fall ¥5 plus ¥1 fuel surcharge.",
+    "Ride apps: Didi works; local apps may need Chinese registration.",
+    "Walking is fine May to mid-November; cycling is risky in traffic."
+  ],
+  "airports": [
+    {
+      "code": "CGQ",
+      "name": "Longjia International Airport",
+      "primary": true,
+      "note": "Main airport, about 32 km east of the centre.",
+      "options": [
+        {
+          "mode": "Train",
+          "to": "Changchun station",
+          "price": "¥10-20",
+          "time": "14 min",
+          "note": "Longjia rail station links to the terminal; no trains roughly 8pm-7am."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "People's Square",
+          "price": "¥20-30",
+          "time": "45 min",
+          "note": "Regular coaches to the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-100",
+          "time": "40-50 min",
+          "note": "Include toll; drivers may ask for at least ¥100 from the airport."
+        },
+        {
+          "mode": "Metro Line 9",
+          "to": "Line 2 network",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Planned to open by late 2025."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Museum of the Imperial Palace of Manchukuo",
+    "Jingyuetan National Forest Park"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Changchun",
+      "https://en.wikivoyage.org/wiki/Changchun"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    43.88,
+    125.32278
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": -8,
+      "low": -18,
+      "rain_days": 2
+    },
+    {
+      "high": -3,
+      "low": -14,
+      "rain_days": 2
+    },
+    {
+      "high": 7,
+      "low": -5,
+      "rain_days": 3
+    },
+    {
+      "high": 15,
+      "low": 2,
+      "rain_days": 5
+    },
+    {
+      "high": 22,
+      "low": 9,
+      "rain_days": 9
+    },
+    {
+      "high": 26,
+      "low": 15,
+      "rain_days": 14
+    },
+    {
+      "high": 28,
+      "low": 20,
+      "rain_days": 15
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 12,
+      "rain_days": 9
+    },
+    {
+      "high": 13,
+      "low": 3,
+      "rain_days": 5
+    },
+    {
+      "high": 2,
+      "low": -6,
+      "rain_days": 5
+    },
+    {
+      "high": -7,
+      "low": -15,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

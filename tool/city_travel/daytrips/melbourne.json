@@ -1,0 +1,183 @@
+{
+ "city": "Melbourne",
+ "trips": [
+  {
+   "place": "Ballarat",
+   "label": "",
+   "position": {
+    "id": 455440,
+    "name": "Ballarat",
+    "city": "Ballarat",
+    "lat": -37.56206,
+    "lng": 143.85082
+   },
+   "town": {
+    "name": "Ballarat",
+    "lat": -37.56622,
+    "lng": 143.84957
+   },
+   "road": {
+    "km": 115,
+    "min": 94,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 290.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "train": {
+     "from": "$4",
+     "time": "1h 25m",
+     "via": "Southern Cross Station to Ballarat Station",
+     "source": "https://www.rome2rio.com/s/Melbourne/Ballarat"
+    },
+    "bus": {
+     "from": "$1-$50",
+     "time": "1h 30m",
+     "via": "Southern Cross Coach Terminal/Spencer St to Ballarat Station/Lydiard St",
+     "source": "https://www.rome2rio.com/s/Melbourne/Ballarat"
+    }
+   },
+   "route_note": "Direct V/Line trains run from Southern Cross to Ballarat station in about 75 minutes, then a local bus or short taxi to Sovereign Hill.",
+   "see": [
+    "Sovereign Hill",
+    "Ballarat Botanical Gardens",
+    "Lake Wendouree",
+    "Art Gallery of Ballarat"
+   ],
+   "visit": "Full day",
+   "tour_query": "Ballarat and Sovereign Hill day trip from Melbourne",
+   "quests": [
+    "Sovereign Hill",
+    "Kryal Castle"
+   ],
+   "recommended": "train",
+   "why": "Direct V/Line trains reach Ballarat in about 75 minutes, faster than driving, with a short hop to Sovereign Hill.",
+   "stars": 4,
+   "know": [
+    "Book Sovereign Hill tickets ahead in peak periods",
+    "Sovereign Hill is open daily but check winter hours",
+    "Allow a full day to see the goldfields and town"
+   ]
+  },
+  {
+   "place": "Bendigo",
+   "label": "",
+   "position": {
+    "id": 16872901,
+    "name": "Bendigo Airport",
+    "city": "East Bendigo",
+    "lat": -36.7394,
+    "lng": 144.33
+   },
+   "town": {
+    "name": "Bendigo",
+    "lat": -36.75818,
+    "lng": 144.28024
+   },
+   "road": {
+    "km": 151,
+    "min": 117,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 380.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "train": {
+     "from": "$4",
+     "time": "1h 55m",
+     "via": "Southern Cross Station to Bendigo Station",
+     "source": "https://www.rome2rio.com/s/Melbourne/Bendigo"
+    },
+    "bus": {
+     "from": "$1-$15",
+     "time": "1h 51m",
+     "via": "Southern Cross Coach Terminal/Spencer St to Bendigo Station/Railway Pl",
+     "source": "https://www.rome2rio.com/s/Melbourne/Bendigo"
+    }
+   },
+   "route_note": "Direct V/Line trains from Southern Cross reach Bendigo in about two hours; the station is a short walk from the centre.",
+   "see": [
+    "Bendigo Art Gallery",
+    "Central Deborah Gold Mine",
+    "Rosalind Park",
+    "Sacred Heart Cathedral"
+   ],
+   "visit": "Full day",
+   "tour_query": "Bendigo day trip from Melbourne",
+   "quests": [],
+   "recommended": "train",
+   "why": "Direct trains take about two hours and the station is a short walk from the centre.",
+   "stars": 3,
+   "know": [
+    "Check V/Line timetables as services are not super frequent",
+    "The art gallery and Central Deborah mine are key sights",
+    "Spring and autumn are the most comfortable seasons"
+   ]
+  },
+  {
+   "place": "Mornington",
+   "label": "",
+   "position": {
+    "id": 455238,
+    "name": "Mornington",
+    "city": "Mornington",
+    "lat": -38.21667,
+    "lng": 145.03333
+   },
+   "town": {
+    "name": "Mornington",
+    "lat": -38.21792,
+    "lng": 145.03876
+   },
+   "road": {
+    "km": 68,
+    "min": 63,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 180.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "train": {
+     "from": "$411-$1,093",
+     "time": "31h 34m",
+     "via": "Belfast Grand Central to Drogheda",
+     "source": "https://www.rome2rio.com/s/Melbourne/Mornington"
+    },
+    "bus": {
+     "from": "$544-$1,355",
+     "time": "26h 43m",
+     "via": "Airport Zone 13 to Drogheda Bus",
+     "source": "https://www.rome2rio.com/s/Melbourne/Mornington"
+    }
+   },
+   "route_note": "Take a Frankston-line train to Frankston, then a local bus (Route 781/788) along the coast to Mornington.",
+   "see": [
+    "Mornington Peninsula beaches",
+    "Main Street Mornington",
+    "Mornington Peninsula Hot Springs",
+    "Mount Martha lookout"
+   ],
+   "visit": "Full day",
+   "tour_query": "Mornington Peninsula day trip from Melbourne",
+   "quests": [],
+   "recommended": "car",
+   "why": "Transit requires a train plus local bus with awkward connections, so driving is clearly simpler for a coastal day trip.",
+   "stars": 3,
+   "know": [
+    "Weekends are busy along the coast in summer",
+    "Combine with nearby beaches and wineries",
+    "Allow extra time for traffic on the return"
+   ]
+  }
+ ],
+ "problems": [
+  "Torquay: no Omio position, dropped",
+  "Healesville: not a town in cities15000.json (AU), dropped"
+ ]
+}

@@ -1,0 +1,583 @@
+{
+  "city": "Tbilisi",
+  "checked": "October 2026",
+  "intro_line": "Tbilisi: warm stone, sulphur baths and long café nights.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Old Town (Abanotubani)",
+        "Rustaveli & Freedom Square",
+        "Vera & Chugureti",
+        "Sololaki"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Old Town (Abanotubani)",
+        "Rustaveli & Freedom Square",
+        "Vera & Chugureti",
+        "Sololaki"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Old Town (Abanotubani)",
+        "Rustaveli & Freedom Square",
+        "Vera & Chugureti",
+        "Sololaki"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Old Town (Abanotubani)",
+        "Rustaveli & Freedom Square",
+        "Vera & Chugureti",
+        "Sololaki"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Old Town (Abanotubani)",
+        "Rustaveli & Freedom Square",
+        "Vera & Chugureti",
+        "Sololaki"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": -2,
+        "rain_days": 6,
+        "note": "January: cold, highs near 6°C and lows around -2°C. Pack a warm coat; some rain days."
+      },
+      {
+        "high": 8,
+        "low": -1,
+        "rain_days": 6,
+        "note": "February: still cold, highs near 8°C. Quiet season with lower prices."
+      },
+      {
+        "high": 11,
+        "low": 2,
+        "rain_days": 12,
+        "note": "March: warming to about 11°C but the wettest month, with around 12 rain days. Bring an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 6,
+        "rain_days": 12,
+        "note": "April: mild at 17°C with 12 rain days. Good for walking between showers."
+      },
+      {
+        "high": 21,
+        "low": 11,
+        "rain_days": 14,
+        "note": "May: pleasant at 21°C, but around 14 rain days — the wettest stretch. Keep plans flexible."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 10,
+        "note": "June: warm at 27°C with fewer rain days. Long evenings outdoors."
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 7,
+        "note": "July: hot, highs near 30°C. Do sights early and rest in the afternoon."
+      },
+      {
+        "high": 30,
+        "low": 19,
+        "rain_days": 6,
+        "note": "August: hot like July, around 30°C. Shade and water matter."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 7,
+        "note": "September: warm and drier, highs near 25°C. One of the best months to visit."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 9,
+        "note": "October: mild at 17°C with 9 rain days. Good for city walks and day trips."
+      },
+      {
+        "high": 11,
+        "low": 3,
+        "rain_days": 6,
+        "note": "November: cooler at 11°C with 6 rain days. Bring layers."
+      },
+      {
+        "high": 7,
+        "low": 0,
+        "rain_days": 6,
+        "note": "December: cold, highs near 7°C and lows near 0°C. Festive lights in the centre."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      1,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      1,
+      0.85,
+      0.75
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.8,
+      0.8,
+      0.95,
+      1,
+      0.8,
+      0.65
+    ],
+    "nature": [
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.9,
+      0.55,
+      0.35
+    ],
+    "budget": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.8,
+      0.7,
+      0.7,
+      0.9,
+      0.9,
+      0.75,
+      0.65
+    ]
+  },
+  "places": {
+    "narikala": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 5
+    },
+    "old-town": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning for photos, evening for atmosphere",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 5
+    },
+    "trinity-cathedral": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 5
+    },
+    "bridge-of-peace": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "chronicles": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon light",
+      "area": "Vera & Chugureti",
+      "popularity": 3
+    },
+    "dry-bridge": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend mornings",
+      "area": "Vera & Chugureti",
+      "popularity": 4
+    },
+    "jvari": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning, before tour buses arrive",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "khachapuri": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or a late dinner",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 5
+    },
+    "kura-river": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "mtatsminda": {
+      "types": [
+        "nature",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Sololaki",
+      "popularity": 4
+    },
+    "svetitskhoveli": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "aerial-tramway": {
+      "types": [
+        "nature",
+        "budget",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "mixed",
+      "best": "Sunset",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "deserter-market": {
+      "types": [
+        "food",
+        "budget",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Vera & Chugureti",
+      "popularity": 3
+    },
+    "fabrika": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Vera & Chugureti",
+      "popularity": 4
+    },
+    "sololaki-walk": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "Sololaki",
+      "popularity": 3
+    },
+    "sulphur-baths": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon or evening",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "wine-tasting": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon or evening",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 4
+    },
+    "metekhi-viewpoint": {
+      "types": [
+        "nature",
+        "culture",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 3
+    },
+    "rustaveli-walk": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Rustaveli & Freedom Square",
+      "popularity": 3
+    },
+    "city-tour": {
+      "types": [
+        "culture",
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Old Town (Abanotubani)",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Old Town, the main museums and a long food-and-wine evening, with time for one day trip."
+  },
+  "airports": [
+    {
+      "code": "TBS",
+      "name": "Tbilisi International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 12-17 km east of the centre.",
+      "options": [
+        {
+          "mode": "Bus 337",
+          "to": "Main railway station via Freedom Square",
+          "price": "₾1-1.50",
+          "time": "50-60 min",
+          "note": "Needs Metromoney card or contactless card; no coins."
+        },
+        {
+          "mode": "Bolt / Yandex Go",
+          "to": "City centre",
+          "price": "₾20-30",
+          "time": "25-40 min",
+          "note": "Usually cheaper than airport taxi touts."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₾30-50",
+          "time": "25-40 min",
+          "note": "Ignore drivers quoting ₾80; agree the price first."
+        }
+      ]
+    },
+    {
+      "code": "KUT",
+      "name": "Kutaisi International Airport",
+      "primary": false,
+      "note": "Low-cost flights from Europe; about 220 km west of Tbilisi.",
+      "options": [
+        {
+          "mode": "Marshrutka",
+          "to": "Tbilisi bus stations",
+          "price": "₾20-25",
+          "time": "4-5 hr",
+          "note": "Cheapest; morning departures are more reliable."
+        },
+        {
+          "mode": "Train",
+          "to": "Tbilisi main station",
+          "price": "₾10-25",
+          "time": "5-6 hr",
+          "note": "Reach Kutaisi station by bus or taxi first."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Tbilisi city centre",
+          "price": "₾250-400",
+          "time": "3.5-4.5 hr",
+          "note": "Agree a fixed price before you set off."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Tbilisi",
+      "https://en.wikivoyage.org/wiki/Tbilisi"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Walk the centre; use the metro for longer hops and ride apps for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Two lines cover the centre and main sights. Buy a Metromoney card at stations."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and marshrutkas reach most of the city. Pay with the card or contactless."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Bolt and Yandex Go work well and are usually cheaper than street taxis. Street taxis often quote high — agree the price first or use an app."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is chaotic. Most visitors skip renting a car in town."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "The centre is walkable, but pavements are uneven, so wear good shoes."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tbilisi has four clear seasons: cold winters, mild springs, hot dry-ish summers and a warm, pleasant autumn.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best months: May, September and October",
+        "text": "Mild to warm days around 17–25°C. September is warm and drier than spring."
+      },
+      {
+        "icon": "☀️",
+        "title": "Hot summer (July–August)",
+        "text": "Highs near 30°C. Sightsee in the morning, then rest or stay indoors in the afternoon."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in spring",
+        "text": "March, April and May have the most rain days (12–14). Carry a small umbrella."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winter (December–February)",
+        "text": "Highs of 6–8°C and lows near or below freezing. A warm coat and shoes are essential."
+      },
+      {
+        "icon": "🍂",
+        "title": "Autumn is a sweet spot",
+        "text": "September and October are warm and drier, with 7–9 rain days. Great for walking and day trips."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for spring and autumn, a warm coat for winter, and light clothes plus sun protection for summer. Good walking shoes for uneven pavements."
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+$ deepseek_prep.py Auckland
+  tokens in 726 out 536
+Auckland: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Auckland
+  tokens in 3914 out 600
+Auckland: 0 problems
+
+$ deepseek_city.py Auckland --stage places
+Auckland: places
+  tokens in 1189 out 2761
+
+$ deepseek_city.py Auckland --stage frame
+Auckland: frame
+  tokens in 2443 out 1828
+
+$ deepseek_city.py Auckland --stage plans
+Auckland: plans
+  plans for day
+  tokens in 1927 out 797
+  plans for 1n
+  tokens in 1928 out 859
+  plans for 2n
+  tokens in 1933 out 1141
+  plans for 3n
+  tokens in 1928 out 1928
+  plans for 4n
+  tokens in 1928 out 1869
+
+$ merge_city.py Auckland
+Auckland: 18 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/auckland.json and planner/auckland.json
+

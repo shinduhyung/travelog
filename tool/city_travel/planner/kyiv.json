@@ -1,0 +1,590 @@
+{
+  "city": "Kyiv",
+  "checked": "October 2026",
+  "intro_line": "Kyiv: golden domes, river bluffs, and stubborn, generous spirit.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Maidan / Khreshchatyk",
+        "Podil",
+        "Pechersk",
+        "Lypky"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Maidan / Khreshchatyk",
+        "Podil",
+        "Pechersk",
+        "Lypky"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Maidan / Khreshchatyk",
+        "Podil",
+        "Pechersk",
+        "Lypky"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Maidan / Khreshchatyk",
+        "Podil",
+        "Pechersk",
+        "Lypky"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Maidan / Khreshchatyk",
+        "Podil",
+        "Pechersk",
+        "Lypky"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 0,
+        "low": -5,
+        "rain_days": 11,
+        "note": "January: cold, highs near 0°C, lows around -5°C; pack a warm coat and expect about 11 wet days."
+      },
+      {
+        "high": 2,
+        "low": -4,
+        "rain_days": 8,
+        "note": "February: still cold, highs near 2°C; short days, so plan indoor sights."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 9,
+        "note": "March: warming to about 7°C; mix of sun and rain, about 9 wet days."
+      },
+      {
+        "high": 15,
+        "low": 5,
+        "rain_days": 10,
+        "note": "April: mild at 15°C; good for walking, but keep a rain layer for about 10 wet days."
+      },
+      {
+        "high": 20,
+        "low": 10,
+        "rain_days": 10,
+        "note": "May: pleasant at 20°C; one of the best months for parks and the river."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 10,
+        "note": "June: warm at 26°C; long evenings, about 10 wet days."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 11,
+        "note": "July: hot at 26°C with lows near 17°C; the busiest month, book ahead."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 6,
+        "note": "August: hottest, highs near 27°C; go out early and rest at midday."
+      },
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 7,
+        "note": "September: comfortable at 21°C; fewer wet days, about 7."
+      },
+      {
+        "high": 13,
+        "low": 6,
+        "rain_days": 8,
+        "note": "October: cooler at 13°C; about 8 wet days, bring layers."
+      },
+      {
+        "high": 6,
+        "low": 1,
+        "rain_days": 10,
+        "note": "November: chilly at 6°C; about 10 wet days, short daylight."
+      },
+      {
+        "high": 2,
+        "low": -2,
+        "rain_days": 13,
+        "note": "December: cold at 2°C with lows near -2°C; the wettest month, about 13 wet days."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.65,
+      0.6
+    ],
+    "history": [
+      0.5,
+      0.55,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "art": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.6,
+      0.55
+    ],
+    "nightlife": [
+      0.5,
+      0.5,
+      0.6,
+      0.75,
+      0.9,
+      1,
+      1,
+      1,
+      0.9,
+      0.75,
+      0.6,
+      0.5
+    ]
+  },
+  "places": {
+    "lavra": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Morning on a weekday; avoid midday crowds",
+      "area": "Pechersk",
+      "popularity": 5
+    },
+    "sophia": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late morning; grounds are lovely in spring",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 5
+    },
+    "maidan": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Any time; evening for lights",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 5
+    },
+    "andrew": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon light on the descent",
+      "area": "Podil",
+      "popularity": 4
+    },
+    "goldengate": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 40,
+      "setting": "mixed",
+      "best": "Morning or late afternoon",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 4
+    },
+    "motherland": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Clear afternoon",
+      "area": "Pechersk",
+      "popularity": 4
+    },
+    "andriyivskyy": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend daytime for market stalls",
+      "area": "Podil",
+      "popularity": 4
+    },
+    "ancientkyiv": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Warm months, dry day",
+      "area": "Pechersk",
+      "popularity": 3
+    },
+    "dnieper": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Pechersk",
+      "popularity": 4
+    },
+    "khreshchatyk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 4
+    },
+    "olimpiyskiy": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match or concert evening",
+      "area": "Pechersk",
+      "popularity": 3
+    },
+    "shevchenkomuseum": {
+      "types": [
+        "culture",
+        "art",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Rainy day or midday heat",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 3
+    },
+    "cyril": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Podil",
+      "popularity": 3
+    },
+    "volodymyr": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 40,
+      "setting": "indoor",
+      "best": "Morning, outside service times",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 3
+    },
+    "besarabka": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning for the freshest produce",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 4
+    },
+    "volodymyrhill": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Pechersk",
+      "popularity": 4
+    },
+    "podilwalk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Podil",
+      "popularity": 4
+    },
+    "chernobyltour": {
+      "types": [
+        "history"
+      ],
+      "minutes": 720,
+      "setting": "outdoor",
+      "best": "Any dry day; book ahead",
+      "area": "Pechersk",
+      "popularity": 3
+    },
+    "riverboat": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Pechersk",
+      "popularity": 3
+    },
+    "lvivchocolate": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "Maidan / Khreshchatyk",
+      "popularity": 3
+    },
+    "peremoha": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Spring and summer daytime",
+      "area": "Pechersk",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the Lavra, Maidan and Podil at an easy pace; add a night for museums and the river."
+  },
+  "airports": [
+    {
+      "code": "KBP",
+      "name": "Boryspil International Airport",
+      "primary": true,
+      "note": "Main hub, 29 km east; airspace closed to civil flights, check status.",
+      "options": [
+        {
+          "mode": "Kyiv Boryspil Express train",
+          "to": "Vokzalna / Central station",
+          "price": "80 грн",
+          "time": "about 40 min",
+          "note": "Buy at the kiosk; card accepted, city transport card not."
+        },
+        {
+          "mode": "Sky Bus",
+          "to": "Central Railway Station",
+          "price": "100-106 грн",
+          "time": "50-70 min",
+          "note": "Runs 24 hr every 20-30 min; online is cheaper."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "550-700 грн",
+          "time": "40-60 min",
+          "note": "Book ahead for a fixed price."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "350-500 грн",
+          "time": "40-60 min",
+          "note": "Best value for last-minute calls."
+        }
+      ]
+    },
+    {
+      "code": "IEV",
+      "name": "Kyiv Zhuliany International Airport",
+      "primary": false,
+      "note": "Budget airport 7 km southwest; currently closed with all Ukrainian airspace.",
+      "options": [
+        {
+          "mode": "Trolleybus 9",
+          "to": "M1 Vokzalna",
+          "price": "8 грн",
+          "time": "30-40 min",
+          "note": "Cheapest link to the metro."
+        },
+        {
+          "mode": "Bus 78",
+          "to": "M2 Vasylkivska",
+          "price": "8 грн",
+          "time": "25-35 min",
+          "note": "Good for the right bank."
+        },
+        {
+          "mode": "Volynsky suburban train",
+          "to": "Central Railway Station",
+          "price": "check locally",
+          "time": "about 15 min",
+          "note": "Station is 500 m west of the terminal."
+        },
+        {
+          "mode": "Uber / Bolt / Uklon",
+          "to": "City centre",
+          "price": "200-250 грн",
+          "time": "20-30 min",
+          "note": "Fastest door-to-door option."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Kyiv",
+      "https://en.wikivoyage.org/wiki/Kyiv"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for most trips; ride apps for late nights and hills.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Fast and cheap; base fare is 8 грн per trip. Pay by tapping a contactless card or phone at orange gates."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Trams, trolleybuses and buses share the same 8 грн fare; transfers cost extra."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Bolt and Uber work well; Uklon is the local favourite. Curfew is 01:00-05:00 daily, so plan your ride home early."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the centre; traffic and parking are a hassle. Use metro and apps instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Central streets are walkable but hilly; underground crossings have stairs, not lifts."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm summers and rain spread across the year.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days around 20–27°C and long evenings. Ideal for walking and the river."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cold winters (December to February)",
+        "text": "Highs near 0–2°C and lows to -5°C. Pack a heavy coat, hat and gloves."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 6–13 wet days each month; December is wettest. Carry a small umbrella."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings",
+        "text": "Days can warm up then cool fast in spring and autumn; dress in layers."
+      },
+      {
+        "icon": "🍂",
+        "title": "Golden autumn",
+        "text": "September and October are mild and colourful, with fewer wet days than summer."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket and comfortable shoes for hilly streets; warm gear in winter."
+      }
+    ]
+  }
+}

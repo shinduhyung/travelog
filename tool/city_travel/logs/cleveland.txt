@@ -1,0 +1,33 @@
+$ deepseek_prep.py Cleveland
+  tokens in 674 out 374
+Cleveland: 5 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Cleveland
+  tokens in 3941 out 946
+Cleveland: 1 problems
+  - CAK taxi $80-110 vs tariff estimate 163
+
+$ deepseek_city.py Cleveland --stage places
+Cleveland: places
+  tokens in 1152 out 2930
+
+$ deepseek_city.py Cleveland --stage frame
+Cleveland: frame
+  tokens in 2442 out 1767
+  repaired JSON
+
+$ deepseek_city.py Cleveland --stage plans
+Cleveland: plans
+  plans for day
+  tokens in 2272 out 866
+  plans for 1n
+  tokens in 2273 out 1303
+  plans for 2n
+  tokens in 2278 out 1611
+  plans for 3n
+  tokens in 2273 out 1992
+
+$ merge_city.py Cleveland
+Cleveland: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/cleveland.json and planner/cleveland.json
+

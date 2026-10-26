@@ -1,0 +1,690 @@
+{
+  "city": "Moscow",
+  "checked": "October 2026",
+  "intro_line": "Moscow: onion domes, metro palaces, and endless ambition.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Tverskoy",
+        "Kitay-Gorod",
+        "Arbat",
+        "Khamovniki"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Tverskoy",
+        "Kitay-Gorod",
+        "Arbat",
+        "Khamovniki"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Tverskoy",
+        "Kitay-Gorod",
+        "Arbat",
+        "Khamovniki"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Tverskoy",
+        "Kitay-Gorod",
+        "Arbat",
+        "Khamovniki"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Tverskoy",
+        "Kitay-Gorod",
+        "Arbat",
+        "Khamovniki"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -5,
+        "low": -10,
+        "rain_days": 13,
+        "note": "January: cold, highs near -5°C. Pack layers and warm boots; days are short."
+      },
+      {
+        "high": -3,
+        "low": -8,
+        "rain_days": 10,
+        "note": "February: still cold, highs near -3°C. Fewer rain days than January."
+      },
+      {
+        "high": 2,
+        "low": -6,
+        "rain_days": 9,
+        "note": "March: slowly warms to about 2°C. Icy underfoot; watch your step."
+      },
+      {
+        "high": 11,
+        "low": 1,
+        "rain_days": 10,
+        "note": "April: milder, highs near 11°C. Expect about 10 rain days; bring a jacket."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 11,
+        "note": "May: pleasant at about 18°C. Good month for walking and parks."
+      },
+      {
+        "high": 23,
+        "low": 12,
+        "rain_days": 10,
+        "note": "June: warm, highs near 23°C. Long daylight hours; a great month to visit."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 14,
+        "note": "July: warmest month, about 24°C, but the wettest with around 14 rain days."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 8,
+        "note": "August: warm at about 23°C and drier than July. Good for outdoor sights."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 9,
+        "note": "September: mild at about 17°C. Comfortable for museums and city walks."
+      },
+      {
+        "high": 9,
+        "low": 3,
+        "rain_days": 12,
+        "note": "October: cooler, highs near 9°C. Around 12 rain days; take an umbrella."
+      },
+      {
+        "high": 2,
+        "low": -2,
+        "rain_days": 11,
+        "note": "November: cold at about 2°C. Short days and grey skies."
+      },
+      {
+        "high": -2,
+        "low": -6,
+        "rain_days": 14,
+        "note": "December: cold, highs near -2°C. Festive lights but pack for ice and snow."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.9,
+      0.7,
+      0.6
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.9,
+      0.7,
+      0.6
+    ],
+    "art": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      1,
+      1,
+      0.95,
+      0.95,
+      1,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ]
+  },
+  "places": {
+    "red_square": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or evening",
+      "area": "Kitay-Gorod",
+      "popularity": 5
+    },
+    "kremlin": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning, avoid Thursday",
+      "area": "Kitay-Gorod",
+      "popularity": 5
+    },
+    "st_basil": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Kitay-Gorod",
+      "popularity": 5
+    },
+    "lenin": {
+      "types": [
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Kitay-Gorod",
+      "popularity": 4
+    },
+    "metro": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time; quieter mid-morning",
+      "area": "Tverskoy",
+      "popularity": 5
+    },
+    "tretyakov": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Khamovniki",
+      "popularity": 4
+    },
+    "christ_saviour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Khamovniki",
+      "popularity": 4
+    },
+    "gum": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Evening when lit up",
+      "area": "Kitay-Gorod",
+      "popularity": 4
+    },
+    "bolshoi": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Tverskoy",
+      "popularity": 4
+    },
+    "novodevichy": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Khamovniki",
+      "popularity": 3
+    },
+    "sparrow_hills": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Khamovniki",
+      "popularity": 4
+    },
+    "hist_museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or afternoon",
+      "area": "Kitay-Gorod",
+      "popularity": 3
+    },
+    "vdnkh": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Warm afternoon",
+      "area": "Tverskoy",
+      "popularity": 3
+    },
+    "kolomenskoye": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Spring or summer",
+      "area": "Khamovniki",
+      "popularity": 3
+    },
+    "attractionmania": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Check on the day",
+      "area": "Tverskoy",
+      "popularity": 2
+    },
+    "blue_dancers": {
+      "types": [
+        "art"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Khamovniki",
+      "popularity": 3
+    },
+    "borscht": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Tverskoy",
+      "popularity": 4
+    },
+    "dodo_pizza": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Anytime",
+      "area": "Tverskoy",
+      "popularity": 3
+    },
+    "dream_island": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "indoor",
+      "best": "Weekday",
+      "area": "Khamovniki",
+      "popularity": 3
+    },
+    "gorky_park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Khamovniki",
+      "popularity": 4
+    },
+    "kazansky": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Kitay-Gorod",
+      "popularity": 3
+    },
+    "luzhniki": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Event day",
+      "area": "Khamovniki",
+      "popularity": 3
+    },
+    "danilovsky_market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Khamovniki",
+      "popularity": 3
+    },
+    "arbat_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Arbat",
+      "popularity": 4
+    },
+    "river_cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset, summer",
+      "area": "Khamovniki",
+      "popularity": 4
+    },
+    "patriarch_ponds": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Tverskoy",
+      "popularity": 3
+    },
+    "zaryadye": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Kitay-Gorod",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Kremlin, Red Square, the big museums and the metro stations without rushing."
+  },
+  "airports": [
+    {
+      "code": "SVO",
+      "name": "Sheremetyevo International Airport",
+      "primary": true,
+      "note": "Aeroflot hub, 27 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Bus 851",
+          "to": "Rechnoy Vokzal metro",
+          "price": "₽57",
+          "time": "40-60 min",
+          "note": "Cheapest; validate your ticket on board."
+        },
+        {
+          "mode": "Aeroexpress train",
+          "to": "Belorussky station",
+          "price": "₽525",
+          "time": "50 min",
+          "note": "Runs every 30-60 min, 05:00-00:30."
+        },
+        {
+          "mode": "Night bus H1",
+          "to": "City centre",
+          "price": "₽61",
+          "time": "40-60 min",
+          "note": "Every 30 min, 00:30-05:30."
+        },
+        {
+          "mode": "Taxi / Yandex Go",
+          "to": "City centre",
+          "price": "₽1,000-1,500",
+          "time": "40-70 min",
+          "note": "Book in the app; ignore touts."
+        }
+      ]
+    },
+    {
+      "code": "DME",
+      "name": "Domodedovo International Airport",
+      "primary": true,
+      "note": "Main airport for foreign airlines, 43 km southeast.",
+      "options": [
+        {
+          "mode": "Bus 308",
+          "to": "Domodedovskaya metro",
+          "price": "₽100",
+          "time": "30 min",
+          "note": "Runs 24 hours, every 15 min."
+        },
+        {
+          "mode": "Commuter train",
+          "to": "Paveletsky station",
+          "price": "₽120",
+          "time": "75 min",
+          "note": "Cheaper but slower than Aeroexpress."
+        },
+        {
+          "mode": "Aeroexpress train",
+          "to": "Paveletsky station",
+          "price": "₽525",
+          "time": "50 min",
+          "note": "Every 30 min, 06:00-00:30."
+        },
+        {
+          "mode": "Taxi / Yandex Go",
+          "to": "City centre",
+          "price": "₽1,000-1,500",
+          "time": "50-90 min",
+          "note": "Traffic can be heavy; allow extra time."
+        }
+      ]
+    },
+    {
+      "code": "VKO",
+      "name": "Vnukovo International Airport",
+      "primary": false,
+      "note": "Smaller airport, 29 km southwest.",
+      "options": [
+        {
+          "mode": "Bus 911",
+          "to": "Salaryevo metro",
+          "price": "₽36-55",
+          "time": "35-40 min",
+          "note": "Troika card is cheaper than paying the driver."
+        },
+        {
+          "mode": "Metro line 8A",
+          "to": "City centre",
+          "price": "₽60-80",
+          "time": "60-75 min",
+          "note": "Direct metro link; no changes needed."
+        },
+        {
+          "mode": "Night bus H11",
+          "to": "Salaryevo metro",
+          "price": "₽55",
+          "time": "35-40 min",
+          "note": "Covers the overnight gap."
+        },
+        {
+          "mode": "Taxi / Yandex Go",
+          "to": "City centre",
+          "price": "₽1,000-1,500",
+          "time": "40-70 min",
+          "note": "Official app is the safe choice."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Moscow",
+      "https://en.wikivoyage.org/wiki/Moscow"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "art"
+  ],
+  "transit": {
+    "best": "Metro for almost everything; it is fast, cheap and the stations are sights themselves.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Runs about 05:30–01:00. Fast and cheap; a Troika card cuts fares. Stations are attractions in themselves."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses, trolleybuses and trams fill the gaps. A Troika card cuts fares."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Yandex Go is the main app. Taxis are metered, but agree the price first."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is slow and parking is costly. Use park-and-ride instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Central streets are walkable. Bike lanes are limited and winter is icy."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No useful ferry service in the city."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate with cold winters and warm summers. Rain falls in every month, so pack a layer and an umbrella.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Highs of 17–24°C and long days. Ideal for walking, parks and the river."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is long and cold",
+        "text": "December to February highs sit near -2 to -5°C. Wear a warm coat, hat, gloves and boots."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect 8–14 rain days monthly. July and December are wettest; August is driest."
+      },
+      {
+        "icon": "🧊",
+        "title": "Icy streets in winter",
+        "text": "Pavements can be slippery from November to March. Choose shoes with grip."
+      },
+      {
+        "icon": "🌗",
+        "title": "Short winter days",
+        "text": "Daylight is limited in December and January. Plan indoor sights and start early."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Summer: light clothes and a rain jacket. Winter: heavy coat, thermals, hat, gloves and waterproof boots."
+      }
+    ]
+  }
+}

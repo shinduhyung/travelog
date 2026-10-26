@@ -1,0 +1,527 @@
+{
+  "city": "Bengaluru",
+  "checked": "October 2026",
+  "intro_line": "India's garden city, where tech towers meet old bazaars and dosa stalls.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "MG Road",
+        "Indiranagar",
+        "Koramangala",
+        "Jayanagar"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "MG Road",
+        "Indiranagar",
+        "Koramangala",
+        "Jayanagar"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "MG Road",
+        "Indiranagar",
+        "Koramangala",
+        "Jayanagar"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "MG Road",
+        "Indiranagar",
+        "Koramangala",
+        "Jayanagar"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "MG Road",
+        "Indiranagar",
+        "Koramangala",
+        "Jayanagar"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 2,
+        "note": "Jan: dry and mild, 16–27°C. Great for walking and parks."
+      },
+      {
+        "high": 30,
+        "low": 16,
+        "rain_days": 1,
+        "note": "Feb: warm and dry, 16–30°C. Very little rain."
+      },
+      {
+        "high": 33,
+        "low": 19,
+        "rain_days": 3,
+        "note": "Mar: hotter, up to 33°C. Start sightseeing early."
+      },
+      {
+        "high": 34,
+        "low": 21,
+        "rain_days": 5,
+        "note": "Apr: hottest month, up to 34°C. Carry water and rest at midday."
+      },
+      {
+        "high": 32,
+        "low": 21,
+        "rain_days": 16,
+        "note": "May: pre-monsoon showers, about 16 rain days. Keep an umbrella."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 21,
+        "note": "Jun: monsoon starts, about 21 rain days. Expect wet afternoons."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 24,
+        "note": "Jul: wettest month, about 24 rain days. Plan indoor sights."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 21,
+        "note": "Aug: still rainy, about 21 rain days. Cool and green."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 21,
+        "note": "Sep: rain continues, about 21 rain days. Check forecasts daily."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 16,
+        "note": "Oct: rain easing, about 16 rain days. Pleasant temperatures."
+      },
+      {
+        "high": 27,
+        "low": 18,
+        "rain_days": 12,
+        "note": "Nov: drier, 18–27°C. Good month to visit."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 6,
+        "note": "Dec: coolest and fairly dry, 17–26°C. Busy holiday season."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "nature": [
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.45,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      1
+    ]
+  },
+  "places": {
+    "vidhana_soudha": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening when floodlit",
+      "area": "MG Road",
+      "popularity": 4
+    },
+    "wonderla": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday morning; avoid monsoon afternoons",
+      "area": "Jayanagar",
+      "popularity": 4
+    },
+    "cafe_coffee_day": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon break",
+      "area": "MG Road",
+      "popularity": 3
+    },
+    "kr_market": {
+      "types": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Jayanagar",
+      "popularity": 3
+    },
+    "lalbagh": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Jayanagar",
+      "popularity": 4
+    },
+    "cubbon_park": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "MG Road",
+      "popularity": 4
+    },
+    "mg_road_walk": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "MG Road",
+      "popularity": 3
+    },
+    "indiranagar_walk": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Indiranagar",
+      "popularity": 3
+    },
+    "koramangala_food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Lunch or dinner",
+      "area": "Koramangala",
+      "popularity": 3
+    },
+    "bull_temple": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Jayanagar",
+      "popularity": 3
+    },
+    "iskcon": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Jayanagar",
+      "popularity": 3
+    },
+    "tipu_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Jayanagar",
+      "popularity": 2
+    },
+    "bangalore_palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning or early afternoon",
+      "area": "MG Road",
+      "popularity": 3
+    },
+    "commercial_street": {
+      "types": [
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "MG Road",
+      "popularity": 3
+    },
+    "nandi_hills": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Sunrise; avoid monsoon",
+      "area": "MG Road",
+      "popularity": 3
+    },
+    "cubbon_museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon or rainy day",
+      "area": "MG Road",
+      "popularity": 3
+    },
+    "ulsoor_lake": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "MG Road",
+      "popularity": 2
+    },
+    "dosa_breakfast": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Jayanagar",
+      "popularity": 4
+    },
+    "cubbon_art": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "MG Road",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the palaces, parks, markets and a food crawl; add a night for a Mysuru or Nandi Hills day trip."
+  },
+  "airports": [
+    {
+      "code": "BLR",
+      "name": "Kempegowda International Airport",
+      "primary": true,
+      "note": "Main airport, about 28-40 km north of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus (KSRTC Vayu Vajra)",
+          "to": "Majestic and city centre",
+          "price": "₹250-350",
+          "time": "60-90 min",
+          "note": "Cheapest option; runs often, but slow in traffic."
+        },
+        {
+          "mode": "Metro (Purple Line extension)",
+          "to": "City centre",
+          "price": "₹60-90",
+          "time": "50-70 min",
+          "note": "Check current airport link status locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "₹800-1,200",
+          "time": "45-75 min",
+          "note": "Use the prepaid counter or app; agree the fare first."
+        },
+        {
+          "mode": "Uber / Ola",
+          "to": "City centre",
+          "price": "₹700-1,100",
+          "time": "45-75 min",
+          "note": "Pick-up zones are marked outside the terminals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Bengaluru",
+      "https://en.wikivoyage.org/wiki/Bengaluru"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "transit": {
+    "best": "Use Namma Metro for long hops and ride apps or autos for short trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Namma Metro has Green, Purple and Yellow lines; fares ₹10–90, smart card ₹50. Use it to dodge traffic."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "BMTC buses cover the city but are slow and crowded at peak times."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber, Ola and Rapido work well; auto-rickshaws are cheaper for short hops."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving yourself is stressful; hire a car with a driver instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is fine in small pockets, but pavements are patchy and traffic heavy."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical highland city: mild all year, with a long monsoon from June to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Dry, mild days around 26–30°C and cool nights. Ideal for parks, markets and walking."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot before the rains (March to April)",
+        "text": "Highs reach 33–34°C. Sightsee in the morning and stay shaded at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Long monsoon (June to October)",
+        "text": "Rain on 16–24 days a month. Expect short heavy showers; carry an umbrella and plan indoor backups."
+      },
+      {
+        "icon": "🌂",
+        "title": "May is the changeover",
+        "text": "About 16 rain days as pre-monsoon showers arrive. Weather can flip within an hour."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Cool nights all year",
+        "text": "Lows stay around 16–21°C. A light layer helps in the evening and in air-conditioned places."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain jacket or umbrella in monsoon months, comfortable shoes for patchy pavements, and sunscreen."
+      }
+    ]
+  }
+}

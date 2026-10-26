@@ -1,0 +1,868 @@
+{
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day on Baltimore's history: the fort that inspired the anthem, then the old harbor and Mount Vernon.",
+      "days": [
+        {
+          "title": "Fort McHenry, Federal Hill and the Inner Harbor",
+          "stops": [
+            {
+              "place": "fortmchenry",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start early. Check seasonal hours before you go."
+            },
+            {
+              "place": "federalhill",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short walk uphill for a skyline view over the harbor."
+            },
+            {
+              "place": "harborplace",
+              "at": "12:15",
+              "minutes": 45,
+              "note": "Walk the promenade. Grab lunch nearby."
+            },
+            {
+              "place": "watertaxi",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Seasonal. A cheap way to see the harbor from the water."
+            },
+            {
+              "place": "fellspoint",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Cobblestone streets and old taverns. Stay for an early dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Inner Harbor"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "A day of art from the grand to the strange: the BMA, the Peabody Library and visionary art.",
+      "days": [
+        {
+          "title": "Mount Vernon museums, then Federal Hill",
+          "stops": [
+            {
+              "place": "bmoremuseum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Mon–Tue. Check hours on the day."
+            },
+            {
+              "place": "peabody",
+              "at": "12:30",
+              "minutes": 30,
+              "note": "Weekday daytime only. The stacked-book hall is free to peek at."
+            },
+            {
+              "place": "lexington",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch at the market. Closed Sunday."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk the historic streets around the monument."
+            },
+            {
+              "place": "americanvisionary",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Closed Monday. Quirky, family-friendly and unlike any other museum."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mount Vernon"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way through Baltimore: market lunch, crab cakes and a Fells Point evening.",
+      "days": [
+        {
+          "title": "Market lunch, harbor walk and Fells Point",
+          "stops": [
+            {
+              "place": "lexington",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunch at the stalls. Closed Sunday."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk off lunch around the monument."
+            },
+            {
+              "place": "harborplace",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Promenade stroll toward the water."
+            },
+            {
+              "place": "watertaxi",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Seasonal. Ride over toward Fells Point."
+            },
+            {
+              "place": "crabcake",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Crab cake lunch or early dinner. Prices vary by market."
+            },
+            {
+              "place": "fellspoint",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Waterfront walk. Bars get busy later in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fells Point"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "First-timers who want the fort, the flag story and the old harbor in one night.",
+      "days": [
+        {
+          "title": "Arrive, Mount Vernon history",
+          "stops": [
+            {
+              "place": "mtvernonwalk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start at the Washington Monument. Always open."
+            },
+            {
+              "place": "peabody",
+              "at": "14:15",
+              "minutes": 30,
+              "note": "Weekday daytime only. Check hours on the day."
+            },
+            {
+              "place": "jhu",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short walk from Mount Vernon. Grounds open daily."
+            },
+            {
+              "place": "harborplace",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Evening stroll on the Inner Harbor promenade."
+            }
+          ]
+        },
+        {
+          "title": "Fort McHenry, then Fells Point",
+          "stops": [
+            {
+              "place": "fortmchenry",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Go early. Check seasonal hours before you go."
+            },
+            {
+              "place": "federalhill",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Short ride away. Great harbor view."
+            },
+            {
+              "place": "lexington",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch stop. Closed Sunday."
+            },
+            {
+              "place": "fellspoint",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Waterfront walk. Bars get busy in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Inner Harbor"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers: visionary art, the BMA and the Peabody Library in a day and a half.",
+      "days": [
+        {
+          "title": "Arrive, visionary art and the harbor",
+          "stops": [
+            {
+              "place": "americanvisionary",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Monday. Federal Hill area."
+            },
+            {
+              "place": "federalhill",
+              "at": "14:45",
+              "minutes": 45,
+              "note": "Walk up for the skyline view."
+            },
+            {
+              "place": "harborplace",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Promenade walk toward the aquarium."
+            },
+            {
+              "place": "fellspoint",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and evening walk."
+            }
+          ]
+        },
+        {
+          "title": "Mount Vernon art and library",
+          "stops": [
+            {
+              "place": "peabody",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Weekday daytime. Check weekend hours on the day."
+            },
+            {
+              "place": "bmoremuseum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Mon–Tue. Check hours on the day."
+            },
+            {
+              "place": "lexington",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch. Closed Sunday."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Finish with the historic streets."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mount Vernon"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat-first visitors: crab cakes, Lexington Market and Fells Point taverns.",
+      "days": [
+        {
+          "title": "Arrive, market and harbor",
+          "stops": [
+            {
+              "place": "lexington",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Snack and look around. Closed Sunday."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "14:15",
+              "minutes": 60,
+              "note": "Walk off lunch. Always open."
+            },
+            {
+              "place": "harborplace",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Promenade walk. Evening is best."
+            },
+            {
+              "place": "crabcake",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Crab cake dinner in Fells Point."
+            }
+          ]
+        },
+        {
+          "title": "Fells Point and the fort",
+          "stops": [
+            {
+              "place": "fortmchenry",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning visit. Check seasonal hours."
+            },
+            {
+              "place": "fellspoint",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Waterfront walk before lunch crowds."
+            },
+            {
+              "place": "crabcake",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Book ahead on weekends."
+            },
+            {
+              "place": "powhatan",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Park walk to finish. Daylight hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fells Point"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the fort, the harbor and the old neighborhoods at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Inner Harbor and the flag's home",
+          "stops": [
+            {
+              "place": "harborplace",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Start with the waterfront promenade to get your bearings."
+            },
+            {
+              "place": "watertaxi",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal and daytime only. A cheap way to see the harbor. Check on the day."
+            },
+            {
+              "place": "fortmchenry",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Where the Star-Spangled Banner was written. Check seasonal hours."
+            },
+            {
+              "place": "federalhill",
+              "at": "17:15",
+              "minutes": 45,
+              "note": "Short climb for a harbor view. Best at sunset."
+            },
+            {
+              "place": "crabcake",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Crab cakes for dinner. Fells Point is a short ride away."
+            }
+          ]
+        },
+        {
+          "title": "Mount Vernon history and Fells Point",
+          "stops": [
+            {
+              "place": "mtvernonwalk",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Self-guided walk past the Washington Monument and grand townhouses."
+            },
+            {
+              "place": "peabody",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "The famous stacked-book atrium. Weekday daytime, limited weekend hours."
+            },
+            {
+              "place": "jhu",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk the Mount Vernon campus. Buildings vary."
+            },
+            {
+              "place": "lexington",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch at the market. Closed Sunday."
+            },
+            {
+              "place": "fellspoint",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Old cobbled streets and waterfront. Bars get busy in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Inner Harbor or Mount Vernon"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Museum lovers: the BMA, the Peabody Library and the Visionary Art Museum.",
+      "days": [
+        {
+          "title": "Mount Vernon museums",
+          "stops": [
+            {
+              "place": "peabody",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Go early for quiet photos. Weekday daytime, limited weekend hours."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Walk the neighborhood between sights."
+            },
+            {
+              "place": "bmoremuseum",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed Mon–Tue. Check on the day."
+            },
+            {
+              "place": "lexington",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch at the market. Closed Sunday."
+            },
+            {
+              "place": "jhu",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Campus stroll to finish the day."
+            }
+          ]
+        },
+        {
+          "title": "Federal Hill art and the harbor",
+          "stops": [
+            {
+              "place": "americanvisionary",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Closed Monday. Outsider art, fun for all ages."
+            },
+            {
+              "place": "federalhill",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Harbor view, then walk downhill to lunch."
+            },
+            {
+              "place": "crabcake",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch in Fells Point."
+            },
+            {
+              "place": "fellspoint",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Waterfront walk and small galleries."
+            },
+            {
+              "place": "harborplace",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Evening stroll along the Inner Harbor."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mount Vernon or Inner Harbor"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters: crab cakes, market stalls and Fells Point taverns, with history in between.",
+      "days": [
+        {
+          "title": "Market lunch and harbor walk",
+          "stops": [
+            {
+              "place": "lexington",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch at the stalls. Closed Sunday."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk off lunch in Mount Vernon."
+            },
+            {
+              "place": "harborplace",
+              "at": "14:30",
+              "minutes": 45,
+              "note": "Promenade stroll."
+            },
+            {
+              "place": "watertaxi",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Hop across the harbor. Seasonal, daytime only."
+            },
+            {
+              "place": "crabcake",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Crab cake dinner in Fells Point."
+            }
+          ]
+        },
+        {
+          "title": "Fort, park and Fells Point evening",
+          "stops": [
+            {
+              "place": "fortmchenry",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning visit. Check seasonal hours."
+            },
+            {
+              "place": "federalhill",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Harbor view before lunch."
+            },
+            {
+              "place": "americanvisionary",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Monday. Good rainy-day option."
+            },
+            {
+              "place": "powhatan",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Patterson Park walk near Fells Point."
+            },
+            {
+              "place": "fellspoint",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Taverns and waterfront. Busiest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fells Point or Inner Harbor"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the fort, the old harbor and Mount Vernon at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive, Inner Harbor and the promenade",
+          "stops": [
+            {
+              "place": "harborplace",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Flat walk along the water. Good first look at the harbor."
+            },
+            {
+              "place": "watertaxi",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Seasonal and daytime only. Check the day's route before you buy."
+            },
+            {
+              "place": "crabcake",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Short taxi or 20-minute walk to Fells Point. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Fort McHenry morning, Federal Hill sunset",
+          "stops": [
+            {
+              "place": "fortmchenry",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "The Star-Spangled Banner story. Check seasonal hours first."
+            },
+            {
+              "place": "americanvisionary",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Closed Monday. Short ride from the fort."
+            },
+            {
+              "place": "lexington",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Closed Sunday. Lunch from the stalls."
+            },
+            {
+              "place": "federalhill",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Climb for the skyline view. Best at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Mount Vernon history, then out",
+          "stops": [
+            {
+              "place": "mtvernonwalk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Self-guided loop of the old squares and monuments."
+            },
+            {
+              "place": "peabody",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Weekday daytime only. The stacked reading room is the draw."
+            },
+            {
+              "place": "jhu",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Walk the grounds. Building access varies."
+            },
+            {
+              "place": "fellspoint",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Waterfront and old streets. Bars get busy in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Inner Harbor"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Museum lovers who want the big collections plus the quirky ones.",
+      "days": [
+        {
+          "title": "Arrive, Inner Harbor and the aquarium",
+          "stops": [
+            {
+              "place": "harborplace",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Stretch your legs by the water."
+            },
+            {
+              "place": "aquarium",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Usually open to 17:00, later in summer. Check on the day and book ahead."
+            },
+            {
+              "place": "crabcake",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner in Fells Point."
+            }
+          ]
+        },
+        {
+          "title": "BMA and the Visionary",
+          "stops": [
+            {
+              "place": "bmoremuseum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Mon–Tue. Check on the day."
+            },
+            {
+              "place": "lexington",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Quick lunch."
+            },
+            {
+              "place": "americanvisionary",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Monday. Outsider art, very family-friendly."
+            },
+            {
+              "place": "federalhill",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset view over the harbor."
+            }
+          ]
+        },
+        {
+          "title": "Peabody and Mount Vernon, then out",
+          "stops": [
+            {
+              "place": "peabody",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Weekday daytime. Free to look in."
+            },
+            {
+              "place": "mtvernonwalk",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Walk the historic blocks between museums."
+            },
+            {
+              "place": "jhu",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Campus grounds open daily."
+            },
+            {
+              "place": "fellspoint",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Last look at the waterfront before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mount Vernon"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who plan the day around crab cakes and harbor taverns.",
+      "days": [
+        {
+          "title": "Arrive, harbor walk and a crab cake",
+          "stops": [
+            {
+              "place": "harborplace",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Easy flat walk to work up an appetite."
+            },
+            {
+              "place": "watertaxi",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Seasonal. A cheap way to see the harbor."
+            },
+            {
+              "place": "crabcake",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "The classic Baltimore lunch or dinner. Book ahead."
+            },
+            {
+              "place": "fellspoint",
+              "at": "20:00",
+              "minutes": 90,
+              "note": "Taverns and bars. Busiest late."
+            }
+          ]
+        },
+        {
+          "title": "Market lunch and the fort",
+          "stops": [
+            {
+              "place": "lexington",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Closed Sunday. Go hungry and graze the stalls."
+            },
+            {
+              "place": "fortmchenry",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Check seasonal hours."
+            },
+            {
+              "place": "americanvisionary",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "federalhill",
+              "at": "18:00",
+              "minutes": 45,
+              "note": "Sunset view, then dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Mount Vernon morning, then out",
+          "stops": [
+            {
+              "place": "mtvernonwalk",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning stroll past the monuments."
+            },
+            {
+              "place": "peabody",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Weekday daytime only."
+            },
+            {
+              "place": "jhu",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Grounds open daily."
+            },
+            {
+              "place": "fellspoint",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "One last waterfront walk before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Fells Point"
+    }
+  ]
+}

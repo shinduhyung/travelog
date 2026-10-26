@@ -1,0 +1,501 @@
+{
+  "city": "Riyadh",
+  "checked": "October 2026",
+  "intro_line": "A desert capital of towers, malls and old mud-brick echoes.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Olaya",
+        "KAFD",
+        "Al-Bathaa",
+        "Diplomatic Quarter"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Olaya",
+        "KAFD",
+        "Al-Bathaa",
+        "Diplomatic Quarter"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Olaya",
+        "KAFD",
+        "Al-Bathaa",
+        "Diplomatic Quarter"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Olaya",
+        "KAFD",
+        "Al-Bathaa",
+        "Diplomatic Quarter"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Olaya",
+        "KAFD",
+        "Al-Bathaa",
+        "Diplomatic Quarter"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 21,
+        "low": 9,
+        "rain_days": 2,
+        "note": "January: mild days around 21°C, cool nights near 9°C. Best month for walking and Diriyah."
+      },
+      {
+        "high": 23,
+        "low": 11,
+        "rain_days": 2,
+        "note": "February: pleasant, highs near 23°C. Light jacket for evenings."
+      },
+      {
+        "high": 28,
+        "low": 15,
+        "rain_days": 3,
+        "note": "March: warming to 28°C, a few rain days. Good for outdoor sights."
+      },
+      {
+        "high": 33,
+        "low": 20,
+        "rain_days": 3,
+        "note": "April: hot at 33°C by day. Do outdoor sights in the morning."
+      },
+      {
+        "high": 39,
+        "low": 25,
+        "rain_days": 1,
+        "note": "May: very hot, near 39°C. Stick to malls, museums and evenings."
+      },
+      {
+        "high": 42,
+        "low": 28,
+        "rain_days": 0,
+        "note": "June: extreme heat, 42°C. Plan indoor days and late nights."
+      },
+      {
+        "high": 43,
+        "low": 30,
+        "rain_days": 0,
+        "note": "July: hottest month, 43°C. Avoid midday sun entirely."
+      },
+      {
+        "high": 43,
+        "low": 29,
+        "rain_days": 0,
+        "note": "August: still 43°C. Indoor family activities are the way to go."
+      },
+      {
+        "high": 40,
+        "low": 26,
+        "rain_days": 0,
+        "note": "September: 40°C, slowly easing. Evenings become bearable late in the month."
+      },
+      {
+        "high": 35,
+        "low": 21,
+        "rain_days": 0,
+        "note": "October: cooling to 35°C. Outdoor trips get easier."
+      },
+      {
+        "high": 27,
+        "low": 16,
+        "rain_days": 2,
+        "note": "November: pleasant at 27°C, a couple of rain days. Great for desert trips."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 2,
+        "note": "December: mild days near 22°C, chilly nights. Busy holiday season; book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.6,
+      0.85,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ],
+    "shopping": [
+      0.95,
+      0.95,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.95,
+      1,
+      0.95
+    ],
+    "family": [
+      1,
+      1,
+      1,
+      0.85,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.5,
+      0.8,
+      1,
+      1
+    ]
+  },
+  "places": {
+    "kingdom_centre": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon to sunset",
+      "area": "Olaya",
+      "popularity": 5
+    },
+    "diriyah": {
+      "types": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Evening, October to March",
+      "area": "Diplomatic Quarter",
+      "popularity": 5
+    },
+    "masmak": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Al-Bathaa",
+      "popularity": 4
+    },
+    "turaif": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, cooler months",
+      "area": "Diplomatic Quarter",
+      "popularity": 4
+    },
+    "national_museum": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning or early afternoon",
+      "area": "Al-Bathaa",
+      "popularity": 4
+    },
+    "al_hokair_land": {
+      "types": [
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Evening, October to March",
+      "area": "Olaya",
+      "popularity": 3
+    },
+    "kabsa": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Al-Bathaa",
+      "popularity": 4
+    },
+    "king_fahd_stadium": {
+      "types": [
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Match days, cooler months",
+      "area": "Olaya",
+      "popularity": 2
+    },
+    "souq_al_zal": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Al-Bathaa",
+      "popularity": 3
+    },
+    "souq_market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning or evening",
+      "area": "Al-Bathaa",
+      "popularity": 3
+    },
+    "sky_viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Olaya",
+      "popularity": 3
+    },
+    "edge_walk": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, October to March",
+      "area": "Olaya",
+      "popularity": 3
+    },
+    "city_tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning in cooler months",
+      "area": "Al-Bathaa",
+      "popularity": 3
+    },
+    "desert_tour": {
+      "types": [
+        "family"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Afternoon, October to March",
+      "area": "Diplomatic Quarter",
+      "popularity": 4
+    },
+    "wadi_walk": {
+      "types": [
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon, cooler months",
+      "area": "Diplomatic Quarter",
+      "popularity": 3
+    },
+    "dq_walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or evening",
+      "area": "Diplomatic Quarter",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover Diriyah, the old city and a mall or two; add a night for a desert trip or Edge of the World."
+  },
+  "airports": [
+    {
+      "code": "RUH",
+      "name": "King Khalid International Airport",
+      "primary": true,
+      "note": "Main hub, about 27-35 km north of the centre.",
+      "options": [
+        {
+          "mode": "Metro Yellow Line",
+          "to": "KAFD downtown",
+          "price": "SR 4",
+          "time": "35-50 min",
+          "note": "Cheapest option; stations serve all terminals."
+        },
+        {
+          "mode": "Riyadh Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Slow but cheap; check routes in the app."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "SR 70-90",
+          "time": "30-45 min",
+          "note": "Use official ranks; agree the flat fare first."
+        },
+        {
+          "mode": "Uber / Careem",
+          "to": "City centre",
+          "price": "SR 60-90",
+          "time": "30-45 min",
+          "note": "Pickup points are outside arrivals."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Riyadh",
+      "https://en.wikivoyage.org/wiki/Riyadh"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "history",
+    "shopping"
+  ],
+  "transit": {
+    "best": "Riyadh Metro for main corridors; taxis or ride apps for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Six lines, about 06:00 to midnight. A 2-hour ticket is SR 4; 3-day pass about SR 20, 7-day SR 40, 30-day SR 140. Tickets include Riyadh Bus."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Riyadh Bus is the main city bus network; fares start around SR 4. Covered by metro passes."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Metered taxis in town usually under SR 30. Uber and Careem work well; many locals agree flat fares of SR 10–15 for short hops."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is the local norm and roads are wide. Check whether your licence needs an International Driving Permit."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Hard in the spread-out north; easy and rewarding in Al-Bathaa's old alleys. Avoid midday heat in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Hot desert climate: near-constant sunshine, very little rain, and a fierce summer from May to September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Days around 21–28°C and cool nights. Ideal for Diriyah, the old city and desert trips."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is extreme (May to September)",
+        "text": "Highs of 39–43°C. Move between air-conditioned places by day; go out after sunset."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Almost no rain",
+        "text": "At most 2–3 rain days a month in winter and spring. No umbrella needed most trips."
+      },
+      {
+        "icon": "🌙",
+        "title": "Nights are cooler but not cool in summer",
+        "text": "Summer lows stay near 26–30°C, so evenings are still hot. Winter nights drop to 9–11°C."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack layers for winter",
+        "text": "December to February evenings are chilly. Bring a jacket and a light layer for strong indoor AC."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes, hat and sunscreen; modest clothing for mosques and heritage sites; comfortable shoes for souq alleys."
+      }
+    ]
+  }
+}

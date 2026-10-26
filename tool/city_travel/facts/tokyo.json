@@ -1,0 +1,266 @@
+{
+  "currency": "JPY",
+  "usd_rate": 150,
+  "intro_line": "Neon districts, quiet shrines and the best food city in the world.",
+  "intro": "Tokyo is a cluster of neighbourhoods, each a day of its own. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "anime",
+      "label": "Anime"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Shinjuku",
+    "Shibuya",
+    "Ginza & Tokyo Station",
+    "Asakusa & Ueno"
+  ],
+  "place_landmarks": [
+    "Senso-ji",
+    "Nakamise-dori",
+    "Meiji Jingu",
+    "Shibuya Crossing",
+    "Tokyo Skytree",
+    "Tokyo Tower",
+    "Imperial Palace",
+    "Tsukiji Outer Market",
+    "Toyosu Market",
+    "Akihabara",
+    "Takeshita Street",
+    "Shinjuku Gyoen National Garden",
+    "Shinjuku Golden Gai",
+    "Tokyo Metropolitan Government Building",
+    "Tokyo National Museum",
+    "Ueno Park",
+    "teamLab Planets Tokyo",
+    "Ghibli Museum",
+    "Odaiba",
+    "Tokyo Disneyland",
+    "Tokyo DisneySea",
+    "Roppongi Hills Mori Tower",
+    "Ginza District",
+    "Omotesando"
+  ],
+  "taxi": {
+    "flag_day": 500,
+    "flag_airport": 500,
+    "per_km": 400,
+    "min_fare": 500
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Trains and subways (JR, Tokyo Metro, Toei) reach everywhere; tap a Suica or Pasmo IC card, about ¥180-330 a ride.",
+    "Buses exist but trains are almost always faster for visitors.",
+    "Taxis are clean and metered (¥500 start); apps like GO and Uber work.",
+    "Driving in central Tokyo is slow and parking expensive; not recommended.",
+    "Each neighbourhood is walkable, but you will take trains between them.",
+    "Trains stop around midnight; plan late nights or take a taxi."
+  ],
+  "airports": [
+    {
+      "code": "HND",
+      "name": "Haneda Airport",
+      "primary": true,
+      "note": "Closest to the city, 15 km south.",
+      "options": [
+        {
+          "mode": "Keikyu Line",
+          "to": "Shinagawa, Asakusa",
+          "price": "¥327-600",
+          "time": "11-30 min",
+          "note": "Pay with a Suica/Pasmo IC card."
+        },
+        {
+          "mode": "Tokyo Monorail",
+          "to": "Hamamatsucho",
+          "price": "¥520-550",
+          "time": "13-19 min",
+          "note": "Change to JR Yamanote line."
+        },
+        {
+          "mode": "Limousine bus",
+          "to": "Major hotels and stations",
+          "price": "¥1,200-1,400",
+          "time": "30-60 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi (fixed fare)",
+          "to": "Central Tokyo",
+          "price": "from ¥6,900",
+          "time": "25-40 min",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "code": "NRT",
+      "name": "Narita Airport",
+      "primary": false,
+      "note": "60 km east; many international flights.",
+      "options": [
+        {
+          "mode": "Keisei Skyliner",
+          "to": "Nippori, Ueno",
+          "price": "¥2,300-2,580",
+          "time": "36-41 min",
+          "note": "Fastest train; cheaper online."
+        },
+        {
+          "mode": "Narita Express (N'EX)",
+          "to": "Tokyo, Shinjuku, Shibuya",
+          "price": "¥3,070-3,330",
+          "time": "53-80 min",
+          "note": "Round-trip ticket for visitors ¥5,200."
+        },
+        {
+          "mode": "Limousine bus",
+          "to": "Major hotels and stations",
+          "price": "¥3,100-3,600",
+          "time": "65-120 min",
+          "note": ""
+        },
+        {
+          "mode": "Low-cost bus (TYO-NRT)",
+          "to": "Tokyo Station",
+          "price": "¥1,500",
+          "time": "about 70 min",
+          "note": "¥3,000 late at night."
+        },
+        {
+          "mode": "Taxi (fixed fare)",
+          "to": "Central Tokyo",
+          "price": "¥19,000-21,000",
+          "time": "60-90 min",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "airports_sources": [
+    [
+      "Narita & Haneda to Tokyo 2026",
+      "https://glostravel.com/en/article/airport-access-tokyo-narita-haneda-2026"
+    ],
+    [
+      "Narita Airport to Tokyo compared",
+      "https://www.tokyotourism.org/narita-airport-to-tokyo/"
+    ],
+    [
+      "Tokyo airport transfer guide",
+      "https://blog.wego.com/tokyo-airport-transfer/"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    35.6895,
+    139.6917
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 9,
+      "low": 0,
+      "rain_days": 5
+    },
+    {
+      "high": 10,
+      "low": 1,
+      "rain_days": 7
+    },
+    {
+      "high": 14,
+      "low": 5,
+      "rain_days": 11
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 11
+    },
+    {
+      "high": 23,
+      "low": 14,
+      "rain_days": 11
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 15
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 16
+    },
+    {
+      "high": 31,
+      "low": 24,
+      "rain_days": 14
+    },
+    {
+      "high": 27,
+      "low": 21,
+      "rain_days": 15
+    },
+    {
+      "high": 22,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 17,
+      "low": 8,
+      "rain_days": 10
+    },
+    {
+      "high": 11,
+      "low": 2,
+      "rain_days": 7
+    }
+  ],
+  "tours": [
+    {
+      "title": "Tokyo: The Best of Izakaya in Shinjuku Food & Cultural Tour",
+      "duration": "3 hrs",
+      "price": "$129",
+      "covers": [
+        "goldengai"
+      ]
+    },
+    {
+      "title": "Imperial Palace & Shogun Walking Tour with a Local Guide",
+      "duration": "2 hours",
+      "price": "$6",
+      "covers": [
+        "imperialpalace"
+      ]
+    },
+    {
+      "title": "Ghibli Museum Mitaka Tour with Local Guide & Ticket",
+      "duration": "1.5 hours",
+      "price": "$63",
+      "covers": [
+        "ghibli"
+      ]
+    }
+  ],
+  "max_km": 45
+}

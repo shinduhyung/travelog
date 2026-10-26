@@ -1,0 +1,181 @@
+{
+  "currency": "CNY",
+  "usd_rate": 6.6882,
+  "intro_line": "Shenzhen: China's boomtown where tech towers meet tropical coast.",
+  "intro": "Shenzhen rewards visitors with fast metros, huge parks, beaches and a buzzing food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Futian",
+    "Luohu",
+    "Nanshan",
+    "Shekou"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 15,
+    "per_km": 2.6,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Metro is fast, cheap and covers most sights; fares from about ¥2.",
+    "Buses fill the gaps; use a transit card or phone app to pay.",
+    "Taxis and ride apps like Didi work well; airport to Futian about ¥100.",
+    "Driving yourself is not advised for short visits; traffic is heavy.",
+    "Walking is fine in central districts; shared bikes are everywhere.",
+    "Ferries link Shekou and Fuyong to Hong Kong, Macau and Zhuhai."
+  ],
+  "airports": [
+    {
+      "code": "SZX",
+      "name": "Shenzhen Bao'an International Airport",
+      "primary": true,
+      "note": "Main airport, about 28 km west of the centre.",
+      "options": [
+        {
+          "mode": "Metro line 11",
+          "to": "Downtown Shenzhen",
+          "price": "¥10",
+          "time": "30 min",
+          "note": "Runs 06:17-00:18; business class car costs about triple."
+        },
+        {
+          "mode": "Airport shuttle bus",
+          "to": "Downtown Shenzhen",
+          "price": "¥20",
+          "time": "45-60 min",
+          "note": "Check the schedule; English may be limited."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Futian",
+          "price": "¥100-120",
+          "time": "35-50 min",
+          "note": "About ¥150 to Luohu including tolls."
+        },
+        {
+          "mode": "Ride app (Didi)",
+          "to": "Central districts",
+          "price": "¥90-130",
+          "time": "35-50 min",
+          "note": "Pickup area has numbered bays; tell the driver your bay."
+        }
+      ],
+      "max_km": 60
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Window of the World",
+    "Ping An International Finance Centre",
+    "China Folk Culture Village",
+    "Happy Valley (Shenzhen)",
+    "Hey Tea",
+    "Hong Kong Disneyland",
+    "Hong Kong Wetland Park",
+    "Ma Wan Park",
+    "Minsk World (closed)",
+    "Naixue (Nayuki)",
+    "OCT East",
+    "Snoopy's World",
+    "Splendid China"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Shenzhen",
+      "https://en.wikivoyage.org/wiki/Shenzhen"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    22.5431,
+    114.0579
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 20,
+      "low": 12,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 7
+    },
+    {
+      "high": 24,
+      "low": 17,
+      "rain_days": 11
+    },
+    {
+      "high": 27,
+      "low": 20,
+      "rain_days": 14
+    },
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 21
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 24
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 25
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 28,
+      "low": 21,
+      "rain_days": 9
+    },
+    {
+      "high": 25,
+      "low": 18,
+      "rain_days": 7
+    },
+    {
+      "high": 21,
+      "low": 13,
+      "rain_days": 4
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

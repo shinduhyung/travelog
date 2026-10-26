@@ -12,6 +12,8 @@ import 'package:jidoapp/providers/airport_provider.dart';
 import 'package:jidoapp/providers/city_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
 import 'package:jidoapp/providers/trip_log_provider.dart';
+import 'package:jidoapp/services/persona_scorer.dart';
+import 'package:jidoapp/services/traveler_type_store.dart';
 import 'package:jidoapp/services/travel_quantifier.dart';
 import 'package:jidoapp/travel_persona/travel_features.dart';
 import 'package:provider/provider.dart';
@@ -191,7 +193,8 @@ class TravelPersonaEngine {
 
     final calculatedFeatures = quantifier.quantify();
 
-    final fullFeatureVector = {
+    // 값이 없는 축은 0.0으로 채우지 않고 빼둔다 (PersonaScorer가 계산에서 제외).
+    final fullFeatureVector = <String, double>{
       ...dnaNormalized,
       "continentDistribution": calculatedFeatures.continentDistribution,
       "countryDistribution": calculatedFeatures.countryDistribution,
@@ -201,122 +204,134 @@ class TravelPersonaEngine {
       "countryWealth": calculatedFeatures.countryWealth,
       "countryType": calculatedFeatures.countryType,
       "countryNightlife": calculatedFeatures.countryNightlife,
-      "cityWealth": 0.0,
-      "cityType": 0.0,
-      "cityNightlife": 0.0,
       "airlineTime": calculatedFeatures.airlineTime,
       "transferAirportScore": calculatedFeatures.transferAirportScore,
       "transferFlightScore": calculatedFeatures.transferFlightScore,
-      "landmark_culture_nature": 0.0,
-      "landmark_ancient_modern": 0.0,
-      "landmark_urban_rural": 0.0,
-      "landmark_adventure_relax": 0.0,
-      "landmark_art_science": 0.0,
-      "landmark_spiritual_secular": 0.0,
-      "landmark_crowd": 0.0,
-      "landmark_budget_luxury": 0.0,
-      "landmark_local_tourist": 0.0,
-      "landmark_calm_nightlife": 0.0,
     };
 
     final rawCityVisitData = _getRawCityVisitList(cityProvider);
     final rawTripLogs = _getRawTripLogList(tripLogProvider);
+    final prototypes = jsonDecode(_archetypePrototypesJson) as List<dynamic>;
 
-    final inputPayload = {
-      "full_feature_vector": fullFeatureVector,
-      "raw_data_for_AI_scoring": {
+    // 1단계: AI는 도시/랜드마크 13개 축만 추정한다 (점수 계산은 하지 않음).
+    String aiNote = 'Success';
+    try {
+      final axesPayload = {
         "visited_cities": rawCityVisitData,
         "trip_logs": rawTripLogs,
         "user_rating_distribution": _getAllRatingsForAI(countryProvider, cityProvider),
-      },
-      "meta_data": {
-        "total_countries": countryProvider.visitedCountries.length,
-        "total_cities": cityProvider.visitedCities.length,
-        "total_flights": airlineProvider.allFlightLogs.length,
-      },
-      "archetype_prototypes": jsonDecode(_archetypePrototypesJson),
-    };
-
-    final systemPrompt = r'''
-You are **TravelPersonaEngine**. Your task is to provide the final travel persona analysis using a **Distance-Based Match Scoring** model.
-
-**[I. Pre-Calculations]**
-1. **Calculate Missing Axes**: You must analyze the 'raw_data_for_AI_scoring' to calculate the 3 City Trait axes and 10 Landmark Trait axes. Apply the rating-based Z-Score weighting. If data is missing or results in NaN, use 0.0.
-2. **Final Vector Assembly**: Use these 13 newly calculated axes to overwrite the 0.0 placeholder values in the 'full_feature_vector'.
-
-**[II. Archetype Scoring (Distance Model)]**
-You must calculate the score for each of the 10 Archetypes using the following distance formula. 
-The sum of weights ($W$) for each archetype is standardized to **40**.
-
-**Formula:**
-$$ D = \sum_{i=1}^{33} W_i \cdot |U_i - P_i| $$
-$$ Score (\%) = 100 \times (1 - \frac{D}{80}) $$
-
-* $U_i$: User's value for axis $i$ (-1.0 to 1.0)
-* $P_i$: Archetype's prototype value for axis $i$ (-1.0 to 1.0)
-* $W_i$: Importance weight of axis $i$ (0, 1, 2, 3)
-* Max possible distance $D_{max} = 80$ (Since $\sum W = 40$ and max diff $|U-P|=2$).
-
-**[III. Output: Rationale & Structure]**
-1. **Rationale Generation**: Generate a detailed, user-friendly explanation in 'ai_explanation'.
-    * **Rule 1**: Use ONLY the provided raw data (countries, cities, logs). **DO NOT hallucinate.**
-    * **Rule 2**: Explain *why* the top type fits based on the user's traits/data.
-    * **Rule 3**: **DO NOT mention any mathematical formulas or terms** (e.g., "Distance D", "Z-Score", "P value"). Keep it natural.
-2. **Type Descriptions**: Do NOT generate `description_ko` or `description_en`.
-
-Output STRICT JSON structure (MUST contain 'debug_info' field):
-
-{
-  "full_feature_vector": { ... },
-  "summary": {
-    "ai_explanation": "...", 
-    "persona_scores": [
-      {"id": "...", "label": "...", "score": 0.0}, // score is 0.0 to 1.0 (e.g., 0.87 for 87%)
-      ...
-    ],
-    "debug_info": "Success"
-  }
-}
-''';
-
-    try {
-      final response = await http.post(
-        Uri.parse(_deepSeekEndpoint),
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer $_apiKey',
-        },
-        body: jsonEncode({
-          'model': _deepSeekModel,
-          'messages': [
-            {'role': 'system', 'content': systemPrompt},
-            {'role': 'user', 'content': jsonEncode(inputPayload)},
-          ],
-          // 시스템 프롬프트가 이미 "STRICT JSON"을 요구하므로 JSON 모드를 강제해서
-          // 마크다운 코드펜스 없이 순수 JSON만 반환하도록 함
-          'response_format': {'type': 'json_object'},
-          'stream': false,
-        }),
-      );
-
-      if (response.statusCode != 200) {
-        throw Exception('DeepSeek API error: ${response.statusCode} ${response.body}');
-      }
-
-      final decoded = jsonDecode(utf8.decode(response.bodyBytes));
-      final text = decoded['choices']?[0]?['message']?['content'] as String?;
-      return text?.replaceAll('```json', '').replaceAll('```', '').trim() ?? '{}';
-    } catch (e) {
-      final debugResponse = {
-        "full_feature_vector": fullFeatureVector,
-        "summary": {
-          "ai_explanation": "AI analysis failed due to communication error: ${e.toString()}",
-          "persona_scores": [],
-          "debug_info": "Communication Failure: ${e.toString()}"
-        }
       };
-      return jsonEncode(debugResponse);
+      final axesJson = await _callDeepSeek(_axesSystemPrompt, jsonEncode(axesPayload));
+      final axes = (jsonDecode(axesJson) as Map<String, dynamic>)['axes'] as Map<String, dynamic>? ?? {};
+      for (final key in _aiAxisKeys) {
+        final v = axes[key];
+        if (v is num && v.isFinite) {
+          fullFeatureVector[key] = v.toDouble().clamp(-1.0, 1.0).toDouble();
+        }
+      }
+    } catch (e) {
+      // AI 실패해도 설문 + 여행 통계 축만으로 계산은 계속한다.
+      aiNote = 'Partial: AI axes unavailable ($e)';
     }
+
+    // 2단계: 점수는 코드로 결정적으로 계산.
+    final result = PersonaScorer.score(prototypes, fullFeatureVector);
+    final personaScores = [
+      for (final s in result.scores) {"id": s.id, "label": s.label, "score": s.score},
+    ];
+
+    // 3단계: AI는 설명문만 작성 (실패해도 점수 결과는 유지).
+    var explanation = '';
+    try {
+      final top = result.scores.take(3).map((s) => {"label": s.label, "score": s.score}).toList();
+      final explainPayload = {
+        "top_types": top,
+        "is_close": result.isClose,
+        "full_feature_vector": fullFeatureVector,
+        "visited_cities": rawCityVisitData,
+        "trip_logs": rawTripLogs,
+        "meta_data": {
+          "total_countries": countryProvider.visitedCountries.length,
+          "total_cities": cityProvider.visitedCities.length,
+          "total_flights": airlineProvider.allFlightLogs.length,
+        },
+      };
+      final explainJson = await _callDeepSeek(_explainSystemPrompt, jsonEncode(explainPayload));
+      explanation = ((jsonDecode(explainJson) as Map<String, dynamic>)['ai_explanation'] as String?) ?? '';
+    } catch (e) {
+      explanation = 'Explanation unavailable: $e';
+    }
+
+    return jsonEncode({
+      "engine_version": TravelerTypeStore.currentVersion,
+      "generated_at": DateTime.now().millisecondsSinceEpoch,
+      "full_feature_vector": fullFeatureVector,
+      "summary": {
+        "ai_explanation": explanation,
+        "persona_scores": personaScores,
+        "is_close": result.isClose,
+        "low_data": result.lowData,
+        "score_gap": result.gap,
+        "data_coverage": result.coverage,
+        "debug_info": aiNote,
+      },
+    });
+  }
+
+  static const List<String> _aiAxisKeys = [
+    'cityWealth', 'cityType', 'cityNightlife',
+    'landmark_culture_nature', 'landmark_ancient_modern', 'landmark_urban_rural',
+    'landmark_adventure_relax', 'landmark_art_science', 'landmark_spiritual_secular',
+    'landmark_crowd', 'landmark_budget_luxury', 'landmark_local_tourist',
+    'landmark_calm_nightlife',
+  ];
+
+  static const String _axesSystemPrompt = r"""
+You estimate 13 travel-trait axes for one traveler from raw data. Each axis is a number in [-1.0, 1.0].
+Weight each visited city / landmark by the user's rating (higher rating = more weight, z-score style).
+If there is not enough data for an axis, OMIT that key (do not output 0.0 as a guess).
+Axes: cityWealth (poor -1 .. rich +1), cityType (nature/small-town -1 .. big metropolis +1),
+cityNightlife (calm -1 .. lively +1), landmark_culture_nature (nature -1 .. culture +1),
+landmark_ancient_modern (modern -1 .. ancient +1), landmark_urban_rural (rural -1 .. urban +1),
+landmark_adventure_relax (relax -1 .. adventure +1), landmark_art_science (science -1 .. art +1),
+landmark_spiritual_secular (secular -1 .. spiritual +1), landmark_crowd (quiet -1 .. crowded +1),
+landmark_budget_luxury (budget -1 .. luxury +1), landmark_local_tourist (local -1 .. touristy +1),
+landmark_calm_nightlife (calm -1 .. nightlife +1).
+Use ONLY the provided data. Output STRICT JSON: {"axes": {"cityWealth": 0.3, ...}}
+""";
+
+  static const String _explainSystemPrompt = r"""
+You write a short, friendly explanation of a traveler's result. The scores are already computed; do NOT recompute them.
+Explain why the top type fits using ONLY the provided raw data (countries, cities, logs). Do not hallucinate.
+If is_close is true, say the traveler is a blend of the top two types.
+Do not mention formulas or statistics terms (distance, z-score, weights).
+Output STRICT JSON: {"ai_explanation": "..."}
+""";
+
+  Future<String> _callDeepSeek(String systemPrompt, String userContent) async {
+    final response = await http.post(
+      Uri.parse(_deepSeekEndpoint),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $_apiKey',
+      },
+      body: jsonEncode({
+        'model': _deepSeekModel,
+        'messages': [
+          {'role': 'system', 'content': systemPrompt},
+          {'role': 'user', 'content': userContent},
+        ],
+        'response_format': {'type': 'json_object'},
+        'temperature': 0,
+        'stream': false,
+      }),
+    );
+    if (response.statusCode != 200) {
+      throw Exception('DeepSeek API error: ${response.statusCode} ${response.body}');
+    }
+    final decoded = jsonDecode(utf8.decode(response.bodyBytes));
+    final text = decoded['choices']?[0]?['message']?['content'] as String?;
+    return text?.replaceAll('```json', '').replaceAll('```', '').trim() ?? '{}';
   }
 
   List<Map<String, dynamic>> _getRawCityVisitList(CityProvider cityProvider) {

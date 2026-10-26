@@ -1,0 +1,31 @@
+$ deepseek_prep.py Bucharest
+  tokens in 718 out 491
+Bucharest: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Bucharest
+  tokens in 4230 out 818
+Bucharest: 0 problems
+
+$ deepseek_city.py Bucharest --stage places
+Bucharest: places
+  tokens in 1195 out 2620
+
+$ deepseek_city.py Bucharest --stage frame
+Bucharest: frame
+  tokens in 2419 out 1835
+
+$ deepseek_city.py Bucharest --stage plans
+Bucharest: plans
+  plans for day
+  tokens in 1914 out 886
+  plans for 1n
+  tokens in 1915 out 1390
+  plans for 2n
+  tokens in 1920 out 1068
+  plans for 3n
+  tokens in 1915 out 1993
+
+$ merge_city.py Bucharest
+Bucharest: 16 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/bucharest.json and planner/bucharest.json
+

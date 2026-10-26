@@ -1,0 +1,120 @@
+{
+ "city": "Sydney",
+ "trips": [
+  {
+   "place": "Manly",
+   "label": "",
+   "position": {
+    "id": 455254,
+    "name": "Manly",
+    "city": "Manly",
+    "lat": -33.79798,
+    "lng": 151.28826
+   },
+   "town": {
+    "name": "Manly",
+    "lat": -33.79798,
+    "lng": 151.28826
+   },
+   "road": {
+    "km": 16,
+    "min": 23,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 40.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$4",
+     "time": "39m",
+     "via": "Wynyard Station, Carrington St, Stand A to Manly Wharf, West Promenade, Stand J",
+     "source": "https://www.rome2rio.com/s/Sydney/Manly"
+    }
+   },
+   "route_note": "Take the Manly Ferry from Circular Quay (about 30 minutes) straight to Manly Wharf, then walk or take a local bus to the beach.",
+   "see": [
+    "Manly Beach and Queenscliff walk",
+    "Manly to Shelly Beach coastal path",
+    "Ferry ride across the harbour",
+    "Manly Corso shops and cafes"
+   ],
+   "visit": "Half day",
+   "tour_query": "Manly ferry and beach day trip from Sydney",
+   "quests": [
+    "Manly Waterworks",
+    "Manly Beach"
+   ],
+   "recommended": "bus",
+   "why": "The bus is quick and frequent, dropping you right at Manly Wharf near the beach.",
+   "stars": 5,
+   "know": [
+    "The ferry from Circular Quay is a scenic alternative",
+    "Manly Beach is a classic first-time Sydney experience",
+    "Weekends and summer get busy, so go early"
+   ]
+  },
+  {
+   "place": "Blacktown",
+   "label": "",
+   "position": {
+    "id": 455328,
+    "name": "Blacktown",
+    "city": "Blacktown",
+    "lat": -33.76667,
+    "lng": 150.91667
+   },
+   "town": {
+    "name": "Blacktown",
+    "lat": -33.76667,
+    "lng": 150.91667
+   },
+   "road": {
+    "km": 37,
+    "min": 37,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 80.0,
+    "currency": "AUD"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$6",
+     "time": "44m",
+     "via": "Central Station to Blacktown Station",
+     "source": "https://www.rome2rio.com/s/Sydney/Blacktown"
+    },
+    "bus": {
+     "from": "$3-$6",
+     "time": "1h 3m",
+     "via": "Town Hall, Park St, Stand H to Blacktown Station, Stand D",
+     "source": "https://www.rome2rio.com/s/Sydney/Blacktown"
+    }
+   },
+   "route_note": "Catch a Western Line train from Central to Blacktown (about 45 minutes), then a local bus to the Featherdale Wildlife Park entrance.",
+   "see": [
+    "Featherdale Wildlife Park koalas and kangaroos",
+    "Hand-feed wallabies",
+    "Meet native birds and reptiles"
+   ],
+   "visit": "Half day",
+   "tour_query": "Featherdale Wildlife Park day trip from Sydney",
+   "quests": [],
+   "recommended": "train",
+   "why": "The train to Blacktown is faster than the bus and connects to a local bus for Featherdale Wildlife Park.",
+   "stars": 3,
+   "know": [
+    "Featherdale Wildlife Park is the main draw for first-time visitors",
+    "Trains run frequently on the Western Line from Central",
+    "Allow extra time for the local bus connection to the park"
+   ]
+  }
+ ],
+ "problems": [
+  "Katoomba: not a town in cities15000.json (AU), dropped",
+  "Bondi Beach: no Omio position, dropped",
+  "Palm Beach: no Omio position, dropped"
+ ]
+}

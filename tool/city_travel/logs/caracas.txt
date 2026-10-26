@@ -1,0 +1,33 @@
+$ deepseek_prep.py Caracas
+  tokens in 683 out 395
+Caracas: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Caracas
+  tokens in 2531 out 644
+Caracas: 1 problems
+  - CCS taxi VES 3000-6000 vs tariff estimate 7570
+
+$ deepseek_city.py Caracas --stage places
+Caracas: places
+  tokens in 1161 out 3043
+
+$ deepseek_city.py Caracas --stage frame
+Caracas: frame
+  tokens in 2451 out 1775
+  repaired JSON
+
+$ deepseek_city.py Caracas --stage plans
+Caracas: plans
+  plans for day
+  tokens in 2101 out 958
+  plans for 1n
+  tokens in 2102 out 1273
+  plans for 2n
+  tokens in 2107 out 1450
+  plans for 3n
+  tokens in 2102 out 1858
+
+$ merge_city.py Caracas
+Caracas: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/caracas.json and planner/caracas.json
+

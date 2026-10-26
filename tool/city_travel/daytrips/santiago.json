@@ -1,0 +1,118 @@
+{
+ "city": "Santiago",
+ "trips": [
+  {
+   "place": "Valparaíso",
+   "label": "",
+   "position": {
+    "id": 373466,
+    "name": "Valparaíso",
+    "city": "Valparaíso",
+    "lat": -33.03932,
+    "lng": -71.62725
+   },
+   "town": {
+    "name": "Valparaíso",
+    "lat": -33.036,
+    "lng": -71.62963
+   },
+   "road": {
+    "km": 118,
+    "min": 88,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 141900,
+    "currency": "CLP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$65",
+     "time": "1h 40m",
+     "via": "Terminal de Buses Pajaritos to Terminal Rodoviario Valparaiso",
+     "source": "https://www.rome2rio.com/s/Santiago/Valpara%C3%ADso"
+    }
+   },
+   "route_note": "Frequent buses run from Santiago's Terminal Alameda/Pajaritos to Valparaíso in about 1.5–2 hours; no train service, and the last leg is on foot or by local trolley/ascensor in the city.",
+   "see": [
+    "Cerro Alegre and Cerro Concepción",
+    "La Sebastiana (Neruda house)",
+    "Port and waterfront views",
+    "Ascensor Reina Victoria"
+   ],
+   "visit": "Full day",
+   "tour_query": "Valparaíso day trip from Santiago",
+   "quests": [
+    "Valparaiso Historic Quarter",
+    "Palacio Baburizza",
+    "La Sebastiana"
+   ],
+   "recommended": "bus",
+   "why": "Frequent buses reach Valparaíso in about 1h40m and drop you near the sights, with no train option.",
+   "stars": 5,
+   "know": [
+    "Book bus tickets ahead for weekend/holiday travel",
+    "Wear comfortable shoes for the steep hills and stairways",
+    "Clear days are best for the coastal views"
+   ]
+  },
+  {
+   "place": "Viña del Mar",
+   "label": "",
+   "position": {
+    "id": 373472,
+    "name": "Viña del Mar",
+    "city": "Viña del Mar",
+    "lat": -33.02457,
+    "lng": -71.55183
+   },
+   "town": {
+    "name": "Viña del Mar",
+    "lat": -33.02457,
+    "lng": -71.55183
+   },
+   "road": {
+    "km": 118,
+    "min": 93,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 141900,
+    "currency": "CLP"
+   },
+   "modes": {
+    "bus": {
+     "from": "$2-$65",
+     "time": "1h 30m",
+     "via": "Terminal de Buses Pajaritos to Terminal de Buses de Viña del Mar",
+     "source": "https://www.rome2rio.com/s/Santiago/Vi%C3%B1a%20del%20Mar"
+    }
+   },
+   "route_note": "Buses from Santiago's Terminal Alameda reach Viña del Mar in roughly 1.5–2 hours; from Valparaíso it's a short local metro ride, so many combine both in one day.",
+   "see": [
+    "Beaches and coastal walk",
+    "Quinta Vergara gardens",
+    "Wulff Castle",
+    "Reloj de Flores"
+   ],
+   "visit": "Full day",
+   "tour_query": "Viña del Mar day trip from Santiago",
+   "quests": [
+    "Vina del Mar"
+   ],
+   "recommended": "bus",
+   "why": "Buses cover the 118 km in about 1h30m, and it pairs easily with Valparaíso via the local metro.",
+   "stars": 3,
+   "know": [
+    "Summer (Dec–Feb) is peak beach season and busiest",
+    "Many visitors combine it with Valparaíso in one day",
+    "Book bus tickets ahead on weekends and holidays"
+   ]
+  }
+ ],
+ "problems": [
+  "San José de Maipo: no Omio position, dropped",
+  "Pomaire: no Omio position, dropped",
+  "El Quisco: not a town in cities15000.json (CL), dropped"
+ ]
+}

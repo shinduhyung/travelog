@@ -1,0 +1,176 @@
+{
+  "currency": "SAR",
+  "usd_rate": 3.75,
+  "intro_line": "A desert capital of towers, malls and old mud-brick echoes.",
+  "intro": "Riyadh rewards visitors who look past the highways to its museums, souqs and desert edge. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "family",
+      "label": "Family"
+    }
+  ],
+  "areas": [
+    "Olaya",
+    "KAFD",
+    "Al-Bathaa",
+    "Diplomatic Quarter"
+  ],
+  "taxi": {
+    "flag_day": 5,
+    "flag_airport": 45,
+    "per_km": 1.6,
+    "min_fare": 10
+  },
+  "road_factor": 1.3,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Riyadh Metro has six lines, running about 06:00 to midnight; a 2-hour ticket is SR 4.",
+    "Metro day passes cost about SR 20 for 3 days, SR 40 for 7 and SR 140 for 30; tickets include Riyadh Bus rides.",
+    "Riyadh Bus is the main city bus network; fares start around SR 4.",
+    "Taxis are plentiful; metered trips in town usually cost under SR 30.",
+    "Uber and Careem work well; many locals negotiate flat fares of SR 10-15 for short hops.",
+    "Driving is the local norm; walking is hard in the north but easy in Al-Bathaa's alleys."
+  ],
+  "airports": [
+    {
+      "code": "RUH",
+      "name": "King Khalid International Airport",
+      "primary": true,
+      "note": "Main hub, about 27-35 km north of the centre.",
+      "options": [
+        {
+          "mode": "Metro Yellow Line",
+          "to": "KAFD downtown",
+          "price": "SR 4",
+          "time": "35-50 min",
+          "note": "Cheapest option; stations serve all terminals."
+        },
+        {
+          "mode": "Riyadh Bus",
+          "to": "City centre",
+          "price": "check locally",
+          "time": "check locally",
+          "note": "Slow but cheap; check routes in the app."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "SR 70-90",
+          "time": "30-45 min",
+          "note": "Use official ranks; agree the flat fare first."
+        },
+        {
+          "mode": "Uber / Careem",
+          "to": "City centre",
+          "price": "SR 60-90",
+          "time": "30-45 min",
+          "note": "Pickup points are outside arrivals."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Kingdom Centre",
+    "Diriyah",
+    "Masmak Fortress",
+    "At-Turaif District",
+    "National Museum of Saudi Arabia",
+    "Al Hokair Land",
+    "Kabsa",
+    "King Fahd International Stadium",
+    "Souq Al Zal"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Riyadh",
+      "https://en.wikivoyage.org/wiki/Riyadh"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    24.7136,
+    46.6753
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 21,
+      "low": 9,
+      "rain_days": 2
+    },
+    {
+      "high": 23,
+      "low": 11,
+      "rain_days": 2
+    },
+    {
+      "high": 28,
+      "low": 15,
+      "rain_days": 3
+    },
+    {
+      "high": 33,
+      "low": 20,
+      "rain_days": 3
+    },
+    {
+      "high": 39,
+      "low": 25,
+      "rain_days": 1
+    },
+    {
+      "high": 42,
+      "low": 28,
+      "rain_days": 0
+    },
+    {
+      "high": 43,
+      "low": 30,
+      "rain_days": 0
+    },
+    {
+      "high": 43,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 40,
+      "low": 26,
+      "rain_days": 0
+    },
+    {
+      "high": 35,
+      "low": 21,
+      "rain_days": 0
+    },
+    {
+      "high": 27,
+      "low": 16,
+      "rain_days": 2
+    },
+    {
+      "high": 22,
+      "low": 11,
+      "rain_days": 2
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

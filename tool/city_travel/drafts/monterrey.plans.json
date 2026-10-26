@@ -1,0 +1,943 @@
+{
+  "plans": [
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A one-day eating loop: market breakfast, old-town snacks and a proper carne asada dinner.",
+      "days": [
+        {
+          "title": "Market breakfast, old town, carne asada",
+          "stops": [
+            {
+              "place": "mercado_juarez",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Start early for breakfast stalls. Some stands close by afternoon, so check on the day."
+            },
+            {
+              "place": "calle_morelos",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Short walk from the market. Shops open in the daytime; grab a snack as you go."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Loop the old streets before the heat peaks. Quiet in the morning."
+            },
+            {
+              "place": "macroplaza",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch nearby, then a quick look at the big square. Best in daylight."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead. A short taxi ride to San Pedro Garza García. Restaurants usually open in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barrio Antiguo or Macroplaza"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "The classic first day: Macroplaza sights, the Santa Lucía walk and old-town streets.",
+      "days": [
+        {
+          "title": "Macroplaza to Barrio Antiguo",
+          "stops": [
+            {
+              "place": "catedral",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start here. Usually open in the daytime; check on the day."
+            },
+            {
+              "place": "palacio_gobierno",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Next door. Weekday hours likely, so this suits a weekday."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Quick photo stop. Lit at night if you come back."
+            },
+            {
+              "place": "paseo_santa_lucia",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk the canal. Boat times vary; check on the day."
+            },
+            {
+              "place": "mercado_juarez",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop. Typically daytime only."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Finish with the old streets. Liveliest in the evening if you want to stay on."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green Monterrey: Fundidora paths, a mountain viewpoint and an early start for clear views.",
+      "days": [
+        {
+          "title": "Fundidora and the mountains",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "08:30",
+              "minutes": 120,
+              "note": "Go early for cooler air. Usually open daily; check on the day."
+            },
+            {
+              "place": "mirador_cerro_silla",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Daylight hours only. Clear mornings give the best views of the saddle-shaped peak."
+            },
+            {
+              "place": "museo_historia_mexicano",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Indoor break from the heat. Usually closed one weekday, so check on the day."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Late-afternoon stroll. Taxi to San Pedro Garza García."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Parque Fundidora"
+    },
+    {
+      "id": "day-mix",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day hitting the highlights tour plus the best of the centre on foot.",
+      "days": [
+        {
+          "title": "Highlights tour, then the centre",
+          "stops": [
+            {
+              "place": "city_tour",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Morning start. Departures vary, so check on the day and book ahead."
+            },
+            {
+              "place": "mercado_juarez",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch after the tour. Typically daytime only."
+            },
+            {
+              "place": "paseo_santa_lucia",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Easy walk along the canal. Boat times vary."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Old-town streets as the light softens."
+            },
+            {
+              "place": "noche_barrio",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Dinner and a night out. Mainly Thursday to Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "One night of eating well: market lunch, a Barrio Antiguo stroll and a proper carne asada dinner.",
+      "days": [
+        {
+          "title": "Market lunch and old-town flavors",
+          "stops": [
+            {
+              "place": "mercado_juarez",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Go for lunch. Try local snacks and fresh produce. Check opening hours on the day."
+            },
+            {
+              "place": "calle_morelos",
+              "at": "13:45",
+              "minutes": 45,
+              "note": "Short walk from the market. Shops are open in the daytime."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "14:45",
+              "minutes": 90,
+              "note": "Wander the old streets. Stop for coffee or a snack."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Book ahead. Taxi to San Pedro Garza García, about 20–30 minutes."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast and a riverside walk",
+          "stops": [
+            {
+              "place": "paseo_santa_lucia",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Easy morning walk along the canal. Boat times vary, check on the day."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Cafés and bakeries along the avenue. Good spot for a late breakfast or lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Barrio Antiguo or Macroplaza"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most visitors: Macroplaza icons and Barrio Antiguo on day one, museums and Fundidora the next.",
+      "days": [
+        {
+          "title": "Macroplaza and old town",
+          "stops": [
+            {
+              "place": "catedral",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Start here. Usually open in the daytime, check on the day."
+            },
+            {
+              "place": "palacio_gobierno",
+              "at": "10:45",
+              "minutes": 30,
+              "note": "Weekday hours likely. Quick look at the facade and courtyard."
+            },
+            {
+              "place": "macroplaza",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk the big square in daylight."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "12:45",
+              "minutes": 20,
+              "note": "Short stop. Best seen lit at dusk if you come back."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Evening stroll. Liveliest after dark. Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Museums and Fundidora",
+          "stops": [
+            {
+              "place": "museo_historia_mexicano",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually closed one weekday, check on the day."
+            },
+            {
+              "place": "parque_fundidora",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Walk the old steelworks grounds. Lunch options inside."
+            },
+            {
+              "place": "fundidora_museum",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Horno3 steel museum. Usually closed one weekday, check first."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Green Monterrey: a mountain park morning, Fundidora's paths and a canyon or cave day trip if you have time.",
+      "days": [
+        {
+          "title": "Mountain air and city parks",
+          "stops": [
+            {
+              "place": "parque_ecologico_chipinque",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Go early for cooler air and clearer views. Usually closed some days, check on the day."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop in San Pedro Garza García."
+            },
+            {
+              "place": "parque_fundidora",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Flat, easy paths. Good for a late-afternoon walk."
+            },
+            {
+              "place": "mirador_cerro_silla",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Daylight hours only. Best on a clear day."
+            }
+          ]
+        },
+        {
+          "title": "Caves or a slow morning",
+          "stops": [
+            {
+              "place": "grutas_garcia",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Half-day trip. Tours run in the daytime, check on the day. Book transport ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "San Pedro Garza García or Macroplaza"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through Monterrey: market food, calle Morelos snacks and a proper carne asada night.",
+      "days": [
+        {
+          "title": "Arrive, Macroplaza and market lunch",
+          "stops": [
+            {
+              "place": "macroplaza",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Start at the big square; it is all outdoors, so bring water and a hat."
+            },
+            {
+              "place": "catedral",
+              "at": "14:10",
+              "minutes": 30,
+              "note": "Short look inside. Hours vary, so check on the day."
+            },
+            {
+              "place": "mercado_juarez",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late lunch and snacks. Mostly daytime, so do not leave it too late."
+            },
+            {
+              "place": "calle_morelos",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Easy stroll past shops and food stalls."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "18:00",
+              "minutes": 20,
+              "note": "Lit at dusk. Quick photo stop."
+            }
+          ]
+        },
+        {
+          "title": "Fundidora morning, carne asada night",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk the old steelworks grounds. Check opening on the day."
+            },
+            {
+              "place": "museo_historia_mexicano",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Usually closed one weekday, so check before you go."
+            },
+            {
+              "place": "paseo_santa_lucia",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the canal back toward the centre. Boat times vary."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Book ahead in San Pedro. Restaurants mostly open in the evening."
+            }
+          ]
+        },
+        {
+          "title": "San Pedro walk and fly",
+          "stops": [
+            {
+              "place": "san_pedro_calzada",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Leafy avenue with cafes. Best in daylight."
+            },
+            {
+              "place": "bosque_magico",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Check hours on the day. Good for a relaxed last morning."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza / Barrio Antiguo"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for first-timers: the Macroplaza icons, Barrio Antiguo and Fundidora's museums.",
+      "days": [
+        {
+          "title": "Arrive, Macroplaza and Barrio Antiguo",
+          "stops": [
+            {
+              "place": "macroplaza",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "The city's main square. Best in daylight."
+            },
+            {
+              "place": "catedral",
+              "at": "14:10",
+              "minutes": 30,
+              "note": "Usually open daytime; check on the day."
+            },
+            {
+              "place": "palacio_gobierno",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Weekday hours likely. Bring ID."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Old streets, liveliest in the evening."
+            },
+            {
+              "place": "noche_barrio",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Dinner and bars. Mainly Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Fundidora museums and canal",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Arrive early; the park is large."
+            },
+            {
+              "place": "fundidora_museum",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Usually closed one weekday, so check first."
+            },
+            {
+              "place": "museo_historia_mexicano",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Check the closed day before you plan around it."
+            },
+            {
+              "place": "paseo_santa_lucia",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Walk or take the boat back to the centre. Boat times vary."
+            }
+          ]
+        },
+        {
+          "title": "City tour and fly",
+          "stops": [
+            {
+              "place": "city_tour",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Morning start. Departures vary, so check on the day."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Quick stop before you head to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza / Barrio Antiguo"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Mountains and green space: Chipinque, Fundidora and a canyon day trip.",
+      "days": [
+        {
+          "title": "Arrive, Fundidora and canal",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Green paths on the old steelworks site. Check hours on the day."
+            },
+            {
+              "place": "mirador_cerro_silla",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Daylight only. Clear afternoons are best."
+            },
+            {
+              "place": "paseo_santa_lucia",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Easy evening walk along the canal."
+            }
+          ]
+        },
+        {
+          "title": "Chipinque early, San Pedro evening",
+          "stops": [
+            {
+              "place": "parque_ecologico_chipinque",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Go early for cooler air and views. Closed some days, so check."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch stop on a leafy avenue."
+            },
+            {
+              "place": "bosque_magico",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening meal in San Pedro."
+            }
+          ]
+        },
+        {
+          "title": "Caves day trip and fly",
+          "stops": [
+            {
+              "place": "grutas_garcia",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Morning departure. Tours run daytime; check on the day and book transport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "San Pedro Garza García / Macroplaza"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Three nights of cabrito, carne asada and market food, with easy walks between meals.",
+      "days": [
+        {
+          "title": "Arrive, Macroplaza and an evening carne asada",
+          "stops": [
+            {
+              "place": "macroplaza",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Best in daylight."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "17:10",
+              "minutes": 20,
+              "note": "Short walk across the plaza. Lit at dusk."
+            },
+            {
+              "place": "paseo_santa_lucia",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Stroll the canal. Boat times vary, check on the day."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Taxi to San Pedro Garza García. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Barrio Antiguo food morning and market lunch",
+          "stops": [
+            {
+              "place": "calle_morelos",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Shops open daytime. Good for a coffee stop."
+            },
+            {
+              "place": "mercado_juarez",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Go before the lunch rush. Check on the day for hours."
+            },
+            {
+              "place": "catedral",
+              "at": "12:45",
+              "minutes": 30,
+              "note": "Usually open daytime, check on the day."
+            },
+            {
+              "place": "palacio_gobierno",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Weekday hours likely. Free to look from outside."
+            },
+            {
+              "place": "noche_barrio",
+              "at": "20:00",
+              "minutes": 180,
+              "note": "Dinner and drinks. Liveliest Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Fundidora morning, San Pedro evening",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Walk the old steelworks grounds. Typically open daily."
+            },
+            {
+              "place": "fundidora_museum",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Usually closed one weekday, check on the day."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Late afternoon walk, then pick a spot for dinner nearby."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Second chance if you missed it. Reserve ahead."
+            }
+          ]
+        },
+        {
+          "title": "Breakfast, then fly",
+          "stops": [
+            {
+              "place": "calle_morelos",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Last breakfast and a short stroll before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza & Barrio Antiguo"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, the Macroplaza and old streets, paced so you never rush a closed door.",
+      "days": [
+        {
+          "title": "Arrive, Macroplaza and Barrio Antiguo",
+          "stops": [
+            {
+              "place": "macroplaza",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Best in daylight. Big plaza, easy walking."
+            },
+            {
+              "place": "catedral",
+              "at": "16:10",
+              "minutes": 30,
+              "note": "Usually open daytime, check on the day."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "16:50",
+              "minutes": 20,
+              "note": "Lit at night, so come back at dusk if you like."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Old streets, liveliest in the evening."
+            },
+            {
+              "place": "noche_barrio",
+              "at": "19:30",
+              "minutes": 180,
+              "note": "Dinner in the old quarter. Mainly Thursday to Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Fundidora museums",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Typically open daily. Wear comfortable shoes."
+            },
+            {
+              "place": "fundidora_museum",
+              "at": "11:45",
+              "minutes": 90,
+              "note": "Usually closed one weekday, check on the day."
+            },
+            {
+              "place": "museo_historia_mexicano",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually closed one weekday. Confirm before you go."
+            },
+            {
+              "place": "mirador_cerro_silla",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Daylight hours only. Clear afternoons are best."
+            }
+          ]
+        },
+        {
+          "title": "City tour and San Pedro",
+          "stops": [
+            {
+              "place": "city_tour",
+              "at": "09:00",
+              "minutes": 240,
+              "note": "Morning start. Departures vary, check on the day."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Late afternoon walk. Daylight is best."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening meal in San Pedro. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Market and fly",
+          "stops": [
+            {
+              "place": "mercado_juarez",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning visit. Check on the day for hours."
+            },
+            {
+              "place": "calle_morelos",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Short stroll before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza & Barrio Antiguo"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Mountain mornings, canyon caves and green paths, with afternoons kept flexible.",
+      "days": [
+        {
+          "title": "Arrive, canal walk and plaza",
+          "stops": [
+            {
+              "place": "paseo_santa_lucia",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Flat canal walk. Boat times vary, check on the day."
+            },
+            {
+              "place": "macroplaza",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Best in daylight, so go before sunset."
+            },
+            {
+              "place": "faro_comercio",
+              "at": "18:20",
+              "minutes": 20,
+              "note": "Lit at night. Quick stop."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:30",
+              "minutes": 90,
+              "note": "Taxi to San Pedro. Reserve ahead."
+            }
+          ]
+        },
+        {
+          "title": "Chipinque early, San Pedro late",
+          "stops": [
+            {
+              "place": "parque_ecologico_chipinque",
+              "at": "08:00",
+              "minutes": 180,
+              "note": "Early morning is coolest. Usually closed some days, check on the day."
+            },
+            {
+              "place": "san_pedro_calzada",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Easy late afternoon walk. Daylight is best."
+            },
+            {
+              "place": "carne_asada_dinner",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening meal nearby."
+            }
+          ]
+        },
+        {
+          "title": "Grutas de García day trip",
+          "stops": [
+            {
+              "place": "grutas_garcia",
+              "at": "08:30",
+              "minutes": 300,
+              "note": "Morning departure. Tours run daytime, check on the day. Bring a light jacket."
+            },
+            {
+              "place": "barrio_antiguo_walk",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Easy evening stroll after the trip."
+            },
+            {
+              "place": "noche_barrio",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Dinner in the old quarter."
+            }
+          ]
+        },
+        {
+          "title": "Fundidora and fly",
+          "stops": [
+            {
+              "place": "parque_fundidora",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Green paths and old steelworks. Typically open daily."
+            },
+            {
+              "place": "mirador_cerro_silla",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Daylight hours only. Clear mornings are best."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Macroplaza & Barrio Antiguo"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "currency": "OMR",
+  "usd_rate": 0.3845,
+  "intro_line": "Where desert forts meet a turquoise Gulf and old souks.",
+  "intro": "Muscat rewards visitors with grand mosques, rugged mountains and a lively waterfront corniche. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "beach",
+      "label": "Beach"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    }
+  ],
+  "areas": [
+    "Mutrah",
+    "Ruwi",
+    "Qurum",
+    "Al Ghubrah"
+  ],
+  "taxi": {
+    "flag_day": 1.5,
+    "flag_airport": 5,
+    "per_km": 0.3,
+    "min_fare": 1.5
+  },
+  "road_factor": 1.3,
+  "city_kmh": 25,
+  "transit_facts": [
+    "No metro or tram; travel is by bus, taxi or car.",
+    "Mwasalat buses cover key sights and the airport; fares about 300 baisa to OMR 1.",
+    "Pay the bus driver in cash; each bus needs a new ticket.",
+    "Orange-and-white taxis are metered-ish; agree the fare first.",
+    "OTaxi app gives fixed fares; maxi taxis cost about OMR 0.2-0.4 per hop.",
+    "Renting a car is cheap and flexible; a 4WD helps for wadis and mountains."
+  ],
+  "airports": [
+    {
+      "code": "MCT",
+      "name": "Muscat International Airport",
+      "primary": true,
+      "note": "Main gateway, about 10 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Mwasalat bus (Route 1)",
+          "to": "Ruwi and city sights",
+          "price": "OMR 0.3-1",
+          "time": "40-60 min",
+          "note": "Cheapest option; cash only, exact change helps."
+        },
+        {
+          "mode": "OTaxi app",
+          "to": "City centre hotels",
+          "price": "OMR 5-10",
+          "time": "20-30 min",
+          "note": "Fixed fare, no haggling."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or Mutrah",
+          "price": "OMR 6-12",
+          "time": "20-35 min",
+          "note": "Agree the fare before you start; prepay at the counter."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Sultan Qaboos Grand Mosque",
+    "Royal Opera House Muscat",
+    "Al Alam Palace",
+    "Muttrah Souq",
+    "Mutrah Corniche",
+    "Al Jalali & Al Mirani Forts",
+    "Shuwa"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Muscat",
+      "https://en.wikivoyage.org/wiki/Muscat"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    23.588,
+    58.3829
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 3
+    },
+    {
+      "high": 26,
+      "low": 18,
+      "rain_days": 1
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 2
+    },
+    {
+      "high": 34,
+      "low": 25,
+      "rain_days": 1
+    },
+    {
+      "high": 38,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 39,
+      "low": 31,
+      "rain_days": 0
+    },
+    {
+      "high": 38,
+      "low": 31,
+      "rain_days": 1
+    },
+    {
+      "high": 37,
+      "low": 29,
+      "rain_days": 0
+    },
+    {
+      "high": 36,
+      "low": 28,
+      "rain_days": 0
+    },
+    {
+      "high": 34,
+      "low": 25,
+      "rain_days": 1
+    },
+    {
+      "high": 29,
+      "low": 22,
+      "rain_days": 1
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 1
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

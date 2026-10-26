@@ -16,6 +16,7 @@ import 'package:collection/collection.dart';
 // Firebase Packages
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 // ==============================================================================
 // 1. Parser Functions (Run in Background Isolate)
@@ -529,11 +530,7 @@ class CityProvider with ChangeNotifier {
       Map<String, dynamic>? remoteUserData;
       if (user != null) {
         try {
-          final doc = await _firestore
-              .collection('users')
-              .doc(user.uid)
-              .get()
-              .timeout(const Duration(seconds: 4));
+          final doc = await UserDocLoader.instance.load(user.uid);
           if (doc.exists) remoteUserData = doc.data();
         } catch (e) {
           print('[CityProvider] Firestore fetch failed: $e');
@@ -1488,7 +1485,7 @@ class CityProvider with ChangeNotifier {
     Map<String, dynamic>? remoteData;
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists) remoteData = doc.data();
       } catch (e) {
         print('[CityProvider] reloadFromServer fetch failed: $e');

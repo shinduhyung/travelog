@@ -9,6 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/traveler_type_store.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 class PersonalityProvider with ChangeNotifier {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -18,6 +20,8 @@ class PersonalityProvider with ChangeNotifier {
   Map<int, int> _responses = {}; // Question ID -> Score (1..7)
   Map<String, double> _finalScores = {};
   bool _isCalculated = false;
+
+  static const String _dnaUpdatedKey = 'dna_updated_at';
 
   List<PersonalityQuestion> get questions => _questions;
   Map<int, int> get responses => _responses;
@@ -45,61 +49,45 @@ class PersonalityProvider with ChangeNotifier {
       final prefs = await SharedPreferences.getInstance();
       final user = _auth.currentUser;
 
+      // 0. 예전 계산식으로 만든 AI 분석 결과는 로컬에서 폐기
+      await TravelerTypeStore.purgeStaleLocal(prefs);
+
       // 1. Load from Local
       _loadFromLocal(prefs);
 
-      // 2. Load from Server (Sync)
+      // 2. Load from Server (Sync) — updated_at 이 더 최신인 쪽이 이긴다.
       if (user != null) {
         try {
-          final doc = await _firestore.collection('users').doc(user.uid).get();
-          if (doc.exists) {
-            final data = doc.data();
-            if (data != null) {
-              bool serverHasData = false;
+          final doc = await UserDocLoader.instance.load(user.uid);
+          final data = doc.exists ? (doc.data() ?? <String, dynamic>{}) : <String, dynamic>{};
 
-              if (data.containsKey('dna_responses')) {
-                await prefs.setString('dna_responses', data['dna_responses']);
-                serverHasData = true;
-              }
-              if (data.containsKey('dna_final_scores')) {
-                await prefs.setString('dna_final_scores', data['dna_final_scores']);
-                serverHasData = true;
-              }
-              if (data.containsKey('dna_is_calculated')) {
-                await prefs.setBool('dna_is_calculated', data['dna_is_calculated']);
-                serverHasData = true;
-              }
+          final localHasDna = prefs.containsKey('dna_responses');
+          final serverHasDna = data.containsKey('dna_responses') ||
+              data.containsKey('dna_final_scores') ||
+              data.containsKey('dna_is_calculated');
+          final localStamp = prefs.getInt(_dnaUpdatedKey) ?? 0;
+          final serverStamp = (data[_dnaUpdatedKey] as num?)?.toInt() ?? 0;
 
-              // 🔧 FIX: traveler_type_ai_screen.dart가 만드는 AI 분석 결과
-              // (ai_analysis_result)는 예전엔 로컬 SharedPreferences에만
-              // 저장되고 Firestore로는 전혀 안 올라갔음. 여기서 앱 시작
-              // 시점에 자동으로 동기화한다 — 서버에 있으면 서버 값으로
-              // 로컬을 채우고, 서버엔 없는데 로컬엔 있으면 즉시 업로드.
-              if (data.containsKey('ai_analysis_result')) {
-                final serverAnalysis = data['ai_analysis_result'] as String?;
-                if (serverAnalysis != null) {
-                  await prefs.setString('ai_analysis_result', serverAnalysis);
-                }
-              } else {
-                final localAnalysis = prefs.getString('ai_analysis_result');
-                if (localAnalysis != null) {
-                  try {
-                    await _firestore.collection('users').doc(user.uid).set({
-                      'ai_analysis_result': localAnalysis,
-                    }, SetOptions(merge: true));
-                  } catch (e) {
-                    print("Failed to upload ai_analysis_result to server: $e");
-                  }
-                }
-              }
-
-              // Reload from local after sync
-              _loadFromLocal(prefs);
-
-              // If server is empty but local has data, upload local data
-
+          if (localHasDna && localStamp > serverStamp) {
+            // 로컬이 더 최신(오프라인 중 응답 등) → 서버로 올린다.
+            await _saveState();
+          } else if (serverHasDna) {
+            if (data.containsKey('dna_responses')) {
+              await prefs.setString('dna_responses', data['dna_responses']);
             }
+            if (data.containsKey('dna_final_scores')) {
+              await prefs.setString('dna_final_scores', data['dna_final_scores']);
+            }
+            if (data.containsKey('dna_is_calculated')) {
+              await prefs.setBool('dna_is_calculated', data['dna_is_calculated']);
+            }
+            if (serverStamp > 0) await prefs.setInt(_dnaUpdatedKey, serverStamp);
           }
+
+          // AI 분석 결과: 최신 쪽 기준 동기화 + 옛 버전 결과는 서버에서도 삭제
+          await TravelerTypeStore.sync(prefs, data);
+
+          _loadFromLocal(prefs);
         } catch (e) {
           print("Failed to load personality state from server: $e");
         }
@@ -141,7 +129,10 @@ class PersonalityProvider with ChangeNotifier {
       String responsesJson = json.encode(stringKeyResponses);
       String scoresJson = json.encode(_finalScores);
 
+      final now = DateTime.now().millisecondsSinceEpoch;
+
       // 1. Save Local
+      await prefs.setInt(_dnaUpdatedKey, now);
       await prefs.setString('dna_responses', responsesJson);
       await prefs.setString('dna_final_scores', scoresJson);
       await prefs.setBool('dna_is_calculated', _isCalculated);
@@ -153,6 +144,7 @@ class PersonalityProvider with ChangeNotifier {
             'dna_responses': responsesJson,
             'dna_final_scores': scoresJson,
             'dna_is_calculated': _isCalculated,
+            _dnaUpdatedKey: now,
             'lastUpdated': FieldValue.serverTimestamp(),
           }, SetOptions(merge: true));
         } catch (e) {
@@ -193,6 +185,7 @@ class PersonalityProvider with ChangeNotifier {
     await prefs.remove('dna_responses');
     await prefs.remove('dna_final_scores');
     await prefs.remove('dna_is_calculated');
+    await prefs.remove(_dnaUpdatedKey);
 
     // Also remove from server
     final user = _auth.currentUser;
@@ -202,6 +195,7 @@ class PersonalityProvider with ChangeNotifier {
           'dna_responses': FieldValue.delete(),
           'dna_final_scores': FieldValue.delete(),
           'dna_is_calculated': FieldValue.delete(),
+          _dnaUpdatedKey: FieldValue.delete(),
         });
       } catch (e) {
         print("Error clearing server state: $e");
@@ -318,7 +312,7 @@ class PersonalityProvider with ChangeNotifier {
     // 2. Firestore에서 새로 로드
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data() != null) {
           final data = doc.data()!;
           if (data.containsKey('dna_responses')) {
@@ -330,12 +324,9 @@ class PersonalityProvider with ChangeNotifier {
           if (data.containsKey('dna_is_calculated')) {
             await prefs.setBool('dna_is_calculated', data['dna_is_calculated']);
           }
-          if (data.containsKey('ai_analysis_result')) {
-            final serverAnalysis = data['ai_analysis_result'] as String?;
-            if (serverAnalysis != null) {
-              await prefs.setString('ai_analysis_result', serverAnalysis);
-            }
-          }
+          final serverStamp = (data[_dnaUpdatedKey] as num?)?.toInt();
+          if (serverStamp != null) await prefs.setInt(_dnaUpdatedKey, serverStamp);
+          await TravelerTypeStore.adoptServer(prefs, data);
           _loadFromLocal(prefs);
         }
       } catch (e) {
@@ -349,19 +340,17 @@ class PersonalityProvider with ChangeNotifier {
   Future<void> uploadLocalToFirestore() async {
     await _saveState();
 
-    // ai_analysis_result도 함께 업로드 (새 계정의 최초 upload 케이스 대비)
+    // AI 분석 결과도 함께 맞춘다 (서버가 더 최신이면 서버 것을 받는다)
     final user = _auth.currentUser;
     if (user != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
-        final localAnalysis = prefs.getString('ai_analysis_result');
-        if (localAnalysis != null) {
-          await _firestore.collection('users').doc(user.uid).set({
-            'ai_analysis_result': localAnalysis,
-          }, SetOptions(merge: true));
-        }
+        await TravelerTypeStore.purgeStaleLocal(prefs);
+        final doc = await UserDocLoader.instance.load(user.uid);
+        await TravelerTypeStore.sync(prefs, doc.data() ?? <String, dynamic>{});
+        notifyListeners();
       } catch (e) {
-        print("Failed to upload ai_analysis_result to server: $e");
+        print("Failed to sync ai_analysis_result with server: $e");
       }
     }
   }

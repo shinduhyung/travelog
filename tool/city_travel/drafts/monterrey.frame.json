@@ -1,0 +1,260 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Cabrito, carne asada and the city's famous breakfasts."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, Macroplaza and the old Barrio Antiguo streets."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Mountain views, canyon day trips and Fundidora's green paths."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Macroplaza",
+      "range": [
+        900,
+        2200
+      ],
+      "why": "Walk to the Macroplaza, museums and the cathedral. Central for first-time visitors and close to Metrorrey.",
+      "center": [
+        25.669,
+        -100.309
+      ]
+    },
+    {
+      "area": "Barrio Antiguo",
+      "range": [
+        800,
+        2000
+      ],
+      "why": "Old-town streets with bars and restaurants on the doorstep. Livelier at night, quieter in the day.",
+      "center": [
+        25.667,
+        -100.306
+      ]
+    },
+    {
+      "area": "San Pedro Garza García",
+      "range": [
+        1800,
+        4500
+      ],
+      "why": "Upscale area with malls, restaurants and mountain views. Good for business trips; you'll need taxis or a car.",
+      "center": [
+        25.651,
+        -100.402
+      ]
+    },
+    {
+      "area": "Parque Fundidora",
+      "range": [
+        1100,
+        2600
+      ],
+      "why": "Green park with museums and walking paths. Calm and family-friendly; a short ride from downtown.",
+      "center": [
+        25.678,
+        -100.284
+      ]
+    }
+  ],
+  "food": [
+    "Try cabrito (roast kid goat) and agujas de res (beef ribs). These are the local specialties.",
+    "Breakfast is big here: look for machacado con huevo (dried beef with eggs) and barbacoa on weekends.",
+    "Carne asada is a social event. Many restaurants grill at the table; book ahead on weekends.",
+    "Snack on a 'torta' or street tacos; prices are usually modest, but check the menu first.",
+    "For a splurge, San Pedro Garza García has many well-known restaurants. Reserve in advance."
+  ],
+  "more_time": [
+    "Add a day trip to the mountains: check local operators for canyon and Parque Nacional Cumbres tours; prices vary, confirm on the day.",
+    "Museum fans can spend an extra half-day at the Museo de Historia Mexicana and MARCO near the Macroplaza.",
+    "With a car, drive to nearby towns like Santiago for a slower day; check road and opening times on the day."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "nature": [
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.65,
+      0.5,
+      0.45,
+      0.45,
+      0.6,
+      0.85,
+      0.9,
+      0.8
+    ],
+    "nightlife": [
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture"
+  ],
+  "recommend": {
+    "why": "Two nights covers the Macroplaza museums, Barrio Antiguo and a proper cabrito dinner; add a night for a mountain day trip."
+  },
+  "month_notes": [
+    "January: cool mornings and evenings (9–19°C). Bring a jacket.",
+    "February: mild and dry, one of the most comfortable months.",
+    "March: warming up (14–26°C); a few more rainy days.",
+    "April: hot afternoons (up to 29°C); plan outdoor time in the morning.",
+    "May: hot and rainier (11 rain days). Carry a light rain layer.",
+    "June: hot (33°C highs) and humid; stay hydrated.",
+    "July: the hottest month (34°C). Do outdoor sights early or late.",
+    "August: hot and humid, similar to July. Indoor museums are a good bet.",
+    "September: still hot with the most rain days (11). Watch afternoon storms.",
+    "October: cooling down (18–27°C); pleasant for walking.",
+    "November: mild and drier; good for parks and day trips.",
+    "December: cool (11–21°C) with a few rainy days. Pack a warm layer."
+  ],
+  "climate_guide": {
+    "summary": "Semi-arid climate with hot summers and mild winters. Rain is modest but peaks in May and September.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to March",
+        "text": "Mild days around 19–26°C and cool evenings. Good for walking the Macroplaza and parks."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot (June to August)",
+        "text": "Highs around 33–34°C. Do outdoor sights early morning; use air-conditioned museums midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in May and September",
+        "text": "About 11 rain days in each. Showers are often short; carry a light rain jacket."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big day–night swing in winter",
+        "text": "January lows near 9°C and highs near 19°C. Layer up."
+      },
+      {
+        "icon": "💧",
+        "title": "Humidity in summer",
+        "text": "June to September feel muggy. Drink water and take breaks."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes for summer, a warm layer for winter nights, sunscreen, and a light rain layer for May and September."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Metrorrey for downtown hops; Uber or DiDi for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metrorrey is clean and cheap: about M$8.70 per ride. A rechargeable card costs about M$20."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses cost about M$15. Pay with a 'Me Muevo' card or the Urbani app; cash is being phased out. Ecovia BRT runs fast buses on Av. Ruiz Cortines, with free transfers to Metrorrey."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and DiDi both work well. Taxis are green-and-white or yellow-and-white; insist the driver uses the meter."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is possible but traffic and parking are tricky. Downtown hotels often offer free parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good around the Macroplaza and Barrio Antiguo. Use rides for longer hops, especially in summer heat."
+      }
+    ]
+  }
+}

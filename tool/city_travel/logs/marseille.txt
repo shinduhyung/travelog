@@ -1,0 +1,28 @@
+$ deepseek_facts.py Marseille
+  tokens in 3215 out 658
+Marseille: 0 problems
+
+$ deepseek_city.py Marseille --stage places
+Marseille: places
+  tokens in 1160 out 3024
+
+$ deepseek_city.py Marseille --stage frame
+Marseille: frame
+  tokens in 2470 out 1946
+  repaired JSON
+
+$ deepseek_city.py Marseille --stage plans
+Marseille: plans
+  plans for day
+  tokens in 2115 out 690
+  plans for 1n
+  tokens in 2116 out 1304
+  plans for 2n
+  tokens in 2121 out 1352
+  plans for 3n
+  tokens in 2116 out 1485
+
+$ merge_city.py Marseille
+Marseille: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/marseille.json and planner/marseille.json
+

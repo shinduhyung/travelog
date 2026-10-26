@@ -1,0 +1,501 @@
+{
+  "city": "Montreal",
+  "checked": "October 2026",
+  "intro_line": "Montreal: where European charm meets North American energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Old Montreal",
+        "Plateau Mont-Royal",
+        "Quartier des Spectacles"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Old Montreal",
+        "Plateau Mont-Royal",
+        "Quartier des Spectacles"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Old Montreal",
+        "Plateau Mont-Royal",
+        "Quartier des Spectacles"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown",
+        "Old Montreal",
+        "Plateau Mont-Royal",
+        "Quartier des Spectacles"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Downtown",
+        "Old Montreal",
+        "Plateau Mont-Royal",
+        "Quartier des Spectacles"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": -6,
+        "low": -14,
+        "rain_days": 12,
+        "note": "January: coldest month, highs around -6°C. Dress in layers and plan indoor sights."
+      },
+      {
+        "high": -4,
+        "low": -14,
+        "rain_days": 11,
+        "note": "February: still deep winter, highs near -4°C. Good for museums and cafés."
+      },
+      {
+        "high": 2,
+        "low": -8,
+        "rain_days": 11,
+        "note": "March: slowly warming to about 2°C, but nights stay below freezing. Expect slush."
+      },
+      {
+        "high": 9,
+        "low": -1,
+        "rain_days": 12,
+        "note": "April: mild days near 9°C with cold nights. Pack a rain jacket."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 10,
+        "note": "May: pleasant at around 18°C. A great month for walking and terraces."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 14,
+        "note": "June: warm, highs near 22°C, but one of the wetter months. Carry an umbrella."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 12,
+        "note": "July: the hottest month, highs around 25°C. Festival season; book ahead."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 13,
+        "note": "August: warm and humid, highs near 24°C. Busy with summer visitors."
+      },
+      {
+        "high": 20,
+        "low": 12,
+        "rain_days": 9,
+        "note": "September: comfortable at about 20°C and drier. One of the best months to visit."
+      },
+      {
+        "high": 13,
+        "low": 5,
+        "rain_days": 12,
+        "note": "October: cool at around 13°C with autumn colours. Bring a warm layer."
+      },
+      {
+        "high": 5,
+        "low": -2,
+        "rain_days": 12,
+        "note": "November: cold, highs near 5°C, and wet. Fewer crowds."
+      },
+      {
+        "high": -1,
+        "low": -8,
+        "rain_days": 13,
+        "note": "December: winter returns, highs around -1°C. Festive lights in Old Montreal."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75
+    ],
+    "nature": [
+      0.3,
+      0.3,
+      0.4,
+      0.6,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.4,
+      0.3
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6
+    ]
+  },
+  "places": {
+    "notre-dame-basilica": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Early morning to avoid crowds; evening for the light show",
+      "area": "Old Montreal",
+      "popularity": 5
+    },
+    "old-montreal": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or golden hour",
+      "area": "Old Montreal",
+      "popularity": 5
+    },
+    "saint-joseph-oratory": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning; clear-day terrace views",
+      "area": "Plateau Mont-Royal",
+      "popularity": 4
+    },
+    "place-jacques-cartier": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening in summer",
+      "area": "Old Montreal",
+      "popularity": 4
+    },
+    "habitat-67": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime; good light from the river side",
+      "area": "Old Montreal",
+      "popularity": 3
+    },
+    "la-ronde": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekday in summer, arrive at opening",
+      "area": "Old Montreal",
+      "popularity": 4
+    },
+    "mcgill": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Weekday daytime for campus life",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "underground-city": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Rainy days or winter; weekday daytime",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "place-des-arts": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Evening for a show; summer for outdoor events",
+      "area": "Quartier des Spectacles",
+      "popularity": 4
+    },
+    "jean-talon-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Morning, especially summer and autumn",
+      "area": "Plateau Mont-Royal",
+      "popularity": 4
+    },
+    "mount-royal-lookout": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset or autumn colours",
+      "area": "Plateau Mont-Royal",
+      "popularity": 5
+    },
+    "plateau-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon; summer and autumn",
+      "area": "Plateau Mont-Royal",
+      "popularity": 4
+    },
+    "st-lawrence-river-walk": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset in summer",
+      "area": "Old Montreal",
+      "popularity": 4
+    },
+    "bagel-tour": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning or late evening",
+      "area": "Plateau Mont-Royal",
+      "popularity": 4
+    },
+    "quartier-spectacles-walk": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening, summer festival season",
+      "area": "Quartier des Spectacles",
+      "popularity": 3
+    },
+    "bota-bota": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Late afternoon into evening",
+      "area": "Old Montreal",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Old Montreal, the Plateau and a Mount Royal walk; add a night for museums and a day trip."
+  },
+  "airports": [
+    {
+      "code": "YUL",
+      "name": "Montreal / Pierre Elliott Trudeau International Airport",
+      "primary": true,
+      "note": "Main international gateway, 13 km west of centre.",
+      "options": [
+        {
+          "mode": "Bus 747",
+          "to": "Downtown (Berri-UQAM)",
+          "price": "$11",
+          "time": "45-60 min",
+          "note": "Runs 24/7; ticket valid for 24h on STM network."
+        },
+        {
+          "mode": "Landline shuttle",
+          "to": "Palais des congrès",
+          "price": "$9",
+          "time": "30-45 min",
+          "note": "For Air Canada passengers; every 15-30 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$40-50",
+          "time": "20-40 min",
+          "note": "Fixed fare to downtown; use taxi lane."
+        },
+        {
+          "mode": "Uber",
+          "to": "Downtown",
+          "price": "$35-45",
+          "time": "20-40 min",
+          "note": "Pickup at designated zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Montreal",
+      "https://en.wikivoyage.org/wiki/Montreal"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "The metro for most trips; walk in the Plateau and Old Montreal.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "4 lines, frequent and fast. $3.50 per ride or a $10 day pass."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Extensive network; use the same tickets as the metro."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are available but pricier; Uber and Lyft operate."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Traffic and parking are challenging; not recommended for short visits."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Great for the Plateau and Old Montreal. BIXI bike-share costs $5 for 24h access, with many bike lanes."
+      },
+      {
+        "mode": "River shuttle",
+        "has": true,
+        "text": "No tourist ferry, but river shuttles run in summer."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid continental climate: long cold winters, warm humid summers, and rain in every month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: June to September",
+        "text": "Warm days around 20–25°C. Ideal for walking, parks and festivals."
+      },
+      {
+        "icon": "🥶",
+        "title": "Winter is long and cold",
+        "text": "December to March highs sit between -6°C and 2°C, with nights well below freezing. Pack a heavy coat, hat and gloves."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain all year",
+        "text": "Expect roughly 9–14 wet days every month. A compact umbrella is worth carrying."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid summers",
+        "text": "July and August feel muggy, highs near 24–25°C. Plan outdoor time for mornings."
+      },
+      {
+        "icon": "🍂",
+        "title": "Shoulder seasons are mild",
+        "text": "May and September–October are comfortable, around 13–20°C, with fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for changing weather, a waterproof jacket, comfortable walking shoes, and warm winter gear if visiting December to March."
+      }
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+ "city": "New Delhi",
+ "trips": [
+  {
+   "place": "Agra",
+   "label": "",
+   "position": {
+    "id": 384547,
+    "name": "Agra",
+    "city": "Agra",
+    "lat": 27.18333,
+    "lng": 78.01667
+   },
+   "town": {
+    "name": "Agra",
+    "lat": 27.18333,
+    "lng": 78.01667
+   },
+   "road": {
+    "km": 201,
+    "min": 150,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 5120,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$15",
+     "time": "1h 50m",
+     "via": "New Delhi to Agra Cantt",
+     "source": "https://www.rome2rio.com/s/New%20Delhi/Agra"
+    },
+    "bus": {
+     "from": "$4-$16",
+     "time": "3h 28m",
+     "via": "Delhi ISBT Kashmiri Gate to Agra",
+     "source": "https://www.rome2rio.com/s/New%20Delhi/Agra"
+    }
+   },
+   "route_note": "Take a fast Gatimaan or Shatabdi express train from New Delhi's Hazrat Nizamuddin or New Delhi station directly to Agra Cantt, then a short auto-rickshaw ride to the Taj Mahal area.",
+   "see": [
+    "Taj Mahal",
+    "Agra Fort",
+    "Mehtab Bagh",
+    "Itimad-ud-Daulah (Baby Taj)"
+   ],
+   "visit": "Full day",
+   "tour_query": "Taj Mahal day trip from Delhi",
+   "quests": [
+    "Taj Mahal",
+    "Agra Fort"
+   ],
+   "recommended": "train",
+   "why": "Fast express trains reach Agra Cantt in 1h 50m, far quicker than the 3h 28m bus, with a short auto ride to the Taj.",
+   "stars": 5,
+   "know": [
+    "Taj Mahal is closed to tourists on Fridays",
+    "Book train tickets ahead, especially in peak season",
+    "Go at sunrise for fewer crowds and better light"
+   ]
+  },
+  {
+   "place": "Mathura",
+   "label": "",
+   "position": {
+    "id": 386253,
+    "name": "Mathura",
+    "city": "Mathura",
+    "lat": 27.50199,
+    "lng": 77.6833
+   },
+   "town": {
+    "name": "Mathura",
+    "lat": 27.5035,
+    "lng": 77.67215
+   },
+   "road": {
+    "km": 143,
+    "min": 110,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 3680,
+    "currency": "INR"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$13",
+     "time": "1h 19m",
+     "via": "New Delhi to Mathura Jn",
+     "source": "https://www.rome2rio.com/s/New%20Delhi/Mathura"
+    },
+    "bus": {
+     "from": "$4-$15",
+     "time": "3h 35m",
+     "via": "Delhi to Mathura",
+     "source": "https://www.rome2rio.com/s/New%20Delhi/Mathura"
+    }
+   },
+   "route_note": "Frequent local and express trains run from New Delhi and Hazrat Nizamuddin to Mathura Junction in under two hours; Vrindavan is a short auto-rickshaw ride away.",
+   "see": [
+    "Krishna Janmabhoomi",
+    "Vishram Ghat",
+    "Banke Bihari Temple in Vrindavan",
+    "Prem Mandir"
+   ],
+   "visit": "Full day",
+   "tour_query": "Mathura Vrindavan day trip from Delhi",
+   "quests": [
+    "Holi Festival"
+   ],
+   "recommended": "train",
+   "why": "Frequent trains reach Mathura Junction in 1h 19m versus 3h 35m by bus, with Vrindavan a short auto ride away.",
+   "stars": 3,
+   "know": [
+    "Major temples are busiest during Holi and Janmashtami festivals",
+    "Some temples close during afternoon hours",
+    "Start early to combine Mathura and Vrindavan in one day"
+   ]
+  }
+ ],
+ "problems": [
+  "Jaipur: 206 min by road, dropped (too far for a day trip)",
+  "Neemrana: not a town in cities15000.json (IN), dropped",
+  "Sultanpur: not a town in cities15000.json (IN), dropped"
+ ]
+}

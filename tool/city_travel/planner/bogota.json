@@ -1,0 +1,556 @@
+{
+  "city": "Bogotá",
+  "checked": "October 2026",
+  "intro_line": "Andean capital of gold, graffiti and endless salsa.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "La Candelaria",
+        "Zona Rosa",
+        "Chapinero",
+        "Usaquén"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "La Candelaria",
+        "Zona Rosa",
+        "Chapinero",
+        "Usaquén"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "La Candelaria",
+        "Zona Rosa",
+        "Chapinero",
+        "Usaquén"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "La Candelaria",
+        "Zona Rosa",
+        "Chapinero",
+        "Usaquén"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "La Candelaria",
+        "Zona Rosa",
+        "Chapinero",
+        "Usaquén"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 20,
+        "low": 8,
+        "rain_days": 13,
+        "note": "January: dry-ish, about 13 rain days. Cool nights near 8°C — pack a jacket."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 16,
+        "note": "February: similar to January, about 16 rain days. Mornings are usually clearest."
+      },
+      {
+        "high": 20,
+        "low": 10,
+        "rain_days": 24,
+        "note": "March: the wettest month, about 24 rain days. Plan indoor sights and carry a rain jacket."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 20,
+        "note": "April: still wet, about 20 rain days. Short heavy afternoon showers are common."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 19,
+        "note": "May: about 19 rain days. Mild days around 19°C; layers help."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 16,
+        "note": "June: about 16 rain days. Cool and often overcast."
+      },
+      {
+        "high": 18,
+        "low": 9,
+        "rain_days": 16,
+        "note": "July: about 16 rain days and the coolest highs near 18°C. Bring a warm layer."
+      },
+      {
+        "high": 19,
+        "low": 8,
+        "rain_days": 10,
+        "note": "August: drier, about 10 rain days. A good month for walking and views."
+      },
+      {
+        "high": 20,
+        "low": 8,
+        "rain_days": 8,
+        "note": "September: the driest month, about 8 rain days. Best odds of clear skies for Monserrate."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 16,
+        "note": "October: wetter again, about 16 rain days. Keep a backup indoor plan."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 22,
+        "note": "November: about 22 rain days. One of the wettest months."
+      },
+      {
+        "high": 20,
+        "low": 8,
+        "rain_days": 14,
+        "note": "December: about 14 rain days. Festive lights and busy streets; book ahead."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.8,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      1,
+      0.9,
+      0.85,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.9,
+      1,
+      0.9,
+      0.8,
+      0.9
+    ],
+    "art": [
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.9,
+      1,
+      0.9,
+      0.85,
+      0.9
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.85
+    ]
+  },
+  "places": {
+    "gold-museum": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning; Sunday is free but crowded",
+      "area": "La Candelaria",
+      "popularity": 5
+    },
+    "monserrate": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Clear morning; sunset is busy",
+      "area": "La Candelaria",
+      "popularity": 5
+    },
+    "la-candelaria": {
+      "types": [
+        "culture",
+        "history",
+        "art"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "La Candelaria",
+      "popularity": 5
+    },
+    "plaza-bolivar": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "La Candelaria",
+      "popularity": 4
+    },
+    "botero-museum": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; closed Monday",
+      "area": "La Candelaria",
+      "popularity": 4
+    },
+    "teatro-colon": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Daytime tour",
+      "area": "La Candelaria",
+      "popularity": 3
+    },
+    "casa-narino": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday, pre-booked",
+      "area": "La Candelaria",
+      "popularity": 2
+    },
+    "divercity": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday for fewer crowds",
+      "area": "Usaquén",
+      "popularity": 2
+    },
+    "la-chorrera": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Dry-season morning",
+      "area": "Chapinero",
+      "popularity": 2
+    },
+    "mundo-aventura": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Usaquén",
+      "popularity": 2
+    },
+    "parque-jaime-duque": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Usaquén",
+      "popularity": 2
+    },
+    "salitre-magico": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Chapinero",
+      "popularity": 2
+    },
+    "tequendama-falls": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Chapinero",
+      "popularity": 2
+    },
+    "virgilio-barco": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Chapinero",
+      "popularity": 2
+    },
+    "paloquemao": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Chapinero",
+      "popularity": 3
+    },
+    "zona-g": {
+      "types": [
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Chapinero",
+      "popularity": 3
+    },
+    "zona-rosa-walk": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Zona Rosa",
+      "popularity": 3
+    },
+    "graffiti-tour": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "La Candelaria",
+      "popularity": 3
+    },
+    "ciclovia": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunday morning",
+      "area": "Chapinero",
+      "popularity": 3
+    },
+    "usaquen-market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend daytime",
+      "area": "Usaquén",
+      "popularity": 3
+    },
+    "cerro-guadalupe": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "La Candelaria",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Gold Museum, La Candelaria, Monserrate and a food tour without rushing, and leaves room for one rainy afternoon."
+  },
+  "airports": [
+    {
+      "code": "BOG",
+      "name": "El Dorado International Airport",
+      "primary": true,
+      "note": "Main gateway, about 8 km straight-line west of the centre.",
+      "options": [
+        {
+          "mode": "Bus 16-14 + TransMilenio",
+          "to": "Portal El Dorado then city",
+          "price": "COP$0-3,600",
+          "time": "60-90 min",
+          "note": "Free green bus to the portal; buy a Tullave card there. Small luggage only."
+        },
+        {
+          "mode": "Regulated taxi",
+          "to": "City centre",
+          "price": "COP$40,000-70,000",
+          "time": "20-40 min",
+          "note": "Buy a fixed-price ticket at the stand before boarding."
+        },
+        {
+          "mode": "Uber / Cabify / DiDi",
+          "to": "City centre",
+          "price": "COP$35,000-60,000",
+          "time": "20-40 min",
+          "note": "Meet the driver at the app pickup point; apps are officially unregulated."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Bogotá",
+      "https://en.wikivoyage.org/wiki/Bogot%C3%A1"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "TransMilenio for cheap main routes; taxi or app for evenings and hills.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro yet. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "TransMilenio BRT and green SITP buses use a rechargeable Tullave card. Fares about COP$3,600 (TransMilenio) and COP$3,200 (SITP); the card costs about COP$8,000. Crowded at rush hour."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber, Cabify, DiDi and InDrive work but are officially unregulated; drivers may ask you to sit in front. Call taxis by dispatch or app, never hail on the street; check the meter starts and lock doors."
+      },
+      {
+        "mode": "Cable car",
+        "has": true,
+        "text": "TransMiCable gondola links Ciudad Bolívar to TransMilenio; a separate tourist cable car climbs Monserrate."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "No intercity trains; Turistren steam trains run to Zipaquirá several times a week."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not recommended: heavy traffic, restricted plates and confusing parking. Use buses, taxis and apps instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good in La Candelaria, Chapinero and Zona Rosa by day. Hills and uneven pavements; avoid unlit streets at night."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "High-altitude tropical city: mild all year, cool nights, and rain possible in any month. September is driest, March and November wettest.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Mild days, cool nights",
+        "text": "Highs stay near 18–20°C all year; lows around 8–10°C. Bring a jacket for evenings."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect 8–24 rain days per month. Showers are often short and heavy in the afternoon."
+      },
+      {
+        "icon": "☀️",
+        "title": "Driest: August and September",
+        "text": "About 8–10 rain days. Best odds for Monserrate views and day trips."
+      },
+      {
+        "icon": "☔",
+        "title": "Wettest: March and November",
+        "text": "About 22–24 rain days. Plan museums and cafés, and carry an umbrella."
+      },
+      {
+        "icon": "⛰️",
+        "title": "Altitude about 2,600 m",
+        "text": "Take the first day easy. Drink water and skip heavy exercise until you adjust."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a waterproof jacket, comfortable shoes for hills and cobblestones, and sunscreen for sunny spells."
+      }
+    ]
+  }
+}

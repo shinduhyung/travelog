@@ -1,0 +1,33 @@
+$ deepseek_facts.py Valencia
+  tokens in 3982 out 529
+Valencia: 0 problems
+
+$ deepseek_city.py Valencia --stage places
+Valencia: places
+  tokens in 1201 out 3406
+
+$ deepseek_city.py Valencia --stage frame
+Valencia: frame
+  tokens in 2450 out 1852
+  repaired JSON
+
+$ deepseek_city.py Valencia --stage plans
+Valencia: plans
+  plans for day
+  tokens in 2218 out 972
+  plans for 1n
+  tokens in 2219 out 1116
+  plans for 2n
+  tokens in 2224 out 1281
+  plans for 3n
+  tokens in 2219 out 2130
+  plans for 4n
+  tokens in 2219 out 1899
+
+$ merge_city.py Valencia
+WARN  dunas: 7374 km from the center (day trip?)
+WARN  mountasia: 9634 km from the center (day trip?)
+WARN  six-flags: 9636 km from the center (day trip?)
+Valencia: 21 places, 15 plans, 0 errors, 3 warnings
+wrote itineraries/valencia.json and planner/valencia.json
+

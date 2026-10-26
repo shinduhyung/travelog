@@ -1,0 +1,31 @@
+$ deepseek_facts.py Panama City
+  tokens in 5657 out 868
+Panama City: 1 problems
+  - PAC taxi B/.5-10 vs tariff estimate 33
+
+$ deepseek_city.py Panama City --stage places
+Panama City: places
+  tokens in 1180 out 2388
+
+$ deepseek_city.py Panama City --stage frame
+Panama City: frame
+  tokens in 2488 out 1755
+  repaired JSON
+
+$ deepseek_city.py Panama City --stage plans
+Panama City: plans
+  plans for day
+  tokens in 1829 out 908
+  plans for 1n
+  tokens in 1830 out 1065
+  plans for 2n
+  tokens in 1830 out 1135
+  plans for 3n
+  tokens in 1835 out 1563
+  plans for 4n
+  tokens in 1830 out 1868
+
+$ merge_city.py Panama City
+Panama City: 16 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/panama-city.json and planner/panama-city.json
+

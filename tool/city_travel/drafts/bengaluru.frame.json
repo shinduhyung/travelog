@@ -1,0 +1,261 @@
+{
+  "styles": [
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Dosas, filter coffee, biryani and craft beer."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Palaces, temples, markets and live music."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Lalbagh, Cubbon Park and a day at Nandi Hills."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "MG Road",
+      "range": [
+        2500,
+        9000
+      ],
+      "why": "Central and on the metro. Walk to Cubbon Park and the shops; easy rides to most sights.",
+      "center": [
+        12.975,
+        77.606
+      ]
+    },
+    {
+      "area": "Indiranagar",
+      "range": [
+        3000,
+        10000
+      ],
+      "why": "Best for food and nightlife. Many cafés, bars and restaurants within walking distance.",
+      "center": [
+        12.971,
+        77.641
+      ]
+    },
+    {
+      "area": "Koramangala",
+      "range": [
+        2500,
+        9000
+      ],
+      "why": "Young, lively area with cafés and startups. Good value stays; traffic can be heavy.",
+      "center": [
+        12.935,
+        77.624
+      ]
+    },
+    {
+      "area": "Jayanagar",
+      "range": [
+        2000,
+        7000
+      ],
+      "why": "Quiet, local south Bengaluru. Close to Lalbagh and traditional food spots; metro nearby.",
+      "center": [
+        12.93,
+        77.583
+      ]
+    }
+  ],
+  "food": [
+    "Start the day with a masala dosa and filter coffee at a stand-up 'darshini' — usually ₹60–150.",
+    "Try a South Indian thali (meals) at lunch: rice, sambar, rasam and vegetables, often ₹150–350.",
+    "Bengaluru is famous for biryani; ask your hotel for a well-known local spot and go early.",
+    "Indiranagar and Koramangala have craft breweries and cafés; expect ₹300–600 for a beer.",
+    "Street food like chaat and idli is cheap and tasty, but choose busy stalls and drink bottled water."
+  ],
+  "more_time": [
+    "Day trip to Mysuru: trains take about 2–3 hours each way. See the palace and Devaraja Market; check times on the day.",
+    "Sunrise at Nandi Hills: hire a car with driver, leave very early, and check the weather before you go.",
+    "Half-day to Tipu Sultan's Summer Palace and the nearby markets for history and shopping."
+  ],
+  "type_month_fit": {
+    "culture": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      1
+    ],
+    "food": [
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "nature": [
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.6,
+      0.45,
+      0.4,
+      0.4,
+      0.45,
+      0.7,
+      0.85,
+      0.95
+    ],
+    "shopping": [
+      1,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.9,
+      1,
+      1
+    ],
+    "history": [
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.9,
+      1
+    ]
+  },
+  "best_for": [
+    "food",
+    "culture",
+    "nature"
+  ],
+  "recommend": {
+    "why": "Two nights covers the palaces, parks, markets and a food crawl; add a night for a Mysuru or Nandi Hills day trip."
+  },
+  "month_notes": [
+    "Jan: dry and mild, 16–27°C. Great for walking and parks.",
+    "Feb: warm and dry, 16–30°C. Very little rain.",
+    "Mar: hotter, up to 33°C. Start sightseeing early.",
+    "Apr: hottest month, up to 34°C. Carry water and rest at midday.",
+    "May: pre-monsoon showers, about 16 rain days. Keep an umbrella.",
+    "Jun: monsoon starts, about 21 rain days. Expect wet afternoons.",
+    "Jul: wettest month, about 24 rain days. Plan indoor sights.",
+    "Aug: still rainy, about 21 rain days. Cool and green.",
+    "Sep: rain continues, about 21 rain days. Check forecasts daily.",
+    "Oct: rain easing, about 16 rain days. Pleasant temperatures.",
+    "Nov: drier, 18–27°C. Good month to visit.",
+    "Dec: coolest and fairly dry, 17–26°C. Busy holiday season."
+  ],
+  "climate_guide": {
+    "summary": "Tropical highland city: mild all year, with a long monsoon from June to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to February",
+        "text": "Dry, mild days around 26–30°C and cool nights. Ideal for parks, markets and walking."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot before the rains (March to April)",
+        "text": "Highs reach 33–34°C. Sightsee in the morning and stay shaded at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Long monsoon (June to October)",
+        "text": "Rain on 16–24 days a month. Expect short heavy showers; carry an umbrella and plan indoor backups."
+      },
+      {
+        "icon": "🌂",
+        "title": "May is the changeover",
+        "text": "About 16 rain days as pre-monsoon showers arrive. Weather can flip within an hour."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Cool nights all year",
+        "text": "Lows stay around 16–21°C. A light layer helps in the evening and in air-conditioned places."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a rain jacket or umbrella in monsoon months, comfortable shoes for patchy pavements, and sunscreen."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Use Namma Metro for long hops and ride apps or autos for short trips.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Namma Metro has Green, Purple and Yellow lines; fares ₹10–90, smart card ₹50. Use it to dodge traffic."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "BMTC buses cover the city but are slow and crowded at peak times."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber, Ola and Rapido work well; auto-rickshaws are cheaper for short hops."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving yourself is stressful; hire a car with a driver instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking is fine in small pockets, but pavements are patchy and traffic heavy."
+      }
+    ]
+  }
+}

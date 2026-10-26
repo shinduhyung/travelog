@@ -1,0 +1,698 @@
+{
+  "city": "Rome",
+  "checked": "October 2026",
+  "intro_line": "Rome: an open-air museum where every street tells a story.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Centro Storico",
+        "Trastevere",
+        "Monti",
+        "Prati / Vatican"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Centro Storico",
+        "Trastevere",
+        "Monti",
+        "Prati / Vatican"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Centro Storico",
+        "Trastevere",
+        "Monti",
+        "Prati / Vatican"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Centro Storico",
+        "Trastevere",
+        "Monti",
+        "Prati / Vatican"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "areas": [
+        "Centro Storico",
+        "Trastevere",
+        "Monti",
+        "Prati / Vatican"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 10,
+        "note": "January: cold and quiet, highs near 12°C. Pack a warm coat and expect some rain."
+      },
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 8,
+        "note": "February: still cool at 14°C highs, fewer crowds. Good for museums."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 11,
+        "note": "March: mild at 16°C but one of the wetter months. Carry an umbrella."
+      },
+      {
+        "high": 20,
+        "low": 9,
+        "rain_days": 9,
+        "note": "April: pleasant 20°C days, busy with spring crowds. Book sights ahead."
+      },
+      {
+        "high": 23,
+        "low": 13,
+        "rain_days": 12,
+        "note": "May: warm at 23°C with some showers. Great for walking the centre."
+      },
+      {
+        "high": 29,
+        "low": 18,
+        "rain_days": 5,
+        "note": "June: hot at 29°C and dry. Sightsee early morning and late afternoon."
+      },
+      {
+        "high": 33,
+        "low": 21,
+        "rain_days": 4,
+        "note": "July: very hot, 33°C highs. Use midday for churches and museums."
+      },
+      {
+        "high": 33,
+        "low": 21,
+        "rain_days": 5,
+        "note": "August: as hot as July and many local shops close. Some restaurants shut for holidays."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 9,
+        "note": "September: warm at 27°C and drier. One of the best months to visit."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 11,
+        "note": "October: mild at 22°C but rain picks up. Layer up."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 13,
+        "note": "November: cooler at 17°C and the wettest month. Indoor plans help."
+      },
+      {
+        "high": 14,
+        "low": 5,
+        "rain_days": 9,
+        "note": "December: cold at 14°C highs with rain. Festive lights and nativity scenes."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.8,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.5,
+      0.5,
+      0.85,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "art": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.65,
+      0.9,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.75,
+      0.8,
+      0.85,
+      0.95,
+      0.9,
+      0.75,
+      0.55,
+      0.55,
+      0.85,
+      0.95,
+      0.85,
+      0.8
+    ],
+    "romance": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.85,
+      0.6,
+      0.6,
+      0.9,
+      0.9,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "colosseum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "First thing in the morning; spring and autumn",
+      "area": "Monti",
+      "popularity": 5
+    },
+    "st-peters": {
+      "types": [
+        "history",
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Prati / Vatican",
+      "popularity": 5
+    },
+    "pantheon": {
+      "types": [
+        "history",
+        "art",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Midday for the light; any season",
+      "area": "Centro Storico",
+      "popularity": 5
+    },
+    "trevi": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning or late evening",
+      "area": "Centro Storico",
+      "popularity": 5
+    },
+    "forum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning; wear sturdy shoes",
+      "area": "Monti",
+      "popularity": 5
+    },
+    "vatican-museums": {
+      "types": [
+        "art",
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "First entry in the morning",
+      "area": "Prati / Vatican",
+      "popularity": 5
+    },
+    "spanish-steps": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Centro Storico",
+      "popularity": 5
+    },
+    "navona": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Centro Storico",
+      "popularity": 4
+    },
+    "castel-sant-angelo": {
+      "types": [
+        "history",
+        "romance",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Late afternoon",
+      "area": "Prati / Vatican",
+      "popularity": 4
+    },
+    "altare-patria": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Sunset",
+      "area": "Centro Storico",
+      "popularity": 4
+    },
+    "santa-maria-maggiore": {
+      "types": [
+        "history",
+        "art",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Monti",
+      "popularity": 3
+    },
+    "caracalla": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning in spring or autumn",
+      "area": "Monti",
+      "popularity": 3
+    },
+    "apollo-daphne": {
+      "types": [
+        "art",
+        "romance",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Booked morning slot",
+      "area": "Centro Storico",
+      "popularity": 4
+    },
+    "bibliotheca-hertziana": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Only with an appointment",
+      "area": "Centro Storico",
+      "popularity": 1
+    },
+    "bioparco": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Centro Storico",
+      "popularity": 2
+    },
+    "cinecitta-world": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Weekend in good weather",
+      "area": "Centro Storico",
+      "popularity": 2
+    },
+    "discobolus": {
+      "types": [
+        "art",
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Monti",
+      "popularity": 2
+    },
+    "ecstasy-teresa": {
+      "types": [
+        "art",
+        "romance",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Monti",
+      "popularity": 3
+    },
+    "fettuccine-papalina": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Prati / Vatican",
+      "popularity": 2
+    },
+    "hadrians-villa": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning, spring or autumn",
+      "area": "Centro Storico",
+      "popularity": 3
+    },
+    "laocoon": {
+      "types": [
+        "art",
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "First entry",
+      "area": "Prati / Vatican",
+      "popularity": 4
+    },
+    "luneur": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Centro Storico",
+      "popularity": 1
+    },
+    "campo-de-fiori": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning, Monday to Saturday",
+      "area": "Centro Storico",
+      "popularity": 4
+    },
+    "gianicolo": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Trastevere",
+      "popularity": 3
+    },
+    "trastevere-walk": {
+      "types": [
+        "food",
+        "romance",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Trastevere",
+      "popularity": 4
+    },
+    "golf-cart-tour": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Centro Storico",
+      "popularity": 3
+    },
+    "monti-walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday afternoon",
+      "area": "Monti",
+      "popularity": 3
+    },
+    "pincio-terrace": {
+      "types": [
+        "romance",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Centro Storico",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Colosseum and Forum, the Vatican Museums and a relaxed evening in Trastevere without rushing."
+  },
+  "airports": [
+    {
+      "code": "FCO",
+      "name": "Leonardo Da Vinci (Fiumicino) International Airport",
+      "primary": true,
+      "note": "Main international airport, 23 km southwest of the centre.",
+      "options": [
+        {
+          "mode": "Regional train",
+          "to": "Rome stations (not Termini)",
+          "price": "€8",
+          "time": "30-45 min",
+          "note": "Cheaper than the express but skips Termini."
+        },
+        {
+          "mode": "Leonardo Express train",
+          "to": "Roma Termini",
+          "price": "€14",
+          "time": "30 min",
+          "note": "Non-stop; validate your ticket to avoid fines."
+        },
+        {
+          "mode": "Airport coach",
+          "to": "Roma Termini",
+          "price": "€7-9",
+          "time": "45-60 min",
+          "note": "Book ahead for the lowest fare."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre (Aurelian Walls)",
+          "price": "€50-55",
+          "time": "30-50 min",
+          "note": "Fixed fare includes luggage."
+        },
+        {
+          "mode": "Uber / private transfer",
+          "to": "City centre hotels",
+          "price": "€45-60",
+          "time": "30-50 min",
+          "note": "Book online in advance."
+        }
+      ]
+    },
+    {
+      "code": "CIA",
+      "name": "Ciampino Airport",
+      "primary": false,
+      "note": "Small low-cost airport, 14 km southeast of the centre.",
+      "options": [
+        {
+          "mode": "ATAC bus 720 + Metro B",
+          "to": "Laurentina then centre",
+          "price": "€1.50",
+          "time": "60-75 min",
+          "note": "Cheapest; one ticket valid 100 min, buy before boarding."
+        },
+        {
+          "mode": "ATRAL bus + Metro A",
+          "to": "Anagnina then centre",
+          "price": "€2.70",
+          "time": "50-60 min",
+          "note": "Bus ticket €1.20 plus metro €1.50."
+        },
+        {
+          "mode": "Airport coach (SIT, Terravision, COTRAL)",
+          "to": "Roma Termini",
+          "price": "€4-7",
+          "time": "40 min",
+          "note": "Several companies; compare prices online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre (Aurelian Walls)",
+          "price": "€30-35",
+          "time": "25-40 min",
+          "note": "Fixed fare for up to four people with luggage."
+        },
+        {
+          "mode": "Uber / shared shuttle",
+          "to": "City centre",
+          "price": "€15-55",
+          "time": "25-45 min",
+          "note": "Shared shuttles cost about €15 per person."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Rome",
+      "https://en.wikivoyage.org/wiki/Rome"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "art",
+    "food"
+  ],
+  "transit": {
+    "best": "Walk the centre; use the metro and buses for longer hops and taxis for late nights.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "text": "Two main lines (A and B) plus a short branch. Useful but limited coverage; good for the Vatican and Colosseum areas."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Trams and city buses fill the gaps. Buy tickets before boarding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis use fixed airport fares and meters in town. Uber works in Rome."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving in the centre is chaotic and ZTL cameras fine you. Don't do it."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The best way to see the centre. Bikes and scooters are common."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "No ferry needed in the city; cruise ships dock at Civitavecchia, reached by train."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, wetter winters. Spring and autumn are the sweet spots.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best months: April–May and September–October",
+        "text": "Highs of 20–27°C with manageable rain. Ideal for walking between sights."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and dry",
+        "text": "July and August hit 33°C with only 4–5 rain days. Plan outdoor sights for early morning."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in autumn and early spring",
+        "text": "November has about 13 rain days, March 11. Showers are often short; carry a small umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cool, not freezing",
+        "text": "January highs near 12°C and lows around 4°C. A warm coat and layers are enough."
+      },
+      {
+        "icon": "👟",
+        "title": "Wear good shoes",
+        "text": "Cobblestones and long museum days mean a lot of walking in any season."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers in spring and autumn, sun hat and water bottle in summer, warm coat and umbrella in winter. Cover shoulders and knees for churches."
+      }
+    ]
+  }
+}

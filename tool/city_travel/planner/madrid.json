@@ -1,0 +1,647 @@
+{
+  "city": "Madrid",
+  "checked": "October 2026",
+  "intro_line": "Madrid: grand boulevards, late nights and world-class art.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Sol",
+        "Gran Vía",
+        "La Latina",
+        "Salamanca"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "Sol",
+        "Gran Vía",
+        "La Latina",
+        "Salamanca"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Sol",
+        "Gran Vía",
+        "La Latina",
+        "Salamanca"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Sol",
+        "Gran Vía",
+        "La Latina",
+        "Salamanca"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Sol",
+        "Gran Vía",
+        "La Latina",
+        "Salamanca"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 6,
+        "note": "January: cold, highs near 10°C and lows around 1°C. Pack a warm coat; few rainy days."
+      },
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 5,
+        "note": "February: still cool, highs near 13°C. Quiet season, good for museums."
+      },
+      {
+        "high": 16,
+        "low": 5,
+        "rain_days": 9,
+        "note": "March: mild at 16°C but one of the wetter months, about 9 rain days. Bring an umbrella."
+      },
+      {
+        "high": 19,
+        "low": 7,
+        "rain_days": 9,
+        "note": "April: pleasant highs near 19°C, lows around 7°C. Also wet, around 9 rain days."
+      },
+      {
+        "high": 24,
+        "low": 12,
+        "rain_days": 6,
+        "note": "May: warm and mostly dry, highs near 24°C. One of the best months to visit."
+      },
+      {
+        "high": 30,
+        "low": 16,
+        "rain_days": 4,
+        "note": "June: hot and dry, highs near 30°C. Sightsee early and late; midday is harsh."
+      },
+      {
+        "high": 34,
+        "low": 20,
+        "rain_days": 1,
+        "note": "July: very hot, highs near 34°C, almost no rain. Plan indoor afternoons."
+      },
+      {
+        "high": 33,
+        "low": 20,
+        "rain_days": 2,
+        "note": "August: hot, highs near 33°C. Many local shops and restaurants close for holidays; check opening times."
+      },
+      {
+        "high": 27,
+        "low": 15,
+        "rain_days": 5,
+        "note": "September: warm at 27°C and drier than spring. A strong month for sightseeing."
+      },
+      {
+        "high": 22,
+        "low": 11,
+        "rain_days": 9,
+        "note": "October: mild at 22°C but wet, around 9 rain days. Carry a light rain jacket."
+      },
+      {
+        "high": 15,
+        "low": 6,
+        "rain_days": 8,
+        "note": "November: cooler at 15°C with about 8 rain days. Fewer crowds at the museums."
+      },
+      {
+        "high": 12,
+        "low": 3,
+        "rain_days": 7,
+        "note": "December: cold, highs near 12°C and lows around 3°C. Festive lights; pack layers."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "art": [
+      0.85,
+      0.9,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "food": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "history": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.9,
+      0.85
+    ],
+    "nightlife": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.75
+    ]
+  },
+  "places": {
+    "prado": {
+      "types": [
+        "art",
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning, or the free evening slot",
+      "area": "Salamanca",
+      "popularity": 5
+    },
+    "royal-palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning, right at opening",
+      "area": "La Latina",
+      "popularity": 5
+    },
+    "plaza-mayor": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning or after dark",
+      "area": "Sol",
+      "popularity": 5
+    },
+    "retiro": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon in spring or autumn",
+      "area": "Salamanca",
+      "popularity": 5
+    },
+    "reina-sofia": {
+      "types": [
+        "art",
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Salamanca",
+      "popularity": 5
+    },
+    "puerta-del-sol": {
+      "types": [
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Any time; busiest in the evening",
+      "area": "Sol",
+      "popularity": 5
+    },
+    "debod": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "La Latina",
+      "popularity": 4
+    },
+    "gran-via": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Gran Vía",
+      "popularity": 5
+    },
+    "almudena": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "La Latina",
+      "popularity": 4
+    },
+    "uam": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday daytime",
+      "area": "Salamanca",
+      "popularity": 1
+    },
+    "metropolitano": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Match day, or a booked tour",
+      "area": "Salamanca",
+      "popularity": 3
+    },
+    "guernica": {
+      "types": [
+        "art",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Salamanca",
+      "popularity": 5
+    },
+    "las-meninas": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Right at opening",
+      "area": "Salamanca",
+      "popularity": 5
+    },
+    "warner": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Summer weekday",
+      "area": "Salamanca",
+      "popularity": 3
+    },
+    "atracciones": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekend in spring",
+      "area": "La Latina",
+      "popularity": 3
+    },
+    "cibeles": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Evening, when the building is lit",
+      "area": "Salamanca",
+      "popularity": 4
+    },
+    "alcala": {
+      "types": [
+        "history"
+      ],
+      "minutes": 15,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Salamanca",
+      "popularity": 4
+    },
+    "teatro-real": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening performance",
+      "area": "Sol",
+      "popularity": 3
+    },
+    "bernabeu": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Booked tour or match day",
+      "area": "Salamanca",
+      "popularity": 4
+    },
+    "teleferico": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "La Latina",
+      "popularity": 3
+    },
+    "telepizza": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Late evening",
+      "area": "Sol",
+      "popularity": 2
+    },
+    "garden-earthly": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Right at opening",
+      "area": "Salamanca",
+      "popularity": 4
+    },
+    "san-miguel": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late morning or late night",
+      "area": "Sol",
+      "popularity": 5
+    },
+    "latina-walk": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Evening, Thursday to Saturday",
+      "area": "La Latina",
+      "popularity": 4
+    },
+    "templo-viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "La Latina",
+      "popularity": 3
+    },
+    "malasana-walk": {
+      "types": [
+        "culture",
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "Gran Vía",
+      "popularity": 3
+    },
+    "prado-tour": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Salamanca",
+      "popularity": 4
+    },
+    "churros": {
+      "types": [
+        "food"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Breakfast or late night",
+      "area": "Sol",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the Prado and Reina Sofía, the old centre and a proper tapas crawl without rushing."
+  },
+  "airports": [
+    {
+      "code": "MAD",
+      "name": "Madrid Barajas International Airport",
+      "primary": true,
+      "note": "Only commercial airport; 14 km north-east of the centre.",
+      "options": [
+        {
+          "mode": "Cercanías C1 train",
+          "to": "Chamartín and Atocha",
+          "price": "€2.60-3.50",
+          "time": "25-35 min",
+          "note": "No airport supplement; tap a contactless bank card at the barrier."
+        },
+        {
+          "mode": "Metro line 8",
+          "to": "Nuevos Ministerios",
+          "price": "€5",
+          "time": "15-20 min",
+          "note": "Includes €3 airport supplement; runs 06:00-01:30."
+        },
+        {
+          "mode": "Airport bus 203",
+          "to": "Atocha and Cibeles",
+          "price": "€5",
+          "time": "30-40 min",
+          "note": "Every 15-20 min from 06:00 to 23:30."
+        },
+        {
+          "mode": "Night bus N27",
+          "to": "Cibeles",
+          "price": "€1.50-2",
+          "time": "30-40 min",
+          "note": "Only public option late at night; every 35 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Central Madrid inside M-30",
+          "price": "€33 fixed",
+          "time": "20-35 min",
+          "note": "Fixed fare to the centre."
+        },
+        {
+          "mode": "Uber / Cabify",
+          "to": "Central Madrid",
+          "price": "€30-40",
+          "time": "20-35 min",
+          "note": "Pick-up points are signposted at each terminal."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Madrid",
+      "https://en.wikivoyage.org/wiki/Madrid"
+    ]
+  ],
+  "best_for": [
+    "art",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Metro for most trips; walk the old centre.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "13 lines, fast and cheap. Single Zone A fare €1.50–2, airport supplement €3. A Multi Card costs €2.50 and is reloadable; a ten-trip Metrobús ticket is about €12.20."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses share the same tickets. Night buses run when the metro closes around 01:30."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are plentiful and metered. Uber, Cabify and Bolt operate in Madrid."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not needed in the city. Use the metro and trains for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best way to see the centre. Bikes and e-scooters are widely rented."
+      },
+      {
+        "mode": "Tourist Travel Card",
+        "has": true,
+        "text": "Unlimited travel: 1 day €10, 2 days €17, 3 days €22.50, 5 days €32.50, 7 days €41. Worth it if you ride often."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: hot, dry summers and cool winters, with the wettest spells in spring and autumn.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best months: May, June, September",
+        "text": "Warm days around 24–30°C and mostly dry. Great for walking the old centre."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is very hot (July–August)",
+        "text": "Highs near 33–34°C with little rain. Do museums at midday and walk in the morning or evening."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in spring and autumn",
+        "text": "March, April and October each see around 9 rain days. Pack a small umbrella."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cool winters",
+        "text": "January highs near 10°C and lows around 1°C. A warm coat and layers are essential."
+      },
+      {
+        "icon": "☀️",
+        "title": "Sunny most of the year",
+        "text": "Even wet months have plenty of bright days. Sunscreen matters from spring to autumn."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and a hat for summer; a warm coat for winter; a rain layer for March, April and October; comfortable shoes for cobbled streets."
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+$ deepseek_facts.py Porto
+  tokens in 4168 out 800
+Porto: 1 problems
+  - airport LIS is 267 km away
+
+$ deepseek_city.py Porto --stage places
+Porto: places
+  tokens in 1197 out 2950
+
+$ deepseek_city.py Porto --stage frame
+Porto: frame
+  tokens in 2426 out 1696
+
+$ deepseek_city.py Porto --stage plans
+Porto: plans
+  plans for day
+  tokens in 2028 out 915
+  plans for 1n
+  tokens in 2029 out 981
+  plans for 2n
+  tokens in 2034 out 1416
+  plans for 3n
+  tokens in 2029 out 1915
+  plans for 4n
+  tokens in 2029 out 2306
+
+$ merge_city.py Porto
+Porto: 19 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/porto.json and planner/porto.json
+

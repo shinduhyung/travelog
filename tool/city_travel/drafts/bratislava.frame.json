@@ -1,0 +1,271 @@
+{
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Castle, old town lanes and the Danube's Cold War edge."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Pub plates, dumplings and riverside wine bars."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Cheap trams, cheap beer and a very walkable centre."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Old Town (Staré Mesto)",
+      "range": [
+        70,
+        180
+      ],
+      "why": "Walk to the castle, the main square and most sights. Best for first-time visitors who want everything on foot.",
+      "center": [
+        48.145,
+        17.108
+      ]
+    },
+    {
+      "area": "Danube riverside",
+      "range": [
+        65,
+        160
+      ],
+      "why": "Quiet evenings by the water, close to the UFO bridge and the Devín ferry. A short walk or tram to the old town.",
+      "center": [
+        48.138,
+        17.1
+      ]
+    },
+    {
+      "area": "Petržalka",
+      "range": [
+        45,
+        110
+      ],
+      "why": "Cheapest beds and big apartment blocks south of the river. Good tram links; plain but practical.",
+      "center": [
+        48.12,
+        17.1
+      ]
+    },
+    {
+      "area": "Nové Mesto",
+      "range": [
+        50,
+        120
+      ],
+      "why": "Local, residential and near the main train station. Good value if you arrive by rail and don't mind a walk.",
+      "center": [
+        48.16,
+        17.12
+      ]
+    }
+  ],
+  "food": [
+    "Try Slovak classics: bryndzové halušky (potato dumplings with sheep cheese), kapustnica soup and lokše pancakes.",
+    "Pub lunches in the old town are good value; a main course often costs around EUR 8–14.",
+    "Look for a weekend 'street food' market or the old market hall for cheap local bites; check opening days on the day.",
+    "Wine bars serve Slovak and small-region wines; a glass is often a few euros. Ask for a local Frankovka or Veltlín.",
+    "Beer is cheaper than coffee in many places. A half-litre of local draft is often around EUR 2–3."
+  ],
+  "more_time": [
+    "Take the Danube ferry to Devín castle in season for ruins and river views; check sailing times on the day.",
+    "Swap a city afternoon for a wine afternoon in the Small Carpathians; buses and trains reach the wine towns.",
+    "Cross to Austria by ferry in season for a half-day on the other bank; bring your passport."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "best_for": [
+    "history",
+    "food",
+    "budget"
+  ],
+  "recommend": {
+    "why": "Two nights covers the castle, old town and riverside at an easy pace; add a third for a Danube or wine day."
+  },
+  "month_notes": [
+    "January: cold, highs near 4°C and lows around -2°C. Pack a warm coat; expect about 10 rain days.",
+    "February: still cold, highs near 8°C. Fewer tourists and lower prices.",
+    "March: milder at around 11°C, with about 7 rain days, the driest month.",
+    "April: spring arrives, highs near 16°C. Good for walking; keep a light rain layer.",
+    "May: pleasant at around 20°C but about 11 rain days. Bring an umbrella.",
+    "June: warm at around 26°C, with about 11 rain days. Long evenings outdoors.",
+    "July: the hottest month, highs near 28°C. Go sightseeing early; about 8 rain days.",
+    "August: hot at around 28°C and busy. Book hotels ahead.",
+    "September: warm at around 22°C and a good balance of sun and showers.",
+    "October: cooler at around 16°C; autumn colours along the river.",
+    "November: chilly at around 10°C with about 9 rain days. Pack layers.",
+    "December: cold at around 5°C. Christmas markets make the old town lively; bring gloves."
+  ],
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm summers and rain spread through the year.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best time: May to September",
+        "text": "Highs from about 20°C to 28°C. Comfortable for walking the old town and castle."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters (December to February)",
+        "text": "Highs of 4–8°C and lows near or below freezing. Warm coat, hat and gloves needed."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–11 rain days every month. May and June are the wettest; March the driest."
+      },
+      {
+        "icon": "☀️",
+        "title": "Sunny summers",
+        "text": "July and August reach about 28°C with around 8 rain days. Long daylight hours."
+      },
+      {
+        "icon": "🍂",
+        "title": "Mild shoulder months",
+        "text": "April and October sit around 16°C, good for sightseeing with fewer crowds."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers and a waterproof jacket any month; a warm coat for winter; light clothes and sunscreen for summer."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the centre; use trams for longer hops and ride apps for the airport.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro in Bratislava. Don't plan around rail inside the city."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Bus 61 links the airport to the main train station; N61 runs at night. Buy tickets from machines before boarding."
+      },
+      {
+        "mode": "Tram / Trolleybus",
+        "has": true,
+        "best": true,
+        "text": "Trams and trolleybuses cover the centre. Buy tickets from machines before boarding."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber, Bolt, Hopin and Liftago work reliably. Airport taxis are pricey; use an app instead."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy, but parking in the old town is scarce and costly."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is very walkable. Bikes are fine along the Danube."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "A ferry runs on the Danube to Devín and across to Austria in season."
+      }
+    ]
+  }
+}

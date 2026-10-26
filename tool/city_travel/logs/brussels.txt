@@ -1,0 +1,32 @@
+$ deepseek_prep.py Brussels
+  tokens in 901 out 475
+Brussels: 6 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Brussels
+  tokens in 4264 out 813
+Brussels: 0 problems
+
+$ deepseek_city.py Brussels --stage places
+Brussels: places
+  tokens in 1256 out 4533
+
+$ deepseek_city.py Brussels --stage frame
+Brussels: frame
+  tokens in 2445 out 1849
+  repaired JSON
+
+$ deepseek_city.py Brussels --stage plans
+Brussels: plans
+  plans for day
+  tokens in 2560 out 984
+  plans for 1n
+  tokens in 2561 out 1186
+  plans for 2n
+  tokens in 2566 out 1371
+  plans for 3n
+  tokens in 2561 out 2006
+
+$ merge_city.py Brussels
+Brussels: 28 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/brussels.json and planner/brussels.json
+

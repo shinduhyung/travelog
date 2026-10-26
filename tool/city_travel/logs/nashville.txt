@@ -1,0 +1,27 @@
+$ deepseek_facts.py Nashville
+  tokens in 1611 out 588
+Nashville: 0 problems
+
+$ deepseek_city.py Nashville --stage places
+Nashville: places
+  tokens in 1152 out 3570
+
+$ deepseek_city.py Nashville --stage frame
+Nashville: frame
+  tokens in 2439 out 1995
+
+$ deepseek_city.py Nashville --stage plans
+Nashville: plans
+  plans for day
+  tokens in 2371 out 830
+  plans for 1n
+  tokens in 2372 out 948
+  plans for 2n
+  tokens in 2377 out 1740
+  plans for 3n
+  tokens in 2372 out 2189
+
+$ merge_city.py Nashville
+Nashville: 23 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/nashville.json and planner/nashville.json
+

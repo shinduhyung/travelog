@@ -1,0 +1,250 @@
+{
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro_line": "Seattle: coffee, water views, and mountains on the horizon.",
+  "intro": "Seattle rewards visitors with a walkable waterfront, world-class coffee, and easy escapes to water and mountains. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Downtown",
+    "Capitol Hill",
+    "Belltown",
+    "South Lake Union"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 5,
+    "per_km": 2.5,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Link light rail 1 Line links Sea-Tac, Downtown, Capitol Hill, and the University of Washington.",
+    "King County Metro buses cover the city; ORCA card or phone tap pays fares.",
+    "Taxis are metered; Uber and Lyft both operate widely.",
+    "Driving is easy to arrange but Downtown traffic is heavy at most hours.",
+    "Walking is good Downtown and on the waterfront; bikes and e-scooters are common.",
+    "Washington State Ferries leave Downtown for Bainbridge Island and Bremerton."
+  ],
+  "airports": [
+    {
+      "code": "SEA",
+      "name": "Seattle-Tacoma International Airport",
+      "primary": true,
+      "note": "Main hub, about 18 km south of the centre.",
+      "options": [
+        {
+          "mode": "Link light rail 1 Line",
+          "to": "Downtown (Westlake)",
+          "price": "$3-4",
+          "time": "35-45 min",
+          "note": "Cheapest and avoids traffic; runs late."
+        },
+        {
+          "mode": "Sound Transit bus 560",
+          "to": "West Seattle",
+          "price": "$3-4",
+          "time": "40-55 min",
+          "note": "Direct service to West Seattle."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$45-60",
+          "time": "25-40 min",
+          "note": "Flat-ish rates; tip extra."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$40-60",
+          "time": "25-40 min",
+          "note": "Pickup at the app zone on the parking garage level."
+        }
+      ]
+    },
+    {
+      "code": "PAE",
+      "name": "Paine Field",
+      "primary": false,
+      "note": "Small airport about 48 km north in Everett; limited Alaska Airlines flights.",
+      "options": [
+        {
+          "mode": "Bus + Link light rail",
+          "to": "Downtown",
+          "price": "$5-8",
+          "time": "1 hr 30 min-2 hr",
+          "note": "Check locally for current connections."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$90-120",
+          "time": "40-60 min",
+          "note": "Long drive; agree on price first."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown",
+          "price": "$80-110",
+          "time": "40-60 min",
+          "note": "Availability can be thin at night."
+        }
+      ]
+    },
+    {
+      "code": "YVR",
+      "name": "Vancouver International Airport",
+      "primary": false,
+      "note": "Major airport about 225 km north across the Canadian border; good for Asia flights.",
+      "options": [
+        {
+          "mode": "Amtrak Cascades + SkyTrain",
+          "to": "Downtown Seattle",
+          "price": "$40-60",
+          "time": "5-6 hr",
+          "note": "Passport needed; book ahead."
+        },
+        {
+          "mode": "Quickcoach bus",
+          "to": "Downtown Seattle",
+          "price": "$40-60",
+          "time": "4-5 hr",
+          "note": "Crosses the border; allow extra time."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Seattle",
+          "price": "$250-350",
+          "time": "2 hr 30 min-3 hr",
+          "note": "Expensive; border waits vary."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Seattle",
+          "price": "check locally",
+          "time": "2 hr 30 min-3 hr",
+          "note": "Cross-border rides are limited."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Space Needle",
+    "Pike Place Market",
+    "Chihuly Garden and Glass",
+    "Museum of Pop Culture",
+    "Seattle Aquarium",
+    "Argosy Harbor Cruise",
+    "Lumen Field",
+    "Playtime Family Fun",
+    "Seattle Central Library",
+    "Starbucks",
+    "Starbucks Reserve Roastery Seattle",
+    "Suzzallo Library",
+    "University of Washington",
+    "Wild Waves Theme Park",
+    "Woodland Park Zoo"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Seattle",
+      "https://en.wikivoyage.org/wiki/Seattle"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    47.60621,
+    -122.33207
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 8,
+      "low": 3,
+      "rain_days": 18
+    },
+    {
+      "high": 8,
+      "low": 2,
+      "rain_days": 15
+    },
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 15
+    },
+    {
+      "high": 14,
+      "low": 6,
+      "rain_days": 14
+    },
+    {
+      "high": 18,
+      "low": 9,
+      "rain_days": 10
+    },
+    {
+      "high": 21,
+      "low": 12,
+      "rain_days": 8
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 3
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 5
+    },
+    {
+      "high": 20,
+      "low": 13,
+      "rain_days": 10
+    },
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 14
+    },
+    {
+      "high": 10,
+      "low": 5,
+      "rain_days": 18
+    },
+    {
+      "high": 7,
+      "low": 3,
+      "rain_days": 19
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "YVR taxi $250-350 vs tariff estimate 636",
+    "airport YVR is 187 km away"
+  ]
+}

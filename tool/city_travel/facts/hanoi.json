@@ -1,0 +1,183 @@
+{
+  "currency": "VND",
+  "usd_rate": 25831.1533,
+  "intro_line": "Hanoi blends ancient lanes, lakes and street-food chaos.",
+  "intro": "Hanoi rewards visitors with layered history, buzzing streets and remarkable food. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Old Quarter",
+    "French Quarter",
+    "Hoan Kiem",
+    "Tay Ho"
+  ],
+  "taxi": {
+    "flag_day": 20000,
+    "flag_airport": 300000,
+    "per_km": 12000,
+    "min_fare": 20000
+  },
+  "road_factor": 1.3,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Metro Line 2A runs Cat Linh to Yen Nghia; Line 3 runs Cau Giay to Nhon.",
+    "Metro fares are distance-based, about 8,000-15,000 VND; tap contactless cards at gates.",
+    "City buses are cheap and air-conditioned, about 7,000-12,000 VND per ride.",
+    "Grab works well for cars and motorbike taxis; fares are fixed in the app.",
+    "Metered taxis: Mai Linh and Taxi Group are reliable; flag-fall about 20,000 VND.",
+    "Traffic is chaotic; walking is fine in the Old Quarter but crossing takes nerve."
+  ],
+  "airports": [
+    {
+      "code": "HAN",
+      "name": "Noi Bai International Airport",
+      "primary": true,
+      "note": "Main gateway, about 22 km north of the centre.",
+      "options": [
+        {
+          "mode": "Public bus 07",
+          "to": "Daewoo Hotel area, west Hanoi",
+          "price": "8,000 VND",
+          "time": "60-90 min",
+          "note": "Cheapest; may need to walk to catch it."
+        },
+        {
+          "mode": "Express bus 86",
+          "to": "Long Bien station and Old Quarter",
+          "price": "50,000 VND",
+          "time": "45 min",
+          "note": "Runs 06:20-22:00 every 25 min."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Old Quarter",
+          "price": "300,000-400,000 VND",
+          "time": "30-40 min",
+          "note": "Use Mai Linh or Taxi Group; avoid touts."
+        },
+        {
+          "mode": "Grab",
+          "to": "City centre",
+          "price": "around 300,000 VND",
+          "time": "30-40 min",
+          "note": "Fixed app fare; motorbike option is cheaper."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Ho Chi Minh Mausoleum",
+    "Hanoi Old Quarter",
+    "Temple of Literature",
+    "Imperial Citadel of Thang Long",
+    "One Pillar Pagoda",
+    "St. Joseph's Cathedral",
+    "Hoan Kiem Lake",
+    "Dong Xuan Market",
+    "Hanoi Opera House",
+    "Hanoi Train Street",
+    "My Dinh National Stadium",
+    "Ngoc Son Temple",
+    "Pho",
+    "Red River"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Hanoi",
+      "https://en.wikivoyage.org/wiki/Hanoi"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    21.0285,
+    105.8542
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 12
+    },
+    {
+      "high": 22,
+      "low": 15,
+      "rain_days": 9
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 13
+    },
+    {
+      "high": 29,
+      "low": 21,
+      "rain_days": 12
+    },
+    {
+      "high": 32,
+      "low": 25,
+      "rain_days": 18
+    },
+    {
+      "high": 33,
+      "low": 27,
+      "rain_days": 18
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 21
+    },
+    {
+      "high": 32,
+      "low": 26,
+      "rain_days": 24
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 21
+    },
+    {
+      "high": 28,
+      "low": 22,
+      "rain_days": 13
+    },
+    {
+      "high": 26,
+      "low": 19,
+      "rain_days": 9
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 7
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "HAN taxi 300,000-400,000 VND vs tariff estimate 643200"
+  ]
+}

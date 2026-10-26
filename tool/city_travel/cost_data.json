@@ -1,0 +1,1874 @@
+{
+ "Bangkok": {
+  "byt": {
+   "stay": 48.0,
+   "transport": 6.0,
+   "food": 34.0
+  },
+  "byt_path": "thailand/bangkok",
+  "numbeo": {
+   "meal": 2.97,
+   "meal2": 35.6,
+   "ticket": 1.08,
+   "taxi_start": 1.04,
+   "taxi_km": 1.19
+  }
+ },
+ "Tokyo": {
+  "byt": {
+   "stay": 74.0,
+   "transport": 17.0,
+   "food": 63.0
+  },
+  "byt_path": "japan/tokyo",
+  "numbeo": {
+   "meal": 7.65,
+   "meal2": 38.27,
+   "ticket": 1.28,
+   "taxi_start": 3.19,
+   "taxi_km": 3.19
+  }
+ },
+ "Abu Dhabi": {
+  "byt": {
+   "stay": 98.0,
+   "transport": 20.0,
+   "food": 78.0
+  },
+  "byt_path": "united-arab-emirates/abu-dhabi",
+  "numbeo": {
+   "meal": 8.17,
+   "meal2": 54.45,
+   "ticket": 0.68,
+   "taxi_start": 3.27,
+   "taxi_km": 0.54
+  }
+ },
+ "London": {
+  "byt": {
+   "stay": 165.0,
+   "transport": 34.0,
+   "food": 79.0
+  },
+  "byt_path": "united-kingdom/london",
+  "numbeo": {
+   "meal": 26.79,
+   "meal2": 107.17,
+   "ticket": 4.29,
+   "taxi_start": 5.63,
+   "taxi_km": 3.32
+  }
+ },
+ "Paris": {
+  "byt": {
+   "stay": 172.0,
+   "transport": 24.0,
+   "food": 81.0
+  },
+  "byt_path": "france/paris",
+  "numbeo": {
+   "meal": 19.07,
+   "meal2": 78.52,
+   "ticket": 2.8,
+   "taxi_start": 8.97,
+   "taxi_km": 1.46
+  }
+ },
+ "New York City": {
+  "byt": null,
+  "byt_path": "united-states/new-york",
+  "numbeo": {
+   "meal": 26.5,
+   "meal2": 120.0,
+   "ticket": 3.0,
+   "taxi_start": 3.0,
+   "taxi_km": 2.18
+  }
+ },
+ "Lisbon": {
+  "byt": {
+   "stay": 71.0,
+   "transport": 28.0,
+   "food": 82.0
+  },
+  "byt_path": "portugal/lisbon",
+  "numbeo": {
+   "meal": 16.83,
+   "meal2": 61.7,
+   "ticket": 2.36,
+   "taxi_start": 3.93,
+   "taxi_km": 1.08
+  }
+ },
+ "Rome": {
+  "byt": {
+   "stay": 101.0,
+   "transport": 24.0,
+   "food": 94.0
+  },
+  "byt_path": "italy/rome",
+  "numbeo": {
+   "meal": 16.83,
+   "meal2": 67.3,
+   "ticket": 1.68,
+   "taxi_start": 6.73,
+   "taxi_km": 1.68
+  }
+ },
+ "Barcelona": {
+  "byt": {
+   "stay": 103.0,
+   "transport": 22.0,
+   "food": 65.0
+  },
+  "byt_path": "spain/barcelona",
+  "numbeo": {
+   "meal": 17.95,
+   "meal2": 67.3,
+   "ticket": 2.97,
+   "taxi_start": 3.08,
+   "taxi_km": 1.48
+  }
+ },
+ "Seoul": {
+  "byt": {
+   "stay": 56.0,
+   "transport": 16.0,
+   "food": 53.0
+  },
+  "byt_path": "south-korea/seoul",
+  "numbeo": {
+   "meal": 9.06,
+   "meal2": 67.98,
+   "ticket": 1.17,
+   "taxi_start": 3.63,
+   "taxi_km": 0.62
+  }
+ },
+ "Istanbul": {
+  "byt": {
+   "stay": 70.0,
+   "transport": 33.0,
+   "food": 55.0
+  },
+  "byt_path": "turkey/istanbul",
+  "numbeo": {
+   "meal": 11.57,
+   "meal2": 54.31,
+   "ticket": 0.85,
+   "taxi_start": 1.31,
+   "taxi_km": 0.88
+  }
+ },
+ "Singapore": {
+  "byt": {
+   "stay": 102.0,
+   "transport": 11.0,
+   "food": 48.0
+  },
+  "byt_path": "singapore",
+  "numbeo": {
+   "meal": 11.74,
+   "meal2": 74.34,
+   "ticket": 1.57,
+   "taxi_start": 3.68,
+   "taxi_km": 0.78
+  }
+ },
+ "Sydney": {
+  "byt": {
+   "stay": 110.0,
+   "transport": 16.0,
+   "food": 82.0
+  },
+  "byt_path": "australia/sydney",
+  "numbeo": {
+   "meal": 17.54,
+   "meal2": 91.23,
+   "ticket": 3.16,
+   "taxi_start": 3.51,
+   "taxi_km": 1.61
+  }
+ },
+ "Dubai": {
+  "byt": {
+   "stay": 170.0,
+   "transport": 13.0,
+   "food": 96.0
+  },
+  "byt_path": "united-arab-emirates/dubai",
+  "numbeo": {
+   "meal": 12.8,
+   "meal2": 81.68,
+   "ticket": 1.63,
+   "taxi_start": 3.27,
+   "taxi_km": 0.7
+  }
+ },
+ "Prague": {
+  "byt": {
+   "stay": 74.0,
+   "transport": 9.0,
+   "food": 49.0
+  },
+  "byt_path": "czech-republic/prague",
+  "numbeo": {
+   "meal": 10.63,
+   "meal2": 50.82,
+   "ticket": 1.8,
+   "taxi_start": 2.77,
+   "taxi_km": 1.62
+  }
+ },
+ "Mexico City": {
+  "byt": {
+   "stay": 39.0,
+   "transport": 12.0,
+   "food": 44.0
+  },
+  "byt_path": "mexico/mexico-city",
+  "numbeo": {
+   "meal": 10.69,
+   "meal2": 48.09,
+   "ticket": 0.32,
+   "taxi_start": 1.87,
+   "taxi_km": 0.53
+  }
+ },
+ "Accra": {
+  "byt": {
+   "stay": 22.0,
+   "transport": 19.0,
+   "food": 19.0
+  },
+  "byt_path": "ghana/accra",
+  "numbeo": {
+   "meal": 8.06,
+   "meal2": 51.7,
+   "ticket": 1.51,
+   "taxi_start": 1.72,
+   "taxi_km": 1.29
+  }
+ },
+ "Amman": {
+  "byt": {
+   "stay": 49.0,
+   "transport": 24.0,
+   "food": 58.0
+  },
+  "byt_path": "jordan/amman",
+  "numbeo": {
+   "meal": 7.05,
+   "meal2": 70.52,
+   "ticket": 0.78,
+   "taxi_start": 0.61,
+   "taxi_km": 1.41
+  }
+ },
+ "Amsterdam": {
+  "byt": {
+   "stay": 114.0,
+   "transport": 22.0,
+   "food": 90.0
+  },
+  "byt_path": "netherlands/amsterdam",
+  "numbeo": {
+   "meal": 22.43,
+   "meal2": 89.74,
+   "ticket": 3.81,
+   "taxi_start": 4.66,
+   "taxi_km": 3.39
+  }
+ },
+ "Athens": {
+  "byt": {
+   "stay": 71.0,
+   "transport": 30.0,
+   "food": 72.0
+  },
+  "byt_path": "greece/athens",
+  "numbeo": {
+   "meal": 16.83,
+   "meal2": 67.3,
+   "ticket": 1.35,
+   "taxi_start": 4.49,
+   "taxi_km": 1.01
+  }
+ },
+ "Auckland": {
+  "byt": {
+   "stay": 94.0,
+   "transport": 16.0,
+   "food": 43.0
+  },
+  "byt_path": "new-zealand/auckland",
+  "numbeo": {
+   "meal": 14.2,
+   "meal2": 68.17,
+   "ticket": 2.56,
+   "taxi_start": 2.27,
+   "taxi_km": 1.99
+  }
+ },
+ "Adelaide": {
+  "byt": {
+   "stay": 70.0,
+   "transport": 20.0,
+   "food": 57.0
+  },
+  "byt_path": "australia/adelaide",
+  "numbeo": {
+   "meal": 17.58,
+   "meal2": 77.33,
+   "ticket": 3.2,
+   "taxi_start": 3.52,
+   "taxi_km": 2.0
+  }
+ },
+ "Ahmedabad": {
+  "byt": null,
+  "byt_path": "india/ahmedabad",
+  "numbeo": {
+   "meal": 5.27,
+   "meal2": 17.38,
+   "ticket": 0.28,
+   "taxi_start": 1.05,
+   "taxi_km": 0.26
+  }
+ },
+ "Almaty": {
+  "byt": null,
+  "byt_path": "kazakhstan/almaty",
+  "numbeo": {
+   "meal": 13.22,
+   "meal2": 44.08,
+   "ticket": 0.26,
+   "taxi_start": 1.32,
+   "taxi_km": 0.66
+  }
+ },
+ "Antwerp": {
+  "byt": {
+   "stay": 80.0,
+   "transport": 14.0,
+   "food": 76.0
+  },
+  "byt_path": "belgium/antwerp",
+  "numbeo": {
+   "meal": 23.52,
+   "meal2": 96.34,
+   "ticket": 3.36,
+   "taxi_start": 5.6,
+   "taxi_km": 2.69
+  }
+ },
+ "Atlanta": {
+  "byt": null,
+  "byt_path": "united-states/atlanta",
+  "numbeo": {
+   "meal": 30.0,
+   "meal2": 110.0,
+   "ticket": 2.5,
+   "taxi_start": 3.5,
+   "taxi_km": 1.49
+  }
+ },
+ "Austin": {
+  "byt": null,
+  "byt_path": "united-states/austin",
+  "numbeo": {
+   "meal": 20.5,
+   "meal2": 85.0,
+   "ticket": 1.5,
+   "taxi_start": 2.75,
+   "taxi_km": 1.62
+  }
+ },
+ "Baku": {
+  "byt": null,
+  "byt_path": "azerbaijan/baku",
+  "numbeo": {
+   "meal": 8.82,
+   "meal2": 39.71,
+   "ticket": 0.35,
+   "taxi_start": 2.06,
+   "taxi_km": 0.59
+  }
+ },
+ "Baltimore": {
+  "byt": null,
+  "byt_path": "united-states/baltimore",
+  "numbeo": {
+   "meal": 18.0,
+   "meal2": 96.0,
+   "ticket": 2.0,
+   "taxi_start": 1.8,
+   "taxi_km": 1.37
+  }
+ },
+ "Beijing": {
+  "byt": {
+   "stay": 43.0,
+   "transport": 8.0,
+   "food": 36.0
+  },
+  "byt_path": "china/beijing",
+  "numbeo": {
+   "meal": 4.5,
+   "meal2": 29.97,
+   "ticket": 0.67,
+   "taxi_start": 1.95,
+   "taxi_km": 0.34
+  }
+ },
+ "Beirut": {
+  "byt": {
+   "stay": 1.0,
+   "transport": 0.0,
+   "food": 1.0
+  },
+  "byt_path": "lebanon/beirut",
+  "numbeo": {
+   "meal": 12.0,
+   "meal2": 69.0,
+   "ticket": 2.25,
+   "taxi_start": 5.0,
+   "taxi_km": 2.25
+  }
+ },
+ "Belgrade": {
+  "byt": {
+   "stay": 32.0,
+   "transport": 6.0,
+   "food": 17.0
+  },
+  "byt_path": "serbia/belgrade",
+  "numbeo": {
+   "meal": 13.25,
+   "meal2": 57.18,
+   "ticket": 0.0,
+   "taxi_start": 3.05,
+   "taxi_km": 1.0
+  }
+ },
+ "Bengaluru": {
+  "byt": null,
+  "byt_path": "india/bengaluru",
+  "numbeo": {}
+ },
+ "Berlin": {
+  "byt": {
+   "stay": 72.0,
+   "transport": 20.0,
+   "food": 101.0
+  },
+  "byt_path": "germany/berlin",
+  "numbeo": {
+   "meal": 16.8,
+   "meal2": 78.41,
+   "ticket": 4.48,
+   "taxi_start": 5.21,
+   "taxi_km": 3.14
+  }
+ },
+ "Bilbao": {
+  "byt": {
+   "stay": 81.0,
+   "transport": 29.0,
+   "food": 87.0
+  },
+  "byt_path": "spain/bilbao",
+  "numbeo": {
+   "meal": 22.4,
+   "meal2": 72.81,
+   "ticket": 1.79,
+   "taxi_start": 5.49,
+   "taxi_km": 1.01
+  }
+ },
+ "Birmingham": {
+  "byt": {
+   "stay": 87.0,
+   "transport": 34.0,
+   "food": 87.0
+  },
+  "byt_path": "united-kingdom/birmingham",
+  "numbeo": {
+   "meal": 20.73,
+   "meal2": 101.66,
+   "ticket": 4.01,
+   "taxi_start": 5.08,
+   "taxi_km": 2.41
+  }
+ },
+ "Bogotá": {
+  "byt": {
+   "stay": 30.0,
+   "transport": 10.0,
+   "food": 27.0
+  },
+  "byt_path": "colombia/bogota",
+  "numbeo": {
+   "meal": 7.88,
+   "meal2": 42.57,
+   "ticket": 1.12,
+   "taxi_start": 2.35,
+   "taxi_km": 2.49
+  }
+ },
+ "Bologna": {
+  "byt": {
+   "stay": 97.0,
+   "transport": 23.0,
+   "food": 76.0
+  },
+  "byt_path": "italy/bologna",
+  "numbeo": {
+   "meal": 22.4,
+   "meal2": 89.61,
+   "ticket": 2.58,
+   "taxi_start": 4.59,
+   "taxi_km": 1.68
+  }
+ },
+ "Boston": {
+  "byt": null,
+  "byt_path": "united-states/boston",
+  "numbeo": {
+   "meal": 27.5,
+   "meal2": 120.0,
+   "ticket": 2.4,
+   "taxi_start": 2.6,
+   "taxi_km": 1.75
+  }
+ },
+ "Bratislava": {
+  "byt": {
+   "stay": 55.0,
+   "transport": 29.0,
+   "food": 88.0
+  },
+  "byt_path": "slovakia/bratislava",
+  "numbeo": {
+   "meal": 11.2,
+   "meal2": 67.21,
+   "ticket": 1.34,
+   "taxi_start": 7.0,
+   "taxi_km": 1.68
+  }
+ },
+ "Brisbane": {
+  "byt": {
+   "stay": 87.0,
+   "transport": 19.0,
+   "food": 58.0
+  },
+  "byt_path": "australia/brisbane",
+  "numbeo": {
+   "meal": 17.58,
+   "meal2": 73.82,
+   "ticket": 0.35,
+   "taxi_start": 3.02,
+   "taxi_km": 1.84
+  }
+ },
+ "Bristol": {
+  "byt": {
+   "stay": 65.0,
+   "transport": 17.0,
+   "food": 74.0
+  },
+  "byt_path": "united-kingdom/bristol",
+  "numbeo": {
+   "meal": 24.08,
+   "meal2": 113.7,
+   "ticket": 3.48,
+   "taxi_start": 3.48,
+   "taxi_km": 1.67
+  }
+ },
+ "Brussels": {
+  "byt": {
+   "stay": 82.0,
+   "transport": 19.0,
+   "food": 74.0
+  },
+  "byt_path": "belgium/brussels",
+  "numbeo": {
+   "meal": 22.4,
+   "meal2": 89.61,
+   "ticket": 2.8,
+   "taxi_start": 2.91,
+   "taxi_km": 2.3
+  }
+ },
+ "Bucharest": {
+  "byt": {
+   "stay": 62.0,
+   "transport": 26.0,
+   "food": 99.0
+  },
+  "byt_path": "romania/bucharest",
+  "numbeo": {
+   "meal": 14.64,
+   "meal2": 57.53,
+   "ticket": 0.84,
+   "taxi_start": 0.63,
+   "taxi_km": 0.63
+  }
+ },
+ "Budapest": {
+  "byt": {
+   "stay": 59.0,
+   "transport": 12.0,
+   "food": 45.0
+  },
+  "byt_path": "hungary/budapest",
+  "numbeo": {
+   "meal": 13.75,
+   "meal2": 61.09,
+   "ticket": 1.53,
+   "taxi_start": 3.36,
+   "taxi_km": 1.34
+  }
+ },
+ "Buenos Aires": {
+  "byt": {
+   "stay": 39.0,
+   "transport": 2.0,
+   "food": 7.0
+  },
+  "byt_path": "argentina/buenos-aires",
+  "numbeo": {
+   "meal": 18.04,
+   "meal2": 65.0,
+   "ticket": 0.72,
+   "taxi_start": 1.6,
+   "taxi_km": 1.0
+  }
+ },
+ "Cairo": {
+  "byt": {
+   "stay": 10.0,
+   "transport": 3.0,
+   "food": 16.0
+  },
+  "byt_path": "egypt/cairo",
+  "numbeo": {}
+ },
+ "Calgary": {
+  "byt": {
+   "stay": 71.0,
+   "transport": 12.0,
+   "food": 52.0
+  },
+  "byt_path": "canada/calgary",
+  "numbeo": {
+   "meal": 17.85,
+   "meal2": 70.7,
+   "ticket": 2.86,
+   "taxi_start": 3.21,
+   "taxi_km": 1.37
+  }
+ },
+ "Cali": {
+  "byt": {
+   "stay": 7.0,
+   "transport": 7.0,
+   "food": 18.0
+  },
+  "byt_path": "colombia/cali",
+  "numbeo": {
+   "meal": 5.36,
+   "meal2": 56.76,
+   "ticket": 1.1,
+   "taxi_start": 1.17,
+   "taxi_km": 0.59
+  }
+ },
+ "Cape Town": {
+  "byt": {
+   "stay": 87.0,
+   "transport": 19.0,
+   "food": 80.0
+  },
+  "byt_path": "south-africa/cape-town",
+  "numbeo": {
+   "meal": 12.07,
+   "meal2": 46.16,
+   "ticket": 1.51,
+   "taxi_start": 0.6,
+   "taxi_km": 1.51
+  }
+ },
+ "Caracas": {
+  "byt": null,
+  "byt_path": "venezuela/caracas",
+  "numbeo": {
+   "meal": 10.8,
+   "meal2": 67.5,
+   "ticket": 0.5,
+   "taxi_start": 5.0,
+   "taxi_km": 2.75
+  }
+ },
+ "Casablanca": {
+  "byt": {
+   "stay": 43.0,
+   "transport": 11.0,
+   "food": 34.0
+  },
+  "byt_path": "morocco/casablanca",
+  "numbeo": {
+   "meal": 4.69,
+   "meal2": 32.6,
+   "ticket": 0.82,
+   "taxi_start": 0.82,
+   "taxi_km": 0.31
+  }
+ },
+ "Changchun": {
+  "byt": null,
+  "byt_path": "china/changchun",
+  "numbeo": {
+   "meal": 3.0,
+   "meal2": 22.48,
+   "ticket": 0.45,
+   "taxi_start": 1.2,
+   "taxi_km": 0.3
+  }
+ },
+ "Changsha": {
+  "byt": null,
+  "byt_path": "china/changsha",
+  "numbeo": {}
+ },
+ "Charlotte": {
+  "byt": null,
+  "byt_path": "united-states/charlotte",
+  "numbeo": {
+   "meal": 18.0,
+   "meal2": 75.0,
+   "ticket": 2.2,
+   "taxi_start": 3.0,
+   "taxi_km": 1.86
+  }
+ },
+ "Chengdu": {
+  "byt": {
+   "stay": 23.0,
+   "transport": 6.0,
+   "food": 41.0
+  },
+  "byt_path": "china/chengdu",
+  "numbeo": {
+   "meal": 2.85,
+   "meal2": 22.48,
+   "ticket": 0.37,
+   "taxi_start": 1.35,
+   "taxi_km": 0.3
+  }
+ },
+ "Chennai": {
+  "byt": {
+   "stay": 13.0,
+   "transport": 2.0,
+   "food": 10.0
+  },
+  "byt_path": "india/chennai",
+  "numbeo": {
+   "meal": 2.11,
+   "meal2": 12.64,
+   "ticket": 0.32,
+   "taxi_start": 1.05,
+   "taxi_km": 0.32
+  }
+ },
+ "Chicago": {
+  "byt": null,
+  "byt_path": "united-states/chicago",
+  "numbeo": {
+   "meal": 20.5,
+   "meal2": 90.0,
+   "ticket": 2.5,
+   "taxi_start": 3.25,
+   "taxi_km": 1.4
+  }
+ },
+ "Chongqing": {
+  "byt": {
+   "stay": 53.0,
+   "transport": 20.0,
+   "food": 46.0
+  },
+  "byt_path": "china/chongqing",
+  "numbeo": {
+   "meal": 2.7,
+   "meal2": 22.48,
+   "ticket": 0.37,
+   "taxi_start": 1.5,
+   "taxi_km": 0.3
+  }
+ },
+ "Cleveland": {
+  "byt": null,
+  "byt_path": "united-states/cleveland",
+  "numbeo": {
+   "meal": 18.0,
+   "meal2": 62.5,
+   "ticket": 2.5,
+   "taxi_start": 2.75,
+   "taxi_km": 1.55
+  }
+ },
+ "Colombo": {
+  "byt": {
+   "stay": 44.0,
+   "transport": 4.0,
+   "food": 26.0
+  },
+  "byt_path": "sri-lanka/colombo",
+  "numbeo": {
+   "meal": 3.81,
+   "meal2": 24.86,
+   "ticket": 0.17,
+   "taxi_start": 0.39,
+   "taxi_km": 0.36
+  }
+ },
+ "Copenhagen": {
+  "byt": {
+   "stay": 94.0,
+   "transport": 75.0,
+   "food": 111.0
+  },
+  "byt_path": "denmark/copenhagen",
+  "numbeo": {
+   "meal": 20.98,
+   "meal2": 119.91,
+   "ticket": 3.6,
+   "taxi_start": 5.85,
+   "taxi_km": 1.65
+  }
+ },
+ "Dallas": {
+  "byt": null,
+  "byt_path": "united-states/dallas",
+  "numbeo": {
+   "meal": 21.0,
+   "meal2": 90.0,
+   "ticket": 3.0,
+   "taxi_start": 3.0,
+   "taxi_km": 1.75
+  }
+ },
+ "Dar es Salaam": {
+  "byt": {
+   "stay": 424.0,
+   "transport": 13.0,
+   "food": 31.0
+  },
+  "byt_path": "tanzania/dar-es-salaam",
+  "numbeo": {}
+ },
+ "Denver": {
+  "byt": null,
+  "byt_path": "united-states/denver",
+  "numbeo": {
+   "meal": 20.0,
+   "meal2": 84.5,
+   "ticket": 2.75,
+   "taxi_start": 3.5,
+   "taxi_km": 1.75
+  }
+ },
+ "Detroit": {
+  "byt": null,
+  "byt_path": "united-states/detroit",
+  "numbeo": {
+   "meal": 18.0,
+   "meal2": 63.0,
+   "ticket": 2.0,
+   "taxi_start": 3.0,
+   "taxi_km": 1.55
+  }
+ },
+ "Dhaka": {
+  "byt": null,
+  "byt_path": "bangladesh/dhaka",
+  "numbeo": {
+   "meal": 2.43,
+   "meal2": 13.15,
+   "ticket": 0.4,
+   "taxi_start": 1.21,
+   "taxi_km": 0.4
+  }
+ },
+ "Doha": {
+  "byt": {
+   "stay": 120.0,
+   "transport": 23.0,
+   "food": 106.0
+  },
+  "byt_path": "qatar/doha",
+  "numbeo": {}
+ },
+ "Dublin": {
+  "byt": {
+   "stay": 77.0,
+   "transport": 22.0,
+   "food": 95.0
+  },
+  "byt_path": "ireland/dublin",
+  "numbeo": {}
+ },
+ "Düsseldorf": {
+  "byt": {
+   "stay": 107.0,
+   "transport": 2.0,
+   "food": 148.0
+  },
+  "byt_path": "germany/dusseldorf",
+  "numbeo": {}
+ },
+ "Edinburgh": {
+  "byt": {
+   "stay": 98.0,
+   "transport": 22.0,
+   "food": 89.0
+  },
+  "byt_path": "united-kingdom/edinburgh",
+  "numbeo": {}
+ },
+ "Frankfurt": {
+  "byt": {
+   "stay": 65.0,
+   "transport": 28.0,
+   "food": 79.0
+  },
+  "byt_path": "germany/frankfurt",
+  "numbeo": {}
+ },
+ "Fuzhou": {
+  "byt": null,
+  "byt_path": "china/fuzhou",
+  "numbeo": {}
+ },
+ "Geneva": {
+  "byt": {
+   "stay": 160.0,
+   "transport": 10.0,
+   "food": 100.0
+  },
+  "byt_path": "switzerland/geneva",
+  "numbeo": {}
+ },
+ "Guangzhou": {
+  "byt": {
+   "stay": 62.0,
+   "transport": 15.0,
+   "food": 36.0
+  },
+  "byt_path": "china/guangzhou",
+  "numbeo": {}
+ },
+ "Guatemala City": {
+  "byt": {
+   "stay": 25.0,
+   "transport": 6.0,
+   "food": 27.0
+  },
+  "byt_path": "guatemala/guatemala-city",
+  "numbeo": {}
+ },
+ "Haikou": {
+  "byt": null,
+  "byt_path": "china/haikou",
+  "numbeo": {}
+ },
+ "Hamburg": {
+  "byt": {
+   "stay": 61.0,
+   "transport": 32.0,
+   "food": 67.0
+  },
+  "byt_path": "germany/hamburg",
+  "numbeo": {}
+ },
+ "Hangzhou": {
+  "byt": {
+   "stay": 25.0,
+   "transport": 9.0,
+   "food": 33.0
+  },
+  "byt_path": "china/hangzhou",
+  "numbeo": {}
+ },
+ "Hanoi": {
+  "byt": {
+   "stay": 25.0,
+   "transport": 7.0,
+   "food": 23.0
+  },
+  "byt_path": "vietnam/hanoi",
+  "numbeo": {}
+ },
+ "Harbin": {
+  "byt": {
+   "stay": 22.0,
+   "transport": 2.0,
+   "food": 26.0
+  },
+  "byt_path": "china/harbin",
+  "numbeo": {}
+ },
+ "Hefei": {
+  "byt": {
+   "stay": 31.0,
+   "transport": 18.0,
+   "food": 39.0
+  },
+  "byt_path": "china/hefei",
+  "numbeo": {}
+ },
+ "Helsinki": {
+  "byt": {
+   "stay": 82.0,
+   "transport": 25.0,
+   "food": 67.0
+  },
+  "byt_path": "finland/helsinki",
+  "numbeo": {}
+ },
+ "Ho Chi Minh City": {
+  "byt": {
+   "stay": 48.0,
+   "transport": 15.0,
+   "food": 23.0
+  },
+  "byt_path": "vietnam/ho-chi-minh-city",
+  "numbeo": {}
+ },
+ "Hong Kong": {
+  "byt": {
+   "stay": 76.0,
+   "transport": 8.69,
+   "food": 54.0
+  },
+  "byt_path": "hong-kong",
+  "numbeo": {}
+ },
+ "Houston": {
+  "byt": null,
+  "byt_path": "united-states/houston",
+  "numbeo": {}
+ },
+ "Hyderabad": {
+  "byt": {
+   "stay": 18.0,
+   "transport": 11.0,
+   "food": 26.0
+  },
+  "byt_path": "india/hyderabad",
+  "numbeo": {}
+ },
+ "Islamabad": {
+  "byt": {
+   "stay": 21.0,
+   "transport": 8.0,
+   "food": 26.0
+  },
+  "byt_path": "pakistan/islamabad",
+  "numbeo": {}
+ },
+ "Jakarta": {
+  "byt": {
+   "stay": 30.0,
+   "transport": 18.0,
+   "food": 26.0
+  },
+  "byt_path": "indonesia/jakarta",
+  "numbeo": {}
+ },
+ "Jeddah": {
+  "byt": null,
+  "byt_path": "saudi-arabia/jeddah",
+  "numbeo": {}
+ },
+ "Jinan": {
+  "byt": null,
+  "byt_path": "china/jinan",
+  "numbeo": {}
+ },
+ "Johannesburg": {
+  "byt": {
+   "stay": 61.0,
+   "transport": 18.0,
+   "food": 32.0
+  },
+  "byt_path": "south-africa/johannesburg",
+  "numbeo": {}
+ },
+ "Kampala": {
+  "byt": {
+   "stay": 56.0,
+   "transport": 2.0,
+   "food": 14.0
+  },
+  "byt_path": "uganda/kampala",
+  "numbeo": {}
+ },
+ "Karachi": {
+  "byt": {
+   "stay": 11.0,
+   "transport": 5.0,
+   "food": 20.0
+  },
+  "byt_path": "pakistan/karachi",
+  "numbeo": {}
+ },
+ "Katowice": {
+  "byt": {
+   "stay": 20.0,
+   "transport": 13.0,
+   "food": 35.0
+  },
+  "byt_path": "poland/katowice",
+  "numbeo": {}
+ },
+ "Kuala Lumpur": {
+  "byt": {
+   "stay": 42.0,
+   "transport": 7.0,
+   "food": 30.0
+  },
+  "byt_path": "malaysia/kuala-lumpur",
+  "numbeo": {}
+ },
+ "Kunming": {
+  "byt": {
+   "stay": 36.0,
+   "transport": 14.0,
+   "food": 42.0
+  },
+  "byt_path": "china/kunming",
+  "numbeo": {}
+ },
+ "Kuwait City": {
+  "byt": null,
+  "byt_path": "kuwait/kuwait-city",
+  "numbeo": {}
+ },
+ "Kyiv": {
+  "byt": null,
+  "byt_path": "ukraine/kyiv",
+  "numbeo": {}
+ },
+ "Kyoto": {
+  "byt": {
+   "stay": 62.0,
+   "transport": 7.0,
+   "food": 40.0
+  },
+  "byt_path": "japan/kyoto",
+  "numbeo": {}
+ },
+ "Labuan": {
+  "byt": null,
+  "byt_path": "malaysia/labuan",
+  "numbeo": {}
+ },
+ "Lagos": {
+  "byt": null,
+  "byt_path": "nigeria/lagos",
+  "numbeo": {}
+ },
+ "Lahore": {
+  "byt": {
+   "stay": 37.0,
+   "transport": 10.0,
+   "food": 24.0
+  },
+  "byt_path": "pakistan/lahore",
+  "numbeo": {}
+ },
+ "Lima": {
+  "byt": {
+   "stay": 52.0,
+   "transport": 6.0,
+   "food": 32.0
+  },
+  "byt_path": "peru/lima",
+  "numbeo": {}
+ },
+ "Ljubljana": {
+  "byt": {
+   "stay": 61.0,
+   "transport": 23.0,
+   "food": 32.0
+  },
+  "byt_path": "slovenia/ljubljana",
+  "numbeo": {}
+ },
+ "Los Angeles": {
+  "byt": null,
+  "byt_path": "united-states/los-angeles",
+  "numbeo": {}
+ },
+ "Luxembourg": {
+  "byt": null,
+  "byt_path": "luxembourg/luxembourg",
+  "numbeo": {}
+ },
+ "Lyon": {
+  "byt": {
+   "stay": 60.0,
+   "transport": 19.0,
+   "food": 80.0
+  },
+  "byt_path": "france/lyon",
+  "numbeo": {}
+ },
+ "Madrid": {
+  "byt": {
+   "stay": 87.0,
+   "transport": 21.0,
+   "food": 66.0
+  },
+  "byt_path": "spain/madrid",
+  "numbeo": {}
+ },
+ "Managua": {
+  "byt": {
+   "stay": 23.0,
+   "transport": 20.0,
+   "food": 30.0
+  },
+  "byt_path": "nicaragua/managua",
+  "numbeo": {}
+ },
+ "Manama": {
+  "byt": null,
+  "byt_path": "bahrain/manama",
+  "numbeo": {}
+ },
+ "Manchester": {
+  "byt": {
+   "stay": 94.0,
+   "transport": 25.0,
+   "food": 127.0
+  },
+  "byt_path": "united-kingdom/manchester",
+  "numbeo": {}
+ },
+ "Manila": {
+  "byt": {
+   "stay": 49.0,
+   "transport": 13.0,
+   "food": 28.0
+  },
+  "byt_path": "philippines/manila",
+  "numbeo": {}
+ },
+ "Marseille": {
+  "byt": {
+   "stay": 80.0,
+   "transport": 32.0,
+   "food": 82.0
+  },
+  "byt_path": "france/marseille",
+  "numbeo": {}
+ },
+ "Melbourne": {
+  "byt": {
+   "stay": 127.0,
+   "transport": 21.0,
+   "food": 56.0
+  },
+  "byt_path": "australia/melbourne",
+  "numbeo": {}
+ },
+ "Miami": {
+  "byt": null,
+  "byt_path": "united-states/miami",
+  "numbeo": {}
+ },
+ "Milan": {
+  "byt": {
+   "stay": 108.0,
+   "transport": 39.0,
+   "food": 75.0
+  },
+  "byt_path": "italy/milan",
+  "numbeo": {}
+ },
+ "Minneapolis": {
+  "byt": null,
+  "byt_path": "united-states/minneapolis",
+  "numbeo": {}
+ },
+ "Monterrey": {
+  "byt": null,
+  "byt_path": "mexico/monterrey",
+  "numbeo": {}
+ },
+ "Montevideo": {
+  "byt": {
+   "stay": 38.0,
+   "transport": 7.0,
+   "food": 22.0
+  },
+  "byt_path": "uruguay/montevideo",
+  "numbeo": {}
+ },
+ "Montreal": {
+  "byt": {
+   "stay": 127.0,
+   "transport": 20.0,
+   "food": 60.0
+  },
+  "byt_path": "canada/montreal",
+  "numbeo": {}
+ },
+ "Moscow": {
+  "byt": {
+   "stay": 45.0,
+   "transport": 7.0,
+   "food": 27.0
+  },
+  "byt_path": "russia/moscow",
+  "numbeo": {}
+ },
+ "Mumbai": {
+  "byt": {
+   "stay": 29.0,
+   "transport": 6.0,
+   "food": 38.0
+  },
+  "byt_path": "india/mumbai",
+  "numbeo": {}
+ },
+ "Munich": {
+  "byt": {
+   "stay": 100.0,
+   "transport": 21.0,
+   "food": 53.0
+  },
+  "byt_path": "germany/munich",
+  "numbeo": {}
+ },
+ "Muscat": {
+  "byt": null,
+  "byt_path": "oman/muscat",
+  "numbeo": {}
+ },
+ "Nairobi": {
+  "byt": {
+   "stay": 12.0,
+   "transport": 11.0,
+   "food": 13.0
+  },
+  "byt_path": "kenya/nairobi",
+  "numbeo": {}
+ },
+ "Nanchang": {
+  "byt": {
+   "stay": 21.0,
+   "transport": 12.0,
+   "food": 60.0
+  },
+  "byt_path": "china/nanchang",
+  "numbeo": {}
+ },
+ "Nanjing": {
+  "byt": {
+   "stay": 50.0,
+   "transport": 41.0,
+   "food": 52.0
+  },
+  "byt_path": "china/nanjing",
+  "numbeo": {}
+ },
+ "Nashville": {
+  "byt": null,
+  "byt_path": "united-states/nashville",
+  "numbeo": {}
+ },
+ "New Delhi": {
+  "byt": null,
+  "byt_path": "india/new-delhi",
+  "numbeo": {}
+ },
+ "Nicosia": {
+  "byt": null,
+  "byt_path": "cyprus/nicosia",
+  "numbeo": {}
+ },
+ "Ningbo": {
+  "byt": null,
+  "byt_path": "china/ningbo",
+  "numbeo": {}
+ },
+ "Osaka": {
+  "byt": {
+   "stay": 45.0,
+   "transport": 13.0,
+   "food": 42.0
+  },
+  "byt_path": "japan/osaka",
+  "numbeo": {}
+ },
+ "Oslo": {
+  "byt": {
+   "stay": 76.0,
+   "transport": 22.0,
+   "food": 54.0
+  },
+  "byt_path": "norway/oslo",
+  "numbeo": {}
+ },
+ "Panama City": {
+  "byt": {
+   "stay": 35.0,
+   "transport": 11.0,
+   "food": 36.0
+  },
+  "byt_path": "panama/panama-city",
+  "numbeo": {}
+ },
+ "Perth": {
+  "byt": {
+   "stay": 80.0,
+   "transport": 27.0,
+   "food": 66.0
+  },
+  "byt_path": "australia/perth",
+  "numbeo": {}
+ },
+ "Philadelphia": {
+  "byt": null,
+  "byt_path": "united-states/philadelphia",
+  "numbeo": {}
+ },
+ "Phnom Penh": {
+  "byt": {
+   "stay": 12.0,
+   "transport": 8.0,
+   "food": 22.0
+  },
+  "byt_path": "cambodia/phnom-penh",
+  "numbeo": {}
+ },
+ "Pittsburgh": {
+  "byt": null,
+  "byt_path": "united-states/pittsburgh",
+  "numbeo": {}
+ },
+ "Port Louis": {
+  "byt": null,
+  "byt_path": "mauritius/port-louis",
+  "numbeo": {}
+ },
+ "Porto": {
+  "byt": {
+   "stay": 81.0,
+   "transport": 23.0,
+   "food": 71.0
+  },
+  "byt_path": "portugal/porto",
+  "numbeo": {}
+ },
+ "Poznań": {
+  "byt": {
+   "stay": 18.0,
+   "transport": 4.0,
+   "food": 19.0
+  },
+  "byt_path": "poland/poznan",
+  "numbeo": {}
+ },
+ "Pune": {
+  "byt": {
+   "stay": 19.0,
+   "transport": 8.0,
+   "food": 21.0
+  },
+  "byt_path": "india/pune",
+  "numbeo": {}
+ },
+ "Qingdao": {
+  "byt": {
+   "stay": 28.0,
+   "transport": 13.0,
+   "food": 37.0
+  },
+  "byt_path": "china/qingdao",
+  "numbeo": {}
+ },
+ "Quito": {
+  "byt": {},
+  "byt_path": "ecuador/quito",
+  "numbeo": {}
+ },
+ "Riga": {
+  "byt": {
+   "stay": 58.0,
+   "transport": 11.0,
+   "food": 64.0
+  },
+  "byt_path": "latvia/riga",
+  "numbeo": {}
+ },
+ "Rio de Janeiro": {
+  "byt": {
+   "stay": 65.0,
+   "transport": 8.0,
+   "food": 34.0
+  },
+  "byt_path": "brazil/rio-de-janeiro",
+  "numbeo": {}
+ },
+ "Riyadh": {
+  "byt": null,
+  "byt_path": "saudi-arabia/riyadh",
+  "numbeo": {}
+ },
+ "Rotterdam": {
+  "byt": {
+   "stay": 92.0,
+   "transport": 29.0,
+   "food": 99.0
+  },
+  "byt_path": "netherlands/rotterdam",
+  "numbeo": {}
+ },
+ "San Diego": {
+  "byt": null,
+  "byt_path": "united-states/san-diego",
+  "numbeo": {}
+ },
+ "San Francisco": {
+  "byt": null,
+  "byt_path": "united-states/san-francisco",
+  "numbeo": {}
+ },
+ "San Jose": {
+  "byt": null,
+  "byt_path": "united-states/san-jose",
+  "numbeo": {}
+ },
+ "San José": {
+  "byt": {
+   "stay": 54.0,
+   "transport": 22.0,
+   "food": 34.0
+  },
+  "byt_path": "costa-rica/san-jose",
+  "numbeo": {}
+ },
+ "San Salvador": {
+  "byt": null,
+  "byt_path": "el-salvador/san-salvador",
+  "numbeo": {}
+ },
+ "Santiago": {
+  "byt": {
+   "stay": 105.0,
+   "transport": 5.0,
+   "food": 22.0
+  },
+  "byt_path": "chile/santiago",
+  "numbeo": {}
+ },
+ "Santo Domingo": {
+  "byt": {
+   "stay": 42.0,
+   "transport": 5.0,
+   "food": 56.0
+  },
+  "byt_path": "dominican-republic/santo-domingo",
+  "numbeo": {}
+ },
+ "São Paulo": {
+  "byt": {
+   "stay": 29.0,
+   "transport": 6.0,
+   "food": 25.0
+  },
+  "byt_path": "brazil/sao-paulo",
+  "numbeo": {}
+ },
+ "Seattle": {
+  "byt": null,
+  "byt_path": "united-states/seattle",
+  "numbeo": {}
+ },
+ "Shanghai": {
+  "byt": {
+   "stay": 88.0,
+   "transport": 4.0,
+   "food": 40.0
+  },
+  "byt_path": "china/shanghai",
+  "numbeo": {}
+ },
+ "Shenyang": {
+  "byt": {
+   "stay": 44.0,
+   "transport": 21.0,
+   "food": 34.0
+  },
+  "byt_path": "china/shenyang",
+  "numbeo": {}
+ },
+ "Shenzhen": {
+  "byt": {
+   "stay": 97.0,
+   "transport": 16.0,
+   "food": 37.0
+  },
+  "byt_path": "china/shenzhen",
+  "numbeo": {}
+ },
+ "Sofia": {
+  "byt": {
+   "stay": 42.0,
+   "transport": 9.0,
+   "food": 33.0
+  },
+  "byt_path": "bulgaria/sofia",
+  "numbeo": {}
+ },
+ "St. Louis": {
+  "byt": null,
+  "byt_path": "united-states/st-louis",
+  "numbeo": {}
+ },
+ "St. Petersburg": {
+  "byt": null,
+  "byt_path": "russia/st-petersburg",
+  "numbeo": {}
+ },
+ "Stockholm": {
+  "byt": {
+   "stay": 104.0,
+   "transport": 22.0,
+   "food": 67.0
+  },
+  "byt_path": "sweden/stockholm",
+  "numbeo": {}
+ },
+ "Stuttgart": {
+  "byt": {
+   "stay": 113.0,
+   "transport": 28.0,
+   "food": 72.0
+  },
+  "byt_path": "germany/stuttgart",
+  "numbeo": {}
+ },
+ "Surabaya": {
+  "byt": {
+   "stay": 33.0,
+   "transport": 2.0,
+   "food": 35.0
+  },
+  "byt_path": "indonesia/surabaya",
+  "numbeo": {}
+ },
+ "Suzhou": {
+  "byt": {
+   "stay": 42.0,
+   "transport": 62.0,
+   "food": 60.0
+  },
+  "byt_path": "china/suzhou",
+  "numbeo": {}
+ },
+ "Taipei": {
+  "byt": {
+   "stay": 148.0,
+   "transport": 10.0,
+   "food": 28.0
+  },
+  "byt_path": "taiwan/taipei",
+  "numbeo": {}
+ },
+ "Taiyuan": {
+  "byt": {
+   "stay": 46.0,
+   "transport": 51.0,
+   "food": 38.0
+  },
+  "byt_path": "china/taiyuan",
+  "numbeo": {}
+ },
+ "Tampa": {
+  "byt": null,
+  "byt_path": "united-states/tampa",
+  "numbeo": {}
+ },
+ "Tbilisi": {
+  "byt": {
+   "stay": 13.0,
+   "transport": 6.0,
+   "food": 14.0
+  },
+  "byt_path": "georgia/tbilisi",
+  "numbeo": {}
+ },
+ "Tegucigalpa": {
+  "byt": null,
+  "byt_path": "honduras/tegucigalpa",
+  "numbeo": {}
+ },
+ "Tel Aviv": {
+  "byt": {
+   "stay": 106.0,
+   "transport": 11.0,
+   "food": 59.0
+  },
+  "byt_path": "israel/tel-aviv",
+  "numbeo": {}
+ },
+ "Tianjin": {
+  "byt": {
+   "stay": 37.0,
+   "transport": 39.0,
+   "food": 38.0
+  },
+  "byt_path": "china/tianjin",
+  "numbeo": {}
+ },
+ "Tirana": {
+  "byt": null,
+  "byt_path": "albania/tirana",
+  "numbeo": {}
+ },
+ "Toronto": {
+  "byt": {
+   "stay": 85.0,
+   "transport": 31.0,
+   "food": 105.0
+  },
+  "byt_path": "canada/toronto",
+  "numbeo": {}
+ },
+ "Tunis": {
+  "byt": null,
+  "byt_path": "tunisia/tunis",
+  "numbeo": {}
+ },
+ "Turin": {
+  "byt": null,
+  "byt_path": "italy/turin",
+  "numbeo": {}
+ },
+ "Valencia": {
+  "byt": {
+   "stay": 65.0,
+   "transport": 20.0,
+   "food": 79.0
+  },
+  "byt_path": "spain/valencia",
+  "numbeo": {}
+ },
+ "Vancouver": {
+  "byt": {
+   "stay": 84.0,
+   "transport": 14.0,
+   "food": 52.0
+  },
+  "byt_path": "canada/vancouver",
+  "numbeo": {}
+ },
+ "Vienna": {
+  "byt": {
+   "stay": 105.0,
+   "transport": 21.0,
+   "food": 64.0
+  },
+  "byt_path": "austria/vienna",
+  "numbeo": {}
+ },
+ "Warsaw": {
+  "byt": {
+   "stay": 53.0,
+   "transport": 5.0,
+   "food": 48.0
+  },
+  "byt_path": "poland/warsaw",
+  "numbeo": {}
+ },
+ "Washington D.C.": {
+  "byt": null,
+  "byt_path": "united-states/washington-dc",
+  "numbeo": {}
+ },
+ "Wellington": {
+  "byt": {
+   "stay": 57.0,
+   "transport": 11.0,
+   "food": 48.0
+  },
+  "byt_path": "new-zealand/wellington",
+  "numbeo": {}
+ },
+ "Wuhan": {
+  "byt": null,
+  "byt_path": "china/wuhan",
+  "numbeo": {}
+ },
+ "Xiamen": {
+  "byt": {
+   "stay": 33.0,
+   "transport": 6.0,
+   "food": 49.0
+  },
+  "byt_path": "china/xiamen",
+  "numbeo": {}
+ },
+ "Xi'an": {
+  "byt": null,
+  "byt_path": "china/xi-an",
+  "numbeo": {}
+ },
+ "Zagreb": {
+  "byt": {
+   "stay": 54.0,
+   "transport": 10.0,
+   "food": 32.0
+  },
+  "byt_path": "croatia/zagreb",
+  "numbeo": {}
+ },
+ "Zhengzhou": {
+  "byt": {
+   "stay": 22.0,
+   "transport": 15.0,
+   "food": 38.0
+  },
+  "byt_path": "china/zhengzhou",
+  "numbeo": {}
+ },
+ "Zurich": {
+  "byt": {
+   "stay": 187.0,
+   "transport": 39.0,
+   "food": 118.0
+  },
+  "byt_path": "switzerland/zurich",
+  "numbeo": {}
+ },
+ "George Town": {
+  "byt": null,
+  "byt_path": "malaysia/george-town",
+  "numbeo": {
+   "meal": 3.43,
+   "meal2": 15.18,
+   "ticket": 0.49,
+   "taxi_start": 1.22,
+   "taxi_km": 0.49
+  }
+ }
+}

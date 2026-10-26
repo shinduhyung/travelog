@@ -1,0 +1,784 @@
+{
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "First-timers who want the classic Shenzhen sights in one day, grouped by area.",
+      "days": [
+        {
+          "title": "Nanshan icons, then Futian views",
+          "stops": [
+            {
+              "place": "window_world",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Start early to beat the heat. Metro to Window of the World station."
+            },
+            {
+              "place": "splendid_china",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Next door. Grab lunch at the food stalls nearby first."
+            },
+            {
+              "place": "lianhuashan",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Short metro ride to Futian. Walk up for the skyline view."
+            },
+            {
+              "place": "ping_an",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Observation deck for sunset. Check hours on the day."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the mall food hall below."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Futian"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way from dim sum to late seafood, with a tea break in between.",
+      "days": [
+        {
+          "title": "Old streets, tea and seafood",
+          "stops": [
+            {
+              "place": "nanshan_walk",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Morning stroll in Nantou Ancient Town. Snack as you go."
+            },
+            {
+              "place": "heytea",
+              "at": "11:30",
+              "minutes": 20,
+              "note": "Try the cheese tea. Branches are everywhere in Futian."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch in the food hall. Many options for groups."
+            },
+            {
+              "place": "shekou_market",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Market is best in the morning, but food streets pick up late afternoon. Pick your seafood and have it cooked."
+            },
+            {
+              "place": "seaworld",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening walk and drinks by the plaza."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shekou"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Parks and coastal views with an easy pace and a sunset finish.",
+      "days": [
+        {
+          "title": "Coast and city parks",
+          "stops": [
+            {
+              "place": "shenzhen_bay",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Flat promenade. Go early before it gets hot. Bring water."
+            },
+            {
+              "place": "lianhuashan",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Metro to Futian. Short climb to the top."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch and a rest indoors."
+            },
+            {
+              "place": "oct_east",
+              "at": "15:30",
+              "minutes": 180,
+              "note": "Long taxi or metro ride to Luohu. Check hours on the day. Stay for sunset over the hills."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Futian"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the big Shenzhen icons and a taste of old streets in one full day.",
+      "days": [
+        {
+          "title": "Theme parks and the bay at sunset",
+          "stops": [
+            {
+              "place": "window_world",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Start early to beat the heat and crowds. Check opening hours on the day."
+            },
+            {
+              "place": "splendid_china",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Next door in Nanshan. Grab lunch nearby first."
+            },
+            {
+              "place": "shenzhen_bay",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Short taxi to the promenade. Stay for sunset over the water."
+            },
+            {
+              "place": "nanshan_walk",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Old town lanes, snacks and dinner. Shops wind down in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Skyline views, then out",
+          "stops": [
+            {
+              "place": "lianhuashan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Easy morning walk up for city views. Park usually opens early."
+            },
+            {
+              "place": "ping_an",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Observation deck in Futian. Go on a clear day; check hours on the day."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch in the mall food hall before you head off."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Futian (near Ping An and the metro)"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around tea, snacks and a big seafood dinner.",
+      "days": [
+        {
+          "title": "Old town snacks and Shekou seafood",
+          "stops": [
+            {
+              "place": "nanshan_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning stroll and street snacks in the old lanes."
+            },
+            {
+              "place": "heytea",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Try the cheese-topped tea. Branches are all over Futian."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch in the food hall."
+            },
+            {
+              "place": "shekou_market",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Pick seafood and have it cooked nearby. Busiest late afternoon."
+            },
+            {
+              "place": "seaworld",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Evening walk by the plaza bars to finish."
+            }
+          ]
+        },
+        {
+          "title": "Dim sum and a slow morning",
+          "stops": [
+            {
+              "place": "lianhuashan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Walk off breakfast with a park loop."
+            },
+            {
+              "place": "naixue",
+              "at": "11:00",
+              "minutes": 25,
+              "note": "Fruit tea and a sit-down before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shekou (walkable to the seafood streets)"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Travellers who want parks, coast and green space more than theme parks.",
+      "days": [
+        {
+          "title": "Parks and the bay",
+          "stops": [
+            {
+              "place": "lianhuashan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning climb for skyline views. Go early before it gets hot."
+            },
+            {
+              "place": "shenzhen_bay",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Flat coastal promenade. Bring water and sun cover."
+            },
+            {
+              "place": "naixue",
+              "at": "13:00",
+              "minutes": 25,
+              "note": "Cool down with a drink nearby."
+            },
+            {
+              "place": "shenzhen_bay",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Return for sunset if you want the best light."
+            }
+          ]
+        },
+        {
+          "title": "Hills and gardens east",
+          "stops": [
+            {
+              "place": "oct_east",
+              "at": "09:30",
+              "minutes": 360,
+              "note": "Big green resort area in Luohu. Start early; check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nanshan (close to the bay promenade)"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big theme parks plus old-town streets and skyline views.",
+      "days": [
+        {
+          "title": "Nanshan theme parks",
+          "stops": [
+            {
+              "place": "window_world",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Outdoor, so bring water and sun cover. Check hours on the day."
+            },
+            {
+              "place": "splendid_china",
+              "at": "17:15",
+              "minutes": 60,
+              "note": "Next door. A short walk-through is enough if you are tired."
+            },
+            {
+              "place": "happy_valley",
+              "at": "18:30",
+              "minutes": 120,
+              "note": "Optional evening add-on. Skip if you want an early night."
+            }
+          ]
+        },
+        {
+          "title": "Futian views and old streets",
+          "stops": [
+            {
+              "place": "lianhuashan",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Easy climb to the summit for skyline views. Go before it gets hot."
+            },
+            {
+              "place": "ping_an",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Observation deck. Clear days only. Check hours on the day."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch in the food hall."
+            },
+            {
+              "place": "nanshan_walk",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Old town lanes, small shops and snacks. About 30 minutes by taxi."
+            }
+          ]
+        },
+        {
+          "title": "Luohu culture and departure",
+          "stops": [
+            {
+              "place": "dafen",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Painting workshops and galleries. Weekday is calmer."
+            },
+            {
+              "place": "snoopys_world",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Mall rooftop, good for a short stop and lunch nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Futian (central, near the metro)"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want dim sum, milk tea and a seafood dinner by the harbour.",
+      "days": [
+        {
+          "title": "Futian snacks and skyline",
+          "stops": [
+            {
+              "place": "heytea",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Try the cheese-foam tea. Branches are everywhere."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Food hall for a light bite."
+            },
+            {
+              "place": "lianhuashan",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk off lunch and catch sunset from the summit."
+            },
+            {
+              "place": "naixue",
+              "at": "19:30",
+              "minutes": 25,
+              "note": "Fruit tea and a snack after dinner."
+            }
+          ]
+        },
+        {
+          "title": "Shekou seafood day",
+          "stops": [
+            {
+              "place": "shekou_market",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Pick seafood and have it cooked nearby. Agree prices first."
+            },
+            {
+              "place": "seaworld",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Plaza walk and bars. Lively into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Old town tastes, then go",
+          "stops": [
+            {
+              "place": "nanshan_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Street snacks and small eateries. Morning is quiet."
+            },
+            {
+              "place": "heytea",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "One last milk tea before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Shekou (near the seafood streets)"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Walkers who prefer parks, coast and birds over theme parks.",
+      "days": [
+        {
+          "title": "Bayside and hills",
+          "stops": [
+            {
+              "place": "shenzhen_bay",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Flat promenade. Best at sunset. Bring water."
+            },
+            {
+              "place": "lianhuashan",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Short evening climb for city lights."
+            }
+          ]
+        },
+        {
+          "title": "Wetlands and Ma Wan",
+          "stops": [
+            {
+              "place": "wetland_park",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed some weekdays, so check before you go. Winter is best for birds."
+            },
+            {
+              "place": "ma_wan",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Park and waterfront. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "OCT East, then go",
+          "stops": [
+            {
+              "place": "oct_east",
+              "at": "09:30",
+              "minutes": 360,
+              "note": "Big outdoor site in Luohu. Start early and wear good shoes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nanshan (close to the bay park)"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the big theme parks plus old-town streets and skyline views.",
+      "days": [
+        {
+          "title": "Arrive, Nanshan theme parks",
+          "stops": [
+            {
+              "place": "window_world",
+              "at": "14:00",
+              "minutes": 180,
+              "note": "Outdoor park. Go late afternoon and stay for the evening lights."
+            },
+            {
+              "place": "splendid_china",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Next door. A short walk-through before it closes; check closing time on the day."
+            },
+            {
+              "place": "nanshan_walk",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Old town lanes for dinner and a stroll."
+            }
+          ]
+        },
+        {
+          "title": "Futian skyline and parks",
+          "stops": [
+            {
+              "place": "ping_an",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Observation deck. Pick a clear morning; check hours on the day."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Lunch in the mall food hall."
+            },
+            {
+              "place": "lianhuashan",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Easy climb to the summit for sunset over the skyline."
+            },
+            {
+              "place": "heytea",
+              "at": "18:30",
+              "minutes": 20,
+              "note": "Grab a drink near the park before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Luohu old streets and art",
+          "stops": [
+            {
+              "place": "dafen",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Painting village. Weekday afternoons are quieter; shops usually open by 10:00."
+            },
+            {
+              "place": "snoopys_world",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Rooftop mall area. Check mall hours on the day."
+            },
+            {
+              "place": "oct_east",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Optional if you have energy; it is a long taxi ride east. Otherwise rest."
+            }
+          ]
+        },
+        {
+          "title": "Shekou walk, then fly",
+          "stops": [
+            {
+              "place": "shekou_market",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning market and food streets. Good for a late breakfast."
+            },
+            {
+              "place": "seaworld",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Plaza walk by the water before heading to the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Futian (metro Line 1/2/11 easy for both Nanshan and Luohu)"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want dim sum, tea shops, seafood markets and late-night snack streets.",
+      "days": [
+        {
+          "title": "Arrive, Futian tea and skyline",
+          "stops": [
+            {
+              "place": "ping_an_mall",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch in the food hall. Many Cantonese options."
+            },
+            {
+              "place": "naixue",
+              "at": "15:00",
+              "minutes": 25,
+              "note": "Afternoon tea break. Branches are everywhere."
+            },
+            {
+              "place": "lianhuashan",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk off lunch and catch sunset."
+            },
+            {
+              "place": "heytea",
+              "at": "19:00",
+              "minutes": 20,
+              "note": "Evening drink before dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Shekou seafood day",
+          "stops": [
+            {
+              "place": "shekou_market",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Pick seafood and have it cooked nearby. Prices vary; agree first."
+            },
+            {
+              "place": "seaworld",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Plaza bars and snacks into the evening."
+            }
+          ]
+        },
+        {
+          "title": "Old town snacks and art",
+          "stops": [
+            {
+              "place": "nanshan_walk",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Street snacks and small eateries. Morning is calm."
+            },
+            {
+              "place": "dafen",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Cafes and shops in the painting village."
+            },
+            {
+              "place": "window_world",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Optional evening visit; food stalls inside. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Dim sum, then fly",
+          "stops": [
+            {
+              "place": "ping_an_mall",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Late dim sum brunch before the airport run."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Futian or Shekou (both have dense food streets)"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want coastal walks, city parks and a quieter pace between big sights.",
+      "days": [
+        {
+          "title": "Arrive, bay promenade sunset",
+          "stops": [
+            {
+              "place": "shenzhen_bay",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Flat waterfront walk. Best light at sunset."
+            },
+            {
+              "place": "seaworld",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner by the water in Shekou."
+            }
+          ]
+        },
+        {
+          "title": "Parks and hills",
+          "stops": [
+            {
+              "place": "lianhuashan",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Morning climb before the heat. Park usually opens early."
+            },
+            {
+              "place": "ping_an_mall",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch, then a short rest."
+            },
+            {
+              "place": "shenzhen_bay",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Second visit for the evening breeze, or swap for a longer walk."
+            }
+          ]
+        },
+        {
+          "title": "East coast day",
+          "stops": [
+            {
+              "place": "oct_east",
+              "at": "09:30",
+              "minutes": 360,
+              "note": "Long taxi east. Start early; check hours on the day."
+            },
+            {
+              "place": "shekou_market",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Seafood dinner on the way back."
+            }
+          ]
+        },
+        {
+          "title": "Morning park, then fly",
+          "stops": [
+            {
+              "place": "lianhuashan",
+              "at": "08:00",
+              "minutes": 60,
+              "note": "Short morning walk before checkout."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Nanshan near Shenzhen Bay (walkable to the promenade)"
+    }
+  ]
+}

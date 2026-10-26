@@ -1,0 +1,31 @@
+$ deepseek_prep.py Jeddah
+  tokens in 710 out 308
+Jeddah: 2 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Jeddah
+  tokens in 7494 out 595
+Jeddah: 0 problems
+
+$ deepseek_city.py Jeddah --stage places
+Jeddah: places
+  tokens in 1174 out 2239
+
+$ deepseek_city.py Jeddah --stage frame
+Jeddah: frame
+  tokens in 2455 out 1908
+
+$ deepseek_city.py Jeddah --stage plans
+Jeddah: plans
+  plans for day
+  tokens in 1718 out 1028
+  plans for 1n
+  tokens in 1719 out 922
+  plans for 2n
+  tokens in 1724 out 1179
+  plans for 3n
+  tokens in 1719 out 1737
+
+$ merge_city.py Jeddah
+Jeddah: 15 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/jeddah.json and planner/jeddah.json
+

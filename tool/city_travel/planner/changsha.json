@@ -1,0 +1,533 @@
+{
+  "city": "Changsha",
+  "checked": "October 2026",
+  "intro_line": "Changsha: spicy food, ancient academies and riverside nights.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Wuyi Square",
+        "Juzizhou",
+        "Yuelu District",
+        "Changsha South Station"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Wuyi Square",
+        "Juzizhou",
+        "Yuelu District",
+        "Changsha South Station"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Wuyi Square",
+        "Juzizhou",
+        "Yuelu District",
+        "Changsha South Station"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Wuyi Square",
+        "Juzizhou",
+        "Yuelu District",
+        "Changsha South Station"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Wuyi Square",
+        "Juzizhou",
+        "Yuelu District",
+        "Changsha South Station"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 10,
+        "low": 3,
+        "rain_days": 11,
+        "note": "January: cold and damp, highs near 10°C. Pack a warm coat."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 14,
+        "note": "February: still chilly, around 13°C, and one of the wetter months."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 17,
+        "note": "March: mild at 18°C but frequent rain; bring an umbrella."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 17,
+        "note": "April: pleasant 23°C, rainy spells; good for walking."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 18,
+        "note": "May: warm and humid, 27°C, with plenty of rain days."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 18,
+        "note": "June: hot and wet, around 30°C; expect sticky afternoons."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 13,
+        "note": "July: peak heat near 33°C; plan indoor breaks midday."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 12,
+        "note": "August: as hot as July, around 33°C; stay hydrated."
+      },
+      {
+        "high": 30,
+        "low": 22,
+        "rain_days": 8,
+        "note": "September: hot but drier, 30°C; a good shoulder month."
+      },
+      {
+        "high": 23,
+        "low": 16,
+        "rain_days": 9,
+        "note": "October: the best month, mild 23°C and fewer rain days."
+      },
+      {
+        "high": 18,
+        "low": 10,
+        "rain_days": 10,
+        "note": "November: cool and mostly dry, around 18°C; bring a layer."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 8,
+        "note": "December: cold at 12°C and drier; warm clothes needed."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.7,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.75
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.6,
+      0.6,
+      0.85,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nature": [
+      0.5,
+      0.55,
+      0.75,
+      0.85,
+      0.8,
+      0.65,
+      0.45,
+      0.45,
+      0.75,
+      0.9,
+      0.7,
+      0.5
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.85,
+      0.75,
+      0.65
+    ]
+  },
+  "places": {
+    "yuelu-academy": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, weekdays",
+      "area": "Yuelu District",
+      "popularity": 5
+    },
+    "orange-isle": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Juzizhou",
+      "popularity": 5
+    },
+    "hunan-museum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Wuyi Square",
+      "popularity": 5
+    },
+    "ifs-tower": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset and evening",
+      "area": "Wuyi Square",
+      "popularity": 5
+    },
+    "pozi-street": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Wuyi Square",
+      "popularity": 5
+    },
+    "huangxing-road": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Wuyi Square",
+      "popularity": 4
+    },
+    "juzizhou-bridge": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Juzizhou",
+      "popularity": 4
+    },
+    "yuelu-mountain": {
+      "types": [
+        "nature",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning, cooler months",
+      "area": "Yuelu District",
+      "popularity": 4
+    },
+    "aiwan-pavilion": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Yuelu District",
+      "popularity": 3
+    },
+    "taiping-street": {
+      "types": [
+        "food",
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Wuyi Square",
+      "popularity": 4
+    },
+    "juzizhou-head": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Juzizhou",
+      "popularity": 3
+    },
+    "helong-sports": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late evening",
+      "area": "Changsha South Station",
+      "popularity": 3
+    },
+    "kaifu-temple": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Wuyi Square",
+      "popularity": 3
+    },
+    "xiang-river-cruise": {
+      "types": [
+        "nightlife",
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Juzizhou",
+      "popularity": 4
+    },
+    "wuyi-square": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Wuyi Square",
+      "popularity": 4
+    },
+    "mawangdui-site": {
+      "types": [
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Changsha South Station",
+      "popularity": 2
+    },
+    "changsha-south": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Daytime",
+      "area": "Changsha South Station",
+      "popularity": 2
+    },
+    "juzizhou-ferry": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Juzizhou",
+      "popularity": 3
+    },
+    "yuelu-gate-food": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Lunchtime",
+      "area": "Yuelu District",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the snack streets, Yuelu Academy and the museums without rushing; add a night for the mountain and river."
+  },
+  "airports": [
+    {
+      "code": "CSX",
+      "name": "Changsha Huanghua International Airport",
+      "primary": true,
+      "note": "Main airport, about 24 km east of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "CAAC Aviation Hotel, Wuyi Dadao",
+          "price": "¥16.5",
+          "time": "45-60 min",
+          "note": "Runs 06:00-22:00; also shuttles to South Railway Station."
+        },
+        {
+          "mode": "Maglev + Metro",
+          "to": "Changsha South Railway Station, then city centre",
+          "price": "¥20-30",
+          "time": "40-55 min",
+          "note": "Fastest rail option; transfer to Metro Line 2."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "¥80-120",
+          "time": "35-50 min",
+          "note": "Taxis wait outside arrivals; use the meter."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥70-110",
+          "time": "35-50 min",
+          "note": "Book in the app; meet at the designated pickup zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Changsha",
+      "https://en.wikivoyage.org/wiki/Changsha"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "history",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for most trips; DiDi for late nights and airport runs.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "5 lines plus a maglev link to the airport. Fares are low, roughly ¥2–8. Easiest way around for visitors."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses cost ¥1–2; air-conditioned and cross-city routes cost ¥2. Cheap but slower."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis start at ¥8 by day and ¥10 at night, meters standard. DiDi works well; have the destination in Chinese."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is busy and parking is hard. The metro is easier for visitors."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine downtown; shared bikes suit short riverside hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Humid subtropical: hot, wet summers and cool, damp winters. Spring and autumn are the most comfortable.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Hot summers",
+        "text": "July and August peak near 33°C with high humidity. Take midday breaks indoors."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rainy spring",
+        "text": "March to June has the most rain days, up to 18 a month. Carry an umbrella."
+      },
+      {
+        "icon": "🍂",
+        "title": "Best time: October",
+        "text": "Mild around 23°C with fewer rain days. Ideal for the mountain and river walks."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cool winters",
+        "text": "January highs near 10°C and lows near 3°C. Damp cold; pack warm layers."
+      },
+      {
+        "icon": "💦",
+        "title": "Humidity year-round",
+        "text": "Summers feel hotter than the numbers; winters feel colder. Dress in layers."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light breathable clothes and rain gear for summer; a warm coat and umbrella for winter and spring."
+      }
+    ]
+  }
+}

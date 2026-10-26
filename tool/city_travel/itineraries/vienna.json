@@ -1,0 +1,1704 @@
+{
+  "city": "Vienna",
+  "checked": "October 2026",
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro": "Vienna rewards visitors with grand palaces, world-class museums, and a relaxed café culture. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 48.1711,
+      "west": 16.2957,
+      "north": 48.2902,
+      "east": 16.4373,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 4.5,
+      "flag_airport": 4.5,
+      "per_km": 1.6,
+      "min_fare": 6
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "U-Bahn, trams, and buses run on one ticket; buy a 24/48/72-hour pass or single fares around €2.60.",
+      "Validate tickets before riding; inspectors fine on the spot.",
+      "Taxis are metered; Uber and Bolt both work in Vienna.",
+      "Driving is slow and parking is scarce; skip the rental car in town.",
+      "The centre is flat and walkable; bikes and e-scooters are easy to rent.",
+      "No ferries; the Danube is crossed by bridges and the U-Bahn."
+    ],
+    "sources": []
+  },
+  "places": {
+    "schonbrunn": {
+      "name": "Schönbrunn Palace",
+      "landmark": "Schönbrunn Palace",
+      "kind": "sight",
+      "lat": 48.1852,
+      "lon": 16.3117,
+      "price": 32,
+      "price_text": "≈ EUR 25–35 for the Grand Tour; gardens free",
+      "hours": "Daily roughly 08:30–17:00, longer in summer; check on the day",
+      "tip": "Book a timed ticket online and arrive early; the gardens and Gloriette hill are free.",
+      "source": "https://www.schoenbrunn.at/en/"
+    },
+    "hofburg": {
+      "name": "Hofburg Palace",
+      "landmark": "Hofburg Palace",
+      "kind": "sight",
+      "lat": 48.2078,
+      "lon": 16.3686,
+      "price": 21,
+      "price_text": "≈ EUR 18–25 for the Imperial Apartments, Sisi Museum and Silver Collection",
+      "hours": "Daily roughly 09:00–17:30; check on the day",
+      "tip": "The combined ticket covers the apartments, Sisi Museum and silver collection in one loop.",
+      "source": "https://www.kaiserliche-schatzkammer.at/en/"
+    },
+    "stephansdom": {
+      "name": "St Stephen's Cathedral",
+      "landmark": "St Stephen's Cathedral",
+      "kind": "sight",
+      "lat": 48.2084,
+      "lon": 16.3732,
+      "price": 6,
+      "price_text": "Nave free; towers and catacombs ≈ EUR 6–15 each",
+      "hours": "Mon–Sat roughly 09:00–17:00, Sun from 13:00; check on the day",
+      "tip": "Climb the south tower stairs for the roof tiles, or take the lift up the north tower.",
+      "source": "https://www.stephanskirche.at/"
+    },
+    "belvedere": {
+      "name": "Belvedere Palace",
+      "landmark": "Belvedere Palace",
+      "kind": "museum",
+      "lat": 48.1923,
+      "lon": 16.3813,
+      "price": 18,
+      "price_text": "≈ EUR 15–20 for Upper Belvedere; gardens free",
+      "hours": "Daily roughly 09:00–18:00; check on the day",
+      "tip": "Upper Belvedere holds Klimt's 'The Kiss'; book online and walk the free gardens between the palaces.",
+      "source": "https://www.belvedere.at/en"
+    },
+    "staatsoper": {
+      "name": "Vienna State Opera",
+      "landmark": "Vienna State Opera",
+      "kind": "show",
+      "lat": 48.1865,
+      "lon": 16.3692,
+      "price": 15,
+      "price_text": "Standing tickets ≈ EUR 10–20; seated tickets much higher",
+      "hours": "Box office daily; performances usually evening",
+      "tip": "Cheap standing places go on sale shortly before the show; queue early.",
+      "source": "https://www.wiener-staatsoper.at/en/"
+    },
+    "kunsthistorisches": {
+      "name": "Kunsthistorisches Museum",
+      "landmark": "Kunsthistorisches Museum",
+      "kind": "museum",
+      "lat": 48.2036,
+      "lon": 16.3619,
+      "price": 21,
+      "price_text": "≈ EUR 18–22; under 19 free",
+      "hours": "Closed Monday · Tue–Sun roughly 10:00–18:00; check on the day",
+      "tip": "See the Bruegel collection and the painted staircase, then rest in the café under the dome.",
+      "source": "https://www.khm.at/en/"
+    },
+    "mq": {
+      "name": "MuseumsQuartier",
+      "landmark": "MuseumsQuartier",
+      "kind": "sight",
+      "lat": 48.2031,
+      "lon": 16.3574,
+      "price": 0,
+      "price_text": "Courtyards free; museums charge separately",
+      "hours": "Courtyards open daily, roughly 06:00–01:00",
+      "tip": "Grab a drink on the Enzi furniture in the courtyard and watch the city go by.",
+      "source": "https://www.mqw.at/en/"
+    },
+    "naschmarkt": {
+      "name": "Naschmarkt",
+      "landmark": "Naschmarkt",
+      "kind": "food",
+      "lat": 48.1983,
+      "lon": 16.3601,
+      "price": 0,
+      "price_text": "Free to browse; food and drinks priced per stall",
+      "hours": "Mon–Fri roughly 06:00–21:00, Sat until about 18:00; closed Sunday",
+      "tip": "Come hungry on Saturday morning for the flea market at the far end.",
+      "source": "https://www.naschmarkt-vienna.com/"
+    },
+    "albertina": {
+      "name": "Albertina",
+      "landmark": "Albertina",
+      "kind": "museum",
+      "lat": 48.2052,
+      "lon": 16.3688,
+      "price": 19,
+      "price_text": "≈ EUR 16–20; check current exhibitions",
+      "hours": "Daily roughly 10:00–18:00, later some evenings; check on the day",
+      "tip": "The state rooms and the view from the terrace are worth the ticket alone.",
+      "source": "https://www.albertina.at/en/"
+    },
+    "nationalbibliothek": {
+      "name": "Austrian National Library",
+      "landmark": "Austrian National Library",
+      "kind": "sight",
+      "lat": 48.2062,
+      "lon": 16.3668,
+      "price": 11,
+      "price_text": "≈ EUR 9–12 for the State Hall",
+      "hours": "Daily roughly 10:00–18:00; check on the day",
+      "tip": "The baroque State Hall is the highlight; go early for quiet photos.",
+      "source": "https://www.onb.ac.at/en/"
+    },
+    "burgtheater": {
+      "name": "Burgtheater",
+      "landmark": "Burgtheater",
+      "kind": "show",
+      "lat": 48.2103,
+      "lon": 16.3615,
+      "price": 15,
+      "price_text": "Tickets vary widely; guided tours ≈ EUR 10–15",
+      "hours": "Box office daily; performances usually evening",
+      "tip": "If you don't speak German, take a daytime guided tour of the building instead.",
+      "source": "https://www.burgtheater.at/"
+    },
+    "danube_cruise": {
+      "name": "Danube Canal Cruise",
+      "landmark": "Danube Canal Cruise",
+      "kind": "tour",
+      "lat": 48.2127,
+      "lon": 16.3776,
+      "price": 25,
+      "price_text": "≈ EUR 20–30 for a short city boat tour",
+      "hours": "Seasonal, roughly April–October; check on the day",
+      "tip": "Sit outside at the back for the best views of the canal graffiti and bridges.",
+      "source": ""
+    },
+    "happel": {
+      "name": "Ernst-Happel-Stadion",
+      "landmark": "Ernst-Happel-Stadion",
+      "kind": "sight",
+      "lat": 48.2073,
+      "lon": 16.4213,
+      "price": 12,
+      "price_text": "Stadium tours ≈ EUR 10–15; match tickets vary",
+      "hours": "Tours on selected days; check on the day",
+      "tip": "Only worth the trip for football fans or a match day; check the tour schedule first.",
+      "source": "https://www.wien.gv.at/english/"
+    },
+    "haus_der_musik": {
+      "name": "Haus der Musik",
+      "landmark": "Haus der Musik",
+      "kind": "museum",
+      "lat": 48.2043,
+      "lon": 16.3719,
+      "price": 16,
+      "price_text": "≈ EUR 13–18; family tickets available",
+      "hours": "Daily roughly 10:00–22:00; check on the day",
+      "tip": "Good for families and rainy days; the virtual conductor is the fun part.",
+      "source": "https://www.hausdermusik.com/en/"
+    },
+    "heiligenkreuz": {
+      "name": "Heiligenkreuz Abbey",
+      "landmark": "Heiligenkreuz Abbey",
+      "kind": "sight",
+      "lat": 48.0673,
+      "lon": 16.0883,
+      "price": 10,
+      "price_text": "≈ EUR 8–12 for a guided tour; church free",
+      "hours": "Daily roughly 09:00–17:00; tours at set times",
+      "tip": "It is outside the city in the Vienna Woods; combine with a day trip by train or car.",
+      "source": "https://www.stift-heiligenkreuz.org/"
+    },
+    "hundertwasser": {
+      "name": "Hundertwasserhaus",
+      "landmark": "Hundertwasserhaus",
+      "kind": "sight",
+      "lat": 48.2098,
+      "lon": 16.3941,
+      "price": 0,
+      "price_text": "Free to view from outside",
+      "hours": "Exterior viewable any time",
+      "tip": "It is a private apartment block, so admire it from the street and skip the doorway.",
+      "source": ""
+    },
+    "kaisergruft": {
+      "name": "Kaisergruft",
+      "landmark": "Kaisergruft",
+      "kind": "sight",
+      "lat": 48.2064,
+      "lon": 16.3697,
+      "price": 8,
+      "price_text": "≈ EUR 6–9",
+      "hours": "Daily roughly 10:00–18:00; check on the day",
+      "tip": "The Habsburg crypt sits under the Kapuzinerkirche; the plain coffins are surprisingly moving.",
+      "source": "https://www.kaisergruft.at/"
+    },
+    "kapuzinerkirche": {
+      "name": "Kapuzinerkirche",
+      "landmark": "Kapuzinerkirche",
+      "kind": "sight",
+      "lat": 48.2065,
+      "lon": 16.3698,
+      "price": 0,
+      "price_text": "Church free; crypt charged separately",
+      "hours": "Daily, roughly 10:00–18:00",
+      "tip": "Step in for a quiet moment before or after the crypt next door.",
+      "source": ""
+    },
+    "leopold": {
+      "name": "Leopold Museum",
+      "landmark": "Leopold Museum",
+      "kind": "museum",
+      "lat": 48.2032,
+      "lon": 16.3586,
+      "price": 17,
+      "price_text": "≈ EUR 14–18",
+      "hours": "Closed Tuesday · Wed–Sun roughly 10:00–18:00; check on the day",
+      "tip": "The Schiele and Klimt collection is the draw; allow two hours.",
+      "source": "https://www.leopoldmuseum.org/en/"
+    },
+    "liechtenstein": {
+      "name": "Liechtenstein City Palace",
+      "landmark": "Liechtenstein City Palace",
+      "kind": "sight",
+      "lat": 48.2096,
+      "lon": 16.368,
+      "price": 15,
+      "price_text": "≈ EUR 12–18; guided tours only",
+      "hours": "Limited tour times; check on the day",
+      "tip": "Tours are limited, so book ahead; the baroque rooms are the highlight.",
+      "source": "https://www.palaisliechtenstein.com/en/"
+    },
+    "mariahilfer": {
+      "name": "Mariahilfer Strasse",
+      "landmark": "Mariahilfer Strasse",
+      "kind": "activity",
+      "lat": 48.1991,
+      "lon": 16.3501,
+      "price": 0,
+      "price_text": "Free to walk; shops priced per item",
+      "hours": "Shops roughly Mon–Sat 10:00–19:00; closed Sunday",
+      "tip": "It is the main shopping street; go on a weekday to avoid Saturday crowds.",
+      "source": ""
+    },
+    "mozarthaus": {
+      "name": "Mozarthaus Vienna",
+      "landmark": "Mozarthaus Vienna",
+      "kind": "museum",
+      "lat": 48.2091,
+      "lon": 16.3768,
+      "price": 12,
+      "price_text": "≈ EUR 10–14",
+      "hours": "Daily roughly 10:00–18:00; check on the day",
+      "tip": "Small museum in Mozart's only surviving Vienna apartment; good for music fans.",
+      "source": "https://www.mozarthausvienna.at/en/"
+    },
+    "kahlenberg": {
+      "name": "Kahlenberg viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 48.2761,
+      "lon": 16.3336,
+      "price": 0,
+      "price_text": "Free; bus or taxi to get there",
+      "hours": "Open any time",
+      "tip": "Best city panorama over the Danube; take bus 38A from Heiligenstadt.",
+      "source": ""
+    },
+    "prater": {
+      "name": "Prater and Riesenrad",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 48.2167,
+      "lon": 16.3958,
+      "price": 14,
+      "price_text": "Ferris wheel ≈ EUR 12–15; park free",
+      "hours": "Wheel daily roughly 10:00–22:00; park always open",
+      "tip": "Ride the old Ferris wheel at dusk for city lights, then walk the chestnut avenue.",
+      "source": "https://www.wienerriesenrad.com/en/"
+    },
+    "cafe_central": {
+      "name": "Café Central",
+      "landmark": null,
+      "kind": "food",
+      "lat": 48.2104,
+      "lon": 16.3656,
+      "price": 12,
+      "price_text": "Coffee and cake ≈ EUR 8–15",
+      "hours": "Mon–Sat roughly 07:30–22:00, Sun from 10:00",
+      "tip": "Classic Viennese coffee house; expect a queue, or go mid-afternoon.",
+      "source": "https://www.cafecentral.wien/en/"
+    },
+    "donauinsel": {
+      "name": "Danube Island walk",
+      "landmark": null,
+      "kind": "park",
+      "lat": 48.2296,
+      "lon": 16.4106,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Locals swim and cycle here in summer; bring a picnic and rent a bike.",
+      "source": ""
+    },
+    "spittelberg": {
+      "name": "Spittelberg neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 48.2043,
+      "lon": 16.3556,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; bars busiest in the evening",
+      "tip": "Quiet cobbled lanes with small bars and shops; combine with the MuseumsQuartier.",
+      "source": ""
+    },
+    "third_man_tour": {
+      "name": "Third Man film locations walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 48.2119,
+      "lon": 16.3747,
+      "price": 15,
+      "price_text": "≈ EUR 10–20 for a guided walk; check operators",
+      "hours": "Scheduled tours; check on the day",
+      "tip": "Fun for film fans; the sewer scenes were shot near the canal in the Innere Stadt.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of imperial Vienna: palace in the morning, old town and a coffee house in the afternoon.",
+      "days": [
+        {
+          "title": "Schönbrunn, then the old town",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Go straight to the palace at opening. Book tickets online to skip the queue. The gardens are free."
+            },
+            {
+              "place": "hofburg",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Take the U4 to Karlsplatz, then walk. See the imperial apartments and the Sisi Museum."
+            },
+            {
+              "place": "stephansdom",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Step inside for free; the towers cost extra."
+            },
+            {
+              "place": "cafe_central",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Coffee and cake. Expect a queue; mid-afternoon is calmer."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening performance. Standing tickets are cheap; book ahead for weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Klimt and the old masters in one day, with a museum-quarter evening.",
+      "days": [
+        {
+          "title": "Belvedere, Kunsthistorisches, MuseumsQuartier",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Start with the Upper Belvedere for Klimt's The Kiss. Go early before the tour groups."
+            },
+            {
+              "place": "kunsthistorisches",
+              "at": "12:00",
+              "minutes": 180,
+              "note": "Closed Monday. The café under the dome is a good lunch stop."
+            },
+            {
+              "place": "mq",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot. Courtyards are free; pick one museum if you have energy."
+            },
+            {
+              "place": "leopold",
+              "at": "17:30",
+              "minutes": 120,
+              "note": "Closed Tuesday. Schiele and Klimt in the MuseumsQuartier."
+            },
+            {
+              "place": "spittelberg",
+              "at": "20:00",
+              "minutes": 60,
+              "note": "Dinner in the lanes behind the MuseumsQuartier."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Neubau"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Market breakfast, a long café afternoon and a schnitzel dinner.",
+      "days": [
+        {
+          "title": "Naschmarkt and the coffee houses",
+          "stops": [
+            {
+              "place": "naschmarkt",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Saturday morning is busiest and best. Graze as you go."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Shops closed Sunday."
+            },
+            {
+              "place": "cafe_central",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk back toward the old town. Cake and a melange."
+            },
+            {
+              "place": "stephansdom",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Five minutes on foot. A quick look inside to walk off lunch."
+            },
+            {
+              "place": "spittelberg",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Evening bars and small restaurants. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mariahilf"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for a first visit: the imperial centre on day one, Schönbrunn before you leave.",
+      "days": [
+        {
+          "title": "Innere Stadt on foot",
+          "stops": [
+            {
+              "place": "stephansdom",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early before the tour groups. Modest dress inside."
+            },
+            {
+              "place": "hofburg",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Five minutes on foot. Pick one collection, not all of them."
+            },
+            {
+              "place": "cafe_central",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and a coffee. Expect a queue; mid-afternoon is quieter."
+            },
+            {
+              "place": "nationalbibliothek",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "The baroque hall is the highlight. Short visit."
+            },
+            {
+              "place": "kaisergruft",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Quick stop under the Kapuzinerkirche. Same square."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn, then depart",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "First entry beats the crowds. Book palace tickets ahead. U4 to Schönbrunn."
+            },
+            {
+              "place": "naschmarkt",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch among the stalls. Closed Sunday, so swap days if needed."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Klimt and the old masters in one tight day, with the MuseumsQuartier at night.",
+      "days": [
+        {
+          "title": "Museum quarter and Klimt",
+          "stops": [
+            {
+              "place": "kunsthistorisches",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. The Bruegel room alone is worth it."
+            },
+            {
+              "place": "mq",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch in the courtyards, then browse. Ten minutes on foot."
+            },
+            {
+              "place": "leopold",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Tuesday. The Klimt collection is the draw."
+            },
+            {
+              "place": "spittelberg",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner in the lanes behind the museum. Bars get busy later."
+            }
+          ]
+        },
+        {
+          "title": "Belvedere and the Albertina",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Upper Belvedere first for The Kiss, then the gardens."
+            },
+            {
+              "place": "albertina",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Lunch nearby, then the collection. Good rainy-day backup."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Markets, cafés and a long lunch, with a palace walk in between.",
+      "days": [
+        {
+          "title": "Naschmarkt and the centre",
+          "stops": [
+            {
+              "place": "naschmarkt",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Best on Saturday morning. Closed Sunday. Graze as you go."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Short walk north. Shops closed Sunday."
+            },
+            {
+              "place": "cafe_central",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Coffee and cake. Queue is shortest mid-afternoon."
+            },
+            {
+              "place": "stephansdom",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Walk off lunch. Five minutes from the café."
+            },
+            {
+              "place": "spittelberg",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner in the lanes. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn and a last coffee",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Palace first, then the gardens. Café on site for a snack."
+            },
+            {
+              "place": "hofburg",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Back on the U4. Optional if you are short on time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Repeat-safe pick: the imperial core plus one evening at the opera or theatre.",
+      "days": [
+        {
+          "title": "Palaces and an evening show",
+          "stops": [
+            {
+              "place": "hofburg",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "First entry to avoid crowds."
+            },
+            {
+              "place": "stephansdom",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "cafe_central",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Queue moves faster mid-afternoon."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead for weekends. Standing tickets are cheap."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn before you go",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book palace tickets ahead. U4 to Schönbrunn."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big palaces, the cathedral and a coffee house, grouped by area.",
+      "days": [
+        {
+          "title": "Innere Stadt on foot",
+          "stops": [
+            {
+              "place": "stephansdom",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early before the tour groups. Modest dress inside."
+            },
+            {
+              "place": "hofburg",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Five minutes on foot. Pick one collection, the complex is huge."
+            },
+            {
+              "place": "cafe_central",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and cake. Expect a queue; mid-afternoon is quieter."
+            },
+            {
+              "place": "nationalbibliothek",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "The baroque hall is the highlight. Short visit."
+            },
+            {
+              "place": "kaisergruft",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Under the Kapuzinerkirche, a few minutes away. Quick stop."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn, then an evening out",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book palace tickets ahead. Walk up to the Gloriette for the view."
+            },
+            {
+              "place": "naschmarkt",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch at the stalls. Closed Sunday."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening performance. Book ahead for weekends; standing tickets are cheap."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Museum lovers: Klimt at the Belvedere, the Kunsthistorisches and the MuseumsQuartier.",
+      "days": [
+        {
+          "title": "Museums and the Ringstrasse",
+          "stops": [
+            {
+              "place": "kunsthistorisches",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is calmest."
+            },
+            {
+              "place": "albertina",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Ten minutes on foot. Good rainy-afternoon choice."
+            },
+            {
+              "place": "mq",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Courtyards and cafés. Nice late afternoon into evening."
+            },
+            {
+              "place": "leopold",
+              "at": "18:00",
+              "minutes": 120,
+              "note": "Inside the MuseumsQuartier. Closed Tuesday; check evening hours."
+            }
+          ]
+        },
+        {
+          "title": "Belvedere and the canal",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Klimt's The Kiss upstairs. Gardens after the museum."
+            },
+            {
+              "place": "hundertwasser",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Exterior only, viewable any time. Short photo stop."
+            },
+            {
+              "place": "danube_cruise",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Seasonal, roughly April to October. Check on the day."
+            },
+            {
+              "place": "prater",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Riesenrad at dusk is the classic view."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eat your way through markets, cafés and schnitzel, with palaces in between.",
+      "days": [
+        {
+          "title": "Market morning and the old town",
+          "stops": [
+            {
+              "place": "naschmarkt",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Best on Saturday morning. Closed Sunday."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shops closed Sunday. Good for a stroll and a snack."
+            },
+            {
+              "place": "stephansdom",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Ten minutes by U-Bahn. Quick look inside."
+            },
+            {
+              "place": "cafe_central",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Coffee and cake, the Viennese way."
+            },
+            {
+              "place": "spittelberg",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Small streets with bars and dinner spots. Busiest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Palace, then a long lunch",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "09:00",
+              "minutes": 180,
+              "note": "Book ahead. The garden is free to walk."
+            },
+            {
+              "place": "hofburg",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "About 30 minutes by tram. One collection is enough."
+            },
+            {
+              "place": "kaisergruft",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Nearby and quick. Then find dinner in the old town."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the palaces, the old centre and a coffee house afternoon.",
+      "days": [
+        {
+          "title": "Imperial centre on foot",
+          "stops": [
+            {
+              "place": "stephansdom",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Go early before the tour groups. Modest dress inside."
+            },
+            {
+              "place": "hofburg",
+              "at": "10:15",
+              "minutes": 120,
+              "note": "Five minutes on foot. Pick one collection, not all of them."
+            },
+            {
+              "place": "nationalbibliothek",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "The baroque hall is the highlight. Quick stop."
+            },
+            {
+              "place": "cafe_central",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch and cake. Expect a queue; mid-afternoon is quieter."
+            },
+            {
+              "place": "kaisergruft",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Under the Kapuzinerkirche. Short and memorable."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn and the west",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book the palace slot online. Gardens are free."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and a stroll. Shops close Sunday."
+            },
+            {
+              "place": "mq",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Courtyards are free. Good coffee and people-watching."
+            },
+            {
+              "place": "spittelberg",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Cobbled lanes nearby. Bars get busy later."
+            }
+          ]
+        },
+        {
+          "title": "Belvedere, opera, and out",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Klimt upstairs. Gardens after."
+            },
+            {
+              "place": "hundertwasser",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Exterior only. A short tram ride away."
+            },
+            {
+              "place": "prater",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Riesenrad runs daily. Park is always open."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead for weekends. Standing tickets are cheap."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Klimt, old masters and the museum quarter, with time for the opera.",
+      "days": [
+        {
+          "title": "Museum quarter and Klimt",
+          "stops": [
+            {
+              "place": "kunsthistorisches",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is calmest."
+            },
+            {
+              "place": "mq",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch in the courtyards, then browse."
+            },
+            {
+              "place": "leopold",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Closed Tuesday. Big Klimt collection."
+            },
+            {
+              "place": "spittelberg",
+              "at": "17:45",
+              "minutes": 60,
+              "note": "Dinner in the lanes nearby."
+            }
+          ]
+        },
+        {
+          "title": "Belvedere and the centre",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "The Kiss is upstairs. Gardens after."
+            },
+            {
+              "place": "albertina",
+              "at": "12:30",
+              "minutes": 120,
+              "note": "Prints and drawings; check the current show."
+            },
+            {
+              "place": "stephansdom",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Five minutes on foot. Early afternoon is busy."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Standing places sell on the day."
+            }
+          ]
+        },
+        {
+          "title": "Palaces and music",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book the palace slot online in advance."
+            },
+            {
+              "place": "haus_der_musik",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Good rainy-afternoon backup."
+            },
+            {
+              "place": "mozarthaus",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Quick stop near the cathedral."
+            },
+            {
+              "place": "burgtheater",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Evening performance or a daytime tour."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Markets, cake and long café afternoons, with the big sights in between.",
+      "days": [
+        {
+          "title": "Market morning and the centre",
+          "stops": [
+            {
+              "place": "naschmarkt",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Closed Sunday. Saturday is liveliest."
+            },
+            {
+              "place": "stephansdom",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Ten minutes on foot. Modest dress inside."
+            },
+            {
+              "place": "cafe_central",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch and cake. Queue is shorter mid-afternoon."
+            },
+            {
+              "place": "hofburg",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Pick one collection. Café Sacher is nearby for later."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn and the west",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book the palace slot online. Gardens are free."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop. Shops close Sunday."
+            },
+            {
+              "place": "spittelberg",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Quiet lanes, good for an afternoon coffee."
+            },
+            {
+              "place": "mq",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Courtyards open late. Dinner options around."
+            }
+          ]
+        },
+        {
+          "title": "Danube side and a last dinner",
+          "stops": [
+            {
+              "place": "donauinsel",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Flat walk by the water. Always open."
+            },
+            {
+              "place": "prater",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Riesenrad daily. Snack stalls in the park."
+            },
+            {
+              "place": "hundertwasser",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Exterior only. Quick photo stop."
+            },
+            {
+              "place": "naschmarkt",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Early dinner. Closed Sunday, so plan around it."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Mariahilf"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want the big palaces, the old centre and a coffee house afternoon, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and the old centre",
+          "stops": [
+            {
+              "place": "stephansdom",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Start here to get your bearings. Early afternoon is busier than morning, so keep it short."
+            },
+            {
+              "place": "hofburg",
+              "at": "15:15",
+              "minutes": 120,
+              "note": "Ten minutes on foot. Last entry is usually well before closing, so check on the day."
+            },
+            {
+              "place": "kaisergruft",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Under the Kapuzinerkirche, a few minutes away. Quick stop."
+            },
+            {
+              "place": "cafe_central",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Coffee and cake, or an early dinner. Expect a queue at peak times."
+            }
+          ]
+        },
+        {
+          "title": "Schönbrunn in the morning",
+          "stops": [
+            {
+              "place": "schonbrunn",
+              "at": "08:30",
+              "minutes": 180,
+              "note": "Book the palace slot ahead. Walk up to the Gloriette for the view."
+            },
+            {
+              "place": "naschmarkt",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch at the stalls. Closed Sunday."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short stroll if you want to shop. Most shops shut on Sunday."
+            },
+            {
+              "place": "spittelberg",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Quiet lanes and bars. Good for an evening meal."
+            }
+          ]
+        },
+        {
+          "title": "Museums and the Ringstrasse",
+          "stops": [
+            {
+              "place": "kunsthistorisches",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Go at opening."
+            },
+            {
+              "place": "mq",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Ten minutes on foot. Courtyards are free to wander."
+            },
+            {
+              "place": "nationalbibliothek",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "The baroque hall is the highlight. Check hours on the day."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Evening performance. Book ahead, especially weekends."
+            }
+          ]
+        },
+        {
+          "title": "Belvedere, then out east",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Museum first, then the gardens."
+            },
+            {
+              "place": "hundertwasser",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Exterior only. A short tram or taxi ride away."
+            },
+            {
+              "place": "prater",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Riesenrad and a park walk. Wheel runs into the evening."
+            },
+            {
+              "place": "donauinsel",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Riverside walk if the weather is good."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "4n-art",
+      "length": "4n",
+      "style": "art",
+      "nights": 4,
+      "for": "Klimt fans and museum-goers: the big collections plus the MuseumsQuartier, with time for the opera.",
+      "days": [
+        {
+          "title": "Arrive, Albertina and the opera",
+          "stops": [
+            {
+              "place": "albertina",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Good rainy-afternoon choice. Check late-opening evenings."
+            },
+            {
+              "place": "stephansdom",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Five minutes on foot."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead. Standing tickets can be cheap, check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Belvedere and the Kunsthistorisches",
+          "stops": [
+            {
+              "place": "belvedere",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Klimt's Kiss upstairs. Go at opening."
+            },
+            {
+              "place": "kunsthistorisches",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Closed Monday. Lunch in the café is an option."
+            },
+            {
+              "place": "mq",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Ten minutes on foot. Leopold Museum is here if you have energy left."
+            }
+          ]
+        },
+        {
+          "title": "Leopold and Schönbrunn",
+          "stops": [
+            {
+              "place": "leopold",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Tuesday. Big Schiele and Klimt collection."
+            },
+            {
+              "place": "schonbrunn",
+              "at": "13:30",
+              "minutes": 180,
+              "note": "Book the palace slot ahead. Gardens are free."
+            },
+            {
+              "place": "spittelberg",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner in the lanes nearby."
+            }
+          ]
+        },
+        {
+          "title": "Music and a last look",
+          "stops": [
+            {
+              "place": "haus_der_musik",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Interactive and good in rain."
+            },
+            {
+              "place": "mozarthaus",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Quick stop, a few minutes away."
+            },
+            {
+              "place": "liechtenstein",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Limited tour times, so book a slot."
+            },
+            {
+              "place": "burgtheater",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Daytime tour or an evening performance."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters and coffee drinkers: markets, cafés and neighbourhood lanes, with the main sights in between.",
+      "days": [
+        {
+          "title": "Arrive, coffee and the old centre",
+          "stops": [
+            {
+              "place": "cafe_central",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Mid-afternoon is quieter. Cake is the point."
+            },
+            {
+              "place": "stephansdom",
+              "at": "15:15",
+              "minutes": 60,
+              "note": "Two minutes away."
+            },
+            {
+              "place": "hofburg",
+              "at": "16:30",
+              "minutes": 120,
+              "note": "Check last entry on the day."
+            },
+            {
+              "place": "spittelberg",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the lanes. Busiest in the evening."
+            }
+          ]
+        },
+        {
+          "title": "Naschmarkt Saturday",
+          "stops": [
+            {
+              "place": "naschmarkt",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Best on Saturday morning. Closed Sunday."
+            },
+            {
+              "place": "mariahilfer",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Shops closed Sunday."
+            },
+            {
+              "place": "schonbrunn",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Book the palace slot ahead."
+            },
+            {
+              "place": "cafe_central",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Second coffee stop, or swap for a nearby café."
+            }
+          ]
+        },
+        {
+          "title": "Markets, museums and a show",
+          "stops": [
+            {
+              "place": "kunsthistorisches",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Café inside is good for lunch."
+            },
+            {
+              "place": "mq",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Snack stalls in the courtyards."
+            },
+            {
+              "place": "naschmarkt",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late-afternoon browse; many stalls wind down by early evening."
+            },
+            {
+              "place": "staatsoper",
+              "at": "19:00",
+              "minutes": 180,
+              "note": "Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Danube side and a last meal",
+          "stops": [
+            {
+              "place": "prater",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Wheel and park. Snack stands along the Hauptallee."
+            },
+            {
+              "place": "donauinsel",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Riverside walk in good weather."
+            },
+            {
+              "place": "hundertwasser",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Exterior only, quick photo stop."
+            },
+            {
+              "place": "belvedere",
+              "at": "16:30",
+              "minutes": 150,
+              "note": "Gardens are free; museum if time allows. Check closing on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Innere Stadt"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Palaces, coffee houses and the Ringstrasse."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Klimt, the Kunsthistorisches and the MuseumsQuartier."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Schnitzel, cake and long café afternoons."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Innere Stadt",
+      "range": [
+        150,
+        400
+      ],
+      "why": "Walk to St. Stephen's, the Hofburg and the Ringstrasse. Quietest at night; book early.",
+      "center": [
+        48.2089,
+        16.3721
+      ]
+    },
+    {
+      "area": "Leopoldstadt",
+      "range": [
+        90,
+        220
+      ],
+      "why": "Across the Danube canal, near the Prater and the Augarten. Good U-Bahn links, better value.",
+      "center": [
+        48.2167,
+        16.4
+      ]
+    },
+    {
+      "area": "Mariahilf",
+      "range": [
+        100,
+        240
+      ],
+      "why": "Between the MuseumsQuartier and the Naschmarkt. Lively streets, easy walk to the centre.",
+      "center": [
+        48.1975,
+        16.3542
+      ]
+    },
+    {
+      "area": "Neubau",
+      "range": [
+        85,
+        200
+      ],
+      "why": "Independent shops, bars and cafés. Young feel, 10–15 minutes on the U-Bahn to the centre.",
+      "center": [
+        48.2025,
+        16.345
+      ]
+    }
+  ],
+  "food": [
+    "Try a Wiener Schnitzel (veal or pork) with potato salad, and Tafelspitz (boiled beef) in a traditional Beisl.",
+    "Coffee houses are a ritual: order a Melange, sit long, and read the papers. Cake like Sachertorte or Apfelstrudel is normal mid-afternoon.",
+    "Naschmarkt on Saturday morning: stalls, spices and cheap snacks. Many stands close on Sunday.",
+    "Street food: a Käsekrainer sausage from a Würstelstand, around €5–7.",
+    "Book dinner ahead for popular places; many kitchens close around 22:00. Tipping is rounding up plus a little, said aloud."
+  ],
+  "more_time": [
+    "Swap a museum morning for Schönbrunn Palace and its gardens, half a day with the U4.",
+    "Take a day trip to the Wachau valley or Baden by train; check times on the day.",
+    "Add a Danube evening: swim or walk at the Alte Donau, or cycle the Donauinsel."
+  ]
+}

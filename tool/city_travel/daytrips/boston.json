@@ -1,0 +1,181 @@
+{
+ "city": "Boston",
+ "trips": [
+  {
+   "place": "Salem",
+   "label": "",
+   "position": {
+    "id": 465560,
+    "name": "Salem, MA",
+    "city": "Salem",
+    "lat": 42.51954,
+    "lng": -70.89672
+   },
+   "town": {
+    "name": "Salem",
+    "lat": 42.51977,
+    "lng": -70.89552
+   },
+   "road": {
+    "km": 25,
+    "min": 28,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 50,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$9",
+     "time": "32m",
+     "via": "North Station to Salem",
+     "source": "https://www.rome2rio.com/s/Boston/Salem%2C%20MA"
+    },
+    "bus": {
+     "from": "$1-$5",
+     "time": "57m",
+     "via": "Congress St @ Haymarket Sta to Essex St @ Summer St",
+     "source": "https://www.rome2rio.com/s/Boston/Salem%2C%20MA"
+    }
+   },
+   "route_note": "Take the MBTA Newburyport/Rockport commuter rail from North Station (about 30 minutes), then walk about 10 minutes into the downtown historic district.",
+   "see": [
+    "Peabody Essex Museum",
+    "Witch House (Jonathan Corwin House)",
+    "Salem Witch Trials Memorial",
+    "Derby Wharf and waterfront",
+    "Hawthorne Hotel and Essex Street shops"
+   ],
+   "visit": "Full day",
+   "tour_query": "Salem day trip from Boston",
+   "quests": [],
+   "recommended": "train",
+   "why": "The commuter rail from North Station takes about 32 minutes and drops you a short walk from the historic downtown.",
+   "stars": 5,
+   "know": [
+    "October is the busiest and most crowded month, especially around Halloween",
+    "The Peabody Essex Museum and the historic House of the Seven Gables are the main sights"
+   ]
+  },
+  {
+   "place": "Concord",
+   "label": "",
+   "position": {
+    "id": 465529,
+    "name": "Concord, MA",
+    "city": "Concord",
+    "lat": 42.46037,
+    "lng": -71.34895
+   },
+   "town": {
+    "name": "Concord",
+    "lat": 42.46037,
+    "lng": -71.34895
+   },
+   "road": {
+    "km": 31,
+    "min": 35,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 60,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$10",
+     "time": "39m",
+     "via": "North Station to Concord",
+     "source": "https://www.rome2rio.com/s/Boston/Concord%2C%20MA"
+    },
+    "bus": {
+     "from": "$12",
+     "time": "45m",
+     "via": "Boston, MA - Copley Square to Concord, MA - Crosby's Supermarket",
+     "source": "https://www.rome2rio.com/s/Boston/Concord%2C%20MA"
+    }
+   },
+   "route_note": "Take the MBTA Fitchburg commuter rail from North Station (about 35-45 minutes) to Concord station, then walk or taxi about 1 to 2 miles to the Old North Bridge and center.",
+   "see": [
+    "Old North Bridge and Minute Man National Historical Park",
+    "Concord Museum",
+    "Orchard House (Louisa May Alcott)",
+    "Walden Pond State Reservation",
+    "Concord town center"
+   ],
+   "visit": "Full day",
+   "tour_query": "Concord and Lexington history day trip from Boston",
+   "quests": [],
+   "recommended": "train",
+   "why": "The Fitchburg line from North Station is about 39 minutes, though the Old North Bridge is a 1 to 2 mile walk or short taxi from the station.",
+   "stars": 4,
+   "know": [
+    "The Old North Bridge is part of Minute Man National Historical Park",
+    "A taxi or rideshare is the easiest way to reach the bridge from the station"
+   ]
+  },
+  {
+   "place": "Providence",
+   "label": "",
+   "position": {
+    "id": 16894775,
+    "name": "Providence Station, RI",
+    "city": "Providence",
+    "lat": 41.82925,
+    "lng": -71.41328
+   },
+   "town": {
+    "name": "Providence",
+    "lat": 41.82399,
+    "lng": -71.41283
+   },
+   "road": {
+    "km": 81,
+    "min": 68,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 160,
+    "currency": "USD"
+   },
+   "modes": {
+    "train": {
+     "from": "$8-$600",
+     "time": "39m",
+     "via": "Boston to Providence",
+     "source": "https://www.rome2rio.com/s/Boston/Providence%2C%20RI"
+    },
+    "bus": {
+     "from": "$7-$16",
+     "time": "1h 10m",
+     "via": "Boston to Providence",
+     "source": "https://www.rome2rio.com/s/Boston/Providence%2C%20RI"
+    }
+   },
+   "route_note": "Take an Amtrak or MBTA Providence/Stoughton train from South Station (about 35 minutes on Amtrak, up to an hour on the MBTA), then walk or take a short taxi to the downtown and State House.",
+   "see": [
+    "Rhode Island State House",
+    "WaterFire (seasonal evenings)",
+    "RISD Museum",
+    "Benefit Street historic houses",
+    "Federal Hill Italian district"
+   ],
+   "visit": "Half day",
+   "tour_query": "Providence day trip from Boston",
+   "quests": [
+    "Brown University"
+   ],
+   "recommended": "train",
+   "why": "Amtrak from South Station takes about 39 minutes and reaches downtown, where the State House and historic districts are within walking distance.",
+   "stars": 3,
+   "know": [
+    "WaterFire lighting events happen on select evenings during the warmer months",
+    "Trains are more frequent on the Amtrak route than on the MBTA service, so check schedules"
+   ]
+  }
+ ],
+ "problems": [
+  "Plymouth: not a town in cities15000.json (US), dropped"
+ ]
+}

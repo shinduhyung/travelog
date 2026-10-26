@@ -1,0 +1,32 @@
+$ deepseek_prep.py Baku
+  tokens in 767 out 704
+Baku: 9 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Baku
+  tokens in 2967 out 720
+Baku: 1 problems
+  - GYD taxi 15–50 AZN vs tariff estimate 30
+
+$ deepseek_city.py Baku --stage places
+Baku: places
+  tokens in 1215 out 3516
+
+$ deepseek_city.py Baku --stage frame
+Baku: frame
+  tokens in 2457 out 1894
+
+$ deepseek_city.py Baku --stage plans
+Baku: plans
+  plans for day
+  tokens in 2246 out 1108
+  plans for 1n
+  tokens in 2247 out 1225
+  plans for 2n
+  tokens in 2252 out 1491
+  plans for 3n
+  tokens in 2247 out 2052
+
+$ merge_city.py Baku
+Baku: 22 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/baku.json and planner/baku.json
+

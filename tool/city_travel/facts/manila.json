@@ -1,0 +1,189 @@
+{
+  "currency": "PHP",
+  "usd_rate": 63.5266,
+  "intro_line": "Manila: colonial walls, jeepney chaos, and bay sunsets.",
+  "intro": "Manila rewards visitors who look past the traffic to find Intramuros, old Binondo, and a restless food scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Ermita",
+    "Malate",
+    "Intramuros",
+    "Makati"
+  ],
+  "taxi": {
+    "flag_day": 50,
+    "flag_airport": 70,
+    "per_km": 15,
+    "min_fare": 50
+  },
+  "road_factor": 1.4,
+  "city_kmh": 18,
+  "transit_facts": [
+    "LRT Line 1 (green) links Malate, Ermita, Quiapo, Binondo and Santa Cruz; most sights sit along it.",
+    "LRT Line 2 (blue) serves Quiapo, Sampaloc and Santa Mesa; trains are packed at rush hour.",
+    "City buses start around PHP 16 and provincial buses around PHP 12; route numbers are shown on the bus.",
+    "Jeepneys start around PHP 10 for the first 4 km; routes are painted on the sides, not numbered.",
+    "Grab, Angkas, Gojek, Joyride and MyTaxi.PH ride apps work; taxis are plentiful but insist on the meter.",
+    "Tricycles, pedicabs and calesa horse carriages cover short trips; a one-hour calesa ride costs around PHP 50-70."
+  ],
+  "airports": [
+    {
+      "code": "MNL",
+      "name": "Ninoy Aquino International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 11 km south of the centre.",
+      "options": [
+        {
+          "mode": "Jeepney + LRT",
+          "to": "Ermita / Malate",
+          "price": "PHP 30-60",
+          "time": "45-70 min",
+          "note": "Cheapest but slow with bags; ride to a Line 1 station first."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre hotels",
+          "price": "PHP 50-150",
+          "time": "40-70 min",
+          "note": "Check locally for current routes and stops."
+        },
+        {
+          "mode": "Grab",
+          "to": "Ermita / Malate",
+          "price": "PHP 250-450",
+          "time": "20-45 min",
+          "note": "Book at the app pickup point to avoid touts."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "PHP 200-400",
+          "time": "20-45 min",
+          "note": "Use the coupon or metered queue; avoid unmarked cabs."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Intramuros",
+    "Fort Santiago",
+    "San Agustin Church",
+    "Rizal Park",
+    "ABS-CBN Studios Experience (Closed)",
+    "Adobo",
+    "Binondo",
+    "Bonifacio High Street",
+    "Chooks-to-Go",
+    "ChristmaSaya Carnival",
+    "Circle of Fun",
+    "DreamPlay",
+    "Fiesta Carnival",
+    "Greenbelt",
+    "Jollibee",
+    "KidZania Manila (Closed)",
+    "Mang Inasal",
+    "Manila Baywalk",
+    "Manila Ocean Park",
+    "Quiapo Market",
+    "SM By the Bay Amusement Park",
+    "SM Mall of Asia"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Manila",
+      "https://en.wikivoyage.org/wiki/Manila"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    14.5995,
+    120.9842
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 29,
+      "low": 23,
+      "rain_days": 10
+    },
+    {
+      "high": 30,
+      "low": 23,
+      "rain_days": 6
+    },
+    {
+      "high": 32,
+      "low": 24,
+      "rain_days": 7
+    },
+    {
+      "high": 33,
+      "low": 25,
+      "rain_days": 9
+    },
+    {
+      "high": 33,
+      "low": 26,
+      "rain_days": 18
+    },
+    {
+      "high": 31,
+      "low": 26,
+      "rain_days": 26
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 28
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 28
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 28
+    },
+    {
+      "high": 30,
+      "low": 25,
+      "rain_days": 25
+    },
+    {
+      "high": 31,
+      "low": 25,
+      "rain_days": 15
+    },
+    {
+      "high": 30,
+      "low": 24,
+      "rain_days": 15
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

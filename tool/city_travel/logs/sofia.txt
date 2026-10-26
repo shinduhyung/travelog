@@ -1,0 +1,28 @@
+$ deepseek_facts.py Sofia
+  tokens in 4261 out 573
+Sofia: 1 problems
+  - SOF taxi 25-30 лв vs tariff estimate 9
+
+$ deepseek_city.py Sofia --stage places
+Sofia: places
+  tokens in 1158 out 3172
+
+$ deepseek_city.py Sofia --stage frame
+Sofia: frame
+  tokens in 2435 out 1757
+
+$ deepseek_city.py Sofia --stage plans
+Sofia: plans
+  plans for day
+  tokens in 2183 out 1276
+  plans for 1n
+  tokens in 2184 out 1244
+  plans for 2n
+  tokens in 2189 out 1521
+  plans for 3n
+  tokens in 2184 out 2114
+
+$ merge_city.py Sofia
+Sofia: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/sofia.json and planner/sofia.json
+

@@ -1,0 +1,211 @@
+{
+  "currency": "EUR",
+  "usd_rate": 0.8915,
+  "intro_line": "Porto charms with river views, tiled churches and port wine.",
+  "intro": "Porto rewards visitors with a walkable historic centre, great food and Douro views. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "art",
+      "label": "Art"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Ribeira",
+    "Baixa",
+    "Cedofeita",
+    "Boavista"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 4.5,
+    "per_km": 1.0,
+    "min_fare": 3.5
+  },
+  "road_factor": 1.35,
+  "city_kmh": 20,
+  "transit_facts": [
+    "Metro line E links the airport to the centre; validate your Andante card before boarding.",
+    "STCP buses cover the city; night bus 3M runs to the airport hourly.",
+    "Uber and Bolt work well; airport rides cost about €10-25.",
+    "Driving is chaotic; narrow hilly streets and hard parking make it best avoided.",
+    "Walking is the best way around the centre, though it is hilly.",
+    "Douro river boats and the Leixões harbour serve cruise and tour trips."
+  ],
+  "airports": [
+    {
+      "code": "OPO",
+      "name": "Francisco de Sá Carneiro Airport",
+      "primary": true,
+      "note": "Main international hub, about 12 km north of the centre.",
+      "options": [
+        {
+          "mode": "Metro line E",
+          "to": "City centre (Trindade, Bolhão)",
+          "price": "€2.15 plus €0.60 card",
+          "time": "25-35 min",
+          "note": "Cheapest option; runs about 06:00-01:00."
+        },
+        {
+          "mode": "STCP bus 601/602/604",
+          "to": "City centre",
+          "price": "€2-3",
+          "time": "30-45 min",
+          "note": "Runs about 05:30-00:30 every 25 min."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "€10-25",
+          "time": "20-30 min",
+          "note": "Easy with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€20-30",
+          "time": "20-30 min",
+          "note": "Metered; confirm the fare first."
+        }
+      ]
+    },
+    {
+      "code": "LIS",
+      "name": "Lisbon Portela Airport",
+      "primary": false,
+      "note": "Alternative gateway, about 300 km south; connect by train.",
+      "options": [
+        {
+          "mode": "Metro then train",
+          "to": "Porto Campanhã",
+          "price": "€30-50",
+          "time": "3-3.5 hr",
+          "note": "Metro to Oriente, then Alfa Pendular or Intercidades."
+        },
+        {
+          "mode": "Long-distance bus",
+          "to": "Porto Campanhã",
+          "price": "€15-30",
+          "time": "3.5-4 hr",
+          "note": "Rede Expressos and Flixbus run often."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Porto",
+          "price": "check locally",
+          "time": "3-3.5 hr",
+          "note": "Expensive; train is better."
+        }
+      ]
+    }
+  ],
+  "max_km": 70,
+  "place_landmarks": [
+    "Ribeira District",
+    "Dom Luís I Bridge",
+    "Livraria Lello",
+    "Clerigos Tower",
+    "Palácio da Bolsa",
+    "Porto Cathedral",
+    "6 Bridges Cruise",
+    "Casa da Música",
+    "Douro River",
+    "Estadio do Dragao",
+    "SEA LIFE Porto",
+    "São Francisco Church",
+    "University of Porto"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Porto",
+      "https://en.wikivoyage.org/wiki/Porto"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    41.14961,
+    -8.61099
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 13,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 15,
+      "low": 8,
+      "rain_days": 10
+    },
+    {
+      "high": 16,
+      "low": 8,
+      "rain_days": 13
+    },
+    {
+      "high": 18,
+      "low": 10,
+      "rain_days": 12
+    },
+    {
+      "high": 20,
+      "low": 13,
+      "rain_days": 9
+    },
+    {
+      "high": 22,
+      "low": 15,
+      "rain_days": 8
+    },
+    {
+      "high": 24,
+      "low": 17,
+      "rain_days": 3
+    },
+    {
+      "high": 25,
+      "low": 17,
+      "rain_days": 3
+    },
+    {
+      "high": 23,
+      "low": 16,
+      "rain_days": 6
+    },
+    {
+      "high": 21,
+      "low": 14,
+      "rain_days": 13
+    },
+    {
+      "high": 17,
+      "low": 11,
+      "rain_days": 14
+    },
+    {
+      "high": 15,
+      "low": 9,
+      "rain_days": 14
+    }
+  ],
+  "tours": [],
+  "problems": [
+    "airport LIS is 267 km away"
+  ]
+}

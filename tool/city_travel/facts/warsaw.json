@@ -1,0 +1,212 @@
+{
+  "currency": "PLN",
+  "usd_rate": 3.8993,
+  "intro_line": "Warsaw is a phoenix city that rebuilt itself into a vibrant capital.",
+  "intro": "Warsaw rewards visitors with a rebuilt Old Town, rich history and a lively food and nightlife scene. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    },
+    {
+      "id": "budget",
+      "label": "Budget"
+    }
+  ],
+  "areas": [
+    "Śródmieście",
+    "Old Town",
+    "Wola",
+    "Mokotów"
+  ],
+  "taxi": {
+    "flag_day": 10,
+    "flag_airport": 15,
+    "per_km": 3,
+    "min_fare": 15
+  },
+  "road_factor": 1.35,
+  "city_kmh": 22,
+  "transit_facts": [
+    "Two metro lines (M1 north-south, M2 east-west) run every 3-10 min until midnight, later on Fri-Sat.",
+    "About 200 bus routes and 30 tram lines share one ZTM ticket system.",
+    "Buy tickets in machines, on some trams, or via the Jakdojade app; validate on board.",
+    "Ride apps Uber, Bolt and Free Now work in Warsaw; taxis are metered.",
+    "Driving is busy; carry licence, insurance and registration documents at all times.",
+    "The centre is walkable and bike-friendly; no ferry needed in the city."
+  ],
+  "airports": [
+    {
+      "code": "WAW",
+      "name": "Warsaw Chopin Airport",
+      "primary": true,
+      "note": "Main airport, 8 km south of the centre.",
+      "options": [
+        {
+          "mode": "Train (SKM/S2)",
+          "to": "Warszawa Śródmieście / Centralna",
+          "price": "around 5-10 zł",
+          "time": "20-30 min",
+          "note": "Fastest link to the centre."
+        },
+        {
+          "mode": "Bus (line 175)",
+          "to": "City centre",
+          "price": "around 5 zł",
+          "time": "30-40 min",
+          "note": "Cheap daytime option."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "40-60 zł",
+          "time": "20-30 min",
+          "note": "Use official taxi rank."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "35-55 zł",
+          "time": "20-30 min",
+          "note": "Pick-up at designated zones."
+        }
+      ]
+    },
+    {
+      "code": "WMI",
+      "name": "Warsaw Modlin Airport",
+      "primary": false,
+      "note": "Low-cost airport, 35-40 km north of the centre.",
+      "options": [
+        {
+          "mode": "Shuttle bus + regional train",
+          "to": "Warszawa Centralna",
+          "price": "22.40 zł combined ticket",
+          "time": "up to 90 min",
+          "note": "Bilet Lotniskowy covers Zone 1 for 75 min."
+        },
+        {
+          "mode": "Contibus bus",
+          "to": "City centre",
+          "price": "40 zł",
+          "time": "around 60 min",
+          "note": "Buy at arrivals or on board."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "120-160 zł",
+          "time": "40-55 min",
+          "note": "Long ride; agree price first."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "100-150 zł",
+          "time": "40-55 min",
+          "note": "Check availability at the airport."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Warsaw Old Town",
+    "Royal Castle, Warsaw",
+    "Palace of Culture and Science",
+    "Łazienki Palace",
+    "POLIN Museum of the History of Polish Jews",
+    "Warsaw Uprising Museum",
+    "Vistula River",
+    "Pierogi",
+    "Stadion Narodowy"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Warsaw",
+      "https://en.wikivoyage.org/wiki/Warsaw"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    52.2297,
+    21.0122
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 2,
+      "low": -3,
+      "rain_days": 13
+    },
+    {
+      "high": 5,
+      "low": -2,
+      "rain_days": 11
+    },
+    {
+      "high": 9,
+      "low": 0,
+      "rain_days": 11
+    },
+    {
+      "high": 14,
+      "low": 4,
+      "rain_days": 11
+    },
+    {
+      "high": 19,
+      "low": 9,
+      "rain_days": 12
+    },
+    {
+      "high": 24,
+      "low": 14,
+      "rain_days": 10
+    },
+    {
+      "high": 25,
+      "low": 15,
+      "rain_days": 13
+    },
+    {
+      "high": 25,
+      "low": 16,
+      "rain_days": 11
+    },
+    {
+      "high": 20,
+      "low": 11,
+      "rain_days": 10
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 12
+    },
+    {
+      "high": 7,
+      "low": 2,
+      "rain_days": 10
+    },
+    {
+      "high": 4,
+      "low": 0,
+      "rain_days": 11
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

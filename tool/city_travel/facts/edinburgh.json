@@ -1,0 +1,184 @@
+{
+  "currency": "GBP",
+  "usd_rate": 0.7467,
+  "intro_line": "Scotland's compact capital of stone, stories and sudden views.",
+  "intro": "Edinburgh rewards visitors with a walkable Old Town, world-class festivals and wild hills minutes from the centre. Pick how long you have and what you enjoy most.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History"
+    },
+    {
+      "id": "culture",
+      "label": "Culture"
+    },
+    {
+      "id": "food",
+      "label": "Food"
+    },
+    {
+      "id": "nature",
+      "label": "Nature"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife"
+    }
+  ],
+  "areas": [
+    "Old Town",
+    "New Town",
+    "Leith",
+    "Haymarket"
+  ],
+  "taxi": {
+    "flag_day": 3.5,
+    "flag_airport": 5,
+    "per_km": 2.2,
+    "min_fare": 4
+  },
+  "road_factor": 1.35,
+  "city_kmh": 18,
+  "transit_facts": [
+    "Trams link the airport, Haymarket, Princes Street, Waverley and Leith; buy at stop machines.",
+    "Lothian buses cover the city; exact cash or contactless, day and multi-day tickets available.",
+    "Airlink 100 runs 24 hours to Waverley Bridge, about 20-30 min.",
+    "Taxis are metered and plentiful; Uber and Bolt operate in Edinburgh.",
+    "Driving is awkward: many central streets are closed and parking is scarce and pricey.",
+    "The centre is very walkable; bikes and e-bikes are easy to hire, with some cycle lanes."
+  ],
+  "airports": [
+    {
+      "code": "EDI",
+      "name": "Edinburgh Airport",
+      "primary": true,
+      "note": "Scotland's main airport, 11 km west of the centre.",
+      "options": [
+        {
+          "mode": "Lothian Bus 17/18",
+          "to": "Leith or south side (not centre)",
+          "price": "£2-3",
+          "time": "60 min",
+          "note": "Standard city fare; not useful for the centre."
+        },
+        {
+          "mode": "Airlink 100 bus",
+          "to": "Haymarket and Waverley Bridge",
+          "price": "£6 single, £8.50 return",
+          "time": "20-30 min",
+          "note": "Runs 24 hours every 10-20 min; contactless accepted."
+        },
+        {
+          "mode": "Tram",
+          "to": "Haymarket, Princes Street, Waverley, Leith",
+          "price": "£7.90 single, £9.50 return",
+          "time": "40 min",
+          "note": "Walk to Ingliston Park & Ride to cut the fare to about £2.40."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "£25-35",
+          "time": "20-30 min",
+          "note": "Rank outside Arrivals; fixed-ish metered fares."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "City centre",
+          "price": "£20-30",
+          "time": "20-30 min",
+          "note": "Pick-up points are signposted outside the terminal."
+        }
+      ]
+    }
+  ],
+  "max_km": 60,
+  "place_landmarks": [
+    "Edinburgh Castle",
+    "Royal Mile",
+    "Palace of Holyroodhouse",
+    "Calton Hill",
+    "Forth Bridge",
+    "Edinburgh Festival Fringe",
+    "Edinburgh Zoo",
+    "Haggis",
+    "The Ladies Waldegrave",
+    "University of Edinburgh"
+  ],
+  "airports_sources": [
+    [
+      "Wikivoyage: Edinburgh",
+      "https://en.wikivoyage.org/wiki/Edinburgh"
+    ]
+  ],
+  "checked": "October 2026",
+  "center": [
+    55.95206,
+    -3.19648
+  ],
+  "climate_source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+  "climate_months": [
+    {
+      "high": 6,
+      "low": 2,
+      "rain_days": 14
+    },
+    {
+      "high": 7,
+      "low": 2,
+      "rain_days": 13
+    },
+    {
+      "high": 9,
+      "low": 3,
+      "rain_days": 16
+    },
+    {
+      "high": 11,
+      "low": 4,
+      "rain_days": 12
+    },
+    {
+      "high": 14,
+      "low": 7,
+      "rain_days": 13
+    },
+    {
+      "high": 17,
+      "low": 10,
+      "rain_days": 14
+    },
+    {
+      "high": 18,
+      "low": 12,
+      "rain_days": 17
+    },
+    {
+      "high": 18,
+      "low": 12,
+      "rain_days": 15
+    },
+    {
+      "high": 16,
+      "low": 10,
+      "rain_days": 13
+    },
+    {
+      "high": 13,
+      "low": 8,
+      "rain_days": 15
+    },
+    {
+      "high": 9,
+      "low": 5,
+      "rain_days": 14
+    },
+    {
+      "high": 7,
+      "low": 3,
+      "rain_days": 16
+    }
+  ],
+  "tours": [],
+  "problems": []
+}

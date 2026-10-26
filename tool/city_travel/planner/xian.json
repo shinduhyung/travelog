@@ -1,0 +1,595 @@
+{
+  "city": "Xi'an",
+  "checked": "October 2026",
+  "intro_line": "Ancient capital where the Silk Road began and terracotta warriors sleep.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Bell Tower / City Walls",
+        "South Gate / Shuyuanmen",
+        "Big Wild Goose Pagoda",
+        "Xi'an North Station"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Bell Tower / City Walls",
+        "South Gate / Shuyuanmen",
+        "Big Wild Goose Pagoda",
+        "Xi'an North Station"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Bell Tower / City Walls",
+        "South Gate / Shuyuanmen",
+        "Big Wild Goose Pagoda",
+        "Xi'an North Station"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Bell Tower / City Walls",
+        "South Gate / Shuyuanmen",
+        "Big Wild Goose Pagoda",
+        "Xi'an North Station"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Bell Tower / City Walls",
+        "South Gate / Shuyuanmen",
+        "Big Wild Goose Pagoda",
+        "Xi'an North Station"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 6,
+        "low": -4,
+        "rain_days": 3,
+        "note": "January: cold, highs near 6°C and lows around -4°C. Pack a warm coat; few rainy days."
+      },
+      {
+        "high": 10,
+        "low": -1,
+        "rain_days": 4,
+        "note": "February: still cold, highs near 10°C. Quiet sights and low prices."
+      },
+      {
+        "high": 18,
+        "low": 5,
+        "rain_days": 5,
+        "note": "March: warming to about 18°C. Good walking weather; a few rainy days."
+      },
+      {
+        "high": 23,
+        "low": 10,
+        "rain_days": 8,
+        "note": "April: mild and pleasant, highs near 23°C. One of the best months to visit."
+      },
+      {
+        "high": 28,
+        "low": 15,
+        "rain_days": 7,
+        "note": "May: warm at about 28°C. Comfortable mornings; book hotels early around holidays."
+      },
+      {
+        "high": 31,
+        "low": 20,
+        "rain_days": 8,
+        "note": "June: hot, highs near 31°C. Sightsee early and rest in the afternoon."
+      },
+      {
+        "high": 33,
+        "low": 22,
+        "rain_days": 10,
+        "note": "July: hottest month, highs near 33°C with about 10 rain days. Carry water and an umbrella."
+      },
+      {
+        "high": 32,
+        "low": 22,
+        "rain_days": 10,
+        "note": "August: hot and wet, similar to July. Plan indoor museums at midday."
+      },
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 10,
+        "note": "September: cools to about 26°C. Pleasant and a good shoulder month."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 10,
+        "note": "October: mild at about 19°C. Great for the wall and outdoor sights."
+      },
+      {
+        "high": 13,
+        "low": 4,
+        "rain_days": 6,
+        "note": "November: cooler, highs near 13°C. Fewer crowds; bring layers."
+      },
+      {
+        "high": 7,
+        "low": -3,
+        "rain_days": 2,
+        "note": "December: cold, highs near 7°C and lows around -3°C. Dry and quiet."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.8,
+      0.95,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.9,
+      1,
+      0.9,
+      0.7
+    ],
+    "culture": [
+      0.7,
+      0.8,
+      0.95,
+      1,
+      0.9,
+      0.7,
+      0.6,
+      0.6,
+      0.9,
+      1,
+      0.9,
+      0.7
+    ],
+    "food": [
+      0.8,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.8
+    ],
+    "shopping": [
+      0.7,
+      0.75,
+      0.9,
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.75,
+      0.9,
+      1,
+      0.85,
+      0.7
+    ],
+    "family": [
+      0.5,
+      0.6,
+      0.85,
+      1,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.85,
+      1,
+      0.8,
+      0.5
+    ]
+  },
+  "places": {
+    "terracotta": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Early morning, avoid weekends and holidays",
+      "area": "Xi'an North Station",
+      "popularity": 5
+    },
+    "citywall": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 5
+    },
+    "biggoose": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon, then evening fountain show",
+      "area": "Big Wild Goose Pagoda",
+      "popularity": 4
+    },
+    "shaanxi": {
+      "types": [
+        "history",
+        "culture",
+        "family"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Morning; book ahead, closed Monday",
+      "area": "Big Wild Goose Pagoda",
+      "popularity": 5
+    },
+    "muslimquarter": {
+      "types": [
+        "food",
+        "culture",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, when stalls are busiest",
+      "area": "Bell Tower / City Walls",
+      "popularity": 5
+    },
+    "belltower": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "After dark for the lights",
+      "area": "Bell Tower / City Walls",
+      "popularity": 4
+    },
+    "greatmosque": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning, before the quarter gets busy",
+      "area": "Bell Tower / City Walls",
+      "popularity": 4
+    },
+    "shuyuanmen": {
+      "types": [
+        "culture",
+        "shopping"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 3
+    },
+    "southgate": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Dusk",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 4
+    },
+    "drumtower": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 40,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Bell Tower / City Walls",
+      "popularity": 4
+    },
+    "dacieng": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 40,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Big Wild Goose Pagoda",
+      "popularity": 3
+    },
+    "fountain": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Big Wild Goose Pagoda",
+      "popularity": 4
+    },
+    "tangshow": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Big Wild Goose Pagoda",
+      "popularity": 3
+    },
+    "bike": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 4
+    },
+    "huimin": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Bell Tower / City Walls",
+      "popularity": 4
+    },
+    "defu": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Afternoon into evening",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 3
+    },
+    "beilin": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 3
+    },
+    "damingpalace": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning in cool months",
+      "area": "Xi'an North Station",
+      "popularity": 3
+    },
+    "huangcheng": {
+      "types": [
+        "family",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 2
+    },
+    "northstation": {
+      "types": [
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Allow 45 minutes before departure",
+      "area": "Xi'an North Station",
+      "popularity": 3
+    },
+    "xianfood": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Bell Tower / City Walls",
+      "popularity": 4
+    },
+    "calligraphy": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "South Gate / Shuyuanmen",
+      "popularity": 2
+    },
+    "nightwalk": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Bell Tower / City Walls",
+      "popularity": 4
+    },
+    "huashan": {
+      "types": [
+        "history",
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Morning departure",
+      "area": "Xi'an North Station",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Terracotta Army, the city wall and the Muslim Quarter; add a night for museums and a day trip."
+  },
+  "airports": [
+    {
+      "code": "XIY",
+      "name": "Xi'an Xianyang International Airport",
+      "primary": true,
+      "note": "Main hub, about 27 km northwest of the centre.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Bell Tower / West Street",
+          "price": "¥25",
+          "time": "50-70 min",
+          "note": "Runs 08:00-01:00; leaves when full."
+        },
+        {
+          "mode": "Metro Line 14",
+          "to": "Xi'an North station",
+          "price": "¥5-10",
+          "time": "30-40 min",
+          "note": "Change to Line 2 for the centre."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Bell Tower downtown",
+          "price": "¥120-160",
+          "time": "40-60 min",
+          "note": "Ignore touts; note the plate if overcharged."
+        },
+        {
+          "mode": "DiDi",
+          "to": "City centre",
+          "price": "¥120-170",
+          "time": "40-60 min",
+          "note": "Meet at the designated pickup zone."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Xi'an",
+      "https://en.wikivoyage.org/wiki/Xi%27an"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most sights; walk or bike inside the city walls.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "12+ lines, single ride about ¥5. Buy a Changantong card or scan WeChat/Alipay. Fast and cheap for the station and main sights."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "¥1–2 flat fare. Line 610 (tourist 8) links the station, Bell Tower and pagodas."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are cheap but hard to hail at rush hour and shift change; watch the meter. DiDi, WeChat and Alipay ride-hailing work widely."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not advised for visitors. Traffic and parking are tough."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best inside the city walls. Shared bikes are handy for the wall and short hops."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Four clear seasons: cold dry winters, hot humid summers with the most rain, and mild spring and autumn.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to May and September to October",
+        "text": "Mild days around 19–28°C. Ideal for the city wall, the Terracotta Army and walking the old town."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and wet (June to August)",
+        "text": "Highs of 31–33°C with about 8–10 rain days a month. Go out early, carry water and an umbrella."
+      },
+      {
+        "icon": "🧥",
+        "title": "Winter is cold and dry",
+        "text": "January highs near 6°C and lows around -4°C. Few rainy days; pack a warm coat and layers."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain peaks in late summer and autumn",
+        "text": "About 10 rain days a month from July to October. Showers are often short; a light rain jacket helps."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Spring can be dusty",
+        "text": "March to May sometimes brings dusty, hazy air. Check the air quality on the day if you have breathing issues."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Comfortable walking shoes, layers for cool mornings, sunscreen and a hat in summer, a warm coat in winter."
+      }
+    ]
+  }
+}

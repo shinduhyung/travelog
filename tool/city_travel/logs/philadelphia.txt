@@ -1,0 +1,36 @@
+$ deepseek_facts.py Philadelphia
+  tokens in 4013 out 1029
+Philadelphia: 3 problems
+  - EWR taxi $150-200 vs tariff estimate 402
+  - BWI taxi $180-250 vs tariff estimate 527
+  - airport BWI is 155 km away
+
+$ deepseek_city.py Philadelphia --stage places
+Philadelphia: places
+  tokens in 1214 out 3841
+
+$ deepseek_city.py Philadelphia --stage frame
+Philadelphia: frame
+  tokens in 2434 out 1763
+  repaired JSON
+
+$ deepseek_city.py Philadelphia --stage plans
+Philadelphia: plans
+  plans for day
+  tokens in 2368 out 872
+  plans for 1n
+  tokens in 2369 out 1332
+  plans for 2n
+  tokens in 2374 out 1506
+  plans for 3n
+  tokens in 2369 out 1961
+
+$ merge_city.py Philadelphia
+ERROR plan day-history: unknown place 'elfreths-alley'
+ERROR plan 1n-history: unknown place 'elfreths-alley'
+ERROR plan 2n-history: unknown place 'elfreths-alley'
+ERROR plan 3n-history: unknown place 'elfreths-alley'
+ERROR plan 3n-food: unknown place 'elfreths-alley'
+ERROR plan 3n-art: unknown place 'elfreths-alley'
+Philadelphia: 23 places, 12 plans, 6 errors, 0 warnings
+

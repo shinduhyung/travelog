@@ -1,0 +1,1206 @@
+{
+  "city": "Oslo",
+  "checked": "October 2026",
+  "currency": "NOK",
+  "usd_rate": 9.344,
+  "intro": "Oslo rewards visitors with a mix of culture, nature, and Scandinavian cool. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 59.7229,
+      "west": 10.6535,
+      "north": 59.9994,
+      "east": 10.7736,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 100,
+      "flag_airport": 200,
+      "per_km": 20,
+      "min_fare": 150
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "Metro (T-bane), trams, and buses cover the city; use the Ruter app or buy tickets at kiosks.",
+      "Ride apps Uber and Bolt operate in Oslo.",
+      "Taxis are expensive; Oslo Taxi and NorgesTaxi are reliable.",
+      "Driving is not recommended due to tolls and limited parking.",
+      "Walking and biking are easy in the compact centre; bike-sharing available.",
+      "Ferries connect to Bygdøy museums and islands in the fjord."
+    ],
+    "sources": []
+  },
+  "places": {
+    "vigeland": {
+      "name": "Vigeland Park",
+      "landmark": "Vigeland Park",
+      "kind": "park",
+      "lat": 59.927,
+      "lon": 10.7008,
+      "price": 0,
+      "price_text": "Free park entry · Vigeland Museum separate fee",
+      "hours": "Park open 24 hours · museum Tue–Sun, check on the day",
+      "tip": "Go early morning to see the sculptures without crowds. The Monolith is at the highest point of the park.",
+      "source": "https://www.vigeland.museum.no/en"
+    },
+    "akershus": {
+      "name": "Akershus Fortress",
+      "landmark": "Akershus Fortress",
+      "kind": "sight",
+      "lat": 59.9076,
+      "lon": 10.7363,
+      "price": 0,
+      "price_text": "Free grounds · castle interior has a fee, check on the day",
+      "hours": "Grounds open daily, roughly 06:00–21:00 · interiors shorter hours",
+      "tip": "Walk the ramparts for harbour views, then head down to Aker Brygge for lunch.",
+      "source": "https://www.forsvarsbygg.no/en/akershus/"
+    },
+    "opera": {
+      "name": "Oslo Opera House",
+      "landmark": "Oslo Opera House",
+      "kind": "sight",
+      "lat": 59.9075,
+      "lon": 10.7531,
+      "price": 0,
+      "price_text": "Free to walk the roof · performance tickets vary",
+      "hours": "Foyer roughly 10:00–18:00 · roof open longer in summer",
+      "tip": "Walk up the sloping marble roof for a free view over the fjord. Wear shoes with grip.",
+      "source": "https://www.operaen.no/en/"
+    },
+    "vikingship": {
+      "name": "Viking Ship Museum, Oslo",
+      "landmark": "Viking Ship Museum, Oslo",
+      "kind": "museum",
+      "lat": 59.9049,
+      "lon": 10.6844,
+      "price": null,
+      "price_text": "Check on the day — the museum has been closed for rebuilding",
+      "hours": "Check on the day before you go",
+      "tip": "Confirm it is open before travelling to Bygdøy; the nearby Fram and Kon-Tiki museums are good backups.",
+      "source": "https://www.khm.uio.no/english/visit-us/viking-ship-museum/"
+    },
+    "munch": {
+      "name": "Munch Museum",
+      "landmark": "Munch Museum",
+      "kind": "museum",
+      "lat": 59.9059,
+      "lon": 10.7551,
+      "price": 180,
+      "price_text": "≈ NOK 160–200 adult · check on the day",
+      "hours": "Daily, usually 10:00–18:00, later some days",
+      "tip": "The Scream rooms are on an upper floor. Buy tickets online to skip the queue.",
+      "source": "https://www.munchmuseet.no/en/"
+    },
+    "palace": {
+      "name": "The Royal Palace",
+      "landmark": "The Royal Palace",
+      "kind": "sight",
+      "lat": 59.9169,
+      "lon": 10.7276,
+      "price": null,
+      "price_text": "Palace tours have a fee · park free",
+      "hours": "Palace interior only in summer, guided tours · park open daily",
+      "tip": "The daily changing of the guard is around 13:30. Check the day and time before you go.",
+      "source": "https://www.royalcourt.no/"
+    },
+    "fram": {
+      "name": "Fram Museum",
+      "landmark": "Fram Museum",
+      "kind": "museum",
+      "lat": 59.9033,
+      "lon": 10.6992,
+      "price": 160,
+      "price_text": "≈ NOK 140–180 adult · check on the day",
+      "hours": "Daily, usually 09:00/10:00–17:00/18:00",
+      "tip": "You can walk inside the polar ship Fram. Allow time for the neighbouring Kon-Tiki Museum.",
+      "source": "https://frammuseum.no/english/"
+    },
+    "farikal": {
+      "name": "Fårikål",
+      "landmark": "Fårikål",
+      "kind": "food",
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "price": null,
+      "price_text": "≈ NOK 200–350 per main in a casual restaurant",
+      "hours": "Served in autumn; many restaurants in September",
+      "tip": "Fårikål is Norway's national dish: lamb and cabbage stew. Try it in late September when it is in season.",
+      "source": ""
+    },
+    "holmenkollen": {
+      "name": "Holmenkollen Ski Museum",
+      "landmark": "Holmenkollen Ski Museum",
+      "kind": "museum",
+      "lat": 59.9639,
+      "lon": 10.6677,
+      "price": 160,
+      "price_text": "≈ NOK 140–180 adult · ski jump tower included",
+      "hours": "Daily, usually 09:00/10:00–17:00/18:00",
+      "tip": "Take metro line 1 to Holmenkollen. Climb the ski jump tower for the best view over Oslo.",
+      "source": "https://www.skiforeningen.no/en/holmenkollen/"
+    },
+    "kontiki": {
+      "name": "Kon-Tiki Museum",
+      "landmark": "Kon-Tiki Museum",
+      "kind": "museum",
+      "lat": 59.9036,
+      "lon": 10.698,
+      "price": 140,
+      "price_text": "≈ NOK 120–160 adult · check on the day",
+      "hours": "Daily, usually 09:30/10:00–17:00/18:00",
+      "tip": "See the original Kon-Tiki raft and the Ra II. Combine with the Fram Museum next door.",
+      "source": "https://www.kon-tiki.no/"
+    },
+    "scream": {
+      "name": "The Scream",
+      "landmark": "The Scream",
+      "kind": "sight",
+      "lat": 59.9162,
+      "lon": 10.7375,
+      "price": 180,
+      "price_text": "Included in Munch Museum ticket, ≈ NOK 160–200",
+      "hours": "Same as Munch Museum, usually 10:00–18:00",
+      "tip": "The painting is shown in a dedicated room. Go early to see it before tour groups arrive.",
+      "source": "https://www.munchmuseet.no/en/"
+    },
+    "tusenfryd": {
+      "name": "TusenFryd",
+      "landmark": "TusenFryd",
+      "kind": "activity",
+      "lat": 59.7501,
+      "lon": 10.7501,
+      "price": 549,
+      "price_text": "≈ NOK 450–600 day pass · check on the day",
+      "hours": "Summer season only, usually 10:00/11:00–17:00/19:00",
+      "tip": "It is outside the city centre; check the bus or train route and opening dates before you go.",
+      "source": "https://www.tusenfryd.no/en"
+    },
+    "ullevaal": {
+      "name": "Ullevaal Stadion",
+      "landmark": "Ullevaal Stadion",
+      "kind": "activity",
+      "lat": 59.9489,
+      "lon": 10.7337,
+      "price": null,
+      "price_text": "Match tickets vary · check on the day",
+      "hours": "Only on match days or tours",
+      "tip": "This is Norway's national football stadium. Check the fixture list if you want a match.",
+      "source": "https://www.ullevaal-stadion.no/"
+    },
+    "mathallen": {
+      "name": "Mathallen Oslo food hall",
+      "landmark": null,
+      "kind": "food",
+      "lat": 59.9219,
+      "lon": 10.7522,
+      "price": 0,
+      "price_text": "Free entry · dishes ≈ NOK 100–250",
+      "hours": "Tue–Sat roughly 10:00–18:00/19:00 · Sun shorter · check on the day",
+      "tip": "Good stop for lunch in Grünerløkka. Try local cheese and smoked fish.",
+      "source": "https://www.mathallenoslo.no/"
+    },
+    "grunerlokka": {
+      "name": "Grünerløkka neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.9234,
+      "lon": 10.7594,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · cafés and shops daytime",
+      "tip": "Walk along the Akerselva river and the side streets for cafés, vintage shops and street art.",
+      "source": ""
+    },
+    "akerbrygge": {
+      "name": "Aker Brygge waterfront",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.9104,
+      "lon": 10.7269,
+      "price": 0,
+      "price_text": "Free to walk · food and drinks extra",
+      "hours": "Always open · restaurants until late",
+      "tip": "Walk the promenade from Aker Brygge to Tjuvholmen for fjord views and the Astrup Fearnley Museum.",
+      "source": ""
+    },
+    "fjordcruise": {
+      "name": "Oslofjord sightseeing boat",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 59.9083,
+      "lon": 10.7281,
+      "price": 400,
+      "price_text": "≈ NOK 300–500 for a short fjord cruise · check on the day",
+      "hours": "Departures daytime, more in summer",
+      "tip": "Boats leave near Rådhuset. Book a short cruise if you have limited time.",
+      "source": ""
+    },
+    "akerselva": {
+      "name": "Akerselva river walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.9269,
+      "lon": 10.7594,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A green path with old mills and small waterfalls. Walk upstream from Grünerløkka.",
+      "source": ""
+    },
+    "karljohan": {
+      "name": "Karl Johans gate walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 59.9139,
+      "lon": 10.7406,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open · shops daytime",
+      "tip": "The main street runs from Central Station to the Royal Palace. A simple orientation walk on day one.",
+      "source": ""
+    },
+    "sognsvann": {
+      "name": "Sognsvann lake",
+      "landmark": null,
+      "kind": "park",
+      "lat": 59.9722,
+      "lon": 10.7275,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Take metro line 5 to Sognsvann for a flat lakeside loop and forest paths.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed day of Oslo's history and landmarks, all in the centre and easy on foot.",
+      "days": [
+        {
+          "title": "Fortress, palace and harbour",
+          "stops": [
+            {
+              "place": "karljohan",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Start at the station end and walk up toward the palace. Shops are quiet this early."
+            },
+            {
+              "place": "palace",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "The park is always open. Interior tours run in summer only, so check on the day."
+            },
+            {
+              "place": "akershus",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Walk down through the centre. Grounds are free and open daily; interiors have shorter hours."
+            },
+            {
+              "place": "mathallen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Take the tram or a 25-minute walk to Grünerløkka. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "opera",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the roof for free. Foyer roughly 10:00–18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Fjord, forest and a hilltop view in one day, using boats and the metro.",
+      "days": [
+        {
+          "title": "Fjord first, then the hills",
+          "stops": [
+            {
+              "place": "fjordcruise",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Boats leave from Aker Brygge. More departures in summer; book ahead in peak season."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch by the water before heading inland."
+            },
+            {
+              "place": "sognsvann",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Metro line 5 to Sognsvann. A flat loop around the lake, always open."
+            },
+            {
+              "place": "holmenkollen",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Metro onward to Holmenkollen. Museum usually closes 17:00–18:00, so check times. The view is best on a clear day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Aker Brygge or Sentrum"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "Munch, sculpture and waterfront art in a single day, mostly indoors.",
+      "days": [
+        {
+          "title": "Munch in the morning, Vigeland after",
+          "stops": [
+            {
+              "place": "munch",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go at opening to beat the crowds. Usually 10:00–18:00, later some days."
+            },
+            {
+              "place": "scream",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Inside the same building, so no extra travel."
+            },
+            {
+              "place": "mathallen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Tram or a walk to Grünerløkka."
+            },
+            {
+              "place": "vigeland",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Tram to Majorstuen. The park is open 24 hours; the museum has shorter hours, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the big sights in one tight day and a half.",
+      "days": [
+        {
+          "title": "Arrive, harbour and fortress",
+          "stops": [
+            {
+              "place": "karljohan",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Walk from the station down to the harbour. Shops are open in the daytime."
+            },
+            {
+              "place": "akershus",
+              "at": "14:00",
+              "minutes": 75,
+              "note": "Grounds are open daily. Interiors have shorter hours, so check on the day."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Waterfront walk, then an early dinner by the water."
+            },
+            {
+              "place": "opera",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Walk up on the roof. Best at sunset. The foyer usually closes around 18:00."
+            }
+          ]
+        },
+        {
+          "title": "Palace, park and art",
+          "stops": [
+            {
+              "place": "palace",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Interior tours are summer only. The park is open daily."
+            },
+            {
+              "place": "vigeland",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Short tram ride from the centre. The park is open 24 hours."
+            },
+            {
+              "place": "munch",
+              "at": "13:30",
+              "minutes": 120,
+              "note": "Lunch first, then the galleries. Usually open 10:00–18:00."
+            },
+            {
+              "place": "scream",
+              "at": "15:30",
+              "minutes": 30,
+              "note": "Inside the Munch Museum. Go at opening time if it is busy."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Visitors who want fjord views, forest and water more than museums.",
+      "days": [
+        {
+          "title": "Fjord and waterfront",
+          "stops": [
+            {
+              "place": "fjordcruise",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Boats leave from Aker Brygge. More departures in summer, so check times on the day."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Walk the waterfront and grab an early dinner."
+            },
+            {
+              "place": "opera",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "The roof is open longer in summer. Great at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Forest, lake and view",
+          "stops": [
+            {
+              "place": "sognsvann",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Metro from the centre. The lake is always open. Wear shoes you can walk in."
+            },
+            {
+              "place": "holmenkollen",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Ski museum and the view. Usually open 09:00/10:00–17:00/18:00. Go on a clear day."
+            },
+            {
+              "place": "fram",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Ferry or bus back down. Usually open until 17:00/18:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Majorstuen or Sentrum"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "Art lovers who want Munch, Vigeland and a harbour walk in one night.",
+      "days": [
+        {
+          "title": "Munch and the harbour",
+          "stops": [
+            {
+              "place": "munch",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually open 10:00–18:00, later some days. Check on the day."
+            },
+            {
+              "place": "scream",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Inside the Munch Museum. Go early if it is crowded."
+            },
+            {
+              "place": "opera",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk up on the roof. The foyer usually closes around 18:00."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner by the water."
+            }
+          ]
+        },
+        {
+          "title": "Vigeland and the centre",
+          "stops": [
+            {
+              "place": "vigeland",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "The park is open 24 hours. The museum is Tue–Sun, so check on the day."
+            },
+            {
+              "place": "palace",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk through the park to the palace. Interior tours are summer only."
+            },
+            {
+              "place": "karljohan",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch on or near the street, then walk down to the station."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the big sights: fortress, palace and opera in the centre, Viking and polar ships by ferry.",
+      "days": [
+        {
+          "title": "Arrive, city centre on foot",
+          "stops": [
+            {
+              "place": "karljohan",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Walk from the station up to the palace. Shops are open in the daytime."
+            },
+            {
+              "place": "palace",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Interior tours only in summer. The park is open daily and free."
+            },
+            {
+              "place": "akershus",
+              "at": "15:30",
+              "minutes": 75,
+              "note": "Grounds open daily, roughly 06:00–21:00. Interiors have shorter hours, so check on the day."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Waterfront walk, then dinner. Restaurants run until late."
+            }
+          ]
+        },
+        {
+          "title": "Munch, opera roof, then Bygdøy",
+          "stops": [
+            {
+              "place": "munch",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Usually opens 10:00, later some days. Check on the day."
+            },
+            {
+              "place": "scream",
+              "at": "11:15",
+              "minutes": 30,
+              "note": "Inside the Munch Museum, same ticket."
+            },
+            {
+              "place": "opera",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Walk up on the roof. Foyer roughly 10:00–18:00."
+            },
+            {
+              "place": "fram",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Ferry or bus to Bygdøy. Usually open until 17:00/18:00."
+            },
+            {
+              "place": "kontiki",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Next door to Fram. Check the closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want fjord views, forest trails and the ski jump, with a little city time in between.",
+      "days": [
+        {
+          "title": "Fjord and waterfront",
+          "stops": [
+            {
+              "place": "fjordcruise",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Boats leave from Aker Brygge. More departures in summer. Check on the day."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch by the water."
+            },
+            {
+              "place": "akershus",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Grounds open daily, roughly 06:00–21:00."
+            },
+            {
+              "place": "opera",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Roof is open longer in summer. Good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Forest, lake and ski jump",
+          "stops": [
+            {
+              "place": "sognsvann",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Metro line 5 to the end. Easy loop around the lake."
+            },
+            {
+              "place": "holmenkollen",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Metro back one stop. Usually open until 17:00/18:00. Go on a clear day for the view."
+            },
+            {
+              "place": "fram",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Bus down to Bygdøy. Check closing time on the day."
+            },
+            {
+              "place": "mathallen",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner in Grünerløkka. Tue–Sat roughly 10:00–18:00/19:00, Sunday shorter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum or Majorstuen"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Art lovers: Vigeland's park, Munch's Scream and the opera, with time for the riverside and food hall.",
+      "days": [
+        {
+          "title": "Vigeland and the centre",
+          "stops": [
+            {
+              "place": "vigeland",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Park open 24 hours. Museum Tue–Sun, check on the day. Go early for quiet."
+            },
+            {
+              "place": "palace",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Walk down Karl Johans gate. Interior tours only in summer."
+            },
+            {
+              "place": "karljohan",
+              "at": "12:45",
+              "minutes": 45,
+              "note": "Lunch on the way."
+            },
+            {
+              "place": "munch",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Usually 10:00–18:00, later some days."
+            },
+            {
+              "place": "scream",
+              "at": "16:00",
+              "minutes": 30,
+              "note": "Inside the Munch Museum."
+            }
+          ]
+        },
+        {
+          "title": "Opera, river and food",
+          "stops": [
+            {
+              "place": "opera",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk the roof. Foyer roughly 10:00–18:00."
+            },
+            {
+              "place": "akerselva",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Walk upstream from the centre. Always open."
+            },
+            {
+              "place": "mathallen",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Tue–Sat roughly 10:00–18:00/19:00, Sunday shorter."
+            },
+            {
+              "place": "grunerlokka",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Cafés and shops in the daytime."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Sunset by the water, then dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum or Grünerløkka"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-time visitors who want the big sights without rushing: fortress, palace, museums and a food hall.",
+      "days": [
+        {
+          "title": "Arrive and walk the centre",
+          "stops": [
+            {
+              "place": "karljohan",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Easy first walk from the main station up to the palace."
+            },
+            {
+              "place": "palace",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Park is open daily. Interiors only in summer with a guided tour, so check on the day."
+            },
+            {
+              "place": "akershus",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Grounds open daily, roughly 06:00–21:00. Interiors have shorter hours."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner by the water. Restaurants run until late."
+            }
+          ]
+        },
+        {
+          "title": "Art and the Opera",
+          "stops": [
+            {
+              "place": "munch",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–18:00 daily, later some days. Go at opening."
+            },
+            {
+              "place": "scream",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Inside the Munch Museum, same hours. No extra trip needed."
+            },
+            {
+              "place": "mathallen",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch. Tue–Sat roughly 10:00–18:00/19:00, Sunday shorter. Check on the day."
+            },
+            {
+              "place": "grunerlokka",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Cafés and shops are daytime. Walk the side streets."
+            },
+            {
+              "place": "opera",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk on the roof. Foyer roughly 10:00–18:00, roof open longer in summer."
+            }
+          ]
+        },
+        {
+          "title": "Majorstuen museums and Vigeland",
+          "stops": [
+            {
+              "place": "fram",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Usually 09:00/10:00–17:00/18:00 daily. Take the ferry from the centre."
+            },
+            {
+              "place": "kontiki",
+              "at": "11:15",
+              "minutes": 60,
+              "note": "Next door to Fram."
+            },
+            {
+              "place": "vikingship",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Check on the day before you go. Hours and access change."
+            },
+            {
+              "place": "vigeland",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Park open 24 hours. Museum Tue–Sun, check on the day. Lunch at a café nearby."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum, near Karl Johans gate"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want water, forest and views, with a few indoor stops for rainy hours.",
+      "days": [
+        {
+          "title": "Fjord and waterfront",
+          "stops": [
+            {
+              "place": "fjordcruise",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Departures are daytime, more in summer. Book ahead in July."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch by the water."
+            },
+            {
+              "place": "akershus",
+              "at": "14:30",
+              "minutes": 75,
+              "note": "Grounds open daily, roughly 06:00–21:00."
+            },
+            {
+              "place": "opera",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Roof walk. Roof open longer in summer."
+            }
+          ]
+        },
+        {
+          "title": "Forest and lake",
+          "stops": [
+            {
+              "place": "sognsvann",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Always open. Take the T-bane to Sognsvann. Bring a rain layer."
+            },
+            {
+              "place": "holmenkollen",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually 09:00/10:00–17:00/18:00 daily. Clear day for the view. Lunch at the café."
+            },
+            {
+              "place": "vigeland",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Park open 24 hours. Best in late light."
+            }
+          ]
+        },
+        {
+          "title": "River walk and museums",
+          "stops": [
+            {
+              "place": "akerselva",
+              "at": "10:00",
+              "minutes": 75,
+              "note": "Always open. Walk upstream from Grünerløkka."
+            },
+            {
+              "place": "mathallen",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch. Tue–Sat roughly 10:00–18:00/19:00, Sunday shorter."
+            },
+            {
+              "place": "fram",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Usually 09:00/10:00–17:00/18:00 daily. Ferry from the centre."
+            },
+            {
+              "place": "kontiki",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Next door to Fram."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Grünerløkka or Sentrum"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Art lovers: Munch and The Scream, Vigeland's sculptures, and the Opera roof.",
+      "days": [
+        {
+          "title": "Munch and the centre",
+          "stops": [
+            {
+              "place": "munch",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Usually 10:00–18:00 daily, later some days. Go at opening."
+            },
+            {
+              "place": "scream",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Inside the Munch Museum, same hours."
+            },
+            {
+              "place": "karljohan",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Lunch on or near the street."
+            },
+            {
+              "place": "opera",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Foyer roughly 10:00–18:00. Walk the roof."
+            },
+            {
+              "place": "akershus",
+              "at": "16:15",
+              "minutes": 75,
+              "note": "Grounds open daily, roughly 06:00–21:00."
+            }
+          ]
+        },
+        {
+          "title": "Sculpture day",
+          "stops": [
+            {
+              "place": "vigeland",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Park open 24 hours. Museum Tue–Sun, check on the day."
+            },
+            {
+              "place": "fram",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Usually 09:00/10:00–17:00/18:00 daily. Lunch nearby first."
+            },
+            {
+              "place": "kontiki",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Next door to Fram."
+            },
+            {
+              "place": "holmenkollen",
+              "at": "16:15",
+              "minutes": 120,
+              "note": "Usually 09:00/10:00–17:00/18:00 daily. Clear day for the view."
+            }
+          ]
+        },
+        {
+          "title": "Neighbourhoods and food",
+          "stops": [
+            {
+              "place": "grunerlokka",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Cafés and shops are daytime. Look for street art."
+            },
+            {
+              "place": "mathallen",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch. Tue–Sat roughly 10:00–18:00/19:00, Sunday shorter."
+            },
+            {
+              "place": "akerselva",
+              "at": "13:30",
+              "minutes": 75,
+              "note": "Always open. Walk upstream from Grünerløkka."
+            },
+            {
+              "place": "akerbrygge",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Waterfront walk, then dinner until late."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Sentrum, near the Opera"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Viking ships, the Opera and the Royal Palace."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Fjord ferries, forest trails and Holmenkollen views."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "Munch, Vigeland's sculptures and the Astrup Fearnley."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Sentrum",
+      "range": [
+        900,
+        1800
+      ],
+      "why": "Walk to the Opera, Karl Johans gate and the palace; best transport links for day trips.",
+      "center": [
+        59.913,
+        10.752
+      ]
+    },
+    {
+      "area": "Aker Brygge",
+      "range": [
+        1300,
+        2600
+      ],
+      "why": "Waterfront dining and the ferry pier to Bygdøy museums and the islands.",
+      "center": [
+        59.909,
+        10.727
+      ]
+    },
+    {
+      "area": "Grünerløkka",
+      "range": [
+        800,
+        1600
+      ],
+      "why": "Cafés, bars and a local feel along the Akerselva river; trams to the centre.",
+      "center": [
+        59.923,
+        10.759
+      ]
+    },
+    {
+      "area": "Majorstuen",
+      "range": [
+        950,
+        1900
+      ],
+      "why": "Quiet and central-west; close to Vigeland Park and the T-bane to Holmenkollen.",
+      "center": [
+        59.93,
+        10.715
+      ]
+    }
+  ],
+  "food": [
+    "Try Norwegian basics: salmon, fish soup, kjøttkaker (meat cakes) and brown cheese on bread.",
+    "Lunch is the cheaper meal. Many restaurants serve the same dishes at lower midday prices.",
+    "Mathallen food hall at Vulkan has many small vendors; good for picky eaters and rainy days.",
+    "Seafood counters and the fish market area near the harbour are worth a look; check prices first, Norway is costly.",
+    "Tap water is safe and free. Alcohol is sold in state Vinmonopolet shops; bars are expensive."
+  ],
+  "more_time": [
+    "Take a fjord ferry to the islands for a half-day of walking and swimming in summer.",
+    "Swap one museum for a forest walk or a trip up to Holmenkollen for views over the city.",
+    "Add a day trip by train to a nearby town; check timetables and prices on the day."
+  ]
+}

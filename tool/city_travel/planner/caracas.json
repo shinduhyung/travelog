@@ -1,0 +1,540 @@
+{
+  "city": "Caracas",
+  "checked": "October 2026",
+  "intro_line": "A mountain-ringed capital of salsa, arepas and chaotic energy.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Altamira",
+        "Las Mercedes",
+        "Bellas Artes",
+        "La Castellana"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Altamira",
+        "Las Mercedes",
+        "Bellas Artes",
+        "La Castellana"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Altamira",
+        "Las Mercedes",
+        "Bellas Artes",
+        "La Castellana"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Altamira",
+        "Las Mercedes",
+        "Bellas Artes",
+        "La Castellana"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Altamira",
+        "Las Mercedes",
+        "Bellas Artes",
+        "La Castellana"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 26,
+        "low": 17,
+        "rain_days": 12,
+        "note": "January: mild and fairly dry, around 12 rain days. Good for walking the city."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 11,
+        "note": "February: one of the driest months, about 11 rain days. Comfortable days and cool nights."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 17,
+        "note": "March: rain picks up to about 17 days. Carry a light rain jacket."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 18,
+        "note": "April: warmer nights near 19°C and 18 rain days. Plan indoor sights for afternoons."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 16,
+        "note": "May: mild but wetter, about 16 rain days. Mornings are usually the best window."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 20,
+        "note": "June: around 20 rain days. Expect short heavy showers; keep plans flexible."
+      },
+      {
+        "high": 27,
+        "low": 20,
+        "rain_days": 24,
+        "note": "July: the wettest stretch begins, about 24 rain days. Pack a rain layer."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 25,
+        "note": "August: wettest month, about 25 rain days. El Ávila trails may be muddy; check on the day."
+      },
+      {
+        "high": 28,
+        "low": 20,
+        "rain_days": 20,
+        "note": "September: still wet, around 20 rain days. Similar to June."
+      },
+      {
+        "high": 28,
+        "low": 19,
+        "rain_days": 22,
+        "note": "October: about 22 rain days. Showers common; evenings stay mild."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 22,
+        "note": "November: cooler highs near 26°C and 22 rain days. Bring a layer for evenings."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 17,
+        "note": "December: cooler nights near 18°C and 17 rain days. Pleasant for city walks."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.75,
+      0.7,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9
+    ],
+    "nature": [
+      0.85,
+      0.85,
+      0.7,
+      0.6,
+      0.55,
+      0.5,
+      0.45,
+      0.45,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.75,
+      0.75,
+      0.8,
+      0.8,
+      0.85,
+      0.85
+    ],
+    "history": [
+      0.9,
+      0.9,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.85
+    ]
+  },
+  "places": {
+    "pantheon": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning on a weekday",
+      "area": "Bellas Artes",
+      "popularity": 4
+    },
+    "bolivar_birthplace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Bellas Artes",
+      "popularity": 3
+    },
+    "university_city": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Bellas Artes",
+      "popularity": 3
+    },
+    "los_proceres": {
+      "types": [
+        "history",
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Las Mercedes",
+      "popularity": 3
+    },
+    "diverxity": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Weekend daytime",
+      "area": "Las Mercedes",
+      "popularity": 2
+    },
+    "pabellon_criollo": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Las Mercedes",
+      "popularity": 4
+    },
+    "mercado_municipal": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "La Castellana",
+      "popularity": 3
+    },
+    "altamira_square": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Altamira",
+      "popularity": 3
+    },
+    "avila_viewpoint": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Clear morning",
+      "area": "Altamira",
+      "popularity": 4
+    },
+    "sabana_grande_walk": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday daytime",
+      "area": "Bellas Artes",
+      "popularity": 2
+    },
+    "las_mercedes_dining": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Evening",
+      "area": "Las Mercedes",
+      "popularity": 4
+    },
+    "museo_bellas_artes": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday afternoon",
+      "area": "Bellas Artes",
+      "popularity": 3
+    },
+    "parque_del_este": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "La Castellana",
+      "popularity": 3
+    },
+    "arepa_breakfast": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Breakfast",
+      "area": "Altamira",
+      "popularity": 3
+    },
+    "city_tour": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Bellas Artes",
+      "popularity": 3
+    },
+    "plaza_bolivar": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Bellas Artes",
+      "popularity": 3
+    },
+    "cafe_altamira": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Altamira",
+      "popularity": 2
+    },
+    "parque_naciones_unidas": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "La Castellana",
+      "popularity": 2
+    },
+    "cable_car_base": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Altamira",
+      "popularity": 3
+    },
+    "heladeria": {
+      "types": [
+        "food"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Las Mercedes",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the museums, plazas and a good food evening; add a third for El Ávila or a day out."
+  },
+  "airports": [
+    {
+      "code": "CCS",
+      "name": "Maiquetia Simon Bolivar Internacional Airport",
+      "primary": true,
+      "note": "Main international gateway, about 17 km straight-line and 28 km by road from downtown.",
+      "options": [
+        {
+          "mode": "Airport bus",
+          "to": "Gato Negro metro or Parque Central",
+          "price": "check locally",
+          "time": "40-70 min",
+          "note": "Cheapest option; Gato Negro street level is unsafe, so continue by metro."
+        },
+        {
+          "mode": "Government bus",
+          "to": "Alba Hotel, Bellas Artes",
+          "price": "check locally",
+          "time": "45-75 min",
+          "note": "You need not be a hotel guest; ask at the tourist offices in the international terminal."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre or hotel",
+          "price": "VES 3000-6000",
+          "time": "40-70 min",
+          "note": "Agree the fare first; prefer official black Ford Explorer cabs and avoid shared rides."
+        },
+        {
+          "mode": "Ride app",
+          "to": "City centre or hotel",
+          "price": "check locally",
+          "time": "40-70 min",
+          "note": "Availability is patchy; book only after landing and confirm the driver."
+        }
+      ],
+      "max_km": 60
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Caracas",
+      "https://en.wikivoyage.org/wiki/Caracas"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food"
+  ],
+  "transit": {
+    "best": "Metro for most cross-city trips; agree taxi prices first or use a ride app.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Clean, cheap and fast. Buy a single, round trip or 10-journey multi abono."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Metrobuses link metro stations to areas off the underground, but run roughly every 20 minutes. Por puesto minibuses are cheap but slow, crowded and often in poor condition."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Taxis have no meters; agree the price first and expect quotes near double the fair fare. Uber and inDrive work but coverage varies; confirm before relying on them."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is hectic. Only worth it for trips outside the city."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Fine by day in safe districts, but avoid quiet streets after dark."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild all year at this altitude: highs around 26–28°C, cool nights, and rain in every month. The driest months are January and February.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Mild all year",
+        "text": "Highs stay around 26–28°C and lows around 17–20°C. No extreme heat or cold."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain in every month",
+        "text": "Expect 11–25 rain days a month. Showers are often short; a light rain jacket helps."
+      },
+      {
+        "icon": "☔",
+        "title": "Wettest: July and August",
+        "text": "About 24–25 rain days. Keep indoor options ready and check mountain trips on the day."
+      },
+      {
+        "icon": "☀️",
+        "title": "Driest: January and February",
+        "text": "Around 11–12 rain days. The best window for walking and outdoor plans."
+      },
+      {
+        "icon": "🌙",
+        "title": "Cool evenings",
+        "text": "Nights drop to 17–20°C. Bring a light layer for evenings out."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light layers, a rain jacket or compact umbrella, and comfortable shoes for hilly streets."
+      }
+    ]
+  }
+}

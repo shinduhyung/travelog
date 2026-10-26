@@ -11,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Firebase Imports
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jidoapp/services/user_doc_loader.dart';
 
 const int _notProvided = -9999;
 
@@ -101,7 +102,7 @@ class AirportProvider with ChangeNotifier {
     // Load from Server (로컬은 Firestore 이후에만 읽음)
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists) {
           final data = doc.data();
           if (data != null) {
@@ -471,7 +472,7 @@ class AirportProvider with ChangeNotifier {
     final user = _auth.currentUser;
     if (user != null) {
       try {
-        final doc = await _firestore.collection('users').doc(user.uid).get();
+        final doc = await UserDocLoader.instance.load(user.uid);
         if (doc.exists && doc.data() != null) {
           final data = doc.data()!;
           if (data.containsKey('airport_visit_history')) {

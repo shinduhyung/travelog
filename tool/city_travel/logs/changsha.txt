@@ -1,0 +1,31 @@
+$ deepseek_prep.py Changsha
+  tokens in 662 out 400
+Changsha: 4 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Changsha
+  tokens in 1812 out 602
+Changsha: 0 problems
+
+$ deepseek_city.py Changsha --stage places
+Changsha: places
+  tokens in 1145 out 2864
+
+$ deepseek_city.py Changsha --stage frame
+Changsha: frame
+  tokens in 2434 out 1689
+
+$ deepseek_city.py Changsha --stage plans
+Changsha: plans
+  plans for day
+  tokens in 2025 out 946
+  plans for 1n
+  tokens in 2026 out 1117
+  plans for 2n
+  tokens in 2031 out 1252
+  plans for 3n
+  tokens in 2026 out 1882
+
+$ merge_city.py Changsha
+Changsha: 19 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/changsha.json and planner/changsha.json
+

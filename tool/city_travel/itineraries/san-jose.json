@@ -1,0 +1,1269 @@
+{
+  "city": "San Jose",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "San Jose rewards visitors with a walkable downtown, world-class tech museums, and easy access to hills and coast. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 37.2964,
+      "west": -122.0452,
+      "north": 37.4303,
+      "east": -121.8255,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 4,
+      "per_km": 2.5,
+      "min_fare": 15
+    },
+    "road_factor": 1.3,
+    "city_kmh": 25,
+    "notes": [
+      "VTA light rail links downtown, the airport area, and suburbs.",
+      "VTA buses cover the city; Clipper card or contactless pay works.",
+      "Taxis are metered; Uber and Lyft operate widely.",
+      "Driving is easy but parking downtown costs money; rush hour is slow.",
+      "Downtown is walkable; bikes and scooters are common.",
+      "No ferry service in San Jose."
+    ],
+    "sources": []
+  },
+  "places": {
+    "winchester": {
+      "name": "Winchester Mystery House",
+      "landmark": "Winchester Mystery House",
+      "kind": "sight",
+      "lat": 37.3183,
+      "lon": -121.951,
+      "price": 45,
+      "price_text": "≈ $40–50 per mansion tour; gardens and grounds free",
+      "hours": "Daily, roughly 10:00–17:00; check tour times on the day",
+      "tip": "Book a timed tour online and arrive 15 minutes early; the house is only seen with a guide.",
+      "source": "https://winchestermysteryhouse.com/"
+    },
+    "rosicrucian": {
+      "name": "Rosicrucian Egyptian Museum",
+      "landmark": "Rosicrucian Egyptian Museum",
+      "kind": "museum",
+      "lat": 37.3335,
+      "lon": -121.9229,
+      "price": 12,
+      "price_text": "≈ $10–15 adult; children and seniors less",
+      "hours": "Closed Monday; Tue–Sun roughly 10:00–17:00",
+      "tip": "See the replica tomb in the basement and walk the peaceful gardens and planetarium next door.",
+      "source": "https://egyptianmuseum.org/"
+    },
+    "sjma": {
+      "name": "San Jose Museum of Art",
+      "landmark": "San Jose Museum of Art",
+      "kind": "museum",
+      "lat": 37.3337,
+      "lon": -121.89,
+      "price": 10,
+      "price_text": "≈ $10 adult; discounts for students and seniors",
+      "hours": "Closed Mon–Tue; Wed–Sun roughly 11:00–17:00",
+      "tip": "Small and calm; pair it with the plaza and the nearby SoFA galleries.",
+      "source": "https://sjmusart.org/"
+    },
+    "happy-hollow": {
+      "name": "Happy Hollow Park and Zoo",
+      "landmark": "Happy Hollow Park and Zoo",
+      "kind": "park",
+      "lat": 37.3117,
+      "lon": -121.848,
+      "price": 20,
+      "price_text": "≈ $15–25 admission; rides may cost extra",
+      "hours": "Closed some weekdays; check the calendar on the day",
+      "tip": "Good for young kids; go early for the zoo and stay for the small rides.",
+      "source": "https://happyhollow.org/"
+    },
+    "rose-garden": {
+      "name": "San Jose Municipal Rose Garden",
+      "landmark": "San Jose Municipal Rose Garden",
+      "kind": "park",
+      "lat": 37.3318,
+      "lon": -121.9286,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 08:00 to sunset",
+      "tip": "Peak bloom is late spring; bring a picnic and walk the quiet paths.",
+      "source": "https://www.sanjoseca.gov/Home/Components/FacilityDirectory/FacilityDirectory/2237/2028"
+    },
+    "great-america": {
+      "name": "California's Great America",
+      "landmark": "California's Great America",
+      "kind": "activity",
+      "lat": 37.3976,
+      "lon": -121.996,
+      "price": 65,
+      "price_text": "≈ $50–90 one-day ticket; buy online for less",
+      "hours": "Seasonal; usually open daily in summer, weekends off-season",
+      "tip": "Check the operating calendar first; arrive at opening for the big coasters.",
+      "source": "https://www.cagreatamerica.com/"
+    },
+    "scu": {
+      "name": "Santa Clara University",
+      "landmark": "Santa Clara University",
+      "kind": "sight",
+      "lat": 37.3496,
+      "lon": -121.939,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Grounds open daily; the mission church has limited hours",
+      "tip": "Visit the old Mission Santa Clara church and the shaded central lawn.",
+      "source": "https://www.scu.edu/"
+    },
+    "stanford": {
+      "name": "Stanford University",
+      "landmark": "Stanford University",
+      "kind": "sight",
+      "lat": 37.4275,
+      "lon": -122.1697,
+      "price": 0,
+      "price_text": "Free to walk; paid parking on campus",
+      "hours": "Campus open daily; Memorial Church and Hoover Tower have set hours",
+      "tip": "Climb Hoover Tower for the view and walk the Main Quad and Palm Drive.",
+      "source": "https://www.stanford.edu/"
+    },
+    "golfland-milpitas": {
+      "name": "Golfland (Milpitas)",
+      "landmark": "Golfland (Milpitas)",
+      "kind": "activity",
+      "lat": 37.415,
+      "lon": -121.9059,
+      "price": 15,
+      "price_text": "≈ $10–20 per round of mini-golf; arcade extra",
+      "hours": "Daily, usually late morning to late evening",
+      "tip": "Good rainy-day or evening option; check prices per course on arrival.",
+      "source": "https://www.golfland.com/milpitas/"
+    },
+    "golfland-sanjose": {
+      "name": "Golfland (San Jose)",
+      "landmark": "Golfland (San Jose)",
+      "kind": "activity",
+      "lat": 37.3382,
+      "lon": -121.8863,
+      "price": 15,
+      "price_text": "≈ $10–20 per round of mini-golf; arcade extra",
+      "hours": "Daily, usually late morning to late evening",
+      "tip": "Closest mini-golf to downtown; fine for a short family break.",
+      "source": "https://www.golfland.com/sanjose/"
+    },
+    "golfland-sunnyvale": {
+      "name": "Golfland (Sunnyvale)",
+      "landmark": "Golfland (Sunnyvale)",
+      "kind": "activity",
+      "lat": 37.3888,
+      "lon": -122.0227,
+      "price": 15,
+      "price_text": "≈ $10–20 per round of mini-golf; arcade extra",
+      "hours": "Daily, usually late morning to late evening",
+      "tip": "Handy if you are already in the South Bay tech corridor.",
+      "source": "https://www.golfland.com/sunnyvale/"
+    },
+    "san-pedro-market": {
+      "name": "San Pedro Square Market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 37.3361,
+      "lon": -121.8946,
+      "price": 15,
+      "price_text": "≈ $10–25 per person for food and drink",
+      "hours": "Daily; stalls vary, busiest at lunch and evening",
+      "tip": "Many small food stalls in one hall; good first stop to try local eats.",
+      "source": "https://www.sanpedrosquaremarket.com/"
+    },
+    "sofa-walk": {
+      "name": "SoFA District gallery walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 37.3318,
+      "lon": -121.8853,
+      "price": 0,
+      "price_text": "Free to walk; galleries and events vary",
+      "hours": "Best in the afternoon and evening; check First Friday events",
+      "tip": "The arts district comes alive on First Friday evenings with open galleries.",
+      "source": "https://www.southfirstarea.com/"
+    },
+    "santana-row": {
+      "name": "Santana Row stroll",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 37.3203,
+      "lon": -121.9476,
+      "price": 0,
+      "price_text": "Free to walk; shops and restaurants extra",
+      "hours": "Daily; shops usually 10:00–21:00",
+      "tip": "Outdoor shopping street with cafes; pleasant for an evening walk and dinner.",
+      "source": "https://www.santanarow.com/"
+    },
+    "japantown": {
+      "name": "Japantown walk and eats",
+      "landmark": null,
+      "kind": "food",
+      "lat": 37.3483,
+      "lon": -121.8947,
+      "price": 15,
+      "price_text": "≈ $10–25 per person for snacks and meals",
+      "hours": "Shops and restaurants daily; some close on Mondays",
+      "tip": "Small historic district; try a Japanese bakery and the grocery stores.",
+      "source": "https://www.sanjoseca.gov/"
+    },
+    "guadalupe-river": {
+      "name": "Guadalupe River Trail",
+      "landmark": null,
+      "kind": "park",
+      "lat": 37.3417,
+      "lon": -121.9017,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open daily, daylight hours",
+      "tip": "Flat paved path for a walk or bike ride; go in daylight.",
+      "source": "https://www.sanjoseca.gov/"
+    },
+    "city-hall-view": {
+      "name": "San Jose City Hall plaza and dome",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 37.3379,
+      "lon": -121.8866,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Plaza open daily; building on weekdays",
+      "tip": "Quick photo stop for the glass dome; combine with a downtown walk.",
+      "source": "https://www.sanjoseca.gov/"
+    },
+    "history-park": {
+      "name": "History Park San Jose",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 37.3203,
+      "lon": -121.8583,
+      "price": 10,
+      "price_text": "≈ $5–10; check current admission",
+      "hours": "Usually Wed–Sun; check hours on the day",
+      "tip": "Outdoor museum of old buildings and a trolley; relaxed for families.",
+      "source": "https://historysanjose.org/"
+    },
+    "tech-museum": {
+      "name": "The Tech Interactive",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 37.3317,
+      "lon": -121.8906,
+      "price": 30,
+      "price_text": "≈ $25–35 adult; children less",
+      "hours": "Daily, roughly 10:00–17:00; check on the day",
+      "tip": "Hands-on science and tech; best for kids and teens.",
+      "source": "https://www.thetech.org/"
+    },
+    "kelley-park": {
+      "name": "Kelley Park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 37.3196,
+      "lon": -121.8589,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, daylight hours",
+      "tip": "Green space next to History Park and Happy Hollow; good picnic stop.",
+      "source": "https://www.sanjoseca.gov/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One packed culture day: Egyptian treasures, modern art and the old downtown on foot.",
+      "days": [
+        {
+          "title": "Museums and downtown",
+          "stops": [
+            {
+              "place": "rosicrucian",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Start early; the tomb and garden are included."
+            },
+            {
+              "place": "sjma",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Short drive or rideshare from the Rosicrucian."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "14:15",
+              "minutes": 75,
+              "note": "Lunch. Stalls vary; busiest at lunch."
+            },
+            {
+              "place": "city-hall-view",
+              "at": "15:45",
+              "minutes": 30,
+              "note": "Plaza open daily; the dome is a quick photo stop."
+            },
+            {
+              "place": "sofa-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Galleries and murals. Check First Friday events."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A grazing day: market lunch, Japantown snacks and an evening stroll at Santana Row.",
+      "days": [
+        {
+          "title": "Markets, Japantown and Santana Row",
+          "stops": [
+            {
+              "place": "san-pedro-market",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Early lunch before the rush. Stalls vary by day."
+            },
+            {
+              "place": "japantown",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Bakeries and small shops. Some close on Mondays."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Walk off lunch on the paved trail. Daylight hours only."
+            },
+            {
+              "place": "santana-row",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Shops usually 10:00–21:00. Good dinner choice."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Green space and easy walks, best in spring when the roses bloom.",
+      "days": [
+        {
+          "title": "Rose Garden, river trail and Kelley Park",
+          "stops": [
+            {
+              "place": "rose-garden",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Free. Best in spring; open roughly 08:00 to sunset."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Flat paved path. Bring water; shade is patchy."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "12:15",
+              "minutes": 75,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "kelley-park",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Daylight hours. Pairs with History Park next door."
+            },
+            {
+              "place": "history-park",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually Wed–Sun; check hours on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "First-timers who want the big museums and a walkable old downtown in one day.",
+      "days": [
+        {
+          "title": "Museums and downtown",
+          "stops": [
+            {
+              "place": "rosicrucian",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Start early; the Egyptian collection is the draw."
+            },
+            {
+              "place": "city-hall-view",
+              "at": "12:15",
+              "minutes": 30,
+              "note": "Short walk to the plaza and glass dome. Building open weekdays."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "13:00",
+              "minutes": 75,
+              "note": "Lunch. Stalls vary; busiest at midday."
+            },
+            {
+              "place": "sjma",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Check the day's exhibitions."
+            },
+            {
+              "place": "sofa-walk",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Galleries and murals nearby. Best on First Friday evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Visitors who plan the day around lunch, snacks and an evening stroll.",
+      "days": [
+        {
+          "title": "Markets, Japantown and Santana Row",
+          "stops": [
+            {
+              "place": "san-pedro-market",
+              "at": "11:30",
+              "minutes": 75,
+              "note": "Early lunch before the rush. Stalls vary by day."
+            },
+            {
+              "place": "japantown",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Short drive or rideshare. Bakeries and small shops; some close Mondays."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "14:45",
+              "minutes": 60,
+              "note": "Flat path to walk off lunch. Daylight hours only."
+            },
+            {
+              "place": "santana-row",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Evening stroll and dinner. Shops usually open to 21:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "A calm day outdoors: a garden, a river path and a leafy campus.",
+      "days": [
+        {
+          "title": "Garden, river and campus",
+          "stops": [
+            {
+              "place": "rose-garden",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Free and open daily. Best bloom is spring."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Easy paved trail. Bring water; little shade in parts."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "11:45",
+              "minutes": 75,
+              "note": "Lunch downtown."
+            },
+            {
+              "place": "scu",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Short drive. Grounds open daily; mission church hours are limited."
+            },
+            {
+              "place": "kelley-park",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Shady lawns to finish the day. Daylight hours."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want museums, old downtown and a campus walk, without rushing.",
+      "days": [
+        {
+          "title": "Arrive and downtown museums",
+          "stops": [
+            {
+              "place": "sjma",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Start here after lunch."
+            },
+            {
+              "place": "city-hall-view",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Short walk from the museum. Plaza open daily."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "16:00",
+              "minutes": 75,
+              "note": "Early dinner; stalls busiest in the evening."
+            },
+            {
+              "place": "sofa-walk",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Galleries and murals. Check First Friday events."
+            }
+          ]
+        },
+        {
+          "title": "Egyptian museum and history park",
+          "stops": [
+            {
+              "place": "rosicrucian",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Weekday afternoon is quieter, but mornings work."
+            },
+            {
+              "place": "history-park",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Usually Wed–Sun; check hours on the day."
+            },
+            {
+              "place": "kelley-park",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Next to History Park. Daylight hours."
+            },
+            {
+              "place": "japantown",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Lunchtime is best, but dinner here works too. Some shops close Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Campus morning, then fly",
+          "stops": [
+            {
+              "place": "scu",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Grounds open daily. Mission church has limited hours."
+            },
+            {
+              "place": "stanford",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "About 30 minutes by car. Memorial Church and Hoover Tower have set hours."
+            },
+            {
+              "place": "santana-row",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch and a stroll before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Visitors who plan the day around markets, bakeries and taquerias.",
+      "days": [
+        {
+          "title": "Market lunch and downtown eats",
+          "stops": [
+            {
+              "place": "san-pedro-market",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Busiest at lunch. Grab a table early."
+            },
+            {
+              "place": "sjma",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Good break between meals."
+            },
+            {
+              "place": "sofa-walk",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Afternoon and evening are best."
+            },
+            {
+              "place": "santana-row",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Shops usually 10:00–21:00. Book dinner ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Japantown and the river",
+          "stops": [
+            {
+              "place": "japantown",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Lunchtime is best. Some shops close Mondays."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Walk off lunch. Daylight hours."
+            },
+            {
+              "place": "rosicrucian",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "18:00",
+              "minutes": 75,
+              "note": "Early evening is lively."
+            }
+          ]
+        },
+        {
+          "title": "Campus and a last meal",
+          "stops": [
+            {
+              "place": "scu",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Quiet weekday morning."
+            },
+            {
+              "place": "stanford",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "About 30 minutes by car. Check church and tower hours."
+            },
+            {
+              "place": "santana-row",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want gardens, river paths and green space between city stops.",
+      "days": [
+        {
+          "title": "Rose garden and river trail",
+          "stops": [
+            {
+              "place": "rose-garden",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Spring morning is best. Open roughly 08:00 to sunset."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Flat and easy. Daylight hours."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "12:30",
+              "minutes": 75,
+              "note": "Lunch stop."
+            },
+            {
+              "place": "city-hall-view",
+              "at": "14:30",
+              "minutes": 30,
+              "note": "Plaza open daily; building on weekdays."
+            },
+            {
+              "place": "sjma",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Indoor break if it is hot."
+            }
+          ]
+        },
+        {
+          "title": "Zoo morning and campus green",
+          "stops": [
+            {
+              "place": "happy-hollow",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Closed some weekdays; check the calendar on the day."
+            },
+            {
+              "place": "kelley-park",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Next door. Daylight hours."
+            },
+            {
+              "place": "scu",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Shady grounds. Mission church has limited hours."
+            },
+            {
+              "place": "japantown",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dinner. Some shops close Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Stanford and out",
+          "stops": [
+            {
+              "place": "stanford",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "About 30 minutes by car. Open daily; check tower and church hours."
+            },
+            {
+              "place": "santana-row",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch and a last stroll."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-time visitors who want museums, old downtown and a campus day, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and downtown core",
+          "stops": [
+            {
+              "place": "city-hall-view",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Start at the plaza; the dome is a quick photo stop. Building open weekdays."
+            },
+            {
+              "place": "sjma",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Ten minutes on foot from the plaza."
+            },
+            {
+              "place": "sofa-walk",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Galleries and street art nearby. Best in late afternoon; check First Friday events."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "18:30",
+              "minutes": 75,
+              "note": "Dinner from the stalls. Busiest at lunch and evening."
+            }
+          ]
+        },
+        {
+          "title": "Egypt and the Tech",
+          "stops": [
+            {
+              "place": "rosicrucian",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Weekday afternoon is quieter, but mornings work for a full day."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Short drive or rideshare back downtown."
+            },
+            {
+              "place": "tech-museum",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Roughly 10:00–17:00; check on the day. Good for mixed-age groups."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "16:45",
+              "minutes": 60,
+              "note": "Easy flat walk along the trail before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Winchester and History Park",
+          "stops": [
+            {
+              "place": "winchester",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Book a tour time on the day; weekday morning is calmest."
+            },
+            {
+              "place": "santana-row",
+              "at": "12:45",
+              "minutes": 90,
+              "note": "Lunch and a stroll. Shops usually 10:00–21:00."
+            },
+            {
+              "place": "history-park",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Usually Wed–Sun; check hours on the day. Kelley Park is next door."
+            },
+            {
+              "place": "japantown",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Dinner. Some shops close on Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Campus morning, then fly",
+          "stops": [
+            {
+              "place": "stanford",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Campus open daily; Memorial Church and Hoover Tower have set hours. About 30–40 minutes by car."
+            },
+            {
+              "place": "scu",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "On the way back. Grounds open daily; mission church hours are limited."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Last lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Visitors who plan the day around markets, bakeries and long dinners.",
+      "days": [
+        {
+          "title": "Market lunch and downtown",
+          "stops": [
+            {
+              "place": "san-pedro-market",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Lunch. Stalls vary; busiest at lunch and evening."
+            },
+            {
+              "place": "sjma",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Closed Mon–Tue. Walk off lunch."
+            },
+            {
+              "place": "sofa-walk",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Galleries and coffee. Check First Friday events."
+            },
+            {
+              "place": "city-hall-view",
+              "at": "17:15",
+              "minutes": 30,
+              "note": "Quick look at the plaza and dome before dinner."
+            }
+          ]
+        },
+        {
+          "title": "Japantown and Santana Row",
+          "stops": [
+            {
+              "place": "japantown",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch and bakeries. Some shops close on Mondays."
+            },
+            {
+              "place": "rose-garden",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Short walk or drive. Best in spring; open roughly 08:00 to sunset."
+            },
+            {
+              "place": "santana-row",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Shops usually 10:00–21:00. Good for coffee and people-watching."
+            },
+            {
+              "place": "santana-row",
+              "at": "18:30",
+              "minutes": 90,
+              "note": "Dinner here; book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Museum morning, market evening",
+          "stops": [
+            {
+              "place": "rosicrucian",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Tue–Sun roughly 10:00–17:00."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch."
+            },
+            {
+              "place": "tech-museum",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Roughly 10:00–17:00; check on the day."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Return for early evening; stalls are livelier then."
+            }
+          ]
+        },
+        {
+          "title": "Slow morning, then fly",
+          "stops": [
+            {
+              "place": "guadalupe-river",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Morning walk to work up an appetite. Daylight hours."
+            },
+            {
+              "place": "japantown",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Late breakfast or pastries to take away."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Final lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want gardens, river paths and green space between city stops.",
+      "days": [
+        {
+          "title": "River path and gardens",
+          "stops": [
+            {
+              "place": "guadalupe-river",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Flat and easy; open daylight hours. Morning is coolest."
+            },
+            {
+              "place": "rose-garden",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Best in spring. Open roughly 08:00 to sunset."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "12:00",
+              "minutes": 75,
+              "note": "Lunch."
+            },
+            {
+              "place": "city-hall-view",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Plaza open daily; building on weekdays."
+            }
+          ]
+        },
+        {
+          "title": "Zoo and park day",
+          "stops": [
+            {
+              "place": "happy-hollow",
+              "at": "09:30",
+              "minutes": 180,
+              "note": "Closed some weekdays; check the calendar on the day. Morning is best."
+            },
+            {
+              "place": "kelley-park",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Next door. Picnic lunch; open daylight hours."
+            },
+            {
+              "place": "history-park",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Usually Wed–Sun; check hours on the day."
+            },
+            {
+              "place": "japantown",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dinner. Some shops close on Mondays."
+            }
+          ]
+        },
+        {
+          "title": "Campus green and museum",
+          "stops": [
+            {
+              "place": "stanford",
+              "at": "09:00",
+              "minutes": 150,
+              "note": "Campus open daily; church and tower have set hours. About 30–40 minutes by car."
+            },
+            {
+              "place": "scu",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Grounds open daily; mission church hours are limited."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch on the way back."
+            },
+            {
+              "place": "rosicrucian",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "Closed Monday. Tue–Sun roughly 10:00–17:00."
+            }
+          ]
+        },
+        {
+          "title": "Easy morning, then fly",
+          "stops": [
+            {
+              "place": "rose-garden",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Quiet early. Open roughly 08:00 to sunset."
+            },
+            {
+              "place": "guadalupe-river",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Last walk before the airport."
+            },
+            {
+              "place": "san-pedro-market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Early lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Downtown San Jose"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, the Rosicrucian Egyptian Museum and the old downtown."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Farm-to-table dining, taquerias and the Japantown bakeries."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Alum Rock trails, the Guadalupe River path and nearby hills."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Downtown",
+      "range": [
+        130,
+        320
+      ],
+      "why": "Walk to museums, the convention center and the San Pedro Square food spots. Best base without a car.",
+      "center": [
+        37.334,
+        -121.89
+      ]
+    },
+    {
+      "area": "SoFA District",
+      "range": [
+        120,
+        300
+      ],
+      "why": "Gallery and nightlife quarter south of downtown; close to the convention center and the arts scene.",
+      "center": [
+        37.331,
+        -121.885
+      ]
+    },
+    {
+      "area": "Santana Row",
+      "range": [
+        220,
+        480
+      ],
+      "why": "Shops, restaurants and a lively evening scene; good for couples and shoppers, but you'll want a car or ride app.",
+      "center": [
+        37.32,
+        -121.948
+      ]
+    },
+    {
+      "area": "Japantown",
+      "range": [
+        110,
+        260
+      ],
+      "why": "Quiet, walkable and full of Japanese restaurants and markets; a short ride from downtown.",
+      "center": [
+        37.348,
+        -121.895
+      ]
+    }
+  ],
+  "food": [
+    "Try a Mission-style burrito or a plate of tacos at a taqueria; many are cheap and filling, roughly $10–15.",
+    "San Pedro Square Market downtown: many small stalls under one roof, good for groups and picky eaters.",
+    "Japantown for ramen, sushi and Japanese bakeries; walk the few blocks and pick what looks busy.",
+    "The area grows much of the region's produce; look for farm-to-table menus and weekend farmers' markets.",
+    "Book popular dinner spots ahead for Friday and Saturday; walk-ins can mean a long wait."
+  ],
+  "more_time": [
+    "Add a day for the Rosicrucian Egyptian Museum and the rose garden next door; a calm, cheap half-day.",
+    "Nature lovers: swap an afternoon for a hike at Alum Rock Park in the eastern hills; go early in summer.",
+    "Have a car? Drive to the coast (Santa Cruz) or the hills for a half-day; check traffic before you go."
+  ]
+}

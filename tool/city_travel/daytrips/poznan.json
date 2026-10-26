@@ -1,0 +1,59 @@
+{
+ "city": "Poznań",
+ "trips": [
+  {
+   "place": "Wągrowiec",
+   "label": "",
+   "position": {
+    "id": 398528,
+    "name": "Wagrowiec",
+    "city": "Wagrowiec",
+    "lat": 52.80842,
+    "lng": 17.19961
+   },
+   "town": {
+    "name": "Wągrowiec",
+    "lat": 52.80842,
+    "lng": 17.19961
+   },
+   "road": {
+    "km": 59,
+    "min": 70,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 180,
+    "currency": "PLN"
+   },
+   "modes": {
+    "train": {
+     "from": "$4-$6",
+     "time": "1h 10m",
+     "via": "Poznan Garbary to Wagrowiec",
+     "source": "https://www.rome2rio.com/s/Poznan/Wagrowiec"
+    }
+   },
+   "route_note": "Regional trains connect Poznań with Wągrowiec directly in roughly an hour, though services are infrequent so check times.",
+   "see": [
+    "Cistercian monastery complex",
+    "Pałuki lake district scenery",
+    "Old town centre"
+   ],
+   "visit": "Half day",
+   "tour_query": "Wagrowiec day trip from Poznan",
+   "quests": [],
+   "recommended": "train",
+   "why": "Regional trains run direct in about an hour, similar to the drive, and drop you in town.",
+   "stars": 2,
+   "know": [
+    "Services are infrequent, so check return times before you go",
+    "Small town with limited sights; best as a relaxed half-day outing"
+   ]
+  }
+ ],
+ "problems": [
+  "Gniezno: not a town in cities15000.json (PL), dropped",
+  "Kórnik: not a town in cities15000.json (PL), dropped",
+  "Rogalin: not a town in cities15000.json (PL), dropped"
+ ]
+}

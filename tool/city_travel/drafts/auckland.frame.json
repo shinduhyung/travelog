@@ -1,0 +1,269 @@
+{
+  "styles": [
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Volcanoes, rainforest walks and island day trips."
+    },
+    {
+      "id": "beach",
+      "label": "Beaches",
+      "blurb": "Swims, ferries and harbour sunsets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Markets, seafood and a strong café scene."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "CBD / Britomart",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Walk to the waterfront, ferries and trains. Best base without a car.",
+      "center": [
+        -36.845,
+        174.767
+      ]
+    },
+    {
+      "area": "Viaduct Harbour",
+      "range": [
+        250,
+        550
+      ],
+      "why": "Waterfront restaurants and bars on the doorstep; short walk to the CBD.",
+      "center": [
+        -36.842,
+        174.758
+      ]
+    },
+    {
+      "area": "Ponsonby",
+      "range": [
+        200,
+        450
+      ],
+      "why": "Cafés, bars and boutiques in a leafy inner suburb; short bus or rideshare to the centre.",
+      "center": [
+        -36.855,
+        174.745
+      ]
+    },
+    {
+      "area": "Parnell",
+      "range": [
+        190,
+        430
+      ],
+      "why": "Quiet historic village with gardens and the museum nearby; good for families.",
+      "center": [
+        -36.858,
+        174.78
+      ]
+    }
+  ],
+  "food": [
+    "Try a hangi-style or modern Māori dish, and seafood like green-lipped mussels and fish and chips.",
+    "Auckland is famous for brunch. Cafés in Ponsonby and Parnell serve flat whites and big breakfasts.",
+    "Night markets (for example in the suburbs) are cheap and good for Asian street food; check which night on the day.",
+    "The Viaduct and Britomart have waterfront restaurants; book ahead on weekends.",
+    "Supermarkets and food courts keep meal costs down; a casual lunch is often NZ$15–25."
+  ],
+  "more_time": [
+    "Take a ferry to Waiheke Island for beaches and vineyards; check ferry times and prices on the day.",
+    "Swap a city day for a west-coast beach such as Piha; a rental car or tour is easiest.",
+    "Hike a volcano: short walks up Mount Eden or One Tree Hill give city and harbour views."
+  ],
+  "type_month_fit": {
+    "nature": [
+      0.95,
+      0.95,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6,
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "beach": [
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.5,
+      0.35,
+      0.3,
+      0.35,
+      0.45,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "culture": [
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "family": [
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55,
+      0.5,
+      0.55,
+      0.6,
+      0.75,
+      0.9,
+      0.95
+    ]
+  },
+  "best_for": [
+    "nature",
+    "beach"
+  ],
+  "recommend": {
+    "why": "Two nights covers the harbour, a volcano walk and a ferry trip; add a night for an island or west-coast beach day."
+  },
+  "month_notes": [
+    "January: warmest and driest feel, highs near 23°C. Book ferries and beaches early.",
+    "February: similar to January, around 23°C. Great for beaches and island trips.",
+    "March: still warm at 22°C, but rain days stay around 11. Pack a light rain jacket.",
+    "April: cooler at 20°C. Good for hiking; evenings need a layer.",
+    "May: drops to 17°C with more rain days (13). Mix indoor sights with short walks.",
+    "June: cool at 15°C and wetter. Bring a waterproof and warm layers.",
+    "July: coldest month, highs near 14°C. Indoor museums and cafés are good bets.",
+    "August: similar cold, around 14°C, with the most rain days (14). Plan flexible days.",
+    "September: still cool at 15°C and the wettest month (15 rain days). Keep an umbrella handy.",
+    "October: warms to 17°C but rain days stay high (13). Check forecasts each morning.",
+    "November: milder at 19°C. Good shoulder season for walks and ferries.",
+    "December: warm again at 21°C. Busy holiday season; book stays ahead."
+  ],
+  "climate_guide": {
+    "summary": "Mild oceanic climate: warm, drier summers and cool, wetter winters. Rain can come any month.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Warmest months, highs around 21–23°C. Best for beaches, ferries and volcano walks."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "Expect roughly 11–15 rain days every month. Showers can be short; carry a light rain jacket."
+      },
+      {
+        "icon": "🥶",
+        "title": "Cool winters (June to August)",
+        "text": "Highs near 14–15°C and lows around 9–11°C. Bring warm layers and a waterproof."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Sea breezes and changeable days",
+        "text": "Harbour winds can make it feel cooler. A layer you can add or remove helps."
+      },
+      {
+        "icon": "🏖️",
+        "title": "Swim in summer",
+        "text": "Water and air are warmest December to March. Other months suit walks more than swims."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers, a rain jacket, comfortable walking shoes and sunscreen for summer. A warm hat for winter."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the CBD and take trains, buses or ferries; use an AT HOP card or contactless card.",
+    "modes": [
+      {
+        "mode": "Train",
+        "has": true,
+        "best": true,
+        "text": "Four lines run from Waitematā Station, and a new underground city loop is open. Good for suburbs and the airport link via bus or rail; check routes on the day."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "Buses cover most suburbs. Cash is not accepted; use an AT HOP card or contactless card. Fares start around NZ$2.80 per zone with free transfers within 30 minutes."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries leave the CBD for Hauraki Gulf islands and Devonport. A quick, scenic way to cross the harbour."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber works widely; taxis are plentiful and take cards."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is easy off-peak, but motorways jam at rush hour and parking is hard."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking suits the CBD and waterfront. Use transit for hills and far suburbs."
+      }
+    ]
+  }
+}

@@ -1,0 +1,623 @@
+{
+  "city": "Manila",
+  "checked": "October 2026",
+  "intro_line": "Manila: colonial walls, jeepney chaos, and bay sunsets.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Ermita",
+        "Malate",
+        "Intramuros",
+        "Makati"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Ermita",
+        "Malate",
+        "Intramuros",
+        "Makati"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Ermita",
+        "Malate",
+        "Intramuros",
+        "Makati"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Ermita",
+        "Malate",
+        "Intramuros",
+        "Makati"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Ermita",
+        "Malate",
+        "Intramuros",
+        "Makati"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 29,
+        "low": 23,
+        "rain_days": 10,
+        "note": "January: dry and mild, highs near 29°C. Great for walking Intramuros."
+      },
+      {
+        "high": 30,
+        "low": 23,
+        "rain_days": 6,
+        "note": "February: the driest month, about 6 rain days. Book outdoor plans now."
+      },
+      {
+        "high": 32,
+        "low": 24,
+        "rain_days": 7,
+        "note": "March: warmer at 32°C with few showers. Start early to beat the heat."
+      },
+      {
+        "high": 33,
+        "low": 25,
+        "rain_days": 9,
+        "note": "April: hot at 33°C and still fairly dry. Carry water and plan shade breaks."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 18,
+        "note": "May: rains arrive, about 18 rain days. Keep indoor backups ready."
+      },
+      {
+        "high": 31,
+        "low": 26,
+        "rain_days": 26,
+        "note": "June: wet season, around 26 rain days. Expect afternoon downpours."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 28,
+        "note": "July: wettest stretch, about 28 rain days. Pack a rain jacket and flexible plans."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 28,
+        "note": "August: still very wet, around 28 rain days. Flooding is possible; check routes on the day."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 28,
+        "note": "September: rain continues, about 28 rain days. Malls and museums are good rainy-day picks."
+      },
+      {
+        "high": 30,
+        "low": 25,
+        "rain_days": 25,
+        "note": "October: still wet at about 25 rain days, but showers start to ease."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 15,
+        "note": "November: rain drops to about 15 days. Comfortable for sightseeing again."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 15,
+        "note": "December: mild at 30°C with about 15 rain days. Busy holiday season, book hotels early."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.65,
+      0.5,
+      0.45,
+      0.45,
+      0.45,
+      0.6,
+      0.8,
+      0.85
+    ],
+    "food": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.55,
+      0.5,
+      0.5,
+      0.5,
+      0.65,
+      0.85,
+      0.9
+    ],
+    "history": [
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.65,
+      0.5,
+      0.45,
+      0.45,
+      0.45,
+      0.6,
+      0.8,
+      0.85
+    ],
+    "shopping": [
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.85
+    ],
+    "nightlife": [
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.6,
+      0.55,
+      0.55,
+      0.55,
+      0.7,
+      0.85,
+      0.85
+    ]
+  },
+  "places": {
+    "intramuros": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Early morning or late afternoon; hot at midday",
+      "area": "Intramuros",
+      "popularity": 5
+    },
+    "fort-santiago": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning, before the heat",
+      "area": "Intramuros",
+      "popularity": 5
+    },
+    "san-agustin": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Any time; quietest in the morning",
+      "area": "Intramuros",
+      "popularity": 4
+    },
+    "rizal-park": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Ermita",
+      "popularity": 4
+    },
+    "abs-cbn": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 0,
+      "setting": "indoor",
+      "best": "Not applicable",
+      "area": "Ermita",
+      "popularity": 1
+    },
+    "adobo": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Ermita",
+      "popularity": 4
+    },
+    "binondo": {
+      "types": [
+        "food",
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "outdoor",
+      "best": "Morning to early afternoon",
+      "area": "Intramuros",
+      "popularity": 4
+    },
+    "bhs": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening",
+      "area": "Makati",
+      "popularity": 4
+    },
+    "chooks": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch or a quick dinner",
+      "area": "Makati",
+      "popularity": 3
+    },
+    "christmasaya": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, in the holiday season",
+      "area": "Malate",
+      "popularity": 2
+    },
+    "circle-of-fun": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Ermita",
+      "popularity": 2
+    },
+    "dreamplay": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Any time; good for rainy days",
+      "area": "Malate",
+      "popularity": 2
+    },
+    "fiesta-carnival": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Malate",
+      "popularity": 2
+    },
+    "greenbelt": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon or evening",
+      "area": "Makati",
+      "popularity": 4
+    },
+    "jollibee": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "Makati",
+      "popularity": 4
+    },
+    "kidzania": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 0,
+      "setting": "indoor",
+      "best": "Not applicable",
+      "area": "Makati",
+      "popularity": 1
+    },
+    "mang-inasal": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Lunch or dinner",
+      "area": "Makati",
+      "popularity": 3
+    },
+    "baywalk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Malate",
+      "popularity": 4
+    },
+    "ocean-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Any time; good for rain",
+      "area": "Ermita",
+      "popularity": 4
+    },
+    "quiapo": {
+      "types": [
+        "food",
+        "culture",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning, avoid Friday crowds",
+      "area": "Intramuros",
+      "popularity": 3
+    },
+    "sm-by-the-bay": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Malate",
+      "popularity": 3
+    },
+    "moa": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon into sunset",
+      "area": "Malate",
+      "popularity": 4
+    },
+    "binondo-food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Intramuros",
+      "popularity": 4
+    },
+    "legazpi-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Early morning",
+      "area": "Makati",
+      "popularity": 2
+    },
+    "paco-park": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Ermita",
+      "popularity": 2
+    },
+    "escolta-walk": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning to afternoon",
+      "area": "Intramuros",
+      "popularity": 2
+    },
+    "bay-sunset-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Ermita",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover Intramuros, Rizal Park and a Binondo food crawl; add a night if you want Makati malls or a day trip."
+  },
+  "airports": [
+    {
+      "code": "MNL",
+      "name": "Ninoy Aquino International Airport",
+      "primary": true,
+      "note": "Main international gateway, about 11 km south of the centre.",
+      "options": [
+        {
+          "mode": "Jeepney + LRT",
+          "to": "Ermita / Malate",
+          "price": "PHP 30-60",
+          "time": "45-70 min",
+          "note": "Cheapest but slow with bags; ride to a Line 1 station first."
+        },
+        {
+          "mode": "Airport bus",
+          "to": "City centre hotels",
+          "price": "PHP 50-150",
+          "time": "40-70 min",
+          "note": "Check locally for current routes and stops."
+        },
+        {
+          "mode": "Grab",
+          "to": "Ermita / Malate",
+          "price": "PHP 250-450",
+          "time": "20-45 min",
+          "note": "Book at the app pickup point to avoid touts."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "PHP 200-400",
+          "time": "20-45 min",
+          "note": "Use the coupon or metered queue; avoid unmarked cabs."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Manila",
+      "https://en.wikivoyage.org/wiki/Manila"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "LRT Line 1 for the old sights, plus ride apps for everything else.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "LRT Line 1 (green) links Malate, Ermita, Quiapo, Binondo and Santa Cruz, where most sights sit. LRT Line 2 (blue) serves Quiapo, Sampaloc and Santa Mesa; trains are packed at rush hour."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "City buses start around PHP 16 and provincial buses around PHP 12. Route numbers are shown on the bus."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Grab, Angkas, Gojek, Joyride and MyTaxi.PH work. Taxis are plentiful but insist on the meter."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not recommended for first-timers: heavy traffic and hard parking. Use apps and rail instead."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Good inside Intramuros and around Rizal Park. Sidewalks are uneven and hot at midday; cross with care."
+      },
+      {
+        "mode": "Jeepney",
+        "has": true,
+        "text": "From about PHP 10 for the first 4 km. Routes are painted on the sides, not numbered, so ask the driver."
+      },
+      {
+        "mode": "Tricycle / pedicab / calesa",
+        "has": true,
+        "text": "Short trips only. A one-hour calesa ride in the old city costs around PHP 50–70; agree the price first."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical and hot all year, with a clear dry season from January to April and a long wet season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: January to April",
+        "text": "Highs of 29–33°C and the fewest rain days, from 6 to 10 a month. Best for walking the old city."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: June to October",
+        "text": "Rain on 25–28 days a month. Showers are often heavy and short; plan indoor stops and check roads on the day."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot and humid year-round",
+        "text": "Lows stay around 23–26°C, so nights are warm. April is the hottest month at 33°C highs."
+      },
+      {
+        "icon": "🌂",
+        "title": "Carry rain gear in the wet months",
+        "text": "A light rain jacket or umbrella helps from May to October. Streets can flood briefly after heavy rain."
+      },
+      {
+        "icon": "🌀",
+        "title": "Typhoon season",
+        "text": "Storms are most likely from June to November. Check forecasts before day trips and keep plans flexible."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light, breathable clothes, sunscreen and a hat; a rain layer for the wet months; comfortable shoes for uneven old-city streets."
+      }
+    ]
+  }
+}

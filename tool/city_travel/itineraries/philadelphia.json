@@ -1,0 +1,1224 @@
+{
+  "city": "Philadelphia",
+  "checked": "October 2026",
+  "currency": "USD",
+  "usd_rate": 1,
+  "intro": "Philadelphia rewards visitors with walkable colonial streets, world-class museums, and a lively food scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 39.7854,
+      "west": -75.332,
+      "north": 40.1023,
+      "east": -74.8696,
+      "zoom": 11
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 3.5,
+      "flag_airport": 3.5,
+      "per_km": 2.5,
+      "min_fare": 10
+    },
+    "road_factor": 1.35,
+    "city_kmh": 20,
+    "notes": [
+      "SEPTA runs the subway, trolleys, and Regional Rail; fares are about $2-2.50 per ride.",
+      "Buses cover the whole city; SEPTA Key card or contactless payment works.",
+      "Taxis are metered; Uber and Lyft both operate widely.",
+      "Driving is possible but parking is costly and traffic is heavy in Center City.",
+      "Walking is easy in Center City; most sights are within 30 minutes on foot.",
+      "Bikes are popular; the Schuylkill River Trail is a favorite. RiverLink ferry runs to Camden in summer."
+    ],
+    "sources": []
+  },
+  "places": {
+    "independence-hall": {
+      "name": "Independence Hall",
+      "landmark": "Independence Hall",
+      "kind": "sight",
+      "lat": 39.9488,
+      "lon": -75.15,
+      "price": 0,
+      "price_text": "Free · timed ticket required",
+      "hours": "Daily, roughly 09:00–17:00 · check on the day",
+      "tip": "Get free timed tickets at the Independence Visitor Center early; the ranger tour is short and worth it.",
+      "source": "https://www.nps.gov/inde/planyourvisit/independencehall.htm"
+    },
+    "liberty-bell": {
+      "name": "Liberty Bell",
+      "landmark": "Liberty Bell",
+      "kind": "sight",
+      "lat": 39.9496,
+      "lon": -75.1502,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 09:00–17:00 · check on the day",
+      "tip": "Go right at opening or late afternoon; the line moves fast but midday is crowded.",
+      "source": "https://www.nps.gov/inde/planyourvisit/libertybellcenter.htm"
+    },
+    "philadelphia-museum-of-art": {
+      "name": "Philadelphia Museum of Art",
+      "landmark": "Philadelphia Museum of Art",
+      "kind": "museum",
+      "lat": 39.9655,
+      "lon": -75.1809,
+      "price": 30,
+      "price_text": "≈ $30 adults · under 18 free · pay-what-you-wish first Sunday",
+      "hours": "Closed Monday · Tue–Sun roughly 10:00–17:00",
+      "tip": "Run the Rocky steps first, then spend the afternoon inside; the collection is huge.",
+      "source": "https://philamuseum.org/visit"
+    },
+    "adventure-aquarium": {
+      "name": "Adventure Aquarium",
+      "landmark": "Adventure Aquarium",
+      "kind": "museum",
+      "lat": 39.9447,
+      "lon": -75.1309,
+      "price": 40,
+      "price_text": "≈ $35–45 adults · cheaper online · check on the day",
+      "hours": "Daily, roughly 09:30–17:00",
+      "tip": "Buy tickets online and arrive at opening; it is across the river in Camden, NJ.",
+      "source": "https://www.adventureaquarium.com/"
+    },
+    "clementon-park": {
+      "name": "Clementon Park and Splash World",
+      "landmark": "Clementon Park and Splash World",
+      "kind": "park",
+      "lat": 39.816,
+      "lon": -74.9972,
+      "price": 45,
+      "price_text": "≈ $40–55 depending on ticket type · check on the day",
+      "hours": "Seasonal, roughly late May–early September · check on the day",
+      "tip": "It is a 30-minute drive into New Jersey; go on a weekday and bring swim gear.",
+      "source": "https://www.clementonpark.com/"
+    },
+    "diggerland": {
+      "name": "Diggerland USA",
+      "landmark": "Diggerland USA",
+      "kind": "park",
+      "lat": 39.8183,
+      "lon": -74.925,
+      "price": 45,
+      "price_text": "≈ $40–50 · cheaper online · check on the day",
+      "hours": "Seasonal, roughly spring–fall · check on the day",
+      "tip": "Best for kids who love machines; it is in West Berlin, NJ, so plan a car or rideshare.",
+      "source": "https://www.diggerlandusa.com/"
+    },
+    "eastern-state-penitentiary": {
+      "name": "Eastern State Penitentiary",
+      "landmark": "Eastern State Penitentiary",
+      "kind": "sight",
+      "lat": 39.9683,
+      "lon": -75.1727,
+      "price": 22,
+      "price_text": "≈ $20–25 adults · check on the day",
+      "hours": "Daily, roughly 10:00–17:00",
+      "tip": "Take the audio guide; Al Capone's cell and the crumbling cellblocks are the highlights.",
+      "source": "https://www.easternstate.org/"
+    },
+    "funplex": {
+      "name": "Funplex (Mount Laurel)",
+      "landmark": "Funplex (Mount Laurel)",
+      "kind": "activity",
+      "lat": 39.9538,
+      "lon": -74.9123,
+      "price": 30,
+      "price_text": "≈ $25–40 per activity pass · check on the day",
+      "hours": "Daily, roughly 10:00–22:00 · check on the day",
+      "tip": "Indoor rides and arcades; a good rainy-day backup for families, 25 minutes from Center City.",
+      "source": "https://www.funplex.net/"
+    },
+    "kimmel-center": {
+      "name": "Kimmel Center",
+      "landmark": "Kimmel Center",
+      "kind": "show",
+      "lat": 39.9467,
+      "lon": -75.1652,
+      "price": null,
+      "price_text": "Varies by concert · some free events",
+      "hours": "Box office and building roughly daily · check the day's schedule",
+      "tip": "Check the calendar for Philadelphia Orchestra or free lobby concerts; the glass roof is worth a look.",
+      "source": "https://www.kimmelculturalcampus.org/"
+    },
+    "nude-descending": {
+      "name": "Nude Descending a Staircase",
+      "landmark": "Nude Descending a Staircase",
+      "kind": "museum",
+      "lat": 39.9656,
+      "lon": -75.181,
+      "price": 30,
+      "price_text": "Included with Philadelphia Museum of Art admission",
+      "hours": "Same as the museum · closed Monday",
+      "tip": "Duchamp's painting is inside the Philadelphia Museum of Art; ask staff for the modern galleries.",
+      "source": "https://philamuseum.org/"
+    },
+    "philadelphia-zoo": {
+      "name": "Philadelphia Zoo",
+      "landmark": "Philadelphia Zoo",
+      "kind": "park",
+      "lat": 39.9719,
+      "lon": -75.1965,
+      "price": 25,
+      "price_text": "≈ $22–28 · cheaper online · check on the day",
+      "hours": "Daily, roughly 09:30–17:00",
+      "tip": "America's first zoo; go early when animals are active and bring water in summer.",
+      "source": "https://www.philadelphiazoo.org/"
+    },
+    "reading-terminal-market": {
+      "name": "Reading Terminal Market",
+      "landmark": "Reading Terminal Market",
+      "kind": "food",
+      "lat": 39.9532,
+      "lon": -75.1593,
+      "price": null,
+      "price_text": "Free to enter · food roughly $8–20",
+      "hours": "Roughly Mon–Sat 08:00–18:00 · Sun 09:00–17:00 · check on the day",
+      "tip": "Come hungry and go for a roast pork sandwich or a cheesesteak; cash helps at some stalls.",
+      "source": "https://www.readingterminalmarket.org/"
+    },
+    "ritas-italian-ice": {
+      "name": "Rita's Italian Ice",
+      "landmark": "Rita's Italian Ice",
+      "kind": "food",
+      "lat": 40.0717,
+      "lon": -74.9654,
+      "price": 6,
+      "price_text": "≈ $4–8 per cup",
+      "hours": "Varies by branch · usually daily afternoon–evening",
+      "tip": "Order a gelati (Italian ice layered with custard); branches are all over the city.",
+      "source": "https://www.ritasice.com/"
+    },
+    "silver-linings-playbook": {
+      "name": "Silver Linings Playbook",
+      "landmark": "Silver Linings Playbook",
+      "kind": "tour",
+      "lat": 39.9615,
+      "lon": -75.2893,
+      "price": null,
+      "price_text": "Free to see film locations · some are private homes",
+      "hours": "Outdoor locations always visible",
+      "tip": "The film is set in the Philadelphia suburbs; the Llanelli-like diner scenes and the museum steps are the easy spots to visit.",
+      "source": ""
+    },
+    "the-gross-clinic": {
+      "name": "The Gross Clinic",
+      "landmark": "The Gross Clinic",
+      "kind": "museum",
+      "lat": 39.9656,
+      "lon": -75.181,
+      "price": 30,
+      "price_text": "Included with Philadelphia Museum of Art admission",
+      "hours": "Same as the museum · closed Monday",
+      "tip": "Eakins' painting hangs in the Philadelphia Museum of Art; check which gallery before you go.",
+      "source": "https://philamuseum.org/"
+    },
+    "university-of-pennsylvania": {
+      "name": "University of Pennsylvania",
+      "landmark": "University of Pennsylvania",
+      "kind": "sight",
+      "lat": 39.9522,
+      "lon": -75.1932,
+      "price": 0,
+      "price_text": "Free to walk the campus",
+      "hours": "Campus open daily · buildings vary",
+      "tip": "Walk Locust Walk and see College Hall; the Penn Museum is nearby if you want more.",
+      "source": "https://www.upenn.edu/"
+    },
+    "city-hall-tower": {
+      "name": "Philadelphia City Hall Tower",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 39.9524,
+      "lon": -75.1636,
+      "price": 8,
+      "price_text": "≈ $6–10 tower tour · check on the day",
+      "hours": "Weekdays roughly 10:00–16:00 · check on the day",
+      "tip": "The tower observation deck gives a close view of William Penn's statue and Broad Street.",
+      "source": "https://www.phila.gov/"
+    },
+    "south-street": {
+      "name": "South Street walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 39.9417,
+      "lon": -75.1533,
+      "price": 0,
+      "price_text": "Free · shops and food extra",
+      "hours": "Shops roughly 11:00–20:00 · bars later",
+      "tip": "Walk from Headhouse Square to South Street for shops, murals and cheap eats.",
+      "source": ""
+    },
+    "rittenhouse-square": {
+      "name": "Rittenhouse Square",
+      "landmark": null,
+      "kind": "park",
+      "lat": 39.9496,
+      "lon": -75.1719,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park open daily, roughly 07:00–22:00",
+      "tip": "Sit with coffee and watch the city; the surrounding streets are good for a stroll and dinner.",
+      "source": ""
+    },
+    "schuylkill-river-trail": {
+      "name": "Schuylkill River Trail",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 39.9612,
+      "lon": -75.1817,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "Rent a bike or walk the river path at sunset; the skyline view from the west bank is the best free view in town.",
+      "source": ""
+    },
+    "el-freight": {
+      "name": "Elfreth's Alley",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 39.9527,
+      "lon": -75.1426,
+      "price": 0,
+      "price_text": "Free to walk · house museum small fee",
+      "hours": "Street always open",
+      "tip": "America's oldest continuously lived-in street; it is short, so pair it with Old City sights.",
+      "source": ""
+    },
+    "cheesesteak-tour": {
+      "name": "Cheesesteak and Old City food walk",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 39.9505,
+      "lon": -75.1478,
+      "price": 45,
+      "price_text": "≈ $35–60 guided · check on the day",
+      "hours": "Tours usually late morning and afternoon",
+      "tip": "A guided walk covers history and a cheesesteak in one go; book ahead in summer.",
+      "source": ""
+    },
+    "penn-museum": {
+      "name": "Penn Museum",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 39.9493,
+      "lon": -75.1911,
+      "price": 18,
+      "price_text": "≈ $15–20 adults · check on the day",
+      "hours": "Closed Monday · Tue–Sun roughly 10:00–17:00",
+      "tip": "World archaeology with Egyptian and Mesopotamian galleries; quieter than the big museums.",
+      "source": "https://www.penn.museum/"
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day in Old City: the founding documents in the morning, colonial streets and a prison after lunch.",
+      "days": [
+        {
+          "title": "Old City history core",
+          "stops": [
+            {
+              "place": "liberty-bell",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go first; lines grow later. Free entry, security check at the door."
+            },
+            {
+              "place": "independence-hall",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Timed tour slots; book ahead or collect tickets at the visitor center."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Late-morning food walk through Old City. Book ahead; tours fill on weekends."
+            },
+            {
+              "place": "eastern-state-penitentiary",
+              "at": "15:00",
+              "minutes": 120,
+              "note": "A short taxi or a 20-minute walk up Fairmount. Last entry is usually mid-afternoon; check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Eat your way from market stalls to cheesesteaks, with a walk and a park to break up the eating.",
+      "days": [
+        {
+          "title": "Market, Old City bites, South Street",
+          "stops": [
+            {
+              "place": "reading-terminal-market",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is calmer than lunch rush. Many stalls are cash-friendly; some close Sunday."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "12:00",
+              "minutes": 150,
+              "note": "Old City food walk; book ahead. Bring an appetite."
+            },
+            {
+              "place": "south-street",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Shops open around 11:00. Good for snacks and people-watching."
+            },
+            {
+              "place": "ritas-italian-ice",
+              "at": "16:45",
+              "minutes": 20,
+              "note": "Afternoon treat on a hot day. Branches vary; check the nearest one."
+            },
+            {
+              "place": "rittenhouse-square",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sit in the park, then pick a nearby restaurant for dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City"
+    },
+    {
+      "id": "day-art",
+      "length": "day",
+      "style": "art",
+      "nights": 0,
+      "for": "A full art day: the Museum of Art in the morning, then a walk and an evening show if tickets line up.",
+      "days": [
+        {
+          "title": "Museum of Art and Center City art",
+          "stops": [
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is quietest. The Rocky steps are outside, free, and best early."
+            },
+            {
+              "place": "the-gross-clinic",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Inside the museum; check which gallery it is in at the desk."
+            },
+            {
+              "place": "nude-descending",
+              "at": "13:45",
+              "minutes": 20,
+              "note": "Also in the museum collection; confirm it is on view."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Walk or rent a bike along the river. Always open."
+            },
+            {
+              "place": "kimmel-center",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening performance; check the day's schedule and book ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "Old City's colonial sights on foot, then the city's darker history at Eastern State.",
+      "days": [
+        {
+          "title": "Old City on foot",
+          "stops": [
+            {
+              "place": "liberty-bell",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go first; lines grow later. Free entry, security check."
+            },
+            {
+              "place": "independence-hall",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Timed tours; pick up tickets at the visitor center early."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "11:15",
+              "minutes": 150,
+              "note": "Lunch and history in one walk. Book ahead."
+            },
+            {
+              "place": "city-hall-tower",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Weekdays only. Check tower access on the day."
+            }
+          ]
+        },
+        {
+          "title": "Fairmount and the museum steps",
+          "stops": [
+            {
+              "place": "eastern-state-penitentiary",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Self-guided audio tour. Some areas are unheated."
+            },
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "12:30",
+              "minutes": 180,
+              "note": "Closed Monday. Lunch at the cafe, then the galleries."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "16:15",
+              "minutes": 60,
+              "note": "Easy flat walk by the water before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Center City"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market grazing, a cheesesteak walk and a South Street evening.",
+      "days": [
+        {
+          "title": "Market and Old City bites",
+          "stops": [
+            {
+              "place": "reading-terminal-market",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is calmer. Bring cash for small stalls."
+            },
+            {
+              "place": "liberty-bell",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Short walk from the market. Free."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Book ahead; tours usually run late morning and afternoon."
+            },
+            {
+              "place": "ritas-italian-ice",
+              "at": "15:30",
+              "minutes": 20,
+              "note": "Cool down with a gelati. Branches vary."
+            },
+            {
+              "place": "south-street",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Shops, bars and casual dinner. Busiest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Rittenhouse and a slow brunch",
+          "stops": [
+            {
+              "place": "rittenhouse-square",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Park benches and a coffee nearby."
+            },
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Closed Monday. The steps are free even if you skip the galleries."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Walk off lunch along the river."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City near Reading Terminal"
+    },
+    {
+      "id": "1n-art",
+      "length": "1n",
+      "style": "art",
+      "nights": 1,
+      "for": "The Museum of Art's highlights and the Rocky steps, plus Old City's streets.",
+      "days": [
+        {
+          "title": "Museum morning, Old City afternoon",
+          "stops": [
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Start upstairs, then the steps outside."
+            },
+            {
+              "place": "the-gross-clinic",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Inside the museum; ask staff for the gallery."
+            },
+            {
+              "place": "nude-descending",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Same building. Check which gallery it hangs in."
+            },
+            {
+              "place": "reading-terminal-market",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Late lunch. Many stalls close by 18:00."
+            }
+          ]
+        },
+        {
+          "title": "University City culture",
+          "stops": [
+            {
+              "place": "penn-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. World collections, good for a rainy morning."
+            },
+            {
+              "place": "university-of-pennsylvania",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Walk the campus; some buildings need a pass."
+            },
+            {
+              "place": "philadelphia-zoo",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Outdoor; skip if it rains. Check last entry time."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City near the Parkway"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-timers who want the Revolution story: Old City on foot, then Eastern State and City Hall.",
+      "days": [
+        {
+          "title": "Old City: the founding sites",
+          "stops": [
+            {
+              "place": "liberty-bell",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go early; the line grows fast. Free entry."
+            },
+            {
+              "place": "independence-hall",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Timed tour slots; book ahead online. Security screening at the visitor center."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Lunch built in. Book a late-morning slot."
+            },
+            {
+              "place": "south-street",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk south for shops and an early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Fairmount, City Hall and University City",
+          "stops": [
+            {
+              "place": "eastern-state-penitentiary",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Self-guided audio tour. Some areas are unheated; dress for the weather."
+            },
+            {
+              "place": "city-hall-tower",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Weekday tower tours only; check times on the day. Short elevator ride up."
+            },
+            {
+              "place": "university-of-pennsylvania",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk the campus and Locust Walk. About 15 minutes by taxi from City Hall."
+            },
+            {
+              "place": "penn-museum",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Closed Monday. An hour covers the highlights only."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Center City near Market Street"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want market stalls, a cheesesteak walk and a park picnic between meals.",
+      "days": [
+        {
+          "title": "Market morning, Old City afternoon",
+          "stops": [
+            {
+              "place": "reading-terminal-market",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late morning is calmer. Many stalls are cash-friendly; some close Sundays."
+            },
+            {
+              "place": "liberty-bell",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Five minutes on foot from the market."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "13:00",
+              "minutes": 150,
+              "note": "Book ahead; tours usually run late morning and afternoon."
+            },
+            {
+              "place": "ritas-italian-ice",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Branches vary; check the nearest one on the day."
+            },
+            {
+              "place": "south-street",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Bars and casual dinner spots get busy later."
+            }
+          ]
+        },
+        {
+          "title": "Rittenhouse and the river",
+          "stops": [
+            {
+              "place": "rittenhouse-square",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Grab coffee or a picnic nearby and sit in the park."
+            },
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Closed Monday. Café inside for a snack; the steps are free."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk toward sunset. Always open."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City near Reading Terminal Market"
+    },
+    {
+      "id": "2n-art",
+      "length": "2n",
+      "style": "art",
+      "nights": 2,
+      "for": "Museum-goers: a full art day at the Museum of Art, then Old City and Penn's collection.",
+      "days": [
+        {
+          "title": "Museum of Art and the river",
+          "stops": [
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is quietest."
+            },
+            {
+              "place": "the-gross-clinic",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Inside the museum; same hours."
+            },
+            {
+              "place": "nude-descending",
+              "at": "13:30",
+              "minutes": 20,
+              "note": "Also in the museum. Ask staff for the gallery."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Easy walk from the museum; good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Old City and University City",
+          "stops": [
+            {
+              "place": "liberty-bell",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Early is best; free."
+            },
+            {
+              "place": "independence-hall",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Timed tickets; book online ahead."
+            },
+            {
+              "place": "reading-terminal-market",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch stop. Closed some holidays; check on the day."
+            },
+            {
+              "place": "penn-museum",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Short taxi or trolley ride west."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City near Rittenhouse Square"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the Revolution story done properly, with Old City on foot and a sobering prison visit.",
+      "days": [
+        {
+          "title": "Old City icons",
+          "stops": [
+            {
+              "place": "liberty-bell",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Go early; the line grows fast. Free entry."
+            },
+            {
+              "place": "independence-hall",
+              "at": "09:45",
+              "minutes": 60,
+              "note": "Timed tour slots. Book ahead online. Check on the day."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "11:30",
+              "minutes": 150,
+              "note": "Lunch built in. Book a late-morning slot."
+            },
+            {
+              "place": "city-hall-tower",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Weekdays only, roughly 10:00–16:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museum row and Fairmount",
+          "stops": [
+            {
+              "place": "eastern-state-penitentiary",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Self-guided audio tour. Dress warm in winter."
+            },
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "13:00",
+              "minutes": 180,
+              "note": "Closed Monday. The Rocky steps are outside and free."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Easy flat walk or bike ride. Good at sunset."
+            }
+          ]
+        },
+        {
+          "title": "University City and Penn",
+          "stops": [
+            {
+              "place": "university-of-pennsylvania",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk the campus and Locust Walk. Buildings vary."
+            },
+            {
+              "place": "penn-museum",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "reading-terminal-market",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Late lunch. Busy on Saturdays. Check Sunday hours."
+            },
+            {
+              "place": "south-street",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Shops roughly 11:00–20:00. Bars later."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old City or Center City"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want market stalls, cheesesteaks and a walkable neighborhood to graze in.",
+      "days": [
+        {
+          "title": "Market morning and Old City",
+          "stops": [
+            {
+              "place": "reading-terminal-market",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Late breakfast. Cash helps at some stalls. Check on the day."
+            },
+            {
+              "place": "liberty-bell",
+              "at": "12:00",
+              "minutes": 30,
+              "note": "Free, quick, indoors if it rains."
+            },
+            {
+              "place": "independence-hall",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Timed tour. Book ahead online."
+            },
+            {
+              "place": "cheesesteak-tour",
+              "at": "15:00",
+              "minutes": 150,
+              "note": "Check tour times; usually late morning and afternoon."
+            },
+            {
+              "place": "ritas-italian-ice",
+              "at": "18:00",
+              "minutes": 20,
+              "note": "Afternoon–evening only. Branches vary."
+            }
+          ]
+        },
+        {
+          "title": "Rittenhouse and South Street",
+          "stops": [
+            {
+              "place": "rittenhouse-square",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Park open daily. Good spot for a coffee and a sit."
+            },
+            {
+              "place": "south-street",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Grab lunch along the way. Shops roughly 11:00–20:00."
+            },
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "15:30",
+              "minutes": 180,
+              "note": "Closed Monday. Café inside for a break."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Walk off dinner. Always open."
+            }
+          ]
+        },
+        {
+          "title": "Old City food walk and farewell",
+          "stops": [
+            {
+              "place": "cheesesteak-tour",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Second food walk if you liked the first. Book ahead."
+            },
+            {
+              "place": "city-hall-tower",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Weekdays only. Check on the day."
+            },
+            {
+              "place": "ritas-italian-ice",
+              "at": "16:00",
+              "minutes": 20,
+              "note": "Last stop before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City near Reading Terminal"
+    },
+    {
+      "id": "3n-art",
+      "length": "3n",
+      "style": "art",
+      "nights": 3,
+      "for": "Museum-goers who want the big collection, the famous steps and a slower Old City morning.",
+      "days": [
+        {
+          "title": "Museum of Art and the steps",
+          "stops": [
+            {
+              "place": "philadelphia-museum-of-art",
+              "at": "10:00",
+              "minutes": 180,
+              "note": "Closed Monday. Weekday morning is calmest."
+            },
+            {
+              "place": "the-gross-clinic",
+              "at": "13:15",
+              "minutes": 20,
+              "note": "Same building. Ask staff for the room."
+            },
+            {
+              "place": "nude-descending",
+              "at": "13:45",
+              "minutes": 20,
+              "note": "Same museum. Closed Monday."
+            },
+            {
+              "place": "schuylkill-river-trail",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Flat riverside walk. Best at sunset."
+            }
+          ]
+        },
+        {
+          "title": "Old City and a show",
+          "stops": [
+            {
+              "place": "liberty-bell",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Free. Early is quieter."
+            },
+            {
+              "place": "independence-hall",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Timed tour. Book ahead online."
+            },
+            {
+              "place": "reading-terminal-market",
+              "at": "12:30",
+              "minutes": 90,
+              "note": "Lunch among the stalls. Check on the day."
+            },
+            {
+              "place": "kimmel-center",
+              "at": "19:30",
+              "minutes": 120,
+              "note": "Evening performance. Check the day's schedule."
+            }
+          ]
+        },
+        {
+          "title": "University City collections",
+          "stops": [
+            {
+              "place": "penn-museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Check on the day."
+            },
+            {
+              "place": "university-of-pennsylvania",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Campus walk. Buildings vary."
+            },
+            {
+              "place": "rittenhouse-square",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Late afternoon in the park."
+            },
+            {
+              "place": "south-street",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Shops roughly 11:00–20:00."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Center City near Museum row"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Independence Hall, the Liberty Bell and Old City's colonial streets."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Cheesesteaks, Reading Terminal Market and neighborhood BYOBs."
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "blurb": "The Barnes, the Museum of Art steps and murals all over town."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Center City",
+      "range": [
+        150,
+        350
+      ],
+      "why": "Most central. Walk to City Hall, Reading Terminal Market and the subway; short walk or ride to Old City.",
+      "center": [
+        39.9526,
+        -75.1652
+      ]
+    },
+    {
+      "area": "Old City",
+      "range": [
+        140,
+        320
+      ],
+      "why": "Steps from Independence Hall, the Liberty Bell and Elfreth's Alley. Quieter at night.",
+      "center": [
+        39.9505,
+        -75.1455
+      ]
+    },
+    {
+      "area": "Rittenhouse Square",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Leafy, upscale and full of restaurants and shops. Good base for food and shopping.",
+      "center": [
+        39.9496,
+        -75.1721
+      ]
+    },
+    {
+      "area": "University City",
+      "range": [
+        120,
+        280
+      ],
+      "why": "Near Penn, Drexel and the museums along the Schuylkill. Cheaper rooms, short ride to Center City.",
+      "center": [
+        39.9522,
+        -75.1932
+      ]
+    }
+  ],
+  "food": [
+    "Order a cheesesteak at a classic stand; ask for 'wit' or 'witout' onions. Expect about $10–15.",
+    "Reading Terminal Market: one big hall of local food stalls. Go hungry and early; it is busy at lunch.",
+    "Try a soft pretzel and water ice (Italian ice) — two cheap Philadelphia classics.",
+    "Many small restaurants are BYOB; bring your own wine and save on the bill.",
+    "Book ahead for popular dinner spots on weekends. Prices range from cheap eats to fine dining."
+  ],
+  "more_time": [
+    "Add a day for the Philadelphia Museum of Art and the Rocky Steps, then walk the Schuylkill River Trail.",
+    "Eastern State Penitentiary and the Barnes Foundation make a good half-day in Fairmount.",
+    "In summer, take the RiverLink ferry to Camden for the waterfront and aquarium."
+  ]
+}

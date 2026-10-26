@@ -1,0 +1,582 @@
+{
+  "city": "Belgrade",
+  "checked": "October 2026",
+  "intro_line": "Belgrade: gritty, warm, and always awake at the confluence of two rivers.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Stari Grad",
+        "Vračar",
+        "Novi Beograd",
+        "Zemun"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Stari Grad",
+        "Vračar",
+        "Novi Beograd",
+        "Zemun"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Stari Grad",
+        "Vračar",
+        "Novi Beograd",
+        "Zemun"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Stari Grad",
+        "Vračar",
+        "Novi Beograd",
+        "Zemun"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Stari Grad",
+        "Vračar",
+        "Novi Beograd",
+        "Zemun"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 5,
+        "low": -2,
+        "rain_days": 12,
+        "note": "Coldest month: highs near 5°C, lows around -2°C, with about 12 rain days. Pack a warm coat."
+      },
+      {
+        "high": 10,
+        "low": 1,
+        "rain_days": 10,
+        "note": "Still chilly, highs near 10°C; snow possible early on. Fewer crowds."
+      },
+      {
+        "high": 13,
+        "low": 3,
+        "rain_days": 10,
+        "note": "Mild and changeable, highs near 13°C; about 10 rain days. Bring layers."
+      },
+      {
+        "high": 18,
+        "low": 7,
+        "rain_days": 9,
+        "note": "Spring warms up: highs near 18°C, pleasant for walking and café terraces."
+      },
+      {
+        "high": 22,
+        "low": 13,
+        "rain_days": 13,
+        "note": "Warm and wet: highs near 22°C with about 13 rain days, the rainiest month. Keep an umbrella."
+      },
+      {
+        "high": 27,
+        "low": 17,
+        "rain_days": 12,
+        "note": "Early summer: highs near 27°C, about 12 rain days. Good for outdoor sightseeing."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 9,
+        "note": "Hot and mostly dry: highs near 29°C, lows near 19°C. Plan shade and water by day."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 7,
+        "note": "Hottest, driest stretch: highs near 29°C with only about 7 rain days. River clubs are in full swing."
+      },
+      {
+        "high": 24,
+        "low": 15,
+        "rain_days": 8,
+        "note": "Warm and comfortable: highs near 24°C, about 8 rain days. A great month to visit."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 7,
+        "note": "Mild autumn: highs near 19°C, about 7 rain days. Good for walking and day trips."
+      },
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 10,
+        "note": "Cooler and greyer: highs near 12°C, about 10 rain days. Pack a jacket."
+      },
+      {
+        "high": 7,
+        "low": 1,
+        "rain_days": 10,
+        "note": "Cold: highs near 7°C, lows near 1°C, about 10 rain days. Expect festive city lights."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      1,
+      1,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      1,
+      0.9,
+      0.85,
+      0.85,
+      0.95,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "budget": [
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.9,
+      0.9,
+      0.8,
+      0.7
+    ]
+  },
+  "places": {
+    "fortress": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon to sunset",
+      "area": "Stari Grad",
+      "popularity": 5
+    },
+    "knez": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening, when locals stroll",
+      "area": "Stari Grad",
+      "popularity": 5
+    },
+    "st-sava": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning or early evening",
+      "area": "Vračar",
+      "popularity": 5
+    },
+    "skadarlija": {
+      "types": [
+        "food",
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening for dinner and music",
+      "area": "Stari Grad",
+      "popularity": 5
+    },
+    "tesla": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning to avoid groups",
+      "area": "Vračar",
+      "popularity": 4
+    },
+    "sava-river": {
+      "types": [
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset into the evening",
+      "area": "Stari Grad",
+      "popularity": 4
+    },
+    "rajko-mitic": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Match day",
+      "area": "Vračar",
+      "popularity": 3
+    },
+    "cevapcici": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Lunch or late dinner",
+      "area": "Stari Grad",
+      "popularity": 5
+    },
+    "zemun-quay": {
+      "types": [
+        "budget",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Zemun",
+      "popularity": 4
+    },
+    "skadarlija-market": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "savamala": {
+      "types": [
+        "culture",
+        "nightlife",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "splavovi": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer nights, from about midnight",
+      "area": "Stari Grad",
+      "popularity": 4
+    },
+    "kalemegdan-view": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Stari Grad",
+      "popularity": 4
+    },
+    "tram-tour": {
+      "types": [
+        "history",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "usce": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or sunset",
+      "area": "Novi Beograd",
+      "popularity": 3
+    },
+    "ada": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Summer afternoon",
+      "area": "Novi Beograd",
+      "popularity": 4
+    },
+    "zeleni-venac": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "rakija-bar": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "museum-yugoslavia": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Vračar",
+      "popularity": 3
+    },
+    "dorcol-walk": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning coffee or evening",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "boat-cruise": {
+      "types": [
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset, summer",
+      "area": "Stari Grad",
+      "popularity": 3
+    },
+    "gardo": {
+      "types": [
+        "history",
+        "budget"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Zemun",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the fortress, old town and a long kafana night; add a third for Zemun or a Novi Sad day trip."
+  },
+  "airports": [
+    {
+      "code": "BEG",
+      "name": "Belgrade Nikola Tesla Airport",
+      "primary": true,
+      "note": "Main gateway, about 12-18 km west of the centre.",
+      "options": [
+        {
+          "mode": "Bus 72",
+          "to": "Zeleni Venac via Novi Beograd",
+          "price": "free",
+          "time": "50 min",
+          "note": "Runs every 30 min, daily 05:00-23:30."
+        },
+        {
+          "mode": "Bus 600",
+          "to": "Beograd Centar (Prokop) via Novi Beograd",
+          "price": "free",
+          "time": "40-60 min",
+          "note": "Every 30-40 min; good for trains."
+        },
+        {
+          "mode": "Minibus A1",
+          "to": "Slavija Square via Fontana and bus station",
+          "price": "RSD400",
+          "time": "30 min",
+          "note": "Pay the driver in dinars or euros; runs at night with a 02:00-04:00 break."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "RSD2000-3000",
+          "time": "25-35 min",
+          "note": "Book by app or phone, or buy a fixed-price voucher at baggage claim."
+        },
+        {
+          "mode": "Ride app (Car:Go, Yandex Go, Pink Taxi)",
+          "to": "City centre",
+          "price": "RSD1800-2800",
+          "time": "25-35 min",
+          "note": "App records route and price; meet driver upstairs at Departures."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Belgrade",
+      "https://en.wikivoyage.org/wiki/Belgrade"
+    ]
+  ],
+  "best_for": [
+    "nightlife",
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Free city buses and trams for most trips; use a ride app or a marked taxi at night.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro yet. Don't plan around it."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "City buses, trams and trolleybuses are free. Express E-lines and trains are not. Trams converge around Slavija and Vukov Spomenik."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "BG:Voz suburban trains link the main stations; useful for Zemun and beyond. Not free."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Car:Go, Pink Taxi and Yandex Go need SMS verification. Only use taxis with a roof sign and plates ending in TX; insist on the meter."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is stressful at rush hour. Keep low beams on and watch for police speed traps."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The old town, Kalemegdan and Skadarlija are compact and walkable. Watch for traffic on bigger roads."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm to hot summers, and rain spread fairly evenly through the year.",
+    "items": [
+      {
+        "icon": "🌸",
+        "title": "Best time: April to June and September to October",
+        "text": "Mild highs of about 18–27°C and fewer extreme days. Ideal for walking the fortress and old town."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer can be hot (July–August)",
+        "text": "Highs near 29°C and warm nights around 19°C. Sightsee in the morning; evenings are for the river clubs."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December–February)",
+        "text": "Highs of 5–10°C and lows near or below freezing. Snow is possible. Bring a proper coat and warm shoes."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 7–13 rain days every month, peaking in May. A compact umbrella is worth packing any month."
+      },
+      {
+        "icon": "🌡️",
+        "title": "Big swings between seasons",
+        "text": "From about 5°C highs in January to 29°C in July–August. Check the forecast before you pack."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers and a light rain jacket in spring and autumn; a warm coat, hat and gloves in winter; light clothes and sunscreen in summer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,634 @@
+{
+  "city": "Athens",
+  "checked": "October 2026",
+  "intro_line": "Ancient stones, bright light, and long evenings by the sea.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Plaka",
+        "Syntagma",
+        "Monastiraki",
+        "Koukaki"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Plaka",
+        "Syntagma",
+        "Monastiraki",
+        "Koukaki"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Plaka",
+        "Syntagma",
+        "Monastiraki",
+        "Koukaki"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Plaka",
+        "Syntagma",
+        "Monastiraki",
+        "Koukaki"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Plaka",
+        "Syntagma",
+        "Monastiraki",
+        "Koukaki"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 8,
+        "note": "January: cold and damp, highs near 12°C. Pack a warm layer and expect some rain days."
+      },
+      {
+        "high": 14,
+        "low": 6,
+        "rain_days": 7,
+        "note": "February: still cool, around 14°C by day. Quiet sights and low prices."
+      },
+      {
+        "high": 16,
+        "low": 8,
+        "rain_days": 7,
+        "note": "March: mild at 16°C with about 7 rain days. Good for walking the ruins without heat."
+      },
+      {
+        "high": 20,
+        "low": 11,
+        "rain_days": 5,
+        "note": "April: pleasant at 20°C. One of the best months for sightseeing."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 5,
+        "note": "May: warm at 25°C and mostly dry. Great for both the centre and the coast."
+      },
+      {
+        "high": 30,
+        "low": 20,
+        "rain_days": 6,
+        "note": "June: hot at 30°C. Start sightseeing early and rest in the afternoon shade."
+      },
+      {
+        "high": 33,
+        "low": 23,
+        "rain_days": 2,
+        "note": "July: very hot, highs near 33°C. Go out early and late; the Acropolis is exposed."
+      },
+      {
+        "high": 33,
+        "low": 23,
+        "rain_days": 2,
+        "note": "August: as hot as July and busy. Book ahead and carry water."
+      },
+      {
+        "high": 29,
+        "low": 19,
+        "rain_days": 3,
+        "note": "September: warm at 29°C and drier. A strong month for beaches and ruins."
+      },
+      {
+        "high": 23,
+        "low": 15,
+        "rain_days": 3,
+        "note": "October: comfortable at 23°C. Good light and fewer crowds."
+      },
+      {
+        "high": 19,
+        "low": 11,
+        "rain_days": 7,
+        "note": "November: cooler at 19°C with more rain days. Bring a rain jacket."
+      },
+      {
+        "high": 14,
+        "low": 7,
+        "rain_days": 8,
+        "note": "December: cool at 14°C and wetter. Festive centre, short daylight."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.85,
+      0.7,
+      0.7,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "history": [
+      0.7,
+      0.75,
+      0.85,
+      0.95,
+      0.9,
+      0.7,
+      0.55,
+      0.55,
+      0.8,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "beach": [
+      0.2,
+      0.25,
+      0.35,
+      0.5,
+      0.75,
+      0.9,
+      1,
+      1,
+      0.85,
+      0.55,
+      0.3,
+      0.2
+    ],
+    "nightlife": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55
+    ]
+  },
+  "places": {
+    "parthenon": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "First hour after opening, spring or autumn",
+      "area": "Plaka",
+      "popularity": 5
+    },
+    "acropolis-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late afternoon or the Friday evening opening",
+      "area": "Koukaki",
+      "popularity": 5
+    },
+    "plaka": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening, or early morning before the heat",
+      "area": "Plaka",
+      "popularity": 5
+    },
+    "ancient-agora": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Monastiraki",
+      "popularity": 4
+    },
+    "temple-olympian-zeus": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Plaka",
+      "popularity": 4
+    },
+    "syntagma-square": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "On the hour, any time of day",
+      "area": "Syntagma",
+      "popularity": 4
+    },
+    "panathenaic-stadium": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Morning or late afternoon",
+      "area": "Syntagma",
+      "popularity": 4
+    },
+    "allou-fun-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Syntagma",
+      "popularity": 2
+    },
+    "athens-lions-kiddie-carnival": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Carnival season, spring",
+      "area": "Plaka",
+      "popularity": 1
+    },
+    "erechtheion": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "With your Acropolis visit, early",
+      "area": "Plaka",
+      "popularity": 4
+    },
+    "hadrians-arch": {
+      "types": [
+        "history"
+      ],
+      "minutes": 10,
+      "setting": "outdoor",
+      "best": "Any time",
+      "area": "Plaka",
+      "popularity": 3
+    },
+    "karaiskakis-stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Evening match day",
+      "area": "Koukaki",
+      "popularity": 2
+    },
+    "lycabettus-hill": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Syntagma",
+      "popularity": 4
+    },
+    "monastiraki-square": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunday morning",
+      "area": "Monastiraki",
+      "popularity": 4
+    },
+    "moussaka": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Dinner",
+      "area": "Plaka",
+      "popularity": 3
+    },
+    "national-archaeological-museum": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Syntagma",
+      "popularity": 4
+    },
+    "odeon-herodes-atticus": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "Plaka",
+      "popularity": 4
+    },
+    "roman-agora": {
+      "types": [
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Monastiraki",
+      "popularity": 3
+    },
+    "theatre-dionysus": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "With your Acropolis visit",
+      "area": "Plaka",
+      "popularity": 3
+    },
+    "university-trilogy": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Daytime",
+      "area": "Syntagma",
+      "popularity": 2
+    },
+    "university-georgia": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 0,
+      "setting": "outdoor",
+      "best": "Not applicable",
+      "area": "Plaka",
+      "popularity": 1
+    },
+    "zaxbys": {
+      "types": [
+        "food"
+      ],
+      "minutes": 0,
+      "setting": "indoor",
+      "best": "Not applicable",
+      "area": "Plaka",
+      "popularity": 1
+    },
+    "central-market": {
+      "types": [
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Monastiraki",
+      "popularity": 3
+    },
+    "philopappou-viewpoint": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Koukaki",
+      "popularity": 3
+    },
+    "food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late morning or early evening",
+      "area": "Monastiraki",
+      "popularity": 3
+    },
+    "anafiotika-walk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Plaka",
+      "popularity": 3
+    },
+    "souvlaki-stop": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Lunch or late night",
+      "area": "Monastiraki",
+      "popularity": 4
+    },
+    "koukaki-evening-walk": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Koukaki",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights cover the Acropolis, the museum and the old town at an easy pace. Add a night for a coast or island day."
+  },
+  "airports": [
+    {
+      "code": "ATH",
+      "name": "Eleftherios Venizelos International Airport",
+      "primary": true,
+      "note": "Main gateway, about 20-27 km east of the centre.",
+      "options": [
+        {
+          "mode": "Metro line 3",
+          "to": "Syntagma",
+          "price": "€9",
+          "time": "40-50 min",
+          "note": "Runs about every 30 min; ticket covers the whole journey."
+        },
+        {
+          "mode": "Express bus X95",
+          "to": "Syntagma",
+          "price": "€5.50",
+          "time": "45-70 min",
+          "note": "Cheaper but slower in traffic; runs 24 hours."
+        },
+        {
+          "mode": "Suburban railway",
+          "to": "Piraeus or Larissa station",
+          "price": "€9",
+          "time": "40-60 min",
+          "note": "Useful for the port or the main rail station."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "€40-55",
+          "time": "30-50 min",
+          "note": "Fixed-ish airport fare plus tolls; agree before you ride."
+        },
+        {
+          "mode": "Uber or Bolt",
+          "to": "City centre",
+          "price": "€30-50",
+          "time": "30-50 min",
+          "note": "App price shown upfront; pickup points are signed."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Athens",
+      "https://en.wikivoyage.org/wiki/Athens"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Metro for the centre and airport; walk in Plaka and Monastiraki.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "3 lines, running about 05:30–00:30, later on Friday and Saturday nights. One OASA ticket costs €1.20 and covers metro, tram and bus with transfers for 90 minutes."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses and the tram use the same €1.20 OASA ticket. The airport express bus X93/X95 costs €5.50."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are yellow; insist on the meter and expect shared rides at busy times. Uber and Bolt work in Athens and help avoid fare haggling."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is hard: narrow streets, little parking and heavy traffic. Skip it for city days."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Best way around Plaka, Monastiraki and Syntagma. Wear shoes with grip for marble and stone paths."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Piraeus port is about 10 km from the centre, with ferries to the islands. Reach it by metro."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, wetter winters. Spring and autumn are the sweet spots.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June and September to October",
+        "text": "Days around 20–29°C with little rain. Ideal for ruins, walking and the coast."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is very hot (July–August)",
+        "text": "Highs near 33°C and few rain days. Sightseeing is hard at midday; go early or late."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in winter",
+        "text": "December to February have about 7–8 rain days a month. Showers are usually short."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cool winters",
+        "text": "January highs near 12°C and lows around 5°C. Bring a warm coat for evenings."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea season",
+        "text": "Beach weather runs roughly June to September, warmest in July and August."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Sun hat and sunscreen for summer; a light rain jacket and warm layer for winter; comfortable shoes for marble and stone paths."
+      }
+    ]
+  }
+}

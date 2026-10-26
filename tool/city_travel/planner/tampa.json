@@ -1,0 +1,649 @@
+{
+  "city": "Tampa",
+  "checked": "October 2026",
+  "intro_line": "Tampa blends a lively downtown with Cuban-flavoured Ybor City and nearby Gulf beaches.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Downtown",
+        "Ybor City",
+        "Channelside",
+        "Westshore"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Downtown",
+        "Ybor City",
+        "Channelside",
+        "Westshore"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "areas": [
+        "Downtown",
+        "Ybor City",
+        "Channelside",
+        "Westshore"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Beach",
+      "areas": [
+        "Downtown",
+        "Ybor City",
+        "Channelside",
+        "Westshore"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Downtown",
+        "Ybor City",
+        "Channelside",
+        "Westshore"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 21,
+        "low": 12,
+        "rain_days": 7,
+        "note": "January: cool and dry, highs near 21°C. Bring a light jacket for evenings."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 7,
+        "note": "February: mild and dry, highs near 23°C. Good walking weather."
+      },
+      {
+        "high": 26,
+        "low": 16,
+        "rain_days": 7,
+        "note": "March: warming to 26°C with about 7 rain days. Pleasant for beaches."
+      },
+      {
+        "high": 28,
+        "low": 18,
+        "rain_days": 9,
+        "note": "April: warm at 28°C and fairly dry. Strong sun; use sunscreen."
+      },
+      {
+        "high": 31,
+        "low": 21,
+        "rain_days": 11,
+        "note": "May: hot at 31°C and wetter, about 11 rain days. Plan indoor breaks."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 22,
+        "note": "June: hot and very wet, about 22 rain days. Afternoon storms are common."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 27,
+        "note": "July: hottest and wettest, about 27 rain days. Carry a rain jacket."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 26,
+        "note": "August: same heat and heavy rain, about 26 rain days. Mornings are best."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 20,
+        "note": "September: still hot and wet, about 20 rain days. Watch for storms."
+      },
+      {
+        "high": 28,
+        "low": 21,
+        "rain_days": 9,
+        "note": "October: cooling to 28°C and drier, about 9 rain days. Good all-round month."
+      },
+      {
+        "high": 25,
+        "low": 17,
+        "rain_days": 6,
+        "note": "November: mild at 25°C and dry, about 6 rain days. Comfortable for sightseeing."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 6,
+        "note": "December: cool and dry, highs near 23°C. Light layers help at night."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.6,
+      0.55,
+      0.55,
+      0.65,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "food": [
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95,
+      0.9
+    ],
+    "nature": [
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.55,
+      0.5,
+      0.5,
+      0.6,
+      0.8,
+      0.9,
+      0.85
+    ],
+    "beach": [
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.85,
+      0.6,
+      0.5,
+      0.5,
+      0.6,
+      0.8,
+      0.85,
+      0.7
+    ],
+    "nightlife": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.65,
+      0.7,
+      0.85,
+      0.9,
+      0.85
+    ]
+  },
+  "places": {
+    "busch_gardens": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 360,
+      "setting": "outdoor",
+      "best": "Weekday morning; avoid summer afternoons",
+      "area": "Westshore",
+      "popularity": 5
+    },
+    "florida_aquarium": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "Morning on a hot or rainy day",
+      "area": "Channelside",
+      "popularity": 4
+    },
+    "checkers": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "mixed",
+      "best": "Lunch or a late-night snack",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "geopoliticus": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Westshore",
+      "popularity": 3
+    },
+    "riverwalk": {
+      "types": [
+        "nature",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon or sunset",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "ybor_walk": {
+      "types": [
+        "culture",
+        "nightlife",
+        "food"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon into evening",
+      "area": "Ybor City",
+      "popularity": 4
+    },
+    "tampa_theatre": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening show",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "armature_works": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Brunch or early dinner",
+      "area": "Downtown",
+      "popularity": 4
+    },
+    "tampa_museum": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "sparkman_wharf": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "Channelside",
+      "popularity": 4
+    },
+    "bayshore": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Early morning or sunset",
+      "area": "Westshore",
+      "popularity": 3
+    },
+    "hyde_park": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning or afternoon",
+      "area": "Westshore",
+      "popularity": 3
+    },
+    "zoo_tampa": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Westshore",
+      "popularity": 3
+    },
+    "clearwater_beach": {
+      "types": [
+        "beach",
+        "nature"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning to sunset on a clear day",
+      "area": "Westshore",
+      "popularity": 5
+    },
+    "cuban_sandwich": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Lunch",
+      "area": "Ybor City",
+      "popularity": 4
+    },
+    "pirate_water": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Afternoon",
+      "area": "Channelside",
+      "popularity": 3
+    },
+    "curtis_hixon": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "glazer_childrens": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Hot midday or rainy day",
+      "area": "Downtown",
+      "popularity": 3
+    },
+    "st_pete_dali": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning start",
+      "area": "Westshore",
+      "popularity": 4
+    },
+    "cigar_factory": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Daytime",
+      "area": "Ybor City",
+      "popularity": 3
+    },
+    "sunday_market": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend morning",
+      "area": "Downtown",
+      "popularity": 2
+    },
+    "amalie_arena": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "Channelside",
+      "popularity": 3
+    },
+    "lettuce_lake": {
+      "types": [
+        "nature"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "Westshore",
+      "popularity": 2
+    },
+    "gasp_parilla": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Lunch or early dinner",
+      "area": "Ybor City",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers Ybor, the Riverwalk and a beach day. Add a night if you want Busch Gardens or a slow Gulf sunset."
+  },
+  "airports": [
+    {
+      "code": "TPA",
+      "name": "Tampa International Airport",
+      "primary": true,
+      "note": "Main gateway, about 8 km northwest of downtown.",
+      "options": [
+        {
+          "mode": "HART bus 10",
+          "to": "Downtown Tampa",
+          "price": "$1.75",
+          "time": "30-45 min",
+          "note": "Cheapest option; stops near the Rental Car Center."
+        },
+        {
+          "mode": "PSTA bus 300X",
+          "to": "Downtown Tampa",
+          "price": "$1.75-3",
+          "time": "35-50 min",
+          "note": "Useful if heading toward St Petersburg or Clearwater."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Tampa",
+          "price": "$25-35",
+          "time": "15-25 min",
+          "note": "Metered; expect surcharges at peak times."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Tampa",
+          "price": "$18-30",
+          "time": "15-25 min",
+          "note": "Pickup zones are signed at the terminal."
+        },
+        {
+          "mode": "Rental car",
+          "to": "City and region",
+          "price": "check locally",
+          "time": "10-20 min to downtown",
+          "note": "Rental Car Center is reached by the SkyConnect train."
+        }
+      ]
+    },
+    {
+      "code": "PIE",
+      "name": "St. Petersburg-Clearwater International Airport",
+      "primary": false,
+      "note": "Alternative airport about 24 km southwest, mainly Allegiant and Sun Country flights.",
+      "options": [
+        {
+          "mode": "PSTA bus",
+          "to": "Downtown Tampa",
+          "price": "$2-4",
+          "time": "60-90 min",
+          "note": "Requires a transfer; check schedules."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Tampa",
+          "price": "$40-55",
+          "time": "25-40 min",
+          "note": "Longer ride across the bay."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Tampa",
+          "price": "$30-50",
+          "time": "25-40 min",
+          "note": "Availability can vary late at night."
+        }
+      ]
+    },
+    {
+      "code": "SRQ",
+      "name": "Sarasota-Bradenton International Airport",
+      "primary": false,
+      "note": "Further south, about 70 km, with some international and domestic flights.",
+      "options": [
+        {
+          "mode": "Bus",
+          "to": "Downtown Tampa",
+          "price": "$5-10",
+          "time": "2-3 hr",
+          "note": "Multiple transfers; check locally."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown Tampa",
+          "price": "$90-130",
+          "time": "60-80 min",
+          "note": "Best for groups or late arrivals."
+        },
+        {
+          "mode": "Uber / Lyft",
+          "to": "Downtown Tampa",
+          "price": "$70-110",
+          "time": "60-80 min",
+          "note": "Compare prices before booking."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Tampa",
+      "https://en.wikivoyage.org/wiki/Tampa"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "culture",
+    "beach"
+  ],
+  "transit": {
+    "best": "Ride apps or a rental car for most trips; the free streetcar for downtown and Ybor.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": false,
+        "text": "No metro or train inside the city. Don't plan around rail."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "HART buses cover Hillsborough County, about $1.75 local and $2.75 commuter express. PSTA buses serve Pinellas County and connect the airport to downtown Tampa."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Uber and Lyft operate. Taxis are metered; book by app or phone."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "best": true,
+        "text": "Driving is convenient but rush hours (7:30–9:30AM, 3:30–7:30PM) are slow, especially on I-275."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Downtown is walkable. Bikes and scooters work for short trips, but summer heat is strong."
+      },
+      {
+        "mode": "Streetcar",
+        "has": true,
+        "text": "TECO Line Streetcar is fare-free and links downtown to Ybor City, roughly every 20 min."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Subtropical and humid. Mild, dry winters and hot, stormy summers with heavy afternoon rain.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: November to April",
+        "text": "Highs of 21–28°C with few rain days. Ideal for walking, beaches and outdoor sights."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer is hot and humid (June to September)",
+        "text": "Highs near 31°C and lows near 24–25°C. Plan outdoor time for early morning."
+      },
+      {
+        "icon": "⛈️",
+        "title": "Heavy summer rain",
+        "text": "June to September brings 20–27 rain days a month, often short afternoon storms. Keep plans flexible."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack a rain jacket in summer",
+        "text": "Storms pass quickly but soak you. An umbrella or light rain shell helps."
+      },
+      {
+        "icon": "🌊",
+        "title": "Beach days are best in spring and fall",
+        "text": "April, May, October and November give warm water with less rain. Check conditions on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, a hat and strong sunscreen. Add a light layer for winter evenings and indoor AC."
+      }
+    ]
+  }
+}

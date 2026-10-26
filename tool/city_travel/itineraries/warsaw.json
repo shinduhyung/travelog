@@ -1,0 +1,1322 @@
+{
+  "city": "Warsaw",
+  "checked": "October 2026",
+  "currency": "PLN",
+  "usd_rate": 3.8993,
+  "intro": "Warsaw rewards visitors with a rebuilt Old Town, rich history and a lively food and nightlife scene. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": 52.2022,
+      "west": 20.9741,
+      "north": 52.2638,
+      "east": 21.0609,
+      "zoom": 13
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 10,
+      "flag_airport": 15,
+      "per_km": 3,
+      "min_fare": 15
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Two metro lines (M1 north-south, M2 east-west) run every 3-10 min until midnight, later on Fri-Sat.",
+      "About 200 bus routes and 30 tram lines share one ZTM ticket system.",
+      "Buy tickets in machines, on some trams, or via the Jakdojade app; validate on board.",
+      "Ride apps Uber, Bolt and Free Now work in Warsaw; taxis are metered.",
+      "Driving is busy; carry licence, insurance and registration documents at all times.",
+      "The centre is walkable and bike-friendly; no ferry needed in the city."
+    ],
+    "sources": []
+  },
+  "places": {
+    "old_town": {
+      "name": "Warsaw Old Town",
+      "landmark": "Warsaw Old Town",
+      "kind": "sight",
+      "lat": 52.2498,
+      "lon": 21.0125,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Always open · liveliest 10:00–22:00",
+      "tip": "Rebuilt after 1945 from old paintings and photos. Walk the Market Square and the city walls in the morning before crowds.",
+      "source": "https://www.unesco.org/en/list/30"
+    },
+    "royal_castle": {
+      "name": "Royal Castle, Warsaw",
+      "landmark": "Royal Castle, Warsaw",
+      "kind": "museum",
+      "lat": 52.2498,
+      "lon": 21.0125,
+      "price": 80,
+      "price_text": "≈ PLN 70–90 adult; check current price and free days",
+      "hours": "Usually Tue–Sun, roughly 10:00–18:00 · closed some Mondays, check on the day",
+      "tip": "Book online in summer. The Great Assembly Hall and the Canaletto room are the highlights.",
+      "source": "https://www.zamek-krolewski.pl/en"
+    },
+    "pkin": {
+      "name": "Palace of Culture and Science",
+      "landmark": "Palace of Culture and Science",
+      "kind": "sight",
+      "lat": 52.2318,
+      "lon": 21.0063,
+      "price": 30,
+      "price_text": "≈ PLN 25–35 for the viewing terrace; check on the day",
+      "hours": "Terrace usually daily, roughly 10:00–20:00 in summer, shorter in winter",
+      "tip": "Go up the terrace near sunset for a full view over the city. Buy the ticket at the desk downstairs.",
+      "source": "https://pkin.pl/en/"
+    },
+    "lazienki": {
+      "name": "Łazienki Palace",
+      "landmark": "Łazienki Palace",
+      "kind": "park",
+      "lat": 52.2155,
+      "lon": 21.0375,
+      "price": 0,
+      "price_text": "Park free · palace and some buildings charged, check on the day",
+      "hours": "Park open daily from morning to dusk; palace shorter hours, closed some days",
+      "tip": "The park is the real draw. Walk to the Chopin Monument; free summer concerts are held there on Sundays.",
+      "source": "https://www.lazienki-krolewskie.pl/en"
+    },
+    "polin": {
+      "name": "POLIN Museum of the History of Polish Jews",
+      "landmark": "POLIN Museum of the History of Polish Jews",
+      "kind": "museum",
+      "lat": 52.2478,
+      "lon": 20.9972,
+      "price": 60,
+      "price_text": "≈ PLN 50–70 adult; check current price and free day",
+      "hours": "Usually daily except some closures, roughly 10:00–18:00 · check on the day",
+      "tip": "Allow at least two hours. The core exhibition is long and text-heavy, so start early.",
+      "source": "https://polin.pl/en"
+    },
+    "uprising_museum": {
+      "name": "Warsaw Uprising Museum",
+      "landmark": "Warsaw Uprising Museum",
+      "kind": "museum",
+      "lat": 52.2323,
+      "lon": 20.9859,
+      "price": 40,
+      "price_text": "≈ PLN 30–50 adult; check current price",
+      "hours": "Usually daily, roughly 10:00–18:00 · check on the day",
+      "tip": "The 1944 uprising story is intense. Give it two hours and take the free map at the desk.",
+      "source": "https://www.1944.pl/en"
+    },
+    "vistula": {
+      "name": "Vistula River",
+      "landmark": "Vistula River",
+      "kind": "sight",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "price": 0,
+      "price_text": "Free to walk · boat trips charged",
+      "hours": "Riverbanks always open · boat trips mostly spring to autumn",
+      "tip": "Walk the west bank boulevards at sunset. In summer there are beach bars and a ferry across to Praga.",
+      "source": ""
+    },
+    "pierogi": {
+      "name": "Pierogi (Polish dumplings)",
+      "landmark": "Pierogi",
+      "kind": "food",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "price": 35,
+      "price_text": "≈ PLN 25–45 a plate in a casual bar mleczny or pierogarnia",
+      "hours": "Varies by place; milk bars often 08:00–18:00, restaurants later",
+      "tip": "Try the classic ruskie (potato and cheese) and fried versions. Milk bars (bar mleczny) are the cheap, local choice.",
+      "source": ""
+    },
+    "stadion": {
+      "name": "Stadion Narodowy",
+      "landmark": "Stadion Narodowy",
+      "kind": "activity",
+      "lat": 52.2396,
+      "lon": 21.0457,
+      "price": 40,
+      "price_text": "≈ PLN 30–50 for a stadium tour; check on the day",
+      "hours": "Tours usually daily, hours vary with events · check on the day",
+      "tip": "Check the event calendar first. On match days tours stop and the area gets very busy.",
+      "source": "https://stadionnarodowy.org.pl/en"
+    },
+    "hala_mirowska": {
+      "name": "Hala Mirowska food market",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.2387,
+      "lon": 20.9989,
+      "price": 0,
+      "price_text": "Free to enter · food paid per item",
+      "hours": "Usually Mon–Sat morning to early evening · closed Sunday",
+      "tip": "Come before noon for fresh produce and cheese. It is a working market, not a tourist set piece.",
+      "source": ""
+    },
+    "viewpoint": {
+      "name": "Viewing terrace at the Palace of Culture",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.2318,
+      "lon": 21.0062,
+      "price": 30,
+      "price_text": "≈ PLN 25–35; check on the day",
+      "hours": "Roughly 10:00–20:00 in summer, shorter in winter",
+      "tip": "The 30th-floor terrace gives the best wide view of Warsaw. Go on a clear day.",
+      "source": "https://pkin.pl/en/"
+    },
+    "old_town_walk": {
+      "name": "Old Town to New Town walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.2515,
+      "lon": 21.0095,
+      "price": 0,
+      "price_text": "Free · paid guided tours around PLN 50–80",
+      "hours": "Always open",
+      "tip": "Walk from Castle Square through the Old Town to the New Town in about an hour. Free walking tours leave from Castle Square daily.",
+      "source": ""
+    },
+    "praga": {
+      "name": "Praga district walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.2545,
+      "lon": 21.0345,
+      "price": 0,
+      "price_text": "Free to walk",
+      "hours": "Daytime; some streets are quiet after dark",
+      "tip": "Cross to the east bank for old brick buildings, street art and the Ząbkowska street. Go in daylight.",
+      "source": ""
+    },
+    "milk_bar": {
+      "name": "Bar mleczny (milk bar) lunch",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.2352,
+      "lon": 21.0115,
+      "price": 25,
+      "price_text": "≈ PLN 15–35 for a full plate",
+      "hours": "Usually weekdays 08:00–18:00, some open Saturday",
+      "tip": "Cheap home-style Polish food: soups, pierogi, pancakes. Order at the counter and pay at the till.",
+      "source": ""
+    },
+    "vodka_bar": {
+      "name": "Evening bar street (Nowy Świat area)",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.2325,
+      "lon": 21.0195,
+      "price": 0,
+      "price_text": "Free to walk · drinks paid per order",
+      "hours": "Bars usually busy from 20:00 to late",
+      "tip": "Nowy Świat and the side streets have many bars. Prices are higher on the main street, cheaper one block back.",
+      "source": ""
+    },
+    "boat_trip": {
+      "name": "Vistula boat trip",
+      "landmark": null,
+      "kind": "tour",
+      "lat": 52.2405,
+      "lon": 21.0305,
+      "price": 50,
+      "price_text": "≈ PLN 40–70 for a short cruise; check on the day",
+      "hours": "Mostly April to October, daytime and sunset departures",
+      "tip": "Short cruises leave from the west bank near the Old Town. Check the weather before booking.",
+      "source": ""
+    },
+    "chopin_benches": {
+      "name": "Chopin benches and Łazienki walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": 52.2151,
+      "lon": 21.0356,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Park open daily until dusk",
+      "tip": "Press the button on the black Chopin benches to hear short piano pieces. Free summer concerts at the monument on Sundays.",
+      "source": "https://www.lazienki-krolewskie.pl/en"
+    },
+    "kopiec": {
+      "name": "Warsaw Uprising Mound viewpoint",
+      "landmark": null,
+      "kind": "sight",
+      "lat": 52.2272,
+      "lon": 20.9855,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open; go in daylight",
+      "tip": "A short climb gives a wide view over the river and the city. Combine it with the Uprising Museum nearby.",
+      "source": ""
+    },
+    "zabka_snack": {
+      "name": "Street snack: zapiekanka and obwarzanek",
+      "landmark": null,
+      "kind": "food",
+      "lat": 52.2365,
+      "lon": 21.0155,
+      "price": 12,
+      "price_text": "≈ PLN 6–15 per item",
+      "hours": "Shops and stands usually 07:00–21:00",
+      "tip": "Obwarzanek (ring bread) is sold from street carts. Zapiekanka is a cheap baked baguette snack.",
+      "source": ""
+    },
+    "mokotow_park": {
+      "name": "Pole Mokotowskie park",
+      "landmark": null,
+      "kind": "park",
+      "lat": 52.2115,
+      "lon": 21.0045,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Always open",
+      "tip": "A big local park with paths and cafes. Good for a quiet break away from the Old Town crowds.",
+      "source": ""
+    },
+    "neon_museum": {
+      "name": "Neon Museum (Soho Factory)",
+      "landmark": null,
+      "kind": "museum",
+      "lat": 52.2515,
+      "lon": 21.0495,
+      "price": 35,
+      "price_text": "≈ PLN 25–40; check on the day",
+      "hours": "Usually Wed–Sun, roughly 11:00–18:00 · check on the day",
+      "tip": "Old communist-era neon signs in a former factory area. Pair it with a Praga walk.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-history",
+      "length": "day",
+      "style": "history",
+      "nights": 0,
+      "for": "One packed day on Warsaw's wartime and rebuilding story, mostly on foot in the Old Town.",
+      "days": [
+        {
+          "title": "Old Town, castle and the ghetto trail",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Start early before the tour groups. The square is rebuilt from photos after 1944."
+            },
+            {
+              "place": "royal_castle",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Take the morning slot. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "milk_bar",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Cheap Polish lunch. Milk bars get busy at 13:00, so go a little before or after."
+            },
+            {
+              "place": "old_town_walk",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Walk north from the Old Town to the New Town. Always open."
+            },
+            {
+              "place": "uprising_museum",
+              "at": "16:00",
+              "minutes": 120,
+              "note": "Short tram or taxi to Wola. Usually open daily to about 18:00, check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town or Śródmieście"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "A single day of museums, the rebuilt old city and a sunset view.",
+      "days": [
+        {
+          "title": "Old Town, POLIN and the terrace",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "09:00",
+              "minutes": 90,
+              "note": "Quiet in the morning. Pretty in December lights."
+            },
+            {
+              "place": "royal_castle",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Morning opening slot. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick zapiekanka or obwarzanek on the go."
+            },
+            {
+              "place": "polin",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Taxi or tram to Wola. Usually open daily to about 18:00, check on the day."
+            },
+            {
+              "place": "viewpoint",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset from the Palace of Culture terrace. Shorter hours in winter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A day of milk bars, markets and dumplings, with a walk between meals.",
+      "days": [
+        {
+          "title": "Market, Old Town and pierogi",
+          "stops": [
+            {
+              "place": "hala_mirowska",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday morning is best. Closed Sunday."
+            },
+            {
+              "place": "old_town",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk it off before lunch. Always open."
+            },
+            {
+              "place": "pierogi",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Milk bars are busiest at 13:00."
+            },
+            {
+              "place": "vistula",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Stroll the riverbanks. Boat trips mostly spring to autumn."
+            },
+            {
+              "place": "vodka_bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening around Nowy Świat. Busy Friday and Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście"
+    },
+    {
+      "id": "1n-history",
+      "length": "1n",
+      "style": "history",
+      "nights": 1,
+      "for": "One packed day on Warsaw's wartime story: the rebuilt Old Town, the ghetto and the Uprising.",
+      "days": [
+        {
+          "title": "Old Town and the Royal Castle",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start early while it is quiet. The square is rebuilt from rubble after 1945."
+            },
+            {
+              "place": "royal_castle",
+              "at": "11:15",
+              "minutes": 120
+            },
+            {
+              "place": "milk_bar",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Cheap Polish lunch. Milk bars are usually weekdays only."
+            },
+            {
+              "place": "old_town_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk north from the Old Town into the quieter New Town."
+            }
+          ]
+        },
+        {
+          "title": "Wola: ghetto and Uprising",
+          "stops": [
+            {
+              "place": "polin",
+              "at": "10:00",
+              "minutes": 150,
+              "note": "Weekday morning is calmest. Allow extra time for the core exhibition."
+            },
+            {
+              "place": "uprising_museum",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "About 15 minutes on foot or a short tram ride. Go before the afternoon school groups."
+            },
+            {
+              "place": "kopiec",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short climb for a city view. Go in daylight."
+            },
+            {
+              "place": "hala_mirowska",
+              "at": "16:45",
+              "minutes": 45,
+              "note": "Market snacks before it closes. Closed Sunday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near the Old Town"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Our pick for most first-timers: the Old Town, the castle and a sunset view, then Chopin and museums.",
+      "days": [
+        {
+          "title": "Old Town and the skyline",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning light and fewer people."
+            },
+            {
+              "place": "royal_castle",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Usually open Tue–Sun. Check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Lunch. Milk bars are busiest around 13:00."
+            },
+            {
+              "place": "viewpoint",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Terrace at the Palace of Culture. Go for sunset on a clear day."
+            },
+            {
+              "place": "vistula",
+              "at": "19:30",
+              "minutes": 60,
+              "note": "Evening walk on the riverbanks. Boat trips run spring to autumn."
+            }
+          ]
+        },
+        {
+          "title": "Łazienki and museums",
+          "stops": [
+            {
+              "place": "lazienki",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Park opens early. Palace hours are shorter and it closes some days."
+            },
+            {
+              "place": "chopin_benches",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Follow the benches through the park. Free Chopin concerts on summer Sundays."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick obwarzanek or zapiekanka."
+            },
+            {
+              "place": "neon_museum",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Usually Wed–Sun. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, walkable to the Old Town"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Eat your way through Warsaw: milk bars, pierogi, markets and an evening bar street.",
+      "days": [
+        {
+          "title": "Old Town snacks and pierogi",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Walk the square before lunch."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "11:15",
+              "minutes": 20,
+              "note": "Obwarzanek is the local ring bread. Stands usually open 07:00–21:00."
+            },
+            {
+              "place": "pierogi",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch. Try the ruski (potato and cheese) filling."
+            },
+            {
+              "place": "hala_mirowska",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Market stalls for cheese, sausage and bread. Closed Sunday."
+            },
+            {
+              "place": "vodka_bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Nowy Świat area bars get busy from 20:00. Busiest Friday and Saturday."
+            }
+          ]
+        },
+        {
+          "title": "Milk bar and river",
+          "stops": [
+            {
+              "place": "milk_bar",
+              "at": "09:00",
+              "minutes": 45,
+              "note": "Cheap weekday breakfast. Most open 08:00–18:00."
+            },
+            {
+              "place": "vistula",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Walk the riverbanks. Boat trips mostly April to October."
+            },
+            {
+              "place": "boat_trip",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Short river cruise. Check departure times on the day."
+            },
+            {
+              "place": "mokotow_park",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Weekend food trucks and a relaxed afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near Nowy Świat"
+    },
+    {
+      "id": "2n-history",
+      "length": "2n",
+      "style": "history",
+      "nights": 2,
+      "for": "First-time visitors who want the war story and the rebuilt city, at an easy pace.",
+      "days": [
+        {
+          "title": "Old Town and the Royal Castle",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Start early before the tour groups. The square is rebuilt, but the feel is real."
+            },
+            {
+              "place": "royal_castle",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Closed some Mondays. Check on the day. Buy tickets at the door or online."
+            },
+            {
+              "place": "milk_bar",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Cheap Polish lunch. Milk bars get busy around 13:00, so go a bit later."
+            },
+            {
+              "place": "old_town_walk",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Walk north from the Old Town to the New Town. Look for the small memorials on the walls."
+            },
+            {
+              "place": "vistula",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk down to the riverbank for sunset. Free and open all day."
+            }
+          ]
+        },
+        {
+          "title": "Uprising history in Wola",
+          "stops": [
+            {
+              "place": "uprising_museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Go at opening to avoid school groups. Usually open daily, check on the day."
+            },
+            {
+              "place": "kopiec",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Short climb for a view over the city. Go in daylight."
+            },
+            {
+              "place": "hala_mirowska",
+              "at": "13:15",
+              "minutes": 45,
+              "note": "Market food for lunch. Closed Sunday."
+            },
+            {
+              "place": "polin",
+              "at": "14:30",
+              "minutes": 150,
+              "note": "The ghetto and Jewish history trail. Usually open daily, check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Dinner. Book ahead on weekends."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near the Old Town"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Museum lovers who want the castle, Chopin and the best views without rushing.",
+      "days": [
+        {
+          "title": "Old Town and the view",
+          "stops": [
+            {
+              "place": "royal_castle",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "First slot is calmest. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "old_town",
+              "at": "12:15",
+              "minutes": 90,
+              "note": "Wander the square and side streets. Pretty in December lights."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "13:45",
+              "minutes": 20,
+              "note": "Quick obwarzanek or zapiekanka between sights."
+            },
+            {
+              "place": "pkin",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "The building itself is worth a look. Terrace hours are shorter in winter."
+            },
+            {
+              "place": "viewpoint",
+              "at": "16:00",
+              "minutes": 45,
+              "note": "Sunset from the terrace on a clear day. Same building, so go up before it closes."
+            }
+          ]
+        },
+        {
+          "title": "Łazienki and Praga",
+          "stops": [
+            {
+              "place": "lazienki",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Park is open daily to dusk. Palace hours are shorter and it closes some days."
+            },
+            {
+              "place": "chopin_benches",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Find the benches and walk the park paths. Sunday Chopin concerts in summer."
+            },
+            {
+              "place": "milk_bar",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Lunch. Most milk bars are weekday only."
+            },
+            {
+              "place": "praga",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Cross the river for old streets and courtyards. Go in daytime."
+            },
+            {
+              "place": "neon_museum",
+              "at": "16:30",
+              "minutes": 60,
+              "note": "Usually Wed–Sun, roughly 11:00–18:00. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, near Nowy Świat"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want milk bars, markets and pierogi, with enough walking to earn it.",
+      "days": [
+        {
+          "title": "Old Town and market food",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Walk the square and side streets before lunch."
+            },
+            {
+              "place": "milk_bar",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Classic Polish lunch, very cheap. Weekdays only for most."
+            },
+            {
+              "place": "hala_mirowska",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Market stalls for cheese, sausage and bread. Closed Sunday."
+            },
+            {
+              "place": "pkin",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Walk off lunch. Terrace is best at sunset."
+            },
+            {
+              "place": "pierogi",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Dinner. Try boiled and fried versions."
+            }
+          ]
+        },
+        {
+          "title": "Łazienki, river and bars",
+          "stops": [
+            {
+              "place": "lazienki",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Morning walk in the park. Open daily to dusk."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Midday snack from a corner shop or stand."
+            },
+            {
+              "place": "vistula",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Riverbank walk. Boat trips mostly April to October."
+            },
+            {
+              "place": "boat_trip",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Sunset departures in summer. Check times on the day."
+            },
+            {
+              "place": "vodka_bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars around Nowy Świat get busy from 20:00. Busiest Friday and Saturday."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście, walkable to milk bars and bars"
+    },
+    {
+      "id": "3n-history",
+      "length": "3n",
+      "style": "history",
+      "nights": 3,
+      "for": "First-timers who want the war story and the rebuilt city, at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and meet the Old Town",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Start at Castle Square. The rebuilt streets are best on foot."
+            },
+            {
+              "place": "old_town_walk",
+              "at": "16:45",
+              "minutes": 90,
+              "note": "Carry on from Old Town to New Town. Look for the small Rising monument."
+            },
+            {
+              "place": "pierogi",
+              "at": "19:00",
+              "minutes": 60,
+              "note": "Dinner in the Old Town. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Royal Castle and the ghetto trail",
+          "stops": [
+            {
+              "place": "royal_castle",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Go at opening. Closed some Mondays, check on the day."
+            },
+            {
+              "place": "milk_bar",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Cheap lunch. Busy around 13:00."
+            },
+            {
+              "place": "polin",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Short tram or taxi to Wola. Allow two and a half hours."
+            },
+            {
+              "place": "hala_mirowska",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Market snacks before it closes. Closed Sunday."
+            }
+          ]
+        },
+        {
+          "title": "Uprising Museum and the river",
+          "stops": [
+            {
+              "place": "uprising_museum",
+              "at": "09:30",
+              "minutes": 120,
+              "note": "Weekday morning is calmest. Check hours on the day."
+            },
+            {
+              "place": "kopiec",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Mound viewpoint nearby. Go in daylight."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Quick zapiekanka or obwarzanek."
+            },
+            {
+              "place": "vistula",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Walk the riverbanks toward sunset."
+            },
+            {
+              "place": "vodka_bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Evening drinks around Nowy Świat."
+            }
+          ]
+        },
+        {
+          "title": "Praga and departure",
+          "stops": [
+            {
+              "place": "praga",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Daytime walk. Some streets are quiet after dark."
+            },
+            {
+              "place": "milk_bar",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Last cheap lunch before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Old Town or Śródmieście"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museum lovers and Chopin fans who want the classics without rushing.",
+      "days": [
+        {
+          "title": "Old Town and the castle",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Morning is quiet and good for photos."
+            },
+            {
+              "place": "royal_castle",
+              "at": "12:00",
+              "minutes": 120,
+              "note": "Closed some Mondays, check on the day."
+            },
+            {
+              "place": "pierogi",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Late lunch nearby."
+            },
+            {
+              "place": "old_town_walk",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Golden hour on the way to New Town."
+            }
+          ]
+        },
+        {
+          "title": "Palace of Culture and POLIN",
+          "stops": [
+            {
+              "place": "pkin",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "See the interiors, then go up."
+            },
+            {
+              "place": "viewpoint",
+              "at": "11:15",
+              "minutes": 45,
+              "note": "Terrace hours are shorter in winter."
+            },
+            {
+              "place": "milk_bar",
+              "at": "12:30",
+              "minutes": 45,
+              "note": "Weekday lunch."
+            },
+            {
+              "place": "polin",
+              "at": "14:00",
+              "minutes": 150,
+              "note": "Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Łazienki and Chopin",
+          "stops": [
+            {
+              "place": "lazienki",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Park open daily to dusk. Palace hours are shorter."
+            },
+            {
+              "place": "chopin_benches",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Sunday Chopin concerts in summer."
+            },
+            {
+              "place": "mokotow_park",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Relaxed afternoon nearby."
+            },
+            {
+              "place": "vistula",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset by the river."
+            }
+          ]
+        },
+        {
+          "title": "Neon Museum and departure",
+          "stops": [
+            {
+              "place": "neon_museum",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Usually Wed–Sun, check on the day."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "12:15",
+              "minutes": 20,
+              "note": "Quick bite before you leave."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want milk bars, markets and pierogi, with sightseeing in between.",
+      "days": [
+        {
+          "title": "Old Town and first pierogi",
+          "stops": [
+            {
+              "place": "old_town",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Walk off the journey."
+            },
+            {
+              "place": "pierogi",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Milk bars get busy at 13:00."
+            },
+            {
+              "place": "old_town_walk",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Easy afternoon stroll."
+            },
+            {
+              "place": "vodka_bar",
+              "at": "20:00",
+              "minutes": 120,
+              "note": "Bars busy from 20:00."
+            }
+          ]
+        },
+        {
+          "title": "Market morning and museums",
+          "stops": [
+            {
+              "place": "hala_mirowska",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Weekday morning. Closed Sunday."
+            },
+            {
+              "place": "polin",
+              "at": "11:00",
+              "minutes": 150,
+              "note": "Check hours on the day."
+            },
+            {
+              "place": "milk_bar",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Late lunch."
+            },
+            {
+              "place": "pkin",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Finish with the terrace view."
+            }
+          ]
+        },
+        {
+          "title": "Łazienki and a river sunset",
+          "stops": [
+            {
+              "place": "lazienki",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Spring and autumn mornings are best."
+            },
+            {
+              "place": "zabka_snack",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Midday snack."
+            },
+            {
+              "place": "vistula",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Walk the banks."
+            },
+            {
+              "place": "boat_trip",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Mostly April to October. Sunset departures."
+            }
+          ]
+        },
+        {
+          "title": "Praga walk and last lunch",
+          "stops": [
+            {
+              "place": "praga",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Daytime walk."
+            },
+            {
+              "place": "milk_bar",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "Final cheap lunch."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Śródmieście near Nowy Świat"
+    }
+  ],
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Old Town, the Rising Museum and the ghetto trail."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, Chopin and the rebuilt old city."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Milk bars, pierogi and a growing restaurant scene."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights",
+      "recommended": true
+    },
+    {
+      "id": "3n",
+      "label": "3 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Śródmieście",
+      "range": [
+        220,
+        550
+      ],
+      "why": "Central and walkable. Close to the main station, the Palace of Culture and both metro lines.",
+      "center": [
+        52.231,
+        21.006
+      ]
+    },
+    {
+      "area": "Old Town",
+      "range": [
+        250,
+        600
+      ],
+      "why": "Stay inside the rebuilt UNESCO square. Pretty at night, but quieter and pricier for food.",
+      "center": [
+        52.249,
+        21.012
+      ]
+    },
+    {
+      "area": "Wola",
+      "range": [
+        180,
+        420
+      ],
+      "why": "Modern towers and the Rising Museum. Good value and fast metro links to the centre.",
+      "center": [
+        52.235,
+        20.96
+      ]
+    },
+    {
+      "area": "Mokotów",
+      "range": [
+        170,
+        400
+      ],
+      "why": "Green, calm and cheaper. Good for longer stays; a tram or metro ride to the sights.",
+      "center": [
+        52.2,
+        21.02
+      ]
+    }
+  ],
+  "food": [
+    "Try Polish classics: pierogi (dumplings), żurek (sour rye soup) and bigos (cabbage stew).",
+    "Milk bars (bar mleczny) serve cheap home-style meals, often under 25 PLN. Look for them near the centre.",
+    "Eat a zapiekanka on the street, and save room for pączki (doughnuts) at a bakery.",
+    "Book dinner in Śródmieście or Praga for the widest choice; prices vary, so check menus first.",
+    "Drink local: Polish beer and vodka are common. Tap water is safe to drink."
+  ],
+  "more_time": [
+    "Add a half-day in Praga: cross the river for street art, the zoo and the old bazaar area.",
+    "Day trip to Wilanów Palace and its gardens, south of the city; check opening hours on the day.",
+    "History fans can spend a full afternoon at the POLIN Museum and the Warsaw Uprising Museum."
+  ]
+}

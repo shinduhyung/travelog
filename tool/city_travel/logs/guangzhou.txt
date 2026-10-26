@@ -1,0 +1,32 @@
+$ deepseek_prep.py Guangzhou
+  tokens in 758 out 625
+Guangzhou: 7 sig, 0 tours, 0 problems
+
+$ deepseek_facts.py Guangzhou
+  tokens in 4301 out 621
+Guangzhou: 0 problems
+
+$ deepseek_city.py Guangzhou --stage places
+Guangzhou: places
+  tokens in 1193 out 2655
+
+$ deepseek_city.py Guangzhou --stage frame
+Guangzhou: frame
+  tokens in 2471 out 1826
+  repaired JSON
+
+$ deepseek_city.py Guangzhou --stage plans
+Guangzhou: plans
+  plans for day
+  tokens in 1914 out 973
+  plans for 1n
+  tokens in 1915 out 1200
+  plans for 2n
+  tokens in 1920 out 1506
+  plans for 3n
+  tokens in 1915 out 1817
+
+$ merge_city.py Guangzhou
+Guangzhou: 17 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/guangzhou.json and planner/guangzhou.json
+

@@ -1,0 +1,27 @@
+$ deepseek_facts.py Labuan
+  tokens in 1745 out 508
+Labuan: 0 problems
+
+$ deepseek_city.py Labuan --stage places
+Labuan: places
+  tokens in 1123 out 3061
+
+$ deepseek_city.py Labuan --stage frame
+Labuan: frame
+  tokens in 2436 out 1671
+
+$ deepseek_city.py Labuan --stage plans
+Labuan: plans
+  plans for day
+  tokens in 2150 out 868
+  plans for 1n
+  tokens in 2156 out 1166
+  plans for 2n
+  tokens in 2151 out 1623
+  plans for 3n
+  tokens in 2151 out 2305
+
+$ merge_city.py Labuan
+Labuan: 21 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/labuan.json and planner/labuan.json
+

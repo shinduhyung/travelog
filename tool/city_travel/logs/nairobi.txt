@@ -1,0 +1,30 @@
+$ deepseek_facts.py Nairobi
+  tokens in 4101 out 723
+Nairobi: 0 problems
+
+$ deepseek_city.py Nairobi --stage places
+Nairobi: places
+  tokens in 1204 out 3185
+
+$ deepseek_city.py Nairobi --stage frame
+Nairobi: frame
+  tokens in 2422 out 1801
+  repaired JSON
+
+$ deepseek_city.py Nairobi --stage plans
+Nairobi: plans
+  plans for day
+  tokens in 2043 out 848
+  plans for 1n
+  tokens in 2044 out 1112
+  plans for 2n
+  tokens in 2049 out 1168
+  plans for 3n
+  tokens in 2044 out 1836
+  plans for 4n
+  tokens in 2044 out 1705
+
+$ merge_city.py Nairobi
+ERROR plan 4n-nature: unknown place 'nairobi-national-museum'
+Nairobi: 20 places, 15 plans, 1 errors, 0 warnings
+

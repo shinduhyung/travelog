@@ -1,0 +1,275 @@
+{
+  "styles": [
+    {
+      "id": "beach",
+      "label": "Beach",
+      "blurb": "Swims, promenade walks and sunsets on the Mediterranean."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Hummus, sabich, Carmel Market and all-night eating."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Bauhaus streets, museums and the old port."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Tel Aviv Center",
+      "range": [
+        450,
+        900
+      ],
+      "why": "Walk to the beach, Rothschild Blvd and the light rail. Best base for first-timers.",
+      "center": [
+        32.073,
+        34.774
+      ]
+    },
+    {
+      "area": "Neve Tzedek",
+      "range": [
+        600,
+        1200
+      ],
+      "why": "Quiet, pretty old streets near the beach and Jaffa. Good for couples.",
+      "center": [
+        32.062,
+        34.766
+      ]
+    },
+    {
+      "area": "Jaffa",
+      "range": [
+        400,
+        850
+      ],
+      "why": "Old port, flea market and history. Cheaper than the center; light rail links it.",
+      "center": [
+        32.053,
+        34.752
+      ]
+    },
+    {
+      "area": "Port area",
+      "range": [
+        550,
+        1100
+      ],
+      "why": "Waterfront promenade, restaurants and parks. Calm and walkable.",
+      "center": [
+        32.096,
+        34.775
+      ]
+    }
+  ],
+  "food": [
+    "Try hummus, sabich (fried aubergine pita) and shakshuka. Cheap lunch spots charge about ILS 30–60.",
+    "Carmel Market: graze on fruit, cheese and street food. Busiest on Fridays; closed on Shabbat.",
+    "Falafel and shawarma are the fast, cheap option, about ILS 20–40 a portion.",
+    "Many restaurants are kosher and close from Friday afternoon to Saturday evening. Check opening hours.",
+    "Book dinner ahead for Thursday and Friday nights. Tipping is around 10–15%."
+  ],
+  "more_time": [
+    "Swap a beach day for Old Jaffa: the port, the flea market and the alleys of the old town.",
+    "Add a day in Jerusalem. Buses and trains run often; check times on the day.",
+    "Take a half-day to Caesarea or the Carmel coast if you have a car or join a tour."
+  ],
+  "type_month_fit": {
+    "beach": [
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.8,
+      0.5,
+      0.35
+    ],
+    "food": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "culture": [
+      0.8,
+      0.8,
+      0.85,
+      0.9,
+      0.85,
+      0.75,
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "nightlife": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      1,
+      1,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.85,
+      0.85,
+      0.9,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.65,
+      0.75,
+      0.9,
+      0.9,
+      0.85
+    ]
+  },
+  "best_for": [
+    "beach",
+    "food",
+    "nightlife"
+  ],
+  "recommend": {
+    "why": "Three nights lets you swim, eat well and still see Jaffa and the old port without rushing."
+  },
+  "month_notes": [
+    "January: cool and rainy, highs near 17°C. Pack a jacket and an umbrella.",
+    "February: still cool and wet, around 18°C. Good for museums and food.",
+    "March: warming to 20°C, fewer rainy days. Pleasant for walking.",
+    "April: mild and mostly dry, highs near 23°C. Great beach-walk weather.",
+    "May: warm at 27°C and almost no rain. Beach season starts.",
+    "June: hot and dry, around 29°C. Swim early or late.",
+    "July: hot at 31°C with warm nights. Plan shade at midday.",
+    "August: hottest month, 32°C. Drink water and use sunscreen.",
+    "September: still hot at 31°C but the sea stays warm. Few crowds.",
+    "October: cooling to 28°C with a few showers. Very comfortable.",
+    "November: mild at 24°C, more rain days. Bring a light rain layer.",
+    "December: cool and wet, around 20°C. Quiet season, lower prices."
+  ],
+  "climate_guide": {
+    "summary": "Mediterranean climate: hot, dry summers and mild, rainy winters. The beach season runs roughly May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: April to June and October",
+        "text": "Warm days around 23–29°C with little rain. Ideal for the beach and walking the city."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot, humid summer (July to September)",
+        "text": "Highs of 31–32°C and warm nights. Swim early, rest in the shade at midday."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet winter (December to February)",
+        "text": "Around 10–12 rain days a month and highs of 17–20°C. Pack a jacket and umbrella."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain is seasonal",
+        "text": "Almost none from June to September. Most rain falls between November and March."
+      },
+      {
+        "icon": "🌊",
+        "title": "Sea and beach",
+        "text": "The sea is warmest in late summer. Check flags and lifeguard hours on the day."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, hat and sunscreen for summer; a light jacket and rain layer for winter."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk and bike the center and promenade; use the light rail and buses for longer trips.",
+    "modes": [
+      {
+        "mode": "Light rail",
+        "has": true,
+        "best": true,
+        "text": "Since 2023 it links Jaffa, Neve Tzedek, Rothschild Blvd, Sarona and Tel Aviv Center. Handy for the main sights."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Frequent and cheap. Use a Rav-Kav smart card; no cash on buses."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis; Gett and Uber work in Tel Aviv. Good for late nights and the airport."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Possible, but traffic is heavy and parking is hard to find. Skip it for city days."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Great along the beach promenade and in the center. The best way to see the city."
+      },
+      {
+        "mode": "Bike",
+        "has": true,
+        "text": "Biking is great along the promenade and in the center. Rent by the hour or day."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries to Tel Aviv. Private boats can dock at the marina."
+      }
+    ]
+  }
+}

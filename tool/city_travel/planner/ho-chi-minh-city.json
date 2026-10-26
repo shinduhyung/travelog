@@ -1,0 +1,572 @@
+{
+  "city": "Ho Chi Minh City",
+  "checked": "October 2026",
+  "intro_line": "Saigon: motorbikes, markets and motorbike-fuelled energy",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "District 1",
+        "Pham Ngu Lao",
+        "District 3",
+        "District 7"
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "District 1",
+        "Pham Ngu Lao",
+        "District 3",
+        "District 7"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "District 1",
+        "Pham Ngu Lao",
+        "District 3",
+        "District 7"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "District 1",
+        "Pham Ngu Lao",
+        "District 3",
+        "District 7"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "District 1",
+        "Pham Ngu Lao",
+        "District 3",
+        "District 7"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 32,
+        "low": 23,
+        "rain_days": 4,
+        "note": "Jan: dry and warm, 32°C days and 23°C nights; one of the best months to walk the city."
+      },
+      {
+        "high": 34,
+        "low": 23,
+        "rain_days": 3,
+        "note": "Feb: the driest month, about 3 rain days; hot at 34°C, so sightsee early."
+      },
+      {
+        "high": 35,
+        "low": 25,
+        "rain_days": 4,
+        "note": "Mar: very hot at 35°C and still dry; carry water and plan indoor breaks."
+      },
+      {
+        "high": 35,
+        "low": 26,
+        "rain_days": 11,
+        "note": "Apr: 35°C highs and rain days jump to about 11; start outdoor plans early."
+      },
+      {
+        "high": 33,
+        "low": 26,
+        "rain_days": 25,
+        "note": "May: the wet season starts, about 25 rain days; expect heavy afternoon showers."
+      },
+      {
+        "high": 32,
+        "low": 25,
+        "rain_days": 27,
+        "note": "Jun: very wet, about 27 rain days; keep a rain jacket and a flexible plan."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 29,
+        "note": "Jul: the wettest stretch, about 29 rain days; showers usually pass, but streets can flood."
+      },
+      {
+        "high": 31,
+        "low": 25,
+        "rain_days": 29,
+        "note": "Aug: still very wet, about 29 rain days; indoor sights and cafés are good backups."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 29,
+        "note": "Sep: wet, about 29 rain days, with highs around 31°C; check forecasts daily."
+      },
+      {
+        "high": 30,
+        "low": 24,
+        "rain_days": 28,
+        "note": "Oct: rain eases slightly to about 28 days; still carry an umbrella."
+      },
+      {
+        "high": 31,
+        "low": 24,
+        "rain_days": 19,
+        "note": "Nov: rain days drop to about 19; a good shoulder month with 31°C highs."
+      },
+      {
+        "high": 31,
+        "low": 23,
+        "rain_days": 10,
+        "note": "Dec: drier again, about 10 rain days; comfortable for walking and markets."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "food": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.55,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.95
+    ],
+    "culture": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.55,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.95
+    ],
+    "history": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.6,
+      0.55,
+      0.55,
+      0.55,
+      0.6,
+      0.8,
+      0.95
+    ],
+    "shopping": [
+      1,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.6,
+      0.65,
+      0.85,
+      0.95
+    ],
+    "nightlife": [
+      1,
+      0.95,
+      0.9,
+      0.85,
+      0.7,
+      0.65,
+      0.6,
+      0.6,
+      0.6,
+      0.7,
+      0.85,
+      0.95
+    ]
+  },
+  "places": {
+    "war-remnants": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning, right at opening",
+      "area": "District 3",
+      "popularity": 5
+    },
+    "cu-chi": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "mixed",
+      "best": "Morning departure before the heat",
+      "area": "District 1",
+      "popularity": 5
+    },
+    "notre-dame": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "District 1",
+      "popularity": 4
+    },
+    "independence-palace": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "District 1",
+      "popularity": 5
+    },
+    "central-post-office": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning or late afternoon",
+      "area": "District 1",
+      "popularity": 4
+    },
+    "ben-thanh": {
+      "types": [
+        "shopping",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning for shopping, evening for the night stalls",
+      "area": "District 1",
+      "popularity": 5
+    },
+    "bach-dang": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset and evening",
+      "area": "District 1",
+      "popularity": 3
+    },
+    "bitexco": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Late afternoon into sunset",
+      "area": "District 1",
+      "popularity": 4
+    },
+    "jade-emperor": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "District 1",
+      "popularity": 3
+    },
+    "landmark-81": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Evening",
+      "area": "District 1",
+      "popularity": 4
+    },
+    "saigon-river": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "District 1",
+      "popularity": 3
+    },
+    "suoi-tien": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Morning on a weekday",
+      "area": "District 1",
+      "popularity": 2
+    },
+    "tan-dinh": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Early morning",
+      "area": "District 3",
+      "popularity": 3
+    },
+    "dai-nam": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 300,
+      "setting": "outdoor",
+      "best": "Morning start on a weekday",
+      "area": "District 1",
+      "popularity": 2
+    },
+    "dam-sen": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Morning on a weekday",
+      "area": "District 1",
+      "popularity": 2
+    },
+    "ben-thanh-night": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Evening from 19:00",
+      "area": "District 1",
+      "popularity": 4
+    },
+    "pham-ngu-lao": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Pham Ngu Lao",
+      "popularity": 4
+    },
+    "street-food-tour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "District 1",
+      "popularity": 4
+    },
+    "cho-lon-walk": {
+      "types": [
+        "culture",
+        "food",
+        "shopping"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "District 1",
+      "popularity": 3
+    },
+    "rooftop-view": {
+      "types": [
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset into evening",
+      "area": "District 1",
+      "popularity": 3
+    },
+    "mekong-day-trip": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Morning departure, dry season",
+      "area": "District 1",
+      "popularity": 3
+    },
+    "district-7-walk": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late afternoon and evening",
+      "area": "District 7",
+      "popularity": 2
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the war sites, Ben Thanh and a street-food crawl; add a night for a Cu Chi or Mekong day trip."
+  },
+  "airports": [
+    {
+      "code": "SGN",
+      "name": "Tan Son Nhat International Airport",
+      "primary": true,
+      "note": "Vietnam's largest airport, about 2 km straight-line from the centre.",
+      "options": [
+        {
+          "mode": "Bus 152",
+          "to": "City centre",
+          "price": "5,000 VND plus 5,000 VND luggage",
+          "time": "30-45 min",
+          "note": "Cheapest option; departs every 15 min."
+        },
+        {
+          "mode": "Bus 109",
+          "to": "City centre",
+          "price": "20,000 VND plus 20,000 VND luggage",
+          "time": "25-40 min",
+          "note": "Express bus, every 45 min."
+        },
+        {
+          "mode": "Ride app (Grab, Xanh SM, beTaxi)",
+          "to": "City centre",
+          "price": "70,000-150,000 VND",
+          "time": "15-30 min",
+          "note": "Fixed fare; easiest with luggage."
+        },
+        {
+          "mode": "Taxi",
+          "to": "City centre",
+          "price": "100,000-180,000 VND",
+          "time": "15-30 min",
+          "note": "Use Mai Linh or Vinasun; insist on the meter."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Ho Chi Minh City",
+      "https://en.wikivoyage.org/wiki/Ho%20Chi%20Minh%20City"
+    ]
+  ],
+  "best_for": [
+    "food",
+    "history"
+  ],
+  "transit": {
+    "best": "Ride apps for most trips; Metro Line 1 for Ben Thanh to Suoi Tien.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Metro Line 1 links Ben Thanh Market to Suoi Tien and the Eastern Bus Terminus. Fares 7,000-20,000 VND, trains every 8-12 min, 5AM-10PM."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Green and blue buses cover 170+ routes. Fares 5,000-7,000 VND local, 10,000-50,000 VND intercity. Tap a contactless Visa or Mastercard."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Grab, Xanh SM and beTaxi work well; fares are fixed and often cheaper than street taxis. Use Mai Linh or Vinasun metered taxis and check the meter is on."
+      },
+      {
+        "mode": "Motorbike taxi",
+        "has": true,
+        "text": "Xe om are everywhere. Agree a price first or book via app; short hops about 20,000 VND."
+      },
+      {
+        "mode": "Ferry / waterbus",
+        "has": true,
+        "text": "Saigon Waterbus runs on the Saigon River from District 1 to Thu Duc. A cheap river ride."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Not practical for visitors; traffic is heavy and parking is hard. Use apps and the metro instead."
+      },
+      {
+        "mode": "Walking",
+        "has": false,
+        "text": "Fine for short blocks, but long walks are impractical in the heat. Use a ride for anything far."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Tropical city: hot all year, with a dry season roughly December to April and a very wet season from May to October.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: December to March",
+        "text": "Highs 31-34°C, lows 23-25°C and only 3-10 rain days a month. Best for walking and markets."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wet season: May to October",
+        "text": "25-29 rain days a month. Showers are often heavy but short; streets can flood."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot year-round",
+        "text": "Highs stay 30-35°C. March and April are hottest at 35°C. Plan outdoor sights for early morning."
+      },
+      {
+        "icon": "🌂",
+        "title": "Pack rain gear in the wet months",
+        "text": "A light rain jacket or umbrella helps from May to October. Wear quick-dry shoes."
+      },
+      {
+        "icon": "💧",
+        "title": "Humid most days",
+        "text": "Lows rarely drop below 23°C. Light, breathable clothes work all year."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes, sunscreen, a hat and a refillable water bottle; add rain gear for May-October."
+      }
+    ]
+  }
+}

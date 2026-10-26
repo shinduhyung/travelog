@@ -27,6 +27,7 @@ import 'package:jidoapp/screens/welcome_screen.dart';
 import 'package:jidoapp/main_screen.dart';
 
 import 'package:jidoapp/widgets/plane_loading_logo.dart';
+import 'package:jidoapp/widgets/badge_summary_dialog.dart';
 
 import 'package:jidoapp/providers/auth_provider.dart';
 import 'package:jidoapp/providers/country_provider.dart';
@@ -67,7 +68,6 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:jidoapp/social/social_hub.dart' show socialRouteName;
@@ -376,13 +376,8 @@ void main() {
         debugPrint('🔴 Stack:\n$st');
       }
 
-      try {
-        await MobileAds.instance.initialize();
-        debugPrint('🟢 [DEBUG] 10) MobileAds.initialize 완료');
-      } catch (e, st) {
-        debugPrint('🔴 [DEBUG] 10) MobileAds.initialize 실패: $e');
-        debugPrint('🔴 Stack:\n$st');
-      }
+      // MobileAds.initialize()는 여기서 호출하지 않는다 — UMP 동의(와 iOS ATT)가
+      // 끝난 뒤 AdService가 직접 호출한다 (AdService._finishConsentFlow).
 
       try {
         await SubscriptionService.instance.initialize();
@@ -860,23 +855,22 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   Future<void> _initATTAndMetaSDK() async {
     if (!Platform.isIOS) return;
     try {
-      await Future.delayed(const Duration(seconds: 1));
+      // ATT 프롬프트는 AdService가 UMP 동의 이후에 띄운다(두 화면이 겹치지
+      // 않게 하기 위함). 여기서는 그 흐름이 끝나길 기다렸다가 결과만 반영한다.
+      await AdService.instance.consentFlowDone.timeout(
+        const Duration(seconds: 45),
+        onTimeout: () {},
+      );
 
-      final TrackingStatus status =
+      TrackingStatus status =
           await AppTrackingTransparency.trackingAuthorizationStatus;
 
+      // 동의 흐름이 타임아웃/실패해서 아직 한 번도 안 물어봤다면 여기서 폴백.
       if (status == TrackingStatus.notDetermined) {
-        final result =
-            await AppTrackingTransparency.requestTrackingAuthorization();
-        if (result == TrackingStatus.authorized) {
-          await facebookAppEvents.setAdvertiserTracking(enabled: true);
-          await facebookAppEvents.activateApp();
-          debugPrint("✅ ATT Authorized: Meta SDK tracking started");
-        } else {
-          await facebookAppEvents.setAdvertiserTracking(enabled: false);
-          debugPrint("🚫 ATT Denied: Meta SDK tracking limited");
-        }
-      } else if (status == TrackingStatus.authorized) {
+        status = await AppTrackingTransparency.requestTrackingAuthorization();
+      }
+
+      if (status == TrackingStatus.authorized) {
         await facebookAppEvents.setAdvertiserTracking(enabled: true);
         await facebookAppEvents.activateApp();
         debugPrint("✅ ATT already authorized: Meta SDK tracking active");
@@ -1190,7 +1184,6 @@ class BadgeGlobalListener extends StatefulWidget {
 }
 
 class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
-  static const int _maxIndividualBadgePopups = 3;
   bool _isShowingDialog = false;
 
   static const int _currentBuildNumber = 75;
@@ -1198,6 +1191,7 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
   bool _buildExpansionCheckDone = false;
 
   static const bool _debugAlwaysShowBadgeExpansionPromo = false;
+  static const int _maxIndividualBadgePopups = 3;
 
   @override
   void initState() {
@@ -1322,30 +1316,21 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
           debugPrint('🏆 [BADGE DEBUG] rank unlock dialog CLOSED: $rankName');
           if (mounted) {
             _isShowingDialog = false;
+            badgeProvider.markRankAsSeen();
+            debugPrint('🏆 [BADGE DEBUG] markRankAsSeen complete');
+          }
+        });
+        return;
+      }
+
       // 한꺼번에 많은 뱃지가 해제되면(앱 업데이트로 신규 뱃지가 추가된 직후 등)
       // 뱃지마다 팝업을 띄우지 않고 요약 팝업 하나로 대체한다.
       if (badgeProvider.newlyUnlocked.length > _maxIndividualBadgePopups) {
         final count = badgeProvider.newlyUnlocked.length;
         _isShowingDialog = true;
-        final goToBadges = await showDialog<bool>(
-          context: overlayContext,
-          builder: (ctx) => AlertDialog(
-            title: Text(tr('New badges unlocked')),
-            content: Text(
-              tr('You unlocked {0} new badges.').replaceAll('{0}', '$count'),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(ctx, false),
-                child: Text(tr('Close')),
-              ),
-              FilledButton(
-                onPressed: () => Navigator.pop(ctx, true),
-                child: Text(tr('View Badges')),
-              ),
-            ],
-          ),
-        );
+        debugPrint('🏅 [BADGE DEBUG] summary dialog OPEN: $count badges');
+        final goToBadges =
+            await BadgeSummaryDialog.show(overlayContext, badgeProvider.newlyUnlocked);
         _isShowingDialog = false;
         badgeProvider.clearNewlyUnlocked();
         if (goToBadges == true && mounted) {
@@ -1353,13 +1338,6 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
             MaterialPageRoute(builder: (_) => const BadgesScreen()),
           );
         }
-        return;
-      }
-
-            badgeProvider.markRankAsSeen();
-            debugPrint('🏆 [BADGE DEBUG] markRankAsSeen complete');
-          }
-        });
         return;
       }
 
@@ -1396,17 +1374,17 @@ class _BadgeGlobalListenerState extends State<BadgeGlobalListener> {
               child: BadgeCollectedScreen(
                 achievement: newBadge,
                 pendingCount: pendingCount,
+              ),
+            );
+          },
+        ).then((result) async {
+          debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen CLOSED');
+          if (mounted) {
+            _isShowingDialog = false;
             if (result == 'all') {
               badgeProvider.clearNewlyUnlocked();
               return;
             }
-              ),
-            );
-          },
-        ).then((_) async {
-          debugPrint('🏅 [BADGE DEBUG] BadgeCollectedScreen CLOSED');
-          if (mounted) {
-            _isShowingDialog = false;
             badgeProvider.markBadgeAsSeen(newBadge);
             debugPrint(
               '🏅 [BADGE DEBUG] markBadgeAsSeen complete for ${newBadge.name}',

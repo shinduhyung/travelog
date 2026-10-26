@@ -1,0 +1,68 @@
+{
+ "city": "Tbilisi",
+ "trips": [
+  {
+   "place": "Gori",
+   "label": "",
+   "position": {
+    "id": 380908,
+    "name": "Gori",
+    "city": "Gori",
+    "lat": 41.98422,
+    "lng": 44.11578
+   },
+   "town": {
+    "name": "Gori",
+    "lat": 41.98422,
+    "lng": 44.11578
+   },
+   "road": {
+    "km": 86,
+    "min": 72,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 130.0,
+    "currency": "GEL"
+   },
+   "modes": {
+    "train": {
+     "from": "$3-$10",
+     "time": "49m",
+     "via": "Tbilisi to Gori",
+     "source": "https://www.rome2rio.com/s/Tbilisi/Gori"
+    },
+    "bus": {
+     "from": "$4-$5",
+     "time": "1h 33m",
+     "via": "Tbilisi Didube to Gori",
+     "source": "https://www.rome2rio.com/s/Tbilisi/Gori"
+    }
+   },
+   "route_note": "Marshrutkas and trains run from Tbilisi to Gori in about 1 to 1.5 hours; from Gori take a local taxi or bus for the short leg to Uplistsikhe.",
+   "see": [
+    "Uplistsikhe cave town",
+    "Stalin Museum",
+    "Gori fortress",
+    "Gori old town"
+   ],
+   "visit": "Full day",
+   "tour_query": "Gori and Uplistsikhe day trip from Tbilisi",
+   "quests": [],
+   "recommended": "train",
+   "why": "The train is the fastest option at 49 minutes and Gori's sights are reachable by a short local taxi or bus.",
+   "stars": 4,
+   "know": [
+    "Uplistsikhe cave town is a short taxi or bus ride from Gori",
+    "Trains and marshrutkas run frequently from Tbilisi",
+    "Check the Stalin Museum's opening days before going"
+   ]
+  }
+ ],
+ "problems": [
+  "Mtskheta: not a town in cities15000.json (GE), dropped",
+  "Stepantsminda: not a town in cities15000.json (GE), dropped",
+  "Sighnaghi: not a town in cities15000.json (GE), dropped",
+  "Udabno: no Omio position, dropped"
+ ]
+}

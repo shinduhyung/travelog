@@ -1,0 +1,699 @@
+{
+  "city": "Paris",
+  "checked": "October 2026",
+  "intro_line": "Grand boulevards, world-famous museums and café life on every corner.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Le Marais",
+        "Saint-Germain & Latin Quarter",
+        "Louvre & Opéra",
+        "Montmartre"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Le Marais",
+        "Saint-Germain & Latin Quarter",
+        "Louvre & Opéra",
+        "Montmartre"
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "Romance",
+      "areas": [
+        "Le Marais",
+        "Saint-Germain & Latin Quarter",
+        "Louvre & Opéra",
+        "Montmartre"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family",
+      "areas": [
+        "Le Marais",
+        "Saint-Germain & Latin Quarter",
+        "Louvre & Opéra",
+        "Montmartre"
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "areas": [
+        "Le Marais",
+        "Saint-Germain & Latin Quarter",
+        "Louvre & Opéra",
+        "Montmartre"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 7,
+        "low": 2,
+        "rain_days": 13,
+        "note": "January: cold, highs near 7°C and about 13 rain days. Pack a warm coat and waterproof shoes."
+      },
+      {
+        "high": 10,
+        "low": 2,
+        "rain_days": 11,
+        "note": "February: still cold, highs near 10°C, about 11 rain days. Quiet museums and shorter queues."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 13,
+        "note": "March: mild at about 12°C but wet, around 13 rain days. Bring an umbrella."
+      },
+      {
+        "high": 16,
+        "low": 6,
+        "rain_days": 10,
+        "note": "April: pleasant highs near 16°C, about 10 rain days. Good for parks and long walks."
+      },
+      {
+        "high": 19,
+        "low": 9,
+        "rain_days": 13,
+        "note": "May: warm at about 19°C, around 13 rain days. Pack layers and a light rain jacket."
+      },
+      {
+        "high": 23,
+        "low": 14,
+        "rain_days": 12,
+        "note": "June: warm and bright, highs near 23°C, about 12 rain days. Long evenings outdoors."
+      },
+      {
+        "high": 26,
+        "low": 15,
+        "rain_days": 9,
+        "note": "July: hottest month, highs near 26°C, about 9 rain days. Busy; book sights ahead."
+      },
+      {
+        "high": 25,
+        "low": 15,
+        "rain_days": 10,
+        "note": "August: warm at about 25°C, around 10 rain days. Some small shops close for holidays."
+      },
+      {
+        "high": 22,
+        "low": 12,
+        "rain_days": 9,
+        "note": "September: lovely at about 22°C, around 9 rain days. A strong month for walking."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 12,
+        "note": "October: cooler at about 17°C, around 12 rain days. Bring a jacket and umbrella."
+      },
+      {
+        "high": 11,
+        "low": 5,
+        "rain_days": 12,
+        "note": "November: cool at about 11°C, around 12 rain days. Indoor sights and cafés suit best."
+      },
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 13,
+        "note": "December: cold, highs near 9°C, about 13 rain days. Dark early; dress warm for evenings out."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "food": [
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.9,
+      0.75,
+      0.7
+    ],
+    "romance": [
+      0.65,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.95,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "family": [
+      0.55,
+      0.6,
+      0.7,
+      0.85,
+      0.9,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.6,
+      0.55
+    ],
+    "budget": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.85,
+      0.8,
+      0.75,
+      0.75,
+      0.85,
+      0.85,
+      0.75,
+      0.7
+    ]
+  },
+  "places": {
+    "eiffel": {
+      "types": [
+        "culture",
+        "romance",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Early morning or after dark for the sparkle",
+      "area": "Louvre & Opéra",
+      "popularity": 5
+    },
+    "louvre": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "First hour after opening or Friday evening",
+      "area": "Louvre & Opéra",
+      "popularity": 5
+    },
+    "orsay": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Late Thursday or a weekday morning",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 5
+    },
+    "notredame": {
+      "types": [
+        "culture",
+        "family",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "First thing in the morning",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 5
+    },
+    "saintechapelle": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Sunny afternoon",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 4
+    },
+    "arc": {
+      "types": [
+        "culture",
+        "romance",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset for the view down the avenue",
+      "area": "Louvre & Opéra",
+      "popularity": 5
+    },
+    "champs": {
+      "types": [
+        "budget",
+        "family"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Evening when the lights come on",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "sacrecoeur": {
+      "types": [
+        "culture",
+        "budget",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset, then dinner in Montmartre",
+      "area": "Montmartre",
+      "popularity": 5
+    },
+    "montmartre": {
+      "types": [
+        "culture",
+        "romance",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning or early evening",
+      "area": "Montmartre",
+      "popularity": 4
+    },
+    "versailles": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 300,
+      "setting": "mixed",
+      "best": "Weekday morning; allow half a day",
+      "area": "Louvre & Opéra",
+      "popularity": 5
+    },
+    "pompidou": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Afternoon, then walk Le Marais",
+      "area": "Le Marais",
+      "popularity": 4
+    },
+    "marais": {
+      "types": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Sunday afternoon or a weekday lunch",
+      "area": "Le Marais",
+      "popularity": 4
+    },
+    "luxembourg": {
+      "types": [
+        "family",
+        "romance",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunny afternoon",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 4
+    },
+    "pantheon": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 4
+    },
+    "garnier": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "invalides": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 4
+    },
+    "orangerie": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "rodin": {
+      "types": [
+        "culture",
+        "romance"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Sunny morning",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 3
+    },
+    "seinecruise": {
+      "types": [
+        "romance",
+        "family",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "After dark",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "catacombs": {
+      "types": [
+        "culture",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "First slot of the day",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 4
+    },
+    "montparnasse": {
+      "types": [
+        "romance",
+        "family"
+      ],
+      "minutes": 60,
+      "setting": "indoor",
+      "best": "Sunset",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 3
+    },
+    "disney": {
+      "types": [
+        "family"
+      ],
+      "minutes": 480,
+      "setting": "outdoor",
+      "best": "Weekday, full day",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "tuileries": {
+      "types": [
+        "budget",
+        "family",
+        "romance"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "pere": {
+      "types": [
+        "culture",
+        "budget"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning",
+      "area": "Le Marais",
+      "popularity": 3
+    },
+    "aligre": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Weekday morning",
+      "area": "Le Marais",
+      "popularity": 3
+    },
+    "trocadero": {
+      "types": [
+        "budget",
+        "romance",
+        "family"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunrise or sunset",
+      "area": "Louvre & Opéra",
+      "popularity": 4
+    },
+    "foodtour": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Saint-Germain & Latin Quarter",
+      "popularity": 3
+    },
+    "canal": {
+      "types": [
+        "budget",
+        "romance"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Weekend afternoon",
+      "area": "Le Marais",
+      "popularity": 3
+    },
+    "boulangerie": {
+      "types": [
+        "food",
+        "budget"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Early morning",
+      "area": "Le Marais",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the big sights, a market lunch and an evening on the Seine without rushing."
+  },
+  "airports": [
+    {
+      "code": "CDG",
+      "name": "Charles de Gaulle Airport",
+      "primary": true,
+      "note": "The main airport, 25 km north-east.",
+      "options": [
+        {
+          "mode": "RER B",
+          "to": "Gare du Nord, Châtelet, Saint-Michel",
+          "price": "€14",
+          "time": "35-45 min",
+          "note": "Airport ticket includes onward Métro/RER for 2 hours."
+        },
+        {
+          "mode": "Taxi (flat fare)",
+          "to": "Right Bank / Left Bank",
+          "price": "€56 / €65",
+          "time": "45-60 min",
+          "note": "Fixed fares from official taxi ranks."
+        },
+        {
+          "mode": "Uber / Bolt",
+          "to": "Central Paris",
+          "price": "€40-60",
+          "time": "45-60 min",
+          "note": "Price changes with demand."
+        },
+        {
+          "mode": "Roissybus",
+          "to": "Opéra",
+          "price": "—",
+          "time": "—",
+          "note": "Reported discontinued in March 2026."
+        }
+      ]
+    },
+    {
+      "code": "ORY",
+      "name": "Orly Airport",
+      "primary": false,
+      "note": "13 km south; many European and French flights.",
+      "options": [
+        {
+          "mode": "Métro line 14",
+          "to": "Châtelet, Gare de Lyon, Saint-Lazare",
+          "price": "€14",
+          "time": "about 25-30 min",
+          "note": "Direct line since 2024."
+        },
+        {
+          "mode": "Orlyval + RER B",
+          "to": "Châtelet, Saint-Michel",
+          "price": "€14",
+          "time": "35-45 min",
+          "note": ""
+        },
+        {
+          "mode": "Taxi (flat fare)",
+          "to": "Left Bank / Right Bank",
+          "price": "€36 / €45",
+          "time": "25-40 min",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Paris airport transfers compared 2026",
+      "https://parisvibes.org/paris-airport-transfers-compared-cdg-orly-and-beauvais-2026/"
+    ],
+    [
+      "CDG to central Paris 2026",
+      "https://travelandtime.com/guides/cdg-airport-to-paris"
+    ],
+    [
+      "Orly to city centre 2026",
+      "https://www.faretus.com/blog/paris-orly-airport-to-city-centre"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "romance"
+  ],
+  "transit": {
+    "best": "Walk in the centre and use the Métro for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "The Métro and RER cover the whole city. A single ticket is about €2.50; weekly Navigo passes are good value."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses use the same tickets. Slower than the Métro but scenic."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Metered taxis with flat fares from the airports. Uber, Bolt and G7 apps work everywhere."
+      },
+      {
+        "mode": "Rental car",
+        "has": false,
+        "text": "Driving and parking in Paris are hard. A car is only useful for day trips."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "Central Paris is compact and very walkable. Vélib' bikes are everywhere."
+      },
+      {
+        "mode": "Train",
+        "has": true,
+        "text": "RER C goes to Versailles; Disneyland is on RER A."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Mild, changeable weather with rain in every month. Summers are warm, not hot; winters are cold and grey.",
+    "items": [
+      {
+        "icon": "🌤️",
+        "title": "Best months: May to September",
+        "text": "Highs around 19–26°C. Long daylight and the best odds of dry, pleasant days."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 9–13 rain days every month. Showers are often short; carry a small umbrella."
+      },
+      {
+        "icon": "❄️",
+        "title": "Cold winters",
+        "text": "December to February highs of 7–10°C and lows near 2°C. Warm coat, scarf and layers."
+      },
+      {
+        "icon": "☀️",
+        "title": "Warm, not hot, summers",
+        "text": "July peaks near 26°C. Comfortable for walking, but book popular sights ahead in peak season."
+      },
+      {
+        "icon": "🧥",
+        "title": "Pack layers",
+        "text": "Mornings and evenings are cooler than midday. A light jacket works most of the year."
+      },
+      {
+        "icon": "👟",
+        "title": "Wear good shoes",
+        "text": "You will walk a lot on cobbles and stone. Waterproof shoes help on wet days."
+      }
+    ]
+  }
+}

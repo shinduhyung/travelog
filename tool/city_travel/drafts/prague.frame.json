@@ -1,0 +1,271 @@
+{
+  "styles": [
+    {
+      "id": "history",
+      "label": "History",
+      "blurb": "Castle, Charles Bridge and the old Jewish quarter."
+    },
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, galleries, concerts and black-light theatre."
+    },
+    {
+      "id": "budget",
+      "label": "Budget",
+      "blurb": "Cheap beer, trams and free views from the hills."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Staré Město",
+      "range": [
+        1800,
+        4500
+      ],
+      "why": "Steps from Old Town Square and Charles Bridge. Walk to most sights; noisier at night.",
+      "center": [
+        50.087,
+        14.421
+      ]
+    },
+    {
+      "area": "Malá Strana",
+      "range": [
+        1600,
+        4000
+      ],
+      "why": "Quiet cobbled lanes under the castle. Romantic and close to the bridge; fewer trams.",
+      "center": [
+        50.088,
+        14.404
+      ]
+    },
+    {
+      "area": "Vinohrady",
+      "range": [
+        1200,
+        2800
+      ],
+      "why": "Leafy, local and full of cafés and restaurants. Good value; 15–20 minutes by tram or metro to the centre.",
+      "center": [
+        50.076,
+        14.446
+      ]
+    },
+    {
+      "area": "Nové Město",
+      "range": [
+        1400,
+        3200
+      ],
+      "why": "Central and practical around Wenceslas Square. Main train station and metro nearby; busy streets.",
+      "center": [
+        50.081,
+        14.427
+      ]
+    }
+  ],
+  "food": [
+    "Try Czech classics: svíčková (beef in cream sauce), goulash with bread dumplings, and fried cheese.",
+    "Prague is famous for beer. A half-litre of local lager is often cheaper than a coffee; prices vary by pub.",
+    "Snack on a trdelník (chimney cake) from a street stall, or grab a chlebíček open sandwich from a deli.",
+    "Lunch menus (polední menu) at local pubs are the best value: a soup and main for a modest price.",
+    "Book popular dinner spots ahead for weekends. Many kitchens close early on Sunday."
+  ],
+  "more_time": [
+    "Day trip to Kutná Hora: train from the main station, about an hour each way, to see the bone church and old town.",
+    "Swap one museum for a half-day at Vyšehrad: fortress walls, a cemetery of famous Czechs and river views.",
+    "Take a tram to Letná or Petřín for a park walk and a beer garden with a city view."
+  ],
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.65
+    ],
+    "nightlife": [
+      0.6,
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "budget": [
+      0.65,
+      0.65,
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.8,
+      0.7,
+      0.65
+    ]
+  },
+  "best_for": [
+    "history",
+    "culture",
+    "budget"
+  ],
+  "recommend": {
+    "why": "Three nights covers the castle, Old Town, the Jewish quarter and a day trip, without rushing."
+  },
+  "month_notes": [
+    "January: cold, highs around 4°C and lows near -2°C. Pack a warm coat; museums and pubs are cozy.",
+    "February: still cold, highs near 7°C. Fewer crowds; some sights keep shorter hours.",
+    "March: cool and changeable, highs around 10°C. Bring layers and a rain jacket.",
+    "April: mild, highs near 15°C. Good for walking; expect about 9 rain days.",
+    "May: pleasant, highs around 19°C. Busy and lively; book hotels early.",
+    "June: warm, highs near 25°C. Long evenings; around 12 rain days, so pack a light rain layer.",
+    "July: warmest month, highs around 26°C. Peak crowds; mornings are best for the bridge and castle.",
+    "August: hot and busy, highs near 26°C. Same advice: start early and rest midday.",
+    "September: mild and comfortable, highs around 21°C. Fewer rain days; a strong month to visit.",
+    "October: cooler, highs near 15°C. Golden autumn light; bring a jacket.",
+    "November: chilly, highs around 8°C. Grey skies and about 10 rain days; Christmas markets start late in the month.",
+    "December: cold, highs near 5°C. Christmas markets and festive lights; pack warm layers and waterproof shoes."
+  ],
+  "climate_guide": {
+    "summary": "Four clear seasons: cold winters, warm summers and mild spring and autumn. Rain is spread through the year.",
+    "items": [
+      {
+        "icon": "🌡️",
+        "title": "Best time: May, June and September",
+        "text": "Highs around 19–25°C with long days. Comfortable for walking the castle and old town."
+      },
+      {
+        "icon": "❄️",
+        "title": "Winter is cold (December to February)",
+        "text": "Highs of 4–7°C and lows near or below freezing. Pack a warm coat, hat and gloves."
+      },
+      {
+        "icon": "☔",
+        "title": "Rain all year",
+        "text": "About 8–12 rain days every month. A small umbrella or rain jacket is always useful."
+      },
+      {
+        "icon": "🥾",
+        "title": "Cobblestones need good shoes",
+        "text": "The old centre is paved with uneven stones. Wear comfortable, grippy shoes, especially when wet."
+      },
+      {
+        "icon": "🌤️",
+        "title": "Summer is warm, not extreme",
+        "text": "July and August peak near 26°C. Start sightseeing early and take a midday break."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Layers for changeable days, a waterproof layer, walking shoes and a warm coat for winter."
+      }
+    ]
+  },
+  "transit": {
+    "best": "Walk the centre; use metro and trams for longer hops.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "Three lines (A, B, C) run roughly 05:00–24:00. Fast for crossing the city; not needed inside the old centre."
+      },
+      {
+        "mode": "Tram",
+        "has": true,
+        "best": true,
+        "text": "Trams cover the centre well. Buy tickets at yellow machines or in apps. A 90-minute ticket costs about 50 CZK; a 24-hour ticket about 150 CZK."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Buses mostly serve the outskirts and the airport. Use metro and trams for sightseeing."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Uber and Bolt work in Prague. Use them to avoid taxi touts."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving in the centre is slow and parking is restricted. Use P+R lots and take transit in."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "best": true,
+        "text": "The centre is walkable. Charles Bridge and Old Town are best on foot."
+      }
+    ]
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "city": "Chicago",
+  "checked": "October 2026",
+  "intro_line": "Chicago: big shoulders, deep pizza, and a lake like an ocean.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "The Loop",
+        "River North",
+        "Magnificent Mile",
+        "Lincoln Park"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "The Loop",
+        "River North",
+        "Magnificent Mile",
+        "Lincoln Park"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art",
+      "areas": [
+        "The Loop",
+        "River North",
+        "Magnificent Mile",
+        "Lincoln Park"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "The Loop",
+        "River North",
+        "Magnificent Mile",
+        "Lincoln Park"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "The Loop",
+        "River North",
+        "Magnificent Mile",
+        "Lincoln Park"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 0,
+        "low": -7,
+        "rain_days": 10,
+        "note": "Cold: highs near 0°C, lows around -7°C. Bundle up and plan indoor sights."
+      },
+      {
+        "high": 2,
+        "low": -7,
+        "rain_days": 9,
+        "note": "Still cold, highs near 2°C. Short outdoor walks only."
+      },
+      {
+        "high": 7,
+        "low": -1,
+        "rain_days": 12,
+        "note": "Warming a little: highs near 7°C, some rain on about 12 days."
+      },
+      {
+        "high": 12,
+        "low": 4,
+        "rain_days": 14,
+        "note": "Milder: highs near 12°C, but the wettest month with rain on about 14 days."
+      },
+      {
+        "high": 19,
+        "low": 10,
+        "rain_days": 13,
+        "note": "Pleasant: highs near 19°C. Good for walking the lakefront."
+      },
+      {
+        "high": 25,
+        "low": 16,
+        "rain_days": 12,
+        "note": "Warm and lively: highs near 25°C, rain on about 12 days."
+      },
+      {
+        "high": 27,
+        "low": 19,
+        "rain_days": 12,
+        "note": "Hot: highs near 27°C, lows near 19°C. Stay hydrated outdoors."
+      },
+      {
+        "high": 26,
+        "low": 19,
+        "rain_days": 12,
+        "note": "Warm and similar to July: highs near 26°C."
+      },
+      {
+        "high": 24,
+        "low": 16,
+        "rain_days": 10,
+        "note": "Comfortable: highs near 24°C, fewer rain days."
+      },
+      {
+        "high": 17,
+        "low": 9,
+        "rain_days": 12,
+        "note": "Cool and crisp: highs near 17°C. Great for parks."
+      },
+      {
+        "high": 9,
+        "low": 2,
+        "rain_days": 8,
+        "note": "Chilly: highs near 9°C, rain on about 8 days."
+      },
+      {
+        "high": 4,
+        "low": -3,
+        "rain_days": 9,
+        "note": "Cold again: highs near 4°C, lows near -3°C. Pack a warm coat."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55
+    ],
+    "food": [
+      0.6,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.7,
+      0.6
+    ],
+    "art": [
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55
+    ],
+    "history": [
+      0.5,
+      0.55,
+      0.65,
+      0.8,
+      0.9,
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.8,
+      0.65,
+      0.55
+    ],
+    "nightlife": [
+      0.5,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65,
+      0.55
+    ]
+  },
+  "places": {
+    "cloudgate": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Early morning or after dark",
+      "area": "The Loop",
+      "popularity": 5
+    },
+    "artinstitute": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "The Loop",
+      "popularity": 5
+    },
+    "willistower": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Sunset or clear evening",
+      "area": "The Loop",
+      "popularity": 5
+    },
+    "magmile": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime; lights in the evening",
+      "area": "Magnificent Mile",
+      "popularity": 4
+    },
+    "navypier": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "mixed",
+      "best": "Late afternoon to sunset",
+      "area": "River North",
+      "popularity": 4
+    },
+    "archtour": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime, April to October",
+      "area": "River North",
+      "popularity": 5
+    },
+    "millennium": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Morning or summer evening",
+      "area": "The Loop",
+      "popularity": 5
+    },
+    "shedd": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 150,
+      "setting": "indoor",
+      "best": "First thing in the morning",
+      "area": "The Loop",
+      "popularity": 4
+    },
+    "grandejatte": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "The Loop",
+      "popularity": 4
+    },
+    "americangothic": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "The Loop",
+      "popularity": 4
+    },
+    "brookfield": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 240,
+      "setting": "outdoor",
+      "best": "Weekday morning, spring to fall",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "culturalcenter": {
+      "types": [
+        "culture",
+        "art"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Any time; rainy day option",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "chicagoriver": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon to evening",
+      "area": "The Loop",
+      "popularity": 4
+    },
+    "chicagotheatre": {
+      "types": [
+        "culture",
+        "nightlife"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Evening for a show; night for the marquee",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "fieldmuseum": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 180,
+      "setting": "indoor",
+      "best": "Morning; rainy day option",
+      "area": "The Loop",
+      "popularity": 4
+    },
+    "hauntedtrails": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Summer weekends",
+      "area": "The Loop",
+      "popularity": 1
+    },
+    "homealone": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Daytime, any season",
+      "area": "Lincoln Park",
+      "popularity": 2
+    },
+    "lincolnparkzoo": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Morning, spring to fall",
+      "area": "Lincoln Park",
+      "popularity": 4
+    },
+    "mcdonalds": {
+      "types": [
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "indoor",
+      "best": "Any time",
+      "area": "River North",
+      "popularity": 2
+    },
+    "nighthawks": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "The Loop",
+      "popularity": 4
+    },
+    "northwestern": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Daytime, spring to fall",
+      "area": "Lincoln Park",
+      "popularity": 2
+    },
+    "parisstreet": {
+      "types": [
+        "art",
+        "culture"
+      ],
+      "minutes": 15,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "westloopmarket": {
+      "types": [
+        "food",
+        "nightlife"
+      ],
+      "minutes": 150,
+      "setting": "mixed",
+      "best": "Evening, Thursday to Saturday",
+      "area": "River North",
+      "popularity": 4
+    },
+    "lakefronttrail": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Morning or sunset, May to October",
+      "area": "River North",
+      "popularity": 4
+    },
+    "riverwalkbar": {
+      "types": [
+        "nightlife",
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Summer evening",
+      "area": "The Loop",
+      "popularity": 3
+    },
+    "lincolnparkwalk": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Afternoon, spring to fall",
+      "area": "Lincoln Park",
+      "popularity": 3
+    },
+    "deepdish": {
+      "types": [
+        "food"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Dinner, any day",
+      "area": "River North",
+      "popularity": 4
+    },
+    "secondcity": {
+      "types": [
+        "nightlife",
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Evening, Thursday to Sunday",
+      "area": "Lincoln Park",
+      "popularity": 3
+    }
+  },
+  "recommend": {
+    "why": "Two nights covers the museums, the lakefront and a good meal or two; add a night for neighborhoods."
+  },
+  "airports": [
+    {
+      "code": "ORD",
+      "name": "Chicago O'Hare International Airport",
+      "primary": true,
+      "note": "Main international hub, 25 km northwest.",
+      "options": [
+        {
+          "mode": "CTA Blue Line",
+          "to": "The Loop",
+          "price": "$5",
+          "time": "50-60 min",
+          "note": "Runs 24 hours; station is under the airport."
+        },
+        {
+          "mode": "Hotel shuttle",
+          "to": "Downtown hotels",
+          "price": "$15-25",
+          "time": "40-60 min",
+          "note": "Book ahead with your hotel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$40-55",
+          "time": "30-60 min",
+          "note": "Slow in rush hour."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown",
+          "price": "$35-55",
+          "time": "30-60 min",
+          "note": "Pickup at designated zones."
+        }
+      ]
+    },
+    {
+      "code": "MDW",
+      "name": "Chicago Midway International Airport",
+      "primary": false,
+      "note": "Compact Southwest hub, 14 km southwest.",
+      "options": [
+        {
+          "mode": "CTA Orange Line",
+          "to": "The Loop",
+          "price": "$2.50",
+          "time": "25-30 min",
+          "note": "Short walk through enclosed tunnel."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Downtown",
+          "price": "$30-40",
+          "time": "20-40 min",
+          "note": "Cheaper than O'Hare."
+        },
+        {
+          "mode": "Uber/Lyft",
+          "to": "Downtown",
+          "price": "$25-40",
+          "time": "20-40 min",
+          "note": "Usually quick."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Chicago",
+      "https://en.wikivoyage.org/wiki/Chicago"
+    ]
+  ],
+  "best_for": [
+    "culture",
+    "food",
+    "art"
+  ],
+  "transit": {
+    "best": "CTA 'L' trains and buses for most trips; walk along the lakefront.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "CTA 'L' trains run 24 hours on some lines; fares about $2.50, $5 from O'Hare."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "best": true,
+        "text": "CTA buses cover the city; pay with Ventra card or contactless."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "text": "Taxis are plentiful but pricey in rush hour; Uber and Lyft both work."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Driving is slow and parking is costly; skip a car downtown."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Walking and Divvy bike-share are great along the lakefront."
+      },
+      {
+        "mode": "Ferry",
+        "has": false,
+        "text": "No ferries for visitors; the lakefront path is the best route."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Continental climate: cold winters, warm summers, and rain spread through the year.",
+    "items": [
+      {
+        "icon": "❄️",
+        "title": "Cold winters (Dec–Feb)",
+        "text": "Highs near 0–4°C and lows down to -7°C. Wind off the lake makes it feel colder."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain all year",
+        "text": "About 8–14 rain days each month; April is wettest. Carry a light rain jacket."
+      },
+      {
+        "icon": "☀️",
+        "title": "Best months: May–September",
+        "text": "Highs 19–27°C. Ideal for the lakefront, walking and outdoor dining."
+      },
+      {
+        "icon": "🥵",
+        "title": "Summer heat",
+        "text": "July and August peak near 27°C with humid days. Plan indoor breaks at midday."
+      },
+      {
+        "icon": "🍂",
+        "title": "Crisp fall",
+        "text": "September and October cool to 17–24°C with fewer rain days. Good for parks."
+      },
+      {
+        "icon": "🧥",
+        "title": "What to pack",
+        "text": "Layers year-round; a warm coat, hat and gloves for winter; a rain jacket and comfortable shoes for walking."
+      }
+    ]
+  }
+}

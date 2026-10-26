@@ -1,0 +1,666 @@
+{
+  "city": "Istanbul",
+  "checked": "October 2026",
+  "intro_line": "Istanbul: where empires meet and continents embrace.",
+  "note": "Typical figures for planning; check hours and prices on the day.",
+  "types": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "areas": [
+        "Sultanahmet",
+        "Beyoğlu",
+        "Kadıköy",
+        "Beşiktaş"
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "areas": [
+        "Sultanahmet",
+        "Beyoğlu",
+        "Kadıköy",
+        "Beşiktaş"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "History",
+      "areas": [
+        "Sultanahmet",
+        "Beyoğlu",
+        "Kadıköy",
+        "Beşiktaş"
+      ]
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping",
+      "areas": [
+        "Sultanahmet",
+        "Beyoğlu",
+        "Kadıköy",
+        "Beşiktaş"
+      ]
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "areas": [
+        "Sultanahmet",
+        "Beyoğlu",
+        "Kadıköy",
+        "Beşiktaş"
+      ]
+    }
+  ],
+  "climate": {
+    "source": "Open-Meteo historical weather, 2015-2024 averages (rain days = days with 1 mm or more)",
+    "months": [
+      {
+        "high": 9,
+        "low": 4,
+        "rain_days": 14,
+        "note": "January: cold and wet, highs near 9°C. Pack a warm coat and waterproof shoes."
+      },
+      {
+        "high": 11,
+        "low": 4,
+        "rain_days": 11,
+        "note": "February: still cold, around 11°C, with about 11 rain days. Indoor sights are best."
+      },
+      {
+        "high": 12,
+        "low": 5,
+        "rain_days": 11,
+        "note": "March: cool at 12°C and changeable. Bring layers and an umbrella."
+      },
+      {
+        "high": 17,
+        "low": 8,
+        "rain_days": 9,
+        "note": "April: mild and pleasant, 17°C. Good for walking the old city."
+      },
+      {
+        "high": 21,
+        "low": 13,
+        "rain_days": 9,
+        "note": "May: warm at 21°C and mostly dry. A great month for ferries and outdoor cafés."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 9,
+        "note": "June: warm to hot, 26°C. Start sightseeing early to avoid midday heat."
+      },
+      {
+        "high": 29,
+        "low": 21,
+        "rain_days": 5,
+        "note": "July: hot at 29°C with little rain. Carry water and plan shade breaks."
+      },
+      {
+        "high": 29,
+        "low": 22,
+        "rain_days": 3,
+        "note": "August: hottest and driest, 29°C. Go out early and late; expect crowds."
+      },
+      {
+        "high": 26,
+        "low": 18,
+        "rain_days": 8,
+        "note": "September: warm at 26°C and drier than spring. A comfortable month to visit."
+      },
+      {
+        "high": 20,
+        "low": 14,
+        "rain_days": 8,
+        "note": "October: mild at 20°C with some rain. Good for long walks and markets."
+      },
+      {
+        "high": 16,
+        "low": 10,
+        "rain_days": 9,
+        "note": "November: cooler at 16°C and wetter. Pack a rain jacket."
+      },
+      {
+        "high": 11,
+        "low": 6,
+        "rain_days": 13,
+        "note": "December: cold at 11°C with about 13 rain days. Indoor sights and hammams suit best."
+      }
+    ]
+  },
+  "type_month_fit": {
+    "culture": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "food": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "history": [
+      0.6,
+      0.65,
+      0.75,
+      0.9,
+      0.95,
+      0.9,
+      0.8,
+      0.8,
+      0.9,
+      0.95,
+      0.8,
+      0.65
+    ],
+    "shopping": [
+      0.7,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.9,
+      0.85,
+      0.85,
+      0.9,
+      0.95,
+      0.85,
+      0.75
+    ],
+    "nightlife": [
+      0.6,
+      0.65,
+      0.75,
+      0.85,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.85,
+      0.75,
+      0.65
+    ]
+  },
+  "places": {
+    "hagia-sophia": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "indoor",
+      "best": "Early morning on a weekday",
+      "area": "Sultanahmet",
+      "popularity": 5
+    },
+    "topkapi": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 180,
+      "setting": "mixed",
+      "best": "Morning, before the tour groups arrive",
+      "area": "Sultanahmet",
+      "popularity": 5
+    },
+    "blue-mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Mid-morning or late afternoon",
+      "area": "Sultanahmet",
+      "popularity": 5
+    },
+    "basilica-cistern": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Hot midday or a rainy day",
+      "area": "Sultanahmet",
+      "popularity": 5
+    },
+    "galata-tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Early morning or sunset",
+      "area": "Beyoğlu",
+      "popularity": 5
+    },
+    "grand-bazaar": {
+      "types": [
+        "shopping",
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Weekday morning",
+      "area": "Sultanahmet",
+      "popularity": 5
+    },
+    "dolmabahce": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Beşiktaş",
+      "popularity": 4
+    },
+    "suleymaniye": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Late afternoon for the view",
+      "area": "Sultanahmet",
+      "popularity": 4
+    },
+    "maidens-tower": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 60,
+      "setting": "mixed",
+      "best": "Sunset",
+      "area": "Kadıköy",
+      "popularity": 4
+    },
+    "rumeli-fortress": {
+      "types": [
+        "history",
+        "culture"
+      ],
+      "minutes": 75,
+      "setting": "outdoor",
+      "best": "Morning in good weather",
+      "area": "Beşiktaş",
+      "popularity": 3
+    },
+    "ataturk-stadium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "mixed",
+      "best": "Match day",
+      "area": "Beşiktaş",
+      "popularity": 2
+    },
+    "balat": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Weekday morning",
+      "area": "Sultanahmet",
+      "popularity": 3
+    },
+    "beylerbeyi": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 75,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Beşiktaş",
+      "popularity": 3
+    },
+    "bosphorus-bridge": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 20,
+      "setting": "outdoor",
+      "best": "Sunset or evening when lit",
+      "area": "Beşiktaş",
+      "popularity": 3
+    },
+    "bosphorus-cruise": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Sultanahmet",
+      "popularity": 5
+    },
+    "bosporus": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Beşiktaş",
+      "popularity": 4
+    },
+    "chora": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "indoor",
+      "best": "Morning",
+      "area": "Sultanahmet",
+      "popularity": 3
+    },
+    "eyup-sultan": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 45,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Sultanahmet",
+      "popularity": 3
+    },
+    "fatih-mosque": {
+      "types": [
+        "culture",
+        "history"
+      ],
+      "minutes": 40,
+      "setting": "mixed",
+      "best": "Morning",
+      "area": "Sultanahmet",
+      "popularity": 2
+    },
+    "galata-bridge": {
+      "types": [
+        "culture",
+        "food"
+      ],
+      "minutes": 30,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Beyoğlu",
+      "popularity": 4
+    },
+    "gulhane-park": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 45,
+      "setting": "outdoor",
+      "best": "Spring for the tulips; any sunny day",
+      "area": "Sultanahmet",
+      "popularity": 3
+    },
+    "istanbul-aquarium": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 120,
+      "setting": "indoor",
+      "best": "Rainy day or with kids",
+      "area": "Beşiktaş",
+      "popularity": 3
+    },
+    "kadikoy-market": {
+      "types": [
+        "food",
+        "shopping"
+      ],
+      "minutes": 90,
+      "setting": "outdoor",
+      "best": "Late morning",
+      "area": "Kadıköy",
+      "popularity": 4
+    },
+    "pierre-loti": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Late afternoon",
+      "area": "Sultanahmet",
+      "popularity": 3
+    },
+    "istiklal-walk": {
+      "types": [
+        "shopping",
+        "nightlife"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Evening",
+      "area": "Beyoğlu",
+      "popularity": 4
+    },
+    "turkish-bath": {
+      "types": [
+        "culture"
+      ],
+      "minutes": 90,
+      "setting": "indoor",
+      "best": "Late afternoon",
+      "area": "Sultanahmet",
+      "popularity": 4
+    },
+    "ortakoy-walk": {
+      "types": [
+        "food",
+        "culture"
+      ],
+      "minutes": 60,
+      "setting": "outdoor",
+      "best": "Sunset",
+      "area": "Beşiktaş",
+      "popularity": 4
+    }
+  },
+  "recommend": {
+    "why": "Three nights covers the old city, a Bosphorus ferry and a food day in Kadıköy without rushing."
+  },
+  "airports": [
+    {
+      "code": "IST",
+      "name": "Istanbul Airport",
+      "primary": true,
+      "note": "Main international hub, 35 km northwest of centre.",
+      "options": [
+        {
+          "mode": "Metro M11",
+          "to": "City centre (with transfer)",
+          "price": "₺30-40",
+          "time": "60-90 min",
+          "note": "Buy Istanbulkart at station."
+        },
+        {
+          "mode": "Havaist bus",
+          "to": "Aksaray Metro",
+          "price": "₺200-250",
+          "time": "90 min",
+          "note": "Every 25-30 min; buy ticket online."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Sultanahmet",
+          "price": "₺1000-1200",
+          "time": "50-70 min",
+          "note": "Use official stands; agree on fare."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "₺900-1100",
+          "time": "50-70 min",
+          "note": "App-based, cash or card."
+        }
+      ]
+    },
+    {
+      "code": "SAW",
+      "name": "Sabiha Gökcen International Airport",
+      "primary": false,
+      "note": "Asia-side airport, 30 km east of centre.",
+      "options": [
+        {
+          "mode": "Metro M4",
+          "to": "Kadıköy",
+          "price": "₺30-40",
+          "time": "60 min",
+          "note": "Transfer to Marmaray for Europe."
+        },
+        {
+          "mode": "Havabüs",
+          "to": "Taksim",
+          "price": "₺150-200",
+          "time": "60-90 min",
+          "note": "Every 30 min; Istanbulkart valid."
+        },
+        {
+          "mode": "City bus E-10",
+          "to": "Kadıköy",
+          "price": "₺20-30",
+          "time": "60-90 min",
+          "note": "Cheapest; 24h."
+        },
+        {
+          "mode": "Taxi",
+          "to": "Taksim",
+          "price": "₺800-1000",
+          "time": "60-90 min",
+          "note": "Around €20."
+        },
+        {
+          "mode": "Uber/Bolt",
+          "to": "City centre",
+          "price": "₺700-900",
+          "time": "60-90 min",
+          "note": "App-based."
+        }
+      ]
+    }
+  ],
+  "airports_checked": "October 2026",
+  "airports_sources": [
+    [
+      "Wikivoyage: Istanbul",
+      "https://en.wikivoyage.org/wiki/Istanbul"
+    ]
+  ],
+  "best_for": [
+    "history",
+    "food",
+    "culture"
+  ],
+  "transit": {
+    "best": "Tram and metro with an Istanbulkart for the old city; ferries for the Bosphorus.",
+    "modes": [
+      {
+        "mode": "Metro",
+        "has": true,
+        "best": true,
+        "text": "M11 connects IST airport to the city; trams serve the old city. Use an Istanbulkart."
+      },
+      {
+        "mode": "Bus",
+        "has": true,
+        "text": "Extensive but crowded. Havaist and Havabüs run airport transfers."
+      },
+      {
+        "mode": "Taxi / ride apps",
+        "has": true,
+        "best": true,
+        "text": "Yellow, blue and black taxis. Use Uber or Bolt to avoid scams."
+      },
+      {
+        "mode": "Rental car",
+        "has": true,
+        "text": "Not recommended: heavy traffic and scarce parking."
+      },
+      {
+        "mode": "Walking",
+        "has": true,
+        "text": "Best in Sultanahmet and Beyoğlu. Ferries cross the Bosphorus for views."
+      },
+      {
+        "mode": "Ferry",
+        "has": true,
+        "text": "Ferries cross the Bosphorus and reach the Asian side; good for views and daily trips."
+      }
+    ]
+  },
+  "climate_guide": {
+    "summary": "Istanbul has a mild, wet climate: cool wet winters and warm, drier summers.",
+    "items": [
+      {
+        "icon": "☀️",
+        "title": "Best time: May to September",
+        "text": "Warm days from 21°C to 29°C and fewer rain days. Ideal for ferries and walking."
+      },
+      {
+        "icon": "🌧️",
+        "title": "Wettest in winter",
+        "text": "December and January have about 13–14 rain days. Bring a waterproof jacket and shoes."
+      },
+      {
+        "icon": "🥵",
+        "title": "Hot summer afternoons",
+        "text": "July and August reach 29°C. Sightsee in the morning and rest in the shade at midday."
+      },
+      {
+        "icon": "🧥",
+        "title": "Cold winter nights",
+        "text": "January and February lows near 4°C. Pack warm layers for evenings."
+      },
+      {
+        "icon": "🌂",
+        "title": "Rain any month",
+        "text": "Even summer has a few wet days. A small umbrella is always useful."
+      },
+      {
+        "icon": "🧳",
+        "title": "What to pack",
+        "text": "Light clothes and a hat for summer; a warm coat and waterproof shoes for winter; modest clothing for mosques."
+      }
+    ]
+  }
+}

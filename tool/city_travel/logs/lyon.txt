@@ -1,0 +1,29 @@
+$ deepseek_facts.py Lyon
+  tokens in 4202 out 975
+Lyon: 1 problems
+  - GNB taxi €80-120 vs tariff estimate 164
+
+$ deepseek_city.py Lyon --stage places
+Lyon: places
+  tokens in 1150 out 3025
+
+$ deepseek_city.py Lyon --stage frame
+Lyon: frame
+  tokens in 2442 out 1891
+  repaired JSON
+
+$ deepseek_city.py Lyon --stage plans
+Lyon: plans
+  plans for day
+  tokens in 2088 out 793
+  plans for 1n
+  tokens in 2089 out 904
+  plans for 2n
+  tokens in 2094 out 1850
+  plans for 3n
+  tokens in 2089 out 2088
+
+$ merge_city.py Lyon
+Lyon: 20 places, 12 plans, 0 errors, 0 warnings
+wrote itineraries/lyon.json and planner/lyon.json
+

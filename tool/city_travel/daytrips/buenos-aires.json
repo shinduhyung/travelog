@@ -1,0 +1,71 @@
+{
+ "city": "Buenos Aires",
+ "trips": [
+  {
+   "place": "Tigre",
+   "label": "",
+   "position": {
+    "id": 454810,
+    "name": "Tigre",
+    "city": "Tigre",
+    "lat": -34.42603,
+    "lng": -58.57962
+   },
+   "town": {
+    "name": "Tigre",
+    "lat": -34.42603,
+    "lng": -58.57962
+   },
+   "road": {
+    "km": 32,
+    "min": 27,
+    "source": "OSRM"
+   },
+   "taxi": {
+    "amount": 39900,
+    "currency": "ARS"
+   },
+   "modes": {
+    "train": {
+     "from": "$1-$2",
+     "time": "1h 7m",
+     "via": "Retiro to Tigre",
+     "source": "https://www.rome2rio.com/s/Buenos%20Aires/Tigre"
+    },
+    "bus": {
+     "from": "$2-$5",
+     "time": "1h 33m",
+     "via": "FRANCISCO DE VIEDMA y GANA to Dr. Luis García 905-1021",
+     "source": "https://www.rome2rio.com/s/Buenos%20Aires/Tigre"
+    }
+   },
+   "route_note": "Take the Mitre commuter train from Retiro station to the Tigre terminus, about 1 hour; from the station it is a short walk to the riverfront Puerto de Frutos and the boat docks for delta cruises.",
+   "see": [
+    "Puerto de Frutos craft and produce market",
+    "Tigre Delta boat trip through river channels",
+    "Museo de Arte Tigre on the riverfront",
+    "Paseo de los Galpones waterfront promenade"
+   ],
+   "visit": "Half day",
+   "tour_query": "Tigre Delta day trip from Buenos Aires",
+   "quests": [
+    "Tigre Delta",
+    "Tigre Art Museum",
+    "Tigre Delta Boat Tour",
+    "Parque de la Costa"
+   ],
+   "recommended": "train",
+   "why": "The Mitre commuter train from Retiro takes about 1h 7m and drops you a short walk from the riverfront Puerto de Frutos and the delta cruise docks.",
+   "stars": 4,
+   "know": [
+    "The bus is slower at about 1h 33m, so the train is the better choice.",
+    "Check the Mitre timetable before you go, since daily frequency isn't listed here.",
+    "Delta boat cruises leave from the docks near the station."
+   ]
+  }
+ ],
+ "problems": [
+  "Colonia del Sacramento: not a town in cities15000.json (AR), dropped",
+  "San Antonio de Areco: no Omio position, dropped"
+ ]
+}

@@ -1,0 +1,1546 @@
+{
+  "city": "Santiago",
+  "checked": "October 2026",
+  "currency": "CLP",
+  "usd_rate": 981.059,
+  "intro": "Santiago rewards visitors with a walkable historic core, world-class museums and easy escapes to the Andes and wine valleys. Pick how long you have and what you enjoy most.",
+  "tour_note": "Check the tour page for which entry tickets are included.",
+  "maps": {
+    "city": {
+      "south": -33.4834,
+      "west": -70.6899,
+      "north": -33.4066,
+      "east": -70.4927,
+      "zoom": 12
+    }
+  },
+  "transport": {
+    "taxi": {
+      "flag_day": 300,
+      "flag_airport": 800,
+      "per_km": 1200,
+      "min_fare": 800
+    },
+    "road_factor": 1.35,
+    "city_kmh": 22,
+    "notes": [
+      "Metro: 7 lines, 136 stations; trains run roughly 06:00–23:00.",
+      "Pay metro and buses only with a bip! card; card costs about CLP 1,550 plus minimum CLP 1,000 recharge.",
+      "Fares run about CLP 640–800 by time of day; transfers within two hours are usually free.",
+      "Buses run around the clock on main lines; Red line 555 links Pajaritos metro to the airport.",
+      "Official taxis are black and yellow; Uber operates but is not officially licensed.",
+      "Bikes are popular on a growing lane network; no ferry service in the city."
+    ],
+    "sources": []
+  },
+  "places": {
+    "lamoneda": {
+      "name": "La Moneda Palace",
+      "landmark": "La Moneda Palace",
+      "kind": "sight",
+      "lat": -33.4429,
+      "lon": -70.6539,
+      "price": 0,
+      "price_text": "Free to view from Plaza de la Constitución · interior visits by guided tour only, book ahead",
+      "hours": "Exterior always visible · guided tours on weekday mornings, check on the day",
+      "tip": "Come for the changing of the guard on alternate mornings and watch from the plaza, not the fence.",
+      "source": ""
+    },
+    "plazaarmas": {
+      "name": "Plaza de Armas of Santiago",
+      "landmark": "Plaza de Armas of Santiago",
+      "kind": "sight",
+      "lat": -33.4378,
+      "lon": -70.6503,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Open 24 hours",
+      "tip": "Sit on a bench and people-watch; keep bags in front of you and phones out of sight.",
+      "source": ""
+    },
+    "cerrosan": {
+      "name": "Sanctuary of the Immaculate Conception",
+      "landmark": "Sanctuary of the Immaculate Conception",
+      "kind": "sight",
+      "lat": -33.4253,
+      "lon": -70.6331,
+      "price": 0,
+      "price_text": "Free entry · funicular and cable car cost extra",
+      "hours": "Grounds roughly 10:00–19:00, shorter in winter · check on the day",
+      "tip": "Walk up or take the funicular, then stay for the city lights at dusk.",
+      "source": ""
+    },
+    "skycostanera": {
+      "name": "Sky Costanera",
+      "landmark": "Sky Costanera",
+      "kind": "sight",
+      "lat": -33.4172,
+      "lon": -70.6067,
+      "price": 20000,
+      "price_text": "≈ CLP 18,000–22,000 adult · check current price online",
+      "hours": "Daily, roughly 10:00–21:00 · last entry before closing",
+      "tip": "Go on a clear day about an hour before sunset for both daylight and night views.",
+      "source": "https://skycostanera.cl"
+    },
+    "precolombino": {
+      "name": "Museo Chileno de Arte Precolombino",
+      "landmark": "Museo Chileno de Arte Precolombino",
+      "kind": "museum",
+      "lat": -33.439,
+      "lon": -70.6528,
+      "price": 8000,
+      "price_text": "≈ CLP 6,000–10,000 adult · check current price",
+      "hours": "Tue–Sun roughly 10:00–18:00 · closed Monday",
+      "tip": "Small but excellent; allow two hours and take the free guided intro if offered.",
+      "source": "https://museoprecolombino.cl"
+    },
+    "catedral": {
+      "name": "Metropolitan Cathedral of Santiago",
+      "landmark": "Metropolitan Cathedral of Santiago",
+      "kind": "sight",
+      "lat": -33.4376,
+      "lon": -70.6511,
+      "price": 0,
+      "price_text": "Free · donations welcome",
+      "hours": "Daily, roughly 09:00–19:00 · closed during mass",
+      "tip": "Step inside for the quiet; dress modestly and don't photograph during services.",
+      "source": ""
+    },
+    "santalucia": {
+      "name": "Santa Lucía Hill",
+      "landmark": "Santa Lucia Hill",
+      "kind": "park",
+      "lat": -33.4411,
+      "lon": -70.6439,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 09:00–19:00 · check on the day",
+      "tip": "Climb the terraces for a free city view; go in daylight and keep to the main paths.",
+      "source": ""
+    },
+    "bahai": {
+      "name": "Baha'i Temple of South America",
+      "landmark": "Baha'i Temple of South America",
+      "kind": "sight",
+      "lat": -33.4728,
+      "lon": -70.5133,
+      "price": 0,
+      "price_text": "Free",
+      "hours": "Daily, roughly 09:00–18:00 · check on the day",
+      "tip": "Far from the centre; combine with a taxi or tour and go for the quiet gardens and mountain backdrop.",
+      "source": ""
+    },
+    "estadionacional": {
+      "name": "Estadio Nacional Julio Martínez Prádanos",
+      "landmark": "Estadio Nacional Julio Martinez Pradanos",
+      "kind": "sight",
+      "lat": -33.4645,
+      "lon": -70.6105,
+      "price": null,
+      "price_text": "Tour price varies · match tickets priced separately",
+      "hours": "Tours on selected days · check on the day",
+      "tip": "Only worth a stop for football fans or history buffs; check tour times before you go.",
+      "source": ""
+    },
+    "fantasilandia": {
+      "name": "Fantasilandia",
+      "landmark": "Fantasilandia",
+      "kind": "activity",
+      "lat": -33.4533,
+      "lon": -70.669,
+      "price": null,
+      "price_text": "Entry ticket price varies by day · check online",
+      "hours": "Seasonal · usually weekends and holidays, check on the day",
+      "tip": "A family day out; buy tickets online and go early to beat queues.",
+      "source": "https://fantasilandia.cl"
+    },
+    "gam": {
+      "name": "Gabriela Mistral Cultural Center (GAM)",
+      "landmark": "Gabriela Mistral Cultural Center (GAM)",
+      "kind": "sight",
+      "lat": -33.4397,
+      "lon": -70.6394,
+      "price": 0,
+      "price_text": "Free to enter · some events ticketed",
+      "hours": "Daily, roughly 10:00–21:00 · check programme",
+      "tip": "Check the free exhibition and event board; the café is a good rest stop.",
+      "source": "https://gam.cl"
+    },
+    "lachascona": {
+      "name": "La Chascona",
+      "landmark": "La Chascona",
+      "kind": "museum",
+      "lat": -33.4319,
+      "lon": -70.6356,
+      "price": 8000,
+      "price_text": "≈ CLP 6,000–9,000 adult · check current price",
+      "hours": "Tue–Sun roughly 10:00–18:00 · closed Monday",
+      "tip": "Pablo Neruda's house; book a time slot and take the audio guide.",
+      "source": "https://fundacionneruda.org"
+    },
+    "teatromunicipal": {
+      "name": "Teatro Municipal",
+      "landmark": "Teatro Municipal",
+      "kind": "show",
+      "lat": -33.441,
+      "lon": -70.6455,
+      "price": null,
+      "price_text": "Ticket price varies by performance · check programme",
+      "hours": "Box office and performances · check on the day",
+      "tip": "Book online for opera or ballet; cheap seats still give a grand hall view.",
+      "source": ""
+    },
+    "mercadocentral": {
+      "name": "Mercado Central",
+      "landmark": null,
+      "kind": "food",
+      "lat": -33.4333,
+      "lon": -70.6503,
+      "price": null,
+      "price_text": "Meal prices vary · check menus before ordering",
+      "hours": "Daily, roughly 09:00–17:00 · check on the day",
+      "tip": "Go for a seafood lunch; agree the price before you order and skip pushy touts.",
+      "source": ""
+    },
+    "lastarria": {
+      "name": "Barrio Lastarria walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -33.4372,
+      "lon": -70.6406,
+      "price": 0,
+      "price_text": "Free to walk · cafés and shops extra",
+      "hours": "Always open · liveliest afternoons and evenings",
+      "tip": "Wander the streets between the park and the river for cafés, bookshops and street art.",
+      "source": ""
+    },
+    "bellavista": {
+      "name": "Bellavista neighbourhood walk",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -33.4317,
+      "lon": -70.6372,
+      "price": 0,
+      "price_text": "Free to walk · bars and food extra",
+      "hours": "Always open · busiest evenings",
+      "tip": "Colourful streets below San Cristóbal; go in daylight, then stay for dinner.",
+      "source": ""
+    },
+    "empanada": {
+      "name": "Empanada de Pino",
+      "landmark": "Empanada de Pino",
+      "kind": "food",
+      "lat": -33.4489,
+      "lon": -70.6693,
+      "price": 3000,
+      "price_text": "≈ CLP 2,000–4,000 each · varies by bakery",
+      "hours": "Bakery hours vary · most open daily",
+      "tip": "The classic Chilean baked empanada with beef, onion, egg and olive; eat it warm from a local bakery.",
+      "source": ""
+    },
+    "cerrosanfunicular": {
+      "name": "San Cristóbal funicular and cable car ride",
+      "landmark": null,
+      "kind": "activity",
+      "lat": -33.4263,
+      "lon": -70.6266,
+      "price": null,
+      "price_text": "Ticket price varies · check at the station",
+      "hours": "Daily, roughly 10:00–19:00 · weather dependent",
+      "tip": "Ride up and walk down through the park; check the cable car is running before you buy.",
+      "source": ""
+    },
+    "vinacomparada": {
+      "name": "Vineyard day trip to Maipo Valley",
+      "landmark": null,
+      "kind": "tour",
+      "lat": -33.7,
+      "lon": -70.7,
+      "price": null,
+      "price_text": "≈ CLP 40,000–90,000 per person · varies by tour",
+      "hours": "Half or full day · book ahead",
+      "tip": "Book a tour with transport included; wine tasting is the point, so don't drive.",
+      "source": ""
+    },
+    "cerrosancristobal": {
+      "name": "Parque Metropolitano viewpoint",
+      "landmark": null,
+      "kind": "park",
+      "lat": -33.4258,
+      "lon": -70.6322,
+      "price": 0,
+      "price_text": "Free to enter · transport up costs extra",
+      "hours": "Daily, roughly 09:00–19:00 · check on the day",
+      "tip": "The big hill above the city; bring water and a layer, it is cooler up top.",
+      "source": ""
+    }
+  },
+  "plans": [
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "One full day on foot through the old centre, with a museum and a hilltop view.",
+      "days": [
+        {
+          "title": "Centro Histórico on foot",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "09:00",
+              "minutes": 30,
+              "note": "Start early while it is quiet. Cathedral is on the square."
+            },
+            {
+              "place": "catedral",
+              "at": "09:35",
+              "minutes": 30,
+              "note": "Closed during mass, so go early."
+            },
+            {
+              "place": "lamoneda",
+              "at": "10:15",
+              "minutes": 45,
+              "note": "Exterior always visible. Guided tours are weekday mornings only, check on the day."
+            },
+            {
+              "place": "precolombino",
+              "at": "11:15",
+              "minutes": 120,
+              "note": "Closed Monday. A short walk from La Moneda."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch stop. Seafood is the thing here. Most stalls close mid-afternoon."
+            },
+            {
+              "place": "santalucia",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Climb for a city view. Roughly open 09:00–19:00, check on the day."
+            },
+            {
+              "place": "lastarria",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "End with a walk, a coffee and galleries. Liveliest late afternoon."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Histórico"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "A market lunch, an empanada and a neighbourhood food walk in one day.",
+      "days": [
+        {
+          "title": "Markets, empanadas and Lastarria",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Easy start near the market."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "10:15",
+              "minutes": 60,
+              "note": "Walk the stalls before the lunch rush. Most open roughly 09:00–17:00."
+            },
+            {
+              "place": "empanada",
+              "at": "11:45",
+              "minutes": 20,
+              "note": "Try an empanada de pino. Bakery hours vary, most open daily."
+            },
+            {
+              "place": "lastarria",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch and a wander. Cafes and small restaurants everywhere."
+            },
+            {
+              "place": "gam",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Coffee stop inside. Check the programme for events."
+            },
+            {
+              "place": "bellavista",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dinner options build up here in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Histórico"
+    },
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "Two hills and a big city view, all on a clear day.",
+      "days": [
+        {
+          "title": "Hills and viewpoints",
+          "stops": [
+            {
+              "place": "santalucia",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning climb before it gets hot. Roughly 09:00–19:00, check on the day."
+            },
+            {
+              "place": "lastarria",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Coffee break on the way to Bellavista."
+            },
+            {
+              "place": "cerrosanfunicular",
+              "at": "11:45",
+              "minutes": 60,
+              "note": "Ride up. Weather dependent, so check before you go."
+            },
+            {
+              "place": "cerrosancristobal",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Walk the viewpoint paths. Bring water and sun cream."
+            },
+            {
+              "place": "bellavista",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Late lunch down the hill."
+            },
+            {
+              "place": "skycostanera",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset from Las Condes. Roughly 10:00–21:00, last entry before closing. Take the metro."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellavista"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "One packed day in the old centre, with a hilltop sunset and an evening in Lastarria.",
+      "days": [
+        {
+          "title": "Centro Histórico on foot",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start here to get your bearings. The cathedral is on the square."
+            },
+            {
+              "place": "catedral",
+              "at": "10:05",
+              "minutes": 30,
+              "note": "Step inside between masses. Dress modestly."
+            },
+            {
+              "place": "lamoneda",
+              "at": "10:45",
+              "minutes": 45,
+              "note": "Walk the outside and the plaza. Guided tours are weekday mornings only, so check on the day."
+            },
+            {
+              "place": "precolombino",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Closed Monday. A few minutes on foot from La Moneda."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Late seafood lunch. Kitchens wind down in the afternoon."
+            },
+            {
+              "place": "santalucia",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Short climb for city views. Check closing time on the day."
+            },
+            {
+              "place": "lastarria",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Walk the streets, then stay for dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Histórico or Lastarria"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Market lunch, street snacks and an evening eating your way through Bellavista.",
+      "days": [
+        {
+          "title": "Market, centre and Bellavista",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "10:00",
+              "minutes": 30,
+              "note": "Easy start near the market."
+            },
+            {
+              "place": "empanada",
+              "at": "10:45",
+              "minutes": 20,
+              "note": "Mid-morning snack. Bakery hours vary, so look for one that is open."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Go early for lunch. Seafood is the thing to order."
+            },
+            {
+              "place": "lastarria",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Coffee and a wander. Cafés and small food shops line the streets."
+            },
+            {
+              "place": "bellavista",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Walk, then pick a spot for dinner. Busiest in the evening."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lastarria or Bellavista"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Two hills and a tower: the best city and Andes views in one day.",
+      "days": [
+        {
+          "title": "Hills and skyline",
+          "stops": [
+            {
+              "place": "santalucia",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Morning climb before the heat. Check closing time on the day."
+            },
+            {
+              "place": "cerrosanfunicular",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Ride up from Bellavista. Runs only in good weather."
+            },
+            {
+              "place": "cerrosancristobal",
+              "at": "12:15",
+              "minutes": 120,
+              "note": "Walk the viewpoints at the top. Bring water and sun protection."
+            },
+            {
+              "place": "bellavista",
+              "at": "14:30",
+              "minutes": 90,
+              "note": "Lunch down the hill, then rest."
+            },
+            {
+              "place": "skycostanera",
+              "at": "17:30",
+              "minutes": 60,
+              "note": "Go up before sunset on a clear day. Last entry is before closing."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellavista or Las Condes"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "First-timers who want the old centre, two great museums and hilltop views on foot.",
+      "days": [
+        {
+          "title": "Old centre on foot",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "09:30",
+              "minutes": 30,
+              "note": "Start here to get your bearings. The cathedral is on the square."
+            },
+            {
+              "place": "catedral",
+              "at": "10:15",
+              "minutes": 30,
+              "note": "Closed during mass; dress modestly."
+            },
+            {
+              "place": "lamoneda",
+              "at": "11:00",
+              "minutes": 45,
+              "note": "Exterior always visible. Guided tours are weekday mornings only, check on the day."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch stop. Seafood is the thing here; most kitchens wind down by mid-afternoon."
+            },
+            {
+              "place": "precolombino",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. A calm, well-laid-out museum, good for a hot afternoon."
+            },
+            {
+              "place": "lastarria",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Short walk south-east. Cafes, bookshops and street art; liveliest late afternoon."
+            }
+          ]
+        },
+        {
+          "title": "Hills, art and Bellavista",
+          "stops": [
+            {
+              "place": "santalucia",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Climb early before the heat. Terraces and city views."
+            },
+            {
+              "place": "gam",
+              "at": "11:00",
+              "minutes": 60,
+              "note": "Short walk east. Free halls and a cafe; check the programme for what is on."
+            },
+            {
+              "place": "lachascona",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Cross the river to Bellavista. Closed Monday. Neruda's house, small and quirky."
+            },
+            {
+              "place": "bellavista",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Wander the streets, then eat. Busiest in the evening."
+            },
+            {
+              "place": "cerrosan",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Take the funicular up if it is running; otherwise a taxi to the top. Grounds close around 19:00, earlier in winter."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Histórico or Lastarria"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who want the market, neighbourhood snacks and a Maipo Valley vineyard day.",
+      "days": [
+        {
+          "title": "Market and old centre tastes",
+          "stops": [
+            {
+              "place": "mercadocentral",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Go before the lunch rush. Fish soup and seafood plates; most stalls close by late afternoon."
+            },
+            {
+              "place": "plazaarmas",
+              "at": "11:45",
+              "minutes": 30,
+              "note": "Five minutes on foot. Good spot to sit and watch the city."
+            },
+            {
+              "place": "empanada",
+              "at": "12:30",
+              "minutes": 20,
+              "note": "Grab an empanada de pino from a bakery near the centre. Bakeries keep normal shop hours."
+            },
+            {
+              "place": "precolombino",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Closed Monday. Walk off lunch indoors."
+            },
+            {
+              "place": "lastarria",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dinner territory. Small plates, wine bars and ice cream; liveliest after dark."
+            }
+          ]
+        },
+        {
+          "title": "Vineyard day, then Bellavista",
+          "stops": [
+            {
+              "place": "vinacomparada",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Book ahead. Half or full day in the Maipo Valley; a weekday is quieter. Eat at the vineyard."
+            },
+            {
+              "place": "bellavista",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Back in the city. Easy evening walk with plenty of places to eat."
+            },
+            {
+              "place": "cerrosan",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Optional: ride up for sunset if the weather is clear. Check closing time on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lastarria or Bellavista"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "Travellers who want Andes views, hilltop parks and one big lookout.",
+      "days": [
+        {
+          "title": "Two hills and a lookout",
+          "stops": [
+            {
+              "place": "santalucia",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Start early, it gets hot. Short climb with terraces and views."
+            },
+            {
+              "place": "plazaarmas",
+              "at": "11:00",
+              "minutes": 30,
+              "note": "Ten minutes on foot. Coffee and a rest before the next climb."
+            },
+            {
+              "place": "cerrosanfunicular",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Ride up Cerro San Cristóbal. Weather dependent, so check on the day."
+            },
+            {
+              "place": "cerrosancristobal",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Walk the park paths at the top. Bring water and sun cream. Grounds close around 19:00."
+            },
+            {
+              "place": "bellavista",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Come down for an early dinner in Bellavista."
+            }
+          ]
+        },
+        {
+          "title": "Skyline and the temple",
+          "stops": [
+            {
+              "place": "skycostanera",
+              "at": "10:30",
+              "minutes": 60,
+              "note": "Go on a clear morning for the Andes view. Last entry before closing, roughly 21:00."
+            },
+            {
+              "place": "bahai",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Short taxi ride east. Quiet gardens and a striking building; check hours on the day."
+            },
+            {
+              "place": "vinacomparada",
+              "at": "15:00",
+              "minutes": 180,
+              "note": "Optional short vineyard visit if you booked ahead; otherwise swap for a longer lunch in Las Condes."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Las Condes or Bellavista"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "First-timers who want the old centre, Bellavista and the big museums at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the old centre",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start here to get your bearings. The cathedral faces the square."
+            },
+            {
+              "place": "catedral",
+              "at": "15:40",
+              "minutes": 30,
+              "note": "Closed during mass, so pop in when the doors are open."
+            },
+            {
+              "place": "lamoneda",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Walk the outside and the plaza. Guided tours are weekday mornings only."
+            },
+            {
+              "place": "lastarria",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Late-afternoon stroll, then dinner here."
+            }
+          ]
+        },
+        {
+          "title": "Museums and markets",
+          "stops": [
+            {
+              "place": "precolombino",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Go early, it gets busy."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "12:45",
+              "minutes": 60,
+              "note": "Lunch stop. Seafood is the thing here."
+            },
+            {
+              "place": "gam",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Check the programme for free exhibitions."
+            },
+            {
+              "place": "santalucia",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Short climb for a city view. Check closing time on the day."
+            }
+          ]
+        },
+        {
+          "title": "Bellavista and the hill",
+          "stops": [
+            {
+              "place": "lachascona",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Neruda's house. Closed Monday."
+            },
+            {
+              "place": "bellavista",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch in the neighbourhood, then wander."
+            },
+            {
+              "place": "cerrosanfunicular",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Ride up and down. Weather dependent."
+            },
+            {
+              "place": "cerrosan",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Walk the grounds and the viewpoint. Shorter hours in winter."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then fly",
+          "stops": [
+            {
+              "place": "estadionacional",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Tours run on selected days only, so check before you go."
+            },
+            {
+              "place": "empanada",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Quick snack before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Histórico or Lastarria"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Eaters who want markets, neighbourhood bites and a Maipo Valley vineyard day.",
+      "days": [
+        {
+          "title": "Arrive, market lunch and Lastarria",
+          "stops": [
+            {
+              "place": "mercadocentral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Go for lunch. Most stalls close mid-afternoon."
+            },
+            {
+              "place": "plazaarmas",
+              "at": "14:00",
+              "minutes": 30,
+              "note": "Short walk to work off lunch."
+            },
+            {
+              "place": "lastarria",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Cafes, then dinner. Liveliest late afternoon onward."
+            }
+          ]
+        },
+        {
+          "title": "Centre bites and Bellavista evening",
+          "stops": [
+            {
+              "place": "empanada",
+              "at": "11:00",
+              "minutes": 20,
+              "note": "Try an empanada de pino, the classic beef and onion one."
+            },
+            {
+              "place": "precolombino",
+              "at": "11:45",
+              "minutes": 120,
+              "note": "Closed Monday. Good rainy-day option."
+            },
+            {
+              "place": "bellavista",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Walk, then pick a spot for dinner. Busiest in the evening."
+            },
+            {
+              "place": "lachascona",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Only if you have time before it closes. Closed Monday."
+            }
+          ]
+        },
+        {
+          "title": "Vineyard day trip",
+          "stops": [
+            {
+              "place": "vinacomparada",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Book ahead. Half or full day in the Maipo Valley."
+            },
+            {
+              "place": "lastarria",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Easy dinner back in town."
+            }
+          ]
+        },
+        {
+          "title": "Views and a last meal",
+          "stops": [
+            {
+              "place": "cerrosanfunicular",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Clear morning ride. Weather dependent."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Final seafood lunch before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lastarria or Bellavista"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Travellers who want Andes views, hill walks and a vineyard in the valley.",
+      "days": [
+        {
+          "title": "Arrive and Santa Lucía",
+          "stops": [
+            {
+              "place": "santalucia",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Easy first walk. Check closing time on the day."
+            },
+            {
+              "place": "lastarria",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "Cerro San Cristóbal",
+          "stops": [
+            {
+              "place": "cerrosanfunicular",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Ride up early for clearer skies. Weather dependent."
+            },
+            {
+              "place": "cerrosan",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Grounds and viewpoint. Shorter hours in winter."
+            },
+            {
+              "place": "bellavista",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch, then a slow walk."
+            },
+            {
+              "place": "skycostanera",
+              "at": "18:00",
+              "minutes": 60,
+              "note": "Sunset from the tower on a clear day. Last entry before closing."
+            }
+          ]
+        },
+        {
+          "title": "Vineyard day trip",
+          "stops": [
+            {
+              "place": "vinacomparada",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Book ahead. Maipo Valley, half or full day."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Late lunch or early dinner if still open. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Temple and fly",
+          "stops": [
+            {
+              "place": "bahai",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Quiet gardens and mountain backdrop. Check hours on the day."
+            },
+            {
+              "place": "empanada",
+              "at": "12:00",
+              "minutes": 20,
+              "note": "Quick bite before the airport."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellavista or Las Condes"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-time visitors who want the old centre, Bellavista and the big museums at an easy pace.",
+      "days": [
+        {
+          "title": "Arrive and walk the old centre",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Start here to get your bearings. The cathedral is on the square."
+            },
+            {
+              "place": "catedral",
+              "at": "15:40",
+              "minutes": 30,
+              "note": "Closed during mass, so check the door times."
+            },
+            {
+              "place": "lastarria",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Short walk east. Cafes and galleries, liveliest late afternoon."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "18:30",
+              "minutes": 60,
+              "note": "Closes around 17:00, so treat this as a plan for another day if you arrive late. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Museums and La Moneda",
+          "stops": [
+            {
+              "place": "lamoneda",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Guided tours run on weekday mornings. Check on the day and bring ID."
+            },
+            {
+              "place": "precolombino",
+              "at": "10:45",
+              "minutes": 120,
+              "note": "Closed Monday. A ten-minute walk from La Moneda."
+            },
+            {
+              "place": "empanada",
+              "at": "13:00",
+              "minutes": 20,
+              "note": "Lunch stop. Bakeries around the centre open daily."
+            },
+            {
+              "place": "gam",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Free cultural centre. Check the programme for events."
+            },
+            {
+              "place": "santalucia",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Closes around 19:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Bellavista and San Cristóbal",
+          "stops": [
+            {
+              "place": "lachascona",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Neruda's house. Closed Monday, so book this day for Tue–Sun."
+            },
+            {
+              "place": "bellavista",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Lunch in the neighbourhood, then walk to the funicular."
+            },
+            {
+              "place": "cerrosanfunicular",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Weather dependent. Check on the day."
+            },
+            {
+              "place": "cerrosan",
+              "at": "15:15",
+              "minutes": 90,
+              "note": "Views over the city. Stay for late afternoon light."
+            }
+          ]
+        },
+        {
+          "title": "Las Condes and a last look",
+          "stops": [
+            {
+              "place": "bahai",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Check opening on the day. Quiet, garden setting."
+            },
+            {
+              "place": "skycostanera",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Best on a clear day. Last entry before closing, roughly 21:00."
+            },
+            {
+              "place": "estadionacional",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Tours only on selected days. Check on the day."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Centro Histórico or Lastarria"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "Eaters who want the market, neighbourhood food streets and a Maipo Valley vineyard day.",
+      "days": [
+        {
+          "title": "Market lunch and the old centre",
+          "stops": [
+            {
+              "place": "mercadocentral",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Go before the lunch rush. Seafood is the thing here. Closes around 17:00."
+            },
+            {
+              "place": "plazaarmas",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Walk it off on the square."
+            },
+            {
+              "place": "empanada",
+              "at": "14:00",
+              "minutes": 20,
+              "note": "Try an empanada de pino as a snack."
+            },
+            {
+              "place": "lastarria",
+              "at": "18:00",
+              "minutes": 90,
+              "note": "Dinner and drinks. Busiest late afternoon and evening."
+            }
+          ]
+        },
+        {
+          "title": "Bellavista food and views",
+          "stops": [
+            {
+              "place": "bellavista",
+              "at": "12:00",
+              "minutes": 90,
+              "note": "Lunch in the neighbourhood. Busiest in the evening."
+            },
+            {
+              "place": "cerrosanfunicular",
+              "at": "14:30",
+              "minutes": 60,
+              "note": "Ride up after lunch. Weather dependent."
+            },
+            {
+              "place": "cerrosan",
+              "at": "15:45",
+              "minutes": 90,
+              "note": "Walk the grounds, then come down for an early dinner."
+            }
+          ]
+        },
+        {
+          "title": "Vineyard day trip",
+          "stops": [
+            {
+              "place": "vinacomparada",
+              "at": "09:00",
+              "minutes": 300,
+              "note": "Half or full day in the Maipo Valley. Book ahead. Weekdays are quieter."
+            },
+            {
+              "place": "gam",
+              "at": "16:00",
+              "minutes": 60,
+              "note": "Easy evening stop back in the centre. Check the programme."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a slow last day",
+          "stops": [
+            {
+              "place": "precolombino",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Good for a rainy morning."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Last market meal. Check on the day."
+            },
+            {
+              "place": "santalucia",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Short climb for a view before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Lastarria or Bellavista"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "Travellers who want Andes views, hill walks and the cable cars, with the city in between.",
+      "days": [
+        {
+          "title": "Arrive and Santa Lucía Hill",
+          "stops": [
+            {
+              "place": "plazaarmas",
+              "at": "15:00",
+              "minutes": 30,
+              "note": "Quick look on the way."
+            },
+            {
+              "place": "santalucia",
+              "at": "15:45",
+              "minutes": 60,
+              "note": "Small hill, big views. Closes around 19:00, check on the day."
+            },
+            {
+              "place": "lastarria",
+              "at": "17:15",
+              "minutes": 90,
+              "note": "Dinner nearby."
+            }
+          ]
+        },
+        {
+          "title": "San Cristóbal by funicular",
+          "stops": [
+            {
+              "place": "cerrosanfunicular",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Go early for clearer skies. Weather dependent."
+            },
+            {
+              "place": "cerrosan",
+              "at": "11:15",
+              "minutes": 90,
+              "note": "Walk the sanctuary grounds and viewpoints."
+            },
+            {
+              "place": "bellavista",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Lunch in the neighbourhood below the hill."
+            },
+            {
+              "place": "lachascona",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Closed Monday. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Andes views in Las Condes",
+          "stops": [
+            {
+              "place": "bahai",
+              "at": "10:00",
+              "minutes": 60,
+              "note": "Gardens and mountain backdrop. Check on the day."
+            },
+            {
+              "place": "skycostanera",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Best on a clear day. Come back at sunset if the sky is good."
+            },
+            {
+              "place": "vinacomparada",
+              "at": "14:00",
+              "minutes": 300,
+              "note": "Optional: swap for a vineyard afternoon. Book ahead."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a last walk",
+          "stops": [
+            {
+              "place": "precolombino",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "mercadocentral",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Lunch. Closes around 17:00."
+            },
+            {
+              "place": "gam",
+              "at": "15:00",
+              "minutes": 60,
+              "note": "Indoor stop if the weather turns. Check the programme."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Bellavista or Lastarria"
+    }
+  ],
+  "styles": [
+    {
+      "id": "culture",
+      "label": "Culture",
+      "blurb": "Museums, markets and the old centre on foot."
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "blurb": "Mercado Central seafood, completos and vineyard day trips."
+    },
+    {
+      "id": "nature",
+      "label": "Nature",
+      "blurb": "Andes views, Cerro San Cristóbal and Cajón del Maipo."
+    }
+  ],
+  "lengths": [
+    {
+      "id": "day",
+      "label": "Day trip"
+    },
+    {
+      "id": "1n",
+      "label": "1 night"
+    },
+    {
+      "id": "2n",
+      "label": "2 nights"
+    },
+    {
+      "id": "3n",
+      "label": "3 nights",
+      "recommended": true
+    },
+    {
+      "id": "4n",
+      "label": "4 nights"
+    }
+  ],
+  "stays": [
+    {
+      "area": "Centro Histórico",
+      "range": [
+        35000,
+        90000
+      ],
+      "why": "Walk to the Plaza de Armas, La Moneda and the markets. Busiest and noisiest at night; keep valuables close.",
+      "center": [
+        -33.442,
+        -70.654
+      ]
+    },
+    {
+      "area": "Bellavista",
+      "range": [
+        45000,
+        110000
+      ],
+      "why": "Colourful streets below Cerro San Cristóbal, close to La Chascona and nightlife. Lively, so pick a quiet side street.",
+      "center": [
+        -33.431,
+        -70.634
+      ]
+    },
+    {
+      "area": "Providencia",
+      "range": [
+        55000,
+        130000
+      ],
+      "why": "Safe, leafy and well connected by Metro Line 1. Good mix of cafés, restaurants and shops.",
+      "center": [
+        -33.431,
+        -70.61
+      ]
+    },
+    {
+      "area": "Las Condes",
+      "range": [
+        70000,
+        180000
+      ],
+      "why": "Modern, calm and close to the Sky Costanera and Parque Arauco. Farther from the old centre; rely on Metro or taxis.",
+      "center": [
+        -33.417,
+        -70.6
+      ]
+    }
+  ],
+  "food": [
+    "Eat seafood at the Mercado Central or Vega Central: try paila marina (shellfish stew) and reineta fish. Prices vary; check the menu before ordering.",
+    "Order a completo (hot dog with avocado, tomato and mayo) or an italiano sandwich at a local fuente de soda. Cheap and filling.",
+    "Try a pastel de choclo (corn pie) and empanadas de pino. Lunch is the big meal; many places offer a fixed menú at midday.",
+    "Coffee culture is strong: order a café or a cortado. For a sweet treat, look for mote con huesillo in summer.",
+    "Wine is a highlight. Ask for Chilean Carménère or Sauvignon Blanc by the glass, and consider a day trip to a nearby vineyard."
+  ],
+  "more_time": [
+    "Add a day trip to Valparaíso and Viña del Mar: buses leave often from the city, roughly 1.5–2 hours each way. Check schedules on the day.",
+    "Swap a city afternoon for Cajón del Maipo in the Andes: book a tour or arrange transport, as public options are limited.",
+    "Wine lovers can spend a half-day at a Maipo Valley vineyard. Book ahead; many tastings need a reservation."
+  ]
+}

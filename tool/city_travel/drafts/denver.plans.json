@@ -1,0 +1,1135 @@
+{
+  "plans": [
+    {
+      "id": "day-nature",
+      "length": "day",
+      "style": "nature",
+      "nights": 0,
+      "for": "A full day outdoors: red rocks in the morning, gardens and a river sunset.",
+      "days": [
+        {
+          "title": "Red Rocks early, then gardens and sunset",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "Go early for cooler air and quieter trails. About 30 minutes by car from downtown."
+            },
+            {
+              "place": "denver_botanic",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Back in the city. Check on the day for summer evening hours."
+            },
+            {
+              "place": "city_park",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Lunch nearby, then a flat walk with mountain views."
+            },
+            {
+              "place": "confluence_park",
+              "at": "17:30",
+              "minutes": 45,
+              "note": "Sunset by the water in LoDo. Easy to reach on foot or by rideshare."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or Downtown CBD"
+    },
+    {
+      "id": "day-food",
+      "length": "day",
+      "style": "food",
+      "nights": 0,
+      "for": "Food halls, a brewery and a ballgame: eat your way across downtown and RiNo.",
+      "days": [
+        {
+          "title": "Market lunch, RiNo taps, ballgame",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Coffee and a look at the grand hall."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Roughly 08:00–21:00 daily, check on the day."
+            },
+            {
+              "place": "rino_murals",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk off lunch among the street art."
+            },
+            {
+              "place": "great_divide",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Tasting room, usually afternoon into evening."
+            },
+            {
+              "place": "coors_field",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Evening game in season, usually April–October. Book tickets ahead."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo"
+    },
+    {
+      "id": "day-culture",
+      "length": "day",
+      "style": "culture",
+      "nights": 0,
+      "for": "Museums and gold-rush history on a weekday, when the Capitol and Mint are open.",
+      "days": [
+        {
+          "title": "Capitol Hill museums, then LoDo",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday morning. Dome tours run on weekdays only."
+            },
+            {
+              "place": "denver_art_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Tue–Sun roughly 10:00–17:00."
+            },
+            {
+              "place": "molly_brown",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "After lunch. Closed some weekdays, so check on the day."
+            },
+            {
+              "place": "union_station",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short ride to LoDo for the station hall."
+            },
+            {
+              "place": "larimer_square",
+              "at": "17:00",
+              "minutes": 45,
+              "note": "Evening stroll and dinner on the historic block."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Capitol Hill or LoDo"
+    },
+    {
+      "id": "1n-nature",
+      "length": "1n",
+      "style": "nature",
+      "nights": 1,
+      "for": "Red Rocks at sunrise, then parks and gardens across the city.",
+      "days": [
+        {
+          "title": "Red Rocks early, then city green space",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "07:00",
+              "minutes": 150,
+              "note": "About 30 minutes by car. Go early for cooler air and quieter trails. Check the day for event closures."
+            },
+            {
+              "place": "confluence_park",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Back in town. Walk the river paths. Bring water."
+            },
+            {
+              "place": "union_station",
+              "at": "12:30",
+              "minutes": 60,
+              "note": "Lunch inside the station hall."
+            },
+            {
+              "place": "denver_botanic",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Outdoor gardens. Last entry is usually well before closing, so arrive early afternoon."
+            }
+          ]
+        },
+        {
+          "title": "City Park morning, then fly",
+          "stops": [
+            {
+              "place": "city_park",
+              "at": "08:30",
+              "minutes": 90,
+              "note": "Flat loop with mountain views on clear days. The zoo is next door if you have more time."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "10:30",
+              "minutes": 45,
+              "note": "Easy walk back toward downtown hotels."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or Downtown CBD"
+    },
+    {
+      "id": "1n-food",
+      "length": "1n",
+      "style": "food",
+      "nights": 1,
+      "for": "Food halls, brewery taps and a ballpark evening.",
+      "days": [
+        {
+          "title": "Market lunch, murals and beer",
+          "stops": [
+            {
+              "place": "denver_central_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Several stalls under one roof. Good for mixed groups."
+            },
+            {
+              "place": "rino_murals",
+              "at": "13:15",
+              "minutes": 90,
+              "note": "Walk the blocks around Larimer and Walnut. Best in daylight."
+            },
+            {
+              "place": "great_divide",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Tasting room. Check hours on the day."
+            },
+            {
+              "place": "coors_field",
+              "at": "18:40",
+              "minutes": 180,
+              "note": "Only on game days in season, usually April to October. Buy tickets ahead."
+            }
+          ]
+        },
+        {
+          "title": "Station breakfast, then fly",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Coffee and a pastry in the great hall."
+            },
+            {
+              "place": "larimer_square",
+              "at": "09:45",
+              "minutes": 45,
+              "note": "Short stroll before checkout."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or RiNo"
+    },
+    {
+      "id": "1n-culture",
+      "length": "1n",
+      "style": "culture",
+      "nights": 1,
+      "for": "Museums and the gold-rush past, plus street art at dusk.",
+      "days": [
+        {
+          "title": "Capitol Hill museums",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekdays only for the dome tour. Bring ID for security."
+            },
+            {
+              "place": "denver_art_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. A short walk from the Capitol."
+            },
+            {
+              "place": "molly_brown",
+              "at": "13:30",
+              "minutes": 60,
+              "note": "Lunch nearby first. Closed some weekdays, so check on the day."
+            },
+            {
+              "place": "rino_murals",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Short ride north. Murals read best in late light."
+            }
+          ]
+        },
+        {
+          "title": "Mint or station, then fly",
+          "stops": [
+            {
+              "place": "denver_mint",
+              "at": "08:30",
+              "minutes": 60,
+              "note": "Weekdays only and booked well ahead. No bags allowed inside."
+            },
+            {
+              "place": "union_station",
+              "at": "10:00",
+              "minutes": 45,
+              "note": "Last look at the terminal hall before the airport train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Capitol Hill or Downtown CBD"
+    },
+    {
+      "id": "2n-nature",
+      "length": "2n",
+      "style": "nature",
+      "nights": 2,
+      "for": "First-timers who want big views: Red Rocks at dawn, gardens and parks, plus a river walk at sunset.",
+      "days": [
+        {
+          "title": "Arrive, gardens and a sunset river walk",
+          "stops": [
+            {
+              "place": "denver_botanic",
+              "at": "13:00",
+              "minutes": 120,
+              "note": "Morning is best but afternoon works. Check on the day for early closes."
+            },
+            {
+              "place": "city_park",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Short walk or ride from the gardens. Flat paths around the lake."
+            },
+            {
+              "place": "confluence_park",
+              "at": "18:30",
+              "minutes": 45,
+              "note": "Sunset over the water. Bring a light layer, evenings cool fast."
+            }
+          ]
+        },
+        {
+          "title": "Red Rocks early, then downtown",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "About 30–40 minutes by car. Go early for cool air and quiet trails. Check on the day for event closures."
+            },
+            {
+              "place": "union_station",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Coffee and a look at the great hall. Shops have their own hours."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "13:00",
+              "minutes": 45,
+              "note": "Easy flat walk. Free shuttle buses run the length of the mall."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or Downtown CBD"
+    },
+    {
+      "id": "2n-food",
+      "length": "2n",
+      "style": "food",
+      "nights": 2,
+      "for": "Eaters who like markets and taps: food halls, brewery patios and a ballpark evening.",
+      "days": [
+        {
+          "title": "Market lunch, street art, brewery taps",
+          "stops": [
+            {
+              "place": "denver_central_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch from several stalls. Roughly 08:00–21:00, check on the day."
+            },
+            {
+              "place": "rino_murals",
+              "at": "13:30",
+              "minutes": 90,
+              "note": "Walk the blocks in daylight. Wear comfy shoes."
+            },
+            {
+              "place": "great_divide",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late-afternoon tasting. Check hours on the day."
+            },
+            {
+              "place": "larimer_square",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Dinner on the historic block. Book ahead on weekends."
+            }
+          ]
+        },
+        {
+          "title": "Brewery tour, ballgame or market",
+          "stops": [
+            {
+              "place": "coors",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Tours usually Wed–Sun. Book online in advance."
+            },
+            {
+              "place": "coors_field",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Game days April–October. Buy tickets early for summer evenings."
+            }
+          ]
+        }
+      ],
+      "stay_area": "RiNo or LoDo"
+    },
+    {
+      "id": "2n-culture",
+      "length": "2n",
+      "style": "culture",
+      "nights": 2,
+      "for": "Our pick for most visitors: museums and the Capitol on weekdays, street art and a ballgame at night.",
+      "days": [
+        {
+          "title": "Capitol Hill museums",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekday morning. Dome tours run weekdays only."
+            },
+            {
+              "place": "denver_art_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Ten-minute walk from the Capitol."
+            },
+            {
+              "place": "molly_brown",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Closed some weekdays, check on the day."
+            },
+            {
+              "place": "cherry_creek",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Afternoon shops and a coffee stop."
+            }
+          ]
+        },
+        {
+          "title": "RiNo art, then LoDo",
+          "stops": [
+            {
+              "place": "rino_murals",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Best in daylight. Start near the market."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch."
+            },
+            {
+              "place": "union_station",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Short ride or walk from RiNo."
+            },
+            {
+              "place": "larimer_square",
+              "at": "19:00",
+              "minutes": 45,
+              "note": "Evening lights and dinner."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Capitol Hill or LoDo"
+    },
+    {
+      "id": "3n-nature",
+      "length": "3n",
+      "style": "nature",
+      "nights": 3,
+      "for": "Red Rocks at dawn, gardens and parks, with an easy first day close to downtown.",
+      "days": [
+        {
+          "title": "Arrive and settle in by the water",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Good first stop. Coffee and a look around the grand hall."
+            },
+            {
+              "place": "confluence_park",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Short walk along the South Platte River."
+            },
+            {
+              "place": "larimer_square",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dinner on the historic block."
+            }
+          ]
+        },
+        {
+          "title": "Red Rocks early, then City Park",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "07:00",
+              "minutes": 120,
+              "note": "About 30–40 minutes by car. Go early for cooler air and fewer people. Check on the day for event closures."
+            },
+            {
+              "place": "city_park",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Back in the city. Walk the park and lake area."
+            },
+            {
+              "place": "quiznos",
+              "at": "13:15",
+              "minutes": 30,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "denver_botanic",
+              "at": "14:15",
+              "minutes": 120,
+              "note": "Daily roughly 09:00–17:00, longer in summer."
+            }
+          ]
+        },
+        {
+          "title": "Foothills morning and market lunch",
+          "stops": [
+            {
+              "place": "rino_murals",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Flat, easy walk. Best in daylight."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls. Daily roughly 08:00–21:00."
+            },
+            {
+              "place": "great_divide",
+              "at": "14:00",
+              "minutes": 90,
+              "note": "Tasting room in RiNo. Usually afternoon into evening."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "16:30",
+              "minutes": 45,
+              "note": "Easy evening stroll back toward downtown."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "cherry_creek",
+              "at": "09:30",
+              "minutes": 90,
+              "note": "Coffee and a walk. Shops vary."
+            },
+            {
+              "place": "union_station",
+              "at": "11:30",
+              "minutes": 30,
+              "note": "Pick up snacks before the airport train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or Downtown CBD"
+    },
+    {
+      "id": "3n-food",
+      "length": "3n",
+      "style": "food",
+      "nights": 3,
+      "for": "Food halls, brewery taps and a ballgame, with one big outdoor morning at Red Rocks.",
+      "days": [
+        {
+          "title": "Arrive, market and taps",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start with coffee in the great hall."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "15:30",
+              "minutes": 60,
+              "note": "Early bite in RiNo. Daily roughly 08:00–21:00."
+            },
+            {
+              "place": "great_divide",
+              "at": "17:00",
+              "minutes": 90,
+              "note": "Brewery taproom. Check hours on the day."
+            },
+            {
+              "place": "larimer_square",
+              "at": "19:00",
+              "minutes": 90,
+              "note": "Dinner on the historic block."
+            }
+          ]
+        },
+        {
+          "title": "Brewery tour and ballgame",
+          "stops": [
+            {
+              "place": "coors",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Tours usually Wed–Sun. Book online in advance."
+            },
+            {
+              "place": "quiznos",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "coors_field",
+              "at": "17:00",
+              "minutes": 180,
+              "note": "Evening game in season, usually April–October. Buy tickets ahead."
+            }
+          ]
+        },
+        {
+          "title": "Red Rocks morning, food hall evening",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "About 30–40 minutes by car. Check on the day for event closures."
+            },
+            {
+              "place": "rino_murals",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Street art walk before lunch."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch from the stalls."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Easy stroll back downtown."
+            }
+          ]
+        },
+        {
+          "title": "Last morning, then go",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "09:30",
+              "minutes": 45,
+              "note": "Breakfast and coffee before the airport train."
+            },
+            {
+              "place": "cherry_creek",
+              "at": "10:45",
+              "minutes": 60,
+              "note": "Short walk if time allows. Shops vary."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or RiNo"
+    },
+    {
+      "id": "3n-culture",
+      "length": "3n",
+      "style": "culture",
+      "nights": 3,
+      "for": "Museums, the gold-rush past and street art, with weekday openings planned around closures.",
+      "days": [
+        {
+          "title": "Arrive, station and square",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start in the grand hall."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "15:15",
+              "minutes": 45,
+              "note": "Walk the mall toward the Capitol."
+            },
+            {
+              "place": "larimer_square",
+              "at": "17:00",
+              "minutes": 60,
+              "note": "Dinner on the historic block."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill culture day",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekdays roughly 07:30–17:00. Dome tours on weekdays only."
+            },
+            {
+              "place": "denver_art_museum",
+              "at": "10:30",
+              "minutes": 120,
+              "note": "Closed Monday. Tue–Sun roughly 10:00–17:00."
+            },
+            {
+              "place": "quiznos",
+              "at": "13:00",
+              "minutes": 30,
+              "note": "Quick lunch. Hours vary by branch."
+            },
+            {
+              "place": "molly_brown",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Closed some weekdays. Check on the day."
+            },
+            {
+              "place": "cherry_creek",
+              "at": "15:30",
+              "minutes": 90,
+              "note": "Afternoon walk. Shops vary."
+            }
+          ]
+        },
+        {
+          "title": "Mint, art and aviation",
+          "stops": [
+            {
+              "place": "denver_mint",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekdays only. Book well ahead."
+            },
+            {
+              "place": "rino_murals",
+              "at": "10:30",
+              "minutes": 90,
+              "note": "Street art walk in daylight."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "12:15",
+              "minutes": 60,
+              "note": "Lunch from the stalls."
+            },
+            {
+              "place": "wings_over_rockies",
+              "at": "14:00",
+              "minutes": 120,
+              "note": "Daily roughly 10:00–17:00. Check on the day."
+            }
+          ]
+        },
+        {
+          "title": "Red Rocks or museum, then go",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "08:00",
+              "minutes": 120,
+              "note": "About 30–40 minutes by car. Check on the day for event closures."
+            },
+            {
+              "place": "union_station",
+              "at": "11:30",
+              "minutes": 45,
+              "note": "Lunch and coffee before the airport train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Capitol Hill or LoDo"
+    },
+    {
+      "id": "4n-nature",
+      "length": "4n",
+      "style": "nature",
+      "nights": 4,
+      "for": "First-timers who want red rocks, gardens and city parks with easy evenings.",
+      "days": [
+        {
+          "title": "Arrive and ease in at Confluence Park",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Coffee and a look around the restored hall."
+            },
+            {
+              "place": "confluence_park",
+              "at": "16:15",
+              "minutes": 45,
+              "note": "Riverside paths. Good at sunset."
+            },
+            {
+              "place": "larimer_square",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner on the block. Book ahead in summer."
+            }
+          ]
+        },
+        {
+          "title": "Red Rocks in the morning",
+          "stops": [
+            {
+              "place": "red_rocks",
+              "at": "07:30",
+              "minutes": 120,
+              "note": "About 30 minutes by car. Hike early, before heat and crowds. Check on the day for event closures."
+            },
+            {
+              "place": "denver_botanic",
+              "at": "11:30",
+              "minutes": 120,
+              "note": "Back in town for lunch nearby, then the gardens."
+            },
+            {
+              "place": "city_park",
+              "at": "15:00",
+              "minutes": 90,
+              "note": "Easy loop with mountain views. Zoo is next door if you have energy."
+            }
+          ]
+        },
+        {
+          "title": "Museums and a ballgame",
+          "stops": [
+            {
+              "place": "denver_art_museum",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Closed Monday. Weekday morning is quietest."
+            },
+            {
+              "place": "state_capitol",
+              "at": "13:00",
+              "minutes": 60,
+              "note": "Dome tours on weekdays only."
+            },
+            {
+              "place": "coors_field",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Game days April–October. Buy tickets early."
+            }
+          ]
+        },
+        {
+          "title": "Street art and a last walk",
+          "stops": [
+            {
+              "place": "rino_murals",
+              "at": "10:00",
+              "minutes": 90,
+              "note": "Best in daylight. Wear comfy shoes."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "12:00",
+              "minutes": 60,
+              "note": "Lunch from the stalls."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Flat walk back toward downtown."
+            },
+            {
+              "place": "union_station",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Last coffee before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or Downtown CBD"
+    },
+    {
+      "id": "4n-food",
+      "length": "4n",
+      "style": "food",
+      "nights": 4,
+      "for": "First-timers who plan the day around lunch, taps and a ballpark hot dog.",
+      "days": [
+        {
+          "title": "Arrive, market and LoDo",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start with coffee and a snack."
+            },
+            {
+              "place": "larimer_square",
+              "at": "15:30",
+              "minutes": 45,
+              "note": "Short stroll. Shops vary."
+            },
+            {
+              "place": "coors_field",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Game days April–October. Eat at the park."
+            }
+          ]
+        },
+        {
+          "title": "RiNo food and taps",
+          "stops": [
+            {
+              "place": "denver_central_market",
+              "at": "11:30",
+              "minutes": 60,
+              "note": "Lunch. Daily roughly 08:00–21:00, check on the day."
+            },
+            {
+              "place": "rino_murals",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Walk off lunch between the murals."
+            },
+            {
+              "place": "great_divide",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Late afternoon tasting. Check hours on the day."
+            }
+          ]
+        },
+        {
+          "title": "Brewery tour and Capitol Hill",
+          "stops": [
+            {
+              "place": "coors",
+              "at": "11:00",
+              "minutes": 90,
+              "note": "Tours usually Wed–Sun. Book online in advance."
+            },
+            {
+              "place": "quiznos",
+              "at": "13:30",
+              "minutes": 30,
+              "note": "Quick budget lunch. Branch hours vary."
+            },
+            {
+              "place": "denver_art_museum",
+              "at": "14:30",
+              "minutes": 120,
+              "note": "Closed Monday."
+            },
+            {
+              "place": "cherry_creek",
+              "at": "17:30",
+              "minutes": 90,
+              "note": "Dinner and a browse. Shops vary."
+            }
+          ]
+        },
+        {
+          "title": "Market morning, then fly",
+          "stops": [
+            {
+              "place": "flea_market",
+              "at": "09:00",
+              "minutes": 120,
+              "note": "Usually Fri–Sun. Cash for snacks and stalls."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "12:00",
+              "minutes": 45,
+              "note": "One last downtown walk."
+            },
+            {
+              "place": "union_station",
+              "at": "13:30",
+              "minutes": 45,
+              "note": "Grab lunch to go before the airport train."
+            }
+          ]
+        }
+      ],
+      "stay_area": "LoDo or RiNo"
+    },
+    {
+      "id": "4n-culture",
+      "length": "4n",
+      "style": "culture",
+      "nights": 4,
+      "for": "First-timers who want museums, street art and a gold-rush past without rushing.",
+      "days": [
+        {
+          "title": "Arrive and downtown history",
+          "stops": [
+            {
+              "place": "union_station",
+              "at": "14:00",
+              "minutes": 45,
+              "note": "Start in the grand hall."
+            },
+            {
+              "place": "sixteenth_street",
+              "at": "15:00",
+              "minutes": 45,
+              "note": "Flat walk through the core."
+            },
+            {
+              "place": "larimer_square",
+              "at": "16:30",
+              "minutes": 90,
+              "note": "Dinner on Denver's oldest block."
+            }
+          ]
+        },
+        {
+          "title": "Capitol Hill museums",
+          "stops": [
+            {
+              "place": "state_capitol",
+              "at": "09:30",
+              "minutes": 60,
+              "note": "Weekday dome tour. Bring ID for security."
+            },
+            {
+              "place": "denver_art_museum",
+              "at": "11:00",
+              "minutes": 120,
+              "note": "Closed Monday. Lunch at the museum cafe."
+            },
+            {
+              "place": "molly_brown",
+              "at": "14:00",
+              "minutes": 60,
+              "note": "Closed some weekdays. Check on the day."
+            },
+            {
+              "place": "cherry_creek",
+              "at": "16:00",
+              "minutes": 90,
+              "note": "Afternoon browse, then dinner."
+            }
+          ]
+        },
+        {
+          "title": "Mint, art and a ballgame",
+          "stops": [
+            {
+              "place": "denver_mint",
+              "at": "09:00",
+              "minutes": 60,
+              "note": "Weekdays only. Book well ahead."
+            },
+            {
+              "place": "rino_murals",
+              "at": "11:30",
+              "minutes": 90,
+              "note": "Street art walk, then lunch nearby."
+            },
+            {
+              "place": "denver_central_market",
+              "at": "13:15",
+              "minutes": 60,
+              "note": "Lunch from the stalls."
+            },
+            {
+              "place": "coors_field",
+              "at": "18:00",
+              "minutes": 180,
+              "note": "Game days April–October."
+            }
+          ]
+        },
+        {
+          "title": "Air and space, then fly",
+          "stops": [
+            {
+              "place": "wings_over_rockies",
+              "at": "10:00",
+              "minutes": 120,
+              "note": "Good rainy-day backup. Check on the day."
+            },
+            {
+              "place": "city_park",
+              "at": "13:00",
+              "minutes": 90,
+              "note": "Short walk and a snack before you go."
+            }
+          ]
+        }
+      ],
+      "stay_area": "Capitol Hill or Downtown CBD"
+    }
+  ]
+}

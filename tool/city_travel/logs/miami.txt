@@ -1,0 +1,30 @@
+$ deepseek_facts.py Miami
+  tokens in 3968 out 837
+Miami: 0 problems
+
+$ deepseek_city.py Miami --stage places
+Miami: places
+  tokens in 1184 out 3209
+
+$ deepseek_city.py Miami --stage frame
+Miami: frame
+  tokens in 2430 out 1846
+  repaired JSON
+
+$ deepseek_city.py Miami --stage plans
+Miami: plans
+  plans for day
+  tokens in 2267 out 954
+  plans for 1n
+  tokens in 2268 out 1168
+  plans for 2n
+  tokens in 2273 out 1347
+  plans for 3n
+  tokens in 2268 out 1934
+  plans for 4n
+  tokens in 2268 out 2195
+
+$ merge_city.py Miami
+Miami: 20 places, 15 plans, 0 errors, 0 warnings
+wrote itineraries/miami.json and planner/miami.json
+
