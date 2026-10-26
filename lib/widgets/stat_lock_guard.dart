@@ -55,7 +55,12 @@ class _StatLockedPromoState extends State<StatLockedPromo> {
   @override
   void initState() {
     super.initState();
-    RewardedUnlockService.instance.preload();
+    // preload() notifies listeners synchronously; doing that during the build
+    // that mounts this widget dirties the enclosing ListenableBuilder
+    // ("'!_dirty': is not true"), so wait until the frame is done.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) RewardedUnlockService.instance.preload();
+    });
   }
 
   Future<void> _watch() async {

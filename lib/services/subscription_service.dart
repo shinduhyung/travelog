@@ -36,7 +36,7 @@ class SubscriptionService extends ChangeNotifier {
   static const String _prefKeyIsLifetime = 'is_lifetime';
 
   static const bool _debugForceNonPremium =
-      true; // [디버깅용] true로 두면 실제 구독 상태와 무관하게 항상 비구독으로 취급됨. 프리미엄 뱃지 잠금 UI 테스트 끝나면 반드시 false로 되돌릴 것.
+      false; // [디버깅용] true로 두면 실제 구독 상태와 무관하게 항상 비구독으로 취급됨. 프리미엄 뱃지 잠금 UI 테스트 끝나면 반드시 false로 되돌릴 것.
 
   // TikTok Android Native SDK와 연결하는 통로
   static const MethodChannel _tiktokChannel = MethodChannel(
