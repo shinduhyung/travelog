@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -64,7 +65,12 @@ bool useGoogleFonts = true;
 
 TextTheme _textTheme(TextTheme base) {
   final themed = base.apply(bodyColor: AppColors.ink, displayColor: AppColors.ink);
-  return useGoogleFonts ? GoogleFonts.poppinsTextTheme(themed) : themed;
+  if (!useGoogleFonts) return themed;
+  final poppins = GoogleFonts.poppinsTextTheme(themed);
+  // iOS 26 시뮬레이터 등 시스템 이모지 폰트가 비어 이모지가 "?" 상자로 나오는 환경이 있어,
+  // 소셜 화면의 이모지(메달, 통계 아이콘)는 Noto Color Emoji로 그린다. Android는 시스템 폰트가 이미 Noto.
+  if (defaultTargetPlatform != TargetPlatform.iOS) return poppins;
+  return poppins.apply(fontFamilyFallback: [GoogleFonts.notoColorEmoji().fontFamily!]);
 }
 
 ThemeData buildTheme() {
