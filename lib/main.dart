@@ -1057,7 +1057,7 @@ class _WidgetUpdateWrapperState extends State<WidgetUpdateWrapper> {
   }
 
   void _triggerWidgetUpdate(CountryProvider countryProvider) {
-    if (!Platform.isAndroid) return;
+    if (!HomeWidgetService.isSupported) return;
 
     final visitedNames = countryProvider.visitedCountries;
     final visitedList = countryProvider.allCountries
